@@ -36,7 +36,12 @@ yarn build
 yarn serve
 ```
 
-Your site is now running at `http://localhost:8000`!
+Your site is now running at `http://localhost:9000`!
+
+## ☁️ Hosting  
+
+This site is build and hosted on Gatsby Cloud. [insert URL here]  
+Changes are published on pushes to `main`
 
 
 ## 🩹 Support
