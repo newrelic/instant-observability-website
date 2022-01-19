@@ -38,10 +38,15 @@ yarn serve
 
 Your site is now running at `http://localhost:9000`!
 
+## ✅ CI/CD 
+#### Gatsby Build Service  
+Verifies that your branch can be built and generates a preview build.  
+This check is required for merges into `main`.
+
 ## ☁️ Hosting  
 
 This site is build and hosted on Gatsby Cloud. [insert URL here]  
-Changes are published on pushes to `main`
+Changes are published on pushes to `main`.
 
 
 ## 🩹 Support
