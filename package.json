@@ -1,0 +1,22 @@
+{
+  "name": "instant-observability-site",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Instant Observability Site",
+  "author": "New Relic",
+  "keywords": [
+    "gatsby"
+  ],
+  "scripts": {
+    "develop": "gatsby develop",
+    "start": "gatsby develop",
+    "build": "gatsby build",
+    "serve": "gatsby serve",
+    "clean": "gatsby clean"
+  },
+  "dependencies": {
+    "gatsby": "^4.5.3",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1"
+  }
+}
