@@ -12,10 +12,14 @@
     "start": "gatsby develop",
     "build": "gatsby build",
     "serve": "gatsby serve",
-    "clean": "gatsby clean"
+    "clean": "gatsby clean",
+    "fetch-quickstarts": "node ./scripts/actions/fetch-quickstarts.js"
   },
   "dependencies": {
     "gatsby": "^4.5.3",
+    "gatsby-plugin-gatsby-cloud": "^4.5.2",
+    "gatsby-source-filesystem": "^4.5.2",
+    "gatsby-transformer-json": "^4.5.0",
     "react": "^17.0.1",
     "react-dom": "^17.0.1"
   }
