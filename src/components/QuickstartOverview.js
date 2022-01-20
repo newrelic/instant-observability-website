@@ -1,23 +1,23 @@
-import React from 'react';
-import { css } from '@emotion/react';
-import { quickstart } from '../../types';
-import OverviewTile from './OverviewTile';
-import Markdown from '../Markdown';
+import React from "react";
+import { css } from "@emotion/react";
+import { quickstart } from "../types";
+import OverviewTile from "./OverviewTile";
+import Markdown from "./Markdown";
 
 const allowedElements = [
-  'h1',
-  'h2',
-  'h3',
-  'ol',
-  'ul',
-  'li',
-  'p',
-  'blockquote',
-  'code',
-  'a',
-  'strong',
-  'em',
-  'hr',
+  "h1",
+  "h2",
+  "h3",
+  "ol",
+  "ul",
+  "li",
+  "p",
+  "blockquote",
+  "code",
+  "a",
+  "strong",
+  "em",
+  "hr",
 ];
 
 const QuickstartOverview = ({ quickstart }) => {

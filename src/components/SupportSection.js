@@ -1,12 +1,12 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import { css } from '@emotion/react';
-import { Link } from '@newrelic/gatsby-theme-newrelic';
+import React from "react";
+import PropTypes from "prop-types";
+import { css } from "@emotion/react";
+import { Link } from "@newrelic/gatsby-theme-newrelic";
 import {
   SUPPORT_LINK,
   COMMUNITY_LINK,
   QUICKSTART_SUPPORT_LEVELS,
-} from '../../data/constants';
+} from "../data/constants";
 
 const SupportSection = ({ supportLevel, onClick: onLinkClick }) => {
   const supportLink = (
@@ -14,7 +14,7 @@ const SupportSection = ({ supportLevel, onClick: onLinkClick }) => {
       to={SUPPORT_LINK}
       key={QUICKSTART_SUPPORT_LEVELS.NEWRELIC}
       onClick={() =>
-        onLinkClick && onLinkClick('QuickstartDetailsSupportClick')
+        onLinkClick && onLinkClick("QuickstartDetailsSupportClick")
       }
     >
       Visit our Support Center
@@ -25,7 +25,7 @@ const SupportSection = ({ supportLevel, onClick: onLinkClick }) => {
     <Link
       to={COMMUNITY_LINK}
       key={QUICKSTART_SUPPORT_LEVELS.NEWRELIC}
-      onClick={() => onLinkClick('QuickstartDetailsCommunityClick')}
+      onClick={() => onLinkClick("QuickstartDetailsCommunityClick")}
     >
       the Explorers Hub
     </Link>
@@ -33,26 +33,26 @@ const SupportSection = ({ supportLevel, onClick: onLinkClick }) => {
 
   const QUICKSTART_SUPPORT_CONTENT = {
     [QUICKSTART_SUPPORT_LEVELS.NEWRELIC]: {
-      title: 'Built by New Relic',
+      title: "Built by New Relic",
       content: (
         <p>
-          Need help? {supportLink} or check out our community forum,{' '}
+          Need help? {supportLink} or check out our community forum,{" "}
           {communityLink}.
         </p>
       ),
     },
     [QUICKSTART_SUPPORT_LEVELS.VERIFIED]: {
-      title: 'Verified by New Relic',
+      title: "Verified by New Relic",
       content: (
         <p>
-          Need help? Find the author's support resources under{' '}
-          <strong>What's included</strong>. Or check out our community forum,{' '}
+          Need help? Find the author's support resources under{" "}
+          <strong>What's included</strong>. Or check out our community forum,{" "}
           {communityLink}.
         </p>
       ),
     },
     [QUICKSTART_SUPPORT_LEVELS.COMMUNITY]: {
-      title: 'Built by the community',
+      title: "Built by the community",
       content: (
         <p>
           Need help? Visit our community forum, {communityLink} to find an

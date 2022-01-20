@@ -1,17 +1,17 @@
-import React from 'react';
-import { css } from '@emotion/react';
-import pluralize from 'pluralize';
-import { Surface, Link, Tag, useTessen } from '@newrelic/gatsby-theme-newrelic';
-import Intro from '../Intro';
-import { quickstart } from '../../types';
+import React from "react";
+import { css } from "@emotion/react";
+import pluralize from "pluralize";
+import { Surface, Link, Tag, useTessen } from "@newrelic/gatsby-theme-newrelic";
+import Intro from "./Intro";
+import { quickstart } from "../types";
 
 const QuickstartDataSources = ({ quickstart }) => {
   const tessen = useTessen();
 
   const handleDocsTileClick = () => {
     tessen.track({
-      eventName: 'instantObservability',
-      category: 'DocsTileClick',
+      eventName: "instantObservability",
+      category: "DocsTileClick",
       quickstartName: quickstart.name,
       quickstartId: quickstart.id,
     });
@@ -24,9 +24,9 @@ const QuickstartDataSources = ({ quickstart }) => {
           margin-bottom: 16px;
         `}
       >
-        {quickstart.title} observability quickstart contains{' '}
-        {pluralize('data source', quickstart.documentation?.length ?? 0, true)}.
-        This is how you'll get your data into New Relic.{' '}
+        {quickstart.title} observability quickstart contains{" "}
+        {pluralize("data source", quickstart.documentation?.length ?? 0, true)}.
+        This is how you'll get your data into New Relic.{" "}
       </Intro>
 
       <div
