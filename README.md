@@ -23,8 +23,6 @@ yarn start
 Your site is now running at `http://localhost:8000`!
 
 
-
-
 ## 🚀 Production Build
 
 You can serve this site locally to quickly see your changes and additions before you PR them. To get started, navigate into your new site’s directory and start it up, as follows.
@@ -42,6 +40,9 @@ Your site is now running at `http://localhost:9000`!
 #### Gatsby Build Service  
 Verifies that your branch can be built and generates a preview build.  
 This check is required for merges into `main`.
+
+#### Fetch-quickstarts
+Runs every 4 hours to pull in new quickstarts from Nerdgraph (New Relic's GraphQL instance) and commit them to the `main` branch.
 
 ## ☁️ Hosting  
 
