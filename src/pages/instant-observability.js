@@ -5,7 +5,7 @@ import IOSeo from '../components/IOSeo';
 import { css } from '@emotion/react';
 import SegmentedControl from '../components/SegmentedControl';
 import Overlay from '../components/Overlay';
-import PackTile from '../components/PackTile';
+import QuickstartTile from '../components/QuickstartTile';
 import IOBanner from '../components/IOBanner';
 import {
   SearchInput,
@@ -538,7 +538,7 @@ const QuickstartsPage = ({ data, location }) => {
               `};
             `}
           >
-            <PackTile
+            <QuickstartTile
               id={RESERVED_QUICKSTART_IDS.BUILD_YOUR_OWN_QUICKSTART}
               css={css`
                 background-color: var(--tertiary-background-color);
@@ -550,7 +550,7 @@ const QuickstartsPage = ({ data, location }) => {
               summary="Can't find a quickstart with what you need? Check out our README and build your own."
             />
             {filteredQuickstarts.map((pack) => (
-              <PackTile
+              <QuickstartTile
                 key={pack.id}
                 view={view}
                 featured={pack.keywords?.includes('featured')}
