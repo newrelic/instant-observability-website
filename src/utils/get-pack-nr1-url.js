@@ -1,7 +1,7 @@
-const NR1_BASE_URL = 'https://one.newrelic.com';
-const NR1_BASE_URL_LOCAL = 'https://dev-one.newrelic.com';
+const NR1_BASE_URL = "https://one.newrelic.com";
+const NR1_BASE_URL_LOCAL = "https://dev-one.newrelic.com";
 const NERDLET_PATH = `launcher/catalog-pack-details.launcher/`;
-const NR1_EXPLORER_NERDLET = 'nr1-core.listing';
+const NR1_EXPLORER_NERDLET = "nr1-core.listing";
 
 /**
  * @param {string} quickstartId The ID for an observability pack.
@@ -17,11 +17,11 @@ const getPackNr1Url = (quickstartId, nerdletId, debug = false) => {
   // Note: this works differently depending on whether or not we have access
   // to the window object (and the btoa function).
   const hash =
-    typeof window !== 'undefined' && window.btoa
+    typeof window !== "undefined" && window.btoa
       ? btoa(pane)
-      : Buffer.from(pane, 'utf-8').toString('base64');
+      : Buffer.from(pane, "utf-8").toString("base64");
 
-  const local = debug ? 'packages=local&' : '';
+  const local = debug ? "packages=local&" : "";
   const NR1_URL = debug ? NR1_BASE_URL_LOCAL : NR1_BASE_URL;
 
   const url = new URL(`${NERDLET_PATH}?${local}pane=${hash}`, NR1_URL);
@@ -36,16 +36,16 @@ const getGuidedInstallStackedNr1Url = (nerdletId, debug = false) => {
   });
 
   const hash =
-    typeof window !== 'undefined' && window.btoa
+    typeof window !== "undefined" && window.btoa
       ? btoa(pane)
-      : Buffer.from(pane, 'utf-8').toString('base64');
+      : Buffer.from(pane, "utf-8").toString("base64");
 
   const cardHash =
-    window && window.btoa
+    typeof window !== "undefined" && window.btoa
       ? btoa(card)
-      : Buffer.from(card, 'utf-8').toString('base64');
+      : Buffer.from(card, "utf-8").toString("base64");
 
-  const local = debug ? 'packages=local&' : '';
+  const local = debug ? "packages=local&" : "";
   const NR1_URL = debug ? NR1_BASE_URL_LOCAL : NR1_BASE_URL;
 
   const url = new URL(
