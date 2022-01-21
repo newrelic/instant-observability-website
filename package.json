@@ -10,7 +10,7 @@
   "scripts": {
     "develop": "gatsby develop",
     "start": "gatsby develop",
-    "build": "gatsby build",
+    "build": "GATSBY_NEWRELIC_ENV=production gatsby build",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
     "fetch-quickstarts": "node ./scripts/actions/fetch-quickstarts.js"
