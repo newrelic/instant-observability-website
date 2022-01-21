@@ -8,12 +8,13 @@
     "gatsby"
   ],
   "scripts": {
-    "develop": "gatsby develop",
+    "develop": "GATSBY_NEWRELIC_ENV=development gatsby develop",
     "start": "gatsby develop",
     "build": "GATSBY_NEWRELIC_ENV=production gatsby build",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "fetch-quickstarts": "node ./scripts/actions/fetch-quickstarts.js"
+    "fetch-quickstarts": "node ./scripts/actions/fetch-quickstarts.js",
+    "build:related-content": "BUILD_RELATED_CONTENT=true yarn run build"
   },
   "dependencies": {
     "@emotion/react": "^11.1.5",
