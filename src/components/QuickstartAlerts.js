@@ -1,9 +1,9 @@
-import React from "react";
-import { css } from "@emotion/react";
-import pluralize from "pluralize";
-import { Surface, Tag } from "@newrelic/gatsby-theme-newrelic";
-import Intro from "./Intro";
-import { quickstart } from "../types";
+import React from 'react';
+import { css } from '@emotion/react';
+import pluralize from 'pluralize';
+import { Surface, Tag } from '@newrelic/gatsby-theme-newrelic';
+import Intro from './Intro';
+import { quickstart } from '../types';
 
 const QuickstartAlerts = ({ quickstart }) => (
   <>
@@ -12,8 +12,8 @@ const QuickstartAlerts = ({ quickstart }) => (
         margin-bottom: 16px;
       `}
     >
-      {quickstart.title} observability quickstart contains{" "}
-      {pluralize("alert", quickstart.alerts?.length ?? 0, true)}. These alerts
+      {quickstart.title} observability quickstart contains{' '}
+      {pluralize('alert', quickstart.alerts?.length ?? 0, true)}. These alerts
       detect changes in key performance metrics. Integrate these alerts with
       your favorite tools (like Slack, PagerDuty, etc.) and New Relic will let
       you know when something needs your attention.

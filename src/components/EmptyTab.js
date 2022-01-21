@@ -1,8 +1,8 @@
-import React from "react";
-import PropTypes from "prop-types";
-import { css } from "@emotion/react";
-import { Button, Icon, Link } from "@newrelic/gatsby-theme-newrelic";
-import { QUICKSTARTS_REPO } from "../data/constants";
+import React from 'react';
+import PropTypes from 'prop-types';
+import { css } from '@emotion/react';
+import { Button, Icon, Link } from '@newrelic/gatsby-theme-newrelic';
+import { QUICKSTARTS_REPO } from '../data/constants';
 
 const EmptyTab = ({
   quickstartName,

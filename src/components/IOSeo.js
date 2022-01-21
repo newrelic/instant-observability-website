@@ -1,9 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { SEO } from '@newrelic/gatsby-theme-newrelic';
+import { SEO as Seo } from '@newrelic/gatsby-theme-newrelic';
 import { useStaticQuery, graphql, withPrefix } from 'gatsby';
 
-function DevSiteSeo({ description, meta, title, tags, location, type }) {
+function IOSeo({ description, meta, title, tags, location, type }) {
   const { site } = useStaticQuery(
     graphql`
       query {
@@ -98,22 +98,22 @@ function DevSiteSeo({ description, meta, title, tags, location, type }) {
   ].filter((m) => m.content !== '');
 
   return (
-    <SEO location={location} title={title} type={type}>
+    <Seo location={location} title={title} type={type}>
       {crazyEgg(location)}
       {validMetadata.map((data, index) => (
         <meta key={`${data.name}-${index}`} {...data} />
       ))}
       <script src={withPrefix('tessen.min-1.3.0.js')} type="text/javascript" />
-    </SEO>
+    </Seo>
   );
 }
 
-DevSiteSeo.defaultProps = {
+IOSeo.defaultProps = {
   meta: [],
   description: '',
 };
 
-DevSiteSeo.propTypes = {
+IOSeo.propTypes = {
   location: PropTypes.object.isRequired,
   description: PropTypes.string,
   meta: PropTypes.arrayOf(PropTypes.object),
@@ -123,4 +123,4 @@ DevSiteSeo.propTypes = {
   quickStartName: PropTypes.string,
 };
 
-export default DevSiteSeo;
+export default IOSeo;

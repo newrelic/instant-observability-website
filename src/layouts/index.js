@@ -1,6 +1,6 @@
-import React from "react";
-import QuickStartLayout from "./QuickStartLayout";
-import PropTypes from "prop-types";
+import React from 'react';
+import QuickStartLayout from './QuickStartLayout';
+import PropTypes from 'prop-types';
 
 const Layout = ({ children, pageContext }) => {
   if (pageContext.fileRelativePath.match(/404/)) {

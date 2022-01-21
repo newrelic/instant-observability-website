@@ -1,9 +1,9 @@
-import React from "react";
-import { css } from "@emotion/react";
-import pluralize from "pluralize";
-import Intro from "./Intro";
-import ImageSlider from "./ImageSlider";
-import { quickstart } from "../types";
+import React from 'react';
+import { css } from '@emotion/react';
+import pluralize from 'pluralize';
+import Intro from './Intro';
+import ImageSlider from './ImageSlider';
+import { quickstart } from '../types';
 
 const QuickstartDashboards = ({ quickstart }) => (
   <>
@@ -12,8 +12,8 @@ const QuickstartDashboards = ({ quickstart }) => (
         margin-bottom: 16px;
       `}
     >
-      {quickstart.title} quickstart contains{" "}
-      {pluralize("dashboard", quickstart.dashboards?.length ?? 0, true)}. These
+      {quickstart.title} quickstart contains{' '}
+      {pluralize('dashboard', quickstart.dashboards?.length ?? 0, true)}. These
       interactive visualizations let you easily explore your data, understand
       context, and resolve problems faster.
     </Intro>

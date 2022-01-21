@@ -1,14 +1,14 @@
-import React from "react";
-import { graphql } from "gatsby";
-import { css } from "@emotion/react";
-import DevSiteSeo from "../components/DevSiteSeo";
-import PropTypes from "prop-types";
-import PageLayout from "../components/PageLayout";
-import Tabs from "../components/Tabs";
-import EmptyTab from "../components/EmptyTab";
-import SupportSection from "../components/SupportSection";
-import QuickstartAlerts from "../components/QuickstartAlerts";
-import QuickstartDashboards from "../components/QuickstartDashboards";
+import React from 'react';
+import { graphql } from 'gatsby';
+import { css } from '@emotion/react';
+import IOSeo from '../components/IOSeo';
+import PropTypes from 'prop-types';
+import PageLayout from '../components/PageLayout';
+import Tabs from '../components/Tabs';
+import EmptyTab from '../components/EmptyTab';
+import SupportSection from '../components/SupportSection';
+import QuickstartAlerts from '../components/QuickstartAlerts';
+import QuickstartDashboards from '../components/QuickstartDashboards';
 import {
   Layout,
   PageTools,
@@ -17,18 +17,18 @@ import {
   Icon,
   Link,
   RelatedResources,
-} from "@newrelic/gatsby-theme-newrelic";
-import InstallButton from "../components/InstallButton";
-import QuickstartDataSources from "../components/QuickstartDataSources";
-import Breadcrumbs from "../components/Breadcrumbs";
-import { quickstart } from "../types";
+} from '@newrelic/gatsby-theme-newrelic';
+import InstallButton from '../components/InstallButton';
+import QuickstartDataSources from '../components/QuickstartDataSources';
+import Breadcrumbs from '../components/Breadcrumbs';
+import { quickstart } from '../types';
 import {
   QUICKSTARTS_REPO,
   SIGNUP_LINK,
   LOGIN_LINK,
   SHIELD_LEVELS,
-} from "../data/constants";
-import QuickstartOverview from "../components/QuickstartOverview";
+} from '../data/constants';
+import QuickstartOverview from '../components/QuickstartOverview';
 
 const QuickstartDetails = ({ data, location }) => {
   const quickstart = data.quickstarts;
@@ -36,8 +36,8 @@ const QuickstartDetails = ({ data, location }) => {
   const tessen = useTessen();
   const breadcrumbs = [
     {
-      name: "Instant Observability (I/O)",
-      url: "/instant-observability/",
+      name: 'Instant Observability (I/O)',
+      url: '/instant-observability/',
     },
     {
       name: quickstart.title,
@@ -45,16 +45,16 @@ const QuickstartDetails = ({ data, location }) => {
   ];
   const quickStartMeta = [
     {
-      name: "quick_start_name",
-      class: "swiftype",
-      "data-type": "string",
+      name: 'quick_start_name',
+      class: 'swiftype',
+      'data-type': 'string',
       content: quickstart.title,
     },
   ];
 
   const trackQuickstart = (action, quickstart) => () =>
     tessen.track({
-      eventName: "instantObservability",
+      eventName: 'instantObservability',
       category: action,
       quickstartName: quickstart.name,
       quickstartId: quickstart.id,
@@ -63,7 +63,7 @@ const QuickstartDetails = ({ data, location }) => {
 
   const tessenTabTrack = (action, quickstart) => (id, count) => {
     tessen.track({
-      eventName: "instantObservability",
+      eventName: 'instantObservability',
       category: action,
       QuickstartTabState: id,
       QuickstartTabCount: count,
@@ -73,7 +73,7 @@ const QuickstartDetails = ({ data, location }) => {
   };
   const tessenSupportTrack = (quickstart) => (action) => {
     tessen.track({
-      eventName: "instantObservability",
+      eventName: 'instantObservability',
       category: action,
       quickstartName: quickstart.name,
       quickstartId: quickstart.id,
@@ -82,7 +82,7 @@ const QuickstartDetails = ({ data, location }) => {
 
   return (
     <>
-      <DevSiteSeo
+      <IOSeo
         title={quickstart.title}
         type="quickstarts"
         location={location}
@@ -119,9 +119,9 @@ const QuickstartDetails = ({ data, location }) => {
               grid-column-gap: 1rem;
               grid-row-gap: 1rem;
               grid-template-areas:
-                "title logo"
-                "summ logo"
-                "cta logo";
+                'title logo'
+                'summ logo'
+                'cta logo';
               justify-content: normal;
               justify-self: center;
               row-gap: 1rem;
@@ -138,8 +138,8 @@ const QuickstartDetails = ({ data, location }) => {
                 border-bottom: 1px solid var(--border-color);
                 border-radius: 0.25rem;
                 grid-template-areas:
-                  "logo title cta"
-                  "logo summ cta";
+                  'logo title cta'
+                  'logo summ cta';
                 padding: 16px 0 24px;
                 position: sticky;
                 top: var(--global-header-height);
@@ -209,7 +209,7 @@ const QuickstartDetails = ({ data, location }) => {
                     margin: 1rem 0 0 0;
                   }
                 `}
-                onClick={trackQuickstart("QuickstartViewRepoClick", quickstart)}
+                onClick={trackQuickstart('QuickstartViewRepoClick', quickstart)}
               >
                 <Icon
                   name="fe-github"
@@ -337,22 +337,22 @@ const QuickstartDetails = ({ data, location }) => {
                   <Link
                     to={SIGNUP_LINK}
                     onClick={trackQuickstart(
-                      "QuickstartDetailsSignUpClick",
+                      'QuickstartDetailsSignUpClick',
                       quickstart
                     )}
                   >
                     Sign Up
-                  </Link>{" "}
-                  for a free New Relic account or{" "}
+                  </Link>{' '}
+                  for a free New Relic account or{' '}
                   <Link
                     to={LOGIN_LINK}
                     onClick={trackQuickstart(
-                      "QuickstartDetailsLoginClick",
+                      'QuickstartDetailsLoginClick',
                       quickstart
                     )}
                   >
                     Log In
-                  </Link>{" "}
+                  </Link>{' '}
                   to your existing account.
                 </li>
                 <li>Click the green install button above.</li>
@@ -371,7 +371,7 @@ const QuickstartDetails = ({ data, location }) => {
             />
             <PageTools.Section>
               <PageTools.Title>Authors</PageTools.Title>
-              <p>{quickstart.authors.join(", ")}</p>
+              <p>{quickstart.authors.join(', ')}</p>
             </PageTools.Section>
             <aside
               data-swiftype-index={false}

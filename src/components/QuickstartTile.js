@@ -13,14 +13,14 @@ import {
   RESERVED_QUICKSTART_IDS,
   LISTVIEW_BREAKPOINT,
 } from '../data/constants';
-import PackImg from './PackImg';
+import QuickstartImg from './QuickstartImg';
 
 const VIEWS = {
   GRID: 'Grid view',
   LIST: 'List view',
 };
 
-const PackTile = ({
+const QuickstartTile = ({
   id,
   title,
   view,
@@ -144,7 +144,7 @@ const PackTile = ({
             height: var(--tile-image-height);
           `}
         >
-          <PackImg
+          <QuickstartImg
             logoUrl={logoUrl}
             packName={title || name}
             css={css`
@@ -219,7 +219,7 @@ const PackTile = ({
   );
 };
 
-PackTile.propTypes = {
+QuickstartTile.propTypes = {
   id: PropTypes.string.isRequired,
   view: PropTypes.oneOf(Object.values(VIEWS)).isRequired,
   name: PropTypes.string.isRequired,
@@ -235,4 +235,4 @@ PackTile.propTypes = {
   href: PropTypes.string,
 };
 
-export default PackTile;
+export default QuickstartTile;

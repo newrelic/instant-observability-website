@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import { graphql } from 'gatsby';
 import React, { useState, useEffect } from 'react';
-import DevSiteSeo from '../components/DevSiteSeo';
+import IOSeo from '../components/IOSeo';
 import { css } from '@emotion/react';
 import SegmentedControl from '../components/SegmentedControl';
 import Overlay from '../components/Overlay';
@@ -188,7 +188,7 @@ const QuickstartsPage = ({ data, location }) => {
 
   return (
     <>
-      <DevSiteSeo
+      <IOSeo
         title="Instant Observability"
         location={location}
         type="quickstarts"

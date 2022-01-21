@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { css } from '@emotion/react';
 import DEFAULT_IMAGE from '../images/default-logo-background.svg';
 
-const PackImg = ({ className, logoUrl, packName }) => {
+const QuickstartImg = ({ className, logoUrl, packName }) => {
   const [packAcronym, setPackAcronym] = useState('');
 
   const getPackNameAcronym = () => {
@@ -58,10 +58,10 @@ const PackImg = ({ className, logoUrl, packName }) => {
   );
 };
 
-PackImg.propTypes = {
+QuickstartImg.propTypes = {
   packName: PropTypes.string.isRequired,
   logoUrl: PropTypes.string,
   className: PropTypes.string,
 };
 
-export default PackImg;
+export default QuickstartImg;
