@@ -37,7 +37,7 @@ const QuickstartDetails = ({ data, location }) => {
   const breadcrumbs = [
     {
       name: 'Instant Observability (I/O)',
-      url: '/instant-observability/',
+      url: '/',
     },
     {
       name: quickstart.title,
