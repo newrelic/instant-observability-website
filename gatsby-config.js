@@ -2,6 +2,7 @@ const quote = (str) => `"${str}"`;
 const resolveQuickstartSlug = require('./src/utils/resolveQuickstartSlug');
 
 module.exports = {
+  pathPrefix: `/instant-observability`,
   flags: {
     DEV_SSR: true,
     PRESERVE_WEBPACK_CACHE: true,
