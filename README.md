@@ -36,6 +36,19 @@ yarn serve
 
 Your site is now running at `http://localhost:9000`!
 
+### Path prefix
+This site supports using a path prefix, allowing the site to work as if it was exposed at `www.somewebsite.com/` while actually being exposed at `www.somewebsite.com/instant-observability`. The value of the prefix is defined in the `gatsby-config.js` file under the `pathPrefix` field. 
+
+To build to the with the path prefix enabled:
+```shell
+yarn build:production
+```
+
+To then serve the built site with path prefixing enabled:
+```shell
+yarn serve:production
+```
+
 ## ✅ CI/CD 
 #### Gatsby Build Service  
 Verifies that your branch can be built and generates a preview build.  
@@ -44,10 +57,19 @@ This check is required for merges into `main`.
 #### Fetch-quickstarts
 Runs every 4 hours to pull in new quickstarts from Nerdgraph (New Relic's GraphQL instance) and commit them to the `main` branch.
 
-## ☁️ Hosting  
+#### Fetch related content
+Runs every day to get various pages that relate to each quickstart from our vendor.
 
-This site is build and hosted on Gatsby Cloud. [insert URL here]  
+## ☁️  Hosting  
+
+This site is built and hosted on Gatsby Cloud. [insert URL here]  
 Changes are published on pushes to `main`.
+
+### Environment variables
+|key|possible values|notes|
+|-|-|-|
+|`GATSBY_NEWRELIC_ENV`|`development` or `production`| Used by the [New Relic Gatsby Theme](https://github.com/newrelic/gatsby-theme-newrelic) to determine the running environment. Set to `production` on prod.|
+|`PREFIX_PATHS`|`true` or `false`|Enables path prefixing during builds and deployments. Set to `true` on prod.|
 
 
 ## 🩹 Support
