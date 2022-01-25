@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import { graphql } from 'gatsby';
+import { graphql, PageProps } from 'gatsby';
 import React, { useState, useEffect } from 'react';
 import IOSeo from '../components/IOSeo';
 import { css } from '@emotion/react';
@@ -24,7 +24,7 @@ import {
   LISTVIEW_BREAKPOINT,
 } from '../data/constants';
 import CATEGORIES from '../data/instant-observability-categories';
-
+import { Quickstart } from '../types';
 import SuperTiles from '../components/SuperTiles';
 
 const VIEWS = {
@@ -38,18 +38,18 @@ const SINGLE_COLUMN_BREAKPOINT = LISTVIEW_BREAKPOINT;
 
 /**
  * Determines if one string is a substring of the other, case insensitive
- * @param {String} substring the substring to test against
- * @returns {(Function) => Boolean} Callback function that determines if the argument has the substring
  */
-const stringIncludes = (substring) => (fullstring) =>
+const stringIncludes = (
+  substring: string
+): ((fullstring: string) => boolean) => (fullstring) =>
   fullstring.toLowerCase().includes(substring.toLowerCase());
 
 /**
  * Filters a quickstart based on a provided search term.
- * @param {String} search Search term.
- * @returns {(Function) => Boolean} Callback function to be used by filter.
  */
-const filterBySearch = (search) => ({
+const filterBySearch: (
+  search: string
+) => (quickstart: Quickstart) => Boolean = (search) => ({
   title,
   summary,
   description,
@@ -70,20 +70,40 @@ const filterBySearch = (search) => ({
 
 /**
  * Filters a quickstart based on a category.
- * @param {String} category The category type (e.g. 'featured').
- * @returns {(Function) => Boolean} Callback function to be used by filter.
  */
-const filterByCategory = (category) => {
+const filterByCategory: (
+  category: string
+) => (quickstart: Quickstart) => Boolean = (category) => {
   const { associatedKeywords = [] } =
-    CATEGORIES.find(({ value }) => value === category) || {};
+    CATEGORIES.find(({ value }: Category) => value === category) || {};
 
   return (quickstart) =>
-    !category ||
-    (quickstart.keywords &&
-      quickstart.keywords.find((k) => associatedKeywords.includes(k)));
+    Boolean(
+      !category ||
+        (quickstart.keywords &&
+          quickstart.keywords.find((k) => associatedKeywords.includes(k)))
+    );
 };
 
-const QuickstartsPage = ({ data, location }) => {
+interface Category {
+  displayName: string;
+  value: string;
+  associatedKeywords: string[];
+}
+
+interface CategoryWithCount extends Category {
+  count: number;
+}
+
+interface QuickstartPageProps extends PageProps {
+  data: {
+    allQuickstarts: {
+      nodes: Quickstart[];
+    };
+  };
+}
+
+const QuickstartsPage = ({ data, location }: QuickstartPageProps) => {
   const [view, setView] = useState(VIEWS.GRID);
   const tessen = useTessen();
 
@@ -113,7 +133,7 @@ const QuickstartsPage = ({ data, location }) => {
     setIsCategoriesOverlayOpen(false);
   };
 
-  const handleSearch = (value) => {
+  const handleSearch = (value: string) => {
     if (value !== null && value !== undefined) {
       const params = new URLSearchParams(location.search);
       params.set('search', value);
@@ -122,7 +142,7 @@ const QuickstartsPage = ({ data, location }) => {
     }
   };
 
-  const handleCategory = (value) => {
+  const handleCategory = (value: string) => {
     if (value !== null && value !== undefined) {
       const params = new URLSearchParams(location.search);
       params.set('category', value);
@@ -167,19 +187,23 @@ const QuickstartsPage = ({ data, location }) => {
     .filter(filterBySearch(search))
     .filter(filterByCategory(category));
 
-  const categoriesWithCount = CATEGORIES.map((cat) => ({
-    ...cat,
-    count: quickstarts
-      .filter(filterBySearch(search))
-      .filter(filterByCategory(cat.value)).length,
-  }));
+  const categoriesWithCount: CategoryWithCount[] = CATEGORIES.map(
+    (cat: Category): CategoryWithCount => ({
+      ...cat,
+      count: quickstarts
+        .filter(filterBySearch(search))
+        .filter(filterByCategory(cat.value)).length,
+    })
+  );
 
   /**
    * Finds display name for selected category.
    * @returns {String} Display name for results found.
    */
-  const getDisplayName = (defaultName = 'All quickstarts') => {
-    const found = CATEGORIES.find((cat) => cat.value === category);
+  const getDisplayName = (defaultName = 'All quickstarts'): string => {
+    const found = CATEGORIES.find(
+      (cat: { value: string }) => cat.value === category
+    );
 
     if (!found.value) return defaultName;
 
@@ -333,7 +357,9 @@ const QuickstartsPage = ({ data, location }) => {
               value={search || ''}
               placeholder="What do you want to monitor? (e.g., AWS, LAMP, Kubernetes)"
               onClear={() => setSearch('')}
-              onChange={(e) => setSearch(e.target.value)}
+              onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
+                setSearch(e.target.value)
+              }
               css={css`
                 --svg-color: var(--color-neutrals-700);
                 box-shadow: none;
@@ -613,7 +639,13 @@ export const pageQuery = graphql`
   }
 `;
 
-const Label = ({ children, htmlFor }) => (
+const Label: ({
+  children,
+  htmlFor,
+}: {
+  children: React.ReactNode;
+  htmlFor: string;
+}) => React.ReactNode = ({ children, htmlFor }) => (
   <label
     htmlFor={htmlFor}
     css={css`
@@ -628,12 +660,11 @@ const Label = ({ children, htmlFor }) => (
   </label>
 );
 
-Label.propTypes = {
-  children: PropTypes.node,
-  htmlFor: PropTypes.string,
-};
-
-const FormControl = ({ children }) => (
+const FormControl: ({
+  children,
+}: {
+  children: React.ReactNode;
+}) => React.ReactNode = ({ children }) => (
   <div
     css={css`
       display: flex;
@@ -644,9 +675,5 @@ const FormControl = ({ children }) => (
     {children}
   </div>
 );
-
-FormControl.propTypes = {
-  children: PropTypes.node,
-};
 
 export default QuickstartsPage;

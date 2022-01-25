@@ -58,3 +58,57 @@ export const quickstart = PropTypes.shape({
   documentation: PropTypes.arrayOf(quickstartDocumentation),
   installPlans: PropTypes.arrayOf(quickstartInstallPlans),
 });
+
+export enum QuickstartSupportLevels {
+  NEWRELIC = 'NEWRELIC',
+  VERIFIED = 'VERIFIED',
+  COMMUNITY = 'COMMUNITY',
+}
+
+export enum QuickstartAlertTypes {
+  BASELINE = 'BASELINE',
+  STATIC = 'STATIC',
+}
+
+export interface QuickstartDashboard {
+  name: string;
+  url: string;
+  description: string;
+  screenshorts: string[];
+}
+
+export interface QuickstartAlert {
+  name: string;
+  url: string;
+  details: string;
+  type: QuickstartAlertTypes;
+}
+
+export interface QuickstartDocumentation {
+  name: string;
+  url: string;
+  description: string;
+}
+
+export interface QuickstartInstallPlan {
+  id: string;
+  name: string;
+}
+
+export interface Quickstart {
+  id: string;
+  name: string;
+  title: string;
+  level: QuickstartSupportLevels;
+  description: string;
+  authors: string[];
+  summary?: string;
+  iconUrl: string;
+  logoUrl: string;
+  websiteUrl: string;
+  dashboards?: QuickstartDashboard[];
+  alerts?: QuickstartAlert[];
+  documentation?: QuickstartDocumentation[];
+  installPlans?: QuickstartInstallPlan[];
+  keywords?: string[];
+}
