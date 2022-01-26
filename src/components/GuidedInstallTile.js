@@ -80,7 +80,7 @@ const GuidedInstallTile = () => {
           </span>
         </div>
         <div>
-          <Button onClick={handleButtonClick} variant={Button.VARIANT.PRIMARY}>
+          <Button onClick={handleButtonClick} variant={Button.VARIANT.PRIMARY} size={Button.SIZE.SMALL}>
             Install New Relic
           </Button>
         </div>
