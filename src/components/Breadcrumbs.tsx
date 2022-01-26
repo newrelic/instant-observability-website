@@ -1,9 +1,7 @@
-import PropTypes from 'prop-types';
-import React from 'react';
 import { css } from '@emotion/react';
 import { Link } from '@newrelic/gatsby-theme-newrelic';
 
-const Breadcrumbs = ({ segments, separator }) => {
+const Breadcrumbs = ({ segments, separator = '/' }: BreadcrumbsProps) => {
   return (
     <div
       css={css`
@@ -48,18 +46,14 @@ const Breadcrumbs = ({ segments, separator }) => {
   );
 };
 
-Breadcrumbs.defaultProps = {
-  separator: '/',
-};
+interface BreadcrumbsProps {
+  segments: Segment[];
+  separator?: string;
+}
 
-Breadcrumbs.propTypes = {
-  segments: PropTypes.arrayOf(
-    PropTypes.shape({
-      name: PropTypes.string.isRequired,
-      url: PropTypes.string,
-    })
-  ).isRequired,
-  separator: PropTypes.string,
-};
+interface Segment {
+  name: string;
+  url?: string;
+}
 
 export default Breadcrumbs;

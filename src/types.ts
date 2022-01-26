@@ -74,7 +74,7 @@ export interface QuickstartDashboard {
   name: string;
   url: string;
   description: string;
-  screenshorts: string[];
+  screenshots: string[];
 }
 
 export interface QuickstartAlert {

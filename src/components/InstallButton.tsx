@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react';
+import { PageProps } from 'gatsby';
 import PropTypes from 'prop-types';
+import { RouteProps } from '@reach/router';
 import { css } from '@emotion/react';
 import { Button, Link, Icon, useTessen } from '@newrelic/gatsby-theme-newrelic';
 import {
@@ -14,7 +16,7 @@ import {
   UTM_PARAMETERS,
   SIGNUP_LINK,
 } from '../data/constants';
-import { quickstart } from '../types';
+import { Quickstart } from '../types';
 import Cookies from 'js-cookie';
 import useTreatment from '../hooks/useTreatment';
 
@@ -22,7 +24,7 @@ import useTreatment from '../hooks/useTreatment';
  * @param {Object} parameters
  * @returns {Boolean}
  */
-const checkUtmParameters = (parameters) => {
+const checkUtmParameters = (parameters: URLSearchParams): boolean => {
   if (!parameters) {
     return false;
   }
@@ -40,7 +42,7 @@ const checkUtmParameters = (parameters) => {
  * Method which returns `false` if current user is 'new'. Returns `true` if user is a returning user.
  * @returns {Boolean}
  */
-const checkIfReturningUser = () => {
+const checkIfReturningUser = (): boolean => {
   return Boolean(Cookies.get('ajs_user_id'));
 };
 
@@ -53,13 +55,13 @@ const checkIfReturningUser = () => {
  * @returns {String}
  */
 const createInstallLink = (
-  id,
-  nerdletId,
-  hasGuidedInstall,
-  hasUtmParameters,
-  isReturningUser,
-  parameters
-) => {
+  id: string,
+  nerdletId: string,
+  hasGuidedInstall: boolean,
+  hasUtmParameters: boolean,
+  isReturningUser: boolean,
+  parameters: URLSearchParams
+): string => {
   const platformUrl = hasGuidedInstall
     ? getGuidedInstallStackedNr1Url(nerdletId)
     : getPackNr1Url(id, nerdletId);
@@ -82,10 +84,14 @@ const createInstallLink = (
  * @param {String} key
  * @returns {Boolean}
  */
-const hasComponent = (quickstart, key) =>
+const hasComponent = (quickstart: Quickstart, key: keyof Quickstart): boolean =>
   quickstart[key] && quickstart[key].length > 0;
 
-const InstallButton = ({ quickstart, location, ...props }) => {
+const InstallButton = ({
+  quickstart,
+  location,
+  ...props
+}: InstallButtonProps) => {
   const { treatment } = useTreatment('super_tiles');
 
   const hasInstallableComponent =
@@ -198,10 +204,10 @@ const InstallButton = ({ quickstart, location, ...props }) => {
   );
 };
 
-InstallButton.propTypes = {
-  quickstart: quickstart.isRequired,
-  onClick: PropTypes.func.isRequired,
-  location: PropTypes.object.isRequired,
-};
+interface InstallButtonProps {
+  quickstart: Quickstart;
+  onClick: Function;
+  location: RouteProps['location'];
+}
 
 export default InstallButton;

@@ -1,15 +1,9 @@
-import React from 'react';
-import PropTypes from 'prop-types';
 import { css } from '@emotion/react';
 import ReactMarkdown from 'react-markdown';
 
 import { Link } from '@newrelic/gatsby-theme-newrelic';
 
-const aTagToLink = ({
-  // eslint-disable-next-line no-unused-vars
-  node,
-  ...props
-}) => {
+const aTagToLink = ({ ...props }) => {
   return (
     <Link
       to={props.href}
@@ -23,9 +17,10 @@ const aTagToLink = ({
   );
 };
 
-const Markdown = ({ className, ...props }) => (
+const Markdown = ({ className, children, ...props }: MarkdownProps) => (
   <ReactMarkdown
     {...props}
+    children={children}
     className={className}
     css={css`
       > *:first-child {
@@ -38,8 +33,9 @@ const Markdown = ({ className, ...props }) => (
   />
 );
 
-Markdown.propTypes = {
-  className: PropTypes.string,
-};
+interface MarkdownProps extends ReactMarkdown.ReactMarkdownOptions {
+  className: string;
+  children: string;
+}
 
 export default Markdown;

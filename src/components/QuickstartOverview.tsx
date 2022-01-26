@@ -1,6 +1,6 @@
 import React from 'react';
 import { css } from '@emotion/react';
-import { quickstart } from '../types';
+import { Quickstart } from '../types';
 import OverviewTile from './OverviewTile';
 import Markdown from './Markdown';
 
@@ -20,7 +20,10 @@ const allowedElements = [
   'hr',
 ];
 
-const QuickstartOverview = ({ quickstart }) => {
+const QuickstartOverview = ({
+  quickstart,
+  className,
+}: QuickstartOverviewProps) => {
   return (
     <>
       <h2> What&apos;s included </h2>
@@ -84,6 +87,7 @@ const QuickstartOverview = ({ quickstart }) => {
           `}
         >
           <Markdown
+            className={className}
             skipHtml
             allowedElements={allowedElements}
             css={css`
@@ -98,8 +102,9 @@ const QuickstartOverview = ({ quickstart }) => {
   );
 };
 
-QuickstartOverview.propTypes = {
-  quickstart: quickstart.isRequired,
-};
+interface QuickstartOverviewProps {
+  quickstart: Quickstart;
+  className: string;
+}
 
 export default QuickstartOverview;
