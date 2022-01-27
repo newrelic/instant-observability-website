@@ -10,7 +10,6 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
         edges {
           node {
             fields {
-              fileRelativePath
               slug
             }
             id
@@ -39,10 +38,20 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
       context: {
         id,
         layout: 'QuickStartLayout',
-        fileRelativePath,
       },
     });
   });
+};
+
+exports.onCreatePage = async ({ page, actions }) => {
+  const { createPage, deletePage } = actions;
+  const oldPage = { ...page };
+
+  if (page.path === '/') {
+    page.context.layout = 'QuickStartLayout';
+  }
+  deletePage(oldPage);
+  createPage(page);
 };
 
 exports.onCreateNode = ({ node, actions }) => {
