@@ -8,19 +8,48 @@
     "gatsby"
   ],
   "scripts": {
-    "develop": "gatsby develop",
+    "develop": "GATSBY_NEWRELIC_ENV=development gatsby develop",
     "start": "gatsby develop",
-    "build": "gatsby build",
+    "build": "GATSBY_NEWRELIC_ENV=production gatsby build",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "fetch-quickstarts": "node ./scripts/actions/fetch-quickstarts.js"
+    "fetch-quickstarts": "node ./scripts/actions/fetch-quickstarts.js",
+    "build:related-content": "BUILD_RELATED_CONTENT=true yarn run build"
   },
   "dependencies": {
-    "gatsby": "^4.5.3",
-    "gatsby-plugin-gatsby-cloud": "^4.5.2",
-    "gatsby-source-filesystem": "^4.5.2",
-    "gatsby-transformer-json": "^4.5.0",
+    "@emotion/react": "^11.1.5",
+    "@emotion/styled": "^11.3.0",
+    "@mdx-js/mdx": "^1.6.19",
+    "@mdx-js/react": "^1.6.19",
+    "@newrelic/gatsby-theme-newrelic": "^4.0.5",
+    "@splitsoftware/splitio-react": "^1.2.0",
+    "gatsby": "^3.8.0",
+    "gatsby-plugin-gatsby-cloud": "^3.0.0",
+    "gatsby-source-filesystem": "^3.8.0",
+    "gatsby-transformer-json": "^3.3.0",
+    "gatsby-transformer-sharp": "^3.13.0",
+    "gatsby-plugin-emotion": "^6.8.0",
+    "gatsby-plugin-manifest": "^3.13.0",
+    "gatsby-plugin-meta-redirect": "^1.1.1",
+    "gatsby-plugin-mdx": "^2.8.0",
+    "gatsby-plugin-use-query-params": "^1.0.1",
+    "gatsby-plugin-react-helmet": "^4.8.0",
+    "gatsby-plugin-sass": "^4.8.0",
+    "gatsby-plugin-sharp": "^3.14.1",
+    "node-sass": "^6.0.1",
+    "pluralize": "^8.0.0",
     "react": "^17.0.1",
-    "react-dom": "^17.0.1"
+    "react-dom": "^17.0.1",
+    "react-helmet": "^6.1.0",
+    "react-markdown": "^6.0.0",
+    "sharp": "^0.29.1",
+    "use-mobile-detect-hook": "^1.0.4",
+    "use-query-params": "^1.2.2"
+  },
+  "devDependencies": {
+    "@newrelic/eslint-plugin-newrelic": "^0.3.1",
+    "babel-jest": "^26.0.1",
+    "babel-preset-gatsby": "^1.0.0",
+    "prettier": "2.2.1"
   }
 }
