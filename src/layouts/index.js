@@ -3,9 +3,9 @@ import QuickStartLayout from './QuickStartLayout';
 import PropTypes from 'prop-types';
 
 const Layout = ({ children, pageContext }) => {
-  //if (pageContext.fileRelativePath.match(/404/)) {
-  //return children;
-  //}
+  if (pageContext.fileRelativePath.match(/404/)) {
+    return children;
+  }
 
   return <QuickStartLayout>{children}</QuickStartLayout>;
 };
