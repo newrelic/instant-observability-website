@@ -40,22 +40,14 @@ module.exports = {
             engineKey: 'Ad9HfGjDw4GRkcmJjUut',
             limit: 5,
             getSlug: ({ node }) => {
-              if (node.internal.type === 'Mdx') {
-                return node.fields.slug;
-              } else if (node.internal.type === 'Quickstarts') {
+              if (node.internal.type === 'Quickstarts') {
                 return resolveQuickstartSlug(node.name, node.id);
               }
             },
             getParams: ({ node }) => {
-              let tags = [];
-              let title = '';
-              if (node.frontmatter) {
-                tags = node.frontmatter.tags;
-                title = node.frontmatter.title;
-              } else {
-                tags = node.keywords;
-                title = node.title;
-              }
+              let tags = node.keywords;
+              let title = node.title;
+
               return {
                 q: tags ? tags.map(quote).join(' OR ') : title,
                 search_fields: {
@@ -79,9 +71,7 @@ module.exports = {
                 },
               };
             },
-            filter: ({ node }) =>
-              node.frontmatter?.template === 'GuideTemplate' ||
-              node.internal.type === 'Quickstarts',
+            filter: ({ node }) => node.internal.type === 'Quickstarts',
           },
         },
         newrelic: {
