@@ -43,12 +43,12 @@ jobs:
 
       - name: Temporarily disable branch protection
         id: disable-branch-protection
-        uses: actions/github-script@v1
+        uses: actions/github-script@v5
         with:
           github-token: ${{ secrets.OPENSOURCE_BOT_TOKEN }}
           previews: luke-cage-preview
           script: |
-            const result = await github.repos.updateBranchProtection({
+            const result = await github.rest.repos.updateBranchProtection({
               owner: context.repo.owner,
               repo: context.repo.repo,
               branch: 'main',
@@ -78,12 +78,12 @@ jobs:
       - name: Re-enable branch protection
         id: enable-branch-protection
         if: always()
-        uses: actions/github-script@v1
+        uses: actions/github-script@v5
         with:
           github-token: ${{ secrets.OPENSOURCE_BOT_TOKEN }}
           previews: luke-cage-preview
           script: |
-            const result = await github.repos.updateBranchProtection({
+            const result = await github.rest.repos.updateBranchProtection({
               owner: context.repo.owner,
               repo: context.repo.repo,
               branch: 'main',
