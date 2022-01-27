@@ -10,6 +10,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
         edges {
           node {
             fields {
+              fileRelativePath
               slug
             }
             id
@@ -38,6 +39,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
       context: {
         id,
         layout: 'QuickStartLayout',
+        fileRelativePath,
       },
     });
   });
