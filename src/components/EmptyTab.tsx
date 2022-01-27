@@ -1,5 +1,3 @@
-import React from 'react';
-import PropTypes from 'prop-types';
 import { css } from '@emotion/react';
 import { Button, Icon, Link } from '@newrelic/gatsby-theme-newrelic';
 import { QUICKSTARTS_REPO } from '../data/constants';
@@ -8,7 +6,7 @@ const EmptyTab = ({
   quickstartName,
   tabName,
   quickstartUrl = QUICKSTARTS_REPO,
-}) => (
+}: EmptyTabProps) => (
   <div
     css={css`
       border: 1px solid var(--divider-color);
@@ -57,10 +55,10 @@ const EmptyTab = ({
   </div>
 );
 
-EmptyTab.propTypes = {
-  quickstartName: PropTypes.string.isRequired,
-  tabName: PropTypes.string.isRequired,
-  quickstartUrl: PropTypes.string,
-};
+interface EmptyTabProps {
+  quickstartName: string;
+  tabName: string;
+  quickstartUrl: string;
+}
 
 export default EmptyTab;

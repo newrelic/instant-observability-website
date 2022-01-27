@@ -104,6 +104,7 @@ export interface Quickstart {
   authors: string[];
   summary?: string;
   iconUrl: string;
+  packUrl: string;
   logoUrl: string;
   websiteUrl: string;
   dashboards?: QuickstartDashboard[];

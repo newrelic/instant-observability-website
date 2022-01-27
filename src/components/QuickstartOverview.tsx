@@ -1,4 +1,3 @@
-import React from 'react';
 import { css } from '@emotion/react';
 import { Quickstart } from '../types';
 import OverviewTile from './OverviewTile';

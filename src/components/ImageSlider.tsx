@@ -1,10 +1,9 @@
-import PropTypes from 'prop-types';
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { css } from '@emotion/react';
 import { Button, Icon } from '@newrelic/gatsby-theme-newrelic';
 import { Transition, animated } from 'react-spring';
 
-const ImageSlider = ({ images, height }) => {
+const ImageSlider = ({ images, height }: ImageSliderProps) => {
   const [selectedImageIndex, setSelectedImageIndex] = useState(0);
   const [forward, setForward] = useState(true);
 
@@ -24,7 +23,7 @@ const ImageSlider = ({ images, height }) => {
     setForward(false);
   };
 
-  const handleClickSpecificSlide = (indexValue) => {
+  const handleClickSpecificSlide = (indexValue: number) => {
     setSelectedImageIndex(indexValue);
   };
 
@@ -201,9 +200,9 @@ const ImageSlider = ({ images, height }) => {
   );
 };
 
-ImageSlider.propTypes = {
-  images: PropTypes.array.isRequired,
-  height: PropTypes.number.isRequired,
-};
+interface ImageSliderProps {
+  images: string[];
+  height: number;
+}
 
 export default ImageSlider;

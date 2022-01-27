@@ -1,7 +1,5 @@
-import React, { useEffect, useState } from 'react';
-import { PageProps } from 'gatsby';
-import PropTypes from 'prop-types';
-import { RouteProps } from '@reach/router';
+import { useEffect, useState } from 'react';
+import { RouterProps } from '@reach/router';
 import { css } from '@emotion/react';
 import { Button, Link, Icon, useTessen } from '@newrelic/gatsby-theme-newrelic';
 import {
@@ -148,7 +146,9 @@ const InstallButton = ({
   const writeCookie = () => {
     const currentEnvironment =
       process.env.ENV || process.env.NODE_ENV || 'development';
-    const options = { expires: 1 /* days */ };
+    const options: { expires: number; domain?: string } = {
+      expires: 1 /* days */,
+    };
     if (currentEnvironment !== 'development') {
       options.domain = 'newrelic.com';
     }
@@ -207,7 +207,7 @@ const InstallButton = ({
 interface InstallButtonProps {
   quickstart: Quickstart;
   onClick: Function;
-  location: RouteProps['location'];
+  location: RouterProps['location'];
 }
 
 export default InstallButton;

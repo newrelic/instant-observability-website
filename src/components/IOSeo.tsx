@@ -1,9 +1,15 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import { RouterProps } from '@reach/router';
 import { SEO as Seo } from '@newrelic/gatsby-theme-newrelic';
 import { useStaticQuery, graphql, withPrefix } from 'gatsby';
 
-function IOSeo({ description, meta, title, tags, location, type }) {
+function IOSeo({
+  description = '',
+  meta = [],
+  title,
+  tags,
+  location,
+  type,
+}: IOSeoProps) {
   const { site } = useStaticQuery(
     graphql`
       query {
@@ -18,7 +24,7 @@ function IOSeo({ description, meta, title, tags, location, type }) {
     `
   );
 
-  const crazyEgg = (location) => {
+  const crazyEgg = (location: RouterProps['location']) => {
     const crazyEggPathnames = [
       '/',
       '/instant-observability/',
@@ -34,14 +40,14 @@ function IOSeo({ description, meta, title, tags, location, type }) {
         <script
           type="text/javascript"
           src="//script.crazyegg.com/pages/scripts/0045/9836.js"
-          async="async"
+          async
         />
       );
   };
 
   const metaDescription = description || site.siteMetadata.description;
 
-  const globalMetadata = [
+  const globalMetadata: Metadata[] = [
     { name: 'description', content: metaDescription },
     { 'http-equiv': 'Content-Type', content: 'text/html', charset: 'utf-8' },
 
@@ -108,19 +114,18 @@ function IOSeo({ description, meta, title, tags, location, type }) {
   );
 }
 
-IOSeo.defaultProps = {
-  meta: [],
-  description: '',
-};
+interface IOSeoProps {
+  location: RouterProps['location'];
+  description?: string;
+  meta?: Metadata[];
+  title?: string;
+  tags?: string[];
+  type?: string;
+  quickStartName?: string;
+}
 
-IOSeo.propTypes = {
-  location: PropTypes.object.isRequired,
-  description: PropTypes.string,
-  meta: PropTypes.arrayOf(PropTypes.object),
-  title: PropTypes.string,
-  tags: PropTypes.arrayOf(PropTypes.string),
-  type: PropTypes.string,
-  quickStartName: PropTypes.string,
-};
+interface Metadata {
+  [x: string]: string;
+}
 
 export default IOSeo;
