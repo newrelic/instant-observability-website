@@ -1,6 +1,9 @@
 import React, { useEffect, useState } from 'react';
-import { Layout, NR_SITES } from '@newrelic/gatsby-theme-newrelic';
-import GlobalHeader from '../@newrelic/gatsby-theme-newrelic/GlobalHeader';
+import {
+  Layout,
+  GlobalHeader,
+  NR_SITES,
+} from '@newrelic/gatsby-theme-newrelic';
 import PropTypes from 'prop-types';
 import { css } from '@emotion/react';
 import '../components/styles.scss';
