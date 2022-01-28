@@ -8,14 +8,12 @@ import ExternalLink from '@newrelic/gatsby-theme-newrelic/src/components/Externa
 import Button from '@newrelic/gatsby-theme-newrelic/src/components/Button';
 import Dropdown from '@newrelic/gatsby-theme-newrelic/src/components/Dropdown';
 import NewRelicLogo from '@newrelic/gatsby-theme-newrelic/src/components/NewRelicLogo';
-import Icon from '@newrelic/gatsby-theme-newrelic/src/components/Icon';
 import GlobalNavLink from '@newrelic/gatsby-theme-newrelic/src/components/GlobalNavLink';
 import useMedia from 'use-media';
 import { useLocation } from '@reach/router';
 import useQueryParams from '@newrelic/gatsby-theme-newrelic/src/hooks/useQueryParams';
 import useLocale from '@newrelic/gatsby-theme-newrelic/src/hooks/useLocale';
 import useThemeTranslation from '@newrelic/gatsby-theme-newrelic/src/hooks/useThemeTranslation';
-import path from 'path';
 import { rgba } from 'polished';
 import SearchModal from '@newrelic/gatsby-theme-newrelic/src/components/SearchModal';
 import { useDebounce } from 'react-use';
@@ -52,7 +50,7 @@ HEADER_LINKS.set(NR_SITES.PLATFORM, {
   })
   .set(NR_SITES.Solutions, {
     text: 'Solutions',
-    href: 'https://newrelic.com/',
+    href: 'https://newrelic.com/devops',
   })
   .set(NR_SITES.DOCS, {
     text: 'Docs',
@@ -60,7 +58,7 @@ HEADER_LINKS.set(NR_SITES.PLATFORM, {
   })
   .set(NR_SITES.IO, {
     text: 'Instant Observability',
-    href: 'https://newrelic.com/instant-observability',
+    href: 'https://developer.newrelic.com/instant-observability/',
   });
 
 const createNavList = (listType, activeSite = null) => {
@@ -300,6 +298,10 @@ const GlobalHeader = ({ className, activeSite }) => {
                   css={css`
                     .logo-text {
                       fill: var(--color-neutrals-900);
+
+                      .dark-mode & {
+                        fill: var(--color-neutrals-100);
+                      }
                     }
                   `}
                   omitText={hideLogoText}
@@ -331,6 +333,9 @@ const GlobalHeader = ({ className, activeSite }) => {
                     --active-color: var(--color-neutrals-400);
                     color: var(--color-neutrals-900);
 
+                    &:hover {
+                      color: var(--color-neutrals-900);
+                    }
                     .dark-mode & {
                       --active-color: var(--color-neutrals-900);
                       color: var(--color-neutrals-100);
@@ -355,6 +360,7 @@ const GlobalHeader = ({ className, activeSite }) => {
               display: flex;
               list-style-type: none;
               align-items: center;
+              justify-content: flex-end;
               flex: 1;
 
               > li {
@@ -373,89 +379,6 @@ const GlobalHeader = ({ className, activeSite }) => {
           >
             <li
               css={css`
-                flex: 1;
-                margin: 0rem 1rem;
-
-                @media screen and (max-width: ${CONDENSED_BREAKPOINT}) {
-                  flex: unset;
-                }
-              `}
-            >
-              <Link
-                to="?q="
-                onFocus={() => {
-                  setQueryParam('q', '');
-                }}
-                css={css`
-                  ${actionLink}
-                  > svg {
-                    color: var(--color-neutrals-700);
-                    .dark-mode & {
-                      color: var(--color-neutrals-300);
-                    }
-                  }
-
-                  @media screen and (max-width: ${CONDENSED_BREAKPOINT}) {
-                    display: block;
-                  }
-                `}
-              >
-                <Icon css={actionIcon} name="fe-search" size="1.5rem" />
-              </Link>
-            </li>
-            {locales.length > 1 && (
-              <li
-                css={css`
-                  @media screen and (max-width: ${MOBILE_BREAKPOINT}) {
-                    display: none;
-                  }
-                `}
-              >
-                <Dropdown align="right">
-                  <Dropdown.Toggle
-                    size={Button.SIZE.SMALL}
-                    variant={Button.VARIANT.LINK}
-                    css={css`
-                      --active-color: none;
-                      margin: 0;
-                      height: 72px;
-                      border-radius: 0px;
-                      font-size: 0.75rem;
-                      color: var(--color-neutrals-00);
-                      background: transparent;
-
-                      .dark-mode & {
-                        --active-color: var(--color-dark-100);
-                      }
-
-                      &:hover {
-                        color: var(--color-neutrals-600);
-                        background-color: var(--active-color);
-                      }
-                    `}
-                  >
-                    {locale.localName}
-                  </Dropdown.Toggle>
-                  <Dropdown.Menu>
-                    {locales.map(({ isDefault, locale, localName }) => (
-                      <Dropdown.MenuItem
-                        as={Link}
-                        key={locale}
-                        href={path.join(
-                          isDefault ? '' : `/${locale}`,
-                          location.pathname.replace(matchLocalePath, '')
-                        )}
-                      >
-                        {localName}
-                      </Dropdown.MenuItem>
-                    ))}
-                  </Dropdown.Menu>
-                </Dropdown>
-              </li>
-            )}
-
-            <li
-              css={css`
                 display: flex;
                 align-items: right;
               `}
@@ -470,7 +393,7 @@ const GlobalHeader = ({ className, activeSite }) => {
                   font-weight: 600;
                   font-size: 0.875rem;
                   white-space: nowrap;
-                  color: var(--color-brand-400);
+                  color: var(--color-brand-500);
                   border-radius: 4px;
 
                   @media screen and (max-width: ${MOBILE_BREAKPOINT}) {
@@ -503,6 +426,11 @@ const GlobalHeader = ({ className, activeSite }) => {
                   action,
                   css`
                     margin: 27px 0px 27px 19px;
+
+                    color: var(--color-neutrals-700);
+                    .dark-mode & {
+                      color: var(--color-neutrals-300);
+                    }
 
                     @media screen and (max-width: 450px) {
                       margin: 0;
