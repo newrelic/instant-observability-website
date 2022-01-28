@@ -1,5 +1,5 @@
 const path = require(`path`);
-const resolveQuickstartSlug = require("./src/utils/resolveQuickstartSlug.js");
+const resolveQuickstartSlug = require('./src/utils/resolveQuickstartSlug.js');
 
 exports.createPages = async ({ actions, graphql, reporter }) => {
   const { createPage } = actions;
@@ -33,11 +33,11 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
     } = node;
 
     createPage({
-      path: path.join(slug, "/"),
-      component: path.resolve("./src/templates/QuickstartDetails.js"),
+      path: path.join(slug, '/'),
+      component: path.resolve('./src/templates/QuickstartDetails.js'),
       context: {
         id,
-        layout: "QuickStartLayout",
+        layout: 'QuickStartLayout',
       },
     });
   });
@@ -47,8 +47,8 @@ exports.onCreatePage = async ({ page, actions }) => {
   const { createPage, deletePage } = actions;
   const oldPage = { ...page };
 
-  if (page.path === "/instant-observability/") {
-    page.context.layout = "QuickStartLayout";
+  if (page.path === '/') {
+    page.context.layout = 'QuickStartLayout';
   }
   deletePage(oldPage);
   createPage(page);
@@ -57,10 +57,10 @@ exports.onCreatePage = async ({ page, actions }) => {
 exports.onCreateNode = ({ node, actions }) => {
   const { createNodeField } = actions;
 
-  if (node.internal.type === "Quickstarts") {
+  if (node.internal.type === 'Quickstarts') {
     createNodeField({
       node,
-      name: "slug",
+      name: 'slug',
       value: `${resolveQuickstartSlug(node.name, node.id)}`,
     });
   }
@@ -73,9 +73,9 @@ exports.onCreateWebpackConfig = ({ actions, plugins }) => {
     // source instead of the node source. See the following issue for this
     // recommendation:
     // https://github.com/escaladesports/legacy-gatsby-plugin-prefetch-google-fonts/issues/18
-    plugins: [plugins.normalModuleReplacement(/^\.\/node\.js/, "./browser.js")],
+    plugins: [plugins.normalModuleReplacement(/^\.\/node\.js/, './browser.js')],
     externals: {
-      tessen: "Tessen",
+      tessen: 'Tessen',
     },
   });
 };

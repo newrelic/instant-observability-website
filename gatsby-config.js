@@ -2,6 +2,7 @@ const quote = (str) => `"${str}"`;
 const resolveQuickstartSlug = require('./src/utils/resolveQuickstartSlug');
 
 module.exports = {
+  pathPrefix: `/instant-observability`,
   flags: {
     DEV_SSR: true,
     PRESERVE_WEBPACK_CACHE: true,
@@ -145,7 +146,7 @@ module.exports = {
         typeName: 'Quickstarts',
       },
     },
-    'gatsby-plugin-mdx',
+    'gatsby-plugin-mdx', // Not used, but required by the theme
     'gatsby-plugin-meta-redirect',
     'gatsby-plugin-use-query-params',
     {

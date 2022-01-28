@@ -9,9 +9,11 @@
   ],
   "scripts": {
     "develop": "GATSBY_NEWRELIC_ENV=development gatsby develop",
-    "start": "gatsby develop",
+    "start": "yarn develop",
     "build": "GATSBY_NEWRELIC_ENV=production gatsby build",
+    "build:production": "yarn build --prefix-paths",
     "serve": "gatsby serve",
+    "serve:production": "yarn serve --prefix-paths",
     "clean": "gatsby clean",
     "fetch-quickstarts": "node ./scripts/actions/fetch-quickstarts.js",
     "build:related-content": "BUILD_RELATED_CONTENT=true yarn run build"
