@@ -3,11 +3,11 @@ import QuickStartLayout from './QuickStartLayout';
 import PropTypes from 'prop-types';
 
 const Layout = ({ children, pageContext }) => {
-  if (pageContext.fileRelativePath.match(/404/)) {
-    return children;
+  if (pageContext.layout === 'QuickStartLayout') {
+    return <QuickStartLayout>{children}</QuickStartLayout>;
   }
 
-  return <QuickStartLayout>{children}</QuickStartLayout>;
+  return <>{children}</>;
 };
 
 Layout.propTypes = {
