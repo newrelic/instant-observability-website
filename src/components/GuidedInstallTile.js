@@ -68,7 +68,8 @@ const GuidedInstallTile = () => {
           <span
             css={css`
               color: var(--color-neutrals-300);
-
+              font-size: 14px;
+              
               .dark-mode & {
                 color: var(--primary-text-color);
               }
