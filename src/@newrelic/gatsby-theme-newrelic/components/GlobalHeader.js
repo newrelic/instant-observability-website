@@ -50,7 +50,7 @@ HEADER_LINKS.set(NR_SITES.PLATFORM, {
   })
   .set(NR_SITES.IO, {
     text: 'Instant Observability',
-    href: 'https://developer.newrelic.com/instant-observability/',
+    href: 'https://newrelic.com/instant-observability/',
   });
 
 const createNavList = (listType, activeSite = null) => {
