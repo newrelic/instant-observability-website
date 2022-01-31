@@ -1,7 +1,6 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import { css } from '@emotion/react';
-import { graphql, useStaticQuery, Link } from 'gatsby';
 import AnnouncementBanner from '@newrelic/gatsby-theme-newrelic/src/components/AnnouncementBanner';
 import DarkModeToggle from '@newrelic/gatsby-theme-newrelic/src/components/DarkModeToggle';
 import ExternalLink from '@newrelic/gatsby-theme-newrelic/src/components/ExternalLink';
@@ -10,15 +9,8 @@ import Dropdown from '@newrelic/gatsby-theme-newrelic/src/components/Dropdown';
 import NewRelicLogo from '@newrelic/gatsby-theme-newrelic/src/components/NewRelicLogo';
 import GlobalNavLink from '@newrelic/gatsby-theme-newrelic/src/components/GlobalNavLink';
 import useMedia from 'use-media';
-import { useLocation } from '@reach/router';
-import useQueryParams from '@newrelic/gatsby-theme-newrelic/src/hooks/useQueryParams';
-import useLocale from '@newrelic/gatsby-theme-newrelic/src/hooks/useLocale';
 import useThemeTranslation from '@newrelic/gatsby-theme-newrelic/src/hooks/useThemeTranslation';
 import { rgba } from 'polished';
-import SearchModal from '@newrelic/gatsby-theme-newrelic/src/components/SearchModal';
-import { useDebounce } from 'react-use';
-import useHasMounted from '@newrelic/gatsby-theme-newrelic/src/hooks/useHasMounted';
-import useTessen from '@newrelic/gatsby-theme-newrelic/src/hooks/useTessen';
 import SplitTextButton from '@newrelic/gatsby-theme-newrelic/src/components/SplitTextButton';
 
 const action = css`
@@ -98,89 +90,18 @@ const NAV_BREAKPOINT = '770px';
 // changes layout for mobile view
 const MOBILE_BREAKPOINT = '600px';
 
-const actionLink = css`
-  ${action};
-
-  display: flex;
-  align-items: center;
-`;
-
 const actionIcon = css`
   display: block;
   cursor: pointer;
 `;
 
-const useSearchQuery = () => {
-  const { queryParams, setQueryParam } = useQueryParams();
-  const searchQueryParam = queryParams.get('q');
-  const [searchTerm, setSearchTerm] = useState(searchQueryParam);
-  const hasQParam = queryParams.has('q');
-  const tessen = useTessen();
-
-  useDebounce(
-    () => {
-      if (hasQParam) {
-        setQueryParam('q', searchTerm);
-        if (searchTerm && searchTerm.length > 2) {
-          tessen.track({
-            eventName: 'swiftypeSearchInput',
-            category: 'GlobalSearch',
-            name: 'searchInput',
-            searchTerm,
-          });
-        }
-      }
-    },
-    400,
-    [searchTerm, setQueryParam, hasQParam]
-  );
-
-  useEffect(() => {
-    setSearchTerm(searchQueryParam);
-  }, [searchQueryParam]);
-
-  return [searchTerm, setSearchTerm];
-};
-
 const GlobalHeader = ({ className, activeSite }) => {
-  const hasMounted = useHasMounted();
-  const location = useLocation();
-  const { queryParams, setQueryParam, deleteQueryParam } = useQueryParams();
-  const [searchTerm, setSearchTerm] = useSearchQuery();
   const { t } = useThemeTranslation();
-
-  const {
-    allLocale: { nodes: locales },
-  } = useStaticQuery(graphql`
-    query GlobalHeaderQuery2 {
-      allLocale(sort: { fields: [isDefault, locale], order: [DESC, ASC] }) {
-        nodes {
-          locale
-          localName
-          isDefault
-        }
-      }
-    }
-  `);
 
   const hideLogoText = useMedia({ maxWidth: '350px' });
 
-  const matchLocalePath = new RegExp(
-    `^\\/(${locales.map(({ locale }) => locale).join('|')})`
-  );
-
-  const locale = useLocale();
-
   return (
     <>
-      <SearchModal
-        value={searchTerm}
-        onChange={(searchTerm) => setSearchTerm(searchTerm)}
-        onClose={() => {
-          deleteQueryParam('q');
-        }}
-        isOpen={hasMounted && queryParams.has('q')}
-      />
       <AnnouncementBanner />
       <div
         data-swiftype-index={false}
@@ -318,7 +239,6 @@ const GlobalHeader = ({ className, activeSite }) => {
                 margin: 0;
                 padding: 0;
                 display: flex;
-
                 list-style-type: none;
                 white-space: nowrap;
                 overflow-x: auto;
