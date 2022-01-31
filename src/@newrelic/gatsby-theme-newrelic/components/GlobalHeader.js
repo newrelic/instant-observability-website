@@ -11,7 +11,6 @@ import GlobalNavLink from '@newrelic/gatsby-theme-newrelic/src/components/Global
 import useMedia from 'use-media';
 import useThemeTranslation from '@newrelic/gatsby-theme-newrelic/src/hooks/useThemeTranslation';
 import { rgba } from 'polished';
-import SplitTextButton from '@newrelic/gatsby-theme-newrelic/src/components/SplitTextButton';
 
 const action = css`
   color: var(--secondary-text-color);
@@ -329,7 +328,16 @@ const GlobalHeader = ({ className, activeSite }) => {
                 display: flex;
               `}
             >
-              <SplitTextButton
+              <Button
+                as={ExternalLink}
+                className={className}
+                href="https://newrelic.com/signup"
+                size={Button.SIZE.SMALL}
+                variant={Button.VARIANT.PRIMARY}
+                // instrumentation={{
+                //   component: 'SplitTextButton',
+                //   layoutElement: 'globalHeader',
+                // }}
                 css={css`
                   button {
                     background: var(color-brand-500);
@@ -337,7 +345,9 @@ const GlobalHeader = ({ className, activeSite }) => {
                     border-radius: 4px;
                   }
                 `}
-              />
+              >
+                <span>{t('button.signUp')}</span>
+              </Button>
             </li>
             <li>
               <DarkModeToggle
