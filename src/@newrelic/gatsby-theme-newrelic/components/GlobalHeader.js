@@ -335,7 +335,7 @@ const GlobalHeader = ({ className, activeSite }) => {
                 size={Button.SIZE.SMALL}
                 variant={Button.VARIANT.PRIMARY}
                 instrumentation={{
-                  component: 'signUp',
+                  component: 'SignupButton',
                   layoutElement: 'globalHeader',
                 }}
                 css={css`
