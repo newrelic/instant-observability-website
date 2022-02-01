@@ -334,10 +334,10 @@ const GlobalHeader = ({ className, activeSite }) => {
                 href="https://newrelic.com/signup"
                 size={Button.SIZE.SMALL}
                 variant={Button.VARIANT.PRIMARY}
-                // instrumentation={{
-                //   component: 'SplitTextButton',
-                //   layoutElement: 'globalHeader',
-                // }}
+                instrumentation={{
+                  component: 'signUp',
+                  layoutElement: 'globalHeader',
+                }}
                 css={css`
                   button {
                     background: var(color-brand-500);
