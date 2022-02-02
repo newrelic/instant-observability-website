@@ -63,7 +63,6 @@ const GlobalFooter = ({
       `}
     >
       <div
-        id="random-div"
         css={css`
           font-size: 0.75rem;
           align-items: center;
