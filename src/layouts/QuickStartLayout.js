@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import {
   Layout,
   GlobalHeader,
+  GlobalFooter,
   NR_SITES,
 } from '@newrelic/gatsby-theme-newrelic';
 import PropTypes from 'prop-types';
@@ -10,14 +11,6 @@ import '../components/styles.scss';
 import { QUICKSTARTS_COLLAPSE_BREAKPOINT } from '../data/constants';
 
 const QuickStartLayout = ({ children }) => {
-  const [sidebarWidth, setSidebarWidth] = useState(0);
-
-  useEffect(() => {
-    if (window.location.pathname === '/instant-observability/') {
-      setSidebarWidth(300);
-    } else setSidebarWidth(0);
-  }, [children]);
-
   return (
     <>
       <GlobalHeader activeSite={NR_SITES.IO} />
@@ -38,20 +31,15 @@ const QuickStartLayout = ({ children }) => {
         >
           {children}
         </Layout.Main>
-        <Layout.Footer
-          css={css`
-            --sidebar-offset: ${sidebarWidth}px;
-
-            max-width: calc(var(--site-max-width) - var(--sidebar-offset));
-
-            margin-left: calc(var(--sidebar-offset));
-
-            @media screen and (max-width: ${QUICKSTARTS_COLLAPSE_BREAKPOINT}) {
-              margin-left: 0;
-            }
-          `}
-        />
       </Layout>
+      <GlobalFooter
+        css={css`
+          max-width: 100% @media screen and
+            (max-width: ${QUICKSTARTS_COLLAPSE_BREAKPOINT}) {
+            margin-left: 0;
+          }
+        `}
+      />
     </>
   );
 };
