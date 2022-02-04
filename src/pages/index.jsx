@@ -539,17 +539,6 @@ const QuickstartsPage = ({ data, location }) => {
               `};
             `}
           >
-            <QuickstartTile
-              id={RESERVED_QUICKSTART_IDS.BUILD_YOUR_OWN_QUICKSTART}
-              css={css`
-                background-color: var(--tertiary-background-color);
-              `}
-              href={QUICKSTARTS_REPO}
-              view={view}
-              logoUrl={BUILD_YOUR_OWN}
-              title="Build your own quickstart"
-              summary="Can't find a quickstart with what you need? Check out our README and build your own."
-            />
             {filteredQuickstarts.map((pack) => (
               <QuickstartTile
                 key={pack.id}

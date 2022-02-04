@@ -2,11 +2,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Button from '@newrelic/gatsby-theme-newrelic/src/components/Button';
 import Logo from '@newrelic/gatsby-theme-newrelic/src/components/Logo';
+import Icon from '@newrelic/gatsby-theme-newrelic/src/components/Icon';
 import ExternalLink from '@newrelic/gatsby-theme-newrelic/src/components/ExternalLink';
 import { graphql, useStaticQuery } from 'gatsby';
 import { css } from '@emotion/react';
-import CreateIssueButton from '@newrelic/gatsby-theme-newrelic/src/components/CreateIssueButton';
-import EditPageButton from '@newrelic/gatsby-theme-newrelic/src/components/EditPageButton';
 import useThemeTranslation from '@newrelic/gatsby-theme-newrelic/src//hooks/useThemeTranslation';
 import Trans from '@newrelic/gatsby-theme-newrelic/src/components/Trans';
 import Link from '@newrelic/gatsby-theme-newrelic/src/components/Link';
@@ -91,27 +90,20 @@ const GlobalFooter = ({
           />
         </Link>
         <div>
-          {repository && (
-            <CreateIssueButton
-              pageTitle={pageTitle}
-              variant={Button.VARIANT.OUTLINE}
-              size={Button.SIZE.SMALL}
-              labels={issueLabels}
-              instrumentation={{ component: 'GlobalFooter' }}
+          <Button
+            as={Link}
+            variant={Button.VARIANT.OUTLINE}
+            to="https://developer.newrelic.com/contribute-to-quickstarts/"
+            instrumentation={{ component: 'GlobalFooter' }}
+          >
+            <Icon
+              name="zap"
               css={css`
-                margin-right: 0.5rem;
+                margin-right: 7px;
               `}
             />
-          )}
-
-          {repository && fileRelativePath && locale === 'en' && (
-            <EditPageButton
-              fileRelativePath={fileRelativePath}
-              variant={Button.VARIANT.OUTLINE}
-              size={Button.SIZE.SMALL}
-              instrumentation={{ component: 'GlobalFooter' }}
-            />
-          )}
+            Build your own
+          </Button>
         </div>
       </div>
 
@@ -206,7 +198,6 @@ GlobalFooter.propTypes = {
   fileRelativePath: PropTypes.string,
   className: PropTypes.string,
   pageTitle: PropTypes.string,
-  issueLabels: CreateIssueButton.propTypes.labels,
 };
 
 export default GlobalFooter;
