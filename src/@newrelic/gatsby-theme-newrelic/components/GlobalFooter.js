@@ -103,6 +103,12 @@ const GlobalFooter = ({
               `}
             />
             Build your own
+            <Icon
+              name="external-link"
+              css={css`
+                margin-left: 7px;
+              `}
+            />
           </Button>
         </div>
       </div>
