@@ -17,19 +17,13 @@ import useLocale from '@newrelic/gatsby-theme-newrelic/src//hooks/useLocale';
 const copyrightSymbol = String.fromCharCode(169);
 const year = new Date().getFullYear();
 
-const GlobalFooter = ({
-  fileRelativePath,
-  className,
-  pageTitle,
-  issueLabels,
-}) => {
+const GlobalFooter = ({ className }) => {
   const { t } = useThemeTranslation();
   const { site, sitePage } = useStaticQuery(graphql`
     query FooterQueryIO {
       site {
         siteMetadata {
           siteUrl
-          repository
         }
       }
       sitePage(path: { eq: "/terms" }) {
@@ -40,7 +34,6 @@ const GlobalFooter = ({
   const { locale } = useLocale();
 
   const { siteMetadata } = site;
-  const { repository } = siteMetadata;
 
   return (
     <footer
