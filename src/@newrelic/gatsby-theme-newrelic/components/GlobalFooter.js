@@ -84,7 +84,7 @@ const GlobalFooter = ({ className }) => {
         </Link>
         <div>
           <Button
-            as={Link}
+            as={ExternalLink}
             variant={Button.VARIANT.OUTLINE}
             to="https://developer.newrelic.com/contribute-to-quickstarts/"
             instrumentation={{ component: 'GlobalFooter' }}
