@@ -9,14 +9,14 @@ module.exports = {
     PRESERVE_FILE_DOWNLOAD_CACHE: true,
   },
   siteMetadata: {
-    title: 'New Relic Developers',
-    titleTemplate: '%s | New Relic Developers',
+    title: 'New Relic Instant Observability',
+    titleTemplate: '%s | New Relic Instant Observability',
     description:
-      'Do more on our platform and make New Relic your own with APIs, SDKs, code snippets, tutorials, and more developer tools.',
+      'Instant Observability - Dashboards, alerts, and integrations all in one place! Our quickstarts bundle everything you need to start monitoring like a pro right out of the box.',
     author: 'New Relic',
-    repository: 'https://github.com/newrelic/developer-website',
-    siteUrl: 'https://developer.newrelic.com',
-    branch: 'develop',
+    repository: 'https://github.com/newrelic/instant-observability-website',
+    siteUrl: 'https://newrelic.com/instant-observability',
+    branch: 'main',
   },
   plugins: [
     'gatsby-plugin-sharp',
