@@ -16,7 +16,7 @@ module.exports = {
     author: 'New Relic',
     repository: 'https://github.com/newrelic/instant-observability-website',
     siteUrl: 'https://newrelic.com/instant-observability',
-    branch: 'develop',
+    branch: 'main',
   },
   plugins: [
     'gatsby-plugin-sharp',
