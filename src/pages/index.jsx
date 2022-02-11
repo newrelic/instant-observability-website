@@ -543,7 +543,7 @@ const QuickstartsPage = ({ data, location }) => {
               <QuickstartTile
                 key={pack.id}
                 view={view}
-                featured={pack.keywords?.includes('featured')}
+                featured={false}
                 {...pack}
               />
             ))}
