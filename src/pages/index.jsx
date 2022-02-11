@@ -186,6 +186,11 @@ const QuickstartsPage = ({ data, location }) => {
     return found.displayName;
   };
 
+  // OPEN BUILD YOUR OWN QUICKSTART URL ON A NEW TAB
+  const buildYourOwn = (url) => {
+    window.open(url);
+  }
+
   return (
     <>
       <IOSeo
@@ -271,6 +276,17 @@ const QuickstartsPage = ({ data, location }) => {
                   >{`(${count})`}</span>
                 </Button>
               ))}
+            </FormControl>
+            <FormControl>
+              <Label htmlFor="quickstartCategory">Can build QuickStart</Label>
+                <Button
+                  type="button"
+                  key={RESERVED_QUICKSTART_IDS.BUILD_YOUR_OWN_QUICKSTART}
+                  onClick={() => buildYourOwn(QUICKSTARTS_REPO)}
+                  variant={Button.VARIANT.PRIMARY}
+                >
+                  Build your own
+                </Button>
             </FormControl>
           </div>
         </aside>
