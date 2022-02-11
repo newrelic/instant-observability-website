@@ -27,6 +27,11 @@ import CATEGORIES from '../data/instant-observability-categories';
 
 import SuperTiles from '../components/SuperTiles';
 
+import Slider from 'react-slick';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
+
+
 const VIEWS = {
   GRID: 'Grid view',
   LIST: 'List view',
@@ -92,6 +97,13 @@ const QuickstartsPage = ({ data, location }) => {
 
   const [isCategoriesOverlayOpen, setIsCategoriesOverlayOpen] = useState(false);
 
+  const [isSearchInputEmpty, setIsSearchInputEmpty] = useState(true);
+
+  const handleSearchInput = (e) => {
+    let searchInputValue = e.target.value;
+    setSearch(searchInputValue);
+    searchInputValue.length >0 ? setIsSearchInputEmpty(false) : setIsSearchInputEmpty(true);
+  }
   useEffect(() => {
     const params = new URLSearchParams(location.search);
     const searchParam = params.get('search');
@@ -143,6 +155,14 @@ const QuickstartsPage = ({ data, location }) => {
 
   const quickstarts = data.allQuickstarts.nodes;
 
+  const featuredQuickStarts = quickstarts?.filter((product) =>
+    product.keywords.includes('featured')
+  );
+
+  const mostPopularQuickStarts = quickstarts?.filter((product) =>
+    product.keywords.includes('most popular')
+  );
+
   const alphaSort = quickstarts.sort((a, b) => a.title.localeCompare(b.title));
   let sortedQuickstarts = sortFeaturedQuickstarts(alphaSort);
 
@@ -185,7 +205,40 @@ const QuickstartsPage = ({ data, location }) => {
 
     return found.displayName;
   };
-
+  const settings = {
+    dots: false,
+    infinite: false,
+    speed: 300,
+    slidesToShow: 4,
+    slidesToScroll: 4,
+    adaptiveHeight:false,
+    adaptiveWidth:true,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
+          infinite: true,
+          dots: false,
+        },
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+        },
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
+  };
   return (
     <>
       <IOSeo
@@ -332,8 +385,11 @@ const QuickstartsPage = ({ data, location }) => {
               size={SearchInput.SIZE.LARGE}
               value={search || ''}
               placeholder="What do you want to monitor? (e.g., AWS, LAMP, Kubernetes)"
-              onClear={() => setSearch('')}
-              onChange={(e) => setSearch(e.target.value)}
+              onClear={() => {
+                setSearch('');
+                setIsSearchInputEmpty(true);
+              }}
+              onChange={handleSearchInput}
               css={css`
                 --svg-color: var(--color-neutrals-700);
                 box-shadow: none;
@@ -473,6 +529,161 @@ const QuickstartsPage = ({ data, location }) => {
               </div>
             </Overlay>
           </div>
+          {
+            isSearchInputEmpty &&
+            <>
+          <div
+            css={css`
+              --text-color: var(--primary-text-color);
+              font-size: 16px;
+              color: var(--color-neutrals-800);
+              align-text: center;
+
+              span {
+                color: var(--text-color);
+
+                /* target inner children of parent span */
+                span,
+                strong {
+                  @media screen and (max-width: ${QUICKSTARTS_COLLAPSE_BREAKPOINT}) {
+                    display: none;
+                  }
+                }
+              }
+
+              strong {
+                color: var(--text-color);
+              }
+
+              @media screen and (max-width: ${QUICKSTARTS_COLLAPSE_BREAKPOINT}) {
+                padding: 0 0 0.5rem;
+              }
+            `}
+          >
+            <span>
+              <strong>Featured</strong>
+            </span>
+          </div>
+          <div
+            css={css`
+              display: block;
+              grid-gap: 1.25rem;
+              padding:10px;
+              grid-template-columns: repeat(4, 1fr);
+              grid-auto-rows: 1fr;
+              ${view === VIEWS.GRID &&
+              css`
+                @media (max-width: ${TRIPLE_COLUMN_BREAKPOINT}) {
+                  grid-template-columns: repeat(3, 1fr);
+                }
+
+                @media (max-width: ${DOUBLE_COLUMN_BREAKPOINT}) {
+                  grid-template-columns: repeat(2, 1fr);
+                }
+
+                @media (max-width: ${SINGLE_COLUMN_BREAKPOINT}) {
+                  grid-template-columns: repeat(1, 1fr);
+                }
+              `}
+              ${view === VIEWS.LIST &&
+              css`
+                grid-auto-rows: 1fr;
+                grid-template-columns: 1fr;
+                grid-gap: 1.25rem;
+              `};
+            `}
+          >
+            <Slider {...settings}>
+              {featuredQuickStarts.map((pack) => (
+                <QuickstartTile
+                  key={pack.id}
+                  view={view}
+                  featured={false}
+                  css = {css`
+                   grid-template-rows:var(--tile-image-height) var(--title-row-height) 80px auto
+                  `}
+                  {...pack}
+                />
+              ))}
+            </Slider>
+          </div>
+          <div
+            css={css`
+              --text-color: var(--primary-text-color);
+              font-size: 16px;
+              color: var(--color-neutrals-800);
+              align-text: center;
+
+              span {
+                color: var(--text-color);
+
+                /* target inner children of parent span */
+                span,
+                strong {
+                  @media screen and (max-width: ${QUICKSTARTS_COLLAPSE_BREAKPOINT}) {
+                    display: none;
+                  }
+                }
+              }
+
+              strong {
+                color: var(--text-color);
+              }
+
+              @media screen and (max-width: ${QUICKSTARTS_COLLAPSE_BREAKPOINT}) {
+                padding: 0 0 0.5rem;
+              }
+            `}
+          >
+            <span>
+              <strong>Most Popular</strong>
+            </span>
+          </div>
+          <div
+            css={css`
+              display: block;
+              padding:10px;
+              grid-gap: 1.25rem;
+              grid-template-columns: repeat(4, 1fr);
+              grid-auto-rows: 1fr;
+              ${view === VIEWS.GRID &&
+              css`
+                @media (max-width: ${TRIPLE_COLUMN_BREAKPOINT}) {
+                  grid-template-columns: repeat(3, 1fr);
+                }
+
+                @media (max-width: ${DOUBLE_COLUMN_BREAKPOINT}) {
+                  grid-template-columns: repeat(2, 1fr);
+                }
+
+                @media (max-width: ${SINGLE_COLUMN_BREAKPOINT}) {
+                  grid-template-columns: repeat(1, 1fr);
+                }
+              `}
+              ${view === VIEWS.LIST &&
+              css`
+                grid-auto-rows: 1fr;
+                grid-template-columns: 1fr;
+                grid-gap: 1.25rem;
+              `};
+            `}
+          >
+            <Slider {...settings}>
+              {mostPopularQuickStarts.map((pack) => (
+                <QuickstartTile
+                  key={pack.id}
+                  view={view}
+                  featured={false}
+                  css = {css`
+                   grid-template-rows:var(--tile-image-height) var(--title-row-height) 80px auto
+                  `}
+                  {...pack}
+                />
+              ))}
+            </Slider>
+          </div>
+          </>
+          }
           <div
             css={css`
               --text-color: var(--primary-text-color);

@@ -167,7 +167,8 @@
       "http",
       "web",
       "server",
-      "featured"
+      "featured",
+      "most popular"
     ],
     "level": "NEWRELIC",
     "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/v0.99.3/quickstarts/apache/logo.svg",
@@ -5331,7 +5332,8 @@
       "apm",
       "dotnet",
       "language agent",
-      "featured"
+      "featured",
+      "most popular"
     ],
     "level": "NEWRELIC",
     "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/v0.99.3/quickstarts/dotnet/dotnet/logo.svg",
@@ -9892,7 +9894,8 @@
       "apm",
       "java",
       "language agent",
-      "featured"
+      "featured",
+      "most popular"
     ],
     "level": "NEWRELIC",
     "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/v0.99.3/quickstarts/java/java/logo.svg",
@@ -11916,7 +11919,8 @@
     ],
     "keywords": [
       "infrastructure",
-      "featured"
+      "featured",
+      "most popular"
     ],
     "level": "NEWRELIC",
     "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/v0.99.3/quickstarts/kafka/logo.png",
@@ -13656,7 +13660,8 @@
       "apm",
       "node.js",
       "language agent",
-      "featured"
+      "featured",
+      "most popular"
     ],
     "level": "NEWRELIC",
     "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/v0.99.3/quickstarts/node-js/node-js/logo.svg",
@@ -19392,7 +19397,8 @@
     "keywords": [
       "apm",
       "ruby",
-      "language agent"
+      "language agent",
+      "most popular"
     ],
     "level": "NEWRELIC",
     "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/v0.99.3/quickstarts/ruby/ruby/logo.svg",
