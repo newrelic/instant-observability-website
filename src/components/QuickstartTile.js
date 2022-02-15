@@ -78,8 +78,8 @@ const QuickstartTile = ({
         --title-row-height: auto; /* Title height to allow space for longer string */
         padding: 1rem;
         overflow: hidden;
-
-        /* Default grid view */
+        height: 260px;
+         /* Default grid view */
         display: grid;
         grid-gap: 0.2rem;
         grid-template-rows: var(--tile-image-height) var(--title-row-height) 1fr auto;

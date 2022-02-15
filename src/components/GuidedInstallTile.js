@@ -39,6 +39,7 @@ const GuidedInstallTile = () => {
           flex-direction: column;
           justify-content: space-around;
           gap: 40px;
+          height: 212px;
         `}
       >
         <div>
