@@ -41,7 +41,7 @@ const checkUtmParameters = (parameters) => {
  * @returns {Boolean}
  */
 const checkIfReturningUser = () => {
-  return Boolean(Cookies.get('login_service_login_newrelic_com_tokens'));
+  return Boolean(Cookies.get('ajs_user_id'));
 };
 
 /**
