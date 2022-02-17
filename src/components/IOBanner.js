@@ -46,7 +46,7 @@ const BannerHeaderContent = ({ search, setSearch }) => (
     >
       Dashboards, alerts, and integrations all in one place
     </h1>
-    <body
+    <div
       css={css`
         background: none;
         color: var(--color-brand-100);
@@ -59,75 +59,56 @@ const BannerHeaderContent = ({ search, setSearch }) => (
     >
       Our quickstarts bundle everything you need to start monitoring like a pro
       right out of the box.
-      <div
+    </div>
+    <div>
+      <SearchInput
+        size={SearchInput.SIZE.LARGE}
+        value={search || ''}
+        placeholder="What do you want to monitor?"
+        onClear={() => setSearch('')}
+        onChange={(e) => setSearch(e.target.value)}
         css={css`
-          margin-top: 12px;
-          align-items: center;
-          background-color: var(--secondary-background-color);
-          border-radius: 4px;
-          display: flex;
-          justify-content: space-between;
-          padding: 0.5rem;
-
-          input {
-            font-size: 14px;
-            padding: 0.5rem;
-            padding-left: 2.25rem;
-            background: var(--color-white);
-            border: 1px solid var(--color-neutrals-600);
-            border-radius: 4px;
-
-            &::placeholder {
-              color: var(--color-neutrals-600);
-              padding-left: 0.5rem;
-            }
-          }
-
-          .dark-mode & {
-            background-color: var(--tertiary-background-color);
-            input {
-              background: var(--color-dark-400);
-
-              &::placeholder {
-                color: var(primary-text-color);
-              }
-            }
-          }
-          @media (max-width: ${QUICKSTARTS_COLLAPSE_BREAKPOINT}) {
-            background-color: var(--primary-background-color);
-            padding: 0;
-          }
-        `}
-      >
-        <SearchInput
-          size={SearchInput.SIZE.LARGE}
-          value={search || ''}
-          placeholder="What do you want to monitor? (e.g., AWS, LAMP, Kubernetes)"
-          onClear={() => setSearch('')}
-          onChange={(e) => setSearch(e.target.value)}
-          css={css`
             --svg-color: var(--color-neutrals-700);
             box-shadow: none;
             max-width: 630px;
             line-height: 1;
+            margin-top:20px;
+            padding-left: 0.5rem;
+            
+            input {
+              font-size: 14px;
+              padding: 0.5rem;
+              padding-left: 2.25rem;
+              background: var(--color-white);
+              border: 1px solid var(--color-neutrals-600);
+              border-radius: 4px;
+              &::placeholder {
+                color: var(--color-neutrals-600);
+                padding-left: 0.5rem;
+              }
             svg {
-              width: 16px;
-              height: 16px;
-              color: var(--svg-color);
+              width: 15x;
+              height: 15px;
             }
-
             .dark-mode & {
+              background-color: var(--tertiary-background-color);
               --svg-color: var(--primary-text-color);
+              input {
+                background: var(--color-dark-400);
+                &::placeholder {
+                  color: var(primary-text-color);
+                }
+              }
             }
+            
 
             @media screen and (max-width: ${QUICKSTARTS_COLLAPSE_BREAKPOINT}) {
-              font-size: 11px;
+              font-size: 17px;
               max-width: 100%;
             }
           `}
-        />
-      </div>
-    </body>
+      />
+    </div>
   </div>
 );
 
