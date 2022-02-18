@@ -4312,6 +4312,37 @@
       "New Relic"
     ],
     "dashboards": [],
+    "description": "GitHub is a code hosting platform for version control and collaboration. It lets developers and others work together on projects from anywhere. \n\nWith CodeStream you can create, review, and merge GitHub PRs without ever leaving your IDE. All with full source-tree and full file access, your favorite keybindings, and all the code intelligence embedded in your development environment.\n\n[Check out our documentation](https://docs.newrelic.com/docs/codestream/start-here/install-codestream/#connect-tools) to learn how to connect New Relic CodeStream to GitHub.\n",
+    "documentation": [
+      {
+        "description": "How to set up GitHub with Codestream",
+        "name": "Installation Docs",
+        "url": "https://docs.newrelic.com/docs/codestream/start-here/install-codestream/#connect-tools"
+      }
+    ],
+    "iconUrl": null,
+    "id": "364b0de9-f9b3-4ce2-a084-e01ccc328c43",
+    "installPlans": [],
+    "keywords": [
+      "codestream",
+      "github",
+      "pull request",
+      "errors inbox"
+    ],
+    "level": "NEWRELIC",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/v0.104.0/quickstarts/codestream/github-cs/logo.png",
+    "name": "github-for-codestream",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/codestream/github-cs",
+    "summary": "Connect New Relic CodeStream to GitHub.\n",
+    "title": "GitHub for CodeStream",
+    "websiteUrl": "https://www.newrelic.com"
+  },
+  {
+    "alerts": [],
+    "authors": [
+      "New Relic"
+    ],
+    "dashboards": [],
     "description": "Slack is a messaging app for business that connects people to the information they need. \n\nWhen you post a comment, issue, or feedback request, your teammates are notified via the activity feed, and potentially via email. Sometimes, though, you might want to share to Slack as well. This allows you to reach people who haven’t yet joined CodeStream, or maybe don’t spend a lot of time in their IDE.\n\n[Check out our documentation](https://docs.newrelic.com/docs/codestream/codestream-integrations/slack-integration) to connect New Relic CodeStream to your team's Slack channel.\n",
     "documentation": [
       {
@@ -21782,36 +21813,5 @@
     "summary": "Send Zipkin-format traces to New Relic\n",
     "title": "Zipkin",
     "websiteUrl": null
-  },
-  {
-    "alerts": [],
-    "authors": [
-      "New Relic"
-    ],
-    "dashboards": [],
-    "description": "GitHub is a code hosting platform for version control and collaboration. It lets developers and others work together on projects from anywhere. \n\nWith CodeStream you can create, review, and merge GitHub PRs without ever leaving your IDE. All with full source-tree and full file access, your favorite keybindings, and all the code intelligence embedded in your development environment.\n\n[Check out our documentation](https://docs.newrelic.com/docs/codestream/start-here/install-codestream/#connect-tools) to learn how to connect New Relic CodeStream to GitHub.\n",
-    "documentation": [
-      {
-        "description": "How to set up GitHub with Codestream",
-        "name": "Installation Docs",
-        "url": "https://docs.newrelic.com/docs/codestream/start-here/install-codestream/#connect-tools"
-      }
-    ],
-    "iconUrl": null,
-    "id": "364b0de9-f9b3-4ce2-a084-e01ccc328c43",
-    "installPlans": [],
-    "keywords": [
-      "codestream",
-      "github",
-      "pull request",
-      "errors inbox"
-    ],
-    "level": "NEWRELIC",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/v0.104.0/quickstarts/codestream/github-cs/logo.png",
-    "name": "github-for-codestream",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/codestream/github-cs",
-    "summary": "Connect New Relic CodeStream to GitHub.\n",
-    "title": "GitHub for CodeStream",
-    "websiteUrl": "https://www.newrelic.com"
   }
 ]
