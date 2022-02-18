@@ -7,7 +7,6 @@ import Overlay from '../components/Overlay';
 import QuickstartTile from '../components/QuickstartTile';
 import IOBanner from '../components/IOBanner';
 import {
-  SearchInput,
   useTessen,
   Button,
 } from '@newrelic/gatsby-theme-newrelic';

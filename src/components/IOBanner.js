@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { css } from '@emotion/react';
 import bannerOverlayRight from '../images/io-banner/banner-style-right.svg';
 import bannerOverlayLeft from '../images/io-banner/banner-style-left.svg';
@@ -18,7 +19,7 @@ const BannerHeaderContent = ({ search, setSearch }) => (
       width: 568px;
       height: 192px;
 
-      @media (max-width: ${MOBILE_BREAKPOINT}) {
+      @media (max-width: ${QUICKSTARTS_COLLAPSE_BREAKPOINT}) {
         padding: 48px 24px;
       }
     `}
@@ -27,7 +28,7 @@ const BannerHeaderContent = ({ search, setSearch }) => (
       css={css`
         color: var(--color-brand-300);
 
-        @media (max-width: ${MOBILE_BREAKPOINT}) {
+        @media (max-width: ${QUICKSTARTS_COLLAPSE_BREAKPOINT}) {
           font-weight: 400;
         }
       `}
@@ -40,7 +41,7 @@ const BannerHeaderContent = ({ search, setSearch }) => (
         font-weight: 600;
 
         @media (max-width: ${MOBILE_BREAKPOINT}) {
-          font-weight: 600;
+          font-size: 20px;
         }
       `}
     >
@@ -51,7 +52,7 @@ const BannerHeaderContent = ({ search, setSearch }) => (
         background: none;
         color: var(--color-brand-100);
 
-        @media (max-width: ${MOBILE_BREAKPOINT}) {
+        @media (max-width: ${QUICKSTARTS_COLLAPSE_BREAKPOINT}) {
           font-size: 12px;
           font-weight: 300;
         }
@@ -111,7 +112,10 @@ const BannerHeaderContent = ({ search, setSearch }) => (
     </div>
   </div>
 );
-
+SearchInput.propTypes = {
+  search: PropTypes.string,
+  setSearch: PropTypes.func,
+};
 const IOBanner = ({ search, setSearch }) => {
   return (
     <div
@@ -137,13 +141,16 @@ const IOBanner = ({ search, setSearch }) => {
           display: flex;
           justify-content: center;
           align-items: center;
+          @media screen and (max-width: ${QUICKSTARTS_COLLAPSE_BREAKPOINT}) {
+            margin: 45px 0;
+          }
         `}
       >
         <div
           css={css`
             margin-right: auto;
 
-            @media (max-width: ${MOBILE_BREAKPOINT}) {
+            @media (max-width: ${QUICKSTARTS_COLLAPSE_BREAKPOINT}) {
               display: none;
             }
           `}
@@ -162,7 +169,7 @@ const IOBanner = ({ search, setSearch }) => {
           css={css`
             margin-left: auto;
 
-            @media (max-width: ${MOBILE_BREAKPOINT}) {
+            @media (max-width: ${QUICKSTARTS_COLLAPSE_BREAKPOINT}) {
               display: none;
             }
           `}
