@@ -5,7 +5,6 @@ import bannerOverlayRight from '../images/io-banner/banner-style-right.svg';
 import bannerOverlayLeft from '../images/io-banner/banner-style-left.svg';
 import { SearchInput } from '@newrelic/gatsby-theme-newrelic';
 import { QUICKSTARTS_COLLAPSE_BREAKPOINT } from '../data/constants';
-const MOBILE_BREAKPOINT = '530px';
 
 const BannerHeaderContent = ({ search, setSearch }) => (
   <div
@@ -40,7 +39,7 @@ const BannerHeaderContent = ({ search, setSearch }) => (
         color: var(--color-neutrals-050);
         font-weight: 600;
 
-        @media (max-width: ${MOBILE_BREAKPOINT}) {
+        @media (max-width: ${QUICKSTARTS_COLLAPSE_BREAKPOINT}) {
           font-size: 20px;
         }
       `}
@@ -112,10 +111,7 @@ const BannerHeaderContent = ({ search, setSearch }) => (
     </div>
   </div>
 );
-SearchInput.propTypes = {
-  search: PropTypes.string,
-  setSearch: PropTypes.func,
-};
+
 const IOBanner = ({ search, setSearch }) => {
   return (
     <div
@@ -187,5 +183,8 @@ const IOBanner = ({ search, setSearch }) => {
     </div>
   );
 };
-
+IOBanner.propTypes = {
+  search: PropTypes.string,
+  setSearch: PropTypes.func,
+};
 export default IOBanner;

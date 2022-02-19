@@ -6,10 +6,7 @@ import { css } from '@emotion/react';
 import Overlay from '../components/Overlay';
 import QuickstartTile from '../components/QuickstartTile';
 import IOBanner from '../components/IOBanner';
-import {
-  useTessen,
-  Button,
-} from '@newrelic/gatsby-theme-newrelic';
+import { useTessen, Button } from '@newrelic/gatsby-theme-newrelic';
 import { navigate } from '@reach/router';
 
 import BUILD_YOUR_OWN from '../images/build-your-own.svg';
