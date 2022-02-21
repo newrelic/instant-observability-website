@@ -530,15 +530,7 @@ const QuickstartsPage = ({ data, location }) => {
               `};
             `}
           >
-            <div
-              css={css`
-                @media screen and (max-width: ${QUICKSTARTS_COLLAPSE_BREAKPOINT}) {
-                  display: none;
-                }
-              `}
-            >
-              <SuperTiles />
-            </div>
+            <SuperTiles />
             {filteredQuickstarts.map((pack) => (
               <QuickstartTile
                 key={pack.id}
