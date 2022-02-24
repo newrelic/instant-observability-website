@@ -87,7 +87,11 @@ const GlobalFooter = ({ className }) => {
             as={ExternalLink}
             variant={Button.VARIANT.OUTLINE}
             to="https://developer.newrelic.com/contribute-to-quickstarts/"
-            instrumentation={{ component: 'GlobalFooter' }}
+            instrumentation={{
+              component: 'GlobalFooter',
+              eventName: 'instantObservability',
+              category: 'BuildYourOwnQuickstartClick',
+            }}
           >
             <Icon
               name="zap"

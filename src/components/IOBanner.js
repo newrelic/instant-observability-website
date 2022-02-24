@@ -44,7 +44,7 @@ const BannerHeaderContent = ({ search, setSearch }) => (
         }
       `}
     >
-      Dashboards, alerts, and integrations all in one place
+      Monitor everything in your stack
     </h1>
     <div
       css={css`

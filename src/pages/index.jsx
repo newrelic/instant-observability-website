@@ -277,16 +277,6 @@ const QuickstartsPage = ({ data, location }) => {
         >
           <div
             css={css`
-              @media screen and (max-width: ${QUICKSTARTS_COLLAPSE_BREAKPOINT}) {
-                display: none;
-              }
-            `}
-          >
-            <SuperTiles />
-          </div>
-
-          <div
-            css={css`
               display: flex;
               @media screen and (min-width: ${QUICKSTARTS_COLLAPSE_BREAKPOINT}) {
                 display: none;
@@ -451,11 +441,12 @@ const QuickstartsPage = ({ data, location }) => {
               `};
             `}
           >
+            <SuperTiles />
             {filteredQuickstarts.map((pack) => (
               <QuickstartTile
                 key={pack.id}
                 view={view}
-                featured={pack.keywords?.includes('featured')}
+                featured={false}
                 {...pack}
               />
             ))}
