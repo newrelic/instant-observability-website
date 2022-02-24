@@ -1,11 +1,12 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { css } from '@emotion/react';
 import bannerOverlayRight from '../images/io-banner/banner-style-right.svg';
 import bannerOverlayLeft from '../images/io-banner/banner-style-left.svg';
+import { SearchInput } from '@newrelic/gatsby-theme-newrelic';
+import { QUICKSTARTS_COLLAPSE_BREAKPOINT } from '../data/constants';
 
-const MOBILE_BREAKPOINT = '530px';
-
-const BannerHeaderContent = () => (
+const BannerHeaderContent = ({ search, setSearch }) => (
   <div
     css={css`
       position: static;
@@ -17,7 +18,7 @@ const BannerHeaderContent = () => (
       width: 568px;
       height: 192px;
 
-      @media (max-width: ${MOBILE_BREAKPOINT}) {
+      @media (max-width: ${QUICKSTARTS_COLLAPSE_BREAKPOINT}) {
         padding: 48px 24px;
       }
     `}
@@ -26,7 +27,7 @@ const BannerHeaderContent = () => (
       css={css`
         color: var(--color-brand-300);
 
-        @media (max-width: ${MOBILE_BREAKPOINT}) {
+        @media (max-width: ${QUICKSTARTS_COLLAPSE_BREAKPOINT}) {
           font-weight: 400;
         }
       `}
@@ -38,19 +39,19 @@ const BannerHeaderContent = () => (
         color: var(--color-neutrals-050);
         font-weight: 600;
 
-        @media (max-width: ${MOBILE_BREAKPOINT}) {
-          font-weight: 600;
+        @media (max-width: ${QUICKSTARTS_COLLAPSE_BREAKPOINT}) {
+          font-size: 20px;
         }
       `}
     >
       Monitor everything in your stack
     </h1>
-    <body
+    <div
       css={css`
         background: none;
         color: var(--color-brand-100);
 
-        @media (max-width: ${MOBILE_BREAKPOINT}) {
+        @media (max-width: ${QUICKSTARTS_COLLAPSE_BREAKPOINT}) {
           font-size: 12px;
           font-weight: 300;
         }
@@ -58,11 +59,60 @@ const BannerHeaderContent = () => (
     >
       Our quickstarts bundle everything you need to start monitoring like a pro
       right out of the box.
-    </body>
+    </div>
+    <div>
+      <SearchInput
+        size={SearchInput.SIZE.LARGE}
+        value={search || ''}
+        placeholder="What do you want to monitor?"
+        onClear={() => setSearch('')}
+        onChange={(e) => setSearch(e.target.value)}
+        css={css`
+            --svg-color: var(--color-neutrals-700);
+            box-shadow: none;
+            max-width: 630px;
+            line-height: 1;
+            margin-top:20px;
+            padding-left: 0.5rem;
+            
+            input {
+              font-size: 14px;
+              padding: 0.5rem;
+              padding-left: 2.25rem;
+              background: var(--color-white);
+              border: 1px solid var(--color-neutrals-600);
+              border-radius: 4px;
+              &::placeholder {
+                color: var(--color-neutrals-600);
+                padding-left: 0.5rem;
+              }
+            svg {
+              width: 15x;
+              height: 15px;
+            }
+            .dark-mode & {
+              background-color: var(--tertiary-background-color);
+              --svg-color: var(--primary-text-color);
+              input {
+                background: var(--color-dark-400);
+                &::placeholder {
+                  color: var(primary-text-color);
+                }
+              }
+            }
+            
+
+            @media screen and (max-width: ${QUICKSTARTS_COLLAPSE_BREAKPOINT}) {
+              font-size: 17px;
+              max-width: 100%;
+            }
+          `}
+      />
+    </div>
   </div>
 );
 
-const IOBanner = () => {
+const IOBanner = ({ search, setSearch }) => {
   return (
     <div
       css={css`
@@ -87,13 +137,16 @@ const IOBanner = () => {
           display: flex;
           justify-content: center;
           align-items: center;
+          @media screen and (max-width: ${QUICKSTARTS_COLLAPSE_BREAKPOINT}) {
+            margin: 45px 0;
+          }
         `}
       >
         <div
           css={css`
             margin-right: auto;
 
-            @media (max-width: ${MOBILE_BREAKPOINT}) {
+            @media (max-width: ${QUICKSTARTS_COLLAPSE_BREAKPOINT}) {
               display: none;
             }
           `}
@@ -107,12 +160,12 @@ const IOBanner = () => {
             loading="lazy"
           />
         </div>
-        <BannerHeaderContent />
+        <BannerHeaderContent search={search} setSearch={setSearch} />
         <div
           css={css`
             margin-left: auto;
 
-            @media (max-width: ${MOBILE_BREAKPOINT}) {
+            @media (max-width: ${QUICKSTARTS_COLLAPSE_BREAKPOINT}) {
               display: none;
             }
           `}
@@ -130,5 +183,8 @@ const IOBanner = () => {
     </div>
   );
 };
-
+IOBanner.propTypes = {
+  search: PropTypes.string,
+  setSearch: PropTypes.func,
+};
 export default IOBanner;
