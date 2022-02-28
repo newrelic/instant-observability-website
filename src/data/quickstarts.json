@@ -7501,52 +7501,6 @@
     "websiteUrl": "https://www.gigamon.com"
   },
   {
-    "alerts": [],
-    "authors": [
-      "Joseph Counts (New Relic)",
-      "Glassbox"
-    ],
-    "dashboards": [
-      {
-        "description": "",
-        "name": "Glassbox Digital",
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/v0.111.1/quickstarts/glassbox/dashboards/dashboard01.png"
-        ],
-        "url": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/v0.111.1/quickstarts/glassbox/dashboards/dashboard.json"
-      }
-    ],
-    "description": "Glassbox empowers organizations to create frictionless digital journeys for their customers. Our digital experience analytics and Session Replay platform works in real time across mobile apps and websites to accelerate loyalty and growth. Through AI-driven visualization and analytics tools, Glassbox helps teams to prioritize customer experience and digital product enhancements from a single collaborative system.\n\nThe Glassbox quickstart helps you understand the impact of application performance on your customers’ digital experience. Gain deeper contextual insights by combining the data capture and session replay capabilities of Glassbox with New Relic One. Get a view of behavioral insights and KPIs inside a pre-built New Relic dashboard, which links directly to a session replay in Glassbox, so you can find the root cause of the digital issue and fix performance issues faster.\n\nFor more information or support, please go to [glassbox.com](https://www.glassbox.com/)\n",
-    "documentation": [
-      {
-        "description": "Glassbox Integrations page",
-        "name": "Glassbox Integrations",
-        "url": "https://www.glassbox.com/integrations/"
-      }
-    ],
-    "iconUrl": null,
-    "id": "bdb952f3-28db-4ee7-89c6-b00244b0bb73",
-    "installPlans": [
-      {
-        "id": "third-party-glassbox",
-        "name": "glassbox"
-      }
-    ],
-    "keywords": [
-      "glassbox",
-      "newrelic partner",
-      "digital",
-      "session replay"
-    ],
-    "level": "COMMUNITY",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/v0.111.1/quickstarts/glassbox/logo.png",
-    "name": "glassbox",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/glassbox",
-    "summary": "The Glassbox quickstart helps you understand the impact of \napplication performance on your customers’ digital experience.\n",
-    "title": "Glassbox quickstart",
-    "websiteUrl": null
-  },
-  {
     "alerts": [
       {
         "details": "This alert is triggered when the CPU Utilization is above 90%.\n",
@@ -21940,6 +21894,52 @@
     "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/zipkin",
     "summary": "Send Zipkin-format traces to New Relic\n",
     "title": "Zipkin",
+    "websiteUrl": null
+  },
+  {
+    "alerts": [],
+    "authors": [
+      "Joseph Counts (New Relic)",
+      "Glassbox"
+    ],
+    "dashboards": [
+      {
+        "description": "",
+        "name": "Glassbox Digital",
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/v0.111.1/quickstarts/glassbox/dashboards/dashboard01.png"
+        ],
+        "url": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/v0.111.1/quickstarts/glassbox/dashboards/dashboard.json"
+      }
+    ],
+    "description": "Glassbox empowers organizations to create frictionless digital journeys for their customers. Our digital experience analytics and Session Replay platform works in real time across mobile apps and websites to accelerate loyalty and growth. Through AI-driven visualization and analytics tools, Glassbox helps teams to prioritize customer experience and digital product enhancements from a single collaborative system.\n\nThe Glassbox quickstart helps you understand the impact of application performance on your customers’ digital experience. Gain deeper contextual insights by combining the data capture and session replay capabilities of Glassbox with New Relic One. Get a view of behavioral insights and KPIs inside a pre-built New Relic dashboard, which links directly to a session replay in Glassbox, so you can find the root cause of the digital issue and fix performance issues faster.\n\nFor more information or support, please go to [glassbox.com](https://www.glassbox.com/)\n",
+    "documentation": [
+      {
+        "description": "Glassbox Integrations page",
+        "name": "Glassbox Integrations",
+        "url": "https://www.glassbox.com/integrations/"
+      }
+    ],
+    "iconUrl": null,
+    "id": "bdb952f3-28db-4ee7-89c6-b00244b0bb73",
+    "installPlans": [
+      {
+        "id": "third-party-glassbox",
+        "name": "glassbox"
+      }
+    ],
+    "keywords": [
+      "glassbox",
+      "newrelic partner",
+      "digital",
+      "session replay"
+    ],
+    "level": "COMMUNITY",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/v0.111.1/quickstarts/glassbox/logo.png",
+    "name": "glassbox",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/glassbox",
+    "summary": "The Glassbox quickstart helps you understand the impact of \napplication performance on your customers’ digital experience.\n",
+    "title": "Glassbox quickstart",
     "websiteUrl": null
   }
 ]
