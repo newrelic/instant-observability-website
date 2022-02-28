@@ -437,7 +437,9 @@ const QuickstartsPage = ({ data, location }) => {
           {
             isSearchInputEmpty &&
             <>
-          <div
+           {mostPopularQuickStarts.length >0 && 
+           <>
+           <div
             css={css`
               --text-color: var(--primary-text-color);
               font-size: 16px;
@@ -495,7 +497,7 @@ const QuickstartsPage = ({ data, location }) => {
             <Slider {...settings} css={css`
               display: flex;
             `}>
-              <SuperTiles/>
+               <SuperTiles/>
               {mostPopularQuickStarts.map((pack) => (
                 <QuickstartTile
                   key={pack.id}
@@ -510,6 +512,7 @@ const QuickstartsPage = ({ data, location }) => {
               ))}
             </Slider>
           </div>
+          </>}
           <div
             css={css`
               --text-color: var(--primary-text-color);
