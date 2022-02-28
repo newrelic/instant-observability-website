@@ -25,3 +25,31 @@ input[type='text'] {
     }
   }
 }
+.slide {
+  height: 100%;
+}
+.slick-prev:before,
+.slick-next:before {
+  color: var(--primary-text-color) !important;
+}
+
+.slick-initialized .slick-slide{
+  justify-content: space-between;
+  padding:0 8px;
+
+  &:first-child {
+    padding-left: 0;
+  }
+}
+
+.slick-track {
+  display: flex !important;
+  margin-top:2px;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: flex-start;
+}
+.slick-slide
+{
+    height: inherit !important;
+} 
