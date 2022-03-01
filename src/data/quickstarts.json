@@ -18393,6 +18393,53 @@
   {
     "alerts": [],
     "authors": [
+      "ReleaseIQ",
+      "Hemala Devanan"
+    ],
+    "dashboards": [
+      {
+        "description": "",
+        "name": "RIQ Dashboard",
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/v0.112.1/quickstarts/releaseiq/dashboards/riq-dashboard.jpg"
+        ],
+        "url": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/v0.112.1/quickstarts/releaseiq/dashboards/riq-dashboard.json"
+      }
+    ],
+    "description": "## What's ReleaseIQ?\nReleaseIQ is the Unified Enterprise DevOps Platform to Accelerate Software Delivery.\nReleaseIQ is focused on solving the problems of multi-tool, team, and product release pipelines.\n\nFor ReleaseIQ intergration with NewRelic, you must have:\n- A New Relic license to be configured in the ReleaseIQ Platform.\n- Configure New Relic in the ReleaseIQ platform Observability tool settings.\n\nReleaseIQ features with New Relic\n- Custom Events: During pipeline execution for each step, events with all step information is sent to New Relic. To enable this feature, you will need to configure a notification to New Relic in each step.\n- Deployment Verification: Deployments can be verified by New Relic based on the New Relic policies configured in deploy step of a pipeline. Then based on the priority, alerts will be sent back to the ReleaseIQ platform. The progress of pipeline to subsequent steps will be based on deployment verification result.\n",
+    "documentation": [
+      {
+        "description": "ReleaseIQ is the Unified Enterprise DevOps Platform to Accelerate Software Delivery.\nGet started with newrelic setup and configuration.\n",
+        "name": "ReleaseIQ with NewRelic setup and configuration docs",
+        "url": "https://www.releaseiq.io/use-cases/new-relic/"
+      }
+    ],
+    "iconUrl": null,
+    "id": "88dee43d-f259-4423-9a14-d8553d8ac7a8",
+    "installPlans": [
+      {
+        "id": "third-party-releaseiq",
+        "name": "ReleaseIQ"
+      }
+    ],
+    "keywords": [
+      "releaseiq",
+      "integration",
+      "releaseiq server",
+      "devops automation tool",
+      "newrelic partner"
+    ],
+    "level": "VERIFIED",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/v0.112.1/quickstarts/releaseiq/logo.png",
+    "name": "releaseiq",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/releaseiq",
+    "summary": "Monitor ReleaseIQ Performance with NewRelic's ReleaseIQ Agent.\n",
+    "title": "ReleaseIQ",
+    "websiteUrl": "https://www.releaseiq.io/"
+  },
+  {
+    "alerts": [],
+    "authors": [
       "New Relic Labs"
     ],
     "dashboards": [],
@@ -21840,53 +21887,6 @@
     "summary": "Send Zipkin-format traces to New Relic\n",
     "title": "Zipkin",
     "websiteUrl": null
-  },
-  {
-    "alerts": [],
-    "authors": [
-      "ReleaseIQ",
-      "Hemala Devanan"
-    ],
-    "dashboards": [
-      {
-        "description": "",
-        "name": "RIQ Dashboard",
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/v0.112.1/quickstarts/releaseiq/dashboards/riq-dashboard.jpg"
-        ],
-        "url": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/v0.112.1/quickstarts/releaseiq/dashboards/riq-dashboard.json"
-      }
-    ],
-    "description": "## What's ReleaseIQ?\nReleaseIQ is the Unified Enterprise DevOps Platform to Accelerate Software Delivery.\nReleaseIQ is focused on solving the problems of multi-tool, team, and product release pipelines.\n\nFor ReleaseIQ intergration with NewRelic, you must have:\n- A New Relic license to be configured in the ReleaseIQ Platform.\n- Configure New Relic in the ReleaseIQ platform Observability tool settings.\n\nReleaseIQ features with New Relic\n- Custom Events: During pipeline execution for each step, events with all step information is sent to New Relic. To enable this feature, you will need to configure a notification to New Relic in each step.\n- Deployment Verification: Deployments can be verified by New Relic based on the New Relic policies configured in deploy step of a pipeline. Then based on the priority, alerts will be sent back to the ReleaseIQ platform. The progress of pipeline to subsequent steps will be based on deployment verification result.\n",
-    "documentation": [
-      {
-        "description": "ReleaseIQ is the Unified Enterprise DevOps Platform to Accelerate Software Delivery.\nGet started with newrelic setup and configuration.\n",
-        "name": "ReleaseIQ with NewRelic setup and configuration docs",
-        "url": "https://www.releaseiq.io/use-cases/new-relic/"
-      }
-    ],
-    "iconUrl": null,
-    "id": "88dee43d-f259-4423-9a14-d8553d8ac7a8",
-    "installPlans": [
-      {
-        "id": "third-party-releaseiq",
-        "name": "ReleaseIQ"
-      }
-    ],
-    "keywords": [
-      "releaseiq",
-      "integration",
-      "releaseiq server",
-      "devops automation tool",
-      "newrelic partner"
-    ],
-    "level": "VERIFIED",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/v0.112.1/quickstarts/releaseiq/logo.png",
-    "name": "releaseiq",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/releaseiq",
-    "summary": "Monitor ReleaseIQ Performance with NewRelic's ReleaseIQ Agent.\n",
-    "title": "ReleaseIQ",
-    "websiteUrl": "https://www.releaseiq.io/"
   },
   {
     "alerts": [],
