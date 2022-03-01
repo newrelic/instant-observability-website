@@ -193,9 +193,7 @@ const QuickstartsPage = ({ data, location }) => {
 
     return found.displayName;
   };
-  const buildYourOwn = (url) => {
-    window.open(url);
-  }
+
   const settings = {
     dots: false,
     infinite: false,
