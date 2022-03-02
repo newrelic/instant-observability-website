@@ -6,7 +6,16 @@ import bannerOverlayLeft from '../images/io-banner/banner-style-left.svg';
 import { SearchInput } from '@newrelic/gatsby-theme-newrelic';
 import { QUICKSTARTS_COLLAPSE_BREAKPOINT } from '../data/constants';
 
-const BannerHeaderContent = ({ search, setSearch }) => (
+const BannerHeaderContent = ({ search, setSearch,  setIsSearchInputEmpty}) => {
+
+  const handleSearchInput = (e) => {
+    let searchInputValue = e.target.value;
+    setSearch(searchInputValue);
+    searchInputValue.length >0 ? setIsSearchInputEmpty(false) : setIsSearchInputEmpty(true);
+  }
+
+
+return(
   <div
     css={css`
       position: static;
@@ -65,8 +74,11 @@ const BannerHeaderContent = ({ search, setSearch }) => (
         size={SearchInput.SIZE.LARGE}
         value={search || ''}
         placeholder="What do you want to monitor?"
-        onClear={() => setSearch('')}
-        onChange={(e) => setSearch(e.target.value)}
+        onClear={() => {
+          setSearch('');
+          setIsSearchInputEmpty(true);
+        }}
+        onChange={handleSearchInput}
         css={css`
             --svg-color: var(--color-neutrals-700);
             box-shadow: none;
@@ -111,8 +123,8 @@ const BannerHeaderContent = ({ search, setSearch }) => (
     </div>
   </div>
 );
-
-const IOBanner = ({ search, setSearch }) => {
+}
+const IOBanner = ({ search, setSearch ,setIsSearchInputEmpty}) => {
   return (
     <div
       css={css`
@@ -160,7 +172,7 @@ const IOBanner = ({ search, setSearch }) => {
             loading="lazy"
           />
         </div>
-        <BannerHeaderContent search={search} setSearch={setSearch} />
+        <BannerHeaderContent search={search} setSearch={setSearch} setIsSearchInputEmpty={setIsSearchInputEmpty} />
         <div
           css={css`
             margin-left: auto;
