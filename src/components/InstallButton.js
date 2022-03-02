@@ -77,20 +77,14 @@ const createInstallLink = (
   return installUrl.href;
 };
 
-/**
- * @param {quickstart} quickstart
- * @param {String} key
- * @returns {Boolean}
- */
-const hasComponent = (quickstart, key) =>
-  quickstart[key] && quickstart[key].length > 0;
-
 const InstallButton = ({ quickstart, location, ...props }) => {
   const { treatment } = useTreatment('super_tiles');
+  const { installer, id, slug, quickstartUrl, documentation } = quickstart;
+
 
   const hasInstallableComponent =
-    hasComponent(quickstart, 'installPlans') ||
-    quickstart.id === CODESTREAM_QUICKSTART_ID;
+    installer.steps || id === CODESTREAM_QUICKSTART_ID;
+
 
   const tessen = useTessen();
 
@@ -103,8 +97,8 @@ const InstallButton = ({ quickstart, location, ...props }) => {
 
   const hasGuidedInstall =
     hasInstallableComponent &&
-    quickstart.installPlans.length === 1 &&
-    quickstart.installPlans[0].id.includes('guided-install');
+    installer.steps.length === 1 &&
+    installer.steps[0].id.includes('guided-install');
 
   const [installUrl, setInstallUrl] = useState(SIGNUP_LINK);
   useEffect(() => {
@@ -114,7 +108,7 @@ const InstallButton = ({ quickstart, location, ...props }) => {
   }, []);
 
   // If there is nothing to install AND no documentation, don't show this button.
-  if (!hasInstallableComponent && !hasComponent(quickstart, 'documentation')) {
+  if (!hasInstallableComponent && !documentation.length > 0) {
     return null;
   }
 
@@ -122,7 +116,7 @@ const InstallButton = ({ quickstart, location, ...props }) => {
     ? NR1_GUIDED_INSTALL_NERDLET
     : NR1_PACK_DETAILS_NERDLET;
 
-  if (quickstart.id === CODESTREAM_QUICKSTART_ID) {
+  if (id === CODESTREAM_QUICKSTART_ID) {
     nerdletId = NR1_CODESTREAM_INSTALL_NERDLET;
   }
   const hasUtmParameters = checkUtmParameters(parameters);
@@ -130,7 +124,7 @@ const InstallButton = ({ quickstart, location, ...props }) => {
   // first documentation supplied.
   const url = hasInstallableComponent
     ? createInstallLink(
-        quickstart.id,
+        id,
         nerdletId,
         hasGuidedInstall,
         hasUtmParameters,
@@ -150,11 +144,11 @@ const InstallButton = ({ quickstart, location, ...props }) => {
     const startTarget = btoa(
       JSON.stringify({
         source: 'nrio',
-        id: quickstart.id,
+        id: id,
       })
     );
     Cookies.set('start_target', startTarget, options);
-    Cookies.set('newrelic-quickstart-id', quickstart.id, options);
+    Cookies.set('newrelic-quickstart-id', id, options);
   };
 
   const handleInstallClick = () => {
@@ -162,9 +156,9 @@ const InstallButton = ({ quickstart, location, ...props }) => {
     tessen.track({
       eventName: 'instantObservability',
       category: 'QuickstartInstall',
-      quickstartName: quickstart.name,
-      quickstartId: quickstart.id,
-      quickstartUrl: quickstart.packUrl,
+      quickstartName: slug,
+      quickstartId: id,
+      quickstartUrl: quickstartUrl,
       super_tiles_treatment: treatment,
       quickstartButtonText: hasInstallableComponent
         ? 'Install quickstart'
