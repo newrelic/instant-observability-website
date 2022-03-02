@@ -1,0 +1,353 @@
+import PropTypes from 'prop-types';
+import React, { useState, useEffect } from 'react';
+import IOSeo from './IOSeo';
+import { css } from '@emotion/react';
+import Overlay from './Overlay';
+import QuickstartTile from './QuickstartTile';
+import IOBanner from './IOBanner';
+import QuickstartError from './QuickstartError';
+import { useTessen, Button } from '@newrelic/gatsby-theme-newrelic';
+import { navigate } from '@reach/router';
+
+import { rawQuickstart } from '../types';
+import { useDebounce } from 'react-use';
+import QuickstartsSidebar from './QuickstartsSidebar';
+
+import {
+  QUICKSTARTS_COLLAPSE_BREAKPOINT,
+  LISTVIEW_BREAKPOINT,
+} from '../data/constants';
+import CATEGORIES from '../data/instant-observability-categories.json';
+
+import SuperTiles from './SuperTiles';
+
+const VIEWS = {
+  GRID: 'Grid view',
+  LIST: 'List view',
+};
+
+const DOUBLE_COLUMN_BREAKPOINT = '1180px';
+const TRIPLE_COLUMN_BREAKPOINT = '1350px';
+const SINGLE_COLUMN_BREAKPOINT = LISTVIEW_BREAKPOINT;
+
+const QuickstartsPage = ({ location, quickstarts, errored }) => {
+  const [view] = useState(VIEWS.GRID);
+  const tessen = useTessen();
+
+  const [search, setSearch] = useState('');
+  const [category, setCategory] = useState('');
+
+  const [isCategoriesOverlayOpen, setIsCategoriesOverlayOpen] = useState(false);
+
+  useEffect(() => {
+    const params = new URLSearchParams(location.search);
+    const searchParam = params.get('search');
+    const categoryParam = params.get('category');
+
+    setSearch(searchParam);
+    setCategory(categoryParam || '');
+    if (searchParam || categoryParam) {
+      tessen.track({
+        eventName: 'instantObservability',
+        category: 'QuickstartCatalogSearch',
+        search: searchParam,
+        quickstartCategory: categoryParam,
+      });
+    }
+  }, [location.search, tessen]);
+
+  const closeCategoriesOverlay = () => {
+    setIsCategoriesOverlayOpen(false);
+  };
+
+  const handleSearch = (value) => {
+    if (value !== null && value !== undefined) {
+      const params = new URLSearchParams(location.search);
+      params.set('search', value);
+
+      navigate(`?${params.toString()}`);
+    }
+  };
+
+  const handleCategory = (value) => {
+    if (value !== null && value !== undefined) {
+      const params = new URLSearchParams(location.search);
+      params.set('category', value);
+
+      navigate(`?${params.toString()}`);
+    }
+
+    closeCategoriesOverlay();
+  };
+
+  useDebounce(
+    () => {
+      handleSearch(search);
+    },
+    400,
+    [search]
+  );
+
+  // Hard-code for moving codestream object to front of sortedQuickstarts array - CM
+  if ((!category && !search) || (category === 'featured' && !search)) {
+    // uuid is codestream id specifically - CM
+    const codestreamIndex = quickstarts.findIndex(
+      ({ id }) => id === '29bd9a4a-1c19-4219-9694-0942f6411ce7'
+    );
+
+    if (codestreamIndex > -1) {
+      const codestreamObject = quickstarts[codestreamIndex];
+      quickstarts = [
+        codestreamObject,
+        ...quickstarts.slice(0, codestreamIndex),
+        ...quickstarts.slice(codestreamIndex + 1),
+      ];
+    }
+  }
+  /**
+   * Finds display name for selected category.
+   * @returns {String} Display name for results found.
+   */
+  const getDisplayName = (defaultName = 'All quickstarts') => {
+    const found = CATEGORIES.find((cat) => cat.value === category);
+
+    if (!found.value) return defaultName;
+
+    return found.displayName;
+  };
+
+  return (
+    <>
+      <IOSeo
+        title="Instant Observability"
+        location={location}
+        type="quickstarts"
+      />
+      <IOBanner search={search} setSearch={setSearch} />
+      <div
+        css={css`
+          --sidebar-width: 300px;
+          --banner-height: 308px;
+          display: grid;
+          grid-template-columns: var(--sidebar-width) minmax(0, 1fr);
+          grid-template-areas: 'sidebar main';
+          grid-template-rows: 1fr auto;
+          grid-gap: 70px;
+          min-height: calc(100vh - var(--global-header-height));
+          margin: var(--banner-height) auto;
+          max-width: var(--site-max-width);
+
+          @media screen and (max-width: ${QUICKSTARTS_COLLAPSE_BREAKPOINT}) {
+            grid-gap: 0;
+            grid-template-columns: minmax(0, 1fr);
+            grid-template-areas:
+              'sidebar'
+              'main';
+            grid-template-rows: unset;
+          }
+        `}
+      >
+        <QuickstartsSidebar
+          categoriesWithCount={CATEGORIES}
+          category={category}
+          handleCategory={handleCategory}
+        />
+        <div
+          css={css`
+            grid-area: main;
+            padding: var(--site-content-padding);
+          `}
+        >
+          <div
+            css={css`
+              display: flex;
+              @media screen and (min-width: ${QUICKSTARTS_COLLAPSE_BREAKPOINT}) {
+                display: none;
+              }
+            `}
+          >
+            <Button
+              css={css`
+                border-radius: 2px;
+                border: 1px solid var(--border-color);
+                color: var(--primary-text-color);
+                font-size: 12px;
+                justify-content: flex-start;
+                margin: 40px 0;
+              `}
+              variant={Button.VARIANT.LINK}
+              onClick={() => setIsCategoriesOverlayOpen(true)}
+            >
+              {getDisplayName('Filter by Category')}
+            </Button>
+            <Overlay
+              isOpen={isCategoriesOverlayOpen}
+              onCloseOverlay={closeCategoriesOverlay}
+            >
+              <div
+                css={css`
+                  border-radius: 5px;
+                  position: relative;
+                  width: 100%;
+                  margin: 30% auto 0;
+                  padding: 1rem;
+                  background: var(--primary-background-color);
+                `}
+              >
+                <h3
+                  css={css`
+                    padding: 0.5rem 0 0 0.5rem;
+                  `}
+                >
+                  Category
+                </h3>
+                <div
+                  css={css`
+                    max-height: 400px;
+                    padding-bottom: 3rem;
+                    overflow-y: scroll;
+                  `}
+                >
+                  {CATEGORIES.map(({ displayName, value, count }) => (
+                    <Button
+                      type="button"
+                      key={value}
+                      onClick={() => handleCategory(value)}
+                      css={css`
+                        padding: 1rem 0.5rem;
+                        width: 100%;
+                        display: flex;
+                        justify-content: flex-start;
+                        color: var(--primary-text-color);
+                        font-weight: 100;
+                        background: ${category === value
+                          ? 'var(--divider-color)'
+                          : 'none'};
+                      `}
+                    >
+                      {`${displayName} (${count})`}
+                    </Button>
+                  ))}
+                </div>
+                <div
+                  css={css`
+                    background: var(--secondary-background-color);
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 4rem;
+                    border-bottom-right-radius: 5px;
+                    border-bottom-left-radius: 5px;
+                    display: flex;
+                    justify-content: flex-end;
+                    align-items: center;
+                  `}
+                >
+                  <Button
+                    css={css`
+                      height: 2rem;
+                      margin-right: 1rem;
+                    `}
+                    onClick={closeCategoriesOverlay}
+                    variant={Button.VARIANT.PRIMARY}
+                  >
+                    Cancel
+                  </Button>
+                </div>
+              </div>
+            </Overlay>
+          </div>
+          <div
+            css={css`
+              --text-color: var(--primary-text-color);
+
+              padding: 1.25rem 0;
+              font-size: 16px;
+              color: var(--color-neutrals-800);
+              display: flex;
+              justify-content: space-between;
+              align-text: center;
+
+              span {
+                color: var(--text-color);
+
+                /* target inner children of parent span */
+                span,
+                strong {
+                  @media screen and (max-width: ${QUICKSTARTS_COLLAPSE_BREAKPOINT}) {
+                    display: none;
+                  }
+                }
+              }
+
+              strong {
+                color: var(--text-color);
+              }
+
+              @media screen and (max-width: ${QUICKSTARTS_COLLAPSE_BREAKPOINT}) {
+                padding: 0 0 0.5rem;
+              }
+            `}
+          >
+            <span>
+              Showing {quickstarts.length} results
+              <span> for: </span>
+              <strong>{search || getDisplayName()}</strong>
+            </span>
+          </div>
+        {errored ? (
+          <QuickstartError />
+        ) : (
+          <div
+            css={css`
+              display: grid;
+              grid-gap: 1.25rem;
+              grid-template-columns: repeat(4, 1fr);
+              grid-auto-rows: 1fr;
+              ${view === VIEWS.GRID &&
+              css`
+                @media (max-width: ${TRIPLE_COLUMN_BREAKPOINT}) {
+                  grid-template-columns: repeat(3, 1fr);
+                }
+
+                @media (max-width: ${DOUBLE_COLUMN_BREAKPOINT}) {
+                  grid-template-columns: repeat(2, 1fr);
+                }
+
+                @media (max-width: ${SINGLE_COLUMN_BREAKPOINT}) {
+                  grid-template-columns: repeat(1, 1fr);
+                }
+              `}
+              ${view === VIEWS.LIST &&
+              css`
+                grid-auto-rows: 1fr;
+                grid-template-columns: 1fr;
+                grid-gap: 1.25rem;
+              `};
+            `}
+          >
+            <SuperTiles />
+            {quickstarts.map((quickstart) => (
+              <QuickstartTile
+                key={quickstart.id}
+                view={view}
+                featured={quickstart.featured}
+                {...quickstart}
+              />
+            ))}
+          </div>
+          )}
+        </div>
+      </div>
+    </>
+  );
+};
+
+QuickstartsPage.propTypes = {
+  quickstarts: PropTypes.arrayOf(rawQuickstart),
+  location: PropTypes.object,
+  errored: PropTypes.bool,
+};
+
+export default QuickstartsPage;
