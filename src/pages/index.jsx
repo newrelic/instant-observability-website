@@ -9,12 +9,9 @@ import IOBanner from '../components/IOBanner';
 import { useTessen, Button } from '@newrelic/gatsby-theme-newrelic';
 import { navigate } from '@reach/router';
 
-import BUILD_YOUR_OWN from '../images/build-your-own.svg';
 import { useDebounce } from 'react-use';
 import { sortFeaturedQuickstarts } from '../utils/sortFeaturedQuickstarts';
 import {
-  QUICKSTARTS_REPO,
-  RESERVED_QUICKSTART_IDS,
   QUICKSTARTS_COLLAPSE_BREAKPOINT,
   LISTVIEW_BREAKPOINT,
 } from '../data/constants';
