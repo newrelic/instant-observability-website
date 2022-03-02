@@ -21,7 +21,8 @@
       "nrlabs-data",
       "ads",
       "tracking",
-      "GPT"
+      "GPT",
+      "most popular"
     ],
     "level": "COMMUNITY",
     "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/v0.111.1/quickstarts/ads/web/ads-web-gpt/logo.svg",
@@ -53,7 +54,8 @@
       "nrlabs-data",
       "ads",
       "tracking",
-      "Prebid"
+      "Prebid",
+      "most popular"
     ],
     "level": "COMMUNITY",
     "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/v0.111.1/quickstarts/ads/web/ads-web-prebid/logo.png",
@@ -131,7 +133,7 @@
       "http",
       "web",
       "server",
-      "featured"
+      "most popular"
     ],
     "level": "NEWRELIC",
     "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/v0.111.1/quickstarts/apache/logo.svg",
@@ -822,7 +824,8 @@
       "aws",
       "amazon web services",
       "os",
-      "operating system"
+      "operating system",
+      "most popular"
     ],
     "level": "NEWRELIC",
     "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/v0.111.1/quickstarts/aws/amazon-linux/logo.svg",
@@ -5397,7 +5400,7 @@
       "apm",
       "dotnet",
       "language agent",
-      "featured"
+      "most popular"
     ],
     "level": "NEWRELIC",
     "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/v0.111.1/quickstarts/dotnet/dotnet/logo.svg",
@@ -9958,7 +9961,7 @@
       "apm",
       "java",
       "language agent",
-      "featured"
+      "most popular"
     ],
     "level": "NEWRELIC",
     "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/v0.111.1/quickstarts/java/java/logo.svg",
@@ -11982,7 +11985,7 @@
     ],
     "keywords": [
       "infrastructure",
-      "featured"
+      "most popular"
     ],
     "level": "NEWRELIC",
     "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/v0.111.1/quickstarts/kafka/logo.png",
@@ -13242,7 +13245,7 @@
     "keywords": [
       "infrastructure",
       "database",
-      "featured"
+      "most popular"
     ],
     "level": "NEWRELIC",
     "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/v0.111.1/quickstarts/mysql/logo.png",
@@ -13838,7 +13841,7 @@
       "apm",
       "node.js",
       "language agent",
-      "featured"
+      "most popular"
     ],
     "level": "NEWRELIC",
     "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/v0.111.1/quickstarts/node-js/node-js/logo.svg",
@@ -15254,7 +15257,7 @@
       "apm",
       "php",
       "language agent",
-      "featured"
+      "most popular"
     ],
     "level": "NEWRELIC",
     "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/v0.111.1/quickstarts/php/php/logo.jpg",
@@ -19875,7 +19878,8 @@
     "keywords": [
       "apm",
       "ruby",
-      "language agent"
+      "language agent",
+      "most popular"
     ],
     "level": "NEWRELIC",
     "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/v0.111.1/quickstarts/ruby/ruby/logo.svg",
