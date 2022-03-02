@@ -55,8 +55,8 @@ query getQuickstarts($sortBy: Nr1CatalogSearchSortOption){
 
     const json = await resp.json();
 
-    if (json.data?.errors) {
-      throw Error(`Errors returned from nerdgraph`, json.data.errors);
+    if (json.errors) {
+      throw new Error(`Errors returned from nerdgraph`, json.errors);
     }
     const results = json.data?.actor?.nr1Catalog?.search?.results;
 

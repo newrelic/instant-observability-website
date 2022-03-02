@@ -67,7 +67,7 @@ const QuickstartTile = ({
   return (
     <Surface
       as={Link}
-      to={href || slug || '/'}
+      to={href || `quickstart/${slug}/${id}` || '/'}
       key={id}
       base={Surface.BASE.PRIMARY}
       className={className}
