@@ -16,8 +16,7 @@ const Layout = ({ className, children }) => {
 
         display: grid;
         grid-template-columns: var(--sidebar-width) minmax(0, 1fr);
-        grid-template-areas:
-          'sidebar main'
+        grid-template-areas: 'sidebar main';
         grid-template-rows: 1fr auto;
         min-height: calc(100vh - var(--global-header-height));
         margin: 0 auto;
@@ -25,8 +24,7 @@ const Layout = ({ className, children }) => {
 
         @media screen and (max-width: 760px) {
           grid-template-columns: minmax(0, 1fr);
-          grid-template-areas:
-            'main'
+          grid-template-areas: 'main';
           grid-template-rows: unset;
         }
       `}
