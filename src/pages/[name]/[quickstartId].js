@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import QuickstartDetails from '../../../components/QuickstartDetails';
+import QuickstartDetails from '../../components/QuickstartDetails';
 
 const NERDGRAPH_URL = process.env.NERDGRAPH_URL;
 const NEW_RELIC_API_KEY = process.env.NEW_RELIC_API_KEY;
@@ -115,7 +115,7 @@ export const getServerData = async ({ params }) => {
       props: {
         error: false,
         data: json.data,
-        pathname: `/quickstart/${params.name}/${params.id}`,
+        pathname: `${params.name}/${params.id}`,
       },
     };
   } catch (err) {
