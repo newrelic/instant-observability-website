@@ -88,6 +88,7 @@ const QuickstartsPage = ({ data, location }) => {
 
   const [isCategoriesOverlayOpen, setIsCategoriesOverlayOpen] = useState(false);
   const [isSearchInputEmpty, setIsSearchInputEmpty] = useState(true);
+  const [isSelectCategory, setIsSelectCategory] = useState(false)
 
   useEffect(() => {
     const params = new URLSearchParams(location.search);
@@ -120,13 +121,15 @@ const QuickstartsPage = ({ data, location }) => {
   };
 
   const handleCategory = (value) => {
+    setIsSelectCategory(true);
     if (value !== null && value !== undefined) {
       const params = new URLSearchParams(location.search);
       params.set('category', value);
-
       navigate(`?${params.toString()}`);
+      if(value!=""){
+        setIsSelectCategory(false);
+      }
     }
-
     closeCategoriesOverlay();
   };
 
@@ -426,7 +429,8 @@ const QuickstartsPage = ({ data, location }) => {
             </Overlay>
           </div>
 
-          {isSearchInputEmpty && (
+          {isSelectCategory && (
+      
             <>
               {mostPopularQuickStarts.length > 0 && (
                 <>
@@ -650,7 +654,7 @@ const QuickstartsPage = ({ data, location }) => {
               `};
             `}
           >
-            {!isSearchInputEmpty && <SuperTiles />}
+            {!isSearchInputEmpty  && <SuperTiles />}
             {filteredQuickstarts.map((pack) => (
               <QuickstartTile
                 key={pack.id}
@@ -659,6 +663,7 @@ const QuickstartsPage = ({ data, location }) => {
                 {...pack}
               />
             ))}
+               
           </div>
         </div>
       </div>
