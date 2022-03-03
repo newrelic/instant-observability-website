@@ -108,7 +108,6 @@ export const getServerData = async ({ params }) => {
     const json = await resp.json();
 
     if (json.errors) {
-      console.log(json.errors)
       throw new Error(`Errors returned from nerdgraph`, json.errors);
     }
     return {
@@ -132,7 +131,6 @@ export const getServerData = async ({ params }) => {
 
 const QuickstartDetailsSSR = ({ serverData, location }) => {
   const quickstart = serverData?.data?.actor?.nr1Catalog?.quickstart;
-  console.log({serverData})
   return (
     <QuickstartDetails
       rawQuickstart={quickstart}

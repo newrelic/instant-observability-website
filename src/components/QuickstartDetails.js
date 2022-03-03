@@ -32,7 +32,6 @@ import QuickstartOverview from './QuickstartOverview';
 import QuickstartError from './QuickstartError';
 
 const QuickstartDetails = ({ rawQuickstart = {}, location, error }) => {
-  console.log({rawQuickstart})
   const {
     metadata = {},
     id = {},
