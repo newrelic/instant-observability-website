@@ -100,7 +100,7 @@ const QuickstartsPage = ({ location, quickstarts, errored }) => {
 
 
   const mostPopularQuickStarts = quickstarts?.filter((product) =>
-    product.featured
+    product.metadata.keywords.includes('most popular')
   );
 
   // Hard-code for moving codestream object to front of sortedQuickstarts array - CM

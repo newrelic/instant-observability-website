@@ -22,6 +22,7 @@ query getQuickstarts($sortBy: Nr1CatalogSearchSortOption){
             featured
             metadata {
               summary
+              keywords
               displayName
               slug
               icon {
