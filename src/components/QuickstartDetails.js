@@ -86,7 +86,7 @@ const QuickstartDetails = ({ rawQuickstart = {}, location, error }) => {
     installer,
   };
 
-  const relatedResources = relatedPages[`/instant-observability/${slug}/${id}`] || [];
+  const relatedResources = relatedPages[`/${slug}/${id}`] || [];
 
   const tessen = useTessen();
   const breadcrumbs = [

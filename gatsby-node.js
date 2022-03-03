@@ -1,14 +1,3 @@
-exports.onCreatePage = async ({ page, actions }) => {
-  const { createPage, deletePage } = actions;
-  const oldPage = { ...page };
-
-  if (page.path === '/' || '/quickstart') {
-    page.context.layout = 'QuickStartLayout';
-  }
-  deletePage(oldPage);
-  createPage(page);
-};
-
 exports.onCreateWebpackConfig = ({ actions, plugins }) => {
   actions.setWebpackConfig({
     // The `debug` library is causing issues when building the site by including
