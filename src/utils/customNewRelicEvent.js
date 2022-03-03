@@ -1,4 +1,3 @@
-const fetch = require('node-fetch');
 
 // taken from gatsby-config.js
 const NEW_RELIC_ACCOUNT_ID = '10956800';
