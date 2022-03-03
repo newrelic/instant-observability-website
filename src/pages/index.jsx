@@ -191,6 +191,62 @@ const QuickstartsPage = ({ data, location }) => {
     return found.displayName;
   };
 
+
+  const mostPopularSettings = {
+    dots: false,
+    infinite: false,
+    speed: 300,
+    slidesToShow: 4,
+    slidesToScroll: 4,
+    adaptiveHeight: false,
+    adaptiveWidth: true,
+    responsive: [
+      {
+        breakpoint: 1485,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 1,
+          infinite: true,
+          dots: false,
+        },
+      },
+      {
+        breakpoint: 1200,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+          infinite: true,
+          dots: false,
+        },
+      },
+      {
+        breakpoint: 1081,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          infinite: true,
+          dots: false,
+        },
+      },
+      {
+        breakpoint: 760,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          infinite: true,
+          dots: false,
+        },
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
+  };
+
   const settings = {
     dots: false,
     infinite: false,
@@ -486,7 +542,7 @@ const QuickstartsPage = ({ data, location }) => {
                     `}
                   >
                     <Slider
-                      {...settings}
+                      {...mostPopularSettings}
                       css={css`
                         display: flex;
                       `}
