@@ -129,23 +129,6 @@ module.exports = {
         icon: 'src/images/favicon.png',
       },
     },
-    {
-      resolve: 'gatsby-source-filesystem',
-      options: {
-        name: 'quickstarts',
-        path: `${__dirname}/src/data/quickstarts.json`,
-      },
-    },
-    {
-      resolve: 'gatsby-transformer-json',
-      options: {
-        // If we need to source json files other than the i18n/nav, we should
-        // consider making this dynamic. See the docs for ways to do this.
-        //
-        // https://github.com/gatsbyjs/gatsby/tree/master/packages/gatsby-transformer-json
-        typeName: 'Quickstarts',
-      },
-    },
     'gatsby-plugin-mdx', // Not used, but required by the theme
     'gatsby-plugin-meta-redirect',
     'gatsby-plugin-use-query-params',

@@ -1,23 +1,25 @@
 import PropTypes from 'prop-types';
-import { graphql } from 'gatsby';
 import React, { useState, useEffect } from 'react';
-import IOSeo from '../components/IOSeo';
+import IOSeo from './IOSeo';
 import { css } from '@emotion/react';
-import Overlay from '../components/Overlay';
-import QuickstartTile from '../components/QuickstartTile';
-import IOBanner from '../components/IOBanner';
+import Overlay from './Overlay';
+import QuickstartTile from './QuickstartTile';
+import IOBanner from './IOBanner';
+import QuickstartError from './QuickstartError';
 import { useTessen, Button } from '@newrelic/gatsby-theme-newrelic';
 import { navigate } from '@reach/router';
 
+import { rawQuickstart } from '../types';
 import { useDebounce } from 'react-use';
-import { sortFeaturedQuickstarts } from '../utils/sortFeaturedQuickstarts';
+import QuickstartsSidebar from './QuickstartsSidebar';
+
 import {
   QUICKSTARTS_COLLAPSE_BREAKPOINT,
   LISTVIEW_BREAKPOINT,
 } from '../data/constants';
-import CATEGORIES from '../data/instant-observability-categories';
+import CATEGORIES from '../data/instant-observability-categories.json';
 
-import SuperTiles from '../components/SuperTiles';
+import SuperTiles from './SuperTiles';
 
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
@@ -32,54 +34,7 @@ const DOUBLE_COLUMN_BREAKPOINT = '1180px';
 const TRIPLE_COLUMN_BREAKPOINT = '1350px';
 const SINGLE_COLUMN_BREAKPOINT = LISTVIEW_BREAKPOINT;
 
-/**
- * Determines if one string is a substring of the other, case insensitive
- * @param {String} substring the substring to test against
- * @returns {(Function) => Boolean} Callback function that determines if the argument has the substring
- */
-const stringIncludes = (substring) => (fullstring) =>
-  fullstring.toLowerCase().includes(substring.toLowerCase());
-
-/**
- * Filters a quickstart based on a provided search term.
- * @param {String} search Search term.
- * @returns {(Function) => Boolean} Callback function to be used by filter.
- */
-const filterBySearch = (search) => ({
-  title,
-  summary,
-  description,
-  keywords,
-}) => {
-  if (!search) {
-    return true;
-  }
-
-  const searchIncludes = stringIncludes(search);
-  return (
-    searchIncludes(title) ||
-    searchIncludes(summary) ||
-    searchIncludes(description) ||
-    keywords.some(searchIncludes)
-  );
-};
-
-/**
- * Filters a quickstart based on a category.
- * @param {String} category The category type (e.g. 'featured').
- * @returns {(Function) => Boolean} Callback function to be used by filter.
- */
-const filterByCategory = (category) => {
-  const { associatedKeywords = [] } =
-    CATEGORIES.find(({ value }) => value === category) || {};
-
-  return (quickstart) =>
-    !category ||
-    (quickstart.keywords &&
-      quickstart.keywords.find((k) => associatedKeywords.includes(k)));
-};
-
-const QuickstartsPage = ({ data, location }) => {
+const QuickstartsPage = ({ location, quickstarts, errored }) => {
   const [view] = useState(VIEWS.GRID);
   const tessen = useTessen();
 
@@ -138,47 +93,32 @@ const QuickstartsPage = ({ data, location }) => {
     [search]
   );
 
-  const quickstarts = data.allQuickstarts.nodes;
 
   const featuredQuickStarts = quickstarts?.filter((product) =>
-    product.keywords.includes('featured')
+    product.featured
   );
+
 
   const mostPopularQuickStarts = quickstarts?.filter((product) =>
-    product.keywords.includes('most popular')
+    product.metadata.keywords.includes('most popular')
   );
-
-  const alphaSort = quickstarts.sort((a, b) => a.title.localeCompare(b.title));
-  let sortedQuickstarts = sortFeaturedQuickstarts(alphaSort);
 
   // Hard-code for moving codestream object to front of sortedQuickstarts array - CM
   if ((!category && !search) || (category === 'featured' && !search)) {
     // uuid is codestream id specifically - CM
-    const codestreamIndex = sortedQuickstarts.findIndex(
+    const codestreamIndex = quickstarts.findIndex(
       ({ id }) => id === '29bd9a4a-1c19-4219-9694-0942f6411ce7'
     );
 
     if (codestreamIndex > -1) {
-      const codestreamObject = sortedQuickstarts[codestreamIndex];
-      sortedQuickstarts = [
+      const codestreamObject = quickstarts[codestreamIndex];
+      quickstarts = [
         codestreamObject,
-        ...sortedQuickstarts.slice(0, codestreamIndex),
-        ...sortedQuickstarts.slice(codestreamIndex + 1),
+        ...quickstarts.slice(0, codestreamIndex),
+        ...quickstarts.slice(codestreamIndex + 1),
       ];
     }
   }
-
-  const filteredQuickstarts = sortedQuickstarts
-    .filter(filterBySearch(search))
-    .filter(filterByCategory(category));
-
-  const categoriesWithCount = CATEGORIES.map((cat) => ({
-    ...cat,
-    count: quickstarts
-      .filter(filterBySearch(search))
-      .filter(filterByCategory(cat.value)).length,
-  }));
-
   /**
    * Finds display name for selected category.
    * @returns {String} Display name for results found.
@@ -255,70 +195,18 @@ const QuickstartsPage = ({ data, location }) => {
           @media screen and (max-width: ${QUICKSTARTS_COLLAPSE_BREAKPOINT}) {
             grid-gap: 0;
             grid-template-columns: minmax(0, 1fr);
-            grid-template-areas: 'main';
+            grid-template-areas:
+              'sidebar'
+              'main';
             grid-template-rows: unset;
           }
         `}
       >
-        <aside
-          data-swiftype-index={false}
-          css={css`
-            grid-area: sidebar;
-            height: calc(100vh - var(--global-header-height));
-            position: sticky;
-            top: var(--global-header-height);
-
-            @media screen and (max-width: ${QUICKSTARTS_COLLAPSE_BREAKPOINT}) {
-              display: none;
-              position: relative;
-              overflow: hidden;
-              width: 100%;
-              height: 100%;
-            }
-          `}
-        >
-          <div
-            css={css`
-              padding: var(--site-content-padding);
-              height: 100%;
-              overflow: auto;
-              @media screen and (max-width: ${QUICKSTARTS_COLLAPSE_BREAKPOINT}) {
-                position: relative;
-              }
-            `}
-          >
-            <FormControl>
-              <Label htmlFor="quickstartCategory">Categories</Label>
-              {categoriesWithCount.map(({ displayName, value, count }) => (
-                <Button
-                  type="button"
-                  key={value}
-                  disabled={count === 0}
-                  onClick={() => handleCategory(value)}
-                  css={css`
-                    padding: 1rem 0.5rem;
-                    width: 100%;
-                    display: flex;
-                    justify-content: flex-start;
-                    color: var(--primary-text-color);
-                    font-weight: 100;
-                    background: ${category === value
-                      ? 'var(--divider-color)'
-                      : 'none'};
-                  `}
-                >
-                  {`${displayName}`}
-                  <span
-                    css={css`
-                      color: var(--secondary-text-color);
-                      padding-left: 0.25rem;
-                    `}
-                  >{`(${count})`}</span>
-                </Button>
-              ))}
-            </FormControl>
-          </div>
-        </aside>
+        <QuickstartsSidebar
+          categoriesWithCount={CATEGORIES}
+          category={category}
+          handleCategory={handleCategory}
+        />
         <div
           css={css`
             grid-area: main;
@@ -375,7 +263,7 @@ const QuickstartsPage = ({ data, location }) => {
                     overflow-y: scroll;
                   `}
                 >
-                  {categoriesWithCount.map(({ displayName, value, count }) => (
+                  {CATEGORIES.map(({ displayName, value, count }) => (
                     <Button
                       type="button"
                       key={value}
@@ -617,11 +505,14 @@ const QuickstartsPage = ({ data, location }) => {
             `}
           >
             <span>
-              Showing {filteredQuickstarts.length} results
+              Showing {quickstarts.length} results
               <span> for: </span>
               <strong>{search || getDisplayName()}</strong>
             </span>
           </div>
+        {errored ? (
+          <QuickstartError />
+        ) : (
           <div
             css={css`
               display: grid;
@@ -651,15 +542,16 @@ const QuickstartsPage = ({ data, location }) => {
             `}
           >
             {!isSearchInputEmpty && <SuperTiles />}
-            {filteredQuickstarts.map((pack) => (
+            {quickstarts.map((quickstart) => (
               <QuickstartTile
-                key={pack.id}
+                key={quickstart.id}
                 view={view}
-                featured={false}
-                {...pack}
+                featured={quickstart.featured}
+                {...quickstart}
               />
             ))}
           </div>
+          )}
         </div>
       </div>
     </>
@@ -667,88 +559,9 @@ const QuickstartsPage = ({ data, location }) => {
 };
 
 QuickstartsPage.propTypes = {
-  data: PropTypes.object.isRequired,
+  quickstarts: PropTypes.arrayOf(rawQuickstart),
   location: PropTypes.object,
-};
-
-export const pageQuery = graphql`
-  query {
-    allQuickstarts {
-      nodes {
-        fields {
-          slug
-        }
-        id
-        title
-        name
-        websiteUrl
-        logoUrl
-        packUrl
-        level
-        keywords
-        dashboards {
-          description
-          name
-          screenshots
-          url
-        }
-        alerts {
-          details
-          name
-          url
-          type
-        }
-        documentation {
-          name
-          url
-          description
-        }
-        authors
-        description
-        summary
-        installPlans {
-          id
-          name
-        }
-      }
-    }
-  }
-`;
-
-const Label = ({ children, htmlFor }) => (
-  <label
-    htmlFor={htmlFor}
-    css={css`
-      display: block;
-      font-size: 1rem;
-      font-weight: 600;
-      margin-bottom: 0.5rem;
-      color: var(--primary-text-color);
-    `}
-  >
-    {children}
-  </label>
-);
-
-Label.propTypes = {
-  children: PropTypes.node,
-  htmlFor: PropTypes.string,
-};
-
-const FormControl = ({ children }) => (
-  <div
-    css={css`
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-    `}
-  >
-    {children}
-  </div>
-);
-
-FormControl.propTypes = {
-  children: PropTypes.node,
+  errored: PropTypes.bool,
 };
 
 export default QuickstartsPage;

@@ -2,13 +2,7 @@ import React from 'react';
 import QuickStartLayout from './QuickStartLayout';
 import PropTypes from 'prop-types';
 
-const Layout = ({ children, pageContext }) => {
-  if (pageContext.layout === 'QuickStartLayout') {
-    return <QuickStartLayout>{children}</QuickStartLayout>;
-  }
-
-  return <>{children}</>;
-};
+const Layout = ({ children }) => <QuickStartLayout>{children}</QuickStartLayout>;
 
 Layout.propTypes = {
   children: PropTypes.node,

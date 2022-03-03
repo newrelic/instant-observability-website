@@ -12,7 +12,7 @@ const SupportSection = ({ supportLevel, onClick: onLinkClick }) => {
   const supportLink = (
     <Link
       to={SUPPORT_LINK}
-      key={QUICKSTART_SUPPORT_LEVELS.NEWRELIC}
+      key={QUICKSTART_SUPPORT_LEVELS.NEW_RELIC}
       onClick={() =>
         onLinkClick && onLinkClick('QuickstartDetailsSupportClick')
       }
@@ -24,7 +24,7 @@ const SupportSection = ({ supportLevel, onClick: onLinkClick }) => {
   const communityLink = (
     <Link
       to={COMMUNITY_LINK}
-      key={QUICKSTART_SUPPORT_LEVELS.NEWRELIC}
+      key={QUICKSTART_SUPPORT_LEVELS.NEW_RELIC}
       onClick={() => onLinkClick('QuickstartDetailsCommunityClick')}
     >
       the Explorers Hub
@@ -32,7 +32,7 @@ const SupportSection = ({ supportLevel, onClick: onLinkClick }) => {
   );
 
   const QUICKSTART_SUPPORT_CONTENT = {
-    [QUICKSTART_SUPPORT_LEVELS.NEWRELIC]: {
+    [QUICKSTART_SUPPORT_LEVELS.NEW_RELIC]: {
       title: 'Built by New Relic',
       content: (
         <p>
