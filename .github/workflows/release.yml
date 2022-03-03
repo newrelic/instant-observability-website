@@ -183,7 +183,12 @@ jobs:
               owner: context.repo.owner,
               repo: context.repo.repo,
               branch: 'main',
-              required_status_checks: null,
+              required_status_checks: {
+                strict: false,
+                contexts: [
+                    'Gatsby Build Service - instant-observability-website'
+                ]
+              },
               restrictions: null,
               enforce_admins: true,
               required_pull_request_reviews: {
