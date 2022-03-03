@@ -7,7 +7,7 @@ import QuickstartTile from './QuickstartTile';
 import IOBanner from './IOBanner';
 import QuickstartError from './QuickstartError';
 import { useTessen, Button } from '@newrelic/gatsby-theme-newrelic';
-import { navigate } from '@reach/router';
+import { navigate } from 'gatsby';
 
 import { rawQuickstart } from '../types';
 import { useDebounce } from 'react-use';
@@ -17,7 +17,6 @@ import {
   QUICKSTARTS_COLLAPSE_BREAKPOINT,
   LISTVIEW_BREAKPOINT,
 } from '../data/constants';
-import CATEGORIES from '../data/instant-observability-categories.json';
 
 import SuperTiles from './SuperTiles';
 
@@ -34,7 +33,14 @@ const DOUBLE_COLUMN_BREAKPOINT = '1180px';
 const TRIPLE_COLUMN_BREAKPOINT = '1350px';
 const SINGLE_COLUMN_BREAKPOINT = LISTVIEW_BREAKPOINT;
 
-const QuickstartsPage = ({ location, quickstarts, errored }) => {
+const QuickstartsPage = ({ location, serverData, errored }) => {
+  const allCategoriesWithTerms = serverData?.facetsQuery?.categories ?? [];
+  const allCategoriesWithCount =
+    serverData?.facetsQuery?.search?.facets?.categories ?? [];
+  let quickstarts = serverData?.quickstartsQuery?.search?.results ?? [];
+  const facets = serverData?.quickstartsQuery?.search?.facets ?? {};
+  const totalCount = serverData?.facetsQuery?.search?.totalCount;
+
   const [view] = useState(VIEWS.GRID);
   const tessen = useTessen();
 
@@ -74,15 +80,41 @@ const QuickstartsPage = ({ location, quickstarts, errored }) => {
     }
   };
 
-  const handleCategory = (value) => {
-    if (value !== null && value !== undefined) {
+  const handleCategory = (terms) => {
+    if (terms !== null && terms !== undefined) {
       const params = new URLSearchParams(location.search);
-      params.set('category', value);
+      params.set('category', terms);
 
       navigate(`?${params.toString()}`);
     }
 
     closeCategoriesOverlay();
+  };
+
+  const getCategories = () => {
+    const categoriesWithCount =
+      search !== '' ? facets.categories || [] : allCategoriesWithCount;
+
+    const categoryCountDictionary = categoriesWithCount.reduce(
+      (acc, category) => {
+        acc = { ...acc, [category.displayName]: category.count };
+        return acc;
+      },
+      {}
+    );
+
+    const categories = allCategoriesWithTerms.map((category) => {
+      return {
+        ...category,
+        count: categoryCountDictionary[category.displayName] || 0,
+      };
+    });
+    categories.unshift({
+      displayName: 'All',
+      count: totalCount,
+      terms: [''],
+    });
+    return categories;
   };
 
   useDebounce(
@@ -93,11 +125,9 @@ const QuickstartsPage = ({ location, quickstarts, errored }) => {
     [search]
   );
 
-
-  const featuredQuickStarts = quickstarts?.filter((product) =>
-    product.featured
+  const featuredQuickStarts = quickstarts?.filter(
+    (product) => product.featured
   );
-
 
   const mostPopularQuickStarts = quickstarts?.filter((product) =>
     product.metadata.keywords.includes('most popular')
@@ -106,7 +136,7 @@ const QuickstartsPage = ({ location, quickstarts, errored }) => {
   // Hard-code for moving codestream object to front of sortedQuickstarts array - CM
   if ((!category && !search) || (category === 'featured' && !search)) {
     // uuid is codestream id specifically - CM
-    const codestreamIndex = quickstarts.findIndex(
+    const codestreamIndex = quickstarts?.findIndex(
       ({ id }) => id === '29bd9a4a-1c19-4219-9694-0942f6411ce7'
     );
 
@@ -114,19 +144,23 @@ const QuickstartsPage = ({ location, quickstarts, errored }) => {
       const codestreamObject = quickstarts[codestreamIndex];
       quickstarts = [
         codestreamObject,
-        ...quickstarts.slice(0, codestreamIndex),
-        ...quickstarts.slice(codestreamIndex + 1),
+        ...quickstarts?.slice(0, codestreamIndex),
+        ...quickstarts?.slice(codestreamIndex + 1),
       ];
     }
   }
+
+  const categoriesWithCount = getCategories();
+
+  console.log(categoriesWithCount);
   /**
    * Finds display name for selected category.
    * @returns {String} Display name for results found.
    */
   const getDisplayName = (defaultName = 'All quickstarts') => {
-    const found = CATEGORIES.find((cat) => cat.value === category);
+    const found = categoriesWithCount.find((cat) => cat.terms === category);
 
-    if (!found.value) return defaultName;
+    if (!found) return defaultName;
 
     return found.displayName;
   };
@@ -203,7 +237,7 @@ const QuickstartsPage = ({ location, quickstarts, errored }) => {
         `}
       >
         <QuickstartsSidebar
-          categoriesWithCount={CATEGORIES}
+          categoriesWithCount={categoriesWithCount}
           category={category}
           handleCategory={handleCategory}
         />
@@ -263,26 +297,29 @@ const QuickstartsPage = ({ location, quickstarts, errored }) => {
                     overflow-y: scroll;
                   `}
                 >
-                  {CATEGORIES.map(({ displayName, value, count }) => (
-                    <Button
-                      type="button"
-                      key={value}
-                      onClick={() => handleCategory(value)}
-                      css={css`
-                        padding: 1rem 0.5rem;
-                        width: 100%;
-                        display: flex;
-                        justify-content: flex-start;
-                        color: var(--primary-text-color);
-                        font-weight: 100;
-                        background: ${category === value
-                          ? 'var(--divider-color)'
-                          : 'none'};
-                      `}
-                    >
-                      {`${displayName} (${count})`}
-                    </Button>
-                  ))}
+                  {categoriesWithCount.map(
+                    ({ displayName, slug, terms, count }) => (
+                      <Button
+                        type="button"
+                        key={slug}
+                        disabled={count === 0}
+                        onClick={() => handleCategory(terms)}
+                        css={css`
+                          padding: 1rem 0.5rem;
+                          width: 100%;
+                          display: flex;
+                          justify-content: flex-start;
+                          color: var(--primary-text-color);
+                          font-weight: 100;
+                          background: ${category === terms.toString()
+                            ? 'var(--divider-color)'
+                            : 'none'};
+                        `}
+                      >
+                        {`${displayName} (${count})`}
+                      </Button>
+                    )
+                  )}
                 </div>
                 <div
                   css={css`
@@ -505,52 +542,52 @@ const QuickstartsPage = ({ location, quickstarts, errored }) => {
             `}
           >
             <span>
-              Showing {quickstarts.length} results
+              Showing {quickstarts?.length} results
               <span> for: </span>
               <strong>{search || getDisplayName()}</strong>
             </span>
           </div>
-        {errored ? (
-          <QuickstartError />
-        ) : (
-          <div
-            css={css`
-              display: grid;
-              grid-gap: 1.25rem;
-              grid-template-columns: repeat(4, 1fr);
-              grid-auto-rows: 1fr;
-              ${view === VIEWS.GRID &&
-              css`
-                @media (max-width: ${TRIPLE_COLUMN_BREAKPOINT}) {
-                  grid-template-columns: repeat(3, 1fr);
-                }
-
-                @media (max-width: ${DOUBLE_COLUMN_BREAKPOINT}) {
-                  grid-template-columns: repeat(2, 1fr);
-                }
-
-                @media (max-width: ${SINGLE_COLUMN_BREAKPOINT}) {
-                  grid-template-columns: repeat(1, 1fr);
-                }
-              `}
-              ${view === VIEWS.LIST &&
-              css`
-                grid-auto-rows: 1fr;
-                grid-template-columns: 1fr;
+          {errored ? (
+            <QuickstartError />
+          ) : (
+            <div
+              css={css`
+                display: grid;
                 grid-gap: 1.25rem;
-              `};
-            `}
-          >
-            {!isSearchInputEmpty && <SuperTiles />}
-            {quickstarts.map((quickstart) => (
-              <QuickstartTile
-                key={quickstart.id}
-                view={view}
-                featured={quickstart.featured}
-                {...quickstart}
-              />
-            ))}
-          </div>
+                grid-template-columns: repeat(4, 1fr);
+                grid-auto-rows: 1fr;
+                ${view === VIEWS.GRID &&
+                css`
+                  @media (max-width: ${TRIPLE_COLUMN_BREAKPOINT}) {
+                    grid-template-columns: repeat(3, 1fr);
+                  }
+
+                  @media (max-width: ${DOUBLE_COLUMN_BREAKPOINT}) {
+                    grid-template-columns: repeat(2, 1fr);
+                  }
+
+                  @media (max-width: ${SINGLE_COLUMN_BREAKPOINT}) {
+                    grid-template-columns: repeat(1, 1fr);
+                  }
+                `}
+                ${view === VIEWS.LIST &&
+                css`
+                  grid-auto-rows: 1fr;
+                  grid-template-columns: 1fr;
+                  grid-gap: 1.25rem;
+                `};
+              `}
+            >
+              {!isSearchInputEmpty && <SuperTiles />}
+              {quickstarts?.map((quickstart) => (
+                <QuickstartTile
+                  key={quickstart.id}
+                  view={view}
+                  featured={quickstart.featured}
+                  {...quickstart}
+                />
+              ))}
+            </div>
           )}
         </div>
       </div>
@@ -559,7 +596,40 @@ const QuickstartsPage = ({ location, quickstarts, errored }) => {
 };
 
 QuickstartsPage.propTypes = {
-  quickstarts: PropTypes.arrayOf(rawQuickstart),
+  serverData: PropTypes.shape({
+    quickstartsQuery: PropTypes.shape({
+      search: PropTypes.shape({
+        facets: PropTypes.shape({
+          categories: PropTypes.shape({
+            count: PropTypes.string,
+            displayName: PropTypes.string,
+          }),
+        }),
+        results: PropTypes.arrayOf(rawQuickstart),
+        categories: PropTypes.arrayOf(
+          PropTypes.shape({
+            displayName: PropTypes.string,
+            terms: PropTypes.array,
+          })
+        ),
+      }),
+    }),
+    facetsQuery: PropTypes.shape({
+      categories: PropTypes.shape({
+        displayName: PropTypes.string,
+        terms: PropTypes.array,
+      }),
+      search: PropTypes.shape({
+        totalCount: PropTypes.string,
+        facets: PropTypes.shape({
+          categories: PropTypes.shape({
+            count: PropTypes.string,
+            displayName: PropTypes.string,
+          }),
+        }),
+      }),
+    }),
+  }),
   location: PropTypes.object,
   errored: PropTypes.bool,
 };

@@ -8,13 +8,15 @@ const NEW_RELIC_API_KEY = process.env.NEW_RELIC_API_KEY;
 
 export const getServerData = async ({ query }) => {
   const sortParam = query.sort || 'RELEVANCE';
+  const searchParam = query.search;
+  const categoryParam =
+    !query.category || query.category === '' ? [] : query.category.split(',');
 
   const QUICKSTARTS_QUERY = `
-query getQuickstarts($sortBy: Nr1CatalogSearchSortOption){
+query getQuickstarts($sortBy: Nr1CatalogSearchSortOption, $query: String, $categories: [String!]) {
   actor {
     nr1Catalog {
-      search(sortBy: $sortBy, filter: {types: QUICKSTART}) {
-        totalCount
+      search(sortBy: $sortBy, filter: {types: QUICKSTART, categories: $categories}, query: $query) {
         results {
           ... on Nr1CatalogQuickstart {
             id
@@ -31,19 +33,56 @@ query getQuickstarts($sortBy: Nr1CatalogSearchSortOption){
             }
           }
         }
+        facets {
+          categories {
+            count
+            displayName
+          }
+        }
       }
     }
   }
 }
 `;
 
+  const FACET_QUERY = `{
+  actor {
+    nr1Catalog {
+      categories {
+        displayName
+        terms
+      }
+      search(filter: {types: QUICKSTART}) {
+        totalCount
+        facets {
+          categories {
+            count
+            displayName
+          }
+        }
+      }
+    }
+  }
+}`;
+
   try {
     const resp = await fetch(NERDGRAPH_URL, {
       method: 'POST',
-      body: JSON.stringify({
-        query: QUICKSTARTS_QUERY,
-        variables: { sortBy: sortParam },
-      }),
+      body: JSON.stringify([
+        {
+          id: 'quickstartsQuery',
+          query: QUICKSTARTS_QUERY,
+          variables: {
+            sortBy: sortParam,
+            query: searchParam,
+            categories: categoryParam,
+          },
+        },
+        {
+          id: 'facetsQuery',
+          query: FACET_QUERY,
+        },
+      ]),
       headers: {
         'Content-Type': 'application/json',
         'Api-Key': NEW_RELIC_API_KEY,
@@ -56,13 +95,22 @@ query getQuickstarts($sortBy: Nr1CatalogSearchSortOption){
 
     const json = await resp.json();
 
-    if (json.errors) {
-      throw new Error(`Errors returned from nerdgraph`, json.errors);
-    }
-    const results = json.data?.actor?.nr1Catalog?.search?.results;
-
+    const results = json.reduce((acc, queryResponse) => {
+      if (queryResponse.payload.errors) {
+        console.log({ errors: queryResponse.payload.errors });
+        throw new Error(
+          `Errors returned from nerdgraph`,
+          queryResponse.payload.errors
+        );
+      }
+      acc = {
+        ...acc,
+        [queryResponse.id]: queryResponse.payload.data.actor.nr1Catalog,
+      };
+      return acc;
+    }, {});
     /* eslint-disable-next-line no-console */
-    console.log(`Found ${results?.length} quickstarts`);
+    console.log(`Found ${results.facetsQuery?.search?.totalCount} quickstarts`);
 
     customEventTrack('NerdGraphRequest', {
       success: true,
@@ -97,7 +145,7 @@ const QuickstartsPageSSR = ({ serverData, location }) => {
   return (
     <QuickstartsPage
       errored={serverData.error}
-      quickstarts={serverData.data}
+      serverData={serverData.data}
       location={location}
     />
   );

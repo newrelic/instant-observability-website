@@ -2,9 +2,7 @@ import React from 'react';
 import { css } from '@emotion/react';
 import PropTypes from 'prop-types';
 import { Button } from '@newrelic/gatsby-theme-newrelic';
-import {
-  QUICKSTARTS_COLLAPSE_BREAKPOINT,
-} from '../data/constants';
+import { QUICKSTARTS_COLLAPSE_BREAKPOINT } from '../data/constants';
 
 const QuickstartsSidebar = ({
   categoriesWithCount,
@@ -40,12 +38,12 @@ const QuickstartsSidebar = ({
     >
       <FormControl>
         <Label htmlFor="quickstartCategory">CATEGORIES</Label>
-        {categoriesWithCount.map(({ displayName, value, count }) => (
+        {categoriesWithCount.map(({ displayName, terms, slug, count }) => (
           <Button
             type="button"
-            key={value}
+            key={slug}
             disabled={count === 0}
-            onClick={() => handleCategory(value)}
+            onClick={() => handleCategory(terms)}
             css={css`
               padding: 1rem 0.5rem;
               width: 100%;
@@ -53,27 +51,26 @@ const QuickstartsSidebar = ({
               justify-content: flex-start;
               color: var(--primary-text-color);
               font-weight: 100;
-              background: ${category === value
+              background: ${category === terms.toString()
                 ? 'var(--divider-color)'
                 : 'none'};
             `}
           >
             {`${displayName}`}
-        <span
-          css={css`
-            color: var(--secondary-text-color);
-            padding-left: 0.25rem;
-          `}
-        >{`(${count})`}</span>
-              </Button>
-            ))}
-          </FormControl>
+            <span
+              css={css`
+                color: var(--secondary-text-color);
+                padding-left: 0.25rem;
+              `}
+            >{`(${count})`}</span>
+          </Button>
+        ))}
+      </FormControl>
     </div>
   </aside>
 );
 
 QuickstartsSidebar.propTypes = {
-  isMobile: PropTypes.bool,
   categoriesWithCount: PropTypes.array,
   category: PropTypes.string,
   handleCategory: PropTypes.func,
