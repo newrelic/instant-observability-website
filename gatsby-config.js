@@ -1,5 +1,4 @@
 const quote = (str) => `"${str}"`;
-const resolveQuickstartSlug = require('./src/utils/resolveQuickstartSlug');
 
 module.exports = {
   pathPrefix: `/instant-observability`,

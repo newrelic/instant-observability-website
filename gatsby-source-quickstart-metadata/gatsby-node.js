@@ -6,7 +6,7 @@ const NERDGRAPH_URL = process.env.NERDGRAPH_URL;
 const NEW_RELIC_API_KEY = process.env.NEW_RELIC_API_KEY;
 
 exports.onPreInit = () =>
-  console.log(`Loaded gatsby-source-quickstart-metadata`);
+  console.log(`${pluginLogPrefix} Loaded gatsby-source-quickstart-metadata`);
 
 /**
  * Used to pull down metadata related to each quickstart, so that related resources has enough information
@@ -98,22 +98,20 @@ const fetchQuickstartMetadata = async () => {
 
     if (!resp.ok) {
       throw Error(
-        `${pluginLogPrefix} Non 200 status code returned from nerdgraph: ${resp.status} ${resp.statusText}`
+        `Non 200 status code returned from nerdgraph: ${resp.status} ${resp.statusText}`
       );
     }
 
     const json = await resp.json();
 
     if (json.errors) {
-      throw new Error(
-        `${pluginLogPrefix} Errors returned from nerdgraph`,
-        json.errors
-      );
+      throw new Error(`Errors returned from nerdgraph`, json.errors);
     }
-    const results = json.data?.actor?.nr1Catalog?.quickstarts?.results;
+
+    const results = json.data?.actor?.nr1Catalog?.quickstarts?.results ?? [];
 
     /* eslint-disable-next-line no-console */
-    console.log(`${pluginLogPrefix} Found ${results?.length} quickstarts`);
+    console.log(`${pluginLogPrefix} Found ${results.length} quickstarts`);
 
     return results;
   } catch (err) {
