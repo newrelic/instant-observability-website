@@ -59,6 +59,7 @@ Runs every 4 hours to pull in new quickstarts from Nerdgraph (New Relic's GraphQ
 
 #### Fetch related content
 Runs every day to get various pages that relate to each quickstart from our vendor.
+The quickstart metadata used to query for related pages is pulled down using the local [`gatsby-source-quickstart-metadata`](./gatsby-source-quickstart-metadata/README.md) 
 
 ## ☁️  Hosting  
 
