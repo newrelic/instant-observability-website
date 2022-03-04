@@ -88,6 +88,7 @@ const QuickstartsPage = ({ data, location }) => {
 
   const [isCategoriesOverlayOpen, setIsCategoriesOverlayOpen] = useState(false);
   const [isSearchInputEmpty, setIsSearchInputEmpty] = useState(true);
+  const [isSelectCategory, setIsSelectCategory] = useState(true);
 
   useEffect(() => {
     const params = new URLSearchParams(location.search);
@@ -120,13 +121,15 @@ const QuickstartsPage = ({ data, location }) => {
   };
 
   const handleCategory = (value) => {
+    setIsSelectCategory(true);
     if (value !== null && value !== undefined) {
       const params = new URLSearchParams(location.search);
       params.set('category', value);
-
       navigate(`?${params.toString()}`);
+      if (value != '') {
+        setIsSelectCategory(false);
+      }
     }
-
     closeCategoriesOverlay();
   };
 
@@ -427,10 +430,94 @@ const QuickstartsPage = ({ data, location }) => {
             </Overlay>
           </div>
 
-          {isSearchInputEmpty && (
+          {isSelectCategory && (
             <>
-              {mostPopularQuickStarts.length > 0 && (
+              {isSearchInputEmpty && (
                 <>
+                  {mostPopularQuickStarts.length > 0 && (
+                    <>
+                      <div
+                        css={css`
+                          --text-color: var(--primary-text-color);
+                          font-size: 16px;
+                          color: var(--color-neutrals-800);
+                          align-text: center;
+                          span {
+                            color: var(--text-color);
+                            /* target inner children of parent span */
+                            span,
+                            strong {
+                              @media screen and (max-width: ${QUICKSTARTS_COLLAPSE_BREAKPOINT}) {
+                                display: none;
+                              }
+                            }
+                          }
+                          strong {
+                            color: var(--text-color);
+                          }
+                          @media screen and (max-width: ${QUICKSTARTS_COLLAPSE_BREAKPOINT}) {
+                            padding: 0 0 0.5rem;
+                          }
+                        `}
+                      >
+                        <span>
+                          <strong>Most Popular</strong>
+                        </span>
+                      </div>
+                      <div
+                        css={css`
+                          display: block;
+                          grid-gap: 1.25rem;
+                          padding: 10px;
+                          grid-template-columns: repeat(4, 1fr);
+                          grid-auto-rows: 1fr;
+                          ${view === VIEWS.GRID &&
+                          css`
+                            @media (max-width: ${TRIPLE_COLUMN_BREAKPOINT}) {
+                              grid-template-columns: repeat(3, 1fr);
+                            }
+                            @media (max-width: ${DOUBLE_COLUMN_BREAKPOINT}) {
+                              grid-template-columns: repeat(2, 1fr);
+                            }
+                            @media (max-width: ${SINGLE_COLUMN_BREAKPOINT}) {
+                              grid-template-columns: repeat(1, 1fr);
+                            }
+                          `}
+                          ${view === VIEWS.LIST &&
+                          css`
+                            grid-auto-rows: 1fr;
+                            grid-template-columns: 1fr;
+                            grid-gap: 1.25rem;
+                          `};
+                        `}
+                      >
+                        <Slider
+                          {...settings}
+                          css={css`
+                            display: flex;
+                          `}
+                        >
+                          <SuperTiles />
+                          {mostPopularQuickStarts.map((pack) => (
+                            <QuickstartTile
+                              key={pack.id}
+                              view={view}
+                              featured={false}
+                              css={css`
+                                grid-template-rows:
+                                  var(--tile-image-height) var(
+                                    --title-row-height
+                                  )
+                                  80px auto;
+                                min-height: 280px;
+                              `}
+                              {...pack}
+                            />
+                          ))}
+                        </Slider>
+                      </div>
+                    </>
+                  )}
                   <div
                     css={css`
                       --text-color: var(--primary-text-color);
@@ -456,14 +543,14 @@ const QuickstartsPage = ({ data, location }) => {
                     `}
                   >
                     <span>
-                      <strong>Most Popular</strong>
+                      <strong>Featured</strong>
                     </span>
                   </div>
                   <div
                     css={css`
                       display: block;
-                      grid-gap: 1.25rem;
                       padding: 10px;
+                      grid-gap: 1.25rem;
                       grid-template-columns: repeat(4, 1fr);
                       grid-auto-rows: 1fr;
                       ${view === VIEWS.GRID &&
@@ -486,14 +573,8 @@ const QuickstartsPage = ({ data, location }) => {
                       `};
                     `}
                   >
-                    <Slider
-                      {...settings}
-                      css={css`
-                        display: flex;
-                      `}
-                    >
-                      <SuperTiles />
-                      {mostPopularQuickStarts.map((pack) => (
+                    <Slider {...settings}>
+                      {featuredQuickStarts.map((pack) => (
                         <QuickstartTile
                           key={pack.id}
                           view={view}
@@ -511,78 +592,6 @@ const QuickstartsPage = ({ data, location }) => {
                   </div>
                 </>
               )}
-              <div
-                css={css`
-                  --text-color: var(--primary-text-color);
-                  font-size: 16px;
-                  color: var(--color-neutrals-800);
-                  align-text: center;
-                  span {
-                    color: var(--text-color);
-                    /* target inner children of parent span */
-                    span,
-                    strong {
-                      @media screen and (max-width: ${QUICKSTARTS_COLLAPSE_BREAKPOINT}) {
-                        display: none;
-                      }
-                    }
-                  }
-                  strong {
-                    color: var(--text-color);
-                  }
-                  @media screen and (max-width: ${QUICKSTARTS_COLLAPSE_BREAKPOINT}) {
-                    padding: 0 0 0.5rem;
-                  }
-                `}
-              >
-                <span>
-                  <strong>Featured</strong>
-                </span>
-              </div>
-              <div
-                css={css`
-                  display: block;
-                  padding: 10px;
-                  grid-gap: 1.25rem;
-                  grid-template-columns: repeat(4, 1fr);
-                  grid-auto-rows: 1fr;
-                  ${view === VIEWS.GRID &&
-                  css`
-                    @media (max-width: ${TRIPLE_COLUMN_BREAKPOINT}) {
-                      grid-template-columns: repeat(3, 1fr);
-                    }
-                    @media (max-width: ${DOUBLE_COLUMN_BREAKPOINT}) {
-                      grid-template-columns: repeat(2, 1fr);
-                    }
-                    @media (max-width: ${SINGLE_COLUMN_BREAKPOINT}) {
-                      grid-template-columns: repeat(1, 1fr);
-                    }
-                  `}
-                  ${view === VIEWS.LIST &&
-                  css`
-                    grid-auto-rows: 1fr;
-                    grid-template-columns: 1fr;
-                    grid-gap: 1.25rem;
-                  `};
-                `}
-              >
-                <Slider {...settings}>
-                  {featuredQuickStarts.map((pack) => (
-                    <QuickstartTile
-                      key={pack.id}
-                      view={view}
-                      featured={false}
-                      css={css`
-                        grid-template-rows:
-                          var(--tile-image-height) var(--title-row-height)
-                          80px auto;
-                        min-height: 280px;
-                      `}
-                      {...pack}
-                    />
-                  ))}
-                </Slider>
-              </div>
             </>
           )}
           <div
