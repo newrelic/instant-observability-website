@@ -149,7 +149,8 @@ const QuickstartsPage = ({ data, location }) => {
   );
 
   const alphaSort = quickstarts.sort((a, b) => a.title.localeCompare(b.title));
-  let sortedQuickstarts = sortFeaturedQuickstarts(alphaSort);
+  //let sortedQuickstarts = sortFeaturedQuickstarts(alphaSort);
+  let sortedQuickstarts = alphaSort;
 
   // Hard-code for moving codestream object to front of sortedQuickstarts array - CM
   if ((!category && !search) || (category === 'featured' && !search)) {
