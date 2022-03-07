@@ -3,6 +3,7 @@ import React from 'react';
 import QuickstartsPage from '../components/QuickstartsPage';
 import customEventTrack from '../utils/customNewRelicEvent';
 
+const gql = String.raw; // Hack to get text editors to highlight graphql string without pulling in an external package
 const NERDGRAPH_URL = process.env.NERDGRAPH_URL;
 const NEW_RELIC_API_KEY = process.env.NEW_RELIC_API_KEY;
 
@@ -12,58 +13,52 @@ export const getServerData = async ({ query }) => {
   const categoryParam =
     !query.category || query.category === '' ? [] : query.category.split(',');
 
-  const QUICKSTARTS_QUERY = `
-query getQuickstarts($sortBy: Nr1CatalogSearchSortOption, $query: String, $categories: [String!]) {
-  actor {
-    nr1Catalog {
-      search(sortBy: $sortBy, filter: {types: QUICKSTART, categories: $categories}, query: $query) {
-        results {
-          ... on Nr1CatalogQuickstart {
-            id
-            supportLevel
-            featured
-            metadata {
-              summary
-              keywords
-              displayName
-              slug
-              icon {
-                url
+  const QUICKSTARTS_QUERY = gql`
+    query getQuickstarts(
+      $sortBy: Nr1CatalogSearchSortOption
+      $query: String
+      $categories: [String!]
+    ) {
+      actor {
+        nr1Catalog {
+          quickstarts: search(
+            sortBy: $sortBy
+            filter: { types: QUICKSTART, categories: $categories }
+            query: $query
+          ) {
+            results {
+              ... on Nr1CatalogQuickstart {
+                id
+                supportLevel
+                featured
+                metadata {
+                  summary
+                  keywords
+                  displayName
+                  slug
+                  icon {
+                    url
+                  }
+                }
               }
             }
           }
-        }
-        facets {
-          categories {
-            count
+          categoriesWithCounts: search(query: $query) {
+            facets {
+              categories {
+                count
+                displayName
+              }
+            }
+          }
+          categoriesWithTerms: categories {
+            terms
             displayName
           }
         }
       }
     }
-  }
-}
-`;
-
-  const FACET_QUERY = `{
-  actor {
-    nr1Catalog {
-      categories {
-        displayName
-        terms
-      }
-      search(filter: {types: QUICKSTART}) {
-        totalCount
-        facets {
-          categories {
-            count
-            displayName
-          }
-        }
-      }
-    }
-  }
-}`;
+  `;
 
   try {
     const resp = await fetch(NERDGRAPH_URL, {
@@ -77,10 +72,6 @@ query getQuickstarts($sortBy: Nr1CatalogSearchSortOption, $query: String, $categ
             query: searchParam,
             categories: categoryParam,
           },
-        },
-        {
-          id: 'facetsQuery',
-          query: FACET_QUERY,
         },
       ]),
       headers: {
@@ -109,8 +100,12 @@ query getQuickstarts($sortBy: Nr1CatalogSearchSortOption, $query: String, $categ
       };
       return acc;
     }, {});
+
+    //console.log(JSON.stringify(results.categoriesWithTerms, null, 2));
     /* eslint-disable-next-line no-console */
-    console.log(`Found ${results.facetsQuery?.search?.totalCount} quickstarts`);
+    console.log(
+      `Found ${results.quickstartsQuery?.quickstarts?.results?.length} quickstarts`
+    );
 
     customEventTrack('NerdGraphRequest', {
       success: true,

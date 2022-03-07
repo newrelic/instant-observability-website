@@ -37,7 +37,7 @@ const QuickstartsPage = ({ location, serverData, errored }) => {
   const allCategoriesWithTerms = serverData?.facetsQuery?.categories ?? [];
   const allCategoriesWithCount =
     serverData?.facetsQuery?.search?.facets?.categories ?? [];
-  let quickstarts = serverData?.quickstartsQuery?.search?.results ?? [];
+  let quickstarts = serverData?.quickstartsQuery?.quickstarts?.results ?? [];
   const facets = serverData?.quickstartsQuery?.search?.facets ?? {};
   const totalCount = serverData?.facetsQuery?.search?.totalCount;
 
