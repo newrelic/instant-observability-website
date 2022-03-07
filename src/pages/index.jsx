@@ -192,7 +192,6 @@ const QuickstartsPage = ({ data, location }) => {
     return found.displayName;
   };
 
-
   const settings = {
     dots: false,
     infinite: false,
