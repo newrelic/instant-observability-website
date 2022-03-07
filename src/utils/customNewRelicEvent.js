@@ -6,6 +6,11 @@
 // taken from gatsby-config.js
 const NEW_RELIC_ACCOUNT_ID = '10956800';
 const NEW_RELIC_LICENSE_KEY = process.env.NEW_RELIC_LICENSE_KEY;
+
+/**
+ * branch is a Gatsby Cloud provided variable.
+ * see: https://support.gatsbyjs.com/hc/en-us/articles/360052322954-Environment-Variables-Specific-to-Gatsby-Cloud/#read-only-variables
+ */
 const ENVIRONMENT = process.env.BRANCH || 'local';
 
 /**
