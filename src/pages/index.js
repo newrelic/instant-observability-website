@@ -6,7 +6,7 @@ import customEventTrack from '../utils/customNewRelicEvent';
 const NERDGRAPH_URL = process.env.NERDGRAPH_URL;
 const NEW_RELIC_API_KEY = process.env.NEW_RELIC_API_KEY;
 
-export const getServerData = async ({ query }) => {
+export const getServerData = async ({ query, url }) => {
   const sortParam = query.sort || 'RELEVANCE';
 
   const QUICKSTARTS_QUERY = `
@@ -37,13 +37,15 @@ query getQuickstarts($sortBy: Nr1CatalogSearchSortOption){
 }
 `;
 
+  const requestBody = JSON.stringify({
+    query: QUICKSTARTS_QUERY,
+    variables: { sortBy: sortParam },
+  });
+
   try {
     const resp = await fetch(NERDGRAPH_URL, {
       method: 'POST',
-      body: JSON.stringify({
-        query: QUICKSTARTS_QUERY,
-        variables: { sortBy: sortParam },
-      }),
+      body: requestBody,
       headers: {
         'Content-Type': 'application/json',
         'Api-Key': NEW_RELIC_API_KEY,
@@ -66,7 +68,8 @@ query getQuickstarts($sortBy: Nr1CatalogSearchSortOption){
 
     customEventTrack('NerdGraphRequest', {
       success: true,
-      ...query,
+      requestBody,
+      url,
     });
 
     return {
@@ -82,7 +85,8 @@ query getQuickstarts($sortBy: Nr1CatalogSearchSortOption){
     customEventTrack('NerdGraphRequest', {
       success: false,
       errorMessage: err,
-      ...query,
+      requestBody,
+      url,
     });
 
     return {
