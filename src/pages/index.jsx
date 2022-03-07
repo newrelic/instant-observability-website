@@ -736,7 +736,9 @@ Label.propTypes = {
   htmlFor: PropTypes.string,
 };
 
-const FormControl = ({ children }) => (
+const FormControl = ({
+  children
+}) => (
   <div
     css={css`
       display: flex;
