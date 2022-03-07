@@ -12,6 +12,28 @@ This site hosts the public version of the Instant Observability Marketplace
 
 ## 👷‍♂️ Local development
 
+### Environment
+
+In order to run the site without error, you will need to set a few environment variables so that requests to Nerdgraph can succeed. The easiest way to specify these values is to create a `.env.development` file at the root of the repo. If you want, you can forego the file and run with environment variables set via a different mechanism.
+
+Inside the file, you will want to copy (and replace where appropriate) the following:
+```
+BRANCH='local'
+NERDGRAPH_URL='https://api.newrelic.com/graphql'
+NEW_RELIC_API_KEY='KEY_WITH_ACCESS_TO_PROD_NERDGRAPH'
+NEW_RELIC_LICENSE_KEY='STAGING_DEVEN_LICENSE_KEY'
+```
+
+`NERDGRAPH_URL` (required) - the NerdGraph endpoint the site reaches out to. Value is `https://api.newrelic.com/graphql` for production. If missing, catalog & details pages will fail to load.
+
+`NEW_RELIC_API_KEY` (required) - API key with access to NerdGraph. Against production NERDGRAPH_URL, this will need to be for a user in our production account. If testing against staging, this will instead need to be for a staging user. If missing, catalog & details pages will fail to load.
+
+`NEW_RELIC_LICENSE_KEY` (optional) - ingest license key for our staging account. This is needed to monitor the site in New Relic. The site will still function if the value is missing or incorrect but events will not be sent to New Relic.chore
+
+`BRANCH` (optional) - unique identifier which is appended to events as `environment`. Default value is `local`. This is used to filtering events across different branches of work. When working locally, we recommend this value be changed to be as unique as possible so you can identify events specific to your work.
+
+### Running the Site
+
 You can serve this site locally to quickly see your changes and additions before you PR them. To get started, navigate into your new site’s directory and start it up, as follows.
 
 ```shell
@@ -21,7 +43,6 @@ yarn start
 ```
 
 Your site is now running at `http://localhost:8000`!
-
 
 ## 🚀 Production Build
 
