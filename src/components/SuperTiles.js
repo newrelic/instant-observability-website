@@ -1,6 +1,6 @@
 import React from 'react';
 import { css } from '@emotion/react';
-import GuidedInstallTile from './GuidedInstallTile';
+import GuidedInstallTileMostPopular from './GuidedInstallTileMostPopular';
 
 const SuperTiles = () => {
   return (
@@ -11,7 +11,7 @@ const SuperTiles = () => {
         grid-template-columns: repeat(1, 1fr);
       `}
     >
-      <GuidedInstallTile />
+      <GuidedInstallTileMostPopular />
     </div>
   );
 };
