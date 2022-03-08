@@ -12,6 +12,7 @@ import { navigate } from 'gatsby';
 import { rawQuickstart } from '../types';
 import { useDebounce } from 'react-use';
 import QuickstartsSidebar from './QuickstartsSidebar';
+import CategorySelector from './CategorySelector';
 
 import {
   QUICKSTARTS_COLLAPSE_BREAKPOINT,
@@ -153,7 +154,9 @@ const QuickstartsPage = ({ location, serverData, errored }) => {
    * @returns {String} Display name for results found.
    */
   const getDisplayName = (defaultName = 'All quickstarts') => {
-    const found = allCategoriesWithTerms.find((cat) => cat.terms === category);
+    const found = allCategoriesWithTerms.find(
+      (cat) => cat.terms.toString() === category
+    );
 
     if (!found) return defaultName;
 
@@ -243,6 +246,7 @@ const QuickstartsPage = ({ location, serverData, errored }) => {
             padding: var(--site-content-padding);
           `}
         >
+          {/* BEGIN MOBILE CATEGORY PICK */}
           <div
             css={css`
               display: flex;
@@ -277,44 +281,17 @@ const QuickstartsPage = ({ location, serverData, errored }) => {
                   margin: 30% auto 0;
                   padding: 1rem;
                   background: var(--primary-background-color);
+                  div {
+                    max-height: 400px;
+                  }
                 `}
               >
-                <h3
-                  css={css`
-                    padding: 0.5rem 0 0 0.5rem;
-                  `}
-                >
-                  Category
-                </h3>
-                <div
-                  css={css`
-                    max-height: 400px;
-                    padding-bottom: 3rem;
-                    overflow-y: scroll;
-                  `}
-                >
-                  {fullCategories.map(({ displayName, slug, terms, count }) => (
-                    <Button
-                      type="button"
-                      key={slug}
-                      disabled={count === 0}
-                      onClick={() => handleCategory(terms)}
-                      css={css`
-                        padding: 1rem 0.5rem;
-                        width: 100%;
-                        display: flex;
-                        justify-content: flex-start;
-                        color: var(--primary-text-color);
-                        font-weight: 100;
-                        background: ${category === terms.toString()
-                          ? 'var(--divider-color)'
-                          : 'none'};
-                      `}
-                    >
-                      {`${displayName} (${count})`}
-                    </Button>
-                  ))}
-                </div>
+                <CategorySelector
+                  categoriesWithCount={fullCategories}
+                  category={category}
+                  handleCategory={handleCategory}
+                  totalQuickstartCount={totalCount}
+                />
                 <div
                   css={css`
                     background: var(--secondary-background-color);
@@ -344,6 +321,7 @@ const QuickstartsPage = ({ location, serverData, errored }) => {
               </div>
             </Overlay>
           </div>
+          {/* END MOBEIL CATEGORY PICKER */}
 
           {isSearchInputEmpty && (
             <>
