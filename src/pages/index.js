@@ -54,6 +54,7 @@ export const getServerData = async ({ query }) => {
           categoriesWithTerms: categories {
             terms
             displayName
+            slug
           }
         }
       }

@@ -34,12 +34,14 @@ const TRIPLE_COLUMN_BREAKPOINT = '1350px';
 const SINGLE_COLUMN_BREAKPOINT = LISTVIEW_BREAKPOINT;
 
 const QuickstartsPage = ({ location, serverData, errored }) => {
-  const allCategoriesWithTerms = serverData?.facetsQuery?.categories ?? [];
-  const allCategoriesWithCount =
-    serverData?.facetsQuery?.search?.facets?.categories ?? [];
+  const allCategoriesWithTerms =
+    serverData?.quickstartsQuery?.categoriesWithTerms ?? [];
+  const categoriesWithCounts =
+    serverData?.quickstartsQuery?.categoriesWithCounts?.facets?.categories ??
+    [];
   let quickstarts = serverData?.quickstartsQuery?.quickstarts?.results ?? [];
   const facets = serverData?.quickstartsQuery?.search?.facets ?? {};
-  const totalCount = serverData?.facetsQuery?.search?.totalCount;
+  const totalCount = quickstarts.length;
 
   const [view] = useState(VIEWS.GRID);
   const tessen = useTessen();
@@ -91,31 +93,29 @@ const QuickstartsPage = ({ location, serverData, errored }) => {
     closeCategoriesOverlay();
   };
 
-  const getCategories = () => {
-    const categoriesWithCount =
-      search !== '' ? facets.categories || [] : allCategoriesWithCount;
+  const mergeCategoriesAndCounts = (allTerms, allCounts) => {
+    const fullCategories = {};
 
-    const categoryCountDictionary = categoriesWithCount.reduce(
-      (acc, category) => {
-        acc = { ...acc, [category.displayName]: category.count };
-        return acc;
-      },
-      {}
-    );
+    allTerms.forEach((category) => {
+      fullCategories[category.displayName] = { ...category, count: 0 };
+    });
 
-    const categories = allCategoriesWithTerms.map((category) => {
-      return {
-        ...category,
-        count: categoryCountDictionary[category.displayName] || 0,
-      };
+    allCounts.forEach((category) => {
+      fullCategories[category.displayName].count = category.count;
     });
-    categories.unshift({
-      displayName: 'All',
-      count: totalCount,
-      terms: [''],
-    });
-    return categories;
+    const categoriesArray = [];
+
+    for (const category of Object.keys(fullCategories)) {
+      categoriesArray.push(fullCategories[category]);
+    }
+
+    return categoriesArray;
   };
+
+  const fullCategories = mergeCategoriesAndCounts(
+    allCategoriesWithTerms,
+    categoriesWithCounts
+  );
 
   useDebounce(
     () => {
@@ -150,15 +150,12 @@ const QuickstartsPage = ({ location, serverData, errored }) => {
     }
   }
 
-  const categoriesWithCount = getCategories();
-
-  console.log(categoriesWithCount);
   /**
    * Finds display name for selected category.
    * @returns {String} Display name for results found.
    */
   const getDisplayName = (defaultName = 'All quickstarts') => {
-    const found = categoriesWithCount.find((cat) => cat.terms === category);
+    const found = allCategoriesWithTerms.find((cat) => cat.terms === category);
 
     if (!found) return defaultName;
 
@@ -237,7 +234,7 @@ const QuickstartsPage = ({ location, serverData, errored }) => {
         `}
       >
         <QuickstartsSidebar
-          categoriesWithCount={categoriesWithCount}
+          categoriesWithCount={fullCategories}
           category={category}
           handleCategory={handleCategory}
         />
@@ -297,29 +294,27 @@ const QuickstartsPage = ({ location, serverData, errored }) => {
                     overflow-y: scroll;
                   `}
                 >
-                  {categoriesWithCount.map(
-                    ({ displayName, slug, terms, count }) => (
-                      <Button
-                        type="button"
-                        key={slug}
-                        disabled={count === 0}
-                        onClick={() => handleCategory(terms)}
-                        css={css`
-                          padding: 1rem 0.5rem;
-                          width: 100%;
-                          display: flex;
-                          justify-content: flex-start;
-                          color: var(--primary-text-color);
-                          font-weight: 100;
-                          background: ${category === terms.toString()
-                            ? 'var(--divider-color)'
-                            : 'none'};
-                        `}
-                      >
-                        {`${displayName} (${count})`}
-                      </Button>
-                    )
-                  )}
+                  {fullCategories.map(({ displayName, slug, terms, count }) => (
+                    <Button
+                      type="button"
+                      key={slug}
+                      disabled={count === 0}
+                      onClick={() => handleCategory(terms)}
+                      css={css`
+                        padding: 1rem 0.5rem;
+                        width: 100%;
+                        display: flex;
+                        justify-content: flex-start;
+                        color: var(--primary-text-color);
+                        font-weight: 100;
+                        background: ${category === terms.toString()
+                          ? 'var(--divider-color)'
+                          : 'none'};
+                      `}
+                    >
+                      {`${displayName} (${count})`}
+                    </Button>
+                  ))}
                 </div>
                 <div
                   css={css`
