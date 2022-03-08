@@ -34,14 +34,12 @@ const TRIPLE_COLUMN_BREAKPOINT = '1350px';
 const SINGLE_COLUMN_BREAKPOINT = LISTVIEW_BREAKPOINT;
 
 const QuickstartsPage = ({ location, serverData, errored }) => {
-  const allCategoriesWithTerms =
-    serverData?.quickstartsQuery?.categoriesWithTerms ?? [];
+  const queryResults = serverData?.quickstartsQuery;
+  const allCategoriesWithTerms = queryResults?.categoriesWithTerms ?? [];
   const categoriesWithCounts =
-    serverData?.quickstartsQuery?.categoriesWithCounts?.facets?.categories ??
-    [];
-  let quickstarts = serverData?.quickstartsQuery?.quickstarts?.results ?? [];
-  const facets = serverData?.quickstartsQuery?.search?.facets ?? {};
-  const totalCount = quickstarts.length;
+    queryResults?.categoriesWithCounts?.facets?.categories ?? [];
+  let quickstarts = queryResults?.quickstarts?.results ?? [];
+  const totalCount = queryResults?.categoriesWithCounts?.totalCount;
 
   const [view] = useState(VIEWS.GRID);
   const tessen = useTessen();
@@ -237,6 +235,7 @@ const QuickstartsPage = ({ location, serverData, errored }) => {
           categoriesWithCount={fullCategories}
           category={category}
           handleCategory={handleCategory}
+          totalQuickstartCount={totalCount}
         />
         <div
           css={css`

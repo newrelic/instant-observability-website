@@ -43,7 +43,11 @@ export const getServerData = async ({ query }) => {
               }
             }
           }
-          categoriesWithCounts: search(query: $query) {
+          categoriesWithCounts: search(
+            query: $query
+            filter: { types: QUICKSTART }
+          ) {
+            totalCount
             facets {
               categories {
                 count

@@ -8,6 +8,7 @@ const QuickstartsSidebar = ({
   categoriesWithCount,
   category,
   handleCategory,
+  totalQuickstartCount,
 }) => (
   <aside
     data-swiftype-index={false}
@@ -38,6 +39,31 @@ const QuickstartsSidebar = ({
     >
       <FormControl>
         <Label htmlFor="quickstartCategory">CATEGORIES</Label>
+        <Button
+          type="button"
+          key="all"
+          disabled={totalQuickstartCount === 0}
+          onClick={() => handleCategory([])}
+          css={css`
+            padding: 1rem 0.5rem;
+            width: 100%;
+            display: flex;
+            justify-content: flex-start;
+            color: var(--primary-text-color);
+            font-weight: 100;
+            background: ${category === [].toString()
+              ? 'var(--divider-color)'
+              : 'none'};
+          `}
+        >
+          All
+          <span
+            css={css`
+              color: var(--secondary-text-color);
+              padding-left: 0.25rem;
+            `}
+          >{`(${totalQuickstartCount})`}</span>
+        </Button>
         {categoriesWithCount.map(({ displayName, terms, slug, count }) => (
           <Button
             type="button"
@@ -71,9 +97,10 @@ const QuickstartsSidebar = ({
 );
 
 QuickstartsSidebar.propTypes = {
-  categoriesWithCount: PropTypes.array,
-  category: PropTypes.string,
-  handleCategory: PropTypes.func,
+  categoriesWithCount: PropTypes.array.isRequired,
+  category: PropTypes.string.isRequired,
+  handleCategory: PropTypes.func.isRequired,
+  totalQuickstartCount: PropTypes.number.isRequired,
 };
 
 const Label = ({ children, htmlFor }) => (
