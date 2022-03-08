@@ -1,15 +1,10 @@
 import React from 'react';
 import { css } from '@emotion/react';
 import PropTypes from 'prop-types';
-import { Button } from '@newrelic/gatsby-theme-newrelic';
+import CategorySelector from './CategorySelector';
 import { QUICKSTARTS_COLLAPSE_BREAKPOINT } from '../data/constants';
 
-const QuickstartsSidebar = ({
-  categoriesWithCount,
-  category,
-  handleCategory,
-  totalQuickstartCount,
-}) => (
+const QuickstartsSidebar = (props) => (
   <aside
     data-swiftype-index={false}
     css={css`
@@ -37,71 +32,12 @@ const QuickstartsSidebar = ({
         }
       `}
     >
-      <FormControl>
-        <Label htmlFor="quickstartCategory">CATEGORIES</Label>
-        <Button
-          type="button"
-          key="all"
-          disabled={totalQuickstartCount === 0}
-          onClick={() => handleCategory([])}
-          css={css`
-            padding: 1rem 0.5rem;
-            width: 100%;
-            display: flex;
-            justify-content: flex-start;
-            color: var(--primary-text-color);
-            font-weight: 100;
-            background: ${category === [].toString()
-              ? 'var(--divider-color)'
-              : 'none'};
-          `}
-        >
-          All
-          <span
-            css={css`
-              color: var(--secondary-text-color);
-              padding-left: 0.25rem;
-            `}
-          >{`(${totalQuickstartCount})`}</span>
-        </Button>
-        {categoriesWithCount.map(({ displayName, terms, slug, count }) => (
-          <Button
-            type="button"
-            key={slug}
-            disabled={count === 0}
-            onClick={() => handleCategory(terms)}
-            css={css`
-              padding: 1rem 0.5rem;
-              width: 100%;
-              display: flex;
-              justify-content: flex-start;
-              color: var(--primary-text-color);
-              font-weight: 100;
-              background: ${category === terms.toString()
-                ? 'var(--divider-color)'
-                : 'none'};
-            `}
-          >
-            {`${displayName}`}
-            <span
-              css={css`
-                color: var(--secondary-text-color);
-                padding-left: 0.25rem;
-              `}
-            >{`(${count})`}</span>
-          </Button>
-        ))}
-      </FormControl>
+      <CategorySelector {...props} />
     </div>
   </aside>
 );
 
-QuickstartsSidebar.propTypes = {
-  categoriesWithCount: PropTypes.array.isRequired,
-  category: PropTypes.string.isRequired,
-  handleCategory: PropTypes.func.isRequired,
-  totalQuickstartCount: PropTypes.number.isRequired,
-};
+QuickstartsSidebar.propTypes = CategorySelector.propTypes;
 
 const Label = ({ children, htmlFor }) => (
   <label
