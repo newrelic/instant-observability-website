@@ -19,7 +19,7 @@ const OverviewTile = ({ key, title, image, description, tag }) => {
         css={css`
           padding: 1em;
           position: relative;
-          min-height: 230px;
+          min-height: 200px;
         `}
       >
         <h3>{title}</h3>
