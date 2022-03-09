@@ -106,7 +106,6 @@ export const getServerData = async ({ query }) => {
       return acc;
     }, {});
 
-    //console.log(JSON.stringify(results.categoriesWithTerms, null, 2));
     /* eslint-disable-next-line no-console */
     console.log(
       `Found ${results.quickstartsQuery?.quickstarts?.results?.length} quickstarts`
