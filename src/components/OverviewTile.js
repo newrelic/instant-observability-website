@@ -5,8 +5,8 @@ import { css } from '@emotion/react';
 import { Surface, Tag } from '@newrelic/gatsby-theme-newrelic';
 
 const truncateDescription = (description) => {
-  if (description.length > 250) {
-    return `${description.slice(0, 244)} . . .`;
+  if (description.length > 150) {
+    return `${description.slice(0, 144)} . . .`;
   }
 
   return description;
@@ -18,6 +18,8 @@ const OverviewTile = ({ key, title, image, description, tag }) => {
       <div
         css={css`
           padding: 1em;
+          position: relative;
+          min-height: 230px;
         `}
       >
         <h3>{title}</h3>
@@ -47,6 +49,11 @@ const OverviewTile = ({ key, title, image, description, tag }) => {
         <div
           css={css`
             margin-top: 1rem;
+            position: absolute;
+            width: 100%;
+            bottom: 10px;
+            right: 13px;
+            text-align: right;
           `}
         >
           <Tag>{tag}</Tag>
@@ -65,3 +72,4 @@ OverviewTile.propTypes = {
 };
 
 export default OverviewTile;
+
