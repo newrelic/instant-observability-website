@@ -68,17 +68,15 @@ export const getServerData = async ({ query }) => {
   try {
     const resp = await fetch(NERDGRAPH_URL, {
       method: 'POST',
-      body: JSON.stringify([
-        {
-          id: 'quickstartsQuery',
-          query: QUICKSTARTS_QUERY,
-          variables: {
-            sortBy: sortParam,
-            query: searchParam,
-            categories: categoryParam,
-          },
+      body: JSON.stringify({
+        id: 'quickstartsQuery',
+        query: QUICKSTARTS_QUERY,
+        variables: {
+          sortBy: sortParam,
+          query: searchParam,
+          categories: categoryParam,
         },
-      ]),
+      }),
       headers: {
         'Content-Type': 'application/json',
         'Api-Key': NEW_RELIC_API_KEY,
@@ -91,25 +89,15 @@ export const getServerData = async ({ query }) => {
 
     const json = await resp.json();
 
-    const results = json.reduce((acc, queryResponse) => {
-      if (queryResponse.payload.errors) {
-        console.log({ errors: queryResponse.payload.errors });
-        throw new Error(
-          `Errors returned from nerdgraph`,
-          queryResponse.payload.errors
-        );
-      }
-      acc = {
-        ...acc,
-        [queryResponse.id]: queryResponse.payload.data.actor.nr1Catalog,
-      };
-      return acc;
-    }, {});
+    if (json.errors) {
+      console.error(JSON.stringify(json.errors));
+      throw new Error(`Errors returned from nerdgraph`, json.errors);
+    }
+
+    const results = json.data.actor.nr1Catalog;
 
     /* eslint-disable-next-line no-console */
-    console.log(
-      `Found ${results.quickstartsQuery?.quickstarts?.results?.length} quickstarts`
-    );
+    console.log(`Found ${results.quickstarts?.results?.length} quickstarts`);
 
     customEventTrack('NerdGraphRequest', {
       success: true,

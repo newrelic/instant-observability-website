@@ -2,89 +2,87 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import QuickstartDetails from '../../components/QuickstartDetails';
 
+const gql = String.raw; // Hack to get text editors to highlight graphql string without pulling in an external package
 const NERDGRAPH_URL = process.env.NERDGRAPH_URL;
 const NEW_RELIC_API_KEY = process.env.NEW_RELIC_API_KEY;
-const QUICKSTART_QUERY = `
-query QuickstartDetailsQuery(
-      $quickstartId: ID!
-)
-{
-  actor {
-    nr1Catalog {
-      quickstart(id: $quickstartId) {
-        featured
-        id
-        metadata {
-          authors {
-            name
-          }
-          categories {
+const QUICKSTART_QUERY = gql`
+  query QuickstartDetailsQuery($quickstartId: ID!) {
+    actor {
+      nr1Catalog {
+        quickstart(id: $quickstartId) {
+          featured
+          id
+          metadata {
+            authors {
+              name
+            }
+            categories {
+              displayName
+              slug
+              terms
+            }
+            categoryTerms
+            description
             displayName
-            slug
-            terms
-          }
-          categoryTerms
-          description
-          displayName
-          icon {
-            url
-          }
-          installer {
-            type
-            ... on Nr1CatalogInstallPlan {
-              steps {
-                description
-                displayName
-                id
-              }
+            icon {
+              url
             }
-          }
-          keywords
-          quickstartComponents {
-            ... on Nr1CatalogQuickstartAlertCondition {
-              __typename
-              id
-              metadata {
-                description
-                displayName
-                type
-              }
-            }
-            ... on Nr1CatalogQuickstartDashboard {
-              __typename
-              id
-              metadata {
-                description
-                displayName
-                previews {
-                  url
-                  ... on Nr1CatalogPreview {
-                    url
-                  }
-                  ... on Nr1CatalogScreenshot {
-                    url
-                  }
+            installer {
+              type
+              ... on Nr1CatalogInstallPlan {
+                steps {
+                  description
+                  displayName
+                  id
                 }
               }
             }
-            ... on Nr1CatalogQuickstartDocumentation {
-              __typename
-              metadata {
-                description
-                displayName
-                url
+            keywords
+            quickstartComponents {
+              ... on Nr1CatalogQuickstartAlertCondition {
+                __typename
+                id
+                metadata {
+                  description
+                  displayName
+                  type
+                }
+              }
+              ... on Nr1CatalogQuickstartDashboard {
+                __typename
+                id
+                metadata {
+                  description
+                  displayName
+                  previews {
+                    url
+                    ... on Nr1CatalogPreview {
+                      url
+                    }
+                    ... on Nr1CatalogScreenshot {
+                      url
+                    }
+                  }
+                }
+              }
+              ... on Nr1CatalogQuickstartDocumentation {
+                __typename
+                metadata {
+                  description
+                  displayName
+                  url
+                }
               }
             }
+            slug
+            summary
           }
-          slug
-          summary
+          sourceUrl
+          supportLevel
         }
-        sourceUrl
-        supportLevel
       }
     }
   }
-}
 `;
 
 export const getServerData = async ({ params }) => {
@@ -146,3 +144,4 @@ QuickstartDetailsSSR.propTypes = {
 };
 
 export default QuickstartDetailsSSR;
+
