@@ -8,11 +8,11 @@ import IOBanner from './IOBanner';
 import QuickstartError from './QuickstartError';
 import { useTessen, Button } from '@newrelic/gatsby-theme-newrelic';
 import { navigate } from 'gatsby';
-
 import { rawQuickstart } from '../types';
 import { useDebounce } from 'react-use';
 import QuickstartsSidebar from './QuickstartsSidebar';
 import CategorySelector from './CategorySelector';
+import QuickstartSort from './QuickstartSort';
 
 import {
   QUICKSTARTS_COLLAPSE_BREAKPOINT,
@@ -518,6 +518,13 @@ const QuickstartsPage = ({ location, serverData, errored }) => {
               <span> for: </span>
               <strong>{search || getDisplayName()}</strong>
             </span>
+
+            <QuickstartSort
+              location={location}
+              css={css`
+                width: fit-content;
+              `}
+            />
           </div>
           {errored ? (
             <QuickstartError />
