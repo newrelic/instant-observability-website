@@ -28,7 +28,7 @@ NEW_RELIC_LICENSE_KEY='STAGING_DEVEN_LICENSE_KEY'
 
 `NEW_RELIC_API_KEY` (required) - API key with access to NerdGraph. Against production NERDGRAPH_URL, this will need to be for a user in our production account. If testing against staging, this will instead need to be for a staging user. If missing, catalog & details pages will fail to load.
 
-`NEW_RELIC_LICENSE_KEY` (optional) - ingest license key for our staging account. This is needed to monitor the site in New Relic. The site will still function if the value is missing or incorrect but events will not be sent to New Relic.chore
+`NEW_RELIC_LICENSE_KEY` (optional) - ingest license key for our staging account. This is needed to monitor the site in New Relic. The site will still function if the value is missing or incorrect but events will not be sent to New Relic.
 
 `BRANCH` (optional) - unique identifier which is appended to events as `environment`. Default value is `local`. This is used to filtering events across different branches of work. When working locally, we recommend this value be changed to be as unique as possible so you can identify events specific to your work.
 
