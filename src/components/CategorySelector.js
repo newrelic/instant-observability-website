@@ -18,31 +18,34 @@ const CategorySelector = ({
         width: 100%;
       `}
     >
-      <Button
-        type="button"
-        key="all"
-        disabled={totalQuickstartCount === 0}
-        onClick={() => handleCategory([])}
-        css={css`
-          padding: 1rem 0.5rem;
-          width: 100%;
-          display: flex;
-          justify-content: flex-start;
-          color: var(--primary-text-color);
-          font-weight: 100;
-          background: ${category === [].toString()
-            ? 'var(--divider-color)'
-            : 'none'};
-        `}
-      >
-        All
-        <span
+      {categoriesWithCount?.length > 0 && (
+        <Button
+          type="button"
+          key="all"
+          disabled={totalQuickstartCount === 0}
+          onClick={() => handleCategory([])}
+          variant={Button.VARIANT.PLAIN}
           css={css`
-            color: var(--secondary-text-color);
-            padding-left: 0.25rem;
+            padding: 1rem 0.5rem;
+            width: 100%;
+            display: flex;
+            justify-content: flex-start;
+            color: var(--primary-text-color);
+            font-weight: 100;
+            background: ${category === [].toString()
+              ? 'var(--divider-color)'
+              : 'none'};
           `}
-        >{`(${totalQuickstartCount})`}</span>
-      </Button>
+        >
+          All
+          <span
+            css={css`
+              color: var(--secondary-text-color);
+              padding-left: 0.25rem;
+            `}
+          >{`(${totalQuickstartCount})`}</span>
+        </Button>
+      )}
 
       {categoriesWithCount.map(({ displayName, terms, slug, count }) => (
         <Button
@@ -50,6 +53,7 @@ const CategorySelector = ({
           key={slug}
           disabled={count === 0}
           onClick={() => handleCategory(terms)}
+          variant={Button.VARIANT.PLAIN}
           css={css`
             padding: 1rem 0.5rem;
             width: 100%;

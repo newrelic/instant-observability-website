@@ -35,18 +35,20 @@ const TRIPLE_COLUMN_BREAKPOINT = '1350px';
 const SINGLE_COLUMN_BREAKPOINT = LISTVIEW_BREAKPOINT;
 
 const QuickstartsPage = ({ location, serverData, errored }) => {
-  const queryResults = serverData?.quickstartsQuery;
-  const allCategoriesWithTerms = queryResults?.categoriesWithTerms ?? [];
+  const allCategoriesWithTerms = serverData?.categoriesWithTerms ?? [];
   const categoriesWithCounts =
-    queryResults?.categoriesWithCounts?.facets?.categories ?? [];
-  let quickstarts = queryResults?.quickstarts?.results ?? [];
-  const totalCount = queryResults?.categoriesWithCounts?.totalCount;
+    serverData?.categoriesWithCounts?.facets?.categories ?? [];
+  let quickstarts = serverData?.quickstarts?.results ?? [];
+  const totalCount = serverData?.categoriesWithCounts?.totalCount;
 
   const [view] = useState(VIEWS.GRID);
   const tessen = useTessen();
 
-  const [search, setSearch] = useState('');
-  const [category, setCategory] = useState('');
+  const urlSearchParams = new URLSearchParams(location.search);
+  const currentCategory = urlSearchParams.get('category') ?? '';
+  const currentSearch = urlSearchParams.get('search') ?? '';
+  const [search, setSearch] = useState(currentSearch);
+  const [category, setCategory] = useState(currentCategory);
 
   const [isCategoriesOverlayOpen, setIsCategoriesOverlayOpen] = useState(false);
   const [isSearchInputEmpty, setIsSearchInputEmpty] = useState(true);
@@ -55,15 +57,15 @@ const QuickstartsPage = ({ location, serverData, errored }) => {
     const params = new URLSearchParams(location.search);
     const searchParam = params.get('search');
     const categoryParam = params.get('category');
+    const sortParam = params.get('sort');
 
-    setSearch(searchParam);
-    setCategory(categoryParam || '');
     if (searchParam || categoryParam) {
       tessen.track({
         eventName: 'instantObservability',
         category: 'QuickstartCatalogSearch',
         search: searchParam,
         quickstartCategory: categoryParam,
+        sort: sortParam,
       });
     }
   }, [location.search, tessen]);
@@ -85,6 +87,7 @@ const QuickstartsPage = ({ location, serverData, errored }) => {
     if (terms !== null && terms !== undefined) {
       const params = new URLSearchParams(location.search);
       params.set('category', terms);
+      setCategory(terms.toString());
 
       navigate(`?${params.toString()}`);
     }
@@ -576,36 +579,26 @@ const QuickstartsPage = ({ location, serverData, errored }) => {
 
 QuickstartsPage.propTypes = {
   serverData: PropTypes.shape({
-    quickstartsQuery: PropTypes.shape({
+    quickstarts: PropTypes.shape({
       search: PropTypes.shape({
-        facets: PropTypes.shape({
-          categories: PropTypes.shape({
-            count: PropTypes.string,
-            displayName: PropTypes.string,
-          }),
-        }),
         results: PropTypes.arrayOf(rawQuickstart),
-        categories: PropTypes.arrayOf(
-          PropTypes.shape({
-            displayName: PropTypes.string,
-            terms: PropTypes.array,
-          })
-        ),
       }),
     }),
-    facetsQuery: PropTypes.shape({
-      categories: PropTypes.shape({
+    categoriesWithTerms: PropTypes.arrayOf(
+      PropTypes.shape({
         displayName: PropTypes.string,
         terms: PropTypes.array,
-      }),
-      search: PropTypes.shape({
-        totalCount: PropTypes.string,
-        facets: PropTypes.shape({
-          categories: PropTypes.shape({
-            count: PropTypes.string,
+      })
+    ),
+    categoriesWithCounts: PropTypes.shape({
+      totalCount: PropTypes.number,
+      facets: PropTypes.shape({
+        categories: PropTypes.arrayOf(
+          PropTypes.shape({
+            count: PropTypes.number,
             displayName: PropTypes.string,
-          }),
-        }),
+          })
+        ),
       }),
     }),
   }),
