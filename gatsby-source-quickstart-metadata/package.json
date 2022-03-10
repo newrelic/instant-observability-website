@@ -1,0 +1,17 @@
+{
+  "name": "gatsby-source-quickstart-metadata",
+  "version": "0.0.1",
+  "description": "A small plugin to source quickstart metadata from the New Relic API",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "echo \"No build script setup\""
+  },
+  "keywords": [
+    "gatsby",
+    "gatsby-plugin"
+  ],
+  "author": "Alec Swanson <New Relic>",
+  "license": "Apache-2.0",
+  "dependencies": {}
+}

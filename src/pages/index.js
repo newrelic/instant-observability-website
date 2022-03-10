@@ -7,7 +7,7 @@ const gql = String.raw; // Hack to get text editors to highlight graphql string 
 const NERDGRAPH_URL = process.env.NERDGRAPH_URL;
 const NEW_RELIC_API_KEY = process.env.NEW_RELIC_API_KEY;
 
-export const getServerData = async ({ query }) => {
+export const getServerData = async ({ query, url }) => {
   const sortParam = query.sort || 'RELEVANCE';
   const searchParam = query.search;
   const categoryParam =
@@ -65,18 +65,20 @@ export const getServerData = async ({ query }) => {
     }
   `;
 
+  const requestBody = JSON.stringify({
+    id: 'quickstartsQuery',
+    query: QUICKSTARTS_QUERY,
+    variables: {
+      sortBy: sortParam,
+      query: searchParam,
+      categories: categoryParam,
+    },
+  });
+
   try {
     const resp = await fetch(NERDGRAPH_URL, {
       method: 'POST',
-      body: JSON.stringify({
-        id: 'quickstartsQuery',
-        query: QUICKSTARTS_QUERY,
-        variables: {
-          sortBy: sortParam,
-          query: searchParam,
-          categories: categoryParam,
-        },
-      }),
+      body: requestBody,
       headers: {
         'Content-Type': 'application/json',
         'Api-Key': NEW_RELIC_API_KEY,
@@ -101,7 +103,9 @@ export const getServerData = async ({ query }) => {
 
     customEventTrack('NerdGraphRequest', {
       success: true,
-      ...query,
+      requestBody,
+      sortParam,
+      url,
     });
 
     return {
@@ -117,7 +121,9 @@ export const getServerData = async ({ query }) => {
     customEventTrack('NerdGraphRequest', {
       success: false,
       errorMessage: err,
-      ...query,
+      requestBody,
+      sortParam,
+      url,
     });
 
     return {

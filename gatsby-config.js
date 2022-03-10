@@ -1,5 +1,4 @@
 const quote = (str) => `"${str}"`;
-const resolveQuickstartSlug = require('./src/utils/resolveQuickstartSlug');
 
 module.exports = {
   pathPrefix: `/instant-observability`,
@@ -20,6 +19,7 @@ module.exports = {
   },
   plugins: [
     'gatsby-plugin-sharp',
+    require.resolve('./gatsby-source-quickstart-metadata'), // Source quickstart metadata for related resources
     {
       resolve: '@newrelic/gatsby-theme-newrelic',
       options: {
@@ -42,15 +42,15 @@ module.exports = {
             limit: 5,
             getSlug: ({ node }) => {
               if (node.internal.type === 'Quickstarts') {
-                return resolveQuickstartSlug(node.name, node.id);
+                return node.fullSlug;
               }
             },
             getParams: ({ node }) => {
               let tags = node.keywords;
-              let title = node.title;
+              let displayName = node.displayName;
 
               return {
-                q: tags ? tags.map(quote).join(' OR ') : title,
+                q: tags ? tags.map(quote).join(' OR ') : displayName,
                 search_fields: {
                   page: [
                     'tags^10',
