@@ -92,7 +92,14 @@ Changes are published on pushes to `main`.
 |-|-|-|
 |`GATSBY_NEWRELIC_ENV`|`development` or `production`| Used by the [New Relic Gatsby Theme](https://github.com/newrelic/gatsby-theme-newrelic) to determine the running environment. Set to `production` on prod.|
 |`PREFIX_PATHS`|`true` or `false`|Enables path prefixing during builds and deployments. Set to `true` on prod.|
+|`NEW_RELIC_API_KEY`|value of the api key|Used to query for quickstarts on page request and during build|
+|`NERDGRAPH_URL`|most likely `https://api.newrelic.com/graphql`|Used to query for quickstarts on page request and during build|
+|`NEW_RELIC_LICENSE_KEY`|a license key associated with a New Relic account|Used to send custom events to the New Relic platform|
 
+## Software architecture
+This site utilizes the [server side rendering](https://www.gatsbyjs.com/docs/reference/config-files/gatsby-ssr/) API from Gatsby to render the I/O catalog and quickstart details pages. See [Rendering Options](https://www.gatsbyjs.com/docs/how-to/rendering-options/) for more details on the difference between rendering options in Gatsby. The quickstarts are pulled in at request time from Nerdgraph, instead of at build time like a traditional Gatsby site. This allows us to serve up to date information, instead of requesting it on a cron schedule.
+
+![Instant Observability Website Software Architecture](./docs/images/io_website_arch_2022.png)
 
 ## 🩹 Support
 
