@@ -69,6 +69,7 @@ query getQuickstarts($sortBy: Nr1CatalogSearchSortOption){
     customEventTrack('NerdGraphRequest', {
       success: true,
       requestBody,
+      sortParam,
       url,
     });
 
@@ -86,6 +87,7 @@ query getQuickstarts($sortBy: Nr1CatalogSearchSortOption){
       success: false,
       errorMessage: err,
       requestBody,
+      sortParam,
       url,
     });
 
