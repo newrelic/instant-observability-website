@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import QuickstartDetails from '../../components/QuickstartDetails';
+import customEventTrack from '../../utils/customNewRelicEvent';
 
 const NERDGRAPH_URL = process.env.NERDGRAPH_URL;
 const NEW_RELIC_API_KEY = process.env.NEW_RELIC_API_KEY;
@@ -87,14 +88,16 @@ query QuickstartDetailsQuery(
 }
 `;
 
-export const getServerData = async ({ params }) => {
+export const getServerData = async ({ params, url }) => {
+  const requestBody = JSON.stringify({
+    query: QUICKSTART_QUERY,
+    variables: { quickstartId: params.quickstartId },
+  });
+
   try {
     const resp = await fetch(NERDGRAPH_URL, {
       method: 'POST',
-      body: JSON.stringify({
-        query: QUICKSTART_QUERY,
-        variables: { quickstartId: params.quickstartId },
-      }),
+      body: requestBody,
       headers: {
         'Content-Type': 'application/json',
         'Api-Key': NEW_RELIC_API_KEY,
@@ -110,6 +113,13 @@ export const getServerData = async ({ params }) => {
     if (json.errors) {
       throw new Error(`Errors returned from nerdgraph`, json.errors);
     }
+
+    customEventTrack('NerdGraphRequest', {
+      success: true,
+      requestBody,
+      url,
+    });
+
     return {
       props: {
         error: false,
@@ -120,6 +130,13 @@ export const getServerData = async ({ params }) => {
   } catch (err) {
     /* eslint-disable-next-line no-console */
     console.error(err);
+
+    customEventTrack('NerdGraphRequest', {
+      success: false,
+      errorMessage: err,
+      requestBody,
+      url,
+    });
 
     return {
       props: {
