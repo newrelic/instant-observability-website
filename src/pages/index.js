@@ -105,6 +105,8 @@ export const getServerData = async ({ query, url }) => {
       success: true,
       requestBody,
       sortParam,
+      searchParam,
+      categoryParam,
       url,
     });
 
@@ -123,6 +125,8 @@ export const getServerData = async ({ query, url }) => {
       errorMessage: err,
       requestBody,
       sortParam,
+      searchParam,
+      categoryParam,
       url,
     });
 
