@@ -1,16 +1,10 @@
 import React from 'react';
 import { css } from '@emotion/react';
 import PropTypes from 'prop-types';
-import { Button } from '@newrelic/gatsby-theme-newrelic';
-import {
-  QUICKSTARTS_COLLAPSE_BREAKPOINT,
-} from '../data/constants';
+import CategorySelector from './CategorySelector';
+import { QUICKSTARTS_COLLAPSE_BREAKPOINT } from '../data/constants';
 
-const QuickstartsSidebar = ({
-  categoriesWithCount,
-  category,
-  handleCategory,
-}) => (
+const QuickstartsSidebar = (props) => (
   <aside
     data-swiftype-index={false}
     css={css`
@@ -38,46 +32,12 @@ const QuickstartsSidebar = ({
         }
       `}
     >
-      <FormControl>
-        <Label htmlFor="quickstartCategory">CATEGORIES</Label>
-        {categoriesWithCount.map(({ displayName, value, count }) => (
-          <Button
-            type="button"
-            key={value}
-            disabled={count === 0}
-            onClick={() => handleCategory(value)}
-            css={css`
-              padding: 1rem 0.5rem;
-              width: 100%;
-              display: flex;
-              justify-content: flex-start;
-              color: var(--primary-text-color);
-              font-weight: 100;
-              background: ${category === value
-                ? 'var(--divider-color)'
-                : 'none'};
-            `}
-          >
-            {`${displayName}`}
-        <span
-          css={css`
-            color: var(--secondary-text-color);
-            padding-left: 0.25rem;
-          `}
-        >{`(${count})`}</span>
-              </Button>
-            ))}
-          </FormControl>
+      <CategorySelector {...props} />
     </div>
   </aside>
 );
 
-QuickstartsSidebar.propTypes = {
-  isMobile: PropTypes.bool,
-  categoriesWithCount: PropTypes.array,
-  category: PropTypes.string,
-  handleCategory: PropTypes.func,
-};
+QuickstartsSidebar.propTypes = CategorySelector.propTypes;
 
 const Label = ({ children, htmlFor }) => (
   <label

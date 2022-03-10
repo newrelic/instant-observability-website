@@ -7,17 +7,17 @@ import QuickstartTile from './QuickstartTile';
 import IOBanner from './IOBanner';
 import QuickstartError from './QuickstartError';
 import { useTessen, Button } from '@newrelic/gatsby-theme-newrelic';
-import { navigate } from '@reach/router';
-
+import { navigate } from 'gatsby';
 import { rawQuickstart } from '../types';
 import { useDebounce } from 'react-use';
 import QuickstartsSidebar from './QuickstartsSidebar';
+import CategorySelector from './CategorySelector';
+import QuickstartSort from './QuickstartSort';
 
 import {
   QUICKSTARTS_COLLAPSE_BREAKPOINT,
   LISTVIEW_BREAKPOINT,
 } from '../data/constants';
-import CATEGORIES from '../data/instant-observability-categories.json';
 
 import SuperTiles from './SuperTiles';
 
@@ -25,21 +25,24 @@ import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 
-const VIEWS = {
-  GRID: 'Grid view',
-  LIST: 'List view',
-};
-
 const DOUBLE_COLUMN_BREAKPOINT = '1180px';
 const TRIPLE_COLUMN_BREAKPOINT = '1350px';
 const SINGLE_COLUMN_BREAKPOINT = LISTVIEW_BREAKPOINT;
 
-const QuickstartsPage = ({ location, quickstarts, errored }) => {
-  const [view] = useState(VIEWS.GRID);
+const QuickstartsPage = ({ location, serverData, errored }) => {
+  const allCategoriesWithTerms = serverData?.categoriesWithTerms ?? [];
+  const categoriesWithCounts =
+    serverData?.categoriesWithCounts?.facets?.categories ?? [];
+  let quickstarts = serverData?.quickstarts?.results ?? [];
+  const totalCount = serverData?.categoriesWithCounts?.totalCount;
+
   const tessen = useTessen();
 
-  const [search, setSearch] = useState('');
-  const [category, setCategory] = useState('');
+  const urlSearchParams = new URLSearchParams(location.search);
+  const currentCategory = urlSearchParams.get('category') ?? '';
+  const currentSearch = urlSearchParams.get('search') ?? '';
+  const [search, setSearch] = useState(currentSearch);
+  const [category, setCategory] = useState(currentCategory);
 
   const [isCategoriesOverlayOpen, setIsCategoriesOverlayOpen] = useState(false);
   const [isSearchInputEmpty, setIsSearchInputEmpty] = useState(true);
@@ -48,15 +51,15 @@ const QuickstartsPage = ({ location, quickstarts, errored }) => {
     const params = new URLSearchParams(location.search);
     const searchParam = params.get('search');
     const categoryParam = params.get('category');
+    const sortParam = params.get('sort');
 
-    setSearch(searchParam);
-    setCategory(categoryParam || '');
-    if (searchParam || categoryParam) {
+    if (searchParam || categoryParam || sortParam) {
       tessen.track({
         eventName: 'instantObservability',
         category: 'QuickstartCatalogSearch',
         search: searchParam,
         quickstartCategory: categoryParam,
+        sort: sortParam,
       });
     }
   }, [location.search, tessen]);
@@ -74,16 +77,41 @@ const QuickstartsPage = ({ location, quickstarts, errored }) => {
     }
   };
 
-  const handleCategory = (value) => {
-    if (value !== null && value !== undefined) {
+  const handleCategory = (terms) => {
+    if (terms !== null && terms !== undefined) {
       const params = new URLSearchParams(location.search);
-      params.set('category', value);
+      params.set('category', terms);
+      setCategory(terms.toString());
 
       navigate(`?${params.toString()}`);
     }
 
     closeCategoriesOverlay();
   };
+
+  const mergeCategoriesAndCounts = (allTerms, allCounts) => {
+    const fullCategories = {};
+
+    allTerms.forEach((category) => {
+      fullCategories[category.displayName] = { ...category, count: 0 };
+    });
+
+    allCounts.forEach((category) => {
+      fullCategories[category.displayName].count = category.count;
+    });
+    const categoriesArray = [];
+
+    for (const category of Object.keys(fullCategories)) {
+      categoriesArray.push(fullCategories[category]);
+    }
+
+    return categoriesArray;
+  };
+
+  const fullCategories = mergeCategoriesAndCounts(
+    allCategoriesWithTerms,
+    categoriesWithCounts
+  );
 
   useDebounce(
     () => {
@@ -93,11 +121,9 @@ const QuickstartsPage = ({ location, quickstarts, errored }) => {
     [search]
   );
 
-
-  const featuredQuickStarts = quickstarts?.filter((product) =>
-    product.featured
+  const featuredQuickStarts = quickstarts?.filter(
+    (product) => product.featured
   );
-
 
   const mostPopularQuickStarts = quickstarts?.filter((product) =>
     product.metadata.keywords.includes('most popular')
@@ -106,7 +132,7 @@ const QuickstartsPage = ({ location, quickstarts, errored }) => {
   // Hard-code for moving codestream object to front of sortedQuickstarts array - CM
   if ((!category && !search) || (category === 'featured' && !search)) {
     // uuid is codestream id specifically - CM
-    const codestreamIndex = quickstarts.findIndex(
+    const codestreamIndex = quickstarts?.findIndex(
       ({ id }) => id === '29bd9a4a-1c19-4219-9694-0942f6411ce7'
     );
 
@@ -114,19 +140,22 @@ const QuickstartsPage = ({ location, quickstarts, errored }) => {
       const codestreamObject = quickstarts[codestreamIndex];
       quickstarts = [
         codestreamObject,
-        ...quickstarts.slice(0, codestreamIndex),
-        ...quickstarts.slice(codestreamIndex + 1),
+        ...quickstarts?.slice(0, codestreamIndex),
+        ...quickstarts?.slice(codestreamIndex + 1),
       ];
     }
   }
+
   /**
    * Finds display name for selected category.
    * @returns {String} Display name for results found.
    */
   const getDisplayName = (defaultName = 'All quickstarts') => {
-    const found = CATEGORIES.find((cat) => cat.value === category);
+    const found = allCategoriesWithTerms.find(
+      (cat) => cat.terms.toString() === category
+    );
 
-    if (!found.value) return defaultName;
+    if (!found) return defaultName;
 
     return found.displayName;
   };
@@ -203,9 +232,10 @@ const QuickstartsPage = ({ location, quickstarts, errored }) => {
         `}
       >
         <QuickstartsSidebar
-          categoriesWithCount={CATEGORIES}
+          categoriesWithCount={fullCategories}
           category={category}
           handleCategory={handleCategory}
+          totalQuickstartCount={totalCount}
         />
         <div
           css={css`
@@ -213,6 +243,7 @@ const QuickstartsPage = ({ location, quickstarts, errored }) => {
             padding: var(--site-content-padding);
           `}
         >
+          {/* BEGIN MOBILE CATEGORY PICKER */}
           <div
             css={css`
               display: flex;
@@ -247,43 +278,17 @@ const QuickstartsPage = ({ location, quickstarts, errored }) => {
                   margin: 30% auto 0;
                   padding: 1rem;
                   background: var(--primary-background-color);
+                  div {
+                    max-height: 400px;
+                  }
                 `}
               >
-                <h3
-                  css={css`
-                    padding: 0.5rem 0 0 0.5rem;
-                  `}
-                >
-                  Category
-                </h3>
-                <div
-                  css={css`
-                    max-height: 400px;
-                    padding-bottom: 3rem;
-                    overflow-y: scroll;
-                  `}
-                >
-                  {CATEGORIES.map(({ displayName, value, count }) => (
-                    <Button
-                      type="button"
-                      key={value}
-                      onClick={() => handleCategory(value)}
-                      css={css`
-                        padding: 1rem 0.5rem;
-                        width: 100%;
-                        display: flex;
-                        justify-content: flex-start;
-                        color: var(--primary-text-color);
-                        font-weight: 100;
-                        background: ${category === value
-                          ? 'var(--divider-color)'
-                          : 'none'};
-                      `}
-                    >
-                      {`${displayName} (${count})`}
-                    </Button>
-                  ))}
-                </div>
+                <CategorySelector
+                  categoriesWithCount={fullCategories}
+                  category={category}
+                  handleCategory={handleCategory}
+                  totalQuickstartCount={totalCount}
+                />
                 <div
                   css={css`
                     background: var(--secondary-background-color);
@@ -313,6 +318,7 @@ const QuickstartsPage = ({ location, quickstarts, errored }) => {
               </div>
             </Overlay>
           </div>
+          {/* END MOBILE CATEGORY PICKER */}
 
           {isSearchInputEmpty && (
             <>
@@ -353,24 +359,15 @@ const QuickstartsPage = ({ location, quickstarts, errored }) => {
                       padding: 10px;
                       grid-template-columns: repeat(4, 1fr);
                       grid-auto-rows: 1fr;
-                      ${view === VIEWS.GRID &&
-                      css`
-                        @media (max-width: ${TRIPLE_COLUMN_BREAKPOINT}) {
-                          grid-template-columns: repeat(3, 1fr);
-                        }
-                        @media (max-width: ${DOUBLE_COLUMN_BREAKPOINT}) {
-                          grid-template-columns: repeat(2, 1fr);
-                        }
-                        @media (max-width: ${SINGLE_COLUMN_BREAKPOINT}) {
-                          grid-template-columns: repeat(1, 1fr);
-                        }
-                      `}
-                      ${view === VIEWS.LIST &&
-                      css`
-                        grid-auto-rows: 1fr;
-                        grid-template-columns: 1fr;
-                        grid-gap: 1.25rem;
-                      `};
+                      @media (max-width: ${TRIPLE_COLUMN_BREAKPOINT}) {
+                        grid-template-columns: repeat(3, 1fr);
+                      }
+                      @media (max-width: ${DOUBLE_COLUMN_BREAKPOINT}) {
+                        grid-template-columns: repeat(2, 1fr);
+                      }
+                      @media (max-width: ${SINGLE_COLUMN_BREAKPOINT}) {
+                        grid-template-columns: repeat(1, 1fr);
+                      }
                     `}
                   >
                     <Slider
@@ -383,7 +380,6 @@ const QuickstartsPage = ({ location, quickstarts, errored }) => {
                       {mostPopularQuickStarts.map((pack) => (
                         <QuickstartTile
                           key={pack.id}
-                          view={view}
                           featured={false}
                           css={css`
                             grid-template-rows:
@@ -433,31 +429,21 @@ const QuickstartsPage = ({ location, quickstarts, errored }) => {
                   grid-gap: 1.25rem;
                   grid-template-columns: repeat(4, 1fr);
                   grid-auto-rows: 1fr;
-                  ${view === VIEWS.GRID &&
-                  css`
-                    @media (max-width: ${TRIPLE_COLUMN_BREAKPOINT}) {
-                      grid-template-columns: repeat(3, 1fr);
-                    }
-                    @media (max-width: ${DOUBLE_COLUMN_BREAKPOINT}) {
-                      grid-template-columns: repeat(2, 1fr);
-                    }
-                    @media (max-width: ${SINGLE_COLUMN_BREAKPOINT}) {
-                      grid-template-columns: repeat(1, 1fr);
-                    }
-                  `}
-                  ${view === VIEWS.LIST &&
-                  css`
-                    grid-auto-rows: 1fr;
-                    grid-template-columns: 1fr;
-                    grid-gap: 1.25rem;
-                  `};
+                  @media (max-width: ${TRIPLE_COLUMN_BREAKPOINT}) {
+                    grid-template-columns: repeat(3, 1fr);
+                  }
+                  @media (max-width: ${DOUBLE_COLUMN_BREAKPOINT}) {
+                    grid-template-columns: repeat(2, 1fr);
+                  }
+                  @media (max-width: ${SINGLE_COLUMN_BREAKPOINT}) {
+                    grid-template-columns: repeat(1, 1fr);
+                  }
                 `}
               >
                 <Slider {...settings}>
                   {featuredQuickStarts.map((pack) => (
                     <QuickstartTile
                       key={pack.id}
-                      view={view}
                       featured={false}
                       css={css`
                         grid-template-rows:
@@ -505,22 +491,27 @@ const QuickstartsPage = ({ location, quickstarts, errored }) => {
             `}
           >
             <span>
-              Showing {quickstarts.length} results
+              Showing {quickstarts?.length} results
               <span> for: </span>
               <strong>{search || getDisplayName()}</strong>
             </span>
+
+            <QuickstartSort
+              location={location}
+              css={css`
+                width: fit-content;
+              `}
+            />
           </div>
-        {errored ? (
-          <QuickstartError />
-        ) : (
-          <div
-            css={css`
-              display: grid;
-              grid-gap: 1.25rem;
-              grid-template-columns: repeat(4, 1fr);
-              grid-auto-rows: 1fr;
-              ${view === VIEWS.GRID &&
-              css`
+          {errored ? (
+            <QuickstartError />
+          ) : (
+            <div
+              css={css`
+                display: grid;
+                grid-gap: 1.25rem;
+                grid-template-columns: repeat(4, 1fr);
+                grid-auto-rows: 1fr;
                 @media (max-width: ${TRIPLE_COLUMN_BREAKPOINT}) {
                   grid-template-columns: repeat(3, 1fr);
                 }
@@ -533,24 +524,16 @@ const QuickstartsPage = ({ location, quickstarts, errored }) => {
                   grid-template-columns: repeat(1, 1fr);
                 }
               `}
-              ${view === VIEWS.LIST &&
-              css`
-                grid-auto-rows: 1fr;
-                grid-template-columns: 1fr;
-                grid-gap: 1.25rem;
-              `};
-            `}
-          >
-            {!isSearchInputEmpty && <SuperTiles />}
-            {quickstarts.map((quickstart) => (
-              <QuickstartTile
-                key={quickstart.id}
-                view={view}
-                featured={quickstart.featured}
-                {...quickstart}
-              />
-            ))}
-          </div>
+            >
+              {!isSearchInputEmpty && <SuperTiles />}
+              {quickstarts?.map((quickstart) => (
+                <QuickstartTile
+                  key={quickstart.id}
+                  featured={quickstart.featured}
+                  {...quickstart}
+                />
+              ))}
+            </div>
           )}
         </div>
       </div>
@@ -559,7 +542,30 @@ const QuickstartsPage = ({ location, quickstarts, errored }) => {
 };
 
 QuickstartsPage.propTypes = {
-  quickstarts: PropTypes.arrayOf(rawQuickstart),
+  serverData: PropTypes.shape({
+    quickstarts: PropTypes.shape({
+      search: PropTypes.shape({
+        results: PropTypes.arrayOf(rawQuickstart),
+      }),
+    }),
+    categoriesWithTerms: PropTypes.arrayOf(
+      PropTypes.shape({
+        displayName: PropTypes.string,
+        terms: PropTypes.array,
+      })
+    ),
+    categoriesWithCounts: PropTypes.shape({
+      totalCount: PropTypes.number,
+      facets: PropTypes.shape({
+        categories: PropTypes.arrayOf(
+          PropTypes.shape({
+            count: PropTypes.number,
+            displayName: PropTypes.string,
+          })
+        ),
+      }),
+    }),
+  }),
   location: PropTypes.object,
   errored: PropTypes.bool,
 };

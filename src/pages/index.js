@@ -3,43 +3,76 @@ import React from 'react';
 import QuickstartsPage from '../components/QuickstartsPage';
 import customEventTrack from '../utils/customNewRelicEvent';
 
+const gql = String.raw; // Hack to get text editors to highlight graphql string without pulling in an external package
 const NERDGRAPH_URL = process.env.NERDGRAPH_URL;
 const NEW_RELIC_API_KEY = process.env.NEW_RELIC_API_KEY;
 
 export const getServerData = async ({ query, url }) => {
   const sortParam = query.sort || 'RELEVANCE';
+  const searchParam = query.search;
+  const categoryParam =
+    !query.category || query.category === '' ? [] : query.category.split(',');
 
-  const QUICKSTARTS_QUERY = `
-query getQuickstarts($sortBy: Nr1CatalogSearchSortOption){
-  actor {
-    nr1Catalog {
-      search(sortBy: $sortBy, filter: {types: QUICKSTART}) {
-        totalCount
-        results {
-          ... on Nr1CatalogQuickstart {
-            id
-            supportLevel
-            featured
-            metadata {
-              summary
-              keywords
-              displayName
-              slug
-              icon {
-                url
+  const QUICKSTARTS_QUERY = gql`
+    query getQuickstarts(
+      $sortBy: Nr1CatalogSearchSortOption
+      $query: String
+      $categories: [String!]
+    ) {
+      actor {
+        nr1Catalog {
+          quickstarts: search(
+            sortBy: $sortBy
+            filter: { types: QUICKSTART, categories: $categories }
+            query: $query
+          ) {
+            results {
+              ... on Nr1CatalogQuickstart {
+                id
+                supportLevel
+                featured
+                metadata {
+                  summary
+                  keywords
+                  displayName
+                  slug
+                  icon {
+                    url
+                  }
+                }
               }
             }
+          }
+          categoriesWithCounts: search(
+            query: $query
+            filter: { types: QUICKSTART }
+          ) {
+            totalCount
+            facets {
+              categories {
+                count
+                displayName
+              }
+            }
+          }
+          categoriesWithTerms: categories {
+            terms
+            displayName
+            slug
           }
         }
       }
     }
-  }
-}
-`;
+  `;
 
   const requestBody = JSON.stringify({
+    id: 'quickstartsQuery',
     query: QUICKSTARTS_QUERY,
-    variables: { sortBy: sortParam },
+    variables: {
+      sortBy: sortParam,
+      query: searchParam,
+      categories: categoryParam,
+    },
   });
 
   try {
@@ -59,17 +92,21 @@ query getQuickstarts($sortBy: Nr1CatalogSearchSortOption){
     const json = await resp.json();
 
     if (json.errors) {
-      throw new Error(`Errors returned from nerdgraph`, json.errors);
+      console.error(JSON.stringify(json.errors));
+      throw new Error(`Errors returned from nerdgraph`);
     }
-    const results = json.data?.actor?.nr1Catalog?.search?.results;
+
+    const results = json.data.actor.nr1Catalog;
 
     /* eslint-disable-next-line no-console */
-    console.log(`Found ${results?.length} quickstarts`);
+    console.log(`Found ${results.quickstarts?.results?.length} quickstarts`);
 
     customEventTrack('NerdGraphRequest', {
       success: true,
       requestBody,
       sortParam,
+      searchParam,
+      categoryParam,
       url,
     });
 
@@ -88,6 +125,8 @@ query getQuickstarts($sortBy: Nr1CatalogSearchSortOption){
       errorMessage: err,
       requestBody,
       sortParam,
+      searchParam,
+      categoryParam,
       url,
     });
 
@@ -103,7 +142,7 @@ const QuickstartsPageSSR = ({ serverData, location }) => {
   return (
     <QuickstartsPage
       errored={serverData.error}
-      quickstarts={serverData.data}
+      serverData={serverData.data}
       location={location}
     />
   );

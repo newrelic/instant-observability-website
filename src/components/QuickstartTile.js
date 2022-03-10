@@ -16,15 +16,9 @@ import {
 } from '../data/constants';
 import QuickstartImg from './QuickstartImg';
 
-const VIEWS = {
-  GRID: 'Grid view',
-  LIST: 'List view',
-};
-
 const QuickstartTile = ({
   id,
   metadata,
-  view,
   featured,
   supportLevel,
   className,
@@ -40,7 +34,6 @@ const QuickstartTile = ({
         tessen.track({
           eventName: 'instantObservability',
           category: 'GuidedInstallClick',
-          publicCatalogView: view,
           quickstartName: slug,
         });
         break;
@@ -48,7 +41,6 @@ const QuickstartTile = ({
         tessen.track({
           eventName: 'instantObservability',
           category: 'BuildYourOwnQuickstartClick',
-          publicCatalogView: view,
           quickstartName: slug,
         });
         break;
@@ -56,13 +48,10 @@ const QuickstartTile = ({
         tessen.track({
           eventName: 'instantObservability',
           category: 'QuickstartClick',
-          publicCatalogView: view,
           quickstartName: slug,
         });
     }
   };
-
-  const isListView = () => view === VIEWS.LIST;
 
   return (
     <Surface
@@ -89,19 +78,6 @@ const QuickstartTile = ({
           'summary summary'
           '. tag';
 
-        /* List view selected by control */
-        ${
-          isListView() &&
-          css`
-            grid-template-columns: 1fr 1fr 1fr;
-            grid-template-areas:
-              'logo title title'
-              'logo summary summary'
-              'logo tag tag';
-            grid-template-rows: auto;
-          `
-        }
-
         /* Breakpoint triggers List view */
         @media screen and (max-width: ${LISTVIEW_BREAKPOINT}){
           grid-template-areas:
@@ -127,11 +103,6 @@ const QuickstartTile = ({
           .dark-mode & {
             background: var(--color-white);
           }
-
-          ${isListView() &&
-          css`
-            margin-right: 0.5rem;
-          `}
 
           @media screen and (max-width: ${LISTVIEW_BREAKPOINT}) {
             margin-right: 0.5rem;
@@ -166,7 +137,9 @@ const QuickstartTile = ({
         `}
       >
         {displayName}{' '}
-        {SHIELD_LEVELS.includes(supportLevel) && <Icon name="nr-check-shield" />}
+        {SHIELD_LEVELS.includes(supportLevel) && (
+          <Icon name="nr-check-shield" />
+        )}
       </h4>
 
       <div
