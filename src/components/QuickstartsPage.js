@@ -53,7 +53,7 @@ const QuickstartsPage = ({ location, serverData, errored }) => {
     const categoryParam = params.get('category');
     const sortParam = params.get('sort');
 
-    if (searchParam || categoryParam) {
+    if (searchParam || categoryParam || sortParam) {
       tessen.track({
         eventName: 'instantObservability',
         category: 'QuickstartCatalogSearch',
@@ -243,7 +243,7 @@ const QuickstartsPage = ({ location, serverData, errored }) => {
             padding: var(--site-content-padding);
           `}
         >
-          {/* BEGIN MOBILE CATEGORY PICK */}
+          {/* BEGIN MOBILE CATEGORY PICKER */}
           <div
             css={css`
               display: flex;
@@ -318,7 +318,7 @@ const QuickstartsPage = ({ location, serverData, errored }) => {
               </div>
             </Overlay>
           </div>
-          {/* END MOBEIL CATEGORY PICKER */}
+          {/* END MOBILE CATEGORY PICKER */}
 
           {isSearchInputEmpty && (
             <>

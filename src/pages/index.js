@@ -93,7 +93,7 @@ export const getServerData = async ({ query, url }) => {
 
     if (json.errors) {
       console.error(JSON.stringify(json.errors));
-      throw new Error(`Errors returned from nerdgraph`, json.errors);
+      throw new Error(`Errors returned from nerdgraph`);
     }
 
     const results = json.data.actor.nr1Catalog;
