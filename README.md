@@ -93,7 +93,7 @@ Keep in mind when you submit your pull request, you'll need to sign the CLA via 
 
 ## 🚦Code of conduct
 
-Please review and agree to our [Code of Conduct](CODE_OF_CONDUCT.md) prior to submitting any code.
+Please review and agree to our [Code of Conduct](https://github.com/newrelic/.github/blob/main/CODE_OF_CONDUCT.md) prior to submitting any code.
 
 ## 🐛 Issues / enhancement requests
 
