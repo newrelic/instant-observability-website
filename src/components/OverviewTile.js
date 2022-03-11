@@ -6,8 +6,8 @@ import { Link, Surface, Tag } from '@newrelic/gatsby-theme-newrelic';
 import useTabs from './Tabs/useTabs';
 
 const truncateDescription = (description) => {
-  if (description.length > 250) {
-    return `${description.slice(0, 244)} . . .`;
+  if (description.length > 150) {
+    return `${description.slice(0, 144)} . . .`;
   }
 
   return description;
@@ -39,6 +39,8 @@ const OverviewTile = ({ key, title, image, description, tag }) => {
         css={css`
           padding: 1em;
           cursor: pointer;
+          position: relative;
+          min-height: 200px;
         `}
         onClick={() => navigateToTab(tag)}
       >
@@ -69,6 +71,11 @@ const OverviewTile = ({ key, title, image, description, tag }) => {
         <div
           css={css`
             margin-top: 1rem;
+            position: absolute;
+            width: 100%;
+            bottom: 10px;
+            right: 13px;
+            text-align: right;
           `}
         >
           <Tag>{tag}</Tag>
@@ -87,3 +94,4 @@ OverviewTile.propTypes = {
 };
 
 export default OverviewTile;
+
