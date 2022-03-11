@@ -31,13 +31,6 @@ const GuidedInstallTileMostPopular = () => {
     'tessen'
   );
 
-  const isListView = () => {
-    // view === VIEWS.LIST;
-    return true;
-  };
-
-  const type = 'primary';
-
   return (
     <Surface
       base={Surface.BASE.PRIMARY}
@@ -56,9 +49,7 @@ const GuidedInstallTileMostPopular = () => {
         grid-gap: 0.2rem;
         grid-template-rows: var(--tile-heading-height) var(--title-row-height) 1fr auto;
 
-        ${type === 'primary'
-          ? `background: var(--color-brand-700);`
-          : `background: var(--tertiary-background-color);`}
+        background: var(--color-brand-700);
       `}
     >
       <div
