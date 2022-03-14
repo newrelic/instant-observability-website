@@ -682,7 +682,6 @@ export const pageQuery = graphql`
         id
         title
         name
-        websiteUrl
         logoUrl
         packUrl
         level
@@ -691,12 +690,10 @@ export const pageQuery = graphql`
           description
           name
           screenshots
-          url
         }
         alerts {
           details
           name
-          url
           type
         }
         documentation {
