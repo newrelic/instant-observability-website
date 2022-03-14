@@ -103,13 +103,14 @@ export const getServerData = async ({ params, url }) => {
     });
 
     if (!resp.ok) {
-      throw Error(`Non 200 status code returned`, resp.status, resp.statusText);
+      throw Error(`${resp.status} status code returned`);
     }
 
     const json = await resp.json();
 
     if (json.errors) {
-      throw new Error(`Errors returned from nerdgraph`, json.errors);
+      console.error(JSON.stringify(json.errors));
+      throw new Error(`Errors returned from nerdgraph`);
     }
 
     customEventTrack('NerdGraphRequest', {
@@ -131,7 +132,7 @@ export const getServerData = async ({ params, url }) => {
 
     customEventTrack('NerdGraphRequest', {
       success: false,
-      errorMessage: err,
+      errorMessage: err.message,
       requestBody,
       url,
     });

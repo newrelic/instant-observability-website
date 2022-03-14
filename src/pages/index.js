@@ -86,7 +86,7 @@ export const getServerData = async ({ query, url }) => {
     });
 
     if (!resp.ok) {
-      throw Error(`Non 200 status code returned`, resp.status, resp.statusText);
+      throw Error(`${resp.status} status code returned`);
     }
 
     const json = await resp.json();
@@ -122,7 +122,7 @@ export const getServerData = async ({ query, url }) => {
 
     customEventTrack('NerdGraphRequest', {
       success: false,
-      errorMessage: err,
+      errorMessage: err.message,
       requestBody,
       sortParam,
       searchParam,
