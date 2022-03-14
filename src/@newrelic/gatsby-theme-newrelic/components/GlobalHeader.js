@@ -169,8 +169,9 @@ const GlobalHeader = ({ className, activeSite }) => {
               }
             `}
           >
-            <a
+            <ExternalLink
               href="https://newrelic.com/"
+              targetTab="_self"
               css={css`
                 display: flex;
                 align-items: center;
@@ -193,7 +194,7 @@ const GlobalHeader = ({ className, activeSite }) => {
                   }
                 `}
               />
-            </a>
+            </ExternalLink>
 
             <Dropdown
               css={css`
