@@ -176,6 +176,7 @@ const GlobalHeader = ({ className, activeSite }) => {
                 eventName: 'externalLinkClick',
                 category: 'LinkClick',
                 origin: 'globalHeader',
+                href: 'https://newrelic.com',
               })}
               css={css`
                 display: flex;
