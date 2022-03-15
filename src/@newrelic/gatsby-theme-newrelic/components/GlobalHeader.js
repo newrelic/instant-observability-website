@@ -11,6 +11,7 @@ import GlobalNavLink from '@newrelic/gatsby-theme-newrelic/src/components/Global
 import useMedia from 'use-media';
 import useThemeTranslation from '@newrelic/gatsby-theme-newrelic/src/hooks/useThemeTranslation';
 import { rgba } from 'polished';
+import { useInstrumentedHandler } from '@newrelic/gatsby-theme-newrelic';
 
 const action = css`
   color: var(--secondary-text-color);
@@ -169,9 +170,13 @@ const GlobalHeader = ({ className, activeSite }) => {
               }
             `}
           >
-            <ExternalLink
-              href="https://newrelic.com/"
-              targetTab="_self"
+            <a
+              href="https://newrelic.com"
+              onClick={useInstrumentedHandler(null, {
+                eventName: 'externalLinkClick',
+                category: 'LinkClick',
+                origin: 'globalHeader',
+              })}
               css={css`
                 display: flex;
                 align-items: center;
@@ -194,7 +199,7 @@ const GlobalHeader = ({ className, activeSite }) => {
                   }
                 `}
               />
-            </ExternalLink>
+            </a>
 
             <Dropdown
               css={css`
