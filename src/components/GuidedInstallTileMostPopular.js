@@ -39,6 +39,7 @@ const GuidedInstallTileMostPopular = () => {
           var(--tile-heading-height) var(--title-row-height)
           80px auto;
         min-height: 280px;
+        position: relative;
         --tile-heading-height: 100px; /* heading image height */
         --title-row-height: auto; /* Title height to allow space for longer string */
         padding: 1rem;
