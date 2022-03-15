@@ -440,12 +440,10 @@ export const pageQuery = graphql`
         description
         name
         screenshots
-        url
       }
       alerts {
         details
         name
-        url
         type
       }
       documentation {
