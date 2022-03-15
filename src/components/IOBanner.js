@@ -6,80 +6,80 @@ import bannerOverlayLeft from '../images/io-banner/banner-style-left.svg';
 import { SearchInput } from '@newrelic/gatsby-theme-newrelic';
 import { QUICKSTARTS_COLLAPSE_BREAKPOINT } from '../data/constants';
 
-const BannerHeaderContent = ({ search, setSearch,  setIsSearchInputEmpty}) => {
-
+const BannerHeaderContent = ({ search, setSearch, setIsSearchInputEmpty }) => {
   const handleSearchInput = (e) => {
     let searchInputValue = e.target.value;
     setSearch(searchInputValue);
-    searchInputValue.length >0 ? setIsSearchInputEmpty(false) : setIsSearchInputEmpty(true);
-  }
+    searchInputValue.length > 0
+      ? setIsSearchInputEmpty(false)
+      : setIsSearchInputEmpty(true);
+  };
 
-
-return(
-  <div
-    css={css`
-      position: static;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      text-align: center;
-
-      width: 568px;
-      height: 192px;
-
-      @media (max-width: ${QUICKSTARTS_COLLAPSE_BREAKPOINT}) {
-        padding: 48px 24px;
-      }
-    `}
-  >
-    <h2
-      css={css`
-        color: var(--color-brand-300);
-
-        @media (max-width: ${QUICKSTARTS_COLLAPSE_BREAKPOINT}) {
-          font-weight: 400;
-        }
-      `}
-    >
-      Instant Observability
-    </h2>
-    <h1
-      css={css`
-        color: var(--color-neutrals-050);
-        font-weight: 600;
-
-        @media (max-width: ${QUICKSTARTS_COLLAPSE_BREAKPOINT}) {
-          font-size: 20px;
-        }
-      `}
-    >
-      Monitor everything in your stack
-    </h1>
+  return (
     <div
       css={css`
-        background: none;
-        color: var(--color-brand-100);
+        position: static;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+
+        width: 568px;
+        height: 192px;
 
         @media (max-width: ${QUICKSTARTS_COLLAPSE_BREAKPOINT}) {
-          font-size: 12px;
-          font-weight: 300;
+          padding: 48px 24px;
         }
       `}
     >
-      Our quickstarts bundle everything you need to start monitoring like a pro
-      right out of the box.
-    </div>
-    <div>
-      <SearchInput
-        size={SearchInput.SIZE.LARGE}
-        value={search || ''}
-        placeholder="What do you want to monitor?"
-        onClear={() => {
-          setSearch('');
-          setIsSearchInputEmpty(true);
-        }}
-        onChange={handleSearchInput}
+      <h2
         css={css`
+          color: var(--color-brand-300);
+
+          @media (max-width: ${QUICKSTARTS_COLLAPSE_BREAKPOINT}) {
+            font-weight: 400;
+          }
+        `}
+      >
+        Instant Observability
+      </h2>
+      <h1
+        css={css`
+          color: var(--color-neutrals-050);
+          font-weight: 600;
+
+          @media (max-width: ${QUICKSTARTS_COLLAPSE_BREAKPOINT}) {
+            font-size: 20px;
+          }
+        `}
+      >
+        Monitor everything in your stack
+      </h1>
+      <div
+        css={css`
+          background: none;
+          color: var(--color-brand-100);
+
+          @media (max-width: ${QUICKSTARTS_COLLAPSE_BREAKPOINT}) {
+            font-size: 12px;
+            font-weight: 300;
+          }
+        `}
+      >
+        Our quickstarts bundle everything you need to start monitoring like a
+        pro right out of the box.
+      </div>
+      <div>
+        <SearchInput
+          size={SearchInput.SIZE.LARGE}
+          value={search || ''}
+          placeholder="What do you want to monitor?"
+          onClear={() => {
+            setSearch('');
+            setIsSearchInputEmpty(true);
+          }}
+          onChange={handleSearchInput}
+          css={css`
             --svg-color: var(--color-neutrals-700);
             box-shadow: none;
             max-width: 630px;
@@ -91,6 +91,7 @@ return(
               font-size: 14px;
               padding: 0.5rem;
               padding-left: 2.25rem;
+              padding-right: 3rem;
               background: var(--color-white);
               border: 1px solid var(--color-neutrals-600);
               border-radius: 4px;
@@ -119,12 +120,12 @@ return(
               max-width: 100%;
             }
           `}
-      />
+        />
+      </div>
     </div>
-  </div>
-);
-}
-const IOBanner = ({ search, setSearch ,setIsSearchInputEmpty}) => {
+  );
+};
+const IOBanner = ({ search, setSearch, setIsSearchInputEmpty }) => {
   return (
     <div
       css={css`
@@ -172,7 +173,11 @@ const IOBanner = ({ search, setSearch ,setIsSearchInputEmpty}) => {
             loading="lazy"
           />
         </div>
-        <BannerHeaderContent search={search} setSearch={setSearch} setIsSearchInputEmpty={setIsSearchInputEmpty} />
+        <BannerHeaderContent
+          search={search}
+          setSearch={setSearch}
+          setIsSearchInputEmpty={setIsSearchInputEmpty}
+        />
         <div
           css={css`
             margin-left: auto;

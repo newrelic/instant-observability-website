@@ -602,6 +602,7 @@ const QuickstartsPage = ({ data, location }) => {
               align-text: center;
 
               span {
+                width: 100%;
                 color: var(--text-color);
 
                 /* target inner children of parent span */
@@ -615,6 +616,10 @@ const QuickstartsPage = ({ data, location }) => {
 
               strong {
                 color: var(--text-color);
+                display: block;
+                text-overflow: ellipsis;
+                overflow-x: hidden;
+                whitespace: nowrap;
               }
 
               @media screen and (max-width: ${QUICKSTARTS_COLLAPSE_BREAKPOINT}) {
