@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useCallback, useRef } from 'react';
 import PropTypes from 'prop-types';
 import { css } from '@emotion/react';
 import { Portal, useKeyPress } from '@newrelic/gatsby-theme-newrelic';
@@ -16,9 +16,27 @@ const Overlay = ({ children, onCloseOverlay, isOpen = false, className }) => {
 
   useKeyPress('Escape', onCloseOverlay);
 
+  const ref = useRef(null);
+
+  const clickListener = useCallback((e) => {
+    if (ref.current.contains(e.target)) {
+      onCloseOverlay();
+    }
+  }, [ref.current])
+
+  useEffect(() => {
+    //capture click event
+    document.addEventListener('click', clickListener);
+    return () => {
+      //remove click event
+      document.removeEventListener('click', clickListener);
+    }
+  }, [])
+
   return (
     <Portal>
       <div
+        ref={ref}
         css={css`
           z-index: 1000;
           position: fixed;
