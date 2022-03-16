@@ -160,6 +160,8 @@ const QuickstartDetails = ({ data, location }) => {
                   grid-area: logo;
                   align-self: center;
                   justify-self: center;
+                  height: auto;
+                  width: 100%;
 
                   .dark-mode & {
                     background-color: white;
