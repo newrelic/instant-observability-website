@@ -3,8 +3,9 @@ const resolveQuickstartSlug = require('./src/utils/resolveQuickstartSlug');
 
 module.exports = {
   pathPrefix: `/instant-observability`,
+  trailingSlash: 'ignore',
   flags: {
-    DEV_SSR: true,
+    DEV_SSR: false,
     PRESERVE_WEBPACK_CACHE: true,
     PRESERVE_FILE_DOWNLOAD_CACHE: true,
   },
@@ -24,7 +25,6 @@ module.exports = {
       resolve: '@newrelic/gatsby-theme-newrelic',
       options: {
         oneTrustID: '77dd4d78-49db-4057-81ea-4bc325d6ecdd',
-        forceTrailingSlashes: true,
         layout: {
           contentPadding: '2rem',
           maxWidth: '1700px',
@@ -147,7 +147,6 @@ module.exports = {
       },
     },
     'gatsby-plugin-mdx', // Not used, but required by the theme
-    'gatsby-plugin-meta-redirect',
     'gatsby-plugin-use-query-params',
     {
       resolve: 'gatsby-plugin-gatsby-cloud',
