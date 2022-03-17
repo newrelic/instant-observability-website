@@ -5,7 +5,7 @@ module.exports = {
   pathPrefix: `/instant-observability`,
   trailingSlash: 'never',
   flags: {
-    DEV_SSR: false,
+    DEV_SSR: true,
     PRESERVE_WEBPACK_CACHE: true,
     PRESERVE_FILE_DOWNLOAD_CACHE: true,
   },
