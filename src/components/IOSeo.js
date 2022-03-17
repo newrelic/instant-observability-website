@@ -29,14 +29,14 @@ function IOSeo({ description, meta, title, tags, location, type }) {
       '/instant-observability/dotnet/2dff13b6-0fac-43a6-abc6-57f0a3299639/',
       '/instant-observability/codestream/29bd9a4a-1c19-4219-9694-0942f6411ce7/',
     ];
-    // if (crazyEggPathnames.includes(location.pathname))
-    //   return (
-    //     <script
-    //       type="text/javascript"
-    //       src="//script.crazyegg.com/pages/scripts/0045/9836.js"
-    //       async="async"
-    //     />
-    //   );
+    if (crazyEggPathnames.includes(location.pathname))
+      return (
+        <script
+          type="text/javascript"
+          src="//script.crazyegg.com/pages/scripts/0045/9836.js"
+          async="async"
+        />
+      );
   };
 
   const metaDescription = description || site.siteMetadata.description;
