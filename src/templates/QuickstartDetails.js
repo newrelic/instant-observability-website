@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { graphql } from 'gatsby';
 import { css } from '@emotion/react';
 import IOSeo from '../components/IOSeo';
@@ -31,6 +31,9 @@ import {
 import QuickstartOverview from '../components/QuickstartOverview';
 
 const QuickstartDetails = ({ data, location }) => {
+
+  const [imgStyle, setImgStyle] = useState({});
+
   const quickstart = data.quickstarts;
   const quickstartUrl = quickstart.packUrl || QUICKSTARTS_REPO;
   const tessen = useTessen();
@@ -80,6 +83,40 @@ const QuickstartDetails = ({ data, location }) => {
     });
   };
 
+  // get image resolution from URL
+  const getURLMeta = async (url) => {
+    const img = new Image();
+    img.src = url;
+    const { width, height } = await new Promise(resolve => {
+      img.onload = function() {
+        resolve({
+          width: this.width,
+          height: this.height
+        })
+      }
+    })
+    return { width, height }
+  };
+
+  const getImgStyle = async () => {
+    const { width, height } = await getURLMeta(quickstart.logoUrl)
+    const style = {};
+    // if image is rectangle
+    if (width > height) {
+      style.width = '';
+      style.height = '';
+    } else {
+      style.width = '80px'
+      style.height = '80px'
+    }
+    setImgStyle(style);
+  };
+
+  useEffect(() => {
+    getImgStyle();
+  }, [quickstart.logoUrl])
+
+  console.log('quickstart---', quickstart);
   return (
     <>
       <IOSeo
@@ -153,15 +190,16 @@ const QuickstartDetails = ({ data, location }) => {
           >
             {quickstart.logoUrl && (
               <img
+                style={imgStyle}
                 src={quickstart.logoUrl}
                 alt={quickstart.title}
                 css={css`
-                  max-height: 5rem;
+                  max-height: 100%;
+                  max-width: 12rem;
+                  width: 100%;
                   grid-area: logo;
                   align-self: center;
                   justify-self: center;
-                  height: auto;
-                  width: 100%;
 
                   .dark-mode & {
                     background-color: white;
