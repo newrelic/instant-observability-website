@@ -332,69 +332,6 @@
     ]
   },
   {
-    "title": "facepy",
-    "name": "facepy",
-    "description": "## What is facepy?\n\nFramework for using Python to access and communicate with Facebook’s APIs.\n\n## Get started!\n\nLeverage community expertise and instantly get value out of your telemetry data. This quickstart automatically instruments facepy with the New Relic Python agent, and allows you to instantly monitor your Python application with out-of-the-box dashboards and alerts. Further leverage New Relic's APM capabilities by setting up [errors inbox](https://docs.newrelic.com/docs/apm/apm-ui-pages/errors-inbox/errors-inbox/), [transaction tracing](https://docs.newrelic.com/docs/apm/transactions/transaction-traces/introduction-transaction-traces/), and [service maps](https://docs.newrelic.com/docs/understand-dependencies/understand-system-dependencies/service-maps/introduction-service-maps/).\n\n## More info\n\nCheck out the [documentation](https://docs.newrelic.com/docs/agents/python-agent/) to learn more about New Relic monitoring for facepy.",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/python/facepy",
-    "id": "846aaa7d-ecce-455f-88f8-4ed1661fb966",
-    "level": "COMMUNITY",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/python/facepy/logo.svg",
-    "summary": "Monitor facepy with New Relic's Python agent",
-    "websiteUrl": null,
-    "keywords": [
-      "apm",
-      "python"
-    ],
-    "authors": [
-      "New Relic"
-    ],
-    "dashboards": [
-      {
-        "name": "Facepy",
-        "description": "Python",
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/python/facepy/dashboards/python02.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/python/facepy/dashboards/python03.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/python/facepy/dashboards/python.png"
-        ]
-      }
-    ],
-    "alerts": [
-      {
-        "name": "Apdex Score",
-        "details": "This alert is triggered when the Apdex score is below 0.5 for 5 minutes",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "High CPU Utilization",
-        "details": "This alert is triggered when the CPU Utilization is above 90%.",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "Transaction Errors",
-        "details": "This alert is triggered when the the transactions fail more than 10% of the time in 5 minutes.",
-        "type": "STATIC",
-        "url": null
-      }
-    ],
-    "documentation": [
-      {
-        "name": "facepy installation docs",
-        "description": "Framework for using Python to access and communicate with Facebook’s APIs.",
-        "url": "https://docs.newrelic.com/docs/agents/python-agent/getting-started/instrumented-python-packages"
-      }
-    ],
-    "installPlans": [
-      {
-        "name": "Python Agent",
-        "id": "setup-python-agent"
-      }
-    ]
-  },
-  {
     "title": "OurSQL",
     "name": "oursql",
     "description": "## What is OurSQL?\n\noursql is a set of MySQL bindings for Python which wraps the MYSQL_STMT API to\nprovide real parameterization and server-side cursors.\n\n\n## Get started!\n\nLeverage community expertise and instantly get value out of your telemetry data. This quickstart automatically instruments OurSQL with the New Relic Python agent, and allows you to instantly monitor your Python application with out-of-the-box dashboards and alerts. Further leverage New Relic's APM capabilities by setting up [errors inbox](https://docs.newrelic.com/docs/apm/apm-ui-pages/errors-inbox/errors-inbox/), [transaction tracing](https://docs.newrelic.com/docs/apm/transactions/transaction-traces/introduction-transaction-traces/), and [service maps](https://docs.newrelic.com/docs/understand-dependencies/understand-system-dependencies/service-maps/introduction-service-maps/).\n\n## More info\n\nCheck out the [documentation](https://docs.newrelic.com/docs/agents/python-agent/) to learn more about New Relic monitoring for OurSQL.",
@@ -1307,51 +1244,6 @@
     ]
   },
   {
-    "title": "Glassbox quickstart",
-    "name": "glassbox-quickstart",
-    "description": "Glassbox empowers organizations to create frictionless digital journeys for their customers. Our digital experience analytics and Session Replay platform works in real time across mobile apps and websites to accelerate loyalty and growth. Through AI-driven visualization and analytics tools, Glassbox helps teams to prioritize customer experience and digital product enhancements from a single collaborative system.\n\nThe Glassbox quickstart helps you understand the impact of application performance on your customers’ digital experience. Gain deeper contextual insights by combining the data capture and session replay capabilities of Glassbox with New Relic One. Get a view of behavioral insights and KPIs inside a pre-built New Relic dashboard, which links directly to a session replay in Glassbox, so you can find the root cause of the digital issue and fix performance issues faster.\n\nFor more information or support, please go to [glassbox.com](https://www.glassbox.com/)",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/glassbox",
-    "id": "bdb952f3-28db-4ee7-89c6-b00244b0bb73",
-    "level": "COMMUNITY",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/glassbox/logo.png",
-    "summary": "The Glassbox quickstart helps you understand the impact of \napplication performance on your customers’ digital experience.",
-    "websiteUrl": null,
-    "keywords": [
-      "glassbox",
-      "newrelic partner",
-      "digital",
-      "session replay"
-    ],
-    "authors": [
-      "Joseph Counts (New Relic)",
-      "Glassbox"
-    ],
-    "dashboards": [
-      {
-        "name": "Glassbox Digital",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/glassbox/dashboards/dashboard01.png"
-        ]
-      }
-    ],
-    "alerts": [],
-    "documentation": [
-      {
-        "name": "Integraton Guide",
-        "description": "Integrate your Glassbox data with New Relic",
-        "url": "https://support.glassbox.com/hc/en-gb/articles/4405777280401-How-to-Connect-New-Relic"
-      }
-    ],
-    "installPlans": [
-      {
-        "name": "glassbox",
-        "id": "third-party-glassbox"
-      }
-    ]
-  },
-  {
     "title": "PostgreSQL",
     "name": "postresql",
     "description": "Official New Relic quickstart for PostgreSQL\nUse this quickstart together with the New Relic PostgreSQL On Host Integration to get insight into the performance of your PostgreSQL instances.",
@@ -1392,6 +1284,115 @@
       {
         "name": "PostgreSQL",
         "id": "postgresql-integration"
+      }
+    ]
+  },
+  {
+    "title": "Glassbox",
+    "name": "glassbox",
+    "description": "Glassbox empowers organizations to create frictionless digital journeys for their customers. Our digital experience analytics and Session Replay platform works in real time across mobile apps and websites to accelerate loyalty and growth. Through AI-driven visualization and analytics tools, Glassbox helps teams to prioritize customer experience and digital product enhancements from a single collaborative system.\n\nThe Glassbox quickstart helps you understand the impact of application performance on your customers’ digital experience. Gain deeper contextual insights by combining the data capture and session replay capabilities of Glassbox with New Relic One. Get a view of behavioral insights and KPIs inside a pre-built New Relic dashboard, which links directly to a session replay in Glassbox, so you can find the root cause of the digital issue and fix performance issues faster.\n\nFor more information or support, please go to [glassbox.com](https://www.glassbox.com/)",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/glassbox",
+    "id": "bdb952f3-28db-4ee7-89c6-b00244b0bb73",
+    "level": "COMMUNITY",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/glassbox/logo.png",
+    "summary": "The Glassbox quickstart helps you understand the impact of application performance on your customers’ digital experience.",
+    "websiteUrl": null,
+    "keywords": [
+      "glassbox",
+      "newrelic partner",
+      "digital",
+      "session replay"
+    ],
+    "authors": [
+      "Joseph Counts (New Relic)",
+      "Glassbox"
+    ],
+    "dashboards": [
+      {
+        "name": "Glassbox Digital",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/glassbox/dashboards/dashboard01.png"
+        ]
+      }
+    ],
+    "alerts": [],
+    "documentation": [
+      {
+        "name": "Glasbox integraton guide",
+        "description": "Integrate your Glassbox data with New Relic.",
+        "url": "https://support.glassbox.com/hc/en-gb/articles/4405777280401-How-to-Connect-New-Relic"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "glassbox",
+        "id": "third-party-glassbox"
+      }
+    ]
+  },
+  {
+    "title": "Facepy",
+    "name": "facepy",
+    "description": "## What is Facepy?\n\nFacepy is a framework for using Python to access and communicate with Facebook’s APIs.\n\n## Get started!\n\nLeverage community expertise and instantly get value out of your telemetry data. This quickstart automatically instruments Facepy with the New Relic Python agent, and allows you to instantly monitor your Python application with out-of-the-box dashboards and alerts. Further leverage New Relic's APM capabilities by setting up [errors inbox](https://docs.newrelic.com/docs/apm/apm-ui-pages/errors-inbox/errors-inbox/), [transaction tracing](https://docs.newrelic.com/docs/apm/transactions/transaction-traces/introduction-transaction-traces/), and [service maps](https://docs.newrelic.com/docs/understand-dependencies/understand-system-dependencies/service-maps/introduction-service-maps/).\n\n## More info\n\nCheck out the [documentation](https://docs.newrelic.com/docs/agents/python-agent/) to learn more about New Relic monitoring for Facepy.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/python/facepy",
+    "id": "846aaa7d-ecce-455f-88f8-4ed1661fb966",
+    "level": "NEW_RELIC",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/python/facepy/logo.svg",
+    "summary": "This quickstart automatically instruments Facepy with the New Relic Python agent, and allows you to instantly monitor your Python application with out-of-the-box dashboards and alerts.",
+    "websiteUrl": null,
+    "keywords": [
+      "apm",
+      "python",
+      "facepy"
+    ],
+    "authors": [
+      "New Relic"
+    ],
+    "dashboards": [
+      {
+        "name": "Facepy",
+        "description": "Python",
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/python/facepy/dashboards/python02.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/python/facepy/dashboards/python03.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/python/facepy/dashboards/python.png"
+        ]
+      }
+    ],
+    "alerts": [
+      {
+        "name": "Apdex Score",
+        "details": "This alert is triggered when the Apdex score is below 0.5 for 5 minutes",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "High CPU Utilization",
+        "details": "This alert is triggered when the CPU Utilization is above 90%.",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "Transaction Errors",
+        "details": "This alert is triggered when the the transactions fail more than 10% of the time in 5 minutes.",
+        "type": "STATIC",
+        "url": null
+      }
+    ],
+    "documentation": [
+      {
+        "name": "Facepy installation docs",
+        "description": "Framework for using Python to access and communicate with Facebook’s APIs.\n",
+        "url": "https://docs.newrelic.com/docs/agents/python-agent/getting-started/instrumented-python-packages"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "Python Agent",
+        "id": "setup-python-agent"
       }
     ]
   },
@@ -3069,6 +3070,117 @@
     ]
   },
   {
+    "title": "Alert Quality Management",
+    "name": "alert-quality-management",
+    "description": "Alert Quality Management (AQM) focuses on reducing the number of nuisance incidents so that you focus only on alerts with true business impact. This reduces alert fatigue and ensures that you and your team focus your attention on the right places at the right times.\n\nFor more information view the [implementation guide](https://docs.newrelic.com/docs/new-relic-solutions/observability-maturity/uptime-performance-reliability/aqm-implementation-guide/).",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/oma-aqm",
+    "id": "ccdf1cf7-29f0-42ca-ae0d-239dfb073fd0",
+    "level": "NEW_RELIC",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/oma-aqm/logo.png",
+    "summary": "Reduce the volume of nuisance incidents with the Alert Quality Management dashboard and process.",
+    "websiteUrl": null,
+    "keywords": [
+      "oma",
+      "observability maturity",
+      "AQM",
+      "alert quality management"
+    ],
+    "authors": [
+      "Alec Isaacson (New Relic)",
+      "Andrew Faria (New Relic)"
+    ],
+    "dashboards": [
+      {
+        "name": "Alert Quality Management",
+        "description": "Alert quality management KPI dashboard",
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/oma-aqm/dashboards/alert-quality-management.png"
+        ]
+      }
+    ],
+    "alerts": [],
+    "documentation": [
+      {
+        "name": "Implementation guide",
+        "description": "The implementation guide will show you how to implement the AQM process, including the webhook required to generate the data that feeds this dashboard.\n",
+        "url": "https://docs.newrelic.com/docs/new-relic-solutions/observability-maturity/uptime-performance-reliability/aqm-implementation-guide/"
+      }
+    ],
+    "installPlans": []
+  },
+  {
+    "title": "Feedparser",
+    "name": "feedparser",
+    "description": "## Why monitor Feedparser?\n\nFeedparser is a Python module that parses feeds in all known formats, including RSS, RDF, and Atom.\n\nFeedparser runs on Python 2.4 and later versions. The New Relic Feedparser quickstart automatically instruments Feedparser with the [New Relic Python agent](https://docs.newrelic.com/docs/apm/agents/python-agent/getting-started/introduction-new-relic-python/). This allows you to instantly monitor Feedparser with out-of-the-box dashboards and alerts.\n\n### Feedparser quickstart highlights\n\nThe New Relic Feedparser quickstart has the following features:\n\n- Dashboards: Our dashboards effectively monitor metrics like transactions overview, errors overview, virtual machine overview, top 10 failed transactions, transaction errors today vs 1 week ago, latest error, and more.\n\n- Alerts: Get instant alerts notifications on CPU utilization, high memory usage, low apdex score, and transaction error.\n\n### New Relic + Feedparser = Optimum performance monitoring\n\nOur Python agent monitors Feedparser to help you identify issues and solve them quickly. You can also extend your performance monitoring to collect and analyze business data. The dashboards provide interactive visualizations to explore your data, understand context, improve customer experience, and make data-driven business decisions.\n\nThe Feedparser observability quickstart monitors Feedparser’s performance metrics like Apdex score, CPU utilization, and transaction errors. With this quickstart, you can track key transactions specific to your business, create custom dashboards, and get alerts for any error. It offers you the ability to drill down into performance details by examining code-level transaction traces, database query traces, and leveraging thread profiler sessions to see detailed stack traces of sampled threads.\n\nDownload the New Relic Feedparser quickstart now to monitor Feedparser’s key performance indicators and address vulnerabilities efficiently. It’s the fastest path to making sure that you detect and respond to incidents in minutes.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/python/feedparser",
+    "id": "006a5c26-9aa0-4249-b83f-118d7057f5da",
+    "level": "NEW_RELIC",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/python/feedparser/logo.svg",
+    "summary": "Monitoring Feedparser is essential to detect incidents and respond to them quickly. Download the New Relic Feedparser quickstart to track Feedparser’s critical metrics and improve performance.",
+    "websiteUrl": null,
+    "keywords": [
+      "apm",
+      "python",
+      "feedparser"
+    ],
+    "authors": [
+      "New Relic",
+      "Emil Hammarstrand"
+    ],
+    "dashboards": [
+      {
+        "name": "Feedparser",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/python/feedparser/dashboards/feedparser-2.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/python/feedparser/dashboards/feedparser-3.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/python/feedparser/dashboards/feedparser.png"
+        ]
+      }
+    ],
+    "alerts": [
+      {
+        "name": "Apdex Score",
+        "details": "This alert is triggered when the Apdex score is below 0.5 for 5 minutes",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "High CPU Utilization",
+        "details": "This alert is triggered when the CPU Utilization is above 90%.",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "Memory Usage",
+        "details": "This alert is triggered when Memory usage is above 90%",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "Transaction Errors",
+        "details": "This alert is triggered when the the transactions fail more than 10% of the time in 5 minutes.",
+        "type": "STATIC",
+        "url": null
+      }
+    ],
+    "documentation": [
+      {
+        "name": "Feedparser installation docs",
+        "description": "Python parser for a wide variety of Atom and RSS feeds.\n",
+        "url": "https://docs.newrelic.com/docs/agents/python-agent/getting-started/instrumented-python-packages"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "Python Agent",
+        "id": "setup-python-agent"
+      }
+    ]
+  },
+  {
     "title": "Google Kubernetes Engine",
     "name": "google-kubernetes-engine",
     "description": "Provides a managed environment for deploying, managing, and scaling your\ncontainerized applications using Google infrastructure.\n",
@@ -3227,120 +3339,6 @@
       }
     ],
     "installPlans": []
-  },
-  {
-    "title": "Alert Quality Management Quickstart",
-    "name": "alert-quality-management",
-    "description": "Alert Quality Management (AQM) focuses on reducing the number of nuisance incidents so that you focus only on alerts with true business impact. This reduces alert fatigue and ensures that you and your team focus your attention on the right places at the right times.\n\nFor more information view the [implementation guide](https://docs.newrelic.com/docs/new-relic-solutions/observability-maturity/uptime-performance-reliability/aqm-implementation-guide/).\n",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/oma-aqm",
-    "id": "ccdf1cf7-29f0-42ca-ae0d-239dfb073fd0",
-    "level": "NEW_RELIC",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/v0.106.0/quickstarts/oma-aqm/logo.png",
-    "summary": "Reduce the volume of nuisance incidents with the Alert Quality Management dashboard and process.\n",
-    "websiteUrl": null,
-    "keywords": [
-      "oma",
-      "observabilty maturity",
-      "AQM",
-      "alert quality management"
-    ],
-    "authors": [
-      "Alec Isaacson (New Relic)",
-      "Andrew Faria (New Relic)"
-    ],
-    "dashboards": [
-      {
-        "name": "Alert Quality Management",
-        "description": "Alert quality management KPI dashboard",
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/v0.106.0/quickstarts/oma-aqm/dashboards/alert-quality-management.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/v0.95.0/quickstarts/oma-aqm/dashboards/alert-quality-management.png"
-        ]
-      }
-    ],
-    "alerts": [],
-    "documentation": [
-      {
-        "name": "Installation Docs",
-        "description": "The implementation guide will show you how to implement the AQM process, including the webhook required to generate the data that feeds this dashboard.\n",
-        "url": "https://docs.newrelic.com/docs/new-relic-solutions/observability-maturity/uptime-performance-reliability/aqm-implementation-guide/"
-      }
-    ],
-    "installPlans": []
-  },
-  {
-    "title": "feedparser",
-    "name": "feedparser",
-    "description": "## Why monitor Feedparser?\n\nFeedparser is a Python module that parses feeds in all known formats, including RSS, RDF, and Atom.\n\nFeedparser runs on Python 2.4 and later versions. The New Relic Feedparser quickstart automatically instruments Feedparser with the [New Relic Python agent](https://docs.newrelic.com/docs/apm/agents/python-agent/getting-started/introduction-new-relic-python/). This allows you to instantly monitor Feedparser with out-of-the-box dashboards and alerts.\n\n### Feedparser quickstart highlights\n\nThe New Relic Feedparser quickstart has the following features:\n\n- Dashboards: Our dashboards effectively monitor metrics like transactions overview, errors overview, virtual machine overview, top 10 failed transactions, transaction errors today vs 1 week ago, latest error, and more.\n\n- Alerts: Get instant alerts notifications on CPU utilization, high memory usage, low apdex score, and transaction error.\n\n### New Relic + Feedparser = Optimum performance monitoring\n\nOur Python agent monitors Feedparser to help you identify issues and solve them quickly. You can also extend your performance monitoring to collect and analyze business data. The dashboards provide interactive visualizations to explore your data, understand context, improve customer experience, and make data-driven business decisions.\n\nThe Feedparser observability quickstart monitors Feedparser’s performance metrics like Apdex score, CPU utilization, and transaction errors. With this quickstart, you can track key transactions specific to your business, create custom dashboards, and get alerts for any error. It offers you the ability to drill down into performance details by examining code-level transaction traces, database query traces, and leveraging thread profiler sessions to see detailed stack traces of sampled threads.\n\nDownload the New Relic Feedparser quickstart now to monitor Feedparser’s key performance indicators and address vulnerabilities efficiently. It’s the fastest path to making sure that you detect and respond to incidents in minutes.\n",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/python/feedparser",
-    "id": "006a5c26-9aa0-4249-b83f-118d7057f5da",
-    "level": "NEW_RELIC",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/v0.106.0/quickstarts/python/feedparser/logo.svg",
-    "summary": "Monitoring Feedparser is essential to detect incidents and respond to them quickly. Download the New Relic Feedparser quickstart to track Feedparser’s critical metrics and improve performance.\n",
-    "websiteUrl": null,
-    "keywords": [
-      "apm",
-      "python"
-    ],
-    "authors": [
-      "New Relic",
-      "Emil Hammarstrand"
-    ],
-    "dashboards": [
-      {
-        "name": "Feedparser",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/v0.106.0/quickstarts/python/feedparser/dashboards/feedparser-2.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/v0.106.0/quickstarts/python/feedparser/dashboards/feedparser-3.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/v0.106.0/quickstarts/python/feedparser/dashboards/feedparser.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/v0.95.0/quickstarts/python/feedparser/dashboards/feedparser-2.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/v0.95.0/quickstarts/python/feedparser/dashboards/feedparser-3.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/v0.95.0/quickstarts/python/feedparser/dashboards/feedparser.png"
-        ]
-      }
-    ],
-    "alerts": [
-      {
-        "name": "Apdex Score",
-        "details": "This alert is triggered when the Apdex score is below 0.5 for 5 minutes\n",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "High CPU Utilization",
-        "details": "This alert is triggered when the CPU Utilization is above 90%.\n",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "Memory Usage",
-        "details": "This alert is triggered when Memory usage is above 90%\n",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "Transaction Errors",
-        "details": "This alert is triggered when the the transactions fail more than 10% of the time in 5 minutes.\n",
-        "type": "STATIC",
-        "url": null
-      }
-    ],
-    "documentation": [
-      {
-        "name": "feedparser installation docs",
-        "description": "Python parser for a wide variety of Atom and RSS feeds.\n",
-        "url": "https://docs.newrelic.com/docs/agents/python-agent/getting-started/instrumented-python-packages"
-      }
-    ],
-    "installPlans": [
-      {
-        "name": "Python Agent",
-        "id": "setup-python-agent"
-      }
-    ]
   },
   {
     "title": "Grape",
@@ -4454,133 +4452,6 @@
     ]
   },
   {
-    "title": "AIOHTTP",
-    "name": "aiohttp",
-    "description": "## AIO HTTP complete monitoring quickstart\nInstantly monitor Python applications with AIO HTTPS quickstart. Our [Python](https://docs.newrelic.com/docs/agents/python-agent/) integration lets you quickly identify and resolve potential performance issues with your AIO HTTP server and enhance user experiences.\n\n### Monitoring AIO HTTP\n\nPython application developers can extend AIO HTTP performance monitoring to collect, clean, and analyze data to make better data-driven business decisions. Monitoring is vital to ensure uptime and data reliability by keeping an eye on the AIO HTTP server and AIO HTTP client.\n\nNew Relic's AIO HTTP quickstart provides dashboards and built-in instrumentation to track AIO HTTP requests, CPU utilization, garbage collection CPU time, memory heap used, most popular transactions, throughput reports, top 5 slowest transactions, and more. \n\nCount on real-time alerts to apdex scores, CPU utilization, and transaction errors. Expand the Python agent's default monitoring and behavior through the agent API or agent config file and target additional activity and functional calls.\n\n### New Relic - The complte AIO HTTP dashboard tool\n\nThe AIO HTTP dashboard tool ensures total visibility into critical metrics, leveraging dashboards and synthetic checks. With APIs and flexible custom instrumentation options, developers can use multiple building blocks to improve performance and adapt data for your app.\n\n#### What's included?\n\n- Dashboards - CPU Utilization, memory heap used, garbage collection CPU time, top 5 slowest transactions, throughput reports, most popular transactions, and more.\n- Alerts - apdex score, cpu utilization, transaction error.\n\nKnow what's happening in real-time by tracking CPU utilization, throughput reports, and popular transactions with full-stack observability of your entire infrastructure. \n\nWith the AIO HTTP complete monitoring quickstart, you can remediate errors before they impact user experience.",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/python/aiohttp",
-    "id": "e7948525-8726-46a5-83fa-04732ad42fd1",
-    "level": "COMMUNITY",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/python/aiohttp/logo.svg",
-    "summary": "New Relic's AIO HTTP complete monitoring quickstart offers dashboards, alerts, and custom instrumentation to track the health and performance of your Python application before it impacts user experience.",
-    "websiteUrl": null,
-    "keywords": [
-      "python",
-      "apm",
-      "http"
-    ],
-    "authors": [
-      "New Relic"
-    ],
-    "dashboards": [
-      {
-        "name": "AIO HTTP",
-        "description": "Python",
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/python/aiohttp/dashboards/python02.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/python/aiohttp/dashboards/python03.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/python/aiohttp/dashboards/python.png"
-        ]
-      }
-    ],
-    "alerts": [
-      {
-        "name": "Apdex Score",
-        "details": "This alert is triggered when the Apdex score is below 0.5 for 5 minutes",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "High CPU Utilization",
-        "details": "This alert is triggered when the CPU Utilization is above 90%.",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "Transaction Errors",
-        "details": "This alert is triggered when the the transactions fail more than 10% of the time in 5 minutes.",
-        "type": "STATIC",
-        "url": null
-      }
-    ],
-    "documentation": [
-      {
-        "name": "AIOHTTP installation docs",
-        "description": "Async HTTP framework for Python with support for client and server\nmanagement.\n",
-        "url": "https://docs.newrelic.com/docs/agents/python-agent/getting-started/compatibility-requirements-python-agent"
-      }
-    ],
-    "installPlans": [
-      {
-        "name": "Python Agent",
-        "id": "setup-python-agent"
-      }
-    ]
-  },
-  {
-    "title": "tornado",
-    "name": "tornado",
-    "description": "## What is tornado?\n\nPython web application framework built for asynchronous networking operations.\n\n## Get started!\n\nLeverage community expertise and instantly get value out of your telemetry data. This quickstart automatically instruments tornado with the New Relic Python agent, and allows you to instantly monitor your Python application with out-of-the-box dashboards and alerts. Further leverage New Relic's APM capabilities by setting up [errors inbox](https://docs.newrelic.com/docs/apm/apm-ui-pages/errors-inbox/errors-inbox/), [transaction tracing](https://docs.newrelic.com/docs/apm/transactions/transaction-traces/introduction-transaction-traces/), and [service maps](https://docs.newrelic.com/docs/understand-dependencies/understand-system-dependencies/service-maps/introduction-service-maps/).\n\n## More info\n\nCheck out the [documentation](https://docs.newrelic.com/docs/agents/python-agent/) to learn more about New Relic monitoring for tornado.",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/python/tornado",
-    "id": "47934616-fc0c-4e02-8b25-0a92d3f43928",
-    "level": "COMMUNITY",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/python/tornado/logo.svg",
-    "summary": "Monitor tornado with New Relic's Python agent",
-    "websiteUrl": null,
-    "keywords": [
-      "apm",
-      "python"
-    ],
-    "authors": [
-      "New Relic"
-    ],
-    "dashboards": [
-      {
-        "name": "Tornado",
-        "description": "Python",
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/python/tornado/dashboards/python02.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/python/tornado/dashboards/python03.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/python/tornado/dashboards/python.png"
-        ]
-      }
-    ],
-    "alerts": [
-      {
-        "name": "Apdex Score",
-        "details": "This alert is triggered when the Apdex score is below 0.5 for 5 minutes",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "High CPU Utilization",
-        "details": "This alert is triggered when the CPU Utilization is above 90%.",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "Transaction Errors",
-        "details": "This alert is triggered when the the transactions fail more than 10% of the time in 5 minutes.",
-        "type": "STATIC",
-        "url": null
-      }
-    ],
-    "documentation": [
-      {
-        "name": "tornado installation docs",
-        "description": "Python web application framework built for asynchronous networking\noperations.\n",
-        "url": "https://docs.newrelic.com/docs/agents/python-agent/getting-started/instrumented-python-packages"
-      }
-    ],
-    "installPlans": [
-      {
-        "name": "Python Agent",
-        "id": "setup-python-agent"
-      }
-    ]
-  },
-  {
     "title": "Cribl Logstream",
     "name": "cribl-logstream",
     "description": "Cribl Logstream unlocks data sources in an observability pipeline. Deploying this quickstart brings the performance of the Logstream control plane to New Relic with insights into sources, pipelines, workers, and destinations.\n\nFor more information or support, please go to https://cribl.io/support/",
@@ -4874,53 +4745,6 @@
     ]
   },
   {
-    "title": "Gigamon Quickstart",
-    "name": "gigamon-newrelic",
-    "description": "Gigamon helps the world’s leading organizations run fast, stay secure and innovate. We provide the industry’s first elastic visibility and analytics fabric, which closes the cloud visibility gap by enabling cloud tools to see the network and network tools to see the cloud. With visibility across their entire hybrid cloud network, organizations can improve customer experience, eliminate security blind spots, and reduce cost and complexity. Gigamon has been awarded over 90 technology patents and enjoys world-class customer satisfaction with more than 4,000 organizations, including over 80 percent of the Fortune 100 and hundreds of government and educational organizations worldwide.\n\nTo try this integration in your environment please reach out to tme@gigamon.com. If you are not aware of Gigamon Cloud Suite please reach out to sales@gigamon.com. \n",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/gigamon",
-    "id": "d6b36ecf-bf99-475c-938f-370153db8e70",
-    "level": "VERIFIED",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/v0.106.0/quickstarts/gigamon/logo.png",
-    "summary": "\nGigamon Cloud Suite enables collection of network traffic from every instance in the cloud collecting metadata of over 5,000 network traffic-related attributes for a holistic overview of and a much deeper level of security-related inspection.\n",
-    "websiteUrl": null,
-    "keywords": [
-      "Gigamon",
-      "Gigamon Cloud Suite",
-      "Gigamon Integration",
-      "featured",
-      "newrelic partner"
-    ],
-    "authors": [
-      "Haider Jarral"
-    ],
-    "dashboards": [
-      {
-        "name": "Agentless Gigamon View",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/v0.106.0/quickstarts/gigamon/dashboards/gigamon-hawk01.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/v0.94.3/quickstarts/gigamon/dashboards/gigamon-hawk01.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/v0.95.0/quickstarts/gigamon/dashboards/gigamon-hawk01.png"
-        ]
-      }
-    ],
-    "alerts": [],
-    "documentation": [
-      {
-        "name": "Gigamon Cloud Suite Installation",
-        "description": "An overview of the architecture and deployment methodology for Gigamon Hawk integrated with New Relic\n",
-        "url": "https://www.gigamon.com/content/dam/resource-library/english/deployment-guide/gigamon-new-relic-integration-quick-start-guide.pdf"
-      }
-    ],
-    "installPlans": [
-      {
-        "name": "Gigamon-Cloud-Observability",
-        "id": "third-party-gigamon"
-      }
-    ]
-  },
-  {
     "title": "NATS",
     "name": "nats",
     "description": "## What is NATS?\n\nNATS is an open-source messaging system written in Go.\n\n## Get started!\n\nLeverage community expertise and instantly get value out of your telemetry data. This quickstart automatically instruments NATS with the New Relic Go agent, and allows you to further leverage New Relic's APM capabilities by setting up [custom dashboards](https://docs.newrelic.com/docs/query-your-data/explore-query-data/dashboards/introduction-dashboards/), [errors inbox](https://docs.newrelic.com/docs/apm/apm-ui-pages/errors-inbox/errors-inbox/), [transaction tracing](https://docs.newrelic.com/docs/apm/transactions/transaction-traces/introduction-transaction-traces/), and [service maps](https://docs.newrelic.com/docs/understand-dependencies/understand-system-dependencies/service-maps/introduction-service-maps/).\n\n## More info\n\nCheck out the [documentation](https://docs.newrelic.com/docs/agents/go-agent/) to learn more about New Relic monitoring for NATS. ",
@@ -5063,6 +4887,51 @@
     "installPlans": []
   },
   {
+    "title": "Gigamon",
+    "name": "gigamon",
+    "description": "Gigamon helps the world’s leading organizations run fast, stay secure and innovate. We provide the industry’s first elastic visibility and analytics fabric, which closes the cloud visibility gap by enabling cloud tools to see the network and network tools to see the cloud. With visibility across their entire hybrid cloud network, organizations can improve customer experience, eliminate security blind spots, and reduce cost and complexity. Gigamon has been awarded over 90 technology patents and enjoys world-class customer satisfaction with more than 4,000 organizations, including over 80 percent of the Fortune 100 and hundreds of government and educational organizations worldwide.\n\nTo try this integration in your environment please reach out to tme@gigamon.com. If you are not aware of Gigamon Cloud Suite please reach out to sales@gigamon.com.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/gigamon",
+    "id": "d6b36ecf-bf99-475c-938f-370153db8e70",
+    "level": "VERIFIED",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/gigamon/logo.png",
+    "summary": "Gigamon Cloud Suite enables collection of network traffic from every instance in the cloud collecting metadata of over 5,000 network traffic-related attributes for a holistic overview of and a much deeper level of security-related inspection.",
+    "websiteUrl": null,
+    "keywords": [
+      "Gigamon",
+      "Gigamon Cloud Suite",
+      "Gigamon Integration",
+      "featured",
+      "newrelic partner"
+    ],
+    "authors": [
+      "Haider Jarral"
+    ],
+    "dashboards": [
+      {
+        "name": "Agentless Gigamon View",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/gigamon/dashboards/gigamon-hawk01.png"
+        ]
+      }
+    ],
+    "alerts": [],
+    "documentation": [
+      {
+        "name": "Gigamon integration guide",
+        "description": "An overview of the architecture and deployment methodology for Gigamon Hawk integrated with New Relic\n",
+        "url": "https://www.gigamon.com/content/dam/resource-library/english/deployment-guide/gigamon-new-relic-integration-quick-start-guide.pdf"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "Gigamon-Cloud-Observability",
+        "id": "third-party-gigamon"
+      }
+    ]
+  },
+  {
     "title": "Netty",
     "name": "netty",
     "description": "## Why monitor Netty?\nNetty is a tool for building performant, low-level network servers and clients in Java. It operates on an asynchronous, non-blocking I/O model, meaning that it can serve or receive multiple requests simultaneously while maintaining running background processes. \n\nWhile Netty is powerful and runs with lower resource usage than its blocking counterparts, its non-blocking paradigm makes the code it creates harder to test and more difficult to read. The fact that it operates at a low level close to the hardware makes it prone to difficult-to-debug errors. Thus, actively monitoring each Netty instance is vital to keeping all the servers and clients on which it is based running smoothly. The Netty quickstart provides dashboards and alerts that enable continuous monitoring of Netty application health.\n\n### New Relic Netty quickstart features\n\nThe Netty quickstart contains a number of helpful dashboards and alerts that monitor your Netty performance. These include\n\n#### Dashboards  \n- Transactions overview provides information about average transaction duration, slowest 10% duration transactions, total transactions, and success rates.\n- The errors overview gives insight into total transactions and failed transactions by both percentages and total numbers.\n- The VM overview lets you introspect average CPU utilization, average physical memory usage, and total average memory used.\n- The top 10 failed transactions dashboard shows failed transactions with the greatest impact.\n- The latest error dashboard gives insights into recent errors.\n- And more.\n\n#### Alerts\n- The CPU utilization alert is triggered at 90% usage.\n- The high memory usage alert is triggered at 90% usage\n- The low APDEX score alert is triggered when it falls below 0.5 for 5 mins.\n- The transaction error alert is triggered by >10% transaction failure rate over 10 mins.\n\n### New Relic - The Complete Netty Dashboard Tool\n\nMonitor your Netty application to ensure its success and stability. Servers often experience high loads, where hundreds of thousands, even millions, of requests can hit them simultaneously. The New Relic Netty dashboard empowers developers and system admins to stay on top of Netty’s performance and address any critical issues that arise.\nHaving insight into Netty, the state of Netty transactions, and associations such as the Apdex score, are important for ensuring a client is acceptably handling the majority of inbound and outbound requests. If requests begin failing, and the Apdex score dips significantly, this could be an indicator that something is going wrong in the system - perhaps there’s a concurrency issue, a need to scale up the server’s resources, a backend bug, or something else. The New Relic Netty quickstart allows these errors to be flagged with alerts and then drilled down into using the metrics provided in the dashboards. Specifically, the quickstart automatically sets up dashboards with meaningful metrics and default alert notifications for common Netty issues.\n\nThe Netty dashboards provide users tools to monitor global Java VM health, so that if there’s another Java application dragging the system down, it can be identified and addressed before a Netty server, client, or network protocol crashes.\n",
@@ -5135,6 +5004,206 @@
       {
         "name": "Java Agent",
         "id": "setup-java-agent"
+      }
+    ]
+  },
+  {
+    "title": "AIOHTTP",
+    "name": "aiohttp",
+    "description": "## AIO HTTP complete monitoring quickstart\n\nInstantly monitor Python applications with AIO HTTP quickstart. Our [Python](https://docs.newrelic.com/docs/agents/python-agent/) integration lets you quickly identify and resolve potential performance issues with your AIO HTTP server and enhance user experiences.\n\n### Monitoring AIO HTTP\n\nPython application developers can extend AIO HTTP performance monitoring to collect, clean, and analyze data to make better data-driven business decisions. Monitoring is vital to ensure uptime and data reliability by keeping an eye on the AIO HTTP server and AIO HTTP client.\n\nNew Relic's AIO HTTP quickstart provides dashboards and built-in instrumentation to track AIO HTTP requests, CPU utilization, garbage collection CPU time, memory heap used, most popular transactions, throughput reports, top 5 slowest transactions, and more.\n\nCount on real-time alerts to apdex scores, CPU utilization, and transaction errors. Expand the Python agent's default monitoring and behavior through the agent API or agent config file and target additional activity and functional calls.\n\n### New Relic - The complete AIO HTTP dashboard tool\n\nThe AIO HTTP dashboard tool ensures total visibility into critical metrics, leveraging dashboards and synthetic checks. With APIs and flexible custom instrumentation options, developers can use multiple building blocks to improve performance and adapt data for your app.\n\n#### What's included?\n\n- Dashboards - CPU Utilization, memory heap used, garbage collection CPU time, top 5 slowest transactions, throughput reports, most popular transactions, and more.\n- Alerts - apdex score, cpu utilization, transaction error.\n\nKnow what's happening in real-time by tracking CPU utilization, throughput reports, and popular transactions with full-stack observability of your entire infrastructure.\n\nWith the AIO HTTP complete monitoring quickstart, you can remediate errors before they impact user experience.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/python/aiohttp",
+    "id": "e7948525-8726-46a5-83fa-04732ad42fd1",
+    "level": "NEW_RELIC",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/python/aiohttp/logo.svg",
+    "summary": "New Relic's AIO HTTP complete monitoring quickstart offers dashboards, alerts, and custom instrumentation to track the health and performance of your Python application before it impacts user experience.",
+    "websiteUrl": null,
+    "keywords": [
+      "python",
+      "apm",
+      "http",
+      "aiohttp"
+    ],
+    "authors": [
+      "New Relic"
+    ],
+    "dashboards": [
+      {
+        "name": "AIO HTTP",
+        "description": "Python",
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/python/aiohttp/dashboards/python02.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/python/aiohttp/dashboards/python03.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/python/aiohttp/dashboards/python.png"
+        ]
+      }
+    ],
+    "alerts": [
+      {
+        "name": "Apdex Score",
+        "details": "This alert is triggered when the Apdex score is below 0.5 for 5 minutes",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "High CPU Utilization",
+        "details": "This alert is triggered when the CPU Utilization is above 90%.",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "Transaction Errors",
+        "details": "This alert is triggered when the the transactions fail more than 10% of the time in 5 minutes.",
+        "type": "STATIC",
+        "url": null
+      }
+    ],
+    "documentation": [
+      {
+        "name": "AIOHTTP installation docs",
+        "description": "Async HTTP framework for Python with support for client and server\nmanagement.\n",
+        "url": "https://docs.newrelic.com/docs/agents/python-agent/getting-started/compatibility-requirements-python-agent"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "Python Agent",
+        "id": "setup-python-agent"
+      }
+    ]
+  },
+  {
+    "title": "Flask",
+    "name": "flask",
+    "description": "## Why monitor Flask?\n\nFlask is a Python web application micro-framework built with a focus on simplicity. It provides developers the freedom to build the structure of a web application. New Relic Flask Quickstart empowers you with dashboards and alerts to effectively monitor Flask’s performance metrics like transaction errors, CPU utilization, apdex score, and many more.\n\n## Flask quickstart highlights\n\nThe New Relic Flask quickstart has the following features:\n\n### Dashboards\n  - CPU Utilization\n  - memory heap used\n  - garbage collection\n  - CPU time\n  - top 5 slowest transactions\n  - throughput reports\n  - most popular transactions and more\n\n### Alerts\n  - apdex score\n  - cpu utilization\n  - transaction error\n\n### New Relic + Flask = Optimum performance monitoring\n\nThe New Relic Flask quickstart automatically instruments Flask with the [New Relic Python agent](https://docs.newrelic.com/docs/apm/agents/python-agent/getting-started/introduction-new-relic-python/), and instantly monitors your application with out-of-the-box dashboards and alerts. The dashboards provide interactive visualizations to explore your data, understand context, and resolve problems faster. The Python agent allows you to leverage all our platform to customize the data you need from your app.\n\nThe integration monitors Flask’s performance metrics like apdex (user satisfaction), CPU utilization and transaction errors. With the integration, you can track key transactions specific to your business, create custom dashboards, and get alerts for any error. You can also query business data to get more insights and use thread profiler sessions to see detailed stack traces of sampled threads.\n\nInstall the New Relic Flask Quickstart now to monitor Flask’s endpoints and key performance indicators efficiently. It strengthens you to keep developing seamless web apps.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/python/flask",
+    "id": "2c13db46-a9ce-4595-854f-32e76dac6793",
+    "level": "NEW_RELIC",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/python/flask/logo.svg",
+    "summary": "Monitoring Flask’s performance metrics is crucial to build web applications with no hassle. Install New Relic Flask Quickstart to access dashboards and alerts to proactively monitor your Flask application.",
+    "websiteUrl": null,
+    "keywords": [
+      "apm",
+      "python",
+      "flask"
+    ],
+    "authors": [
+      "New Relic",
+      "Emil Hammarstrand"
+    ],
+    "dashboards": [
+      {
+        "name": "Flask",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/python/flask/dashboards/flask2.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/python/flask/dashboards/flask3.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/python/flask/dashboards/flask.png"
+        ]
+      }
+    ],
+    "alerts": [
+      {
+        "name": "Apdex Score",
+        "details": "This alert is triggered when the Apdex score is below 0.5 for 5 minutes",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "High CPU Utilization",
+        "details": "This alert is triggered when the CPU Utilization is above 90%.",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "Memory Usage",
+        "details": "This alert is triggered when Memory usage is above 90%",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "Transaction Errors",
+        "details": "This alert is triggered when the the transactions fail more than 10% of the time in 5 minutes.",
+        "type": "STATIC",
+        "url": null
+      }
+    ],
+    "documentation": [
+      {
+        "name": "Flask installation docs",
+        "description": "Popular python web application micro framework built with a focus on\nsimplicity.\n",
+        "url": "https://docs.newrelic.com/docs/agents/python-agent/getting-started/instrumented-python-packages"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "Python Agent",
+        "id": "setup-python-agent"
+      }
+    ]
+  },
+  {
+    "title": "Tornado",
+    "name": "tornado",
+    "description": "## What is tornado?\n\nTornado is a Python web framework and asynchronous networking library, originally developed at FriendFeed. By using non-blocking network I/O, Tornado can scale to tens of thousands of open connections, making it ideal for long polling, WebSockets, and other applications that require a long-lived connection to each user.\n\n## Get started!\n\nLeverage community expertise and instantly get value out of your telemetry data. This quickstart automatically instruments tornado with the New Relic Python agent, and allows you to instantly monitor your Python application with out-of-the-box dashboards and alerts. Further leverage New Relic's APM capabilities by setting up [errors inbox](https://docs.newrelic.com/docs/apm/apm-ui-pages/errors-inbox/errors-inbox/), [transaction tracing](https://docs.newrelic.com/docs/apm/transactions/transaction-traces/introduction-transaction-traces/), and [service maps](https://docs.newrelic.com/docs/understand-dependencies/understand-system-dependencies/service-maps/introduction-service-maps/).\\n\\n## More info\\n\\nCheck out the [documentation](https://docs.newrelic.com/docs/agents/python-agent/) to learn more about New Relic monitoring for tornado.\"",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/python/tornado",
+    "id": "47934616-fc0c-4e02-8b25-0a92d3f43928",
+    "level": "NEW_RELIC",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/python/tornado/logo.svg",
+    "summary": "This quickstart automatically instruments tornado with the New Relic Python agent, and allows you to instantly monitor your Python application with out-of-the-box dashboards and alerts.",
+    "websiteUrl": null,
+    "keywords": [
+      "apm",
+      "python",
+      "tornado"
+    ],
+    "authors": [
+      "New Relic"
+    ],
+    "dashboards": [
+      {
+        "name": "Tornado",
+        "description": "Python",
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/python/tornado/dashboards/python02.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/python/tornado/dashboards/python03.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/python/tornado/dashboards/python.png"
+        ]
+      }
+    ],
+    "alerts": [
+      {
+        "name": "Apdex Score",
+        "details": "This alert is triggered when the Apdex score is below 0.5 for 5 minutes",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "High CPU Utilization",
+        "details": "This alert is triggered when the CPU Utilization is above 90%.",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "Transaction Errors",
+        "details": "This alert is triggered when the the transactions fail more than 10% of the time in 5 minutes.",
+        "type": "STATIC",
+        "url": null
+      }
+    ],
+    "documentation": [
+      {
+        "name": "Tornado installation docs",
+        "description": "Python web application framework built for asynchronous networking\noperations.\n",
+        "url": "https://docs.newrelic.com/docs/agents/python-agent/getting-started/instrumented-python-packages"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "Python Agent",
+        "id": "setup-python-agent"
       }
     ]
   },
@@ -5319,79 +5388,6 @@
       }
     ],
     "installPlans": []
-  },
-  {
-    "title": "flask",
-    "name": "flask",
-    "description": "## Why monitor Flask?\n\nFlask is a Python web application micro-framework built with a focus on simplicity. It provides developers the freedom to build the structure of a web application. New Relic Flask Quickstart empowers you with dashboards and alerts to effectively monitor Flask’s performance metrics like transaction errors, CPU utilization, apdex score, and many more.\n\n### Flask quickstart highlights\n\nThe New Relic Flask quickstart has the following features - \n  Dashboards - Our dashboards proactively monitor metrics like \n  - CPU Utilization\n  - memory heap used\n  - garbage collection\n  - CPU time\n  - top 5 slowest transactions\n  - throughput reports\n  - most popular transactions and more\n Alerts - \n  - apdex score, \n  - cpu utilization, \n  - transaction error\n \n### New Relic + Flask = Optimum performance monitoring\n\nNewrelic Flask quickstart automatically instruments Flask with the [New Relic Python agent](https://docs.newrelic.com/docs/apm/agents/python-agent/getting-started/introduction-new-relic-python/), and instantly monitors your application with out-of-the-box dashboards and alerts. The dashboards provide interactive visualizations to explore your data, understand context, and resolve problems faster. The Python agent allows you to leverage all our platform to customize the data you need from your app.\n\nThe integration monitors Flask’s performance metrics like apdex (user satisfaction), CPU utilization and transaction errors. With the integration, you can track key transactions specific to your business, create custom dashboards, and get alerts for any error. You can also query business data to get more insights and use thread profiler sessions to see detailed stack traces of sampled threads.\n\nInstall the New Relic Flask Quickstart now to monitor Flask’s endpoints and key performance indicators efficiently. It strengthens you to keep developing seamless web apps.\n",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/python/flask",
-    "id": "2c13db46-a9ce-4595-854f-32e76dac6793",
-    "level": "NEW_RELIC",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/v0.106.0/quickstarts/python/flask/logo.svg",
-    "summary": "Monitoring Flask’s performance metrics is crucial to build web applications with no hassle. Install New Relic Flask Quickstart to access dashboards and alerts to proactively monitor your Flask application.\n",
-    "websiteUrl": null,
-    "keywords": [
-      "apm",
-      "python"
-    ],
-    "authors": [
-      "New Relic",
-      "Emil Hammarstrand"
-    ],
-    "dashboards": [
-      {
-        "name": "Flask",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/v0.106.0/quickstarts/python/flask/dashboards/flask2.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/v0.106.0/quickstarts/python/flask/dashboards/flask3.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/v0.106.0/quickstarts/python/flask/dashboards/flask.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/v0.95.0/quickstarts/python/flask/dashboards/flask2.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/v0.95.0/quickstarts/python/flask/dashboards/flask3.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/v0.95.0/quickstarts/python/flask/dashboards/flask.png"
-        ]
-      }
-    ],
-    "alerts": [
-      {
-        "name": "Apdex Score",
-        "details": "This alert is triggered when the Apdex score is below 0.5 for 5 minutes\n",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "High CPU Utilization",
-        "details": "This alert is triggered when the CPU Utilization is above 90%.\n",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "Memory Usage",
-        "details": "This alert is triggered when Memory usage is above 90%\n",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "Transaction Errors",
-        "details": "This alert is triggered when the the transactions fail more than 10% of the time in 5 minutes.\n",
-        "type": "STATIC",
-        "url": null
-      }
-    ],
-    "documentation": [
-      {
-        "name": "flask installation docs",
-        "description": "Popular python web application microframework built with a focus on\nsimplicity.\n",
-        "url": "https://docs.newrelic.com/docs/agents/python-agent/getting-started/instrumented-python-packages"
-      }
-    ],
-    "installPlans": [
-      {
-        "name": "Python Agent",
-        "id": "setup-python-agent"
-      }
-    ]
   },
   {
     "title": "Psycopg2",
@@ -7092,69 +7088,6 @@
     ]
   },
   {
-    "title": "twisted",
-    "name": "twisted",
-    "description": "## What is twisted?\n\nAn event-based framework for internet applications written in Python.\n\n## Get started!\n\nLeverage community expertise and instantly get value out of your telemetry data. This quickstart automatically instruments twisted with the New Relic Python agent, and allows you to instantly monitor your Python application with out-of-the-box dashboards and alerts. Further leverage New Relic's APM capabilities by setting up [errors inbox](https://docs.newrelic.com/docs/apm/apm-ui-pages/errors-inbox/errors-inbox/), [transaction tracing](https://docs.newrelic.com/docs/apm/transactions/transaction-traces/introduction-transaction-traces/), and [service maps](https://docs.newrelic.com/docs/understand-dependencies/understand-system-dependencies/service-maps/introduction-service-maps/).\n\n## More info\n\nCheck out the [documentation](https://docs.newrelic.com/docs/agents/python-agent/) to learn more about New Relic monitoring for twisted.",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/python/twisted",
-    "id": "f697c86c-385f-40e9-83d2-c01215045912",
-    "level": "COMMUNITY",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/python/twisted/logo.svg",
-    "summary": "Monitor twisted with New Relic's Python agent",
-    "websiteUrl": null,
-    "keywords": [
-      "apm",
-      "python"
-    ],
-    "authors": [
-      "New Relic"
-    ],
-    "dashboards": [
-      {
-        "name": "Twisted",
-        "description": "Python",
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/python/twisted/dashboards/python02.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/python/twisted/dashboards/python03.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/python/twisted/dashboards/python.png"
-        ]
-      }
-    ],
-    "alerts": [
-      {
-        "name": "Apdex Score",
-        "details": "This alert is triggered when the Apdex score is below 0.5 for 5 minutes",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "High CPU Utilization",
-        "details": "This alert is triggered when the CPU Utilization is above 90%.",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "Transaction Errors",
-        "details": "This alert is triggered when the the transactions fail more than 10% of the time in 5 minutes.",
-        "type": "STATIC",
-        "url": null
-      }
-    ],
-    "documentation": [
-      {
-        "name": "twisted installation docs",
-        "description": "An event-based framework for internet applications written in Python.",
-        "url": "https://docs.newrelic.com/docs/agents/python-agent/getting-started/instrumented-python-packages"
-      }
-    ],
-    "installPlans": [
-      {
-        "name": "Python Agent",
-        "id": "setup-python-agent"
-      }
-    ]
-  },
-  {
     "title": "Echo",
     "name": "echo",
     "description": "## What is Echo?\n\nWeb framework for Go that's built for scalability and ease of use.\n\n## Get started!\n\nLeverage community expertise and instantly get value out of your telemetry data. This quickstart automatically instruments Echo with the New Relic Go agent, and allows you to further leverage New Relic's APM capabilities by setting up [custom dashboards](https://docs.newrelic.com/docs/query-your-data/explore-query-data/dashboards/introduction-dashboards/), [errors inbox](https://docs.newrelic.com/docs/apm/apm-ui-pages/errors-inbox/errors-inbox/), [transaction tracing](https://docs.newrelic.com/docs/apm/transactions/transaction-traces/introduction-transaction-traces/), and [service maps](https://docs.newrelic.com/docs/understand-dependencies/understand-system-dependencies/service-maps/introduction-service-maps/).\n\n## More info\n\nCheck out the [documentation](https://docs.newrelic.com/docs/agents/go-agent/) to learn more about New Relic monitoring for Echo. ",
@@ -7210,71 +7143,6 @@
         "name": "Echo installation docs",
         "description": "Web framework for Go that's built for scalability and ease of use.",
         "url": "https://docs.newrelic.com/docs/agents/go-agent/get-started/go-agent-compatibility-requirements"
-      }
-    ],
-    "installPlans": [
-      {
-        "name": "Go Agent",
-        "id": "setup-go-agent"
-      }
-    ]
-  },
-  {
-    "title": "pkg/errors",
-    "name": "pkg-errors",
-    "description": "## What is pkg/errors?\n\nWrap pkg/errors errors to improve stack traces and error class information\n\n## Get started!\n\nLeverage community expertise and instantly get value out of your telemetry data. This quickstart automatically instruments pkg/errors with the New Relic Go agent, and allows you to further leverage New Relic's APM capabilities by setting up [custom dashboards](https://docs.newrelic.com/docs/query-your-data/explore-query-data/dashboards/introduction-dashboards/), [errors inbox](https://docs.newrelic.com/docs/apm/apm-ui-pages/errors-inbox/errors-inbox/), [transaction tracing](https://docs.newrelic.com/docs/apm/transactions/transaction-traces/introduction-transaction-traces/), and [service maps](https://docs.newrelic.com/docs/understand-dependencies/understand-system-dependencies/service-maps/introduction-service-maps/).\n\n## More info\n\nCheck out the [documentation](https://docs.newrelic.com/docs/agents/go-agent/) to learn more about New Relic monitoring for pkg/errors. \n",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/golang/pkg-errors",
-    "id": "1599c1e3-cd4d-4edf-bd44-32a7602fbcfd",
-    "level": "COMMUNITY",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/v0.106.0/quickstarts/golang/pkg-errors/logo.png",
-    "summary": "Monitor pkg/errors with New Relic's Golang agent",
-    "websiteUrl": null,
-    "keywords": [
-      "golang",
-      "errors"
-    ],
-    "authors": [
-      "New Relic"
-    ],
-    "dashboards": [
-      {
-        "name": "Pkg Errors",
-        "description": null,
-        "url": null,
-        "screenshots": []
-      }
-    ],
-    "alerts": [
-      {
-        "name": "Apdex Score",
-        "details": "This alert is triggered when the Apdex score is below 0.5 for 5 minutes\n",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "High CPU Utilization",
-        "details": "This alert is triggered when the CPU Utilization is above 90%.\n",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "Memory Usage",
-        "details": "This alert is triggered when Memory usage is above 90%\n",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "Transaction Errors",
-        "details": "This alert is triggered when the the transactions fail more than 10% of the time in 5 minutes.\n",
-        "type": "STATIC",
-        "url": null
-      }
-    ],
-    "documentation": [
-      {
-        "name": "Go agent compatibility and requirements",
-        "description": null,
-        "url": "https://docs.newrelic.com/docs/agents/go-agent/get-started/go-agent-compatibility-requirements/"
       }
     ],
     "installPlans": [
@@ -7517,6 +7385,140 @@
       {
         "name": "Netlify",
         "id": "third-party-netlify"
+      }
+    ]
+  },
+  {
+    "title": "pkg/errors",
+    "name": "pkg-errors",
+    "description": "## What is pkg/errors?\n\n[Package errors](https://github.com/pkg/errors) provides simple error handling primitives.\n\n## Get started!\n\nLeverage community expertise and instantly get value out of your telemetry data. This quickstart automatically instruments pkg/errors with the New Relic Go agent, and allows you to further leverage New Relic's APM capabilities by setting up [custom dashboards](https://docs.newrelic.com/docs/query-your-data/explore-query-data/dashboards/introduction-dashboards/), [errors inbox](https://docs.newrelic.com/docs/apm/apm-ui-pages/errors-inbox/errors-inbox/), [transaction tracing](https://docs.newrelic.com/docs/apm/transactions/transaction-traces/introduction-transaction-traces/), and [service maps](https://docs.newrelic.com/docs/understand-dependencies/understand-system-dependencies/service-maps/introduction-service-maps/).\n\n## More info\n\nCheck out the [documentation](https://docs.newrelic.com/docs/agents/go-agent/) to learn more about New Relic monitoring for pkg/errors.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/golang/pkg-errors",
+    "id": "1599c1e3-cd4d-4edf-bd44-32a7602fbcfd",
+    "level": "COMMUNITY",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/golang/pkg-errors/logo.png",
+    "summary": "This quickstart automatically instruments pkg/errors with the New Relic Go agent and allows you to instantly monitor your Go application with out-of-the-box dashboards and alerts.",
+    "websiteUrl": null,
+    "keywords": [
+      "golang",
+      "errors",
+      "pkg/errors"
+    ],
+    "authors": [
+      "New Relic"
+    ],
+    "dashboards": [
+      {
+        "name": "Pkg Errors",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/golang/pkg-errors/dashboards/PkgErrors2.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/golang/pkg-errors/dashboards/PkgErrors3.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/golang/pkg-errors/dashboards/PkgErros.png"
+        ]
+      }
+    ],
+    "alerts": [
+      {
+        "name": "Apdex Score",
+        "details": "This alert is triggered when the Apdex score is below 0.5 for 5 minutes",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "High CPU Utilization",
+        "details": "This alert is triggered when the CPU Utilization is above 90%.",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "Memory Usage",
+        "details": "This alert is triggered when Memory usage is above 90%",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "Transaction Errors",
+        "details": "This alert is triggered when the the transactions fail more than 10% of the time in 5 minutes.",
+        "type": "STATIC",
+        "url": null
+      }
+    ],
+    "documentation": [
+      {
+        "name": "Installation docs",
+        "description": "Go agent compatibility and requirements",
+        "url": "https://docs.newrelic.com/docs/agents/go-agent/get-started/go-agent-compatibility-requirements/"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "Go Agent",
+        "id": "setup-go-agent"
+      }
+    ]
+  },
+  {
+    "title": "Twisted",
+    "name": "twisted",
+    "description": "## What is Twisted?\n\nTwisted is an event-based framework for internet applications written in Python. It supports CPython 3.6+ and PyPy3.\n\n## Get started!\n\nLeverage community expertise and instantly get value out of your telemetry data. This quickstart automatically instruments twisted with the New Relic Python agent, and allows you to instantly monitor your Python application with out-of-the-box dashboards and alerts. Further leverage New Relic's APM capabilities by setting up [errors inbox](https://docs.newrelic.com/docs/apm/apm-ui-pages/errors-inbox/errors-inbox/), [transaction tracing](https://docs.newrelic.com/docs/apm/transactions/transaction-traces/introduction-transaction-traces/), and [service maps](https://docs.newrelic.com/docs/understand-dependencies/understand-system-dependencies/service-maps/introduction-service-maps/).\n\n## More info\n\nCheck out the [documentation](https://docs.newrelic.com/docs/agents/python-agent/) to learn more about New Relic monitoring for twisted.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/python/twisted",
+    "id": "f697c86c-385f-40e9-83d2-c01215045912",
+    "level": "NEW_RELIC",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/python/twisted/logo.svg",
+    "summary": "This quickstart automatically instruments twisted with the New Relic Python agent, and allows you to instantly monitor your Python application with out-of-the-box dashboards and alerts.",
+    "websiteUrl": null,
+    "keywords": [
+      "apm",
+      "python",
+      "twisted"
+    ],
+    "authors": [
+      "New Relic"
+    ],
+    "dashboards": [
+      {
+        "name": "Twisted",
+        "description": "Python",
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/python/twisted/dashboards/python02.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/python/twisted/dashboards/python03.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/python/twisted/dashboards/python.png"
+        ]
+      }
+    ],
+    "alerts": [
+      {
+        "name": "Apdex Score",
+        "details": "This alert is triggered when the Apdex score is below 0.5 for 5 minutes",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "High CPU Utilization",
+        "details": "This alert is triggered when the CPU Utilization is above 90%.",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "Transaction Errors",
+        "details": "This alert is triggered when the the transactions fail more than 10% of the time in 5 minutes.",
+        "type": "STATIC",
+        "url": null
+      }
+    ],
+    "documentation": [
+      {
+        "name": "Twisted installation docs",
+        "description": "An event-based framework for internet applications written in Python.",
+        "url": "https://docs.newrelic.com/docs/agents/python-agent/getting-started/instrumented-python-packages"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "Python Agent",
+        "id": "setup-python-agent"
       }
     ]
   },
@@ -10924,69 +10926,6 @@
     ]
   },
   {
-    "title": "bottle",
-    "name": "bottle",
-    "description": "## What is bottle?\n\nWSGI micro web-framework for Python. Single file module with no dependencies\nother than the Python Standard Library.\n\n\n## Get started!\n\nLeverage community expertise and instantly get value out of your telemetry data. This quickstart automatically instruments bottle with the New Relic Python agent, and allows you to instantly monitor your Python application with out-of-the-box dashboards and alerts. Further leverage New Relic's APM capabilities by setting up [errors inbox](https://docs.newrelic.com/docs/apm/apm-ui-pages/errors-inbox/errors-inbox/), [transaction tracing](https://docs.newrelic.com/docs/apm/transactions/transaction-traces/introduction-transaction-traces/), and [service maps](https://docs.newrelic.com/docs/understand-dependencies/understand-system-dependencies/service-maps/introduction-service-maps/).\n\n## More info\n\nCheck out the [documentation](https://docs.newrelic.com/docs/agents/python-agent/) to learn more about New Relic monitoring for bottle.",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/python/bottle",
-    "id": "38dc3bf5-e96c-43b8-98f4-80e444cdb657",
-    "level": "COMMUNITY",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/python/bottle/logo.svg",
-    "summary": "Monitor bottle with New Relic's Python agent",
-    "websiteUrl": null,
-    "keywords": [
-      "apm",
-      "python"
-    ],
-    "authors": [
-      "New Relic"
-    ],
-    "dashboards": [
-      {
-        "name": "Bottle",
-        "description": "Python",
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/python/bottle/dashboards/python02.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/python/bottle/dashboards/python03.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/python/bottle/dashboards/python.png"
-        ]
-      }
-    ],
-    "alerts": [
-      {
-        "name": "Apdex Score",
-        "details": "This alert is triggered when the Apdex score is below 0.5 for 5 minutes",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "High CPU Utilization",
-        "details": "This alert is triggered when the CPU Utilization is above 90%.",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "Transaction Errors",
-        "details": "This alert is triggered when the the transactions fail more than 10% of the time in 5 minutes.",
-        "type": "STATIC",
-        "url": null
-      }
-    ],
-    "documentation": [
-      {
-        "name": "bottle installation docs",
-        "description": "WSGI micro web-framework for Python. Single file module with no\ndependencies other than the Python Standard Library.\n",
-        "url": "https://docs.newrelic.com/docs/agents/python-agent/getting-started/instrumented-python-packages"
-      }
-    ],
-    "installPlans": [
-      {
-        "name": "Python Agent",
-        "id": "setup-python-agent"
-      }
-    ]
-  },
-  {
     "title": "Symfony",
     "name": "symfony",
     "description": "## What is Symfony?\n\nA set of reusable PHP components and a PHP framework to build web\napplications, APIs, microservices and web services.\n\n\n## Get started!\n\nLeverage community expertise and instantly get value out of your telemetry data. This quickstart automatically instruments Symfony with the New Relic PHP agent, and allows you to further leverage New Relic's APM capabilities by setting up [custom dashboards](https://docs.newrelic.com/docs/query-your-data/explore-query-data/dashboards/introduction-dashboards/), [errors inbox](https://docs.newrelic.com/docs/apm/apm-ui-pages/errors-inbox/errors-inbox/), [transaction tracing](https://docs.newrelic.com/docs/apm/transactions/transaction-traces/introduction-transaction-traces/), and [service maps](https://docs.newrelic.com/docs/understand-dependencies/understand-system-dependencies/service-maps/introduction-service-maps/).\n\n## More info\n\nCheck out the [documentation](https://docs.newrelic.com/docs/agents/php-agent/) to learn more about New Relic monitoring for Symfony.",
@@ -11046,195 +10985,6 @@
       {
         "name": "PHP Agent",
         "id": "php-agent"
-      }
-    ]
-  },
-  {
-    "title": "gevent",
-    "name": "gevent",
-    "description": "## What is gevent?\n\nPython networking library for coroutine operations through a libev or libuv\nAPI.\n\n\n## Get started!\n\nLeverage community expertise and instantly get value out of your telemetry data. This quickstart automatically instruments gevent with the New Relic Python agent, and allows you to instantly monitor your Python application with out-of-the-box dashboards and alerts. Further leverage New Relic's APM capabilities by setting up [errors inbox](https://docs.newrelic.com/docs/apm/apm-ui-pages/errors-inbox/errors-inbox/), [transaction tracing](https://docs.newrelic.com/docs/apm/transactions/transaction-traces/introduction-transaction-traces/), and [service maps](https://docs.newrelic.com/docs/understand-dependencies/understand-system-dependencies/service-maps/introduction-service-maps/).\n\n## More info\n\nCheck out the [documentation](https://docs.newrelic.com/docs/agents/python-agent/) to learn more about New Relic monitoring for gevent.",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/python/gevent",
-    "id": "30e39b88-ad5f-4850-b4e6-d9960bceece6",
-    "level": "COMMUNITY",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/python/gevent/logo.svg",
-    "summary": "Monitor gevent with New Relic's Python agent",
-    "websiteUrl": null,
-    "keywords": [
-      "apm",
-      "python"
-    ],
-    "authors": [
-      "New Relic"
-    ],
-    "dashboards": [
-      {
-        "name": "Gevent",
-        "description": "Python",
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/python/gevent/dashboards/python02.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/python/gevent/dashboards/python03.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/python/gevent/dashboards/python.png"
-        ]
-      }
-    ],
-    "alerts": [
-      {
-        "name": "Apdex Score",
-        "details": "This alert is triggered when the Apdex score is below 0.5 for 5 minutes",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "High CPU Utilization",
-        "details": "This alert is triggered when the CPU Utilization is above 90%.",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "Transaction Errors",
-        "details": "This alert is triggered when the the transactions fail more than 10% of the time in 5 minutes.",
-        "type": "STATIC",
-        "url": null
-      }
-    ],
-    "documentation": [
-      {
-        "name": "gevent installation docs",
-        "description": "Python networking library for coroutine operations through a libev or\nlibuv API.\n",
-        "url": "https://docs.newrelic.com/docs/agents/python-agent/getting-started/instrumented-python-packages"
-      }
-    ],
-    "installPlans": [
-      {
-        "name": "Python Agent",
-        "id": "setup-python-agent"
-      }
-    ]
-  },
-  {
-    "title": "pylibmc",
-    "name": "pylibmc",
-    "description": "## What is pylibmc?\n\nPylibmc is a Python client for memcached written in C.\n\n## Get started!\n\nLeverage community expertise and instantly get value out of your telemetry data. This quickstart automatically instruments pylibmc with the New Relic Python agent, and allows you to instantly monitor your Python application with out-of-the-box dashboards and alerts. Further leverage New Relic's APM capabilities by setting up [errors inbox](https://docs.newrelic.com/docs/apm/apm-ui-pages/errors-inbox/errors-inbox/), [transaction tracing](https://docs.newrelic.com/docs/apm/transactions/transaction-traces/introduction-transaction-traces/), and [service maps](https://docs.newrelic.com/docs/understand-dependencies/understand-system-dependencies/service-maps/introduction-service-maps/).\n\n## More info\n\nCheck out the [documentation](https://docs.newrelic.com/docs/agents/python-agent/) to learn more about New Relic monitoring for pylibmc.",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/python/pylibmc",
-    "id": "50b770b5-03a3-4e0e-b981-c2df9ac18d53",
-    "level": "COMMUNITY",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/python/pylibmc/logo.svg",
-    "summary": "Monitor pylibmc with New Relic's Python agent",
-    "websiteUrl": null,
-    "keywords": [
-      "apm",
-      "python"
-    ],
-    "authors": [
-      "New Relic"
-    ],
-    "dashboards": [
-      {
-        "name": "Pylibmc",
-        "description": "Python",
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/python/pylibmc/dashboards/python02.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/python/pylibmc/dashboards/python03.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/python/pylibmc/dashboards/python.png"
-        ]
-      }
-    ],
-    "alerts": [
-      {
-        "name": "Apdex Score",
-        "details": "This alert is triggered when the Apdex score is below 0.5 for 5 minutes",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "High CPU Utilization",
-        "details": "This alert is triggered when the CPU Utilization is above 90%.",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "Transaction Errors",
-        "details": "This alert is triggered when the the transactions fail more than 10% of the time in 5 minutes.",
-        "type": "STATIC",
-        "url": null
-      }
-    ],
-    "documentation": [
-      {
-        "name": "pylibmc installation docs",
-        "description": "Pylibmc is a Python client for memcached written in C.",
-        "url": "https://docs.newrelic.com/docs/agents/python-agent/getting-started/instrumented-python-packages"
-      }
-    ],
-    "installPlans": [
-      {
-        "name": "Python Agent",
-        "id": "setup-python-agent"
-      }
-    ]
-  },
-  {
-    "title": "web2py",
-    "name": "web2py",
-    "description": "## What is web2py?\n\nOpen source, Python-based web application framework that enables development\nvia browser.\n\n\n## Get started!\n\nLeverage community expertise and instantly get value out of your telemetry data. This quickstart automatically instruments web2py with the New Relic Python agent, and allows you to instantly monitor your Python application with out-of-the-box dashboards and alerts. Further leverage New Relic's APM capabilities by setting up [errors inbox](https://docs.newrelic.com/docs/apm/apm-ui-pages/errors-inbox/errors-inbox/), [transaction tracing](https://docs.newrelic.com/docs/apm/transactions/transaction-traces/introduction-transaction-traces/), and [service maps](https://docs.newrelic.com/docs/understand-dependencies/understand-system-dependencies/service-maps/introduction-service-maps/).\n\n## More info\n\nCheck out the [documentation](https://docs.newrelic.com/docs/agents/python-agent/) to learn more about New Relic monitoring for web2py.",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/python/web2py",
-    "id": "272f1fcb-624f-41be-8ae3-19f552b15d7c",
-    "level": "COMMUNITY",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/python/web2py/logo.svg",
-    "summary": "Monitor web2py with New Relic's Python agent",
-    "websiteUrl": null,
-    "keywords": [
-      "apm",
-      "python"
-    ],
-    "authors": [
-      "New Relic"
-    ],
-    "dashboards": [
-      {
-        "name": "Web2Py",
-        "description": "Python",
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/python/web2py/dashboards/python02.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/python/web2py/dashboards/python03.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/python/web2py/dashboards/python.png"
-        ]
-      }
-    ],
-    "alerts": [
-      {
-        "name": "Apdex Score",
-        "details": "This alert is triggered when the Apdex score is below 0.5 for 5 minutes",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "High CPU Utilization",
-        "details": "This alert is triggered when the CPU Utilization is above 90%.",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "Transaction Errors",
-        "details": "This alert is triggered when the the transactions fail more than 10% of the time in 5 minutes.",
-        "type": "STATIC",
-        "url": null
-      }
-    ],
-    "documentation": [
-      {
-        "name": "web2py installation docs",
-        "description": "Open source, Python-based web application framework that enables\ndevelopment via browser.\n",
-        "url": "https://docs.newrelic.com/docs/agents/python-agent/getting-started/instrumented-python-packages"
-      }
-    ],
-    "installPlans": [
-      {
-        "name": "Python Agent",
-        "id": "setup-python-agent"
       }
     ]
   },
@@ -11588,6 +11338,333 @@
     ]
   },
   {
+    "title": "Bottle",
+    "name": "bottle",
+    "description": "## What is Bottle?\n\nBottle is a WSGI micro web-framework for Python and is a single file module with no dependencies\nother than the Python Standard Library.\n\n## Get started!\n\nLeverage community expertise and instantly get value out of your telemetry data. This quickstart automatically instruments Bottle with the New Relic Python agent, and allows you to instantly monitor your Python application with out-of-the-box dashboards and alerts. Further leverage New Relic's APM capabilities by setting up [errors inbox](https://docs.newrelic.com/docs/apm/apm-ui-pages/errors-inbox/errors-inbox/), [transaction tracing](https://docs.newrelic.com/docs/apm/transactions/transaction-traces/introduction-transaction-traces/), and [service maps](https://docs.newrelic.com/docs/understand-dependencies/understand-system-dependencies/service-maps/introduction-service-maps/).\n\n## More info\n\nCheck out the [documentation](https://docs.newrelic.com/docs/agents/python-agent/) to learn more about New Relic monitoring for bottle.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/python/bottle",
+    "id": "38dc3bf5-e96c-43b8-98f4-80e444cdb657",
+    "level": "NEW_RELIC",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/python/bottle/logo.svg",
+    "summary": "This quickstart automatically instruments Bottle with the New Relic Python agent, and allows you to instantly monitor your Python application with out-of-the-box dashboards and alerts.",
+    "websiteUrl": null,
+    "keywords": [
+      "apm",
+      "python",
+      "bottle"
+    ],
+    "authors": [
+      "New Relic"
+    ],
+    "dashboards": [
+      {
+        "name": "Bottle",
+        "description": "Python",
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/python/bottle/dashboards/python02.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/python/bottle/dashboards/python03.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/python/bottle/dashboards/python.png"
+        ]
+      }
+    ],
+    "alerts": [
+      {
+        "name": "Apdex Score",
+        "details": "This alert is triggered when the Apdex score is below 0.5 for 5 minutes",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "High CPU Utilization",
+        "details": "This alert is triggered when the CPU Utilization is above 90%.",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "Transaction Errors",
+        "details": "This alert is triggered when the the transactions fail more than 10% of the time in 5 minutes.",
+        "type": "STATIC",
+        "url": null
+      }
+    ],
+    "documentation": [
+      {
+        "name": "Bottle installation docs",
+        "description": "WSGI micro web-framework for Python. Single file module with no\ndependencies other than the Python Standard Library.\n",
+        "url": "https://docs.newrelic.com/docs/agents/python-agent/getting-started/instrumented-python-packages"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "Python Agent",
+        "id": "setup-python-agent"
+      }
+    ]
+  },
+  {
+    "title": "gevent",
+    "name": "gevent",
+    "description": "## What is gevent?\n\ngevent is a Python networking library for coroutine operations through a libev or libuv\nAPI.\n\n## Get started!\n\nLeverage community expertise and instantly get value out of your telemetry data. This quickstart automatically instruments gevent with the New Relic Python agent, and allows you to instantly monitor your Python application with out-of-the-box dashboards and alerts. Further leverage New Relic's APM capabilities by setting up [errors inbox](https://docs.newrelic.com/docs/apm/apm-ui-pages/errors-inbox/errors-inbox/), [transaction tracing](https://docs.newrelic.com/docs/apm/transactions/transaction-traces/introduction-transaction-traces/), and [service maps](https://docs.newrelic.com/docs/understand-dependencies/understand-system-dependencies/service-maps/introduction-service-maps/).\n\n## More info\n\nCheck out the [documentation](https://docs.newrelic.com/docs/agents/python-agent/) to learn more about New Relic monitoring for gevent.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/python/gevent",
+    "id": "30e39b88-ad5f-4850-b4e6-d9960bceece6",
+    "level": "NEW_RELIC",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/python/gevent/logo.svg",
+    "summary": "This quickstart automatically instruments gevent with the New Relic Python agent, and allows you to instantly monitor your Python application with out-of-the-box dashboards and alerts.",
+    "websiteUrl": null,
+    "keywords": [
+      "apm",
+      "python",
+      "gevent"
+    ],
+    "authors": [
+      "New Relic"
+    ],
+    "dashboards": [
+      {
+        "name": "Gevent",
+        "description": "Python",
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/python/gevent/dashboards/python02.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/python/gevent/dashboards/python03.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/python/gevent/dashboards/python.png"
+        ]
+      }
+    ],
+    "alerts": [
+      {
+        "name": "Apdex Score",
+        "details": "This alert is triggered when the Apdex score is below 0.5 for 5 minutes",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "High CPU Utilization",
+        "details": "This alert is triggered when the CPU Utilization is above 90%.",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "Transaction Errors",
+        "details": "This alert is triggered when the the transactions fail more than 10% of the time in 5 minutes.",
+        "type": "STATIC",
+        "url": null
+      }
+    ],
+    "documentation": [
+      {
+        "name": "gevent installation docs",
+        "description": "Python networking library for coroutine operations through a libev or\nlibuv API.\n",
+        "url": "https://docs.newrelic.com/docs/agents/python-agent/getting-started/instrumented-python-packages"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "Python Agent",
+        "id": "setup-python-agent"
+      }
+    ]
+  },
+  {
+    "title": "pylibmc",
+    "name": "pylibmc",
+    "description": "## What is pylibmc?\n\npylibmc is a Python client for memcached written in C.\n\n## Get started!\n\nLeverage community expertise and instantly get value out of your telemetry data. This quickstart automatically instruments pylibmc with the New Relic Python agent, and allows you to instantly monitor your Python application with out-of-the-box dashboards and alerts. Further leverage New Relic's APM capabilities by setting up [errors inbox](https://docs.newrelic.com/docs/apm/apm-ui-pages/errors-inbox/errors-inbox/), [transaction tracing](https://docs.newrelic.com/docs/apm/transactions/transaction-traces/introduction-transaction-traces/), and [service maps](https://docs.newrelic.com/docs/understand-dependencies/understand-system-dependencies/service-maps/introduction-service-maps/).\n\n## More info\n\nCheck out the [documentation](https://docs.newrelic.com/docs/agents/python-agent/) to learn more about New Relic monitoring for pylibmc.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/python/pylibmc",
+    "id": "50b770b5-03a3-4e0e-b981-c2df9ac18d53",
+    "level": "NEW_RELIC",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/python/pylibmc/logo.svg",
+    "summary": "This quickstart automatically instruments pylibmc with the New Relic Python agent, and allows you to instantly monitor your Python application with out-of-the-box dashboards and alerts.",
+    "websiteUrl": null,
+    "keywords": [
+      "apm",
+      "python",
+      "pylibmc"
+    ],
+    "authors": [
+      "New Relic"
+    ],
+    "dashboards": [
+      {
+        "name": "Pylibmc",
+        "description": "Python",
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/python/pylibmc/dashboards/python02.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/python/pylibmc/dashboards/python03.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/python/pylibmc/dashboards/python.png"
+        ]
+      }
+    ],
+    "alerts": [
+      {
+        "name": "Apdex Score",
+        "details": "This alert is triggered when the Apdex score is below 0.5 for 5 minutes",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "High CPU Utilization",
+        "details": "This alert is triggered when the CPU Utilization is above 90%.",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "Transaction Errors",
+        "details": "This alert is triggered when the the transactions fail more than 10% of the time in 5 minutes.",
+        "type": "STATIC",
+        "url": null
+      }
+    ],
+    "documentation": [
+      {
+        "name": "pylibmc installation docs",
+        "description": "pylibmc is a Python client for memcached written in C.",
+        "url": "https://docs.newrelic.com/docs/agents/python-agent/getting-started/instrumented-python-packages"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "Python Agent",
+        "id": "setup-python-agent"
+      }
+    ]
+  },
+  {
+    "title": "web2py",
+    "name": "web2py",
+    "description": "## What is web2py?\n\nWeb2py is an open-source web application framework and allows web developers to program dynamic web content using Python. Web2py is designed to help reduce tedious web development tasks, such as developing web forms from scratch, although a web developer may build a form from scratch if required.\n\n## Get started!\n\nLeverage community expertise and instantly get value out of your telemetry data. This quickstart automatically instruments web2py with the New Relic Python agent, and allows you to instantly monitor your Python application with out-of-the-box dashboards and alerts. Further leverage New Relic's APM capabilities by setting up [errors inbox](https://docs.newrelic.com/docs/apm/apm-ui-pages/errors-inbox/errors-inbox/), [transaction tracing](https://docs.newrelic.com/docs/apm/transactions/transaction-traces/introduction-transaction-traces/), and [service maps](https://docs.newrelic.com/docs/understand-dependencies/understand-system-dependencies/service-maps/introduction-service-maps/).\n\n## More info\n\nCheck out the [documentation](https://docs.newrelic.com/docs/agents/python-agent/) to learn more about New Relic monitoring for web2py.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/python/web2py",
+    "id": "272f1fcb-624f-41be-8ae3-19f552b15d7c",
+    "level": "NEW_RELIC",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/python/web2py/logo.svg",
+    "summary": "This quickstart automatically instruments web2py with the New Relic Python agent, and allows you to instantly monitor your Python application with out-of-the-box dashboards and alerts.",
+    "websiteUrl": null,
+    "keywords": [
+      "apm",
+      "python",
+      "web2py"
+    ],
+    "authors": [
+      "New Relic"
+    ],
+    "dashboards": [
+      {
+        "name": "Web2Py",
+        "description": "Python",
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/python/web2py/dashboards/python02.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/python/web2py/dashboards/python03.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/python/web2py/dashboards/python.png"
+        ]
+      }
+    ],
+    "alerts": [
+      {
+        "name": "Apdex Score",
+        "details": "This alert is triggered when the Apdex score is below 0.5 for 5 minutes",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "High CPU Utilization",
+        "details": "This alert is triggered when the CPU Utilization is above 90%.",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "Transaction Errors",
+        "details": "This alert is triggered when the the transactions fail more than 10% of the time in 5 minutes.",
+        "type": "STATIC",
+        "url": null
+      }
+    ],
+    "documentation": [
+      {
+        "name": "web2py installation docs",
+        "description": "Web2py is an open-source web application framework and allows web developers to program dynamic web content using Python.\n",
+        "url": "https://docs.newrelic.com/docs/agents/python-agent/getting-started/instrumented-python-packages"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "Python Agent",
+        "id": "setup-python-agent"
+      }
+    ]
+  },
+  {
+    "title": "Net::HTTP",
+    "name": "net-http",
+    "description": "## What is Net::HTTP?\n\nNet::HTTP for Ruby provides a rich library which can be used to build HTTP\nuser-agents.\n\n\n## Get started!\n\nLeverage community expertise and instantly get value out of your telemetry data. This quickstart automatically instruments Net::HTTP with the New Relic Ruby agent, and allows you to further leverage New Relic's APM capabilities by setting up [custom dashboards](https://docs.newrelic.com/docs/query-your-data/explore-query-data/dashboards/introduction-dashboards/), [errors inbox](https://docs.newrelic.com/docs/apm/apm-ui-pages/errors-inbox/errors-inbox/), [transaction tracing](https://docs.newrelic.com/docs/apm/transactions/transaction-traces/introduction-transaction-traces/), and [service maps](https://docs.newrelic.com/docs/understand-dependencies/understand-system-dependencies/service-maps/introduction-service-maps/).\n\n## More info\n\nCheck out the [documentation](https://docs.newrelic.com/docs/agents/ruby-agent/) to learn more about New Relic monitoring for Net::HTTP.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/ruby/net-http",
+    "id": "932f757b-98aa-460c-8ce8-bbab9c2cbf09",
+    "level": "NEW_RELIC",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/ruby/net-http/logo.svg",
+    "summary": "This quickstart automatically instruments Net::HTTP with the New Relic Ruby agent and allows you to instantly monitor your Ruby application with out-of-the-box dashboards and alerts.",
+    "websiteUrl": null,
+    "keywords": [
+      "apm",
+      "ruby",
+      "Net::HTTP"
+    ],
+    "authors": [
+      "New Relic",
+      "Emil Hammarstrand"
+    ],
+    "dashboards": [
+      {
+        "name": "Net http",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/ruby/net-http/dashboards/Nethttp2.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/ruby/net-http/dashboards/Nethttp3.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/ruby/net-http/dashboards/Nethttp.png"
+        ]
+      }
+    ],
+    "alerts": [
+      {
+        "name": "Apdex Score",
+        "details": "This alert is triggered when the Apdex score is below 0.5 for 5 minutes",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "High CPU Utilization",
+        "details": "This alert is triggered when the CPU Utilization is above 90%.",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "Memory Usage",
+        "details": "This alert is triggered when Memory usage is above 90%",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "Transaction Errors",
+        "details": "This alert is triggered when the the transactions fail more than 10% of the time in 5 minutes.",
+        "type": "STATIC",
+        "url": null
+      }
+    ],
+    "documentation": [
+      {
+        "name": "Net::HTTP installation docs",
+        "description": "Net::HTTP for Ruby provides a rich library which can be used to build HTTP\nuser-agents.\n",
+        "url": "https://docs.newrelic.com/docs/agents/ruby-agent/getting-started/ruby-agent-requirements-supported-frameworks"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "Ruby Agent",
+        "id": "setup-ruby-agent"
+      }
+    ]
+  },
+  {
     "title": "Atlassian Jira for Errors Inbox",
     "name": "jira-errors-inbox",
     "description": "[Connect errors inbox to Jira (Cloud)](https://docs.newrelic.com/docs/errors-inbox/errors-inbox/#jira) to easily create tickets for your errors, allowing for faster collaboration and resolution. Check out our documentation to learn how to set up Jira templates, which allow you to quickly create a ticket containing error details and links directly to the stack trace and APM for quick access and resolution.\n",
@@ -11897,72 +11974,6 @@
       {
         "name": "Acts_as_solr installation docs",
         "description": "Ruby plugins that adds full text search capabilities and other features\nfrom Apache's Solr to any Rails model.\n",
-        "url": "https://docs.newrelic.com/docs/agents/ruby-agent/getting-started/ruby-agent-requirements-supported-frameworks"
-      }
-    ],
-    "installPlans": [
-      {
-        "name": "Ruby Agent",
-        "id": "setup-ruby-agent"
-      }
-    ]
-  },
-  {
-    "title": "Net::HTTP",
-    "name": "net-http",
-    "description": "## What is Net::HTTP?\n\nNet::HTTP for Ruby provides a rich library which can be used to build HTTP\nuser-agents.\n\n\n## Get started!\n\nLeverage community expertise and instantly get value out of your telemetry data. This quickstart automatically instruments Net::HTTP with the New Relic Ruby agent, and allows you to further leverage New Relic's APM capabilities by setting up [custom dashboards](https://docs.newrelic.com/docs/query-your-data/explore-query-data/dashboards/introduction-dashboards/), [errors inbox](https://docs.newrelic.com/docs/apm/apm-ui-pages/errors-inbox/errors-inbox/), [transaction tracing](https://docs.newrelic.com/docs/apm/transactions/transaction-traces/introduction-transaction-traces/), and [service maps](https://docs.newrelic.com/docs/understand-dependencies/understand-system-dependencies/service-maps/introduction-service-maps/).\n\n## More info\n\nCheck out the [documentation](https://docs.newrelic.com/docs/agents/ruby-agent/) to learn more about New Relic monitoring for Net::HTTP.\n",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/ruby/net-http",
-    "id": "932f757b-98aa-460c-8ce8-bbab9c2cbf09",
-    "level": "NEW_RELIC",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/v0.106.0/quickstarts/ruby/net-http/logo.svg",
-    "summary": "Monitor Net::HTTP with New Relic's Ruby agent\n",
-    "websiteUrl": null,
-    "keywords": [
-      "apm",
-      "ruby"
-    ],
-    "authors": [
-      "New Relic",
-      "Emil Hammarstrand"
-    ],
-    "dashboards": [
-      {
-        "name": "Net http",
-        "description": null,
-        "url": null,
-        "screenshots": []
-      }
-    ],
-    "alerts": [
-      {
-        "name": "Apdex Score",
-        "details": "This alert is triggered when the Apdex score is below 0.5 for 5 minutes\n",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "High CPU Utilization",
-        "details": "This alert is triggered when the CPU Utilization is above 90%.\n",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "Memory Usage",
-        "details": "This alert is triggered when Memory usage is above 90%\n",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "Transaction Errors",
-        "details": "This alert is triggered when the the transactions fail more than 10% of the time in 5 minutes.\n",
-        "type": "STATIC",
-        "url": null
-      }
-    ],
-    "documentation": [
-      {
-        "name": "Net::HTTP installation docs",
-        "description": "Net::HTTP for Ruby provides a rich library which can be used to build HTTP\nuser-agents.\n",
         "url": "https://docs.newrelic.com/docs/agents/ruby-agent/getting-started/ruby-agent-requirements-supported-frameworks"
       }
     ],
@@ -13266,6 +13277,49 @@
     ]
   },
   {
+    "title": "Jumpstart quickstart tool",
+    "name": "jumpstart-quickstart-tool",
+    "description": "The Jumpstart quickstart is a tool that has everything you need to help you get started building your own quickstart. It has some basic steps to follow to get started, some sample dashboards and queries, as well as a list of resources to help you build your own quickstart faster!",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/jumpstart",
+    "id": "fbca935b-5a3e-41d7-b708-c24d90fcd820",
+    "level": "COMMUNITY",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/jumpstart/logo.png",
+    "summary": "A sample quickstart to help you get started building your own quickstart for New Relic I/O.",
+    "websiteUrl": null,
+    "keywords": [
+      "jumpstart",
+      "quickstart",
+      "intro"
+    ],
+    "authors": [
+      "New Relic"
+    ],
+    "dashboards": [
+      {
+        "name": "Partner I/O quickstart",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/jumpstart/dashboards/Jumpstart01.png"
+        ]
+      }
+    ],
+    "alerts": [],
+    "documentation": [
+      {
+        "name": "Guide to build a quickstart",
+        "description": "Detailed instructions how to contribute a quickstart to New Relic I/O.",
+        "url": "https://developer.newrelic.com/contribute-to-quickstarts/build-a-quickstart/"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "Jumpstart",
+        "id": "third-party-jumpstart"
+      }
+    ]
+  },
+  {
     "title": "Fluent Bit plugin for Logs",
     "name": "fluent-bit-plugin-for-logs",
     "description": "Open source and multi-platform Log Processor and Forwarder which allows you to\ncollect data/logs from different sources.\n",
@@ -13456,50 +13510,6 @@
       }
     ],
     "installPlans": []
-  },
-  {
-    "title": "Jumpstart quickstart",
-    "name": "jumpstart-quickstart",
-    "description": "The Jumpstart quickstart is a tool that has everything you need to help you get started building your own quickstart. It has some basic steps to follow to get started, some sample dashboards and queries, as well as a list of resources to help you build your own quickstart faster !\n",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/jumpstart",
-    "id": "fbca935b-5a3e-41d7-b708-c24d90fcd820",
-    "level": "COMMUNITY",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/v0.106.0/quickstarts/jumpstart/logo.png",
-    "summary": "A Quickstart to help you get started building your own quickstart!\n",
-    "websiteUrl": null,
-    "keywords": [
-      "jumpstart",
-      "quickstart",
-      "intro"
-    ],
-    "authors": [
-      "New Relic"
-    ],
-    "dashboards": [
-      {
-        "name": "Partner I/O quickstart",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/v0.106.0/quickstarts/jumpstart/dashboards/Jumpstart01.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/v0.95.0/quickstarts/jumpstart/dashboards/Jumpstart01.png"
-        ]
-      }
-    ],
-    "alerts": [],
-    "documentation": [
-      {
-        "name": "Guides to quickstarts",
-        "description": "Description about this doc reference",
-        "url": "https://developer.newrelic.com/contribute-to-quickstarts/build-a-quickstart/"
-      }
-    ],
-    "installPlans": [
-      {
-        "name": "Jumpstart",
-        "id": "third-party-jumpstart"
-      }
-    ]
   },
   {
     "title": "LaunchDarkly",
@@ -14470,69 +14480,6 @@
     "installPlans": []
   },
   {
-    "title": "django",
-    "name": "django",
-    "description": "## What is django?\n\nDjango is a Python-based free, open-source web framework that follows the model-template-views architectural pattern. The framework enables the rapid development of secure and maintainable websites. It takes away the hassle of web development from developers, and empowers them to focus on writing apps without reinventing the wheel.\n\n### New Relic Django quickstart features\n\nThe New Relic Django monitoring quickstart has the following features:\n- Dashboard: Our standard dashboard provides a clear overview of transactions and errors. The dashboards also help you track other key indicators like daily transaction errors, comparison between weekly transaction errors, memory heap used, most popular transactions, and more.\n- Alerts: You can get instant alerts on performance metrics like Apdex score, CPU utilization, and transaction error.\n\n### Why monitor Django with New Relic?\n\nProactively monitor Django with [New Relic’s Python agent](https://docs.newrelic.com/docs/apm/agents/python-agent/getting-started/introduction-new-relic-python/). With an interactive dashboard, you can explore, query, and visualize your data. The quickstart also has three alerts that can detect changes in key metrics: \n- The transaction error alert is triggered when transactions fail more than 10% of the time during a 5-minute period. \n- The high CPU utilization alert is triggered when the CPU utilization is above 90%.\n- Similarly, the Apdex score alert is triggered when the Apdex score is below 0.5 during a period of 5 minutes.\n\nIn addition, the New Relic Django integration can automatically add [browser monitoring](https://newrelic.com/products/browser-monitoring) to any HTML page responses for the Django Python web framework. Install the New Relic Django quickstart to instrument Django with New Relic’s Python agent, and track Django’s key metrics in real-time.",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/python/django",
-    "id": "d8ab0fa9-205e-4c7d-92f1-09ef04b2b8e6",
-    "level": "NEW_RELIC",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/python/django/logo.svg",
-    "summary": "Monitoring Django is critical to ensure that you detect incidents and respond to them quickly. Download the New Relic Django quickstart to proactively track your Django’s performance metrics via New Relic’s Python agent.",
-    "websiteUrl": null,
-    "keywords": [
-      "apm",
-      "python"
-    ],
-    "authors": [
-      "New Relic"
-    ],
-    "dashboards": [
-      {
-        "name": "Django",
-        "description": "Python",
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/python/django/dashboards/python02.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/python/django/dashboards/python03.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/python/django/dashboards/python.png"
-        ]
-      }
-    ],
-    "alerts": [
-      {
-        "name": "Apdex Score",
-        "details": "This alert is triggered when the Apdex score is below 0.5 for 5 minutes",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "High CPU Utilization",
-        "details": "This alert is triggered when the CPU Utilization is above 90%.",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "Transaction Errors",
-        "details": "This alert is triggered when the the transactions fail more than 10% of the time in 5 minutes.",
-        "type": "STATIC",
-        "url": null
-      }
-    ],
-    "documentation": [
-      {
-        "name": "django installation docs",
-        "description": "Django is a Python-based free and open-source web framework that follows\nthe model-template-views architectural pattern.\n",
-        "url": "https://docs.newrelic.com/docs/agents/python-agent/getting-started/instrumented-python-packages"
-      }
-    ],
-    "installPlans": [
-      {
-        "name": "Python Agent",
-        "id": "setup-python-agent"
-      }
-    ]
-  },
-  {
     "title": "Fluentd plugin for Logs",
     "name": "fluentd-plugin-for-logs",
     "description": "Open source data collector, which lets you unify the data collection and\nconsumption for a better use and understanding of data.\n",
@@ -14913,132 +14860,6 @@
       {
         "name": "PHP Agent",
         "id": "php-agent"
-      }
-    ]
-  },
-  {
-    "title": "mako",
-    "name": "mako",
-    "description": "## What is mako?\n\nMako is a template library written in Python.\n\n## Get started!\n\nLeverage community expertise and instantly get value out of your telemetry data. This quickstart automatically instruments mako with the New Relic Python agent, and allows you to instantly monitor your Python application with out-of-the-box dashboards and alerts. Further leverage New Relic's APM capabilities by setting up [errors inbox](https://docs.newrelic.com/docs/apm/apm-ui-pages/errors-inbox/errors-inbox/), [transaction tracing](https://docs.newrelic.com/docs/apm/transactions/transaction-traces/introduction-transaction-traces/), and [service maps](https://docs.newrelic.com/docs/understand-dependencies/understand-system-dependencies/service-maps/introduction-service-maps/).\n\n## More info\n\nCheck out the [documentation](https://docs.newrelic.com/docs/agents/python-agent/) to learn more about New Relic monitoring for mako.",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/python/mako",
-    "id": "594f92b6-9996-4328-af75-129329a36a2c",
-    "level": "COMMUNITY",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/python/mako/logo.svg",
-    "summary": "Monitor mako with New Relic's Python agent",
-    "websiteUrl": null,
-    "keywords": [
-      "apm",
-      "python"
-    ],
-    "authors": [
-      "New Relic"
-    ],
-    "dashboards": [
-      {
-        "name": "Mako",
-        "description": "Python",
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/python/mako/dashboards/python02.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/python/mako/dashboards/python03.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/python/mako/dashboards/python.png"
-        ]
-      }
-    ],
-    "alerts": [
-      {
-        "name": "Apdex Score",
-        "details": "This alert is triggered when the Apdex score is below 0.5 for 5 minutes",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "High CPU Utilization",
-        "details": "This alert is triggered when the CPU Utilization is above 90%.",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "Transaction Errors",
-        "details": "This alert is triggered when the the transactions fail more than 10% of the time in 5 minutes.",
-        "type": "STATIC",
-        "url": null
-      }
-    ],
-    "documentation": [
-      {
-        "name": "mako installation docs",
-        "description": "Mako is a template library written in Python.",
-        "url": "https://docs.newrelic.com/docs/agents/python-agent/getting-started/instrumented-python-packages"
-      }
-    ],
-    "installPlans": [
-      {
-        "name": "Python Agent",
-        "id": "setup-python-agent"
-      }
-    ]
-  },
-  {
-    "title": "pyramid",
-    "name": "pyramid",
-    "description": "## What is pyramid?\n\nPyramid is an open source and minimalistic web framework written in Python and\nis based on WSGI.\n\n\n## Get started!\n\nLeverage community expertise and instantly get value out of your telemetry data. This quickstart automatically instruments pyramid with the New Relic Python agent, and allows you to instantly monitor your Python application with out-of-the-box dashboards and alerts. Further leverage New Relic's APM capabilities by setting up [errors inbox](https://docs.newrelic.com/docs/apm/apm-ui-pages/errors-inbox/errors-inbox/), [transaction tracing](https://docs.newrelic.com/docs/apm/transactions/transaction-traces/introduction-transaction-traces/), and [service maps](https://docs.newrelic.com/docs/understand-dependencies/understand-system-dependencies/service-maps/introduction-service-maps/).\n\n## More info\n\nCheck out the [documentation](https://docs.newrelic.com/docs/agents/python-agent/) to learn more about New Relic monitoring for pyramid.",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/python/pyramid",
-    "id": "02f1dc20-9034-405b-90c1-8ad1bbf7755e",
-    "level": "COMMUNITY",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/python/pyramid/logo.svg",
-    "summary": "Monitor pyramid with New Relic's Python agent",
-    "websiteUrl": null,
-    "keywords": [
-      "apm",
-      "python"
-    ],
-    "authors": [
-      "New Relic"
-    ],
-    "dashboards": [
-      {
-        "name": "Pyramid",
-        "description": "Python",
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/python/pyramid/dashboards/python02.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/python/pyramid/dashboards/python03.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/python/pyramid/dashboards/python.png"
-        ]
-      }
-    ],
-    "alerts": [
-      {
-        "name": "Apdex Score",
-        "details": "This alert is triggered when the Apdex score is below 0.5 for 5 minutes",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "High CPU Utilization",
-        "details": "This alert is triggered when the CPU Utilization is above 90%.",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "Transaction Errors",
-        "details": "This alert is triggered when the the transactions fail more than 10% of the time in 5 minutes.",
-        "type": "STATIC",
-        "url": null
-      }
-    ],
-    "documentation": [
-      {
-        "name": "pyramid installation docs",
-        "description": "Pyramid is an open source and minimalistic web framework written in Python\nand is based on WSGI.\n",
-        "url": "https://docs.newrelic.com/docs/agents/python-agent/getting-started/instrumented-python-packages"
-      }
-    ],
-    "installPlans": [
-      {
-        "name": "Python Agent",
-        "id": "setup-python-agent"
       }
     ]
   },
@@ -15630,9 +15451,9 @@
     ]
   },
   {
-    "title": "Catchpoint quickstart",
-    "name": "catchpoint-quickstart",
-    "description": "This quickstart uses the Catchpoint Test Data Webhook to send data to the New Relic Platform, this is accomplished by using New Relic’s Metrics API. We will rely on a third-party Google Cloud function to accept the data from the Catchpoint API, process it in the desired format, and then push it to New Relic. This approach allows you to visualize Catchpoint's digital experience data with New Relic’s Application Performance Monitoring (APM) data together.\n\n ### Dashboards\n\n- Catchpoint Overview dashboard: Overview of errors and request components of tests\n- Catchpoint Recent Errors dashboard: Recent errors with test id, timestamp, node name and error code\n- Catchpoint Response size: Monitor the average response size in MB\n- Catchpoint Test Times: Test time of with respect to test ids.",
+    "title": "Catchpoint",
+    "name": "catchpoint",
+    "description": "This quickstart uses the Catchpoint Test Data Webhook to send data to the New Relic Platform, this is accomplished by using New Relic’s Metrics API. We will rely on a third-party Google Cloud function to accept the data from the Catchpoint API, process it in the desired format, and then push it to New Relic. This approach allows you to visualize Catchpoint's digital experience data with New Relic’s Application Performance Monitoring (APM) data together.\n\n ### Dashboards\n\n- Catchpoint Overview dashboard: Overview of errors and request components of tests\n- Catchpoint Recent Errors dashboard: Recent errors with test id, timestamp, node name and error code\n- Catchpoint Response size: Monitor the average response size in MB\n- Catchpoint Test Times: Test time of with respect to test ids",
     "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/catchpoint",
     "id": "ac2341e3-05bb-49c5-b445-b16b27fc6ea0",
     "level": "COMMUNITY",
@@ -15711,12 +15532,205 @@
         "url": "https://github.com/catchpoint/Integrations.NewRelic"
       },
       {
-        "name": "Installation Docs",
+        "name": "Catchpoint installation docs",
         "description": "Learn more about the Catchpoint Test Data Webhook.",
         "url": "https://www.catchpoint.com/blog/webhook-implementation"
       }
     ],
     "installPlans": []
+  },
+  {
+    "title": "Django",
+    "name": "django",
+    "description": "## What is Django?\n\nDjango is a Python-based free, open-source web framework that follows the model-template-views architectural pattern. The framework enables the rapid development of secure and maintainable websites. It takes away the hassle of web development from developers, and empowers them to focus on writing apps without reinventing the wheel.\n\n### New Relic Django quickstart features\n\nThe New Relic Django monitoring quickstart has the following features:\n- Dashboard: Our standard dashboard provides a clear overview of transactions and errors. The dashboards also help you track other key indicators like daily transaction errors, comparison between weekly transaction errors, memory heap used, most popular transactions, and more.\n- Alerts: You can get instant alerts on performance metrics like Apdex score, CPU utilization, and transaction error.\n\n### Why monitor Django with New Relic?\n\nProactively monitor Django with [New Relic’s Python agent](https://docs.newrelic.com/docs/apm/agents/python-agent/getting-started/introduction-new-relic-python/). With an interactive dashboard, you can explore, query, and visualize your data. The quickstart also has three alerts that can detect changes in key metrics:\n- The transaction error alert is triggered when transactions fail more than 10% of the time during a 5-minute period.\n- The high CPU utilization alert is triggered when the CPU utilization is above 90%.\n- Similarly, the Apdex score alert is triggered when the Apdex score is below 0.5 during a period of 5 minutes.\n\nIn addition, the New Relic Django integration can automatically add [browser monitoring](https://newrelic.com/products/browser-monitoring) to any HTML page responses for the Django Python web framework. Install the New Relic Django quickstart to instrument Django with New Relic’s Python agent, and track Django’s key metrics in real-time.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/python/django",
+    "id": "d8ab0fa9-205e-4c7d-92f1-09ef04b2b8e6",
+    "level": "NEW_RELIC",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/python/django/logo.svg",
+    "summary": "Monitoring Django is critical to ensure that you detect incidents and respond to them quickly. Download the New Relic Django quickstart to proactively track your Django’s performance metrics via New Relic’s Python agent.",
+    "websiteUrl": null,
+    "keywords": [
+      "apm",
+      "python",
+      "django"
+    ],
+    "authors": [
+      "New Relic"
+    ],
+    "dashboards": [
+      {
+        "name": "Django",
+        "description": "Python",
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/python/django/dashboards/python02.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/python/django/dashboards/python03.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/python/django/dashboards/python.png"
+        ]
+      }
+    ],
+    "alerts": [
+      {
+        "name": "Apdex Score",
+        "details": "This alert is triggered when the Apdex score is below 0.5 for 5 minutes",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "High CPU Utilization",
+        "details": "This alert is triggered when the CPU Utilization is above 90%.",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "Transaction Errors",
+        "details": "This alert is triggered when the the transactions fail more than 10% of the time in 5 minutes.",
+        "type": "STATIC",
+        "url": null
+      }
+    ],
+    "documentation": [
+      {
+        "name": "Django installation docs",
+        "description": "Django is a Python-based free and open-source web framework that follows\nthe model-template-views architectural pattern.\n",
+        "url": "https://docs.newrelic.com/docs/agents/python-agent/getting-started/instrumented-python-packages"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "Python Agent",
+        "id": "setup-python-agent"
+      }
+    ]
+  },
+  {
+    "title": "Pyramid",
+    "name": "pyramid",
+    "description": "## What is Pyramid?\n\nPyramid is an open source and minimalistic web framework written in Python and\nis based on WSGI.\n\n## Get started!\n\nLeverage community expertise and instantly get value out of your telemetry data. This quickstart automatically instruments Pyramid with the New Relic Python agent, and allows you to instantly monitor your Python application with out-of-the-box dashboards and alerts. Further leverage New Relic's APM capabilities by setting up [errors inbox](https://docs.newrelic.com/docs/apm/apm-ui-pages/errors-inbox/errors-inbox/), [transaction tracing](https://docs.newrelic.com/docs/apm/transactions/transaction-traces/introduction-transaction-traces/), and [service maps](https://docs.newrelic.com/docs/understand-dependencies/understand-system-dependencies/service-maps/introduction-service-maps/).\n\n## More info\n\nCheck out the [documentation](https://docs.newrelic.com/docs/agents/python-agent/) to learn more about New Relic monitoring for Pyramid.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/python/pyramid",
+    "id": "02f1dc20-9034-405b-90c1-8ad1bbf7755e",
+    "level": "NEW_RELIC",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/python/pyramid/logo.svg",
+    "summary": "This quickstart automatically instruments Pyramid with the New Relic Python agent, and allows you to instantly monitor your Python application with out-of-the-box dashboards and alerts.",
+    "websiteUrl": null,
+    "keywords": [
+      "apm",
+      "python",
+      "pyramid",
+      "WSGI"
+    ],
+    "authors": [
+      "New Relic"
+    ],
+    "dashboards": [
+      {
+        "name": "Pyramid",
+        "description": "Python",
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/python/pyramid/dashboards/python02.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/python/pyramid/dashboards/python03.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/python/pyramid/dashboards/python.png"
+        ]
+      }
+    ],
+    "alerts": [
+      {
+        "name": "Apdex Score",
+        "details": "This alert is triggered when the Apdex score is below 0.5 for 5 minutes",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "High CPU Utilization",
+        "details": "This alert is triggered when the CPU Utilization is above 90%.",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "Transaction Errors",
+        "details": "This alert is triggered when the the transactions fail more than 10% of the time in 5 minutes.",
+        "type": "STATIC",
+        "url": null
+      }
+    ],
+    "documentation": [
+      {
+        "name": "Pyramid installation docs",
+        "description": "Pyramid is an open source and minimalistic web framework written in Python\nand is based on WSGI.\n",
+        "url": "https://docs.newrelic.com/docs/agents/python-agent/getting-started/instrumented-python-packages"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "Python Agent",
+        "id": "setup-python-agent"
+      }
+    ]
+  },
+  {
+    "title": "Mako",
+    "name": "mako",
+    "description": "## What is Mako?\n\nMako is a template library written in Python.\n\n## Get started!\n\nLeverage community expertise and instantly get value out of your telemetry data. This quickstart automatically instruments mako with the New Relic Python agent, and allows you to instantly monitor your Python application with out-of-the-box dashboards and alerts. Further leverage New Relic's APM capabilities by setting up [errors inbox](https://docs.newrelic.com/docs/apm/apm-ui-pages/errors-inbox/errors-inbox/), [transaction tracing](https://docs.newrelic.com/docs/apm/transactions/transaction-traces/introduction-transaction-traces/), and [service maps](https://docs.newrelic.com/docs/understand-dependencies/understand-system-dependencies/service-maps/introduction-service-maps/).\n\n## More info\n\nCheck out the [documentation](https://docs.newrelic.com/docs/agents/python-agent/) to learn more about New Relic monitoring for Mako.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/python/mako",
+    "id": "594f92b6-9996-4328-af75-129329a36a2c",
+    "level": "NEW_RELIC",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/python/mako/logo.svg",
+    "summary": "This quickstart automatically instruments mako with the New Relic Python agent, and allows you to instantly monitor your Python application with out-of-the-box dashboards and alerts.",
+    "websiteUrl": null,
+    "keywords": [
+      "apm",
+      "python",
+      "mako"
+    ],
+    "authors": [
+      "New Relic"
+    ],
+    "dashboards": [
+      {
+        "name": "Mako",
+        "description": "Python",
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/python/mako/dashboards/python02.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/python/mako/dashboards/python03.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/python/mako/dashboards/python.png"
+        ]
+      }
+    ],
+    "alerts": [
+      {
+        "name": "Apdex Score",
+        "details": "This alert is triggered when the Apdex score is below 0.5 for 5 minutes",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "High CPU Utilization",
+        "details": "This alert is triggered when the CPU Utilization is above 90%.",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "Transaction Errors",
+        "details": "This alert is triggered when the the transactions fail more than 10% of the time in 5 minutes.",
+        "type": "STATIC",
+        "url": null
+      }
+    ],
+    "documentation": [
+      {
+        "name": "Mako installation docs",
+        "description": "Mako is a template library written in Python.",
+        "url": "https://docs.newrelic.com/docs/agents/python-agent/getting-started/instrumented-python-packages"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "Python Agent",
+        "id": "setup-python-agent"
+      }
+    ]
   },
   {
     "title": "Lighthouse",
@@ -17561,6 +17575,78 @@
     ]
   },
   {
+    "title": "FastAPI",
+    "name": "fastapi",
+    "description": "## What is FastAPI?\n\nFastAPI is a modern and really fast web framework for developing RESTful APIs in Python.\n\n## Get started!\n\nLeverage community expertise and instantly get value out of your telemetry data. This quickstart automatically instruments fastAPI with the New Relic Python agent, and allows you to instantly monitor your Python application with out-of-the-box dashboards and alerts. Further leverage New Relic's APM capabilities by setting up [errors inbox](https://docs.newrelic.com/docs/apm/apm-ui-pages/errors-inbox/errors-inbox/), [transaction tracing](https://docs.newrelic.com/docs/apm/transactions/transaction-traces/introduction-transaction-traces/), and [service maps](https://docs.newrelic.com/docs/understand-dependencies/understand-system-dependencies/service-maps/introduction-service-maps/).\n\n## More info\n\nCheck out the [documentation](https://docs.newrelic.com/docs/agents/python-agent/) to learn more about New Relic monitoring for FastAPI.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/python/fastapi",
+    "id": "e559ec64-f765-4470-a15f-1901fcebb468",
+    "level": "NEW_RELIC",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/python/fastapi/logo.png",
+    "summary": "This quickstart automatically instruments FastAPI with the New Relic Python agent, and allows you to instantly monitor your Python application with out-of-the-box dashboards and alerts",
+    "websiteUrl": null,
+    "keywords": [
+      "apm",
+      "python",
+      "language agent",
+      "fastapi"
+    ],
+    "authors": [
+      "New Relic",
+      "Emil Hammarstrand"
+    ],
+    "dashboards": [
+      {
+        "name": "fastAPI",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/python/fastapi/dashboards/fastAPI-02.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/python/fastapi/dashboards/fastAPI-03.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/python/fastapi/dashboards/fastAPI.png"
+        ]
+      }
+    ],
+    "alerts": [
+      {
+        "name": "Apdex Score",
+        "details": "This alert is triggered when the Apdex score is below 0.5 for 5 minutes",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "High CPU Utilization",
+        "details": "This alert is triggered when the CPU Utilization is above 90%.",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "Memory Usage",
+        "details": "This alert is triggered when Memory usage is above 90%",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "Transaction Errors",
+        "details": "This alert is triggered when the the transactions fail more than 10% of the time in 5 minutes.",
+        "type": "STATIC",
+        "url": null
+      }
+    ],
+    "documentation": [
+      {
+        "name": "Python installation docs",
+        "description": "Python is an interpreted, high-level and general-purpose programming\nlanguage.\n",
+        "url": "https://docs.newrelic.com/docs/agents/python-agent/getting-started/compatibility-requirements-python-agent"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "Python Agent",
+        "id": "setup-python-agent"
+      }
+    ]
+  },
+  {
     "title": "Azure Kubernetes Service",
     "name": "azure-kubernetes-service",
     "description": "Provides a managed environment for deploying, managing, and scaling your\ncontainerized applications using Azure infrastructure.\n",
@@ -17700,81 +17786,6 @@
       }
     ],
     "installPlans": []
-  },
-  {
-    "title": "fastAPI",
-    "name": "fastAPI",
-    "description": "## What is fastAPI?\n\nFastAPI is a modern and really fast web framework for developing RESTful APIs in Python. \n\n\n## Get started!\n\nLeverage community expertise and instantly get value out of your telemetry data. This quickstart automatically instruments fastAPI with the New Relic Python agent, and allows you to instantly monitor your Python application with out-of-the-box dashboards and alerts. Further leverage New Relic's APM capabilities by setting up [errors inbox](https://docs.newrelic.com/docs/apm/apm-ui-pages/errors-inbox/errors-inbox/), [transaction tracing](https://docs.newrelic.com/docs/apm/transactions/transaction-traces/introduction-transaction-traces/), and [service maps](https://docs.newrelic.com/docs/understand-dependencies/understand-system-dependencies/service-maps/introduction-service-maps/).\n\n## More info\n\nCheck out the [documentation](https://docs.newrelic.com/docs/agents/python-agent/) to learn more about New Relic monitoring for fastAPI.\n",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/python/fastapi",
-    "id": "e559ec64-f765-4470-a15f-1901fcebb468",
-    "level": "NEW_RELIC",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/v0.106.0/quickstarts/python/fastapi/logo.png",
-    "summary": "Monitor fastAPI with New Relic's Python agent\n",
-    "websiteUrl": null,
-    "keywords": [
-      "apm",
-      "python",
-      "language agent",
-      "fastapi"
-    ],
-    "authors": [
-      "New Relic",
-      "Emil Hammarstrand"
-    ],
-    "dashboards": [
-      {
-        "name": "fastAPI",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/v0.106.0/quickstarts/python/fastapi/dashboards/fastAPI-02.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/v0.106.0/quickstarts/python/fastapi/dashboards/fastAPI-03.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/v0.106.0/quickstarts/python/fastapi/dashboards/fastAPI.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/v0.95.0/quickstarts/python/fastapi/dashboards/fastAPI-02.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/v0.95.0/quickstarts/python/fastapi/dashboards/fastAPI-03.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/v0.95.0/quickstarts/python/fastapi/dashboards/fastAPI.png"
-        ]
-      }
-    ],
-    "alerts": [
-      {
-        "name": "Apdex Score",
-        "details": "This alert is triggered when the Apdex score is below 0.5 for 5 minutes\n",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "High CPU Utilization",
-        "details": "This alert is triggered when the CPU Utilization is above 90%.\n",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "Memory Usage",
-        "details": "This alert is triggered when Memory usage is above 90%\n",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "Transaction Errors",
-        "details": "This alert is triggered when the the transactions fail more than 10% of the time in 5 minutes.\n",
-        "type": "STATIC",
-        "url": null
-      }
-    ],
-    "documentation": [
-      {
-        "name": "Python installation docs",
-        "description": "Python is an interpreted, high-level and general-purpose programming\nlanguage.\n",
-        "url": "https://docs.newrelic.com/docs/agents/python-agent/getting-started/compatibility-requirements-python-agent"
-      }
-    ],
-    "installPlans": [
-      {
-        "name": "Python Agent",
-        "id": "setup-python-agent"
-      }
-    ]
   },
   {
     "title": "Red Hat OpenShift",
@@ -19138,132 +19149,6 @@
     ]
   },
   {
-    "title": "celery",
-    "name": "celery",
-    "description": "## What is celery?\n\nOpen source distributed task queue built for real-time operations.\n\n## Get started!\n\nLeverage community expertise and instantly get value out of your telemetry data. This quickstart automatically instruments celery with the New Relic Python agent, and allows you to instantly monitor your Python application with out-of-the-box dashboards and alerts. Further leverage New Relic's APM capabilities by setting up [errors inbox](https://docs.newrelic.com/docs/apm/apm-ui-pages/errors-inbox/errors-inbox/), [transaction tracing](https://docs.newrelic.com/docs/apm/transactions/transaction-traces/introduction-transaction-traces/), and [service maps](https://docs.newrelic.com/docs/understand-dependencies/understand-system-dependencies/service-maps/introduction-service-maps/).\n\n## More info\n\nCheck out the [documentation](https://docs.newrelic.com/docs/agents/python-agent/) to learn more about New Relic monitoring for celery.",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/python/celery",
-    "id": "c0484a1b-d778-47f5-879b-2d01dce3df78",
-    "level": "COMMUNITY",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/python/celery/logo.svg",
-    "summary": "Monitor celery with New Relic's Python agent",
-    "websiteUrl": null,
-    "keywords": [
-      "apm",
-      "python"
-    ],
-    "authors": [
-      "New Relic"
-    ],
-    "dashboards": [
-      {
-        "name": "Celery",
-        "description": "Python",
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/python/celery/dashboards/python02.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/python/celery/dashboards/python03.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/python/celery/dashboards/python.png"
-        ]
-      }
-    ],
-    "alerts": [
-      {
-        "name": "Apdex Score",
-        "details": "This alert is triggered when the Apdex score is below 0.5 for 5 minutes",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "High CPU Utilization",
-        "details": "This alert is triggered when the CPU Utilization is above 90%.",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "Transaction Errors",
-        "details": "This alert is triggered when the the transactions fail more than 10% of the time in 5 minutes.",
-        "type": "STATIC",
-        "url": null
-      }
-    ],
-    "documentation": [
-      {
-        "name": "celery installation docs",
-        "description": "Open source distributed task queue built for real-time operations.",
-        "url": "https://docs.newrelic.com/docs/agents/python-agent/getting-started/instrumented-python-packages"
-      }
-    ],
-    "installPlans": [
-      {
-        "name": "Python Agent",
-        "id": "setup-python-agent"
-      }
-    ]
-  },
-  {
-    "title": "httplib2",
-    "name": "httplib2",
-    "description": "## What is httplib2?\n\nLightweight HTTP client for Python with straightforward usage and full feature\nsupport.\n\n\n## Get started!\n\nLeverage community expertise and instantly get value out of your telemetry data. This quickstart automatically instruments httplib2 with the New Relic Python agent, and allows you to instantly monitor your Python application with out-of-the-box dashboards and alerts. Further leverage New Relic's APM capabilities by setting up [errors inbox](https://docs.newrelic.com/docs/apm/apm-ui-pages/errors-inbox/errors-inbox/), [transaction tracing](https://docs.newrelic.com/docs/apm/transactions/transaction-traces/introduction-transaction-traces/), and [service maps](https://docs.newrelic.com/docs/understand-dependencies/understand-system-dependencies/service-maps/introduction-service-maps/).\n\n## More info\n\nCheck out the [documentation](https://docs.newrelic.com/docs/agents/python-agent/) to learn more about New Relic monitoring for httplib2.",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/python/httplib2",
-    "id": "6bab5c37-1444-4d47-a87a-80edbe316c46",
-    "level": "COMMUNITY",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/python/httplib2/logo.svg",
-    "summary": "Monitor httplib2 with New Relic's Python agent",
-    "websiteUrl": null,
-    "keywords": [
-      "apm",
-      "python"
-    ],
-    "authors": [
-      "New Relic"
-    ],
-    "dashboards": [
-      {
-        "name": "HTTPLib2",
-        "description": "Python",
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/python/httplib2/dashboards/python02.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/python/httplib2/dashboards/python03.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/python/httplib2/dashboards/python.png"
-        ]
-      }
-    ],
-    "alerts": [
-      {
-        "name": "Apdex Score",
-        "details": "This alert is triggered when the Apdex score is below 0.5 for 5 minutes",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "High CPU Utilization",
-        "details": "This alert is triggered when the CPU Utilization is above 90%.",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "Transaction Errors",
-        "details": "This alert is triggered when the the transactions fail more than 10% of the time in 5 minutes.",
-        "type": "STATIC",
-        "url": null
-      }
-    ],
-    "documentation": [
-      {
-        "name": "httplib2 installation docs",
-        "description": "Lightweight HTTP client for Python with straightforward usage and full\nfeature support.\n",
-        "url": "https://docs.newrelic.com/docs/agents/python-agent/getting-started/instrumented-python-packages"
-      }
-    ],
-    "installPlans": [
-      {
-        "name": "Python Agent",
-        "id": "setup-python-agent"
-      }
-    ]
-  },
-  {
     "title": "pylons",
     "name": "pylons",
     "description": "## What is pylons?\n\nPylons Framework is an open-source Web application framework written in\nPython.\n\n\n## Get started!\n\nLeverage community expertise and instantly get value out of your telemetry data. This quickstart automatically instruments pylons with the New Relic Python agent, and allows you to instantly monitor your Python application with out-of-the-box dashboards and alerts. Further leverage New Relic's APM capabilities by setting up [errors inbox](https://docs.newrelic.com/docs/apm/apm-ui-pages/errors-inbox/errors-inbox/), [transaction tracing](https://docs.newrelic.com/docs/apm/transactions/transaction-traces/introduction-transaction-traces/), and [service maps](https://docs.newrelic.com/docs/understand-dependencies/understand-system-dependencies/service-maps/introduction-service-maps/).\n\n## More info\n\nCheck out the [documentation](https://docs.newrelic.com/docs/agents/python-agent/) to learn more about New Relic monitoring for pylons.",
@@ -19316,6 +19201,134 @@
       {
         "name": "pylons installation docs",
         "description": "Pylons Framework is an open-source Web application framework written in\nPython.\n",
+        "url": "https://docs.newrelic.com/docs/agents/python-agent/getting-started/instrumented-python-packages"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "Python Agent",
+        "id": "setup-python-agent"
+      }
+    ]
+  },
+  {
+    "title": "Celery",
+    "name": "celery",
+    "description": "## What is celery?\n\nOpen source distributed task queue built for real-time operations.\n\n## Get started!\n\nLeverage community expertise and instantly get value out of your telemetry data. This quickstart automatically instruments celery with the New Relic Python agent, and allows you to instantly monitor your Python application with out-of-the-box dashboards and alerts. Further leverage New Relic's APM capabilities by setting up [errors inbox](https://docs.newrelic.com/docs/apm/apm-ui-pages/errors-inbox/errors-inbox/), [transaction tracing](https://docs.newrelic.com/docs/apm/transactions/transaction-traces/introduction-transaction-traces/), and [service maps](https://docs.newrelic.com/docs/understand-dependencies/understand-system-dependencies/service-maps/introduction-service-maps/).\n\n## More info\n\nCheck out the [documentation](https://docs.newrelic.com/docs/agents/python-agent/) to learn more about New Relic monitoring for celery.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/python/celery",
+    "id": "c0484a1b-d778-47f5-879b-2d01dce3df78",
+    "level": "NEW_RELIC",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/python/celery/logo.svg",
+    "summary": "This quickstart automatically instruments Celery with the New Relic Python agent, and allows you to instantly monitor your Python application with out-of-the-box dashboards and alerts",
+    "websiteUrl": null,
+    "keywords": [
+      "apm",
+      "python",
+      "celery"
+    ],
+    "authors": [
+      "New Relic"
+    ],
+    "dashboards": [
+      {
+        "name": "Celery",
+        "description": "Python",
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/python/celery/dashboards/python02.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/python/celery/dashboards/python03.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/python/celery/dashboards/python.png"
+        ]
+      }
+    ],
+    "alerts": [
+      {
+        "name": "Apdex Score",
+        "details": "This alert is triggered when the Apdex score is below 0.5 for 5 minutes",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "High CPU Utilization",
+        "details": "This alert is triggered when the CPU Utilization is above 90%.",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "Transaction Errors",
+        "details": "This alert is triggered when the the transactions fail more than 10% of the time in 5 minutes.",
+        "type": "STATIC",
+        "url": null
+      }
+    ],
+    "documentation": [
+      {
+        "name": "Celery installation docs",
+        "description": "Open source distributed task queue built for real-time operations.",
+        "url": "https://docs.newrelic.com/docs/agents/python-agent/getting-started/instrumented-python-packages"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "Python Agent",
+        "id": "setup-python-agent"
+      }
+    ]
+  },
+  {
+    "title": "httplib2",
+    "name": "httplib2",
+    "description": "## What is httplib2?\n\nhttplib2 is a lightweight HTTP client library for Python. httplib2 supports many features left out of other HTTP libraries.\n\n## Get started!\n\nLeverage community expertise and instantly get value out of your telemetry data. This quickstart automatically instruments httplib2 with the New Relic Python agent, and allows you to instantly monitor your Python application with out-of-the-box dashboards and alerts. Further leverage New Relic's APM capabilities by setting up [errors inbox](https://docs.newrelic.com/docs/apm/apm-ui-pages/errors-inbox/errors-inbox/), [transaction tracing](https://docs.newrelic.com/docs/apm/transactions/transaction-traces/introduction-transaction-traces/), and [service maps](https://docs.newrelic.com/docs/understand-dependencies/understand-system-dependencies/service-maps/introduction-service-maps/).\n\n## More info\n\nCheck out the [documentation](https://docs.newrelic.com/docs/agents/python-agent/) to learn more about New Relic monitoring for httplib2.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/python/httplib2",
+    "id": "6bab5c37-1444-4d47-a87a-80edbe316c46",
+    "level": "NEW_RELIC",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/python/httplib2/logo.svg",
+    "summary": "This quickstart automatically instruments httplib2 with the New Relic Python agent, and allows you to instantly monitor your Python application with out-of-the-box dashboards and alerts.",
+    "websiteUrl": null,
+    "keywords": [
+      "apm",
+      "python",
+      "httplib2"
+    ],
+    "authors": [
+      "New Relic"
+    ],
+    "dashboards": [
+      {
+        "name": "HTTPLib2",
+        "description": "Python",
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/python/httplib2/dashboards/python02.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/python/httplib2/dashboards/python03.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/python/httplib2/dashboards/python.png"
+        ]
+      }
+    ],
+    "alerts": [
+      {
+        "name": "Apdex Score",
+        "details": "This alert is triggered when the Apdex score is below 0.5 for 5 minutes",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "High CPU Utilization",
+        "details": "This alert is triggered when the CPU Utilization is above 90%.",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "Transaction Errors",
+        "details": "This alert is triggered when the the transactions fail more than 10% of the time in 5 minutes.",
+        "type": "STATIC",
+        "url": null
+      }
+    ],
+    "documentation": [
+      {
+        "name": "httplib2 installation docs",
+        "description": "httplib2 is a lightweight HTTP client library for Python. httplib2 supports many features left out of other HTTP libraries.\n",
         "url": "https://docs.newrelic.com/docs/agents/python-agent/getting-started/instrumented-python-packages"
       }
     ],
@@ -19483,6 +19496,77 @@
     ]
   },
   {
+    "title": "webpy",
+    "name": "webpy",
+    "description": "## Why monitor webpy?\n\nwebpy is a web framework for Python that is as simple as it is powerful. It offers useful debug features and automatically reloads after code changes. Integrate New Relic’s Python agent with your webpy app to monitor your app’s performance metrics in real time.\n\n## webpy quickstart highlights\n\nThe New Relic webpy quickstart has the following features:\n\n- Dashboards: Our dashboards provide you a clear overview of transactions, errors, and the virtual machine. The dashboards also help you monitor other key indicators like top 10 failed transactions, latest errors, and more.\n- Alerts: Get instant alerts like Apdex score, memory usage, high CPU utilizations, and transaction errors.\n\n## New Relic + webpy = Optimum performance monitoring\n\nNew Relic’s webpy quickstart automatically instruments your webpy app with the [New Relic Python agent](https://docs.newrelic.com/docs/apm/agents/python-agent/getting-started/introduction-new-relic-python/) and allows you to monitor your Python application with practical dashboards and alerts. In particular, the dashboards provide you with interactive visualizations to easily explore your data, understand context, and resolve issues faster. With flexible options for custom instrumentation and APIs, our Python agent offers multiple building blocks for you to create and share customized dashboards.\n\nMonitoring webpy with New Relic’s Python agent provides instant alerts on Apdex score and transaction errors. You can track key transactions, examine database query traces, and get a high-level summary of your app’s performance. You also have the ability to view logs and infrastructure data as well as bring them together to make troubleshooting easier and more efficient.\n\nInstall the New Relic webpy quickstart to effectively monitor your webpy app’s performance metrics with our Python agent. This quickstart gives you the tools to address issues that may arise when using webpy.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/python/webpy",
+    "id": "535f37ab-3b88-471d-b107-266f39d28819",
+    "level": "NEW_RELIC",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/python/webpy/logo.svg",
+    "summary": "Monitoring webpy is critical to ensure that you detect incidents and respond to them quickly. Install the New Relic webpy quickstart to proactively track your webpy key performance metrics.",
+    "websiteUrl": null,
+    "keywords": [
+      "apm",
+      "python",
+      "webpy"
+    ],
+    "authors": [
+      "New Relic",
+      "Emil Hammarstrand"
+    ],
+    "dashboards": [
+      {
+        "name": "WebPy",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/python/webpy/dashboards/webpy2.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/python/webpy/dashboards/webpy3.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/python/webpy/dashboards/webpy.png"
+        ]
+      }
+    ],
+    "alerts": [
+      {
+        "name": "Apdex Score",
+        "details": "This alert is triggered when the Apdex score is below 0.5 for 5 minutes",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "High CPU Utilization",
+        "details": "This alert is triggered when the CPU Utilization is above 90%.",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "Memory Usage",
+        "details": "This alert is triggered when Memory usage is above 90%",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "Transaction Errors",
+        "details": "This alert is triggered when the the transactions fail more than 10% of the time in 5 minutes.",
+        "type": "STATIC",
+        "url": null
+      }
+    ],
+    "documentation": [
+      {
+        "name": "webpy installation docs",
+        "description": "webpy is a web framework for Python that is as simple as it is powerful.",
+        "url": "https://docs.newrelic.com/docs/agents/python-agent/getting-started/instrumented-python-packages"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "Python Agent",
+        "id": "setup-python-agent"
+      }
+    ]
+  },
+  {
     "title": "LAMP stack",
     "name": "lamp-stack",
     "description": "This LAMP quickstart allows you to monitor a LAMP stack (Linux, Apache, MySQL, PHP).\nIt includes a specific dashboard to get observability for an entire LAMP stack.\n",
@@ -19616,79 +19700,6 @@
       }
     ],
     "installPlans": []
-  },
-  {
-    "title": "webpy",
-    "name": "webpy",
-    "description": "## Why monitor Webpy?\n\nWebpy is a web framework for Python that is as simple as it is powerful. It offers useful debug features and automatically reloads after code changes. Integrate New Relic’s Python agent with your Webpy app to monitor your app’s performance metrics in real time.\n\n## Webpy quickstart highlights\n\nThe New Relic Webpy quickstart has the following features:\nDashboards: Our dashboards provide you a clear overview of transactions, errors, and the virtual machine. The dashboards also help you monitor other key indicators like top 10 failed transactions, latest errors, and more.\nAlerts: Get instant alerts like Apdex score, memory usage, high CPU utilizations, and transaction errors.\n\n## New Relic + Webpy = Optimum performance monitoring\n\nNew Relic’s Webpy quickstart automatically instruments your Webpy app with the [New Relic Python agent](https://docs.newrelic.com/docs/apm/agents/python-agent/getting-started/introduction-new-relic-python/) and allows you to monitor your Python application with practical dashboards and alerts. In particular, the dashboards provide you with interactive visualizations to easily explore your data, understand context, and resolve issues faster. With flexible options for custom instrumentation and APIs, our Python agent offers multiple building blocks for you to create and share customized dashboards.\nMonitoring Webpy with New Relic’s Python agent provides instant alerts on Apdex score and transaction errors. You can track key transactions, examine database query traces, and get a high-level summary of your app’s performance. You also have the ability to view logs and infrastructure data as well as bring them together to make troubleshooting easier and more efficient.\nInstall the New Relic Webpy quickstart to effectively monitor your Webpy app’s performance metrics with our Python agent. This quickstart gives you the tools to address issues that may arise when using Webpy.\n",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/python/webpy",
-    "id": "535f37ab-3b88-471d-b107-266f39d28819",
-    "level": "NEW_RELIC",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/v0.106.0/quickstarts/python/webpy/logo.svg",
-    "summary": "Monitoring Webpy is critical to ensure that you detect incidents and respond to them quickly. Download the New Relic Webpy quickstart to proactively track your Webpy key performance metrics.\n",
-    "websiteUrl": null,
-    "keywords": [
-      "apm",
-      "python"
-    ],
-    "authors": [
-      "New Relic",
-      "Emil Hammarstrand"
-    ],
-    "dashboards": [
-      {
-        "name": "WebPy",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/v0.106.0/quickstarts/python/webpy/dashboards/webpy2.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/v0.106.0/quickstarts/python/webpy/dashboards/webpy3.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/v0.106.0/quickstarts/python/webpy/dashboards/webpy.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/v0.95.0/quickstarts/python/webpy/dashboards/webpy2.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/v0.95.0/quickstarts/python/webpy/dashboards/webpy3.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/v0.95.0/quickstarts/python/webpy/dashboards/webpy.png"
-        ]
-      }
-    ],
-    "alerts": [
-      {
-        "name": "Apdex Score",
-        "details": "This alert is triggered when the Apdex score is below 0.5 for 5 minutes\n",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "High CPU Utilization",
-        "details": "This alert is triggered when the CPU Utilization is above 90%.\n",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "Memory Usage",
-        "details": "This alert is triggered when Memory usage is above 90%\n",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "Transaction Errors",
-        "details": "This alert is triggered when the the transactions fail more than 10% of the time in 5 minutes.\n",
-        "type": "STATIC",
-        "url": null
-      }
-    ],
-    "documentation": [
-      {
-        "name": "webpy installation docs",
-        "description": "Webpy is a web framework for Python that is as simple as it is powerful.",
-        "url": "https://docs.newrelic.com/docs/agents/python-agent/getting-started/instrumented-python-packages"
-      }
-    ],
-    "installPlans": [
-      {
-        "name": "Python Agent",
-        "id": "setup-python-agent"
-      }
-    ]
   },
   {
     "title": "Authlogic",
