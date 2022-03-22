@@ -1,4 +1,4 @@
-[![Community Project header](https://opensource.newrelic.com/static/Community_Project-7c4805883d6396086f907f1c716477cd.png)](https://opensource.newrelic.com/oss-category/#community-project)
+[![Community Project header](https://github.com/newrelic/opensource-website/raw/main/src/images/categories/Community_Project.png)](https://opensource.newrelic.com/oss-category/#community-project)
 
 # Instant Observability Website
 
