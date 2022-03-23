@@ -1484,6 +1484,61 @@
     ]
   },
   {
+    "title": "OMA Data Ingest Governance",
+    "name": "oma-data-governance",
+    "description": "Data ingest governance is a practice of ensuring optimal value for telemetry data collected by an organization particularly a complex organization with numerous business units and working groups.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/oma-data-gov",
+    "id": "30593cae-4cfb-435c-9170-310e3f38ab40",
+    "level": "NEW_RELIC",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/oma-data-gov/logo.png",
+    "summary": "The prerequisite step of data governance includes developing an accurate baseline of your telemetry data ingest levels.  A good ingest baseline will break your ingest out by sub-account and telemetry type.  This is particularly necessary in a complex organization with numerous business units and working groups.",
+    "websiteUrl": null,
+    "keywords": [
+      "OMA",
+      "Data Governance",
+      "Data Consumption",
+      "Manage Data Ingest"
+    ],
+    "authors": [
+      "Jim Hagan",
+      "Kim Hickey"
+    ],
+    "dashboards": [
+      {
+        "name": "Data Governance Entity Breakdowns",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/oma-data-gov/dashboards/data-ingest-baseline.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/oma-data-gov/dashboards/data-ingest-entity-breakdown.png"
+        ]
+      },
+      {
+        "name": "Data Governance Baseline",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/oma-data-gov/dashboards/data-ingest-baseline.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/oma-data-gov/dashboards/data-ingest-entity-breakdown.png"
+        ]
+      }
+    ],
+    "alerts": [],
+    "documentation": [
+      {
+        "name": "Observability Maturity",
+        "description": "Observability Maturity Solutions Guide",
+        "url": "https://docs.newrelic.com/docs/new-relic-solutions/observability-maturity/introduction"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "solutions-hub",
+        "id": "solutions-hub-dashboards"
+      }
+    ]
+  },
+  {
     "title": "AWS EMR",
     "name": "aws-emr",
     "description": "## What is AWS EMR?\n\nProcess and manage big data inputs from popular frameworks.\n\n### Get started!\n\nStart monitoring AWS EMR by connecting Amazon Web Services (AWS) to New Relic!\n\nCheck out our AWS EMR documentation to instrument your cloud service and manage the stability, scalability, and reliability of your systems with New Relic's infrastructure monitoring capabilities.\n\n### More info\n\nCheck out the [documentation](https://docs.newrelic.com/docs/infrastructure/amazon-integrations/aws-integrations-list/aws-emr-monitoring-integration/) to learn more about New Relic monitoring for AWS EMR. ",
@@ -1742,61 +1797,6 @@
       {
         "name": "C SDK Agent",
         "id": "setup-c-agent"
-      }
-    ]
-  },
-  {
-    "title": "OMA Data Ingest Governance",
-    "name": "oma-data-governance",
-    "description": "Data ingest governance is a practice of ensuring optimal value for telemetry data collected by an organization particularly a complex organization with numerous business units and working groups.",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/oma-data-gov",
-    "id": "30593cae-4cfb-435c-9170-310e3f38ab40",
-    "level": "NEW_RELIC",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/oma-data-gov/logo.png",
-    "summary": "The prerequisite step of data governance includes developing an accurate baseline of your telemetry data ingest levels.  A good ingest baseline will break your ingest out by sub-account and telemetry type.  This is particularly necessary in a complex organization with numerous business units and working groups.",
-    "websiteUrl": null,
-    "keywords": [
-      "OMA",
-      "Data Governance",
-      "Data Consumption",
-      "Manage Data Ingest"
-    ],
-    "authors": [
-      "Jim Hagan",
-      "Kim Hickey"
-    ],
-    "dashboards": [
-      {
-        "name": "Data Governance Entity Breakdowns",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/oma-data-gov/dashboards/data-ingest-baseline.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/oma-data-gov/dashboards/data-ingest-entity-breakdown.png"
-        ]
-      },
-      {
-        "name": "Data Governance Baseline",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/oma-data-gov/dashboards/data-ingest-baseline.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/oma-data-gov/dashboards/data-ingest-entity-breakdown.png"
-        ]
-      }
-    ],
-    "alerts": [],
-    "documentation": [
-      {
-        "name": "Observability Maturity",
-        "description": "Observability Maturity Solutions Guide",
-        "url": "https://docs.newrelic.com/docs/new-relic-solutions/observability-maturity/introduction"
-      }
-    ],
-    "installPlans": [
-      {
-        "name": "solutions-hub",
-        "id": "solutions-hub-dashboards"
       }
     ]
   },
@@ -6835,6 +6835,80 @@
     ]
   },
   {
+    "title": "Netlify builds",
+    "name": "netlify-builds",
+    "description": "Netlify is an all-in-one platform for automating modern web projects. Replace your hosting infrastructure, continuous integration, and deployment pipeline with a single workflow. Integrate dynamic functionality like serverless functions, user authentication, and form handling as your projects grow.\n\n### Netlify quickstart highlights\n\nThe Netlify quickstart is the fastest way to explore data from the [New Relic Netlify plugin](https://github.com/newrelic-experimental/netlify-plugin). Visualize your Netlify performance with a wide selection of dashboards.\n\n- Get a detailed view of your web application traffic, including page views, load times, sessions, and most popular content\n- Find out more about your visitors. Where are they from? What devices are they using? When do they frequent your application most?\n- View in-depth information about your page rendering, including LCP, CLS, and FID ratings\n- See all your JavaScript errors tagged by deployment\n- Compare deployment statstics and notice trends in failing builds\n\nKnow as soon as an event occurs with alerts.\n\n- When the number of JavaScript errors increases beyond an allowed threshold\n- If the onError event is triggered and a build fails\n- When page load time degrades beyond two standard deviations from the normal",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/netlify",
+    "id": "5861d7f5-26c0-43ad-bda8-c893c4b27b25",
+    "level": "COMMUNITY",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/netlify/logo.png",
+    "summary": "Analyze the health of your Netlify builds and Jamstack applications",
+    "websiteUrl": null,
+    "keywords": [
+      "infrastructure",
+      "automation",
+      "Netlify",
+      "Jamstack",
+      "RUM",
+      "browser agent",
+      "continuous integration",
+      "continuous deployment",
+      "newrelic partner",
+      "featured"
+    ],
+    "authors": [
+      "Aaron Bassett (New Relic)"
+    ],
+    "dashboards": [
+      {
+        "name": "Netlify",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/netlify/dashboards/netlify01.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/netlify/dashboards/netlify02.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/netlify/dashboards/netlify03.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/netlify/dashboards/netlify04.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/netlify/dashboards/netlify05.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/netlify/dashboards/netlify06.png"
+        ]
+      }
+    ],
+    "alerts": [
+      {
+        "name": "Build Failed",
+        "details": "This alert is triggered whenever the build error count is > 0",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "JavaScript Errors",
+        "details": "This alert is triggered whenever the number of JavaScript errors deviates 5 standard deviations from the normal.",
+        "type": "BASELINE",
+        "url": null
+      },
+      {
+        "name": "Page Load Time Degrades",
+        "details": "This alert is triggered whenever the average page load time deviates 2 standard deviations from the normal.",
+        "type": "BASELINE",
+        "url": null
+      }
+    ],
+    "documentation": [
+      {
+        "name": "Installation Docs",
+        "description": "Install the New Relic plugin for Netlify",
+        "url": "https://github.com/newrelic-experimental/netlify-plugin#installation"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "Netlify",
+        "id": "third-party-netlify"
+      }
+    ]
+  },
+  {
     "title": "SQLite",
     "name": "sqlite",
     "description": "## What is SQLite?\n\nSQLite is a relational database management system that is embedded into\napplications.\n\n\n## Get started!\n\nLeverage community expertise and instantly get value out of your telemetry data. This quickstart automatically instruments SQLite with the New Relic PHP agent, and allows you to further leverage New Relic's APM capabilities by setting up [custom dashboards](https://docs.newrelic.com/docs/query-your-data/explore-query-data/dashboards/introduction-dashboards/), [errors inbox](https://docs.newrelic.com/docs/apm/apm-ui-pages/errors-inbox/errors-inbox/), [transaction tracing](https://docs.newrelic.com/docs/apm/transactions/transaction-traces/introduction-transaction-traces/), and [service maps](https://docs.newrelic.com/docs/understand-dependencies/understand-system-dependencies/service-maps/introduction-service-maps/).\n\n## More info\n\nCheck out the [documentation](https://docs.newrelic.com/docs/agents/php-agent/) to learn more about New Relic monitoring for SQLite.",
@@ -7311,80 +7385,6 @@
       {
         "name": "MongoDB",
         "id": "mongodb-integration"
-      }
-    ]
-  },
-  {
-    "title": "Netlify builds",
-    "name": "netlify-builds",
-    "description": "Netlify is an all-in-one platform for automating modern web projects. Replace your hosting infrastructure, continuous integration, and deployment pipeline with a single workflow. Integrate dynamic functionality like serverless functions, user authentication, and form handling as your projects grow.\n\n### Netlify quickstart highlights\n\nThe Netlify quickstart is the fastest way to explore data from the [New Relic Netlify plugin](https://github.com/newrelic-experimental/netlify-plugin). Visualize your Netlify performance with a wide selection of dashboards.\n\n- Get a detailed view of your web application traffic, including page views, load times, sessions, and most popular content\n- Find out more about your visitors. Where are they from? What devices are they using? When do they frequent your application most?\n- View in-depth information about your page rendering, including LCP, CLS, and FID ratings\n- See all your JavaScript errors tagged by deployment\n- Compare deployment statstics and notice trends in failing builds\n\nKnow as soon as an event occurs with alerts.\n\n- When the number of JavaScript errors increases beyond an allowed threshold\n- If the onError event is triggered and a build fails\n- When page load time degrades beyond two standard deviations from the normal",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/netlify",
-    "id": "5861d7f5-26c0-43ad-bda8-c893c4b27b25",
-    "level": "COMMUNITY",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/netlify/logo.png",
-    "summary": "Analyze the health of your Netlify builds and Jamstack applications",
-    "websiteUrl": null,
-    "keywords": [
-      "infrastructure",
-      "automation",
-      "Netlify",
-      "Jamstack",
-      "RUM",
-      "browser agent",
-      "continuous integration",
-      "continuous deployment",
-      "newrelic partner",
-      "featured"
-    ],
-    "authors": [
-      "Aaron Bassett (New Relic)"
-    ],
-    "dashboards": [
-      {
-        "name": "Netlify",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/netlify/dashboards/netlify01.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/netlify/dashboards/netlify02.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/netlify/dashboards/netlify03.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/netlify/dashboards/netlify04.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/netlify/dashboards/netlify05.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/netlify/dashboards/netlify06.png"
-        ]
-      }
-    ],
-    "alerts": [
-      {
-        "name": "Build Failed",
-        "details": "This alert is triggered whenever the build error count is > 0",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "JavaScript Errors",
-        "details": "This alert is triggered whenever the number of JavaScript errors deviates 5 standard deviations from the normal.",
-        "type": "BASELINE",
-        "url": null
-      },
-      {
-        "name": "Page Load Time Degrades",
-        "details": "This alert is triggered whenever the average page load time deviates 2 standard deviations from the normal.",
-        "type": "BASELINE",
-        "url": null
-      }
-    ],
-    "documentation": [
-      {
-        "name": "Installation Docs",
-        "description": "Install the New Relic plugin for Netlify",
-        "url": "https://github.com/newrelic-experimental/netlify-plugin#installation"
-      }
-    ],
-    "installPlans": [
-      {
-        "name": "Netlify",
-        "id": "third-party-netlify"
       }
     ]
   },
