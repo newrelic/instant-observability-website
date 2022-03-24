@@ -6,7 +6,7 @@ import { css } from '@emotion/react';
 import Overlay from '../components/Overlay';
 import QuickstartTile from '../components/QuickstartTile';
 import IOBanner from '../components/IOBanner';
-import { useTessen, Button } from '@newrelic/gatsby-theme-newrelic';
+import { useTessen, Button, Spinner } from '@newrelic/gatsby-theme-newrelic';
 import { navigate } from '@reach/router';
 
 import { useDebounce } from 'react-use';
@@ -89,6 +89,8 @@ const QuickstartsPage = ({ data, location }) => {
   const [isCategoriesOverlayOpen, setIsCategoriesOverlayOpen] = useState(false);
   const [isSearchInputEmpty, setIsSearchInputEmpty] = useState(true);
   const [isSelectCategory, setIsSelectCategory] = useState(true);
+  // variable to check if the page load completed
+  const [loadComplete, setLoadComplete] = useState(false);
 
   useEffect(() => {
     const params = new URLSearchParams(location.search);
@@ -106,6 +108,11 @@ const QuickstartsPage = ({ data, location }) => {
       });
     }
   }, [location.search, tessen]);
+
+  // check if the page is loaded
+  useEffect(() => {
+    setLoadComplete(true);
+  }, [])
 
   const closeCategoriesOverlay = () => {
     setIsCategoriesOverlayOpen(false);
@@ -233,6 +240,8 @@ const QuickstartsPage = ({ data, location }) => {
       },
     ],
   };
+
+  console.log('loadComplete', loadComplete);
   return (
     <>
       <IOSeo
@@ -447,9 +456,6 @@ const QuickstartsPage = ({ data, location }) => {
                         /* target inner children of parent span */
                         span,
                         strong {
-                          @media screen and (max-width: ${QUICKSTARTS_COLLAPSE_BREAKPOINT}) {
-                            display: none;
-                          }
                         }
                       }
                       strong {
@@ -491,28 +497,33 @@ const QuickstartsPage = ({ data, location }) => {
                       `};
                     `}
                   >
-                    <Slider
-                      {...settings}
-                      css={css`
-                        display: flex;
-                      `}
-                    >
-                      <SuperTiles />
-                      {mostPopularQuickStarts.map((pack) => (
-                        <QuickstartTile
-                          key={pack.id}
-                          view={view}
-                          featured={false}
-                          css={css`
-                            grid-template-rows:
-                              var(--tile-image-height) var(--title-row-height)
-                              80px auto;
-                            min-height: 280px;
-                          `}
-                          {...pack}
-                        />
-                      ))}
-                    </Slider>
+                    {!loadComplete && (
+                      <Spinner />
+                    )}
+                    {loadComplete && (
+                      <Slider
+                        {...settings}
+                        css={css`
+                          display: flex;
+                        `}
+                      >
+                        <SuperTiles />
+                        {mostPopularQuickStarts.map((pack) => (
+                          <QuickstartTile
+                            key={pack.id}
+                            view={view}
+                            featured={false}
+                            css={css`
+                              grid-template-rows:
+                                var(--tile-image-height) var(--title-row-height)
+                                80px auto;
+                              min-height: 280px;
+                            `}
+                            {...pack}
+                          />
+                        ))}
+                      </Slider>
+                    )}
                   </div>
                 </>
               )}
@@ -527,9 +538,6 @@ const QuickstartsPage = ({ data, location }) => {
                     /* target inner children of parent span */
                     span,
                     strong {
-                      @media screen and (max-width: ${QUICKSTARTS_COLLAPSE_BREAKPOINT}) {
-                        display: none;
-                      }
                     }
                   }
                   strong {
@@ -571,22 +579,27 @@ const QuickstartsPage = ({ data, location }) => {
                   `};
                 `}
               >
-                <Slider {...settings}>
-                  {featuredQuickStarts.map((pack) => (
-                    <QuickstartTile
-                      key={pack.id}
-                      view={view}
-                      featured={false}
-                      css={css`
-                        grid-template-rows:
-                          var(--tile-image-height) var(--title-row-height)
-                          80px auto;
-                        min-height: 280px;
-                      `}
-                      {...pack}
-                    />
-                  ))}
-                </Slider>
+                {!loadComplete && (
+                  <Spinner />
+                )}
+                {loadComplete && (
+                  <Slider {...settings}>
+                    {featuredQuickStarts.map((pack) => (
+                      <QuickstartTile
+                        key={pack.id}
+                        view={view}
+                        featured={false}
+                        css={css`
+                          grid-template-rows:
+                            var(--tile-image-height) var(--title-row-height)
+                            80px auto;
+                          min-height: 280px;
+                        `}
+                        {...pack}
+                      />
+                    ))}
+                  </Slider>
+                )}
               </div>
             </>
           )}
