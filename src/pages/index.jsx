@@ -109,7 +109,7 @@ const QuickstartsPage = ({ data, location }) => {
     }
   }, [location.search, tessen]);
 
-  // check if the page is loaded
+  // mark the value as true, if the page is loaded
   useEffect(() => {
     setLoadComplete(true);
   }, [])
@@ -241,7 +241,6 @@ const QuickstartsPage = ({ data, location }) => {
     ],
   };
 
-  console.log('loadComplete', loadComplete);
   return (
     <>
       <IOSeo
