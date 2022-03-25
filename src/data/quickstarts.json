@@ -3991,51 +3991,6 @@
     ]
   },
   {
-    "title": "gigamon-newrelic",
-    "name": "gigamonnewrelic",
-    "description": "Gigamon helps the world’s leading organizations run fast, stay secure and innovate. We provide the industry’s first elastic visibility and analytics fabric, which closes the cloud visibility gap by enabling cloud tools to see the network and network tools to see the cloud. With visibility across their entire hybrid cloud network, organizations can improve customer experience, eliminate security blind spots, and reduce cost and complexity. Gigamon has been awarded over 90 technology patents and enjoys world-class customer satisfaction with more than 4,000 organizations, including over 80 percent of the Fortune 100 and hundreds of government and educational organizations worldwide.\n\nTo try this integration in your environment please reach out to tme@gigamon.com. If you are not aware of Gigamon Cloud Suite please reach out to sales@gigamon.com.",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/gigamon",
-    "id": "d6b36ecf-bf99-475c-938f-370153db8e70",
-    "level": "VERIFIED",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/gigamon/logo.png",
-    "summary": "Gigamon Cloud Suite enables collection of network traffic from every instance in the cloud collecting metadata of over 5,000 network traffic-related attributes for a holistic overview of and a much deeper level of security-related inspection.",
-    "websiteUrl": null,
-    "keywords": [
-      "Gigamon",
-      "Gigamon Cloud Suite",
-      "Gigamon Integration",
-      "featured",
-      "newrelic partner"
-    ],
-    "authors": [
-      "Haider Jarral"
-    ],
-    "dashboards": [
-      {
-        "name": "Agentless Gigamon View",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/gigamon/dashboards/gigamon-hawk01.png"
-        ]
-      }
-    ],
-    "alerts": [],
-    "documentation": [
-      {
-        "name": "Gigamon integration guide",
-        "description": "An overview of the architecture and deployment methodology for Gigamon Hawk integrated with New Relic\n",
-        "url": "https://www.gigamon.com/content/dam/resource-library/english/deployment-guide/gigamon-new-relic-integration-quick-start-guide.pdf"
-      }
-    ],
-    "installPlans": [
-      {
-        "name": "Gigamon-Cloud-Observability",
-        "id": "third-party-gigamon"
-      }
-    ]
-  },
-  {
     "title": "Microsoft Teams for CodeStream",
     "name": "microsoft-teams-for-codestream",
     "description": "Microsoft Teams helps bring people together so that they can get things done.\n\nWhen you post a codemark your teammates will get notified via the activity feed, and potentially via email. Sometimes, though, you might want to share to Microsoft Teams as well. This would allow you to reach people who haven’t yet joined CodeStream, or maybe don’t spend a lot of time in their IDE.\n\n[Check out our documentation](https://docs.newrelic.com/docs/codestream/codestream-integrations/msteams-integration/) to learn how to connect New Relic CodeStream to your Microsoft Teams channel.\n",
@@ -4206,6 +4161,51 @@
       }
     ],
     "installPlans": []
+  },
+  {
+    "title": "Gigamon Newrelic",
+    "name": "gigamon-newrelic",
+    "description": "Gigamon helps the world’s leading organizations run fast, stay secure and innovate. We provide the industry’s first elastic visibility and analytics fabric, which closes the cloud visibility gap by enabling cloud tools to see the network and network tools to see the cloud. With visibility across their entire hybrid cloud network, organizations can improve customer experience, eliminate security blind spots, and reduce cost and complexity. Gigamon has been awarded over 90 technology patents and enjoys world-class customer satisfaction with more than 4,000 organizations, including over 80 percent of the Fortune 100 and hundreds of government and educational organizations worldwide.\n\nTo try this integration in your environment please reach out to tme@gigamon.com. If you are not aware of Gigamon Cloud Suite please reach out to sales@gigamon.com.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/gigamon",
+    "id": "d6b36ecf-bf99-475c-938f-370153db8e70",
+    "level": "VERIFIED",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/gigamon/logo.png",
+    "summary": "Gigamon Cloud Suite enables collection of network traffic from every instance in the cloud collecting metadata of over 5,000 network traffic-related attributes for a holistic overview of and a much deeper level of security-related inspection.",
+    "websiteUrl": null,
+    "keywords": [
+      "Gigamon",
+      "Gigamon Cloud Suite",
+      "Gigamon Integration",
+      "featured",
+      "newrelic partner"
+    ],
+    "authors": [
+      "Haider Jarral"
+    ],
+    "dashboards": [
+      {
+        "name": "Agentless Gigamon View",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/gigamon/dashboards/gigamon-hawk01.png"
+        ]
+      }
+    ],
+    "alerts": [],
+    "documentation": [
+      {
+        "name": "Gigamon integration guide",
+        "description": "An overview of the architecture and deployment methodology for Gigamon Hawk integrated with New Relic\n",
+        "url": "https://www.gigamon.com/content/dam/resource-library/english/deployment-guide/gigamon-new-relic-integration-quick-start-guide.pdf"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "Gigamon-Cloud-Observability",
+        "id": "third-party-gigamon"
+      }
+    ]
   },
   {
     "title": "NancyFX",
