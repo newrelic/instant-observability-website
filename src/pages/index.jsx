@@ -89,8 +89,6 @@ const QuickstartsPage = ({ data, location }) => {
   const [isCategoriesOverlayOpen, setIsCategoriesOverlayOpen] = useState(false);
   const [isSearchInputEmpty, setIsSearchInputEmpty] = useState(true);
   const [isSelectCategory, setIsSelectCategory] = useState(true);
-  // variable to check if the page load was complete
-  const [loadComplete, setLoadComplete] = useState(true);
 
   useEffect(() => {
     const params = new URLSearchParams(location.search);
@@ -108,11 +106,6 @@ const QuickstartsPage = ({ data, location }) => {
       });
     }
   }, [location.search, tessen]);
-
-  // mark the value as true, if the page is loaded
-  // useEffect(() => {
-  //   setLoadComplete(true);
-  // }, [])
 
   const closeCategoriesOverlay = () => {
     setIsCategoriesOverlayOpen(false);
@@ -240,7 +233,6 @@ const QuickstartsPage = ({ data, location }) => {
       },
     ],
   };
-
   return (
     <>
       <IOSeo
@@ -455,6 +447,9 @@ const QuickstartsPage = ({ data, location }) => {
                         /* target inner children of parent span */
                         span,
                         strong {
+                          @media screen and (max-width: ${QUICKSTARTS_COLLAPSE_BREAKPOINT}) {
+                            display: none;
+                          }
                         }
                       }
                       strong {
@@ -496,33 +491,28 @@ const QuickstartsPage = ({ data, location }) => {
                       `};
                     `}
                   >
-                    {/* {!loadComplete && (
-                      <Spinner />
-                    )} */}
-                    {loadComplete && (
-                      <Slider
-                        {...settings}
-                        css={css`
-                          display: flex;
-                        `}
-                      >
-                        <SuperTiles />
-                        {mostPopularQuickStarts.map((pack) => (
-                          <QuickstartTile
-                            key={pack.id}
-                            view={view}
-                            featured={false}
-                            css={css`
-                              grid-template-rows:
-                                var(--tile-image-height) var(--title-row-height)
-                                80px auto;
-                              min-height: 280px;
-                            `}
-                            {...pack}
-                          />
-                        ))}
-                      </Slider>
-                    )}
+                    <Slider
+                      {...settings}
+                      css={css`
+                        display: flex;
+                      `}
+                    >
+                      <SuperTiles />
+                      {mostPopularQuickStarts.map((pack) => (
+                        <QuickstartTile
+                          key={pack.id}
+                          view={view}
+                          featured={false}
+                          css={css`
+                            grid-template-rows:
+                              var(--tile-image-height) var(--title-row-height)
+                              80px auto;
+                            min-height: 280px;
+                          `}
+                          {...pack}
+                        />
+                      ))}
+                    </Slider>
                   </div>
                 </>
               )}
@@ -537,6 +527,9 @@ const QuickstartsPage = ({ data, location }) => {
                     /* target inner children of parent span */
                     span,
                     strong {
+                      @media screen and (max-width: ${QUICKSTARTS_COLLAPSE_BREAKPOINT}) {
+                        display: none;
+                      }
                     }
                   }
                   strong {
@@ -578,27 +571,22 @@ const QuickstartsPage = ({ data, location }) => {
                   `};
                 `}
               >
-                {/* {!loadComplete && (
-                  <Spinner />
-                )} */}
-                {loadComplete && (
-                  <Slider {...settings}>
-                    {featuredQuickStarts.map((pack) => (
-                      <QuickstartTile
-                        key={pack.id}
-                        view={view}
-                        featured={false}
-                        css={css`
-                          grid-template-rows:
-                            var(--tile-image-height) var(--title-row-height)
-                            80px auto;
-                          min-height: 280px;
-                        `}
-                        {...pack}
-                      />
-                    ))}
-                  </Slider>
-                )}
+                <Slider {...settings}>
+                  {featuredQuickStarts.map((pack) => (
+                    <QuickstartTile
+                      key={pack.id}
+                      view={view}
+                      featured={false}
+                      css={css`
+                        grid-template-rows:
+                          var(--tile-image-height) var(--title-row-height)
+                          80px auto;
+                        min-height: 280px;
+                      `}
+                      {...pack}
+                    />
+                  ))}
+                </Slider>
               </div>
             </>
           )}
