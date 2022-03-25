@@ -269,6 +269,56 @@
     ]
   },
   {
+    "title": "Datazoom",
+    "name": "datazoom",
+    "description": "The Datazoom quickstart provides a fast and easy launching point into video metrics built on top of New Relic One dashboards, allowing you to gain insights about your viewers, content, ads and your platform's performance. Customize the dashboard to use only the metrics that fit your goals and easily edit metric calculations and tailor them to your needs.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/datazoom",
+    "id": "2ffed926-6ee2-43b2-a942-344192fdf418",
+    "level": "COMMUNITY",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/datazoom/logo.png",
+    "summary": "The Datazoom quickstart will help you gain insights into your viewers streaming video experience.",
+    "websiteUrl": null,
+    "keywords": [
+      "datazoom",
+      "video quality",
+      "video experience",
+      "quality of experience",
+      "video streaming",
+      "video metrics",
+      "featured",
+      "newrelic partner"
+    ],
+    "authors": [
+      "Datazoom",
+      "New Relic"
+    ],
+    "dashboards": [
+      {
+        "name": "Datazoom",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/datazoom/dashboards/datazoom_dashboard01.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/datazoom/dashboards/datazoom_dashboard02.png"
+        ]
+      }
+    ],
+    "alerts": [],
+    "documentation": [
+      {
+        "name": "Installation docs",
+        "description": "Configure Datazoom Connector for New Relic One",
+        "url": "https://help.datazoom.io/hc/en-us/articles/360022667532-New-Relic-One"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "Datazoom",
+        "id": "third-party-datazoom"
+      }
+    ]
+  },
+  {
     "title": "CakePHP",
     "name": "cakephp",
     "description": "## What is CakePHP?\n\nPHP open-source web framework that follows the model–view–controller approach,\nmodeled after the concepts of Ruby on Rails.\n\n\n## Get started!\n\nLeverage community expertise and instantly get value out of your telemetry data. This quickstart automatically instruments CakePHP with the New Relic PHP agent, and allows you to further leverage New Relic's APM capabilities by setting up [custom dashboards](https://docs.newrelic.com/docs/query-your-data/explore-query-data/dashboards/introduction-dashboards/), [errors inbox](https://docs.newrelic.com/docs/apm/apm-ui-pages/errors-inbox/errors-inbox/), [transaction tracing](https://docs.newrelic.com/docs/apm/transactions/transaction-traces/introduction-transaction-traces/), and [service maps](https://docs.newrelic.com/docs/understand-dependencies/understand-system-dependencies/service-maps/introduction-service-maps/).\n\n## More info\n\nCheck out the [documentation](https://docs.newrelic.com/docs/agents/php-agent/) to learn more about New Relic monitoring for CakePHP.",
@@ -1484,61 +1534,6 @@
     ]
   },
   {
-    "title": "OMA Data Ingest Governance",
-    "name": "oma-data-governance",
-    "description": "Data ingest governance is a practice of ensuring optimal value for telemetry data collected by an organization particularly a complex organization with numerous business units and working groups.",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/oma-data-gov",
-    "id": "30593cae-4cfb-435c-9170-310e3f38ab40",
-    "level": "NEW_RELIC",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/oma-data-gov/logo.png",
-    "summary": "The prerequisite step of data governance includes developing an accurate baseline of your telemetry data ingest levels.  A good ingest baseline will break your ingest out by sub-account and telemetry type.  This is particularly necessary in a complex organization with numerous business units and working groups.",
-    "websiteUrl": null,
-    "keywords": [
-      "OMA",
-      "Data Governance",
-      "Data Consumption",
-      "Manage Data Ingest"
-    ],
-    "authors": [
-      "Jim Hagan",
-      "Kim Hickey"
-    ],
-    "dashboards": [
-      {
-        "name": "Data Governance Entity Breakdowns",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/oma-data-gov/dashboards/data-ingest-baseline.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/oma-data-gov/dashboards/data-ingest-entity-breakdown.png"
-        ]
-      },
-      {
-        "name": "Data Governance Baseline",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/oma-data-gov/dashboards/data-ingest-baseline.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/oma-data-gov/dashboards/data-ingest-entity-breakdown.png"
-        ]
-      }
-    ],
-    "alerts": [],
-    "documentation": [
-      {
-        "name": "Observability Maturity",
-        "description": "Observability Maturity Solutions Guide",
-        "url": "https://docs.newrelic.com/docs/new-relic-solutions/observability-maturity/introduction"
-      }
-    ],
-    "installPlans": [
-      {
-        "name": "solutions-hub",
-        "id": "solutions-hub-dashboards"
-      }
-    ]
-  },
-  {
     "title": "AWS EMR",
     "name": "aws-emr",
     "description": "## What is AWS EMR?\n\nProcess and manage big data inputs from popular frameworks.\n\n### Get started!\n\nStart monitoring AWS EMR by connecting Amazon Web Services (AWS) to New Relic!\n\nCheck out our AWS EMR documentation to instrument your cloud service and manage the stability, scalability, and reliability of your systems with New Relic's infrastructure monitoring capabilities.\n\n### More info\n\nCheck out the [documentation](https://docs.newrelic.com/docs/infrastructure/amazon-integrations/aws-integrations-list/aws-emr-monitoring-integration/) to learn more about New Relic monitoring for AWS EMR. ",
@@ -1605,6 +1600,47 @@
         "id": "aws-infrastructure-monitoring"
       }
     ]
+  },
+  {
+    "title": "Browser Segment Investigation Quickstart",
+    "name": "browser-segment-investigation-quickstart",
+    "description": "Review the extent of crushed urls so you know which urls you need to add segments for in the browser segment allow list.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/browser-segment-investigation",
+    "id": "eb24e234-90aa-4908-972d-64d6d56b557e",
+    "level": "NEW_RELIC",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/browser-segment-investigation/logo.png",
+    "summary": "Check for crushed urls so you can remedy them.",
+    "websiteUrl": null,
+    "keywords": [
+      "oma",
+      "crushed",
+      "urls",
+      "browser",
+      "segment",
+      "segments"
+    ],
+    "authors": [
+      "Kim Hickey"
+    ],
+    "dashboards": [
+      {
+        "name": "Browser Segment Investigation",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/browser-segment-investigation/dashboards/browser-segment-investigation.png"
+        ]
+      }
+    ],
+    "alerts": [],
+    "documentation": [
+      {
+        "name": "Usage instructions",
+        "description": "The _Validate Browser URL grouping_ section of Quality foundation explains how to use the segment investigation dashboard as well as resolve any crushed URLs you might find.",
+        "url": "https://docs.newrelic.com/docs/new-relic-solutions/observability-maturity/customer-experience/quality-foundation-implementation-guide#validate-browser-url-grouping"
+      }
+    ],
+    "installPlans": []
   },
   {
     "title": "AWS X-Ray",
@@ -2931,6 +2967,61 @@
     ]
   },
   {
+    "title": "OMA Data Ingest Governance",
+    "name": "oma-data-governance",
+    "description": "Data ingest governance is a practice of ensuring optimal value for telemetry data collected by an organization particularly a complex organization with numerous business units and working groups.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/oma-data-gov",
+    "id": "30593cae-4cfb-435c-9170-310e3f38ab40",
+    "level": "NEW_RELIC",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/oma-data-gov/logo.png",
+    "summary": "The prerequisite step of data governance includes developing an accurate baseline of your telemetry data ingest levels.  A good ingest baseline will break your ingest out by sub-account and telemetry type.  This is particularly necessary in a complex organization with numerous business units and working groups.",
+    "websiteUrl": null,
+    "keywords": [
+      "OMA",
+      "Data Governance",
+      "Data Consumption",
+      "Manage Data Ingest"
+    ],
+    "authors": [
+      "Jim Hagan",
+      "Kim Hickey"
+    ],
+    "dashboards": [
+      {
+        "name": "Data Governance Baseline",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/oma-data-gov/dashboards/data-ingest-baseline.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/oma-data-gov/dashboards/data-ingest-entity-breakdown.png"
+        ]
+      },
+      {
+        "name": "Data Governance Entity Breakdowns",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/oma-data-gov/dashboards/data-ingest-baseline.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/oma-data-gov/dashboards/data-ingest-entity-breakdown.png"
+        ]
+      }
+    ],
+    "alerts": [],
+    "documentation": [
+      {
+        "name": "Observability Maturity",
+        "description": "Observability Maturity Solutions Guide",
+        "url": "https://docs.newrelic.com/docs/new-relic-solutions/observability-maturity/introduction"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "solutions-hub",
+        "id": "solutions-hub-dashboards"
+      }
+    ]
+  },
+  {
     "title": "Varnish",
     "name": "varnish",
     "description": "## Varnish Cache and why should you monitor it?\n\nVarnish is a web cache used for content delivery and website acceleration. Media delivery over the internet can often experience lags and slow downs related to heavy user traffic and high throughput volumes. Varnish helps to address these issues by offering CDNs, streaming servers, caches, and HTTP/API reverse proxies that speed up the user experience. Caches such as Varnish are sensitive to things like insertion hits and misses and backend interactions, so it’s important to monitor such metrics to ensure Varnish runs smoothly.\n\n### New Relic Varnish quickstart highlights\n\nThe New Relic Varnish quickstart provides a number of visual dashboards that display real-time insights into Varnish cache performance. These include:\n- Session connections and drops\n- Expired objects\n- Requests\n- Cache hits\n- Cache misses\n- Cache hits for misses and passes\n- Cache grace hits\n- And many more…\n\n### New Relic - The complete Varnish dashboard tool\n\n[New Relic enables cohesive Varnish monitoring](https://docs.newrelic.com/docs/integrations/host-integrations/host-integrations-list/varnish-cache-monitoring-integration/). Varnish’s value is its ability to enhance the speed of backend requests and content serving; however, such value is negated by any performance issues that Varnish experiences. Having real-time insight into key Varnish metrics provided by New Relic is essential to keeping it running at peak capacity.\n\nDashboards, such as the ones on cache hits and misses, can help. Cache hits refer to successful requests to items in the Varnish cache. Conversely, cache misses are those requests which hit an empty cache and thus need to fetch data from the origin. Ideally, one should look to maximize cache hit rate, calculated as # of cache hits / total requests, and a hit rate of 95% or higher should be achievable. These two dashboards let you calculate this.",
@@ -3030,8 +3121,8 @@
     ],
     "dashboards": [
       {
-        "name": "Battlesnake Server Status",
-        "description": "A dashboard to monitor your Battlesnake server's performance. It's important to keep all responses to the `/move` endpoint under 500ms. Furthermore, it's possible that your snake may be in multiple concurrent matches at the same time. It's important to make sure you server and web application are running smoothly to keep you in the game!",
+        "name": "Battlesnake Performance",
+        "description": "Monitor your Battlensakes performance and see how it stacks up against your competition!",
         "url": null,
         "screenshots": [
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/battlesnake/dashboards/battlesnake-game-tracking-1.png",
@@ -3040,8 +3131,8 @@
         ]
       },
       {
-        "name": "Battlesnake Performance",
-        "description": "Monitor your Battlensakes performance and see how it stacks up against your competition!",
+        "name": "Battlesnake Server Status",
+        "description": "A dashboard to monitor your Battlesnake server's performance. It's important to keep all responses to the `/move` endpoint under 500ms. Furthermore, it's possible that your snake may be in multiple concurrent matches at the same time. It's important to make sure you server and web application are running smoothly to keep you in the game!",
         "url": null,
         "screenshots": [
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/battlesnake/dashboards/battlesnake-game-tracking-1.png",
@@ -11782,21 +11873,21 @@
         ]
       },
       {
-        "name": "Lacework Compliance Violations",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/v0.106.0/quickstarts/lacework/dashboards/lacework-compliance-violations.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/v0.95.0/quickstarts/lacework/dashboards/lacework-compliance-violations.png"
-        ]
-      },
-      {
         "name": "Lacework Anomaly Detections",
         "description": null,
         "url": null,
         "screenshots": [
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/v0.106.0/quickstarts/lacework/dashboards/lacework-anomaly-detections.png",
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/v0.95.0/quickstarts/lacework/dashboards/lacework-anomaly-detections.png"
+        ]
+      },
+      {
+        "name": "Lacework Compliance Violations",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/v0.106.0/quickstarts/lacework/dashboards/lacework-compliance-violations.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/v0.95.0/quickstarts/lacework/dashboards/lacework-compliance-violations.png"
         ]
       }
     ],
@@ -15473,6 +15564,17 @@
     ],
     "dashboards": [
       {
+        "name": "Catchpoint-Overview",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/catchpoint/dashboards/Catchpoint-Overview.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/catchpoint/dashboards/Catchpoint-Recent_Errors.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/catchpoint/dashboards/Catchpoint-Response_Size.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/catchpoint/dashboards/Catchpoint-Test_Times.png"
+        ]
+      },
+      {
         "name": "Catchpoint-Recent Errors",
         "description": null,
         "url": null,
@@ -15496,17 +15598,6 @@
       },
       {
         "name": "Catchpoint-Test Times",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/catchpoint/dashboards/Catchpoint-Overview.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/catchpoint/dashboards/Catchpoint-Recent_Errors.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/catchpoint/dashboards/Catchpoint-Response_Size.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/catchpoint/dashboards/Catchpoint-Test_Times.png"
-        ]
-      },
-      {
-        "name": "Catchpoint-Overview",
         "description": null,
         "url": null,
         "screenshots": [
@@ -20459,6 +20550,16 @@
     ],
     "dashboards": [
       {
+        "name": "AWS Integrations Data Ingest Analysis",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/v0.106.0/quickstarts/audit/infrastructure-integrations-data-analysis/dashboards/aws-integrations-data-ingest-analysis.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/v0.94.3/quickstarts/audit/infrastructure-integrations-data-analysis/dashboards/aws-integrations-data-ingest-analysis.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/v0.95.0/quickstarts/audit/infrastructure-integrations-data-analysis/dashboards/aws-integrations-data-ingest-analysis.png"
+        ]
+      },
+      {
         "name": "GCP Integrations Data Ingest Analysis",
         "description": null,
         "url": null,
@@ -20469,13 +20570,13 @@
         ]
       },
       {
-        "name": "Kubernetes Data Ingest Analysis",
+        "name": "Azure Integrations Data Ingest Analysis",
         "description": null,
         "url": null,
         "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/v0.106.0/quickstarts/audit/infrastructure-integrations-data-analysis/dashboards/kubernetes-data-ingest-analysis.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/v0.94.3/quickstarts/audit/infrastructure-integrations-data-analysis/dashboards/kubernetes-data-ingest-analysis.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/v0.95.0/quickstarts/audit/infrastructure-integrations-data-analysis/dashboards/kubernetes-data-ingest-analysis.png"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/v0.106.0/quickstarts/audit/infrastructure-integrations-data-analysis/dashboards/azure-integrations-data-ingest-analysis.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/v0.94.3/quickstarts/audit/infrastructure-integrations-data-analysis/dashboards/azure-integrations-data-ingest-analysis.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/v0.95.0/quickstarts/audit/infrastructure-integrations-data-analysis/dashboards/azure-integrations-data-ingest-analysis.png"
         ]
       },
       {
@@ -20489,23 +20590,13 @@
         ]
       },
       {
-        "name": "AWS Integrations Data Ingest Analysis",
+        "name": "Kubernetes Data Ingest Analysis",
         "description": null,
         "url": null,
         "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/v0.106.0/quickstarts/audit/infrastructure-integrations-data-analysis/dashboards/aws-integrations-data-ingest-analysis.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/v0.94.3/quickstarts/audit/infrastructure-integrations-data-analysis/dashboards/aws-integrations-data-ingest-analysis.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/v0.95.0/quickstarts/audit/infrastructure-integrations-data-analysis/dashboards/aws-integrations-data-ingest-analysis.png"
-        ]
-      },
-      {
-        "name": "Azure Integrations Data Ingest Analysis",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/v0.106.0/quickstarts/audit/infrastructure-integrations-data-analysis/dashboards/azure-integrations-data-ingest-analysis.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/v0.94.3/quickstarts/audit/infrastructure-integrations-data-analysis/dashboards/azure-integrations-data-ingest-analysis.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/v0.95.0/quickstarts/audit/infrastructure-integrations-data-analysis/dashboards/azure-integrations-data-ingest-analysis.png"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/v0.106.0/quickstarts/audit/infrastructure-integrations-data-analysis/dashboards/kubernetes-data-ingest-analysis.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/v0.94.3/quickstarts/audit/infrastructure-integrations-data-analysis/dashboards/kubernetes-data-ingest-analysis.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/v0.95.0/quickstarts/audit/infrastructure-integrations-data-analysis/dashboards/kubernetes-data-ingest-analysis.png"
         ]
       }
     ],
@@ -21274,26 +21365,6 @@
     ],
     "dashboards": [
       {
-        "name": "Browser Traffic Analysis",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/v0.106.0/quickstarts/browser/dashboards/traffic_analysis.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/v0.94.3/quickstarts/browser/dashboards/traffic_analysis.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/v0.95.0/quickstarts/browser/dashboards/traffic_analysis.png"
-        ]
-      },
-      {
-        "name": "Browser Pages Dashboard",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/v0.106.0/quickstarts/browser/dashboards/browser_pages_dashboard.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/v0.94.3/quickstarts/browser/dashboards/browser_pages_dashboard.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/v0.95.0/quickstarts/browser/dashboards/browser_pages_dashboard.png"
-        ]
-      },
-      {
         "name": "JavaScript Errors",
         "description": null,
         "url": null,
@@ -21311,6 +21382,26 @@
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/v0.106.0/quickstarts/browser/dashboards/browser_overview.png",
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/v0.94.3/quickstarts/browser/dashboards/browser_overview.png",
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/v0.95.0/quickstarts/browser/dashboards/browser_overview.png"
+        ]
+      },
+      {
+        "name": "Browser Pages Dashboard",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/v0.106.0/quickstarts/browser/dashboards/browser_pages_dashboard.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/v0.94.3/quickstarts/browser/dashboards/browser_pages_dashboard.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/v0.95.0/quickstarts/browser/dashboards/browser_pages_dashboard.png"
+        ]
+      },
+      {
+        "name": "Browser Traffic Analysis",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/v0.106.0/quickstarts/browser/dashboards/traffic_analysis.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/v0.94.3/quickstarts/browser/dashboards/traffic_analysis.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/v0.95.0/quickstarts/browser/dashboards/traffic_analysis.png"
         ]
       }
     ],
