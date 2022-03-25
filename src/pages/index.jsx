@@ -89,7 +89,7 @@ const QuickstartsPage = ({ data, location }) => {
   const [isCategoriesOverlayOpen, setIsCategoriesOverlayOpen] = useState(false);
   const [isSearchInputEmpty, setIsSearchInputEmpty] = useState(true);
   const [isSelectCategory, setIsSelectCategory] = useState(true);
-  // variable to check if the page load completed
+  // variable to check if the page load was complete
   const [loadComplete, setLoadComplete] = useState(false);
 
   useEffect(() => {
