@@ -22,7 +22,6 @@ yarn start
 
 Your site is now running at `http://localhost:8000`!
 
-
 ## 🚀 Production Build
 
 You can serve this site locally to quickly see your changes and additions before you PR them. To get started, navigate into your new site’s directory and start it up, as follows.
