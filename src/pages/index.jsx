@@ -6,7 +6,7 @@ import { css } from '@emotion/react';
 import Overlay from '../components/Overlay';
 import QuickstartTile from '../components/QuickstartTile';
 import IOBanner from '../components/IOBanner';
-import { useTessen, Button, Spinner } from '@newrelic/gatsby-theme-newrelic';
+import { useTessen, Button } from '@newrelic/gatsby-theme-newrelic';
 import { navigate } from '@reach/router';
 
 import { useDebounce } from 'react-use';
@@ -90,7 +90,7 @@ const QuickstartsPage = ({ data, location }) => {
   const [isSearchInputEmpty, setIsSearchInputEmpty] = useState(true);
   const [isSelectCategory, setIsSelectCategory] = useState(true);
   // variable to check if the page load was complete
-  const [loadComplete, setLoadComplete] = useState(false);
+  const [loadComplete, setLoadComplete] = useState(true);
 
   useEffect(() => {
     const params = new URLSearchParams(location.search);
@@ -110,9 +110,9 @@ const QuickstartsPage = ({ data, location }) => {
   }, [location.search, tessen]);
 
   // mark the value as true, if the page is loaded
-  useEffect(() => {
-    setLoadComplete(true);
-  }, [])
+  // useEffect(() => {
+  //   setLoadComplete(true);
+  // }, [])
 
   const closeCategoriesOverlay = () => {
     setIsCategoriesOverlayOpen(false);
@@ -496,9 +496,9 @@ const QuickstartsPage = ({ data, location }) => {
                       `};
                     `}
                   >
-                    {!loadComplete && (
+                    {/* {!loadComplete && (
                       <Spinner />
-                    )}
+                    )} */}
                     {loadComplete && (
                       <Slider
                         {...settings}
@@ -578,9 +578,9 @@ const QuickstartsPage = ({ data, location }) => {
                   `};
                 `}
               >
-                {!loadComplete && (
+                {/* {!loadComplete && (
                   <Spinner />
-                )}
+                )} */}
                 {loadComplete && (
                   <Slider {...settings}>
                     {featuredQuickStarts.map((pack) => (
