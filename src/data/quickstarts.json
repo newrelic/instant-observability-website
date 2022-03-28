@@ -3066,8 +3066,8 @@
     ],
     "dashboards": [
       {
-        "name": "Battlesnake Performance",
-        "description": "Monitor your Battlensakes performance and see how it stacks up against your competition!",
+        "name": "Battlesnake Server Status",
+        "description": "A dashboard to monitor your Battlesnake server's performance. It's important to keep all responses to the `/move` endpoint under 500ms. Furthermore, it's possible that your snake may be in multiple concurrent matches at the same time. It's important to make sure you server and web application are running smoothly to keep you in the game!",
         "url": null,
         "screenshots": [
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/battlesnake/dashboards/battlesnake-game-tracking-1.png",
@@ -3076,8 +3076,8 @@
         ]
       },
       {
-        "name": "Battlesnake Server Status",
-        "description": "A dashboard to monitor your Battlesnake server's performance. It's important to keep all responses to the `/move` endpoint under 500ms. Furthermore, it's possible that your snake may be in multiple concurrent matches at the same time. It's important to make sure you server and web application are running smoothly to keep you in the game!",
+        "name": "Battlesnake Performance",
+        "description": "Monitor your Battlensakes performance and see how it stacks up against your competition!",
         "url": null,
         "screenshots": [
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/battlesnake/dashboards/battlesnake-game-tracking-1.png",
@@ -3238,7 +3238,7 @@
     ],
     "dashboards": [
       {
-        "name": "Data Governance Entity Breakdowns",
+        "name": "Data Governance Baseline",
         "description": null,
         "url": null,
         "screenshots": [
@@ -3247,7 +3247,7 @@
         ]
       },
       {
-        "name": "Data Governance Baseline",
+        "name": "Data Governance Entity Breakdowns",
         "description": null,
         "url": null,
         "screenshots": [
@@ -7222,80 +7222,6 @@
     ]
   },
   {
-    "title": "Netlify builds",
-    "name": "netlify-builds",
-    "description": "Netlify is an all-in-one platform for automating modern web projects. Replace your hosting infrastructure, continuous integration, and deployment pipeline with a single workflow. Integrate dynamic functionality like serverless functions, user authentication, and form handling as your projects grow.\n\n### Netlify quickstart highlights\n\nThe Netlify quickstart is the fastest way to explore data from the [New Relic Netlify plugin](https://github.com/newrelic-experimental/netlify-plugin). Visualize your Netlify performance with a wide selection of dashboards.\n\n- Get a detailed view of your web application traffic, including page views, load times, sessions, and most popular content\n- Find out more about your visitors. Where are they from? What devices are they using? When do they frequent your application most?\n- View in-depth information about your page rendering, including LCP, CLS, and FID ratings\n- See all your JavaScript errors tagged by deployment\n- Compare deployment statstics and notice trends in failing builds\n\nKnow as soon as an event occurs with alerts.\n\n- When the number of JavaScript errors increases beyond an allowed threshold\n- If the onError event is triggered and a build fails\n- When page load time degrades beyond two standard deviations from the normal",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/netlify",
-    "id": "5861d7f5-26c0-43ad-bda8-c893c4b27b25",
-    "level": "COMMUNITY",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/netlify/logo.png",
-    "summary": "Analyze the health of your Netlify builds and Jamstack applications",
-    "websiteUrl": null,
-    "keywords": [
-      "infrastructure",
-      "automation",
-      "Netlify",
-      "Jamstack",
-      "RUM",
-      "browser agent",
-      "continuous integration",
-      "continuous deployment",
-      "newrelic partner",
-      "featured"
-    ],
-    "authors": [
-      "Aaron Bassett (New Relic)"
-    ],
-    "dashboards": [
-      {
-        "name": "Netlify",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/netlify/dashboards/netlify01.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/netlify/dashboards/netlify02.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/netlify/dashboards/netlify03.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/netlify/dashboards/netlify04.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/netlify/dashboards/netlify05.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/netlify/dashboards/netlify06.png"
-        ]
-      }
-    ],
-    "alerts": [
-      {
-        "name": "Build Failed",
-        "details": "This alert is triggered whenever the build error count is > 0",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "JavaScript Errors",
-        "details": "This alert is triggered whenever the number of JavaScript errors deviates 5 standard deviations from the normal.",
-        "type": "BASELINE",
-        "url": null
-      },
-      {
-        "name": "Page Load Time Degrades",
-        "details": "This alert is triggered whenever the average page load time deviates 2 standard deviations from the normal.",
-        "type": "BASELINE",
-        "url": null
-      }
-    ],
-    "documentation": [
-      {
-        "name": "Installation Docs",
-        "description": "Install the New Relic plugin for Netlify",
-        "url": "https://github.com/newrelic-experimental/netlify-plugin#installation"
-      }
-    ],
-    "installPlans": [
-      {
-        "name": "Netlify",
-        "id": "third-party-netlify"
-      }
-    ]
-  },
-  {
     "title": "Echo",
     "name": "echo",
     "description": "## What is Echo?\n\nWeb framework for Go that's built for scalability and ease of use.\n\n## Get started!\n\nLeverage community expertise and instantly get value out of your telemetry data. This quickstart automatically instruments Echo with the New Relic Go agent, and allows you to further leverage New Relic's APM capabilities by setting up [custom dashboards](https://docs.newrelic.com/docs/query-your-data/explore-query-data/dashboards/introduction-dashboards/), [errors inbox](https://docs.newrelic.com/docs/apm/apm-ui-pages/errors-inbox/errors-inbox/), [transaction tracing](https://docs.newrelic.com/docs/apm/transactions/transaction-traces/introduction-transaction-traces/), and [service maps](https://docs.newrelic.com/docs/understand-dependencies/understand-system-dependencies/service-maps/introduction-service-maps/).\n\n## More info\n\nCheck out the [documentation](https://docs.newrelic.com/docs/agents/go-agent/) to learn more about New Relic monitoring for Echo. ",
@@ -7575,6 +7501,80 @@
       {
         "name": "MongoDB",
         "id": "mongodb-integration"
+      }
+    ]
+  },
+  {
+    "title": "Netlify Builds",
+    "name": "netlify-builds",
+    "description": "Netlify is an all-in-one platform for automating modern web projects. Replace your hosting infrastructure, continuous integration, and deployment pipeline with a single workflow. Integrate dynamic functionality like serverless functions, user authentication, and form handling as your projects grow.\n\n### Netlify Builds quickstart highlights\n\nThe Netlify Builds quickstart is the fastest way to explore data from the [New Relic Netlify plugin](https://github.com/newrelic-experimental/netlify-plugin). Visualize your Netlify performance with a wide selection of dashboards.\n\n- Get a detailed view of your web application traffic, including page views, load times, sessions, and most popular content\n- Find out more about your visitors. Where are they from? What devices are they using? When do they frequent your application most?\n- View in-depth information about your page rendering, including LCP, CLS, and FID ratings\n- See all your JavaScript errors tagged by deployment\n- Compare deployment statstics and notice trends in failing builds\n\nKnow as soon as an event occurs with alerts.\n\n- When the number of JavaScript errors increases beyond an allowed threshold\n- If the onError event is triggered and a build fails\n- When page load time degrades beyond two standard deviations from the normal",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/netlify/netlify-builds",
+    "id": "5861d7f5-26c0-43ad-bda8-c893c4b27b25",
+    "level": "COMMUNITY",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/netlify/netlify-builds/logo.png",
+    "summary": "Analyze the health of your Netlify builds and Jamstack applications",
+    "websiteUrl": null,
+    "keywords": [
+      "infrastructure",
+      "automation",
+      "Netlify",
+      "Jamstack",
+      "RUM",
+      "browser agent",
+      "continuous integration",
+      "continuous deployment",
+      "newrelic partner",
+      "featured"
+    ],
+    "authors": [
+      "Aaron Bassett (New Relic)"
+    ],
+    "dashboards": [
+      {
+        "name": "Netlify",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/netlify/netlify-builds/dashboards/netlify-builds01.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/netlify/netlify-builds/dashboards/netlify-builds02.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/netlify/netlify-builds/dashboards/netlify-builds03.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/netlify/netlify-builds/dashboards/netlify-builds04.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/netlify/netlify-builds/dashboards/netlify-builds05.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/netlify/netlify-builds/dashboards/netlify-builds06.png"
+        ]
+      }
+    ],
+    "alerts": [
+      {
+        "name": "Build Failed",
+        "details": "This alert is triggered whenever the build error count is > 0",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "JavaScript Errors",
+        "details": "This alert is triggered whenever the number of JavaScript errors deviates 5 standard deviations from the normal.",
+        "type": "BASELINE",
+        "url": null
+      },
+      {
+        "name": "Page Load Time Degrades",
+        "details": "This alert is triggered whenever the average page load time deviates 2 standard deviations from the normal.",
+        "type": "BASELINE",
+        "url": null
+      }
+    ],
+    "documentation": [
+      {
+        "name": "Installation Docs",
+        "description": "Install the New Relic plugin for Netlify",
+        "url": "https://github.com/newrelic-experimental/netlify-plugin#installation"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "Netlify",
+        "id": "third-party-netlify"
       }
     ]
   },
@@ -9177,6 +9177,46 @@
     ]
   },
   {
+    "title": "Apollo Server",
+    "name": "apollo-server",
+    "description": "## What is Apollo Server?\n\nApollo Server is an open-source, spec-compliant GraphQL server that's compatible with any GraphQL client, including Apollo Client. It's the best way to build a production-ready, self-documenting GraphQL API that can use data from any source.\n\nYou can use Apollo Server as:\n\n- A stand-alone GraphQL server, including in a serverless environment\n- An add-on to your application's existing Node.js middleware (such as Express or Fastify)\n- A gateway for a federated graph\n\n### Apollo & New Relic\n\nThe New Relic Apollo Server plugin instruments your Apollo Server applications to give visibility into your GraphQL payloads. This helps you uncover and diagnose the cause of your slow GraphQL queries.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/apollo/apollo-server",
+    "id": "7befa2d3-aaa2-4e67-93a8-364f8d746b90",
+    "level": "COMMUNITY",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/apollo/apollo-server/logo.png",
+    "summary": "The New Relic Apollo Server plugin instruments your Apollo Server applications to give visibility into your GraphQL payloads. This helps you uncover and diagnose the cause of your slow GraphQL queries.",
+    "websiteUrl": null,
+    "keywords": [
+      "apollo server",
+      "apollo",
+      "graphql"
+    ],
+    "authors": [
+      "New Relic",
+      "John Vajda"
+    ],
+    "dashboards": [],
+    "alerts": [],
+    "documentation": [
+      {
+        "name": "Installation Docs",
+        "description": "The New Relic Apollo Server plugin instruments your Apollo Server applications to give visibility into your GraphQL payloads.",
+        "url": "https://docs.newrelic.com/docs/apm/agents/nodejs-agent/extend-your-instrumentation/apollo-server-plugin-nodejs/"
+      },
+      {
+        "name": "New Relic Apollo Server plugin repository",
+        "description": "New Relic's official Apollo Server plugin for use with the Node.js agent.",
+        "url": "https://github.com/newrelic/newrelic-node-apollo-server-plugin/blob/main/README.md"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "Node Agent",
+        "id": "node-agent"
+      }
+    ]
+  },
+  {
     "title": "CodeIgniter",
     "name": "codeigniter",
     "description": "## What is CodeIgniter?\n\nOpen-source PHP-based web framework built for rapid development.\n\n## Get started!\n\nLeverage community expertise and instantly get value out of your telemetry data. This quickstart automatically instruments CodeIgniter with the New Relic PHP agent, and allows you to further leverage New Relic's APM capabilities by setting up [custom dashboards](https://docs.newrelic.com/docs/query-your-data/explore-query-data/dashboards/introduction-dashboards/), [errors inbox](https://docs.newrelic.com/docs/apm/apm-ui-pages/errors-inbox/errors-inbox/), [transaction tracing](https://docs.newrelic.com/docs/apm/transactions/transaction-traces/introduction-transaction-traces/), and [service maps](https://docs.newrelic.com/docs/understand-dependencies/understand-system-dependencies/service-maps/introduction-service-maps/).\n\n## More info\n\nCheck out the [documentation](https://docs.newrelic.com/docs/agents/php-agent/) to learn more about New Relic monitoring for CodeIgniter.",
@@ -10528,6 +10568,55 @@
       {
         "name": "Deeper Network",
         "id": "third-party-deeper-network"
+      }
+    ]
+  },
+  {
+    "title": "Netlify Logs",
+    "name": "netlify-logs",
+    "description": "Use this quickstart to quickly parse traffic and function logs from Netlify into meaningful metrics within New Relic.\n\n### Netlify Logs quickstart highlights\n\nThe Netlify Logs quickstart is the fastest way to explore and visualize data from traffic and function logs provided by [Netlify log drains](https://docs.netlify.com/monitor-sites/log-drains/). \n\nWith this quickstart, you can easily understand:\n\n- Changes in your sites' traffic over time\n- Percentage of successful requests, warnings, and errors\n- Requests by status\n- Average duration of requests \n- Changes in Functions utilization over time\n- Number of successful Function Invocations, warnings, and errors\n- Number of Function Invocations over time\n- Average Function duration\n- Traffic logs and function logs for correlation with these metrics\n\nNote: The Functions dashboard within the Netlify Logs quickstart features a function duration chart that requires a custom parsing rule to correctly display this data.\n\nTo create this parsing rule in New Relic One, navigate to the Logs tab and select the Parsing option under Manage Data. Click Create Parsing Rule and enter a name for your rule (ex: Function Duration). Under Attribute, select `log_type` and select `functions` under Value. In the Parsing Logic field, enter the following:\n\n`%{WORD:level} RequestId: %{DATA} %{BASE16FLOAT:duration} %{DATA} %{INT:billed_duration} %{DATA} %{INT:max_mem} %{DATA} %{INT:used_mem}`\n\nEnable the rule toggle and the then click Save Parsing Rule.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/netlify/netlify-logs",
+    "id": "63f08781-18ad-4a89-ae63-49718deee041",
+    "level": "COMMUNITY",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/netlify/netlify-logs/logo.png",
+    "summary": "Visualize your Netlify traffic and function log drains",
+    "websiteUrl": null,
+    "keywords": [
+      "netlify",
+      "logs",
+      "traffic logs",
+      "function logs",
+      "log drains",
+      "jamstack",
+      "serverless functions",
+      "newrelic partner"
+    ],
+    "authors": [
+      "Matt Rinehart (Netlify)"
+    ],
+    "dashboards": [
+      {
+        "name": "Netlify Traffic and Function Logs",
+        "description": "Netlify traffic and function log drain dashboard",
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/netlify/netlify-logs/dashboards/netlify-logs01.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/netlify/netlify-logs/dashboards/netlify-logs02.png"
+        ]
+      }
+    ],
+    "alerts": [],
+    "documentation": [
+      {
+        "name": "Configuration docs",
+        "description": "Configuring Netlify log drains for New Relic",
+        "url": "https://docs.netlify.com/monitor-sites/log-drains/"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "netlify-logs",
+        "id": "third-party-netlify-logs"
       }
     ]
   },
@@ -11963,12 +12052,12 @@
     ],
     "dashboards": [
       {
-        "name": "Lacework Compliance Violations",
+        "name": "Lacework Anomaly Detections",
         "description": null,
         "url": null,
         "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/v0.106.0/quickstarts/lacework/dashboards/lacework-compliance-violations.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/v0.95.0/quickstarts/lacework/dashboards/lacework-compliance-violations.png"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/v0.106.0/quickstarts/lacework/dashboards/lacework-anomaly-detections.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/v0.95.0/quickstarts/lacework/dashboards/lacework-anomaly-detections.png"
         ]
       },
       {
@@ -11981,12 +12070,12 @@
         ]
       },
       {
-        "name": "Lacework Anomaly Detections",
+        "name": "Lacework Compliance Violations",
         "description": null,
         "url": null,
         "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/v0.106.0/quickstarts/lacework/dashboards/lacework-anomaly-detections.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/v0.95.0/quickstarts/lacework/dashboards/lacework-anomaly-detections.png"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/v0.106.0/quickstarts/lacework/dashboards/lacework-compliance-violations.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/v0.95.0/quickstarts/lacework/dashboards/lacework-compliance-violations.png"
         ]
       }
     ],
@@ -20659,6 +20748,16 @@
         ]
       },
       {
+        "name": "Azure Integrations Data Ingest Analysis",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/v0.106.0/quickstarts/audit/infrastructure-integrations-data-analysis/dashboards/azure-integrations-data-ingest-analysis.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/v0.94.3/quickstarts/audit/infrastructure-integrations-data-analysis/dashboards/azure-integrations-data-ingest-analysis.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/v0.95.0/quickstarts/audit/infrastructure-integrations-data-analysis/dashboards/azure-integrations-data-ingest-analysis.png"
+        ]
+      },
+      {
         "name": "Kubernetes Data Ingest Analysis",
         "description": null,
         "url": null,
@@ -20666,16 +20765,6 @@
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/v0.106.0/quickstarts/audit/infrastructure-integrations-data-analysis/dashboards/kubernetes-data-ingest-analysis.png",
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/v0.94.3/quickstarts/audit/infrastructure-integrations-data-analysis/dashboards/kubernetes-data-ingest-analysis.png",
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/v0.95.0/quickstarts/audit/infrastructure-integrations-data-analysis/dashboards/kubernetes-data-ingest-analysis.png"
-        ]
-      },
-      {
-        "name": "On-Host Integrations Data Analysis",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/v0.106.0/quickstarts/audit/infrastructure-integrations-data-analysis/dashboards/on-host-integrations-data-analysis.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/v0.94.3/quickstarts/audit/infrastructure-integrations-data-analysis/dashboards/on-host-integrations-data-analysis.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/v0.95.0/quickstarts/audit/infrastructure-integrations-data-analysis/dashboards/on-host-integrations-data-analysis.png"
         ]
       },
       {
@@ -20689,13 +20778,13 @@
         ]
       },
       {
-        "name": "Azure Integrations Data Ingest Analysis",
+        "name": "On-Host Integrations Data Analysis",
         "description": null,
         "url": null,
         "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/v0.106.0/quickstarts/audit/infrastructure-integrations-data-analysis/dashboards/azure-integrations-data-ingest-analysis.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/v0.94.3/quickstarts/audit/infrastructure-integrations-data-analysis/dashboards/azure-integrations-data-ingest-analysis.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/v0.95.0/quickstarts/audit/infrastructure-integrations-data-analysis/dashboards/azure-integrations-data-ingest-analysis.png"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/v0.106.0/quickstarts/audit/infrastructure-integrations-data-analysis/dashboards/on-host-integrations-data-analysis.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/v0.94.3/quickstarts/audit/infrastructure-integrations-data-analysis/dashboards/on-host-integrations-data-analysis.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/v0.95.0/quickstarts/audit/infrastructure-integrations-data-analysis/dashboards/on-host-integrations-data-analysis.png"
         ]
       }
     ],
@@ -21464,16 +21553,6 @@
     ],
     "dashboards": [
       {
-        "name": "Browser Traffic Analysis",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/v0.106.0/quickstarts/browser/dashboards/traffic_analysis.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/v0.94.3/quickstarts/browser/dashboards/traffic_analysis.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/v0.95.0/quickstarts/browser/dashboards/traffic_analysis.png"
-        ]
-      },
-      {
         "name": "Browser Pages Dashboard",
         "description": null,
         "url": null,
@@ -21491,6 +21570,16 @@
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/v0.106.0/quickstarts/browser/dashboards/javascript_errors.png",
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/v0.94.3/quickstarts/browser/dashboards/javascript_errors.png",
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/v0.95.0/quickstarts/browser/dashboards/javascript_errors.png"
+        ]
+      },
+      {
+        "name": "Browser Traffic Analysis",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/v0.106.0/quickstarts/browser/dashboards/traffic_analysis.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/v0.94.3/quickstarts/browser/dashboards/traffic_analysis.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/v0.95.0/quickstarts/browser/dashboards/traffic_analysis.png"
         ]
       },
       {
