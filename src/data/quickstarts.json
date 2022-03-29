@@ -3238,7 +3238,7 @@
     ],
     "dashboards": [
       {
-        "name": "Data Governance Baseline",
+        "name": "Data Governance Entity Breakdowns",
         "description": null,
         "url": null,
         "screenshots": [
@@ -3247,7 +3247,7 @@
         ]
       },
       {
-        "name": "Data Governance Entity Breakdowns",
+        "name": "Data Governance Baseline",
         "description": null,
         "url": null,
         "screenshots": [
@@ -12052,6 +12052,15 @@
     ],
     "dashboards": [
       {
+        "name": "Lacework Compliance Violations",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/v0.106.0/quickstarts/lacework/dashboards/lacework-compliance-violations.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/v0.95.0/quickstarts/lacework/dashboards/lacework-compliance-violations.png"
+        ]
+      },
+      {
         "name": "Lacework Anomaly Detections",
         "description": null,
         "url": null,
@@ -12067,15 +12076,6 @@
         "screenshots": [
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/v0.106.0/quickstarts/lacework/dashboards/lacework-security-overview.png",
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/v0.95.0/quickstarts/lacework/dashboards/lacework-security-overview.png"
-        ]
-      },
-      {
-        "name": "Lacework Compliance Violations",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/v0.106.0/quickstarts/lacework/dashboards/lacework-compliance-violations.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/v0.95.0/quickstarts/lacework/dashboards/lacework-compliance-violations.png"
         ]
       }
     ],
@@ -12983,6 +12983,55 @@
       }
     ],
     "installPlans": []
+  },
+  {
+    "title": "Network KTranslate Container Health",
+    "name": "network-ktranslate-container-health",
+    "description": "The Network KTranslate Container Health quickstart provides a dashboard that gives you a holistic view of the health of all containers used for collecting your network telemetry.\nUse this quickstart together with New Relic's Network Performance Monitoring (NPM) feature to visualize anomalies and/or bottlenecks in your network.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/network-ktranslate-health",
+    "id": "f7119d5e-32b7-45ff-a814-0dca91ae0493",
+    "level": "VERIFIED",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/network-ktranslate-health/logo.svg",
+    "summary": "Easily install a curated dashboard to monitor the health of your ktranslate containers for New Relic Network Performance Monitoring.",
+    "websiteUrl": null,
+    "keywords": [
+      "npm",
+      "network",
+      "networking",
+      "ktranslate",
+      "kentik",
+      "infrastructure"
+    ],
+    "authors": [
+      "New Relic",
+      "Marc Netterfield",
+      "Zack Mutchler"
+    ],
+    "dashboards": [
+      {
+        "name": "Network - KTranslate Container Health",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/network-ktranslate-health/dashboards/network-ktranslate-health01.jpg",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/network-ktranslate-health/dashboards/network-ktranslate-health02.jpg"
+        ]
+      }
+    ],
+    "alerts": [],
+    "documentation": [
+      {
+        "name": "KTranslate Container Health Monitoring docs",
+        "description": "Monitor the health of your ktranslate container using out-of-box metrics and logs.\n",
+        "url": "https://docs.newrelic.com/docs/network-performance-monitoring/advanced/ktranslate-container-health"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "Network KTranslate Container Health",
+        "id": "network-ktranslate-health"
+      }
+    ]
   },
   {
     "title": "gRPC",
@@ -15752,6 +15801,17 @@
     ],
     "dashboards": [
       {
+        "name": "Catchpoint-Recent Errors",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/catchpoint/dashboards/Catchpoint-Overview.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/catchpoint/dashboards/Catchpoint-Recent_Errors.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/catchpoint/dashboards/Catchpoint-Response_Size.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/catchpoint/dashboards/Catchpoint-Test_Times.png"
+        ]
+      },
+      {
         "name": "Catchpoint-Response Size",
         "description": null,
         "url": null,
@@ -15775,17 +15835,6 @@
       },
       {
         "name": "Catchpoint-Overview",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/catchpoint/dashboards/Catchpoint-Overview.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/catchpoint/dashboards/Catchpoint-Recent_Errors.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/catchpoint/dashboards/Catchpoint-Response_Size.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/catchpoint/dashboards/Catchpoint-Test_Times.png"
-        ]
-      },
-      {
-        "name": "Catchpoint-Recent Errors",
         "description": null,
         "url": null,
         "screenshots": [
@@ -20738,26 +20787,6 @@
     ],
     "dashboards": [
       {
-        "name": "GCP Integrations Data Ingest Analysis",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/v0.106.0/quickstarts/audit/infrastructure-integrations-data-analysis/dashboards/gcp-integrations-data-ingest-analysis.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/v0.94.3/quickstarts/audit/infrastructure-integrations-data-analysis/dashboards/gcp-integrations-data-ingest-analysis.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/v0.95.0/quickstarts/audit/infrastructure-integrations-data-analysis/dashboards/gcp-integrations-data-ingest-analysis.png"
-        ]
-      },
-      {
-        "name": "Azure Integrations Data Ingest Analysis",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/v0.106.0/quickstarts/audit/infrastructure-integrations-data-analysis/dashboards/azure-integrations-data-ingest-analysis.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/v0.94.3/quickstarts/audit/infrastructure-integrations-data-analysis/dashboards/azure-integrations-data-ingest-analysis.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/v0.95.0/quickstarts/audit/infrastructure-integrations-data-analysis/dashboards/azure-integrations-data-ingest-analysis.png"
-        ]
-      },
-      {
         "name": "Kubernetes Data Ingest Analysis",
         "description": null,
         "url": null,
@@ -20765,6 +20794,16 @@
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/v0.106.0/quickstarts/audit/infrastructure-integrations-data-analysis/dashboards/kubernetes-data-ingest-analysis.png",
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/v0.94.3/quickstarts/audit/infrastructure-integrations-data-analysis/dashboards/kubernetes-data-ingest-analysis.png",
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/v0.95.0/quickstarts/audit/infrastructure-integrations-data-analysis/dashboards/kubernetes-data-ingest-analysis.png"
+        ]
+      },
+      {
+        "name": "On-Host Integrations Data Analysis",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/v0.106.0/quickstarts/audit/infrastructure-integrations-data-analysis/dashboards/on-host-integrations-data-analysis.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/v0.94.3/quickstarts/audit/infrastructure-integrations-data-analysis/dashboards/on-host-integrations-data-analysis.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/v0.95.0/quickstarts/audit/infrastructure-integrations-data-analysis/dashboards/on-host-integrations-data-analysis.png"
         ]
       },
       {
@@ -20778,13 +20817,23 @@
         ]
       },
       {
-        "name": "On-Host Integrations Data Analysis",
+        "name": "Azure Integrations Data Ingest Analysis",
         "description": null,
         "url": null,
         "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/v0.106.0/quickstarts/audit/infrastructure-integrations-data-analysis/dashboards/on-host-integrations-data-analysis.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/v0.94.3/quickstarts/audit/infrastructure-integrations-data-analysis/dashboards/on-host-integrations-data-analysis.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/v0.95.0/quickstarts/audit/infrastructure-integrations-data-analysis/dashboards/on-host-integrations-data-analysis.png"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/v0.106.0/quickstarts/audit/infrastructure-integrations-data-analysis/dashboards/azure-integrations-data-ingest-analysis.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/v0.94.3/quickstarts/audit/infrastructure-integrations-data-analysis/dashboards/azure-integrations-data-ingest-analysis.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/v0.95.0/quickstarts/audit/infrastructure-integrations-data-analysis/dashboards/azure-integrations-data-ingest-analysis.png"
+        ]
+      },
+      {
+        "name": "GCP Integrations Data Ingest Analysis",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/v0.106.0/quickstarts/audit/infrastructure-integrations-data-analysis/dashboards/gcp-integrations-data-ingest-analysis.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/v0.94.3/quickstarts/audit/infrastructure-integrations-data-analysis/dashboards/gcp-integrations-data-ingest-analysis.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/v0.95.0/quickstarts/audit/infrastructure-integrations-data-analysis/dashboards/gcp-integrations-data-ingest-analysis.png"
         ]
       }
     ],
@@ -21553,16 +21602,6 @@
     ],
     "dashboards": [
       {
-        "name": "Browser Pages Dashboard",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/v0.106.0/quickstarts/browser/dashboards/browser_pages_dashboard.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/v0.94.3/quickstarts/browser/dashboards/browser_pages_dashboard.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/v0.95.0/quickstarts/browser/dashboards/browser_pages_dashboard.png"
-        ]
-      },
-      {
         "name": "JavaScript Errors",
         "description": null,
         "url": null,
@@ -21573,16 +21612,6 @@
         ]
       },
       {
-        "name": "Browser Traffic Analysis",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/v0.106.0/quickstarts/browser/dashboards/traffic_analysis.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/v0.94.3/quickstarts/browser/dashboards/traffic_analysis.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/v0.95.0/quickstarts/browser/dashboards/traffic_analysis.png"
-        ]
-      },
-      {
         "name": "Browser Overview",
         "description": null,
         "url": null,
@@ -21590,6 +21619,26 @@
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/v0.106.0/quickstarts/browser/dashboards/browser_overview.png",
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/v0.94.3/quickstarts/browser/dashboards/browser_overview.png",
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/v0.95.0/quickstarts/browser/dashboards/browser_overview.png"
+        ]
+      },
+      {
+        "name": "Browser Pages Dashboard",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/v0.106.0/quickstarts/browser/dashboards/browser_pages_dashboard.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/v0.94.3/quickstarts/browser/dashboards/browser_pages_dashboard.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/v0.95.0/quickstarts/browser/dashboards/browser_pages_dashboard.png"
+        ]
+      },
+      {
+        "name": "Browser Traffic Analysis",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/v0.106.0/quickstarts/browser/dashboards/traffic_analysis.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/v0.94.3/quickstarts/browser/dashboards/traffic_analysis.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/v0.95.0/quickstarts/browser/dashboards/traffic_analysis.png"
         ]
       }
     ],
