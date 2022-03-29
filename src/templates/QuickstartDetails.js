@@ -1,34 +1,35 @@
-import React, { useState, useEffect } from 'react';
-import { graphql } from 'gatsby';
-import { css } from '@emotion/react';
-import IOSeo from '../components/IOSeo';
-import PropTypes from 'prop-types';
-import PageLayout from '../components/PageLayout';
-import Tabs from '../components/Tabs';
-import EmptyTab from '../components/EmptyTab';
-import SupportSection from '../components/SupportSection';
-import QuickstartAlerts from '../components/QuickstartAlerts';
-import QuickstartDashboards from '../components/QuickstartDashboards';
 import {
-  Layout,
-  PageTools,
-  useTessen,
   Button,
   Icon,
+  Layout,
   Link,
+  PageTools,
   RelatedResources,
+  useTessen,
 } from '@newrelic/gatsby-theme-newrelic';
-import InstallButton from '../components/InstallButton';
-import QuickstartDataSources from '../components/QuickstartDataSources';
-import Breadcrumbs from '../components/Breadcrumbs';
-import { quickstart } from '../types';
 import {
-  QUICKSTARTS_REPO,
-  SIGNUP_LINK,
   LOGIN_LINK,
+  QUICKSTARTS_REPO,
   SHIELD_LEVELS,
+  SIGNUP_LINK,
 } from '../data/constants';
+import React, { useEffect, useState } from 'react';
+
+import Breadcrumbs from '../components/Breadcrumbs';
+import EmptyTab from '../components/EmptyTab';
+import IOSeo from '../components/IOSeo';
+import InstallButton from '../components/InstallButton';
+import PageLayout from '../components/PageLayout';
+import PropTypes from 'prop-types';
+import QuickstartAlerts from '../components/QuickstartAlerts';
+import QuickstartDashboards from '../components/QuickstartDashboards';
+import QuickstartDataSources from '../components/QuickstartDataSources';
 import QuickstartOverview from '../components/QuickstartOverview';
+import SupportSection from '../components/SupportSection';
+import Tabs from '../components/Tabs';
+import { css } from '@emotion/react';
+import { graphql } from 'gatsby';
+import { quickstart } from '../types';
 
 const QuickstartDetails = ({ data, location }) => {
 
@@ -116,7 +117,6 @@ const QuickstartDetails = ({ data, location }) => {
     getImgStyle();
   }, [quickstart.logoUrl])
 
-  console.log('quickstart---', quickstart);
   return (
     <>
       <IOSeo
