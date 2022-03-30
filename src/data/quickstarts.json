@@ -382,6 +382,52 @@
     ]
   },
   {
+    "title": "Glassbox",
+    "name": "glassbox",
+    "description": "Glassbox empowers organizations to create frictionless digital journeys for their customers. Our digital experience analytics and Session Replay platform works in real time across mobile apps and websites to accelerate loyalty and growth. Through AI-driven visualization and analytics tools, Glassbox helps teams to prioritize customer experience and digital product enhancements from a single collaborative system.\n\nThe Glassbox quickstart helps you understand the impact of application performance on your customers’ digital experience. Gain deeper contextual insights by combining the data capture and session replay capabilities of Glassbox with New Relic One. Get a view of behavioral insights and KPIs inside a pre-built New Relic dashboard, which links directly to a session replay in Glassbox, so you can find the root cause of the digital issue and fix performance issues faster.\n\nFor more information or support, please go to [glassbox.com](https://www.glassbox.com/)",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/glassbox",
+    "id": "bdb952f3-28db-4ee7-89c6-b00244b0bb73",
+    "level": "COMMUNITY",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/glassbox/logo.png",
+    "summary": "The Glassbox quickstart helps you understand the impact of application performance on your customers’ digital experience.",
+    "websiteUrl": null,
+    "keywords": [
+      "glassbox",
+      "newrelic partner",
+      "digital",
+      "session replay",
+      "featured"
+    ],
+    "authors": [
+      "Joseph Counts (New Relic)",
+      "Glassbox"
+    ],
+    "dashboards": [
+      {
+        "name": "Glassbox Digital",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/glassbox/dashboards/dashboard01.png"
+        ]
+      }
+    ],
+    "alerts": [],
+    "documentation": [
+      {
+        "name": "Glasbox integraton guide",
+        "description": "Integrate your Glassbox data with New Relic.",
+        "url": "https://support.glassbox.com/hc/en-gb/articles/4405777280401-How-to-Connect-New-Relic"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "glassbox",
+        "id": "third-party-glassbox"
+      }
+    ]
+  },
+  {
     "title": "OurSQL",
     "name": "oursql",
     "description": "## What is OurSQL?\n\noursql is a set of MySQL bindings for Python which wraps the MYSQL_STMT API to\nprovide real parameterization and server-side cursors.\n\n\n## Get started!\n\nLeverage community expertise and instantly get value out of your telemetry data. This quickstart automatically instruments OurSQL with the New Relic Python agent, and allows you to instantly monitor your Python application with out-of-the-box dashboards and alerts. Further leverage New Relic's APM capabilities by setting up [errors inbox](https://docs.newrelic.com/docs/apm/apm-ui-pages/errors-inbox/errors-inbox/), [transaction tracing](https://docs.newrelic.com/docs/apm/transactions/transaction-traces/introduction-transaction-traces/), and [service maps](https://docs.newrelic.com/docs/understand-dependencies/understand-system-dependencies/service-maps/introduction-service-maps/).\n\n## More info\n\nCheck out the [documentation](https://docs.newrelic.com/docs/agents/python-agent/) to learn more about New Relic monitoring for OurSQL.",
@@ -506,6 +552,54 @@
       {
         "name": "Python Agent",
         "id": "setup-python-agent"
+      }
+    ]
+  },
+  {
+    "title": "CircleCI",
+    "name": "circleci",
+    "description": "## CircleCI Quickstart\n\nThe world’s best software teams use CircleCI to deliver quality code with confidence. As the largest continuous integration and delivery (CI/CD) platform, CircleCI empowers engineers to seamlessly take ideas to execution, at scale. Every feature of our platform is built to fine-tune the entire development process from start to finish.\n\nThis quickstart allows users to view analytical data about their CircleCI jobs within the New Relic dashboard to gain visibility into the performance and health of their continuous integration and deployment pipelines. \n\n### With the CircleCI quickstart you can:\n\n- Monitor real-time CI performance, activity, and health, or track over time.\n- Identify opportunities for optimization.\n\n## The CircleCI quickstart includes a dashboard where users can easily monitor:\n- Total Jobs Ran\n- Job Health (% success)\n- Projects Summary\n- Most Recent Failed Jobs\n- Jobs Ran Per Project\n\nTo set up the integration, visit the [CircleCI Webhooks documentation](https://circleci.com/docs/2.0/webhooks/).\n\nFor more information or support, please go to [support.circleci.com](https://support.circleci.com/)",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/circleci",
+    "id": "39109d3d-b1d8-4366-8ca9-b8925005f727",
+    "level": "COMMUNITY",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/circleci/logo.png",
+    "summary": "This integration allows users to view analytical data about their CircleCI jobs within the New Relic monitoring stack.",
+    "websiteUrl": null,
+    "keywords": [
+      "newrelic partner",
+      "devops",
+      "circleci",
+      "circle",
+      "cicd",
+      "featured",
+      "logs"
+    ],
+    "authors": [
+      "New Relic",
+      "Joseph Counts"
+    ],
+    "dashboards": [
+      {
+        "name": "CircleCI",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/circleci/dashboards/circledashboard01.png"
+        ]
+      }
+    ],
+    "alerts": [],
+    "documentation": [
+      {
+        "name": "CircleCi Webhooks documentation",
+        "description": "CircleCi webhooks documentation",
+        "url": "https://circleci.com/docs/2.0/webhooks/"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "CircleCi",
+        "id": "third-party-circleci"
       }
     ]
   },
@@ -1150,53 +1244,6 @@
     ]
   },
   {
-    "title": "CircleCI",
-    "name": "circleci",
-    "description": "## CircleCI Quickstart\n\nThe world’s best software teams use CircleCI to deliver quality code with confidence. As the largest continuous integration and delivery (CI/CD) platform, CircleCI empowers engineers to seamlessly take ideas to execution, at scale. Every feature of our platform is built to fine-tune the entire development process from start to finish.\n\nThis quickstart allows users to view analytical data about their CircleCI jobs within the New Relic dashboard to gain visibility into the performance and health of their continuous integration and deployment pipelines. \n\n### With the CircleCI quickstart you can:\n\n- Monitor real-time CI performance, activity, and health, or track over time.\n- Identify opportunities for optimization.\n\n## The CircleCI quickstart includes a dashboard where users can easily monitor:\n- Total Jobs Ran\n- Job Health (% success)\n- Projects Summary\n- Most Recent Failed Jobs\n- Jobs Ran Per Project\n\nTo set up the integration, visit the [CircleCI Webhooks documentation](https://circleci.com/docs/2.0/webhooks/).\n\nFor more information or support, please go to [support.circleci.com](https://support.circleci.com/)",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/circleci",
-    "id": "39109d3d-b1d8-4366-8ca9-b8925005f727",
-    "level": "COMMUNITY",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/circleci/logo.png",
-    "summary": "This integration allows users to view analytical data about their CircleCI jobs within the New Relic monitoring stack.",
-    "websiteUrl": null,
-    "keywords": [
-      "newrelic partner",
-      "devops",
-      "circleci",
-      "circle",
-      "ci/cd",
-      "featured"
-    ],
-    "authors": [
-      "New Relic",
-      "Joseph Counts"
-    ],
-    "dashboards": [
-      {
-        "name": "CircleCI",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/circleci/dashboards/circledashboard01.png"
-        ]
-      }
-    ],
-    "alerts": [],
-    "documentation": [
-      {
-        "name": "CircleCi Webhooks documentation",
-        "description": "CircleCi webhooks documentation",
-        "url": "https://circleci.com/docs/2.0/webhooks/"
-      }
-    ],
-    "installPlans": [
-      {
-        "name": "CircleCi",
-        "id": "third-party-circleci"
-      }
-    ]
-  },
-  {
     "title": "ReleaseIQ",
     "name": "releaseiq",
     "description": "## What's ReleaseIQ?\nReleaseIQ is the Unified Enterprise DevOps Platform to Accelerate Software Delivery.\nReleaseIQ is focused on solving the problems of multi-tool, team, and product release pipelines.\n\nFor ReleaseIQ intergration with NewRelic, you must have:\n- A New Relic license to be configured in the ReleaseIQ Platform.\n- Configure New Relic in the ReleaseIQ platform Observability tool settings.\n\nReleaseIQ features with New Relic\n- Custom Events: During pipeline execution for each step, events with all step information is sent to New Relic. To enable this feature, you will need to configure a notification to New Relic in each step.\n- Deployment Verification: Deployments can be verified by New Relic based on the New Relic policies configured in deploy step of a pipeline. Then based on the priority, alerts will be sent back to the ReleaseIQ platform. The progress of pipeline to subsequent steps will be based on deployment verification result.",
@@ -1334,51 +1381,6 @@
       {
         "name": "PostgreSQL",
         "id": "postgresql-integration"
-      }
-    ]
-  },
-  {
-    "title": "Glassbox",
-    "name": "glassbox",
-    "description": "Glassbox empowers organizations to create frictionless digital journeys for their customers. Our digital experience analytics and Session Replay platform works in real time across mobile apps and websites to accelerate loyalty and growth. Through AI-driven visualization and analytics tools, Glassbox helps teams to prioritize customer experience and digital product enhancements from a single collaborative system.\n\nThe Glassbox quickstart helps you understand the impact of application performance on your customers’ digital experience. Gain deeper contextual insights by combining the data capture and session replay capabilities of Glassbox with New Relic One. Get a view of behavioral insights and KPIs inside a pre-built New Relic dashboard, which links directly to a session replay in Glassbox, so you can find the root cause of the digital issue and fix performance issues faster.\n\nFor more information or support, please go to [glassbox.com](https://www.glassbox.com/)",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/glassbox",
-    "id": "bdb952f3-28db-4ee7-89c6-b00244b0bb73",
-    "level": "COMMUNITY",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/glassbox/logo.png",
-    "summary": "The Glassbox quickstart helps you understand the impact of application performance on your customers’ digital experience.",
-    "websiteUrl": null,
-    "keywords": [
-      "glassbox",
-      "newrelic partner",
-      "digital",
-      "session replay"
-    ],
-    "authors": [
-      "Joseph Counts (New Relic)",
-      "Glassbox"
-    ],
-    "dashboards": [
-      {
-        "name": "Glassbox Digital",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/glassbox/dashboards/dashboard01.png"
-        ]
-      }
-    ],
-    "alerts": [],
-    "documentation": [
-      {
-        "name": "Glasbox integraton guide",
-        "description": "Integrate your Glassbox data with New Relic.",
-        "url": "https://support.glassbox.com/hc/en-gb/articles/4405777280401-How-to-Connect-New-Relic"
-      }
-    ],
-    "installPlans": [
-      {
-        "name": "glassbox",
-        "id": "third-party-glassbox"
       }
     ]
   },
@@ -4055,49 +4057,6 @@
     "installPlans": []
   },
   {
-    "title": "Postman",
-    "name": "postman",
-    "description": "## Postman's New Relic Integration\n\nPostman is an API platform for building and using APIs. Postman simplifies each step of the API lifecycle and\nstreamlines collaboration so you can create better APIs—faster. Postman's integration with New Relic allows\nyou to observe the performance of your APIs by sending results from Postman Monitor to New Relic and returning\ncritical API performance data back to Postman's API platform.",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/postman",
-    "id": "d465bf08-b737-4bc5-b5ad-dd5be272967b",
-    "level": "COMMUNITY",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/postman/logo.svg",
-    "summary": "Integrate Postman with New Relic to monitor your API performance effectively.",
-    "websiteUrl": null,
-    "keywords": [
-      "api",
-      "postman",
-      "newrelic partner"
-    ],
-    "authors": [
-      "Shashank Awasthi"
-    ],
-    "dashboards": [
-      {
-        "name": "Postman Monitor Overview",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/postman/dashboards/postman-dashboard01.png"
-        ]
-      }
-    ],
-    "alerts": [],
-    "documentation": [
-      {
-        "name": "Installation Docs",
-        "description": "Postman integration configuration",
-        "url": "https://learning.postman.com/docs/integrations/available-integrations/new-relic/"
-      }
-    ],
-    "installPlans": [
-      {
-        "name": "Postman",
-        "id": "third-party-postman"
-      }
-    ]
-  },
-  {
     "title": "DNN Evoq",
     "name": "dnn-evoq",
     "description": "## What is DNN Evoq?\n\nDNN Evoq is a commercial edition of the DNN platform, the largest and most popular open source Content Management System (CMS) on the Microsoft ASP.NET stack. [DNN Evoq](https://developer.newrelic.com/instant-observability/dnn-evoq/82672f5f-48ec-477c-ae49-7eb24a91595f/) includes customer support and provides premium features not available in the DNN platform. These premium features include personalization, in-page analytics, workflow and built-in connectors to Marketo, SharePoint, Amazon S3, and Dropbox.\n\nIntegrate New Relic .NET agent with your DNN Evoq to monitor the platform’s performance metrics in real time.\n\n### Get started!\n\nLeverage community expertise and instantly get value out of your telemetry data. This quickstart automatically instruments DNN Evoq with the New Relic .Net agent, and allows you to instantly monitor your .Net application with out-of-the-box dashboards and alerts. Further leverage New Relic's APM capabilities by setting up [errors inbox](https://docs.newrelic.com/docs/apm/apm-ui-pages/errors-inbox/errors-inbox/), [transaction tracing](https://docs.newrelic.com/docs/apm/transactions/transaction-traces/introduction-transaction-traces/), and [service maps](https://docs.newrelic.com/docs/understand-dependencies/understand-system-dependencies/service-maps/introduction-service-maps/).\n\n## DNN Evoq and New Relic highlights\n\nNew Relic’s DNN Evoq quickstart instruments DNN Evoq with the [New Relic .NET agent](https://docs.newrelic.com/docs/apm/agents/net-agent/getting-started/introduction-new-relic-net/), and empowers you to seamlessly monitor your DNN Evoq platform through out-of-the-box dashboards and alerts.\n\nOur .NET agent supports both .NET Framework and .NET Core, and it works with all .NET compatible languages. You can track your DNN Evoq platform in dynamic or distributed environments such as on-host VM servers, Microsoft Azure app services, cloud-managed server VM images, self-hosted Windows and Linux systems and Amazon AWS EC2 VMs.\n\n### DNN Evoq ideal performance monitoring\n\nThe DNN Evoq observability quickstart instruments DNN Evoq with New Relic .NET agent. The integration enables you to use [Application Performance Monitoring](https://newrelic.com/products/application-monitoring) (APM) to get a high-level overview of your DNN Evoq platform, and to track activity across the platform. With the integration, you can install [infrastructure monitoring](https://developer.newrelic.com/instant-observability/infrastructure/71419258-a96f-4845-b4f7-723f3b29d6a5/) to view the performance of your platform’s host environment.\n\nOnce you install our .NET agent, wait for a few minutes for your DNN Evoq platform to generate traffic, data will appear in the APM summary page. The agent includes a variety of configuration options to further customize your installation. You can extend your instrumentation by integrating the .NET agent with [browser monitoring](https://docs.newrelic.com/docs/browser/new-relic-browser/getting-started/new-relic-browser/) to gain visibility into end-user activity. You can also enable distributed tracing to understand activity across your platform.\n\nDownload the New Relic DNN Evoq quickstart to effectively get value out of your telemetry data and monitor your DNN Evoq platform. This quickstart is your gateway to instant monitoring of your platform via our .NET agent.\n",
@@ -4627,6 +4586,50 @@
       {
         "name": "PHP Agent",
         "id": "php-agent"
+      }
+    ]
+  },
+  {
+    "title": "Postman",
+    "name": "postman",
+    "description": "## Postman's New Relic Integration\n\nPostman is an API platform for building and using APIs. Postman simplifies each step of the API lifecycle and\nstreamlines collaboration so you can create better APIs—faster. Postman's integration with New Relic allows\nyou to observe the performance of your APIs by sending results from Postman Monitor to New Relic and returning\ncritical API performance data back to Postman's API platform.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/postman",
+    "id": "d465bf08-b737-4bc5-b5ad-dd5be272967b",
+    "level": "COMMUNITY",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/postman/logo.svg",
+    "summary": "Integrate Postman with New Relic to monitor your API performance effectively.",
+    "websiteUrl": null,
+    "keywords": [
+      "api",
+      "postman",
+      "newrelic partner",
+      "featured"
+    ],
+    "authors": [
+      "Shashank Awasthi"
+    ],
+    "dashboards": [
+      {
+        "name": "Postman Monitor Overview",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/postman/dashboards/postman-dashboard01.png"
+        ]
+      }
+    ],
+    "alerts": [],
+    "documentation": [
+      {
+        "name": "Installation Docs",
+        "description": "Postman integration configuration",
+        "url": "https://learning.postman.com/docs/integrations/available-integrations/new-relic/"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "Postman",
+        "id": "third-party-postman"
       }
     ]
   },
@@ -10572,55 +10575,6 @@
     ]
   },
   {
-    "title": "Netlify Logs",
-    "name": "netlify-logs",
-    "description": "Use this quickstart to quickly parse traffic and function logs from Netlify into meaningful metrics within New Relic.\n\n### Netlify Logs quickstart highlights\n\nThe Netlify Logs quickstart is the fastest way to explore and visualize data from traffic and function logs provided by [Netlify log drains](https://docs.netlify.com/monitor-sites/log-drains/). \n\nWith this quickstart, you can easily understand:\n\n- Changes in your sites' traffic over time\n- Percentage of successful requests, warnings, and errors\n- Requests by status\n- Average duration of requests \n- Changes in Functions utilization over time\n- Number of successful Function Invocations, warnings, and errors\n- Number of Function Invocations over time\n- Average Function duration\n- Traffic logs and function logs for correlation with these metrics\n\nNote: The Functions dashboard within the Netlify Logs quickstart features a function duration chart that requires a custom parsing rule to correctly display this data.\n\nTo create this parsing rule in New Relic One, navigate to the Logs tab and select the Parsing option under Manage Data. Click Create Parsing Rule and enter a name for your rule (ex: Function Duration). Under Attribute, select `log_type` and select `functions` under Value. In the Parsing Logic field, enter the following:\n\n`%{WORD:level} RequestId: %{DATA} %{BASE16FLOAT:duration} %{DATA} %{INT:billed_duration} %{DATA} %{INT:max_mem} %{DATA} %{INT:used_mem}`\n\nEnable the rule toggle and the then click Save Parsing Rule.",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/netlify/netlify-logs",
-    "id": "63f08781-18ad-4a89-ae63-49718deee041",
-    "level": "COMMUNITY",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/netlify/netlify-logs/logo.png",
-    "summary": "Visualize your Netlify traffic and function log drains",
-    "websiteUrl": null,
-    "keywords": [
-      "netlify",
-      "logs",
-      "traffic logs",
-      "function logs",
-      "log drains",
-      "jamstack",
-      "serverless functions",
-      "newrelic partner"
-    ],
-    "authors": [
-      "Matt Rinehart (Netlify)"
-    ],
-    "dashboards": [
-      {
-        "name": "Netlify Traffic and Function Logs",
-        "description": "Netlify traffic and function log drain dashboard",
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/netlify/netlify-logs/dashboards/netlify-logs01.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/netlify/netlify-logs/dashboards/netlify-logs02.png"
-        ]
-      }
-    ],
-    "alerts": [],
-    "documentation": [
-      {
-        "name": "Configuration docs",
-        "description": "Configuring Netlify log drains for New Relic",
-        "url": "https://docs.netlify.com/monitor-sites/log-drains/"
-      }
-    ],
-    "installPlans": [
-      {
-        "name": "netlify-logs",
-        "id": "third-party-netlify-logs"
-      }
-    ]
-  },
-  {
     "title": "Algorithmia",
     "name": "mlops-algorithmia",
     "description": "## What is Algorithmia?\n\nAlgorithmia is an enterprise platform for automating the deployment of machine-learning models into production. \n\n### New Relic + Algorithmia\n\nThe New Relic Algorithmia quickstart helps you track the performance of machine learning models in production. The quickstart enables full-stack observability of your machine learning models so that you can achieve maximum performance and uptime, as well as build more intelligent apps by unlocking end-to-end. The quickstart’s dashboards provide a high-level overview of Algorithmia metrics, like runtime duration by algorithm and throughput by algorithm.\n\n### Why monitor Algorithmia with New Relic?\n\nMonitoring your ML models after production is critical to understanding the effectiveness of your algorithm. The New Relic Algorithmia monitoring quickstart empowers you to track and detect model drift, model bias, and data drift. The Algorithmia [integration](https://newrelic.com/blog/how-to-relic/monitor-model-performance-algorithmia) helps you to instrument, analyze, troubleshoot, and optimize ML model performance across your entire system. \nIn addition, the quickstart enables you to send model performance metrics from Algorithmia Insights to New Relic where you can monitor your algorithms in real-time. You can also explore metrics data and view the state of your algorithm through a user-friendly dashboard.\nInstall the New Relic Algorithmia quickstart today to streamline models in New Relic’s observability platform and build sophisticated ML models. It’s the key to creating a seamless collaboration between your data science and DevOps teams.",
@@ -10795,6 +10749,56 @@
       {
         "name": "GCP-Infrastructure-Monitoring",
         "id": "gcp-infrastructure-monitoring"
+      }
+    ]
+  },
+  {
+    "title": "Netlify Logs",
+    "name": "netlify-logs",
+    "description": "Use this quickstart to quickly parse traffic and function logs from Netlify into meaningful metrics within New Relic.\n\n### Netlify Logs quickstart highlights\n\nThe Netlify Logs quickstart is the fastest way to explore and visualize data from traffic and function logs provided by [Netlify log drains](https://docs.netlify.com/monitor-sites/log-drains/). \n\nWith this quickstart, you can easily understand:\n\n- Changes in your sites' traffic over time\n- Percentage of successful requests, warnings, and errors\n- Requests by status\n- Average duration of requests \n- Changes in Functions utilization over time\n- Number of successful Function Invocations, warnings, and errors\n- Number of Function Invocations over time\n- Average Function duration\n- Traffic logs and function logs for correlation with these metrics\n\nNote: The Functions dashboard within the Netlify Logs quickstart features a function duration chart that requires a custom parsing rule to correctly display this data.\n\nTo create this parsing rule in New Relic One, navigate to the Logs tab and select the Parsing option under Manage Data. Click Create Parsing Rule and enter a name for your rule (ex: Function Duration). Under Attribute, select `log_type` and select `functions` under Value. In the Parsing Logic field, enter the following:\n\n`%{WORD:level} RequestId: %{DATA} %{BASE16FLOAT:duration} %{DATA} %{INT:billed_duration} %{DATA} %{INT:max_mem} %{DATA} %{INT:used_mem}`\n\nEnable the rule toggle and the then click Save Parsing Rule.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/netlify/netlify-logs",
+    "id": "63f08781-18ad-4a89-ae63-49718deee041",
+    "level": "COMMUNITY",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/netlify/netlify-logs/logo.png",
+    "summary": "Visualize your Netlify traffic and function log drains",
+    "websiteUrl": null,
+    "keywords": [
+      "netlify",
+      "logs",
+      "traffic logs",
+      "function logs",
+      "log drains",
+      "jamstack",
+      "serverless functions",
+      "newrelic partner",
+      "featured"
+    ],
+    "authors": [
+      "Matt Rinehart (Netlify)"
+    ],
+    "dashboards": [
+      {
+        "name": "Netlify Traffic and Function Logs",
+        "description": "Netlify traffic and function log drain dashboard",
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/netlify/netlify-logs/dashboards/netlify-logs01.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/netlify/netlify-logs/dashboards/netlify-logs02.png"
+        ]
+      }
+    ],
+    "alerts": [],
+    "documentation": [
+      {
+        "name": "Configuration docs",
+        "description": "Configuring Netlify log drains for New Relic",
+        "url": "https://docs.netlify.com/monitor-sites/log-drains/"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "netlify-logs",
+        "id": "third-party-netlify-logs"
       }
     ]
   },
@@ -13034,6 +13038,56 @@
     ]
   },
   {
+    "title": "Cloudflare Network Logs",
+    "name": "cloudflare-network-logs",
+    "description": "## About Cloudflare\n\nCloudflare is an industry leading global network designed to make everything you connect to the Internet secure, private, fast, and reliable. Protect and accelerate external, public-facing web properties; secure your internal operations on a single global network; and build new applications on our serverless platform. Internet properties powered by Cloudflare have all web traffic routed through its intelligent global network, which gets smarter with every request.\n\n## About this quickstart\n\nCloudflare is on a mission to help build a better Internet. The Cloudflare quickstart will enable you to monitor and analyze web traffic metrics on a dashboard, integrating with New Relic’s database to provide an at-a-glance overview of the most important logs and metrics from your websites and applications.\n\nFor more information check out our website at [cloudflare.com](https://www.cloudflare.com/)",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/cloudflare",
+    "id": "fc2bb0ac-6622-43c6-8c1f-6a4c26ab5434",
+    "level": "COMMUNITY",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/cloudflare/logo.png",
+    "summary": "The Cloudflare quickstart will enable you to monitor and analyze web traffic metrics.",
+    "websiteUrl": null,
+    "keywords": [
+      "cloudflare",
+      "logs",
+      "network",
+      "security",
+      "cdn",
+      "featured",
+      "newrelic partner"
+    ],
+    "authors": [
+      "Joseph Counts",
+      "Cloudflare"
+    ],
+    "dashboards": [
+      {
+        "name": "Cloudflare Logs",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/cloudflare/dashboards/cloudflare01.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/cloudflare/dashboards/cloudflare02.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/cloudflare/dashboards/cloudflare03.png"
+        ]
+      }
+    ],
+    "alerts": [],
+    "documentation": [
+      {
+        "name": "Enable New Relic destination doc",
+        "description": "Developer doc on getting Cloudflare data ingested into New Relic",
+        "url": "https://docs.newrelic.com/docs/logs/forward-logs/cloudflare-logpush-forwarding"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "cloudflare",
+        "id": "third-party-cloudflare"
+      }
+    ]
+  },
+  {
     "title": "gRPC",
     "name": "grpc",
     "description": "# What is gRPC?\n\nOpen source framework for remote procedure calls designed for multi-platform usage.\n\n\n## Get started!\n\nLeverage community expertise and instantly get value out of your telemetry data. This quickstart automatically instruments gRPC with the New Relic Java agent, and allows you to instantly monitor your Java application with out-of-the-box dashboards and alerts. \nFurther leverage New Relic's APM capabilities by setting up [errors inbox](https://docs.newrelic.com/docs/apm/apm-ui-pages/errors-inbox/errors-inbox/), [transaction tracing](https://docs.newrelic.com/docs/apm/transactions/transaction-traces/introduction-transaction-traces/), and [service maps](https://docs.newrelic.com/docs/understand-dependencies/understand-system-dependencies/service-maps/introduction-service-maps/).\n\n## More info\n\nCheck out the [documentation](https://docs.newrelic.com/docs/agents/java-agent/getting-started/introduction-new-relic-java/) to learn more about New Relic monitoring for gRPC.",
@@ -13552,55 +13606,6 @@
       {
         "name": "speedscale",
         "id": "third-party-speedscale-integration"
-      }
-    ]
-  },
-  {
-    "title": "Cloudflare Network Logs",
-    "name": "cloudflare-network-logs",
-    "description": "## About Cloudflare\n\nCloudflare is an industry leading global network designed to make everything you connect to the Internet secure, private, fast, and reliable. Protect and accelerate external, public-facing web properties; secure your internal operations on a single global network; and build new applications on our serverless platform. Internet properties powered by Cloudflare have all web traffic routed through its intelligent global network, which gets smarter with every request.\n\n## About this quickstart\n\nCloudflare is on a mission to help build a better Internet. The Cloudflare quickstart will enable you to monitor and analyze web traffic metrics on a dashboard, integrating with New Relic’s database to provide an at-a-glance overview of the most important logs and metrics from your websites and applications.\n\nFor more information check out our website at [cloudflare.com](https://www.cloudflare.com/)",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/cloudflare",
-    "id": "fc2bb0ac-6622-43c6-8c1f-6a4c26ab5434",
-    "level": "COMMUNITY",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/cloudflare/logo.png",
-    "summary": "The Cloudflare quickstart will enable you to monitor and analyze web traffic metrics.",
-    "websiteUrl": null,
-    "keywords": [
-      "cloudflare",
-      "log",
-      "network",
-      "security",
-      "cdn",
-      "featured"
-    ],
-    "authors": [
-      "Joseph Counts",
-      "Cloudflare"
-    ],
-    "dashboards": [
-      {
-        "name": "Cloudflare Logs",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/cloudflare/dashboards/cloudflare01.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/cloudflare/dashboards/cloudflare02.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/cloudflare/dashboards/cloudflare03.png"
-        ]
-      }
-    ],
-    "alerts": [],
-    "documentation": [
-      {
-        "name": "Enable New Relic destination doc",
-        "description": "Developer doc on getting Cloudflare data ingested into New Relic",
-        "url": "https://docs.newrelic.com/docs/logs/forward-logs/cloudflare-logpush-forwarding"
-      }
-    ],
-    "installPlans": [
-      {
-        "name": "cloudflare",
-        "id": "third-party-cloudflare"
       }
     ]
   },
