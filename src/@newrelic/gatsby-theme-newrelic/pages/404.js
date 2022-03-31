@@ -40,6 +40,8 @@ const NotFoundPage = ({
 
   const pageLocale = getLocale({ location }, themeOptions);
 
+    console.log(siteUrl);
+
   const hostname = new URL(siteUrl).hostname;
   const nrSubDomain = /.*\.newrelic\.com/.test(hostname)
     ? hostname.split('.')[0]
@@ -186,7 +188,7 @@ const NotFoundPage = ({
 
   return (
     <>
-        <script src={withPrefix('tessen.min-1.14.0.js')} type="text/javascript" />
+      <script src={withPrefix('tessen.min-1.14.0.js')} type="text/javascript" />
       <GlobalHeader />
       <div
         css={css`
