@@ -604,6 +604,74 @@
     ]
   },
   {
+    "title": "Video agent for JWPlayer",
+    "name": "video-web-jwplayer",
+    "description": "Agent to monitor video applications using JWPlayer.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/video/video-web/video-web-jwplayer",
+    "id": "f85451c5-657b-4e41-bf87-1e710b246992",
+    "level": "COMMUNITY",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/video/video-web/video-web-jwplayer/logo.svg",
+    "summary": "Agent to monitor video applications using JWPlayer.",
+    "websiteUrl": null,
+    "keywords": [
+      "nrlabs",
+      "nrlabs-data",
+      "video",
+      "tracking",
+      "JWPlayer"
+    ],
+    "authors": [
+      "New Relic Labs"
+    ],
+    "dashboards": [
+      {
+        "name": "Video Quality - JWPlayer",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/video/video-web/video-web-jwplayer/dashboards/jwplayer01.png"
+        ]
+      }
+    ],
+    "alerts": [
+      {
+        "name": "Video Playback Failure % - jwplayer",
+        "details": "Alert when the Video Playback Failures % increases significantly from its baseline.\nUseful for understanding when your users are experiencing issues during video playback.",
+        "type": "BASELINE",
+        "url": null
+      },
+      {
+        "name": "Video Start Failure % - jwplayer",
+        "details": "Alert when the Video Start Failures % increases significantly from its baseline.\nUseful for understanding when your users are unable to successfully initiate video plays.",
+        "type": "BASELINE",
+        "url": null
+      },
+      {
+        "name": "Video Start Time - jwplayer",
+        "details": "Alert when Video Start Time increases significantly from its baseline.\nUseful for understanding when your users are experiencing increased start times.",
+        "type": "BASELINE",
+        "url": null
+      }
+    ],
+    "documentation": [
+      {
+        "name": "Video JWPlayer Installation Docs",
+        "description": "Agent to monitor video applications using JWPlayer.",
+        "url": "https://github.com/newrelic/video-jwplayer-js"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "Browser",
+        "id": "browser-docs"
+      },
+      {
+        "name": "JW Player",
+        "id": "video-web-jwplayer"
+      }
+    ]
+  },
+  {
     "title": "Azure Express Route",
     "name": "azure-express-route",
     "description": "## What is Azure Express Route?\n\nCreate a dedicated connection between your on-prem infrastructure and Azure's\nservices.\n\n\n### Get started!\n\nStart monitoring Azure Express Route by connecting Microsoft Azure to New Relic!\n\nCheck out our Azure Express Route documentation to instrument your cloud service and manage the stability, scalability, and reliability of your systems with New Relic's infrastructure monitoring capabilities.\n\n### More info\n\nCheck out the [documentation](https://docs.newrelic.com/docs/infrastructure/microsoft-azure-integrations/azure-integrations-list/azure-express-route-monitoring-integration/) to learn more about New Relic monitoring for Azure Express Route. ",
@@ -1083,72 +1151,6 @@
       }
     ],
     "installPlans": []
-  },
-  {
-    "title": "Video agent for JWPlayer",
-    "name": "video-web-jwplayer",
-    "description": "Agent to monitor video applications using JWPlayer.",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/video/video-web/video-web-jwplayer",
-    "id": "f85451c5-657b-4e41-bf87-1e710b246992",
-    "level": "COMMUNITY",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/v0.106.0/quickstarts/video/video-web/video-web-jwplayer/logo.svg",
-    "summary": "Agent to monitor video applications using JWPlayer.",
-    "websiteUrl": null,
-    "keywords": [
-      "nrlabs",
-      "nrlabs-data",
-      "video",
-      "tracking",
-      "JWPlayer"
-    ],
-    "authors": [
-      "New Relic Labs"
-    ],
-    "dashboards": [
-      {
-        "name": "Video QoS - jwplayer",
-        "description": null,
-        "url": null,
-        "screenshots": []
-      }
-    ],
-    "alerts": [
-      {
-        "name": "Video Playback Failure % - jwplayer",
-        "details": "Alert when the Video Playback Failures % increases significantly from its baseline.\nUseful for understanding when your users are experiencing issues during video playback.\n\n",
-        "type": "BASELINE",
-        "url": null
-      },
-      {
-        "name": "Video Start Failure % - jwplayer",
-        "details": "Alert when the Video Start Failures % increases significantly from its baseline.\nUseful for understanding when your users are unable to successfully initiate video plays.\n\n",
-        "type": "BASELINE",
-        "url": null
-      },
-      {
-        "name": "Video Start Time - jwplayer",
-        "details": "Alert when Video Start Time increases significantly from its baseline.\nUseful for understanding when your users are experiencing increased start times.\n\n",
-        "type": "BASELINE",
-        "url": null
-      }
-    ],
-    "documentation": [
-      {
-        "name": "Video JWPlayer Installation Docs",
-        "description": "Agent to monitor video applications using JWPlayer.",
-        "url": "https://github.com/newrelic/video-jwplayer-js"
-      }
-    ],
-    "installPlans": [
-      {
-        "name": "Browser",
-        "id": "browser-docs"
-      },
-      {
-        "name": "JW Player",
-        "id": "video-web-jwplayer"
-      }
-    ]
   },
   {
     "title": "Zipkin",
@@ -9220,6 +9222,74 @@
     ]
   },
   {
+    "title": "Video agent for The Platform player",
+    "name": "video-web-theplatform",
+    "description": "Agent to monitor video applications using The Platform player.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/video/video-web/video-web-theplatform",
+    "id": "22af96ba-47b0-44b4-9d58-6bad65ca2917",
+    "level": "COMMUNITY",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/video/video-web/video-web-theplatform/logo.png",
+    "summary": "Agent to monitor video applications using The Platform player.",
+    "websiteUrl": null,
+    "keywords": [
+      "nrlabs",
+      "nrlabs-data",
+      "video",
+      "tracking",
+      "ThePlatform"
+    ],
+    "authors": [
+      "New Relic Labs"
+    ],
+    "dashboards": [
+      {
+        "name": "Video Quality - Theplatform",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/video/video-web/video-web-theplatform/dashboards/theplatform01.png"
+        ]
+      }
+    ],
+    "alerts": [
+      {
+        "name": "Video Playback Failure % - theplatform",
+        "details": "Alert when the Video Playback Failures % increases significantly from its baseline.\nUseful for understanding when your users are experiencing issues during video playback.",
+        "type": "BASELINE",
+        "url": null
+      },
+      {
+        "name": "Video Start Failure % - theplatform",
+        "details": "Alert when the Video Start Failures % increases significantly from its baseline.\nUseful for understanding when your users are unable to successfully initiate video plays.",
+        "type": "BASELINE",
+        "url": null
+      },
+      {
+        "name": "Video Start Time - theplatform",
+        "details": "Alert when Video Start Time increases significantly from its baseline.\nUseful for understanding when your users are experiencing increased start times.",
+        "type": "BASELINE",
+        "url": null
+      }
+    ],
+    "documentation": [
+      {
+        "name": "Video The Platform Installation Docs",
+        "description": "Agent to monitor video applications using The Platform player.",
+        "url": "https://github.com/newrelic/video-theplatform-js"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "Browser",
+        "id": "browser-docs"
+      },
+      {
+        "name": "thePlatform Player",
+        "id": "video-web-theplatform"
+      }
+    ]
+  },
+  {
     "title": "CodeIgniter",
     "name": "codeigniter",
     "description": "## What is CodeIgniter?\n\nOpen-source PHP-based web framework built for rapid development.\n\n## Get started!\n\nLeverage community expertise and instantly get value out of your telemetry data. This quickstart automatically instruments CodeIgniter with the New Relic PHP agent, and allows you to further leverage New Relic's APM capabilities by setting up [custom dashboards](https://docs.newrelic.com/docs/query-your-data/explore-query-data/dashboards/introduction-dashboards/), [errors inbox](https://docs.newrelic.com/docs/apm/apm-ui-pages/errors-inbox/errors-inbox/), [transaction tracing](https://docs.newrelic.com/docs/apm/transactions/transaction-traces/introduction-transaction-traces/), and [service maps](https://docs.newrelic.com/docs/understand-dependencies/understand-system-dependencies/service-maps/introduction-service-maps/).\n\n## More info\n\nCheck out the [documentation](https://docs.newrelic.com/docs/agents/php-agent/) to learn more about New Relic monitoring for CodeIgniter.",
@@ -10116,72 +10186,6 @@
       {
         "name": "Guided install",
         "id": "guided-install"
-      }
-    ]
-  },
-  {
-    "title": "Video agent for The Platform player",
-    "name": "video-web-theplatform",
-    "description": "Agent to monitor video applications using The Platform player.",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/video/video-web/video-web-theplatform",
-    "id": "22af96ba-47b0-44b4-9d58-6bad65ca2917",
-    "level": "COMMUNITY",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/v0.106.0/quickstarts/video/video-web/video-web-theplatform/logo.png",
-    "summary": "Agent to monitor video applications using The Platform player.",
-    "websiteUrl": null,
-    "keywords": [
-      "nrlabs",
-      "nrlabs-data",
-      "video",
-      "tracking",
-      "ThePlatform"
-    ],
-    "authors": [
-      "New Relic Labs"
-    ],
-    "dashboards": [
-      {
-        "name": "Video QoS - theplatform",
-        "description": null,
-        "url": null,
-        "screenshots": []
-      }
-    ],
-    "alerts": [
-      {
-        "name": "Video Playback Failure % - theplatform",
-        "details": "Alert when the Video Playback Failures % increases significantly from its baseline.\nUseful for understanding when your users are experiencing issues during video playback.\n\n",
-        "type": "BASELINE",
-        "url": null
-      },
-      {
-        "name": "Video Start Failure % - theplatform",
-        "details": "Alert when the Video Start Failures % increases significantly from its baseline.\nUseful for understanding when your users are unable to successfully initiate video plays.\n\n",
-        "type": "BASELINE",
-        "url": null
-      },
-      {
-        "name": "Video Start Time - theplatform",
-        "details": "Alert when Video Start Time increases significantly from its baseline.\nUseful for understanding when your users are experiencing increased start times.\n\n",
-        "type": "BASELINE",
-        "url": null
-      }
-    ],
-    "documentation": [
-      {
-        "name": "Video The Platform Installation Docs",
-        "description": "Agent to monitor video applications using The Platform player.",
-        "url": "https://github.com/newrelic/video-theplatform-js"
-      }
-    ],
-    "installPlans": [
-      {
-        "name": "Browser",
-        "id": "browser-docs"
-      },
-      {
-        "name": "thePlatform Player",
-        "id": "video-web-theplatform"
       }
     ]
   },
@@ -12056,15 +12060,6 @@
     ],
     "dashboards": [
       {
-        "name": "Lacework Compliance Violations",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/v0.106.0/quickstarts/lacework/dashboards/lacework-compliance-violations.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/v0.95.0/quickstarts/lacework/dashboards/lacework-compliance-violations.png"
-        ]
-      },
-      {
         "name": "Lacework Anomaly Detections",
         "description": null,
         "url": null,
@@ -12080,6 +12075,15 @@
         "screenshots": [
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/v0.106.0/quickstarts/lacework/dashboards/lacework-security-overview.png",
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/v0.95.0/quickstarts/lacework/dashboards/lacework-security-overview.png"
+        ]
+      },
+      {
+        "name": "Lacework Compliance Violations",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/v0.106.0/quickstarts/lacework/dashboards/lacework-compliance-violations.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/v0.95.0/quickstarts/lacework/dashboards/lacework-compliance-violations.png"
         ]
       }
     ],
@@ -13610,6 +13614,74 @@
     ]
   },
   {
+    "title": "Video agent for Akamai player",
+    "name": "video-web-akamai",
+    "description": "## Why monitor Akamai player?\n\nAkamai Media Player is designed to help you insert quality media playback experiences into web, mobile, and connected-TV applications using SDKs. It includes SDKs for web, iOS, tvOS, Android, Android TV, Fire TV, and Chromecast. New Relic Akamai quickstart monitors your Akamai player with digital experience monitoring, tracing, diagnostics, and application analytics.\n\n### Akamai player quickstart highlights\n\nThe New Relic Akamai player quickstart has the following features\n- Dashboards| Our dashboards proactively track metrics like video attempts, video plays, and average video start time. The dashboards also help you monitor other key indicators like connection buffering ratio, plays by app, and more.\n- Alerts| You can get instant alerts on performance metrics like video playback failure, video start failure, and video start time.\n\n### How to monitor Akamai performance\n\nNew Relic’s Akamai quickstart automatically instruments your Akamai player with our video agent. It empowers you to monitor video applications with practical dashboards and alerts. The dashboard provides interactive visualizations to explore your data and understand context. In particular, the dashboard offers you the ability to drill down into performance details like the number of video attempts, number of video plays, and the overall average video start.\n\nWith instant alerts, the integration helps you to detect issues quickly and respond to them efficiently thereby improving your Akamai streaming experience.\n\nInstall the [New Relic Akamai](https://developer.akamai.com/new-relic-overview) observability quickstart today to track Akamai player’s metrics in real-time through a seamless dashboard and different alerts. This quickstart offers you the fastest path to effective monitoring of your Akamai video player via our video agent.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/video/video-web/video-web-akamai",
+    "id": "794055cb-eeb3-4cca-b478-6cd1fb97678e",
+    "level": "COMMUNITY",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/video/video-web/video-web-akamai/logo.svg",
+    "summary": "Monitoring Akamai player is critical to ensure that you detect incidents and respond to them quickly. Download the New Relic Akamai quickstart to proactively track your video applications’ performance metrics via our video agent.",
+    "websiteUrl": null,
+    "keywords": [
+      "nrlabs",
+      "nrlabs-data",
+      "video",
+      "tracking",
+      "Akamai"
+    ],
+    "authors": [
+      "New Relic Labs"
+    ],
+    "dashboards": [
+      {
+        "name": "Video Quality - Akamai Media Player",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/video/video-web/video-web-akamai/dashboards/akamai01.png"
+        ]
+      }
+    ],
+    "alerts": [
+      {
+        "name": "Video Playback Failure % - akamai-media-player",
+        "details": "Alert when the Video Playback Failures % increases significantly from its baseline.\nUseful for understanding when your users are experiencing issues during video playback.",
+        "type": "BASELINE",
+        "url": null
+      },
+      {
+        "name": "Video Start Failure % - akamai-media-player",
+        "details": "Alert when the Video Start Failures % increases significantly from its baseline.\nUseful for understanding when your users are unable to successfully initiate video plays.",
+        "type": "BASELINE",
+        "url": null
+      },
+      {
+        "name": "Video Start Time - akamai-media-player",
+        "details": "Alert when Video Start Time increases significantly from its baseline.\nUseful for understanding when your users are experiencing increased start times.",
+        "type": "BASELINE",
+        "url": null
+      }
+    ],
+    "documentation": [
+      {
+        "name": "Video Akamai Installation Docs",
+        "description": "Agent to monitor video applications using Akamai player.",
+        "url": "https://github.com/newrelic/video-akamai-js"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "Browser",
+        "id": "browser-docs"
+      },
+      {
+        "name": "Akamai Media Player",
+        "id": "video-web-akamai"
+      }
+    ]
+  },
+  {
     "title": "Jumpstart quickstart tool",
     "name": "jumpstart-quickstart-tool",
     "description": "The Jumpstart quickstart is a tool that has everything you need to help you get started building your own quickstart. It has some basic steps to follow to get started, some sample dashboards and queries, as well as a list of resources to help you build your own quickstart faster!",
@@ -14402,72 +14474,6 @@
     "installPlans": []
   },
   {
-    "title": "Video agent for Akamai player",
-    "name": "video-web-akamai",
-    "description": "\n## Why monitor Akamai player?\n\nAkamai Media Player is designed to help you insert quality media playback experiences into web, mobile, and connected-TV applications using SDKs. It includes SDKs for web, iOS, tvOS, Android, Android TV, Fire TV, and Chromecast. New Relic Akamai quickstart monitors your Akamai player with digital experience monitoring, tracing, diagnostics, and application analytics.\n\n### Akamai player quickstart highlights\n\nThe New Relic Akamai player quickstart has the following features\n- Dashboards| Our dashboards proactively track metrics like video attempts, video plays, and average video start time. The dashboards also help you monitor other key indicators like connection buffering ratio, plays by app, and more.\n- Alerts| You can get instant alerts on performance metrics like video playback failure, video start failure, and video start time.\n\n### How to monitor Akamai performance\n\nNew Relic’s Akamai quickstart automatically instruments your Akamai player with our video agent. It empowers you to monitor video applications with practical dashboards and alerts. The dashboard provides interactive visualizations to explore your data and understand context. In particular, the dashboard offers you the ability to drill down into performance details like the number of video attempts, number of video plays, and the overall average video start.\n\nWith instant alerts, the integration helps you to detect issues quickly and respond to them efficiently thereby improving your Akamai streaming experience.\n\nInstall the [New Relic Akamai](https://developer.akamai.com/new-relic-overview) observability quickstart today to track Akamai player’s metrics in real-time through a seamless dashboard and different alerts. This quickstart offers you the fastest path to effective monitoring of your Akamai video player via our video agent.",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/video/video-web/video-web-akamai",
-    "id": "794055cb-eeb3-4cca-b478-6cd1fb97678e",
-    "level": "COMMUNITY",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/v0.106.0/quickstarts/video/video-web/video-web-akamai/logo.svg",
-    "summary": "Monitoring Akamai player is critical to ensure that you detect incidents and respond to them quickly. Download the New Relic Akamai quickstart to proactively track your video applications’ performance metrics via our video agent.",
-    "websiteUrl": null,
-    "keywords": [
-      "nrlabs",
-      "nrlabs-data",
-      "video",
-      "tracking",
-      "Akamai"
-    ],
-    "authors": [
-      "New Relic Labs"
-    ],
-    "dashboards": [
-      {
-        "name": "Video QoS - akamai-media-player",
-        "description": null,
-        "url": null,
-        "screenshots": []
-      }
-    ],
-    "alerts": [
-      {
-        "name": "Video Playback Failure % - akamai-media-player",
-        "details": "Alert when the Video Playback Failures % increases significantly from its baseline.\nUseful for understanding when your users are experiencing issues during video playback.\n\n",
-        "type": "BASELINE",
-        "url": null
-      },
-      {
-        "name": "Video Start Failure % - akamai-media-player",
-        "details": "Alert when the Video Start Failures % increases significantly from its baseline.\nUseful for understanding when your users are unable to successfully initiate video plays.\n\n",
-        "type": "BASELINE",
-        "url": null
-      },
-      {
-        "name": "Video Start Time - akamai-media-player",
-        "details": "Alert when Video Start Time increases significantly from its baseline.\nUseful for understanding when your users are experiencing increased start times.\n\n",
-        "type": "BASELINE",
-        "url": null
-      }
-    ],
-    "documentation": [
-      {
-        "name": "Video Akamai Installation Docs",
-        "description": "Agent to monitor video applications using Akamai player.",
-        "url": "https://github.com/newrelic/video-akamai-js"
-      }
-    ],
-    "installPlans": [
-      {
-        "name": "Browser",
-        "id": "browser-docs"
-      },
-      {
-        "name": "Akamai Media Player",
-        "id": "video-web-akamai"
-      }
-    ]
-  },
-  {
     "title": "Xamarin bindings to New Relic's Mobile SDK",
     "name": "xamarin",
     "description": "This repo/project provides Xamarin bindings for New Relic's iOS and Android SDK's. The dll produced after building the bindings can be used in your Xamarin project.\n",
@@ -14497,6 +14503,135 @@
       }
     ],
     "installPlans": []
+  },
+  {
+    "title": "Istio Service",
+    "name": "istio-service",
+    "description": "This dashboard will give you insight into services and applications running\nin Kubernetes clusters with an Istio Service Mesh enabled. Includes client/server focused service metrics,\nand an additional page for displaying Ingress Gateway metrics.\n\nThe only requirement for installing this along with the New Relic Kubernetes agent is the\nPrometheus OpenMetrics Integration. [POMI](https://docs.newrelic.com/docs/infrastructure/prometheus-integrations/get-started/send-prometheus-metric-data-new-relic)\n\n[Istio Standard Metrics](https://istio.io/latest/docs/reference/config/metrics/)",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/istio",
+    "id": "cced731a-c027-4e19-ba77-474311bf43d2",
+    "level": "NEW_RELIC",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/istio/logo.png",
+    "summary": "A dashboard view of services running in your Kubernetes cluster using an Istio Service Mesh.",
+    "websiteUrl": null,
+    "keywords": [
+      "istio",
+      "kubernetes",
+      "service",
+      "mesh",
+      "k8s"
+    ],
+    "authors": [
+      "New Relic"
+    ],
+    "dashboards": [
+      {
+        "name": "Istio Service",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/istio/dashboards/istio-dashboard.png"
+        ]
+      }
+    ],
+    "alerts": [
+      {
+        "name": "Response Code 5xx for over 5 minutes",
+        "details": "If the `reporter = 'destination'` reports response code '5xx' over 100 times in five minutes then\nissue a 'Critical' alert.",
+        "type": "STATIC",
+        "url": null
+      }
+    ],
+    "documentation": [
+      {
+        "name": "Kubernetes installation docs",
+        "description": "To view the Istio Quickstart, the Kubernetes New Relic integration with the Prometheus OpenMetrics Integration (POMI) must be installed prior.\n",
+        "url": "https://docs.newrelic.com/docs/integrations/host-integrations/host-integrations-list/kubernetes-monitoring-integration"
+      },
+      {
+        "name": "Prometheus OpenMetrics Intergration (POMI) installation docs",
+        "description": "To view the Istio Quickstart, the Kubernetes New Relic integration with the Prometheus OpenMetrics Integration (POMI) must be installed prior.\n",
+        "url": "https://docs.newrelic.com/docs/infrastructure/prometheus-integrations/get-started/send-prometheus-metric-data-new-relic"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "Kubernetes integration",
+        "id": "kubernetes-install"
+      },
+      {
+        "name": "Prometheus OpenMetrics Integration",
+        "id": "setup-pomi"
+      }
+    ]
+  },
+  {
+    "title": "Video agent for HTML5 player",
+    "name": "video-web-html5",
+    "description": "Agent to monitor video applications using HTML5 player.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/video/video-web/video-web-html5",
+    "id": "7151989c-e4f2-4e51-a114-6951f3e783d4",
+    "level": "COMMUNITY",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/video/video-web/video-web-html5/logo.png",
+    "summary": "Agent to monitor video applications using HTML5 player.",
+    "websiteUrl": null,
+    "keywords": [
+      "nrlabs",
+      "nrlabs-data",
+      "video",
+      "tracking",
+      "HTML5"
+    ],
+    "authors": [
+      "New Relic Labs"
+    ],
+    "dashboards": [
+      {
+        "name": "Video Quality - html5",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/video/video-web/video-web-html5/dashboards/html501.png"
+        ]
+      }
+    ],
+    "alerts": [
+      {
+        "name": "Video Playback Failure % - html5",
+        "details": "Alert when the Video Playback Failures % increases significantly from its baseline.\nUseful for understanding when your users are experiencing issues during video playback.",
+        "type": "BASELINE",
+        "url": null
+      },
+      {
+        "name": "Video Start Failure % - html5",
+        "details": "Alert when the Video Start Failures % increases significantly from its baseline.\nUseful for understanding when your users are unable to successfully initiate video plays.",
+        "type": "BASELINE",
+        "url": null
+      },
+      {
+        "name": "Video Start Time - html5",
+        "details": "Alert when Video Start Time increases significantly from its baseline.\nUseful for understanding when your users are experiencing increased start times.",
+        "type": "BASELINE",
+        "url": null
+      }
+    ],
+    "documentation": [
+      {
+        "name": "Video HTML5 Installation Docs",
+        "description": "Agent to monitor video applications using HTML5 player.",
+        "url": "https://github.com/newrelic/video-html5-js"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "Browser",
+        "id": "browser-docs"
+      },
+      {
+        "name": "Html5 Player",
+        "id": "video-web-html5"
+      }
+    ]
   },
   {
     "title": "AWS Cloudwatch plugin for Logs",
@@ -15806,28 +15941,6 @@
     ],
     "dashboards": [
       {
-        "name": "Catchpoint-Recent Errors",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/catchpoint/dashboards/Catchpoint-Overview.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/catchpoint/dashboards/Catchpoint-Recent_Errors.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/catchpoint/dashboards/Catchpoint-Response_Size.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/catchpoint/dashboards/Catchpoint-Test_Times.png"
-        ]
-      },
-      {
-        "name": "Catchpoint-Response Size",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/catchpoint/dashboards/Catchpoint-Overview.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/catchpoint/dashboards/Catchpoint-Recent_Errors.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/catchpoint/dashboards/Catchpoint-Response_Size.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/catchpoint/dashboards/Catchpoint-Test_Times.png"
-        ]
-      },
-      {
         "name": "Catchpoint-Test Times",
         "description": null,
         "url": null,
@@ -15840,6 +15953,28 @@
       },
       {
         "name": "Catchpoint-Overview",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/catchpoint/dashboards/Catchpoint-Overview.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/catchpoint/dashboards/Catchpoint-Recent_Errors.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/catchpoint/dashboards/Catchpoint-Response_Size.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/catchpoint/dashboards/Catchpoint-Test_Times.png"
+        ]
+      },
+      {
+        "name": "Catchpoint-Recent Errors",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/catchpoint/dashboards/Catchpoint-Overview.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/catchpoint/dashboards/Catchpoint-Recent_Errors.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/catchpoint/dashboards/Catchpoint-Response_Size.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/catchpoint/dashboards/Catchpoint-Test_Times.png"
+        ]
+      },
+      {
+        "name": "Catchpoint-Response Size",
         "description": null,
         "url": null,
         "screenshots": [
@@ -16428,72 +16563,6 @@
     "installPlans": []
   },
   {
-    "title": "Video agent for HTML5 player",
-    "name": "video-web-html5",
-    "description": "Agent to monitor video applications using HTML5 player.",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/video/video-web/video-web-html5",
-    "id": "7151989c-e4f2-4e51-a114-6951f3e783d4",
-    "level": "COMMUNITY",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/v0.106.0/quickstarts/video/video-web/video-web-html5/logo.png",
-    "summary": "Agent to monitor video applications using HTML5 player.",
-    "websiteUrl": null,
-    "keywords": [
-      "nrlabs",
-      "nrlabs-data",
-      "video",
-      "tracking",
-      "HTML5"
-    ],
-    "authors": [
-      "New Relic Labs"
-    ],
-    "dashboards": [
-      {
-        "name": "Video QoS - html5",
-        "description": null,
-        "url": null,
-        "screenshots": []
-      }
-    ],
-    "alerts": [
-      {
-        "name": "Video Playback Failure % - html5",
-        "details": "Alert when the Video Playback Failures % increases significantly from its baseline.\nUseful for understanding when your users are experiencing issues during video playback.\n\n",
-        "type": "BASELINE",
-        "url": null
-      },
-      {
-        "name": "Video Start Failure % - html5",
-        "details": "Alert when the Video Start Failures % increases significantly from its baseline.\nUseful for understanding when your users are unable to successfully initiate video plays.\n\n",
-        "type": "BASELINE",
-        "url": null
-      },
-      {
-        "name": "Video Start Time - html5",
-        "details": "Alert when Video Start Time increases significantly from its baseline.\nUseful for understanding when your users are experiencing increased start times.\n\n",
-        "type": "BASELINE",
-        "url": null
-      }
-    ],
-    "documentation": [
-      {
-        "name": "Video HTML5 Installation Docs",
-        "description": "Agent to monitor video applications using HTML5 player.",
-        "url": "https://github.com/newrelic/video-html5-js"
-      }
-    ],
-    "installPlans": [
-      {
-        "name": "Browser",
-        "id": "browser-docs"
-      },
-      {
-        "name": "Html5 Player",
-        "id": "video-web-html5"
-      }
-    ]
-  },
-  {
     "title": "xMatters",
     "name": "xmatters",
     "description": "## What is xMatters?\n\nAutomated alerts for detecting and responding to events and critical issues.\n\n### Get started!\n\nCheck out our xMatters documentation to set up a notification channel and provide fast and consistent ways for the right personnel to be notified about incidents.\n\n### More info\n\nCheck out the [documentation](https://docs.newrelic.com/docs/alerts/new-relic-alerts/managing-notification-channels/notification-channels-control-where-send-alerts) to learn more about New Relic alerting for xMatters.\n",
@@ -16629,6 +16698,74 @@
       {
         "name": "AWS-CloudWatch-Metric-Streams",
         "id": "aws-cloudwatch-metric-streams"
+      }
+    ]
+  },
+  {
+    "title": "Video agent for VideoJS player",
+    "name": "video-web-videojs",
+    "description": "Agent to monitor video applications using VideoJS player.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/video/video-web/video-web-videojs",
+    "id": "e0296927-4ea9-40a8-a1d4-3a2c1cced9af",
+    "level": "COMMUNITY",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/video/video-web/video-web-videojs/logo.png",
+    "summary": "Agent to monitor video applications using VideoJS player.",
+    "websiteUrl": null,
+    "keywords": [
+      "nrlabs",
+      "nrlabs-data",
+      "video",
+      "tracking",
+      "VideoJS"
+    ],
+    "authors": [
+      "New Relic Labs"
+    ],
+    "dashboards": [
+      {
+        "name": "Video Quality - Video.js",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/video/video-web/video-web-videojs/dashboards/videojs01.png"
+        ]
+      }
+    ],
+    "alerts": [
+      {
+        "name": "Video Playback Failure % - videojs",
+        "details": "Alert when the Video Playback Failures % increases significantly from its baseline.\nUseful for understanding when your users are experiencing issues during video playback.",
+        "type": "BASELINE",
+        "url": null
+      },
+      {
+        "name": "Video Start Failure % - videojs",
+        "details": "Alert when the Video Start Failures % increases significantly from its baseline.\nUseful for understanding when your users are unable to successfully initiate video plays.",
+        "type": "BASELINE",
+        "url": null
+      },
+      {
+        "name": "Video Start Time - videojs",
+        "details": "Alert when Video Start Time increases significantly from its baseline.\nUseful for understanding when your users are experiencing increased start times.",
+        "type": "BASELINE",
+        "url": null
+      }
+    ],
+    "documentation": [
+      {
+        "name": "Video VideoJS Installation Docs",
+        "description": "Agent to monitor video applications using VideoJS player.",
+        "url": "https://github.com/newrelic/video-videojs-js"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "Browser",
+        "id": "browser-docs"
+      },
+      {
+        "name": "Video.js",
+        "id": "video-web-videojs"
       }
     ]
   },
@@ -18410,72 +18547,6 @@
     "installPlans": []
   },
   {
-    "title": "Video agent for VideoJS player",
-    "name": "video-web-videojs",
-    "description": "Agent to monitor video applications using VideoJS player.",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/video/video-web/video-web-videojs",
-    "id": "e0296927-4ea9-40a8-a1d4-3a2c1cced9af",
-    "level": "COMMUNITY",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/v0.106.0/quickstarts/video/video-web/video-web-videojs/logo.png",
-    "summary": "Agent to monitor video applications using VideoJS player.",
-    "websiteUrl": null,
-    "keywords": [
-      "nrlabs",
-      "nrlabs-data",
-      "video",
-      "tracking",
-      "VideoJS"
-    ],
-    "authors": [
-      "New Relic Labs"
-    ],
-    "dashboards": [
-      {
-        "name": "Video QoS - videojs",
-        "description": null,
-        "url": null,
-        "screenshots": []
-      }
-    ],
-    "alerts": [
-      {
-        "name": "Video Playback Failure % - videojs",
-        "details": "Alert when the Video Playback Failures % increases significantly from its baseline.\nUseful for understanding when your users are experiencing issues during video playback.\n\n",
-        "type": "BASELINE",
-        "url": null
-      },
-      {
-        "name": "Video Start Failure % - videojs",
-        "details": "Alert when the Video Start Failures % increases significantly from its baseline.\nUseful for understanding when your users are unable to successfully initiate video plays.\n\n",
-        "type": "BASELINE",
-        "url": null
-      },
-      {
-        "name": "Video Start Time - videojs",
-        "details": "Alert when Video Start Time increases significantly from its baseline.\nUseful for understanding when your users are experiencing increased start times.\n\n",
-        "type": "BASELINE",
-        "url": null
-      }
-    ],
-    "documentation": [
-      {
-        "name": "Video VideoJS Installation Docs",
-        "description": "Agent to monitor video applications using VideoJS player.",
-        "url": "https://github.com/newrelic/video-videojs-js"
-      }
-    ],
-    "installPlans": [
-      {
-        "name": "Browser",
-        "id": "browser-docs"
-      },
-      {
-        "name": "Video.js",
-        "id": "video-web-videojs"
-      }
-    ]
-  },
-  {
     "title": "Amazon Web Services",
     "name": "amazon-web-services",
     "description": "## Introduction to AWS integrations\n\nAmazon integrations let you monitor your AWS data in several New Relic features.\nEnabling the [AWS CloudWatch Metric Streams](https://docs.newrelic.com/docs/infrastructure/amazon-integrations/aws-integrations-list/aws-metric-stream/)\nintegration is the recommended solution to monitor all CloudWatch metrics from all AWS services (including custom namespaces).\nOn top of this, additional integrations are available to get extended visibility on key AWS services beyond the available CloudWatch metrics.\nFor a full reference of the supported metrics, please check the available CloudWatch metrics for each service in the AWS documentation pages.\n\n### Get started!\n\nStart monitoring AWS services by connecting Amazon Web Services (AWS) to New Relic!\n\nCheck out our AWS integrations documentation to instrument your cloud service and manage the stability, scalability, and reliability of your systems with New Relic's infrastructure monitoring capabilities.\n\n### More info\n\nCheck out the [documentation](https://docs.newrelic.com/docs/infrastructure/amazon-integrations/get-started/introduction-aws-integrations/) to learn more about New Relic monitoring for more than 50 AWS services.",
@@ -19759,16 +19830,6 @@
     ],
     "dashboards": [
       {
-        "name": "HerokuConnect ",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/v0.106.0/quickstarts/heroku/dashboards/heroku_connect.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/v0.94.3/quickstarts/heroku/dashboards/heroku_connect.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/v0.95.0/quickstarts/heroku/dashboards/heroku_connect.png"
-        ]
-      },
-      {
         "name": "Heroku Dyno/DB",
         "description": null,
         "url": null,
@@ -19776,6 +19837,16 @@
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/v0.106.0/quickstarts/heroku/dashboards/heroku_dyno_db.png",
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/v0.94.3/quickstarts/heroku/dashboards/heroku_dyno_db.png",
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/v0.95.0/quickstarts/heroku/dashboards/heroku_dyno_db.png"
+        ]
+      },
+      {
+        "name": "HerokuConnect ",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/v0.106.0/quickstarts/heroku/dashboards/heroku_connect.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/v0.94.3/quickstarts/heroku/dashboards/heroku_connect.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/v0.95.0/quickstarts/heroku/dashboards/heroku_connect.png"
         ]
       }
     ],
@@ -20792,16 +20863,6 @@
     ],
     "dashboards": [
       {
-        "name": "Kubernetes Data Ingest Analysis",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/v0.106.0/quickstarts/audit/infrastructure-integrations-data-analysis/dashboards/kubernetes-data-ingest-analysis.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/v0.94.3/quickstarts/audit/infrastructure-integrations-data-analysis/dashboards/kubernetes-data-ingest-analysis.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/v0.95.0/quickstarts/audit/infrastructure-integrations-data-analysis/dashboards/kubernetes-data-ingest-analysis.png"
-        ]
-      },
-      {
         "name": "On-Host Integrations Data Analysis",
         "description": null,
         "url": null,
@@ -20839,6 +20900,16 @@
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/v0.106.0/quickstarts/audit/infrastructure-integrations-data-analysis/dashboards/gcp-integrations-data-ingest-analysis.png",
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/v0.94.3/quickstarts/audit/infrastructure-integrations-data-analysis/dashboards/gcp-integrations-data-ingest-analysis.png",
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/v0.95.0/quickstarts/audit/infrastructure-integrations-data-analysis/dashboards/gcp-integrations-data-ingest-analysis.png"
+        ]
+      },
+      {
+        "name": "Kubernetes Data Ingest Analysis",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/v0.106.0/quickstarts/audit/infrastructure-integrations-data-analysis/dashboards/kubernetes-data-ingest-analysis.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/v0.94.3/quickstarts/audit/infrastructure-integrations-data-analysis/dashboards/kubernetes-data-ingest-analysis.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/v0.95.0/quickstarts/audit/infrastructure-integrations-data-analysis/dashboards/kubernetes-data-ingest-analysis.png"
         ]
       }
     ],
@@ -21607,26 +21678,6 @@
     ],
     "dashboards": [
       {
-        "name": "JavaScript Errors",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/v0.106.0/quickstarts/browser/dashboards/javascript_errors.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/v0.94.3/quickstarts/browser/dashboards/javascript_errors.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/v0.95.0/quickstarts/browser/dashboards/javascript_errors.png"
-        ]
-      },
-      {
-        "name": "Browser Overview",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/v0.106.0/quickstarts/browser/dashboards/browser_overview.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/v0.94.3/quickstarts/browser/dashboards/browser_overview.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/v0.95.0/quickstarts/browser/dashboards/browser_overview.png"
-        ]
-      },
-      {
         "name": "Browser Pages Dashboard",
         "description": null,
         "url": null,
@@ -21637,6 +21688,16 @@
         ]
       },
       {
+        "name": "JavaScript Errors",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/v0.106.0/quickstarts/browser/dashboards/javascript_errors.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/v0.94.3/quickstarts/browser/dashboards/javascript_errors.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/v0.95.0/quickstarts/browser/dashboards/javascript_errors.png"
+        ]
+      },
+      {
         "name": "Browser Traffic Analysis",
         "description": null,
         "url": null,
@@ -21644,6 +21705,16 @@
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/v0.106.0/quickstarts/browser/dashboards/traffic_analysis.png",
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/v0.94.3/quickstarts/browser/dashboards/traffic_analysis.png",
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/v0.95.0/quickstarts/browser/dashboards/traffic_analysis.png"
+        ]
+      },
+      {
+        "name": "Browser Overview",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/v0.106.0/quickstarts/browser/dashboards/browser_overview.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/v0.94.3/quickstarts/browser/dashboards/browser_overview.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/v0.95.0/quickstarts/browser/dashboards/browser_overview.png"
         ]
       }
     ],
