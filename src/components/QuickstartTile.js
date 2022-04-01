@@ -70,8 +70,8 @@ const QuickstartTile = ({
     let requiredURL = '';
     if (href) {
       requiredURL = href.replaceAll(' ', '-');
-    } else if (fields) {
-      requiredURL = fields?.slug.replaceAll(' ', '-');
+    } else if (fields?.slug) {
+      requiredURL = fields.slug.replaceAll(' ', '-');
     } else {
       requiredURL = '/';
     }
