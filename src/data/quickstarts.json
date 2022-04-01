@@ -4594,7 +4594,7 @@
   {
     "title": "Postman",
     "name": "postman",
-    "description": "## Postman's New Relic Integration\n\nPostman is an API platform for building and using APIs. Postman simplifies each step of the API lifecycle and\nstreamlines collaboration so you can create better APIs—faster. Postman's integration with New Relic allows\nyou to observe the performance of your APIs by sending results from Postman Monitor to New Relic and returning\ncritical API performance data back to Postman's API platform.",
+    "description": "## Postman introduction\n\nPostman is an API platform for building and using APIs. Postman simplifies each step of the API lifecycle and\nstreamlines collaboration so you can create better APIs—faster.\n\n## Postman quickstart highlights\n\nThe Postman quickstart allows you to get an opinionated visualization of your Postman API data within minutes.\n\n- View your average latency over time\n- Compare your total request count over time\n- Get a real time tally of recent errors and failed tests\n- Measure API 4xx and 5xx failures\n- Review your byte traffic over time",
     "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/postman",
     "id": "d465bf08-b737-4bc5-b5ad-dd5be272967b",
     "level": "COMMUNITY",
@@ -4608,15 +4608,17 @@
       "featured"
     ],
     "authors": [
-      "Shashank Awasthi"
+      "Shashank Awasthi",
+      "Postman"
     ],
     "dashboards": [
       {
-        "name": "Postman Monitor Overview",
+        "name": "Postman Monitor",
         "description": null,
         "url": null,
         "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/postman/dashboards/postman-dashboard01.png"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/postman/dashboards/postman-dashboard01.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/postman/dashboards/postman-dashboard02.png"
         ]
       }
     ],
