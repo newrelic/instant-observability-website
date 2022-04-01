@@ -63,12 +63,30 @@ const QuickstartTile = ({
     }
   };
 
+  const getURLWithNoSpace = ({
+    href,
+    fields
+  }) => {
+    let requiredURL = '';
+    if (href) {
+      requiredURL = href.replaceAll(' ', '-');
+    } else if (fields) {
+      requiredURL = fields?.slug.replaceAll(' ', '-');
+    } else {
+      requiredURL = '/'
+    }
+    return requiredURL;
+  };
+
   const isListView = () => view === VIEWS.LIST;
 
   return (
     <Surface
       as={Link}
-      to={href || fields?.slug || '/'}
+      to={getURLWithNoSpace({
+        href,
+        fields
+      })}
       key={id}
       base={Surface.BASE.PRIMARY}
       className={className}
