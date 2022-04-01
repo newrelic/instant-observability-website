@@ -13,6 +13,14 @@ import useThemeTranslation from '@newrelic/gatsby-theme-newrelic/src/hooks/useTh
 import { rgba } from 'polished';
 import { useInstrumentedHandler } from '@newrelic/gatsby-theme-newrelic';
 
+const breakpoints = ['40em', '52em', '64em'];
+
+const media = {
+  small: `screen and (min-width: ${breakpoints[0]})`,
+  medium: `screen and (min-width: ${breakpoints[1]})`,
+  large: `screen and (min-width: ${breakpoints[2]})`,
+};
+
 const action = css`
   color: var(--secondary-text-color);
   transition: all 0.2s ease-out;
@@ -59,7 +67,34 @@ const createNavList = (listType, activeSite = null) => {
     switch (listType) {
       case 'main':
         navList.push(
-          <li key={href}>
+          <li
+            key={href}
+            css={[
+              css`
+                --active-color: var(--color-neutrals-400),
+                color: inherit,
+                text-decoration: none,
+                transition-property: color,
+                transition-duration: 0.2s,
+                transition-timing-function: ease-in-out,
+                &:hover {
+                  color: var(--active-color),
+                },
+              `,
+              css`
+                --link-hover-color: #0ab0bf;
+                &:hover {
+                  border-bottom: 3px solid var(--link-hover-color);
+                }
+              `,
+              css`
+                color: inherit;
+                text-decoration: none;
+                transition-property: color;
+                transition-duration: 0.2s;
+                transition-timing-function: ease-in-out;
+            `]}
+          >
             <GlobalNavLink
               href={href}
               activeSite={activeSite && HEADER_LINKS.get(activeSite)}
@@ -97,6 +132,15 @@ const actionIcon = css`
 
 const GlobalHeader = ({ className, activeSite }) => {
   const { t } = useThemeTranslation();
+  const [isOpen, setOpen] = React.useState(false)
+
+  React.useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflowY = "hidden"
+    } else {
+      document.body.style.overflowY = "visible"
+    }
+  }, [isOpen])
 
   const hideLogoText = useMedia({ maxWidth: '350px' });
 
@@ -106,17 +150,29 @@ const GlobalHeader = ({ className, activeSite }) => {
       <div
         data-swiftype-index={false}
         className={className}
-        css={css`
+        css={[
+          // responsive header - start
+          css`
+            position: relative;
+            z-index: 1;
+            display: none;
+            @media screen and (min-width: ${NAV_BREAKPOINT}) {
+              display: block;
+            }
+          `,
+          // responsive header - end
+          css`
           background-color: var(--color-neutrals-300);
           box-shadow: var(--shadow-2);
-          position: sticky;
+          // position: sticky;
           top: 0;
           z-index: 80;
 
           .dark-mode & {
             background-color: var(--color-neutrals-800);
           }
-        `}
+          `
+        ]}
       >
         <div
           css={css`
@@ -380,6 +436,120 @@ const GlobalHeader = ({ className, activeSite }) => {
           </ul>
         </div>
       </div>
+
+      {/* mobile header container - start */}
+      <div
+        css={css`
+          display: none;
+          position: relative;
+          paddingTop: 16px;
+          @media screen and (max-width: ${NAV_BREAKPOINT}) {
+            display: block;
+          }
+          ${isOpen && `
+            background: yellow;
+          `}
+        `}
+      >
+       <div
+          css={css`
+            display: flex;
+            align-items: center;
+            width: 100%;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            flex-direction: column;
+            @media ${media.small} {
+              flex-direction: row;
+            }
+          `}
+        >
+          logo here
+          <div
+            css={css`
+              display: flex;
+              align-items: center;
+              width: 100%;
+              flex-wrap: wrap;
+              justify-content: space-between;
+              flex-direction: column;
+              @media ${media.small} {
+                flex-direction: row;
+              }
+            `}
+          >
+            mobile nav bar
+            {/* Nudge - start */}
+            <div>
+              {/* Interactive icon - start */}
+              <Button
+                css={css`
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                  background: transparent;
+                  border: none;
+                  cursor: pointer;
+                  width: 48;
+                  height: 48;
+                  ${isOpen ? `
+                    color: green
+                  ` : `
+                    color: blue
+                  `}
+                `}
+                title="Toggle menu"
+                onClick={() => setOpen(!isOpen)}
+              >
+                {isOpen ? 'x' : 'menu'}
+              </Button>
+              {/* Interactive icon - end */}
+            </div>
+            {/* Nudge - end */}
+          </div>
+        </div> 
+      </div>
+      {/* mobile header container - end */}
+
+      {/* mobile header menu container - start */}
+      {isOpen && (
+        <div
+          css={css`
+            position: absolute;
+            width: 100vw;
+            height: 100vh;
+            padding-top: 32px;
+            background: blue;
+            z-index: 1;
+            @media ${media.small} {
+              display: none;
+            }
+          `}
+        >
+          <nav>
+            <ul
+              css={css`
+                display: flex;
+                align-items: stretch;
+                width: 100%;
+                flex-wrap: wrap;
+                justify-content: center;
+                flex-direction: column;
+                @media ${media.small} {
+                  flex-direction: row;
+                }
+                --list style--
+                list-style: none;
+                padding: 0;
+                margin: 0;
+              `}
+            >
+              {createNavList('main', activeSite)}
+            </ul>
+          </nav>
+        </div>
+      )}
+      {/* mobile header menu container - end */}
     </>
   );
 };
