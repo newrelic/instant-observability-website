@@ -73,7 +73,7 @@ const QuickstartTile = ({
     } else if (fields) {
       requiredURL = fields?.slug.replaceAll(' ', '-');
     } else {
-      requiredURL = '/'
+      requiredURL = '/';
     }
     return requiredURL;
   };
