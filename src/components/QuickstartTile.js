@@ -69,7 +69,10 @@ const QuickstartTile = ({
   }) => {
     let requiredURL = '';
     if (href) {
-      requiredURL = href.replaceAll(' ', '-');
+      const hrefValues = href.split('?');
+      const hrefSlug = hrefValues[0];
+      hrefValues[0] = hrefSlug.replaceAll(' ', '-').toLowerCase();
+      requiredURL = hrefValues.join('?');
     } else if (fields?.slug) {
       requiredURL = fields.slug.replaceAll(' ', '-');
     } else {
