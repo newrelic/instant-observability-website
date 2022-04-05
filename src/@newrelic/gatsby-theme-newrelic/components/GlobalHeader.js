@@ -5,29 +5,16 @@ import AnnouncementBanner from '@newrelic/gatsby-theme-newrelic/src/components/A
 import DarkModeToggle from '@newrelic/gatsby-theme-newrelic/src/components/DarkModeToggle';
 import ExternalLink from '@newrelic/gatsby-theme-newrelic/src/components/ExternalLink';
 import Button from '@newrelic/gatsby-theme-newrelic/src/components/Button';
-import Dropdown from '@newrelic/gatsby-theme-newrelic/src/components/Dropdown';
 import NewRelicLogo from '@newrelic/gatsby-theme-newrelic/src/components/NewRelicLogo';
 import GlobalNavLink from '@newrelic/gatsby-theme-newrelic/src/components/GlobalNavLink';
 import useMedia from 'use-media';
 import useThemeTranslation from '@newrelic/gatsby-theme-newrelic/src/hooks/useThemeTranslation';
-import { rgba } from 'polished';
 import { useInstrumentedHandler } from '@newrelic/gatsby-theme-newrelic';
-
-const breakpoints = ['40em', '52em', '64em'];
-
-const media = {
-  small: `screen and (min-width: ${breakpoints[0]})`,
-  medium: `screen and (min-width: ${breakpoints[1]})`,
-  large: `screen and (min-width: ${breakpoints[2]})`,
-};
+import { Menu, X } from "react-feather"
 
 const action = css`
   color: var(--secondary-text-color);
   transition: all 0.2s ease-out;
-
-  &:hover {
-    color: var(--secondary-text-hover-color);
-  }
 `;
 
 export const NR_SITES = {
@@ -59,6 +46,7 @@ HEADER_LINKS.set(NR_SITES.PLATFORM, {
   .set(NR_SITES.IO, {
     text: 'Instant Observability',
     href: 'https://newrelic.com/instant-observability/',
+    active: true,
   });
 
 const createNavList = (listType, activeSite = null) => {
@@ -69,31 +57,6 @@ const createNavList = (listType, activeSite = null) => {
         navList.push(
           <li
             key={href}
-            css={[
-              css`
-                --active-color: var(--color-neutrals-400),
-                color: inherit,
-                text-decoration: none,
-                transition-property: color,
-                transition-duration: 0.2s,
-                transition-timing-function: ease-in-out,
-                &:hover {
-                  color: var(--active-color),
-                },
-              `,
-              css`
-                --link-hover-color: #0ab0bf;
-                &:hover {
-                  border-bottom: 3px solid var(--link-hover-color);
-                }
-              `,
-              css`
-                color: inherit;
-                text-decoration: none;
-                transition-property: color;
-                transition-duration: 0.2s;
-                transition-timing-function: ease-in-out;
-            `]}
           >
             <GlobalNavLink
               href={href}
@@ -102,13 +65,6 @@ const createNavList = (listType, activeSite = null) => {
               {text}
             </GlobalNavLink>
           </li>
-        );
-        break;
-      case 'dropdown':
-        navList.push(
-          <Dropdown.MenuItem key={href} href={href}>
-            {text}
-          </Dropdown.MenuItem>
         );
         break;
     }
@@ -151,7 +107,6 @@ const GlobalHeader = ({ className, activeSite }) => {
         data-swiftype-index={false}
         className={className}
         css={[
-          // responsive header - start
           css`
             position: relative;
             z-index: 1;
@@ -160,11 +115,9 @@ const GlobalHeader = ({ className, activeSite }) => {
               display: block;
             }
           `,
-          // responsive header - end
           css`
-          background-color: var(--color-neutrals-300);
+          background-color: var(--color-white);
           box-shadow: var(--shadow-2);
-          // position: sticky;
           top: 0;
           z-index: 80;
 
@@ -182,51 +135,11 @@ const GlobalHeader = ({ className, activeSite }) => {
             max-width: var(--site-max-width);
             margin: 0 auto;
             padding: 0 var(--site-content-padding);
+            height: 5.9375rem;
+            align-items: center;
           `}
         >
-          <nav
-            css={css`
-              display: flex;
-              align-items: center;
-              height: 100%;
-              overflow: hidden;
-              position: relative;
-
-              @media screen and (max-width: 1235px) {
-                &::after {
-                  content: '';
-                  position: absolute;
-                  right: 0;
-                  height: 100%;
-                  width: 2rem;
-                  pointer-events: none;
-                  background: linear-gradient(
-                    to right,
-                    ${rgba('#f4f5f5', 0)},
-                    var(--color-neutrals-800)
-                  );
-
-                  .dark-mode & {
-                    background: linear-gradient(
-                      to right,
-                      ${rgba('#22353c', 0)},
-                      var(--color-dark-100)
-                    );
-                  }
-                }
-              }
-
-              @media screen and (max-width: ${NAV_BREAKPOINT}) {
-                overflow: visible;
-
-                &::after {
-                  background: none !important;
-                  width: 0 !important;
-                }
-              }
-            `}
-          >
-            <a
+             <a
               href="https://newrelic.com"
               onClick={useInstrumentedHandler(null, {
                 eventName: 'externalLinkClick',
@@ -245,7 +158,7 @@ const GlobalHeader = ({ className, activeSite }) => {
               `}
             >
               <NewRelicLogo
-                size="104px"
+                size="176px"
                 css={css`
                   .logo-text {
                     fill: var(--color-neutrals-900);
@@ -257,48 +170,44 @@ const GlobalHeader = ({ className, activeSite }) => {
                 `}
               />
             </a>
+          <nav
+            css={css`
+              display: flex;
+              align-items: center;
+              height: 100%;
+              overflow: hidden;
+              position: relative;
+              width:100%;
+              justify-content: center;
 
-            <Dropdown
-              css={css`
-                display: none;
-
-                @media screen and (max-width: ${NAV_BREAKPOINT}) {
-                  display: block;
+              @media screen and (max-width: 1235px) {
+                &::after {
+                  content: '';
+                  position: absolute;
+                  right: 0;
+                  height: 100%;
+                  width: 2rem;
+                  pointer-events: none;
+                  }
                 }
-              `}
-            >
-              <Dropdown.Toggle
-                size={Button.SIZE.EXTRA_SMALL}
-                variant={Button.VARIANT.LINK}
-                chevron={false}
-                css={css`
-                  padding-left: 0;
-                  padding-right: 0;
-                `}
-              >
-                <NewRelicLogo
-                  size={hideLogoText ? '24px' : '104px'}
-                  css={css`
-                    .logo-text {
-                      fill: var(--color-neutrals-900);
+              }
 
-                      .dark-mode & {
-                        fill: var(--color-neutrals-100);
-                      }
-                    }
-                  `}
-                  omitText={hideLogoText}
-                />
-              </Dropdown.Toggle>
-              <Dropdown.Menu>
-                {createNavList('dropdown', activeSite)}
-              </Dropdown.Menu>
-            </Dropdown>
+              @media screen and (max-width: ${NAV_BREAKPOINT}) {
+                overflow: visible;
+
+                &::after {
+                  background: none !important;
+                  width: 0 !important;
+                }
+              }
+            `}
+          >
 
             <ul
               css={css`
                 height: 100%;
-                margin: 0;
+                display:flex;
+                justify-conten: center;
                 padding: 0;
                 display: flex;
                 list-style-type: none;
@@ -307,19 +216,26 @@ const GlobalHeader = ({ className, activeSite }) => {
                 position: relative;
                 -webkit-overflow-scrolling: touch;
                 -ms-overflow-style: -ms-autohiding-scrollbar;
-
+                
                 > li {
-                  margin: 0;
+                  margin: 1.3rem 0;
+                  padding: 0px 10px;
                   flex: 0 0 auto;
                   > a {
-                    --active-color: var(--color-neutrals-400);
-                    color: var(--color-neutrals-900);
+                   --active-color: var(--color-white);
+                   font-family: Open Sans,Open Sans,Corbel,Arial,sans-serif;
+                   color: #54565a;
+                   font-weight: 400;
+                   font-size: 1.1rem;
+                   padding: 17px 0px;
+                   display:block;
 
                     &:hover {
                       color: var(--color-neutrals-900);
+                      border-bottom: 3px solid var(--color-brand-400);
                     }
                     .dark-mode & {
-                      --active-color: var(--color-neutrals-900);
+                      --active-color: var(--color-neutrals-800);
                       color: var(--color-neutrals-100);
                     }
                   }
@@ -348,6 +264,12 @@ const GlobalHeader = ({ className, activeSite }) => {
               > li {
                 transition: all 0.2s ease-out;
                 color: var(--secondary-text-color);
+                > a{
+                  font-family: Open Sans,Open Sans,Corbel,Arial,sans-serif;
+                  font-weight: 400;
+                  font-size: 1.1rem;
+                  line-height: 1.625;
+                }
 
                 &:not(:first-of-type) {
                   margin-left: 0.5rem;
@@ -375,8 +297,10 @@ const GlobalHeader = ({ className, activeSite }) => {
                   font-weight: 600;
                   font-size: 0.875rem;
                   white-space: nowrap;
-                  color: var(--color-brand-500);
-                  border-radius: 4px;
+                  color: #54565a;
+                  .dark-mode & {
+                    color: var(--color-neutrals-300);
+                  }
 
                   @media screen and (max-width: ${MOBILE_BREAKPOINT}) {
                     display: none;
@@ -419,7 +343,6 @@ const GlobalHeader = ({ className, activeSite }) => {
                   action,
                   css`
                     margin: 27px 0px 27px 19px;
-
                     color: var(--color-neutrals-700);
                     .dark-mode & {
                       color: var(--color-neutrals-300);
@@ -437,51 +360,101 @@ const GlobalHeader = ({ className, activeSite }) => {
         </div>
       </div>
 
-      {/* mobile header container - start */}
       <div
         css={css`
           display: none;
           position: relative;
-          paddingTop: 16px;
+          z-index: 10;
+          box-shadow: 0 0.25rem 1.875rem rgb(84 86 90 / 10%);
+         
           @media screen and (max-width: ${NAV_BREAKPOINT}) {
-            display: block;
+            display: flex;
+          }
+          .dark-mode & {
+            background-color: var(--color-neutrals-800);
           }
           ${isOpen && `
-            background: yellow;
+          background-color: var(--color-white);
           `}
         `}
       >
        <div
           css={css`
             display: flex;
-            align-items: center;
             width: 100%;
+            padding: 1.5rem;
             flex-wrap: wrap;
             justify-content: space-between;
             flex-direction: column;
-            @media ${media.small} {
+            @media screen and (max-width: ${MOBILE_BREAKPOINT}) {
               flex-direction: row;
             }
           `}
         >
-          logo here
+          <a
+              href="https://newrelic.com"
+              onClick={useInstrumentedHandler(null, {
+              eventName: 'externalLinkClick',
+              category: 'LinkClick',
+              origin: 'globalHeader',
+              href: 'https://newrelic.com',
+              })}
+              css={css`
+                display: flex;
+                align-items: center;
+                margin-right: 3rem;
+                height: 100%;
+              
+              `}
+            >
+              
+          <NewRelicLogo
+                  size={hideLogoText ? '24px' : '104px'}
+                  css={css`
+                  width: 7.5rem;
+                    .logo-text {
+                      fill: var(--color-neutrals-900);
+
+                      .dark-mode & {
+                        fill: var(--color-neutrals-100);
+                      }
+                    }
+                  `}
+                  omitText={hideLogoText}
+                />
+                </a>
+      </div>         
           <div
             css={css`
-              display: flex;
+              display: grid;
+              grid-auto-flow: column;
               align-items: center;
-              width: 100%;
               flex-wrap: wrap;
               justify-content: space-between;
-              flex-direction: column;
-              @media ${media.small} {
-                flex-direction: row;
-              }
+              //flex-direction: row;
             `}
           >
-            mobile nav bar
-            {/* Nudge - start */}
             <div>
-              {/* Interactive icon - start */}
+            <DarkModeToggle
+                css={[
+                  actionIcon,
+                  action,
+                  css`
+                    margin: 27px 0px 27px 19px;
+                    color: var(--color-neutrals-700);
+                    .dark-mode & {
+                      color: var(--color-neutrals-300);
+                    }
+
+                    @media screen and (max-width: 450px) {
+                      margin: 0;
+                    }
+                  `,
+                ]}
+                size="1.5rem"
+              />
+            </div>
+              <div>
               <Button
                 css={css`
                   display: flex;
@@ -492,36 +465,37 @@ const GlobalHeader = ({ className, activeSite }) => {
                   cursor: pointer;
                   width: 48;
                   height: 48;
+                  .dark-mode & {
+                    color: var(--color-neutrals-300);
+                  }
                   ${isOpen ? `
-                    color: green
+                    color:     color: var(--color-neutrals-700);
                   ` : `
-                    color: blue
+                    color:     color: var(--color-neutrals-700);
                   `}
                 `}
                 title="Toggle menu"
                 onClick={() => setOpen(!isOpen)}
               >
-                {isOpen ? 'x' : 'menu'}
+                {isOpen ? <X /> : <Menu />}
               </Button>
-              {/* Interactive icon - end */}
-            </div>
-            {/* Nudge - end */}
+              </div>
           </div>
         </div> 
-      </div>
-      {/* mobile header container - end */}
-
-      {/* mobile header menu container - start */}
       {isOpen && (
         <div
           css={css`
+            display:block;
             position: absolute;
             width: 100vw;
             height: 100vh;
-            padding-top: 32px;
-            background: blue;
+            background-color:var(--color-white);
             z-index: 1;
-            @media ${media.small} {
+            .dark-mode & {
+              background-color: var(--color-neutrals-800);
+              color: var(--color-neutrals-500);
+            }
+            @media screen and (min-width: ${NAV_BREAKPOINT}) {
               display: none;
             }
           `}
@@ -535,21 +509,126 @@ const GlobalHeader = ({ className, activeSite }) => {
                 flex-wrap: wrap;
                 justify-content: center;
                 flex-direction: column;
-                @media ${media.small} {
+                list-style-type: none;
+                width: 100%;
+                margin: 0;
+                padding: 0;
+                > li {
+                  margin: 0;
+                  flex: 0 0 auto;
+                  border-bottom: 1px solid #eeefef;
+                  > a {
+                    --active-color: var(--color-white);
+                    font-family: Open Sans,Open Sans,Corbel,Arial,sans-serif;
+                    color: #54565a;
+                    font-weight: 400;
+                    font-size: 1rem;
+                    line-height: 4;
+                    padding: 0 2.5rem;
+                    text-align: left;
+                    
+                    .dark-mode & {
+                      color: var(--color-neutrals-500);
+                      --active-color: var(--color-neutrals-800);
+                    }
+                @media screen and (min-width: ${NAV_BREAKPOINT}) {
                   flex-direction: row;
                 }
                 --list style--
                 list-style: none;
-                padding: 0;
-                margin: 0;
               `}
             >
               {createNavList('main', activeSite)}
             </ul>
           </nav>
+          <div
+          css={css`
+          display:grid;
+          grid-template-columns: 1fr 1fr;
+          grid-column-gap: 1.5rem;
+          padding: 1.6875rem;
+          width: -webkit-fill-available;
+           bottom: 0;
+           position: fixed;
+           box-shadow: 0 0.25rem 1.875rem rgb(84 86 90 / 10%);
+         
+         ` }
+          >
+          
+              <Button
+                as={ExternalLink}
+                size={Button.SIZE.SMALL}
+                variant={Button.VARIANT.LINK}
+                href="https://one.newrelic.com"
+                css={css`
+                ease;
+                transition: background-color 0.3s ease,color 0.3s ease,border-color 0.3s ease;
+                font-family: Open Sans,Open Sans,Corbel,Arial,sans-serif;
+                font-weight: 400;
+                font-size: 1rem;
+                line-height: 1.625;
+                text-decoration: none;
+                border: 1px solid transparent;
+                border-radius: 4px;
+                cursor: pointer;
+                display: inline-block;
+                text-align: center;
+                vertical-align: middle;
+                white-space: nowrap;
+                background-color: #fff;
+                color: #00838f;
+                border-color: #00838f;
+           
+                padding: 0.375rem 1rem;
+                  .dark-mode & {
+                    background:var(--background-color-300);
+                    color: var(--color-brand-500);
+                  }
+
+                  
+                `}
+              >
+                <span>{t('button.login')}</span>
+              </Button>
+           
+            
+              <Button
+                as={ExternalLink}
+                className={className}
+                href="https://newrelic.com/signup"
+                size={Button.SIZE.SMALL}
+                variant={Button.VARIANT.PRIMARY}
+                instrumentation={{
+                  component: 'SignupButton',
+                  layoutElement: 'globalHeader',
+                }}
+                css={css`
+                padding: 0.375rem 1rem;
+                    transition: background-color 0.3s ease,color 0.3s ease,border-color 0.3s ease;
+                    font-family: Open Sans,Open Sans,Corbel,Arial,sans-serif;
+                    font-weight: 400;
+                    font-size: 1rem;
+                    line-height: 1.625;
+                    text-decoration: none;
+                    border: 1px solid transparent;
+                    border-radius: 4px;
+                    cursor: pointer;
+                    display: inline-block;
+                    text-align: center;
+                    vertical-align: middle;
+                    white-space: nowrap;
+                    background-color: #00838f;
+                    color: #fff;
+                    border-color: #00838f;
+                  
+                `}
+              >
+                <span>{t('button.signUp')}</span>
+              </Button>
+           
+          </div>
         </div>
       )}
-      {/* mobile header menu container - end */}
     </>
   );
 };
