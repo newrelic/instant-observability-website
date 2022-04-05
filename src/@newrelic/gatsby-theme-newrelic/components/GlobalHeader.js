@@ -46,7 +46,6 @@ HEADER_LINKS.set(NR_SITES.PLATFORM, {
   .set(NR_SITES.IO, {
     text: 'Instant Observability',
     href: 'https://newrelic.com/instant-observability/',
-    active: true,
   });
 
 const createNavList = (listType, activeSite = null) => {
@@ -226,12 +225,11 @@ const GlobalHeader = ({ className, activeSite }) => {
                    font-family: Open Sans,Open Sans,Corbel,Arial,sans-serif;
                    color: #54565a;
                    font-weight: 400;
-                   font-size: 1.1rem;
+                   font-size: 1rem;
                    padding: 17px 0px;
                    display:block;
-
                     &:hover {
-                      color: var(--color-neutrals-900);
+                      color: #54565a;
                       border-bottom: 3px solid var(--color-brand-400);
                     }
                     .dark-mode & {
@@ -245,6 +243,7 @@ const GlobalHeader = ({ className, activeSite }) => {
                   display: none;
                 }
               `}
+              className="header-nav-list"
             >
               {createNavList('main', activeSite)}
             </ul>
@@ -267,7 +266,7 @@ const GlobalHeader = ({ className, activeSite }) => {
                 > a{
                   font-family: Open Sans,Open Sans,Corbel,Arial,sans-serif;
                   font-weight: 400;
-                  font-size: 1.1rem;
+                  font-size: 1rem;
                   line-height: 1.625;
                 }
 
@@ -431,7 +430,6 @@ const GlobalHeader = ({ className, activeSite }) => {
               align-items: center;
               flex-wrap: wrap;
               justify-content: space-between;
-              //flex-direction: row;
             `}
           >
             <div>
@@ -537,6 +535,7 @@ const GlobalHeader = ({ className, activeSite }) => {
                 --list style--
                 list-style: none;
               `}
+              className="header-nav-list"
             >
               {createNavList('main', activeSite)}
             </ul>
