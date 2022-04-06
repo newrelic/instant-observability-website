@@ -672,6 +672,38 @@
     ]
   },
   {
+    "title": "tvOS",
+    "name": "tvos",
+    "description": "## New Relic Mobile monitoring\n\nNew Relic's mobile monitoring for tvOS gives you a comprehensive view of your app's performance.\n\n## Get started!\n\nFollow [the documentation](https://docs.newrelic.com/docs/mobile-monitoring/new-relic-mobile-ios/tvos/tvos-installation-configuration/) to get started!",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/tvos",
+    "id": "36061f8f-c057-4a01-b578-c9b67bdf1859",
+    "level": "NEW_RELIC",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/tvos/logo.svg",
+    "summary": "Use New Relic Mobile monitoring to monitor your tvOS apps.",
+    "websiteUrl": null,
+    "keywords": [
+      "mobile"
+    ],
+    "authors": [
+      "New Relic"
+    ],
+    "dashboards": [],
+    "alerts": [],
+    "documentation": [
+      {
+        "name": "tvOS installation docs",
+        "description": "Default operating system for Apple media streaming devices, including the\nApple TV.\n",
+        "url": "https://docs.newrelic.com/docs/mobile-monitoring/new-relic-mobile-ios/tvos/tvos-installation-configuration"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "tvOS",
+        "id": "tvos-mobile"
+      }
+    ]
+  },
+  {
     "title": "Azure Express Route",
     "name": "azure-express-route",
     "description": "## What is Azure Express Route?\n\nCreate a dedicated connection between your on-prem infrastructure and Azure's\nservices.\n\n\n### Get started!\n\nStart monitoring Azure Express Route by connecting Microsoft Azure to New Relic!\n\nCheck out our Azure Express Route documentation to instrument your cloud service and manage the stability, scalability, and reliability of your systems with New Relic's infrastructure monitoring capabilities.\n\n### More info\n\nCheck out the [documentation](https://docs.newrelic.com/docs/infrastructure/microsoft-azure-integrations/azure-integrations-list/azure-express-route-monitoring-integration/) to learn more about New Relic monitoring for Azure Express Route. ",
@@ -1121,33 +1153,6 @@
         "name": "StatsD installation docs",
         "description": "Lightweight, open-source Node.js application that listens for metrics from\ndifferent applications and aggregates them.\n",
         "url": "https://docs.newrelic.com/docs/integrations/host-integrations/host-integrations-list/statsd-monitoring-integration-version-2"
-      }
-    ],
-    "installPlans": []
-  },
-  {
-    "title": "tvOS",
-    "name": "tvos",
-    "description": "## New Relic Mobile monitoring\n\nNew Relic's mobile monitoring for tvOS gives you a comprehensive view of your app's performance.\n\n## Get started!\n\nFollow [the documentation](https://docs.newrelic.com/docs/mobile-monitoring/new-relic-mobile-ios/tvos/tvos-installation-configuration/) to get started!\n",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/tvos",
-    "id": "36061f8f-c057-4a01-b578-c9b67bdf1859",
-    "level": "NEW_RELIC",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/v0.106.0/quickstarts/tvos/logo.svg",
-    "summary": "Use New Relic Mobile monitoring to monitor your tvOS apps.\n",
-    "websiteUrl": null,
-    "keywords": [
-      "mobile"
-    ],
-    "authors": [
-      "New Relic"
-    ],
-    "dashboards": [],
-    "alerts": [],
-    "documentation": [
-      {
-        "name": "tvOS installation docs",
-        "description": "Default operating system for Apple media streaming devices, including the\nApple TV.\n",
-        "url": "https://docs.newrelic.com/docs/mobile-monitoring/new-relic-mobile-ios/tvos/tvos-installation-configuration"
       }
     ],
     "installPlans": []
@@ -4931,6 +4936,39 @@
     ]
   },
   {
+    "title": "iOS",
+    "name": "ios",
+    "description": "## New Relic Mobile monitoring\n\nNew Relic's mobile monitoring for iOS gives you a comprehensive view of your app's performance. It works for iOS apps written using Objective-C, Swift, or both languages\n\n## Get started!\n\nFollow [the documentation](https://docs.newrelic.com/docs/mobile-monitoring/new-relic-mobile-ios/get-started/introduction-new-relic-mobile-ios/) to get started!",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/ios",
+    "id": "63bf288d-707e-4214-aac9-b51e7121b22d",
+    "level": "NEW_RELIC",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/ios/logo.svg",
+    "summary": "Use New Relic Mobile monitoring to monitor your iOS apps.",
+    "websiteUrl": null,
+    "keywords": [
+      "mobile",
+      "mobile agent"
+    ],
+    "authors": [
+      "New Relic"
+    ],
+    "dashboards": [],
+    "alerts": [],
+    "documentation": [
+      {
+        "name": "iOS installation docs",
+        "description": "Default operating system for Apple mobile devices, including the iPhone\nand iPad.\n",
+        "url": "https://docs.newrelic.com/docs/mobile-monitoring/new-relic-mobile-ios/get-started/introduction-new-relic-mobile-ios"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "iOS",
+        "id": "ios-mobile"
+      }
+    ]
+  },
+  {
     "title": "NATS",
     "name": "nats",
     "description": "## What is NATS?\n\nNATS is an open-source messaging system written in Go.\n\n## Get started!\n\nLeverage community expertise and instantly get value out of your telemetry data. This quickstart automatically instruments NATS with the New Relic Go agent, and allows you to further leverage New Relic's APM capabilities by setting up [custom dashboards](https://docs.newrelic.com/docs/query-your-data/explore-query-data/dashboards/introduction-dashboards/), [errors inbox](https://docs.newrelic.com/docs/apm/apm-ui-pages/errors-inbox/errors-inbox/), [transaction tracing](https://docs.newrelic.com/docs/apm/transactions/transaction-traces/introduction-transaction-traces/), and [service maps](https://docs.newrelic.com/docs/understand-dependencies/understand-system-dependencies/service-maps/introduction-service-maps/).\n\n## More info\n\nCheck out the [documentation](https://docs.newrelic.com/docs/agents/go-agent/) to learn more about New Relic monitoring for NATS. ",
@@ -4994,34 +5032,6 @@
         "id": "setup-go-agent"
       }
     ]
-  },
-  {
-    "title": "iOS",
-    "name": "ios",
-    "description": "## New Relic Mobile monitoring\n\nNew Relic's mobile monitoring for iOS gives you a comprehensive view of your app's performance. It works for iOS apps written using Objective-C, Swift, or both languages\n\n## Get started!\n\nFollow [the documentation](https://docs.newrelic.com/docs/mobile-monitoring/new-relic-mobile-ios/get-started/introduction-new-relic-mobile-ios/) to get started!\n",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/ios",
-    "id": "63bf288d-707e-4214-aac9-b51e7121b22d",
-    "level": "NEW_RELIC",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/v0.106.0/quickstarts/ios/logo.svg",
-    "summary": "Use New Relic Mobile monitoring to monitor your iOS apps.\n",
-    "websiteUrl": null,
-    "keywords": [
-      "mobile",
-      "mobile agent"
-    ],
-    "authors": [
-      "New Relic"
-    ],
-    "dashboards": [],
-    "alerts": [],
-    "documentation": [
-      {
-        "name": "iOS installation docs",
-        "description": "Default operating system for Apple mobile devices, including the iPhone\nand iPad.\n",
-        "url": "https://docs.newrelic.com/docs/mobile-monitoring/new-relic-mobile-ios/get-started/introduction-new-relic-mobile-ios"
-      }
-    ],
-    "installPlans": []
   },
   {
     "title": "Synthetics Page Link Crawler",
@@ -20471,6 +20481,39 @@
     ]
   },
   {
+    "title": "Android",
+    "name": "android",
+    "description": "## New Relic Mobile monitoring\n\nNew Relic's mobile monitoring for Android gives you a comprehensive view of your app's performance.\nIt works for Android apps written using Java or Kotlin.\n\n## Get started!\n\nFollow [the documentation](https://docs.newrelic.com/docs/mobile-monitoring/new-relic-mobile-android/get-started/introduction-new-relic-mobile-android/) to get started!",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/android",
+    "id": "23802e4e-518b-409f-857e-dfe8c32d5562",
+    "level": "NEW_RELIC",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/android/logo.svg",
+    "summary": "Use New Relic Mobile monitoring to monitor your Android apps.",
+    "websiteUrl": null,
+    "keywords": [
+      "mobile",
+      "mobile agent"
+    ],
+    "authors": [
+      "New Relic"
+    ],
+    "dashboards": [],
+    "alerts": [],
+    "documentation": [
+      {
+        "name": "Android installation docs",
+        "description": "Mobile operating system based on a modified Linux kernel and other open\nsource software.\n",
+        "url": "https://docs.newrelic.com/docs/mobile-monitoring/new-relic-mobile-android/get-started/introduction-new-relic-mobile-android"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "android",
+        "id": "android-mobile"
+      }
+    ]
+  },
+  {
     "title": "Apache httpd",
     "name": "apache",
     "description": "## Understanding Apache httpd\n\nThe Apache HTTP Server is a free and open-source, secure, efficient, and extensible HTTP web server for the Windows and UNIX operating systems.\n\n### What should you look for in an Apache HTTP Server Monitor?\n\n[An Apache monitor](https://docs.newrelic.com/docs/integrations/host-integrations/host-integrations-list/apache-monitoring-integration/) offers developers critical information to help them paint a complete picture of a web server's performance. Such data includes error analytics, host-related resource metrics, throughput metrics, latency metrics, resource utilization metrics, and activity metrics.\n\n### What’s included?\n\nOur Apache quickstart include out-of-the-box dashboards and alerts, including data such as:\n- Servers reporting\n- Total requests per second\n- Requests per second by server\n\n### What makes New Relic's quickstart unique?\n\nOur monitoring features an intuitive design that allows developers to look up their preferred performance-related data quickly, efficient issue resolution process, and combines practicality and usability.",
@@ -20604,34 +20647,6 @@
         "name": "Prebid agent Installation Docs",
         "description": "Agent to monitor web applications using Prebid.",
         "url": "https://github.com/newrelic/tracker-prebid-js"
-      }
-    ],
-    "installPlans": []
-  },
-  {
-    "title": "Android",
-    "name": "android",
-    "description": "## New Relic Mobile monitoring\n\nNew Relic's mobile monitoring for Android gives you a comprehensive view of your app's performance.\nIt works for Android apps written using Java or Kotlin.\n\n## Get started!\n\nFollow [the documentation](https://docs.newrelic.com/docs/mobile-monitoring/new-relic-mobile-android/get-started/introduction-new-relic-mobile-android/) to get started! \n",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/android",
-    "id": "23802e4e-518b-409f-857e-dfe8c32d5562",
-    "level": "NEW_RELIC",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/v0.106.0/quickstarts/android/logo.svg",
-    "summary": "Use New Relic Mobile monitoring to monitor your Android apps.\n",
-    "websiteUrl": null,
-    "keywords": [
-      "mobile",
-      "mobile agent"
-    ],
-    "authors": [
-      "New Relic"
-    ],
-    "dashboards": [],
-    "alerts": [],
-    "documentation": [
-      {
-        "name": "Android installation docs",
-        "description": "Mobile operating system based on a modified Linux kernel and other open\nsource software.\n",
-        "url": "https://docs.newrelic.com/docs/mobile-monitoring/new-relic-mobile-android/get-started/introduction-new-relic-mobile-android"
       }
     ],
     "installPlans": []
