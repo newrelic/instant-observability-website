@@ -42,8 +42,9 @@ input[type='text'] {
   }
 }
 // styles to show the active tab on header
-.header-nav-list .css-r4qgq5-GlobalNavLink{
-  border-bottom:3px solid var(--color-brand-400);
+#header-nav-active-tab > a
+ {
+  border-bottom: 3px solid var(--color-brand-400);
 }
 .slick-track {
   display: flex !important;

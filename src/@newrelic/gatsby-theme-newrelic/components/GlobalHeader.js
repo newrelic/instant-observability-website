@@ -51,11 +51,13 @@ HEADER_LINKS.set(NR_SITES.PLATFORM, {
 const createNavList = (listType, activeSite = null) => {
   const navList = [];
   HEADER_LINKS.forEach(({ text, href }) => {
+    const activePath = 'instant-observability';
     switch (listType) {
       case 'main':
         navList.push(
           <li
             key={href}
+            id={href.includes(activePath) && 'header-nav-active-tab'}
           >
             <GlobalNavLink
               href={href}
@@ -243,7 +245,6 @@ const GlobalHeader = ({ className, activeSite }) => {
                   display: none;
                 }
               `}
-              className="header-nav-list"
             >
               {createNavList('main', activeSite)}
             </ul>
@@ -535,7 +536,6 @@ const GlobalHeader = ({ className, activeSite }) => {
                 --list style--
                 list-style: none;
               `}
-              className="header-nav-list"
             >
               {createNavList('main', activeSite)}
             </ul>
