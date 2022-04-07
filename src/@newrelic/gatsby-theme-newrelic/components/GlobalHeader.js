@@ -512,6 +512,9 @@ const GlobalHeader = ({ className, activeSite }) => {
                 width: 100%;
                 margin: 0;
                 padding: 0;
+                li:last-child {
+                  border-bottom: 1px solid var(--color-brand-400);
+                }
                 > li {
                   margin: 0;
                   flex: 0 0 auto;
