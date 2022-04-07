@@ -1611,47 +1611,6 @@
     ]
   },
   {
-    "title": "Browser Segment Investigation Quickstart",
-    "name": "browser-segment-investigation-quickstart",
-    "description": "Review the extent of crushed urls so you know which urls you need to add segments for in the browser segment allow list.",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/browser-segment-investigation",
-    "id": "eb24e234-90aa-4908-972d-64d6d56b557e",
-    "level": "NEW_RELIC",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/browser-segment-investigation/logo.png",
-    "summary": "Check for crushed urls so you can remedy them.",
-    "websiteUrl": null,
-    "keywords": [
-      "oma",
-      "crushed",
-      "urls",
-      "browser",
-      "segment",
-      "segments"
-    ],
-    "authors": [
-      "Kim Hickey"
-    ],
-    "dashboards": [
-      {
-        "name": "Browser Segment Investigation",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/browser-segment-investigation/dashboards/browser-segment-investigation.png"
-        ]
-      }
-    ],
-    "alerts": [],
-    "documentation": [
-      {
-        "name": "Usage instructions",
-        "description": "The _Validate Browser URL grouping_ section of Quality foundation explains how to use the segment investigation dashboard as well as resolve any crushed URLs you might find.",
-        "url": "https://docs.newrelic.com/docs/new-relic-solutions/observability-maturity/customer-experience/quality-foundation-implementation-guide#validate-browser-url-grouping"
-      }
-    ],
-    "installPlans": []
-  },
-  {
     "title": "AWS X-Ray",
     "name": "aws-x-ray",
     "description": "## What is AWS X-Ray?\n\nCapture data and debug protection for applications built on distributed\nframeworks.\n\n\n### Get started!\n\nStart monitoring AWS X-Ray by connecting Amazon Web Services (AWS) to New Relic!\n\nCheck out our AWS X-Ray documentation to instrument your cloud service and manage the stability, scalability, and reliability of your systems with New Relic's infrastructure monitoring capabilities.\n\n### More info\n\nCheck out the [documentation](https://docs.newrelic.com/docs/infrastructure/amazon-integrations/aws-integrations-list/aws-x-ray-monitoring-integration/) to learn more about New Relic monitoring for AWS X-Ray.",
@@ -3279,6 +3238,47 @@
         "id": "solutions-hub-dashboards"
       }
     ]
+  },
+  {
+    "title": "Browser Segment Investigation Quickstart",
+    "name": "browser-segment-investigation-quickstart",
+    "description": "Review the extent of crushed urls so you know which urls you need to add segments for in the browser segment allow list.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/browser-segment-investigation",
+    "id": "eb24e234-90aa-4908-972d-64d6d56b557e",
+    "level": "NEW_RELIC",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/browser-segment-investigation/logo.png",
+    "summary": "Check for crushed urls so you can remedy them.",
+    "websiteUrl": null,
+    "keywords": [
+      "oma",
+      "crushed",
+      "urls",
+      "browser",
+      "segment",
+      "segments"
+    ],
+    "authors": [
+      "Kim Hickey"
+    ],
+    "dashboards": [
+      {
+        "name": "Browser Segment Investigation",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/browser-segment-investigation/dashboards/browser-segment-investigation.png"
+        ]
+      }
+    ],
+    "alerts": [],
+    "documentation": [
+      {
+        "name": "Usage instructions",
+        "description": "The _Validate Browser URL grouping_ section of Quality foundation explains how to use the segment investigation dashboard as well as resolve any crushed URLs you might find.",
+        "url": "https://docs.newrelic.com/docs/new-relic-solutions/observability-maturity/customer-experience/quality-foundation-implementation-guide#validate-browser-url-grouping"
+      }
+    ],
+    "installPlans": []
   },
   {
     "title": "Google Kubernetes Engine",
@@ -13005,105 +13005,6 @@
     "installPlans": []
   },
   {
-    "title": "Network KTranslate Container Health",
-    "name": "network-ktranslate-container-health",
-    "description": "The Network KTranslate Container Health quickstart provides a dashboard that gives you a holistic view of the health of all containers used for collecting your network telemetry.\nUse this quickstart together with New Relic's Network Performance Monitoring (NPM) feature to visualize anomalies and/or bottlenecks in your network.",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/network-ktranslate-health",
-    "id": "f7119d5e-32b7-45ff-a814-0dca91ae0493",
-    "level": "VERIFIED",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/network-ktranslate-health/logo.svg",
-    "summary": "Easily install a curated dashboard to monitor the health of your ktranslate containers for New Relic Network Performance Monitoring.",
-    "websiteUrl": null,
-    "keywords": [
-      "npm",
-      "network",
-      "networking",
-      "ktranslate",
-      "kentik",
-      "infrastructure"
-    ],
-    "authors": [
-      "New Relic",
-      "Marc Netterfield",
-      "Zack Mutchler"
-    ],
-    "dashboards": [
-      {
-        "name": "Network - KTranslate Container Health",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/network-ktranslate-health/dashboards/network-ktranslate-health01.jpg",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/network-ktranslate-health/dashboards/network-ktranslate-health02.jpg"
-        ]
-      }
-    ],
-    "alerts": [],
-    "documentation": [
-      {
-        "name": "KTranslate Container Health Monitoring docs",
-        "description": "Monitor the health of your ktranslate container using out-of-box metrics and logs.\n",
-        "url": "https://docs.newrelic.com/docs/network-performance-monitoring/advanced/ktranslate-container-health"
-      }
-    ],
-    "installPlans": [
-      {
-        "name": "Network KTranslate Container Health",
-        "id": "network-ktranslate-health"
-      }
-    ]
-  },
-  {
-    "title": "Cloudflare Network Logs",
-    "name": "cloudflare-network-logs",
-    "description": "## About Cloudflare\n\nCloudflare is an industry leading global network designed to make everything you connect to the Internet secure, private, fast, and reliable. Protect and accelerate external, public-facing web properties; secure your internal operations on a single global network; and build new applications on our serverless platform. Internet properties powered by Cloudflare have all web traffic routed through its intelligent global network, which gets smarter with every request.\n\n## About this quickstart\n\nCloudflare is on a mission to help build a better Internet. The Cloudflare quickstart will enable you to monitor and analyze web traffic metrics on a dashboard, integrating with New Relic’s database to provide an at-a-glance overview of the most important logs and metrics from your websites and applications.\n\nFor more information check out our website at [cloudflare.com](https://www.cloudflare.com/)",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/cloudflare",
-    "id": "fc2bb0ac-6622-43c6-8c1f-6a4c26ab5434",
-    "level": "COMMUNITY",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/cloudflare/logo.png",
-    "summary": "The Cloudflare quickstart will enable you to monitor and analyze web traffic metrics.",
-    "websiteUrl": null,
-    "keywords": [
-      "cloudflare",
-      "logs",
-      "network",
-      "security",
-      "cdn",
-      "featured",
-      "newrelic partner"
-    ],
-    "authors": [
-      "Joseph Counts",
-      "Cloudflare"
-    ],
-    "dashboards": [
-      {
-        "name": "Cloudflare Logs",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/cloudflare/dashboards/cloudflare01.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/cloudflare/dashboards/cloudflare02.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/cloudflare/dashboards/cloudflare03.png"
-        ]
-      }
-    ],
-    "alerts": [],
-    "documentation": [
-      {
-        "name": "Enable New Relic destination doc",
-        "description": "Developer doc on getting Cloudflare data ingested into New Relic",
-        "url": "https://docs.newrelic.com/docs/logs/forward-logs/cloudflare-logpush-forwarding"
-      }
-    ],
-    "installPlans": [
-      {
-        "name": "cloudflare",
-        "id": "third-party-cloudflare"
-      }
-    ]
-  },
-  {
     "title": "gRPC",
     "name": "grpc",
     "description": "# What is gRPC?\n\nOpen source framework for remote procedure calls designed for multi-platform usage.\n\n\n## Get started!\n\nLeverage community expertise and instantly get value out of your telemetry data. This quickstart automatically instruments gRPC with the New Relic Java agent, and allows you to instantly monitor your Java application with out-of-the-box dashboards and alerts. \nFurther leverage New Relic's APM capabilities by setting up [errors inbox](https://docs.newrelic.com/docs/apm/apm-ui-pages/errors-inbox/errors-inbox/), [transaction tracing](https://docs.newrelic.com/docs/apm/transactions/transaction-traces/introduction-transaction-traces/), and [service maps](https://docs.newrelic.com/docs/understand-dependencies/understand-system-dependencies/service-maps/introduction-service-maps/).\n\n## More info\n\nCheck out the [documentation](https://docs.newrelic.com/docs/agents/java-agent/getting-started/introduction-new-relic-java/) to learn more about New Relic monitoring for gRPC.",
@@ -13737,6 +13638,56 @@
     ]
   },
   {
+    "title": "Cloudflare Network Logs",
+    "name": "cloudflare-network-logs",
+    "description": "## About Cloudflare\n\nCloudflare is an industry leading global network designed to make everything you connect to the Internet secure, private, fast, and reliable. Protect and accelerate external, public-facing web properties; secure your internal operations on a single global network; and build new applications on our serverless platform. Internet properties powered by Cloudflare have all web traffic routed through its intelligent global network, which gets smarter with every request.\n\n## About this quickstart\n\nCloudflare is on a mission to help build a better Internet. The Cloudflare quickstart will enable you to monitor and analyze web traffic metrics on a dashboard, integrating with New Relic’s database to provide an at-a-glance overview of the most important logs and metrics from your websites and applications.\n\nFor more information check out our website at [cloudflare.com](https://www.cloudflare.com/)",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/cloudflare",
+    "id": "fc2bb0ac-6622-43c6-8c1f-6a4c26ab5434",
+    "level": "COMMUNITY",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/cloudflare/logo.png",
+    "summary": "The Cloudflare quickstart will enable you to monitor and analyze web traffic metrics.",
+    "websiteUrl": null,
+    "keywords": [
+      "cloudflare",
+      "logs",
+      "network",
+      "security",
+      "cdn",
+      "featured",
+      "newrelic partner"
+    ],
+    "authors": [
+      "Joseph Counts",
+      "Cloudflare"
+    ],
+    "dashboards": [
+      {
+        "name": "Cloudflare Logs",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/cloudflare/dashboards/cloudflare01.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/cloudflare/dashboards/cloudflare02.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/cloudflare/dashboards/cloudflare03.png"
+        ]
+      }
+    ],
+    "alerts": [],
+    "documentation": [
+      {
+        "name": "Enable New Relic destination doc",
+        "description": "Developer doc on getting Cloudflare data ingested into New Relic",
+        "url": "https://docs.newrelic.com/docs/logs/forward-logs/cloudflare-logpush-forwarding"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "cloudflare",
+        "id": "third-party-cloudflare"
+      }
+    ]
+  },
+  {
     "title": "Fluent Bit plugin for Logs",
     "name": "fluent-bit-plugin-for-logs",
     "description": "Open source and multi-platform Log Processor and Forwarder which allows you to\ncollect data/logs from different sources.\n",
@@ -13927,6 +13878,55 @@
       }
     ],
     "installPlans": []
+  },
+  {
+    "title": "Network KTranslate Container Health",
+    "name": "network-ktranslate-container-health",
+    "description": "The Network KTranslate Container Health quickstart provides a dashboard that gives you a holistic view of the health of all containers used for collecting your network telemetry.\nUse this quickstart together with New Relic's Network Performance Monitoring (NPM) feature to visualize anomalies and/or bottlenecks in your network.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/network-ktranslate-health",
+    "id": "f7119d5e-32b7-45ff-a814-0dca91ae0493",
+    "level": "VERIFIED",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/network-ktranslate-health/logo.svg",
+    "summary": "Easily install a curated dashboard to monitor the health of your ktranslate containers for New Relic Network Performance Monitoring.",
+    "websiteUrl": null,
+    "keywords": [
+      "npm",
+      "network",
+      "networking",
+      "ktranslate",
+      "kentik",
+      "infrastructure"
+    ],
+    "authors": [
+      "New Relic",
+      "Marc Netterfield",
+      "Zack Mutchler"
+    ],
+    "dashboards": [
+      {
+        "name": "Network - KTranslate Container Health",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/network-ktranslate-health/dashboards/network-ktranslate-health01.jpg",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/network-ktranslate-health/dashboards/network-ktranslate-health02.jpg"
+        ]
+      }
+    ],
+    "alerts": [],
+    "documentation": [
+      {
+        "name": "KTranslate Container Health Monitoring docs",
+        "description": "Monitor the health of your ktranslate container using out-of-box metrics and logs.\n",
+        "url": "https://docs.newrelic.com/docs/network-performance-monitoring/advanced/ktranslate-container-health"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "Network KTranslate Container Health",
+        "id": "network-ktranslate-health"
+      }
+    ]
   },
   {
     "title": "LaunchDarkly",
@@ -14960,6 +14960,95 @@
     "installPlans": []
   },
   {
+    "title": "Catchpoint",
+    "name": "catchpoint",
+    "description": "This quickstart uses the Catchpoint Test Data Webhook to send data to the New Relic Platform, this is accomplished by using New Relic’s Metrics API. We will rely on a third-party Google Cloud function to accept the data from the Catchpoint API, process it in the desired format, and then push it to New Relic. This approach allows you to visualize Catchpoint's digital experience data with New Relic’s Application Performance Monitoring (APM) data together.\n\n ### Dashboards\n\n- Catchpoint Overview dashboard: Overview of errors and request components of tests\n- Catchpoint Recent Errors dashboard: Recent errors with test id, timestamp, node name and error code\n- Catchpoint Response size: Monitor the average response size in MB\n- Catchpoint Test Times: Test time of with respect to test ids",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/catchpoint",
+    "id": "ac2341e3-05bb-49c5-b445-b16b27fc6ea0",
+    "level": "COMMUNITY",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/catchpoint/logo.png",
+    "summary": "This quickstart uses Catchpoint Test Data Webhook to send data to the New Relic Platform, this is accomplished by using New Relic’s Metrics API. You can visualize Catchpoint's digital experience data with New Relic’s Application Performance Monitoring (APM) data together.",
+    "websiteUrl": null,
+    "keywords": [
+      "metric name",
+      "node name",
+      "test id",
+      "timestamp",
+      "catchpoint",
+      "metrics api"
+    ],
+    "authors": [
+      "Pavan Kumar"
+    ],
+    "dashboards": [
+      {
+        "name": "Catchpoint-Test Times",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/catchpoint/dashboards/Catchpoint-Overview.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/catchpoint/dashboards/Catchpoint-Recent_Errors.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/catchpoint/dashboards/Catchpoint-Response_Size.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/catchpoint/dashboards/Catchpoint-Test_Times.png"
+        ]
+      },
+      {
+        "name": "Catchpoint-Overview",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/catchpoint/dashboards/Catchpoint-Overview.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/catchpoint/dashboards/Catchpoint-Recent_Errors.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/catchpoint/dashboards/Catchpoint-Response_Size.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/catchpoint/dashboards/Catchpoint-Test_Times.png"
+        ]
+      },
+      {
+        "name": "Catchpoint-Recent Errors",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/catchpoint/dashboards/Catchpoint-Overview.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/catchpoint/dashboards/Catchpoint-Recent_Errors.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/catchpoint/dashboards/Catchpoint-Response_Size.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/catchpoint/dashboards/Catchpoint-Test_Times.png"
+        ]
+      },
+      {
+        "name": "Catchpoint-Response Size",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/catchpoint/dashboards/Catchpoint-Overview.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/catchpoint/dashboards/Catchpoint-Recent_Errors.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/catchpoint/dashboards/Catchpoint-Response_Size.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/catchpoint/dashboards/Catchpoint-Test_Times.png"
+        ]
+      }
+    ],
+    "alerts": [
+      {
+        "name": "recent-errors",
+        "details": "Alerts when there is a new error code for more than 5 minutes and alerts through email.",
+        "type": "STATIC",
+        "url": null
+      }
+    ],
+    "documentation": [
+      {
+        "name": "Catchpoint Github repository",
+        "description": "A repository to help get you started setting up your New Relic & Catchpoint integration.",
+        "url": "https://github.com/catchpoint/Integrations.NewRelic"
+      },
+      {
+        "name": "Catchpoint installation docs",
+        "description": "Learn more about the Catchpoint Test Data Webhook.",
+        "url": "https://www.catchpoint.com/blog/webhook-implementation"
+      }
+    ],
+    "installPlans": []
+  },
+  {
     "title": "Fluentd plugin for Logs",
     "name": "fluentd-plugin-for-logs",
     "description": "Open source data collector, which lets you unify the data collection and\nconsumption for a better use and understanding of data.\n",
@@ -15929,95 +16018,6 @@
         "id": "rabbitmq-integration"
       }
     ]
-  },
-  {
-    "title": "Catchpoint",
-    "name": "catchpoint",
-    "description": "This quickstart uses the Catchpoint Test Data Webhook to send data to the New Relic Platform, this is accomplished by using New Relic’s Metrics API. We will rely on a third-party Google Cloud function to accept the data from the Catchpoint API, process it in the desired format, and then push it to New Relic. This approach allows you to visualize Catchpoint's digital experience data with New Relic’s Application Performance Monitoring (APM) data together.\n\n ### Dashboards\n\n- Catchpoint Overview dashboard: Overview of errors and request components of tests\n- Catchpoint Recent Errors dashboard: Recent errors with test id, timestamp, node name and error code\n- Catchpoint Response size: Monitor the average response size in MB\n- Catchpoint Test Times: Test time of with respect to test ids",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/catchpoint",
-    "id": "ac2341e3-05bb-49c5-b445-b16b27fc6ea0",
-    "level": "COMMUNITY",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/catchpoint/logo.png",
-    "summary": "This quickstart uses Catchpoint Test Data Webhook to send data to the New Relic Platform, this is accomplished by using New Relic’s Metrics API. You can visualize Catchpoint's digital experience data with New Relic’s Application Performance Monitoring (APM) data together.",
-    "websiteUrl": null,
-    "keywords": [
-      "metric name",
-      "node name",
-      "test id",
-      "timestamp",
-      "catchpoint",
-      "metrics api"
-    ],
-    "authors": [
-      "Pavan Kumar"
-    ],
-    "dashboards": [
-      {
-        "name": "Catchpoint-Test Times",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/catchpoint/dashboards/Catchpoint-Overview.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/catchpoint/dashboards/Catchpoint-Recent_Errors.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/catchpoint/dashboards/Catchpoint-Response_Size.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/catchpoint/dashboards/Catchpoint-Test_Times.png"
-        ]
-      },
-      {
-        "name": "Catchpoint-Overview",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/catchpoint/dashboards/Catchpoint-Overview.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/catchpoint/dashboards/Catchpoint-Recent_Errors.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/catchpoint/dashboards/Catchpoint-Response_Size.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/catchpoint/dashboards/Catchpoint-Test_Times.png"
-        ]
-      },
-      {
-        "name": "Catchpoint-Recent Errors",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/catchpoint/dashboards/Catchpoint-Overview.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/catchpoint/dashboards/Catchpoint-Recent_Errors.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/catchpoint/dashboards/Catchpoint-Response_Size.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/catchpoint/dashboards/Catchpoint-Test_Times.png"
-        ]
-      },
-      {
-        "name": "Catchpoint-Response Size",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/catchpoint/dashboards/Catchpoint-Overview.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/catchpoint/dashboards/Catchpoint-Recent_Errors.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/catchpoint/dashboards/Catchpoint-Response_Size.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/catchpoint/dashboards/Catchpoint-Test_Times.png"
-        ]
-      }
-    ],
-    "alerts": [
-      {
-        "name": "recent-errors",
-        "details": "Alerts when there is a new error code for more than 5 minutes and alerts through email.",
-        "type": "STATIC",
-        "url": null
-      }
-    ],
-    "documentation": [
-      {
-        "name": "Catchpoint Github repository",
-        "description": "A repository to help get you started setting up your New Relic & Catchpoint integration.",
-        "url": "https://github.com/catchpoint/Integrations.NewRelic"
-      },
-      {
-        "name": "Catchpoint installation docs",
-        "description": "Learn more about the Catchpoint Test Data Webhook.",
-        "url": "https://www.catchpoint.com/blog/webhook-implementation"
-      }
-    ],
-    "installPlans": []
   },
   {
     "title": "Django",
@@ -20590,6 +20590,126 @@
     "installPlans": []
   },
   {
+    "title": "Event API",
+    "name": "Event API",
+    "description": "The New Relic Event API is one way to report custom events to New Relic. The Event API lets you send custom event data to your New Relic account with a POST command. These events are then queryable and chartable using NRQL.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/apis/event",
+    "id": "bc62e8f8-0d0c-4c86-9f05-b9e83e21d0fc",
+    "level": "NEW_RELIC",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/apis/event/logo.png",
+    "summary": "The New Relic Event API is one way to report custom events to New Relic. The Event API lets you send custom event data to your New Relic account with a POST command. These events are then queryable and chartable using NRQL.",
+    "websiteUrl": null,
+    "keywords": [
+      "events",
+      "custom events",
+      "new relic",
+      "MELT"
+    ],
+    "authors": [
+      "New Relic"
+    ],
+    "dashboards": [],
+    "alerts": [],
+    "documentation": [
+      {
+        "name": "Event API usage docs",
+        "description": "The New Relic Event API is one way to report custom events to New Relic. The Event API lets you send custom event data to your New Relic account with a POST command. These events are then queryable and chartable using NRQL.\n",
+        "url": "https://docs.newrelic.com/docs/telemetry-data-platform/ingest-apis/introduction-event-api/"
+      }
+    ],
+    "installPlans": []
+  },
+  {
+    "title": "Logs API",
+    "name": "Logs API",
+    "description": "If our logging solutions don't meet your needs, you can use our Log API to send log data directly to New Relic's Log management via an HTTP endpoint.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/apis/logs",
+    "id": "b40194c0-c7a0-497c-82c1-ca47b60726da",
+    "level": "NEW_RELIC",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/apis/logs/logo.png",
+    "summary": "If our logging solutions don't meet your needs, you can use our Log API to send log data directly to New Relic's Log management via an HTTP endpoint.",
+    "websiteUrl": null,
+    "keywords": [
+      "logging",
+      "logs",
+      "new relic",
+      "MELT"
+    ],
+    "authors": [
+      "New Relic"
+    ],
+    "dashboards": [],
+    "alerts": [],
+    "documentation": [
+      {
+        "name": "Logs API usage docs",
+        "description": "If our logging solutions don't meet your needs, you can use our Log API to send log data directly to New Relic's Log management via an HTTP endpoint.\n",
+        "url": "https://docs.newrelic.com/docs/logs/log-management/log-api/introduction-log-api/"
+      }
+    ],
+    "installPlans": []
+  },
+  {
+    "title": "Trace and Span API",
+    "name": "Trace and Span API",
+    "description": "Our Trace API is used to send distributed tracing data to New Relic: either in our own generic format or the Zipkin data format. This API is also how trace data from some of our integrations and exporters is reported to New Relic.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/apis/trace",
+    "id": "07f0b96c-add9-43d5-962d-1865d0149082",
+    "level": "NEW_RELIC",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/apis/trace/logo.png",
+    "summary": "Our Trace API is used to send distributed tracing data to New Relic: either in our own generic format or the Zipkin data format. This API is also how trace data from some of our integrations and exporters is reported to New Relic.",
+    "websiteUrl": null,
+    "keywords": [
+      "tracing",
+      "span",
+      "zipkin",
+      "new relic",
+      "MELT"
+    ],
+    "authors": [
+      "New Relic"
+    ],
+    "dashboards": [],
+    "alerts": [],
+    "documentation": [
+      {
+        "name": "Trace and Span API usage docs",
+        "description": "Our Trace API is used to send distributed tracing data to New Relic: either in our own generic format or the Zipkin data format. This API is also how trace data from some of our integrations and exporters is reported to New Relic.\n",
+        "url": "https://docs.newrelic.com/docs/distributed-tracing/trace-api/introduction-trace-api/"
+      }
+    ],
+    "installPlans": []
+  },
+  {
+    "title": "Metric API",
+    "name": "Metric API",
+    "description": "New Relic's Metric API can be used to send metric data to New Relic from a variety of sources. This API is how metrics from some of our integrations and exporters get into New Relic.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/apis/metric",
+    "id": "028e4c30-1567-4b9a-8417-6606bc9d83c8",
+    "level": "NEW_RELIC",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/apis/metric/logo.png",
+    "summary": "New Relic's Metric API can be used to send metric data to New Relic from a variety of sources. This API is how metrics from some of our integrations and exporters get into New Relic.",
+    "websiteUrl": null,
+    "keywords": [
+      "metrics",
+      "new relic",
+      "MELT"
+    ],
+    "authors": [
+      "New Relic"
+    ],
+    "dashboards": [],
+    "alerts": [],
+    "documentation": [
+      {
+        "name": "Metric API usage docs",
+        "description": "New Relic's Metric API can be used to send metric data to New Relic from a variety of sources. This API is how metrics from some of our integrations and exporters get into New Relic.\n",
+        "url": "https://docs.newrelic.com/docs/telemetry-data-platform/ingest-apis/metric-api/introduction-metric-api/"
+      }
+    ],
+    "installPlans": []
+  },
+  {
     "title": "Agent for Google Publisher Tags",
     "name": "ads-web-gpt",
     "description": "Agent to monitor web applications using GPT.",
@@ -20647,126 +20767,6 @@
         "name": "Prebid agent Installation Docs",
         "description": "Agent to monitor web applications using Prebid.",
         "url": "https://github.com/newrelic/tracker-prebid-js"
-      }
-    ],
-    "installPlans": []
-  },
-  {
-    "title": "Event API",
-    "name": "Event API",
-    "description": "The New Relic Event API is one way to report custom events to New Relic. The Event API lets you send custom event data to your New Relic account with a POST command. These events are then queryable and chartable using NRQL.\n",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/apis/event",
-    "id": "bc62e8f8-0d0c-4c86-9f05-b9e83e21d0fc",
-    "level": "NEW_RELIC",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/v0.106.0/quickstarts/apis/event/logo.png",
-    "summary": "The New Relic Event API is one way to report custom events to New Relic. The Event API lets you send custom event data to your New Relic account with a POST command. These events are then queryable and chartable using NRQL.\n",
-    "websiteUrl": null,
-    "keywords": [
-      "events",
-      "custom events",
-      "new relic",
-      "MELT"
-    ],
-    "authors": [
-      "New Relic"
-    ],
-    "dashboards": [],
-    "alerts": [],
-    "documentation": [
-      {
-        "name": "Event API usage docs",
-        "description": "The New Relic Event API is one way to report custom events to New Relic. The Event API lets you send custom event data to your New Relic account with a POST command. These events are then queryable and chartable using NRQL.\n",
-        "url": "https://docs.newrelic.com/docs/telemetry-data-platform/ingest-apis/introduction-event-api/"
-      }
-    ],
-    "installPlans": []
-  },
-  {
-    "title": "Logs API",
-    "name": "Logs API",
-    "description": "If our logging solutions don't meet your needs, you can use our Log API to send log data directly to New Relic's Log management via an HTTP endpoint.\n",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/apis/logs",
-    "id": "b40194c0-c7a0-497c-82c1-ca47b60726da",
-    "level": "NEW_RELIC",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/v0.106.0/quickstarts/apis/logs/logo.png",
-    "summary": "If our logging solutions don't meet your needs, you can use our Log API to send log data directly to New Relic's Log management via an HTTP endpoint.\n",
-    "websiteUrl": null,
-    "keywords": [
-      "logging",
-      "logs",
-      "new relic",
-      "MELT"
-    ],
-    "authors": [
-      "New Relic"
-    ],
-    "dashboards": [],
-    "alerts": [],
-    "documentation": [
-      {
-        "name": "Logs API usage docs",
-        "description": "If our logging solutions don't meet your needs, you can use our Log API to send log data directly to New Relic's Log management via an HTTP endpoint.\n",
-        "url": "https://docs.newrelic.com/docs/logs/log-management/log-api/introduction-log-api/"
-      }
-    ],
-    "installPlans": []
-  },
-  {
-    "title": "Metric API",
-    "name": "Metric API",
-    "description": "New Relic's Metric API can be used to send metric data to New Relic from a variety of sources. This API is how metrics from some of our integrations and exporters get into New Relic.\n",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/apis/metric",
-    "id": "028e4c30-1567-4b9a-8417-6606bc9d83c8",
-    "level": "NEW_RELIC",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/v0.106.0/quickstarts/apis/metric/logo.png",
-    "summary": "New Relic's Metric API can be used to send metric data to New Relic from a variety of sources. This API is how metrics from some of our integrations and exporters get into New Relic.\n",
-    "websiteUrl": null,
-    "keywords": [
-      "metrics",
-      "new relic",
-      "MELT"
-    ],
-    "authors": [
-      "New Relic"
-    ],
-    "dashboards": [],
-    "alerts": [],
-    "documentation": [
-      {
-        "name": "Metric API usage docs",
-        "description": "New Relic's Metric API can be used to send metric data to New Relic from a variety of sources. This API is how metrics from some of our integrations and exporters get into New Relic.\n",
-        "url": "https://docs.newrelic.com/docs/telemetry-data-platform/ingest-apis/metric-api/introduction-metric-api/"
-      }
-    ],
-    "installPlans": []
-  },
-  {
-    "title": "Trace and Span API",
-    "name": "Trace and Span API",
-    "description": "Our Trace API is used to send distributed tracing data to New Relic: either in our own generic format or the Zipkin data format. This API is also how trace data from some of our integrations and exporters is reported to New Relic.\n",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/apis/trace",
-    "id": "07f0b96c-add9-43d5-962d-1865d0149082",
-    "level": "NEW_RELIC",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/v0.106.0/quickstarts/apis/trace/logo.png",
-    "summary": "Our Trace API is used to send distributed tracing data to New Relic: either in our own generic format or the Zipkin data format. This API is also how trace data from some of our integrations and exporters is reported to New Relic.\n",
-    "websiteUrl": null,
-    "keywords": [
-      "tracing",
-      "span",
-      "zipkin",
-      "new relic",
-      "MELT"
-    ],
-    "authors": [
-      "New Relic"
-    ],
-    "dashboards": [],
-    "alerts": [],
-    "documentation": [
-      {
-        "name": "Trace and Span API usage docs",
-        "description": "Our Trace API is used to send distributed tracing data to New Relic: either in our own generic format or the Zipkin data format. This API is also how trace data from some of our integrations and exporters is reported to New Relic.\n",
-        "url": "https://docs.newrelic.com/docs/distributed-tracing/trace-api/introduction-trace-api/"
       }
     ],
     "installPlans": []
