@@ -1,9 +1,10 @@
 const path = require(`path`);
 const resolveQuickstartSlug = require('./src/utils/resolveQuickstartSlug.js');
+const externalRedirects = require('./src/data/quickstart-redirects.json');
 
 exports.createPages = async ({ actions, graphql, reporter }) => {
-  const { createPage } = actions;
-
+  const { createPage, createRedirect } = actions;
+  console.log("createRedirect->",createRedirect);
   const result = await graphql(`
     query {
       allQuickstarts {
@@ -18,6 +19,15 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
       }
     }
   `);
+
+  externalRedirects.forEach(({ from, to }) => {
+    createRedirect({
+      fromPath: from,
+      toPath: to,
+      isPermanent: true,
+      redirectInBrowser: true,
+    });
+  });
 
   // Handle errors
   if (result.errors) {
