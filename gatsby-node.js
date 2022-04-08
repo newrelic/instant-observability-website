@@ -4,7 +4,6 @@ const externalRedirects = require('./src/data/quickstart-redirects.json');
 
 exports.createPages = async ({ actions, graphql, reporter }) => {
   const { createPage, createRedirect } = actions;
-  console.log("createRedirect->",createRedirect);
   const result = await graphql(`
     query {
       allQuickstarts {
