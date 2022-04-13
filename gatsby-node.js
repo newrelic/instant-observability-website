@@ -24,7 +24,6 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
       fromPath: from,
       toPath: to,
       isPermanent: true,
-      redirectInBrowser: true,
     });
   });
 
