@@ -30,6 +30,7 @@ import Tabs from '../components/Tabs';
 import { css } from '@emotion/react';
 import { graphql } from 'gatsby';
 import { quickstart } from '../types';
+import RenderImageFromText from '../components/RenderImageFromText';
 
 const QuickstartDetails = ({ data, location }) => {
 
@@ -299,6 +300,16 @@ const QuickstartDetails = ({ data, location }) => {
             >
               Data sources
             </Tabs.BarItem>
+            <Tabs.BarItem
+              id="render-image-test"
+              count={
+                (quickstart.instrumentation?.length ?? 0) +
+                (quickstart.documentation?.length ?? 0)
+              }
+              onClick={tessenTabTrack(`QuickstartTabToggle`, quickstart)}
+            >
+              Render images test
+            </Tabs.BarItem>
           </Tabs.Bar>
           <Layout.Content>
             <Tabs.Pages>
@@ -337,6 +348,9 @@ const QuickstartDetails = ({ data, location }) => {
                     tabName="data sources"
                   />
                 )}
+              </Tabs.Page>
+              <Tabs.Page id="render-image-test">
+                <RenderImageFromText />
               </Tabs.Page>
             </Tabs.Pages>
           </Layout.Content>
