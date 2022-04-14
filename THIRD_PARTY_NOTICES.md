@@ -35,6 +35,7 @@ code, the source code can be found at [https://github.com/newrelic/instant-obser
 * [node-sass](#node-sass)
 * [pluralize](#pluralize)
 * [react-dom](#react-dom)
+* [react-feather](#react-feather)
 * [react-helmet](#react-helmet)
 * [react-markdown](#react-markdown)
 * [react-slick](#react-slick)
@@ -47,6 +48,11 @@ code, the source code can be found at [https://github.com/newrelic/instant-obser
 **[devDependencies](#devDependencies)**
 
 * [@newrelic/eslint-plugin-newrelic](#newreliceslint-plugin-newrelic)
+* [@semantic-release/changelog](#semantic-releasechangelog)
+* [@semantic-release/commit-analyzer](#semantic-releasecommit-analyzer)
+* [@semantic-release/git](#semantic-releasegit)
+* [@semantic-release/github](#semantic-releasegithub)
+* [@semantic-release/release-notes-generator](#semantic-releaserelease-notes-generator)
 * [babel-jest](#babel-jest)
 * [babel-preset-gatsby](#babel-preset-gatsby)
 * [prettier](#prettier)
@@ -172,7 +178,7 @@ THE SOFTWARE.
 
 ### @newrelic/gatsby-theme-newrelic
 
-This product includes source derived from [@newrelic/gatsby-theme-newrelic](https://github.com/newrelic/gatsby-theme-newrelic) ([v4.1.8](https://github.com/newrelic/gatsby-theme-newrelic/tree/v4.1.8)), distributed under the [Apache-2.0 License](https://github.com/newrelic/gatsby-theme-newrelic/blob/v4.1.8/LICENSE):
+This product includes source derived from [@newrelic/gatsby-theme-newrelic](https://github.com/newrelic/gatsby-theme-newrelic) ([v5.0.4](https://github.com/newrelic/gatsby-theme-newrelic/tree/v5.0.4)), distributed under the [Apache-2.0 License](https://github.com/newrelic/gatsby-theme-newrelic/blob/v5.0.4/LICENSE):
 
 ```
                                  Apache License
@@ -832,6 +838,35 @@ SOFTWARE.
 
 ```
 
+### react-feather
+
+This product includes source derived from [react-feather](https://github.com/feathericons/react-feather) ([v2.0.9](https://github.com/feathericons/react-feather/tree/v2.0.9)), distributed under the [MIT License](https://github.com/feathericons/react-feather/blob/v2.0.9/LICENSE):
+
+```
+MIT License
+
+Copyright (c) 2017 Carmelo Pullara
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+```
+
 ### react-helmet
 
 This product includes source derived from [react-helmet](https://github.com/nfl/react-helmet) ([v6.1.0](https://github.com/nfl/react-helmet/tree/v6.1.0)), distributed under the [MIT License](https://github.com/nfl/react-helmet/blob/v6.1.0/LICENSE):
@@ -1427,6 +1462,151 @@ This product includes source derived from [@newrelic/eslint-plugin-newrelic](htt
    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
    See the License for the specific language governing permissions and
    limitations under the License.
+
+```
+
+### @semantic-release/changelog
+
+This product includes source derived from [@semantic-release/changelog](https://github.com/semantic-release/changelog) ([v6.0.1](https://github.com/semantic-release/changelog/tree/v6.0.1)), distributed under the [MIT License](https://github.com/semantic-release/changelog/blob/v6.0.1/LICENSE):
+
+```
+MIT License
+
+Copyright (c) 2017 Contributors
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+```
+
+### @semantic-release/commit-analyzer
+
+This product includes source derived from [@semantic-release/commit-analyzer](https://github.com/semantic-release/commit-analyzer) ([v9.0.2](https://github.com/semantic-release/commit-analyzer/tree/v9.0.2)), distributed under the [MIT License](https://github.com/semantic-release/commit-analyzer/blob/v9.0.2/LICENSE):
+
+```
+MIT License
+
+Copyright (c) 2017 Pierre-Denis Vanduynslager
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+```
+
+### @semantic-release/git
+
+This product includes source derived from [@semantic-release/git](https://github.com/semantic-release/git) ([v10.0.1](https://github.com/semantic-release/git/tree/v10.0.1)), distributed under the [MIT License](https://github.com/semantic-release/git/blob/v10.0.1/LICENSE):
+
+```
+MIT License
+
+Copyright (c) 2017 Pierre-Denis Vanduynslager
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+```
+
+### @semantic-release/github
+
+This product includes source derived from [@semantic-release/github](https://github.com/semantic-release/github) ([v8.0.4](https://github.com/semantic-release/github/tree/v8.0.4)), distributed under the [MIT License](https://github.com/semantic-release/github/blob/v8.0.4/LICENSE):
+
+```
+MIT License
+
+Copyright (c) 2017 Contributors
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+```
+
+### @semantic-release/release-notes-generator
+
+This product includes source derived from [@semantic-release/release-notes-generator](https://github.com/semantic-release/release-notes-generator) ([v10.0.3](https://github.com/semantic-release/release-notes-generator/tree/v10.0.3)), distributed under the [MIT License](https://github.com/semantic-release/release-notes-generator/blob/v10.0.3/LICENSE):
+
+```
+MIT License
+
+Copyright (c) 2017 Pierre-Denis Vanduynslager
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
 
 ```
 
