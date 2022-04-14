@@ -50,14 +50,14 @@ HEADER_LINKS.set(NR_SITES.PLATFORM, {
 
 const createNavList = (listType, activeSite = null) => {
   const navList = [];
+  const currentPage = HEADER_LINKS.get(NR_SITES.IO);
   HEADER_LINKS.forEach(({ text, href }) => {
-    const activePath = 'instant-observability';
     switch (listType) {
       case 'main':
         navList.push(
           <li
             key={href}
-            id={href.includes(activePath) && 'header-nav-active-tab'}
+            id={currentPage.href === href && 'header-nav-active-tab'}
           >
             <GlobalNavLink
               href={href}
