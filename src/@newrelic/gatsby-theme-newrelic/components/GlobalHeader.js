@@ -495,9 +495,8 @@ const GlobalHeader = ({ className, activeSite }) => {
                 vertical-align: middle;
                 white-space: nowrap;
                 background-color: #fff;
-                color: #1CE783;
-                border-color:#1CE783;
-           
+                color: #1D252C;
+                border-color:#1D252C;
                 padding: 0.375rem 1rem;
                   
                 `}
@@ -531,9 +530,9 @@ const GlobalHeader = ({ className, activeSite }) => {
                 text-align: center;
                 vertical-align: middle;
                 white-space: nowrap;
-                background-color: #1ce783;
+                background-color: #1D252C;
                 color: #fff;
-                border-color: #1ce783;
+                border-color:#1D252C;
               `}
             >
               <span>{t('Get Started')}</span>
