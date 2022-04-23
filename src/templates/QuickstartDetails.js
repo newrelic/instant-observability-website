@@ -111,12 +111,6 @@ const QuickstartDetails = ({ data, location }) => {
         meta={quickStartMeta}
       />
       <Breadcrumbs segments={breadcrumbs} />
-      <PageLayout
-        type={PageLayout.TYPE.RELATED_CONTENT_TABS}
-        css={css`
-            grid-template-columns: minmax(0, 1fr);
-          `}
-      >
         <PageLayout.Header
           title={quickstart.title}
           icon={
@@ -244,10 +238,7 @@ const QuickstartDetails = ({ data, location }) => {
           </div>
         </PageLayout.Header>
 
-        <Layout.Content
-          css={css`
-          width: 100%;
-          `}>
+        <Layout.Content>
           {/* What's included section here */}
           <div
             css={css`
@@ -289,7 +280,6 @@ const QuickstartDetails = ({ data, location }) => {
           />
 
         </Layout.Content>
-      </PageLayout>
     </>
   );
 };
