@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { css } from '@emotion/react';
 
-const EbookIcon = () => {
+const EbookIconSVG = () => {
     return (
 
         <svg
@@ -19,9 +19,4 @@ const EbookIcon = () => {
     );
 };
 
-EbookIcon.propTypes = {
-    className: PropTypes.string,
-    width: PropTypes.string,
-};
-
-export default EbookIcon;
+export default EbookIconSVG;

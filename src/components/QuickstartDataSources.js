@@ -4,7 +4,7 @@ import pluralize from 'pluralize';
 import { Surface, Link, Tag, useTessen } from '@newrelic/gatsby-theme-newrelic';
 import Intro from './Intro';
 import { quickstart } from '../types';
-import EbookIcon from './EbookIcon';
+import EbookIconSVG from './Icons/EbookIconSVG';
 
 const QuickstartDataSources = ({ quickstart }) => {
   const tessen = useTessen();
@@ -57,7 +57,7 @@ const QuickstartDataSources = ({ quickstart }) => {
             `}
             interactive
           >
-            <EbookIcon className="Ebook"
+            <EbookIconSVG className="Ebook"
               css={css`
              width: 0.75rem;
              height: 1rem;

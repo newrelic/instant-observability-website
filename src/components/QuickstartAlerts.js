@@ -1,10 +1,10 @@
 import React from 'react';
 import { css } from '@emotion/react';
 import pluralize from 'pluralize';
-import { Surface, Tag } from '@newrelic/gatsby-theme-newrelic';
+import { Surface } from '@newrelic/gatsby-theme-newrelic';
 import Intro from './Intro';
 import { quickstart } from '../types';
-import AlertIcon from './AlertIcon';
+import AlertIconSVG from './Icons/AlertIconSVG';
 
 const QuickstartAlerts = ({ quickstart }) => (
   <>
@@ -43,7 +43,7 @@ const QuickstartAlerts = ({ quickstart }) => (
             padding: 2rem;
           `}
         >
-          <AlertIcon className="Alert"
+          <AlertIconSVG className="Alert"
             css={css`
             width: 0.75rem;
             height: 1rem;

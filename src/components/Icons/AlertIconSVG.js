@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { css } from '@emotion/react';
 
-const AlertIcon = () => {
+const AlertIconSVG = () => {
     return (
 
         <svg width="24" height="23" viewBox="0 0 24 23" fill="none" xmlns="http://www.w3.org/2000/svg" className="Alert">
@@ -12,9 +12,4 @@ const AlertIcon = () => {
     );
 };
 
-AlertIcon.propTypes = {
-    className: PropTypes.string,
-    width: PropTypes.string,
-};
-
-export default AlertIcon;
+export default AlertIconSVG;

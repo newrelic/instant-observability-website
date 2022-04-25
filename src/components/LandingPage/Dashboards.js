@@ -1,7 +1,6 @@
 import { PageTools } from '@newrelic/gatsby-theme-newrelic';
 import { quickstart } from '../../types';
 import QuickstartDashboards from '../../components/QuickstartDashboards';
-import EmptyTab from '../../components/EmptyTab';
 import { css } from '@emotion/react';
 
 const Dashboards = ({ quickstart }) => {
@@ -9,9 +8,6 @@ const Dashboards = ({ quickstart }) => {
     return (
         <div
             css={css`
-        display: grid;
-        grid-gap: 1rem;
-        grid-template-columns: repeat(1, 1fr);
         h1 {
             margin-bottom: 58px;
         }
@@ -45,6 +41,17 @@ const Dashboards = ({ quickstart }) => {
                     >
                         {quickstart.dashboards.length}</div>
                 </h2>
+                {quickstart.dashboards?.length > 0 ? (
+                    <QuickstartDashboards quickstart={quickstart} />
+                ) : (
+
+                    <p>
+                        This quickstart doesn't include any dashboards. Do you think it should?
+                        <br />
+                        You can edit this quickstart to add helpful components. View the
+                        repository and open a pull request.
+                    </p>
+                )}
 
             </PageTools.Section>
         </div>
