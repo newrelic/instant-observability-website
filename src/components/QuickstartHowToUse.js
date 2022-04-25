@@ -27,7 +27,7 @@ const QuickstartHowToUse = ({
             display: grid;
             grid-template-columns: repeat(1, 1fr);
             margin-left: 40px;
-            margin-right: 39px;
+            margin-right: 23px;
         }
         `}>
         <PageTools.Section>

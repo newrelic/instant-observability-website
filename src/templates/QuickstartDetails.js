@@ -111,22 +111,22 @@ const QuickstartDetails = ({ data, location }) => {
         meta={quickStartMeta}
       />
       <Breadcrumbs segments={breadcrumbs} />
-        <PageLayout.Header
-          title={quickstart.title}
-          icon={
-            SHIELD_LEVELS.includes(quickstart.level) && (
-              <Icon
-                name="nr-check-shield"
-                size="50%"
-                css={css`
+      <PageLayout.Header
+        title={quickstart.title}
+        icon={
+          SHIELD_LEVELS.includes(quickstart.level) && (
+            <Icon
+              name="nr-check-shield"
+              size="50%"
+              css={css`
                     width: 0.75rem;
                     height: 1rem;
                     margin-left: 0.5rem;
                   `}
-              />
-            )
-          }
-          css={css`
+            />
+          )
+        }
+        css={css`
               border-bottom: none;
               display: grid;
               grid-column-gap: 1rem;
@@ -163,13 +163,13 @@ const QuickstartDetails = ({ data, location }) => {
                 box-shadow: none;
               }
             `}
-        >
-          {quickstart.logoUrl && (
-            <img
-              style={imgStyle}
-              src={quickstart.logoUrl}
-              alt={quickstart.title}
-              css={css`
+      >
+        {quickstart.logoUrl && (
+          <img
+            style={imgStyle}
+            src={quickstart.logoUrl}
+            alt={quickstart.title}
+            css={css`
                   max-height: 100%;
                   max-width: 12rem;
                   width: 100%;
@@ -185,11 +185,11 @@ const QuickstartDetails = ({ data, location }) => {
                     display: none;
                   }
                 `}
-            />
-          )}
-          {quickstart.summary && (
-            <div
-              css={css`
+          />
+        )}
+        {quickstart.summary && (
+          <div
+            css={css`
                   grid-area: summ;
                   max-width: 50vw;
 
@@ -197,12 +197,12 @@ const QuickstartDetails = ({ data, location }) => {
                     max-width: 100%;
                   }
                 `}
-            >
-              {quickstart.summary}
-            </div>
-          )}
-          <div
-            css={css`
+          >
+            {quickstart.summary}
+          </div>
+        )}
+        <div
+          css={css`
                 grid-area: cta;
                 display: flex;
                 justify-content: center;
@@ -212,74 +212,78 @@ const QuickstartDetails = ({ data, location }) => {
                   align-items: stretch;
                 }
               `}
-          >
-            <InstallButton quickstart={quickstart} location={location} />
-            <Button
-              as={Link}
-              variant={Button.VARIANT.OUTLINE}
-              to={quickstartUrl}
-              rel="noopener noreferrer"
-              css={css`
+        >
+          <InstallButton quickstart={quickstart} location={location} />
+          <Button
+            as={Link}
+            variant={Button.VARIANT.OUTLINE}
+            to={quickstartUrl}
+            rel="noopener noreferrer"
+            css={css`
                   margin: 0 0 0 0.5rem;
                   @media (max-width: 760px) {
                     margin: 1rem 0 0 0;
                   }
                 `}
-              onClick={trackQuickstart('QuickstartViewRepoClick', quickstart)}
-            >
-              <Icon
-                name="fe-github"
-                css={css`
+            onClick={trackQuickstart('QuickstartViewRepoClick', quickstart)}
+          >
+            <Icon
+              name="fe-github"
+              css={css`
                     margin-right: 7px;
                   `}
-              />
-              View repo
-            </Button>
-          </div>
-        </PageLayout.Header>
-
-        <Layout.Content>
-          {/* What's included section here */}
-          <div
-            css={css`
-                display: grid;
-                grid-gap: 1rem;
-                grid-template-columns: repeat(1, 1fr);
-
-                @media (min-width: 760px) {
-                  margin-left: 156px;
-                }
-
-                @media (max-width: 760px) {
-                  margin-left: 40px;
-                  margin-right: 39px;
-                }
-              `}
-          >
-            <Dashboards quickstart={quickstart} />
-            <Alerts quickstart={quickstart} />
-            <DataSources quickstart={quickstart} />
-          </div>
-
-          {/* How to use this quickstart here */}
-          <div
-            css={css`
-             background-color: #F1F2F2;        
-          `}>
-            <QuickstartHowToUse
-              quickstart={quickstart}
-              trackQuickstart={trackQuickstart}
-              tessenSupportTrack={tessenSupportTrack}
             />
-          </div>
-          {/* Get started component here */}
+            View repo
+          </Button>
+        </div>
+      </PageLayout.Header>
 
+      <Layout.Content>
+        {/* What's included section here */}
+        <div
+          css={css`
+            @media (min-width: 760px) {
+                  margin-right: 122.34px;
+                  padding-bottom: 60px;
+            }
+
+            @media (max-width: 760px) {
+              padding-bottom: 60px;
+        }
+
+          `}>
+          <Dashboards quickstart={quickstart} />
+          <Alerts quickstart={quickstart} />
+          <DataSources quickstart={quickstart} />
+        </div>
+
+        {/* How to use this quickstart here */}
+        <div
+          css={css`
+             background-color: #F1F2F2;      
+              padding-top: 30px;
+              padding-bottom: 30px;
+           
+          `}>
+          <QuickstartHowToUse
+            quickstart={quickstart}
+            trackQuickstart={trackQuickstart}
+            tessenSupportTrack={tessenSupportTrack}
+          />
+        </div>
+        {/* Get started component here */}
+        <div
+          css={css`
+              padding-top: 30px;
+              padding-bottom: 30px; 
+          `}>
           <Authors quickstart={quickstart}
             trackQuickstart={trackQuickstart}
             tessenSupportTrack={tessenSupportTrack}
           />
+        </div>
 
-        </Layout.Content>
+      </Layout.Content>
     </>
   );
 };

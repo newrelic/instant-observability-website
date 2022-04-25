@@ -28,19 +28,16 @@ const Authors = ({
 
                     @media (max-width: 760px) {
                         grid-template-columns: repeat(1, 1fr);
+                        margin-left: 40px;
+                      margin-right: 23px;
                     }
 
                     @media (min-width: 760px) {
                       margin-left: 156px;
-
+                        
                       h3 {
                           margin-bottom: 58px
                       }
-                    }
-
-                    @media (max-width: 760px) {
-                      margin-left: 40px;
-                      margin-right: 39px;
                     }
           `}>
                 <PageTools.Section>
@@ -76,7 +73,8 @@ const Authors = ({
                             css={css`
                                 background: #1D252C;
                                 color: #F9FAFA;
-                                padding: 10px;
+                                border-radius: 4px;
+                                padding: 12px 20px 12px 20px;
                                 &:hover{
                                     color: #F9FAFA;;
                                   }
@@ -113,7 +111,8 @@ const Authors = ({
                             css={css`
                                 background: #1D252C;
                                 color: #F9FAFA;
-                                padding: 10px;
+                                border-radius: 4px;
+                                padding: 12px 20px 12px 20px;
                                 &:hover{
                                     color: #F9FAFA;;
                                 }

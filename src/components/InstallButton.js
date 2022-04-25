@@ -180,6 +180,8 @@ const InstallButton = ({ quickstart, location, ...props }) => {
       onClick={handleInstallClick}
       variant={Button.VARIANT.PRIMARY}
       css={css`
+      border-radius: 4px;
+      padding: 12px 20px 12px 20px;
       &:hover{
         background-color: #1D252C;
       }
