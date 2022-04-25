@@ -127,8 +127,7 @@ const QuickstartHowToUse = ({
 };
 
 QuickstartHowToUse.propTypes = {
-  quickstart: quickstart.isRequired,
-  location: PropTypes.object.isRequired,
+  quickstart: quickstart.isRequired
 };
 
 export default QuickstartHowToUse;

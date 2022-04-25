@@ -268,7 +268,6 @@ const QuickstartDetails = ({ data, location }) => {
           <QuickstartHowToUse
             quickstart={quickstart}
             trackQuickstart={trackQuickstart}
-            tessenSupportTrack={tessenSupportTrack}
             location={location}
           />
         </div>
