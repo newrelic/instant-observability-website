@@ -1065,6 +1065,59 @@
     "installPlans": []
   },
   {
+    "title": "Node Exporter",
+    "name": "node-exporter",
+    "description": "Official New Relic dashboard for Prometheus Node Exporter. Node Exporter allows host metrics gathered by the exporter to be scraped by Prometheus Server.\n\n## Dashboard Highlights\n- Load Averages\n- CPU\n- Memory Usage\n- Storage Usage\n- Network\n\n## Requirements:\n1. [Prometheus Server](https://prometheus.io/docs/prometheus/latest/installation/)\n2. [Node Exporter](https://prometheus.io/docs/guides/node-exporter/) installed\n3. Enable Prometheus [Remote Write](https://docs.newrelic.com/docs/infrastructure/prometheus-integrations/install-configure-remote-write/set-your-prometheus-remote-write-integration/) to New Relic.\n4. To be able to filter metrics by a specific label that isn't part of the Node Exporter default installation, an `external_label` will need to be added to the Prometheus config. Example:\n    `\n      global:\n        external_labels:\n          clusterName: <cluster_name>\n    `",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/node-exporter",
+    "id": "63f7cc4c-57d8-41e5-a496-a2e61efa992f",
+    "level": "NEW_RELIC",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/node-exporter/logo.png",
+    "summary": "Dashboard for metrics gathered through Node Exporter",
+    "websiteUrl": null,
+    "keywords": [
+      "prometheus",
+      "node",
+      "exporter",
+      "remote",
+      "write",
+      "host",
+      "cpu",
+      "memory",
+      "storage",
+      "network"
+    ],
+    "authors": [
+      "New Relic"
+    ],
+    "dashboards": [],
+    "alerts": [
+      {
+        "name": "Node Exporter CPU Seconds Threshold",
+        "details": null,
+        "type": "BASELINE",
+        "url": null
+      }
+    ],
+    "documentation": [
+      {
+        "name": "Node Exporter - GitHub",
+        "description": "Exporter for machine metrics\n",
+        "url": "https://github.com/prometheus/node_exporter"
+      },
+      {
+        "name": "Node Exporter - Prometheus",
+        "description": "Monitoring Linux Host Metrics with the Node Exporter\n",
+        "url": "https://prometheus.io/docs/guides/node-exporter/"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "Prometheus remote write",
+        "id": "setup-prometheus"
+      }
+    ]
+  },
+  {
     "title": "Logs Analysis Dashboard",
     "name": "log-analysis",
     "description": "The logs analysis dashboard allows you to get deep visibility into the ingestion of your logs. With this panel, you will be able to identify the services and host that send the most logs, which types of serverity are being sent, the cost for each of the attributes and also if the essential attributes are being sent for the ccorrelation between services and logs, such as: service name, log in context and hostname.",
