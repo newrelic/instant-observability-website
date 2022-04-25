@@ -14,6 +14,7 @@ import InstallButton from './InstallButton';
 const QuickstartHowToUse = ({
   quickstart,
   trackQuickstart,
+  location
 }) => {
   return (
     <>
@@ -127,6 +128,7 @@ const QuickstartHowToUse = ({
 
 QuickstartHowToUse.propTypes = {
   quickstart: quickstart.isRequired,
+  location: PropTypes.object.isRequired,
 };
 
 export default QuickstartHowToUse;

@@ -269,6 +269,7 @@ const QuickstartDetails = ({ data, location }) => {
             quickstart={quickstart}
             trackQuickstart={trackQuickstart}
             tessenSupportTrack={tessenSupportTrack}
+            location={location}
           />
         </div>
         {/* Get started component here */}
