@@ -25,7 +25,6 @@ const QuickStartLayout = ({ children }) => {
             padding: 0;
 
             > * {
-              margin: var(--site-content-padding);
             }
           `}
         >
