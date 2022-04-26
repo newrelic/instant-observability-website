@@ -324,7 +324,7 @@ const GlobalHeader = ({ className, activeSite }) => {
           z-index: 10;
           box-shadow: 0 0.25rem 1.875rem rgb(84 86 90 / 10%);
           background: #1d252c;
-          border: 1px solid #83878b;
+          border-bottom: 1px solid #83878b;
           @media screen and (max-width: ${NAV_BREAKPOINT}) {
             display: flex;
           }
