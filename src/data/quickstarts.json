@@ -7940,6 +7940,40 @@
     ]
   },
   {
+    "title": "AWS Billing",
+    "name": "aws-billing",
+    "description": "## What is AWS Billing?\n\nThe AWS Billing console provides features to manage and report your AWS cost and usage based on user-defined methods. With this, you can easily understand your AWS spending, pay invoices, analyze and control costs, manage billing preferences and tax settings, and access other cloud financial management services.\n\n### New Relic AWS Billing features\n\nThe New Relic AWS Billing integration empowers you with an [AWS Billing integration](https://docs.newrelic.com/docs/integrations/amazon-integrations/aws-integrations-list/aws-billing-monitoring-integration) that collects AWS financial data and splits it into two groups, billing costs and billing budgets, to make it easier for your team to gain cost visibility.\n\n### Why monitor AWS Billing with New Relic?\n\nWith our AWS Billing integration, you can gain visibility into all of your financial data. Our integration aggregates data from different sub-accounts and services and looks at your budgets in actual and forecasted spend. The best part? It’s all in one place. \n\nStart ingesting your AWS billing data today and visualize your AWS billing metrics in real-time.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/aws/aws-billing",
+    "id": "c7f15a54-e243-4e23-95dd-ff08937041ed",
+    "level": "NEW_RELIC",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/aws/aws-billing/logo.svg",
+    "summary": "Monitoring AWS Billing is critical to effectively track AWS cost and usage. Download the New Relic AWS Billing quickstart to proactively monitor AWS financial data including AWS billing metrics and AWS budget metrics.",
+    "websiteUrl": null,
+    "keywords": [
+      "aws",
+      "amazon web services",
+      "aws billing"
+    ],
+    "authors": [
+      "New Relic"
+    ],
+    "dashboards": [],
+    "alerts": [],
+    "documentation": [
+      {
+        "name": "AWS Billing installation docs",
+        "description": "Monitor AWS Billing by connecting AWS to New Relic.\n",
+        "url": "https://docs.newrelic.com/docs/integrations/amazon-integrations/aws-integrations-list/aws-billing-monitoring-integration"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "AWS-Infrastructure-Monitoring",
+        "id": "aws-infrastructure-monitoring"
+      }
+    ]
+  },
+  {
     "title": "ArgoCD Quickstart",
     "name": "argocd-quickstart",
     "description": "## What is Argo CD?\nArgo CD is a declarative, GitOps continuous delivery tool for Kubernetes.\n\n## Why Argo CD?\nApplication definitions, configurations, and environments should be declarative and version controlled. Application deployment and lifecycle management should be automated, auditable, and easy to understand.\n\nThis dashboard mirrors the official Argo CD Grafana dashboard ([Link](https://github.com/argoproj/argo-cd/blob/master/examples/dashboard.json)).\n\n## Argo CD Getting started:\n- [Getting Started](https://argo-cd.readthedocs.io/en/stable/getting_started)\n- [Docs](https://argo-cd.readthedocs.io/en/stable/)\n- [Available Metrics](https://argo-cd.readthedocs.io/en/stable/operator-manual/metrics/)\n\n## ArgoCD Dashboard Highlights:\n- Sync Activity\n- Health Status\n- Controller Stats\n- Repo Server Stats\n- Argo Server Stats\n\n## Requirements:\n1. NewRelic Kubernetes Integration ([Link](https://docs.newrelic.com/docs/kubernetes-pixie/kubernetes-integration/installation/kubernetes-integration-install-configure/)) with the Prometheus OpenMetrics Integration ([Link](https://docs.newrelic.com/docs/infrastructure/prometheus-integrations/get-started/send-prometheus-metric-data-new-relic/#OpenMetrics))\n2. Patch the ArgoCD pods with `prometheus.io/scrape=true` podAnnotations.  This will enable the New Relic Prometheus Integration to scrape ArgoCD metrics:\n\n    `kubectl patch deployment argocd-server -n argocd -p '{\"spec\": {\"template\":{\"metadata\":{\"annotations\":{\"prometheus.io/scrape\":\"true\",\"prometheus.io/port\": \"8083\",\"prometheus.io/path\": \"metrics\"}}}} }'`\n\n    `kubectl patch statefulset argocd-application-controller -n argocd -p '{\"spec\": {\"template\":{\"metadata\":{\"annotations\":{\"prometheus.io/scrape\":\"true\",\"prometheus.io/port\": \"8082\",\"prometheus.io/path\": \"metrics\"}}}} }'`\n\n    `kubectl patch deployment argocd-repo-server -n argocd -p '{\"spec\": {\"template\":{\"metadata\":{\"annotations\":{\"prometheus.io/scrape\":\"true\",\"prometheus.io/port\": \"8084\",\"prometheus.io/path\": \"metrics\"}}}} }'`",
@@ -8030,39 +8064,6 @@
         "name": "Amazon Athena installation docs",
         "description": "Monitor Amazon Athena by connecting AWS to New Relic.\n",
         "url": "https://docs.newrelic.com/docs/integrations/amazon-integrations/aws-integrations-list/aws-athena-monitoring-integration"
-      }
-    ],
-    "installPlans": [
-      {
-        "name": "AWS-Infrastructure-Monitoring",
-        "id": "aws-infrastructure-monitoring"
-      }
-    ]
-  },
-  {
-    "title": "AWS Billing",
-    "name": "aws-billing",
-    "description": "## What is AWS Billing?\n\nService that can be used to pay your AWS bill, monitor your usage, and analyze\nand control your costs.\n\n\n### Get started!\n\nStart monitoring AWS Billing by connecting Amazon Web Services (AWS) to New Relic!\n\nCheck out our AWS Billing documentation to instrument your cloud service and manage the stability, scalability, and reliability of your systems with New Relic's infrastructure monitoring capabilities.\n\n### More info\n\nCheck out the [documentation](https://docs.newrelic.com/docs/integrations/amazon-integrations/aws-integrations-list/aws-billing-monitoring-integration) to learn more about New Relic monitoring for AWS Billing.",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/aws/aws-billing",
-    "id": "c7f15a54-e243-4e23-95dd-ff08937041ed",
-    "level": "NEW_RELIC",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/aws/aws-billing/logo.svg",
-    "summary": "Monitor AWS Billing by connecting AWS to New Relic",
-    "websiteUrl": null,
-    "keywords": [
-      "aws",
-      "amazon web services"
-    ],
-    "authors": [
-      "New Relic"
-    ],
-    "dashboards": [],
-    "alerts": [],
-    "documentation": [
-      {
-        "name": "AWS Billing installation docs",
-        "description": "Monitor AWS Billing by connecting AWS to New Relic.\n",
-        "url": "https://docs.newrelic.com/docs/integrations/amazon-integrations/aws-integrations-list/aws-billing-monitoring-integration"
       }
     ],
     "installPlans": [
@@ -16388,6 +16389,72 @@
     "installPlans": []
   },
   {
+    "title": "Azure MySQL",
+    "name": "azure-mysql",
+    "description": "## What is Azure MySQL?\n\nAzure MySQL is a fully-managed database that can handle mission-critical workloads with predictable performance and dynamic scalability. This relational database offers high-availability, automatic backups, and data protection at-rest and in-motion.\n\n\n### New Relic + Azure integration\n\nThe New Relic Azure MySQL monitoring quickstart instruments your cloud service and manages the stability, scalability, and reliability of Azure MySQL with our infrastructure monitoring capabilities. \n\nOnce instrumented, we proactively track your organization’s Azure MySQL metric data in real-time.\n\n### Why monitor Azure MySQL with New Relic?\n\nNew Relic's integration reports your Microsoft Azure Database for MySQL metrics and other data to New Relic.\n\nWith our [Azure integration](https://docs.newrelic.com/docs/infrastructure/microsoft-azure-integrations/azure-integrations-list/azure-database-mysql-monitoring-integration/), you can view the Azure database for mysql data in pre-built dashboards, create your own alert conditions, and run custom queries for easy data visualization.\n\nIf you’re looking to optimize your mysql database with high availability, elastic scaling, and more, install our quickstart.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/azure/azure-mysql",
+    "id": "f126b6c1-a1e8-4473-b5d3-44c22ff93008",
+    "level": "NEW_RELIC",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/azure/azure-mysql/logo.svg",
+    "summary": "Monitoring Azure MySQL is crucial to track your organization’s Azure MySQL metric data in real-time. Download the New Relic quickstart to proactively instrument Azure MySQL with New Relic infrastructure monitoring capabilities.",
+    "websiteUrl": null,
+    "keywords": [
+      "azure",
+      "database"
+    ],
+    "authors": [
+      "New Relic"
+    ],
+    "dashboards": [],
+    "alerts": [],
+    "documentation": [
+      {
+        "name": "Azure MySQL installation docs",
+        "description": "Monitor Azure MySQL by connecting Azure to New Relic.\n",
+        "url": "https://docs.newrelic.com/docs/infrastructure/microsoft-azure-integrations/azure-integrations-list/azure-database-mysql-monitoring-integration/"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "Azure-Infrastructure-Monitoring",
+        "id": "azure-infrastructure-monitoring"
+      }
+    ]
+  },
+  {
+    "title": "AWS Trusted Advisor",
+    "name": "aws-trusted-advisor",
+    "description": "## What is AWS Trusted Advisor?\n\nThe AWS Trusted Advisor is an online tool that provides real-time guidance to help you follow AWS best practices for provisioning your resources. It evaluates your account by using checks which then identify ways to optimize your AWS infrastructure.\n\n\n### New Relic AWS Trusted Advisor quickstart features\n\nThe New Relic AWS Trusted Advisor monitoring quickstart empowers you with our [AWS Trusted Advisor integration](https://docs.newrelic.com/docs/infrastructure/amazon-integrations/aws-integrations-list/aws-trusted-advisor-integration/) to collect data about key metrics, query the data and gain valuable insights. \n\n### Why monitor AWS Trusted Advisor with New Relic?\n\nNew Relic's integration reports your AWS Trusted Advisor metrics and other data to New Relic. In order to have fresh data, our integration programmatically sends refresh requests to AWS.\n\nYou can activate the integration by following our [standard procedures](https://docs.newrelic.com/docs/infrastructure/infrastructure-integrations/getting-started/connect-aws-integrations-infrastructure) for connecting AWS services to New Relic. The monitoring quickstart helps you to track key AWS Trusted Advisor metrics like AWS region, current usage, limit amount, service limit usage, status, and timestamp.\n\nInstall the New Relic AWS Trusted Advisor quickstart today to proactively monitor AWS Trusted Advisor and keep getting quality recommendations that help you follow AWS best practices.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/aws/aws-trusted-advisor",
+    "id": "a248809c-704c-440c-bdbc-fc2e7a183a3b",
+    "level": "NEW_RELIC",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/aws/aws-trusted-advisor/logo.svg",
+    "summary": "Monitoring AWS Trusted Advisor is critical to keep getting quality recommendations that help you follow AWS best practices. Download the New Relic quickstart to proactively instrument AWS Trusted Advisor with New Relic infrastructure monitoring capabilities.",
+    "websiteUrl": null,
+    "keywords": [
+      "aws",
+      "amazon web services"
+    ],
+    "authors": [
+      "New Relic"
+    ],
+    "dashboards": [],
+    "alerts": [],
+    "documentation": [
+      {
+        "name": "AWS Trusted Advisor installation docs",
+        "description": "Monitor AWS Trusted Advisor by connecting AWS to New Relic.\n",
+        "url": "https://docs.newrelic.com/docs/infrastructure/amazon-integrations/aws-integrations-list/aws-trusted-advisor-integration/"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "AWS-Infrastructure-Monitoring",
+        "id": "aws-infrastructure-monitoring"
+      }
+    ]
+  },
+  {
     "title": "Amazon Linux",
     "name": "amazon-linux",
     "description": "## What is Amazon Linux?\n\nAmazon supported and maintained Linux image provided by Amazon Web Services\nfor use on Amazon Elastic Compute Cloud.\n\n## Get started!\n\nChoose this quickstart and follow New Relic's guided install process to monitor your Amazon Linux environment.",
@@ -16587,39 +16654,6 @@
     ]
   },
   {
-    "title": "AWS Trusted Advisor",
-    "name": "aws-trusted-advisor",
-    "description": "## What is AWS Trusted Advisor?\n\nOnline tool that provides real-time guidance to help you follow AWS best\npractices for provisioning your resources.\n\n\n### Get started!\n\nStart monitoring AWS Trusted Advisor by connecting Amazon Web Services (AWS) to New Relic!\n\nCheck out our AWS Trusted Advisor documentation to instrument your cloud service and manage the stability, scalability, and reliability of your systems with New Relic's infrastructure monitoring capabilities.\n\n### More info\n\nCheck out the [documentation](https://docs.newrelic.com/docs/infrastructure/amazon-integrations/aws-integrations-list/aws-trusted-advisor-integration/) to learn more about New Relic monitoring for AWS Trusted Advisor.",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/aws/aws-trusted-advisor",
-    "id": "a248809c-704c-440c-bdbc-fc2e7a183a3b",
-    "level": "NEW_RELIC",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/aws/aws-trusted-advisor/logo.svg",
-    "summary": "Monitor AWS Trusted Advisor by connecting AWS to New Relic",
-    "websiteUrl": null,
-    "keywords": [
-      "aws",
-      "amazon web services"
-    ],
-    "authors": [
-      "New Relic"
-    ],
-    "dashboards": [],
-    "alerts": [],
-    "documentation": [
-      {
-        "name": "AWS Trusted Advisor installation docs",
-        "description": "Monitor AWS Trusted Advisor by connecting AWS to New Relic.\n",
-        "url": "https://docs.newrelic.com/docs/infrastructure/amazon-integrations/aws-integrations-list/aws-trusted-advisor-integration/"
-      }
-    ],
-    "installPlans": [
-      {
-        "name": "AWS-Infrastructure-Monitoring",
-        "id": "aws-infrastructure-monitoring"
-      }
-    ]
-  },
-  {
     "title": "Azure Cost Management",
     "name": "azure-cost-management",
     "description": "## What is Azure Cost Management?\n\nMonitor billing, manage subscriptions, and optimize spending across your Azure\nservices.\n\n\n### Get started!\n\nStart monitoring Azure Cost Management by connecting Microsoft Azure to New Relic!\n\nCheck out our Azure Cost Management documentation to instrument your cloud service and manage the stability, scalability, and reliability of your systems with New Relic's infrastructure monitoring capabilities.\n\n### More info\n\nCheck out the [documentation](https://docs.newrelic.com/docs/infrastructure/microsoft-azure-integrations/azure-integrations-list/azure-cost-management-monitoring-integration/) to learn more about New Relic monitoring for Azure Cost Management.",
@@ -16652,39 +16686,6 @@
         "name": "Azure Cost Management installation docs",
         "description": "Monitor Azure Cost Management by connecting Azure to New Relic.\n",
         "url": "https://docs.newrelic.com/docs/infrastructure/microsoft-azure-integrations/azure-integrations-list/azure-cost-management-monitoring-integration/"
-      }
-    ],
-    "installPlans": [
-      {
-        "name": "Azure-Infrastructure-Monitoring",
-        "id": "azure-infrastructure-monitoring"
-      }
-    ]
-  },
-  {
-    "title": "Azure MySQL",
-    "name": "azure-mysql",
-    "description": "## What is Azure MySQL?\n\nFully managed MySQL Community database as a service with high availability,\nelastic scaling, automatic backups, and data protection.\n\n\n### Get started!\n\nStart monitoring Azure MySQL by connecting Microsoft Azure to New Relic!\n\nCheck out our Azure MySQL documentation to instrument your cloud service and manage the stability, scalability, and reliability of your systems with New Relic's infrastructure monitoring capabilities.\n\n### More info\n\nCheck out the [documentation](https://docs.newrelic.com/docs/infrastructure/microsoft-azure-integrations/azure-integrations-list/azure-database-mysql-monitoring-integration/) to learn more about New Relic monitoring for Azure MySQL.",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/azure/azure-mysql",
-    "id": "f126b6c1-a1e8-4473-b5d3-44c22ff93008",
-    "level": "NEW_RELIC",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/azure/azure-mysql/logo.svg",
-    "summary": "Monitor Azure MySQL by connecting Azure to New Relic",
-    "websiteUrl": null,
-    "keywords": [
-      "azure",
-      "database"
-    ],
-    "authors": [
-      "New Relic"
-    ],
-    "dashboards": [],
-    "alerts": [],
-    "documentation": [
-      {
-        "name": "Azure MySQL installation docs",
-        "description": "Monitor Azure MySQL by connecting Azure to New Relic.\n",
-        "url": "https://docs.newrelic.com/docs/infrastructure/microsoft-azure-integrations/azure-integrations-list/azure-database-mysql-monitoring-integration/"
       }
     ],
     "installPlans": [
@@ -22263,12 +22264,12 @@
   {
     "title": "Azure Storage",
     "name": "azure-storage",
-    "description": "## What is Azure Storage?\n\nManaged cloud service that provides highly available, secure, durable,\nscalable, and redundant storage.\n\n\n### Get started!\n\nStart monitoring Azure Storage by connecting Microsoft Azure to New Relic!\n\nCheck out our Azure Storage documentation to instrument your cloud service and manage the stability, scalability, and reliability of your systems with New Relic's infrastructure monitoring capabilities.\n\n### More info\n\nCheck out the [documentation](https://docs.newrelic.com/docs/infrastructure/microsoft-azure-integrations/azure-integrations-list/azure-storage-monitoring-integration/) to learn more about New Relic monitoring for Azure Storage.",
+    "description": "## What is Azure Storage?\n\nAzure Storage is Microsoft’s cloud storage solution that offers highly available, scalable, secure, and durable storage for different data objects in the cloud. \n\n\n### New Relic Azure storage quickstart features\n\nThe New Relic Azure Storage monitoring integration has the following features:\n\n- A standard dashboard that tracks key indicators like average blob count, average table count, average file count, and average queue count\n- Additional dashboards that track transactions, availability in % per storage account, successful requests’ server latency (ms), and more\n- Run custom queries and visualize the data immediately\n\n\n### Why monitor Azure Storage with New Relic?\n\n[New Relic Azure Storage](https://docs.newrelic.com/docs/infrastructure/microsoft-azure-integrations/azure-integrations-list/azure-storage-monitoring-integration/) monitoring quickstart empowers you to track the performance of Azure Storage via different metrics including account used capacity, the amount of ingress and egress data, and latency. \n\nOur integration features a standard dashboard that provides interactive visualizations to explore your data, understand context, and get valuable insights. We’ve also made it easy for you to view your data in pre-built dashboards, create specialized alerts, and run custom queries with immediate data visualization.\n\nStart ingesting your Azure data today and get immediate access to our visualization dashboards so you can optimize your Azure service.",
     "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/azure/azure-storage",
     "id": "20a76661-a6f9-4f2a-a005-5fcd6589800e",
     "level": "NEW_RELIC",
     "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/azure/azure-storage/logo.svg",
-    "summary": "Monitor Azure Storage by connecting Azure to New Relic",
+    "summary": "Monitoring Azure Storage is critical to track the performance of the storage via key metrics. Download New Relic Azure Storage monitoring quickstart to proactively instrument Azure Storage with New Relic infrastructure monitoring capabilities.",
     "websiteUrl": null,
     "keywords": [
       "azure",
