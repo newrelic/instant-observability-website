@@ -108,7 +108,7 @@ const GlobalHeader = ({ className, activeSite }) => {
             position: relative;
             top: 0;
             z-index: 80;
-            border: 1px solid #83878b;
+            border-bottom: 1px solid #83878b;
             display: none;
             @media screen and (min-width: ${NAV_BREAKPOINT}) {
               display: block;
