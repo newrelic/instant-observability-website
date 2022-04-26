@@ -98,7 +98,7 @@ const QuickstartHowToUse = ({
          ::marker{
            color: #1D252C;
          }
-         `}>Click the green install button above.</li>
+         `}>Click the install button.</li>
             <li
               css={css`
          ::marker{
