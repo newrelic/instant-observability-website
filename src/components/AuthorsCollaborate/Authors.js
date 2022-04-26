@@ -10,6 +10,8 @@ import { quickstart } from '../../types';
 import SupportSection from '../SupportSection';
 import ExternalLink from '@newrelic/gatsby-theme-newrelic/src/components/ExternalLink';
 import RelatedResources from './RelatedResources';
+import TickIconSVG from '../Icons/TickIconSVG';
+import GitHubIconSVG from '../Icons/GitHubIconSVG';
 
 const Authors = ({
     quickstart,
@@ -74,7 +76,8 @@ const Authors = ({
                                 background: #1D252C;
                                 color: #F9FAFA;
                                 border-radius: 4px;
-                                padding: 12px 20px 12px 20px;
+                                padding: 14px 20px 14px 20px;
+                                column-gap: 7px;
                                 &:hover{
                                     color: #F9FAFA;;
                                   }
@@ -89,12 +92,7 @@ const Authors = ({
                             rel="noopener noreferrer"
                             onClick={trackQuickstart('QuickstartViewRepoClick', quickstart)}
                         >
-                            <Icon
-                                name="fe-github"
-                                css={css`
-                                    margin-right: 7px;
-                                `}
-                            />
+                            <GitHubIconSVG className="ViewRepo" />
                             View repo
                         </Button>
                     </PageTools.Title>
@@ -112,7 +110,7 @@ const Authors = ({
                                 background: #1D252C;
                                 color: #F9FAFA;
                                 border-radius: 4px;
-                                padding: 12px 20px 12px 20px;
+                                padding: 14px 20px 14px 20px;
                                 &:hover{
                                     color: #F9FAFA;;
                                 }
@@ -122,19 +120,9 @@ const Authors = ({
                                 }
                                 `}
                         >
-                            <Icon
-                                name="zap"
-                                css={css`
-                    margin-right: 7px;
-                  `}
-                            />
+                            <TickIconSVG
+                                className="Tick" />
                             Build your own
-                            <Icon
-                                name="external-link"
-                                css={css`
-                  margin-left: 7px;
-                  `}
-                            />
                         </Button>
                     </PageTools.Title>
                 </PageTools.Section>
