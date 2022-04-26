@@ -27,11 +27,6 @@ const Markdown = ({ className, ...props }) => (
   <ReactMarkdown
     {...props}
     className={className}
-    css={css`
-      > *:first-child {
-        margin-top: 0;
-      }
-    `}
     components={{
       a: aTagToLink,
     }}

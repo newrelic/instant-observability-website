@@ -2,7 +2,12 @@
   --height-mobile-nav-bar: 60px;
   --ease-out-quad: cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
-
+h2{
+  font-family: 'Söhne-Kräftig';
+}
+h3,h4,h5,h6,p{
+  font-family: 'Söhne-Buch';
+}
 input[type='text'] {
   border: 1px solid var(--border-color);
   border-radius: 4px;
