@@ -6,12 +6,12 @@ import {
     Icon,
 } from '@newrelic/gatsby-theme-newrelic';
 import { css } from '@emotion/react';
-import { quickstart } from '../../types';
-import SupportSection from '../SupportSection';
+import { quickstart } from '../types';
+import SupportSection from './SupportSection';
 import ExternalLink from '@newrelic/gatsby-theme-newrelic/src/components/ExternalLink';
 import RelatedResources from './RelatedResources';
-import TickIconSVG from '../Icons/TickIconSVG';
-import GitHubIconSVG from '../Icons/GitHubIconSVG';
+import TickIconSVG from './Icons/TickIconSVG';
+import GitHubIconSVG from './Icons/GitHubIconSVG';
 
 const Authors = ({
     quickstart,

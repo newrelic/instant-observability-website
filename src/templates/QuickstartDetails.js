@@ -20,7 +20,7 @@ import { css } from '@emotion/react';
 import { graphql } from 'gatsby';
 import { quickstart } from '../types';
 import QuickstartHowToUse from '../components/QuickstartHowToUse';
-import Authors from '../components/AuthorsCollaborate/Authors';
+import Authors from '../components/LandingPageFooter';
 
 const QuickstartDetails = ({ data, location }) => {
 
