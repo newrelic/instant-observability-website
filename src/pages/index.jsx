@@ -112,7 +112,7 @@ const QuickstartsPage = ({ data, location }) => {
   // mark the value as true, if the page is loaded
   useEffect(() => {
     setLoadComplete(true);
-  }, [])
+  }, []);
 
   const closeCategoriesOverlay = () => {
     setIsCategoriesOverlayOpen(false);
@@ -256,7 +256,7 @@ const QuickstartsPage = ({ data, location }) => {
       <div
         css={css`
           --sidebar-width: 300px;
-          --banner-height: 308px;
+          --banner-height: 368px;
           display: grid;
           grid-template-columns: var(--sidebar-width) minmax(0, 1fr);
           grid-template-areas: 'sidebar main';
@@ -496,9 +496,7 @@ const QuickstartsPage = ({ data, location }) => {
                       `};
                     `}
                   >
-                    {!loadComplete && (
-                      <Spinner />
-                    )}
+                    {!loadComplete && <Spinner />}
                     {loadComplete && (
                       <Slider
                         {...settings}
@@ -578,9 +576,7 @@ const QuickstartsPage = ({ data, location }) => {
                   `};
                 `}
               >
-                {!loadComplete && (
-                  <Spinner />
-                )}
+                {!loadComplete && <Spinner />}
                 {loadComplete && (
                   <Slider {...settings}>
                     {featuredQuickStarts.map((pack) => (
