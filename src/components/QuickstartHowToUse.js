@@ -22,6 +22,7 @@ const QuickstartHowToUse = ({
         css={css`
           @media screen and (min-width: 760px){
             margin-left: 156px;
+            margin-right: 155px;
           }
 
           @media screen and (max-width: 760px){
@@ -58,14 +59,14 @@ const QuickstartHowToUse = ({
             <li
               css={css`
         ::marker{
-          color: #1D252C;
+          color: var(--link-font-color);
         }
         `}>
               <Link
                 css={css`
-          color: #1D252C;
-          &:hover{
-            color: #1D252C;
+              color: var(--link-font-color);
+              &:hover{
+                color: var(--hover-color);
           }
           `}
                 to={SIGNUP_LINK}
@@ -79,10 +80,10 @@ const QuickstartHowToUse = ({
               for a free New Relic account or{' '}
               <Link
                 css={css`
-           color: #1D252C;
-           &:hover{
-            color: #1D252C;
-          }
+                    color: var(--link-font-color);
+                    &:hover{
+                      color: var(--hover-color);
+                    }
            `}
                 to={LOGIN_LINK}
                 onClick={trackQuickstart(
@@ -96,15 +97,15 @@ const QuickstartHowToUse = ({
             </li>
             <li
               css={css`
-         ::marker{
-           color: #1D252C;
-         }
+                ::marker{
+                  color: var(--link-font-color);
+                }
          `}>Click the install button.</li>
             <li
               css={css`
-         ::marker{
-           color: #1D252C;
-         }
+                ::marker{
+                  color: var(--link-font-color);
+                }
          `}>
               Install the quickstart to get started or improve how you monitor
               your environment. They’re filled with pre-built resources like
@@ -117,7 +118,7 @@ const QuickstartHowToUse = ({
           <InstallButton quickstart={quickstart}
             location={location}
             css={css`
-                            background: #1D252C;
+                            background: var(--background-color);
                             padding: 10px;
                           `} />
         </PageTools.Section>

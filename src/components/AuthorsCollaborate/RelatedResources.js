@@ -90,9 +90,9 @@ const RelatedResources = ({ className, resources, title }) => {
                   css={css`
                     display: block;
                     margin-bottom: 0.25rem;
-                    color: #1D252C;
+                    color: var(--link-font-color);
                     &:hover{
-                      color: #1D252C;
+                      color: var(--hover-color);
                     }
                   `}
                   instrumentation={{

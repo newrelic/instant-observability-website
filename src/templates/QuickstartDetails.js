@@ -236,8 +236,20 @@ const QuickstartDetails = ({ data, location }) => {
       </PageLayout.Header>
 
       <Layout.Content>
-        {/* What's included section here */}
 
+        {/* What's included section here */}
+        <div
+          css={css`
+            @media (min-width: 760px) {
+                  margin-right: 122.34px;
+                  padding-bottom: 60px;
+            }
+            @media (max-width: 760px) {
+              padding-bottom: 60px;
+        }
+          `}>
+
+        </div>
 
         {/* How to use this quickstart here */}
         <div

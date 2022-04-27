@@ -36,7 +36,7 @@ const Authors = ({
 
                     @media (min-width: 760px) {
                       margin-left: 156px;
-                        
+                        margin-right: 155px;
                       h3 {
                           margin-bottom: 58px
                       }
@@ -55,10 +55,7 @@ const Authors = ({
                     <h3>
                         Support
                     </h3>
-                    <div
-                        css={css`
-                    color: #1D252C;
-                    `}>
+                    <div>
                         <SupportSection
                             supportLevel={quickstart.level}
                             onClick={tessenSupportTrack(quickstart)}
@@ -73,13 +70,14 @@ const Authors = ({
                     <PageTools.Title>
                         <Button
                             css={css`
-                                background: #1D252C;
-                                color: #F9FAFA;
+                                background: var(--background-color);
+                        
+                                color: var(--btn-text-color);
                                 border-radius: 4px;
                                 padding: 14px 20px 14px 20px;
                                 column-gap: 7px;
                                 &:hover{
-                                    color: #F9FAFA;;
+                                    color: var(--white-hover-color);
                                   }
 
                                 @media (max-width: 760px) {
@@ -107,12 +105,12 @@ const Authors = ({
                                 category: 'BuildYourOwnQuickstartClick',
                             }}
                             css={css`
-                                background: #1D252C;
-                                color: #F9FAFA;
+                                background: var(--background-color);
+                                color: var(--btn-text-color);
                                 border-radius: 4px;
                                 padding: 14px 20px 14px 20px;
                                 &:hover{
-                                    color: #F9FAFA;;
+                                    color: var(--white-hover-color);
                                 }
 
                                 @media (max-width: 760px) {
