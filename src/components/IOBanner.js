@@ -213,4 +213,5 @@ IOBanner.propTypes = {
   search: PropTypes.string,
   setSearch: PropTypes.func,
 };
+
 export default IOBanner;
