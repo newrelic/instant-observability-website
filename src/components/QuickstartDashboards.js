@@ -9,7 +9,7 @@ import LeftArrowSVG from './Icons/LeftArrowSVG';
 
 const settings = {
   dots: false,
-  infinite: true,
+  infinite: false,
   speed: 500,
   slidesToShow: 3,
   slidesToScroll: 1,
@@ -64,6 +64,8 @@ const QuickstartDashboards = ({ quickstart }) => (
     {quickstart.dashboards.map((dashboard) => (
       <div key={dashboard.name}>
         <div>
+        <h3>{dashboard.name}</h3>
+        {dashboard.description && <p>{dashboard.description}</p>}
           <Slider {...settings}>
             {dashboard.screenshots.map((imgUrl) => {
               return (
