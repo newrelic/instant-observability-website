@@ -151,7 +151,7 @@ const GlobalFooter = ({ className }) => {
 
               a {
                 white-space: nowrap;
-                margin-right: 32px;
+                margin-right: 52px;
               }
             `}
           >
