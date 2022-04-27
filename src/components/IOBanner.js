@@ -102,17 +102,6 @@ const BannerHeaderContent = ({ search, setSearch, setIsSearchInputEmpty }) => {
                 border: 1px solid #f9fafa;
                 box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.1);
               }
-
-              .dark-mode & {
-                background-color: var(--tertiary-background-color);
-                --svg-color: var(--primary-text-color);
-                input {
-                  background: var(--color-dark-400);
-                  &::placeholder {
-                    color: var(primary-text-color);
-                  }
-                }
-              }
             }
             svg {
               left: unset !important;
