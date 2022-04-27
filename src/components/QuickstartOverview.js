@@ -25,22 +25,21 @@ const QuickstartOverview = ({ quickstart }) => {
       {quickstart.description && (
         <div
           css={css`
+            color: #1d252c;
             h2 {
               font-size: 44px;
               line-height: 50px;
-              color: #1d252c;
+             
               margin-top: 104px;
             }
             h3 {
               font-size: 24px;
               line-height: 32px;
-              color: #1d252c;
               margin-top: 60px;
             }
             p {
               font-size: 18px;
               line-height: 28px;
-              color: #1d252c;
 
               a {
                 color: #1d252c;
@@ -49,7 +48,6 @@ const QuickstartOverview = ({ quickstart }) => {
             ul {
               margin-bottom: 50px;
               li {
-                color: #1d252c;
                 ::marker {
                   color: #1d252c;
                 }
