@@ -11503,69 +11503,6 @@
     ]
   },
   {
-    "title": "Lacework Integration",
-    "name": "lacework",
-    "description": "Lacework is a comprehensive cloud security platform. We aim to turn security into a data problem and replace the frictionful processes for things like breach investigations or achieving compliance standards with simple, contextualized workflows.\nTechnically, our approach is that we replace the traditional 'rules' based mentality that requires you to predict attacker patterns ahead of time with a fully ML based approach.  We baseline what normal user, application and network behaviors look like across your workloads and cloud accounts automatically and then only alert you to deviations from the norm.  This significantly reduces the amount of toil in setting up and maintaining our solution, but also drastically improves the efficacy and amount of security alerts you will receive.\nThe following Quickstart brings the curated security alerts for misconfigurations and anomalous security behaviors into the New Relic platform so you can easily triage against your wealth of observability data or easily transition from monitoring to security investigations from a single interface!\nIf you encounter any issues, have feedback or would like more details on how to get started, please head over to support.lacework.com or send an email to adam.larson@lacework.net!",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/lacework",
-    "id": "8a7a7220-e8ec-4959-b35d-0fe082be8039",
-    "level": "VERIFIED",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/lacework/logo.svg",
-    "summary": "Integrate Lacework's security events into the New Relic platform",
-    "websiteUrl": null,
-    "keywords": [
-      "security",
-      "compliance",
-      "lacework",
-      "anomaly",
-      "configuration",
-      "featured",
-      "newrelic partner"
-    ],
-    "authors": [
-      "Lacework, Inc"
-    ],
-    "dashboards": [
-      {
-        "name": "Lacework Security Overview",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/lacework/dashboards/lacework-security-overview/lacework-security-overview.png"
-        ]
-      },
-      {
-        "name": "Lacework Compliance Violations",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/lacework/dashboards/lacework-compliance-violations/lacework-compliance-violations.png"
-        ]
-      },
-      {
-        "name": "Lacework Anomaly Detections",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/lacework/dashboards/lacework-anomaly-detections/lacework-anomaly-detections.png"
-        ]
-      }
-    ],
-    "alerts": [],
-    "documentation": [
-      {
-        "name": "Lacework installation docs",
-        "description": "The only prerequisite is to setup the New Relic integration within the Lacework UI.  Details on how to do that can be found below!",
-        "url": "https://support.lacework.com/hc/en-us/articles/360005842354-New-Relic"
-      }
-    ],
-    "installPlans": [
-      {
-        "name": "lacework",
-        "id": "third-party-lacework-integration"
-      }
-    ]
-  },
-  {
     "title": "Algorithmia",
     "name": "mlops-algorithmia",
     "description": "## What is Algorithmia?\n\nAlgorithmia is an enterprise platform for automating the deployment of machine-learning models into production. \n\n### New Relic + Algorithmia\n\nThe New Relic Algorithmia quickstart helps you track the performance of machine learning models in production. The quickstart enables full-stack observability of your machine learning models so that you can achieve maximum performance and uptime, as well as build more intelligent apps by unlocking end-to-end. The quickstart’s dashboards provide a high-level overview of Algorithmia metrics, like runtime duration by algorithm and throughput by algorithm.\n\n### Why monitor Algorithmia with New Relic?\n\nMonitoring your ML models after production is critical to understanding the effectiveness of your algorithm. The New Relic Algorithmia monitoring quickstart empowers you to track and detect model drift, model bias, and data drift. The Algorithmia [integration](https://newrelic.com/blog/how-to-relic/monitor-model-performance-algorithmia) helps you to instrument, analyze, troubleshoot, and optimize ML model performance across your entire system. \nIn addition, the quickstart enables you to send model performance metrics from Algorithmia Insights to New Relic where you can monitor your algorithms in real-time. You can also explore metrics data and view the state of your algorithm through a user-friendly dashboard.\nInstall the New Relic Algorithmia quickstart today to streamline models in New Relic’s observability platform and build sophisticated ML models. It’s the key to creating a seamless collaboration between your data science and DevOps teams.",
@@ -12560,6 +12497,69 @@
       {
         "name": "Guided install",
         "id": "guided-install"
+      }
+    ]
+  },
+  {
+    "title": "Lacework Integration",
+    "name": "lacework",
+    "description": "Lacework is a comprehensive cloud security platform. We aim to turn security into a data problem and replace the frictionful processes for things like breach investigations or achieving compliance standards with simple, contextualized workflows.\nTechnically, our approach is that we replace the traditional 'rules' based mentality that requires you to predict attacker patterns ahead of time with a fully ML based approach.  We baseline what normal user, application and network behaviors look like across your workloads and cloud accounts automatically and then only alert you to deviations from the norm.  This significantly reduces the amount of toil in setting up and maintaining our solution, but also drastically improves the efficacy and amount of security alerts you will receive.\nThe following Quickstart brings the curated security alerts for misconfigurations and anomalous security behaviors into the New Relic platform so you can easily triage against your wealth of observability data or easily transition from monitoring to security investigations from a single interface!\nIf you encounter any issues, have feedback or would like more details on how to get started, please head over to support.lacework.com or send an email to adam.larson@lacework.net!",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/lacework",
+    "id": "8a7a7220-e8ec-4959-b35d-0fe082be8039",
+    "level": "VERIFIED",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/lacework/logo.jpg",
+    "summary": "Integrate Lacework's security events into the New Relic platform",
+    "websiteUrl": null,
+    "keywords": [
+      "security",
+      "compliance",
+      "lacework",
+      "anomaly",
+      "configuration",
+      "featured",
+      "newrelic partner"
+    ],
+    "authors": [
+      "Lacework, Inc"
+    ],
+    "dashboards": [
+      {
+        "name": "Lacework Security Overview",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/lacework/dashboards/lacework-security-overview/lacework-security-overview.png"
+        ]
+      },
+      {
+        "name": "Lacework Compliance Violations",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/lacework/dashboards/lacework-compliance-violations/lacework-compliance-violations.png"
+        ]
+      },
+      {
+        "name": "Lacework Anomaly Detections",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/lacework/dashboards/lacework-anomaly-detections/lacework-anomaly-detections.png"
+        ]
+      }
+    ],
+    "alerts": [],
+    "documentation": [
+      {
+        "name": "Lacework installation docs",
+        "description": "The only prerequisite is to setup the New Relic integration within the Lacework UI.  Details on how to do that can be found below!",
+        "url": "https://support.lacework.com/hc/en-us/articles/360005842354-New-Relic"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "lacework",
+        "id": "third-party-lacework-integration"
       }
     ]
   },
