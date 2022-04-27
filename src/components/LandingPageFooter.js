@@ -13,7 +13,7 @@ import RelatedResources from './RelatedResources';
 import TickIconSVG from './Icons/TickIconSVG';
 import GitHubIconSVG from './Icons/GitHubIconSVG';
 
-const Authors = ({
+const LandingPageFooter = ({
     quickstart,
     trackQuickstart,
     tessenSupportTrack,
@@ -144,8 +144,8 @@ const Authors = ({
 
 };
 
-Authors.propTypes = {
+LandingPageFooter.propTypes = {
     quickstart: quickstart.isRequired,
 };
 
-export default Authors;
+export default LandingPageFooter;

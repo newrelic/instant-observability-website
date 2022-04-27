@@ -20,7 +20,7 @@ import { css } from '@emotion/react';
 import { graphql } from 'gatsby';
 import { quickstart } from '../types';
 import QuickstartHowToUse from '../components/QuickstartHowToUse';
-import Authors from '../components/LandingPageFooter';
+import LandingPageFooter from '../components/LandingPageFooter';
 
 const QuickstartDetails = ({ data, location }) => {
 
@@ -271,7 +271,7 @@ const QuickstartDetails = ({ data, location }) => {
               padding-top: 30px;
               padding-bottom: 30px; 
           `}>
-          <Authors quickstart={quickstart}
+          <LandingPageFooter quickstart={quickstart}
             trackQuickstart={trackQuickstart}
             tessenSupportTrack={tessenSupportTrack}
           />
