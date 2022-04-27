@@ -2,11 +2,26 @@
   --height-mobile-nav-bar: 60px;
   --ease-out-quad: cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
-h1,h2{
+h1,h2,h3{
   font-family: 'Söhne-Kräftig';
 }
-h3,h4,h5,h6,p{
+h1{
+  font-size:72px;
+}
+h2{
+  font-size:56px;
+}
+h3{
+  font-size:44px;
+}
+h4,h5,h6,p{
   font-family: 'Söhne-Buch';
+}
+h6{
+  font-size:24px;
+}
+p{
+  font-size:18px;
 }
 input[type='text'] {
   border: 1px solid var(--border-color);
