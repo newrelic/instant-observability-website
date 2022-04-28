@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import {
-  Layout,
   GlobalHeader,
   GlobalFooter,
   NR_SITES,
@@ -9,6 +8,8 @@ import PropTypes from 'prop-types';
 import { css } from '@emotion/react';
 import '../components/styles.scss';
 import { QUICKSTARTS_COLLAPSE_BREAKPOINT } from '../data/constants';
+import '../components/fonts.scss';
+import Layout from '../components/Layout';
 
 const QuickStartLayout = ({ children }) => {
   return (

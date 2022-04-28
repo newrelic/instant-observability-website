@@ -3,7 +3,6 @@ import {
     Link,
     Button,
     PageTools,
-    Icon,
 } from '@newrelic/gatsby-theme-newrelic';
 import { css } from '@emotion/react';
 import { quickstart } from '../types';
@@ -67,15 +66,15 @@ const LandingPageFooter = ({
                     <h3>
                         Collaborate on this quickstart
                     </h3>
-                    <PageTools.Title>
+                    <div>
                         <Button
                             css={css`
                                 background: var(--background-color);
                         
                                 color: var(--btn-text-color);
                                 border-radius: 4px;
-                                padding: 14px 20px 14px 20px;
-                                column-gap: 7px;
+                                padding: 13.5px 20px 13.5px 22px;
+                                column-gap: 14.45px; 
                                 &:hover{
                                     color: var(--white-hover-color);
                                   }
@@ -93,8 +92,12 @@ const LandingPageFooter = ({
                             <GitHubIconSVG className="ViewRepo" />
                             View repo
                         </Button>
-                    </PageTools.Title>
-                    <PageTools.Title>
+                    </div>
+                    <div
+                        css={css`
+                        margin-top: 14px;
+                        `}
+                    >
                         <Button
                             as={ExternalLink}
                             variant={Button.VARIANT.OUTLINE}
@@ -108,7 +111,8 @@ const LandingPageFooter = ({
                                 background: var(--background-color);
                                 color: var(--btn-text-color);
                                 border-radius: 4px;
-                                padding: 14px 20px 14px 20px;
+                                padding: 13.5px 20px 13.5px 22px;
+                                column-gap: 14.45px;    
                                 &:hover{
                                     color: var(--white-hover-color);
                                 }
@@ -122,7 +126,7 @@ const LandingPageFooter = ({
                                 className="Tick" />
                             Build your own
                         </Button>
-                    </PageTools.Title>
+                    </div>
                 </PageTools.Section>
 
                 <PageTools.Section>

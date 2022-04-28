@@ -10,7 +10,6 @@ import useThemeTranslation from '@newrelic/gatsby-theme-newrelic/src/hooks/useTh
 import { useInstrumentedHandler } from '@newrelic/gatsby-theme-newrelic';
 import { Menu, X } from 'react-feather';
 import NewLogo from './NewLogo';
-import '../../../components/fonts.scss';
 
 const action = css`
   color: var(--secondary-text-color);

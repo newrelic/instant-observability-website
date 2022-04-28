@@ -181,7 +181,6 @@ const InstallButton = ({ quickstart, location, ...props }) => {
       variant={Button.VARIANT.PRIMARY}
       css={css`
       border-radius: 4px;
-      padding: 12px 20px 12px 20px;
       &:hover{
         background-color: #1D252C;
       }
@@ -189,7 +188,7 @@ const InstallButton = ({ quickstart, location, ...props }) => {
     >
       {hasInstallableComponent ? (
         <>
-          Install Now
+          Install now
         </>
       ) : (
         'See installation docs'

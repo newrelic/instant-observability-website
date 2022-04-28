@@ -1,7 +1,7 @@
 import {
   Button,
   Icon,
-  Layout,
+  // Layout,
   Link,
   useTessen,
 } from '@newrelic/gatsby-theme-newrelic';
@@ -24,6 +24,7 @@ import LandingPageFooter from '../components/LandingPageFooter';
 import Dashboards from '../components/WhatsIncluded/Dashboards';
 import Alerts from '../components/WhatsIncluded/Alerts';
 import DataSources from '../components/WhatsIncluded/DataSources';
+import Layout from '../components/Layout';
 
 const QuickstartDetails = ({ data, location }) => {
 
@@ -238,7 +239,11 @@ const QuickstartDetails = ({ data, location }) => {
         </div>
       </PageLayout.Header>
 
-      <Layout.Content>
+      <Layout.Content
+      // css={css`
+      // margin: 0 0;
+      // max-width: none`}
+      >
 
         {/* What's included section here */}
         <div
