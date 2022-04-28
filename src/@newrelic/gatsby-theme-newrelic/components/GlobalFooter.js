@@ -1,8 +1,9 @@
 import { graphql, useStaticQuery } from 'gatsby';
 
 import ExternalLink from '@newrelic/gatsby-theme-newrelic/src/components/ExternalLink';
+import { Icon } from '@newrelic/gatsby-theme-newrelic';
 import Link from '@newrelic/gatsby-theme-newrelic/src/components/Link';
-import Logo from '@newrelic/gatsby-theme-newrelic/src/components/Logo';
+import NewLogo from './NewLogo';
 import PropTypes from 'prop-types';
 import React from 'react';
 import { css } from '@emotion/react';
@@ -55,6 +56,20 @@ const RESOURCES = [
   },
 ];
 
+{
+  /* <Icon name={social.title} />; */
+}
+
+const SOCIALS = [
+  { title: 'facebook' },
+  { title: 'linkedin' },
+  { title: 'instagram' },
+  { title: 'youtube' },
+  { title: 'github' },
+  { title: 'twitch' },
+  { title: 'twitter' },
+];
+
 const GlobalFooter = ({ className }) => {
   const { t } = useThemeTranslation();
   const { site, sitePage } = useStaticQuery(graphql`
@@ -77,6 +92,7 @@ const GlobalFooter = ({ className }) => {
       css={css`
         --background-color: #1d252c;
         --secondary-text-color: #898e91;
+        font-family: Söhne-Buch;
 
         width: 100%;
         color: var(--secondary-text-color);
@@ -97,32 +113,27 @@ const GlobalFooter = ({ className }) => {
           css={css`
             --default-first-column-size: 1024px;
             display: grid;
-            grid-template-columns: var(--default-first-column-size) auto;
+            grid-template-columns: auto auto;
 
             grid-template-areas:
               'resources socials'
               'logo logo'
               'legal locale';
 
-            @media screen and (max-width: 760px) {
-              ${
-                /*justify-content: center;
-              text-align: center;
-              grid-template-columns: auto;
-              grid-gap: 0.5rem;
+            @media screen and (max-width: 930px) {
               grid-template-areas:
-                'legal'
-                'copyright';
-              */ ''
-              }
-              ${/* TODO */ ``}
+                'resources'
+                'socials'
+                'logo'
+                'legal';
             }
           `}
         >
           <div
             css={css`
-              margin: 64px 0px;
-              justify-content: space-around;
+              margin: 104px;
+              margin-bottom: 0px;
+              justify-content: start;
               display: grid;
               grid-template-rows: repeat(4, 1fr);
               grid-auto-flow: column;
@@ -132,7 +143,15 @@ const GlobalFooter = ({ className }) => {
               a {
                 font-size: 18px;
                 line-height: 24px;
-                margin-top: 32px;
+                margin-right: 104px;
+                margin-bottom: 32px;
+              }
+
+              @media screen and (max-width: 930px) {
+                margin-left: 40px;
+                justify-content: flex-start;
+                grid-template-rows: 1fr;
+                grid-auto-flow: row;
               }
             `}
           >
@@ -143,8 +162,65 @@ const GlobalFooter = ({ className }) => {
 
           <div
             css={css`
+              margin: 104px 104px 0px 0px;
+              margin-bottom: 0px;
+
+              display: grid;
+              grid-area: socials;
+              grid-template-rows: repeat(4, 1fr);
+              grid-template-columns: repeat(4, 1fr);
+
+              > span {
+                justify-self: end;
+                font-size: 18px;
+                grid-column: span 4;
+              }
+
+              > svg {
+                justify-self: end;
+                margin-left: 24px;
+
+                :nth-child(3n+3) {
+                  grid-column-start: 2;
+                }
+              }
+
+
+            `}
+          >
+            <span>Follow us</span>
+
+            {SOCIALS.map((social) => (
+              <Icon
+                name={social.title}
+                size="24px"
+                css={css`
+                  outline: none;
+                  stroke-width: 0px;
+                  color: #898e91;
+                  fill: #898e91;
+                `}
+              />
+            ))}
+          </div>
+          <div
+            css={css`
+              grid-area: logo;
+              margin: 64px 0px 0px 104px;
+
+              @media screen and (max-width: 930px) {
+                margin-left: 40px;
+              }
+            `}
+          >
+            <NewLogo />
+          </div>
+
+          <div
+            css={css`
               display: flex;
               margin-left: 104px;
+              margin-top: 40px;
 
               justify-content: flex-start;
               grid-area: legal;
@@ -152,6 +228,16 @@ const GlobalFooter = ({ className }) => {
               a {
                 white-space: nowrap;
                 margin-right: 52px;
+              }
+
+              @media screen and (max-width: 930px) {
+                margin-left: 40px;
+                flex-direction: column;
+
+                a {
+                  white-space: nowrap;
+                  margin-bottom: 32px;
+                }
               }
             `}
           >
@@ -179,14 +265,19 @@ const GlobalFooter = ({ className }) => {
           <div
             css={css`
               display: flex;
+              align-items: flex-end;
               margin-right: 104px;
 
-              justify-content: flex-end;
+              justify-content: flex;
               grid-area: locale;
 
               a {
                 margin-right: 32px;
                 white-space: nowrap;
+              }
+
+              @media screen and (max-width: 1180px) {
+                display: none;
               }
             `}
           >
