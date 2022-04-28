@@ -1,7 +1,6 @@
 import React from 'react';
 import { css } from '@emotion/react';
 import { quickstart } from '../types';
-import OverviewTile from './OverviewTile';
 import Markdown from './Markdown';
 
 const allowedElements = [
@@ -23,63 +22,21 @@ const allowedElements = [
 const QuickstartOverview = ({ quickstart }) => {
   return (
     <>
-      <h2> What&apos;s included </h2>
-      <div
-        css={css`
-          display: grid;
-          grid-gap: 1rem;
-          grid-template-columns: repeat(3, 1fr);
-
-          @media (max-width: 1180px) {
-            grid-template-columns: repeat(1, 1fr);
-          }
-        `}
-      >
-        {quickstart.dashboards.map((dashboard, index) => (
-          <OverviewTile
-            key={index}
-            title={dashboard.name}
-            image={dashboard.screenshots[0]}
-            description={dashboard.description}
-            tag="Dashboard"
-          />
-        ))}
-        {quickstart.alerts.map((alert, index) => (
-          <OverviewTile
-            key={index}
-            title={alert.name}
-            description={alert.details}
-            tag="Alert"
-          />
-        ))}
-        {quickstart.documentation.map((doc, index) => (
-          <OverviewTile
-            key={index}
-            title={doc.name}
-            description={doc.description}
-            tag="Doc"
-          />
-        ))}
-      </div>
       {quickstart.description && (
         <div
           css={css`
-            h1,
-            h2,
-            h3 {
-              margin: 1em 0 0.25em 0;
+            color: #1d252c;
+            p {
+              line-height: 28px;
             }
-            p,
-            pre {
-              margin-left: 1em;
-            }
-            h1,
-            h2 {
-              font-size: 1.5em;
-              font-weight: 600;
-            }
-            h3 {
-              font-size: 1.2em;
+            ul {
+              margin-bottom: 50px;
+              font-size:18px;
+              li {
+                ::marker {
+                  color: #1d252c;
+                }
+              }
             }
           `}
         >
@@ -87,7 +44,11 @@ const QuickstartOverview = ({ quickstart }) => {
             skipHtml
             allowedElements={allowedElements}
             css={css`
-              margin: 2em 0;
+              width: fit-content;
+              margin: 40px;
+              @media screen and (min-width: 1440px) {
+                margin: 104px 156px;
+              }
             `}
           >
             {quickstart.description}
