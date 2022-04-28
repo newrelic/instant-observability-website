@@ -268,11 +268,11 @@ const GlobalFooter = ({ className }) => {
               align-items: flex-end;
               margin-right: 104px;
 
-              justify-content: flex;
+              justify-content: flex-end;
               grid-area: locale;
 
               a {
-                margin-right: 32px;
+                margin-left: 32px;
                 white-space: nowrap;
               }
 
