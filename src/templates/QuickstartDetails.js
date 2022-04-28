@@ -19,6 +19,8 @@ import PropTypes from 'prop-types';
 import { css } from '@emotion/react';
 import { graphql } from 'gatsby';
 import { quickstart } from '../types';
+import QuickstartHowToUse from '../components/QuickstartHowToUse';
+import LandingPageFooter from '../components/LandingPageFooter';
 import Dashboards from '../components/WhatsIncluded/Dashboards';
 import Alerts from '../components/WhatsIncluded/Alerts';
 import DataSources from '../components/WhatsIncluded/DataSources';
@@ -237,22 +239,50 @@ const QuickstartDetails = ({ data, location }) => {
       </PageLayout.Header>
 
       <Layout.Content>
+
         {/* What's included section here */}
         <div
           css={css`
             @media (min-width: 760px) {
                   margin-right: 122.34px;
                   padding-bottom: 60px;
-            }
-
+            }   
             @media (max-width: 760px) {
               padding-bottom: 60px;
         }
-
-          `}>
+          `}> 
+            
           <Dashboards quickstart={quickstart} />
           <Alerts quickstart={quickstart} />
           <DataSources quickstart={quickstart} />
+
+        </div>
+
+        {/* How to use this quickstart here */}
+        <div
+          css={css`
+             background-color: #F1F2F2;      
+              padding-top: 30px;
+              padding-bottom: 30px;
+           
+          `}>
+          <QuickstartHowToUse
+            quickstart={quickstart}
+            trackQuickstart={trackQuickstart}
+            location={location}
+          />
+        </div>
+        {/* Get started component here */}
+        <div
+          css={css`
+              padding-top: 30px;
+              padding-bottom: 30px; 
+          `}>
+          <LandingPageFooter quickstart={quickstart}
+            trackQuickstart={trackQuickstart}
+            tessenSupportTrack={tessenSupportTrack}
+          />
+
         </div>
 
       </Layout.Content>
