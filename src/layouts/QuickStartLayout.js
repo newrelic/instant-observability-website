@@ -43,6 +43,10 @@ const QuickStartLayout = ({ children }) => {
             (max-width: ${QUICKSTARTS_COLLAPSE_BREAKPOINT}) {
             margin-left: 0;
           }
+
+          @media screen and (max-width: 930px) {
+            height: 1192px;
+          }
         `}
       />
     </>
