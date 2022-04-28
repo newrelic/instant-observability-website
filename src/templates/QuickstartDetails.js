@@ -21,6 +21,9 @@ import { graphql } from 'gatsby';
 import { quickstart } from '../types';
 import QuickstartHowToUse from '../components/QuickstartHowToUse';
 import LandingPageFooter from '../components/LandingPageFooter';
+import Dashboards from '../components/WhatsIncluded/Dashboards';
+import Alerts from '../components/WhatsIncluded/Alerts';
+import DataSources from '../components/WhatsIncluded/DataSources';
 
 const QuickstartDetails = ({ data, location }) => {
 
@@ -243,11 +246,15 @@ const QuickstartDetails = ({ data, location }) => {
             @media (min-width: 760px) {
                   margin-right: 122.34px;
                   padding-bottom: 60px;
-            }
+            }   
             @media (max-width: 760px) {
               padding-bottom: 60px;
         }
-          `}>
+          `}> 
+            
+          <Dashboards quickstart={quickstart} />
+          <Alerts quickstart={quickstart} />
+          <DataSources quickstart={quickstart} />
 
         </div>
 
@@ -275,6 +282,7 @@ const QuickstartDetails = ({ data, location }) => {
             trackQuickstart={trackQuickstart}
             tessenSupportTrack={tessenSupportTrack}
           />
+
         </div>
 
       </Layout.Content>
