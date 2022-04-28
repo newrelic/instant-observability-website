@@ -113,7 +113,7 @@ const GlobalFooter = ({ className }) => {
           css={css`
             --default-first-column-size: 1024px;
             display: grid;
-            grid-template-columns: auto auto;
+            grid-template-columns: 1fr max-content;
 
             grid-template-areas:
               'resources socials'
