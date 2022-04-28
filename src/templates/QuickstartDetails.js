@@ -1,7 +1,6 @@
 import {
   Button,
   Icon,
-  // Layout,
   Link,
   useTessen,
 } from '@newrelic/gatsby-theme-newrelic';
@@ -25,6 +24,7 @@ import Dashboards from '../components/WhatsIncluded/Dashboards';
 import Alerts from '../components/WhatsIncluded/Alerts';
 import DataSources from '../components/WhatsIncluded/DataSources';
 import Layout from '../components/Layout';
+import QuickstartOverview from '../components/QuickstartOverview'
 
 const QuickstartDetails = ({ data, location }) => {
 
@@ -239,11 +239,7 @@ const QuickstartDetails = ({ data, location }) => {
         </div>
       </PageLayout.Header>
 
-      <Layout.Content
-      // css={css`
-      // margin: 0 0;
-      // max-width: none`}
-      >
+      <Layout.Content>
 
         {/* What's included section here */}
         <div
@@ -262,7 +258,23 @@ const QuickstartDetails = ({ data, location }) => {
           <DataSources quickstart={quickstart} />
 
         </div>
+        <div
+          css={css`
+          mix-blend-mode: normal;
+          width:50%;
+          opacity: 0.84;
+          border: 5px solid #E8E8E8;
+          border-radius: 5px;
+          transform: rotate(180deg);
 
+          @media (max-width: 760px) {
+          width: 100%;
+          }
+          `}
+        ></div>
+        <div>
+          <QuickstartOverview quickstart={quickstart} />
+        </div>
         {/* How to use this quickstart here */}
         <div
           css={css`
