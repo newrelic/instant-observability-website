@@ -1,7 +1,6 @@
 import {
   Button,
   Icon,
-  Layout,
   Link,
   useTessen,
 } from '@newrelic/gatsby-theme-newrelic';
@@ -24,6 +23,7 @@ import LandingPageFooter from '../components/LandingPageFooter';
 import Dashboards from '../components/WhatsIncluded/Dashboards';
 import Alerts from '../components/WhatsIncluded/Alerts';
 import DataSources from '../components/WhatsIncluded/DataSources';
+import Layout from '../components/Layout';
 import QuickstartOverview from '../components/QuickstartOverview'
 
 const QuickstartDetails = ({ data, location }) => {

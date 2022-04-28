@@ -23,6 +23,7 @@ const QuickstartDataSources = ({ quickstart }) => {
       <Intro
         css={css`
           margin-bottom: 16px;
+          color: var(--black-text-color);
         `}
       >
         {quickstart.title} observability quickstart contains{' '}
@@ -35,6 +36,7 @@ const QuickstartDataSources = ({ quickstart }) => {
           display: grid;
           grid-gap: 1rem;
           grid-template-columns: repeat(4, 1fr);
+          color: var(--black-text-color);
 
           @media (max-width: 1180px) {
             grid-template-columns: repeat(1, 1fr);

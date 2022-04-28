@@ -43,19 +43,20 @@ const QuickstartHowToUse = ({
               padding-bottom: 58px !important;
             }
           `}
-          >
-            <PageTools.Title>
+          > 
               <h1
                 css={css`
                   `}>
                 How to use this quickstart
               </h1>
-            </PageTools.Title>
           </div>
         </PageTools.Section>
 
         <PageTools.Section>
-          <ul>
+          <ul
+          css={css`
+          color: var(--black-text-color);
+          `}>
             <li
               css={css`
         ::marker{
@@ -119,7 +120,7 @@ const QuickstartHowToUse = ({
             location={location}
             css={css`
                             background: var(--background-color);
-                            padding: 10px;
+                            padding: 13px 20px 14px 20px;
                           `} />
         </PageTools.Section>
       </div>

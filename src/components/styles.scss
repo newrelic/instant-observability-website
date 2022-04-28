@@ -6,6 +6,7 @@
   --white-hover-color: #F9FAFA;
   --background-color: #1D252C;
   --btn-text-color: white;
+  --black-text-color : #1D252C;
 }
 h1,h2,h3{
   font-family: 'Söhne-Kräftig';
@@ -92,4 +93,8 @@ input[type='text'] {
   float: left;
   justify-content: center;
   align-items: center;
+}
+
+.e132irl20 {
+  font-weight: none;
 }
