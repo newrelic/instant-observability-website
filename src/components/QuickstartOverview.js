@@ -28,13 +28,10 @@ const QuickstartOverview = ({ quickstart }) => {
             color: #1d252c;
             p {
               line-height: 28px;
-
-              a {
-                color: #1d252c;
-              }
             }
             ul {
               margin-bottom: 50px;
+              font-size:18px;
               li {
                 ::marker {
                   color: #1d252c;
