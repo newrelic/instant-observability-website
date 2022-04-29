@@ -36,7 +36,7 @@ const VIEWS = {
 
 const DOUBLE_COLUMN_BREAKPOINT = '1180px';
 const TRIPLE_COLUMN_BREAKPOINT = '1350px';
-const SINGLE_COLUMN_BREAKPOINT = LISTVIEW_BREAKPOINT;
+const SINGLE_COLUMN_BREAKPOINT = QUICKSTARTS_COLLAPSE_BREAKPOINT;
 
 /**
  * Determines if one string is a substring of the other, case insensitive
@@ -393,7 +393,7 @@ const QuickstartsPage = ({ data, location }) => {
                   transform: rotate(-90deg);
                   margin: -4px;
                 `}
-                name="chevron-left"
+                name="fe-chevron-left"
                 size="120%"
               />
             </Button>
@@ -655,7 +655,7 @@ const QuickstartsPage = ({ data, location }) => {
               --text-color: var(--primary-text-color);
 
               padding: 1.25rem 0;
-              font-size: 16px;
+              font-size: 18px;
               color: var(--color-neutrals-800);
               display: flex;
               justify-content: space-between;
@@ -668,6 +668,9 @@ const QuickstartsPage = ({ data, location }) => {
                 /* target inner children of parent span */
                 span,
                 strong {
+                  font-family: 'Söhne-Leicht';
+
+                  letter-space: -0.5px;
                   @media screen and (max-width: ${QUICKSTARTS_COLLAPSE_BREAKPOINT}) {
                     display: none;
                   }
@@ -680,6 +683,8 @@ const QuickstartsPage = ({ data, location }) => {
                 text-overflow: ellipsis;
                 overflow-x: hidden;
                 whitespace: nowrap;
+                font-weight: 100;
+                font-size: 28px;
               }
 
               @media screen and (max-width: ${QUICKSTARTS_COLLAPSE_BREAKPOINT}) {
