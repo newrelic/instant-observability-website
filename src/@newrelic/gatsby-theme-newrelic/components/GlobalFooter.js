@@ -9,6 +9,10 @@ import React from 'react';
 import { css } from '@emotion/react';
 import useThemeTranslation from '@newrelic/gatsby-theme-newrelic/src//hooks/useThemeTranslation';
 
+const MOBILE_BREAKPOINT = '920px';
+
+const MIDPOINT_BREAKPOINT = '1230px;';
+
 const RESOURCES = [
   {
     title: 'About Us',
@@ -56,18 +60,46 @@ const RESOURCES = [
   },
 ];
 
-{
-  /* <Icon name={social.title} />; */
-}
-
 const SOCIALS = [
-  { title: 'facebook' },
-  { title: 'linkedin' },
-  { title: 'instagram' },
-  { title: 'youtube' },
-  { title: 'github' },
-  { title: 'twitch' },
-  { title: 'twitter' },
+  {
+    title: 'facebook',
+    href: 'http://www.facebook.com/NewRelic',
+  },
+  {
+    title: 'linkedin',
+    href: 'https://www.linkedin.com/company/new-relic-inc-',
+  },
+  {
+    title: 'instagram',
+    href: 'https://www.instagram.com/newrelic/',
+  },
+  {
+    title: 'youtube',
+    href: 'https://www.youtube.com/user/NewRelicInc/featured',
+  },
+  {
+    title: 'github',
+    href: 'https://github.com/newrelic',
+  },
+  {
+    title: 'twitch',
+    href: 'https://www.twitch.tv/new_relic',
+  },
+  {
+    title: 'twitter',
+    href: 'https://twitter.com/newrelic',
+  },
+];
+
+const LOCALS = [
+  {
+    title: 'Français',
+    href: 'https://newrelic.com/fr',
+  },
+  {
+    title: 'Deutsch',
+    href: 'https://newrelic.com/de',
+  },
 ];
 
 const GlobalFooter = ({ className }) => {
@@ -92,15 +124,20 @@ const GlobalFooter = ({ className }) => {
       css={css`
         --background-color: #1d252c;
         --secondary-text-color: #898e91;
-        font-family: Söhne-Buch;
 
-        width: 100%;
+        font-family: Söhne-Buch;
+        font-size: 18px;
+        font-weight: 600;
+        line-height: 24px;
+        font-feature-settings: 'ss02' on;
+
         color: var(--secondary-text-color);
         background-color: var(--background-color);
 
         a {
-          color: currentColor;
+          color: var(--secondary-text-color);
           text-decoration: none;
+          text-decoration-thickness: none;
         }
 
         a:hover {
@@ -111,28 +148,32 @@ const GlobalFooter = ({ className }) => {
       <div>
         <div
           css={css`
-            --default-first-column-size: 1024px;
             display: grid;
-            grid-template-columns: 1fr max-content;
+            width: 100%;
+            grid-template-columns: min-content 192px;
+            justify-content: space-evenly;
 
             grid-template-areas:
               'resources socials'
               'logo logo'
               'legal locale';
 
-            @media screen and (max-width: 930px) {
+            @media screen and (max-width: ${MOBILE_BREAKPOINT}) {
+              justify-content: start;
+
+              grid-template-columns: auto;
               grid-template-areas:
                 'resources'
                 'socials'
                 'logo'
-                'legal';
+                'legal'
+                'locale';
             }
           `}
         >
           <div
             css={css`
-              margin: 104px;
-              margin-bottom: 0px;
+              margin: 104px 0px 0px 0px;
               justify-content: start;
               display: grid;
               grid-template-rows: repeat(4, 1fr);
@@ -140,18 +181,21 @@ const GlobalFooter = ({ className }) => {
 
               grid-area: resources;
 
-              a {
-                font-size: 18px;
-                line-height: 24px;
-                margin-right: 104px;
+              > a {
+                margin-right: 52px;
                 margin-bottom: 32px;
               }
 
-              @media screen and (max-width: 930px) {
-                margin-left: 40px;
+              @media screen and (max-width: ${MOBILE_BREAKPOINT}) {
+                margin: 40px 0px 0px 40px;
+
                 justify-content: flex-start;
                 grid-template-rows: 1fr;
                 grid-auto-flow: row;
+
+                > a:nth-last-child(1) {
+                  margin-bottom: 10px;
+                }
               }
             `}
           >
@@ -159,57 +203,76 @@ const GlobalFooter = ({ className }) => {
               <ExternalLink href={resource.href}>{resource.title}</ExternalLink>
             ))}
           </div>
-
           <div
             css={css`
-              margin: 104px 104px 0px 0px;
-              margin-bottom: 0px;
-
               display: grid;
+              justify-content: start;
               grid-area: socials;
-              grid-template-rows: repeat(4, 1fr);
-              grid-template-columns: repeat(4, 1fr);
 
-              > span {
-                justify-self: end;
-                font-size: 18px;
-                grid-column: span 4;
-              }
+              margin-top: 104px;
 
-              > svg {
-                justify-self: end;
-                margin-left: 24px;
 
-                :nth-child(3n+3) {
-                  grid-column-start: 2;
+              @media screen and (min-width: calc(${MOBILE_BREAKPOINT} + 1px)) {
+                grid-template-rows: repeat(4, 1fr);
+                grid-template-columns: repeat(4, 1fr);
+
+                > span {
+                  justify-self: end;
+                  grid-column: span 4;
+                }
+
+                > a {
+                  justify-self: end;
+                  margin-left: 24px;
+                  margin-right: 0px;
+                  :nth-child(3n + 3) {
+                    grid-column-start: 2;
+                  }
                 }
               }
 
+              @media screen and (max-width: ${MOBILE_BREAKPOINT}) {
+                justify-content: start;
+                margin: 40px 0px 0px 40px;
+                display: grid;
+                grid-template-rows: 1fr max-content;
+                grid-auto-flow: column;
 
+                > span {
+                  grid-column: span 7;
+                  margin-bottom: 14px;
+                }
+
+                > a {
+                  margin-right: 24px;
+                }
+              }
             `}
           >
             <span>Follow us</span>
 
             {SOCIALS.map((social) => (
-              <Icon
-                name={social.title}
-                size="24px"
-                css={css`
-                  outline: none;
-                  stroke-width: 0px;
-                  color: #898e91;
-                  fill: #898e91;
-                `}
-              />
+              <ExternalLink href={social.href}>
+                <Icon
+                  name={social.title}
+                  size="24px"
+                  css={css`
+                    outline: none;
+                    stroke-width: 0px;
+                    color: var(--secondary-text-color);
+                    fill: var(--secondary-text-color);
+                  `}
+                />
+              </ExternalLink>
             ))}
           </div>
           <div
             css={css`
               grid-area: logo;
-              margin: 64px 0px 0px 104px;
+              margin: 64px 0px 0px 0px;
 
-              @media screen and (max-width: 930px) {
-                margin-left: 40px;
+              @media screen and (max-width: ${MOBILE_BREAKPOINT}) {
+                margin: 32px 0px 20px 40px;
               }
             `}
           >
@@ -219,18 +282,18 @@ const GlobalFooter = ({ className }) => {
           <div
             css={css`
               display: flex;
-              margin-left: 104px;
-              margin-top: 40px;
+              margin-top: 20px;
 
               justify-content: flex-start;
               grid-area: legal;
 
               a {
+                font-size: 14px;
                 white-space: nowrap;
                 margin-right: 52px;
               }
 
-              @media screen and (max-width: 930px) {
+              @media screen and (max-width: ${MOBILE_BREAKPOINT}) {
                 margin-left: 40px;
                 flex-direction: column;
 
@@ -264,29 +327,34 @@ const GlobalFooter = ({ className }) => {
           </div>
           <div
             css={css`
-              display: flex;
-              align-items: flex-end;
-              margin-right: 104px;
+              display: grid;
+              justify-items: end;
+              align-items: end;
 
-              justify-content: flex-end;
               grid-area: locale;
+              grid-template-column: min-content min-content;
+              grid-auto-flow: column;
 
-              a {
-                margin-left: 32px;
-                white-space: nowrap;
+              > a {
+                font-size: 14px;
               }
 
-              @media screen and (max-width: 1180px) {
-                display: none;
+              @media screen and (max-width: ${MOBILE_BREAKPOINT}) {
+                margin-left: 40px;
+                justify-content: start;
+
+                grid-template-column: 1fr;
+                grid-auto-flow: row;
+
+                > a {
+                  margin-bottom: 32px;
+                }
               }
             `}
           >
-            <ExternalLink href="https://newrelic/com/de">
-              {t('footer.francais', 'Francais')}
-            </ExternalLink>
-            <ExternalLink href="https://newrelic/com/de">
-              {t('footer.deutsch', 'Deutsch')}
-            </ExternalLink>
+            {LOCALS.map((locale) => (
+              <ExternalLink href={locale.href}>{locale.title}</ExternalLink>
+            ))}
           </div>
         </div>
       </div>

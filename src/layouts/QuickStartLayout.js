@@ -44,8 +44,8 @@ const QuickStartLayout = ({ children }) => {
             margin-left: 0;
           }
 
-          @media screen and (max-width: 930px) {
-            height: 1192px;
+          @media screen and (max-width: 920px) {
+            height: 1240px;
           }
         `}
       />
