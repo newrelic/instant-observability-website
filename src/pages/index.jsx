@@ -6,7 +6,12 @@ import { css } from '@emotion/react';
 import Overlay from '../components/Overlay';
 import QuickstartTile from '../components/QuickstartTile';
 import IOBanner from '../components/IOBanner';
-import { useTessen, Button, Spinner } from '@newrelic/gatsby-theme-newrelic';
+import {
+  useTessen,
+  Button,
+  Spinner,
+  Icon,
+} from '@newrelic/gatsby-theme-newrelic';
 import { navigate } from '@reach/router';
 
 import { useDebounce } from 'react-use';
@@ -22,6 +27,7 @@ import SuperTiles from '../components/SuperTiles';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
+import '../components/fonts.scss';
 
 const VIEWS = {
   GRID: 'Grid view',
@@ -257,6 +263,8 @@ const QuickstartsPage = ({ data, location }) => {
         css={css`
           --sidebar-width: 300px;
           --banner-height: 368px;
+          --divider-color: #e4e5e6;
+          --primary-text-color: #1d252c;
           display: grid;
           grid-template-columns: var(--sidebar-width) minmax(0, 1fr);
           grid-template-areas: 'sidebar main';
@@ -281,6 +289,7 @@ const QuickstartsPage = ({ data, location }) => {
             height: calc(100vh - var(--global-header-height));
             position: sticky;
             top: var(--global-header-height);
+            width: 100%;
 
             @media screen and (max-width: ${QUICKSTARTS_COLLAPSE_BREAKPOINT}) {
               display: none;
@@ -293,9 +302,18 @@ const QuickstartsPage = ({ data, location }) => {
         >
           <div
             css={css`
-              padding: var(--site-content-padding);
+              padding: 32px 0 32px 32px;
               height: 100%;
               overflow: auto;
+
+              label {
+                font-family: 'Söhne-Buch';
+                font-size: 28px;
+                font-weight: 400;
+                line-height: 36px;
+                margin-bottom: 12px;
+                letter-spacing: -0.5px;
+              }
               @media screen and (max-width: ${QUICKSTARTS_COLLAPSE_BREAKPOINT}) {
                 position: relative;
               }
@@ -310,12 +328,16 @@ const QuickstartsPage = ({ data, location }) => {
                   disabled={count === 0}
                   onClick={() => handleCategory(value)}
                   css={css`
-                    padding: 1rem 0.5rem;
+                    padding: 8px 12px;
+                    font-family: 'Söhne-Buch';
+                    font-size: 18px;
+                    font-weight: 400;
+                    line-height: 54px;
                     width: 100%;
                     display: flex;
                     justify-content: flex-start;
                     color: var(--primary-text-color);
-                    font-weight: 100;
+                    border-radius: 3px;
                     background: ${category === value
                       ? 'var(--divider-color)'
                       : 'none'};
@@ -324,7 +346,6 @@ const QuickstartsPage = ({ data, location }) => {
                   {`${displayName}`}
                   <span
                     css={css`
-                      color: var(--secondary-text-color);
                       padding-left: 0.25rem;
                     `}
                   >{`(${count})`}</span>
@@ -349,17 +370,32 @@ const QuickstartsPage = ({ data, location }) => {
           >
             <Button
               css={css`
-                border-radius: 2px;
-                border: 1px solid var(--border-color);
+                width: 100%;
+                border-radius: 4px;
+                border: 1px solid #1d252c;
                 color: var(--primary-text-color);
-                font-size: 12px;
+                font-weight: 400;
+                font-size: 18px;
                 justify-content: flex-start;
-                margin: 40px 0;
+                margin: 10px 10px 30px;
+                padding: 20px 24px;
+                display: flex;
+                justify-content: space-between;
               `}
               variant={Button.VARIANT.LINK}
               onClick={() => setIsCategoriesOverlayOpen(true)}
             >
               {getDisplayName('Filter by Category')}
+              <Icon
+                css={css`
+                  color: #1d252c;
+                  width: 20px;
+                  transform: rotate(-90deg);
+                  margin: -4px;
+                `}
+                name="chevron-left"
+                size="120%"
+              />
             </Button>
             <Overlay
               isOpen={isCategoriesOverlayOpen}
@@ -367,6 +403,8 @@ const QuickstartsPage = ({ data, location }) => {
             >
               <div
                 css={css`
+                  --divider-color: #e4e5e6;
+
                   border-radius: 5px;
                   position: relative;
                   width: 100%;
@@ -378,6 +416,12 @@ const QuickstartsPage = ({ data, location }) => {
                 <h3
                   css={css`
                     padding: 0.5rem 0 0 0.5rem;
+                    font-family: 'Söhne-Buch';
+                    font-size: 28px;
+                    font-weight: 400;
+                    line-height: 36px;
+                    margin-bottom: 12px;
+                    letter-spacing: -0.5px;
                   `}
                 >
                   Category
@@ -395,12 +439,16 @@ const QuickstartsPage = ({ data, location }) => {
                       key={value}
                       onClick={() => handleCategory(value)}
                       css={css`
-                        padding: 1rem 0.5rem;
                         width: 100%;
                         display: flex;
                         justify-content: flex-start;
                         color: var(--primary-text-color);
-                        font-weight: 100;
+                        border-radius: 3px;
+                        padding: 8px 12px;
+                        font-family: 'Söhne-Buch';
+                        font-size: 18px;
+                        font-weight: 400;
+                        line-height: 54px;
                         background: ${category === value
                           ? 'var(--divider-color)'
                           : 'none'};
@@ -412,7 +460,7 @@ const QuickstartsPage = ({ data, location }) => {
                 </div>
                 <div
                   css={css`
-                    background: var(--secondary-background-color);
+                    background: var(--divider-color);
                     position: absolute;
                     bottom: 0;
                     left: 0;
@@ -429,6 +477,10 @@ const QuickstartsPage = ({ data, location }) => {
                     css={css`
                       height: 2rem;
                       margin-right: 1rem;
+                      background: #1d252c;
+                      &:hover {
+                        background: #1d252c;
+                      }
                     `}
                     onClick={closeCategoriesOverlay}
                     variant={Button.VARIANT.PRIMARY}
