@@ -11,8 +11,6 @@ import useThemeTranslation from '@newrelic/gatsby-theme-newrelic/src//hooks/useT
 
 const MOBILE_BREAKPOINT = '920px';
 
-const MIDPOINT_BREAKPOINT = '1230px;';
-
 const RESOURCES = [
   {
     title: 'About Us',
@@ -122,17 +120,19 @@ const GlobalFooter = ({ className }) => {
       data-swiftype-index={false}
       className={className}
       css={css`
+        /* Color variables */
         --background-color: #1d252c;
         --secondary-text-color: #898e91;
 
+        color: var(--secondary-text-color);
+        background-color: var(--background-color);
+
+        /* fonts  */
         font-family: Söhne-Buch;
         font-size: 18px;
         font-weight: 600;
         line-height: 24px;
         font-feature-settings: 'ss02' on;
-
-        color: var(--secondary-text-color);
-        background-color: var(--background-color);
 
         a {
           color: var(--secondary-text-color);
@@ -149,10 +149,10 @@ const GlobalFooter = ({ className }) => {
         <div
           css={css`
             display: grid;
-            width: 100%;
-            grid-template-columns: min-content 192px;
             justify-content: space-evenly;
 
+            /* Sets up the sizing of the columns */
+            grid-template-columns: min-content 192px;
             grid-template-areas:
               'resources socials'
               'logo logo'
@@ -161,6 +161,7 @@ const GlobalFooter = ({ className }) => {
             @media screen and (max-width: ${MOBILE_BREAKPOINT}) {
               justify-content: start;
 
+              /* Sets single column for mobile view */
               grid-template-columns: auto;
               grid-template-areas:
                 'resources'
@@ -173,12 +174,13 @@ const GlobalFooter = ({ className }) => {
         >
           <div
             css={css`
-              margin: 104px 0px 0px 0px;
-              justify-content: start;
               display: grid;
+              justify-content: start;
+              margin-top: 104px;
+
+              /* 4 rows set at 1 fraction each */
               grid-template-rows: repeat(4, 1fr);
               grid-auto-flow: column;
-
               grid-area: resources;
 
               > a {
@@ -193,6 +195,7 @@ const GlobalFooter = ({ className }) => {
                 grid-template-rows: 1fr;
                 grid-auto-flow: row;
 
+                /* Decrease margin of last item for mobile view */
                 > a:nth-last-child(1) {
                   margin-bottom: 10px;
                 }
@@ -207,12 +210,14 @@ const GlobalFooter = ({ className }) => {
             css={css`
               display: grid;
               justify-content: start;
-              grid-area: socials;
-
               margin-top: 104px;
 
+              grid-area: socials;
 
               @media screen and (min-width: calc(${MOBILE_BREAKPOINT} + 1px)) {
+                /* Set the same amount of rows and columns to mimic 
+                 * the resources grid. 
+                 */
                 grid-template-rows: repeat(4, 1fr);
                 grid-template-columns: repeat(4, 1fr);
 
@@ -225,6 +230,8 @@ const GlobalFooter = ({ className }) => {
                   justify-self: end;
                   margin-left: 24px;
                   margin-right: 0px;
+
+                  /* Shifts the last row to the right by 1 column */
                   :nth-child(3n + 3) {
                     grid-column-start: 2;
                   }
@@ -232,9 +239,11 @@ const GlobalFooter = ({ className }) => {
               }
 
               @media screen and (max-width: ${MOBILE_BREAKPOINT}) {
-                justify-content: start;
-                margin: 40px 0px 0px 40px;
                 display: grid;
+                justify-content: start;
+                margin-top: 40px;
+                margin-left: 40px;
+
                 grid-template-rows: 1fr max-content;
                 grid-auto-flow: column;
 
