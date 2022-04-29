@@ -26,9 +26,9 @@ import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import '../components/fonts.scss';
 
-const DOUBLE_COLUMN_BREAKPOINT = '1180px';
-const TRIPLE_COLUMN_BREAKPOINT = '1350px';
-const SINGLE_COLUMN_BREAKPOINT = QUICKSTARTS_COLLAPSE_BREAKPOINT;
+const DOUBLE_COLUMN_BREAKPOINT = '1160px';
+const TRIPLE_COLUMN_BREAKPOINT = '1420px';
+const SINGLE_COLUMN_BREAKPOINT = '900px';
 
 /**
  * Determines if one string is a substring of the other, case insensitive
@@ -260,18 +260,20 @@ const QuickstartsPage = ({ data, location }) => {
           grid-template-columns: var(--sidebar-width) minmax(0, 1fr);
           grid-template-areas: 'sidebar main';
           grid-template-rows: 1fr auto;
-          grid-gap: 70px;
+          grid-gap: 20px;
           min-height: calc(100vh - var(--global-header-height));
           margin: var(--banner-height) auto;
 
           max-width: var(--site-max-width);
 
           @media screen and (max-width: ${QUICKSTARTS_COLLAPSE_BREAKPOINT}) {
-            margin: 500px auto;
             grid-gap: 0;
             grid-template-columns: minmax(0, 1fr);
             grid-template-areas: 'main';
             grid-template-rows: unset;
+          }
+          @media screen and (max-width: 760px) {
+            margin: 500px auto;
           }
         `}
       >
@@ -676,7 +678,7 @@ const QuickstartsPage = ({ data, location }) => {
           <div
             css={css`
               display: grid;
-              grid-gap: 1.25rem;
+              grid-gap: 40px 15px;
               grid-template-columns: repeat(4, 1fr);
               grid-auto-rows: 1fr;
               @media (max-width: ${TRIPLE_COLUMN_BREAKPOINT}) {

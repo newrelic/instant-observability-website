@@ -76,7 +76,7 @@ const QuickstartTile = ({
 
         @media screen and (max-width: ${QUICKSTARTS_COLLAPSE_BREAKPOINT}) {
         padding: 0 32px 24px 32px;
-          width: 80%;
+          width: 100%;
           min-width: 250px;
         }
 
