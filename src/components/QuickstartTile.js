@@ -11,12 +11,13 @@ import {
 import { SHIELD_LEVELS, RESERVED_QUICKSTART_IDS } from '../data/constants';
 import QuickstartImg from './QuickstartImg';
 
+import { QUICKSTARTS_COLLAPSE_BREAKPOINT } from '../data/constants';
+
 import './fonts.scss';
 
 const QuickstartTile = ({
   id,
   title,
-  view,
   featured,
   name,
   fields,
@@ -34,7 +35,6 @@ const QuickstartTile = ({
         tessen.track({
           eventName: 'instantObservability',
           category: 'GuidedInstallClick',
-          publicCatalogView: view,
           quickstartName: name,
         });
         break;
@@ -42,7 +42,6 @@ const QuickstartTile = ({
         tessen.track({
           eventName: 'instantObservability',
           category: 'BuildYourOwnQuickstartClick',
-          publicCatalogView: view,
           quickstartName: name,
         });
         break;
@@ -50,7 +49,6 @@ const QuickstartTile = ({
         tessen.track({
           eventName: 'instantObservability',
           category: 'QuickstartClick',
-          publicCatalogView: view,
           quickstartName: name,
         });
     }
@@ -76,6 +74,12 @@ const QuickstartTile = ({
         border-radius: 8px;
         box-shadow: none;
 
+        @media screen and (max-width: ${QUICKSTARTS_COLLAPSE_BREAKPOINT}) {
+        padding: 0 32px 24px 32px;
+          width: 80%;
+          min-width: 250px;
+        }
+
         h4,
         p,
         span {
@@ -83,9 +87,15 @@ const QuickstartTile = ({
           letter-spacing: -0.5%;
           color: #1d252c;
           font-weight: 600;
+
+          @media screen and (max-width: ${QUICKSTARTS_COLLAPSE_BREAKPOINT}) {
+          width: 100%;
+          font-family: 'Söhne-Buch';
+          font-weight: 400;
         }
 
-        /* Default grid view */
+        }
+
         display: grid;
         align-items: flex-start;
         grid-gap: 0.2rem;
@@ -95,6 +105,11 @@ const QuickstartTile = ({
           'logo logo'
           'text text'
           'tag arrow';
+
+          @media screen and (max-width: ${QUICKSTARTS_COLLAPSE_BREAKPOINT}) {
+        grid-template-rows: 125px; 152px auto;
+        }
+
       `}
       onClick={() => handlePackClick(id)}
     >
@@ -120,6 +135,12 @@ const QuickstartTile = ({
               object-fit: scale-down;
               height: 45px;
               margin: 35px 0 0;
+
+              @media screen and (max-width: ${QUICKSTARTS_COLLAPSE_BREAKPOINT}) {
+                margin: 20px 0 0;
+                height: 70px;
+                max-width: 240px;
+              }
             `}
           />
         </div>
@@ -158,6 +179,10 @@ const QuickstartTile = ({
               text-overflow: ellipsis;
               -webkit-box-orient: vertical;
               -webkit-line-clamp: 3;
+
+              @media screen and (max-width: ${QUICKSTARTS_COLLAPSE_BREAKPOINT}) {
+                -webkit-line-clamp: 2;
+              }
             `}
           >
             {summary || 'No summary provided'}

@@ -16,10 +16,7 @@ import { navigate } from '@reach/router';
 
 import { useDebounce } from 'react-use';
 import { sortFeaturedQuickstarts } from '../utils/sortFeaturedQuickstarts';
-import {
-  QUICKSTARTS_COLLAPSE_BREAKPOINT,
-  LISTVIEW_BREAKPOINT,
-} from '../data/constants';
+import { QUICKSTARTS_COLLAPSE_BREAKPOINT } from '../data/constants';
 import CATEGORIES from '../data/instant-observability-categories';
 
 import SuperTiles from '../components/SuperTiles';
@@ -28,11 +25,6 @@ import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import '../components/fonts.scss';
-
-const VIEWS = {
-  GRID: 'Grid view',
-  LIST: 'List view',
-};
 
 const DOUBLE_COLUMN_BREAKPOINT = '1180px';
 const TRIPLE_COLUMN_BREAKPOINT = '1350px';
@@ -86,7 +78,6 @@ const filterByCategory = (category) => {
 };
 
 const QuickstartsPage = ({ data, location }) => {
-  const [view] = useState(VIEWS.GRID);
   const tessen = useTessen();
 
   const [search, setSearch] = useState('');
@@ -272,9 +263,11 @@ const QuickstartsPage = ({ data, location }) => {
           grid-gap: 70px;
           min-height: calc(100vh - var(--global-header-height));
           margin: var(--banner-height) auto;
+
           max-width: var(--site-max-width);
 
           @media screen and (max-width: ${QUICKSTARTS_COLLAPSE_BREAKPOINT}) {
+            margin: 500px auto;
             grid-gap: 0;
             grid-template-columns: minmax(0, 1fr);
             grid-template-areas: 'main';
@@ -528,24 +521,16 @@ const QuickstartsPage = ({ data, location }) => {
                       padding: 10px;
                       grid-template-columns: repeat(4, 1fr);
                       grid-auto-rows: 1fr;
-                      ${view === VIEWS.GRID &&
-                      css`
-                        @media (max-width: ${TRIPLE_COLUMN_BREAKPOINT}) {
-                          grid-template-columns: repeat(3, 1fr);
-                        }
-                        @media (max-width: ${DOUBLE_COLUMN_BREAKPOINT}) {
-                          grid-template-columns: repeat(2, 1fr);
-                        }
-                        @media (max-width: ${SINGLE_COLUMN_BREAKPOINT}) {
-                          grid-template-columns: repeat(1, 1fr);
-                        }
-                      `}
-                      ${view === VIEWS.LIST &&
-                      css`
-                        grid-auto-rows: 1fr;
-                        grid-template-columns: 1fr;
-                        grid-gap: 1.25rem;
-                      `};
+
+                      @media (max-width: ${TRIPLE_COLUMN_BREAKPOINT}) {
+                        grid-template-columns: repeat(3, 1fr);
+                      }
+                      @media (max-width: ${DOUBLE_COLUMN_BREAKPOINT}) {
+                        grid-template-columns: repeat(2, 1fr);
+                      }
+                      @media (max-width: ${SINGLE_COLUMN_BREAKPOINT}) {
+                        grid-template-columns: repeat(1, 1fr);
+                      }
                     `}
                   >
                     {!loadComplete && <Spinner />}
@@ -560,7 +545,6 @@ const QuickstartsPage = ({ data, location }) => {
                         {mostPopularQuickStarts.map((pack) => (
                           <QuickstartTile
                             key={pack.id}
-                            view={view}
                             featured={false}
                             css={css`
                               grid-template-rows:
@@ -608,24 +592,16 @@ const QuickstartsPage = ({ data, location }) => {
                   grid-gap: 1.25rem;
                   grid-template-columns: repeat(4, 1fr);
                   grid-auto-rows: 1fr;
-                  ${view === VIEWS.GRID &&
-                  css`
-                    @media (max-width: ${TRIPLE_COLUMN_BREAKPOINT}) {
-                      grid-template-columns: repeat(3, 1fr);
-                    }
-                    @media (max-width: ${DOUBLE_COLUMN_BREAKPOINT}) {
-                      grid-template-columns: repeat(2, 1fr);
-                    }
-                    @media (max-width: ${SINGLE_COLUMN_BREAKPOINT}) {
-                      grid-template-columns: repeat(1, 1fr);
-                    }
-                  `}
-                  ${view === VIEWS.LIST &&
-                  css`
-                    grid-auto-rows: 1fr;
-                    grid-template-columns: 1fr;
-                    grid-gap: 1.25rem;
-                  `};
+
+                  @media (max-width: ${TRIPLE_COLUMN_BREAKPOINT}) {
+                    grid-template-columns: repeat(3, 1fr);
+                  }
+                  @media (max-width: ${DOUBLE_COLUMN_BREAKPOINT}) {
+                    grid-template-columns: repeat(2, 1fr);
+                  }
+                  @media (max-width: ${SINGLE_COLUMN_BREAKPOINT}) {
+                    grid-template-columns: repeat(1, 1fr);
+                  }
                 `}
               >
                 {!loadComplete && <Spinner />}
@@ -634,7 +610,6 @@ const QuickstartsPage = ({ data, location }) => {
                     {featuredQuickStarts.map((pack) => (
                       <QuickstartTile
                         key={pack.id}
-                        view={view}
                         featured={false}
                         css={css`
                           grid-template-rows:
@@ -704,36 +679,22 @@ const QuickstartsPage = ({ data, location }) => {
               grid-gap: 1.25rem;
               grid-template-columns: repeat(4, 1fr);
               grid-auto-rows: 1fr;
-              ${view === VIEWS.GRID &&
-              css`
-                @media (max-width: ${TRIPLE_COLUMN_BREAKPOINT}) {
-                  grid-template-columns: repeat(3, 1fr);
-                }
+              @media (max-width: ${TRIPLE_COLUMN_BREAKPOINT}) {
+                grid-template-columns: repeat(3, 1fr);
+              }
 
-                @media (max-width: ${DOUBLE_COLUMN_BREAKPOINT}) {
-                  grid-template-columns: repeat(2, 1fr);
-                }
+              @media (max-width: ${DOUBLE_COLUMN_BREAKPOINT}) {
+                grid-template-columns: repeat(2, 1fr);
+              }
 
-                @media (max-width: ${SINGLE_COLUMN_BREAKPOINT}) {
-                  grid-template-columns: repeat(1, 1fr);
-                }
-              `}
-              ${view === VIEWS.LIST &&
-              css`
-                grid-auto-rows: 1fr;
-                grid-template-columns: 1fr;
-                grid-gap: 1.25rem;
-              `};
+              @media (max-width: ${SINGLE_COLUMN_BREAKPOINT}) {
+                grid-template-columns: repeat(1, 1fr);
+              }
             `}
           >
             {!isSearchInputEmpty && <SuperTiles />}
             {filteredQuickstarts.map((pack) => (
-              <QuickstartTile
-                key={pack.id}
-                view={view}
-                featured={false}
-                {...pack}
-              />
+              <QuickstartTile key={pack.id} featured={false} {...pack} />
             ))}
           </div>
         </div>
