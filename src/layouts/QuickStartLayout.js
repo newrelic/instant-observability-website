@@ -1,16 +1,19 @@
-import React, { useEffect, useState } from 'react';
-import {
-  GlobalHeader,
-  GlobalFooter,
-  NR_SITES,
-} from '@newrelic/gatsby-theme-newrelic';
-import PropTypes from 'prop-types';
-import { css } from '@emotion/react';
 import '../components/styles.scss';
 import '../components/fonts.scss';
-import { QUICKSTARTS_COLLAPSE_BREAKPOINT } from '../data/constants';
 import '../components/fonts.scss';
+
+import {
+  GlobalFooter,
+  GlobalHeader,
+  NR_SITES,
+} from '@newrelic/gatsby-theme-newrelic';
+import React, { useEffect, useState } from 'react';
+
+import GetStartedFooter from '../components/GetStartedFooter';
 import Layout from '../components/Layout';
+import PropTypes from 'prop-types';
+import { QUICKSTARTS_COLLAPSE_BREAKPOINT } from '../data/constants';
+import { css } from '@emotion/react';
 
 const QuickStartLayout = ({ children }) => {
   return (
@@ -33,6 +36,7 @@ const QuickStartLayout = ({ children }) => {
           {children}
         </Layout.Main>
       </Layout>
+      <GetStartedFooter />
       <GlobalFooter
         css={css`
           max-width: 100% @media screen and
