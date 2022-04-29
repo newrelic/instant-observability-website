@@ -1118,6 +1118,54 @@
     ]
   },
   {
+    "title": "CircleCI",
+    "name": "circleci",
+    "description": "## CircleCI Quickstart\n\nThe world’s best software teams use CircleCI to deliver quality code with confidence. As the largest continuous integration and delivery (CI/CD) platform, CircleCI empowers engineers to seamlessly take ideas to execution, at scale. Every feature of our platform is built to fine-tune the entire development process from start to finish.\n\nThis quickstart allows users to view analytical data about their CircleCI jobs within the New Relic dashboard to gain visibility into the performance and health of their continuous integration and deployment pipelines. \n\n### With the CircleCI quickstart you can:\n\n- Monitor real-time CI performance, activity, and health, or track over time.\n- Identify opportunities for optimization.\n\n## The CircleCI quickstart includes a dashboard where users can easily monitor:\n- Total Jobs Ran\n- Job Health (% success)\n- Projects Summary\n- Most Recent Failed Jobs\n- Jobs Ran Per Project\n\nTo set up the integration, visit the [CircleCI Webhooks documentation](https://circleci.com/docs/2.0/webhooks/).\n\nFor more information or support, please go to [support.circleci.com](https://support.circleci.com/)",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/circleci",
+    "id": "39109d3d-b1d8-4366-8ca9-b8925005f727",
+    "level": "COMMUNITY",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/circleci/logo.png",
+    "summary": "This integration allows users to view analytical data about their CircleCI jobs within the New Relic monitoring stack.",
+    "websiteUrl": null,
+    "keywords": [
+      "newrelic partner",
+      "devops",
+      "circleci",
+      "circle",
+      "cicd",
+      "featured",
+      "logs"
+    ],
+    "authors": [
+      "New Relic",
+      "Joseph Counts"
+    ],
+    "dashboards": [
+      {
+        "name": "CircleCI",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/circleci/dashboards/circledashboard/circledashboard01.png"
+        ]
+      }
+    ],
+    "alerts": [],
+    "documentation": [
+      {
+        "name": "Push CircleCI logs to New Relic",
+        "description": "Doc file explaining how to get your CircleCI logs into New Relic.",
+        "url": "https://docs.newrelic.com/docs/logs/forward-logs/circleci-logs/"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "CircleCi",
+        "id": "third-party-circleci"
+      }
+    ]
+  },
+  {
     "title": "Logs Analysis Dashboard",
     "name": "log-analysis",
     "description": "The logs analysis dashboard allows you to get deep visibility into the ingestion of your logs. With this panel, you will be able to identify the services and host that send the most logs, which types of serverity are being sent, the cost for each of the attributes and also if the essential attributes are being sent for the ccorrelation between services and logs, such as: service name, log in context and hostname.",
@@ -1412,54 +1460,6 @@
       {
         "name": "Azure-Infrastructure-Monitoring",
         "id": "azure-infrastructure-monitoring"
-      }
-    ]
-  },
-  {
-    "title": "CircleCI",
-    "name": "circleci",
-    "description": "## CircleCI Quickstart\n\nThe world’s best software teams use CircleCI to deliver quality code with confidence. As the largest continuous integration and delivery (CI/CD) platform, CircleCI empowers engineers to seamlessly take ideas to execution, at scale. Every feature of our platform is built to fine-tune the entire development process from start to finish.\n\nThis quickstart allows users to view analytical data about their CircleCI jobs within the New Relic dashboard to gain visibility into the performance and health of their continuous integration and deployment pipelines. \n\n### With the CircleCI quickstart you can:\n\n- Monitor real-time CI performance, activity, and health, or track over time.\n- Identify opportunities for optimization.\n\n## The CircleCI quickstart includes a dashboard where users can easily monitor:\n- Total Jobs Ran\n- Job Health (% success)\n- Projects Summary\n- Most Recent Failed Jobs\n- Jobs Ran Per Project\n\nTo set up the integration, visit the [CircleCI Webhooks documentation](https://circleci.com/docs/2.0/webhooks/).\n\nFor more information or support, please go to [support.circleci.com](https://support.circleci.com/)",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/circleci",
-    "id": "39109d3d-b1d8-4366-8ca9-b8925005f727",
-    "level": "COMMUNITY",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/circleci/logo.png",
-    "summary": "This integration allows users to view analytical data about their CircleCI jobs within the New Relic monitoring stack.",
-    "websiteUrl": null,
-    "keywords": [
-      "newrelic partner",
-      "devops",
-      "circleci",
-      "circle",
-      "cicd",
-      "featured",
-      "logs"
-    ],
-    "authors": [
-      "New Relic",
-      "Joseph Counts"
-    ],
-    "dashboards": [
-      {
-        "name": "CircleCI",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/circleci/dashboards/circledashboard/circledashboard01.png"
-        ]
-      }
-    ],
-    "alerts": [],
-    "documentation": [
-      {
-        "name": "CircleCi Webhooks documentation",
-        "description": "CircleCi webhooks documentation",
-        "url": "https://circleci.com/docs/2.0/webhooks/"
-      }
-    ],
-    "installPlans": [
-      {
-        "name": "CircleCi",
-        "id": "third-party-circleci"
       }
     ]
   },
