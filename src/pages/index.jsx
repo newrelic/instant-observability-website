@@ -479,8 +479,7 @@ const QuickstartsPage = ({ data, location }) => {
                       margin-right: 1rem;
                       background: #1a3c34;
                       &:hover {
-                        background: #1d252c;
-                        color: #1ce783;
+                        background: #026747;
                       }
                     `}
                     onClick={closeCategoriesOverlay}
