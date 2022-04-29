@@ -87,7 +87,8 @@ const BannerHeaderContent = ({ search, setSearch, setIsSearchInputEmpty }) => {
             padding-left: 0.5rem;
             margin: 0 auto 40px;
             height: 64px;
-            ${search.length > 0 &&
+            ${search &&
+            search.length > 0 &&
             css`
               > svg {
                 display: none;
