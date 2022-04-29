@@ -87,6 +87,12 @@ const BannerHeaderContent = ({ search, setSearch, setIsSearchInputEmpty }) => {
             padding-left: 0.5rem;
             margin: 0 auto 40px;
             height: 64px;
+            ${search.length > 0 &&
+            css`
+              > svg {
+                display: none;
+              }
+            `};
 
             input {
               height: 64px;
@@ -95,6 +101,7 @@ const BannerHeaderContent = ({ search, setSearch, setIsSearchInputEmpty }) => {
               background: #1d252c;
               border: 1px solid #f9fafa;
               border-radius: 4px;
+              color: #f9fafa;
               &::placeholder {
                 color: var(--color-neutrals-600);
               }
