@@ -11044,80 +11044,6 @@
     ]
   },
   {
-    "title": "Golden Signals for Web Servers",
-    "name": "golden-signals-for-web-servers",
-    "description": "Golden signals alerts for web servers. Includes alerts and a dashboard for throughput, errors, response time, CPU usage, and memory usage.",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/golden-signals-web",
-    "id": "aae62e98-51c4-4e73-82b4-29d9ae95433a",
-    "level": "NEW_RELIC",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/golden-signals-web/logo.png",
-    "summary": "Golden signals alerts for web servers. Includes alerts and a dashboard for throughput, errors, response time, CPU usage, and memory usage.",
-    "websiteUrl": null,
-    "keywords": [
-      "golden signals",
-      "monitoring",
-      "SRE",
-      "latency",
-      "traffic",
-      "errors",
-      "saturation",
-      "site reliability"
-    ],
-    "authors": [
-      "New Relic",
-      "Alec Swanson"
-    ],
-    "dashboards": [
-      {
-        "name": "Golden Signals Web",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/golden-signals-web/dashboards/golden_signals/golden_signals.png"
-        ]
-      }
-    ],
-    "alerts": [
-      {
-        "name": "CPU Usage",
-        "details": "This alert fires when a host's CPU usage goes above 90 percent for a period of 5 minutes.",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "Errors",
-        "details": "This alert fires when 10 percent of the transactions against an application end with an error, over a period of 5 minutes.",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "Memory Usage",
-        "details": "When memory limits are reached, applications can do weird and unpredictable things.\nThis alert fires when the percentage of memory used on a host exceeds 90 percent for 5 minutes.",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "Response time",
-        "details": "This alert fires when the average transaction duration is above 5 seconds for 5 minutes.",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "Throughput",
-        "details": "Throughput is a great way to measure the health of your applications.\nThis alert fires when the throughput of a web application drops below 5 transactions in a 5 minute period.",
-        "type": "STATIC",
-        "url": null
-      }
-    ],
-    "documentation": [],
-    "installPlans": [
-      {
-        "name": "Guided install",
-        "id": "guided-install"
-      }
-    ]
-  },
-  {
     "title": "Anorm",
     "name": "anorm",
     "description": "# What is Anorm?\n\nData access layer that uses plain SQL to interact with the database and provides an API to parse and transform the resulting datasets.\n\n\n## Get started!\n\nLeverage community expertise and instantly get value out of your telemetry data. This quickstart automatically instruments Anorm with the New Relic Java agent, and allows you to instantly monitor your Java application with out-of-the-box dashboards and alerts. \nFurther leverage New Relic's APM capabilities by setting up [errors inbox](https://docs.newrelic.com/docs/apm/apm-ui-pages/errors-inbox/errors-inbox/), [transaction tracing](https://docs.newrelic.com/docs/apm/transactions/transaction-traces/introduction-transaction-traces/), and [service maps](https://docs.newrelic.com/docs/understand-dependencies/understand-system-dependencies/service-maps/introduction-service-maps/).\n\n## More info\n\nCheck out the [documentation](https://docs.newrelic.com/docs/agents/java-agent/getting-started/introduction-new-relic-java/) to learn more about New Relic monitoring for Anorm.",
@@ -12597,6 +12523,91 @@
       {
         "name": "lacework",
         "id": "third-party-lacework-integration"
+      }
+    ]
+  },
+  {
+    "title": "Golden Signals for Web Servers",
+    "name": "golden-signals-for-web-servers",
+    "description": "Golden signals alerts for web servers. Includes alerts and a dashboard for throughput, errors, response time, CPU usage, and memory usage.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/golden-signals-web",
+    "id": "aae62e98-51c4-4e73-82b4-29d9ae95433a",
+    "level": "NEW_RELIC",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/golden-signals-web/logo.png",
+    "summary": "Golden signals alerts for web servers. Includes alerts and a dashboard for throughput, errors, response time, CPU usage, and memory usage.",
+    "websiteUrl": null,
+    "keywords": [
+      "golden signals",
+      "monitoring",
+      "SRE",
+      "latency",
+      "traffic",
+      "errors",
+      "saturation",
+      "site reliability"
+    ],
+    "authors": [
+      "New Relic",
+      "Alec Swanson"
+    ],
+    "dashboards": [
+      {
+        "name": "Golden Signals Web",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/golden-signals-web/dashboards/golden_signals/golden_signals.png"
+        ]
+      }
+    ],
+    "alerts": [
+      {
+        "name": "CPU Usage",
+        "details": "This alert fires when a host's CPU usage goes above 90 percent for a period of 5 minutes.",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "Errors",
+        "details": "This alert fires when 10 percent of the transactions against an application end with an error, over a period of 5 minutes.",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "Memory Usage",
+        "details": "When memory limits are reached, applications can do weird and unpredictable things.\nThis alert fires when the percentage of memory used on a host exceeds 90 percent for 5 minutes.",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "Response time",
+        "details": "This alert fires when the average transaction duration is above 5 seconds for 5 minutes.",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "Throughput",
+        "details": "Throughput is a great way to measure the health of your applications.\nThis alert fires when the throughput of a web application drops below 5 transactions in a 5 minute period.",
+        "type": "STATIC",
+        "url": null
+      }
+    ],
+    "documentation": [
+      {
+        "name": "New Relic infrastructure agent",
+        "description": "Learn how to monitor your hosts with New Relic.\n",
+        "url": "https://docs.newrelic.com/docs/infrastructure/infrastructure-monitoring/get-started/get-started-infrastructure-monitoring/"
+      },
+      {
+        "name": "New Relic language agents",
+        "description": "Learn how to get in-depth and relevant information about your running software in minutes.\n",
+        "url": "https://docs.newrelic.com/docs/apm/new-relic-apm/getting-started/introduction-apm"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "Infrastructure Agent",
+        "id": "infra-agent-targeted"
       }
     ]
   },
