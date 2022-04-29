@@ -3660,19 +3660,19 @@
     ],
     "dashboards": [
       {
-        "name": "Data Governance Entity Breakdowns",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/oma-data-gov/dashboards/data-ingest-entity-breakdown/data-ingest-entity-breakdown.png"
-        ]
-      },
-      {
         "name": "Data Governance Baseline",
         "description": null,
         "url": null,
         "screenshots": [
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/oma-data-gov/dashboards/data-ingest-baseline/data-ingest-baseline.png"
+        ]
+      },
+      {
+        "name": "Data Governance Entity Breakdowns",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/oma-data-gov/dashboards/data-ingest-entity-breakdown/data-ingest-entity-breakdown.png"
         ]
       }
     ],
@@ -5676,36 +5676,6 @@
     ]
   },
   {
-    "title": "Salesforce Event Logs integration for New Relic Logs",
-    "name": "salesforce-eventlog-for-logs",
-    "description": "## What is Salesforce Event Log?\n\nSalesforce event log refers to a log file generated when an event occurs in your organization. There are up to 50 event types that can be consumed. Some of the event types include logins, logouts, visualforce page loads, report exports, apex executions, URI (web clicks in Salesforce Classic), application programming interface (API) calls, etc. To collect Salesforce event log data, you have to have read access to the Salesforce event log and enable the Salesforce event log file API. Create a Salesforce 'Connected App' to use OAuth authentication.\n\n### New Relic and Salesforce Event Log\n\nThe New Relic Salesforce Event Log integration allows you to process and forward Salesforce Event Log files to New Relic Logs. Our event monitoring product gathers information about your Salesforce org’s operational events, which you can use to analyze usage trends and user behavior.\n\n### Why monitor Salesforce Event Logs with New Relic?\n\nThe [New Relic Salesforce Event Log](https://newrelic.com/resources/datasheets/salesforce-solution-brief) monitoring quickstart helps you view the granular details of user activities in your organization. With the integration, you can track trends in events, identify suspicious user behavior, and protect your firm’s data. What’s more, you can identify parts of your organization that aren’t performing up to expectation, thereby gaining insights on which performance to optimize.\nTo allow New Relic monitoring products to collect Salesforce Event Log data, you need to have read access to the Salesforce Event Logs, and enable the Salesforce event log file API.\nInstall the New Relic Salesforce Event Log quickstart today to instantly monitor your organization’s Salesforce events in real-time. The instant observability quickstart is the key to a seamless Salesforce Event Log monitoring.",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/salesforce-eventlog-for-logs",
-    "id": "9e721dc6-e854-4a7f-86ef-c256209fbc91",
-    "level": "COMMUNITY",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/salesforce-eventlog-for-logs/logo.png",
-    "summary": "Monitoring Salesforce Event Log is critical to ensure that you track events’ trends, and detect suspicious user behavior. Install the New Relic quicksart to proactively monitor Saleforce Event Logs.",
-    "websiteUrl": null,
-    "keywords": [
-      "nrlabs",
-      "nrlabs-data",
-      "salesforce",
-      "salesforce event log"
-    ],
-    "authors": [
-      "New Relic Labs"
-    ],
-    "dashboards": [],
-    "alerts": [],
-    "documentation": [
-      {
-        "name": "Salesforce Event Logs integration for New Relic Logs",
-        "description": "Salesforce Event Logs integration for New Relic Logs offers an integration to process and forward Salesforce event log files to New Relic Logs.\n",
-        "url": "https://github.com/newrelic-experimental/newrelic-logs-salesforce-eventlogfile"
-      }
-    ],
-    "installPlans": []
-  },
-  {
     "title": "Synthetics Page Link Crawler",
     "name": "synthetics-page-link-crawler",
     "description": "## What is a link crawler?\n\nLink crawler helps you to automatically test your webpage links to detect broken links. When a website URL is provided, synthetic Link Crawler will visit the URL, test all the links on the website, and return any broken links.\n\n### New Relic synthetic link crawler\n\nBroken links in a website can lead to many problems, including missing web pages,  site performance issues, and a reduction in site conversion rates. The New Relic synthetic link crawler quickstart offers you a broken link monitor for your website links. This monitor is one of the seven types of New Relic synthetic monitors. Others include certificate check monitor, ping monitor, step monitor, simple browser monitors, scripted browser monitors, and API tests.\n\n### Why should you monitor your site links with New Relic?\n\nMonitoring website links with New Relic synthetic link crawler quickstart is crucial to quickly detect broken links and resolve outages. The [synthetic monitor](https://docs.newrelic.com/docs/synthetics/synthetic-monitoring/getting-started/types-synthetic-monitors/) provides detailed statistics for each web page resource and downtime incidents. You can also collect [custom response codes](https://docs.newrelic.com/docs/synthetics/new-relic-synthetics/using-monitors/synthetics-response-codes) for more details on your monitor runs.\n\nNew Relic synthetic broken link monitor quickstart also leverages the [host-not-reporting](https://docs.newrelic.com/docs/infrastructure/new-relic-infrastructure/configuration/create-infrastructure-host-not-reporting-condition) feature in infrastructure monitoring. This gives you the advantage of enhanced monitoring options, and you can get notified when New Relic stops receiving data from your hosts.\n\nDownload and install the New Relic synthetic broken link monitor quickstart today to start monitoring your websites for broken links.",
@@ -5813,6 +5783,65 @@
       }
     ],
     "installPlans": []
+  },
+  {
+    "title": "Salesforce Event Logs integration for New Relic Logs",
+    "name": "salesforce-eventlog-for-logs",
+    "description": "## What is Salesforce Event Log?\n\nSalesforce event log refers to a log file generated when an event occurs in your organization. There are up to 50 event types that can be consumed. Some of the event types include logins, logouts, visualforce page loads, report exports, apex executions, URI (web clicks in Salesforce Classic), application programming interface (API) calls, etc. To collect Salesforce event log data, you have to have read access to the Salesforce event log and enable the Salesforce event log file API. Create a Salesforce 'Connected App' to use OAuth authentication.\n\n### New Relic and Salesforce Event Log\n\nThe New Relic Salesforce Event Log integration allows you to process and forward Salesforce Event Log files to New Relic Logs. Our event monitoring product gathers information about your Salesforce org’s operational events, which you can use to analyze usage trends and user behavior.\n\n### Why monitor Salesforce Event Logs with New Relic?\n\nThe [New Relic Salesforce Event Log](https://newrelic.com/resources/datasheets/salesforce-solution-brief) monitoring quickstart helps you view the granular details of user activities in your organization. With the integration, you can track trends in events, identify suspicious user behavior, and protect your firm’s data. What’s more, you can identify parts of your organization that aren’t performing up to expectation, thereby gaining insights on which performance to optimize.\nTo allow New Relic monitoring products to collect Salesforce Event Log data, you need to have read access to the Salesforce Event Logs, and enable the Salesforce event log file API.\nInstall the New Relic Salesforce Event Log quickstart today to instantly monitor your organization’s Salesforce events in real-time. The instant observability quickstart is the key to a seamless Salesforce Event Log monitoring.\n\n## Dashboards\n\nVisualize the following security aspects of any Salesforce org to get a clear picture of your environment's security and ensure that sensitive data in your organization is not breached:\n- Users and where they login from\n- What reports users access/export and how large these reports are\n- Lightning CRUDs\n- Apex Triggers for Account, Contact, Opportunity, Lead databases and more\n- Platform Encryption Actions\n- Admin Impersonations",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/salesforce-eventlog-for-logs",
+    "id": "9e721dc6-e854-4a7f-86ef-c256209fbc91",
+    "level": "COMMUNITY",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/salesforce-eventlog-for-logs/logo.png",
+    "summary": "Monitoring Salesforce Event Log is critical to ensure that you track events’ trends, and detect suspicious user behavior. Install the New Relic quicksart to proactively monitor Saleforce Event Logs.",
+    "websiteUrl": null,
+    "keywords": [
+      "nrlabs",
+      "nrlabs-data",
+      "nrlabs-viz",
+      "salesforce",
+      "salesforce event log"
+    ],
+    "authors": [
+      "New Relic Labs"
+    ],
+    "dashboards": [
+      {
+        "name": "SFDC Overview - SK test 1",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/salesforce-eventlog-for-logs/dashboards/sfdc-overview/sfdc-overview-01.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/salesforce-eventlog-for-logs/dashboards/sfdc-overview/sfdc-overview-02.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/salesforce-eventlog-for-logs/dashboards/sfdc-overview/sfdc-overview-03.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/salesforce-eventlog-for-logs/dashboards/sfdc-overview/sfdc-overview-04.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/salesforce-eventlog-for-logs/dashboards/sfdc-overview/sfdc-overview-05.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/salesforce-eventlog-for-logs/dashboards/sfdc-overview/sfdc-overview-06.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/salesforce-eventlog-for-logs/dashboards/sfdc-overview/sfdc-overview-07.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/salesforce-eventlog-for-logs/dashboards/sfdc-overview/sfdc-overview-08.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/salesforce-eventlog-for-logs/dashboards/sfdc-overview/sfdc-overview-09.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/salesforce-eventlog-for-logs/dashboards/sfdc-overview/sfdc-overview-10.png"
+        ]
+      }
+    ],
+    "alerts": [],
+    "documentation": [
+      {
+        "name": "Salesforce Event Logs integration for New Relic Logs",
+        "description": "Salesforce Event Logs integration for New Relic Logs offers an integration to process and forward Salesforce event log files to New Relic Logs.\n",
+        "url": "https://github.com/newrelic-experimental/newrelic-logs-salesforce-eventlogfile"
+      },
+      {
+        "name": "Salesforce Security Dashboards",
+        "description": "Salesforce Security Dashboard provides visualization into the security details of your salesforce organiztion.\n",
+        "url": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/salesforce-eventlog-for-logs/dashboards/sfdc_security.md"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "Salesforce Event Logs Monitoring",
+        "id": "third-party-salesforce-eventlog-for-logs"
+      }
+    ]
   },
   {
     "title": "Prometheus OpenMetrics Integration Stats",
@@ -12487,11 +12516,11 @@
     ],
     "dashboards": [
       {
-        "name": "Lacework Security Overview",
+        "name": "Lacework Anomaly Detections",
         "description": null,
         "url": null,
         "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/lacework/dashboards/lacework-security-overview/lacework-security-overview.png"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/lacework/dashboards/lacework-anomaly-detections/lacework-anomaly-detections.png"
         ]
       },
       {
@@ -12503,11 +12532,11 @@
         ]
       },
       {
-        "name": "Lacework Anomaly Detections",
+        "name": "Lacework Security Overview",
         "description": null,
         "url": null,
         "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/lacework/dashboards/lacework-anomaly-detections/lacework-anomaly-detections.png"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/lacework/dashboards/lacework-security-overview/lacework-security-overview.png"
         ]
       }
     ],
@@ -16766,19 +16795,19 @@
     ],
     "dashboards": [
       {
+        "name": "Catchpoint-Response Size",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/catchpoint/dashboards/Catchpoint-Response_Size/Catchpoint-Response_Size.png"
+        ]
+      },
+      {
         "name": "Catchpoint-Test Times",
         "description": null,
         "url": null,
         "screenshots": [
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/catchpoint/dashboards/Catchpoint-Test_Times/Catchpoint-Test_Times.png"
-        ]
-      },
-      {
-        "name": "Catchpoint-Overview",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/catchpoint/dashboards/Catchpoint-Overview/Catchpoint-Overview.png"
         ]
       },
       {
@@ -16790,11 +16819,11 @@
         ]
       },
       {
-        "name": "Catchpoint-Response Size",
+        "name": "Catchpoint-Overview",
         "description": null,
         "url": null,
         "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/catchpoint/dashboards/Catchpoint-Response_Size/Catchpoint-Response_Size.png"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/catchpoint/dashboards/Catchpoint-Overview/Catchpoint-Overview.png"
         ]
       }
     ],
@@ -21689,11 +21718,11 @@
     ],
     "dashboards": [
       {
-        "name": "Browser Overview",
+        "name": "JavaScript Errors",
         "description": null,
         "url": null,
         "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/browser/dashboards/browser_overview/browser_overview.png"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/browser/dashboards/javascript_errors/javascript_errors.png"
         ]
       },
       {
@@ -21705,19 +21734,19 @@
         ]
       },
       {
+        "name": "Browser Overview",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/browser/dashboards/browser_overview/browser_overview.png"
+        ]
+      },
+      {
         "name": "Browser Traffic Analysis",
         "description": null,
         "url": null,
         "screenshots": [
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/browser/dashboards/traffic_analysis/traffic_analysis.png"
-        ]
-      },
-      {
-        "name": "JavaScript Errors",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/browser/dashboards/javascript_errors/javascript_errors.png"
         ]
       }
     ],
