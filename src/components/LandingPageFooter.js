@@ -26,6 +26,7 @@ const LandingPageFooter = ({
                     grid-template-columns: repeat(4, 1fr);
                     gap: 10px;
                     grid-auto-rows: minmax(100px, auto);
+                    font-size: 18px;
 
                     @media (max-width: 760px) {
                         grid-template-columns: repeat(1, 1fr);
@@ -36,24 +37,27 @@ const LandingPageFooter = ({
                     @media (min-width: 760px) {
                       margin-left: 156px;
                         margin-right: 155px;
-                      h3 {
-                          margin-bottom: 58px
+                      h6 {
+                          margin-bottom: 66px;
+                      }
+                      .collaborate-section {
+                          margin-bottom: 34px !important;
                       }
                     }
           `}>
                 <PageTools.Section>
-                    <h3>
+                    <h6>
                         Authors
-                    </h3>
+                    </h6>
                     <p>
                         {quickstart.authors.join(', ')}
                     </p>
                 </PageTools.Section>
 
                 <PageTools.Section>
-                    <h3>
+                    <h6>
                         Support
-                    </h3>
+                    </h6>
                     <div>
                         <SupportSection
                             supportLevel={quickstart.level}
@@ -63,9 +67,9 @@ const LandingPageFooter = ({
                 </PageTools.Section>
 
                 <PageTools.Section>
-                    <h3>
+                    <h6 className='collaborate-section'>
                         Collaborate on this quickstart
-                    </h3>
+                    </h6>
                     <div>
                         <Button
                             css={css`
@@ -130,9 +134,9 @@ const LandingPageFooter = ({
                 </PageTools.Section>
 
                 <PageTools.Section>
-                    <h3>
+                    <h6>
                         Related Resources
-                    </h3>
+                    </h6>
                     <RelatedResources
                         css={css`
                             padding: 0;

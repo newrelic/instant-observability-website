@@ -33,29 +33,35 @@ const QuickstartHowToUse = ({
         }
         `}>
         <PageTools.Section>
-          <div
+          <h3
             css={css`
             top: 0;
             padding-top: 0.5rem;
             height: 2.5rem;
             width: 100%;
+            font-weight: 400;
+
+            @media screen and (min-width: 760px){
+            line-height: 50px;
+            margin-bottom: 35px !important;
+            }
+
             @media screen and (max-width: 760px){
               padding-bottom: 58px !important;
+              margin-bottom: 24px !important;
+              line-height: 40px ;
             }
           `}
-          > 
-              <h1
-                css={css`
-                  `}>
-                How to use this quickstart
-              </h1>
-          </div>
+          >
+            How to use this quickstart
+          </h3>
         </PageTools.Section>
 
         <PageTools.Section>
           <ul
-          css={css`
+            css={css`
           color: var(--black-text-color);
+          font-size: 18px;
           `}>
             <li
               css={css`
@@ -121,6 +127,7 @@ const QuickstartHowToUse = ({
             css={css`
                             background: var(--background-color);
                             padding: 13px 20px 14px 20px;
+                            font-weight: 400;
                           `} />
         </PageTools.Section>
       </div>

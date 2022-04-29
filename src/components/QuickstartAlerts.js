@@ -53,13 +53,14 @@ const QuickstartAlerts = ({ quickstart }) => (
       
           `}
           />
-          <h3
+          <p
             css={css`
+            font-family: 'Söhne-Kräftig';
           margin-top: 16px;
           margin-bottom: 16px;
           `}>
             {alert.name}
-          </h3>
+          </p>
           {alert.details && <p>{alert.details}</p>}
         </Surface>
       ))}
