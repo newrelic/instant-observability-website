@@ -1,15 +1,17 @@
 import React from 'react';
 import { css } from '@emotion/react';
 import pluralize from 'pluralize';
-import { Surface, Tag } from '@newrelic/gatsby-theme-newrelic';
+import { Surface } from '@newrelic/gatsby-theme-newrelic';
 import Intro from './Intro';
 import { quickstart } from '../types';
+import AlertIconSVG from './Icons/AlertIconSVG';
 
 const QuickstartAlerts = ({ quickstart }) => (
   <>
     <Intro
       css={css`
         margin-bottom: 16px;
+        color: var(--black-text-color);
       `}
     >
       {quickstart.title} observability quickstart contains{' '}
@@ -23,32 +25,41 @@ const QuickstartAlerts = ({ quickstart }) => (
       css={css`
         display: grid;
         grid-gap: 1rem;
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(4, 1fr);
+        color: var(--black-text-color);
 
-        @media (max-width: 1180px) {
+        @media (max-width: 760px) {
           grid-template-columns: repeat(1, 1fr);
         }
+        .esuq8iu0 {
+          box-shadow: none;
+        }
       `}
+
     >
       {quickstart.alerts.map((alert, index) => (
         <Surface
           key={index}
           base={Surface.BASE.PRIMARY}
           css={css`
-            padding: 1rem;
+            padding: 2rem;
           `}
         >
-          <h3>{alert.name}</h3>
-          {alert.type && (
-            <Tag
-              css={css`
-                display: inline-block;
-                margin-bottom: 1rem;
-              `}
-            >
-              Alert Type: {alert.type}
-            </Tag>
-          )}
+          <AlertIconSVG className="Alert"
+            css={css`
+            width: 0.75rem;
+            height: 1rem;
+            margin-left: 0.5rem;
+      
+          `}
+          />
+          <h3
+            css={css`
+          margin-top: 16px;
+          margin-bottom: 16px;
+          `}>
+            {alert.name}
+          </h3>
           {alert.details && <p>{alert.details}</p>}
         </Surface>
       ))}

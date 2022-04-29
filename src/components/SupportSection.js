@@ -11,6 +11,14 @@ import {
 const SupportSection = ({ supportLevel, onClick: onLinkClick }) => {
   const supportLink = (
     <Link
+      css={css`
+          color: var(--link-font-color);
+  
+          &:hover{
+            color: var(--hover-color);
+          }
+    
+    `}
       to={SUPPORT_LINK}
       key={QUICKSTART_SUPPORT_LEVELS.NEWRELIC}
       onClick={() =>
@@ -23,6 +31,13 @@ const SupportSection = ({ supportLevel, onClick: onLinkClick }) => {
 
   const communityLink = (
     <Link
+      css={css`
+            color: var(--link-font-color);
+            
+            &:hover{
+              color: var(--hover-color);
+            }
+    `}
       to={COMMUNITY_LINK}
       key={QUICKSTART_SUPPORT_LEVELS.NEWRELIC}
       onClick={() => onLinkClick('QuickstartDetailsCommunityClick')}
@@ -67,6 +82,7 @@ const SupportSection = ({ supportLevel, onClick: onLinkClick }) => {
       <h5
         css={css`
           text-transform: uppercase;
+          color: var( --link-font-color);
         `}
       >
         {QUICKSTART_SUPPORT_CONTENT[`${supportLevel}`].title}

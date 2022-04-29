@@ -1,12 +1,15 @@
 import '../components/styles.scss';
+import '../components/styles.scss';
+import '../components/fonts.scss';
+import '../components/fonts.scss';
 
 import {
   GlobalFooter,
   GlobalHeader,
-  Layout,
   NR_SITES,
 } from '@newrelic/gatsby-theme-newrelic';
 
+import Layout from '../components/Layout';
 import PropTypes from 'prop-types';
 import { QUICKSTARTS_COLLAPSE_BREAKPOINT } from '../data/constants';
 import React from 'react';
@@ -27,7 +30,6 @@ const QuickStartLayout = ({ children }) => {
             padding: 0;
 
             > * {
-              margin: var(--site-content-padding);
             }
           `}
         >
@@ -45,7 +47,7 @@ const QuickStartLayout = ({ children }) => {
           }
 
           @media screen and (max-width: 920px) {
-            height: 1240px;
+            --footer-height: 1240px;
           }
         `}
       />

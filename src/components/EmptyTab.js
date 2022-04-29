@@ -14,13 +14,13 @@ const EmptyTab = ({
       border: 1px solid var(--divider-color);
       border-radius: 0.25rem;
       padding: 1rem;
-      text-align: center;
+      text-align: left;
     `}
   >
     <Icon
       css={css`
         display: block;
-        margin: 2rem auto;
+        margin: 15px 0px;
         font-size: 4rem;
         color: var(--divider-color);
       `}
@@ -35,7 +35,7 @@ const EmptyTab = ({
     <div
       css={css`
         display: flex;
-        justify-content: center;
+        justify-content: left;
       `}
     >
       <Button

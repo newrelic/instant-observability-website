@@ -1,8 +1,34 @@
 :root {
   --height-mobile-nav-bar: 60px;
   --ease-out-quad: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  --link-font-color: black;
+  --hover-color: #1D252C;
+  --white-hover-color: #F9FAFA;
+  --background-color: #1D252C;
+  --btn-text-color: white;
+  --black-text-color : #1D252C;
 }
-
+h1,h2,h3{
+  font-family: 'Söhne-Kräftig';
+}
+h1{
+  font-size:72px;
+}
+h2{
+  font-size:56px;
+}
+h3{
+  font-size:44px;
+}
+h4,h5,h6,p{
+ font-family: 'Söhne-Buch';
+}
+h6{
+  font-size:24px;
+}
+p{
+  font-size:18px;
+}
 input[type='text'] {
   border: 1px solid var(--border-color);
   border-radius: 4px;
@@ -61,4 +87,14 @@ input[type='text'] {
   #onetrust-banner-sdk.otFloatingRoundedCorner {
     max-width: 100%;
   }
+}
+
+.slick-track {
+  float: left;
+  justify-content: center;
+  align-items: center;
+}
+
+.e132irl20 {
+  font-weight: none;
 }
