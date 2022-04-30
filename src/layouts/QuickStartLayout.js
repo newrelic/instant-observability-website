@@ -1,6 +1,4 @@
 import '../components/styles.scss';
-import '../components/styles.scss';
-import '../components/fonts.scss';
 import '../components/fonts.scss';
 
 import {
