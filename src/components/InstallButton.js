@@ -130,13 +130,13 @@ const InstallButton = ({ quickstart, location, ...props }) => {
   // first documentation supplied.
   const url = hasInstallableComponent
     ? createInstallLink(
-      quickstart.id,
-      nerdletId,
-      hasGuidedInstall,
-      hasUtmParameters,
-      checkIfReturningUser(),
-      parameters
-    )
+        quickstart.id,
+        nerdletId,
+        hasGuidedInstall,
+        hasUtmParameters,
+        checkIfReturningUser(),
+        parameters
+      )
     : quickstart.documentation[0].url;
 
   const writeCookie = () => {
@@ -180,19 +180,16 @@ const InstallButton = ({ quickstart, location, ...props }) => {
       onClick={handleInstallClick}
       variant={Button.VARIANT.PRIMARY}
       css={css`
-      border-radius: 4px;
-      &:hover{
-        background-color: #1D252C;
-      }
+        border-radius: 4px;
+        padding: 1rem;
+
+        background-color: #1d252c;
+        &:hover {
+          background-color: #1d252c;
+        }
       `}
     >
-      {hasInstallableComponent ? (
-        <>
-          Install now
-        </>
-      ) : (
-        'See installation docs'
-      )}
+      {hasInstallableComponent ? <>Install now</> : 'See installation docs'}
     </Button>
   );
 };

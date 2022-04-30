@@ -129,6 +129,7 @@ const BannerHeaderContent = ({ search, setSearch, setIsSearchInputEmpty }) => {
     </div>
   );
 };
+
 const IOBanner = ({ search, setSearch, setIsSearchInputEmpty }) => {
   return (
     <div

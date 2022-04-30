@@ -1,13 +1,5 @@
-import {
-  Button,
-  Icon,
-  Link,
-  useTessen,
-} from '@newrelic/gatsby-theme-newrelic';
-import {
-  QUICKSTARTS_REPO,
-  SHIELD_LEVELS
-} from '../data/constants';
+import { Button, Icon, Link, useTessen } from '@newrelic/gatsby-theme-newrelic';
+import { QUICKSTARTS_REPO, SHIELD_LEVELS } from '../data/constants';
 import React, { useEffect, useState } from 'react';
 
 import Breadcrumbs from '../components/Breadcrumbs';
@@ -24,10 +16,10 @@ import Dashboards from '../components/WhatsIncluded/Dashboards';
 import Alerts from '../components/WhatsIncluded/Alerts';
 import DataSources from '../components/WhatsIncluded/DataSources';
 import Layout from '../components/Layout';
-import QuickstartOverview from '../components/QuickstartOverview'
+import QuickstartOverview from '../components/QuickstartOverview';
+import LandingBanner from '../components/LandingBanner';
 
 const QuickstartDetails = ({ data, location }) => {
-
   const [imgStyle, setImgStyle] = useState({});
 
   const quickstart = data.quickstarts;
@@ -73,34 +65,34 @@ const QuickstartDetails = ({ data, location }) => {
   const getURLMeta = async (url) => {
     const img = new Image();
     img.src = url;
-    const { width, height } = await new Promise(resolve => {
+    const { width, height } = await new Promise((resolve) => {
       img.onload = function () {
         resolve({
           width: this.width,
-          height: this.height
-        })
-      }
-    })
-    return { width, height }
+          height: this.height,
+        });
+      };
+    });
+    return { width, height };
   };
 
   const getImgStyle = async () => {
-    const { width, height } = await getURLMeta(quickstart.logoUrl)
+    const { width, height } = await getURLMeta(quickstart.logoUrl);
     const style = {};
     // if image is rectangle
     if (width > height) {
       style.width = '';
       style.height = '';
     } else {
-      style.width = '80px'
-      style.height = '80px'
+      style.width = '80px';
+      style.height = '80px';
     }
     setImgStyle(style);
   };
 
   useEffect(() => {
     getImgStyle();
-  }, [quickstart.logoUrl])
+  }, [quickstart.logoUrl]);
 
   return (
     <>
@@ -111,165 +103,48 @@ const QuickstartDetails = ({ data, location }) => {
         tags={quickstart.keywords}
         meta={quickStartMeta}
       />
-      <Breadcrumbs segments={breadcrumbs} />
-      <PageLayout.Header
-        title={quickstart.title}
-        icon={
-          SHIELD_LEVELS.includes(quickstart.level) && (
-            <Icon
-              name="nr-check-shield"
-              size="50%"
-              css={css`
-                    width: 0.75rem;
-                    height: 1rem;
-                    margin-left: 0.5rem;
-                  `}
-            />
-          )
-        }
-        css={css`
-              border-bottom: none;
-              display: grid;
-              grid-column-gap: 1rem;
-              grid-row-gap: 1rem;
-              grid-template-areas:
-                'title logo'
-                'summ logo'
-                'cta logo';
-              justify-content: normal;
-              justify-self: center;
-              row-gap: 1rem;
-              width: 101%;
-
-              h1 {
-                font-weight: normal;
-                grid-area: title;
-                padding-bottom: 1rem;
-              }
-
-              @media (min-width: 760px) {
-                background: var(--primary-background-color);
-                border-bottom: 1px solid var(--border-color);
-                border-radius: 0.25rem;
-                grid-template-areas:
-                  'logo title cta'
-                  'logo summ cta';
-                padding: 16px 0 24px;
-                position: sticky;
-                top: var(--global-header-height);
-                z-index: 80;
-              }
-
-              .dark-mode {
-                box-shadow: none;
-              }
-            `}
-      >
-        {quickstart.logoUrl && (
-          <img
-            style={imgStyle}
-            src={quickstart.logoUrl}
-            alt={quickstart.title}
-            css={css`
-                  max-height: 100%;
-                  max-width: 12rem;
-                  width: 100%;
-                  grid-area: logo;
-                  align-self: center;
-                  justify-self: center;
-
-                  .dark-mode & {
-                    background-color: white;
-                  }
-
-                  @media (max-width: 760px) {
-                    display: none;
-                  }
-                `}
-          />
-        )}
-        {quickstart.summary && (
-          <div
-            css={css`
-                  grid-area: summ;
-                  max-width: 50vw;
-
-                  @media (max-width: 760px) {
-                    max-width: 100%;
-                  }
-                `}
-          >
-            {quickstart.summary}
-          </div>
-        )}
-        <div
+      <PageLayout.Header>
+        <LandingBanner
           css={css`
-                grid-area: cta;
-                display: flex;
-                justify-content: center;
-                align-self: center;
-                @media (max-width: 760px) {
-                  flex-direction: column;
-                  align-items: stretch;
-                }
-              `}
-        >
-          <InstallButton quickstart={quickstart} location={location} />
-          <Button
-            as={Link}
-            variant={Button.VARIANT.OUTLINE}
-            to={quickstartUrl}
-            rel="noopener noreferrer"
-            css={css`
-                  margin: 0 0 0 0.5rem;
-                  @media (max-width: 760px) {
-                    margin: 1rem 0 0 0;
-                  }
-                `}
-            onClick={trackQuickstart('QuickstartViewRepoClick', quickstart)}
-          >
-            <Icon
-              name="fe-github"
-              css={css`
-                    margin-right: 7px;
-                  `}
-            />
-            View repo
-          </Button>
-        </div>
+            margin-left: 156px;
+            margin-right: 156px;
+            width: 100%;
+          `}
+          quickstart={quickstart}
+        />
       </PageLayout.Header>
 
       <Layout.Content>
-
         {/* What's included section here */}
         <div
           css={css`
+            --banner-height: 368px;
+            margin: var(--banner-height) auto;
             @media (min-width: 760px) {
-                  margin-right: 122.34px;
-                  padding-bottom: 60px;
-            }   
+              margin-right: 122.34px;
+              padding-bottom: 60px;
+            }
             @media (max-width: 760px) {
               padding-bottom: 60px;
-        }
-          `}> 
-            
+            }
+          `}
+        >
           <Dashboards quickstart={quickstart} />
           <Alerts quickstart={quickstart} />
           <DataSources quickstart={quickstart} />
-
         </div>
         <div
           css={css`
-          mix-blend-mode: normal;
-          width:50%;
-          opacity: 0.84;
-          border: 5px solid #E8E8E8;
-          border-radius: 5px;
-          transform: rotate(180deg);
+            mix-blend-mode: normal;
+            width: 50%;
+            opacity: 0.84;
+            border: 5px solid #e8e8e8;
+            border-radius: 5px;
+            transform: rotate(180deg);
 
-          @media (max-width: 760px) {
-          width: 100%;
-          }
+            @media (max-width: 760px) {
+              width: 100%;
+            }
           `}
         ></div>
         <div>
@@ -278,11 +153,11 @@ const QuickstartDetails = ({ data, location }) => {
         {/* How to use this quickstart here */}
         <div
           css={css`
-             background-color: #F1F2F2;      
-              padding-top: 30px;
-              padding-bottom: 30px;
-           
-          `}>
+            background-color: #f1f2f2;
+            padding-top: 30px;
+            padding-bottom: 30px;
+          `}
+        >
           <QuickstartHowToUse
             quickstart={quickstart}
             trackQuickstart={trackQuickstart}
@@ -292,16 +167,16 @@ const QuickstartDetails = ({ data, location }) => {
         {/* Get started component here */}
         <div
           css={css`
-              padding-top: 30px;
-              padding-bottom: 30px; 
-          `}>
-          <LandingPageFooter quickstart={quickstart}
+            padding-top: 30px;
+            padding-bottom: 30px;
+          `}
+        >
+          <LandingPageFooter
+            quickstart={quickstart}
             trackQuickstart={trackQuickstart}
             tessenSupportTrack={tessenSupportTrack}
           />
-
         </div>
-
       </Layout.Content>
     </>
   );
