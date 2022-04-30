@@ -1,3 +1,4 @@
+import { LOCALS, RESOURCES, SOCIALS } from '../../../data/constants';
 import { graphql, useStaticQuery } from 'gatsby';
 
 import ExternalLink from '@newrelic/gatsby-theme-newrelic/src/components/ExternalLink';
@@ -10,95 +11,6 @@ import { css } from '@emotion/react';
 import useThemeTranslation from '@newrelic/gatsby-theme-newrelic/src//hooks/useThemeTranslation';
 
 const MOBILE_BREAKPOINT = '920px';
-
-const RESOURCES = [
-  {
-    title: 'About Us',
-    href: 'https://newrelic.com/about',
-  },
-  {
-    title: 'Leadership',
-    href: 'https://newrelic.com/about/leadership',
-  },
-  {
-    title: 'Careers',
-    href: 'https://newrelic.com/about/culture',
-  },
-  {
-    title: 'Social Impact',
-    href: 'https://newrelic.com/social-impact',
-  },
-  {
-    title: 'Newsroom',
-    href: 'https://newrelic.com/about/newsroom',
-  },
-  {
-    title: 'Customers',
-    href: 'https://newrelic.com/customers',
-  },
-  {
-    title: 'Partner Program',
-    href: 'https://newrelic.com/solutions/partners',
-  },
-  {
-    title: 'Investor Relations',
-    href: 'https://ir.newrelic.com/investors-home/default.aspx',
-  },
-  {
-    title: 'Suppliers Portal',
-    href: 'https://newrelic.com/procurement/suppliers',
-  },
-  {
-    title: 'Security',
-    href: 'https://newrelic.com/security',
-  },
-  {
-    title: 'Contact Us',
-    href: 'https://newrelic.com/about/contact-us',
-  },
-];
-
-const SOCIALS = [
-  {
-    title: 'facebook',
-    href: 'http://www.facebook.com/NewRelic',
-  },
-  {
-    title: 'linkedin',
-    href: 'https://www.linkedin.com/company/new-relic-inc-',
-  },
-  {
-    title: 'instagram',
-    href: 'https://www.instagram.com/newrelic/',
-  },
-  {
-    title: 'youtube',
-    href: 'https://www.youtube.com/user/NewRelicInc/featured',
-  },
-  {
-    title: 'github',
-    href: 'https://github.com/newrelic',
-  },
-  {
-    title: 'twitch',
-    href: 'https://www.twitch.tv/new_relic',
-  },
-  {
-    title: 'twitter',
-    href: 'https://twitter.com/newrelic',
-  },
-];
-
-const LOCALS = [
-  {
-    title: 'Français',
-    href: 'https://newrelic.com/fr',
-  },
-  {
-    title: 'Deutsch',
-    href: 'https://newrelic.com/de',
-  },
-];
 
 const GlobalFooter = ({ className }) => {
   const { t } = useThemeTranslation();
@@ -132,7 +44,6 @@ const GlobalFooter = ({ className }) => {
         font-size: 18px;
         font-weight: 600;
         line-height: 24px;
-        font-feature-settings: 'ss02' on;
 
         a {
           color: var(--secondary-text-color);
@@ -141,7 +52,7 @@ const GlobalFooter = ({ className }) => {
         }
 
         a:hover {
-          text-decoration: underline;
+          color: white;
         }
       `}
     >
@@ -215,8 +126,8 @@ const GlobalFooter = ({ className }) => {
               grid-area: socials;
 
               @media screen and (min-width: calc(${MOBILE_BREAKPOINT} + 1px)) {
-                /* Set the same amount of rows and columns to mimic 
-                 * the resources grid. 
+                /* Set the same amount of rows and columns to mimic
+                 * the resources grid.
                  */
                 grid-template-rows: repeat(4, 1fr);
                 grid-template-columns: repeat(4, 1fr);
@@ -234,6 +145,10 @@ const GlobalFooter = ({ className }) => {
                   /* Shifts the last row to the right by 1 column */
                   :nth-child(3n + 3) {
                     grid-column-start: 2;
+                  }
+
+                  :hover > svg {
+                    fill: white;
                   }
                 }
               }
@@ -270,6 +185,7 @@ const GlobalFooter = ({ className }) => {
                     stroke-width: 0px;
                     color: var(--secondary-text-color);
                     fill: var(--secondary-text-color);
+
                   `}
                 />
               </ExternalLink>
