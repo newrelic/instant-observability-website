@@ -1,4 +1,5 @@
 import { Button, ExternalLink } from '@newrelic/gatsby-theme-newrelic';
+import { DEMO_LINK, SIGNUP_LINK } from '../data/constants';
 
 import React from 'react';
 import { css } from '@emotion/react';
@@ -88,7 +89,7 @@ const GetStartedFooter = () => {
       >
         <Button
           as={ExternalLink}
-          href={'https://newrelic.com/signup'}
+          href={SIGNUP_LINK}
           css={css`
             background-color: var(--nr-black);
             color: var(--nr-green);
@@ -98,7 +99,7 @@ const GetStartedFooter = () => {
         </Button>
         <Button
           as={ExternalLink}
-          href={'https://newrelic.com/request-demo'}
+          href={DEMO_LINK}
           css={css`
             background-color: var(--nr-green);
             color: var(--nr-black);
