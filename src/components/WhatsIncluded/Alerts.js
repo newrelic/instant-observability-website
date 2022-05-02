@@ -27,6 +27,10 @@ const Alerts = ({ quickstart }) => {
                 margin-left: 40px;
               margin-right: 23px;
             }}
+
+            h6{
+                font-weight: 400;
+            }
         `}
         >
             <PageTools.Section>

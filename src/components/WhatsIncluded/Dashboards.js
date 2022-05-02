@@ -11,6 +11,11 @@ const Dashboards = ({ quickstart }) => {
             css={css`
         h3 {
             margin-bottom: 58px;
+            font-weight: 400;
+        }
+
+        h6 {
+            font-weight: 400;
         }
 
         @media (min-width: 760px) {

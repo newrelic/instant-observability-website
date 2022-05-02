@@ -39,6 +39,8 @@ const LandingPageFooter = ({
                         margin-right: 155px;
                       h6 {
                           margin-bottom: 66px;
+                            font-weight: 400;
+                        
                       }
                       .collaborate-section {
                           margin-bottom: 34px !important;
