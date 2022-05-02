@@ -1,31 +1,30 @@
-import PropTypes from 'prop-types';
-import { graphql } from 'gatsby';
-import React, { useState, useEffect } from 'react';
-import IOSeo from '../components/IOSeo';
-import { css } from '@emotion/react';
-import Overlay from '../components/Overlay';
-import QuickstartTile from '../components/QuickstartTile';
-import IOBanner from '../components/IOBanner';
-import {
-  useTessen,
-  Button,
-  Spinner,
-  Icon,
-} from '@newrelic/gatsby-theme-newrelic';
-import { navigate } from '@reach/router';
-
-import { useDebounce } from 'react-use';
-import { sortFeaturedQuickstarts } from '../utils/sortFeaturedQuickstarts';
-import { QUICKSTARTS_COLLAPSE_BREAKPOINT } from '../data/constants';
-import CATEGORIES from '../data/instant-observability-categories';
-
-import SuperTiles from '../components/SuperTiles';
-
-import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import '../components/fonts.scss';
 import '../components/styles.scss';
+
+import {
+  Button,
+  Icon,
+  Spinner,
+  useTessen,
+} from '@newrelic/gatsby-theme-newrelic';
+import React, { useEffect, useState } from 'react';
+
+import CATEGORIES from '../data/instant-observability-categories';
+import IOBanner from '../components/IOBanner';
+import IOSeo from '../components/IOSeo';
+import Overlay from '../components/Overlay';
+import PropTypes from 'prop-types';
+import { QUICKSTARTS_COLLAPSE_BREAKPOINT } from '../data/constants';
+import QuickstartTile from '../components/QuickstartTile';
+import Slider from 'react-slick';
+import SuperTiles from '../components/SuperTiles';
+import { css } from '@emotion/react';
+import { graphql } from 'gatsby';
+import { navigate } from '@reach/router';
+import { sortFeaturedQuickstarts } from '../utils/sortFeaturedQuickstarts';
+import { useDebounce } from 'react-use';
 
 const TRIPLE_COLUMN_BREAKPOINT = '1420px';
 const DOUBLE_COLUMN_BREAKPOINT = '1180px';
@@ -202,6 +201,37 @@ const QuickstartsPage = ({ data, location }) => {
     return found.displayName;
   };
 
+  const PrevArrow = (
+    <Icon
+      name="carousel-left"
+      size="120%"
+      viewBox="0 0 30 30"
+      css={css`
+        fill: white;
+        stroke: #00838f;
+        z-index: 100;
+        stroke-width: 1px;
+        width: 29px;
+        height: 29px;
+      `}
+    />
+  );
+  const NextArrow = (
+    <Icon
+      name="carousel-right"
+      size="120%"
+      viewBox="0 0 30 30"
+      css={css`
+        fill: white;
+        stroke: #00838f;
+        z-index: 100;
+        stroke-width: 1px;
+        width: 29px;
+        height: 29px;
+      `}
+    />
+  );
+
   // Settings for Slick-Carousel
   const settings = {
     dots: false,
@@ -212,6 +242,8 @@ const QuickstartsPage = ({ data, location }) => {
     adaptiveHeight: false,
     adaptiveWidth: true,
     mobileFirst: true, // necessary for breakpoints to work as expected
+    prevArrow: PrevArrow,
+    nextArrow: NextArrow,
     responsive: [
       {
         breakpoint: parseInt(TRIPLE_COLUMN_BREAKPOINT),
