@@ -125,6 +125,10 @@ const GlobalFooter = ({ className }) => {
 
               grid-area: socials;
 
+              > svg:hover {
+                fill: white;
+              }
+
               @media screen and (min-width: calc(${MOBILE_BREAKPOINT} + 1px)) {
                 /* Set the same amount of rows and columns to mimic
                  * the resources grid.
@@ -148,9 +152,7 @@ const GlobalFooter = ({ className }) => {
                     grid-column-start: 2;
                   }
 
-                  :hover > svg {
-                    fill: white;
-                  }
+
                 }
               }
 
