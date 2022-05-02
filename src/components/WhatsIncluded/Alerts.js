@@ -14,28 +14,39 @@ const Alerts = ({ quickstart }) => {
 
         @media (min-width: 760px) {
           margin-left: 156px;
-            // margin-right: 155px;
         }
 
         @media (max-width: 760px) {
           margin-left: 40px;
           margin-right: 23px;
         }
+
+        @media not all and (min-resolution:.001dpcm) and max-width: 760px { 
+            @media {
+                grid-template-columns: repeat(1, 1fr);
+                margin-left: 40px;
+              margin-right: 23px;
+            }}
+
+            h6{
+                font-weight: 400;
+            }
         `}
         >
             <PageTools.Section>
-                <h2>
+                <h6>
                     Alerts &nbsp;
                     <div
                         css={css`
                         display: inline-block;
-                        background: #D6D6D6;
-                        padding: 4px 6px 4px 6px;
+                        background: var(--background-grey-color);
+                        margin: 0px 8px;
+                        padding: 1px 4px;
                         border-radius: 3px;
                     `}
                     >
                         {quickstart.alerts.length}</div>
-                </h2>
+                </h6>
                 {quickstart.alerts?.length > 0 ? (
                     <QuickstartAlerts quickstart={quickstart} />
                 ) : (

@@ -9,8 +9,13 @@ const Dashboards = ({ quickstart }) => {
     return (
         <div
             css={css`
-        h1 {
+        h3 {
             margin-bottom: 58px;
+            font-weight: 400;
+        }
+
+        h6 {
+            font-weight: 400;
         }
 
         @media (min-width: 760px) {
@@ -23,25 +28,33 @@ const Dashboards = ({ quickstart }) => {
           margin-right: 23px;
           
         }
+
+        @media not all and (min-resolution:.001dpcm) and max-width: 760px { 
+            @media {
+                grid-template-columns: repeat(1, 1fr);
+                margin-left: 40px;
+              margin-right: 23px;
+            }}
         `}
         >
             <PageTools.Section>
-                <h1>
+                <h3>
                     What&apos;s included?
-                </h1>
-                <h2>
+                </h3>
+                <h6>
                     Dashboard
                     &nbsp;
                     <div
                         css={css`
                         display: inline-block;
-                        background: #D6D6D6;
-                        padding: 4px 6px 4px 6px;
+                        background: var(--background-grey-color);
+                        margin: 0px 8px;
+                        padding: 1px 4px;
                         border-radius: 3px;
                     `}
                     >
                         {quickstart.dashboards.length}</div>
-                </h2>
+                </h6>
                 {quickstart.dashboards?.length > 0 ? (
                     <QuickstartDashboards quickstart={quickstart} />
                 ) : (

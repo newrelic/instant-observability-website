@@ -7,10 +7,9 @@ import {
 import PropTypes from 'prop-types';
 import { css } from '@emotion/react';
 import '../components/styles.scss';
-import '../components/fonts.scss';
 import { QUICKSTARTS_COLLAPSE_BREAKPOINT } from '../data/constants';
-import '../components/fonts.scss';
 import Layout from '../components/Layout';
+import '../components/fonts.scss';
 
 const QuickStartLayout = ({ children }) => {
   return (

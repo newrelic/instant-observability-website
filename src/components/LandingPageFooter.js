@@ -26,6 +26,7 @@ const LandingPageFooter = ({
                     grid-template-columns: repeat(4, 1fr);
                     gap: 10px;
                     grid-auto-rows: minmax(100px, auto);
+                    font-size: 18px;
 
                     @media (max-width: 760px) {
                         grid-template-columns: repeat(1, 1fr);
@@ -36,24 +37,36 @@ const LandingPageFooter = ({
                     @media (min-width: 760px) {
                       margin-left: 156px;
                         margin-right: 155px;
-                      h3 {
-                          margin-bottom: 58px
+                      h6 {
+                          margin-bottom: 66px;
+                            font-weight: 400;
+                        
+                      }
+                      .collaborate-section {
+                          margin-bottom: 34px !important;
                       }
                     }
+
+                    @media not all and (min-resolution:.001dpcm) and max-width: 760px { 
+                        @media {
+                            grid-template-columns: repeat(1, 1fr);
+                            margin-left: 40px;
+                          margin-right: 23px;
+                        }}
           `}>
                 <PageTools.Section>
-                    <h3>
+                    <h6>
                         Authors
-                    </h3>
+                    </h6>
                     <p>
                         {quickstart.authors.join(', ')}
                     </p>
                 </PageTools.Section>
 
                 <PageTools.Section>
-                    <h3>
+                    <h6>
                         Support
-                    </h3>
+                    </h6>
                     <div>
                         <SupportSection
                             supportLevel={quickstart.level}
@@ -63,9 +76,9 @@ const LandingPageFooter = ({
                 </PageTools.Section>
 
                 <PageTools.Section>
-                    <h3>
+                    <h6 className='collaborate-section'>
                         Collaborate on this quickstart
-                    </h3>
+                    </h6>
                     <div>
                         <Button
                             css={css`
@@ -75,6 +88,7 @@ const LandingPageFooter = ({
                                 border-radius: 4px;
                                 padding: 13.5px 20px 13.5px 22px;
                                 column-gap: 14.45px; 
+                                font-weight: 400; 
                                 &:hover{
                                     color: var(--white-hover-color);
                                   }
@@ -112,7 +126,8 @@ const LandingPageFooter = ({
                                 color: var(--btn-text-color);
                                 border-radius: 4px;
                                 padding: 13.5px 20px 13.5px 22px;
-                                column-gap: 14.45px;    
+                                column-gap: 14.45px;   
+                                font-weight: 400; 
                                 &:hover{
                                     color: var(--white-hover-color);
                                 }
@@ -130,9 +145,9 @@ const LandingPageFooter = ({
                 </PageTools.Section>
 
                 <PageTools.Section>
-                    <h3>
+                    <h6>
                         Related Resources
-                    </h3>
+                    </h6>
                     <RelatedResources
                         css={css`
                             padding: 0;
