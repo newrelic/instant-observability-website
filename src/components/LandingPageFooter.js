@@ -44,6 +44,13 @@ const LandingPageFooter = ({
                           margin-bottom: 34px !important;
                       }
                     }
+
+                    @media not all and (min-resolution:.001dpcm) and max-width: 760px { 
+                        @media {
+                            grid-template-columns: repeat(1, 1fr);
+                            margin-left: 40px;
+                          margin-right: 23px;
+                        }}
           `}>
                 <PageTools.Section>
                     <h6>
