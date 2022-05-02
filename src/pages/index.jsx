@@ -25,6 +25,7 @@ import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import '../components/fonts.scss';
+import '../components/styles.scss';
 
 const TRIPLE_COLUMN_BREAKPOINT = '1420px';
 const DOUBLE_COLUMN_BREAKPOINT = '1180px';
@@ -518,25 +519,7 @@ const QuickstartsPage = ({ data, location }) => {
                       <strong>Most Popular</strong>
                     </span>
                   </div>
-                  <div
-                    css={css`
-                      display: block;
-                      grid-gap: 1.25rem;
-                      padding: 10px;
-                      grid-template-columns: repeat(4, 1fr);
-                      grid-auto-rows: 1fr;
-
-                      @media (max-width: ${TRIPLE_COLUMN_BREAKPOINT}) {
-                        grid-template-columns: repeat(3, 1fr);
-                      }
-                      @media (max-width: ${DOUBLE_COLUMN_BREAKPOINT}) {
-                        grid-template-columns: repeat(2, 1fr);
-                      }
-                      @media (max-width: ${SINGLE_COLUMN_BREAKPOINT}) {
-                        grid-template-columns: repeat(1, 1fr);
-                      }
-                    `}
-                  >
+                  <div>
                     {!loadComplete && <Spinner />}
                     {loadComplete && (
                       <Slider
@@ -550,12 +533,6 @@ const QuickstartsPage = ({ data, location }) => {
                           <QuickstartTile
                             key={pack.id}
                             featured={false}
-                            css={css`
-                              grid-template-rows:
-                                var(--tile-image-height) var(--title-row-height)
-                                80px auto;
-                              min-height: 280px;
-                            `}
                             {...pack}
                           />
                         ))}
@@ -589,25 +566,7 @@ const QuickstartsPage = ({ data, location }) => {
                   <strong>Featured</strong>
                 </span>
               </div>
-              <div
-                css={css`
-                  display: block;
-                  padding: 10px;
-                  grid-gap: 1.25rem;
-                  grid-template-columns: repeat(4, 1fr);
-                  grid-auto-rows: 1fr;
-
-                  @media (max-width: ${TRIPLE_COLUMN_BREAKPOINT}) {
-                    grid-template-columns: repeat(3, 1fr);
-                  }
-                  @media (max-width: ${DOUBLE_COLUMN_BREAKPOINT}) {
-                    grid-template-columns: repeat(2, 1fr);
-                  }
-                  @media (max-width: ${SINGLE_COLUMN_BREAKPOINT}) {
-                    grid-template-columns: repeat(1, 1fr);
-                  }
-                `}
-              >
+              <div>
                 {!loadComplete && <Spinner />}
                 {loadComplete && (
                   <Slider {...settings}>
@@ -615,12 +574,6 @@ const QuickstartsPage = ({ data, location }) => {
                       <QuickstartTile
                         key={pack.id}
                         featured={false}
-                        css={css`
-                          grid-template-rows:
-                            var(--tile-image-height) var(--title-row-height)
-                            80px auto;
-                          min-height: 280px;
-                        `}
                         {...pack}
                       />
                     ))}
