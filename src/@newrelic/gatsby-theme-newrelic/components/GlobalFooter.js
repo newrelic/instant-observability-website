@@ -94,14 +94,14 @@ const GlobalFooter = ({ className }) => {
             }}
           >
             <Icon
-              name="zap"
+              name="fe-zap"
               css={css`
                 margin-right: 7px;
               `}
             />
             Build your own
             <Icon
-              name="external-link"
+              name="fe-external-link"
               css={css`
                 margin-left: 7px;
               `}
