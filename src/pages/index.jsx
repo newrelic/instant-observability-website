@@ -26,8 +26,8 @@ import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import '../components/fonts.scss';
 
-const DOUBLE_COLUMN_BREAKPOINT = '1160px';
 const TRIPLE_COLUMN_BREAKPOINT = '1420px';
+const DOUBLE_COLUMN_BREAKPOINT = '1180px';
 const SINGLE_COLUMN_BREAKPOINT = '900px';
 
 /**
