@@ -79,6 +79,7 @@ const LandingPageFooter = ({
                                 border-radius: 4px;
                                 padding: 13.5px 20px 13.5px 22px;
                                 column-gap: 14.45px; 
+                                font-weight: 400; 
                                 &:hover{
                                     color: var(--white-hover-color);
                                   }
@@ -116,7 +117,8 @@ const LandingPageFooter = ({
                                 color: var(--btn-text-color);
                                 border-radius: 4px;
                                 padding: 13.5px 20px 13.5px 22px;
-                                column-gap: 14.45px;    
+                                column-gap: 14.45px;   
+                                font-weight: 400; 
                                 &:hover{
                                     color: var(--white-hover-color);
                                 }
