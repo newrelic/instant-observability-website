@@ -143,6 +143,7 @@ const GlobalFooter = ({ className }) => {
                   margin-right: 0px;
 
                   /* Shifts the last row to the right by 1 column */
+                  /* Change this when adding or removing socials  */
                   :nth-child(3n + 3) {
                     grid-column-start: 2;
                   }
