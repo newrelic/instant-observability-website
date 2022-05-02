@@ -1,21 +1,16 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import Button from '@newrelic/gatsby-theme-newrelic/src/components/Button';
-import Logo from '@newrelic/gatsby-theme-newrelic/src/components/Logo';
-import Icon from '@newrelic/gatsby-theme-newrelic/src/components/Icon';
-import ExternalLink from '@newrelic/gatsby-theme-newrelic/src/components/ExternalLink';
+import { LOCALS, RESOURCES, SOCIALS } from '../../../data/constants';
 import { graphql, useStaticQuery } from 'gatsby';
+
+import ExternalLink from '@newrelic/gatsby-theme-newrelic/src/components/ExternalLink';
+import { Icon } from '@newrelic/gatsby-theme-newrelic';
+import Link from '@newrelic/gatsby-theme-newrelic/src/components/Link';
+import NewLogo from './NewLogo';
+import PropTypes from 'prop-types';
+import React from 'react';
 import { css } from '@emotion/react';
 import useThemeTranslation from '@newrelic/gatsby-theme-newrelic/src//hooks/useThemeTranslation';
-import Trans from '@newrelic/gatsby-theme-newrelic/src/components/Trans';
-import Link from '@newrelic/gatsby-theme-newrelic/src/components/Link';
-import useLocale from '@newrelic/gatsby-theme-newrelic/src//hooks/useLocale';
 
-// We need to use this as a JS value otherwise the HTML entity gets saved in the
-// string and escaped by React, therefore rendering the literal &copy; text in
-// the footer
-const copyrightSymbol = String.fromCharCode(169);
-const year = new Date().getFullYear();
+const MOBILE_BREAKPOINT = '920px';
 
 const GlobalFooter = ({ className }) => {
   const { t } = useThemeTranslation();
@@ -31,145 +26,210 @@ const GlobalFooter = ({ className }) => {
       }
     }
   `);
-  const { locale } = useLocale();
-
-  const { siteMetadata } = site;
 
   return (
     <footer
       data-swiftype-index={false}
       className={className}
       css={css`
-        width: 100%;
-        color: var(--secondary-text-color);
-        background-color: var(--color-neutrals-050);
-        z-index: 1;
+        /* Color variables */
+        --background-color: #1d252c;
+        --secondary-text-color: #898e91;
 
-        .dark-mode & {
-          background-color: var(--color-dark-050);
-        }
+        color: var(--secondary-text-color);
+        background-color: var(--background-color);
+
+        /* fonts  */
+        font-family: Söhne-Buch;
+        font-size: 18px;
+        font-weight: 600;
+        line-height: 24px;
 
         a {
-          color: currentColor;
+          color: var(--secondary-text-color);
+          text-decoration: none;
+          text-decoration-thickness: none;
+        }
+
+        a:hover {
+          color: white;
         }
       `}
     >
-      <div
-        css={css`
-          font-size: 0.75rem;
-          align-items: center;
-          justify-content: space-between;
-          display: flex;
-          padding: 1rem var(--site-content-padding);
-          max-width: var(--site-max-width);
-          margin: 0 auto;
-
-          @media screen and (max-width: 550px) {
-            flex-direction: column;
-            justify-content: center;
-          }
-        `}
-      >
-        <Link to="/">
-          <Logo
-            width="150px"
-            css={css`
-              display: block;
-
-              @media screen and (max-width: 550px) {
-                margin-bottom: 1rem;
-              }
-            `}
-          />
-        </Link>
-        <div>
-          <Button
-            as={ExternalLink}
-            variant={Button.VARIANT.OUTLINE}
-            to="https://developer.newrelic.com/contribute-to-quickstarts/"
-            instrumentation={{
-              component: 'GlobalFooter',
-              eventName: 'instantObservability',
-              category: 'BuildYourOwnQuickstartClick',
-            }}
-          >
-            <Icon
-              name="fe-zap"
-              css={css`
-                margin-right: 7px;
-              `}
-            />
-            Build your own
-            <Icon
-              name="fe-external-link"
-              css={css`
-                margin-left: 7px;
-              `}
-            />
-          </Button>
-        </div>
-      </div>
-
-      <div
-        css={css`
-          background-color: rgba(0, 0, 0, 0.05);
-
-          .dark-mode & {
-            background-color: rgba(0, 0, 0, 0.2);
-          }
-        `}
-      >
+      <div>
         <div
           css={css`
-            font-size: 0.75rem;
-            align-items: center;
-            justify-content: space-between;
             display: grid;
-            grid-template-columns: auto auto;
-            grid-template-areas: 'copyright legal';
-            padding: 0.5rem var(--site-content-padding);
-            max-width: var(--site-max-width);
-            margin: 0 auto;
+            justify-content: space-evenly;
 
-            @media screen and (max-width: 760px) {
-              justify-content: center;
-              text-align: center;
+            /* Sets up the sizing of the columns */
+            grid-template-columns: min-content 192px;
+            grid-template-areas:
+              'resources socials'
+              'logo logo'
+              'legal locale';
+
+            @media screen and (max-width: ${MOBILE_BREAKPOINT}) {
+              justify-content: start;
+
+              /* Sets single column for mobile view */
               grid-template-columns: auto;
-              grid-gap: 0.5rem;
               grid-template-areas:
+                'resources'
+                'socials'
+                'logo'
                 'legal'
-                'copyright';
+                'locale';
             }
           `}
         >
-          <Trans
-            i18nKey="footer.copyright"
-            parent="div"
-            css={css`
-              grid-area: copyright;
-              text-transform: uppercase;
-              font-size: 0.5rem;
-              letter-spacing: 0.1rem;
-            `}
-          >
-            Copyright {{ copyrightSymbol }} {{ year }} New Relic Inc.
-          </Trans>
           <div
             css={css`
-              display: flex;
-              flex-wrap: wrap;
-              justify-content: center;
-              grid-area: legal;
+              display: grid;
+              justify-content: start;
+              margin-top: 104px;
 
-              a {
-                margin-left: 0.75rem;
-                white-space: nowrap;
+              /* 4 rows set at 1 fraction each */
+              grid-template-rows: repeat(4, 1fr);
+              grid-auto-flow: column;
+              grid-area: resources;
+
+              > a {
+                margin-right: 52px;
+                margin-bottom: 32px;
+              }
+
+              @media screen and (max-width: ${MOBILE_BREAKPOINT}) {
+                margin: 40px 0px 0px 40px;
+
+                justify-content: flex-start;
+                grid-template-rows: 1fr;
+                grid-auto-flow: row;
+
+                /* Decrease margin of last item for mobile view */
+                > a:nth-last-child(1) {
+                  margin-bottom: 10px;
+                }
               }
             `}
           >
-            <ExternalLink href="https://newrelic.com/about/careers">
-              {t('footer.careers', 'Careers')}
-            </ExternalLink>
+            {RESOURCES.map((resource) => (
+              <ExternalLink href={resource.href}>{resource.title}</ExternalLink>
+            ))}
+          </div>
+          <div
+            css={css`
+              display: grid;
+              justify-content: start;
+              margin-top: 104px;
+
+              grid-area: socials;
+
+              @media screen and (min-width: calc(${MOBILE_BREAKPOINT} + 1px)) {
+                /* Set the same amount of rows and columns to mimic
+                 * the resources grid.
+                 */
+                grid-template-rows: repeat(4, 1fr);
+                grid-template-columns: repeat(4, 1fr);
+
+                > span {
+                  justify-self: end;
+                  grid-column: span 4;
+                }
+
+                > a {
+                  justify-self: end;
+                  margin-left: 24px;
+                  margin-right: 0px;
+
+                  /* Shifts the last row to the right by 1 column */
+                  /* Change this when adding or removing socials  */
+                  :nth-child(3n + 3) {
+                    grid-column-start: 2;
+                  }
+
+                  :hover > svg {
+                    fill: white;
+                  }
+                }
+              }
+
+              @media screen and (max-width: ${MOBILE_BREAKPOINT}) {
+                display: grid;
+                justify-content: start;
+                margin-top: 40px;
+                margin-left: 40px;
+
+                grid-template-rows: 1fr max-content;
+                grid-auto-flow: column;
+
+                > span {
+                  grid-column: span 7;
+                  margin-bottom: 14px;
+                }
+
+                > a {
+                  margin-right: 24px;
+                }
+              }
+            `}
+          >
+            <span>Follow us</span>
+
+            {SOCIALS.map((social) => (
+              <ExternalLink href={social.href}>
+                <Icon
+                  name={social.title}
+                  size="24px"
+                  css={css`
+                    outline: none;
+                    stroke-width: 0px;
+                    color: var(--secondary-text-color);
+                    fill: var(--secondary-text-color);
+
+                  `}
+                />
+              </ExternalLink>
+            ))}
+          </div>
+          <div
+            css={css`
+              grid-area: logo;
+              margin: 64px 0px 0px 0px;
+
+              @media screen and (max-width: ${MOBILE_BREAKPOINT}) {
+                margin: 32px 0px 20px 40px;
+              }
+            `}
+          >
+            <NewLogo />
+          </div>
+
+          <div
+            css={css`
+              display: flex;
+              margin-top: 20px;
+
+              justify-content: flex-start;
+              grid-area: legal;
+
+              a {
+                font-size: 14px;
+                white-space: nowrap;
+                margin-right: 52px;
+              }
+
+              @media screen and (max-width: ${MOBILE_BREAKPOINT}) {
+                margin-left: 40px;
+                flex-direction: column;
+
+                a {
+                  white-space: nowrap;
+                  margin-bottom: 32px;
+                }
+              }
+            `}
+          >
             {sitePage ? (
               <Link to="/terms">{t('footer.terms', 'Terms of Service')}</Link>
             ) : (
@@ -190,6 +250,37 @@ const GlobalFooter = ({ className }) => {
             <ExternalLink href="https://newrelic.com/termsandconditions/uk-slavery-act">
               {t('footer.ukSlaveryAct', 'UK Slavery Act')}
             </ExternalLink>
+          </div>
+          <div
+            css={css`
+              display: grid;
+              justify-items: end;
+              align-items: end;
+
+              grid-area: locale;
+              grid-template-column: min-content min-content;
+              grid-auto-flow: column;
+
+              > a {
+                font-size: 14px;
+              }
+
+              @media screen and (max-width: ${MOBILE_BREAKPOINT}) {
+                margin-left: 40px;
+                justify-content: start;
+
+                grid-template-column: 1fr;
+                grid-auto-flow: row;
+
+                > a {
+                  margin-bottom: 32px;
+                }
+              }
+            `}
+          >
+            {LOCALS.map((locale) => (
+              <ExternalLink href={locale.href}>{locale.title}</ExternalLink>
+            ))}
           </div>
         </div>
       </div>
