@@ -201,6 +201,7 @@ const QuickstartsPage = ({ data, location }) => {
     return found.displayName;
   };
 
+  // Settings for Slick-Carousel
   const settings = {
     dots: false,
     infinite: false,
@@ -209,27 +210,28 @@ const QuickstartsPage = ({ data, location }) => {
     slidesToScroll: 4,
     adaptiveHeight: false,
     adaptiveWidth: true,
+    mobileFirst: true, // necessary for breakpoints to work as expected
     responsive: [
       {
-        breakpoint: 1081,
+        breakpoint: parseInt(TRIPLE_COLUMN_BREAKPOINT),
         settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
+          slidesToShow: 3,
+          slidesToScroll: 3,
           infinite: true,
           dots: false,
         },
       },
       {
-        breakpoint: 760,
+        breakpoint: parseInt(DOUBLE_COLUMN_BREAKPOINT),
         settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
+          slidesToShow: 2,
+          slidesToScroll: 2,
           infinite: true,
           dots: false,
         },
       },
       {
-        breakpoint: 480,
+        breakpoint: parseInt(SINGLE_COLUMN_BREAKPOINT),
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
