@@ -72,13 +72,14 @@ const QuickstartDataSources = ({ quickstart }) => {
              
            `}
             />
-            <h3
+            <p
               css={css`
+                font-family: 'Söhne-Kräftig';
                 margin-top: 16px;
                 margin-bottom: 16px;
                 `}>
               {doc.name}
-            </h3>
+            </p>
 
             {doc.description &&
               <p>

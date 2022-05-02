@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { css } from '@emotion/react';
 import { Button, Icon, Link } from '@newrelic/gatsby-theme-newrelic';
 import { QUICKSTARTS_REPO } from '../data/constants';
+import GitHubIconSVG from '../components/Icons/GitHubIconSVG';
 
 const EmptyTab = ({
   quickstartName,
@@ -39,20 +40,32 @@ const EmptyTab = ({
       `}
     >
       <Button
+        css={css`
+              background: var(--background-color);
+              color: var(--btn-text-color);
+              border-radius: 4px;
+              padding: 13.5px 20px 13.5px 22px;
+              column-gap: 14.45px; 
+              
+              &:hover{
+                color: var(--white-hover-color);
+                background-color: var(--background-color);
+                }
+
+                @media (max-width: 760px) {
+                    width: 100%;
+                }
+            `}
         as={Link}
         variant={Button.VARIANT.PRIMARY}
         to={quickstartUrl}
         rel="noopener noreferrer"
         instrumentation={{ quickstartName }}
       >
-        <Icon
-          name="fe-github"
-          css={css`
-            margin-right: 7px;
-          `}
-        />
+        <GitHubIconSVG className="ViewRepo" />
         View repo
       </Button>
+
     </div>
   </div>
 );

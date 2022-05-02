@@ -65,34 +65,39 @@ const QuickstartDashboards = ({ quickstart }) => (
     {quickstart.dashboards.map((dashboard) => (
       <div key={dashboard.name}>
         <div>
-          <h3>{dashboard.name}</h3>
+          <p
+          css={css`
+          font-weight: 700 !important;
+          font-family: 'Söhne-Kräftig';
+
+          `}>
+            {dashboard.name}
+            </p>
           {dashboard.description && <p>{dashboard.description}</p>}
           <Slider {...settings}>
             {dashboard.screenshots.map((imgUrl) => {
               return (
                 <div>
-                  <h3>
-                    <animated.div
-                      css={css`
+                  <animated.div
+                    css={css`
                       display: flex;
                       height: 100%;
                       align-items: center;
                     `}
-                    >
-                      <a href={imgUrl} target="_blank" rel="noreferrer">
-                        <img
-                          src={imgUrl}
-                          css={css`
+                  >
+                    <a href={imgUrl} target="_blank" rel="noreferrer">
+                      <img
+                        src={imgUrl}
+                        css={css`
                             width: 100%;
                             max-height: 400px;
                             border-radius: 4px;
                             border: solid 1px var(--divider-color);
                             padding: 0.25rem;
                           `}
-                        />
-                      </a>
-                    </animated.div>
-                  </h3>
+                      />
+                    </a>
+                  </animated.div>
                 </div>
               );
             })}

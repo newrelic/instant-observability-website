@@ -8,22 +8,16 @@ import {
   Tag,
   Link,
 } from '@newrelic/gatsby-theme-newrelic';
-import {
-  SHIELD_LEVELS,
-  RESERVED_QUICKSTART_IDS,
-  LISTVIEW_BREAKPOINT,
-} from '../data/constants';
+import { SHIELD_LEVELS, RESERVED_QUICKSTART_IDS } from '../data/constants';
 import QuickstartImg from './QuickstartImg';
 
-const VIEWS = {
-  GRID: 'Grid view',
-  LIST: 'List view',
-};
+import { QUICKSTARTS_COLLAPSE_BREAKPOINT } from '../data/constants';
+
+import './fonts.scss';
 
 const QuickstartTile = ({
   id,
   title,
-  view,
   featured,
   name,
   fields,
@@ -41,7 +35,6 @@ const QuickstartTile = ({
         tessen.track({
           eventName: 'instantObservability',
           category: 'GuidedInstallClick',
-          publicCatalogView: view,
           quickstartName: name,
         });
         break;
@@ -49,7 +42,6 @@ const QuickstartTile = ({
         tessen.track({
           eventName: 'instantObservability',
           category: 'BuildYourOwnQuickstartClick',
-          publicCatalogView: view,
           quickstartName: name,
         });
         break;
@@ -57,13 +49,10 @@ const QuickstartTile = ({
         tessen.track({
           eventName: 'instantObservability',
           category: 'QuickstartClick',
-          publicCatalogView: view,
           quickstartName: name,
         });
     }
   };
-
-  const isListView = () => view === VIEWS.LIST;
 
   return (
     <Surface
@@ -76,43 +65,51 @@ const QuickstartTile = ({
       css={css`
         --tile-image-height: 100px; /* Logo image height */
         --title-row-height: auto; /* Title height to allow space for longer string */
-        padding: 1rem;
+        padding: 0 22px 35px 24px;
         overflow: hidden;
+        height: 360px;
+        min-width: 250px;
+        margin: 0 auto;
+        border: 1px solid #e4e5e6;
+        border-radius: 8px;
+        box-shadow: none;
 
-        /* Default grid view */
+        @media screen and (max-width: ${QUICKSTARTS_COLLAPSE_BREAKPOINT}) {
+        padding: 0 32px 24px 32px;
+          width: 100%;
+          min-width: 250px;
+        }
+
+        h4,
+        p,
+        span {
+          font-family: 'Söhne-Leicht';
+          letter-spacing: -0.5%;
+          color: #1d252c;
+          font-weight: 600;
+
+          @media screen and (max-width: ${QUICKSTARTS_COLLAPSE_BREAKPOINT}) {
+          width: 100%;
+          font-family: 'Söhne-Buch';
+          font-weight: 400;
+        }
+
+        }
+
         display: grid;
+        align-items: flex-start;
         grid-gap: 0.2rem;
-        grid-template-rows: var(--tile-image-height) var(--title-row-height) 1fr auto;
+        grid-template-rows: var(--tile-image-height) 152px auto;
         grid-template-columns: auto;
         grid-template-areas:
           'logo logo'
-          'title title'
-          'summary summary'
-          '. tag';
+          'text text'
+          'tag arrow';
 
-        /* List view selected by control */
-        ${
-          isListView() &&
-          css`
-            grid-template-columns: 1fr 1fr 1fr;
-            grid-template-areas:
-              'logo title title'
-              'logo summary summary'
-              'logo tag tag';
-            grid-template-rows: auto;
-          `
+          @media screen and (max-width: ${QUICKSTARTS_COLLAPSE_BREAKPOINT}) {
+        grid-template-rows: 125px; 152px auto;
         }
 
-        /* Breakpoint triggers List view */
-        @media screen and (max-width: ${LISTVIEW_BREAKPOINT}){
-          grid-template-areas:
-            'logo title title'
-            'logo summary summary';
-            'logo summary summary';
-          grid-template-columns: 1fr 1fr 1fr;
-          grid-template-rows: 0.5fr 1fr;
-          padding: 0.2rem 0.5rem;
-        }
       `}
       onClick={() => handlePackClick(id)}
     >
@@ -122,21 +119,8 @@ const QuickstartTile = ({
           display: flex;
           grid-area: logo;
           height: 100%;
-          justify-content: center;
+          justify-content: flex-start;
           margin-bottom: 1rem;
-
-          .dark-mode & {
-            background: var(--color-white);
-          }
-
-          ${isListView() &&
-          css`
-            margin-right: 0.5rem;
-          `}
-
-          @media screen and (max-width: ${LISTVIEW_BREAKPOINT}) {
-            margin-right: 0.5rem;
-          }
         `}
       >
         <div
@@ -149,71 +133,100 @@ const QuickstartTile = ({
             packName={title || name}
             css={css`
               object-fit: scale-down;
-              height: 100%;
+              height: 45px;
+              margin: 35px 0 0;
+
+              @media screen and (max-width: ${QUICKSTARTS_COLLAPSE_BREAKPOINT}) {
+                margin: 20px 0 0;
+                height: 70px;
+                max-width: 240px;
+              }
             `}
           />
         </div>
       </div>
-      <h4
-        css={css`
-          grid-area: title;
-
-          @media screen and (max-width: ${LISTVIEW_BREAKPOINT}) {
-            align-self: end;
-            font-size: 14px;
-            font-weight: 300;
-            margin: 0;
-          }
-        `}
-      >
-        {title}{' '}
-        {SHIELD_LEVELS.includes(level) && <Icon name="nr-check-shield" />}
-      </h4>
 
       <div
         css={css`
-          grid-area: summary;
+          grid-area: text;
         `}
       >
-        <p
+        <h4
           css={css`
-            font-size: 0.8rem;
-            color: var(--secondary-text-color);
-
-            /* Limits the number of lines */
-            overflow: hidden;
-            display: -webkit-box;
-            text-overflow: ellipsis;
-            -webkit-box-orient: vertical;
-            -webkit-line-clamp: 3;
+            grid-area: title;
+            font-size: 24px;
+            letter-spacing: -0.5%;
           `}
         >
-          {summary || 'No summary provided'}
-        </p>
+          {title}{' '}
+          {SHIELD_LEVELS.includes(level) && <Icon name="nr-check-shield" />}
+        </h4>
+
+        <div
+          css={css`
+            grid-area: summary;
+            align-self: flex-start;
+          `}
+        >
+          <p
+            css={css`
+              font-size: 18px;
+              line-height: 24px;
+
+              /* Limits the number of lines */
+              overflow: hidden;
+              display: -webkit-box;
+              text-overflow: ellipsis;
+              -webkit-box-orient: vertical;
+              -webkit-line-clamp: 3;
+
+              @media screen and (max-width: ${QUICKSTARTS_COLLAPSE_BREAKPOINT}) {
+                -webkit-line-clamp: 2;
+              }
+            `}
+          >
+            {summary || 'No summary provided'}
+          </p>
+        </div>
+      </div>
+
+      <div
+        css={css`
+          justify-self: start;
+          align-self: end;
+          grid-area: tag;
+        `}
+      >
+        <Tag
+          css={css`
+            background: #e4e5e6;
+            border-radius: 4px;
+            font-weight: 600;
+            height: 32px;
+            width: 100px;
+            padding: 3px 8px 5px;
+            color: red;
+            line-spacing: unset;
+          `}
+        >
+          Read more
+        </Tag>
       </div>
       <div
         css={css`
+          grid-area: arrow;
           justify-self: end;
           align-self: end;
-          span {
-            color: var(--color-brand-500);
-          }
-          grid-area: tag;
-
-          @media screen and (max-width: ${LISTVIEW_BREAKPOINT}) {
-            display: none;
-          }
         `}
       >
-        {featured && (
-          <Tag
-            css={css`
-              background-color: var(--color-brand-100);
-            `}
-          >
-            Featured
-          </Tag>
-        )}
+        <Icon
+          css={css`
+            height: 16px;
+            color: #1d252c;
+          `}
+          name="fe-arrow-right"
+          size="120%"
+        />
       </div>
     </Surface>
   );
@@ -221,7 +234,6 @@ const QuickstartTile = ({
 
 QuickstartTile.propTypes = {
   id: PropTypes.string.isRequired,
-  view: PropTypes.oneOf(Object.values(VIEWS)).isRequired,
   name: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
   fields: PropTypes.shape({
