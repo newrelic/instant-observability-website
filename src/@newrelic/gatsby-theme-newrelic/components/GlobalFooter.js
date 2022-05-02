@@ -125,7 +125,7 @@ const GlobalFooter = ({ className }) => {
 
               grid-area: socials;
 
-              > svg:hover {
+              svg:hover {
                 fill: white;
               }
 
