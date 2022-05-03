@@ -1,5 +1,4 @@
 import '../components/styles.scss';
-import '../components/fonts.scss';
 
 import {
   GlobalFooter,
@@ -7,7 +6,7 @@ import {
   NR_SITES,
 } from '@newrelic/gatsby-theme-newrelic';
 
-import GetStartedFooter from '../components/GetStartedFooter'
+import GetStartedFooter from '../components/GetStartedFooter';
 import Layout from '../components/Layout';
 import PropTypes from 'prop-types';
 import { QUICKSTARTS_COLLAPSE_BREAKPOINT } from '../data/constants';

@@ -13,8 +13,6 @@ import QuickstartImg from './QuickstartImg';
 
 import { QUICKSTARTS_COLLAPSE_BREAKPOINT } from '../data/constants';
 
-import './fonts.scss';
-
 const QuickstartTile = ({
   id,
   title,
