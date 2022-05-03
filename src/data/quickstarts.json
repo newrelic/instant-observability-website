@@ -1921,19 +1921,19 @@
     ],
     "dashboards": [
       {
-        "name": "Battlesnake Performance",
-        "description": "Monitor your Battlensakes performance and see how it stacks up against your competition!",
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/battlesnake/dashboards/battlesnake-performance/battlesnake-performance.png"
-        ]
-      },
-      {
         "name": "Battlesnake Server Status",
         "description": "A dashboard to monitor your Battlesnake server's performance. It's important to keep all responses to the `/move` endpoint under 500ms. Furthermore, it's possible that your snake may be in multiple concurrent matches at the same time. It's important to make sure you server and web application are running smoothly to keep you in the game!",
         "url": null,
         "screenshots": [
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/battlesnake/dashboards/battlesnake-server-status/battlesnake-server-status.png"
+        ]
+      },
+      {
+        "name": "Battlesnake Performance",
+        "description": "Monitor your Battlensakes performance and see how it stacks up against your competition!",
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/battlesnake/dashboards/battlesnake-performance/battlesnake-performance.png"
         ]
       },
       {
@@ -5842,6 +5842,55 @@
         "id": "third-party-salesforce-eventlog-for-logs"
       }
     ]
+  },
+  {
+    "title": "Basic Dashboard",
+    "name": "basic-dashboard",
+    "description": "The purpose of this dashboard is being on the same page among full platform, core, and basic users. Basic dashboard provides similar dashboards of Infra, APM, Browser, Mobile, NPM, Alert, and usage for full platform users.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/basic-dashboard",
+    "id": "0d6577a3-d53e-4b12-82df-0296d69b2d0a",
+    "level": "NEW_RELIC",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/basic-dashboard/logo.png",
+    "summary": "New Relic curated dashboard for all (Full platform, core, and basic users)",
+    "websiteUrl": null,
+    "keywords": [
+      "infra",
+      "infrastructure",
+      "apm",
+      "application performance",
+      "browser",
+      "mobile",
+      "network performance",
+      "synthetic",
+      "alert",
+      "ai",
+      "usage"
+    ],
+    "authors": [
+      "Astin Choi 최길우"
+    ],
+    "dashboards": [
+      {
+        "name": "Basic Dashboard",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/basic-dashboard/dashboards/basic-dashboard/basic-dashboard1.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/basic-dashboard/dashboards/basic-dashboard/basic-dashboard2.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/basic-dashboard/dashboards/basic-dashboard/basic-dashboard3.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/basic-dashboard/dashboards/basic-dashboard/basic-dashboard4.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/basic-dashboard/dashboards/basic-dashboard/basic-dashboard5.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/basic-dashboard/dashboards/basic-dashboard/basic-dashboard6.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/basic-dashboard/dashboards/basic-dashboard/basic-dashboard7.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/basic-dashboard/dashboards/basic-dashboard/basic-dashboard8.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/basic-dashboard/dashboards/basic-dashboard/basic-dashboard9.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/basic-dashboard/dashboards/basic-dashboard/basic-dashboard.png"
+        ]
+      }
+    ],
+    "alerts": [],
+    "documentation": [],
+    "installPlans": []
   },
   {
     "title": "Prometheus OpenMetrics Integration Stats",
@@ -16795,11 +16844,11 @@
     ],
     "dashboards": [
       {
-        "name": "Catchpoint-Response Size",
+        "name": "Catchpoint-Recent Errors",
         "description": null,
         "url": null,
         "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/catchpoint/dashboards/Catchpoint-Response_Size/Catchpoint-Response_Size.png"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/catchpoint/dashboards/Catchpoint-Recent_Errors/Catchpoint-Recent_Errors.png"
         ]
       },
       {
@@ -16811,11 +16860,11 @@
         ]
       },
       {
-        "name": "Catchpoint-Recent Errors",
+        "name": "Catchpoint-Response Size",
         "description": null,
         "url": null,
         "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/catchpoint/dashboards/Catchpoint-Recent_Errors/Catchpoint-Recent_Errors.png"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/catchpoint/dashboards/Catchpoint-Response_Size/Catchpoint-Response_Size.png"
         ]
       },
       {
@@ -18200,48 +18249,6 @@
     ]
   },
   {
-    "title": "Prometheus Remote Write integration",
-    "name": "prometheus-remote-write",
-    "description": "## Prometheus monitoring \n\nPrometheus is an open-source monitoring and alerting toolkit. Setting up Prometheus is straightforward, but scaling up and managing is not. That’s where New Relic steps in.\n\n### New Relic's Prometheus quickstart\n\nNew Relic offers two Prometheus integration schemes, Remote Write and OpenMetrics. \n\n[Remote Write](https://docs.newrelic.com/docs/integrations/prometheus-integrations/install-configure-remote-write/prometheus-remote-write-integration/) is ideal for well-established Prometheus infrastructures. It provides easy access to your metrics and only takes one line of yaml in your configuration for access. \n\n[OpenMetrics](https://docs.newrelic.com/docs/integrations/prometheus-integrations/install-configure-openmetrics/configure-prometheus-openmetrics-integrations/) allows for more visibility across multiple container platforms. Once the integration is set up, you can query data on memory usage for pods in deployment, facet any metrics, and view raw metric values all in one place.\n\nNew Relic's Prometheus Integration stores various kinds of telemetry data - whether open-source, vendor-specific, or vendor-agnostic. \n\n### Value of the Prometheus quickstart \n\nThis New Relic quickstart helps you to configure Prometheus Remote Write.\n\n#### Remote Write:\n\nSee all of your metrics in one place\n- Combine and group all data across an entire software stack\n- Connect Grafana dashboards\n- Better understand the relationship between data and behaviors related to your software stack",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/prometheus-remote-write",
-    "id": "7dbd7355-c380-4211-bd32-fed9a65351af",
-    "level": "NEW_RELIC",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/prometheus-remote-write/logo.svg",
-    "summary": "Prometheus' ability to monitor a wide variety of data necessitates monitoring the toolkit itself. New Relic helps store, manage, and view telemetry data from your Prometheus setup, relieving you of a significant operational burden.",
-    "websiteUrl": null,
-    "keywords": [
-      "open source monitoring"
-    ],
-    "authors": [
-      "New Relic"
-    ],
-    "dashboards": [
-      {
-        "name": "Prometheus Remote Write Monitoring",
-        "description": "Monitoring for Prometheus Remote Write. Displays Prometheus server statistics, resulting metric cardinality and any errors during ingest.",
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/prometheus-remote-write/dashboards/prometheus-remote-write-monitoring/prometheus-remote-write-monitoring01.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/prometheus-remote-write/dashboards/prometheus-remote-write-monitoring/prometheus-remote-write-monitoring.png"
-        ]
-      }
-    ],
-    "alerts": [],
-    "documentation": [
-      {
-        "name": "Prometheus installation docs",
-        "description": "Use Prometheus remote_write or New Relic's Prometheus OpenMetrics integration\n",
-        "url": "https://one.newrelic.com/launcher/nr1-core.explorer?pane=eyJuZXJkbGV0SWQiOiJucjEtY29yZS5saXN0aW5nIiwiZmF2b3JpdGVzIjp7InNlbGVjdGVkIjp0cnVlLCJ2aXNpYmxlIjp0cnVlfSwibGFzdFZpZXdlZCI6eyJzZWxlY3RlZCI6ZmFsc2UsInZpc2libGUiOnRydWV9fQ==&cards[0]=eyJuZXJkbGV0SWQiOiJwcm9tZXRoZXVzLXJlbW90ZS13cml0ZS1pbnRlZ3JhdGlvbi5ob21lIiwiYWNjb3VudElkIjoyMTM2Njc5fQ==&sidebars[0]=eyJuZXJkbGV0SWQiOiJucjEtY29yZS5jYXRlZ29yaWVzIiwicm9vdE5lcmRsZXRJZCI6Im5yMS1jb3JlLmxpc3RpbmciLCJmYXZvcml0ZXMiOnsic2VsZWN0ZWQiOnRydWUsInZpc2libGUiOnRydWV9LCJsYXN0Vmlld2VkIjp7InNlbGVjdGVkIjpmYWxzZSwidmlzaWJsZSI6dHJ1ZX19&state=32a8b400-a43a-5a3d-3bc6-16621b554b08"
-      }
-    ],
-    "installPlans": [
-      {
-        "name": "Prometheus remote write",
-        "id": "setup-prometheus"
-      }
-    ]
-  },
-  {
     "title": "CoreDNS",
     "name": "coredns",
     "description": "## Why monitor CoreDNS?\n\nCoreDNS is DNS server that can serve as the Kubernetes cluster DNS (Kubernetes 1.23+ uses CoreDNS by default).\nCoreDNS is a critical component of a Kubernetes cluster that can be difficult to debug during an error scenario. Surfacing monitoring to this component can help teams respond faster to these unexpected scenarios.\n\n## CoreDNS quickstart highlights\n\nThe New Relic quickstart uses dashboards to proactively monitor your CoreDNS servers, like:\n\n- load shared amongst running instances\n- request & response stats (rate, payload size, etc.)\n- cache hit ratio\n- response codes and panics, and more.\n\n## Monitoring CoreDNS\n\nThis quickstart utilizes New Relic's ability to ingest Prometheus data (either from our OpenMetrics integration or via Prometheus remote write). See instructions for [sending Prometheus data to New Relic here](https://docs.newrelic.com/docs/infrastructure/prometheus-integrations/get-started/send-prometheus-metric-data-new-relic/).\n\n### How do I enable monitoring in CoreDNS\n\n[CoreDNS provides a plugin](https://coredns.io/plugins/metrics/) to surface Prometheus metrics on `localhost:9153/metrics`.\nBefore attempting to modify your CoreDNS configuration, you should be able to `kubectl port-forward pod/<pod_name> -n kube-system 9153` against a CoreDNS server in your cluster to verify it returns metrics.\n\nFor instructions on modifying your cluster's CoreDNS configuration see https://coredns.io/2018/01/29/deploying-kubernetes-with-coredns-using-kubeadm/\n\n\n### How do I configure my integration to scrape CoreDNS severs?\n\nThe approach to getting your Prometheus metrics into New Relic differs depending on which integration you use.\n\n#### Prometheus Remote Write\n\nIn addition to setting up your `remote_write` configuration as described [here](https://docs.newrelic.com/docs/infrastructure/prometheus-integrations/install-configure-remote-write/set-your-prometheus-remote-write-integration/), you will need to add the following scrape configuration to your `prometheus.yml` config file:\n\n```\n- job_name: 'kube-dns'\n  honor_labels: true\n  kubernetes_sd_configs:\n    - role: pod\n  relabel_configs:\n    - action: keep\n      source_labels:\n        - __meta_kubernetes_namespace\n        - __meta_kubernetes_pod_name\n      separator: '/'\n      regex: 'kube-system/coredns.+'\n    - source_labels:\n        - __meta_kubernetes_pod_container_port_name\n      action: keep\n      regex: metrics\n    - source_labels:\n        - __meta_kubernetes_pod_name\n      action: replace\n      target_label: instance\n    - action: labelmap\n      regex: __meta_kubernetes_pod_label_(.+)\n```\n(This helpful Prometheus job defnition sourced from [sysdig blog](https://sysdig.com/blog/how-to-monitor-coredns/))\n\nThen, after reloading Prometheus config, you can check that your CoreDNS pods are appearing under your [Prometheus targets](https://prometheus.io/docs/prometheus/latest/querying/api/#targets).\n\n#### Prometheus OpenMetrics integration\n\nPOMI will scrape any resource that contains the label or annotation `prometheus.io/scrape` (which is configurable value here https://github.com/newrelic/helm-charts/blob/ecef47fc938b7ddca8a50e63cb290924f654c56a/charts/nri-prometheus/values.yaml#L117).\nThis will make targets visible to POMI but to confiugre the `relabel_configs` as above, the defaults would have to be updated in the Helm chart here: https://github.com/newrelic/helm-charts/blob/ecef47fc938b7ddca8a50e63cb290924f654c56a/charts/nri-prometheus/values.yaml#L67-L244",
@@ -18302,6 +18309,48 @@
       {
         "name": "CoreDNS",
         "id": "third-party-coredns"
+      }
+    ]
+  },
+  {
+    "title": "Prometheus Remote Write integration",
+    "name": "prometheus-remote-write",
+    "description": "## Prometheus monitoring \n\nPrometheus is an open-source monitoring and alerting toolkit. Setting up Prometheus is straightforward, but scaling up and managing is not. That’s where New Relic steps in.\n\n### New Relic's Prometheus quickstart\n\nNew Relic offers two Prometheus integration schemes, Remote Write and OpenMetrics. \n\n[Remote Write](https://docs.newrelic.com/docs/integrations/prometheus-integrations/install-configure-remote-write/prometheus-remote-write-integration/) is ideal for well-established Prometheus infrastructures. It provides easy access to your metrics and only takes one line of yaml in your configuration for access. \n\n[OpenMetrics](https://docs.newrelic.com/docs/integrations/prometheus-integrations/install-configure-openmetrics/configure-prometheus-openmetrics-integrations/) allows for more visibility across multiple container platforms. Once the integration is set up, you can query data on memory usage for pods in deployment, facet any metrics, and view raw metric values all in one place.\n\nNew Relic's Prometheus Integration stores various kinds of telemetry data - whether open-source, vendor-specific, or vendor-agnostic. \n\n### Value of the Prometheus quickstart \n\nThis New Relic quickstart helps you to configure Prometheus Remote Write.\n\n#### Remote Write:\n\nSee all of your metrics in one place\n- Combine and group all data across an entire software stack\n- Connect Grafana dashboards\n- Better understand the relationship between data and behaviors related to your software stack",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/prometheus-remote-write",
+    "id": "7dbd7355-c380-4211-bd32-fed9a65351af",
+    "level": "NEW_RELIC",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/prometheus-remote-write/logo.svg",
+    "summary": "Prometheus' ability to monitor a wide variety of data necessitates monitoring the toolkit itself. New Relic helps store, manage, and view telemetry data from your Prometheus setup, relieving you of a significant operational burden.",
+    "websiteUrl": null,
+    "keywords": [
+      "open source monitoring"
+    ],
+    "authors": [
+      "New Relic"
+    ],
+    "dashboards": [
+      {
+        "name": "Prometheus Remote Write Monitoring",
+        "description": "Monitoring for Prometheus Remote Write. Displays Prometheus server statistics, resulting metric cardinality and any errors during ingest.",
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/prometheus-remote-write/dashboards/prometheus-remote-write-monitoring/prometheus-remote-write-monitoring01.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/prometheus-remote-write/dashboards/prometheus-remote-write-monitoring/prometheus-remote-write-monitoring.png"
+        ]
+      }
+    ],
+    "alerts": [],
+    "documentation": [
+      {
+        "name": "Prometheus installation docs",
+        "description": "Use Prometheus remote_write or New Relic's Prometheus OpenMetrics integration\n",
+        "url": "https://one.newrelic.com/launcher/nr1-core.explorer?pane=eyJuZXJkbGV0SWQiOiJucjEtY29yZS5saXN0aW5nIiwiZmF2b3JpdGVzIjp7InNlbGVjdGVkIjp0cnVlLCJ2aXNpYmxlIjp0cnVlfSwibGFzdFZpZXdlZCI6eyJzZWxlY3RlZCI6ZmFsc2UsInZpc2libGUiOnRydWV9fQ==&cards[0]=eyJuZXJkbGV0SWQiOiJwcm9tZXRoZXVzLXJlbW90ZS13cml0ZS1pbnRlZ3JhdGlvbi5ob21lIiwiYWNjb3VudElkIjoyMTM2Njc5fQ==&sidebars[0]=eyJuZXJkbGV0SWQiOiJucjEtY29yZS5jYXRlZ29yaWVzIiwicm9vdE5lcmRsZXRJZCI6Im5yMS1jb3JlLmxpc3RpbmciLCJmYXZvcml0ZXMiOnsic2VsZWN0ZWQiOnRydWUsInZpc2libGUiOnRydWV9LCJsYXN0Vmlld2VkIjp7InNlbGVjdGVkIjpmYWxzZSwidmlzaWJsZSI6dHJ1ZX19&state=32a8b400-a43a-5a3d-3bc6-16621b554b08"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "Prometheus remote write",
+        "id": "setup-prometheus"
       }
     ]
   },
@@ -20845,6 +20894,54 @@
     "installPlans": []
   },
   {
+    "title": "Kubernetes Log Ingest Analysis",
+    "name": "audit-kubernetes-log-data-ingest-analysis",
+    "description": "Shows log bytes ingest for Kubernetes faceted by several common attributes k8s logs: application, environment, container, namespace, pod and cluster. Total logs and GB ingested is shown.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/audit/k8s-log-ingestion-analysis",
+    "id": "b3cafc0a-6876-41e5-876c-5ae3c8c9ecea",
+    "level": "NEW_RELIC",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/audit/k8s-log-ingestion-analysis/logo.svg",
+    "summary": "Paginated dashboard that analyzes overall data ingest generated by the New Relic Kubernetes Logs integration and outlines options available to fine-tune your environment to help control ingest and cost.",
+    "websiteUrl": null,
+    "keywords": [
+      "k8s",
+      "kubernetes",
+      "data ingest",
+      "audit",
+      "logs"
+    ],
+    "authors": [
+      "New Relic",
+      "Jim Hagan",
+      "Brian Bost",
+      "Emil Hammarstrand"
+    ],
+    "dashboards": [
+      {
+        "name": "Kubernetes Log Ingest Analysis",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/audit/k8s-log-ingestion-analysis/dashboards/k8s-log-ingest-breakdown/kubernetes-log-ingest-analysis.png"
+        ]
+      }
+    ],
+    "alerts": [],
+    "documentation": [
+      {
+        "name": "New Relic Kubernetes Logs integration",
+        "description": "Kubernetes plugin for log forwarding\n",
+        "url": "https://docs.newrelic.com/docs/logs/forward-logs/kubernetes-plugin-log-forwarding/"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "Kubernetes integration",
+        "id": "kubernetes-install"
+      }
+    ]
+  },
+  {
     "title": "Agent for Google Publisher Tags",
     "name": "ads-web-gpt",
     "description": "Agent to monitor web applications using GPT.",
@@ -21108,48 +21205,6 @@
     "installPlans": []
   },
   {
-    "title": "Kubernetes Log Ingest Analysis",
-    "name": "audit-kubernetes-log-data-ingest-analysis",
-    "description": "Shows log bytes ingest for Kubernetes faceted by several common attributes k8s logs: application, environment, and container.",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/audit/k8s-log-ingestion-analysis",
-    "id": "b3cafc0a-6876-41e5-876c-5ae3c8c9ecea",
-    "level": "NEW_RELIC",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/audit/k8s-log-ingestion-analysis/logo.svg",
-    "summary": "Paginated dashboard that analyzes overall data ingest generated by the New Relic Kubernetes Logs integration and outlines options available to fine-tune your environment to help control ingest and cost.",
-    "websiteUrl": null,
-    "keywords": [
-      "k8s",
-      "kubernetes",
-      "data ingest",
-      "audit",
-      "logs"
-    ],
-    "authors": [
-      "New Relic",
-      "Jim Hagan",
-      "Brian Bost"
-    ],
-    "dashboards": [
-      {
-        "name": "Log Ingest Breakdown",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/audit/k8s-log-ingestion-analysis/dashboards/k8s-log-ingest-breakdown/k8s-log-ingest-breakdown.png"
-        ]
-      }
-    ],
-    "alerts": [],
-    "documentation": [
-      {
-        "name": "New Relic Kubernetes Logs integration",
-        "description": "Kubernetes plugin for log forwarding\n",
-        "url": "https://docs.newrelic.com/docs/logs/forward-logs/kubernetes-plugin-log-forwarding/"
-      }
-    ],
-    "installPlans": []
-  },
-  {
     "title": "Atlassian JIRA",
     "name": "atlassian-jira",
     "description": "Jira is a proprietary issue tracking product developed by Atlassian that allows bug tracking and agile project management. You can Integrate New Relic with Atlassian Jira(Cloud) and automatically create and update Jira issues.\n\n[Check out our documentation](https://docs.newrelic.com/docs/alerts-applied-intelligence/notifications/notification-integrations/#jira) to set up a JIRA notification channel and provide fast and consistent ways for the right personnel to be notified about incidents",
@@ -21284,6 +21339,22 @@
     ],
     "dashboards": [
       {
+        "name": "AWS Integrations Data Ingest Analysis",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/audit/infrastructure-integrations-data-analysis/dashboards/aws-integrations-data-ingest-analysis/aws-integrations-data-ingest-analysis.png"
+        ]
+      },
+      {
+        "name": "Azure Integrations Data Ingest Analysis",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/audit/infrastructure-integrations-data-analysis/dashboards/azure-integrations-data-ingest-analysis/azure-integrations-data-ingest-analysis.png"
+        ]
+      },
+      {
         "name": "GCP Integrations Data Ingest Analysis",
         "description": null,
         "url": null,
@@ -21305,22 +21376,6 @@
         "url": null,
         "screenshots": [
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/audit/infrastructure-integrations-data-analysis/dashboards/on-host-integrations-data-analysis/on-host-integrations-data-analysis.png"
-        ]
-      },
-      {
-        "name": "AWS Integrations Data Ingest Analysis",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/audit/infrastructure-integrations-data-analysis/dashboards/aws-integrations-data-ingest-analysis/aws-integrations-data-ingest-analysis.png"
-        ]
-      },
-      {
-        "name": "Azure Integrations Data Ingest Analysis",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/audit/infrastructure-integrations-data-analysis/dashboards/azure-integrations-data-ingest-analysis/azure-integrations-data-ingest-analysis.png"
         ]
       }
     ],
@@ -21661,6 +21716,52 @@
     ]
   },
   {
+    "title": "New Relic IBM MQ Monitor",
+    "name": "ibmmq",
+    "description": "### IBM MQ\n\nIBM MQ allows independent and potentially non-concurrent applications on a distributed system to securely communicate with each other, using messages. MQ is available on a large number of platforms (both IBM and non-IBM), including z/OS (mainframe), IBM i, Transaction Processing Facility, UNIX (AIX, HP-UX, Solaris), HP NonStop, OpenVMS, Linux, and Microsoft Windows.\n\nThe New Relic IBM MQ Monitor allows you to monitor the performance of MQ Objects like channels and queues . The metrics collected include depth of your queues, how much space your queues have for additional messages, and the age of a queue’s oldest message. Analyzing metrics over time allows you to scale your instances accordingly in order to prevent full queues, which can delay message delivery.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/ibmmq",
+    "id": "924fd4b3-a6d1-4a6e-9e2c-b598f197f713",
+    "level": "NEW_RELIC",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/ibmmq/logo.png",
+    "summary": "The New Relic IBM MQ Monitor enables performance monitoring of IBM MQ Objects like channels, topics and queues.",
+    "websiteUrl": null,
+    "keywords": [
+      "infrastructure",
+      "ibm mq",
+      "mq",
+      "messaging",
+      "queue"
+    ],
+    "authors": [
+      "New Relic"
+    ],
+    "dashboards": [
+      {
+        "name": "IBM MQ - Dashboard",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/ibmmq/dashboards/ibmmq/ibmmq01.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/ibmmq/dashboards/ibmmq/ibmmq02.png"
+        ]
+      }
+    ],
+    "alerts": [],
+    "documentation": [
+      {
+        "name": "New Relic integration for IBM MQ",
+        "description": "The New Relic IBM MQ Monitor enables performance monitoring of IBM MQ Objects like channels, topics and queues.\n",
+        "url": "https://docs.newrelic.com/docs/integrations/host-integrations/host-integrations-list/ibmmq-monitoring-integration/"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "IBM MQ",
+        "id": "ibmmq-integration-docs"
+      }
+    ]
+  },
+  {
     "title": "Azure SQL Database",
     "name": "azure-sql-database",
     "description": "## What is Azure SQL Database?\n\nAzure SQL provides single databases with their own set of resources, and\nelastic pools that share a set of resources.\n\n\n### Get started!\n\nStart monitoring Azure SQL Database by connecting Microsoft Azure to New Relic!\n\nCheck out our Azure SQL Database documentation to instrument your cloud service and manage the stability, scalability, and reliability of your systems with New Relic's infrastructure monitoring capabilities.\n\n### More info\n\nCheck out the [documentation](https://docs.newrelic.com/docs/infrastructure/microsoft-azure-integrations/azure-integrations-list/azure-sql-database-monitoring-integration/) to learn more about New Relic monitoring for Azure SQL Database.",
@@ -21718,14 +21819,6 @@
     ],
     "dashboards": [
       {
-        "name": "JavaScript Errors",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/browser/dashboards/javascript_errors/javascript_errors.png"
-        ]
-      },
-      {
         "name": "Browser Pages Dashboard",
         "description": null,
         "url": null,
@@ -21747,6 +21840,14 @@
         "url": null,
         "screenshots": [
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/browser/dashboards/traffic_analysis/traffic_analysis.png"
+        ]
+      },
+      {
+        "name": "JavaScript Errors",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/browser/dashboards/javascript_errors/javascript_errors.png"
         ]
       }
     ],
@@ -22143,50 +22244,6 @@
       {
         "name": "Go Agent",
         "id": "setup-go-agent"
-      }
-    ]
-  },
-  {
-    "title": "New Relic IBM MQ Monitor",
-    "name": "ibmmq",
-    "description": "IBM MQ MQ allows independent and potentially non-concurrent applications on a distributed system to securely communicate with each other, using messages. MQ is available on a large number of platforms (both IBM and non-IBM), including z/OS (mainframe), IBM i, Transaction Processing Facility, UNIX (AIX, HP-UX, Solaris), HP NonStop, OpenVMS, Linux, and Microsoft Windows.\n\nThe New Relic IBM MQ Monitor allows you to monitor the performance of MQ Objects like channels and queues . The metrics collected include depth of your queues, how much space your queues have for additional messages, and the age of a queue’s oldest message. Analyzing metrics over time allows you to scale your instances accordingly in order to prevent full queues, which can delay message delivery.",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/ibmmq",
-    "id": "924fd4b3-a6d1-4a6e-9e2c-b598f197f713",
-    "level": "COMMUNITY",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/ibmmq/logo.png",
-    "summary": "The New Relic IBM MQ Monitor enables performance monitoring of IBM MQ Objects like channels, topics and queues.",
-    "websiteUrl": null,
-    "keywords": [
-      "nrlabs",
-      "nrlabs-data",
-      "ibm mq",
-      "mq"
-    ],
-    "authors": [
-      "New Relic Labs"
-    ],
-    "dashboards": [
-      {
-        "name": "IBM MQ PROD",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/ibmmq/dashboards/ibmmq/ibmmq.png"
-        ]
-      }
-    ],
-    "alerts": [],
-    "documentation": [
-      {
-        "name": "New Relic integration for IBM MQ",
-        "description": "The New Relic IBM MQ Monitor enables performance monitoring of IBM MQ Objects like channels, topics and queues.\n",
-        "url": "https://github.com/newrelic-experimental/newrelic-ibm-mq-monitor"
-      }
-    ],
-    "installPlans": [
-      {
-        "name": "IBM MQ",
-        "id": "ibmmq-integration-docs"
       }
     ]
   },
