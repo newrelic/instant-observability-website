@@ -65,21 +65,14 @@ input[type='text'] {
 }
 
 .slick-next {
-  right: -5px !important;
+  right: -8px !important;
 }
 .slick-prev {
   z-index: 100;
-  left: -8px !important;
+  left: -7px !important;
 }
 
 
-.slick-initialized .slick-slide{
-  padding:0 0px;
-
-  &:first-child {
-    padding-left: 0;
-  }
-}
 .slick-track {
   display: flex !important;
   margin-top:2px;

@@ -288,7 +288,7 @@ const QuickstartsPage = ({ data, location }) => {
       <div
         css={css`
           --sidebar-width: 300px;
-          --banner-height: 368px;
+          --banner-height: 450px;
           --divider-color: #e4e5e6;
           --primary-text-color: #1d252c;
           display: grid;
@@ -308,7 +308,7 @@ const QuickstartsPage = ({ data, location }) => {
             grid-template-rows: unset;
           }
           @media screen and (max-width: 760px) {
-            margin: 500px auto;
+            margin: 400px auto;
           }
         `}
       >
@@ -532,15 +532,16 @@ const QuickstartsPage = ({ data, location }) => {
                       font-size: 16px;
                       color: var(--color-neutrals-800);
                       align-text: center;
+                      margin: 0 0 13px 4px;
                       span {
-                        color: var(--text-color);
-                        /* target inner children of parent span */
-                        span,
-                        strong {
-                        }
                       }
                       strong {
-                        color: var(--text-color);
+                        font-family: 'Söhne-Leicht';
+                        font-size: 28px;
+                        font-weight: 600;
+                        line-height: 36px;
+                        letter-spacing: -0.5px;
+                        color: #1d252c;
                       }
                       @media screen and (max-width: ${QUICKSTARTS_COLLAPSE_BREAKPOINT}) {
                         padding: 0 0 0.5rem;
@@ -579,15 +580,15 @@ const QuickstartsPage = ({ data, location }) => {
                   font-size: 16px;
                   color: var(--color-neutrals-800);
                   align-text: center;
-                  span {
-                    color: var(--text-color);
-                    /* target inner children of parent span */
-                    span,
-                    strong {
-                    }
-                  }
+                  margin: 75px 0 35px 4px;
+
                   strong {
-                    color: var(--text-color);
+                    font-family: 'Söhne-Leicht';
+                    font-size: 28px;
+                    font-weight: 600;
+                    line-height: 36px;
+                    letter-spacing: -0.5px;
+                    color: #1d252c;
                   }
                   @media screen and (max-width: ${QUICKSTARTS_COLLAPSE_BREAKPOINT}) {
                     padding: 0 0 0.5rem;

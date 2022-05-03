@@ -75,7 +75,7 @@ const QuickstartTile = ({
         box-shadow: none;
 
         @media screen and (max-width: ${QUICKSTARTS_COLLAPSE_BREAKPOINT}) {
-        padding: 0 32px 24px 32px;
+          padding: 0 32px 24px 32px;
           width: 100%;
           min-width: 250px;
         }
@@ -89,11 +89,10 @@ const QuickstartTile = ({
           font-weight: 600;
 
           @media screen and (max-width: ${QUICKSTARTS_COLLAPSE_BREAKPOINT}) {
-          width: 100%;
-          font-family: 'Söhne-Buch';
-          font-weight: 400;
-        }
-
+            width: 100%;
+            font-family: 'Söhne-Buch';
+            font-weight: 400;
+          }
         }
 
         display: grid;
@@ -105,11 +104,6 @@ const QuickstartTile = ({
           'logo logo'
           'text text'
           'tag arrow';
-
-          @media screen and (max-width: ${QUICKSTARTS_COLLAPSE_BREAKPOINT}) {
-        grid-template-rows: 125px; 152px auto;
-        }
-
       `}
       onClick={() => handlePackClick(id)}
     >
