@@ -179,27 +179,40 @@ const InstallButton = ({ quickstart, location, ...props }) => {
           overflow: hidden;
           line-height: 30px;
           text-align: center;
+          margin: 0;
           width: 106px;
           height: 48px;
-          margin: 0;
+          position: relative;
 
           > div {
             margin: 10px auto 0;
             white-space: nowrap;
           }
+          > span {
+            width: 106px;
+            height: 48px;
+            background: none;
+            border: 15px solid var(--button-background);
+            position: absolute;
+            z-index: 100;
+            top: 0;
+            left: 0;
+          }
 
           .scroll {
-            -webkit-animation: scroll-back 0.2s
+            -webkit-animation: scroll-back 0.3s
               cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
-            animation: scroll-back 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275)
+            animation: scroll-back 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275)
               forwards;
           }
           &:hover .scroll {
-            -webkit-animation: scroll 0.2s
+            -webkit-animation: scroll 0.3s
               cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
-            animation: scroll 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275)
+            animation: scroll 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275)
               forwards;
           }
+
+          --translateY-distance: -40px;
 
           @-webkit-keyframes scroll {
             0% {
@@ -207,14 +220,14 @@ const InstallButton = ({ quickstart, location, ...props }) => {
               transform: translateY(0);
             }
             100% {
-              -webkit-transform: translateY(-40px);
-              transform: translateY(-40px);
+              -webkit-transform: translateY(var(--translateY-distance));
+              transform: translateY(var(--translateY-distance));
             }
           }
           @-webkit-keyframes scroll-back {
             0% {
-              -webkit-transform: translateY(-40px);
-              transform: translateY(-40px);
+              -webkit-transform: translateY(var(--translateY-distance));
+              transform: translateY(var(--translateY-distance));
             }
             100% {
               -webkit-transform: translateY(0);
@@ -228,14 +241,14 @@ const InstallButton = ({ quickstart, location, ...props }) => {
               transform: translateY(0);
             }
             100% {
-              -webkit-transform: translateY(-40px);
-              transform: translateY(-40px);
+              -webkit-transform: translateY(var(--translateY-distance));
+              transform: translateY(var(--translateY-distance));
             }
           }
           @keyframes scroll-back {
             0% {
-              -webkit-transform: translateY(-40px);
-              transform: translateY(-40px);
+              -webkit-transform: translateY(var(--translateY-distance));
+              transform: translateY(var(--translateY-distance));
             }
             100% {
               -webkit-transform: translateY(0);
@@ -244,6 +257,7 @@ const InstallButton = ({ quickstart, location, ...props }) => {
           }
         `}
       >
+        <span />
         <div class="scroll scroll-top">Install now</div>
         <div class="scroll scroll-bottom">Install now</div>
       </div>
@@ -257,15 +271,16 @@ const InstallButton = ({ quickstart, location, ...props }) => {
       onClick={handleInstallClick}
       variant={Button.VARIANT.PRIMARY}
       css={css`
+        --button-background: #1d252c;
         border-radius: 4px;
         padding: 1rem;
-        background-color: #1d252c;
+        background-color: var(--button-background);
         font-family: 'Söhne-Leicht';
         font-size: 14px;
         font-weight: 400;
 
         &:hover {
-          background-color: #1d252c;
+          background-color: var(--button-background);
         }
         ${hasInstallableComponent &&
         css`
