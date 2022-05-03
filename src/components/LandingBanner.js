@@ -188,9 +188,11 @@ const LandingBanner = ({ quickstart, className }) => {
           <InstallButton
             css={css`
               background-color: white;
-              color: #000000;
+              color: #1d252c;
+
               &:hover {
                 background-color: white;
+                color: #1d252c;
               }
             `}
             quickstart={quickstart}

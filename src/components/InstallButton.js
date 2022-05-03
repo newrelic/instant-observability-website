@@ -172,6 +172,83 @@ const InstallButton = ({ quickstart, location, ...props }) => {
     });
   };
 
+  const InstallAnimationStyles = () => {
+    return (
+      <div
+        css={css`
+          overflow: hidden;
+          line-height: 30px;
+          text-align: center;
+          width: 106px;
+          height: 48px;
+          margin: 0;
+
+          > div {
+            margin: 10px auto 0;
+            white-space: nowrap;
+          }
+
+          .scroll {
+            -webkit-animation: scroll-back 0.2s
+              cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+            animation: scroll-back 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275)
+              forwards;
+          }
+          &:hover .scroll {
+            -webkit-animation: scroll 0.2s
+              cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+            animation: scroll 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275)
+              forwards;
+          }
+
+          @-webkit-keyframes scroll {
+            0% {
+              -webkit-transform: translateY(0);
+              transform: translateY(0);
+            }
+            100% {
+              -webkit-transform: translateY(-40px);
+              transform: translateY(-40px);
+            }
+          }
+          @-webkit-keyframes scroll-back {
+            0% {
+              -webkit-transform: translateY(-40px);
+              transform: translateY(-40px);
+            }
+            100% {
+              -webkit-transform: translateY(0);
+              transform: translateY(0);
+            }
+          }
+
+          @keyframes scroll {
+            0% {
+              -webkit-transform: translateY(0);
+              transform: translateY(0);
+            }
+            100% {
+              -webkit-transform: translateY(-40px);
+              transform: translateY(-40px);
+            }
+          }
+          @keyframes scroll-back {
+            0% {
+              -webkit-transform: translateY(-40px);
+              transform: translateY(-40px);
+            }
+            100% {
+              -webkit-transform: translateY(0);
+              transform: translateY(0);
+            }
+          }
+        `}
+      >
+        <div class="scroll scroll-top">Install now</div>
+        <div class="scroll scroll-bottom">Install now</div>
+      </div>
+    );
+  };
   return (
     <Button
       {...props}
@@ -182,14 +259,26 @@ const InstallButton = ({ quickstart, location, ...props }) => {
       css={css`
         border-radius: 4px;
         padding: 1rem;
-
         background-color: #1d252c;
+        font-family: 'Söhne-Leicht';
+        font-size: 14px;
+        font-weight: 400;
+
         &:hover {
           background-color: #1d252c;
         }
+        ${hasInstallableComponent &&
+        css`
+          padding: 0;
+          width: 106px;
+        `};
       `}
     >
-      {hasInstallableComponent ? <>Install now</> : 'See installation docs'}
+      {hasInstallableComponent ? (
+        <InstallAnimationStyles />
+      ) : (
+        'See installation docs'
+      )}
     </Button>
   );
 };
