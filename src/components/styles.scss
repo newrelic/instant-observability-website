@@ -55,30 +55,36 @@ input[type='text'] {
 .slide {
   height: 100%;
 }
-.slick-prev:before,
-.slick-next:before {
-  color: var(--primary-text-color) !important;
+
+.slick-list{
+  margin: 0 0px 0 -10px !important;
 }
 
-.slick-initialized .slick-slide{
-  justify-content: space-between;
-  padding:0 8px;
-
-  &:first-child {
-    padding-left: 0;
-  }
+.slick-dots li button {
+  height: 40px !important;
 }
+
+.slick-next {
+  right: -8px !important;
+}
+.slick-prev {
+  z-index: 100;
+  left: -7px !important;
+}
+
+
 .slick-track {
   display: flex !important;
   margin-top:2px;
   flex-direction: row;
+  column-gap: 15px;
   flex-wrap: nowrap;
   align-items: flex-start;
 }
 .slick-slide
 {
-    height: inherit !important;
-} 
+  height: inherit !important;
+}
 @media only screen and (max-width: 425px){
   #onetrust-banner-sdk.otFloatingRoundedCorner {
     width: 100% !important;

@@ -146,6 +146,9 @@ const IOBanner = ({ search, setSearch, setIsSearchInputEmpty }) => {
 
         background: #1d252c;
         box-sizing: border-box;
+        @media (max-width: 1130px) {
+          --banner-height: 425px;
+        }
         @media (max-width: ${QUICKSTARTS_COLLAPSE_BREAKPOINT}) {
           --banner-height: unset;
         }
