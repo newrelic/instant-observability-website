@@ -2,7 +2,7 @@ import SohneBuch from '../fonts/SohneFonts/Sohne-Buch.otf';
 
 // Regular
 import SohneDreiviertelfett from '../fonts/SohneFonts/Sohne-Dreiviertelfett.otf';
-import SohneFett from '../fonts/Sohnefonts/Sohne-Fett.otf';
+import SohneFett from '../fonts/SohneFonts/Sohne-Fett.otf';
 import SohneExtrafett from '../fonts/SohneFonts/Sohne-Extrafett.otf';
 import SohneExtraleicht from '../fonts/SohneFonts/Sohne-Extraleicht.otf';
 import SohneHalbfett from '../fonts/SohneFonts/Sohne-Halbfett.otf';
