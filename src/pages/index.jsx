@@ -1,6 +1,5 @@
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-import '../components/fonts.scss';
 import '../components/styles.scss';
 
 import {
@@ -23,7 +22,6 @@ import SuperTiles from '../components/SuperTiles';
 import { css } from '@emotion/react';
 import { graphql } from 'gatsby';
 import { navigate } from '@reach/router';
-import { sortFeaturedQuickstarts } from '../utils/sortFeaturedQuickstarts';
 import { useDebounce } from 'react-use';
 
 const TRIPLE_COLUMN_BREAKPOINT = '1420px';
