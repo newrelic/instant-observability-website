@@ -16,33 +16,49 @@ const QuickstartHowToUse = ({ quickstart, trackQuickstart, location }) => {
           }
 
           @media screen and (max-width: 760px) {
-            display: grid;
-            grid-template-columns: repeat(1, 1fr);
             margin-left: 40px;
             margin-right: 23px;
+          }
+
+          @media not all and (min-resolution: 0.001dpcm) and max-width: 760px {
+            @media {
+              grid-template-columns: repeat(1, 1fr);
+              margin-left: 40px;
+              margin-right: 23px;
+            }
           }
         `}
       >
         <PageTools.Section>
-          <div
+          <h3
             css={css`
               top: 0;
               padding-top: 0.5rem;
               height: 2.5rem;
               width: 100%;
+              font-weight: 400;
+
+              @media screen and (min-width: 760px) {
+                line-height: 50px;
+                margin-bottom: 35px !important;
+              }
+
               @media screen and (max-width: 760px) {
                 padding-bottom: 58px !important;
+                margin-bottom: 24px !important;
+                line-height: 40px;
               }
             `}
           >
-            <h1 css={css``}>How to use this quickstart</h1>
-          </div>
+            How to use this quickstart
+          </h3>
         </PageTools.Section>
 
         <PageTools.Section>
           <ul
             css={css`
               color: var(--black-text-color);
+              font-size: 18px;
             `}
           >
             <li
@@ -114,9 +130,8 @@ const QuickstartHowToUse = ({ quickstart, trackQuickstart, location }) => {
             location={location}
             css={css`
               background: var(--background-color);
-              &:hover {
-                background-color: #1d252c;
-              }
+              padding: 18px 20px 18px 20px;
+              font-weight: 400;
             `}
           />
         </PageTools.Section>

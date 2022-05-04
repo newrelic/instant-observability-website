@@ -1,12 +1,13 @@
 :root {
   --height-mobile-nav-bar: 60px;
   --ease-out-quad: cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  --link-font-color: black;
+  --link-font-color: #1D252C;
   --hover-color: #1D252C;
   --white-hover-color: #F9FAFA;
   --background-color: #1D252C;
-  --btn-text-color: white;
+  --btn-text-color: #F9FAFA;
   --black-text-color : #1D252C;
+  --background-grey-color : #D6D6D6;
 }
 h1,h2,h3{
   font-family: 'Söhne-Kräftig';
@@ -54,30 +55,36 @@ input[type='text'] {
 .slide {
   height: 100%;
 }
-.slick-prev:before,
-.slick-next:before {
-  color: var(--primary-text-color) !important;
+
+.slick-list{
+  margin: 0 0px 0 -10px !important;
 }
 
-.slick-initialized .slick-slide{
-  justify-content: space-between;
-  padding:0 8px;
-
-  &:first-child {
-    padding-left: 0;
-  }
+.slick-dots li button {
+  height: 40px !important;
 }
+
+.slick-next {
+  right: -8px !important;
+}
+.slick-prev {
+  z-index: 100;
+  left: -7px !important;
+}
+
+
 .slick-track {
   display: flex !important;
   margin-top:2px;
   flex-direction: row;
+  column-gap: 15px;
   flex-wrap: nowrap;
   align-items: flex-start;
 }
 .slick-slide
 {
-    height: inherit !important;
-} 
+  height: inherit !important;
+}
 @media only screen and (max-width: 425px){
   #onetrust-banner-sdk.otFloatingRoundedCorner {
     width: 100% !important;
@@ -93,8 +100,4 @@ input[type='text'] {
   float: left;
   justify-content: center;
   align-items: center;
-}
-
-.e132irl20 {
-  font-weight: none;
 }

@@ -5,7 +5,6 @@ import bannerOverlayRight from '../images/io-banner/banner-style-right.svg';
 import bannerOverlayLeft from '../images/io-banner/banner-style-left.svg';
 import { SearchInput } from '@newrelic/gatsby-theme-newrelic';
 import { QUICKSTARTS_COLLAPSE_BREAKPOINT } from '../data/constants';
-import '../components/fonts.scss';
 
 const BannerHeaderContent = ({ search, setSearch, setIsSearchInputEmpty }) => {
   const handleSearchInput = (e) => {
@@ -147,6 +146,9 @@ const IOBanner = ({ search, setSearch, setIsSearchInputEmpty }) => {
 
         background: #1d252c;
         box-sizing: border-box;
+        @media (max-width: 1130px) {
+          --banner-height: 425px;
+        }
         @media (max-width: ${QUICKSTARTS_COLLAPSE_BREAKPOINT}) {
           --banner-height: unset;
         }

@@ -19,21 +19,33 @@ const DataSources = ({ quickstart }) => {
           margin-left: 40px;
           margin-right: 23px;
         }
+
+        @media not all and (min-resolution:.001dpcm) and max-width: 760px { 
+            @media {
+                grid-template-columns: repeat(1, 1fr);
+                margin-left: 40px;
+              margin-right: 23px;
+            }}
+
+            h6{
+                font-weight: 400;
+            }
         `}
         >
             <PageTools.Section>
-                <h2>
+                <h6>
                     Data Sources &nbsp;
                     <div
                         css={css`
                         display: inline-block;
-                        background: #D6D6D6;
-                        padding: 4px 6px 4px 6px;
+                        background: var(--background-grey-color);
+                        margin: 0px 8px;
+                        padding: 1px 4px;
                         border-radius: 3px;
                     `}
                     >
                         {quickstart.documentation.length}</div>
-                </h2>
+                </h6>
                 {quickstart.documentation?.length > 0 ? (
                     <QuickstartDataSources quickstart={quickstart} />
                 ) : (

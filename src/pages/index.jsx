@@ -1,42 +1,32 @@
-import PropTypes from 'prop-types';
-import { graphql } from 'gatsby';
-import React, { useState, useEffect } from 'react';
-import IOSeo from '../components/IOSeo';
-import { css } from '@emotion/react';
-import Overlay from '../components/Overlay';
-import QuickstartTile from '../components/QuickstartTile';
-import IOBanner from '../components/IOBanner';
-import {
-  useTessen,
-  Button,
-  Spinner,
-  Icon,
-} from '@newrelic/gatsby-theme-newrelic';
-import { navigate } from '@reach/router';
-
-import { useDebounce } from 'react-use';
-import { sortFeaturedQuickstarts } from '../utils/sortFeaturedQuickstarts';
-import {
-  QUICKSTARTS_COLLAPSE_BREAKPOINT,
-  LISTVIEW_BREAKPOINT,
-} from '../data/constants';
-import CATEGORIES from '../data/instant-observability-categories';
-
-import SuperTiles from '../components/SuperTiles';
-
-import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-import '../components/fonts.scss';
+import '../components/styles.scss';
 
-const VIEWS = {
-  GRID: 'Grid view',
-  LIST: 'List view',
-};
+import {
+  Button,
+  Icon,
+  Spinner,
+  useTessen,
+} from '@newrelic/gatsby-theme-newrelic';
+import React, { useEffect, useState } from 'react';
 
+import CATEGORIES from '../data/instant-observability-categories';
+import IOBanner from '../components/IOBanner';
+import IOSeo from '../components/IOSeo';
+import Overlay from '../components/Overlay';
+import PropTypes from 'prop-types';
+import { QUICKSTARTS_COLLAPSE_BREAKPOINT } from '../data/constants';
+import QuickstartTile from '../components/QuickstartTile';
+import Slider from 'react-slick';
+import SuperTiles from '../components/SuperTiles';
+import { css } from '@emotion/react';
+import { graphql } from 'gatsby';
+import { navigate } from '@reach/router';
+import { useDebounce } from 'react-use';
+
+const TRIPLE_COLUMN_BREAKPOINT = '1420px';
 const DOUBLE_COLUMN_BREAKPOINT = '1180px';
-const TRIPLE_COLUMN_BREAKPOINT = '1350px';
-const SINGLE_COLUMN_BREAKPOINT = LISTVIEW_BREAKPOINT;
+const SINGLE_COLUMN_BREAKPOINT = '900px';
 
 /**
  * Determines if one string is a substring of the other, case insensitive
@@ -86,7 +76,6 @@ const filterByCategory = (category) => {
 };
 
 const QuickstartsPage = ({ data, location }) => {
-  const [view] = useState(VIEWS.GRID);
   const tessen = useTessen();
 
   const [search, setSearch] = useState('');
@@ -210,6 +199,38 @@ const QuickstartsPage = ({ data, location }) => {
     return found.displayName;
   };
 
+  const PrevArrow = (
+    <Icon
+      name="carousel-left"
+      size="120%"
+      viewBox="0 0 30 30"
+      css={css`
+        fill: white;
+        stroke: #00838f;
+        z-index: 100;
+        stroke-width: 1px;
+        width: 29px;
+        height: 29px;
+      `}
+    />
+  );
+  const NextArrow = (
+    <Icon
+      name="carousel-right"
+      size="120%"
+      viewBox="0 0 30 30"
+      css={css`
+        fill: white;
+        stroke: #00838f;
+        z-index: 100;
+        stroke-width: 1px;
+        width: 29px;
+        height: 29px;
+      `}
+    />
+  );
+
+  // Settings for Slick-Carousel
   const settings = {
     dots: false,
     infinite: false,
@@ -218,27 +239,30 @@ const QuickstartsPage = ({ data, location }) => {
     slidesToScroll: 4,
     adaptiveHeight: false,
     adaptiveWidth: true,
+    mobileFirst: true, // necessary for breakpoints to work as expected
+    prevArrow: PrevArrow,
+    nextArrow: NextArrow,
     responsive: [
       {
-        breakpoint: 1081,
+        breakpoint: parseInt(TRIPLE_COLUMN_BREAKPOINT),
         settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
+          slidesToShow: 3,
+          slidesToScroll: 3,
           infinite: true,
           dots: false,
         },
       },
       {
-        breakpoint: 760,
+        breakpoint: parseInt(DOUBLE_COLUMN_BREAKPOINT),
         settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
+          slidesToShow: 2,
+          slidesToScroll: 2,
           infinite: true,
           dots: false,
         },
       },
       {
-        breakpoint: 480,
+        breakpoint: parseInt(SINGLE_COLUMN_BREAKPOINT),
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
@@ -262,16 +286,17 @@ const QuickstartsPage = ({ data, location }) => {
       <div
         css={css`
           --sidebar-width: 300px;
-          --banner-height: 368px;
+          --banner-height: 450px;
           --divider-color: #e4e5e6;
           --primary-text-color: #1d252c;
           display: grid;
           grid-template-columns: var(--sidebar-width) minmax(0, 1fr);
           grid-template-areas: 'sidebar main';
           grid-template-rows: 1fr auto;
-          grid-gap: 70px;
+          grid-gap: 20px;
           min-height: calc(100vh - var(--global-header-height));
           margin: var(--banner-height) auto;
+
           max-width: var(--site-max-width);
 
           @media screen and (max-width: ${QUICKSTARTS_COLLAPSE_BREAKPOINT}) {
@@ -279,6 +304,9 @@ const QuickstartsPage = ({ data, location }) => {
             grid-template-columns: minmax(0, 1fr);
             grid-template-areas: 'main';
             grid-template-rows: unset;
+          }
+          @media screen and (max-width: 760px) {
+            margin: 400px auto;
           }
         `}
       >
@@ -307,9 +335,9 @@ const QuickstartsPage = ({ data, location }) => {
               overflow: auto;
 
               label {
-                font-family: 'Söhne-Buch';
+                font-family: 'Söhne-Leicht';
                 font-size: 28px;
-                font-weight: 400;
+                font-weight: 600;
                 line-height: 36px;
                 margin-bottom: 12px;
                 letter-spacing: -0.5px;
@@ -329,9 +357,9 @@ const QuickstartsPage = ({ data, location }) => {
                   onClick={() => handleCategory(value)}
                   css={css`
                     padding: 8px 12px;
-                    font-family: 'Söhne-Buch';
+                    font-family: 'Söhne-Leicht';
                     font-size: 18px;
-                    font-weight: 400;
+                    font-weight: 600;
                     line-height: 54px;
                     width: 100%;
                     display: flex;
@@ -393,7 +421,7 @@ const QuickstartsPage = ({ data, location }) => {
                   transform: rotate(-90deg);
                   margin: -4px;
                 `}
-                name="chevron-left"
+                name="fe-chevron-left"
                 size="120%"
               />
             </Button>
@@ -502,15 +530,16 @@ const QuickstartsPage = ({ data, location }) => {
                       font-size: 16px;
                       color: var(--color-neutrals-800);
                       align-text: center;
+                      margin: 0 0 13px 4px;
                       span {
-                        color: var(--text-color);
-                        /* target inner children of parent span */
-                        span,
-                        strong {
-                        }
                       }
                       strong {
-                        color: var(--text-color);
+                        font-family: 'Söhne-Leicht';
+                        font-size: 28px;
+                        font-weight: 600;
+                        line-height: 36px;
+                        letter-spacing: -0.5px;
+                        color: #1d252c;
                       }
                       @media screen and (max-width: ${QUICKSTARTS_COLLAPSE_BREAKPOINT}) {
                         padding: 0 0 0.5rem;
@@ -521,33 +550,7 @@ const QuickstartsPage = ({ data, location }) => {
                       <strong>Most Popular</strong>
                     </span>
                   </div>
-                  <div
-                    css={css`
-                      display: block;
-                      grid-gap: 1.25rem;
-                      padding: 10px;
-                      grid-template-columns: repeat(4, 1fr);
-                      grid-auto-rows: 1fr;
-                      ${view === VIEWS.GRID &&
-                      css`
-                        @media (max-width: ${TRIPLE_COLUMN_BREAKPOINT}) {
-                          grid-template-columns: repeat(3, 1fr);
-                        }
-                        @media (max-width: ${DOUBLE_COLUMN_BREAKPOINT}) {
-                          grid-template-columns: repeat(2, 1fr);
-                        }
-                        @media (max-width: ${SINGLE_COLUMN_BREAKPOINT}) {
-                          grid-template-columns: repeat(1, 1fr);
-                        }
-                      `}
-                      ${view === VIEWS.LIST &&
-                      css`
-                        grid-auto-rows: 1fr;
-                        grid-template-columns: 1fr;
-                        grid-gap: 1.25rem;
-                      `};
-                    `}
-                  >
+                  <div>
                     {!loadComplete && <Spinner />}
                     {loadComplete && (
                       <Slider
@@ -560,14 +563,7 @@ const QuickstartsPage = ({ data, location }) => {
                         {mostPopularQuickStarts.map((pack) => (
                           <QuickstartTile
                             key={pack.id}
-                            view={view}
                             featured={false}
-                            css={css`
-                              grid-template-rows:
-                                var(--tile-image-height) var(--title-row-height)
-                                80px auto;
-                              min-height: 280px;
-                            `}
                             {...pack}
                           />
                         ))}
@@ -582,15 +578,15 @@ const QuickstartsPage = ({ data, location }) => {
                   font-size: 16px;
                   color: var(--color-neutrals-800);
                   align-text: center;
-                  span {
-                    color: var(--text-color);
-                    /* target inner children of parent span */
-                    span,
-                    strong {
-                    }
-                  }
+                  margin: 75px 0 35px 4px;
+
                   strong {
-                    color: var(--text-color);
+                    font-family: 'Söhne-Leicht';
+                    font-size: 28px;
+                    font-weight: 600;
+                    line-height: 36px;
+                    letter-spacing: -0.5px;
+                    color: #1d252c;
                   }
                   @media screen and (max-width: ${QUICKSTARTS_COLLAPSE_BREAKPOINT}) {
                     padding: 0 0 0.5rem;
@@ -601,47 +597,14 @@ const QuickstartsPage = ({ data, location }) => {
                   <strong>Featured</strong>
                 </span>
               </div>
-              <div
-                css={css`
-                  display: block;
-                  padding: 10px;
-                  grid-gap: 1.25rem;
-                  grid-template-columns: repeat(4, 1fr);
-                  grid-auto-rows: 1fr;
-                  ${view === VIEWS.GRID &&
-                  css`
-                    @media (max-width: ${TRIPLE_COLUMN_BREAKPOINT}) {
-                      grid-template-columns: repeat(3, 1fr);
-                    }
-                    @media (max-width: ${DOUBLE_COLUMN_BREAKPOINT}) {
-                      grid-template-columns: repeat(2, 1fr);
-                    }
-                    @media (max-width: ${SINGLE_COLUMN_BREAKPOINT}) {
-                      grid-template-columns: repeat(1, 1fr);
-                    }
-                  `}
-                  ${view === VIEWS.LIST &&
-                  css`
-                    grid-auto-rows: 1fr;
-                    grid-template-columns: 1fr;
-                    grid-gap: 1.25rem;
-                  `};
-                `}
-              >
+              <div>
                 {!loadComplete && <Spinner />}
                 {loadComplete && (
                   <Slider {...settings}>
                     {featuredQuickStarts.map((pack) => (
                       <QuickstartTile
                         key={pack.id}
-                        view={view}
                         featured={false}
-                        css={css`
-                          grid-template-rows:
-                            var(--tile-image-height) var(--title-row-height)
-                            80px auto;
-                          min-height: 280px;
-                        `}
                         {...pack}
                       />
                     ))}
@@ -655,7 +618,7 @@ const QuickstartsPage = ({ data, location }) => {
               --text-color: var(--primary-text-color);
 
               padding: 1.25rem 0;
-              font-size: 16px;
+              font-size: 18px;
               color: var(--color-neutrals-800);
               display: flex;
               justify-content: space-between;
@@ -668,6 +631,9 @@ const QuickstartsPage = ({ data, location }) => {
                 /* target inner children of parent span */
                 span,
                 strong {
+                  font-family: 'Söhne-Leicht';
+
+                  letter-space: -0.5px;
                   @media screen and (max-width: ${QUICKSTARTS_COLLAPSE_BREAKPOINT}) {
                     display: none;
                   }
@@ -680,6 +646,8 @@ const QuickstartsPage = ({ data, location }) => {
                 text-overflow: ellipsis;
                 overflow-x: hidden;
                 whitespace: nowrap;
+                font-weight: 100;
+                font-size: 28px;
               }
 
               @media screen and (max-width: ${QUICKSTARTS_COLLAPSE_BREAKPOINT}) {
@@ -696,39 +664,25 @@ const QuickstartsPage = ({ data, location }) => {
           <div
             css={css`
               display: grid;
-              grid-gap: 1.25rem;
+              grid-gap: 40px 15px;
               grid-template-columns: repeat(4, 1fr);
               grid-auto-rows: 1fr;
-              ${view === VIEWS.GRID &&
-              css`
-                @media (max-width: ${TRIPLE_COLUMN_BREAKPOINT}) {
-                  grid-template-columns: repeat(3, 1fr);
-                }
+              @media (max-width: ${TRIPLE_COLUMN_BREAKPOINT}) {
+                grid-template-columns: repeat(3, 1fr);
+              }
 
-                @media (max-width: ${DOUBLE_COLUMN_BREAKPOINT}) {
-                  grid-template-columns: repeat(2, 1fr);
-                }
+              @media (max-width: ${DOUBLE_COLUMN_BREAKPOINT}) {
+                grid-template-columns: repeat(2, 1fr);
+              }
 
-                @media (max-width: ${SINGLE_COLUMN_BREAKPOINT}) {
-                  grid-template-columns: repeat(1, 1fr);
-                }
-              `}
-              ${view === VIEWS.LIST &&
-              css`
-                grid-auto-rows: 1fr;
-                grid-template-columns: 1fr;
-                grid-gap: 1.25rem;
-              `};
+              @media (max-width: ${SINGLE_COLUMN_BREAKPOINT}) {
+                grid-template-columns: repeat(1, 1fr);
+              }
             `}
           >
             {!isSearchInputEmpty && <SuperTiles />}
             {filteredQuickstarts.map((pack) => (
-              <QuickstartTile
-                key={pack.id}
-                view={view}
-                featured={false}
-                {...pack}
-              />
+              <QuickstartTile key={pack.id} featured={false} {...pack} />
             ))}
           </div>
         </div>
