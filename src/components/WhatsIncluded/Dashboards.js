@@ -41,11 +41,9 @@ const Dashboards = ({ quickstart }) => {
                 @media (min-width: 760px) {
                     margin-bottom: 47px;
                     margin-top: 71px;
-                    font-size: 44px;
                   }
 
                   @media (max-width: 760px) {
-                    font-size: 36px;
                     margin-top: 23px;
                   }
 

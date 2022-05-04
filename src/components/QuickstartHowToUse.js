@@ -37,10 +37,6 @@ const QuickstartHowToUse = ({
             margin-right: 23px;
           }}
         `}>
-        <PageTools.Section
-         css={css`
-         padding-left: 0px !important;
-         `}>
           <h3
             css={css`
             top: 0;
@@ -52,24 +48,22 @@ const QuickstartHowToUse = ({
             @media screen and (min-width: 760px){
             line-height: 50px;
             margin-bottom: 35px !important;
-            font-size: 44px;
             }
 
             @media screen and (max-width: 760px){
               padding-bottom: 58px !important;
               margin-bottom: 24px !important;
               line-height: 40px ;
-              font-size: 36px;
             }
           `}
           >
             How to use this quickstart
           </h3>
-        </PageTools.Section>
 
         <PageTools.Section
          css={css`
          padding-left: 0px !important;
+         line-height: 28px;
          `}>
           <ul
             css={css`
@@ -137,6 +131,7 @@ const QuickstartHowToUse = ({
         <PageTools.Section
          css={css`
          padding-left: 0px !important;
+         margin-top: 23px;
          `}>
           <InstallButton quickstart={quickstart}
             location={location}
