@@ -36,6 +36,7 @@ const Dashboards = ({ quickstart }) => {
                 <h3
                     css={css`
                 margin-bottom: 45px;
+                font-weight: 400 !important;
              
                 @media (min-width: 760px) {
                     margin-bottom: 47px;

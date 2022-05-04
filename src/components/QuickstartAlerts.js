@@ -12,6 +12,7 @@ const QuickstartAlerts = ({ quickstart }) => (
       css={css`
         margin-bottom: 16px;
         color: var(--black-text-color);
+        line-height:28px !important;
       `}
     >
       {quickstart.title} observability quickstart contains{' '}
@@ -58,10 +59,15 @@ const QuickstartAlerts = ({ quickstart }) => (
             font-family: 'Söhne-Kräftig';
           margin-top: 16px;
           margin-bottom: 16px;
+          line-height:30px !important;
           `}>
             {alert.name}
           </p>
-          {alert.details && <p>{alert.details}</p>}
+          {alert.details && 
+          <p css={css`
+          line-height:28px !important;
+          `}
+          >{alert.details}</p>}
         </Surface>
       ))}
     </div>

@@ -14,6 +14,7 @@ const settings = {
   speed: 500,
   slidesToShow: 3,
   slidesToScroll: 1,
+  variableWidth: true,
   nextArrow: <RightArrowSVG />,
   prevArrow: <LeftArrowSVG />,
   responsive: [
@@ -51,6 +52,7 @@ const QuickstartDashboards = ({ quickstart }) => (
       css={css`
         margin-bottom: 16px;
         color: var(--black-text-color);
+        line-height:28px !important;
         @media screen and (max-width: 760px){
           display: none;
         }
@@ -69,11 +71,16 @@ const QuickstartDashboards = ({ quickstart }) => (
           css={css`
           font-weight: 700 !important;
           font-family: 'Söhne-Kräftig';
-
+          line-height: 28px !important;
           `}>
             {dashboard.name}
             </p>
-          {dashboard.description && <p>{dashboard.description}</p>}
+          {dashboard.description && 
+          <p
+          css={css`
+          line-height: 28px !important;
+          `}>
+            {dashboard.description}</p>}
           <Slider {...settings}>
             {dashboard.screenshots.map((imgUrl) => {
               return (
