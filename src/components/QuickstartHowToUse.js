@@ -47,6 +47,7 @@ const QuickstartHowToUse = ({
             padding-top: 0.5rem;
             height: 2.5rem;
             width: 100%;
+            font-weight: 400 !important;
 
             @media screen and (min-width: 760px){
             line-height: 50px;
