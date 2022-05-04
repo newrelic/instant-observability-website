@@ -5050,14 +5050,14 @@
     "alerts": [],
     "documentation": [
       {
-        "name": "New Relic Telemetry SDK",
-        "description": "Alternatively, use one of New Relic's Telemetry SDKs to send trace data to New Relic\n",
-        "url": "https://docs.newrelic.com/docs/data-ingest-apis/get-data-new-relic/new-relic-sdks/telemetry-sdks-send-custom-telemetry-data-new-relic"
-      },
-      {
         "name": "OpenCensus exporter",
         "description": "Use the OpenCensus exporter for Go or Python\n",
         "url": "https://docs.newrelic.com/docs/integrations/open-source-telemetry-integrations/opencensus/opencensus-exporter/"
+      },
+      {
+        "name": "New Relic Telemetry SDK",
+        "description": "Alternatively, use one of New Relic's Telemetry SDKs to send trace data to New Relic\n",
+        "url": "https://docs.newrelic.com/docs/data-ingest-apis/get-data-new-relic/new-relic-sdks/telemetry-sdks-send-custom-telemetry-data-new-relic"
       }
     ],
     "installPlans": []
@@ -5892,8 +5892,8 @@
     "documentation": [],
     "installPlans": [
       {
-        "name": "Guided install",
-        "id": "guided-install"
+        "name": "Basic Dashboard",
+        "id": "basic-dashboard"
       }
     ]
   },
@@ -8090,6 +8090,48 @@
       {
         "name": "AWS-Infrastructure-Monitoring",
         "id": "aws-infrastructure-monitoring"
+      }
+    ]
+  },
+  {
+    "title": "NGINX Ingress Controller",
+    "name": "nginx-ingress-controller",
+    "description": "## Why monitor the NGINX ingress controller? \n\nThe NGINX ingress controller exposes many useful metrics that can be scraped by a Prometheus server or agent. These metrics can inform you of ongoing process connections and the current ingress load that your system is handling. Furthermore, these metrics can inform you on ingress config reloads and empower alert conditions on config reload errors or unexpected config changes.\n\n## NGINX ingress controller quickstart highlights\n\n- Config reload monitoring (errors and last successful reload)\n- Throughput faceted by ingress classes\n- Request/response insights on payload size and response time\n- CPU and memory statistics \n\n## Monitoring NGINX ingress controller\n\nThe NGINX ingress controller has to have metrics enabled before they are available to be scraped. Instructions for ensuring your NGINX metrics are enabled can be found here: https://kubernetes.github.io/ingress-nginx/user-guide/monitoring/#wildcard-ingresses",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/kubernetes/nginx",
+    "id": "689827ca-e78b-4d30-989e-aa404a4f6984",
+    "level": "NEW_RELIC",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/kubernetes/nginx/logo.svg",
+    "summary": "Visualize NGINX ingress controller performance and alert on potential configuration errors. Download New Relic NGINX ingress controller quickstart to increase visibility into your ingress performance.",
+    "websiteUrl": null,
+    "keywords": [
+      "kubernetes",
+      "k8s",
+      "nginx",
+      "ingress",
+      "controllers",
+      "config"
+    ],
+    "authors": [
+      "New Relic"
+    ],
+    "dashboards": [],
+    "alerts": [],
+    "documentation": [
+      {
+        "name": "Enabling metrics for your NGINX ingress controller",
+        "description": "Details on enabling metrics for your NGINX ingress controller",
+        "url": "https://kubernetes.github.io/ingress-nginx/user-guide/monitoring/#prometheus-and-grafana-installation-using-pod-annotations"
+      },
+      {
+        "name": "NGINX Ingress Controller Quickstart",
+        "description": "Details on installing the NGINX ingress controller in your Kubernetes cluster",
+        "url": "https://kubernetes.github.io/ingress-nginx/deploy/#quick-start"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "NGINX Ingress Controller",
+        "id": "third-party-nginx-ingress"
       }
     ]
   },
