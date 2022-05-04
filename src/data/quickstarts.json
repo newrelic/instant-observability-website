@@ -5890,7 +5890,12 @@
     ],
     "alerts": [],
     "documentation": [],
-    "installPlans": []
+    "installPlans": [
+      {
+        "name": "Guided install",
+        "id": "guided-install"
+      }
+    ]
   },
   {
     "title": "Prometheus OpenMetrics Integration Stats",
