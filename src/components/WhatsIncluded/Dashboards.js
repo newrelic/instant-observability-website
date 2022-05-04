@@ -9,14 +9,6 @@ const Dashboards = ({ quickstart }) => {
     return (
         <div
             css={css`
-        h3 {
-            margin-bottom: 58px;
-            font-weight: 400;
-        }
-
-        h6 {
-            font-weight: 400;
-        }
 
         @media (min-width: 760px) {
           margin-left: 156px;
@@ -37,8 +29,26 @@ const Dashboards = ({ quickstart }) => {
             }}
         `}
         >
-            <PageTools.Section>
-                <h3>
+            <PageTools.Section
+                css={css`
+            padding: 0px !important;
+            `}>
+                <h3
+                    css={css`
+                margin-bottom: 45px;
+             
+                @media (min-width: 760px) {
+                    margin-bottom: 47px;
+                    margin-top: 71px;
+                    font-size: 44px;
+                  }
+
+                  @media (max-width: 760px) {
+                    font-size: 36px;
+                    margin-top: 23px;
+                  }
+
+                `}>
                     What&apos;s included?
                 </h3>
                 <h6>
@@ -48,7 +58,6 @@ const Dashboards = ({ quickstart }) => {
                         css={css`
                         display: inline-block;
                         background: var(--background-grey-color);
-                        margin: 0px 8px;
                         padding: 1px 4px;
                         border-radius: 3px;
                     `}

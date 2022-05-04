@@ -50,7 +50,10 @@ const SupportSection = ({ supportLevel, onClick: onLinkClick }) => {
     [QUICKSTART_SUPPORT_LEVELS.NEWRELIC]: {
       title: 'Built by New Relic',
       content: (
-        <p>
+        <p
+        css={css`
+        line-height: 28px;
+        `}>
           Need help? {supportLink} or check out our community forum,{' '}
           {communityLink}.
         </p>
@@ -79,14 +82,18 @@ const SupportSection = ({ supportLevel, onClick: onLinkClick }) => {
 
   return (
     <>
-      <h5
+      <div
         css={css`
           text-transform: uppercase;
           color: var( --link-font-color);
+          font-size: 18px;
+          font-family: 'Open Sans';
+          font-weight: 700;
+          line-height: 48px;
         `}
       >
         {QUICKSTART_SUPPORT_CONTENT[`${supportLevel}`].title}
-      </h5>
+      </div>
       {QUICKSTART_SUPPORT_CONTENT[`${supportLevel}`].content}
     </>
   );

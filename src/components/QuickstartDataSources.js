@@ -31,7 +31,7 @@ const QuickstartDataSources = ({ quickstart }) => {
         This is how you'll get your data into New Relic.{' '}
       </Intro>
 
-      <div
+      <div 
         css={css`
           display: grid;
           grid-gap: 1rem;
@@ -42,13 +42,13 @@ const QuickstartDataSources = ({ quickstart }) => {
             grid-template-columns: repeat(1, 1fr);
           }
 
-          .esuq8iu0 {
+          .data-source-card {
           box-shadow: none;
         }
         `}
       >
         {quickstart.documentation.map((doc, index) => (
-          <Surface
+          <Surface className='data-source-card'
             key={index}
             as={Link}
             to={doc.url}

@@ -37,24 +37,28 @@ const QuickstartHowToUse = ({
             margin-right: 23px;
           }}
         `}>
-        <PageTools.Section>
+        <PageTools.Section
+         css={css`
+         padding-left: 0px !important;
+         `}>
           <h3
             css={css`
             top: 0;
             padding-top: 0.5rem;
             height: 2.5rem;
             width: 100%;
-            font-weight: 400;
 
             @media screen and (min-width: 760px){
             line-height: 50px;
             margin-bottom: 35px !important;
+            font-size: 44px;
             }
 
             @media screen and (max-width: 760px){
               padding-bottom: 58px !important;
               margin-bottom: 24px !important;
               line-height: 40px ;
+              font-size: 36px;
             }
           `}
           >
@@ -62,7 +66,10 @@ const QuickstartHowToUse = ({
           </h3>
         </PageTools.Section>
 
-        <PageTools.Section>
+        <PageTools.Section
+         css={css`
+         padding-left: 0px !important;
+         `}>
           <ul
             css={css`
           color: var(--black-text-color);
@@ -126,7 +133,10 @@ const QuickstartHowToUse = ({
           </ul>
         </PageTools.Section>
 
-        <PageTools.Section>
+        <PageTools.Section
+         css={css`
+         padding-left: 0px !important;
+         `}>
           <InstallButton quickstart={quickstart}
             location={location}
             css={css`

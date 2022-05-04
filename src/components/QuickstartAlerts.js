@@ -31,14 +31,14 @@ const QuickstartAlerts = ({ quickstart }) => (
         @media (max-width: 760px) {
           grid-template-columns: repeat(1, 1fr);
         }
-        .esuq8iu0 {
+        .alerts-card {
           box-shadow: none;
         }
       `}
 
     >
       {quickstart.alerts.map((alert, index) => (
-        <Surface
+        <Surface className='alerts-card'
           key={index}
           base={Surface.BASE.PRIMARY}
           css={css`

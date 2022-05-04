@@ -76,7 +76,7 @@ const RelatedResources = ({ className, resources, title }) => {
               <li
                 key={url}
                 css={css`
-                  font-size: 0.875rem;
+                  font-size: 18px;
                   margin-top: 0;
 
 
@@ -89,7 +89,7 @@ const RelatedResources = ({ className, resources, title }) => {
                   to={url}
                   css={css`
                     display: block;
-                    margin-bottom: 0.25rem;
+                    margin-bottom: 0.75rem;
                     color: var(--link-font-color);
                     &:hover{
                       color: var(--hover-color);

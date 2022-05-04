@@ -14,11 +14,16 @@ const Alerts = ({ quickstart }) => {
 
         @media (min-width: 760px) {
           margin-left: 156px;
+          margin-top: 50px;
         }
 
         @media (max-width: 760px) {
           margin-left: 40px;
           margin-right: 23px;
+          margin-top: 51px;
+          h6{
+            margin-bottom: 23px;
+          }
         }
 
         @media not all and (min-resolution:.001dpcm) and max-width: 760px { 
@@ -27,20 +32,18 @@ const Alerts = ({ quickstart }) => {
                 margin-left: 40px;
               margin-right: 23px;
             }}
-
-            h6{
-                font-weight: 400;
-            }
         `}
         >
-            <PageTools.Section>
+            <PageTools.Section
+                css={css`
+             padding: 0px !important;
+             `}>
                 <h6>
                     Alerts &nbsp;
                     <div
                         css={css`
                         display: inline-block;
                         background: var(--background-grey-color);
-                        margin: 0px 8px;
                         padding: 1px 4px;
                         border-radius: 3px;
                     `}

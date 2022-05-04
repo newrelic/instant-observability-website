@@ -246,7 +246,7 @@ const QuickstartDetails = ({ data, location }) => {
           css={css`
             @media (min-width: 760px) {
                   margin-right: 122.34px;
-                  padding-bottom: 60px;
+                  margin-bottom: 60px;
             }   
             @media (max-width: 760px) {
               padding-bottom: 60px;
@@ -279,9 +279,13 @@ const QuickstartDetails = ({ data, location }) => {
         <div
           css={css`
              background-color: #F1F2F2;      
-              padding-top: 30px;
-              padding-bottom: 30px;
-           
+              padding-top: 38px;
+              padding-bottom: 49px;
+              @media (max-width: 760px) {
+                padding-top: 53px;
+              padding-bottom: 63px; 
+                
+              }
           `}>
           <QuickstartHowToUse
             quickstart={quickstart}
@@ -292,8 +296,14 @@ const QuickstartDetails = ({ data, location }) => {
         {/* Get started component here */}
         <div
           css={css`
-              padding-top: 30px;
-              padding-bottom: 30px; 
+              padding-top: 41px;
+              padding-bottom: 43px; 
+
+              @media (max-width: 760px) {
+                padding-top: 58px;
+              padding-bottom: 68px; 
+                
+              }
           `}>
           <LandingPageFooter quickstart={quickstart}
             trackQuickstart={trackQuickstart}
