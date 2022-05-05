@@ -1921,19 +1921,19 @@
     ],
     "dashboards": [
       {
-        "name": "Battlesnake Server Status",
-        "description": "A dashboard to monitor your Battlesnake server's performance. It's important to keep all responses to the `/move` endpoint under 500ms. Furthermore, it's possible that your snake may be in multiple concurrent matches at the same time. It's important to make sure you server and web application are running smoothly to keep you in the game!",
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/battlesnake/dashboards/battlesnake-server-status/battlesnake-server-status.png"
-        ]
-      },
-      {
         "name": "Battlesnake Performance",
         "description": "Monitor your Battlensakes performance and see how it stacks up against your competition!",
         "url": null,
         "screenshots": [
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/battlesnake/dashboards/battlesnake-performance/battlesnake-performance.png"
+        ]
+      },
+      {
+        "name": "Battlesnake Server Status",
+        "description": "A dashboard to monitor your Battlesnake server's performance. It's important to keep all responses to the `/move` endpoint under 500ms. Furthermore, it's possible that your snake may be in multiple concurrent matches at the same time. It's important to make sure you server and web application are running smoothly to keep you in the game!",
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/battlesnake/dashboards/battlesnake-server-status/battlesnake-server-status.png"
         ]
       },
       {
@@ -3660,19 +3660,19 @@
     ],
     "dashboards": [
       {
-        "name": "Data Governance Baseline",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/oma-data-gov/dashboards/data-ingest-baseline/data-ingest-baseline.png"
-        ]
-      },
-      {
         "name": "Data Governance Entity Breakdowns",
         "description": null,
         "url": null,
         "screenshots": [
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/oma-data-gov/dashboards/data-ingest-entity-breakdown/data-ingest-entity-breakdown.png"
+        ]
+      },
+      {
+        "name": "Data Governance Baseline",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/oma-data-gov/dashboards/data-ingest-baseline/data-ingest-baseline.png"
         ]
       }
     ],
@@ -8114,7 +8114,16 @@
     "authors": [
       "New Relic"
     ],
-    "dashboards": [],
+    "dashboards": [
+      {
+        "name": "NGINX Ingress Controller",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/kubernetes/nginx/dashboards/nginx-ingress/nginx-ingress.png"
+        ]
+      }
+    ],
     "alerts": [],
     "documentation": [
       {
@@ -16891,19 +16900,19 @@
     ],
     "dashboards": [
       {
+        "name": "Catchpoint-Overview",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/catchpoint/dashboards/Catchpoint-Overview/Catchpoint-Overview.png"
+        ]
+      },
+      {
         "name": "Catchpoint-Recent Errors",
         "description": null,
         "url": null,
         "screenshots": [
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/catchpoint/dashboards/Catchpoint-Recent_Errors/Catchpoint-Recent_Errors.png"
-        ]
-      },
-      {
-        "name": "Catchpoint-Test Times",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/catchpoint/dashboards/Catchpoint-Test_Times/Catchpoint-Test_Times.png"
         ]
       },
       {
@@ -16915,11 +16924,11 @@
         ]
       },
       {
-        "name": "Catchpoint-Overview",
+        "name": "Catchpoint-Test Times",
         "description": null,
         "url": null,
         "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/catchpoint/dashboards/Catchpoint-Overview/Catchpoint-Overview.png"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/catchpoint/dashboards/Catchpoint-Test_Times/Catchpoint-Test_Times.png"
         ]
       }
     ],
@@ -20989,6 +20998,39 @@
     ]
   },
   {
+    "title": "Atlassian JIRA",
+    "name": "atlassian-jira",
+    "description": "Jira is a proprietary issue tracking product developed by Atlassian that allows bug tracking and agile project management. You can Integrate New Relic with Atlassian Jira(Cloud) and automatically create and update Jira issues.\n\n[Check out our documentation](https://docs.newrelic.com/docs/alerts-applied-intelligence/notifications/notification-integrations/#jira) to set up a JIRA notification channel and provide fast and consistent ways for the right personnel to be notified about incidents",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/atlassian/atlassian-jira",
+    "id": "a99b22a5-5666-4096-b239-8f315700fde0",
+    "level": "NEW_RELIC",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/atlassian/atlassian-jira/logo.png",
+    "summary": "Integrate New Relic with Atlassian Jira(Cloud) and automatically create and update Jira issues.",
+    "websiteUrl": null,
+    "keywords": [
+      "JIRA",
+      "Atlassian",
+      "notifications",
+      "AIOps",
+      "Incident Intelligence",
+      "Destinations",
+      "newrelic partner"
+    ],
+    "authors": [
+      "Matan Moser (New Relic)",
+      "Ismail Azam (New Relic)"
+    ],
+    "dashboards": [],
+    "alerts": [],
+    "documentation": [],
+    "installPlans": [
+      {
+        "name": "Atlassian JIRA",
+        "id": "third-party-atlassian-jira"
+      }
+    ]
+  },
+  {
     "title": "Agent for Google Publisher Tags",
     "name": "ads-web-gpt",
     "description": "Agent to monitor web applications using GPT.",
@@ -21249,34 +21291,6 @@
         "url": "https://docs.newrelic.com/docs/logs/log-management/log-api/introduction-log-api/"
       }
     ],
-    "installPlans": []
-  },
-  {
-    "title": "Atlassian JIRA",
-    "name": "atlassian-jira",
-    "description": "Jira is a proprietary issue tracking product developed by Atlassian that allows bug tracking and agile project management. You can Integrate New Relic with Atlassian Jira(Cloud) and automatically create and update Jira issues.\n\n[Check out our documentation](https://docs.newrelic.com/docs/alerts-applied-intelligence/notifications/notification-integrations/#jira) to set up a JIRA notification channel and provide fast and consistent ways for the right personnel to be notified about incidents",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/atlassian/atlassian-jira",
-    "id": "a99b22a5-5666-4096-b239-8f315700fde0",
-    "level": "NEW_RELIC",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/atlassian/atlassian-jira/logo.png",
-    "summary": "Integrate New Relic with Atlassian Jira(Cloud) and automatically create and update Jira issues.",
-    "websiteUrl": null,
-    "keywords": [
-      "JIRA",
-      "Atlassian",
-      "notifications",
-      "AIOps",
-      "Incident Intelligence",
-      "Destinations",
-      "newrelic partner"
-    ],
-    "authors": [
-      "Matan Moser (New Relic)",
-      "Ismail Azam (New Relic)"
-    ],
-    "dashboards": [],
-    "alerts": [],
-    "documentation": [],
     "installPlans": []
   },
   {
