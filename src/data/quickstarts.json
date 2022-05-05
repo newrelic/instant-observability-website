@@ -21763,14 +21763,14 @@
     ]
   },
   {
-    "title": "New Relic IBM MQ Monitor",
+    "title": "IBM MQ",
     "name": "ibmmq",
-    "description": "### IBM MQ\n\nIBM MQ allows independent and potentially non-concurrent applications on a distributed system to securely communicate with each other, using messages. MQ is available on a large number of platforms (both IBM and non-IBM), including z/OS (mainframe), IBM i, Transaction Processing Facility, UNIX (AIX, HP-UX, Solaris), HP NonStop, OpenVMS, Linux, and Microsoft Windows.\n\nThe New Relic IBM MQ Monitor allows you to monitor the performance of MQ Objects like channels and queues . The metrics collected include depth of your queues, how much space your queues have for additional messages, and the age of a queue’s oldest message. Analyzing metrics over time allows you to scale your instances accordingly in order to prevent full queues, which can delay message delivery.",
+    "description": "## IBM MQ performance\n\nIBM MQ allows independent and potentially non-concurrent applications on a distributed system to securely communicate with each other, using messages.\n\nThe IBM MQ integration allows you to monitor the performance of MQ Objects like channels and queues . The metrics collected include depth of your queues, how much space your queues have for additional messages, and the age of a queue’s oldest message. Analyzing metrics over time allows you to scale your instances accordingly in order to prevent full queues, which can delay message delivery.\n\n### IBM MQ quickstart highlights\n\nThe IBM MQ quickstart automatically instruments your IBM MQ infrastructure, and comes pre-built dashboard visualizing:\n- Total of Connections\n- Connections by Queue Manager\n- Total of Errors\n- Errors  by Queue Manager\n- Total of Messages\n- Messages by Queue Manager\n- Messages by Queue\n- Queue Depth\n- Expired messages by Queue\n- Filesystem usage",
     "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/ibmmq",
     "id": "924fd4b3-a6d1-4a6e-9e2c-b598f197f713",
     "level": "NEW_RELIC",
     "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/ibmmq/logo.png",
-    "summary": "The New Relic IBM MQ Monitor enables performance monitoring of IBM MQ Objects like channels, topics and queues.",
+    "summary": "The IBM MQ integration enables performance monitoring of IBM MQ infrastructure.",
     "websiteUrl": null,
     "keywords": [
       "infrastructure",
@@ -21796,8 +21796,8 @@
     "alerts": [],
     "documentation": [
       {
-        "name": "New Relic integration for IBM MQ",
-        "description": "The New Relic IBM MQ Monitor enables performance monitoring of IBM MQ Objects like channels, topics and queues.\n",
+        "name": "IBM MQ monitoring integration",
+        "description": "Our IBM MQ integration collects and sends dimensional metrics from IBM MQ.\n",
         "url": "https://docs.newrelic.com/docs/integrations/host-integrations/host-integrations-list/ibmmq-monitoring-integration/"
       }
     ],
