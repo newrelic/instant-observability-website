@@ -88,6 +88,11 @@ const QuickstartsPage = ({ data, location }) => {
   const [loadComplete, setLoadComplete] = useState(false);
 
   useEffect(() => {
+    const pageBodyClass = document.body.classList;
+    if (pageBodyClass.contains('dark-mode')) {
+      pageBodyClass.replace('dark-mode', 'light-mode');
+    }
+
     const params = new URLSearchParams(location.search);
     const searchParam = params.get('search');
     const categoryParam = params.get('category');
