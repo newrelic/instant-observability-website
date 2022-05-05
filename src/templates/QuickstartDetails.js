@@ -249,7 +249,7 @@ const QuickstartDetails = ({ data, location }) => {
                   margin-bottom: 60px;
             }   
             @media (max-width: 760px) {
-              padding-bottom: 60px;
+                   margin-bottom: 104px;
         }
           `}> 
             
@@ -278,7 +278,7 @@ const QuickstartDetails = ({ data, location }) => {
         {/* How to use this quickstart here */}
         <div
           css={css`
-             background-color: #F1F2F2;      
+             background-color: var(--background-quickstart);      
               padding-top: 38px;
               padding-bottom: 49px;
               @media (max-width: 760px) {

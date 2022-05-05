@@ -8,6 +8,7 @@
   --btn-text-color: #F9FAFA;
   --black-text-color : #1D252C;
   --background-grey-color : #D6D6D6;
+  --background-quickstart: #F1F2F2;
 }
 h1,h2,h3{
   font-family: 'Söhne-Kräftig';
@@ -18,17 +19,29 @@ h1{
 h2{
   font-size:56px;
 }
-h3{
-  font-weight: 400;
-  @media (max-width: 760px) {
+
+@media (max-width: 760px) {
+  h3{
     line-height: 40px;
     font-size: 36px;
   }
-
-  @media (min-width: 760px) {
-    line-height: 50px;
-    font-size: 44px;
+  h6{
+    line-height: 32px;
   }
+}
+
+@media (min-width: 760px) {
+  h3{
+  line-height: 50px;
+  font-size: 44px;
+  }
+  h6{
+    line-height: 30px;
+  }
+}
+
+h3{
+  font-weight: 400;
 }
 h4,h5,h6,p{
  font-family: 'Söhne-Buch';
@@ -36,14 +49,6 @@ h4,h5,h6,p{
 }
 h6{
   font-size:24px;
-
-  @media (max-width: 760px) {
-    line-height: 32px;
-  }
-
-  @media (min-width: 760px) {
-    line-height: 30px;
-  }
 }
 p{
   font-size:18px;

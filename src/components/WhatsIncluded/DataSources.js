@@ -14,12 +14,11 @@ const DataSources = ({ quickstart }) => {
         @media (min-width: 760px) {
           margin-left: 156px;
           margin-top:51px;
+          margin-bottom: 104px;
         }
 
         @media (max-width: 760px) {
-          margin-left: 40px;
-          margin-right: 23px;
-          margin-top: 52px;
+          margin: 52px 23px 78px 40px;
           h6{
             margin-bottom: 23px;
           }

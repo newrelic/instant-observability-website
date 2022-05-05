@@ -52,6 +52,7 @@ const QuickstartOverview = ({ quickstart }) => {
                 font-size: 36px;
                 font-weight: 400;
                 margin-bottom: 24px;
+                margin-top: 78px;
               }
             }
               @media screen and (min-width: 760px) {

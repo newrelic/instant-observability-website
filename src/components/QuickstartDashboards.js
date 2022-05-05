@@ -14,7 +14,6 @@ const settings = {
   speed: 500,
   slidesToShow: 3,
   slidesToScroll: 1,
-  variableWidth: true,
   nextArrow: <RightArrowSVG />,
   prevArrow: <LeftArrowSVG />,
   responsive: [
@@ -68,19 +67,21 @@ const QuickstartDashboards = ({ quickstart }) => (
       <div key={dashboard.name}>
         <div>
           <p
-          css={css`
+            css={css`
           font-weight: 700 !important;
           font-family: 'Söhne-Kräftig';
           line-height: 28px !important;
+          margin-bottom: 0;
           `}>
             {dashboard.name}
-            </p>
-          {dashboard.description && 
-          <p
-          css={css`
+          </p>
+          {dashboard.description &&
+            <p
+              css={css`
           line-height: 28px !important;
           `}>
-            {dashboard.description}</p>}
+              {dashboard.description}</p>
+          }
           <Slider {...settings}>
             {dashboard.screenshots.map((imgUrl) => {
               return (
