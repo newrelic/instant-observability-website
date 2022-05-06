@@ -121,7 +121,6 @@ const QuickstartDashboards = ({ quickstart }) => (
                   <animated.div
                     css={css`
                      display: grid;
-                     height: 100%;
                      align-items: center;
                      padding-left: 5px;
                      padding-right: 5px;
@@ -141,8 +140,12 @@ const QuickstartDashboards = ({ quickstart }) => (
                         src={imgUrl}
                         css={css`
                             width: 100%;
+                            max-height: 250px;
                             border-radius: 4px;
                             border: solid 1px var(--divider-color);
+                            @media (max-width: 760px) {
+                              max-height: 250px;
+                            }
                           `}
                       />
                     </a>
