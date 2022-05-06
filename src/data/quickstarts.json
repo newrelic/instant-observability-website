@@ -1153,8 +1153,13 @@
     "alerts": [],
     "documentation": [
       {
-        "name": "Push CircleCI logs to New Relic",
-        "description": "Doc file explaining how to get your CircleCI logs into New Relic.",
+        "name": "CircleCI Webhooks documentation",
+        "description": "CircleCI webhooks documentation",
+        "url": "https://circleci.com/docs/2.0/webhooks/"
+      },
+      {
+        "name": "Forward CircleCI docs to New Relic",
+        "description": "How to set up a webhook to forward your CircleCI logs to New Relic",
         "url": "https://docs.newrelic.com/docs/logs/forward-logs/circleci-logs/"
       }
     ],
@@ -5050,14 +5055,14 @@
     "alerts": [],
     "documentation": [
       {
-        "name": "OpenCensus exporter",
-        "description": "Use the OpenCensus exporter for Go or Python\n",
-        "url": "https://docs.newrelic.com/docs/integrations/open-source-telemetry-integrations/opencensus/opencensus-exporter/"
-      },
-      {
         "name": "New Relic Telemetry SDK",
         "description": "Alternatively, use one of New Relic's Telemetry SDKs to send trace data to New Relic\n",
         "url": "https://docs.newrelic.com/docs/data-ingest-apis/get-data-new-relic/new-relic-sdks/telemetry-sdks-send-custom-telemetry-data-new-relic"
+      },
+      {
+        "name": "OpenCensus exporter",
+        "description": "Use the OpenCensus exporter for Go or Python\n",
+        "url": "https://docs.newrelic.com/docs/integrations/open-source-telemetry-integrations/opencensus/opencensus-exporter/"
       }
     ],
     "installPlans": []
