@@ -295,7 +295,8 @@ const QuickstartsPage = ({ data, location }) => {
           grid-template-rows: 1fr auto;
           grid-gap: 20px;
           min-height: calc(100vh - var(--global-header-height));
-          margin: var(--banner-height) auto;
+          margin: 0 auto;
+          padding: var(--banner-height) 0;
 
           max-width: var(--site-max-width);
 
