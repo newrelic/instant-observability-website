@@ -25,16 +25,16 @@ const QuickstartOverview = ({ quickstart }) => {
       {quickstart.description && (
         <div
           css={css`
-            color: #1d252c;
+            color: var(--brand-primary-text-color);
             p {
               line-height: 28px;
             }
             ul {
               margin-bottom: 50px;
-              font-size:18px;
+              font-size: 18px;
               li {
                 ::marker {
-                  color: #1d252c;
+                  color: var(--brand-primary-text-color);
                 }
               }
             }
@@ -44,12 +44,12 @@ const QuickstartOverview = ({ quickstart }) => {
             skipHtml
             allowedElements={allowedElements}
             css={css`
-            @media screen and (max-width: 760px){
-              width: fit-content;
-              margin: 40px 70px 40px 58px;
-            }
+              @media screen and (max-width: 760px) {
+                width: fit-content;
+                margin: 40px 70px 40px 58px;
+              }
               @media screen and (min-width: 760px) {
-                margin: 104px 155px 104px  168px;
+                margin: 104px 155px 104px 168px;
               }
             `}
           >
