@@ -1,10 +1,7 @@
-import { Button, Icon, Link, useTessen } from '@newrelic/gatsby-theme-newrelic';
-import { QUICKSTARTS_REPO, SHIELD_LEVELS } from '../data/constants';
-import React, { useEffect, useState } from 'react';
+import { useTessen } from '@newrelic/gatsby-theme-newrelic';
+import React from 'react';
 
-import Breadcrumbs from '../components/Breadcrumbs';
 import IOSeo from '../components/IOSeo';
-import InstallButton from '../components/InstallButton';
 import PageLayout from '../components/PageLayout';
 import PropTypes from 'prop-types';
 import { css } from '@emotion/react';
@@ -28,20 +25,8 @@ const layoutContentSpacing = css`
 `;
 
 const QuickstartDetails = ({ data, location }) => {
-  const [imgStyle, setImgStyle] = useState({});
-
   const quickstart = data.quickstarts;
-  const quickstartUrl = quickstart.packUrl || QUICKSTARTS_REPO;
   const tessen = useTessen();
-  const breadcrumbs = [
-    {
-      name: 'Instant Observability (I/O)',
-      url: '/',
-    },
-    {
-      name: quickstart.title,
-    },
-  ];
   const quickStartMeta = [
     {
       name: 'quick_start_name',
@@ -68,39 +53,6 @@ const QuickstartDetails = ({ data, location }) => {
       quickstartId: quickstart.id,
     });
   };
-
-  // get image resolution from URL
-  const getURLMeta = async (url) => {
-    const img = new Image();
-    img.src = url;
-    const { width, height } = await new Promise((resolve) => {
-      img.onload = function () {
-        resolve({
-          width: this.width,
-          height: this.height,
-        });
-      };
-    });
-    return { width, height };
-  };
-
-  const getImgStyle = async () => {
-    const { width, height } = await getURLMeta(quickstart.logoUrl);
-    const style = {};
-    // if image is rectangle
-    if (width > height) {
-      style.width = '';
-      style.height = '';
-    } else {
-      style.width = '80px';
-      style.height = '80px';
-    }
-    setImgStyle(style);
-  };
-
-  useEffect(() => {
-    getImgStyle();
-  }, [quickstart.logoUrl]);
 
   return (
     <>
@@ -129,6 +81,7 @@ const QuickstartDetails = ({ data, location }) => {
             margin: 0 var(--page-margin);
           `}
           quickstart={quickstart}
+          location={location}
         />
       </PageLayout.Header>
 

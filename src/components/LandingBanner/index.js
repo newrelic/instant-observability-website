@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import PropTypes from 'prop-types';
 
 import Breadcrumbs from '../../components/Breadcrumbs';
 import InstallButton from '../../components/InstallButton';
@@ -9,7 +10,7 @@ import BannerBackground from './BannerBackground';
 
 const IMAGE_DISPLAY_BREAKPOINT = '1200px';
 
-const LandingBanner = ({ quickstart, className }) => {
+const LandingBanner = ({ quickstart, className, location }) => {
   const [imgStyle, setImgStyle] = useState({});
 
   const breadcrumbs = [
@@ -195,6 +196,7 @@ const LandingBanner = ({ quickstart, className }) => {
 
 LandingBanner.propTypes = {
   quickstarts: quickstart.isRequired,
+  location: PropTypes.object.isRequired,
 };
 
 export default LandingBanner;
