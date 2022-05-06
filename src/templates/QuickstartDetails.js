@@ -19,6 +19,14 @@ import Layout from '../components/Layout';
 import QuickstartOverview from '../components/QuickstartOverview';
 import LandingBanner from '../components/LandingBanner';
 
+const layoutContentSpacing = css`
+  --page-margin: 156px;
+  @media (max-width: 760px) {
+    --page-margin: 30px;
+  }
+  padding: 0 var(--page-margin);
+`;
+
 const QuickstartDetails = ({ data, location }) => {
   const [imgStyle, setImgStyle] = useState({});
 
@@ -103,12 +111,22 @@ const QuickstartDetails = ({ data, location }) => {
         tags={quickstart.keywords}
         meta={quickStartMeta}
       />
-      <PageLayout.Header>
+      <PageLayout.Header
+        css={css`
+          --banner-height: 430px;
+          --page-margin: 156px;
+          @media (max-width: 760px) {
+            --banner-height: 420px;
+            --page-margin: 30px;
+          }
+
+          font-family: 'Söhne-Buch';
+          height: var(--banner-height);
+        `}
+      >
         <LandingBanner
           css={css`
-            margin-left: 156px;
-            margin-right: 156px;
-            width: 100%;
+            margin: 0 var(--page-margin);
           `}
           quickstart={quickstart}
         />
@@ -118,14 +136,9 @@ const QuickstartDetails = ({ data, location }) => {
         {/* What's included section here */}
         <div
           css={css`
-            --banner-height: 368px;
-            margin: var(--banner-height) auto;
-            @media (min-width: 760px) {
-              margin-right: 122.34px;
-              padding-bottom: 60px;
-            }
-            @media (max-width: 760px) {
-              padding-bottom: 60px;
+            ${layoutContentSpacing};
+            > * {
+              padding-top: 3rem;
             }
           `}
         >
@@ -135,6 +148,8 @@ const QuickstartDetails = ({ data, location }) => {
         </div>
         <div
           css={css`
+            margin-top: 80px;
+            margin-bottom: 80px;
             mix-blend-mode: normal;
             width: 50%;
             opacity: 0.84;
@@ -147,12 +162,23 @@ const QuickstartDetails = ({ data, location }) => {
             }
           `}
         ></div>
-        <div>
+        <div
+          css={css`
+            ${layoutContentSpacing};
+
+            padding-bottom: 117px;
+            @media screen and (max-width: 760px) {
+              padding-bottom: 40px;
+            }
+          `}
+        >
           <QuickstartOverview quickstart={quickstart} />
         </div>
         {/* How to use this quickstart here */}
         <div
           css={css`
+            ${layoutContentSpacing};
+
             background-color: #f1f2f2;
             padding-top: 30px;
             padding-bottom: 30px;
@@ -167,6 +193,8 @@ const QuickstartDetails = ({ data, location }) => {
         {/* Get started component here */}
         <div
           css={css`
+            ${layoutContentSpacing};
+
             padding-top: 30px;
             padding-bottom: 30px;
           `}

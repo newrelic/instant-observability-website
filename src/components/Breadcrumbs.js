@@ -16,6 +16,7 @@ const Breadcrumbs = ({ segments, separator }) => {
           <Link
             to={segment.url}
             css={css`
+              color: var(--brand-highlight-green);
               text-decoration: none;
             `}
           >

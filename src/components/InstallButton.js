@@ -85,7 +85,12 @@ const createInstallLink = (
 const hasComponent = (quickstart, key) =>
   quickstart[key] && quickstart[key].length > 0;
 
-const InstallButton = ({ quickstart, location, ...props }) => {
+const InstallButton = ({
+  quickstart,
+  location,
+  style = 'PRIMARY',
+  ...props
+}) => {
   const { treatment } = useTreatment('super_tiles');
 
   const hasInstallableComponent =
@@ -271,17 +276,29 @@ const InstallButton = ({ quickstart, location, ...props }) => {
       onClick={handleInstallClick}
       variant={Button.VARIANT.PRIMARY}
       css={css`
-        --button-background: #1d252c;
-        border-radius: 4px;
-        padding: 1rem;
+        --button-background: var(
+          ${style === 'PRIMARY'
+            ? '--brand-white'
+            : '--brand-secondary-background-color'}
+        );
+        --button-text-color: var(
+          ${style === 'PRIMARY'
+            ? '--brand-primary-text-color'
+            : '--brand-secondary-text-color'}
+        );
         background-color: var(--button-background);
-        font-family: 'Söhne-Leicht';
+        border-radius: 4px;
+        color: var(--button-text-color);
         font-size: 14px;
+        line-height: 21px;
         font-weight: 400;
+        padding: 1rem;
 
         &:hover {
           background-color: var(--button-background);
+          color: var(--button-text-color);
         }
+
         ${hasInstallableComponent &&
         css`
           padding: 0;
@@ -302,6 +319,7 @@ InstallButton.propTypes = {
   quickstart: quickstart.isRequired,
   onClick: PropTypes.func.isRequired,
   location: PropTypes.object.isRequired,
+  style: PropTypes.oneOf(['PRIMARY', 'SECONDARY']),
 };
 
 export default InstallButton;

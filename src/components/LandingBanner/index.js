@@ -1,19 +1,17 @@
-import { Button, Icon, Link, useTessen } from '@newrelic/gatsby-theme-newrelic';
-import { QUICKSTARTS_REPO, SHIELD_LEVELS } from '../data/constants';
 import React, { useEffect, useState } from 'react';
 
-import Breadcrumbs from '../components/Breadcrumbs';
-import InstallButton from '../components/InstallButton';
+import Breadcrumbs from '../../components/Breadcrumbs';
+import InstallButton from '../../components/InstallButton';
 import { css } from '@emotion/react';
-import { quickstart } from '../types';
-import defaultImage from '../images/defaultQuickstartImage.png';
+import { quickstart } from '../../types';
+import defaultImage from '../../images/defaultQuickstartImage.png';
 import BannerBackground from './BannerBackground';
+
+const IMAGE_DISPLAY_BREAKPOINT = '1200px';
 
 const LandingBanner = ({ quickstart, className }) => {
   const [imgStyle, setImgStyle] = useState({});
 
-  const quickstartUrl = quickstart.packUrl || QUICKSTARTS_REPO;
-  const tessen = useTessen();
   const breadcrumbs = [
     {
       name: 'Instant Observability',
@@ -23,15 +21,6 @@ const LandingBanner = ({ quickstart, className }) => {
       name: quickstart.title,
     },
   ];
-
-  const trackQuickstart = (action, quickstart) => () =>
-    tessen.track({
-      eventName: 'instantObservability',
-      category: action,
-      quickstartName: quickstart.name,
-      quickstartId: quickstart.id,
-      quickstartUrl: quickstart.packUrl,
-    });
 
   // get image resolution from URL
   const getURLMeta = async (url) => {
@@ -71,34 +60,37 @@ const LandingBanner = ({ quickstart, className }) => {
       <div
         className={className}
         css={css`
-          color: white;
-          h2 {
-            color: white;
-          }
-          z-index: 2;
-
           border-bottom: none;
+          color: var(--brand-secondary-text-color);
           display: grid;
           grid-column-gap: 1rem;
           grid-row-gap: 1rem;
-          grid-template-columns: 1fr 0.5fr 1fr;
           grid-template-areas:
             'breadcrumbs logo .'
             'title title image'
             'summ summ image'
-            'summ summ image'
             'cta . image';
+          grid-template-columns: 1fr 0.5fr 1fr;
+          grid-template-rows: 0.25fr 0.5fr auto auto;
+          height: 100%;
           justify-content: normal;
           justify-self: center;
+          padding-bottom: 1rem;
           row-gap: 1rem;
+          z-index: 2;
 
-          @media (max-width: 1300px) {
-            grid-template-columns: 1fr;
+          h2 {
+            color: white;
+          }
+
+          @media (max-width: ${IMAGE_DISPLAY_BREAKPOINT}) {
             grid-template-areas:
               'breadcrumbs'
               'title'
               'summ'
               'cta';
+            grid-template-columns: 1fr;
+            grid-template-rows: 0.25fr 0.25fr auto auto;
           }
         `}
       >
@@ -106,13 +98,13 @@ const LandingBanner = ({ quickstart, className }) => {
         {quickstart.logoUrl && (
           <div
             css={css`
+              align-self: start;
               background-color: white;
               border-radius: 0 0 7px 7px;
               grid-area: logo;
-              align-self: center;
               justify-self: center;
               padding: 5px;
-              @media (max-width: 1300px) {
+              @media (max-width: ${IMAGE_DISPLAY_BREAKPOINT}) {
                 display: none;
               }
             `}
@@ -135,8 +127,12 @@ const LandingBanner = ({ quickstart, className }) => {
             font-weight: normal;
             grid-area: title;
             margin-bottom: 0;
-            padding-bottom: 0;
-            align-self: end;
+
+            @media (max-width: 760px) {
+              font-size: 44px;
+              line-height: 46px;
+              letter-spacing: -0.015em;
+            }
           `}
         >
           {quickstart.title}
@@ -147,10 +143,12 @@ const LandingBanner = ({ quickstart, className }) => {
               grid-area: summ;
               font-size: 24px;
               line-height: 32px;
-              margin-right: 3rem;
 
               @media (max-width: 760px) {
                 max-width: 100%;
+                font-size: 18px;
+                line-height: 24px;
+                letter-spacing: -0.005em;
               }
             `}
           >
@@ -160,13 +158,10 @@ const LandingBanner = ({ quickstart, className }) => {
         <div
           css={css`
             grid-area: image;
-            align-self: center;
-            justify-self: center;
-            margin-bottom: 1rem;
-            border: 28px solid #000000;
-            border-radius: 26px;
+            align-self: start;
+            margin: 0 auto 1rem;
 
-            @media (max-width: 1300px) {
+            @media (max-width: ${IMAGE_DISPLAY_BREAKPOINT}) {
               display: none;
             }
           `}
@@ -175,8 +170,9 @@ const LandingBanner = ({ quickstart, className }) => {
             src={quickstart.dashboards[0]?.screenshots[0] ?? defaultImage}
             alt={quickstart.title}
             css={css`
-              height: 200px;
-              width: 100%;
+              border: 28px solid #000000;
+              border-radius: 26px;
+              height: 250px;
             `}
           />
         </div>
@@ -186,19 +182,10 @@ const LandingBanner = ({ quickstart, className }) => {
           `}
         >
           <InstallButton
-            css={css`
-              --button-background: #f9fafa;
-
-              background-color: var(--button-background);
-              color: #1d252c;
-
-              &:hover {
-                background-color: var(--button-background);
-                color: #1d252c;
-              }
-            `}
+            css={css``}
             quickstart={quickstart}
             location={location}
+            style="PRIMARY"
           />
         </div>
       </div>

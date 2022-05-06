@@ -128,7 +128,6 @@ const BannerHeaderContent = ({ search, setSearch, setIsSearchInputEmpty }) => {
     </div>
   );
 };
-
 const IOBanner = ({ search, setSearch, setIsSearchInputEmpty }) => {
   return (
     <div
@@ -138,6 +137,7 @@ const IOBanner = ({ search, setSearch, setIsSearchInputEmpty }) => {
         --left-margin: calc(50% - 50vw);
 
         position: absolute;
+        top: var(--global-header-height);
         width: 100vw;
         left: var(--left-margin);
         height: var(--banner-height);

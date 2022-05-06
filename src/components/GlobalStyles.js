@@ -20,7 +20,19 @@ import {
   SohneLeichtKursiv,
 } from './fonts';
 
-const fonts = styled.div`
+const GlobalStyles = styled.div`
+  /* BRAND COLORS */
+  --brand-highlight-green: #1ce783;
+  --brand-grey-black: #1d252c;
+  --brand-white: #f9fafa;
+
+  --brand-primary-background-color: #e5e5e5;
+  --brand-secondary-background-color: var(--brand-grey-black);
+
+  --brand-primary-text-color: var(--brand-grey-black);
+  --brand-secondary-text-color: var(--brand-white);
+
+  /* FONTS */
   @font-face {
     font-family: 'Söhne-Buch';
     src: url(${SohneBuch});
@@ -95,4 +107,4 @@ const fonts = styled.div`
   }
 `;
 
-export default fonts;
+export default GlobalStyles;

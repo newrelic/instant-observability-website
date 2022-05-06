@@ -7,16 +7,14 @@ const Layout = ({ children, pageContext }) => {
   if (pageContext.layout === 'QuickStartLayout') {
     return (
       <QuickStartLayout>
-        <GlobalStyles />
-        {children}
+        <GlobalStyles>{children}</GlobalStyles>
       </QuickStartLayout>
     );
   }
 
   return (
     <div>
-      <GlobalStyles />
-      {children}
+      <GlobalStyles>{children}</GlobalStyles>
     </div>
   );
 };
