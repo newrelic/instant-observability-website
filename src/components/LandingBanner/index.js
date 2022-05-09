@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 
 import Breadcrumbs from '../../components/Breadcrumbs';
@@ -11,8 +11,6 @@ import BannerBackground from './BannerBackground';
 const IMAGE_DISPLAY_BREAKPOINT = '1200px';
 
 const LandingBanner = ({ quickstart, className, location }) => {
-  const [imgStyle, setImgStyle] = useState({});
-
   const breadcrumbs = [
     {
       name: 'Instant Observability',
@@ -22,39 +20,6 @@ const LandingBanner = ({ quickstart, className, location }) => {
       name: quickstart.title,
     },
   ];
-
-  // get image resolution from URL
-  const getURLMeta = async (url) => {
-    const img = new Image();
-    img.src = url;
-    const { width, height } = await new Promise((resolve) => {
-      img.onload = function () {
-        resolve({
-          width: this.width,
-          height: this.height,
-        });
-      };
-    });
-    return { width, height };
-  };
-
-  const getImgStyle = async () => {
-    const { width, height } = await getURLMeta(quickstart.logoUrl);
-    const style = {};
-    // if image is rectangle
-    if (width > height) {
-      style.width = '';
-      style.height = '';
-    } else {
-      style.width = '80px';
-      style.height = '80px';
-    }
-    setImgStyle(style);
-  };
-
-  useEffect(() => {
-    getImgStyle();
-  }, [quickstart.logoUrl]);
 
   return (
     <BannerBackground>
@@ -119,13 +84,13 @@ const LandingBanner = ({ quickstart, className, location }) => {
               `}
             >
               <img
-                style={imgStyle}
                 src={quickstart.logoUrl}
                 alt={quickstart.title}
                 css={css`
+                  max-width: 350px;
                   margin: auto;
                   display: block;
-                  max-height: 50px;
+                  height: 50px;
                 `}
               />
             </div>
@@ -182,8 +147,7 @@ const LandingBanner = ({ quickstart, className, location }) => {
             css={css`
               border: 28px solid #000000;
               border-radius: 26px;
-              height: 251.44px;
-              max-width: 447px;
+              height: 250px;
             `}
           />
         </div>
