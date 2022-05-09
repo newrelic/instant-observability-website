@@ -67,7 +67,7 @@ const LandingBanner = ({ quickstart, className, location }) => {
           grid-column-gap: 1rem;
           grid-row-gap: 1rem;
           grid-template-areas:
-            'breadcrumbs logo .'
+            'breadcrumbs . .'
             'title title image'
             'summ summ image'
             'cta . image';
@@ -99,28 +99,36 @@ const LandingBanner = ({ quickstart, className, location }) => {
         {quickstart.logoUrl && (
           <div
             css={css`
-              align-self: start;
-              background-color: var(--brand-white);
-              border-radius: 0 0 7px 7px;
-              grid-area: logo;
-              justify-self: center;
-              padding: 5px;
-              @media (max-width: ${IMAGE_DISPLAY_BREAKPOINT}) {
-                display: none;
-              }
+              position: absolute;
+              display: flex;
+              justify-content: center;
+              top: 0;
+              left: 0;
+              right: 0;
+              pointer-events: none;
             `}
           >
-            <img
-              style={imgStyle}
-              src={quickstart.logoUrl}
-              alt={quickstart.title}
+            <div
               css={css`
-                margin: auto;
-                display: block;
-                max-height: 50px;
-                width: 100%;
+                background-color: var(--brand-white);
+                border-radius: 0 0 7px 7px;
+                padding: 5px;
+                @media (max-width: ${IMAGE_DISPLAY_BREAKPOINT}) {
+                  display: none;
+                }
               `}
-            />
+            >
+              <img
+                style={imgStyle}
+                src={quickstart.logoUrl}
+                alt={quickstart.title}
+                css={css`
+                  margin: auto;
+                  display: block;
+                  max-height: 50px;
+                `}
+              />
+            </div>
           </div>
         )}
         <h2
@@ -161,6 +169,7 @@ const LandingBanner = ({ quickstart, className, location }) => {
             grid-area: image;
             align-self: start;
             margin: 0 auto 1rem;
+            padding-top: 1rem;
 
             @media (max-width: ${IMAGE_DISPLAY_BREAKPOINT}) {
               display: none;
@@ -173,7 +182,8 @@ const LandingBanner = ({ quickstart, className, location }) => {
             css={css`
               border: 28px solid #000000;
               border-radius: 26px;
-              height: 250px;
+              height: 251.44px;
+              max-width: 447px;
             `}
           />
         </div>
@@ -195,7 +205,8 @@ const LandingBanner = ({ quickstart, className, location }) => {
 };
 
 LandingBanner.propTypes = {
-  quickstarts: quickstart.isRequired,
+  quickstart: quickstart.isRequired,
+  className: PropTypes.string,
   location: PropTypes.object.isRequired,
 };
 
