@@ -42,7 +42,6 @@ const GlobalFooter = ({ className }) => {
         /* fonts  */
         font-family: Söhne-Buch;
         font-size: 18px;
-        font-weight: 600;
         line-height: 24px;
 
         a {
@@ -151,8 +150,6 @@ const GlobalFooter = ({ className }) => {
                   :nth-child(3n + 3) {
                     grid-column-start: 2;
                   }
-
-
                 }
               }
 
@@ -188,7 +185,6 @@ const GlobalFooter = ({ className }) => {
                     stroke-width: 0px;
                     color: var(--secondary-text-color);
                     fill: var(--secondary-text-color);
-
                   `}
                 />
               </ExternalLink>

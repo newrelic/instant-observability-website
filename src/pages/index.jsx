@@ -338,7 +338,6 @@ const QuickstartsPage = ({ data, location }) => {
               label {
                 font-family: 'Söhne-Leicht';
                 font-size: 28px;
-                font-weight: 600;
                 line-height: 36px;
                 margin-bottom: 12px;
                 letter-spacing: -0.5px;
@@ -360,7 +359,7 @@ const QuickstartsPage = ({ data, location }) => {
                     padding: 8px 12px;
                     font-family: 'Söhne-Leicht';
                     font-size: 18px;
-                    font-weight: 600;
+                    font-weight: 400;
                     line-height: 54px;
                     width: 100%;
                     display: flex;
