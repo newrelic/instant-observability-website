@@ -21,12 +21,6 @@ const SegmentedControl = ({ items, onChange, className }) => {
           cursor: pointer;
           user-select: none;
         }
-
-        .dark-mode & {
-          button {
-            color: var(--color-neutrals-500);
-          }
-        }
       `}
     >
       {items.map((item, index) => {

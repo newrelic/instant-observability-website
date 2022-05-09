@@ -10,9 +10,6 @@ const IOLogo = ({ className, width }) => {
       className={className}
       css={css`
         width: ${width || '221px'};
-        .dark-mode & {
-          fill: white;
-        }
       `}
     >
       <defs>

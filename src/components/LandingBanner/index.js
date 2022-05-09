@@ -100,7 +100,7 @@ const LandingBanner = ({ quickstart, className, location }) => {
           <div
             css={css`
               align-self: start;
-              background-color: white;
+              background-color: var(--brand-white);
               border-radius: 0 0 7px 7px;
               grid-area: logo;
               justify-self: center;
