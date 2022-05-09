@@ -31,7 +31,7 @@ const LandingPageFooter = ({
 
           @media (min-width: 760px) {
             h6 {
-              margin-bottom: 66px;
+              margin-bottom: 34px;
               font-weight: 400;
             }
             .collaborate-section {
@@ -161,4 +161,3 @@ LandingPageFooter.propTypes = {
 };
 
 export default LandingPageFooter;
-

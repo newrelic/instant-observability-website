@@ -11,7 +11,6 @@ const Header = ({ children, className }) => (
       flex-wrap: wrap;
       align-items: baseline;
       justify-content: space-between;
-      border-bottom: 1px solid var(--divider-color);
       padding-bottom: 1rem;
 
       @media screen and (max-width: 1080px) {

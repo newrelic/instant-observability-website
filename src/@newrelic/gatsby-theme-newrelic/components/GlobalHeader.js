@@ -418,7 +418,7 @@ const GlobalHeader = ({ className, activeSite }) => {
             width: 100vw;
             height: 100vh;
             background-color: var(--color-white);
-            z-index: 1;
+            z-index: 10;
 
             @media screen and (min-width: ${NAV_BREAKPOINT}) {
               display: none;

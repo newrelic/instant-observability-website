@@ -46,10 +46,6 @@ const QuickstartOverview = ({ quickstart }) => {
             css={css`
               @media screen and (max-width: 760px) {
                 width: fit-content;
-                margin: 40px 70px 40px 58px;
-              }
-              @media screen and (min-width: 760px) {
-                margin: 104px 155px 104px 168px;
               }
             `}
           >
