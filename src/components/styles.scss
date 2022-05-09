@@ -27,6 +27,24 @@ h4,h5,h6,p{
 h6{
   font-size:24px;
 }
+@media (max-width: 760px) {
+  h3 {
+    line-height: 40px;
+    font-size: 36px;
+  }
+  h6 {
+    line-height: 32px;
+  }
+}
+@media (min-width: 760px) {
+  h3 {
+    line-height: 50px;
+    font-size: 44px;
+  }
+  h6 {
+    line-height: 30px;
+  }
+}
 p{
   font-size:18px;
 }

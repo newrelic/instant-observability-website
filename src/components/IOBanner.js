@@ -97,7 +97,7 @@ const BannerHeaderContent = ({ search, setSearch, setIsSearchInputEmpty }) => {
             input {
               height: 64px;
               font-size: 18px;
-              padding: 20px 24px;
+              padding: 20px 55px 20px 24px;
               background: #1d252c;
               border: 1px solid #f9fafa;
               border-radius: 4px;
