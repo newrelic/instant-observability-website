@@ -5055,14 +5055,14 @@
     "alerts": [],
     "documentation": [
       {
-        "name": "New Relic Telemetry SDK",
-        "description": "Alternatively, use one of New Relic's Telemetry SDKs to send trace data to New Relic\n",
-        "url": "https://docs.newrelic.com/docs/data-ingest-apis/get-data-new-relic/new-relic-sdks/telemetry-sdks-send-custom-telemetry-data-new-relic"
-      },
-      {
         "name": "OpenCensus exporter",
         "description": "Use the OpenCensus exporter for Go or Python\n",
         "url": "https://docs.newrelic.com/docs/integrations/open-source-telemetry-integrations/opencensus/opencensus-exporter/"
+      },
+      {
+        "name": "New Relic Telemetry SDK",
+        "description": "Alternatively, use one of New Relic's Telemetry SDKs to send trace data to New Relic\n",
+        "url": "https://docs.newrelic.com/docs/data-ingest-apis/get-data-new-relic/new-relic-sdks/telemetry-sdks-send-custom-telemetry-data-new-relic"
       }
     ],
     "installPlans": []
@@ -10290,6 +10290,48 @@
     ]
   },
   {
+    "title": "APM Logs",
+    "name": "apm-logs",
+    "description": "This dashboard helps customers keep an eye on APM Logs sent to NR. It will monitor for any dropped logs and/or duplicate logging with the infra agent.\n\nFor more information or support, please go to https://docs.newrelic.com/docs/logs/logs-context/upgrade-to-automatic-logs-context/",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/apm-logs",
+    "id": "c5c5dd30-abcf-46b6-3497-f9a1bba5b700",
+    "level": "NEW_RELIC",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/apm-logs/logo.jpeg",
+    "summary": "Get better insights into your logging data sent by our apm agents.",
+    "websiteUrl": null,
+    "keywords": [
+      "logs",
+      "APM"
+    ],
+    "authors": [
+      "Leon Chapman"
+    ],
+    "dashboards": [
+      {
+        "name": "[NR] APM Logs Monitoring",
+        "description": "Monitoring of APM Logs sent to NR. Will expose any dropped logs and/or duplicate logging.",
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/apm-logs/dashboards/apm-log-monitoring/APM-Logs-Monitoring.png"
+        ]
+      }
+    ],
+    "alerts": [],
+    "documentation": [
+      {
+        "name": "New Relic APM Installation Docs",
+        "description": "Configure automatic logs in context with logs",
+        "url": "https://docs.newrelic.com/docs/logs/logs-context/upgrade-to-automatic-logs-context/"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "Basic Dashboard",
+        "id": "basic-dashboard"
+      }
+    ]
+  },
+  {
     "title": "Apollo Server",
     "name": "apollo-server",
     "description": "## What is Apollo Server?\n\nApollo Server is an open-source, spec-compliant GraphQL server that's compatible with any GraphQL client, including Apollo Client. It's the best way to build a production-ready, self-documenting GraphQL API that can use data from any source.\n\nYou can use Apollo Server as:\n\n- A stand-alone GraphQL server, including in a serverless environment\n- An add-on to your application's existing Node.js middleware (such as Express or Fastify)\n- A gateway for a federated graph\n\n### Apollo & New Relic\n\nThe New Relic Apollo Server plugin instruments your Apollo Server applications to give visibility into your GraphQL payloads. This helps you uncover and diagnose the cause of your slow GraphQL queries.",
@@ -12634,19 +12676,19 @@
         ]
       },
       {
-        "name": "Lacework Compliance Violations",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/lacework/dashboards/lacework-compliance-violations/lacework-compliance-violations.png"
-        ]
-      },
-      {
         "name": "Lacework Security Overview",
         "description": null,
         "url": null,
         "screenshots": [
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/lacework/dashboards/lacework-security-overview/lacework-security-overview.png"
+        ]
+      },
+      {
+        "name": "Lacework Compliance Violations",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/lacework/dashboards/lacework-compliance-violations/lacework-compliance-violations.png"
         ]
       }
     ],
@@ -21400,6 +21442,14 @@
     ],
     "dashboards": [
       {
+        "name": "GCP Integrations Data Ingest Analysis",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/audit/infrastructure-integrations-data-analysis/dashboards/gcp-integrations-data-ingest-analysis/gcp-integrations-data-ingest-analysis.png"
+        ]
+      },
+      {
         "name": "AWS Integrations Data Ingest Analysis",
         "description": null,
         "url": null,
@@ -21416,11 +21466,11 @@
         ]
       },
       {
-        "name": "GCP Integrations Data Ingest Analysis",
+        "name": "On-Host Integrations Data Analysis",
         "description": null,
         "url": null,
         "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/audit/infrastructure-integrations-data-analysis/dashboards/gcp-integrations-data-ingest-analysis/gcp-integrations-data-ingest-analysis.png"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/audit/infrastructure-integrations-data-analysis/dashboards/on-host-integrations-data-analysis/on-host-integrations-data-analysis.png"
         ]
       },
       {
@@ -21429,14 +21479,6 @@
         "url": null,
         "screenshots": [
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/audit/infrastructure-integrations-data-analysis/dashboards/kubernetes-data-ingest-analysis/kubernetes-data-ingest-analysis.png"
-        ]
-      },
-      {
-        "name": "On-Host Integrations Data Analysis",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/audit/infrastructure-integrations-data-analysis/dashboards/on-host-integrations-data-analysis/on-host-integrations-data-analysis.png"
         ]
       }
     ],
@@ -21880,11 +21922,11 @@
     ],
     "dashboards": [
       {
-        "name": "Browser Pages Dashboard",
+        "name": "Browser Traffic Analysis",
         "description": null,
         "url": null,
         "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/browser/dashboards/browser_pages_dashboard/browser_pages_dashboard.png"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/browser/dashboards/traffic_analysis/traffic_analysis.png"
         ]
       },
       {
@@ -21896,11 +21938,11 @@
         ]
       },
       {
-        "name": "Browser Traffic Analysis",
+        "name": "Browser Pages Dashboard",
         "description": null,
         "url": null,
         "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/browser/dashboards/traffic_analysis/traffic_analysis.png"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/browser/dashboards/browser_pages_dashboard/browser_pages_dashboard.png"
         ]
       },
       {
