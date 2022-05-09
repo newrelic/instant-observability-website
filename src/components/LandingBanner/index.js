@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 
 import Breadcrumbs from '../../components/Breadcrumbs';
@@ -11,8 +11,6 @@ import BannerBackground from './BannerBackground';
 const IMAGE_DISPLAY_BREAKPOINT = '1200px';
 
 const LandingBanner = ({ quickstart, className, location }) => {
-  const [imgStyle, setImgStyle] = useState({});
-
   const breadcrumbs = [
     {
       name: 'Instant Observability',
@@ -22,39 +20,6 @@ const LandingBanner = ({ quickstart, className, location }) => {
       name: quickstart.title,
     },
   ];
-
-  // get image resolution from URL
-  const getURLMeta = async (url) => {
-    const img = new Image();
-    img.src = url;
-    const { width, height } = await new Promise((resolve) => {
-      img.onload = function () {
-        resolve({
-          width: this.width,
-          height: this.height,
-        });
-      };
-    });
-    return { width, height };
-  };
-
-  const getImgStyle = async () => {
-    const { width, height } = await getURLMeta(quickstart.logoUrl);
-    const style = {};
-    // if image is rectangle
-    if (width > height) {
-      style.width = '';
-      style.height = '';
-    } else {
-      style.width = '80px';
-      style.height = '80px';
-    }
-    setImgStyle(style);
-  };
-
-  useEffect(() => {
-    getImgStyle();
-  }, [quickstart.logoUrl]);
 
   return (
     <BannerBackground>
@@ -67,7 +32,7 @@ const LandingBanner = ({ quickstart, className, location }) => {
           grid-column-gap: 1rem;
           grid-row-gap: 1rem;
           grid-template-areas:
-            'breadcrumbs logo .'
+            'breadcrumbs . .'
             'title title image'
             'summ summ image'
             'cta . image';
@@ -99,28 +64,36 @@ const LandingBanner = ({ quickstart, className, location }) => {
         {quickstart.logoUrl && (
           <div
             css={css`
-              align-self: start;
-              background-color: var(--brand-white);
-              border-radius: 0 0 7px 7px;
-              grid-area: logo;
-              justify-self: center;
-              padding: 5px;
-              @media (max-width: ${IMAGE_DISPLAY_BREAKPOINT}) {
-                display: none;
-              }
+              position: absolute;
+              display: flex;
+              justify-content: center;
+              top: 0;
+              left: 0;
+              right: 0;
+              pointer-events: none;
             `}
           >
-            <img
-              style={imgStyle}
-              src={quickstart.logoUrl}
-              alt={quickstart.title}
+            <div
               css={css`
-                margin: auto;
-                display: block;
-                max-height: 50px;
-                width: 100%;
+                background-color: var(--brand-white);
+                border-radius: 0 0 7px 7px;
+                padding: 5px;
+                @media (max-width: ${IMAGE_DISPLAY_BREAKPOINT}) {
+                  display: none;
+                }
               `}
-            />
+            >
+              <img
+                src={quickstart.logoUrl}
+                alt={quickstart.title}
+                css={css`
+                  max-width: 350px;
+                  margin: auto;
+                  display: block;
+                  height: 50px;
+                `}
+              />
+            </div>
           </div>
         )}
         <h2
@@ -161,6 +134,7 @@ const LandingBanner = ({ quickstart, className, location }) => {
             grid-area: image;
             align-self: start;
             margin: 0 auto 1rem;
+            padding-top: 1rem;
 
             @media (max-width: ${IMAGE_DISPLAY_BREAKPOINT}) {
               display: none;
@@ -195,7 +169,8 @@ const LandingBanner = ({ quickstart, className, location }) => {
 };
 
 LandingBanner.propTypes = {
-  quickstarts: quickstart.isRequired,
+  quickstart: quickstart.isRequired,
+  className: PropTypes.string,
   location: PropTypes.object.isRequired,
 };
 
