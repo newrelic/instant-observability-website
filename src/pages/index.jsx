@@ -306,9 +306,6 @@ const QuickstartsPage = ({ data, location }) => {
             grid-template-areas: 'main';
             grid-template-rows: unset;
           }
-          @media screen and (max-width: 760px) {
-            margin: 400px auto;
-          }
         `}
       >
         <aside
