@@ -171,10 +171,6 @@ const QuickstartTile = ({
               text-overflow: ellipsis;
               -webkit-box-orient: vertical;
               -webkit-line-clamp: 3;
-
-              @media screen and (max-width: ${QUICKSTARTS_COLLAPSE_BREAKPOINT}) {
-                -webkit-line-clamp: 2;
-              }
             `}
           >
             {summary || 'No summary provided'}
@@ -199,6 +195,10 @@ const QuickstartTile = ({
             padding: 3px 8px 5px;
             color: red;
             line-spacing: unset;
+            @media screen and (max-width: ${QUICKSTARTS_COLLAPSE_BREAKPOINT}) {
+              padding: 5px 12px 8px;
+              font-size: 14px;
+            }
           `}
         >
           Read more
@@ -209,12 +209,19 @@ const QuickstartTile = ({
           grid-area: arrow;
           justify-self: end;
           align-self: end;
+          @media screen and (max-width: ${QUICKSTARTS_COLLAPSE_BREAKPOINT}) {
+            height: 35px;
+          }
         `}
       >
         <Icon
           css={css`
             height: 16px;
             color: #1d252c;
+            @media screen and (max-width: ${QUICKSTARTS_COLLAPSE_BREAKPOINT}) {
+              margin-top: 12px;
+              height: 24px;
+            }
           `}
           name="fe-arrow-right"
           size="120%"
