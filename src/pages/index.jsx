@@ -305,6 +305,7 @@ const QuickstartsPage = ({ data, location }) => {
             grid-template-columns: minmax(0, 1fr);
             grid-template-areas: 'main';
             grid-template-rows: unset;
+            padding-bottom: 20px;
           }
         `}
       >
