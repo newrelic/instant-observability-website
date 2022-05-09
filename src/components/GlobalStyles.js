@@ -32,8 +32,6 @@ const GlobalStyles = styled.div`
   --brand-primary-text-color: var(--brand-grey-black);
   --brand-secondary-text-color: var(--brand-white);
 
-  background-color: var(--brand-white);
-
   /* FONTS */
   @font-face {
     font-family: 'Söhne-Buch';

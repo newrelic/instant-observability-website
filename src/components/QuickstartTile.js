@@ -197,8 +197,11 @@ const QuickstartTile = ({
             height: 32px;
             width: 100px;
             padding: 3px 8px 5px;
-            color: red;
             line-spacing: unset;
+            .dark-mode & {
+              background: #e4e5e6;
+              color: #1d252c;
+            }
           `}
         >
           Read more
