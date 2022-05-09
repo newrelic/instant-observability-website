@@ -32,8 +32,8 @@ const Dashboards = ({ quickstart }) => {
           css={css`
             display: inline-block;
             background: var(--background-grey-color);
-            margin: 0px 8px;
-            padding: 1px 4px;
+            margin: 0px 0px;
+            padding: 1px 6px;
             border-radius: 3px;
           `}
         >
