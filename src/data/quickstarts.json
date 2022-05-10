@@ -1171,6 +1171,57 @@
     ]
   },
   {
+    "title": "AWS Lambda",
+    "name": "aws-lambda",
+    "description": "## What is AWS Lambda?\n\nZero-administration compute platform for back-end web developers that runs\nyour code for you in AWS cloud.\n\n\n### Get started!\n\nStart monitoring AWS Lambda by connecting Amazon Web Services (AWS) to New Relic!\n\nCheck out our AWS Lambda documentation to instrument your cloud service and manage the stability, scalability, and reliability of your systems with New Relic's infrastructure monitoring capabilities.\n\n### More info\n\nCheck out the [documentation](https://docs.newrelic.com/docs/infrastructure/amazon-integrations/aws-integrations-list/aws-lambda-monitoring-integration/) to learn more about New Relic monitoring for AWS Lambda.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/aws/aws-lambda",
+    "id": "6908e6c3-fed5-4c6c-a3fc-f85e467cefa1",
+    "level": "NEW_RELIC",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/aws/aws-lambda/logo.svg",
+    "summary": "Monitor AWS Lambda by connecting AWS to New Relic",
+    "websiteUrl": null,
+    "keywords": [
+      "aws",
+      "amazon web services",
+      "serverless"
+    ],
+    "authors": [
+      "New Relic",
+      "Emil Hammarstrand"
+    ],
+    "dashboards": [
+      {
+        "name": "AWS Lambda",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/aws/aws-lambda/dashboards/lambda/lambda.png"
+        ]
+      }
+    ],
+    "alerts": [
+      {
+        "name": "High Average Response Time",
+        "details": "This alert is triggered when the lambda function has a response time above 1.5 seconds.",
+        "type": "STATIC",
+        "url": null
+      }
+    ],
+    "documentation": [
+      {
+        "name": "AWS Lambda installation docs",
+        "description": "Monitor AWS Lambda by connecting AWS to New Relic.\n",
+        "url": "https://docs.newrelic.com/docs/infrastructure/amazon-integrations/aws-integrations-list/aws-lambda-monitoring-integration/"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "AWS-CloudWatch-Metric-Streams",
+        "id": "aws-cloudwatch-metric-streams"
+      }
+    ]
+  },
+  {
     "title": "Logs Analysis Dashboard",
     "name": "log-analysis",
     "description": "The logs analysis dashboard allows you to get deep visibility into the ingestion of your logs. With this panel, you will be able to identify the services and host that send the most logs, which types of serverity are being sent, the cost for each of the attributes and also if the essential attributes are being sent for the ccorrelation between services and logs, such as: service name, log in context and hostname.",
@@ -1313,57 +1364,6 @@
       {
         "name": "AWS-Infrastructure-Monitoring",
         "id": "aws-infrastructure-monitoring"
-      }
-    ]
-  },
-  {
-    "title": "AWS Lambda",
-    "name": "aws-lambda",
-    "description": "## What is AWS Lambda?\n\nZero-administration compute platform for back-end web developers that runs\nyour code for you in AWS cloud.\n\n\n### Get started!\n\nStart monitoring AWS Lambda by connecting Amazon Web Services (AWS) to New Relic!\n\nCheck out our AWS Lambda documentation to instrument your cloud service and manage the stability, scalability, and reliability of your systems with New Relic's infrastructure monitoring capabilities.\n\n### More info\n\nCheck out the [documentation](https://docs.newrelic.com/docs/infrastructure/amazon-integrations/aws-integrations-list/aws-lambda-monitoring-integration/) to learn more about New Relic monitoring for AWS Lambda.",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/aws/aws-lambda",
-    "id": "6908e6c3-fed5-4c6c-a3fc-f85e467cefa1",
-    "level": "NEW_RELIC",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/aws/aws-lambda/logo.svg",
-    "summary": "Monitor AWS Lambda by connecting AWS to New Relic",
-    "websiteUrl": null,
-    "keywords": [
-      "aws",
-      "amazon web services",
-      "serverless"
-    ],
-    "authors": [
-      "New Relic",
-      "Emil Hammarstrand"
-    ],
-    "dashboards": [
-      {
-        "name": "AWS Lambda",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/aws/aws-lambda/dashboards/lambda/lambda.png"
-        ]
-      }
-    ],
-    "alerts": [
-      {
-        "name": "High Average Response Time",
-        "details": "This alert is triggered when the lambda function has a response time above 1.5 seconds.",
-        "type": "STATIC",
-        "url": null
-      }
-    ],
-    "documentation": [
-      {
-        "name": "AWS Lambda installation docs",
-        "description": "Monitor AWS Lambda by connecting AWS to New Relic.\n",
-        "url": "https://docs.newrelic.com/docs/infrastructure/amazon-integrations/aws-integrations-list/aws-lambda-monitoring-integration/"
-      }
-    ],
-    "installPlans": [
-      {
-        "name": "AWS-CloudWatch-Metric-Streams",
-        "id": "aws-cloudwatch-metric-streams"
       }
     ]
   },
@@ -1926,19 +1926,19 @@
     ],
     "dashboards": [
       {
-        "name": "Battlesnake Performance",
-        "description": "Monitor your Battlensakes performance and see how it stacks up against your competition!",
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/battlesnake/dashboards/battlesnake-performance/battlesnake-performance.png"
-        ]
-      },
-      {
         "name": "Battlesnake Server Status",
         "description": "A dashboard to monitor your Battlesnake server's performance. It's important to keep all responses to the `/move` endpoint under 500ms. Furthermore, it's possible that your snake may be in multiple concurrent matches at the same time. It's important to make sure you server and web application are running smoothly to keep you in the game!",
         "url": null,
         "screenshots": [
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/battlesnake/dashboards/battlesnake-server-status/battlesnake-server-status.png"
+        ]
+      },
+      {
+        "name": "Battlesnake Performance",
+        "description": "Monitor your Battlensakes performance and see how it stacks up against your competition!",
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/battlesnake/dashboards/battlesnake-performance/battlesnake-performance.png"
         ]
       },
       {
@@ -3717,7 +3717,18 @@
     "authors": [
       "New Relic"
     ],
-    "dashboards": [],
+    "dashboards": [
+      {
+        "name": "Redis-Prometheus",
+        "description": "Dashboard for displaying Redis metrics from Prometheus",
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/redis-prometheus/dashboards/redis-prometheus/redis01.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/redis-prometheus/dashboards/redis-prometheus/redis02.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/redis-prometheus/dashboards/redis-prometheus/redis03.png"
+        ]
+      }
+    ],
     "alerts": [],
     "documentation": [
       {
@@ -16947,19 +16958,11 @@
     ],
     "dashboards": [
       {
-        "name": "Catchpoint-Overview",
+        "name": "Catchpoint-Test Times",
         "description": null,
         "url": null,
         "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/catchpoint/dashboards/Catchpoint-Overview/Catchpoint-Overview.png"
-        ]
-      },
-      {
-        "name": "Catchpoint-Recent Errors",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/catchpoint/dashboards/Catchpoint-Recent_Errors/Catchpoint-Recent_Errors.png"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/catchpoint/dashboards/Catchpoint-Test_Times/Catchpoint-Test_Times.png"
         ]
       },
       {
@@ -16971,11 +16974,19 @@
         ]
       },
       {
-        "name": "Catchpoint-Test Times",
+        "name": "Catchpoint-Recent Errors",
         "description": null,
         "url": null,
         "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/catchpoint/dashboards/Catchpoint-Test_Times/Catchpoint-Test_Times.png"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/catchpoint/dashboards/Catchpoint-Recent_Errors/Catchpoint-Recent_Errors.png"
+        ]
+      },
+      {
+        "name": "Catchpoint-Overview",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/catchpoint/dashboards/Catchpoint-Overview/Catchpoint-Overview.png"
         ]
       }
     ],
