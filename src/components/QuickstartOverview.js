@@ -49,6 +49,7 @@ const QuickstartOverview = ({ quickstart }) => {
 
                 h3{
                   margin-bottom: 1.5rem;
+                  margin-top: 78px !important;
                 }
               }
             `}
