@@ -58,4 +58,3 @@ Dashboards.propTypes = {
 };
 
 export default Dashboards;
-
