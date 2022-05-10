@@ -11,7 +11,7 @@ import BannerBackground from './BannerBackground';
 const IMAGE_DISPLAY_BREAKPOINT = '1200px';
 
 const LandingBanner = ({ quickstart, className, location }) => {
-  const [bannerImg, setBannerImg] = useState(defaultImage);
+  const [bannerImg, setBannerImg] = useState({ src: defaultImage, style: {} });
   const breadcrumbs = [
     {
       name: 'Instant Observability',
@@ -39,16 +39,23 @@ const LandingBanner = ({ quickstart, className, location }) => {
 
   const isImgAspect16by9 = async () => {
     const screenshot = quickstart.dashboards[0].screenshots[0];
-    const image = bannerImg;
+    let image = {
+      src: bannerImg.src,
+      style: {},
+    };
     const { width, height } = await getURLMeta(screenshot);
     const aspectRatio = width / height;
     console.log(aspectRatio);
-    if (2 > aspectRatio > 1.6) {
-      //set quickstartImgUrl to screenshot
-      image = screenshot;
+    if (aspectRatio > 1.5 && aspectRatio < 2) {
+      //set quickstartImgUrl to screenshot if it thte aspec ratio fits the page layout
+      image.src = screenshot;
+      console.log(screenshot);
+      console.log('new image', image);
+    } else {
+      image.style = { padding: ' 20px 100px 0' };
     }
     setBannerImg(image);
-    console.log(image);
+    console.log(image.src);
   };
 
   useEffect(() => {
@@ -176,12 +183,14 @@ const LandingBanner = ({ quickstart, className, location }) => {
           `}
         >
           <img
-            src={bannerImg}
+            style={bannerImg.style}
+            src={bannerImg.src}
             alt={quickstart.title}
             css={css`
               border: 28px solid #000000;
               border-radius: 26px;
               height: 250px;
+              background: white;
             `}
           />
         </div>
