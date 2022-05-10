@@ -93,6 +93,9 @@ const GetStartedFooter = () => {
           css={css`
             background-color: var(--nr-black);
             color: var(--nr-green);
+            &:hover {
+              color: var(--nr-green);
+            }  
           `}
         >
           Sign Up
@@ -104,6 +107,9 @@ const GetStartedFooter = () => {
             background-color: var(--nr-green);
             color: var(--nr-black);
             border: 1px solid var(--nr-black);
+            &:hover {
+              color: var(--nr-black);
+            } 
           `}
         >
           Get Demo
