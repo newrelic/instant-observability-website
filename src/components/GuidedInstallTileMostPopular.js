@@ -97,7 +97,6 @@ const GuidedInstallTileMostPopular = () => {
           css={css`
             font-size: 18px;
             font-family: 'Söhne-Leicht';
-            font-weight: 800;
             line-height: 24px;
             color: #898e91;
           `}
@@ -114,7 +113,6 @@ const GuidedInstallTileMostPopular = () => {
         <p
           css={css`
             font-size: 24px;
-            font-weight: 800;
             font-family: 'Söhne-Leicht';
             letter-spacing: -0.025em;
             line-height: 32px;
