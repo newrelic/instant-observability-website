@@ -77,7 +77,11 @@ const QuickstartDashboards = ({ quickstart }) => (
           <Slider {...settings}>
             {dashboard.screenshots.map((imgUrl) => {
               return (
-                <div>
+                <div
+                  css={css`
+                    border: solid 1px var(--border-color);
+                  `}
+                >
                   <animated.div
                     css={css`
                       display: flex;
@@ -85,16 +89,22 @@ const QuickstartDashboards = ({ quickstart }) => (
                       align-items: center;
                     `}
                   >
-                    <a href={imgUrl} target="_blank" rel="noreferrer">
+                    <a
+                      href={imgUrl}
+                      target="_blank"
+                      rel="noreferrer"
+                      css={css`
+                        margin: auto;
+                      `}
+                    >
                       <img
                         src={imgUrl}
                         css={css`
-                            width: 100%;
-                            max-height: 400px;
-                            border-radius: 4px;
-                            border: solid 1px var(--divider-color);
-                            padding: 0.25rem;
-                          `}
+                          width: 100%;
+                          height: 250px;
+                          border-radius: 4px;
+                          padding: 0.25rem;
+                        `}
                       />
                     </a>
                   </animated.div>
