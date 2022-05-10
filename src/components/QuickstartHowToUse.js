@@ -10,6 +10,14 @@ const QuickstartHowToUse = ({ quickstart, trackQuickstart, location }) => {
     <>
       <div
         css={css`
+        @media (max-width: 760px) {
+        margin-top: 23px;
+        margin-bottom:  33px;
+        }
+        @media (min-width: 760px) {
+          margin-top: 8px;
+          margin-bottom: 19px;
+        }
           @media not all and (min-resolution: 0.001dpcm) and max-width: 760px {
             @media {
               grid-template-columns: repeat(1, 1fr);
@@ -22,11 +30,9 @@ const QuickstartHowToUse = ({ quickstart, trackQuickstart, location }) => {
         <h3
           css={css`
             top: 0;
-            padding-top: 0.5rem;
             width: 100%;
             font-weight: 400;
             padding-bottom: 2rem;
-            line-height: 50px;
           `}
         >
           How to use this quickstart
@@ -100,12 +106,18 @@ const QuickstartHowToUse = ({ quickstart, trackQuickstart, location }) => {
             dashboards, instrumentation, and alerts.
           </li>
         </ul>
-
+        <div
+        css={css`
+        @media (max-width: 760px) {
+        margin-bottom: 33px;
+        }
+        `}>
         <InstallButton
           quickstart={quickstart}
           location={location}
           style="SECONDARY"
         />
+        </div>
       </div>
     </>
   );

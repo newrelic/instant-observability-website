@@ -117,6 +117,9 @@ const QuickstartDetails = ({ data, location }) => {
         ></div>
         <div
           css={css`
+          @media (max-width: 760px) {
+          margin-bottom: 60px;
+          }
             ${layoutContentSpacing};
 
             padding-bottom: 117px;
