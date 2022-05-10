@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 
 import Breadcrumbs from '../../components/Breadcrumbs';
@@ -11,6 +11,7 @@ import BannerBackground from './BannerBackground';
 const IMAGE_DISPLAY_BREAKPOINT = '1200px';
 
 const LandingBanner = ({ quickstart, className, location }) => {
+  const [bannerImg, setBannerImg] = useState(defaultImage);
   const breadcrumbs = [
     {
       name: 'Instant Observability',
@@ -20,6 +21,39 @@ const LandingBanner = ({ quickstart, className, location }) => {
       name: quickstart.title,
     },
   ];
+
+  // get image resolution from URL
+  const getURLMeta = async (url) => {
+    const img = new Image();
+    img.src = url;
+    const { width, height } = await new Promise((resolve) => {
+      img.onload = function () {
+        resolve({
+          width: this.width,
+          height: this.height,
+        });
+      };
+    });
+    return { width, height };
+  };
+
+  const isImgAspect16by9 = async () => {
+    const screenshot = quickstart.dashboards[0].screenshots[0];
+    const image = bannerImg;
+    const { width, height } = await getURLMeta(screenshot);
+    const aspectRatio = width / height;
+    console.log(aspectRatio);
+    if (2 > aspectRatio > 1.6) {
+      //set quickstartImgUrl to screenshot
+      image = screenshot;
+    }
+    setBannerImg(image);
+    console.log(image);
+  };
+
+  useEffect(() => {
+    isImgAspect16by9();
+  }, []);
 
   return (
     <BannerBackground>
@@ -142,7 +176,7 @@ const LandingBanner = ({ quickstart, className, location }) => {
           `}
         >
           <img
-            src={quickstart.dashboards[0]?.screenshots[0] ?? defaultImage}
+            src={bannerImg}
             alt={quickstart.title}
             css={css`
               border: 28px solid #000000;
