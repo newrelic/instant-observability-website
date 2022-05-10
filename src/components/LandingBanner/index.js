@@ -13,6 +13,7 @@ const IMAGE_DISPLAY_BREAKPOINT = '1200px';
 const LandingBanner = ({ quickstart, className, location }) => {
   const defaultBannerImg = {
     src: defaultImage,
+    //style the default img's element to fit 16:9 aspect ratio
     style: { padding: ' 20px 100px 0' },
   };
   const [bannerImg, setBannerImg] = useState(defaultBannerImg);
@@ -50,9 +51,11 @@ const LandingBanner = ({ quickstart, className, location }) => {
       const { width, height } = await getURLMeta(screenshot);
       const aspectRatio = width / height;
       if (aspectRatio > 1.5 && aspectRatio < 2) {
-        //set quickstartImgUrl to screenshot if it thte aspec ratio fits the page layout
+        //set quickstartImgUrl to this screenshot if it the aspec ratio fits the page layout
+        //the ideal ratio is near 16:9 (~1.7)
         image.src = screenshot;
         console.log('new image', image);
+        //unsetting the padding allows the image to size itself with no whitespace
         image.style = { padding: '0' };
         break;
       }
