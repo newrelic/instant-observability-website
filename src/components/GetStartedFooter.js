@@ -10,8 +10,16 @@ const GetStartedFooter = () => {
   return (
     <div
       css={css`
-        --nr-green: #1ce783;
-        --nr-black: #1d252c;
+        --nr1--color--accent: #1ce783;
+        --nr1--color--text--primary: #293338;
+
+        --nr1--color--background--button--primary--enabled: #293338;
+        --nr1--color--background--button--primary--hover: #000;
+        --nr1--color--text--buttton--primary: #fafbfb;
+
+        --nr1--color--background--button--primary-accent--enabled: #1CE78;
+        --nr1--color--background--button--primary-accent--hover: #00ce7c;
+        --nr1--color--text--buttton--primary-accent: #000;
 
         width: 100%;
         height: 120px;
@@ -22,10 +30,10 @@ const GetStartedFooter = () => {
 
         font-size: 33px;
 
-        background-color: var(--nr-green);
+        background-color: var(--nr1--color--accent);
 
         > h3 {
-          color: var(--nr-black);
+          color: var(--nr1--color--text--primary);
 
           font-family: Söhne-Buch;
           font-size: 44px;
@@ -91,11 +99,17 @@ const GetStartedFooter = () => {
           as={ExternalLink}
           href={SIGNUP_LINK}
           css={css`
-            background-color: var(--nr-black);
-            color: var(--nr-green);
+            background-color: var(
+              --nr1--color--background--button--primary--enabled
+            );
+            color: var(--nr1--color--text--buttton--primary);
+
             &:hover {
-              color: var(--nr-green);
-            }  
+              background-color: var(
+                --nr1--color--background--button--primary--hover
+              );
+              color: var(--nr1--color--text--buttton--primary);
+            }
           `}
         >
           Sign Up
@@ -104,12 +118,18 @@ const GetStartedFooter = () => {
           as={ExternalLink}
           href={DEMO_LINK}
           css={css`
-            background-color: var(--nr-green);
-            color: var(--nr-black);
-            border: 1px solid var(--nr-black);
+            background-color: var(
+              --nr1--color--background--button--primary-accent--enabled
+            );
+            color: var(--nr1--color--text--buttton--primary-accent);
+            border: 1px solid var(--nr1--color--text--buttton--primary-accent);
+
             &:hover {
-              color: var(--nr-black);
-            } 
+              background-color: var(
+                --nr1--color--background--button--primary-accent--hover
+              );
+              color: var(--nr1--color--text--buttton--primary-accent);
+            }
           `}
         >
           Get Demo
