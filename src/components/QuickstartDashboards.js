@@ -4,9 +4,41 @@ import pluralize from 'pluralize';
 import Intro from './Intro';
 import { quickstart } from '../types';
 import Slider from 'react-slick';
-import RightArrowSVG from './Icons/RightArrowSVG';
-import LeftArrowSVG from './Icons/LeftArrowSVG';
 import { animated } from 'react-spring';
+import {
+  Icon
+} from '@newrelic/gatsby-theme-newrelic';
+
+const PrevArrow = (
+  <Icon
+    name="carousel-left"
+    size="120%"
+    viewBox="0 0 30 30"
+    css={css`
+      fill: white;
+      stroke: #00838f;
+      z-index: 100;
+      stroke-width: 1px;
+      width: 29px;
+      height: 29px;
+    `}
+  />
+);
+const NextArrow = (
+  <Icon
+    name="carousel-right"
+    size="120%"
+    viewBox="0 0 30 30"
+    css={css`
+      fill: white;
+      stroke: #00838f;
+      z-index: 100;
+      stroke-width: 1px;
+      width: 29px;
+      height: 29px;
+    `}
+  />
+);
 
 const settings = {
   dots: false,
@@ -14,8 +46,8 @@ const settings = {
   speed: 500,
   slidesToShow: 3,
   slidesToScroll: 1,
-  nextArrow: <RightArrowSVG />,
-  prevArrow: <LeftArrowSVG />,
+  prevArrow: PrevArrow,
+  nextArrow: NextArrow,
   responsive: [
     {
       breakpoint: 1081,

@@ -8,8 +8,14 @@ const Dashboards = ({ quickstart }) => {
     <div
       css={css`
         h3 {
-          margin-bottom: 58px;
+          
           font-weight: 400;
+          @media (max-width: 760px) {
+            margin-bottom: 45px;
+          }
+          @media (min-width: 760px) {
+            margin-bottom: 47px;
+          }
         }
 
         h6 {
@@ -32,7 +38,6 @@ const Dashboards = ({ quickstart }) => {
           css={css`
             display: inline-block;
             background: var(--background-grey-color);
-            margin: 0px 0px;
             padding: 1px 6px;
             border-radius: 3px;
           `}
