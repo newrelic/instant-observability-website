@@ -14,7 +14,7 @@ const LandingBanner = ({ quickstart, className, location }) => {
   const defaultBannerImg = {
     src: defaultImage,
     //style the default img's element to fit 16:9 aspect ratio
-    style: { padding: ' 20px 100px 0' },
+    style: { padding: ' 20px 60px 0' },
   };
   const [bannerImg, setBannerImg] = useState(defaultBannerImg);
   const breadcrumbs = [
