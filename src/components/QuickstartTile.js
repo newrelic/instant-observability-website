@@ -145,6 +145,7 @@ const QuickstartTile = ({
         <h4
           css={css`
             grid-area: title;
+            font-weight: normal;
             font-size: 24px;
             letter-spacing: -0.5%;
           `}
