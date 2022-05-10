@@ -11,12 +11,8 @@ import BannerBackground from './BannerBackground';
 const IMAGE_DISPLAY_BREAKPOINT = '1200px';
 
 const LandingBanner = ({ quickstart, className, location }) => {
-  const defaultBannerImg = {
-    src: defaultImage,
-    //style the default img's element to fit 16:9 aspect ratio
-    style: { padding: ' 20px 60px 0' },
-  };
-  const [bannerImg, setBannerImg] = useState(defaultBannerImg);
+  const bannerImg = useDetermineBannerImg(quickstart, defaultImage);
+
   const breadcrumbs = [
     {
       name: 'Instant Observability',
@@ -26,46 +22,6 @@ const LandingBanner = ({ quickstart, className, location }) => {
       name: quickstart.title,
     },
   ];
-
-  // get image resolution from URL
-  const getURLMeta = async (url) => {
-    const img = new Image();
-    img.src = url;
-    const { width, height } = await new Promise((resolve) => {
-      img.onload = function () {
-        resolve({
-          width: this.width,
-          height: this.height,
-        });
-      };
-    });
-    return { width, height };
-  };
-
-  const isImgAspect16by9 = async () => {
-    let image = {
-      src: bannerImg.src,
-      style: bannerImg.style,
-    };
-    for (const screenshot of quickstart.dashboards[0].screenshots) {
-      const { width, height } = await getURLMeta(screenshot);
-      const aspectRatio = width / height;
-      if (aspectRatio > 1.5 && aspectRatio < 2) {
-        //set quickstartImgUrl to this screenshot if it the aspec ratio fits the page layout
-        //the ideal ratio is near 16:9 (~1.7)
-        image.src = screenshot;
-        console.log('new image', image);
-        //unsetting the padding allows the image to size itself with no whitespace
-        image.style = { padding: '0' };
-        break;
-      }
-    }
-    setBannerImg(image);
-  };
-
-  useEffect(() => {
-    isImgAspect16by9();
-  }, []);
 
   return (
     <BannerBackground>
@@ -215,6 +171,57 @@ const LandingBanner = ({ quickstart, className, location }) => {
     </BannerBackground>
   );
 };
+
+function useDetermineBannerImg(quickstart, defaultImage) {
+  const defaultBannerImg = {
+    src: defaultImage,
+    //style the default img's element to fit 16:9 aspect ratio
+    style: { padding: ' 20px 100px 0' },
+  };
+  const [bannerImg, setBannerImg] = useState(defaultBannerImg);
+
+  // get image resolution from URL
+  const getURLMeta = async (url) => {
+    const img = new Image();
+    img.src = url;
+    const { width, height } = await new Promise((resolve) => {
+      img.onload = function () {
+        resolve({
+          width: this.width,
+          height: this.height,
+        });
+      };
+    });
+    return { width, height };
+  };
+
+  const isImgAspect16by9 = async () => {
+    let image = {
+      src: bannerImg.src,
+      style: bannerImg.style,
+    };
+    for (const screenshot of quickstart.dashboards[0].screenshots) {
+      const { width, height } = await getURLMeta(screenshot);
+      const aspectRatio = width / height;
+      if (aspectRatio > 1.6 && aspectRatio < 2.2) {
+        //set quickstartImgUrl to this screenshot if it the aspec ratio fits the page layout
+        //the ideal ratio is near 16:9 (~1.7)
+        image.src = screenshot;
+        console.log('new image', image);
+        //unsetting the padding allows the image to size itself with no whitespace
+        image.style = { padding: '0' };
+        break;
+      }
+    }
+    setBannerImg(image);
+  };
+
+  useEffect(() => {
+    isImgAspect16by9();
+  }, []);
+
+  return bannerImg;
+}
 
 LandingBanner.propTypes = {
   quickstart: quickstart.isRequired,
