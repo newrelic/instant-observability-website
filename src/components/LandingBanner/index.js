@@ -11,7 +11,11 @@ import BannerBackground from './BannerBackground';
 const IMAGE_DISPLAY_BREAKPOINT = '1200px';
 
 const LandingBanner = ({ quickstart, className, location }) => {
-  const [bannerImg, setBannerImg] = useState({ src: defaultImage, style: {} });
+  const defaultBannerImg = {
+    src: defaultImage,
+    style: { padding: ' 20px 100px 0' },
+  };
+  const [bannerImg, setBannerImg] = useState(defaultBannerImg);
   const breadcrumbs = [
     {
       name: 'Instant Observability',
@@ -38,24 +42,22 @@ const LandingBanner = ({ quickstart, className, location }) => {
   };
 
   const isImgAspect16by9 = async () => {
-    const screenshot = quickstart.dashboards[0].screenshots[0];
     let image = {
       src: bannerImg.src,
-      style: {},
+      style: bannerImg.style,
     };
-    const { width, height } = await getURLMeta(screenshot);
-    const aspectRatio = width / height;
-    console.log(aspectRatio);
-    if (aspectRatio > 1.5 && aspectRatio < 2) {
-      //set quickstartImgUrl to screenshot if it thte aspec ratio fits the page layout
-      image.src = screenshot;
-      console.log(screenshot);
-      console.log('new image', image);
-    } else {
-      image.style = { padding: ' 20px 100px 0' };
+    for (const screenshot of quickstart.dashboards[0].screenshots) {
+      const { width, height } = await getURLMeta(screenshot);
+      const aspectRatio = width / height;
+      if (aspectRatio > 1.5 && aspectRatio < 2) {
+        //set quickstartImgUrl to screenshot if it thte aspec ratio fits the page layout
+        image.src = screenshot;
+        console.log('new image', image);
+        image.style = { padding: '0' };
+        break;
+      }
     }
     setBannerImg(image);
-    console.log(image.src);
   };
 
   useEffect(() => {
