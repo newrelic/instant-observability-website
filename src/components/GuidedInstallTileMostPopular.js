@@ -86,6 +86,7 @@ const GuidedInstallTileMostPopular = () => {
           css={css`
             font-family: 'Söhne-Buch';
 
+            font-weight: normal;
             font-size: 18px;
             line-height: 24px;
             margin: 0;
@@ -148,6 +149,7 @@ const GuidedInstallTileMostPopular = () => {
           size={Button.SIZE.SMALL}
           css={css`
             background: none;
+            font-weight: normal;
             font-size: 18px;
             font-family: 'Söhne-Leicht';
             padding: 0 0 3px 0;

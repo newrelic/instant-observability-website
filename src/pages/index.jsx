@@ -449,6 +449,7 @@ const QuickstartsPage = ({ data, location }) => {
                     line-height: 36px;
                     margin-bottom: 12px;
                     letter-spacing: -0.5px;
+                    font-weight: normal;
                   `}
                 >
                   Category
@@ -537,6 +538,7 @@ const QuickstartsPage = ({ data, location }) => {
                         line-height: 36px;
                         letter-spacing: -0.5px;
                         color: #1d252c;
+                        font-weight: normal;
                       }
                       @media screen and (max-width: ${QUICKSTARTS_COLLAPSE_BREAKPOINT}) {
                         padding: 0 0 0.5rem;
@@ -583,6 +585,7 @@ const QuickstartsPage = ({ data, location }) => {
                     line-height: 36px;
                     letter-spacing: -0.5px;
                     color: #1d252c;
+                    font-weight: normal;
                   }
                   @media screen and (max-width: ${QUICKSTARTS_COLLAPSE_BREAKPOINT}) {
                     padding: 0 0 0.5rem;
