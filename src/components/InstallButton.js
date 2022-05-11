@@ -278,7 +278,7 @@ const InstallButton = ({
       css={css`
         --button-background: var(
           ${style === 'PRIMARY'
-            ? '--brand-white'
+            ? '--link-color'
             : '--brand-secondary-background-color'}
         );
         --button-text-color: var(
