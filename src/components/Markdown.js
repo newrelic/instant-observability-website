@@ -23,6 +23,17 @@ const aTagToLink = ({
   );
 };
 
+const ImgTag = ({
+  node,
+  ...props
+}) => {
+  console.log(node, props)
+  return (
+    // <img src={} />
+    <a>image here</a>
+  )
+}
+
 const Markdown = ({ className, ...props }) => (
   <ReactMarkdown
     {...props}
@@ -34,6 +45,7 @@ const Markdown = ({ className, ...props }) => (
     `}
     components={{
       a: aTagToLink,
+      img: ImgTag
     }}
   />
 );

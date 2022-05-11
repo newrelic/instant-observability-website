@@ -63,3 +63,18 @@ input[type='text'] {
     max-width: 100%;
   }
 }
+
+.md-content {
+  // display: grid;
+  p {
+    display: grid;
+  }
+  img:nth-of-type(odd) {
+    width: 50%;
+    justify-self: right;
+  }
+  img:nth-of-type(even) {
+    width: 50%;
+    justify-self: left;
+  }
+}
