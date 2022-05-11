@@ -339,6 +339,7 @@ const QuickstartsPage = ({ data, location }) => {
                 font-family: 'Söhne-Leicht';
                 font-size: 28px;
                 line-height: 36px;
+                font-weight: normal;
                 margin-bottom: 12px;
                 letter-spacing: -0.5px;
               }
