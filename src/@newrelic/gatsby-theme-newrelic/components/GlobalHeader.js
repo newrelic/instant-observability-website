@@ -269,7 +269,6 @@ const GlobalHeader = ({ className, activeSite }) => {
                 href="https://one.newrelic.com"
                 css={css`
                   margin: 0 0.625rem;
-                  font-weight: 600;
                   font-size: 18px;
                   white-space: nowrap;
                   color: #e4e5e6;
@@ -297,7 +296,6 @@ const GlobalHeader = ({ className, activeSite }) => {
                 variant={Button.VARIANT.LINK}
                 href="https://one.newrelic.com"
                 css={css`
-                  font-weight: 600;
                   font-size: 18px;
                   white-space: nowrap;
                   color: #1ce783;
@@ -529,9 +527,9 @@ const GlobalHeader = ({ className, activeSite }) => {
                 text-align: center;
                 vertical-align: middle;
                 white-space: nowrap;
-                background-color: #1D252C;
+                background-color: #1d252c;
                 color: #fff;
-                border-color:#1D252C;
+                border-color: #1d252c;
               `}
             >
               <span>{t('Get Started')}</span>

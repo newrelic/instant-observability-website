@@ -114,7 +114,7 @@ const QuickstartDetails = ({ data, location }) => {
               width: 100%;
             }
           `}
-        ></div>
+        />
         <div
           css={css`
             ${layoutContentSpacing};
