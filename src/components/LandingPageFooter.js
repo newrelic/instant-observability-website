@@ -18,50 +18,60 @@ const LandingPageFooter = ({
     <>
       <div
         css={css`
-          width: 100%;
-          display: grid;
-          grid-template-columns: repeat(4, 1fr);
-          gap: 10px;
-          grid-auto-rows: minmax(100px, auto);
-          font-size: 18px;
+                display: grid;
+                grid-template-columns: repeat(4, 1fr);
+                gap: 10px;
+                grid-auto-rows: minmax(100px, auto);
+                font-size: 18px;
+               
 
-          @media (max-width: 760px) {
-            grid-template-columns: repeat(1, 1fr);
-          }
+                @media (max-width: 760px) {
+                    grid-template-columns: repeat(1, 1fr);
+                  h6{
+                    margin-bottom: 15px;
+                    margin-top: 45px;
+                  }
+                }
 
-          @media (min-width: 760px) {
-            h6 {
-              margin-bottom: 34px;
-              font-weight: 400;
-            }
-            .collaborate-section {
-              margin-bottom: 34px !important;
-            }
-          }
+                @media (min-width: 760px) {
+                  margin-top: 11px;
+                  h6 {
+                        line-height: 32px;
+                        font-weight: 400;
+                  }
+                }
 
-          @media not all and (min-resolution: 0.001dpcm) and max-width: 760px {
-            @media {
-              grid-template-columns: repeat(1, 1fr);
-              margin-left: 40px;
-              margin-right: 23px;
-            }
-          }
-          &: * {
-            padding: 1rem;
-          }
-        `}
-      >
+                @media not all and (min-resolution:.001dpcm) and max-width: 760px { 
+                    @media {
+                        grid-template-columns: repeat(1, 1fr);
+                        margin-left: 40px;
+                      margin-right: 23px;
+                    }}
+      `}>
         <div>
-          <h6>Authors</h6>
-          <p>{quickstart.authors.join(', ')}</p>
+          <h6
+            css={css`
+                  height: 32px;
+                  margin-bottom: 66px;
+                  `}>
+            Authors
+          </h6>
+          <p
+            css={css`
+                line-height: 28px;
+                `}>
+            {quickstart.authors.join(', ')}
+          </p>
         </div>
 
-        <div
-          css={css`
-            padding-bottom: 2rem;
-          `}
-        >
-          <h6>Support</h6>
+        <div>
+          <h6
+            css={css`
+                  height: 32px;
+                  margin-bottom: 58px;
+                  `}>
+            Support
+          </h6>
           <div>
             <SupportSection
               supportLevel={quickstart.level}
@@ -70,32 +80,31 @@ const LandingPageFooter = ({
           </div>
         </div>
 
-        <div
-          css={css`
-            padding-bottom: 2rem;
-          `}
-        >
-          <h6 className="collaborate-section">
+        <div>
+          <h6
+            css={css`
+                    height: 64px;
+                    margin-bottom: 33px;
+                    `} >
             Collaborate on this quickstart
           </h6>
           <div>
             <Button
               css={css`
-                background: var(--background-color);
+                    background: var(--background-color);
+                    color: var(--btn-text-color);
+                    border-radius: 4px;
+                    padding: 13.5px 20px 13.5px 22px;
+                    column-gap: 14.45px; 
+                    font-weight: 400; 
+                    &:hover{
+                      color: var(--white-hover-color);
+                    }
 
-                color: var(--btn-text-color);
-                border-radius: 4px;
-                padding: 13.5px 20px 13.5px 22px;
-                column-gap: 14.45px;
-                font-weight: 400;
-                &:hover {
-                  color: var(--white-hover-color);
-                }
-
-                @media (max-width: 760px) {
-                  width: 100%;
-                }
-              `}
+                    @media (max-width: 760px) {
+                      width: 100%;
+                    }
+                  `}
               as={Link}
               variant={Button.VARIANT.OUTLINE}
               to={quickstartUrl}
@@ -108,8 +117,8 @@ const LandingPageFooter = ({
           </div>
           <div
             css={css`
-              margin-top: 14px;
-            `}
+                    margin-top: 14px;
+              `}
           >
             <Button
               as={ExternalLink}
@@ -121,39 +130,55 @@ const LandingPageFooter = ({
                 category: 'BuildYourOwnQuickstartClick',
               }}
               css={css`
-                background: var(--background-color);
-                color: var(--btn-text-color);
-                border-radius: 4px;
-                padding: 13.5px 20px 13.5px 22px;
-                column-gap: 14.45px;
-                font-weight: 400;
-                &:hover {
-                  color: var(--white-hover-color);
-                }
+                  background: var(--background-color);
+                  color: var(--btn-text-color);
+                  border-radius: 4px;
+                  padding: 13.5px 20px 13.5px 22px;
+                  column-gap: 14.45px;   
+                  font-weight: 400; 
+                  height: 48px;
+                  &:hover{
+                        color: var(--white-hover-color);
+                     }
 
-                @media (max-width: 760px) {
-                  width: 100%;
-                }
-              `}
+                  @media (max-width: 760px) {
+                        width: 100%;
+                 }
+             `}
             >
-              <TickIconSVG className="Tick" />
+              <TickIconSVG
+                className="Tick" />
               Build your own
             </Button>
           </div>
         </div>
 
-        <div>
-          <h6>Related Resources</h6>
+        <div
+          css={
+            css`
+              margin-bottom: 68px;
+              `
+          }>
+          <h6
+            css={css`
+                  height: 32px;
+                  margin-bottom: 67px;
+                  `}>
+            Related resources
+          </h6>
           <RelatedResources
             css={css`
-              padding: 0;
-            `}
+                        padding: 0;
+                        `}
             resources={quickstart.relatedResources}
           />
+
         </div>
       </div>
     </>
+
   );
+
 };
 
 LandingPageFooter.propTypes = {
