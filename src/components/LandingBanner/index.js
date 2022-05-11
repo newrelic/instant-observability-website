@@ -31,6 +31,7 @@ const LandingBanner = ({ quickstart, className, location }) => {
           border-bottom: none;
           color: var(--brand-secondary-text-color);
           display: grid;
+          width: 100%;
           grid-column-gap: 1rem;
           grid-row-gap: 1rem;
           grid-template-areas:
@@ -39,8 +40,6 @@ const LandingBanner = ({ quickstart, className, location }) => {
             'summ summ image'
             'cta . image';
           grid-template-columns: 1fr 0.5fr 1fr;
-          grid-template-rows: 0.25fr 0.5fr auto auto;
-          height: 100%;
           justify-content: normal;
           justify-self: center;
           padding-bottom: 1rem;
@@ -104,6 +103,10 @@ const LandingBanner = ({ quickstart, className, location }) => {
             grid-area: title;
             margin-bottom: 0;
 
+            @media (max-width: ${IMAGE_DISPLAY_BREAKPOINT}) {
+              font-size: 4vw;
+            }
+
             @media (max-width: 760px) {
               font-size: 44px;
               line-height: 46px;
@@ -117,8 +120,12 @@ const LandingBanner = ({ quickstart, className, location }) => {
           <div
             css={css`
               grid-area: summ;
-              font-size: 24px;
+              font-size: 1.25vw;
               line-height: 32px;
+
+              @media (max-width: ${IMAGE_DISPLAY_BREAKPOINT}) {
+                font-size: 2vw;
+              }
 
               @media (max-width: 760px) {
                 max-width: 100%;
