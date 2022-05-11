@@ -24,100 +24,103 @@ const BannerHeaderContent = ({ search, setSearch, setIsSearchInputEmpty }) => {
         justify-content: center;
         text-align: center;
 
-        width: 568px;
-        height: 192px;
+        h1,
+        div {
+          font-family: 'Söhne-Buch';
+        }
+
+        width: 1100px;
 
         @media (max-width: ${QUICKSTARTS_COLLAPSE_BREAKPOINT}) {
-          padding: 48px 24px;
+          justify-content: center;
+          width: 100vw;
         }
       `}
     >
-      <h2
-        css={css`
-          color: var(--color-brand-300);
-
-          @media (max-width: ${QUICKSTARTS_COLLAPSE_BREAKPOINT}) {
-            font-weight: 400;
-          }
-        `}
-      >
-        Instant Observability
-      </h2>
       <h1
         css={css`
-          color: var(--color-neutrals-050);
+          color: #f9fafa;
           font-weight: 600;
+          font-size: 72px;
+          letter-spacing: -3%;
+          margin: 72px 0 0;
 
           @media (max-width: ${QUICKSTARTS_COLLAPSE_BREAKPOINT}) {
-            font-size: 20px;
+            font-size: 52px;
+            margin-top: 30px;
           }
         `}
       >
-        Monitor everything in your stack
+        Monitor everything in your stack.
       </h1>
       <div
         css={css`
           background: none;
-          color: var(--color-brand-100);
+          color: #f9fafa;
+          font-size: 16px;
+          letter-spacing: -0.5%;
+          margin: 20px 0;
+          font-weight: 300;
 
           @media (max-width: ${QUICKSTARTS_COLLAPSE_BREAKPOINT}) {
-            font-size: 12px;
-            font-weight: 300;
+            font-size: 18px;
           }
         `}
       >
         Our quickstarts bundle everything you need to start monitoring like a
-        pro right out of the box.
+        pro right out of the box
       </div>
       <div>
         <SearchInput
           size={SearchInput.SIZE.LARGE}
           value={search || ''}
-          placeholder="What do you want to monitor?"
+          placeholder="Search"
           onClear={() => {
             setSearch('');
             setIsSearchInputEmpty(true);
           }}
           onChange={handleSearchInput}
           css={css`
-            --svg-color: var(--color-neutrals-700);
             box-shadow: none;
-            max-width: 630px;
-            line-height: 1;
-            margin-top:20px;
+            max-width: 816px;
             padding-left: 0.5rem;
-            
+            margin: 0 auto 40px;
+            height: 64px;
+            ${search &&
+            search.length > 0 &&
+            css`
+              > svg {
+                display: none;
+              }
+            `};
+
             input {
-              font-size: 14px;
-              padding: 0.5rem;
-              padding-left: 2.25rem;
-              padding-right: 3rem;
-              background: var(--color-white);
-              border: 1px solid var(--color-neutrals-600);
+              height: 64px;
+              font-size: 18px;
+              padding: 20px 55px 20px 24px;
+              background: #1d252c;
+              border: 1px solid #f9fafa;
               border-radius: 4px;
+              color: #f9fafa;
               &::placeholder {
                 color: var(--color-neutrals-600);
-                padding-left: 0.5rem;
               }
+              &:focus {
+                outline: none;
+                border: 1px solid #f9fafa;
+                box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.1);
+              }
+            }
             svg {
-              width: 15x;
-              height: 15px;
+              left: unset !important;
+              right: var(--horizontal-spacing) !important;
+              stroke: #f9fafa;
+              height: 24px;
+              margin-right: 7px;
             }
-            .dark-mode & {
-              background-color: var(--tertiary-background-color);
-              --svg-color: var(--primary-text-color);
-              input {
-                background: var(--color-dark-400);
-                &::placeholder {
-                  color: var(primary-text-color);
-                }
-              }
-            }
-            
 
             @media screen and (max-width: ${QUICKSTARTS_COLLAPSE_BREAKPOINT}) {
               font-size: 17px;
-              max-width: 100%;
             }
           `}
         />
@@ -129,29 +132,40 @@ const IOBanner = ({ search, setSearch, setIsSearchInputEmpty }) => {
   return (
     <div
       css={css`
-        --banner-height: 308px;
+        --banner-height: 368px;
+
         --left-margin: calc(50% - 50vw);
 
         position: absolute;
+        top: var(--global-header-height);
         width: 100vw;
         left: var(--left-margin);
         height: var(--banner-height);
         margin: 0 0 0 var(--left-margin);
+        padding: 0 40px;
 
-        background: var(--color-brand-500);
-        border: 1px solid var(--color-brand-600);
+        background: #1d252c;
         box-sizing: border-box;
+        @media (max-width: 1130px) {
+          --banner-height: 425px;
+        }
+        @media (max-width: ${QUICKSTARTS_COLLAPSE_BREAKPOINT}) {
+          --banner-height: unset;
+        }
       `}
     >
       <div
         css={css`
-          margin: 60px 0 56px 0;
-          width: 100%;
+          margin: 0 auto 88px;
+          max-width: 1440px;
+          position: relative;
           display: flex;
           justify-content: center;
           align-items: center;
           @media screen and (max-width: ${QUICKSTARTS_COLLAPSE_BREAKPOINT}) {
-            margin: 45px 0;
+            width: 100%;
+            height: unset;
+            margin: 0 auto 0px;
           }
         `}
       >
@@ -159,14 +173,18 @@ const IOBanner = ({ search, setSearch, setIsSearchInputEmpty }) => {
           css={css`
             margin-right: auto;
 
-            @media (max-width: ${QUICKSTARTS_COLLAPSE_BREAKPOINT}) {
+            @media (max-width: 1440px) {
               display: none;
             }
           `}
         >
           <img
             css={css`
-              width: 100%;
+              position: absolute;
+              width: 157.03px;
+              height: 148px;
+              left: 10px;
+              top: 50px;
             `}
             src={bannerOverlayLeft}
             alt="banner-left"
@@ -182,14 +200,16 @@ const IOBanner = ({ search, setSearch, setIsSearchInputEmpty }) => {
           css={css`
             margin-left: auto;
 
-            @media (max-width: ${QUICKSTARTS_COLLAPSE_BREAKPOINT}) {
+            @media (max-width: 1440px) {
               display: none;
             }
           `}
         >
           <img
             css={css`
-              width: 100%;
+              position: absolute;
+              right: 10px;
+              top: 36px;
             `}
             src={bannerOverlayRight}
             alt="banner-right"
@@ -204,4 +224,5 @@ IOBanner.propTypes = {
   search: PropTypes.string,
   setSearch: PropTypes.func,
 };
+
 export default IOBanner;

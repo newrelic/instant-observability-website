@@ -41,10 +41,6 @@ const BarItem = ({
           span {
             color: var(--primary-text-color);
           }
-
-          .dark-mode & {
-            color: var(--color-brand-400);
-          }
         }
 
         ${disabled &&
@@ -52,23 +48,11 @@ const BarItem = ({
           color: var(--color-neutrals-500);
           cursor: default;
 
-          .dark-mode & {
-            color: var(--color-dark-500);
-          }
-
           &:hover {
             color: var(--color-neutrals-500);
 
-            .dark-mode & {
-              color: var(--color-dark-500);
-            }
-
             span {
               color: var(--color-neutrals-500);
-
-              .dark-mode & {
-                color: var(--color-dark-500);
-              }
             }
           }
         `}
@@ -77,11 +61,6 @@ const BarItem = ({
         css`
           color: var(--color-brand-500);
           border-bottom: var(--color-brand-500) solid 3px;
-
-          .dark-mode & {
-            color: var(--color-brand-400);
-            border-bottom: var(--color-brand-400) solid 3px;
-          }
         `}
       `}
     >
@@ -95,10 +74,6 @@ const BarItem = ({
             background-color: var(--color-neutrals-100);
             border-radius: 4px;
 
-            .dark-mode & {
-              background-color: var(--color-dark-100);
-            }
-
             ${isSelected &&
             css`
               color: var(--primary-text-color);
@@ -108,10 +83,6 @@ const BarItem = ({
             css`
               background: none;
               border: 1px solid var(--color-neutrals-100);
-
-              .dark-mode & {
-                border-color: var(--color-dark-100);
-              }
             `}
           `}
         >

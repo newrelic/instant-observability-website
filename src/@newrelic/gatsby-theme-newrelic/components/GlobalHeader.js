@@ -2,15 +2,14 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { css } from '@emotion/react';
 import AnnouncementBanner from '@newrelic/gatsby-theme-newrelic/src/components/AnnouncementBanner';
-import DarkModeToggle from '@newrelic/gatsby-theme-newrelic/src/components/DarkModeToggle';
 import ExternalLink from '@newrelic/gatsby-theme-newrelic/src/components/ExternalLink';
 import Button from '@newrelic/gatsby-theme-newrelic/src/components/Button';
-import NewRelicLogo from '@newrelic/gatsby-theme-newrelic/src/components/NewRelicLogo';
 import GlobalNavLink from '@newrelic/gatsby-theme-newrelic/src/components/GlobalNavLink';
 import useMedia from 'use-media';
 import useThemeTranslation from '@newrelic/gatsby-theme-newrelic/src/hooks/useThemeTranslation';
 import { useInstrumentedHandler } from '@newrelic/gatsby-theme-newrelic';
 import { Menu, X } from 'react-feather';
+import NewLogo from './NewLogo';
 
 const action = css`
   color: var(--secondary-text-color);
@@ -22,7 +21,7 @@ export const NR_SITES = {
   PRICING: 'PRICING',
   SOLUTIONS: 'SOLUTIONS',
   DOCS: 'DOCS',
-  IO: 'IO',
+  HELP_CENTER: 'HELP CENTER',
 };
 
 const HEADER_LINKS = new Map();
@@ -35,7 +34,7 @@ HEADER_LINKS.set(NR_SITES.PLATFORM, {
     text: 'Pricing',
     href: 'https://newrelic.com/pricing',
   })
-  .set(NR_SITES.Solutions, {
+  .set(NR_SITES.SOLUTIONS, {
     text: 'Solutions',
     href: 'https://newrelic.com/devops',
   })
@@ -43,22 +42,18 @@ HEADER_LINKS.set(NR_SITES.PLATFORM, {
     text: 'Docs',
     href: 'https://docs.newrelic.com/',
   })
-  .set(NR_SITES.IO, {
-    text: 'Instant Observability',
-    href: 'https://newrelic.com/instant-observability/',
+  .set(NR_SITES.HELP_CENTER, {
+    text: 'Help Center',
+    href: 'https://discuss.newrelic.com/',
   });
 
 const createNavList = (listType, activeSite = null) => {
   const navList = [];
-  const currentPage = HEADER_LINKS.get(NR_SITES.IO);
   HEADER_LINKS.forEach(({ text, href }) => {
     switch (listType) {
       case 'main':
         navList.push(
-          <li
-            key={href}
-            id={currentPage.href === href && 'header-nav-active-tab'}
-          >
+          <li key={href}>
             <GlobalNavLink
               href={href}
               activeSite={activeSite && HEADER_LINKS.get(activeSite)}
@@ -77,7 +72,7 @@ const createNavList = (listType, activeSite = null) => {
 const CONDENSED_BREAKPOINT = '815px';
 
 // swaps out logo into collapsable nav
-const NAV_BREAKPOINT = '1035px';
+const NAV_BREAKPOINT = '1127px';
 
 // changes layout for mobile view
 const MOBILE_BREAKPOINT = '600px';
@@ -110,20 +105,13 @@ const GlobalHeader = ({ className, activeSite }) => {
         css={[
           css`
             position: relative;
-            z-index: 1;
+            top: 0;
+            z-index: 80;
+            border-bottom: 1px solid #83878b;
             display: none;
             @media screen and (min-width: ${NAV_BREAKPOINT}) {
               display: block;
-            }
-          `,
-          css`
-            background-color: var(--color-white);
-            box-shadow: var(--shadow-2);
-            top: 0;
-            z-index: 80;
-
-            .dark-mode & {
-              background-color: var(--color-neutrals-800);
+              background: #1d252c;
             }
           `,
         ]}
@@ -132,11 +120,11 @@ const GlobalHeader = ({ className, activeSite }) => {
           css={css`
             height: var(--global-header-height);
             display: flex;
-            justify-content: space-between;
-            max-width: var(--site-max-width);
             margin: 0 auto;
+            max-width: 1440px;
+            justify-content: space-between;
             padding: 0 var(--site-content-padding);
-            height: 5.9375rem;
+            height: 96px;
             align-items: center;
           `}
         >
@@ -151,22 +139,17 @@ const GlobalHeader = ({ className, activeSite }) => {
             css={css`
               display: flex;
               align-items: center;
-              margin-right: 1rem;
 
               @media screen and (max-width: ${NAV_BREAKPOINT}) {
                 display: none;
               }
             `}
           >
-            <NewRelicLogo
-              size="176px"
+            <NewLogo
+              size="160px"
               css={css`
                 .logo-text {
                   fill: var(--color-neutrals-900);
-
-                  .dark-mode & {
-                    fill: var(--color-neutrals-100);
-                  }
                 }
               `}
             />
@@ -178,7 +161,7 @@ const GlobalHeader = ({ className, activeSite }) => {
               height: 100%;
               overflow: hidden;
               position: relative;
-              width:100%;
+              width: 100%;
               justify-content: center;
 
               @media screen and (max-width: 1235px) {
@@ -209,7 +192,6 @@ const GlobalHeader = ({ className, activeSite }) => {
                 display: flex;
                 justify-conten: center;
                 padding: 0;
-                display: flex;
                 list-style-type: none;
                 white-space: nowrap;
                 overflow-x: auto;
@@ -217,24 +199,20 @@ const GlobalHeader = ({ className, activeSite }) => {
                 -webkit-overflow-scrolling: touch;
                 -ms-overflow-style: -ms-autohiding-scrollbar;
                 > li {
-                  margin: 1.3rem 0;
-                  padding: 0px 10px;
+                  margin: 1.5rem 0;
+                  padding: 0px 32px;
                   flex: 0 0 auto;
                   > a {
-                    --active-color: var(--color-white);
-                    font-family: Open Sans, Open Sans, Corbel, Arial, sans-serif;
-                    color: #54565a;
+                    --active-color: #1d252c;
+                    color: #e4e5e6;
+                    font-family: Söhne-Buch;
                     font-weight: 400;
-                    font-size: 1rem;
+                    font-size: 18px;
                     padding: 17px 0px;
                     display: block;
                     &:hover {
-                      color: #54565a;
-                      border-bottom: 3px solid var(--color-brand-400);
-                    }
-                    .dark-mode & {
-                      --active-color: var(--color-neutrals-800);
-                      color: var(--color-neutrals-100);
+                      color: #e4e5e6;
+                      border-bottom: 1.5px solid #e4e5e6;
                     }
                   }
                 }
@@ -251,7 +229,6 @@ const GlobalHeader = ({ className, activeSite }) => {
           <ul
             css={css`
               margin: 0;
-              margin-left: 1rem;
               padding: 0;
               display: flex;
               list-style-type: none;
@@ -263,9 +240,9 @@ const GlobalHeader = ({ className, activeSite }) => {
                 transition: all 0.2s ease-out;
                 color: var(--secondary-text-color);
                 > a {
-                  font-family: Open Sans, Open Sans, Corbel, Arial, sans-serif;
+                  font-family: Söhne-Buch;
                   font-weight: 400;
-                  font-size: 1rem;
+                  font-size: 18px;
                   line-height: 1.625;
                 }
 
@@ -293,66 +270,47 @@ const GlobalHeader = ({ className, activeSite }) => {
                 css={css`
                   margin: 0 0.625rem;
                   font-weight: 600;
-                  font-size: 0.875rem;
+                  font-size: 18px;
                   white-space: nowrap;
-                  color: #54565a;
-                  .dark-mode & {
-                    color: var(--color-neutrals-300);
-                  }
+                  color: #e4e5e6;
 
-                  @media screen and (max-width: ${MOBILE_BREAKPOINT}) {
+                  &:hover {
+                    color: #e4e5e6;
+                  }
+                  @media screen and (max-width: ${NAV_BREAKPOINT}) {
                     display: none;
                   }
                 `}
               >
-                <span>{t('button.login')}</span>
+                <span>{t('Login')}</span>
               </Button>
             </li>
             <li
               css={css`
                 display: flex;
+                align-items: right;
               `}
             >
               <Button
                 as={ExternalLink}
-                className={className}
-                href="https://newrelic.com/signup"
                 size={Button.SIZE.SMALL}
-                variant={Button.VARIANT.PRIMARY}
-                instrumentation={{
-                  component: 'SignupButton',
-                  layoutElement: 'globalHeader',
-                }}
+                variant={Button.VARIANT.LINK}
+                href="https://one.newrelic.com"
                 css={css`
-                  button {
-                    background: var(color-brand-500);
-                    border: 1px solid var(color-brand-500);
-                    border-radius: 4px;
+                  font-weight: 600;
+                  font-size: 18px;
+                  white-space: nowrap;
+                  color: #1ce783;
+                  &:hover {
+                    color: #1ce783;
+                  }
+                  @media screen and (max-width: ${NAV_BREAKPOINT}) {
+                    display: none;
                   }
                 `}
               >
-                <span>{t('button.signUp')}</span>
+                <span>{t('Get Started')}</span>
               </Button>
-            </li>
-            <li>
-              <DarkModeToggle
-                css={[
-                  actionIcon,
-                  action,
-                  css`
-                    margin: 27px 0px 27px 19px;
-                    color: var(--color-neutrals-700);
-                    .dark-mode & {
-                      color: var(--color-neutrals-300);
-                    }
-
-                    @media screen and (max-width: 450px) {
-                      margin: 0;
-                    }
-                  `,
-                ]}
-                size="1.5rem"
-              />
             </li>
           </ul>
         </div>
@@ -364,16 +322,14 @@ const GlobalHeader = ({ className, activeSite }) => {
           position: relative;
           z-index: 10;
           box-shadow: 0 0.25rem 1.875rem rgb(84 86 90 / 10%);
-
+          background: #1d252c;
+          border-bottom: 1px solid #83878b;
           @media screen and (max-width: ${NAV_BREAKPOINT}) {
             display: flex;
           }
-          .dark-mode & {
-            background-color: var(--color-neutrals-800);
-          }
           ${isOpen &&
           `
-          background-color: var(--color-white);
+          background: #1D252C;
           `}
         `}
       >
@@ -405,16 +361,12 @@ const GlobalHeader = ({ className, activeSite }) => {
               height: 100%;
             `}
           >
-            <NewRelicLogo
+            <NewLogo
               size={hideLogoText ? '24px' : '104px'}
               css={css`
                 width: 7.5rem;
                 .logo-text {
                   fill: var(--color-neutrals-900);
-
-                  .dark-mode & {
-                    fill: var(--color-neutrals-100);
-                  }
                 }
               `}
               omitText={hideLogoText}
@@ -431,26 +383,6 @@ const GlobalHeader = ({ className, activeSite }) => {
           `}
         >
           <div>
-            <DarkModeToggle
-              css={[
-                actionIcon,
-                action,
-                css`
-                  margin: 27px 0px 27px 19px;
-                  color: var(--color-neutrals-700);
-                  .dark-mode & {
-                    color: var(--color-neutrals-300);
-                  }
-
-                  @media screen and (max-width: 450px) {
-                    margin: 0;
-                  }
-                `,
-              ]}
-              size="1.5rem"
-            />
-          </div>
-          <div>
             <Button
               css={css`
                 display: flex;
@@ -461,15 +393,13 @@ const GlobalHeader = ({ className, activeSite }) => {
                 cursor: pointer;
                 width: 48;
                 height: 48;
-                .dark-mode & {
-                  color: var(--color-neutrals-300);
-                }
+
                 ${isOpen
                   ? `
-                    color:     color: var(--color-neutrals-700);
+                  color: #E4E5E6;
                   `
                   : `
-                    color:     color: var(--color-neutrals-700);
+                  color: #E4E5E6;
                   `}
               `}
               title="Toggle menu"
@@ -488,11 +418,8 @@ const GlobalHeader = ({ className, activeSite }) => {
             width: 100vw;
             height: 100vh;
             background-color: var(--color-white);
-            z-index: 1;
-            .dark-mode & {
-              background-color: var(--color-neutrals-800);
-              color: var(--color-neutrals-500);
-            }
+            z-index: 10;
+
             @media screen and (min-width: ${NAV_BREAKPOINT}) {
               display: none;
             }
@@ -511,27 +438,19 @@ const GlobalHeader = ({ className, activeSite }) => {
                 width: 100%;
                 margin: 0;
                 padding: 0;
-                li:last-child {
-                  border-bottom: 1px solid var(--color-brand-400);
-                }
                 > li {
                   margin: 0;
                   flex: 0 0 auto;
                   border-bottom: 1px solid #eeefef;
                   > a {
                     --active-color: var(--color-white);
-                    font-family: Open Sans,Open Sans,Corbel,Arial,sans-serif;
+                    font-family: Söhne-Buch;
                     color: #54565a;
                     font-weight: 400;
                     font-size: 1rem;
                     line-height: 4;
                     padding: 0 2.5rem;
                     text-align: left;
-                    
-                    .dark-mode & {
-                      color: var(--color-neutrals-500);
-                      --active-color: var(--color-neutrals-800);
-                    }
                 @media screen and (min-width: ${NAV_BREAKPOINT}) {
                   flex-direction: row;
                 }
@@ -562,7 +481,7 @@ const GlobalHeader = ({ className, activeSite }) => {
               css={css`
                 ease;
                 transition: background-color 0.3s ease,color 0.3s ease,border-color 0.3s ease;
-                font-family: Open Sans,Open Sans,Corbel,Arial,sans-serif;
+                font-family:Söhne-Buch;
                 font-weight: 400;
                 font-size: 1rem;
                 line-height: 1.625;
@@ -575,19 +494,13 @@ const GlobalHeader = ({ className, activeSite }) => {
                 vertical-align: middle;
                 white-space: nowrap;
                 background-color: #fff;
-                color: #00838f;
-                border-color: #00838f;
-           
+                color: #1D252C;
+                border-color:#1D252C;
                 padding: 0.375rem 1rem;
-                  .dark-mode & {
-                    background:var(--background-color-300);
-                    color: var(--color-brand-500);
-                  }
-
                   
                 `}
             >
-              <span>{t('button.login')}</span>
+              <span>{t('Login')}</span>
             </Button>
 
             <Button
@@ -604,7 +517,7 @@ const GlobalHeader = ({ className, activeSite }) => {
                 padding: 0.375rem 1rem;
                 transition: background-color 0.3s ease, color 0.3s ease,
                   border-color 0.3s ease;
-                font-family: Open Sans, Open Sans, Corbel, Arial, sans-serif;
+                font-family: Söhne-Buch;
                 font-weight: 400;
                 font-size: 1rem;
                 line-height: 1.625;
@@ -616,12 +529,12 @@ const GlobalHeader = ({ className, activeSite }) => {
                 text-align: center;
                 vertical-align: middle;
                 white-space: nowrap;
-                background-color: #00838f;
+                background-color: #1D252C;
                 color: #fff;
-                border-color: #00838f;
+                border-color:#1D252C;
               `}
             >
-              <span>{t('button.signUp')}</span>
+              <span>{t('Get Started')}</span>
             </Button>
           </div>
         </div>

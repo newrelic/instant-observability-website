@@ -57,10 +57,6 @@ const GuidedInstallTile = () => {
               font-weight: 600;
               line-height: 30px;
               color: var(--color-white);
-
-              .dark-mode & {
-                color: var(--heading-text-color);
-              }
             `}
           >
             Guided install
@@ -69,10 +65,6 @@ const GuidedInstallTile = () => {
             css={css`
               color: var(--color-neutrals-300);
               font-size: 14px;
-              
-              .dark-mode & {
-                color: var(--primary-text-color);
-              }
             `}
           >
             Many engineers start here. You'll install an agent with a single
@@ -81,7 +73,11 @@ const GuidedInstallTile = () => {
           </span>
         </div>
         <div>
-          <Button onClick={handleButtonClick} variant={Button.VARIANT.PRIMARY} size={Button.SIZE.SMALL}>
+          <Button
+            onClick={handleButtonClick}
+            variant={Button.VARIANT.PRIMARY}
+            size={Button.SIZE.SMALL}
+          >
             Install New Relic
           </Button>
         </div>
