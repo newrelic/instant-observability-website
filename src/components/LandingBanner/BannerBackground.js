@@ -9,20 +9,13 @@ const BannerBackground = ({ children }) => {
   return (
     <div
       css={css`
-        --banner-height: 430px;
-
         --left-margin: calc(50% - 50vw);
-
         width: 100vw;
         left: var(--left-margin);
-        height: var(--banner-height);
         margin: 0 0 0 var(--left-margin);
 
         background: var(--brand-secondary-background-color);
         box-sizing: border-box;
-        @media (max-width: ${QUICKSTARTS_COLLAPSE_BREAKPOINT}) {
-          --banner-height: unset;
-        }
       `}
     >
       <div

@@ -65,15 +65,12 @@ const QuickstartDetails = ({ data, location }) => {
       />
       <PageLayout.Header
         css={css`
-          --banner-height: 430px;
           --page-margin: 156px;
           @media (max-width: 760px) {
-            --banner-height: 420px;
             --page-margin: 30px;
           }
 
           font-family: 'Söhne-Buch';
-          height: var(--banner-height);
         `}
       >
         <LandingBanner
