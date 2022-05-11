@@ -8,25 +8,7 @@ import InstallButton from './InstallButton';
 const QuickstartHowToUse = ({ quickstart, trackQuickstart, location }) => {
   return (
     <>
-      <div
-        css={css`
-        @media (max-width: 760px) {
-        margin-top: 23px;
-        margin-bottom:  33px;
-        }
-        @media (min-width: 760px) {
-          margin-top: 8px;
-          margin-bottom: 19px;
-        }
-          @media not all and (min-resolution: 0.001dpcm) and max-width: 760px {
-            @media {
-              grid-template-columns: repeat(1, 1fr);
-              margin-left: 40px;
-              margin-right: 23px;
-            }
-          }
-        `}
-      >
+      <div>
         <h3
           css={css`
             top: 0;

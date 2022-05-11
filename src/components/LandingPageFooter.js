@@ -51,7 +51,6 @@ const LandingPageFooter = ({
         <div>
           <h6
             css={css`
-                  width: 265px;
                   height: 32px;
                   margin-bottom: 66px;
                   `}>
@@ -68,7 +67,6 @@ const LandingPageFooter = ({
         <div>
           <h6
             css={css`
-                  width: 263px;
                   height: 32px;
                   margin-bottom: 58px;
                   `}>
@@ -85,7 +83,6 @@ const LandingPageFooter = ({
         <div>
           <h6
             css={css`
-                    width: 264px;
                     height: 64px;
                     margin-bottom: 33px;
                     `} >
@@ -94,21 +91,20 @@ const LandingPageFooter = ({
           <div>
             <Button
               css={css`
-                            background: var(--background-color);
-                    
-                            color: var(--btn-text-color);
-                            border-radius: 4px;
-                            padding: 13.5px 20px 13.5px 22px;
-                            column-gap: 14.45px; 
-                            font-weight: 400; 
-                            &:hover{
-                                color: var(--white-hover-color);
-                              }
+                    background: var(--background-color);
+                    color: var(--btn-text-color);
+                    border-radius: 4px;
+                    padding: 13.5px 20px 13.5px 22px;
+                    column-gap: 14.45px; 
+                    font-weight: 400; 
+                    &:hover{
+                      color: var(--white-hover-color);
+                    }
 
-                            @media (max-width: 760px) {
-                                width: 100%;
-                            }
-                            `}
+                    @media (max-width: 760px) {
+                      width: 100%;
+                    }
+                  `}
               as={Link}
               variant={Button.VARIANT.OUTLINE}
               to={quickstartUrl}
@@ -122,7 +118,7 @@ const LandingPageFooter = ({
           <div
             css={css`
                     margin-top: 14px;
-                    `}
+              `}
           >
             <Button
               as={ExternalLink}
@@ -134,21 +130,21 @@ const LandingPageFooter = ({
                 category: 'BuildYourOwnQuickstartClick',
               }}
               css={css`
-                            background: var(--background-color);
-                            color: var(--btn-text-color);
-                            border-radius: 4px;
-                            padding: 13.5px 20px 13.5px 22px;
-                            column-gap: 14.45px;   
-                            font-weight: 400; 
-                            height: 48px;
-                            &:hover{
-                                color: var(--white-hover-color);
-                            }
+                  background: var(--background-color);
+                  color: var(--btn-text-color);
+                  border-radius: 4px;
+                  padding: 13.5px 20px 13.5px 22px;
+                  column-gap: 14.45px;   
+                  font-weight: 400; 
+                  height: 48px;
+                  &:hover{
+                        color: var(--white-hover-color);
+                     }
 
-                            @media (max-width: 760px) {
-                                width: 100%;
-                            }
-                            `}
+                  @media (max-width: 760px) {
+                        width: 100%;
+                 }
+             `}
             >
               <TickIconSVG
                 className="Tick" />
@@ -165,7 +161,6 @@ const LandingPageFooter = ({
           }>
           <h6
             css={css`
-                  width: 265px;
                   height: 32px;
                   margin-bottom: 67px;
                   `}>
