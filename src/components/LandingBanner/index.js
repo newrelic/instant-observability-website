@@ -44,6 +44,7 @@ const LandingBanner = ({ quickstart, className, location }) => {
           padding-bottom: 1rem;
           row-gap: 1rem;
           z-index: 2;
+          width: 100%;
 
           h2 {
             color: white;
