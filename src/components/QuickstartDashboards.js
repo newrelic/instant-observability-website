@@ -54,13 +54,35 @@ const settings = {
   ],
 };
 
+const renderDescription = (dashboard) => {
+  let descriptionToShow = '';
+  // check if description field is present
+  if (dashboard.description) {
+    // check if description and name are same
+    if (dashboard.description === dashboard.name) {
+      // if both are same, then descriptionToShow will be empty
+      descriptionToShow = '';
+    } else {
+      // if both are not same, then descriptionToShow will be the received description
+      descriptionToShow = dashboard.description
+    }
+  } else {
+    // if description field is not present then the descriptionToShow will be empty
+    descriptionToShow = '';
+  }
+  // render description
+  return (
+    <p>{descriptionToShow}</p>
+  )
+}
+
 const QuickstartDashboards = ({ quickstart }) => (
   <>
     <Intro
       css={css`
         margin-bottom: 16px;
         color: var(--black-text-color);
-        @media screen and (max-width: 760px){
+        @media screen and (max-width: 760px) {
           display: none;
         }
       `}
@@ -76,13 +98,13 @@ const QuickstartDashboards = ({ quickstart }) => (
         <div>
           <p
             css={css`
-          font-weight: 700 !important;
-          font-family: 'Söhne-Kräftig';
-
-          `}>
+              font-weight: 700 !important;
+              font-family: 'Söhne-Kräftig';
+            `}
+          >
             {dashboard.name}
           </p>
-          {dashboard.description && <p>{dashboard.description}</p>}
+          {renderDescription(dashboard)}
           <Slider {...settings}>
             {dashboard.screenshots.map((imgUrl) => {
               return (
@@ -120,7 +142,8 @@ const QuickstartDashboards = ({ quickstart }) => (
                 </div>
               );
             })}
-          </Slider></div>
+          </Slider>
+        </div>
       </div>
     ))}
   </>
