@@ -208,7 +208,6 @@ function useDetermineBannerImg(quickstart, defaultImage) {
         //set quickstartImgUrl to this screenshot if its the aspect ratio fits the page layout
         //the ideal ratio is near(~1.9)
         image.src = screenshot;
-        console.log('new image', image);
         //unsetting the padding allows the image to size itself with no whitespace
         image.style = { padding: '0' };
         break;
