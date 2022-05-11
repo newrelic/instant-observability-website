@@ -1065,59 +1065,6 @@
     "installPlans": []
   },
   {
-    "title": "Node Exporter",
-    "name": "node-exporter",
-    "description": "Official New Relic dashboard for Prometheus Node Exporter. Node Exporter allows host metrics gathered by the exporter to be scraped by Prometheus Server.\n\n## Dashboard Highlights\n- Load Averages\n- CPU\n- Memory Usage\n- Storage Usage\n- Network\n\n## Requirements:\n1. [Prometheus Server](https://prometheus.io/docs/prometheus/latest/installation/)\n2. [Node Exporter](https://prometheus.io/docs/guides/node-exporter/) installed\n3. Enable Prometheus [Remote Write](https://docs.newrelic.com/docs/infrastructure/prometheus-integrations/install-configure-remote-write/set-your-prometheus-remote-write-integration/) to New Relic.\n4. To be able to filter metrics by a specific label that isn't part of the Node Exporter default installation, an `external_label` will need to be added to the Prometheus config. Example:\n    `\n      global:\n        external_labels:\n          clusterName: <cluster_name>\n    `",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/node-exporter",
-    "id": "63f7cc4c-57d8-41e5-a496-a2e61efa992f",
-    "level": "NEW_RELIC",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/node-exporter/logo.png",
-    "summary": "Dashboard for metrics gathered through Node Exporter",
-    "websiteUrl": null,
-    "keywords": [
-      "prometheus",
-      "node",
-      "exporter",
-      "remote",
-      "write",
-      "host",
-      "cpu",
-      "memory",
-      "storage",
-      "network"
-    ],
-    "authors": [
-      "New Relic"
-    ],
-    "dashboards": [],
-    "alerts": [
-      {
-        "name": "Node Exporter CPU Seconds Threshold",
-        "details": null,
-        "type": "BASELINE",
-        "url": null
-      }
-    ],
-    "documentation": [
-      {
-        "name": "Node Exporter - GitHub",
-        "description": "Exporter for machine metrics\n",
-        "url": "https://github.com/prometheus/node_exporter"
-      },
-      {
-        "name": "Node Exporter - Prometheus",
-        "description": "Monitoring Linux Host Metrics with the Node Exporter\n",
-        "url": "https://prometheus.io/docs/guides/node-exporter/"
-      }
-    ],
-    "installPlans": [
-      {
-        "name": "Prometheus remote write",
-        "id": "setup-prometheus"
-      }
-    ]
-  },
-  {
     "title": "CircleCI",
     "name": "circleci",
     "description": "## CircleCI Quickstart\n\nThe world’s best software teams use CircleCI to deliver quality code with confidence. As the largest continuous integration and delivery (CI/CD) platform, CircleCI empowers engineers to seamlessly take ideas to execution, at scale. Every feature of our platform is built to fine-tune the entire development process from start to finish.\n\nThis quickstart allows users to view analytical data about their CircleCI jobs within the New Relic dashboard to gain visibility into the performance and health of their continuous integration and deployment pipelines. \n\n### With the CircleCI quickstart you can:\n\n- Monitor real-time CI performance, activity, and health, or track over time.\n- Identify opportunities for optimization.\n\n## The CircleCI quickstart includes a dashboard where users can easily monitor:\n- Total Jobs Ran\n- Job Health (% success)\n- Projects Summary\n- Most Recent Failed Jobs\n- Jobs Ran Per Project\n\nTo set up the integration, visit the [CircleCI Webhooks documentation](https://circleci.com/docs/2.0/webhooks/).\n\nFor more information or support, please go to [support.circleci.com](https://support.circleci.com/)",
@@ -1218,6 +1165,68 @@
       {
         "name": "AWS-CloudWatch-Metric-Streams",
         "id": "aws-cloudwatch-metric-streams"
+      }
+    ]
+  },
+  {
+    "title": "Node Exporter",
+    "name": "node-exporter",
+    "description": "Official New Relic dashboard for Prometheus Node Exporter. Node Exporter allows host metrics gathered by the exporter to be scraped by Prometheus Server.\n\n## Dashboard Highlights\n- Load Averages\n- CPU\n- Memory Usage\n- Storage Usage\n- Network\n\n## Requirements:\n1. [Prometheus Server](https://prometheus.io/docs/prometheus/latest/installation/)\n2. [Node Exporter](https://prometheus.io/docs/guides/node-exporter/) installed\n3. Enable Prometheus [Remote Write](https://docs.newrelic.com/docs/infrastructure/prometheus-integrations/install-configure-remote-write/set-your-prometheus-remote-write-integration/) to New Relic.\n4. To be able to filter metrics by a specific label that isn't part of the Node Exporter default installation, an `external_label` will need to be added to the Prometheus config. Example:\n    `\n      global:\n        external_labels:\n          clusterName: <cluster_name>\n    `",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/node-exporter",
+    "id": "63f7cc4c-57d8-41e5-a496-a2e61efa992f",
+    "level": "NEW_RELIC",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/node-exporter/logo.png",
+    "summary": "Dashboard for metrics gathered through Node Exporter",
+    "websiteUrl": null,
+    "keywords": [
+      "prometheus",
+      "node",
+      "exporter",
+      "remote",
+      "write",
+      "host",
+      "cpu",
+      "memory",
+      "storage",
+      "network"
+    ],
+    "authors": [
+      "New Relic"
+    ],
+    "dashboards": [
+      {
+        "name": "Node Exporter",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/node-exporter/dashboards/node-exporter/node-exporter.png"
+        ]
+      }
+    ],
+    "alerts": [
+      {
+        "name": "Node Exporter CPU Seconds Threshold",
+        "details": null,
+        "type": "BASELINE",
+        "url": null
+      }
+    ],
+    "documentation": [
+      {
+        "name": "Node Exporter - GitHub",
+        "description": "Exporter for machine metrics\n",
+        "url": "https://github.com/prometheus/node_exporter"
+      },
+      {
+        "name": "Node Exporter - Prometheus",
+        "description": "Monitoring Linux Host Metrics with the Node Exporter\n",
+        "url": "https://prometheus.io/docs/guides/node-exporter/"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "Prometheus remote write",
+        "id": "setup-prometheus"
       }
     ]
   },
@@ -12679,6 +12688,14 @@
     ],
     "dashboards": [
       {
+        "name": "Lacework Compliance Violations",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/lacework/dashboards/lacework-compliance-violations/lacework-compliance-violations.png"
+        ]
+      },
+      {
         "name": "Lacework Anomaly Detections",
         "description": null,
         "url": null,
@@ -12692,14 +12709,6 @@
         "url": null,
         "screenshots": [
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/lacework/dashboards/lacework-security-overview/lacework-security-overview.png"
-        ]
-      },
-      {
-        "name": "Lacework Compliance Violations",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/lacework/dashboards/lacework-compliance-violations/lacework-compliance-violations.png"
         ]
       }
     ],
@@ -12800,6 +12809,49 @@
       {
         "name": "Infrastructure Agent",
         "id": "infra-agent-targeted"
+      }
+    ]
+  },
+  {
+    "title": "Zebrium Root Cause as a Service",
+    "name": "zebrium",
+    "description": "## Zebrium Quickstart\n\nZebrium Root Cause as a Service reduces downtime by helping users find the root cause of problems more quickly. It works by using statistical machine learning on logs and achieves a proven accuracy rate of 95%. This is done without any manual training or rules. When there's a problem, you can now automatically see the root cause directly on any New Relic dashboard.\n\n\n### How to use Zebrium\n\n- Send your logs to Zebrium by installing an open source log collector (Zebrium does not retain your logs, it analyzes them inline). \n- When you know there is a problem, simply look at the Zebrium dashboard and you will see root cause indicators to explain what happened\n\n### Benefits\n\n- For problems that require digging through logs, speed up resolution by 10x\n- Proactively catch problems without requiring any rules\n- Reduce the burden on engineering, SREs and Devops when solving complex incidents\n\n### The Zebrium quickstart includes a dashboard that shows:\n\n- A vertical bar whenever Zebrium detects a potential problem\n- A listing of Zebrium detection summaries that includes an NLP generated summary and a link to the full report in the Zebrium UI\n- Metric charts showing log counts, error counts and anomaly counts\n\nQuestions? [Please contact Zebrium.](mailto:hello@zebrium.com)",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/zebrium",
+    "id": "2135562c-bdf4-41bd-bca4-f11bcdee72ca",
+    "level": "VERIFIED",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/zebrium/logo.png",
+    "summary": "The Zebrium integration allows you to automatically see details of root cause on any New Relic dashboard",
+    "websiteUrl": null,
+    "keywords": [
+      "devops",
+      "Zebrium",
+      "featured",
+      "logs",
+      "ML",
+      "AI",
+      "machine learning",
+      "root cause",
+      "newrelic partner",
+      "partner",
+      "SRE"
+    ],
+    "authors": [
+      "Rod Bagg",
+      "Gavin Cohen"
+    ],
+    "dashboards": [],
+    "alerts": [],
+    "documentation": [
+      {
+        "name": "Documentation for the Zebrium New Relic integration",
+        "description": "Step-by-step instructions for installing the Zebrium New Relic integration",
+        "url": "https://docs.zebrium.com/docs/monitoring/newrelic"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "Zebrium",
+        "id": "third-party-zebrium"
       }
     ]
   },
@@ -16958,19 +17010,19 @@
     ],
     "dashboards": [
       {
-        "name": "Catchpoint-Test Times",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/catchpoint/dashboards/Catchpoint-Test_Times/Catchpoint-Test_Times.png"
-        ]
-      },
-      {
         "name": "Catchpoint-Response Size",
         "description": null,
         "url": null,
         "screenshots": [
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/catchpoint/dashboards/Catchpoint-Response_Size/Catchpoint-Response_Size.png"
+        ]
+      },
+      {
+        "name": "Catchpoint-Test Times",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/catchpoint/dashboards/Catchpoint-Test_Times/Catchpoint-Test_Times.png"
         ]
       },
       {
@@ -21453,11 +21505,19 @@
     ],
     "dashboards": [
       {
-        "name": "GCP Integrations Data Ingest Analysis",
+        "name": "Kubernetes Data Ingest Analysis",
         "description": null,
         "url": null,
         "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/audit/infrastructure-integrations-data-analysis/dashboards/gcp-integrations-data-ingest-analysis/gcp-integrations-data-ingest-analysis.png"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/audit/infrastructure-integrations-data-analysis/dashboards/kubernetes-data-ingest-analysis/kubernetes-data-ingest-analysis.png"
+        ]
+      },
+      {
+        "name": "On-Host Integrations Data Analysis",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/audit/infrastructure-integrations-data-analysis/dashboards/on-host-integrations-data-analysis/on-host-integrations-data-analysis.png"
         ]
       },
       {
@@ -21477,19 +21537,11 @@
         ]
       },
       {
-        "name": "On-Host Integrations Data Analysis",
+        "name": "GCP Integrations Data Ingest Analysis",
         "description": null,
         "url": null,
         "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/audit/infrastructure-integrations-data-analysis/dashboards/on-host-integrations-data-analysis/on-host-integrations-data-analysis.png"
-        ]
-      },
-      {
-        "name": "Kubernetes Data Ingest Analysis",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/audit/infrastructure-integrations-data-analysis/dashboards/kubernetes-data-ingest-analysis/kubernetes-data-ingest-analysis.png"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/audit/infrastructure-integrations-data-analysis/dashboards/gcp-integrations-data-ingest-analysis/gcp-integrations-data-ingest-analysis.png"
         ]
       }
     ],
@@ -21933,22 +21985,6 @@
     ],
     "dashboards": [
       {
-        "name": "Browser Traffic Analysis",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/browser/dashboards/traffic_analysis/traffic_analysis.png"
-        ]
-      },
-      {
-        "name": "Browser Overview",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/browser/dashboards/browser_overview/browser_overview.png"
-        ]
-      },
-      {
         "name": "Browser Pages Dashboard",
         "description": null,
         "url": null,
@@ -21962,6 +21998,22 @@
         "url": null,
         "screenshots": [
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/browser/dashboards/javascript_errors/javascript_errors.png"
+        ]
+      },
+      {
+        "name": "Browser Traffic Analysis",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/browser/dashboards/traffic_analysis/traffic_analysis.png"
+        ]
+      },
+      {
+        "name": "Browser Overview",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/browser/dashboards/browser_overview/browser_overview.png"
         ]
       }
     ],
