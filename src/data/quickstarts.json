@@ -5075,14 +5075,14 @@
     "alerts": [],
     "documentation": [
       {
-        "name": "OpenCensus exporter",
-        "description": "Use the OpenCensus exporter for Go or Python\n",
-        "url": "https://docs.newrelic.com/docs/integrations/open-source-telemetry-integrations/opencensus/opencensus-exporter/"
-      },
-      {
         "name": "New Relic Telemetry SDK",
         "description": "Alternatively, use one of New Relic's Telemetry SDKs to send trace data to New Relic\n",
         "url": "https://docs.newrelic.com/docs/data-ingest-apis/get-data-new-relic/new-relic-sdks/telemetry-sdks-send-custom-telemetry-data-new-relic"
+      },
+      {
+        "name": "OpenCensus exporter",
+        "description": "Use the OpenCensus exporter for Go or Python\n",
+        "url": "https://docs.newrelic.com/docs/integrations/open-source-telemetry-integrations/opencensus/opencensus-exporter/"
       }
     ],
     "installPlans": []
@@ -12688,6 +12688,14 @@
     ],
     "dashboards": [
       {
+        "name": "Lacework Security Overview",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/lacework/dashboards/lacework-security-overview/lacework-security-overview.png"
+        ]
+      },
+      {
         "name": "Lacework Compliance Violations",
         "description": null,
         "url": null,
@@ -12701,14 +12709,6 @@
         "url": null,
         "screenshots": [
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/lacework/dashboards/lacework-anomaly-detections/lacework-anomaly-detections.png"
-        ]
-      },
-      {
-        "name": "Lacework Security Overview",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/lacework/dashboards/lacework-security-overview/lacework-security-overview.png"
         ]
       }
     ],
@@ -14671,6 +14671,53 @@
       }
     ],
     "installPlans": []
+  },
+  {
+    "title": "New Relic Ingest Metric",
+    "name": "new-relic-ingest-metric",
+    "description": "This quickstart provides a synthetic monitor (and associated dashboard) that will regularly query ingest for each data type (APM Events, Infrastructure Processes, etc.) and post it to the Metric API as a custom metric `newrelic-ingest-metric`. This means that you can query and analyze ingest across your account for 13 months by default, instead of 8 days for events, 30 days for  Logs, etc. The custom metric also includes a facet for each data type, so that you can see, for example, ingest for Mobile Events by appName or Logging by labels.app. The following parameters have default values but are all configurable:\n- ingest interval (hourly, daily, weekly)\n- facet for each data type\n- name of custom metric\n- addition of custom events",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/newrelic-ingest-metric",
+    "id": "c57f4c0b-824c-4b80-ac93-555763ee9549",
+    "level": "COMMUNITY",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/newrelic-ingest-metric/icon.jpeg",
+    "summary": "Use this script to set up a synthetic monitor that:\n1. Queries ingestion by data source, faceted by the attribute of your choice (e.g., APM Events by appName)\n2. Transforms the output into a metric that is pushed to the Metric API\n3. Can be queried for consumption analysis / dashboards for 13 months",
+    "websiteUrl": null,
+    "keywords": [
+      "ingest",
+      "ingestion",
+      "custom metric",
+      "synthetic monitor",
+      "consumption",
+      "billing",
+      "facet"
+    ],
+    "authors": [
+      "Nora Shannon Johnson"
+    ],
+    "dashboards": [
+      {
+        "name": "newrelic.ingest",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/newrelic-ingest-metric/dashboards/newrelic-ingest-metric/newrelic-ingest-metric.png"
+        ]
+      }
+    ],
+    "alerts": [],
+    "documentation": [
+      {
+        "name": "nr1-ingest-metric-script (github)",
+        "description": "Instructions for updating and activating the synthetic monitor that generates the newrelic.ingest custom metric",
+        "url": "https://github.com/newrelic-experimental/nr1-ingest-metric-script"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "New Relic Ingest Metric",
+        "id": "newrelic-ingest-metric"
+      }
+    ]
   },
   {
     "title": "Amazon EKS on AWS Fargate",
@@ -17010,19 +17057,19 @@
     ],
     "dashboards": [
       {
-        "name": "Catchpoint-Response Size",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/catchpoint/dashboards/Catchpoint-Response_Size/Catchpoint-Response_Size.png"
-        ]
-      },
-      {
         "name": "Catchpoint-Test Times",
         "description": null,
         "url": null,
         "screenshots": [
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/catchpoint/dashboards/Catchpoint-Test_Times/Catchpoint-Test_Times.png"
+        ]
+      },
+      {
+        "name": "Catchpoint-Overview",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/catchpoint/dashboards/Catchpoint-Overview/Catchpoint-Overview.png"
         ]
       },
       {
@@ -17034,11 +17081,11 @@
         ]
       },
       {
-        "name": "Catchpoint-Overview",
+        "name": "Catchpoint-Response Size",
         "description": null,
         "url": null,
         "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/catchpoint/dashboards/Catchpoint-Overview/Catchpoint-Overview.png"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/catchpoint/dashboards/Catchpoint-Response_Size/Catchpoint-Response_Size.png"
         ]
       }
     ],
@@ -21505,19 +21552,11 @@
     ],
     "dashboards": [
       {
-        "name": "Kubernetes Data Ingest Analysis",
+        "name": "GCP Integrations Data Ingest Analysis",
         "description": null,
         "url": null,
         "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/audit/infrastructure-integrations-data-analysis/dashboards/kubernetes-data-ingest-analysis/kubernetes-data-ingest-analysis.png"
-        ]
-      },
-      {
-        "name": "On-Host Integrations Data Analysis",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/audit/infrastructure-integrations-data-analysis/dashboards/on-host-integrations-data-analysis/on-host-integrations-data-analysis.png"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/audit/infrastructure-integrations-data-analysis/dashboards/gcp-integrations-data-ingest-analysis/gcp-integrations-data-ingest-analysis.png"
         ]
       },
       {
@@ -21537,11 +21576,19 @@
         ]
       },
       {
-        "name": "GCP Integrations Data Ingest Analysis",
+        "name": "On-Host Integrations Data Analysis",
         "description": null,
         "url": null,
         "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/audit/infrastructure-integrations-data-analysis/dashboards/gcp-integrations-data-ingest-analysis/gcp-integrations-data-ingest-analysis.png"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/audit/infrastructure-integrations-data-analysis/dashboards/on-host-integrations-data-analysis/on-host-integrations-data-analysis.png"
+        ]
+      },
+      {
+        "name": "Kubernetes Data Ingest Analysis",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/audit/infrastructure-integrations-data-analysis/dashboards/kubernetes-data-ingest-analysis/kubernetes-data-ingest-analysis.png"
         ]
       }
     ],
@@ -21985,14 +22032,6 @@
     ],
     "dashboards": [
       {
-        "name": "Browser Pages Dashboard",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/browser/dashboards/browser_pages_dashboard/browser_pages_dashboard.png"
-        ]
-      },
-      {
         "name": "JavaScript Errors",
         "description": null,
         "url": null,
@@ -22001,19 +22040,27 @@
         ]
       },
       {
-        "name": "Browser Traffic Analysis",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/browser/dashboards/traffic_analysis/traffic_analysis.png"
-        ]
-      },
-      {
         "name": "Browser Overview",
         "description": null,
         "url": null,
         "screenshots": [
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/browser/dashboards/browser_overview/browser_overview.png"
+        ]
+      },
+      {
+        "name": "Browser Pages Dashboard",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/browser/dashboards/browser_pages_dashboard/browser_pages_dashboard.png"
+        ]
+      },
+      {
+        "name": "Browser Traffic Analysis",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/browser/dashboards/traffic_analysis/traffic_analysis.png"
         ]
       }
     ],
