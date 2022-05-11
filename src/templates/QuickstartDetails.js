@@ -118,23 +118,34 @@ const QuickstartDetails = ({ data, location }) => {
         <div
           css={css`
             ${layoutContentSpacing};
-
             padding-bottom: 117px;
-            @media screen and (max-width: 760px) {
-              padding-bottom: 40px;
-            }
           `}
         >
           <QuickstartOverview quickstart={quickstart} />
         </div>
         {/* How to use this quickstart here */}
         <div
-          css={css`
+          css={css` 
+            @media not all and (min-resolution: 0.001dpcm) and max-width: 760px {
+              @media {
+                grid-template-columns: repeat(1, 1fr);
+                margin-left: 40px;
+                margin-right: 23px;
+              }
+            }
+          
             ${layoutContentSpacing};
+            @media (min-width: 760px) { 
+              padding-top: 38px;
+              padding-bottom: 49px;
+            }
+
+            @media (max-width: 760px) {
+              padding-top: 53px;
+              padding-bottom:  63px;
+              }
 
             background-color: #f1f2f2;
-            padding-top: 30px;
-            padding-bottom: 30px;
           `}
         >
           <QuickstartHowToUse

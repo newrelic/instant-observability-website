@@ -4,9 +4,9 @@ import pluralize from 'pluralize';
 import Intro from './Intro';
 import { quickstart } from '../types';
 import Slider from 'react-slick';
+import { animated } from 'react-spring';
 import RightArrowSVG from './Icons/RightArrowSVG';
 import LeftArrowSVG from './Icons/LeftArrowSVG';
-import { animated } from 'react-spring';
 
 const settings = {
   dots: false,
@@ -14,8 +14,17 @@ const settings = {
   speed: 500,
   slidesToShow: 3,
   slidesToScroll: 1,
-  nextArrow: <RightArrowSVG />,
-  prevArrow: <LeftArrowSVG />,
+  prevArrow: <LeftArrowSVG css={css`
+                            width: 62px; 
+                            height: 62px; 
+                            margin-left: -20px;
+                            `} />,
+
+  nextArrow: <RightArrowSVG css={css`
+                                width: 62px; 
+                                height: 62px; 
+                                margin-right: -12px;
+                                `} />,
   responsive: [
     {
       breakpoint: 1081,
@@ -66,13 +75,13 @@ const QuickstartDashboards = ({ quickstart }) => (
       <div key={dashboard.name}>
         <div>
           <p
-          css={css`
+            css={css`
           font-weight: 700 !important;
           font-family: 'Söhne-Kräftig';
 
           `}>
             {dashboard.name}
-            </p>
+          </p>
           {dashboard.description && <p>{dashboard.description}</p>}
           <Slider {...settings}>
             {dashboard.screenshots.map((imgUrl) => {

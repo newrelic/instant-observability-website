@@ -4,14 +4,17 @@ import { css } from '@emotion/react';
 
 const LeftArrowSVG = (props) => {
     const { className, style, onClick } = props;
-
     return (
 
-        <svg width="29" height="29" viewBox="0 0 29 29" fill="none" xmlns="http://www.w3.org/2000/svg" className={className} onClick={onClick}>
-            <circle r="13.832" transform="matrix(-1 8.74228e-08 8.74228e-08 1 14.332 14.668)" fill="white" stroke="#00838F" />
-            <rect width="1.26186" height="6.94021" transform="matrix(-0.707107 -0.707107 -0.707107 0.707107 16.8276 10.6504)" fill="#00838F" />
-            <rect width="6.94021" height="1.26186" transform="matrix(-0.707107 -0.707107 -0.707107 0.707107 16.7632 18.7451)" fill="#00838F" />
+        <svg width="62" height="62" viewBox="0 0 62 62" fill="none" xmlns="http://www.w3.org/2000/svg"
+            className={className} onClick={onClick}>
+            <path d="M31 16C34.9782 16 38.7936 17.5804 41.6066 20.3934C44.4196 23.2064 46 27.0218 46 31C46 34.9782 44.4196 38.7936 41.6066 41.6066C38.7936 44.4196 34.9782 46 31 46C27.0218 46 23.2064 44.4196 20.3934 41.6066C17.5804 38.7936 16 34.9782 16 31V31C16 27.0218 17.5804 23.2064 20.3934 20.3934C23.2064 17.5804 27.0218 16 31 16Z" 
+            fill="#1D252C" />
+            <path d="M31 27.25L31.6609 27.9109L29.0453 30.5312H34.75V31.4688H29.0453L31.6656 34.0844L31 34.75L27.25 31L31 27.25Z" 
+            fill="#F9FAFA" />
+
         </svg>
+
 
     );
 };
