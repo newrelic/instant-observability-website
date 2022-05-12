@@ -29,7 +29,7 @@ const iterateDirs = async (url) => {
   return fileAggregator;
 };
 
-const fetchData = async (prNumber, quickstartPath) => {
+const getQuickstartFilesFromPR = async (prNumber, quickstartPath) => {
   // Hit the Github API for SHA that references the PR branch
   const prResponse = await fetch(`${GITHUB_API_PULL_URL}/${prNumber}`);
   const prResponseJSON = await prResponse.json();
@@ -48,7 +48,7 @@ const PreviewPage = ({ location }) => {
     const prNumber = urlParams.get('pr');
     const quickstartPath = urlParams.get('quickstart');
 
-    fetchData(prNumber, quickstartPath);
+    getQuickstartFilesFromPR(prNumber, quickstartPath);
   }, []);
 
   return <span>oh hai</span>;
