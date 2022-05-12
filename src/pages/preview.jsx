@@ -31,6 +31,8 @@ const PreviewPage = ({ location }) => {
         'quickstarts/'
       );
 
+      // This gives us the branch SHA by using the raw_url in respones JSON
+      // It aint pretty, but its honest work.
       const branchSHA = prResponseJSON[0].raw_url
         .split('raw/')[1]
         .split('/')[0];
