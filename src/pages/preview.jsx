@@ -13,17 +13,20 @@ const GITHUB_API_PULL_URL =
  * @param {String} url - GitHub API URL to walk the file system
  * @returns {Array} array of files
  **/
-const iterateDirs = async (files, url) => {
+const iterateDirs = async (url) => {
   const branchResponse = await fetch(url);
   const branchResponseJSON = await branchResponse.json();
+  let fileAggregator = [];
 
   for (const dirListing of branchResponseJSON) {
-    if (dirListing.type === 'file') {
-      files.push(dirListing);
+    if (dirListing.type === 'dir') {
+      const dirFiles = await iterateDirs(dirListing.url);
+      fileAggregator = [...fileAggregator, ...dirFiles];
     } else {
-      await iterateDirs(files, dirListing.url);
+      fileAggregator = [...fileAggregator, dirListing];
     }
   }
+  return fileAggregator;
 };
 
 const fetchData = async (prNumber, quickstartPath) => {
@@ -33,12 +36,10 @@ const fetchData = async (prNumber, quickstartPath) => {
   const branchSHA = prResponseJSON.head.sha;
 
   // Recursively walk the Github API from the root of the quickstart
-  const files = [];
-  await iterateDirs(
-    files,
+  const fileAggregator = await iterateDirs(
     `${GITHUB_API_BASE_URL}/quickstarts/${quickstartPath}?ref=${branchSHA}`
   );
-  console.log(files);
+  console.log(fileAggregator);
 };
 
 const PreviewPage = ({ location }) => {
