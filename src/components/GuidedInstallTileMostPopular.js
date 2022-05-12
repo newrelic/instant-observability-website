@@ -85,8 +85,8 @@ const GuidedInstallTileMostPopular = () => {
         <h2
           css={css`
             font-family: 'Söhne-Buch';
-            letter-spacing: -0.75%;
 
+            font-weight: normal;
             font-size: 18px;
             line-height: 24px;
             margin: 0;
@@ -98,7 +98,6 @@ const GuidedInstallTileMostPopular = () => {
           css={css`
             font-size: 18px;
             font-family: 'Söhne-Leicht';
-            font-weight: 800;
             line-height: 24px;
             color: #898e91;
           `}
@@ -115,9 +114,8 @@ const GuidedInstallTileMostPopular = () => {
         <p
           css={css`
             font-size: 24px;
-            font-weight: 800;
             font-family: 'Söhne-Leicht';
-            letter-spacing: -0.5%;
+            letter-spacing: -0.025em;
             line-height: 32px;
 
             color: var(--secondary-text-color);
@@ -151,9 +149,9 @@ const GuidedInstallTileMostPopular = () => {
           size={Button.SIZE.SMALL}
           css={css`
             background: none;
+            font-weight: normal;
             font-size: 18px;
             font-family: 'Söhne-Leicht';
-            font-weight: 800;
             padding: 0 0 3px 0;
             border-bottom: 1px solid white;
             &:hover {

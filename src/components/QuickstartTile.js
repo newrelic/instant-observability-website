@@ -84,7 +84,6 @@ const QuickstartTile = ({
           font-family: 'Söhne-Leicht';
           letter-spacing: -0.5%;
           color: #1d252c;
-          font-weight: 600;
 
           @media screen and (max-width: ${QUICKSTARTS_COLLAPSE_BREAKPOINT}) {
             width: 100%;
@@ -146,6 +145,7 @@ const QuickstartTile = ({
         <h4
           css={css`
             grid-area: title;
+            font-weight: normal;
             font-size: 24px;
             letter-spacing: -0.5%;
           `}
@@ -189,7 +189,6 @@ const QuickstartTile = ({
           css={css`
             background: #e4e5e6;
             border-radius: 4px;
-            font-weight: 600;
             height: 32px;
             width: 100px;
             padding: 3px 8px 5px;

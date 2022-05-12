@@ -40,9 +40,8 @@ const BannerHeaderContent = ({ search, setSearch, setIsSearchInputEmpty }) => {
       <h1
         css={css`
           color: #f9fafa;
-          font-weight: 600;
           font-size: 72px;
-          letter-spacing: -3%;
+          letter-spacing: -0.001em;
           margin: 72px 0 0;
 
           @media (max-width: ${QUICKSTARTS_COLLAPSE_BREAKPOINT}) {

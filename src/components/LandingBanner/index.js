@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 
 import Breadcrumbs from '../../components/Breadcrumbs';
@@ -11,6 +11,8 @@ import BannerBackground from './BannerBackground';
 const IMAGE_DISPLAY_BREAKPOINT = '1200px';
 
 const LandingBanner = ({ quickstart, className, location }) => {
+  const bannerImg = useDetermineBannerImg(quickstart, defaultImage);
+
   const breadcrumbs = [
     {
       name: 'Instant Observability',
@@ -29,6 +31,7 @@ const LandingBanner = ({ quickstart, className, location }) => {
           border-bottom: none;
           color: var(--brand-secondary-text-color);
           display: grid;
+          width: 100%;
           grid-column-gap: 1rem;
           grid-row-gap: 1rem;
           grid-template-areas:
@@ -37,8 +40,6 @@ const LandingBanner = ({ quickstart, className, location }) => {
             'summ summ image'
             'cta . image';
           grid-template-columns: 1fr 0.5fr 1fr;
-          grid-template-rows: 0.25fr 0.5fr auto auto;
-          height: 100%;
           justify-content: normal;
           justify-self: center;
           padding-bottom: 1rem;
@@ -102,6 +103,10 @@ const LandingBanner = ({ quickstart, className, location }) => {
             grid-area: title;
             margin-bottom: 0;
 
+            @media (max-width: ${IMAGE_DISPLAY_BREAKPOINT}) {
+              font-size: 4vw;
+            }
+
             @media (max-width: 760px) {
               font-size: 44px;
               line-height: 46px;
@@ -115,8 +120,12 @@ const LandingBanner = ({ quickstart, className, location }) => {
           <div
             css={css`
               grid-area: summ;
-              font-size: 24px;
+              font-size: 1.25vw;
               line-height: 32px;
+
+              @media (max-width: ${IMAGE_DISPLAY_BREAKPOINT}) {
+                font-size: 2vw;
+              }
 
               @media (max-width: 760px) {
                 max-width: 100%;
@@ -142,12 +151,13 @@ const LandingBanner = ({ quickstart, className, location }) => {
           `}
         >
           <img
-            src={quickstart.dashboards[0]?.screenshots[0] ?? defaultImage}
+            src={bannerImg}
             alt={quickstart.title}
             css={css`
               border: 28px solid #000000;
               border-radius: 26px;
               height: 250px;
+              background: white;
             `}
           />
         </div>
@@ -167,6 +177,46 @@ const LandingBanner = ({ quickstart, className, location }) => {
     </BannerBackground>
   );
 };
+
+function useDetermineBannerImg(quickstart, defaultImage) {
+  const [bannerImg, setBannerImg] = useState(defaultImage);
+
+  // get image resolution from URL
+  const getURLMeta = async (url) => {
+    const img = new Image();
+    img.src = url;
+    const { width, height } = await new Promise((resolve) => {
+      img.onload = function () {
+        resolve({
+          width: this.width,
+          height: this.height,
+        });
+      };
+    });
+    return { width, height };
+  };
+
+  const checkImgAspectRatio = async () => {
+    let image = bannerImg;
+
+    for (const screenshot of quickstart.dashboards[0]?.screenshots ?? []) {
+      const { width, height } = await getURLMeta(screenshot);
+      const aspectRatio = width / height;
+      if (aspectRatio > 1.6 && aspectRatio < 2.2) {
+        //set image to this screenshot if its the ideal aspect ratio  of ~1.9
+        image = screenshot;
+        break;
+      }
+    }
+    setBannerImg(image);
+  };
+
+  useEffect(() => {
+    checkImgAspectRatio();
+  }, []);
+
+  return bannerImg;
+}
 
 LandingBanner.propTypes = {
   quickstart: quickstart.isRequired,

@@ -336,8 +336,8 @@ const QuickstartsPage = ({ data, location }) => {
               label {
                 font-family: 'Söhne-Leicht';
                 font-size: 28px;
-                font-weight: 600;
                 line-height: 36px;
+                font-weight: normal;
                 margin-bottom: 12px;
                 letter-spacing: -0.5px;
               }
@@ -358,7 +358,7 @@ const QuickstartsPage = ({ data, location }) => {
                     padding: 8px 12px;
                     font-family: 'Söhne-Leicht';
                     font-size: 18px;
-                    font-weight: 600;
+                    font-weight: 400;
                     line-height: 54px;
                     width: 100%;
                     display: flex;
@@ -445,10 +445,10 @@ const QuickstartsPage = ({ data, location }) => {
                     padding: 0.5rem 0 0 0.5rem;
                     font-family: 'Söhne-Buch';
                     font-size: 28px;
-                    font-weight: 400;
                     line-height: 36px;
                     margin-bottom: 12px;
                     letter-spacing: -0.5px;
+                    font-weight: normal;
                   `}
                 >
                   Category
@@ -474,7 +474,6 @@ const QuickstartsPage = ({ data, location }) => {
                         padding: 8px 12px;
                         font-family: 'Söhne-Buch';
                         font-size: 18px;
-                        font-weight: 400;
                         line-height: 54px;
                         background: ${category === value
                           ? 'var(--divider-color)'
@@ -535,10 +534,10 @@ const QuickstartsPage = ({ data, location }) => {
                       strong {
                         font-family: 'Söhne-Leicht';
                         font-size: 28px;
-                        font-weight: 600;
                         line-height: 36px;
                         letter-spacing: -0.5px;
                         color: #1d252c;
+                        font-weight: normal;
                       }
                       @media screen and (max-width: ${QUICKSTARTS_COLLAPSE_BREAKPOINT}) {
                         padding: 0 0 0.5rem;
@@ -582,10 +581,10 @@ const QuickstartsPage = ({ data, location }) => {
                   strong {
                     font-family: 'Söhne-Leicht';
                     font-size: 28px;
-                    font-weight: 600;
                     line-height: 36px;
                     letter-spacing: -0.5px;
                     color: #1d252c;
+                    font-weight: normal;
                   }
                   @media screen and (max-width: ${QUICKSTARTS_COLLAPSE_BREAKPOINT}) {
                     padding: 0 0 0.5rem;
