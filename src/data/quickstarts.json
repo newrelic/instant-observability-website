@@ -1065,59 +1065,6 @@
     "installPlans": []
   },
   {
-    "title": "CircleCI",
-    "name": "circleci",
-    "description": "## CircleCI Quickstart\n\nThe world’s best software teams use CircleCI to deliver quality code with confidence. As the largest continuous integration and delivery (CI/CD) platform, CircleCI empowers engineers to seamlessly take ideas to execution, at scale. Every feature of our platform is built to fine-tune the entire development process from start to finish.\n\nThis quickstart allows users to view analytical data about their CircleCI jobs within the New Relic dashboard to gain visibility into the performance and health of their continuous integration and deployment pipelines. \n\n### With the CircleCI quickstart you can:\n\n- Monitor real-time CI performance, activity, and health, or track over time.\n- Identify opportunities for optimization.\n\n## The CircleCI quickstart includes a dashboard where users can easily monitor:\n- Total Jobs Ran\n- Job Health (% success)\n- Projects Summary\n- Most Recent Failed Jobs\n- Jobs Ran Per Project\n\nTo set up the integration, visit the [CircleCI Webhooks documentation](https://circleci.com/docs/2.0/webhooks/).\n\nFor more information or support, please go to [support.circleci.com](https://support.circleci.com/)",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/circleci",
-    "id": "39109d3d-b1d8-4366-8ca9-b8925005f727",
-    "level": "COMMUNITY",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/circleci/logo.png",
-    "summary": "This integration allows users to view analytical data about their CircleCI jobs within the New Relic monitoring stack.",
-    "websiteUrl": null,
-    "keywords": [
-      "newrelic partner",
-      "devops",
-      "circleci",
-      "circle",
-      "cicd",
-      "featured",
-      "logs"
-    ],
-    "authors": [
-      "New Relic",
-      "Joseph Counts"
-    ],
-    "dashboards": [
-      {
-        "name": "CircleCI",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/circleci/dashboards/circledashboard/circledashboard01.png"
-        ]
-      }
-    ],
-    "alerts": [],
-    "documentation": [
-      {
-        "name": "CircleCI Webhooks documentation",
-        "description": "CircleCI webhooks documentation",
-        "url": "https://circleci.com/docs/2.0/webhooks/"
-      },
-      {
-        "name": "Forward CircleCI docs to New Relic",
-        "description": "How to set up a webhook to forward your CircleCI logs to New Relic",
-        "url": "https://docs.newrelic.com/docs/logs/forward-logs/circleci-logs/"
-      }
-    ],
-    "installPlans": [
-      {
-        "name": "CircleCi",
-        "id": "third-party-circleci"
-      }
-    ]
-  },
-  {
     "title": "AWS Lambda",
     "name": "aws-lambda",
     "description": "## What is AWS Lambda?\n\nZero-administration compute platform for back-end web developers that runs\nyour code for you in AWS cloud.\n\n\n### Get started!\n\nStart monitoring AWS Lambda by connecting Amazon Web Services (AWS) to New Relic!\n\nCheck out our AWS Lambda documentation to instrument your cloud service and manage the stability, scalability, and reliability of your systems with New Relic's infrastructure monitoring capabilities.\n\n### More info\n\nCheck out the [documentation](https://docs.newrelic.com/docs/infrastructure/amazon-integrations/aws-integrations-list/aws-lambda-monitoring-integration/) to learn more about New Relic monitoring for AWS Lambda.",
@@ -1227,6 +1174,59 @@
       {
         "name": "Prometheus remote write",
         "id": "setup-prometheus"
+      }
+    ]
+  },
+  {
+    "title": "CircleCI",
+    "name": "circleci",
+    "description": "## CircleCI Quickstart\n\nThe world’s best software teams use CircleCI to deliver quality code with confidence. As the largest continuous integration and delivery (CI/CD) platform, CircleCI empowers engineers to seamlessly take ideas to execution, at scale. Every feature of our platform is built to fine-tune the entire development process from start to finish.\n\nThis quickstart allows users to view analytical data about their CircleCI jobs within the New Relic dashboard to gain visibility into the performance and health of their continuous integration and deployment pipelines. \n\n### With the CircleCI quickstart you can:\n\n- Monitor real-time CI performance, activity, and health, or track over time.\n- Identify opportunities for optimization.\n\n### The CircleCI quickstart includes a dashboard where users can easily monitor:\n- Total Jobs Ran\n- Job Health (% success)\n- Projects Summary\n- Most Recent Failed Jobs\n- Jobs Ran Per Project\n\n### Requirements\nTo set up the integration, visit the [CircleCI Webhooks documentation](https://circleci.com/docs/2.0/webhooks/).\n\n### Contact us\nShow us how you’re using the quickstart for a chance to win a CircleCI swag kit! Join us on Discuss [here](https://discuss.circleci.com/t/circleci-quickstart-with-new-relic/44022).\nFor more information or support, please go to [support.circleci.com](https://support.circleci.com/)",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/circleci",
+    "id": "39109d3d-b1d8-4366-8ca9-b8925005f727",
+    "level": "COMMUNITY",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/circleci/logo.png",
+    "summary": "This integration allows users to view analytical data about their CircleCI jobs within the New Relic monitoring stack.",
+    "websiteUrl": null,
+    "keywords": [
+      "newrelic partner",
+      "devops",
+      "circleci",
+      "circle",
+      "cicd",
+      "featured",
+      "logs"
+    ],
+    "authors": [
+      "New Relic",
+      "Joseph Counts"
+    ],
+    "dashboards": [
+      {
+        "name": "CircleCI",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/circleci/dashboards/circledashboard/circledashboard01.png"
+        ]
+      }
+    ],
+    "alerts": [],
+    "documentation": [
+      {
+        "name": "CircleCI Webhooks documentation",
+        "description": "CircleCI webhooks documentation",
+        "url": "https://circleci.com/docs/2.0/webhooks/"
+      },
+      {
+        "name": "Forward CircleCI docs to New Relic",
+        "description": "How to set up a webhook to forward your CircleCI logs to New Relic",
+        "url": "https://docs.newrelic.com/docs/logs/forward-logs/circleci-logs/"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "CircleCi",
+        "id": "third-party-circleci"
       }
     ]
   },
@@ -12688,19 +12688,19 @@
     ],
     "dashboards": [
       {
-        "name": "Lacework Security Overview",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/lacework/dashboards/lacework-security-overview/lacework-security-overview.png"
-        ]
-      },
-      {
         "name": "Lacework Compliance Violations",
         "description": null,
         "url": null,
         "screenshots": [
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/lacework/dashboards/lacework-compliance-violations/lacework-compliance-violations.png"
+        ]
+      },
+      {
+        "name": "Lacework Security Overview",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/lacework/dashboards/lacework-security-overview/lacework-security-overview.png"
         ]
       },
       {
@@ -12839,7 +12839,16 @@
       "Rod Bagg",
       "Gavin Cohen"
     ],
-    "dashboards": [],
+    "dashboards": [
+      {
+        "name": "Zebrium Root Cause as a Service",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/zebrium/dashboards/zebrium_rcaas/zebrium_rcaas_dashboard01.png"
+        ]
+      }
+    ],
     "alerts": [],
     "documentation": [
       {
@@ -17057,11 +17066,11 @@
     ],
     "dashboards": [
       {
-        "name": "Catchpoint-Test Times",
+        "name": "Catchpoint-Recent Errors",
         "description": null,
         "url": null,
         "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/catchpoint/dashboards/Catchpoint-Test_Times/Catchpoint-Test_Times.png"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/catchpoint/dashboards/Catchpoint-Recent_Errors/Catchpoint-Recent_Errors.png"
         ]
       },
       {
@@ -17073,19 +17082,19 @@
         ]
       },
       {
-        "name": "Catchpoint-Recent Errors",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/catchpoint/dashboards/Catchpoint-Recent_Errors/Catchpoint-Recent_Errors.png"
-        ]
-      },
-      {
         "name": "Catchpoint-Response Size",
         "description": null,
         "url": null,
         "screenshots": [
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/catchpoint/dashboards/Catchpoint-Response_Size/Catchpoint-Response_Size.png"
+        ]
+      },
+      {
+        "name": "Catchpoint-Test Times",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/catchpoint/dashboards/Catchpoint-Test_Times/Catchpoint-Test_Times.png"
         ]
       }
     ],
@@ -18583,9 +18592,19 @@
       "queue"
     ],
     "authors": [
-      "New Relic"
+      "New Relic",
+      "Ganesh N"
     ],
-    "dashboards": [],
+    "dashboards": [
+      {
+        "name": "Amazon - MSK Monitoring",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/aws/amazon-msk/dashboards/msk-monitoring/aws-msk-dashboard-screenshot.png"
+        ]
+      }
+    ],
     "alerts": [],
     "documentation": [
       {
@@ -21560,19 +21579,11 @@
         ]
       },
       {
-        "name": "AWS Integrations Data Ingest Analysis",
+        "name": "Kubernetes Data Ingest Analysis",
         "description": null,
         "url": null,
         "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/audit/infrastructure-integrations-data-analysis/dashboards/aws-integrations-data-ingest-analysis/aws-integrations-data-ingest-analysis.png"
-        ]
-      },
-      {
-        "name": "Azure Integrations Data Ingest Analysis",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/audit/infrastructure-integrations-data-analysis/dashboards/azure-integrations-data-ingest-analysis/azure-integrations-data-ingest-analysis.png"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/audit/infrastructure-integrations-data-analysis/dashboards/kubernetes-data-ingest-analysis/kubernetes-data-ingest-analysis.png"
         ]
       },
       {
@@ -21584,11 +21595,19 @@
         ]
       },
       {
-        "name": "Kubernetes Data Ingest Analysis",
+        "name": "Azure Integrations Data Ingest Analysis",
         "description": null,
         "url": null,
         "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/audit/infrastructure-integrations-data-analysis/dashboards/kubernetes-data-ingest-analysis/kubernetes-data-ingest-analysis.png"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/audit/infrastructure-integrations-data-analysis/dashboards/azure-integrations-data-ingest-analysis/azure-integrations-data-ingest-analysis.png"
+        ]
+      },
+      {
+        "name": "AWS Integrations Data Ingest Analysis",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/audit/infrastructure-integrations-data-analysis/dashboards/aws-integrations-data-ingest-analysis/aws-integrations-data-ingest-analysis.png"
         ]
       }
     ],
@@ -22032,11 +22051,11 @@
     ],
     "dashboards": [
       {
-        "name": "JavaScript Errors",
+        "name": "Browser Pages Dashboard",
         "description": null,
         "url": null,
         "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/browser/dashboards/javascript_errors/javascript_errors.png"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/browser/dashboards/browser_pages_dashboard/browser_pages_dashboard.png"
         ]
       },
       {
@@ -22048,19 +22067,19 @@
         ]
       },
       {
-        "name": "Browser Pages Dashboard",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/browser/dashboards/browser_pages_dashboard/browser_pages_dashboard.png"
-        ]
-      },
-      {
         "name": "Browser Traffic Analysis",
         "description": null,
         "url": null,
         "screenshots": [
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/browser/dashboards/traffic_analysis/traffic_analysis.png"
+        ]
+      },
+      {
+        "name": "JavaScript Errors",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/browser/dashboards/javascript_errors/javascript_errors.png"
         ]
       }
     ],
