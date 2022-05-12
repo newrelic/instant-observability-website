@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import { navigate } from 'gatsby';
 
 import PropTypes from 'prop-types';
 
@@ -32,6 +33,12 @@ const iterateDirs = async (url) => {
 const getQuickstartFilesFromPR = async (prNumber, quickstartPath) => {
   // Hit the Github API for SHA that references the PR branch
   const prResponse = await fetch(`${GITHUB_API_PULL_URL}/${prNumber}`);
+
+  if (prResponse.status !== 200 || !prResponse.ok) {
+    await navigate('/');
+    return;
+  }
+
   const prResponseJSON = await prResponse.json();
   const branchSHA = prResponseJSON.head.sha;
 
@@ -47,6 +54,11 @@ const PreviewPage = ({ location }) => {
     const urlParams = new URLSearchParams(location.search);
     const prNumber = urlParams.get('pr');
     const quickstartPath = urlParams.get('quickstart');
+
+    if (!prNumber || !quickstartPath) {
+      navigate('/');
+      return;
+    }
 
     getQuickstartFilesFromPR(prNumber, quickstartPath);
   }, []);
