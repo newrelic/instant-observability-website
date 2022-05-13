@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { navigate } from 'gatsby';
 
 import PropTypes from 'prop-types';
@@ -55,7 +55,7 @@ const getFileType = (fileName) => {
  * @param {Object} - Metadata object to parse
  * @param {Object}.download_url - raw file URL
  * @param {Object}.name - name of the file
- * @returns {Object} - Object of file containing type, fileName, and content of 
+ * @returns {Object} - Object of file containing type, fileName, and content of
  * file
  **/
 const determineContent = async ({ download_url, name: fileName }) => {
@@ -98,9 +98,10 @@ const getQuickstartFilesFromPR = async (prNumber, quickstartPath) => {
   const prResponse = await fetch(`${GITHUB_API_PULL_URL}/${prNumber}`);
 
   if (prResponse.status !== 200 || !prResponse.ok) {
-    throw `Response from github came back with status: ${prResponse.status}`;
+    return null;
   }
 
+  // Response containing files at root of PR
   const prResponseJSON = await prResponse.json();
   const branchSHA = prResponseJSON.head.sha;
 
@@ -110,27 +111,56 @@ const getQuickstartFilesFromPR = async (prNumber, quickstartPath) => {
   );
 
   const rawContent = await getRawContent(fileAggregator);
-  console.log(rawContent);
+  return rawContent;
 };
 
 const PreviewPage = ({ location }) => {
+  const [rawContentFiles, setRawContentFiles] = useState([]);
+
   useEffect(() => {
+    // grab query parameters to determine if it is a local preview or
+    // PR preview
     const urlParams = new URLSearchParams(location.search);
     const prNumber = urlParams.get('pr');
     const quickstartPath = urlParams.get('quickstart');
 
+    // check to make sure query parameters are set
+    // otherwise, return home
     if (!prNumber || !quickstartPath) {
       navigate('/');
       return;
     }
 
-    try {
-      getQuickstartFilesFromPR(prNumber, quickstartPath);
-    } catch (error) {
-      navigate('/');
-      return;
-    }
+    /*
+     * Async function to walk the file system in Github
+     * and set the content to a stateful variable.
+     **/
+    const fetchRawFiles = async () => {
+      const rawContent = await getQuickstartFilesFromPR(
+        prNumber,
+        quickstartPath
+      );
+
+      // Error handling in the chance Github returns
+      // a non 200 status
+      if (rawContent === null) {
+        navigate('/');
+        return;
+      }
+      setRawContentFiles(rawContent);
+    };
+    fetchRawFiles();
   }, []);
+
+  // To console log the results as part of AC
+  // TODO: Remove/refactor this in parsing implementation
+  useEffect(() => {
+    if (!rawContentFiles) {
+      return
+    }
+    
+      console.log(rawContentFiles);
+  }, [rawContentFiles]);
 
   return <span>oh hai</span>;
 };
