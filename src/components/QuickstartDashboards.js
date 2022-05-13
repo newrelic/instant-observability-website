@@ -112,6 +112,7 @@ const QuickstartDashboards = ({ quickstart }) => (
                   css={css`
                     border: solid 1px var(--border-color);
                   `}
+                  key={imgUrl} 
                 >
                   <animated.div
                     css={css`

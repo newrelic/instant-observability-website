@@ -106,14 +106,14 @@ const GlobalFooter = ({ className }) => {
                 grid-auto-flow: row;
 
                 /* Decrease margin of last item for mobile view */
-                > a:nth-last-child(1) {
+                > a:nth-last-of-type(1) {
                   margin-bottom: 10px;
                 }
               }
             `}
           >
             {RESOURCES.map((resource) => (
-              <ExternalLink href={resource.href}>{resource.title}</ExternalLink>
+              <ExternalLink key={resource.href} href={resource.href}>{resource.title}</ExternalLink>
             ))}
           </div>
           <div
@@ -147,7 +147,7 @@ const GlobalFooter = ({ className }) => {
 
                   /* Shifts the last row to the right by 1 column */
                   /* Change this when adding or removing socials  */
-                  :nth-child(3n + 3) {
+                  :nth-of-type(3n + 3) {
                     grid-column-start: 2;
                   }
                 }
@@ -176,7 +176,7 @@ const GlobalFooter = ({ className }) => {
             <span>Follow us</span>
 
             {SOCIALS.map((social) => (
-              <ExternalLink href={social.href}>
+              <ExternalLink key={social.href} href={social.href}>
                 <Icon
                   name={social.title}
                   size="24px"
@@ -277,7 +277,7 @@ const GlobalFooter = ({ className }) => {
             `}
           >
             {LOCALS.map((locale) => (
-              <ExternalLink href={locale.href}>{locale.title}</ExternalLink>
+              <ExternalLink key={locale.href} href={locale.href}>{locale.title}</ExternalLink>
             ))}
           </div>
         </div>

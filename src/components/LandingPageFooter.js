@@ -90,26 +90,27 @@ const LandingPageFooter = ({
           </h6>
           <div>
             <Button
-              css={css`
-                    background: var(--background-color);
-                    color: var(--btn-text-color);
-                    border-radius: 4px;
-                    padding: 13.5px 20px 13.5px 22px;
-                    column-gap: 14.45px; 
-                    font-weight: 400; 
-                    &:hover{
-                      color: var(--white-hover-color);
-                    }
-
-                    @media (max-width: 760px) {
-                      width: 100%;
-                    }
-                  `}
               as={Link}
               variant={Button.VARIANT.OUTLINE}
               to={quickstartUrl}
               rel="noopener noreferrer"
               onClick={trackQuickstart('QuickstartViewRepoClick', quickstart)}
+              css={css`
+              background: var(--background-color);
+
+              color: var(--btn-text-color);
+              border-radius: 4px;
+              padding: 13.5px 20px 13.5px 22px;
+              column-gap: 14.45px;
+              font-weight: 400;
+              &:hover {
+                color: var(--white-hover-color);
+              }
+
+              @media (max-width: 760px) {
+                width: 100%;
+              }
+            `}
             >
               <GitHubIconSVG className="ViewRepo" />
               View repo

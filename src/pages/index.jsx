@@ -201,7 +201,7 @@ const QuickstartsPage = ({ data, location }) => {
 
   const PrevArrow = (
     <Icon
-      name="carousel-left"
+      name="fe-carousel-left"
       size="120%"
       viewBox="0 0 30 30"
       css={css`
@@ -216,7 +216,7 @@ const QuickstartsPage = ({ data, location }) => {
   );
   const NextArrow = (
     <Icon
-      name="carousel-right"
+      name="fe-carousel-right"
       size="120%"
       viewBox="0 0 30 30"
       css={css`
@@ -353,6 +353,7 @@ const QuickstartsPage = ({ data, location }) => {
                   type="button"
                   key={value}
                   disabled={count === 0}
+                  variant={Button.VARIANT.PRIMARY}
                   onClick={() => handleCategory(value)}
                   css={css`
                     padding: 8px 12px;
@@ -464,6 +465,7 @@ const QuickstartsPage = ({ data, location }) => {
                     <Button
                       type="button"
                       key={value}
+                      variant={Button.VARIANT.PRIMARY}
                       onClick={() => handleCategory(value)}
                       css={css`
                         width: 100%;
