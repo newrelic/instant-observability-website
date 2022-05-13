@@ -59,7 +59,7 @@ const QuickstartTile = ({
       key={id}
       base={Surface.BASE.PRIMARY}
       className={className}
-      interactive={true}
+      interactive
       css={css`
         --tile-image-height: 100px; /* Logo image height */
         --title-row-height: auto; /* Title height to allow space for longer string */

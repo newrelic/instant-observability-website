@@ -61,7 +61,7 @@ const QuickstartDataSources = ({ quickstart }) => {
                 color: #1D252C;
               }
             `}
-            interactive={true}
+            interactive
           >
             <EbookIconSVG className="Ebook"
               css={css`
