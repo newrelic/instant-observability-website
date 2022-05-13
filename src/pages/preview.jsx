@@ -30,6 +30,11 @@ const iterateDirs = async (url) => {
   return fileAggregator;
 };
 
+/**
+ * Function handles retreiving the type of file for parsing
+ * @param {String} fileName - file name to check
+ * @returns {String} - type of file
+ **/
 const getFileType = (fileName) => {
   // Regex for different filetypes
   const imageFileTypes = /^.*\.(jpg|jpeg|svg|png)$/i;
@@ -45,16 +50,24 @@ const getFileType = (fileName) => {
   }
 };
 
+/**
+ * Function determines the type of content depending on type of image
+ * @param {Object} - Metadata object to parse
+ * @param {Object}.download_url - raw file URL
+ * @param {Object}.name - name of the file
+ * @returns {Object} - Object of file containing type, fileName, and content of 
+ * file
+ **/
 const determineContent = async ({ download_url, name: fileName }) => {
   const rawFileResponse = await fetch(download_url);
-  const fileType = getFileType(fileName);
+  const type = getFileType(fileName);
   const content =
-    fileType === 'image'
+    type === 'image'
       ? await rawFileResponse.blob()
       : await rawFileResponse.text();
 
   const rawContentObj = {
-    type: fileType,
+    type,
     fileName,
     content,
   };
