@@ -8,146 +8,178 @@ import { animated } from 'react-spring';
 import RightArrowSVG from './Icons/RightArrowSVG';
 import LeftArrowSVG from './Icons/LeftArrowSVG';
 
-const settings = {
-  dots: false,
-  infinite: false,
-  speed: 500,
-  slidesToShow: 3,
-  slidesToScroll: 1,
-  prevArrow: <LeftArrowSVG css={css`
-                            width: 62px; 
-                            height: 62px; 
-                            margin-left: -20px;
-                            `} />,
+const MOBILE_BREAKPOINT = '920px';
 
-  nextArrow: <RightArrowSVG css={css`
-                                width: 62px; 
-                                height: 62px; 
-                                margin-right: -12px;
-                                `} />,
-  responsive: [
-    {
-      breakpoint: 1081,
-      settings: {
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        infinite: true,
-        dots: false,
-      },
-    },
-    {
-      breakpoint: 760,
-      settings: {
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        infinite: true,
-        dots: false,
-      },
-    },
-    {
-      breakpoint: 480,
-      settings: {
-        slidesToShow: 1,
-        slidesToScroll: 1,
-      },
-    },
-  ],
-};
+const QuickstartDashboards = ({ quickstart }) => {
+  // declaring react-slick settings
+  const settings = {
+    variableWidth: true,
+    variableHeight: true,
+    dots: false,
+    infinite: false,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    prevArrow: (
+      <LeftArrowSVG
+        css={css`
+          width: 62px;
+          height: 62px;
+          margin-left: -3.5rem;
+          @media screen and (max-width: ${MOBILE_BREAKPOINT}) {
+            margin-left: -1.5rem;
+          }
+        `}
+      />
+    ),
 
-const renderDescription = (dashboard) => {
-  let descriptionToShow = '';
-  // check if description field is present
-  if (dashboard.description) {
-    // check if description and name are same
-    if (dashboard.description === dashboard.name) {
-      // if both are same, then descriptionToShow will be empty
-      descriptionToShow = '';
+    nextArrow: (
+      <RightArrowSVG
+        css={css`
+          width: 62px;
+          height: 62px;
+          margin-right: -3.5rem;
+          @media screen and (max-width: ${MOBILE_BREAKPOINT}) {
+            margin-right: -2rem;
+          }
+        `}
+      />
+    ),
+    responsive: [
+      {
+        // 4k resolution
+        breakpoint: 3840,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 1,
+          infinite: true,
+          dots: false,
+        },
+        breakpoint: 1081,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          infinite: true,
+          dots: false,
+        },
+      },
+      {
+        breakpoint: 760,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          infinite: true,
+          dots: false,
+        },
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
+  };
+
+  const renderDescription = (dashboard) => {
+    let descriptionToShow = '';
+    // check if description field is present
+    if (dashboard.description) {
+      // check if description and name are same
+      if (dashboard.description === dashboard.name) {
+        // if both are same, then descriptionToShow will be empty
+        descriptionToShow = '';
+      } else {
+        // if both are not same, then descriptionToShow will be the received description
+        descriptionToShow = dashboard.description
+      }
     } else {
-      // if both are not same, then descriptionToShow will be the received description
-      descriptionToShow = dashboard.description
+      // if description field is not present then the descriptionToShow will be empty
+      descriptionToShow = '';
     }
-  } else {
-    // if description field is not present then the descriptionToShow will be empty
-    descriptionToShow = '';
+    // render description
+    return (
+      <p>{descriptionToShow}</p>
+    )
   }
-  // render description
+
   return (
-    <p>{descriptionToShow}</p>
-  )
-}
+    <>
+      <Intro
+        css={css`
+          margin-bottom: 16px;
+          color: var(--black-text-color);
+          @media screen and (max-width: 760px) {
+            display: none;
+          }
+        `}
+      >
+        {quickstart.title} quickstart contains{' '}
+        {pluralize('dashboard', quickstart.dashboards?.length ?? 0, true)}.
+        These interactive visualizations let you easily explore your data,
+        understand context, and resolve problems faster.
+      </Intro>
 
-const QuickstartDashboards = ({ quickstart }) => (
-  <>
-    <Intro
-      css={css`
-        margin-bottom: 16px;
-        color: var(--black-text-color);
-        @media screen and (max-width: 760px) {
-          display: none;
-        }
-      `}
-    >
-      {quickstart.title} quickstart contains{' '}
-      {pluralize('dashboard', quickstart.dashboards?.length ?? 0, true)}. These
-      interactive visualizations let you easily explore your data, understand
-      context, and resolve problems faster.
-    </Intro>
-
-    {quickstart.dashboards.map((dashboard) => (
-      <div key={dashboard.name}>
-        <div>
-          <p
-            css={css`
-              font-weight: 700 !important;
-              font-family: 'Söhne-Kräftig';
-            `}
-          >
-            {dashboard.name}
-          </p>
-          {renderDescription(dashboard)}
-          <Slider {...settings}>
-            {dashboard.screenshots.map((imgUrl) => {
-              return (
-                <div
-                  css={css`
-                    border: solid 1px var(--border-color);
-                  `}
-                >
-                  <animated.div
+      {quickstart.dashboards.map((dashboard) => (
+        <div key={dashboard.name}>
+          <div>
+            <p
+              css={css`
+                font-weight: 700 !important;
+                font-family: 'Söhne-Kräftig';
+              `}
+            >
+              {dashboard.name}
+            </p>
+            {renderDescription(dashboard)}
+            <Slider {...settings}>
+              {dashboard.screenshots.map((imgUrl) => {
+                return (
+                  <div
                     css={css`
-                      display: flex;
-                      height: 100%;
-                      align-items: center;
+                      border: solid 1px var(--border-color);
                     `}
                   >
-                    <a
-                      href={imgUrl}
-                      target="_blank"
-                      rel="noreferrer"
+                    <animated.div
                       css={css`
-                        margin: auto;
+                        display: flex;
+                        height: 100%;
+                        align-items: center;
                       `}
                     >
-                      <img
-                        src={imgUrl}
+                      <a
+                        href={imgUrl}
+                        target="_blank"
+                        rel="noreferrer"
                         css={css`
-                          width: 100%;
-                          height: 250px;
-                          border-radius: 4px;
-                          padding: 0.25rem;
+                          margin: auto;
                         `}
-                      />
-                    </a>
-                  </animated.div>
-                </div>
-              );
-            })}
-          </Slider>
+                      >
+                        <img
+                          src={imgUrl}
+                          css={css`
+                            width: 100%;
+                            height: 25rem;
+                            @media screen and (max-width: ${MOBILE_BREAKPOINT}) {
+                              height: 100%;
+                            }
+                            border-radius: 4px;
+                            padding: 0.25rem;
+                          `}
+                        />
+                      </a>
+                    </animated.div>
+                  </div>
+                );
+              })}
+            </Slider>
+          </div>
         </div>
-      </div>
-    ))}
-  </>
-);
+      ))}
+    </>
+  );
+};
 
 QuickstartDashboards.propTypes = {
   quickstart: quickstart.isRequired,
