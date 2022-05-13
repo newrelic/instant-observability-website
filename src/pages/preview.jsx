@@ -156,10 +156,10 @@ const PreviewPage = ({ location }) => {
   // TODO: Remove/refactor this in parsing implementation
   useEffect(() => {
     if (!rawContentFiles) {
-      return
+      return;
     }
-    
-      console.log(rawContentFiles);
+
+    console.log(rawContentFiles);
   }, [rawContentFiles]);
 
   return <span>oh hai</span>;
