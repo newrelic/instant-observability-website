@@ -58,7 +58,7 @@ const getFileType = (fileName) => {
  * @returns {Object} - Object of file containing type, fileName, and content of
  * file
  **/
-const determineContent = async ({ download_url, name: fileName }) => {
+const determineContent = async ({ download_url, name: fileName, path }) => {
   const type = getFileType(fileName);
   let rawFileResponse = null;
 
@@ -70,8 +70,11 @@ const determineContent = async ({ download_url, name: fileName }) => {
   const content =
     type === 'image' ? download_url : await rawFileResponse.text();
 
+  const filePath = path.split('quickstarts/').pop();
+
   const rawContentObj = {
     type,
+    filePath,
     fileName,
     content,
   };
@@ -87,6 +90,7 @@ const determineContent = async ({ download_url, name: fileName }) => {
 const getRawContentOrBlob = async (fileAggregator) => {
   const rawContent = Promise.all(
     fileAggregator.map(async (rawMetadata) => {
+      console.log(rawMetadata);
       return determineContent(rawMetadata);
     })
   );
