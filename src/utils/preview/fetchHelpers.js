@@ -81,12 +81,12 @@ export const determineContent = async ({
 };
 
 /**
- * Async function grabs the raw content from files
+ * Function grabs the raw content from files
  * @param {Array} fileAggregator - array of Github metadata objects
- * @returns {Array<Object>} - array of objects containg raw content to parse
+ * @returns {Promise<Array<Object>>} - array of objects containg raw content to parse
  *
  **/
-export const getRawContent = async (fileAggregator) => {
+export const getRawContent = (fileAggregator) => {
   return Promise.all(fileAggregator.map(determineContent));
 };
 
