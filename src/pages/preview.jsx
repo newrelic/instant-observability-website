@@ -59,12 +59,16 @@ const getFileType = (fileName) => {
  * file
  **/
 const determineContent = async ({ download_url, name: fileName }) => {
-  const rawFileResponse = await fetch(download_url);
   const type = getFileType(fileName);
+  let rawFileResponse = null;
+
+  if (type !== 'image') {
+    rawFileResponse = await fetch(download_url);
+  }
+
+  // if the file is an image, we can supply the URL to the raw content
   const content =
-    type === 'image'
-      ? await rawFileResponse.blob()
-      : await rawFileResponse.text();
+    type === 'image' ? download_url : await rawFileResponse.text();
 
   const rawContentObj = {
     type,
