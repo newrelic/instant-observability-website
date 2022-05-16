@@ -102,7 +102,7 @@ const GuidedInstallTileMostPopular = () => {
             color: #898e91;
           `}
         >
-          First Step
+          First step
         </span>
       </div>
 
