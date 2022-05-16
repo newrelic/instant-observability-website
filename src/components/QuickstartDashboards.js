@@ -18,6 +18,7 @@ const settings = {
                             width: 62px; 
                             height: 62px; 
                             margin-left: -20px;
+                            z-index: 1;
                             `} />,
 
   nextArrow: <RightArrowSVG css={css`
