@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 
 import PropTypes from 'prop-types';
-import { getQuickstartFilesFromPR } from '../utils/preview/fetchHelpers';
+import { getQuickstartFilesFromPR, getQuickstartFilesFromLocal, getFileListFromLocal } from '../utils/preview/fetchHelpers';
 import { navigate } from 'gatsby';
 
 const PreviewPage = ({ location }) => {
@@ -13,24 +13,36 @@ const PreviewPage = ({ location }) => {
     // PR preview
     const urlParams = new URLSearchParams(location.search);
     const prNumber = urlParams.get('pr');
+    const isLocal = urlParams.get('local');
+    const port = urlParams.get('port') || 3000;
     const quickstartPath = urlParams.get('quickstart');
 
     // check to make sure query parameters are set
     // otherwise, return home
-    if (!prNumber || !quickstartPath) {
-      navigate('/');
-      return;
+    if (!isLocal) {
+        if (!prNumber || !quickstartPath) {
+            navigate('/');
+            return;
+        }
     }
-
+    
     /*
      * Async function to walk the file system in Github
      * and set the content to a stateful variable.
      **/
     const fetchRawFiles = async () => {
-      const fileContent = await getQuickstartFilesFromPR(
-        prNumber,
-        quickstartPath
-      );
+      let fileContent;
+      if (isLocal) {
+        const fileList = await getFileListFromLocal(port);
+
+        fileContent = await getQuickstartFilesFromLocal(fileList, port);
+      } else {
+        fileContent = await getQuickstartFilesFromPR(
+            prNumber,
+            quickstartPath
+        );
+      }
+      
 
       // Error handling in the chance Github returns
       // a non 200 status
