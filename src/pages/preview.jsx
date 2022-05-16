@@ -80,7 +80,7 @@ const determineContent = async ({ download_url, name: fileName }) => {
  * @returns {Array<Object>} - array of objects containg raw content to parse
  *
  **/
-const getRawContent = async (fileAggregator) => {
+const getRawContentOrBlob = async (fileAggregator) => {
   const rawContent = Promise.all(
     fileAggregator.map(async (rawMetadata) => {
       return determineContent(rawMetadata);
@@ -110,12 +110,12 @@ const getQuickstartFilesFromPR = async (prNumber, quickstartPath) => {
     `${GITHUB_API_BASE_URL}/quickstarts/${quickstartPath}?ref=${branchSHA}`
   );
 
-  const rawContent = await getRawContent(fileAggregator);
-  return rawContent;
+  const fileContent = await getRawContentOrBlob(fileAggregator);
+  return fileContent;
 };
 
 const PreviewPage = ({ location }) => {
-  const [rawContentFiles, setRawContentFiles] = useState([]);
+  const [contentFiles, setContentFiles] = useState([]);
 
   useEffect(() => {
     // grab query parameters to determine if it is a local preview or
@@ -136,18 +136,18 @@ const PreviewPage = ({ location }) => {
      * and set the content to a stateful variable.
      **/
     const fetchRawFiles = async () => {
-      const rawContent = await getQuickstartFilesFromPR(
+      const fileContent = await getQuickstartFilesFromPR(
         prNumber,
         quickstartPath
       );
 
       // Error handling in the chance Github returns
       // a non 200 status
-      if (rawContent === null) {
+      if (fileContent === null) {
         navigate('/');
         return;
       }
-      setRawContentFiles(rawContent);
+      setContentFiles(fileContent);
     };
     fetchRawFiles();
   }, []);
@@ -155,12 +155,12 @@ const PreviewPage = ({ location }) => {
   // To console log the results as part of AC
   // TODO: Remove/refactor this in parsing implementation
   useEffect(() => {
-    if (!rawContentFiles) {
+    if (contentFiles.length < 1) {
       return;
     }
 
-    console.log(rawContentFiles);
-  }, [rawContentFiles]);
+    console.log(contentFiles);
+  }, [contentFiles]);
 
   return <span>oh hai</span>;
 };
