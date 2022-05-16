@@ -263,8 +263,8 @@ const InstallButton = ({
         `}
       >
         <span />
-        <div class="scroll scroll-top">Install now</div>
-        <div class="scroll scroll-bottom">Install now</div>
+        <div className="scroll scroll-top">Install now</div>
+        <div className="scroll scroll-bottom">Install now</div>
       </div>
     );
   };
@@ -317,7 +317,7 @@ const InstallButton = ({
 
 InstallButton.propTypes = {
   quickstart: quickstart.isRequired,
-  onClick: PropTypes.func.isRequired,
+  onClick: PropTypes.func,
   location: PropTypes.object.isRequired,
   style: PropTypes.oneOf(['PRIMARY', 'SECONDARY']),
 };

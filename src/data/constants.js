@@ -91,31 +91,31 @@ export const RESOURCES = [
 
 export const SOCIALS = [
   {
-    title: 'facebook',
+    title: 'fe-facebook',
     href: 'http://www.facebook.com/NewRelic',
   },
   {
-    title: 'linkedin',
+    title: 'fe-linkedin',
     href: 'https://www.linkedin.com/company/new-relic-inc-',
   },
   {
-    title: 'instagram',
+    title: 'fe-instagram',
     href: 'https://www.instagram.com/newrelic/',
   },
   {
-    title: 'youtube',
+    title: 'fe-youtube',
     href: 'https://www.youtube.com/user/NewRelicInc/featured',
   },
   {
-    title: 'github',
+    title: 'fe-github',
     href: 'https://github.com/newrelic',
   },
   {
-    title: 'twitch',
+    title: 'fe-twitch',
     href: 'https://www.twitch.tv/new_relic',
   },
   {
-    title: 'twitter',
+    title: 'fe-twitter',
     href: 'https://twitter.com/newrelic',
   },
 ];

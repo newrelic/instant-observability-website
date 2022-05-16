@@ -106,12 +106,14 @@ const QuickstartDashboards = ({ quickstart }) => (
           </p>
           {renderDescription(dashboard)}
           <Slider {...settings}>
-            {dashboard.screenshots.map((imgUrl) => {
+            {dashboard.screenshots.map((imgUrl, index) => {
+              const elementKey = `imgurl_${index}`;
               return (
                 <div
                   css={css`
                     border: solid 1px var(--border-color);
                   `}
+                  key={elementKey} 
                 >
                   <animated.div
                     css={css`

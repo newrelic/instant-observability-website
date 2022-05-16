@@ -39,7 +39,7 @@ const SupportSection = ({ supportLevel, onClick: onLinkClick }) => {
             }
     `}
       to={COMMUNITY_LINK}
-      key={QUICKSTART_SUPPORT_LEVELS.NEWRELIC}
+      key={QUICKSTART_SUPPORT_LEVELS.COMMUNITY}
       onClick={() => onLinkClick('QuickstartDetailsCommunityClick')}
     >
       the Explorers Hub

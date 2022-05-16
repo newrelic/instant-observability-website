@@ -401,6 +401,7 @@ const GlobalHeader = ({ className, activeSite }) => {
                   `}
               `}
               title="Toggle menu"
+              variant={Button.VARIANT.LINK}
               onClick={() => setOpen(!isOpen)}
             >
               {isOpen ? <X /> : <Menu />}
