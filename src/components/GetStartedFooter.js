@@ -75,7 +75,7 @@ const GetStartedFooter = () => {
             width: 142px;
             height: 64px;
 
-            :first-child {
+            :first-of-type {
               margin: 0px 8px;
             }
           }
@@ -88,7 +88,7 @@ const GetStartedFooter = () => {
               width: 296px;
               height: 64px;
 
-              :first-child {
+              :first-of-type {
                 margin: 8px 0px;
               }
             }
@@ -97,6 +97,7 @@ const GetStartedFooter = () => {
       >
         <Button
           as={ExternalLink}
+          variant={Button.VARIANT.PRIMARY}
           href={SIGNUP_LINK}
           css={css`
             background-color: var(
@@ -116,6 +117,7 @@ const GetStartedFooter = () => {
         </Button>
         <Button
           as={ExternalLink}
+          variant={Button.VARIANT.PRIMARY}
           href={DEMO_LINK}
           css={css`
             background-color: var(

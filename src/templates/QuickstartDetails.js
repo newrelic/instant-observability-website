@@ -30,7 +30,7 @@ const QuickstartDetails = ({ data, location }) => {
   const quickStartMeta = [
     {
       name: 'quick_start_name',
-      class: 'swiftype',
+      className: 'swiftype',
       'data-type': 'string',
       content: quickstart.title,
     },
