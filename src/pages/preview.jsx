@@ -27,18 +27,17 @@ const PreviewPage = ({ location }) => {
      * and set the content to a stateful variable.
      **/
     const fetchRawFiles = async () => {
-      const fileContent = await getQuickstartFilesFromPR(
-        prNumber,
-        quickstartPath
-      );
-
-      // Error handling in the chance Github returns
-      // a non 200 status
-      if (fileContent === null) {
+      try {
+        const fileContent = await getQuickstartFilesFromPR(
+          prNumber,
+          quickstartPath
+        );
+        setContentFiles(fileContent);
+      } catch (error) {
+        console.error(error);
         navigate('/');
         return;
       }
-      setContentFiles(fileContent);
     };
     fetchRawFiles();
   }, []);
