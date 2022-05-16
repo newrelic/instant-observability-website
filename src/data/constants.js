@@ -131,3 +131,11 @@ export const LOCALS = [
   },
 ];
 
+
+/* Quickstart Preview */
+
+export const GITHUB_API_BASE_URL =
+  'https://api.github.com/repos/newrelic/newrelic-quickstarts/contents';
+
+export const GITHUB_API_PULL_URL =
+  'https://api.github.com/repos/newrelic/newrelic-quickstarts/pulls';
