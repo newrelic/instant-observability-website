@@ -18,6 +18,14 @@ const PreviewPage = ({ location }) => {
     // check to make sure query parameters are set
     // otherwise, return home
     if (!prNumber || !quickstartPath) {
+      console.log('Error: Missing query parameters');
+      if (!prNumber) {
+        console.log('prNumber');
+      }
+      if (!quickstartPath) {
+        console.log('quickstartPath');
+      }
+
       navigate('/');
       return;
     }
@@ -45,7 +53,7 @@ const PreviewPage = ({ location }) => {
   // To console log the results as part of AC
   // TODO: Remove/refactor this in parsing implementation
   useEffect(() => {
-    if (contentFiles.length < 1) {
+    if (!contentFiles) {
       return;
     }
 
