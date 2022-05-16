@@ -9,7 +9,7 @@ export const iterateDirs = async (url) => {
   const response = await fetch(url);
   if (response.status !== 200 || !response.ok) {
     throw new Error(
-      `Response from came back with status ${response.status}\nFetched URL: ${url}`
+      `Response came back while walking the file tree with status ${response.status}\nFetched URL: ${url}`
     );
   }
   const json = await response.json();
