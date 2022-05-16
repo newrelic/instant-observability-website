@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 
 import PropTypes from 'prop-types';
-import { getQuickstartFilesFromPR } from '../utils/helpers/previewHelpers';
+import { getQuickstartFilesFromPR } from '../utils/preview/fetchHelpers';
 import { navigate } from 'gatsby';
 
 const PreviewPage = ({ location }) => {
