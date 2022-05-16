@@ -34,7 +34,7 @@ const PreviewPage = ({ location }) => {
         );
         setContentFiles(fileContent);
       } catch (error) {
-        console.error(error);
+        console.log('Error:', error.message);
         navigate('/');
         return;
       }
