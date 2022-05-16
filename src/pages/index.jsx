@@ -23,6 +23,8 @@ import { css } from '@emotion/react';
 import { graphql } from 'gatsby';
 import { navigate } from '@reach/router';
 import { useDebounce } from 'react-use';
+import LeftArrowSVG from '../components/Icons/LeftArrowSVG';
+import RightArrowSVG from '../components/Icons/RightArrowSVG';
 
 const TRIPLE_COLUMN_BREAKPOINT = '1420px';
 const DOUBLE_COLUMN_BREAKPOINT = '1180px';
@@ -199,36 +201,6 @@ const QuickstartsPage = ({ data, location }) => {
     return found.displayName;
   };
 
-  const PrevArrow = (
-    <Icon
-      name="fe-carousel-left"
-      size="120%"
-      viewBox="0 0 30 30"
-      css={css`
-        fill: white;
-        stroke: #00838f;
-        z-index: 100;
-        stroke-width: 1px;
-        width: 29px;
-        height: 29px;
-      `}
-    />
-  );
-  const NextArrow = (
-    <Icon
-      name="fe-carousel-right"
-      size="120%"
-      viewBox="0 0 30 30"
-      css={css`
-        fill: white;
-        stroke: #00838f;
-        z-index: 100;
-        stroke-width: 1px;
-        width: 29px;
-        height: 29px;
-      `}
-    />
-  );
 
   // Settings for Slick-Carousel
   const settings = {
@@ -240,8 +212,16 @@ const QuickstartsPage = ({ data, location }) => {
     adaptiveHeight: false,
     adaptiveWidth: true,
     mobileFirst: true, // necessary for breakpoints to work as expected
-    prevArrow: PrevArrow,
-    nextArrow: NextArrow,
+    prevArrow: <LeftArrowSVG css={css`
+                  width: 62px; 
+                  height: 62px; 
+                  margin-left: -20px;
+                  `} />,
+    nextArrow: <RightArrowSVG css={css`
+                  width: 62px; 
+                  height: 62px; 
+                  margin-right: -12px;
+                  `} />,
     responsive: [
       {
         breakpoint: parseInt(TRIPLE_COLUMN_BREAKPOINT),
