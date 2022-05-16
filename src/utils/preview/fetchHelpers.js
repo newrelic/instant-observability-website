@@ -89,6 +89,43 @@ export const getRawContent = async (fileAggregator) => {
 };
 
 /**
+ * Async function to get list of files from localhost
+ * @param {number} port - Optional port env variable from the quickstart preview server. Defaults to 3000 
+ * @returns {Array<string>} - List of file names to be used to fetch the files from the local server
+ */
+export const getFileListFromLocal = async (port) => {
+  const response = await fetch(`http://localhost:${port}`);
+
+  if (response.status !== 200 || !response.ok) return null;
+
+  const fileList = response.json();
+
+  return fileList;
+};
+
+/**
+ * Async function to get list of files from localhost
+ * @param {Array<string>} fileList - List of file paths to fetch files from localhost
+ * @param {number} port - Optional port env variable from the quickstart preview server. Defaults to 3000 
+ * @returns {Array<object>} - Array of objects containing metadata and file contents
+ */
+export const getQuickstartFilesFromLocal = async (port) => {
+  const fileList = await getFileListFromLocal(port);
+  
+  const data = fileList.map(path => {
+    return {
+      path,
+      name: path.split('/').pop(),
+      download_url: `http://localhost:${port}/${path}`
+    }
+  });
+
+  const content = await getRawContent(data);
+
+  return content;
+};
+
+/**
  * Async function handles fetching changed files in pull request from Github
  **/
 export const getQuickstartFilesFromPR = async (prNumber, quickstartPath) => {
