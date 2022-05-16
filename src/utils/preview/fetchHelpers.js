@@ -108,12 +108,8 @@ export const getQuickstartFilesFromPR = async (prNumber, quickstartPath) => {
   const branchSHA = json.head.sha;
 
   // Recursively walk the Github API from the root of the quickstart
-  try {
-    const fileAggregator = await iterateDirs(
-      `${GITHUB_API_BASE_URL}/quickstarts/${quickstartPath}?ref=${branchSHA}`
-    );
-    return getRawContent(fileAggregator);
-  } catch (error) {
-    console.log('Error:', error.message);
-  }
+  const fileAggregator = await iterateDirs(
+    `${GITHUB_API_BASE_URL}/quickstarts/${quickstartPath}?ref=${branchSHA}`
+  );
+  return getRawContent(fileAggregator);
 };
