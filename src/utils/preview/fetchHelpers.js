@@ -6,11 +6,16 @@ import { GITHUB_API_BASE_URL, GITHUB_API_PULL_URL } from '../../data/constants';
  * @returns {Array} array of files
  **/
 export const iterateDirs = async (url) => {
-  const branchResponse = await fetch(url);
-  const branchResponseJSON = await branchResponse.json();
+  const response = await fetch(url);
+  if (response.status !== 200 || !response.ok) {
+    throw new Error(
+      `Response from came back with status ${response.status}\nFetched URL: ${url}`
+    );
+  }
+  const json = await response.json();
   let fileAggregator = [];
 
-  for (const dirListing of branchResponseJSON) {
+  for (const dirListing of json) {
     if (dirListing.type === 'dir') {
       const dirFiles = await iterateDirs(dirListing.url);
       fileAggregator = [...fileAggregator, ...dirFiles];
@@ -103,9 +108,12 @@ export const getQuickstartFilesFromPR = async (prNumber, quickstartPath) => {
   const branchSHA = json.head.sha;
 
   // Recursively walk the Github API from the root of the quickstart
-  const fileAggregator = await iterateDirs(
-    `${GITHUB_API_BASE_URL}/quickstarts/${quickstartPath}?ref=${branchSHA}`
-  );
-
-  return getRawContent(fileAggregator);
+  try {
+    const fileAggregator = await iterateDirs(
+      `${GITHUB_API_BASE_URL}/quickstarts/${quickstartPath}?ref=${branchSHA}`
+    );
+    return getRawContent(fileAggregator);
+  } catch (error) {
+    console.log('Error:', error.message);
+  }
 };
