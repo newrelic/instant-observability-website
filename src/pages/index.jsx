@@ -20,6 +20,7 @@ import CATEGORIES from '../data/instant-observability-categories';
 import SuperTiles from '../components/SuperTiles';
 
 import Slider from 'react-slick';
+
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 
@@ -112,7 +113,7 @@ const QuickstartsPage = ({ data, location }) => {
   // mark the value as true, if the page is loaded
   useEffect(() => {
     setLoadComplete(true);
-  }, [])
+  }, []);
 
   const closeCategoriesOverlay = () => {
     setIsCategoriesOverlayOpen(false);
@@ -496,9 +497,7 @@ const QuickstartsPage = ({ data, location }) => {
                       `};
                     `}
                   >
-                    {!loadComplete && (
-                      <Spinner />
-                    )}
+                    {!loadComplete && <Spinner />}
                     {loadComplete && (
                       <Slider
                         {...settings}
@@ -578,9 +577,7 @@ const QuickstartsPage = ({ data, location }) => {
                   `};
                 `}
               >
-                {!loadComplete && (
-                  <Spinner />
-                )}
+                {!loadComplete && <Spinner />}
                 {loadComplete && (
                   <Slider {...settings}>
                     {featuredQuickStarts.map((pack) => (
