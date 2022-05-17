@@ -11,6 +11,14 @@ import {
 const SupportSection = ({ supportLevel, onClick: onLinkClick }) => {
   const supportLink = (
     <Link
+      css={css`
+          color: var(--link-font-color);
+  
+          &:hover{
+            color: var(--hover-color);
+          }
+    
+    `}
       to={SUPPORT_LINK}
       key={QUICKSTART_SUPPORT_LEVELS.NEWRELIC}
       onClick={() =>
@@ -23,8 +31,15 @@ const SupportSection = ({ supportLevel, onClick: onLinkClick }) => {
 
   const communityLink = (
     <Link
+      css={css`
+            color: var(--link-font-color);
+            
+            &:hover{
+              color: var(--hover-color);
+            }
+    `}
       to={COMMUNITY_LINK}
-      key={QUICKSTART_SUPPORT_LEVELS.NEWRELIC}
+      key={QUICKSTART_SUPPORT_LEVELS.COMMUNITY}
       onClick={() => onLinkClick('QuickstartDetailsCommunityClick')}
     >
       the Explorers Hub
@@ -35,7 +50,10 @@ const SupportSection = ({ supportLevel, onClick: onLinkClick }) => {
     [QUICKSTART_SUPPORT_LEVELS.NEWRELIC]: {
       title: 'Built by New Relic',
       content: (
-        <p>
+        <p
+        css={css`
+        line-height: 28px;
+        `}>
           Need help? {supportLink} or check out our community forum,{' '}
           {communityLink}.
         </p>
@@ -64,13 +82,18 @@ const SupportSection = ({ supportLevel, onClick: onLinkClick }) => {
 
   return (
     <>
-      <h5
+       <div
         css={css`
           text-transform: uppercase;
+          color: var( --link-font-color);
+          font-size: 18px;
+          font-family: 'Open Sans';
+          font-weight: 700;
+          line-height: 48px;
         `}
       >
         {QUICKSTART_SUPPORT_CONTENT[`${supportLevel}`].title}
-      </h5>
+      </div>
       {QUICKSTART_SUPPORT_CONTENT[`${supportLevel}`].content}
     </>
   );

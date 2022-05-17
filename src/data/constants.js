@@ -30,6 +30,7 @@ export const QUICKSTARTS_REPO =
 
 export const SIGNUP_LINK = 'https://newrelic.com/signup';
 export const LOGIN_LINK = 'https://login.newrelic.com/login';
+export const DEMO_LINK = 'https://newrelic.com/request-demo';
 
 export const UTM_PARAMETERS = { utm_medium: 'cpc' };
 
@@ -40,3 +41,93 @@ export const RESERVED_QUICKSTART_IDS = {
 
 export const QUICKSTARTS_COLLAPSE_BREAKPOINT = '760px';
 export const LISTVIEW_BREAKPOINT = '1080px';
+
+export const RESOURCES = [
+  {
+    title: 'About Us',
+    href: 'https://newrelic.com/about',
+  },
+  {
+    title: 'Leadership',
+    href: 'https://newrelic.com/about/leadership',
+  },
+  {
+    title: 'Careers',
+    href: 'https://newrelic.com/about/culture',
+  },
+  {
+    title: 'Social Impact',
+    href: 'https://newrelic.com/social-impact',
+  },
+  {
+    title: 'Newsroom',
+    href: 'https://newrelic.com/about/newsroom',
+  },
+  {
+    title: 'Customers',
+    href: 'https://newrelic.com/customers',
+  },
+  {
+    title: 'Partner Program',
+    href: 'https://newrelic.com/solutions/partners',
+  },
+  {
+    title: 'Investor Relations',
+    href: 'https://ir.newrelic.com/investors-home/default.aspx',
+  },
+  {
+    title: 'Suppliers Portal',
+    href: 'https://newrelic.com/procurement/suppliers',
+  },
+  {
+    title: 'Security',
+    href: 'https://newrelic.com/security',
+  },
+  {
+    title: 'Contact Us',
+    href: 'https://newrelic.com/about/contact-us',
+  },
+];
+
+export const SOCIALS = [
+  {
+    title: 'fe-facebook',
+    href: 'http://www.facebook.com/NewRelic',
+  },
+  {
+    title: 'fe-linkedin',
+    href: 'https://www.linkedin.com/company/new-relic-inc-',
+  },
+  {
+    title: 'fe-instagram',
+    href: 'https://www.instagram.com/newrelic/',
+  },
+  {
+    title: 'fe-youtube',
+    href: 'https://www.youtube.com/user/NewRelicInc/featured',
+  },
+  {
+    title: 'fe-github',
+    href: 'https://github.com/newrelic',
+  },
+  {
+    title: 'fe-twitch',
+    href: 'https://www.twitch.tv/new_relic',
+  },
+  {
+    title: 'fe-twitter',
+    href: 'https://twitter.com/newrelic',
+  },
+];
+
+export const LOCALS = [
+  {
+    title: 'Français',
+    href: 'https://newrelic.com/fr',
+  },
+  {
+    title: 'Deutsch',
+    href: 'https://newrelic.com/de',
+  },
+];
+

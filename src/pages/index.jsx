@@ -1,36 +1,34 @@
-import PropTypes from 'prop-types';
-import { graphql } from 'gatsby';
-import React, { useState, useEffect } from 'react';
-import IOSeo from '../components/IOSeo';
-import { css } from '@emotion/react';
-import Overlay from '../components/Overlay';
-import QuickstartTile from '../components/QuickstartTile';
-import IOBanner from '../components/IOBanner';
-import { useTessen, Button, Spinner } from '@newrelic/gatsby-theme-newrelic';
-import { navigate } from '@reach/router';
-
-import { useDebounce } from 'react-use';
-import { sortFeaturedQuickstarts } from '../utils/sortFeaturedQuickstarts';
-import {
-  QUICKSTARTS_COLLAPSE_BREAKPOINT,
-  LISTVIEW_BREAKPOINT,
-} from '../data/constants';
-import CATEGORIES from '../data/instant-observability-categories';
-
-import SuperTiles from '../components/SuperTiles';
-
-import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
+import '../components/styles.scss';
 
-const VIEWS = {
-  GRID: 'Grid view',
-  LIST: 'List view',
-};
+import {
+  Button,
+  Icon,
+  Spinner,
+  useTessen,
+} from '@newrelic/gatsby-theme-newrelic';
+import React, { useEffect, useState } from 'react';
 
+import CATEGORIES from '../data/instant-observability-categories';
+import IOBanner from '../components/IOBanner';
+import IOSeo from '../components/IOSeo';
+import Overlay from '../components/Overlay';
+import PropTypes from 'prop-types';
+import { QUICKSTARTS_COLLAPSE_BREAKPOINT } from '../data/constants';
+import QuickstartTile from '../components/QuickstartTile';
+import Slider from 'react-slick';
+import SuperTiles from '../components/SuperTiles';
+import { css } from '@emotion/react';
+import { graphql } from 'gatsby';
+import { navigate } from '@reach/router';
+import { useDebounce } from 'react-use';
+import LeftArrowSVG from '../components/Icons/LeftArrowSVG';
+import RightArrowSVG from '../components/Icons/RightArrowSVG';
+
+const TRIPLE_COLUMN_BREAKPOINT = '1420px';
 const DOUBLE_COLUMN_BREAKPOINT = '1180px';
-const TRIPLE_COLUMN_BREAKPOINT = '1350px';
-const SINGLE_COLUMN_BREAKPOINT = LISTVIEW_BREAKPOINT;
+const SINGLE_COLUMN_BREAKPOINT = '900px';
 
 /**
  * Determines if one string is a substring of the other, case insensitive
@@ -80,7 +78,6 @@ const filterByCategory = (category) => {
 };
 
 const QuickstartsPage = ({ data, location }) => {
-  const [view] = useState(VIEWS.GRID);
   const tessen = useTessen();
 
   const [search, setSearch] = useState('');
@@ -112,7 +109,7 @@ const QuickstartsPage = ({ data, location }) => {
   // mark the value as true, if the page is loaded
   useEffect(() => {
     setLoadComplete(true);
-  }, [])
+  }, []);
 
   const closeCategoriesOverlay = () => {
     setIsCategoriesOverlayOpen(false);
@@ -204,6 +201,8 @@ const QuickstartsPage = ({ data, location }) => {
     return found.displayName;
   };
 
+
+  // Settings for Slick-Carousel
   const settings = {
     dots: false,
     infinite: false,
@@ -212,27 +211,48 @@ const QuickstartsPage = ({ data, location }) => {
     slidesToScroll: 4,
     adaptiveHeight: false,
     adaptiveWidth: true,
+    mobileFirst: true, // necessary for breakpoints to work as expected
+    prevArrow: <button>
+                <LeftArrowSVG
+                  className="slick-prev"
+                  css={css`
+                    width: auto;
+                    height: auto;
+                    margin: 0 1.5rem;
+                  `}
+                />
+              </button>,
+    nextArrow: <button>
+                <RightArrowSVG
+                  className="slick-next"
+                  css={css`
+                    width: auto;
+                    height: auto;
+                    margin: 0 1.5rem;
+                  `}
+                />
+              </button>,
     responsive: [
       {
-        breakpoint: 1081,
+        breakpoint: parseInt(TRIPLE_COLUMN_BREAKPOINT),
         settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
+          slidesToShow: 3,
+          slidesToScroll: 3,
           infinite: true,
           dots: false,
         },
       },
       {
-        breakpoint: 760,
+        breakpoint: parseInt(DOUBLE_COLUMN_BREAKPOINT),
         settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
+          slidesToShow: 2,
+          slidesToScroll: 2,
           infinite: true,
           dots: false,
         },
       },
       {
-        breakpoint: 480,
+        breakpoint: parseInt(SINGLE_COLUMN_BREAKPOINT),
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
@@ -256,14 +276,18 @@ const QuickstartsPage = ({ data, location }) => {
       <div
         css={css`
           --sidebar-width: 300px;
-          --banner-height: 308px;
+          --banner-height: 450px;
+          --divider-color: #e4e5e6;
+          --primary-text-color: #1d252c;
           display: grid;
           grid-template-columns: var(--sidebar-width) minmax(0, 1fr);
           grid-template-areas: 'sidebar main';
           grid-template-rows: 1fr auto;
-          grid-gap: 70px;
+          grid-gap: 20px;
           min-height: calc(100vh - var(--global-header-height));
-          margin: var(--banner-height) auto;
+          margin: 0 auto;
+          padding: var(--banner-height) 0 15vh 0;
+
           max-width: var(--site-max-width);
 
           @media screen and (max-width: ${QUICKSTARTS_COLLAPSE_BREAKPOINT}) {
@@ -271,6 +295,7 @@ const QuickstartsPage = ({ data, location }) => {
             grid-template-columns: minmax(0, 1fr);
             grid-template-areas: 'main';
             grid-template-rows: unset;
+            padding-bottom: 20px;
           }
         `}
       >
@@ -281,6 +306,7 @@ const QuickstartsPage = ({ data, location }) => {
             height: calc(100vh - var(--global-header-height));
             position: sticky;
             top: var(--global-header-height);
+            width: 100%;
 
             @media screen and (max-width: ${QUICKSTARTS_COLLAPSE_BREAKPOINT}) {
               display: none;
@@ -293,9 +319,18 @@ const QuickstartsPage = ({ data, location }) => {
         >
           <div
             css={css`
-              padding: var(--site-content-padding);
+              padding: 32px 0 32px 32px;
               height: 100%;
               overflow: auto;
+
+              label {
+                font-family: 'Söhne-Leicht';
+                font-size: 28px;
+                line-height: 36px;
+                font-weight: normal;
+                margin-bottom: 12px;
+                letter-spacing: -0.5px;
+              }
               @media screen and (max-width: ${QUICKSTARTS_COLLAPSE_BREAKPOINT}) {
                 position: relative;
               }
@@ -308,14 +343,19 @@ const QuickstartsPage = ({ data, location }) => {
                   type="button"
                   key={value}
                   disabled={count === 0}
+                  variant={Button.VARIANT.PRIMARY}
                   onClick={() => handleCategory(value)}
                   css={css`
-                    padding: 1rem 0.5rem;
+                    padding: 8px 12px;
+                    font-family: 'Söhne-Leicht';
+                    font-size: 18px;
+                    font-weight: 400;
+                    line-height: 54px;
                     width: 100%;
                     display: flex;
                     justify-content: flex-start;
                     color: var(--primary-text-color);
-                    font-weight: 100;
+                    border-radius: 3px;
                     background: ${category === value
                       ? 'var(--divider-color)'
                       : 'none'};
@@ -324,7 +364,6 @@ const QuickstartsPage = ({ data, location }) => {
                   {`${displayName}`}
                   <span
                     css={css`
-                      color: var(--secondary-text-color);
                       padding-left: 0.25rem;
                     `}
                   >{`(${count})`}</span>
@@ -349,17 +388,32 @@ const QuickstartsPage = ({ data, location }) => {
           >
             <Button
               css={css`
-                border-radius: 2px;
-                border: 1px solid var(--border-color);
+                width: 100%;
+                border-radius: 4px;
+                border: 1px solid #1d252c;
                 color: var(--primary-text-color);
-                font-size: 12px;
+                font-weight: 400;
+                font-size: 18px;
                 justify-content: flex-start;
-                margin: 40px 0;
+                margin: 10px 10px 30px;
+                padding: 20px 24px;
+                display: flex;
+                justify-content: space-between;
               `}
               variant={Button.VARIANT.LINK}
               onClick={() => setIsCategoriesOverlayOpen(true)}
             >
               {getDisplayName('Filter by Category')}
+              <Icon
+                css={css`
+                  color: #1d252c;
+                  width: 20px;
+                  transform: rotate(-90deg);
+                  margin: -4px;
+                `}
+                name="fe-chevron-left"
+                size="120%"
+              />
             </Button>
             <Overlay
               isOpen={isCategoriesOverlayOpen}
@@ -367,6 +421,8 @@ const QuickstartsPage = ({ data, location }) => {
             >
               <div
                 css={css`
+                  --divider-color: #e4e5e6;
+
                   border-radius: 5px;
                   position: relative;
                   width: 100%;
@@ -378,6 +434,12 @@ const QuickstartsPage = ({ data, location }) => {
                 <h3
                   css={css`
                     padding: 0.5rem 0 0 0.5rem;
+                    font-family: 'Söhne-Buch';
+                    font-size: 28px;
+                    line-height: 36px;
+                    margin-bottom: 12px;
+                    letter-spacing: -0.5px;
+                    font-weight: normal;
                   `}
                 >
                   Category
@@ -393,14 +455,18 @@ const QuickstartsPage = ({ data, location }) => {
                     <Button
                       type="button"
                       key={value}
+                      variant={Button.VARIANT.PRIMARY}
                       onClick={() => handleCategory(value)}
                       css={css`
-                        padding: 1rem 0.5rem;
                         width: 100%;
                         display: flex;
                         justify-content: flex-start;
                         color: var(--primary-text-color);
-                        font-weight: 100;
+                        border-radius: 3px;
+                        padding: 8px 12px;
+                        font-family: 'Söhne-Buch';
+                        font-size: 18px;
+                        line-height: 54px;
                         background: ${category === value
                           ? 'var(--divider-color)'
                           : 'none'};
@@ -412,7 +478,7 @@ const QuickstartsPage = ({ data, location }) => {
                 </div>
                 <div
                   css={css`
-                    background: var(--secondary-background-color);
+                    background: var(--divider-color);
                     position: absolute;
                     bottom: 0;
                     left: 0;
@@ -429,6 +495,10 @@ const QuickstartsPage = ({ data, location }) => {
                     css={css`
                       height: 2rem;
                       margin-right: 1rem;
+                      background: #1d252c;
+                      &:hover {
+                        background: #1d252c;
+                      }
                     `}
                     onClick={closeCategoriesOverlay}
                     variant={Button.VARIANT.PRIMARY}
@@ -450,15 +520,16 @@ const QuickstartsPage = ({ data, location }) => {
                       font-size: 16px;
                       color: var(--color-neutrals-800);
                       align-text: center;
+                      margin: 0 0 13px 4px;
                       span {
-                        color: var(--text-color);
-                        /* target inner children of parent span */
-                        span,
-                        strong {
-                        }
                       }
                       strong {
-                        color: var(--text-color);
+                        font-family: 'Söhne-Leicht';
+                        font-size: 28px;
+                        line-height: 36px;
+                        letter-spacing: -0.5px;
+                        color: #1d252c;
+                        font-weight: normal;
                       }
                       @media screen and (max-width: ${QUICKSTARTS_COLLAPSE_BREAKPOINT}) {
                         padding: 0 0 0.5rem;
@@ -469,36 +540,8 @@ const QuickstartsPage = ({ data, location }) => {
                       <strong>Most Popular</strong>
                     </span>
                   </div>
-                  <div
-                    css={css`
-                      display: block;
-                      grid-gap: 1.25rem;
-                      padding: 10px;
-                      grid-template-columns: repeat(4, 1fr);
-                      grid-auto-rows: 1fr;
-                      ${view === VIEWS.GRID &&
-                      css`
-                        @media (max-width: ${TRIPLE_COLUMN_BREAKPOINT}) {
-                          grid-template-columns: repeat(3, 1fr);
-                        }
-                        @media (max-width: ${DOUBLE_COLUMN_BREAKPOINT}) {
-                          grid-template-columns: repeat(2, 1fr);
-                        }
-                        @media (max-width: ${SINGLE_COLUMN_BREAKPOINT}) {
-                          grid-template-columns: repeat(1, 1fr);
-                        }
-                      `}
-                      ${view === VIEWS.LIST &&
-                      css`
-                        grid-auto-rows: 1fr;
-                        grid-template-columns: 1fr;
-                        grid-gap: 1.25rem;
-                      `};
-                    `}
-                  >
-                    {!loadComplete && (
-                      <Spinner />
-                    )}
+                  <div>
+                    {!loadComplete && <Spinner />}
                     {loadComplete && (
                       <Slider
                         {...settings}
@@ -510,14 +553,7 @@ const QuickstartsPage = ({ data, location }) => {
                         {mostPopularQuickStarts.map((pack) => (
                           <QuickstartTile
                             key={pack.id}
-                            view={view}
                             featured={false}
-                            css={css`
-                              grid-template-rows:
-                                var(--tile-image-height) var(--title-row-height)
-                                80px auto;
-                              min-height: 280px;
-                            `}
                             {...pack}
                           />
                         ))}
@@ -532,15 +568,15 @@ const QuickstartsPage = ({ data, location }) => {
                   font-size: 16px;
                   color: var(--color-neutrals-800);
                   align-text: center;
-                  span {
-                    color: var(--text-color);
-                    /* target inner children of parent span */
-                    span,
-                    strong {
-                    }
-                  }
+                  margin: 75px 0 13px 4px;
+
                   strong {
-                    color: var(--text-color);
+                    font-family: 'Söhne-Leicht';
+                    font-size: 28px;
+                    line-height: 36px;
+                    letter-spacing: -0.5px;
+                    color: #1d252c;
+                    font-weight: normal;
                   }
                   @media screen and (max-width: ${QUICKSTARTS_COLLAPSE_BREAKPOINT}) {
                     padding: 0 0 0.5rem;
@@ -551,49 +587,14 @@ const QuickstartsPage = ({ data, location }) => {
                   <strong>Featured</strong>
                 </span>
               </div>
-              <div
-                css={css`
-                  display: block;
-                  padding: 10px;
-                  grid-gap: 1.25rem;
-                  grid-template-columns: repeat(4, 1fr);
-                  grid-auto-rows: 1fr;
-                  ${view === VIEWS.GRID &&
-                  css`
-                    @media (max-width: ${TRIPLE_COLUMN_BREAKPOINT}) {
-                      grid-template-columns: repeat(3, 1fr);
-                    }
-                    @media (max-width: ${DOUBLE_COLUMN_BREAKPOINT}) {
-                      grid-template-columns: repeat(2, 1fr);
-                    }
-                    @media (max-width: ${SINGLE_COLUMN_BREAKPOINT}) {
-                      grid-template-columns: repeat(1, 1fr);
-                    }
-                  `}
-                  ${view === VIEWS.LIST &&
-                  css`
-                    grid-auto-rows: 1fr;
-                    grid-template-columns: 1fr;
-                    grid-gap: 1.25rem;
-                  `};
-                `}
-              >
-                {!loadComplete && (
-                  <Spinner />
-                )}
+              <div>
+                {!loadComplete && <Spinner />}
                 {loadComplete && (
                   <Slider {...settings}>
                     {featuredQuickStarts.map((pack) => (
                       <QuickstartTile
                         key={pack.id}
-                        view={view}
                         featured={false}
-                        css={css`
-                          grid-template-rows:
-                            var(--tile-image-height) var(--title-row-height)
-                            80px auto;
-                          min-height: 280px;
-                        `}
                         {...pack}
                       />
                     ))}
@@ -605,9 +606,10 @@ const QuickstartsPage = ({ data, location }) => {
           <div
             css={css`
               --text-color: var(--primary-text-color);
+              margin: 75px 0 13px 4px;
 
               padding: 1.25rem 0;
-              font-size: 16px;
+              font-size: 18px;
               color: var(--color-neutrals-800);
               display: flex;
               justify-content: space-between;
@@ -620,6 +622,9 @@ const QuickstartsPage = ({ data, location }) => {
                 /* target inner children of parent span */
                 span,
                 strong {
+                  font-family: 'Söhne-Leicht';
+
+                  letter-space: -0.5px;
                   @media screen and (max-width: ${QUICKSTARTS_COLLAPSE_BREAKPOINT}) {
                     display: none;
                   }
@@ -632,6 +637,8 @@ const QuickstartsPage = ({ data, location }) => {
                 text-overflow: ellipsis;
                 overflow-x: hidden;
                 whitespace: nowrap;
+                font-weight: 100;
+                font-size: 28px;
               }
 
               @media screen and (max-width: ${QUICKSTARTS_COLLAPSE_BREAKPOINT}) {
@@ -648,39 +655,25 @@ const QuickstartsPage = ({ data, location }) => {
           <div
             css={css`
               display: grid;
-              grid-gap: 1.25rem;
+              grid-gap: 40px 15px;
               grid-template-columns: repeat(4, 1fr);
               grid-auto-rows: 1fr;
-              ${view === VIEWS.GRID &&
-              css`
-                @media (max-width: ${TRIPLE_COLUMN_BREAKPOINT}) {
-                  grid-template-columns: repeat(3, 1fr);
-                }
+              @media (max-width: ${TRIPLE_COLUMN_BREAKPOINT}) {
+                grid-template-columns: repeat(3, 1fr);
+              }
 
-                @media (max-width: ${DOUBLE_COLUMN_BREAKPOINT}) {
-                  grid-template-columns: repeat(2, 1fr);
-                }
+              @media (max-width: ${DOUBLE_COLUMN_BREAKPOINT}) {
+                grid-template-columns: repeat(2, 1fr);
+              }
 
-                @media (max-width: ${SINGLE_COLUMN_BREAKPOINT}) {
-                  grid-template-columns: repeat(1, 1fr);
-                }
-              `}
-              ${view === VIEWS.LIST &&
-              css`
-                grid-auto-rows: 1fr;
-                grid-template-columns: 1fr;
-                grid-gap: 1.25rem;
-              `};
+              @media (max-width: ${SINGLE_COLUMN_BREAKPOINT}) {
+                grid-template-columns: repeat(1, 1fr);
+              }
             `}
           >
             {!isSearchInputEmpty && <SuperTiles />}
             {filteredQuickstarts.map((pack) => (
-              <QuickstartTile
-                key={pack.id}
-                view={view}
-                featured={false}
-                {...pack}
-              />
+              <QuickstartTile key={pack.id} featured={false} {...pack} />
             ))}
           </div>
         </div>

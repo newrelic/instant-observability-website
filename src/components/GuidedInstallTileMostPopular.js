@@ -5,7 +5,11 @@ import {
   Button,
   useInstrumentedHandler,
 } from '@newrelic/gatsby-theme-newrelic';
-import { SIGNUP_LINK, NR1_GUIDED_INSTALL_NERDLET } from '../data/constants';
+import {
+  SIGNUP_LINK,
+  NR1_GUIDED_INSTALL_NERDLET,
+  QUICKSTARTS_COLLAPSE_BREAKPOINT,
+} from '../data/constants';
 import { navigate } from 'gatsby';
 import Cookies from 'js-cookie';
 import { getGuidedInstallStackedNr1Url } from '../utils/get-pack-nr1-url';
@@ -35,49 +39,71 @@ const GuidedInstallTileMostPopular = () => {
     <Surface
       base={Surface.BASE.PRIMARY}
       css={css`
-        grid-template-rows:
-          var(--tile-heading-height) var(--title-row-height)
-          80px auto;
-        min-height: 280px;
-        position: relative;
-        --tile-heading-height: 100px; /* heading image height */
-        --title-row-height: auto; /* Title height to allow space for longer string */
-        padding: 1rem;
+        padding: 32px;
         overflow: hidden;
+        height: 360px;
+        min-width: 250px;
+        margin: 0 auto;
+        border: 1px solid #e4e5e6;
         border-radius: 8px;
-
-        /* Default grid view */
+        box-shadow: none;
+        display: grid;
+        align-items: flex-start;
         grid-gap: 0.2rem;
-        grid-template-rows: var(--tile-heading-height) var(--title-row-height) 1fr auto;
+        grid-template-rows: 68px 200px auto;
+        grid-template-columns: auto;
+        grid-template-areas:
+          'heading'
+          'summary'
+          'install';
 
-        background: var(--color-brand-700);
+        @media screen and (max-width: ${QUICKSTARTS_COLLAPSE_BREAKPOINT}) {
+          padding: 32px 32px 24px 32px;
+          width: 100%;
+          min-width: 250px;
+        }
+
+        background: #1a3c34;
+
+        h2,
+        p {
+          color: #f9fafa;
+
+          @media screen and (max-width: ${QUICKSTARTS_COLLAPSE_BREAKPOINT}) {
+            width: 100%;
+            font-family: 'Söhne-Buch';
+            font-weight: 400;
+          }
+        }
       `}
     >
       <div
         css={css`
-            grid-area: heading
-            height: var(--tile-heading-height);
+          grid-area: heading;
         `}
       >
-        <span
-          css={css`
-            color: #faa44a;
-            font-size: 14px;
-            line-height: 20px;
-          `}
-        >
-          First step
-        </span>
         <h2
           css={css`
-            font-size: 24px;
-            font-weight: 600;
-            line-height: 30px;
-            color: var(--color-white);
+            font-family: 'Söhne-Buch';
+
+            font-weight: normal;
+            font-size: 18px;
+            line-height: 24px;
+            margin: 0;
           `}
         >
           Guided install
         </h2>
+        <span
+          css={css`
+            font-size: 18px;
+            font-family: 'Söhne-Leicht';
+            line-height: 24px;
+            color: #898e91;
+          `}
+        >
+          First step
+        </span>
       </div>
 
       <div
@@ -87,12 +113,16 @@ const GuidedInstallTileMostPopular = () => {
       >
         <p
           css={css`
-            font-size: 0.8rem;
+            font-size: 24px;
+            font-family: 'Söhne-Leicht';
+            letter-spacing: -0.025em;
+            line-height: 32px;
+
             color: var(--secondary-text-color);
 
             /* Limit the number of lines */
             word-break: break-word;
-            /* line-height: 16px; */
+
             max-height: 8rem;
 
             /* Limits the number of lines */
@@ -100,7 +130,7 @@ const GuidedInstallTileMostPopular = () => {
             display: -webkit-box;
             text-overflow: ellipsis;
             -webkit-box-orient: vertical;
-            -webkit-line-clamp: 5;
+            -webkit-line-clamp: 3;
           `}
         >
           Many engineers start here. You'll install an agent with a single
@@ -110,14 +140,24 @@ const GuidedInstallTileMostPopular = () => {
       </div>
       <div
         css={css`
-          position: absolute;
-          bottom: 1rem;
+          grid-area: install;
         `}
       >
         <Button
           onClick={handleButtonClick}
           variant={Button.VARIANT.PRIMARY}
           size={Button.SIZE.SMALL}
+          css={css`
+            background: none;
+            font-weight: normal;
+            font-size: 18px;
+            font-family: 'Söhne-Leicht';
+            padding: 0 0 3px 0;
+            border-bottom: 1px solid white;
+            &:hover {
+              background: none;
+            }
+          `}
         >
           Install New Relic
         </Button>

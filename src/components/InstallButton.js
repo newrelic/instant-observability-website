@@ -85,7 +85,12 @@ const createInstallLink = (
 const hasComponent = (quickstart, key) =>
   quickstart[key] && quickstart[key].length > 0;
 
-const InstallButton = ({ quickstart, location, ...props }) => {
+const InstallButton = ({
+  quickstart,
+  location,
+  style = 'PRIMARY',
+  ...props
+}) => {
   const { treatment } = useTreatment('super_tiles');
 
   const hasInstallableComponent =
@@ -172,6 +177,97 @@ const InstallButton = ({ quickstart, location, ...props }) => {
     });
   };
 
+  const InstallAnimationStyles = () => {
+    return (
+      <div
+        css={css`
+          overflow: hidden;
+          line-height: 30px;
+          text-align: center;
+          margin: 0;
+          width: 106px;
+          height: 48px;
+          position: relative;
+
+          > div {
+            margin: 10px auto 0;
+            white-space: nowrap;
+          }
+          > span {
+            width: 106px;
+            height: 48px;
+            background: none;
+            border: 15px solid var(--button-background);
+            position: absolute;
+            z-index: 100;
+            top: 0;
+            left: 0;
+          }
+
+          .scroll {
+            -webkit-animation: scroll-back 0.3s
+              cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+            animation: scroll-back 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275)
+              forwards;
+          }
+          &:hover .scroll {
+            -webkit-animation: scroll 0.3s
+              cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+            animation: scroll 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275)
+              forwards;
+          }
+
+          --translateY-distance: -40px;
+
+          @-webkit-keyframes scroll {
+            0% {
+              -webkit-transform: translateY(0);
+              transform: translateY(0);
+            }
+            100% {
+              -webkit-transform: translateY(var(--translateY-distance));
+              transform: translateY(var(--translateY-distance));
+            }
+          }
+          @-webkit-keyframes scroll-back {
+            0% {
+              -webkit-transform: translateY(var(--translateY-distance));
+              transform: translateY(var(--translateY-distance));
+            }
+            100% {
+              -webkit-transform: translateY(0);
+              transform: translateY(0);
+            }
+          }
+
+          @keyframes scroll {
+            0% {
+              -webkit-transform: translateY(0);
+              transform: translateY(0);
+            }
+            100% {
+              -webkit-transform: translateY(var(--translateY-distance));
+              transform: translateY(var(--translateY-distance));
+            }
+          }
+          @keyframes scroll-back {
+            0% {
+              -webkit-transform: translateY(var(--translateY-distance));
+              transform: translateY(var(--translateY-distance));
+            }
+            100% {
+              -webkit-transform: translateY(0);
+              transform: translateY(0);
+            }
+          }
+        `}
+      >
+        <span />
+        <div className="scroll scroll-top">Install now</div>
+        <div className="scroll scroll-bottom">Install now</div>
+      </div>
+    );
+  };
   return (
     <Button
       {...props}
@@ -179,18 +275,39 @@ const InstallButton = ({ quickstart, location, ...props }) => {
       to={installUrl}
       onClick={handleInstallClick}
       variant={Button.VARIANT.PRIMARY}
+      css={css`
+        --button-background: var(
+          ${style === 'PRIMARY'
+            ? '--btn-background-green'
+            : '--brand-secondary-background-color'}
+        );
+        --button-text-color: var(
+          ${style === 'PRIMARY'
+            ? '--brand-primary-text-color'
+            : '--brand-secondary-text-color'}
+        );
+        background-color: var(--button-background);
+        border-radius: 4px;
+        color: var(--button-text-color);
+        font-size: 14px;
+        line-height: 21px;
+        font-weight: 400;
+        padding: 1rem;
+
+        &:hover {
+          background-color: var(--button-background);
+          color: var(--button-text-color);
+        }
+
+        ${hasInstallableComponent &&
+        css`
+          padding: 0;
+          width: 106px;
+        `};
+      `}
     >
       {hasInstallableComponent ? (
-        <>
-          <Icon
-            name="fe-plus"
-            viewBox="0 0 16 16"
-            css={css`
-              margin-right: 7px;
-            `}
-          />
-          Install quickstart
-        </>
+        <InstallAnimationStyles />
       ) : (
         'See installation docs'
       )}
@@ -200,8 +317,9 @@ const InstallButton = ({ quickstart, location, ...props }) => {
 
 InstallButton.propTypes = {
   quickstart: quickstart.isRequired,
-  onClick: PropTypes.func.isRequired,
+  onClick: PropTypes.func,
   location: PropTypes.object.isRequired,
+  style: PropTypes.oneOf(['PRIMARY', 'SECONDARY']),
 };
 
 export default InstallButton;

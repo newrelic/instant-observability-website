@@ -1,56 +1,36 @@
-import {
-  Button,
-  Icon,
-  Layout,
-  Link,
-  PageTools,
-  RelatedResources,
-  useTessen,
-} from '@newrelic/gatsby-theme-newrelic';
-import {
-  LOGIN_LINK,
-  QUICKSTARTS_REPO,
-  SHIELD_LEVELS,
-  SIGNUP_LINK,
-} from '../data/constants';
-import React, { useEffect, useState } from 'react';
+import { useTessen } from '@newrelic/gatsby-theme-newrelic';
+import React from 'react';
 
-import Breadcrumbs from '../components/Breadcrumbs';
-import EmptyTab from '../components/EmptyTab';
 import IOSeo from '../components/IOSeo';
-import InstallButton from '../components/InstallButton';
 import PageLayout from '../components/PageLayout';
 import PropTypes from 'prop-types';
-import QuickstartAlerts from '../components/QuickstartAlerts';
-import QuickstartDashboards from '../components/QuickstartDashboards';
-import QuickstartDataSources from '../components/QuickstartDataSources';
-import QuickstartOverview from '../components/QuickstartOverview';
-import SupportSection from '../components/SupportSection';
-import Tabs from '../components/Tabs';
 import { css } from '@emotion/react';
 import { graphql } from 'gatsby';
 import { quickstart } from '../types';
+import QuickstartHowToUse from '../components/QuickstartHowToUse';
+import LandingPageFooter from '../components/LandingPageFooter';
+import Dashboards from '../components/WhatsIncluded/Dashboards';
+import Alerts from '../components/WhatsIncluded/Alerts';
+import DataSources from '../components/WhatsIncluded/DataSources';
+import Layout from '../components/Layout';
+import QuickstartOverview from '../components/QuickstartOverview';
+import LandingBanner from '../components/LandingBanner';
+
+const layoutContentSpacing = css`
+  --page-margin: 156px;
+  @media (max-width: 760px) {
+    --page-margin: 30px;
+  }
+  padding: 0 var(--page-margin);
+`;
 
 const QuickstartDetails = ({ data, location }) => {
-
-  const [imgStyle, setImgStyle] = useState({});
-
   const quickstart = data.quickstarts;
-  const quickstartUrl = quickstart.packUrl || QUICKSTARTS_REPO;
   const tessen = useTessen();
-  const breadcrumbs = [
-    {
-      name: 'Instant Observability (I/O)',
-      url: '/',
-    },
-    {
-      name: quickstart.title,
-    },
-  ];
   const quickStartMeta = [
     {
       name: 'quick_start_name',
-      class: 'swiftype',
+      className: 'swiftype',
       'data-type': 'string',
       content: quickstart.title,
     },
@@ -65,16 +45,6 @@ const QuickstartDetails = ({ data, location }) => {
       quickstartUrl: quickstart.packUrl,
     });
 
-  const tessenTabTrack = (action, quickstart) => (id, count) => {
-    tessen.track({
-      eventName: 'instantObservability',
-      category: action,
-      QuickstartTabState: id,
-      QuickstartTabCount: count,
-      quickstartName: quickstart.name,
-      quickstartId: quickstart.id,
-    });
-  };
   const tessenSupportTrack = (quickstart) => (action) => {
     tessen.track({
       eventName: 'instantObservability',
@@ -83,39 +53,6 @@ const QuickstartDetails = ({ data, location }) => {
       quickstartId: quickstart.id,
     });
   };
-
-  // get image resolution from URL
-  const getURLMeta = async (url) => {
-    const img = new Image();
-    img.src = url;
-    const { width, height } = await new Promise(resolve => {
-      img.onload = function() {
-        resolve({
-          width: this.width,
-          height: this.height
-        })
-      }
-    })
-    return { width, height }
-  };
-
-  const getImgStyle = async () => {
-    const { width, height } = await getURLMeta(quickstart.logoUrl)
-    const style = {};
-    // if image is rectangle
-    if (width > height) {
-      style.width = '';
-      style.height = '';
-    } else {
-      style.width = '80px'
-      style.height = '80px'
-    }
-    setImgStyle(style);
-  };
-
-  useEffect(() => {
-    getImgStyle();
-  }, [quickstart.logoUrl])
 
   return (
     <>
@@ -126,329 +63,110 @@ const QuickstartDetails = ({ data, location }) => {
         tags={quickstart.keywords}
         meta={quickStartMeta}
       />
-      <Breadcrumbs segments={breadcrumbs} />
-      <Tabs>
-        <PageLayout
-          type={PageLayout.TYPE.RELATED_CONTENT_TABS}
+      <PageLayout.Header
+        css={css`
+          --page-margin: 156px;
+          @media (max-width: 760px) {
+            --page-margin: 30px;
+          }
+
+          font-family: 'Söhne-Buch';
+        `}
+      >
+        <LandingBanner
           css={css`
-            grid-template-columns: minmax(0, 1fr) 360px;
-            margin-top: 1rem;
+            margin: 0 var(--page-margin);
+          `}
+          quickstart={quickstart}
+          location={location}
+        />
+      </PageLayout.Header>
+
+      <Layout.Content>
+        {/* What's included section here */}
+        <div
+          css={css`
+            ${layoutContentSpacing};
+            > * {
+              padding-top: 3rem;
+            }
           `}
         >
-          <PageLayout.Header
-            title={quickstart.title}
-            icon={
-              SHIELD_LEVELS.includes(quickstart.level) && (
-                <Icon
-                  name="nr-check-shield"
-                  size="50%"
-                  css={css`
-                    width: 0.75rem;
-                    height: 1rem;
-                    margin-left: 0.5rem;
-                  `}
-                />
-              )
+          <Dashboards quickstart={quickstart} />
+          <Alerts quickstart={quickstart} />
+          <DataSources quickstart={quickstart} />
+        </div>
+        <div
+          css={css`
+            margin-top: 80px;
+            margin-bottom: 80px;
+            mix-blend-mode: normal;
+            width: 50%;
+            opacity: 0.84;
+            border: 5px solid #e8e8e8;
+            border-radius: 5px;
+            transform: rotate(180deg);
+
+            @media (max-width: 760px) {
+              width: 100%;
             }
-            css={css`
-              border-bottom: none;
-              display: grid;
-              grid-column-gap: 1rem;
-              grid-row-gap: 1rem;
-              grid-template-areas:
-                'title logo'
-                'summ logo'
-                'cta logo';
-              justify-content: normal;
-              justify-self: center;
-              row-gap: 1rem;
-              width: 101%;
+          `}
+        />
+        <div
+          css={css`
+            ${layoutContentSpacing};
+            padding-bottom: 117px;
+          `}
+        >
+          <QuickstartOverview quickstart={quickstart} />
+        </div>
+        {/* How to use this quickstart here */}
+        <div
+          css={css` 
+            @media not all and (min-resolution: 0.001dpcm) and max-width: 760px {
+              @media {
+                grid-template-columns: repeat(1, 1fr);
+                margin-left: 40px;
+                margin-right: 23px;
+              }
+            }
+          
+            ${layoutContentSpacing};
+            @media (min-width: 760px) { 
+              padding-top: 38px;
+              padding-bottom: 49px;
+            }
 
-              h1 {
-                font-weight: normal;
-                grid-area: title;
-                padding-bottom: 1rem;
+            @media (max-width: 760px) {
+              padding-top: 53px;
+              padding-bottom:  63px;
               }
 
-              @media (min-width: 760px) {
-                background: var(--primary-background-color);
-                border-bottom: 1px solid var(--border-color);
-                border-radius: 0.25rem;
-                grid-template-areas:
-                  'logo title cta'
-                  'logo summ cta';
-                padding: 16px 0 24px;
-                position: sticky;
-                top: var(--global-header-height);
-                z-index: 80;
-              }
+            background-color: #f1f2f2;
+          `}
+        >
+          <QuickstartHowToUse
+            quickstart={quickstart}
+            trackQuickstart={trackQuickstart}
+            location={location}
+          />
+        </div>
+        {/* Get started component here */}
+        <div
+          css={css`
+            ${layoutContentSpacing};
 
-              .dark-mode {
-                box-shadow: none;
-              }
-            `}
-          >
-            {quickstart.logoUrl && (
-              <img
-                style={imgStyle}
-                src={quickstart.logoUrl}
-                alt={quickstart.title}
-                css={css`
-                  max-height: 100%;
-                  max-width: 12rem;
-                  width: 100%;
-                  grid-area: logo;
-                  align-self: center;
-                  justify-self: center;
-
-                  .dark-mode & {
-                    background-color: white;
-                  }
-
-                  @media (max-width: 760px) {
-                    display: none;
-                  }
-                `}
-              />
-            )}
-            {quickstart.summary && (
-              <div
-                css={css`
-                  grid-area: summ;
-                  max-width: 50vw;
-
-                  @media (max-width: 760px) {
-                    max-width: 100%;
-                  }
-                `}
-              >
-                {quickstart.summary}
-              </div>
-            )}
-            <div
-              css={css`
-                grid-area: cta;
-                display: flex;
-                justify-content: center;
-                align-self: center;
-                @media (max-width: 760px) {
-                  flex-direction: column;
-                  align-items: stretch;
-                }
-              `}
-            >
-              <InstallButton quickstart={quickstart} location={location} />
-              <Button
-                as={Link}
-                variant={Button.VARIANT.OUTLINE}
-                to={quickstartUrl}
-                rel="noopener noreferrer"
-                css={css`
-                  margin: 0 0 0 0.5rem;
-                  @media (max-width: 760px) {
-                    margin: 1rem 0 0 0;
-                  }
-                `}
-                onClick={trackQuickstart('QuickstartViewRepoClick', quickstart)}
-              >
-                <Icon
-                  name="fe-github"
-                  css={css`
-                    margin-right: 7px;
-                  `}
-                />
-                View repo
-              </Button>
-            </div>
-          </PageLayout.Header>
-          <Tabs.Bar
-            css={css`
-              grid-column: 1/3;
-              box-sizing: border-box;
-              padding-right: 30%;
-              @media (max-width: 1240px) {
-                padding: 0;
-              }
-              @media (max-width: 760px) {
-                flex-wrap: wrap;
-              }
-            `}
-          >
-            <Tabs.BarItem id="overview">Overview</Tabs.BarItem>
-            <Tabs.BarItem
-              id="dashboards"
-              count={quickstart.dashboards?.length ?? 0}
-              onClick={tessenTabTrack(`QuickstartTabToggle`, quickstart)}
-            >
-              Dashboards
-            </Tabs.BarItem>
-            <Tabs.BarItem
-              id="alerts"
-              count={quickstart.alerts?.length ?? 0}
-              onClick={tessenTabTrack(`QuickstartTabToggle`, quickstart)}
-            >
-              Alerts
-            </Tabs.BarItem>
-            <Tabs.BarItem
-              id="data-sources"
-              count={
-                (quickstart.instrumentation?.length ?? 0) +
-                (quickstart.documentation?.length ?? 0)
-              }
-              onClick={tessenTabTrack(`QuickstartTabToggle`, quickstart)}
-            >
-              Data sources
-            </Tabs.BarItem>
-          </Tabs.Bar>
-          <Layout.Content>
-            <Tabs.Pages>
-              <Tabs.Page id="overview">
-                <QuickstartOverview quickstart={quickstart} />
-              </Tabs.Page>
-              <Tabs.Page id="dashboards">
-                {quickstart.dashboards?.length > 0 ? (
-                  <QuickstartDashboards quickstart={quickstart} />
-                ) : (
-                  <EmptyTab
-                    quickstartUrl={quickstart.packUrl}
-                    quickstartName={quickstart.title}
-                    tabName="dashboards"
-                  />
-                )}
-              </Tabs.Page>
-              <Tabs.Page id="alerts">
-                {quickstart.alerts?.length > 0 ? (
-                  <QuickstartAlerts quickstart={quickstart} />
-                ) : (
-                  <EmptyTab
-                    quickstartUrl={quickstart.packUrl}
-                    quickstartName={quickstart.title}
-                    tabName="alerts"
-                  />
-                )}
-              </Tabs.Page>
-              <Tabs.Page id="data-sources">
-                {quickstart.documentation?.length > 0 ? (
-                  <QuickstartDataSources quickstart={quickstart} />
-                ) : (
-                  <EmptyTab
-                    quickstartUrl={quickstart.packUrl}
-                    quickstartName={quickstart.title}
-                    tabName="data sources"
-                  />
-                )}
-              </Tabs.Page>
-            </Tabs.Pages>
-          </Layout.Content>
-          <Layout.PageTools
-            css={css`
-              p,
-              li {
-                font-size: 0.85rem;
-              }
-              max-height: 100%;
-              @media (min-width: 1240px) {
-                width: 320px;
-                justify-self: flex-end;
-              }
-            `}
-          >
-            <PageTools.Section>
-              <div
-                css={css`
-                  background-color: var(--divider-color);
-                  position: absolute;
-                  top: 0;
-                  left: 0;
-                  padding: 1rem;
-                  padding-top: 0.5rem;
-                  height: 2.5rem;
-                  width: 100%;
-                `}
-              >
-                <PageTools.Title>How to use this quickstart</PageTools.Title>
-              </div>
-              <ol
-                css={css`
-                  margin-top: 2.5rem;
-                `}
-              >
-                <li>
-                  <Link
-                    to={SIGNUP_LINK}
-                    onClick={trackQuickstart(
-                      'QuickstartDetailsSignUpClick',
-                      quickstart
-                    )}
-                  >
-                    Sign Up
-                  </Link>{' '}
-                  for a free New Relic account or{' '}
-                  <Link
-                    to={LOGIN_LINK}
-                    onClick={trackQuickstart(
-                      'QuickstartDetailsLoginClick',
-                      quickstart
-                    )}
-                  >
-                    Log In
-                  </Link>{' '}
-                  to your existing account.
-                </li>
-                <li>Click the green install button above.</li>
-                <li>
-                  Install the quickstart to get started or improve how you
-                  monitor your environment. They’re filled with pre-built
-                  resources like dashboards, instrumentation, and alerts.
-                </li>
-              </ol>
-            </PageTools.Section>
-            <aside
-              data-swiftype-index={false}
-              css={css`
-                border-bottom: 1px solid var(--divider-color);
-              `}
-            />
-            <PageTools.Section>
-              <PageTools.Title>Authors</PageTools.Title>
-              <p>{quickstart.authors.join(', ')}</p>
-            </PageTools.Section>
-            <aside
-              data-swiftype-index={false}
-              css={css`
-                border-bottom: 1px solid var(--divider-color);
-              `}
-            />
-            <PageTools.Section>
-              <PageTools.Title>Support</PageTools.Title>
-              <SupportSection
-                supportLevel={quickstart.level}
-                onClick={tessenSupportTrack(quickstart)}
-              />
-            </PageTools.Section>
-            <aside
-              data-swiftype-index={false}
-              css={css`
-                border-bottom: 1px solid var(--divider-color);
-              `}
-            />
-            <PageTools.Section>
-              <RelatedResources
-                css={css`
-                  padding: 0;
-                `}
-                resources={quickstart.relatedResources}
-              />
-            </PageTools.Section>
-            <aside
-              data-swiftype-index={false}
-              css={css`
-                border-bottom: 1px solid var(--divider-color);
-              `}
-            />
-          </Layout.PageTools>
-        </PageLayout>
-      </Tabs>
+            padding-top: 30px;
+            padding-bottom: 30px;
+          `}
+        >
+          <LandingPageFooter
+            quickstart={quickstart}
+            trackQuickstart={trackQuickstart}
+            tessenSupportTrack={tessenSupportTrack}
+          />
+        </div>
+      </Layout.Content>
     </>
   );
 };

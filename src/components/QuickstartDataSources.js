@@ -4,6 +4,7 @@ import pluralize from 'pluralize';
 import { Surface, Link, Tag, useTessen } from '@newrelic/gatsby-theme-newrelic';
 import Intro from './Intro';
 import { quickstart } from '../types';
+import EbookIconSVG from './Icons/EbookIconSVG';
 
 const QuickstartDataSources = ({ quickstart }) => {
   const tessen = useTessen();
@@ -22,6 +23,7 @@ const QuickstartDataSources = ({ quickstart }) => {
       <Intro
         css={css`
           margin-bottom: 16px;
+          color: var(--black-text-color);
         `}
       >
         {quickstart.title} observability quickstart contains{' '}
@@ -33,11 +35,16 @@ const QuickstartDataSources = ({ quickstart }) => {
         css={css`
           display: grid;
           grid-gap: 1rem;
-          grid-template-columns: repeat(3, 1fr);
+          grid-template-columns: repeat(4, 1fr);
+          color: var(--black-text-color);
 
           @media (max-width: 1180px) {
             grid-template-columns: repeat(1, 1fr);
           }
+
+          .esuq8iu0 {
+          box-shadow: none;
+        }
         `}
       >
         {quickstart.documentation.map((doc, index) => (
@@ -48,21 +55,39 @@ const QuickstartDataSources = ({ quickstart }) => {
             base={Surface.BASE.PRIMARY}
             onClick={handleDocsTileClick}
             css={css`
-              padding: 1rem;
+              padding: 2rem;
               color: inherit;
+              &:hover{
+                color: #1D252C;
+              }
             `}
             interactive
           >
-            <h3>{doc.name}</h3>
-            {doc.description && <p>{doc.description}</p>}
-            <Tag
+            <EbookIconSVG className="Ebook"
               css={css`
-                display: inline-block;
-                margin-bottom: 1rem;
-              `}
-            >
-              Docs
-            </Tag>
+             width: 0.75rem;
+             height: 1rem;
+             margin-left: 0.5rem;
+             margin-top: 27px;
+             
+           `}
+            />
+            <p
+              css={css`
+                font-family: 'Söhne-Kräftig';
+                margin-top: 16px;
+                margin-bottom: 16px;
+                `}>
+              {doc.name}
+            </p>
+
+            {doc.description &&
+              <p>
+                {doc.description}
+              </p>
+
+            }
+
           </Surface>
         ))}
       </div>

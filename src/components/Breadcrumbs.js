@@ -8,9 +8,6 @@ const Breadcrumbs = ({ segments, separator }) => {
     <div
       css={css`
         margin: 1rem 0 0;
-        padding: 1rem 2rem;
-
-        background-color: var(--secondary-background-color); ;
       `}
       aria-label="breadcrumb"
     >
@@ -19,7 +16,11 @@ const Breadcrumbs = ({ segments, separator }) => {
           <Link
             to={segment.url}
             css={css`
+              color: var(--brand-highlight-green);
               text-decoration: none;
+              &:hover{
+              color: var(--brand-highlight-green);
+              }
             `}
           >
             {segment.name}
@@ -31,8 +32,6 @@ const Breadcrumbs = ({ segments, separator }) => {
           <span
             key={`breadcrumb-${segment.name}`}
             css={css`
-              font-size: 0.85rem;
-
               :not(:last-of-type):after {
                 margin: 0 0.5em;
                 display: inline-block;
