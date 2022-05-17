@@ -612,7 +612,7 @@ const QuickstartsPage = ({ data, location }) => {
               --text-color: var(--primary-text-color);
               margin: 0px 0 13px 4px;
 
-              padding: 1.25rem 0;
+              padding: 0 0 1.25rem 0;
               font-size: 18px;
               color: var(--color-neutrals-800);
               display: flex;
