@@ -7,11 +7,10 @@ const parseQuickstartFiles = (quickstartFiles) => {
       quickstartContent.logoUrl = file.content;
     }
     if (file.type === 'yaml') {
-      //if config, parse the yaml
       const loadYaml = yaml.load(file.content);
       let docs = loadYaml.documentation;
 
-      //itterate through the array of documentation objects to trim new lines
+      //iterate through the array of documentation objects to trim new lines
       if (docs && docs.length > 0) {
         docs = docs.map((doc) => {
           doc.description = doc.description?.trim();
@@ -51,6 +50,7 @@ const parseDashboardFiles = (dashboardFiles) => {
     if (!dashboards[getDir]) {
       dashboards[getDir] = { name: '', description: '', screenshots: [] };
     }
+    //parse and construct the dashboard object and push it to the array
     if (file.type === 'json') {
       const dashboardContent = JSON.parse(file.content);
       dashboards[getDir]['name'] = dashboardContent.name ?? '';
@@ -64,34 +64,32 @@ const parseDashboardFiles = (dashboardFiles) => {
 };
 
 const parseAlertFiles = (alertFiles) => {
-  //add each alert to the array, parsing out its relevent data into an object
   let alerts = [];
   alertFiles.forEach((file) => {
     const loadYaml = yaml.load(file.content);
 
+    //parse and build alert object and add it to the array
     const alert = {
       details: loadYaml.description?.trim() ?? '',
       name: loadYaml.name?.trim() ?? '',
       type: loadYaml.type?.trim() ?? '',
     };
-
     alerts.push(alert);
   });
+
   return alerts;
 };
 
 const parseFiles = (rawFile) => {
   let dashboardFiles = [];
   let alertFiles = [];
-  let quickstartFiles = [];
   let quickstartDirs = {};
+  let quickstartFiles = [];
 
   for (const file of rawFile) {
     if (file.filePath.includes('/dashboards/')) {
-      //add too array
       dashboardFiles.push(file);
     } else if (file.filePath.includes('/alerts/')) {
-      //add to array
       alertFiles.push(file);
     } else {
       quickstartFiles.push(file);
@@ -104,6 +102,8 @@ const parseFiles = (rawFile) => {
   quickstartDirs.dashboards = dashboardsDirs;
   quickstartDirs.alerts = alertsDir;
   const quickstart = parseQuickstartFiles(quickstartFiles);
+
+  //merge together the parsed quickstart content and the alerts/dashboard arrrays
   const parsedQuickstart = { ...quickstartDirs, ...quickstart };
 
   return parsedQuickstart;
