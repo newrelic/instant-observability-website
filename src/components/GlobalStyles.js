@@ -35,19 +35,31 @@ const GlobalStyles = styled.div`
   /* FONTS */
   @font-face {
     font-family: 'Söhne-Buch';
-    src: url(${SohneBuch});
+    src: url(${SohneBuch})
+      format('opentype');
+    font-weight: 400;
+    font-style: 'normal';
   }
   @font-face {
     font-family: 'Söhne-BuchKursiv';
-    src: url(${SohneBuchKursiv});
+    src: url(${SohneBuchKursiv})
+      format('opentype');
+    font-weight: 400;
+    font-style: 'italic';
   }
   @font-face {
     font-family: 'Söhne-Dreiviertelfett';
-    src: url(${SohneDreiviertelfett});
+    src: url(${SohneDreiviertelfett})
+      format('opentype');
+    font-weight: 700;
+    font-style: 'normal';
   }
   @font-face {
     font-family: 'Söhne-DreiviertelfettKursiv';
-    src: url(${SohneDreiviertelfettKursiv});
+    src: url(${SohneDreiviertelfettKursiv})
+      format('opentype');
+    font-weight: 700;
+    font-style: 'italic';
   }
   @font-face {
     font-family: 'Söhne-Extrafett';
@@ -75,7 +87,10 @@ const GlobalStyles = styled.div`
   }
   @font-face {
     font-family: 'Söhne-Halbfett';
-    src: url(${SohneHalbfett});
+    src: url(${SohneHalbfett})
+      format('opentype');
+    font-weight: 600;
+    font-style: 'normal';
   }
   @font-face {
     font-family: 'Söhne-HalbfettKursiv';
@@ -83,7 +98,10 @@ const GlobalStyles = styled.div`
   }
   @font-face {
     font-family: 'Söhne-Kräftig';
-    src: url(${SohneKraftig});
+    src: url(${SohneKraftig})
+      format('opentype');
+    font-weight: 500;
+    font-style: 'normal';
   }
   @font-face {
     font-family: 'Söhne-KräftigKursiv';
