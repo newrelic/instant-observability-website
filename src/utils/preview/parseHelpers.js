@@ -8,6 +8,7 @@ const parseQuickstartFiles = (quickstartFiles) => {
     }
     if (file.type === 'yaml') {
       const loadYaml = yaml.load(file.content);
+      console.log(loadYaml);
       let docs = loadYaml.documentation;
 
       //iterate through the array of documentation objects to trim new lines
@@ -32,7 +33,7 @@ const parseQuickstartFiles = (quickstartFiles) => {
       quickstartContent.level = loadYaml.level ?? '';
       quickstartContent.name = loadYaml.slug ?? '';
       quickstartContent.packUrl = packUrl ?? '';
-      quickstartContent.relatedResources = loadYaml.relatedResources ?? [];
+      quickstartContent.relatedResources = []; //we don't get these from the config.yml
       quickstartContent.summary = loadYaml.summary?.trim() ?? '';
       quickstartContent.title = loadYaml.title ?? '';
     }
