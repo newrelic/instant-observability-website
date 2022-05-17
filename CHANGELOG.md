@@ -1,3 +1,50 @@
+# [1.1.0](https://github.com/newrelic/instant-observability-website/compare/v1.0.0...v1.1.0) (2022-05-17)
+
+
+### Bug Fixes
+
+* add normal font weight to category label ([d807eb4](https://github.com/newrelic/instant-observability-website/commit/d807eb44d4de800fec8370fc742d4bdc69c1c414))
+* correct path to font ([4b31791](https://github.com/newrelic/instant-observability-website/commit/4b3179190ed79d816fc4b687484583b351e2e7bb))
+* fix logo styling ([1d61660](https://github.com/newrelic/instant-observability-website/commit/1d61660bc1c0f75b077c9400e2fa27cd68434b2e))
+* font styling between browsers ([1230243](https://github.com/newrelic/instant-observability-website/commit/123024337c6eb21a9fab4972f7a4c7bcb66b4576))
+* font weight differences between browsers ([20bfcf2](https://github.com/newrelic/instant-observability-website/commit/20bfcf2e6ea144b5c4bbc1a1a2a94bef9d7809bc))
+* logo centering on various browser widths ([1cfe610](https://github.com/newrelic/instant-observability-website/commit/1cfe610ce2307cde26830c2808ea6571175ac9ac))
+* make sass work on arm cpus ([3bb6a7f](https://github.com/newrelic/instant-observability-website/commit/3bb6a7fcc5d97390a41a42a43cf392ecb5e952ef))
+* pass location into LandingBanner ([4765664](https://github.com/newrelic/instant-observability-website/commit/4765664089f7a935f62c8ae53eac4bc4ce88002f))
+* quickstart tile title font sizing ([4618173](https://github.com/newrelic/instant-observability-website/commit/46181738b710d451049f08abd7ce481e878e209f))
+* Remove excess space above footer on mobile ([813b9ca](https://github.com/newrelic/instant-observability-website/commit/813b9ca079a43d08b1e8961850e10e926f9ae67d))
+* remove extra white space on mobile view ([50369b8](https://github.com/newrelic/instant-observability-website/commit/50369b87863379d26ae01b801d9119be3726989d))
+* remove import to old font css file ([e693f29](https://github.com/newrelic/instant-observability-website/commit/e693f2993d20bb6caad54eec314de692a675da0f))
+* remove reference to old scss file ([d97c0e5](https://github.com/newrelic/instant-observability-website/commit/d97c0e5a22a71f08e15e956916f33f39039503d7))
+* remove unicode from files names ([ac64682](https://github.com/newrelic/instant-observability-website/commit/ac64682c56de5709addc2a672c656a3f5efe4948))
+* remove unneeded hardcoded font-weights ([483f710](https://github.com/newrelic/instant-observability-website/commit/483f710a7214000921f6fa36dd8b720975d40bf1))
+* rework fonts to work in production ([e017ef3](https://github.com/newrelic/instant-observability-website/commit/e017ef3cfd9a1b033ca9a0f25a1b8dafd5d0b47d))
+* search text no longer overlaps with x icon ([0abc6b3](https://github.com/newrelic/instant-observability-website/commit/0abc6b316a822ca95fff277061b862d4feb6c644))
+* Update sign-up buttons in footer ([e99fba6](https://github.com/newrelic/instant-observability-website/commit/e99fba654ecc18c7cab6a270f1db41a1baef275d))
+
+
+### Features
+
+* add carousel settings to match screen breakpoints ([8d4bf19](https://github.com/newrelic/instant-observability-website/commit/8d4bf1969981de6c9b4ac14cad11b7548be48b7f))
+* add scrolling animation to install buttons ([cce614b](https://github.com/newrelic/instant-observability-website/commit/cce614bb06c14c1a0de3f125576dae1faa5f4d64))
+* display fallback image in banner if screenshot isn't 16:9 ([e70d3fe](https://github.com/newrelic/instant-observability-website/commit/e70d3feb3be5f5e6afacb7d6cbf3bb81b1624aa2))
+* fix overlapping search bar icons ([fcf126c](https://github.com/newrelic/instant-observability-website/commit/fcf126c0cb8d445c4eb820a39d73678872aeeb04))
+* move aspect ratio check to custom hook ([4a6954e](https://github.com/newrelic/instant-observability-website/commit/4a6954e137683116f91427412038ab1379e2ef43))
+* NR-1507 and NR-1508 UI updates ([3e9c187](https://github.com/newrelic/instant-observability-website/commit/3e9c1870650a273255f7a909e190d88bb903c828))
+* NR-1509 - Categories UI Updates ([ffb9aa6](https://github.com/newrelic/instant-observability-website/commit/ffb9aa67aa5e9b69362faa6461e49cc3217d9c29))
+* NR-1512 Quickstart Tiles UI Updates ([8de21b6](https://github.com/newrelic/instant-observability-website/commit/8de21b6f1a11b96ecb88e6728fc6f10f00cea114))
+* NR3156 - changes in style file ([2381b29](https://github.com/newrelic/instant-observability-website/commit/2381b295dde56214961da52bcbe52adcb71458ed))
+* NR3156 - fix ([155462c](https://github.com/newrelic/instant-observability-website/commit/155462c3a5e56d799aabb9461d3b9949d1bdb62c))
+* NR3156 - fix for responsiveness on browsers ([45a2420](https://github.com/newrelic/instant-observability-website/commit/45a242051546db00992873f18d370af56a377337))
+* NR3156 - fix for responsiveness on browsers ([182de2c](https://github.com/newrelic/instant-observability-website/commit/182de2c29329312d42225c7f2bf1cab1a4b8862c))
+* NR3156 - Heading tags updated ([ae92a4e](https://github.com/newrelic/instant-observability-website/commit/ae92a4e0b2b64a8ab7b1ce3bb56b59cf2ac5e57e))
+* override theme dark-mode class ([7182892](https://github.com/newrelic/instant-observability-website/commit/7182892139d538ccf897725a03e4b25b64984ad0))
+* remove all dark-mode css ([f04a59e](https://github.com/newrelic/instant-observability-website/commit/f04a59e67c08d4c439535d6b47cbe0e7d215845f))
+* set theme styles to always be light-mode ([14bca21](https://github.com/newrelic/instant-observability-website/commit/14bca219d06eaca8433fc1e4ad3b338fe466e6a1))
+* unify landing page layout ([f5706c7](https://github.com/newrelic/instant-observability-website/commit/f5706c7b2044c198406aeaff6bbdc7ddf3dc02c4))
+* update fallback img and set correct aspect ratio styling ([f2a5590](https://github.com/newrelic/instant-observability-website/commit/f2a5590bb7468fa3f3a6d0722ef697f3f17638f7))
+* update styles on Guided Install Tile ([47d7abd](https://github.com/newrelic/instant-observability-website/commit/47d7abd63ba72d8e9f75e034df927a7aadf4d5c2))
+
 # 1.0.0 (2022-03-29)
 
 
