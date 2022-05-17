@@ -74,19 +74,21 @@ input[type='text'] {
 }
 
 .slick-list{
-  margin: 0 0px 0 -10px !important;
+  margin: 0 -2px !important;
 }
 
 .slick-dots li button {
   height: 40px !important;
 }
 
-.slick-next {
-  right: -8px !important;
-}
 .slick-prev {
   z-index: 100;
-  left: -7px !important;
+}
+.slick-disabled .arrow-bg {
+  fill: transparent;
+}
+.slick-disabled .arrow {
+  fill: transparent;
 }
 
 
