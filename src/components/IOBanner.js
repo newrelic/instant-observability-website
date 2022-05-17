@@ -41,7 +41,6 @@ const BannerHeaderContent = ({ search, setSearch, setIsSearchInputEmpty }) => {
         css={css`
           color: #f9fafa;
           font-size: 72px;
-          letter-spacing: -0.001em;
           margin: 72px 0 0;
           letter-spacing: -0.03em;
 
@@ -58,7 +57,6 @@ const BannerHeaderContent = ({ search, setSearch, setIsSearchInputEmpty }) => {
           background: none;
           color: #f9fafa;
           font-size: 16px;
-          letter-spacing: -0.5%;
           margin: 20px 0;
           font-weight: 300;
           letter-spacing: -0.005em;
