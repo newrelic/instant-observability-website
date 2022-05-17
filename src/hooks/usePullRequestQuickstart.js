@@ -5,7 +5,7 @@ import { parseQuickstartFilesFromPR } from '../utils/preview/parseHelpers';
 import { navigate } from 'gatsby';
 
 const usePullRequestQuickstart = (location) => {
-  const [contentFiles, setContentFiles] = useState([]);
+  const [quickstart, setQuickstart] = useState([]);
 
   useEffect(() => {
     // grab query parameters to determine if it is a local preview or
@@ -26,26 +26,34 @@ const usePullRequestQuickstart = (location) => {
      * and set the content to a stateful variable.
      **/
     const fetchFiles = async () => {
-      const rawFileContent = await getQuickstartFilesFromPR(
-        prNumber,
-        quickstartPath
-      );
+      try {
+        const rawFileContent = await getQuickstartFilesFromPR(
+          prNumber,
+          quickstartPath
+        );
 
-      // Error handling in the chance Github returns
-      // a non 200 status
-      if (rawFileContent === null) {
+        // Error handling in the chance Github returns
+        // a non 200 status
+        if (rawFileContent === null) {
+          navigate('/');
+          return;
+        }
+
+        const parsedQuickstart = await parseQuickstartFilesFromPR(
+          rawFileContent
+        );
+
+        setQuickstart(parsedQuickstart);
+      } catch (error) {
+        console.log('Error:', error.message);
         navigate('/');
         return;
       }
-
-      const quickstart = await parseQuickstartFilesFromPR(rawFileContent);
-
-      setContentFiles(quickstart);
     };
 
     fetchFiles();
   }, []);
-  return contentFiles;
+  return quickstart;
 };
 
 export default usePullRequestQuickstart;

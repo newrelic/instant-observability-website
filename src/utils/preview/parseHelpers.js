@@ -15,12 +15,15 @@ const parseQuickstartDir = (file) => {
   if (file.type === 'yaml') {
     //if config, parse the yaml
     const loadYaml = yaml.load(file.content);
+    const docs = loadYaml.documentation;
 
     //itterate through the array of documentation objects to trim new lines
-    const trimmedDocumentation = loadYaml.documentation.map((doc) => {
-      doc.description = doc.description?.trim();
-      return doc;
-    });
+    if (docs && docs.length > 0) {
+      docs = docs.map((doc) => {
+        doc.description = doc.description?.trim();
+        return doc;
+      });
+    }
     //build the packUrl since it is not part of the raw github file contents
     const packUrl =
       'https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/' +
@@ -29,7 +32,7 @@ const parseQuickstartDir = (file) => {
 
     parsedQuickstart.authors = loadYaml.authors ?? [];
     parsedQuickstart.description = loadYaml.description?.trim() ?? '';
-    parsedQuickstart.documentation = trimmedDocumentation ?? [];
+    parsedQuickstart.documentation = docs ?? [];
     parsedQuickstart.id = loadYaml.id ?? '';
     parsedQuickstart.installPlans = loadYaml.installPlans ?? [];
     parsedQuickstart.keywords = loadYaml.keywords ?? [];
@@ -91,7 +94,7 @@ const checkFileType = (rawFile) => {
  * Transforms them into shape needed for QuickstartDetails.js
  **/
 
-export const parseQuickstartFilesFromPR = async (rawFileContent) => {
+export const parseQuickstartFilesFromPR = (rawFileContent) => {
   checkFileType(rawFileContent);
   dashboardDirs = Object.values(dashboardDirs);
 
