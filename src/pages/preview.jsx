@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 
 import PropTypes from 'prop-types';
-import { getQuickstartFilesFromPR, getQuickstartFilesFromLocal, getFileListFromLocal } from '../utils/preview/fetchHelpers';
+import { getQuickstartFilesFromPR, getQuickstartFilesFromLocal } from '../utils/preview/fetchHelpers';
 import { navigate } from 'gatsby';
 
 const PreviewPage = ({ location }) => {
@@ -20,10 +20,18 @@ const PreviewPage = ({ location }) => {
     // check to make sure query parameters are set
     // otherwise, return home
     if (!isLocal) {
-        if (!prNumber || !quickstartPath) {
-            navigate('/');
-            return;
+      if (!prNumber || !quickstartPath) {
+        console.log('Error: Missing query parameters');
+        if (!prNumber) {
+          console.log('prNumber');
         }
+        if (!quickstartPath) {
+          console.log('quickstartPath');
+        }
+  
+        navigate('/');
+        return;
+      }
     }
     
     /*
@@ -31,32 +39,32 @@ const PreviewPage = ({ location }) => {
      * and set the content to a stateful variable.
      **/
     const fetchRawFiles = async () => {
-      let fileContent;
-      if (isLocal) {
-        fileContent = await getQuickstartFilesFromLocal(port);
-      } else {
-        fileContent = await getQuickstartFilesFromPR(
+      try {
+        let fileContent;
+
+        if (isLocal) {
+          fileContent = await getQuickstartFilesFromLocal(port);
+        } else {
+          fileContent = await getQuickstartFilesFromPR(
             prNumber,
             quickstartPath
-        );
-      }
-      
-
-      // Error handling in the chance Github returns
-      // a non 200 status
-      if (fileContent === null) {
+          );
+        }
+        
+        setContentFiles(fileContent);
+      } catch (error) {
+        console.log('Error:', error.message);
         navigate('/');
         return;
       }
-      setContentFiles(fileContent);
-    };
+    }
     fetchRawFiles();
   }, []);
 
   // To console log the results as part of AC
   // TODO: Remove/refactor this in parsing implementation
   useEffect(() => {
-    if (contentFiles.length < 1) {
+    if (!contentFiles || contentFiles.length === 0) {
       return;
     }
 
