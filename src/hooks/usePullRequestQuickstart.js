@@ -32,13 +32,6 @@ const usePullRequestQuickstart = (location) => {
           quickstartPath
         );
 
-        // Error handling in the chance Github returns
-        // a non 200 status
-        if (rawFileContent === null) {
-          navigate('/');
-          return;
-        }
-
         const parsedQuickstart = await parseQuickstartFilesFromPR(
           rawFileContent
         );

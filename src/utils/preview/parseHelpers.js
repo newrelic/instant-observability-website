@@ -32,7 +32,7 @@ const parseQuickstartFiles = (quickstartFiles) => {
       quickstartContent.level = loadYaml.level ?? '';
       quickstartContent.name = loadYaml.slug ?? '';
       quickstartContent.packUrl = packUrl ?? '';
-      quickstartContent.relatedResources = [];
+      quickstartContent.relatedResources = loadYaml.relatedResources ?? [];
       quickstartContent.summary = loadYaml.summary?.trim() ?? '';
       quickstartContent.title = loadYaml.title ?? '';
     }
@@ -41,7 +41,7 @@ const parseQuickstartFiles = (quickstartFiles) => {
 };
 
 const parseDashboardFiles = (dashboardFiles) => {
-  const dashboards = [];
+  const dashboards = {};
   //split each filepath to get its dashboard dir
   dashboardFiles.forEach((file) => {
     const getDir = file.filePath.split('/dashboards/')[1].split('/')[0];
