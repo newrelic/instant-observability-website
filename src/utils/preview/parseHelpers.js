@@ -8,7 +8,6 @@ const parseQuickstartFiles = (quickstartFiles) => {
     }
     if (file.type === 'yaml') {
       const loadYaml = yaml.load(file.content);
-      console.log(loadYaml);
       let docs = loadYaml.documentation;
 
       //iterate through the array of documentation objects to trim new lines
