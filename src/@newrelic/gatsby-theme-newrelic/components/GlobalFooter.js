@@ -59,6 +59,7 @@ const GlobalFooter = ({ className }) => {
         <div
           css={css`
             display: grid;
+            background: #1d252c;
             justify-content: space-evenly;
 
             /* Sets up the sizing of the columns */
@@ -279,6 +280,18 @@ const GlobalFooter = ({ className }) => {
             {LOCALS.map((locale) => (
               <ExternalLink key={locale.title} href={locale.href}>{locale.title}</ExternalLink>
             ))}
+          </div>
+          <div
+            css={css`
+              margin: 32px 0px 20px 0px;
+              font-size: 0.875rem;
+              line-height: 1.25rem;
+              @media screen and (max-width: ${MOBILE_BREAKPOINT}) {
+                margin: 32px 0px 20px 40px;
+              }
+            `}
+          >
+            ©2008-22 New Relic, Inc. All rights reserved
           </div>
         </div>
       </div>
