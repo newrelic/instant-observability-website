@@ -1,3 +1,10 @@
+## [1.1.1](https://github.com/newrelic/instant-observability-website/compare/v1.1.0...v1.1.1) (2022-05-17)
+
+
+### Bug Fixes
+
+* make font names lowercase ([72a3e1a](https://github.com/newrelic/instant-observability-website/commit/72a3e1ab8b03becf65f78731e7916fb928935f10))
+
 # [1.1.0](https://github.com/newrelic/instant-observability-website/compare/v1.0.0...v1.1.0) (2022-05-17)
 
 
