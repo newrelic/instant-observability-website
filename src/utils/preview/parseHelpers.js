@@ -80,14 +80,13 @@ const parseAlertFiles = (alertFiles) => {
   return alerts;
 };
 
-const checkFileType = (rawFile) => {
+const parseFiles = (rawFile) => {
   let dashboardFiles = [];
   let alertFiles = [];
   let quickstartFiles = [];
   let quickstartDirs = {};
 
-  for (const each in rawFile) {
-    const file = rawFile[each];
+  for (const file of rawFile) {
     if (file.filePath.includes('/dashboards/')) {
       //add too array
       dashboardFiles.push(file);
@@ -116,5 +115,5 @@ const checkFileType = (rawFile) => {
  **/
 
 export const parseQuickstartFilesFromPR = (rawFileContent) => {
-  return checkFileType(rawFileContent);
+  return parseFiles(rawFileContent);
 };
