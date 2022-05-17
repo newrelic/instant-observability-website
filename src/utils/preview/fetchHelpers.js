@@ -6,11 +6,16 @@ import { GITHUB_API_BASE_URL, GITHUB_API_PULL_URL } from '../../data/constants';
  * @returns {Array} array of files
  **/
 export const iterateDirs = async (url) => {
-  const branchResponse = await fetch(url);
-  const branchResponseJSON = await branchResponse.json();
+  const response = await fetch(url);
+  if (response.status !== 200 || !response.ok) {
+    throw new Error(
+      `Response came back while walking the file tree with status ${response.status}\nFetched URL: ${url}`
+    );
+  }
+  const json = await response.json();
   let fileAggregator = [];
 
-  for (const dirListing of branchResponseJSON) {
+  for (const dirListing of json) {
     if (dirListing.type === 'dir') {
       const dirFiles = await iterateDirs(dirListing.url);
       fileAggregator = [...fileAggregator, ...dirFiles];
@@ -49,7 +54,11 @@ export const getFileType = (fileName) => {
  * @returns {Object} - Object of file containing type, fileName, and content of
  * file
  **/
-export const determineContent = async ({ download_url, name: fileName, path }) => {
+export const determineContent = async ({
+  download_url,
+  name: fileName,
+  path,
+}) => {
   const type = getFileType(fileName);
   let rawFileResponse = null;
 
@@ -63,29 +72,22 @@ export const determineContent = async ({ download_url, name: fileName, path }) =
 
   const filePath = path.split('quickstarts/').pop();
 
-  const rawContentObj = {
+  return {
     type,
     filePath,
     fileName,
     content,
   };
-  return rawContentObj;
 };
 
 /**
- * Async function grabs the raw content from files
+ * Function grabs the raw content from files
  * @param {Array} fileAggregator - array of Github metadata objects
- * @returns {Array<Object>} - array of objects containg raw content to parse
+ * @returns {Promise<Array<Object>>} - array of objects containg raw content to parse
  *
  **/
-export const getRawContent = async (fileAggregator) => {
-  const rawContent = Promise.all(
-    fileAggregator.map(async (rawMetadata) => {
-      return determineContent(rawMetadata);
-    })
-  );
-
-  return rawContent;
+export const getRawContent = (fileAggregator) => {
+  return Promise.all(fileAggregator.map(determineContent));
 };
 
 /**
@@ -93,22 +95,21 @@ export const getRawContent = async (fileAggregator) => {
  **/
 export const getQuickstartFilesFromPR = async (prNumber, quickstartPath) => {
   // Hit the Github API for SHA that references the PR branch
-  const prResponse = await fetch(`${GITHUB_API_PULL_URL}/${prNumber}`);
+  const response = await fetch(`${GITHUB_API_PULL_URL}/${prNumber}`);
 
-  if (prResponse.status !== 200 || !prResponse.ok) {
-    return null;
+  if (response.status !== 200 || !response.ok) {
+    throw new Error(
+      `Response from pull request came back with status ${response.status}\n`
+    );
   }
 
   // Response containing files at root of PR
-  const prResponseJSON = await prResponse.json();
-  const branchSHA = prResponseJSON.head.sha;
+  const json = await response.json();
+  const branchSHA = json.head.sha;
 
   // Recursively walk the Github API from the root of the quickstart
   const fileAggregator = await iterateDirs(
     `${GITHUB_API_BASE_URL}/quickstarts/${quickstartPath}?ref=${branchSHA}`
   );
-
-  const fileContent = await getRawContent(fileAggregator);
-  return fileContent;
+  return getRawContent(fileAggregator);
 };
-

@@ -11,6 +11,7 @@ const PreviewPage = ({ location }) => {
   // TODO: Remove/refactor this in parsing implementation
   console.log('Parsed quickstart content:', contentFiles);
 
+
   return <span>oh hai</span>;
 };
 
