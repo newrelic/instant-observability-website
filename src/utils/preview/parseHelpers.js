@@ -1,92 +1,113 @@
 import yaml from 'js-yaml';
 
-let dashboardDirs = {};
-let alertsDir = [];
-
-let parsedQuickstart = {
-  alerts: alertsDir ?? [],
-  dashboards: dashboardDirs ?? [],
-};
-
-const parseQuickstartDir = (file) => {
-  if (file.fileName.includes('logo') && file.type === 'image') {
-    parsedQuickstart.logoUrl = file.content;
-  }
-  if (file.type === 'yaml') {
-    //if config, parse the yaml
-    const loadYaml = yaml.load(file.content);
-    const docs = loadYaml.documentation;
-
-    //itterate through the array of documentation objects to trim new lines
-    if (docs && docs.length > 0) {
-      docs = docs.map((doc) => {
-        doc.description = doc.description?.trim();
-        return doc;
-      });
+const parseQuickstartFiles = (quickstartFiles) => {
+  let quickstartContent = {};
+  quickstartFiles.forEach((file) => {
+    if (file.fileName.includes('logo') && file.type === 'image') {
+      quickstartContent.logoUrl = file.content;
     }
-    //build the packUrl since it is not part of the raw github file contents
-    const packUrl =
-      'https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/' +
-      file.filePath.split('/config')[0];
-    //assumes the pathName is always directly under 'quickstarts/'
+    if (file.type === 'yaml') {
+      //if config, parse the yaml
+      const loadYaml = yaml.load(file.content);
+      let docs = loadYaml.documentation;
 
-    parsedQuickstart.authors = loadYaml.authors ?? [];
-    parsedQuickstart.description = loadYaml.description?.trim() ?? '';
-    parsedQuickstart.documentation = docs ?? [];
-    parsedQuickstart.id = loadYaml.id ?? '';
-    parsedQuickstart.installPlans = loadYaml.installPlans ?? [];
-    parsedQuickstart.keywords = loadYaml.keywords ?? [];
-    parsedQuickstart.level = loadYaml.level ?? '';
-    parsedQuickstart.name = loadYaml.slug ?? '';
-    parsedQuickstart.packUrl = packUrl ?? '';
-    parsedQuickstart.relatedResources = [];
-    parsedQuickstart.summary = loadYaml.summary?.trim() ?? '';
-    parsedQuickstart.title = loadYaml.title ?? '';
-  }
+      //itterate through the array of documentation objects to trim new lines
+      if (docs && docs.length > 0) {
+        docs = docs.map((doc) => {
+          doc.description = doc.description?.trim();
+          return doc;
+        });
+      }
+      //build the packUrl since it is not part of the raw github file contents
+      //assumes the pathName is always directly under 'quickstarts/'
+      const packUrl =
+        'https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/' +
+        file.filePath.split('/config')[0];
+
+      quickstartContent.authors = loadYaml.authors ?? [];
+      quickstartContent.description = loadYaml.description?.trim() ?? '';
+      quickstartContent.documentation = docs ?? [];
+      quickstartContent.id = loadYaml.id ?? '';
+      quickstartContent.installPlans = loadYaml.installPlans ?? [];
+      quickstartContent.keywords = loadYaml.keywords ?? [];
+      quickstartContent.level = loadYaml.level ?? '';
+      quickstartContent.name = loadYaml.slug ?? '';
+      quickstartContent.packUrl = packUrl ?? '';
+      quickstartContent.relatedResources = [];
+      quickstartContent.summary = loadYaml.summary?.trim() ?? '';
+      quickstartContent.title = loadYaml.title ?? '';
+    }
+  });
+  return quickstartContent;
 };
 
-const parseDashboardDir = (file) => {
+const parseDashboardFiles = (dashboardFiles) => {
+  const dashboards = [];
   //split each filepath to get its dashboard dir
-  const getDir = file.filePath.split('/dashboards/')[1].split('/')[0];
-  //add it to the dashboard dirs object as a key if new
-  //or update it if not
-  if (!dashboardDirs[getDir]) {
-    dashboardDirs[getDir] = { name: '', description: '', screenshots: [] };
-  }
-  if (file.type === 'json') {
-    const dashboardContent = JSON.parse(file.content);
-    dashboardDirs[getDir]['name'] = dashboardContent.name ?? '';
-    dashboardDirs[getDir]['description'] = dashboardContent.description ?? '';
-  }
-  if (file.type === 'image') {
-    dashboardDirs[getDir]['screenshots'].push(file.content);
-  }
+  dashboardFiles.forEach((file) => {
+    const getDir = file.filePath.split('/dashboards/')[1].split('/')[0];
+    //add it to the dashboard dirs object as a key if new
+    //or update it if not
+    if (!dashboards[getDir]) {
+      dashboards[getDir] = { name: '', description: '', screenshots: [] };
+    }
+    if (file.type === 'json') {
+      const dashboardContent = JSON.parse(file.content);
+      dashboards[getDir]['name'] = dashboardContent.name ?? '';
+      dashboards[getDir]['description'] = dashboardContent.description ?? '';
+    }
+    if (file.type === 'image') {
+      dashboards[getDir]['screenshots'].push(file.content);
+    }
+  });
+  return Object.values(dashboards);
 };
 
-const parseAlertsDir = (file) => {
+const parseAlertFiles = (alertFiles) => {
   //add each alert to the array, parsing out its relevent data into an object
-  const loadYaml = yaml.load(file.content);
+  let alerts = [];
+  alertFiles.forEach((file) => {
+    const loadYaml = yaml.load(file.content);
 
-  const alert = {
-    details: loadYaml.description?.trim() ?? '',
-    name: loadYaml.name?.trim() ?? '',
-    type: loadYaml.type?.trim() ?? '',
-  };
+    const alert = {
+      details: loadYaml.description?.trim() ?? '',
+      name: loadYaml.name?.trim() ?? '',
+      type: loadYaml.type?.trim() ?? '',
+    };
 
-  alertsDir.push(alert);
+    alerts.push(alert);
+  });
+  return alerts;
 };
 
 const checkFileType = (rawFile) => {
+  let dashboardFiles = [];
+  let alertFiles = [];
+  let quickstartFiles = [];
+  let quickstartDirs = {};
+
   for (const each in rawFile) {
     const file = rawFile[each];
     if (file.filePath.includes('/dashboards/')) {
-      parseDashboardDir(file);
+      //add too array
+      dashboardFiles.push(file);
     } else if (file.filePath.includes('/alerts/')) {
-      parseAlertsDir(file);
+      //add to array
+      alertFiles.push(file);
     } else {
-      parseQuickstartDir(file);
+      quickstartFiles.push(file);
     }
   }
+
+  const dashboardsDirs =
+    dashboardFiles.length > 0 ? parseDashboardFiles(dashboardFiles) : [];
+  const alertsDir = alertFiles.length > 0 ? parseAlertFiles(alertFiles) : [];
+  quickstartDirs.dashboards = dashboardsDirs;
+  quickstartDirs.alerts = alertsDir;
+  const quickstart = parseQuickstartFiles(quickstartFiles);
+  const parsedQuickstart = { ...quickstartDirs, ...quickstart };
+
+  return parsedQuickstart;
 };
 
 /**
@@ -95,8 +116,5 @@ const checkFileType = (rawFile) => {
  **/
 
 export const parseQuickstartFilesFromPR = (rawFileContent) => {
-  checkFileType(rawFileContent);
-  dashboardDirs = Object.values(dashboardDirs);
-
-  return parsedQuickstart;
+  return checkFileType(rawFileContent);
 };
