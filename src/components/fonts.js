@@ -1,25 +1,25 @@
-import SohneBuch from '../fonts/SohneFonts/Sohne-Buch.otf';
+import SohneBuch from '../fonts/sohnefonts/sohne-buch.otf';
 
 // Regular
-import SohneDreiviertelfett from '../fonts/SohneFonts/Sohne-Dreiviertelfett.otf';
-import SohneFett from '../fonts/SohneFonts/Sohne-Fett.otf';
-import SohneExtrafett from '../fonts/SohneFonts/Sohne-Extrafett.otf';
-import SohneExtraleicht from '../fonts/SohneFonts/Sohne-Extraleicht.otf';
-import SohneHalbfett from '../fonts/SohneFonts/Sohne-Halbfett.otf';
-import SohneKraftig from '../fonts/SohneFonts/Sohne-Kraftig.otf';
-import SohneLeicht from '../fonts/SohneFonts/Sohne-Leicht.otf';
-import SohneMonoBuch from '../fonts/SohneFonts/SohneMono-Buch.otf';
-import SohneMonoKraftig from '../fonts/SohneFonts/SohneMono-Kraftig.otf';
+import SohneDreiviertelfett from '../fonts/sohnefonts/sohne-dreiviertelfett.otf';
+import SohneFett from '../fonts/sohnefonts/sohne-fett.otf';
+import SohneExtrafett from '../fonts/sohnefonts/sohne-extrafett.otf';
+import SohneExtraleicht from '../fonts/sohnefonts/sohne-extraleicht.otf';
+import SohneHalbfett from '../fonts/sohnefonts/sohne-halbfett.otf';
+import SohneKraftig from '../fonts/sohnefonts/sohne-kraftig.otf';
+import SohneLeicht from '../fonts/sohnefonts/sohne-leicht.otf';
+import SohneMonoBuch from '../fonts/sohnefonts/sohnemono-buch.otf';
+import SohneMonoKraftig from '../fonts/sohnefonts/sohnemono-kraftig.otf';
 
 // Italics
-import SohneBuchKursiv from '../fonts/SohneFonts/Sohne-BuchKursiv.otf';
-import SohneDreiviertelfettKursiv from '../fonts/SohneFonts/Sohne-DreiviertelfettKursiv.otf';
-import SohneExtrafettKursiv from '../fonts/SohneFonts/Sohne-ExtrafettKursiv.otf';
-import SohneExtraleichtKursiv from '../fonts/SohneFonts/Sohne-ExtraleichtKursiv.otf';
-import SohneFettKursiv from '../fonts/SohneFonts/Sohne-FettKursiv.otf';
-import SohneHalbfettKursiv from '../fonts/SohneFonts/Sohne-HalbfettKursiv.otf';
-import SohneKraftigKursiv from '../fonts/SohneFonts/Sohne-KraftigKursiv.otf';
-import SohneLeichtKursiv from '../fonts/SohneFonts/Sohne-LeichtKursiv.otf';
+import SohneBuchKursiv from '../fonts/sohnefonts/sohne-buchkursiv.otf';
+import SohneDreiviertelfettKursiv from '../fonts/sohnefonts/sohne-dreiviertelfettkursiv.otf';
+import SohneExtrafettKursiv from '../fonts/sohnefonts/sohne-extrafettkursiv.otf';
+import SohneExtraleichtKursiv from '../fonts/sohnefonts/sohne-extraleichtkursiv.otf';
+import SohneFettKursiv from '../fonts/sohnefonts/sohne-fettkursiv.otf';
+import SohneHalbfettKursiv from '../fonts/sohnefonts/sohne-halbfettkursiv.otf';
+import SohneKraftigKursiv from '../fonts/sohnefonts/sohne-kraftigkursiv.otf';
+import SohneLeichtKursiv from '../fonts/sohnefonts/sohne-leichtkursiv.otf';
 
 export {
   SohneBuch,
