@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 
 import { getQuickstartFilesFromLocal } from '../utils/preview/fetchHelpers';
-import { parseQuickstartFiles } from '../utils/preview/parseHelpers';
+//import { parseQuickstartFiles } from '../utils/preview/parseHelpers';
 import { navigate } from 'gatsby';
 
 const useLocalhostQuickstart = (location) => {
@@ -24,10 +24,12 @@ const useLocalhostQuickstart = (location) => {
         navigate('/');
         return;
       }
-
-      const quickstart = await parseQuickstartFiles(rawFileContent);
-
-      setQuickstart(quickstart);
+      /**
+       * TODO: Uncomment these lines and delete setQuickstart(rawFileContent) once parsing is complete
+       */
+      //const quickstart = await parseQuickstartFiles(rawFileContent);
+      //setQuickstart(quickstart);
+      setQuickstart(rawFileContent);
     };
 
     fetchFiles();
