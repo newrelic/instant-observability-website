@@ -5,7 +5,7 @@ import { parseQuickstartFiles } from '../utils/preview/parseHelpers';
 import { navigate } from 'gatsby';
 
 const usePullRequestQuickstart = (location) => {
-  const [contentFiles, setContentFiles] = useState([]);
+  const [quickstart, setQuickstart] = useState([]);
 
   useEffect(() => {
     const urlParams = new URLSearchParams(location.search);
@@ -16,24 +16,24 @@ const usePullRequestQuickstart = (location) => {
      * and set to state variable
      **/
     const fetchFiles = async () => {
-      const rawFileContent = await getQuickstartFilesFromLocal(port);
-
-      // Error handling in the chance Github returns
-      // a non 200 status
-      if (rawFileContent === null) {
+      let rawFileContent;
+      
+      try {
+        rawFileContent = await getQuickstartFilesFromLocal(port);
+      } catch (err) {
         navigate('/');
         return;
       }
 
       const quickstart = await parseQuickstartFiles(rawFileContent);
 
-      setContentFiles(quickstart);
+      setQuickstart(quickstart);
     };
 
     fetchFiles();
   }, []);
   
-  return contentFiles;
+  return quickstart;
 };
 
 export default usePullRequestQuickstart;
