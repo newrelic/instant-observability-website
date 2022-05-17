@@ -1,17 +1,20 @@
 import React from 'react';
-
-import usePullRequestQuickstart from '../hooks/usePullRequestQuickstart';
-
 import PropTypes from 'prop-types';
 
+import usePullRequestQuickstart from '../hooks/usePullRequestQuickstart';
+import useLocalhostQuickstart from '../hooks/useLocalhostQuickstart';
+
 const PreviewPage = ({ location }) => {
-  const contentFiles = usePullRequestQuickstart(location);
+  const urlParams = new URLSearchParams(location.search);
+  let contentFiles;
 
-  // To console log the results as part of AC
-  // TODO: Remove/refactor this in parsing implementation
+  if (urlParams.get('local')) {
+    contentFiles = useLocalhostQuickstart(location);
+  } else {
+    contentFiles = usePullRequestQuickstart(location);
+  }
+
   console.log('Parsed quickstart content:', contentFiles);
-
-
   return <span>oh hai</span>;
 };
 
