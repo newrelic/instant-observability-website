@@ -1,5 +1,11 @@
 'use strict';
 const parseHelpers = require('../preview/parseHelpers');
+const {
+  expectedConfigOutput,
+  baseFiles,
+  dashboardFiles,
+  expectedDashboardOutput,
+} = require('./testContent');
 
 describe('Action: Parse helpers', () => {
   afterEach(() => {
@@ -7,63 +13,12 @@ describe('Action: Parse helpers', () => {
   });
 
   test('parseQuickstartFiles for valid quickstart', () => {
-    const expectedConfigOutput = {
-      title: 'Generic Quickstart',
-      name: 'quickstart-slug',
-      description: 'example description',
-      packUrl:
-        'https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/mock_quickstart_1', 
-
-      id: 'generic-quickstart-id-1',
-      level: 'New Relic',
-      logoUrl: 'fake/path/to/logo.png',
-      summary: 'example summary',
-      keywords: ['os', 'operating system'],
-      authors: ['New Relic'],
-      relatedResources: [],
-      documentation: [],
-      installPlans: [
-        {
-          name: '',
-          id: 'guided-install',
-        },
-      ],
-    };
-
-    const configContent = `
-    id: generic-quickstart-id-1
-    slug: quickstart-slug
-    description: example description 
-    summary: example summary 
-    icon: logo.png
-    level: New Relic 
-    authors:
-      - New Relic
-    title: Generic Quickstart
-    keywords:
-      - os
-      - operating system
-    
-    installPlans:
-      - guided-install
-    `;
-
-    const files = [
-      {
-        type: 'yaml',
-        filePath: 'mock_quickstart_1/config.yml',
-        fileName: 'config.yml',
-        content: configContent,
-      },
-      {
-        type: 'image',
-        filepath: 'mock_quickstarts_1/logo.png',
-        fileName: 'logo.png',
-        content: 'fake/path/to/logo.png'
-      },
-    ];
-
-    const output = parseHelpers.parseQuickstartFiles(files);
+    const output = parseHelpers.parseQuickstartFiles(baseFiles);
     expect(output).toEqual(expectedConfigOutput);
   });
+
+  test('parseDashboardFiles for valid quickstart', () =>{
+    const output = parseHelpers.parseDashboardFiles(dashboardFiles);
+    console.log(output);
+  })
 });
