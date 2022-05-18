@@ -2,41 +2,49 @@ import yaml from 'js-yaml';
 
 const parseQuickstartFiles = (quickstartFiles) => {
   let quickstartContent = {};
+  let config;
   quickstartFiles.forEach((file) => {
-    if (file.fileName.includes('logo') && file.type === 'image') {
-      quickstartContent.logoUrl = file.content;
-    }
-    if (file.type === 'yaml') {
-      const loadYaml = yaml.load(file.content);
-      let docs = loadYaml.documentation;
-
-      //iterate through the array of documentation objects to trim new lines
-      if (docs && docs.length > 0) {
-        docs = docs.map((doc) => {
-          doc.description = doc.description?.trim();
-          return doc;
-        });
-      }
-      //build the packUrl since it is not part of the raw github file contents
-      //assumes the pathName is always directly under 'quickstarts/'
-      const packUrl =
-        'https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/' +
-        file.filePath.split('/config')[0];
-
-      quickstartContent.authors = loadYaml.authors ?? [];
-      quickstartContent.description = loadYaml.description?.trim() ?? '';
-      quickstartContent.documentation = docs ?? [];
-      quickstartContent.id = loadYaml.id ?? '';
-      quickstartContent.installPlans = loadYaml.installPlans ?? [];
-      quickstartContent.keywords = loadYaml.keywords ?? [];
-      quickstartContent.level = loadYaml.level ?? '';
-      quickstartContent.name = loadYaml.slug ?? '';
-      quickstartContent.packUrl = packUrl ?? '';
-      quickstartContent.relatedResources = []; //we don't get these from the config.yml
-      quickstartContent.summary = loadYaml.summary?.trim() ?? '';
-      quickstartContent.title = loadYaml.title ?? '';
+    if (file.type === 'yaml' && file.fileName.includes('config')) {
+      config = file;
     }
   });
+
+  //build the packUrl since it is not part of the raw github file contents
+  //assumes the pathName is always directly under 'quickstarts/'
+  const packUrl =
+    'https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/' +
+    config.filePath.split('/config')[0];
+
+  let loadYaml = yaml.load(config.content);
+  let quickstartDocs = loadYaml.documentation;
+
+  //iterate through the array of documentation objects to trim new lines
+  if (quickstartDocs && quickstartDocs.length > 0) {
+    quickstartDocs = quickstartDocs.map((doc) => {
+      doc.description = doc.description?.trim();
+      return doc;
+    });
+  }
+
+  quickstartFiles.forEach((file) => {
+    if (file.type === 'image' && file.fileName === loadYaml.icon) {
+      quickstartContent.logoUrl = file.content;
+    }
+  });
+
+  quickstartContent.authors = loadYaml.authors ?? [];
+  quickstartContent.description = loadYaml.description?.trim() ?? '';
+  quickstartContent.documentation = quickstartDocs ?? [];
+  quickstartContent.id = loadYaml.id ?? '';
+  quickstartContent.installPlans = loadYaml.installPlans ?? [];
+  quickstartContent.keywords = loadYaml.keywords ?? [];
+  quickstartContent.level = loadYaml.level ?? '';
+  quickstartContent.name = loadYaml.slug ?? '';
+  quickstartContent.packUrl = packUrl ?? '';
+  quickstartContent.relatedResources = []; //we don't get these from the config.yml
+  quickstartContent.summary = loadYaml.summary?.trim() ?? '';
+  quickstartContent.title = loadYaml.title ?? '';
+
   return quickstartContent;
 };
 
