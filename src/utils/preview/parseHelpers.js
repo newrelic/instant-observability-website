@@ -3,6 +3,7 @@ import yaml from 'js-yaml';
 const parseQuickstartFiles = (quickstartFiles) => {
   let quickstartContent = {};
   let config;
+
   quickstartFiles.forEach((file) => {
     if (file.type === 'yaml' && file.fileName.includes('config')) {
       config = file;
@@ -10,7 +11,7 @@ const parseQuickstartFiles = (quickstartFiles) => {
   });
 
   //build the packUrl since it is not part of the raw github file contents
-  //assumes the pathName is always directly under 'quickstarts/'
+  //assumes the filePath is always directly under 'quickstarts/'
   const packUrl =
     'https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/' +
     config.filePath.split('/config')[0];
