@@ -1019,6 +1019,42 @@
     "installPlans": []
   },
   {
+    "title": "WayScript",
+    "name": "wayscript",
+    "description": "## Scalable, single click development environments with WayScript\nSpin up customizable development environments which integrate Docker, Kubernetes, New Relic, and all your third-party dev tooling in a single click.\n\n### What is WayScript\n[WayScript](https://t.sidekickopen14.com/s3t/c/5/f18dQhb0S7kF8cFB-bW2kCdVL59hl3kW7_k2841CX6NGW36PLj07t5S8DW1Dh2LL96WRJDf197v5Y04?te=W3R5hFj4cm2zwW4myBCV3FcKb-w4fdHZS48S2&si=8000000020074708&pi=d3941e79-14e2-4cd1-c97d-45af92f6d865) is an **Internal Developer Platform (IDP)** that enables scalable, single click development environments. The platform empowers early stage, high growth engineering teams with scalable, modern infrastructure so they can focus on product instead of battling Ops.\n\n### Why WayScript\nHelp your development team ‘shift left’ with WayScript. Instantly connect your environments to New Relic for standardized observability in pre-production, staging, and production. \n\nWayScript is self-hosted, air-gapped, & SOC-2 Type 2 compliant and spins up in under 1 hour on your AWS.\n\n### Benefits\n* Instant infrastructure in a box \n* Increases internal tooling output by 50% \n* Standardized, secure cloud-hosted developer environments\n* Observability in pre-production, staging, and production environments\n* Developer productivity and innovation\n* Rapid Internal Tooling, API Development, and Process Automation\n\n### Getting started\n* [Get started with WayScript](https://wsxdocs.wayscript.com/quickstart). See how to create a workspace, add a lair, and build your first tool.\n* Docs: [https://wsxdocs.wayscript.com](https://wsxdocs.wayscript.com)  \n* [What is an Internal Developer Platform?](https://wayscript.com/internal-developer-platform)\n\n### Requirements\nSee here for self-hosted requirements: [https://wsxdocs.wayscript.com/hosting/self-hosting](https://wsxdocs.wayscript.com/hosting/self-hosting)",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/wayscript",
+    "id": "51294fb4-6b0a-4ee5-acad-c377b3b528d5",
+    "level": "VERIFIED",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/wayscript/logo.png",
+    "summary": "WayScript is an Internal Developer Platform (IDP) that enables scalable, single click development environments. Connect your environments to New Relic in minutes.",
+    "websiteUrl": null,
+    "keywords": [
+      "wayscript",
+      "idp",
+      "internal developer platform",
+      "newrelic partner",
+      "featured"
+    ],
+    "authors": [
+      "New Relic"
+    ],
+    "dashboards": [],
+    "alerts": [],
+    "documentation": [
+      {
+        "name": "Get started with WayScript",
+        "description": "See how to create a workspace, add a lair, and build your first tool.",
+        "url": "https://wsxdocs.wayscript.com/quickstart"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "WayScript",
+        "id": "wayscript"
+      }
+    ]
+  },
+  {
     "title": "AWS Lambda",
     "name": "aws-lambda",
     "description": "## What is AWS Lambda?\n\nZero-administration compute platform for back-end web developers that runs\nyour code for you in AWS cloud.\n\n\n### Get started!\n\nStart monitoring AWS Lambda by connecting Amazon Web Services (AWS) to New Relic!\n\nCheck out our AWS Lambda documentation to instrument your cloud service and manage the stability, scalability, and reliability of your systems with New Relic's infrastructure monitoring capabilities.\n\n### More info\n\nCheck out the [documentation](https://docs.newrelic.com/docs/infrastructure/amazon-integrations/aws-integrations-list/aws-lambda-monitoring-integration/) to learn more about New Relic monitoring for AWS Lambda.",
