@@ -29,6 +29,7 @@ import RightArrowSVG from '../components/Icons/RightArrowSVG';
 const TRIPLE_COLUMN_BREAKPOINT = '1420px';
 const DOUBLE_COLUMN_BREAKPOINT = '1180px';
 const SINGLE_COLUMN_BREAKPOINT = '900px';
+const COLUMN_BREAKPOINT = '1131px';
 
 /**
  * Determines if one string is a substring of the other, case insensitive
@@ -289,6 +290,10 @@ const QuickstartsPage = ({ data, location }) => {
           padding: var(--banner-height) 0 15vh 0;
 
           max-width: var(--site-max-width);
+
+          @media screen and (min-width: ${COLUMN_BREAKPOINT}) {
+          --banner-height: 394px;
+          }
 
           @media screen and (max-width: ${QUICKSTARTS_COLLAPSE_BREAKPOINT}) {
             grid-gap: 0;
