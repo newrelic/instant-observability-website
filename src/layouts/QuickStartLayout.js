@@ -46,7 +46,7 @@ const QuickStartLayout = ({ children }) => {
           }
 
           @media screen and (max-width: 920px) {
-            --footer-height: 1240px;
+            --footer-height: 78rem;
           }
         `}
       />
