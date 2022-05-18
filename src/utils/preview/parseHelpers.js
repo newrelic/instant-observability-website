@@ -1,6 +1,6 @@
-import yaml from 'js-yaml';
+const yaml = require('js-yaml');
 
-export const parseDocs = (docs) => {
+const parseDocs = (docs) => {
   const parsedDocs = docs.map((doc) => {
     doc.description = doc.description?.trim();
     return doc;
@@ -9,7 +9,7 @@ export const parseDocs = (docs) => {
   return parsedDocs;
 };
 
-export const parseInstallPlans = (installPlans) => {
+const parseInstallPlans = (installPlans) => {
   const parsedInstallPlans = installPlans.map((planId) => {
     const installPlan = {
       id: planId,
@@ -20,7 +20,7 @@ export const parseInstallPlans = (installPlans) => {
   return parsedInstallPlans;
 };
 
-export const parseQuickstartFiles = (quickstartFiles) => {
+const parseQuickstartFiles = (quickstartFiles) => {
   let quickstartContent = {};
   let config;
 
@@ -69,7 +69,7 @@ export const parseQuickstartFiles = (quickstartFiles) => {
   return quickstartContent;
 };
 
-export const parseDashboardFiles = (dashboardFiles) => {
+const parseDashboardFiles = (dashboardFiles) => {
   const dashboards = {};
   //split each filepath to get its dashboard dir
   dashboardFiles.forEach((file) => {
@@ -92,7 +92,7 @@ export const parseDashboardFiles = (dashboardFiles) => {
   return Object.values(dashboards);
 };
 
-export const parseAlertFiles = (alertFiles) => {
+const parseAlertFiles = (alertFiles) => {
   let alerts = [];
   alertFiles.forEach((file) => {
     const loadYaml = yaml.load(file.content);
@@ -109,7 +109,7 @@ export const parseAlertFiles = (alertFiles) => {
   return alerts;
 };
 
-export const parseFiles = (rawFile) => {
+const parseFiles = (rawFile) => {
   let dashboardFiles = [];
   let alertFiles = [];
   let quickstartDirs = {};
@@ -143,6 +143,15 @@ export const parseFiles = (rawFile) => {
  * Transforms them into shape needed for QuickstartDetails.js
  **/
 
-export const parseQuickstartFilesFromPR = (rawFileContent) => {
+const parseQuickstartFilesFromPR = (rawFileContent) => {
   return parseFiles(rawFileContent);
+};
+
+module.exports = {
+  parseDocs,
+  parseInstallPlans,
+  parseQuickstartFiles,
+  parseDashboardFiles,
+  parseAlertFiles,
+  parseQuickstartFilesFromPR,
 };
