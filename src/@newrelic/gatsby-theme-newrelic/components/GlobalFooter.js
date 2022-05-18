@@ -12,6 +12,13 @@ import useThemeTranslation from '@newrelic/gatsby-theme-newrelic/src//hooks/useT
 
 const MOBILE_BREAKPOINT = '920px';
 
+const getCurrentYear = () => {
+  let currentYear = '';
+  const fullYear = new Date().getFullYear().toString();
+  currentYear = fullYear.substring(fullYear.length - 2);
+  return currentYear;
+};
+
 const GlobalFooter = ({ className }) => {
   const { t } = useThemeTranslation();
   const { site, sitePage } = useStaticQuery(graphql`
@@ -291,7 +298,7 @@ const GlobalFooter = ({ className }) => {
               }
             `}
           >
-            ©2008-22 New Relic, Inc. All rights reserved
+            ©2008-{getCurrentYear()} New Relic, Inc. All rights reserved
           </div>
         </div>
       </div>
