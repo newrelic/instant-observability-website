@@ -85,7 +85,6 @@ import { css } from '@emotion/react';
         }
       `}
       >
-        <span />
         <div className="scroll scroll-top">{text}</div>
         <div className="scroll scroll-bottom">{text}</div>
       </div>
