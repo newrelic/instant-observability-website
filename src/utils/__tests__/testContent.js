@@ -16,6 +16,24 @@ export const configContent = `
       - guided-install
     `;
 
+export const configContentMissingFields = `
+    id: generic-quickstart-id-1
+    slug: quickstart-slug
+    description: example description 
+    summary: example summary 
+    icon: logo.png
+    level: New Relic 
+    authors:
+      - New Relic
+    title: Generic Quickstart
+    keywords:
+      - os
+      - operating system
+    
+    installPlans:
+      - guided-install
+    `;
+
 export const dashboardContent = {
   name: 'mock dashboard name',
   description: 'mock dashboard description',
@@ -44,12 +62,12 @@ export const expectedConfigOutput = {
   ],
 };
 
-export const baseFiles = [
+export const baseFiles = (content) =>  [
   {
     type: 'yaml',
     filePath: 'mock_quickstart_1/config.yml',
     fileName: 'config.yml',
-    content: configContent,
+    content: content,
   },
   {
     type: 'image',
@@ -59,13 +77,13 @@ export const baseFiles = [
   },
 ];
 
-export const dashboardFiles = [
+export const dashboardFiles = (content) => [
   {
     type: 'json',
     filePath:
       'mock_quickstart_1/dashboards/custom_dashboard/mock_dashboard.json',
     fileName: 'mock_dashboard.json',
-    content: JSON.stringify(dashboardContent),
+    content: JSON.stringify(content),
   },
   {
     type: 'image',
