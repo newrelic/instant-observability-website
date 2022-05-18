@@ -41,7 +41,7 @@ const BannerHeaderContent = ({ search, setSearch, setIsSearchInputEmpty }) => {
         css={css`
           color: #f9fafa;
           font-size: 72px;
-          letter-spacing: -0.001em;
+          letter-spacing: -0.03em;
           margin: 72px 0 0;
 
           @media (max-width: ${QUICKSTARTS_COLLAPSE_BREAKPOINT}) {
@@ -57,7 +57,7 @@ const BannerHeaderContent = ({ search, setSearch, setIsSearchInputEmpty }) => {
           background: none;
           color: #f9fafa;
           font-size: 16px;
-          letter-spacing: -0.5%;
+          letter-spacing: -0.005em;
           margin: 20px 0;
           font-weight: 300;
 
