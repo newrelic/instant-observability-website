@@ -15,7 +15,7 @@ const GetStartedFooter = () => {
 
         --nr1--color--background--button--primary--enabled: #293338;
         --nr1--color--background--button--primary--hover: #000;
-        --nr1--color--text--buttton--primary: #fafbfb;
+        --nr1--color--text--buttton--primary: #1ce783;
 
         --nr1--color--background--button--primary-accent--enabled: #1CE78;
         --nr1--color--background--button--primary-accent--hover: #00ce7c;
