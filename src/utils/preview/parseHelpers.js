@@ -1,6 +1,6 @@
 import yaml from 'js-yaml';
 
-const parseQuickstartFiles = (quickstartFiles) => {
+export const parseQuickstartFiles = (quickstartFiles) => {
   let quickstartContent = {};
   let config;
 
@@ -49,7 +49,7 @@ const parseQuickstartFiles = (quickstartFiles) => {
   return quickstartContent;
 };
 
-const parseDashboardFiles = (dashboardFiles) => {
+export const parseDashboardFiles = (dashboardFiles) => {
   const dashboards = {};
   //split each filepath to get its dashboard dir
   dashboardFiles.forEach((file) => {
@@ -72,7 +72,7 @@ const parseDashboardFiles = (dashboardFiles) => {
   return Object.values(dashboards);
 };
 
-const parseAlertFiles = (alertFiles) => {
+export const parseAlertFiles = (alertFiles) => {
   let alerts = [];
   alertFiles.forEach((file) => {
     const loadYaml = yaml.load(file.content);
@@ -89,7 +89,7 @@ const parseAlertFiles = (alertFiles) => {
   return alerts;
 };
 
-const parseFiles = (rawFile) => {
+export const parseFiles = (rawFile) => {
   let dashboardFiles = [];
   let alertFiles = [];
   let quickstartDirs = {};
