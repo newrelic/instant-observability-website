@@ -364,6 +364,10 @@ const QuickstartsPage = ({ data, location }) => {
                     background: ${category === value
                       ? 'var(--divider-color)'
                       : 'none'};
+                      &:hover {
+                        color: var(--black-text-color);
+                        background: var(--category-hover-color);
+                      }
                   `}
                 >
                   {`${displayName}`}
