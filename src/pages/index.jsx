@@ -592,7 +592,11 @@ const QuickstartsPage = ({ data, location }) => {
                   <strong>Featured</strong>
                 </span>
               </div>
-              <div>
+              <div
+                css={css`
+                  margin-bottom: 75px
+                `}
+              >
                 {!loadComplete && <Spinner />}
                 {loadComplete && (
                   <Slider {...settings}>
@@ -611,9 +615,9 @@ const QuickstartsPage = ({ data, location }) => {
           <div
             css={css`
               --text-color: var(--primary-text-color);
-              margin: 75px 0 13px 4px;
+              margin: 0px 0 13px 4px;
 
-              padding: 1.25rem 0;
+              padding: 0 0 1.25rem 0;
               font-size: 18px;
               color: var(--color-neutrals-800);
               display: flex;
