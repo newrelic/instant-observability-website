@@ -1,5 +1,25 @@
 import yaml from 'js-yaml';
 
+export const parseDocs = (docs) => {
+  const parsedDocs = docs.map((doc) => {
+    doc.description = doc.description?.trim();
+    return doc;
+  });
+
+  return parsedDocs;
+};
+
+export const parseInstallPlans = (installPlans) => {
+  const parsedInstallPlans = installPlans.map((planId) => {
+    const installPlan = {
+      id: planId,
+      name: '',
+    };
+    return installPlan;
+  });
+  return parsedInstallPlans;
+};
+
 export const parseQuickstartFiles = (quickstartFiles) => {
   let quickstartContent = {};
   let config;
@@ -17,15 +37,8 @@ export const parseQuickstartFiles = (quickstartFiles) => {
     config.filePath.split('/config')[0];
 
   let loadYaml = yaml.load(config.content);
-  let quickstartDocs = loadYaml.documentation;
 
   //iterate through the array of documentation objects to trim new lines
-  if (quickstartDocs && quickstartDocs.length > 0) {
-    quickstartDocs = quickstartDocs.map((doc) => {
-      doc.description = doc.description?.trim();
-      return doc;
-    });
-  }
 
   quickstartFiles.forEach((file) => {
     if (file.type === 'image' && file.fileName === loadYaml.icon) {
@@ -33,11 +46,18 @@ export const parseQuickstartFiles = (quickstartFiles) => {
     }
   });
 
+  const parsedQuickstartDocs =
+    loadYaml.documentation?.length > 0 ? parseDocs(loadYaml.documentation) : [];
+  const parsedInstallPlans =
+    loadYaml.installPlans?.length > 0
+      ? parseInstallPlans(loadYaml.installPlans)
+      : [];
+
   quickstartContent.authors = loadYaml.authors ?? [];
   quickstartContent.description = loadYaml.description?.trim() ?? '';
-  quickstartContent.documentation = quickstartDocs ?? [];
+  quickstartContent.documentation = parsedQuickstartDocs;
   quickstartContent.id = loadYaml.id ?? '';
-  quickstartContent.installPlans = loadYaml.installPlans ?? [];
+  quickstartContent.installPlans = parsedInstallPlans;
   quickstartContent.keywords = loadYaml.keywords ?? [];
   quickstartContent.level = loadYaml.level ?? '';
   quickstartContent.name = loadYaml.slug ?? '';
