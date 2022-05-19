@@ -1,36 +1,39 @@
+const installPlansContent = `
+installPlans:
+  - guided-install
+`;
+
 const configContent = `
-    id: generic-quickstart-id-1
-    slug: quickstart-slug
-    description: example description 
-    summary: example summary 
-    icon: logo.png
-    level: New Relic 
-    authors:
-      - New Relic
-    title: Generic Quickstart
-    keywords:
-      - os
-      - operating system
-    
-    installPlans:
-      - guided-install
-    `;
+id: generic-quickstart-id-1
+slug: quickstart-slug
+description: example description 
+summary: example summary 
+icon: logo.png
+level: New Relic 
+authors:
+  - New Relic
+title: Generic Quickstart
+keywords:
+  - os
+  - operating system
+
+${installPlansContent}
+`;
 
 const configContentMissingFields = `
-    id: generic-quickstart-id-1
-    slug: quickstart-slug
-    description: example description 
-    icon: logo.png
-    level: New Relic 
-    authors:
-      - New Relic
-    keywords:
-      - os
-      - operating system
-    
-    installPlans:
-      - guided-install
-    `;
+id: generic-quickstart-id-1
+slug: quickstart-slug
+description: example description 
+icon: logo.png
+level: New Relic 
+authors:
+  - New Relic
+keywords:
+  - os
+  - operating system
+
+${installPlansContent}
+`;
 
 const dashboardContent = {
   name: 'mock dashboard name',
@@ -40,7 +43,36 @@ const dashboardContent = {
 const missingConfigOutput = {
   title: 'Generic Quickstart',
   summary: 'example summary',
-}
+};
+
+const installPlansInput = ['guided-install'];
+
+const documentationInput = [
+  {
+    name: 'Kamon installation docs',
+    description:
+      'Kamon is used to automatically instrument, monitor and debug distributed\nsystems.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n',
+    url:
+      'https://docs.newrelic.com/docs/integrations/open-source-telemetry-integrations/open-source-telemetry-integration-list/kamon-reporter',
+  },
+];
+
+const documentationOutput = [
+  {
+    name: 'Kamon installation docs',
+    description:
+      'Kamon is used to automatically instrument, monitor and debug distributed\nsystems.',
+    url:
+      'https://docs.newrelic.com/docs/integrations/open-source-telemetry-integrations/open-source-telemetry-integration-list/kamon-reporter',
+  },
+];
+
+const installPlansOutput = [
+  {
+    name: '',
+    id: 'guided-install',
+  },
+];
 
 const expectedConfigOutput = {
   title: 'Generic Quickstart',
@@ -57,12 +89,7 @@ const expectedConfigOutput = {
   authors: ['New Relic'],
   relatedResources: [],
   documentation: [],
-  installPlans: [
-    {
-      name: '',
-      id: 'guided-install',
-    },
-  ],
+  installPlans: installPlansOutput,
 };
 
 const baseFiles = (content) => [
@@ -116,12 +143,17 @@ const expectedDashboardOutput = [
 ];
 
 module.exports = {
-  configContent, 
+  installPlansContent,
+  configContent,
   configContentMissingFields,
   dashboardContent,
   expectedConfigOutput,
-  missingConfigOutput, 
+  missingConfigOutput,
   baseFiles,
   dashboardFiles,
   expectedDashboardOutput,
+  installPlansInput,
+  installPlansOutput,
+  documentationInput,
+  documentationOutput,
 };
