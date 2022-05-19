@@ -1,4 +1,4 @@
-export const configContent = `
+const configContent = `
     id: generic-quickstart-id-1
     slug: quickstart-slug
     description: example description 
@@ -16,7 +16,7 @@ export const configContent = `
       - guided-install
     `;
 
-export const configContentMissingFields = `
+const configContentMissingFields = `
     id: generic-quickstart-id-1
     slug: quickstart-slug
     description: example description 
@@ -34,12 +34,12 @@ export const configContentMissingFields = `
       - guided-install
     `;
 
-export const dashboardContent = {
+const dashboardContent = {
   name: 'mock dashboard name',
   description: 'mock dashboard description',
 };
 
-export const expectedConfigOutput = {
+const expectedConfigOutput = {
   title: 'Generic Quickstart',
   name: 'quickstart-slug',
   description: 'example description',
@@ -62,7 +62,7 @@ export const expectedConfigOutput = {
   ],
 };
 
-export const baseFiles = (content) =>  [
+const baseFiles = (content) => [
   {
     type: 'yaml',
     filePath: 'mock_quickstart_1/config.yml',
@@ -77,7 +77,7 @@ export const baseFiles = (content) =>  [
   },
 ];
 
-export const dashboardFiles = (content) => [
+const dashboardFiles = (content) => [
   {
     type: 'json',
     filePath:
@@ -101,10 +101,23 @@ export const dashboardFiles = (content) => [
   },
 ];
 
-export const expectedDashboardOutput = [
+const expectedDashboardOutput = [
   {
     name: 'mock dashboard name',
     description: 'mock dashboard description',
-    screenshots: ['mock/url/for/mock_dashboard01.png', 'mock/url/for/mock_dashboard02.png'],
+    screenshots: [
+      'mock/url/for/mock_dashboard01.png',
+      'mock/url/for/mock_dashboard02.png',
+    ],
   },
 ];
+
+module.exports = {
+  configContent, 
+  configContentMissingFields,
+  dashboardContent,
+  expectedConfigOutput,
+  baseFiles,
+  dashboardFiles,
+  expectedDashboardOutput,
+};
