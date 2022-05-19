@@ -1,6 +1,8 @@
 const parseHelpers = require('../preview/parseHelpers');
 const {
   expectedConfigOutput,
+  missingConfigOutput,
+  configContentMissingFields,
   configContent,
   baseFiles,
   dashboardFiles,
@@ -22,10 +24,17 @@ describe('Action: Parse helpers', () => {
     expect(output).toEqual(expectedConfigOutput);
   });
 
-  test('parseDashboardFiles for valid quickstart', () =>{
-    const input = dashboardFiles(dashboardContent)
+  test('parseQuickstartFiles for invalid quickstart', () => {
+    const input = baseFiles(configContentMissingFields);
+    const output = parseHelpers.parseQuickstartFiles(input);
+
+    expect({...output, ...missingConfigOutput}).toEqual(expectedConfigOutput);
+  });
+
+  test('parseDashboardFiles for valid quickstart', () => {
+    const input = dashboardFiles(dashboardContent);
     const output = parseHelpers.parseDashboardFiles(input);
 
     expect(output).toEqual(expectedDashboardOutput);
-  })
+  });
 });

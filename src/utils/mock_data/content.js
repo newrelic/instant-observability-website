@@ -20,12 +20,10 @@ const configContentMissingFields = `
     id: generic-quickstart-id-1
     slug: quickstart-slug
     description: example description 
-    summary: example summary 
     icon: logo.png
     level: New Relic 
     authors:
       - New Relic
-    title: Generic Quickstart
     keywords:
       - os
       - operating system
@@ -38,6 +36,11 @@ const dashboardContent = {
   name: 'mock dashboard name',
   description: 'mock dashboard description',
 };
+
+const missingConfigOutput = {
+  title: 'Generic Quickstart',
+  summary: 'example summary',
+}
 
 const expectedConfigOutput = {
   title: 'Generic Quickstart',
@@ -117,6 +120,7 @@ module.exports = {
   configContentMissingFields,
   dashboardContent,
   expectedConfigOutput,
+  missingConfigOutput, 
   baseFiles,
   dashboardFiles,
   expectedDashboardOutput,
