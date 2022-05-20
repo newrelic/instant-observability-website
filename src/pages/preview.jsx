@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import usePullRequestQuickstart from '../hooks/usePullRequestQuickstart';
 import useLocalhostQuickstart from '../hooks/useLocalhostQuickstart';
 
 const PreviewPage = ({ location }) => {
@@ -10,7 +11,7 @@ const PreviewPage = ({ location }) => {
   if (urlParams.get('local')) {
     contentFiles = useLocalhostQuickstart(location);
   } else {
-    //contentFiles = usePullRequestQuickstart(location);
+    contentFiles = usePullRequestQuickstart(location);
   }
 
   console.log('Parsed quickstart content:', contentFiles);
