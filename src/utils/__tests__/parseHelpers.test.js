@@ -16,7 +16,7 @@ const {
 
 console.log(baseFiles);
 
-describe('Action: Parse helpers', () => {
+describe('parseHelpers', () => {
   afterEach(() => {
     jest.resetAllMocks();
   });
