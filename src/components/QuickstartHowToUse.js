@@ -5,10 +5,14 @@ import { quickstart } from '../types';
 import { LOGIN_LINK, SIGNUP_LINK } from '../data/constants';
 import InstallButton from './InstallButton';
 
-const QuickstartHowToUse = ({ quickstart, trackQuickstart, location }) => {
+const QuickstartHowToUse = ({ quickstart, trackQuickstart, location, layoutContentSpacing }) => {
   return (
     <>
-      <div>
+      <div
+        css={css`
+          ${layoutContentSpacing};
+        `}
+      >
         <h3
           css={css`
             top: 0;

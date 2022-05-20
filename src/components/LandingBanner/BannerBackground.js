@@ -29,11 +29,12 @@ const BannerBackground = ({ children }) => {
             width: 100%;
             margin: 0 auto 0px;
           }
+          max-width: 98rem;
+          margin: 1rem auto;
         `}
       >
         <div
           css={css`
-            margin-left: auto;
 
             @media (max-width: 1440px) {
               display: none;
@@ -41,14 +42,6 @@ const BannerBackground = ({ children }) => {
           `}
         >
           <img
-            css={css`
-              position: absolute;
-              width: 157.03px;
-              height: 148px;
-              left: 5px;
-              top: 50px;
-              z-index: auto;
-            `}
             src={bannerOverlayLeft}
             alt="banner-left"
             loading="lazy"
@@ -57,7 +50,6 @@ const BannerBackground = ({ children }) => {
         {children}
         <div
           css={css`
-            margin-right: auto;
 
             @media (max-width: 1440px) {
               display: none;
@@ -65,12 +57,6 @@ const BannerBackground = ({ children }) => {
           `}
         >
           <img
-            css={css`
-              position: absolute;
-              right: 5px;
-              top: 0px;
-              z-index: auto;
-            `}
             src={bannerOverlayRight}
             alt="banner-right"
             loading="lazy"

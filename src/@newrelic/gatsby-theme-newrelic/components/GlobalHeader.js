@@ -121,7 +121,7 @@ const GlobalHeader = ({ className, activeSite }) => {
             height: var(--global-header-height);
             display: flex;
             margin: 0 auto;
-            max-width: 1440px;
+            max-width: 1248px;
             justify-content: space-between;
             padding: 0 var(--site-content-padding);
             height: 96px;

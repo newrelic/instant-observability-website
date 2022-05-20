@@ -21,7 +21,9 @@ const layoutContentSpacing = css`
   @media (max-width: 760px) {
     --page-margin: 30px;
   }
-  padding: 0 var(--page-margin);
+  max-width: 1248px;
+  padding: 0 var(--site-content-padding);
+  margin: auto;
 `;
 
 const QuickstartDetails = ({ data, location }) => {
@@ -75,7 +77,11 @@ const QuickstartDetails = ({ data, location }) => {
       >
         <LandingBanner
           css={css`
-            margin: 0 var(--page-margin);
+            padding: 0 var(--site-content-padding);
+
+            @media screen and (max-width: 920px) {
+              margin: 0 var(--site-content-padding);
+            }
           `}
           quickstart={quickstart}
           location={location}
@@ -131,7 +137,6 @@ const QuickstartDetails = ({ data, location }) => {
               }
             }
           
-            ${layoutContentSpacing};
             @media (min-width: 760px) { 
               padding-top: 38px;
               padding-bottom: 49px;
@@ -149,6 +154,7 @@ const QuickstartDetails = ({ data, location }) => {
             quickstart={quickstart}
             trackQuickstart={trackQuickstart}
             location={location}
+            layoutContentSpacing={layoutContentSpacing}
           />
         </div>
         {/* Get started component here */}

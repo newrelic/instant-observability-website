@@ -69,7 +69,10 @@ const GlobalFooter = ({ className }) => {
           css={css`
             display: grid;
             background: #1d252c;
-            justify-content: space-evenly;
+            justify-content: space-between;
+            max-width: 1248px;
+            margin: 0 auto;
+            padding: 0 var(--site-content-padding);
 
             /* Sets up the sizing of the columns */
             grid-template-columns: min-content 192px;
