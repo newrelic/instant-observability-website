@@ -31,6 +31,7 @@ const BannerBackground = ({ children }) => {
           }
           max-width: 98rem;
           margin: 1rem auto;
+          margin-top: 0;
         `}
       >
         <div
