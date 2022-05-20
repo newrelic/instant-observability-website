@@ -606,53 +606,6 @@
     "installPlans": []
   },
   {
-    "title": "ReleaseIQ",
-    "name": "releaseiq",
-    "description": "## What's ReleaseIQ?\nReleaseIQ is the Unified Enterprise DevOps Platform to Accelerate Software Delivery.\nReleaseIQ is focused on solving the problems of multi-tool, team, and product release pipelines.\n\nFor ReleaseIQ intergration with NewRelic, you must have:\n- A New Relic license to be configured in the ReleaseIQ Platform.\n- Configure New Relic in the ReleaseIQ platform Observability tool settings.\n\nReleaseIQ features with New Relic\n- Custom Events: During pipeline execution for each step, events with all step information is sent to New Relic. To enable this feature, you will need to configure a notification to New Relic in each step.\n- Deployment Verification: Deployments can be verified by New Relic based on the New Relic policies configured in deploy step of a pipeline. Then based on the priority, alerts will be sent back to the ReleaseIQ platform. The progress of pipeline to subsequent steps will be based on deployment verification result.",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/releaseiq",
-    "id": "88dee43d-f259-4423-9a14-d8553d8ac7a8",
-    "level": "VERIFIED",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/releaseiq/logo.png",
-    "summary": "Monitor ReleaseIQ Performance with NewRelic's ReleaseIQ Agent.",
-    "websiteUrl": null,
-    "keywords": [
-      "releaseiq",
-      "integration",
-      "releaseiq server",
-      "devops automation tool",
-      "newrelic partner",
-      "featured"
-    ],
-    "authors": [
-      "ReleaseIQ",
-      "Hemala Devanan"
-    ],
-    "dashboards": [
-      {
-        "name": "RIQ Dashboard",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/releaseiq/dashboards/riq-dashboard/riq-dashboard.jpg"
-        ]
-      }
-    ],
-    "alerts": [],
-    "documentation": [
-      {
-        "name": "ReleaseIQ with NewRelic setup and configuration docs",
-        "description": "ReleaseIQ is the Unified Enterprise DevOps Platform to Accelerate Software Delivery.\nGet started with newrelic setup and configuration.\n",
-        "url": "https://www.releaseiq.io/use-cases/new-relic/"
-      }
-    ],
-    "installPlans": [
-      {
-        "name": "ReleaseIQ",
-        "id": "third-party-releaseiq"
-      }
-    ]
-  },
-  {
     "title": "Dalli",
     "name": "dalli",
     "description": "## What is Dalli?\n\nRuby client built for accessing Memcached servers.\n\n## Get started!\n\nLeverage community expertise and instantly get value out of your telemetry data. This quickstart automatically instruments Dalli with the New Relic Ruby agent, and allows you to further leverage New Relic's APM capabilities by setting up [custom dashboards](https://docs.newrelic.com/docs/query-your-data/explore-query-data/dashboards/introduction-dashboards/), [errors inbox](https://docs.newrelic.com/docs/apm/apm-ui-pages/errors-inbox/errors-inbox/), [transaction tracing](https://docs.newrelic.com/docs/apm/transactions/transaction-traces/introduction-transaction-traces/), and [service maps](https://docs.newrelic.com/docs/understand-dependencies/understand-system-dependencies/service-maps/introduction-service-maps/).\n\n## More info\n\nCheck out the [documentation](https://docs.newrelic.com/docs/agents/ruby-agent/) to learn more about New Relic monitoring for Dalli.",
@@ -1168,6 +1121,51 @@
     ]
   },
   {
+    "title": "Glassbox",
+    "name": "glassbox",
+    "description": "Glassbox empowers organizations to create frictionless digital journeys for their customers. Our digital experience analytics and Session Replay platform works in real time across mobile apps and websites to accelerate loyalty and growth. Through AI-driven visualization and analytics tools, Glassbox helps teams to prioritize customer experience and digital product enhancements from a single collaborative system.\n\nThe Glassbox quickstart helps you understand the impact of application performance on your customers’ digital experience. Gain deeper contextual insights by combining the data capture and session replay capabilities of Glassbox with New Relic One. Get a view of behavioral insights and KPIs inside a pre-built New Relic dashboard, which links directly to a session replay in Glassbox, so you can find the root cause of the digital issue and fix performance issues faster.\n\nFor more information or support, please go to [glassbox.com](https://www.glassbox.com/)",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/glassbox",
+    "id": "bdb952f3-28db-4ee7-89c6-b00244b0bb73",
+    "level": "COMMUNITY",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/glassbox/logo.png",
+    "summary": "The Glassbox quickstart helps you understand the impact of application performance on your customers’ digital experience.",
+    "websiteUrl": null,
+    "keywords": [
+      "glassbox",
+      "newrelic partner",
+      "digital",
+      "session replay"
+    ],
+    "authors": [
+      "Joseph Counts (New Relic)",
+      "Glassbox"
+    ],
+    "dashboards": [
+      {
+        "name": "Glassbox Digital",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/glassbox/dashboards/dashboard/dashboard01.png"
+        ]
+      }
+    ],
+    "alerts": [],
+    "documentation": [
+      {
+        "name": "Glasbox integraton guide",
+        "description": "Integrate your Glassbox data with New Relic.",
+        "url": "https://support.glassbox.com/hc/en-gb/articles/4405777280401-How-to-Connect-New-Relic"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "glassbox",
+        "id": "third-party-glassbox"
+      }
+    ]
+  },
+  {
     "title": "CircleCI",
     "name": "circleci",
     "description": "## CircleCI Quickstart\n\nThe world’s best software teams use CircleCI to deliver quality code with confidence. As the largest continuous integration and delivery (CI/CD) platform, CircleCI empowers engineers to seamlessly take ideas to execution, at scale. Every feature of our platform is built to fine-tune the entire development process from start to finish.\n\nThis quickstart allows users to view analytical data about their CircleCI jobs within the New Relic dashboard to gain visibility into the performance and health of their continuous integration and deployment pipelines. \n\n### With the CircleCI quickstart you can:\n\n- Monitor real-time CI performance, activity, and health, or track over time.\n- Identify opportunities for optimization.\n\n### The CircleCI quickstart includes a dashboard where users can easily monitor:\n- Total Jobs Ran\n- Job Health (% success)\n- Projects Summary\n- Most Recent Failed Jobs\n- Jobs Ran Per Project\n\n### Requirements\nTo set up the integration, visit the [CircleCI Webhooks documentation](https://circleci.com/docs/2.0/webhooks/).\n\n### Contact us\nShow us how you’re using the quickstart for a chance to win a CircleCI swag kit! Join us on Discuss [here](https://discuss.circleci.com/t/circleci-quickstart-with-new-relic/44022).\nFor more information or support, please go to [support.circleci.com](https://support.circleci.com/)",
@@ -1304,6 +1302,52 @@
       }
     ],
     "installPlans": []
+  },
+  {
+    "title": "ReleaseIQ",
+    "name": "releaseiq",
+    "description": "## What's ReleaseIQ?\nReleaseIQ is the Unified Enterprise DevOps Platform to Accelerate Software Delivery.\nReleaseIQ is focused on solving the problems of multi-tool, team, and product release pipelines.\n\nFor ReleaseIQ intergration with NewRelic, you must have:\n- A New Relic license to be configured in the ReleaseIQ Platform.\n- Configure New Relic in the ReleaseIQ platform Observability tool settings.\n\nReleaseIQ features with New Relic\n- Custom Events: During pipeline execution for each step, events with all step information is sent to New Relic. To enable this feature, you will need to configure a notification to New Relic in each step.\n- Deployment Verification: Deployments can be verified by New Relic based on the New Relic policies configured in deploy step of a pipeline. Then based on the priority, alerts will be sent back to the ReleaseIQ platform. The progress of pipeline to subsequent steps will be based on deployment verification result.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/releaseiq",
+    "id": "88dee43d-f259-4423-9a14-d8553d8ac7a8",
+    "level": "VERIFIED",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/releaseiq/logo.png",
+    "summary": "Monitor ReleaseIQ Performance with NewRelic's ReleaseIQ Agent.",
+    "websiteUrl": null,
+    "keywords": [
+      "releaseiq",
+      "integration",
+      "releaseiq server",
+      "devops automation tool",
+      "newrelic partner"
+    ],
+    "authors": [
+      "ReleaseIQ",
+      "Hemala Devanan"
+    ],
+    "dashboards": [
+      {
+        "name": "RIQ Dashboard",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/releaseiq/dashboards/riq-dashboard/riq-dashboard.jpg"
+        ]
+      }
+    ],
+    "alerts": [],
+    "documentation": [
+      {
+        "name": "ReleaseIQ with NewRelic setup and configuration docs",
+        "description": "ReleaseIQ is the Unified Enterprise DevOps Platform to Accelerate Software Delivery.\nGet started with newrelic setup and configuration.\n",
+        "url": "https://www.releaseiq.io/use-cases/new-relic/"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "ReleaseIQ",
+        "id": "third-party-releaseiq"
+      }
+    ]
   },
   {
     "title": "AWS API Gateway",
@@ -1555,52 +1599,6 @@
       {
         "name": "Datazoom",
         "id": "third-party-datazoom"
-      }
-    ]
-  },
-  {
-    "title": "Glassbox",
-    "name": "glassbox",
-    "description": "Glassbox empowers organizations to create frictionless digital journeys for their customers. Our digital experience analytics and Session Replay platform works in real time across mobile apps and websites to accelerate loyalty and growth. Through AI-driven visualization and analytics tools, Glassbox helps teams to prioritize customer experience and digital product enhancements from a single collaborative system.\n\nThe Glassbox quickstart helps you understand the impact of application performance on your customers’ digital experience. Gain deeper contextual insights by combining the data capture and session replay capabilities of Glassbox with New Relic One. Get a view of behavioral insights and KPIs inside a pre-built New Relic dashboard, which links directly to a session replay in Glassbox, so you can find the root cause of the digital issue and fix performance issues faster.\n\nFor more information or support, please go to [glassbox.com](https://www.glassbox.com/)",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/glassbox",
-    "id": "bdb952f3-28db-4ee7-89c6-b00244b0bb73",
-    "level": "COMMUNITY",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/glassbox/logo.png",
-    "summary": "The Glassbox quickstart helps you understand the impact of application performance on your customers’ digital experience.",
-    "websiteUrl": null,
-    "keywords": [
-      "glassbox",
-      "newrelic partner",
-      "digital",
-      "session replay",
-      "featured"
-    ],
-    "authors": [
-      "Joseph Counts (New Relic)",
-      "Glassbox"
-    ],
-    "dashboards": [
-      {
-        "name": "Glassbox Digital",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/glassbox/dashboards/dashboard/dashboard01.png"
-        ]
-      }
-    ],
-    "alerts": [],
-    "documentation": [
-      {
-        "name": "Glasbox integraton guide",
-        "description": "Integrate your Glassbox data with New Relic.",
-        "url": "https://support.glassbox.com/hc/en-gb/articles/4405777280401-How-to-Connect-New-Relic"
-      }
-    ],
-    "installPlans": [
-      {
-        "name": "glassbox",
-        "id": "third-party-glassbox"
       }
     ]
   },
@@ -13103,58 +13101,6 @@
     ]
   },
   {
-    "title": "Delphix",
-    "name": "delphix",
-    "description": "This Delphix quickstart allows you to get visibility into all your Delphix Virtualization platforms. Use this quickstart together with this [integration](https://github.com/delphix/dct-newrelic-integration)",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/delphix",
-    "id": "98f77308-4ac3-4c55-bc56-eb9d12f52ab7",
-    "level": "COMMUNITY",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/delphix/logo.png",
-    "summary": "Monitor Delphix Virtualization operations with New Relic.",
-    "websiteUrl": null,
-    "keywords": [
-      "delphix",
-      "newrelic partner",
-      "virtualization",
-      "featured"
-    ],
-    "authors": [
-      "Diego Loureda",
-      "Carlos Cuellar"
-    ],
-    "dashboards": [
-      {
-        "name": "Delphix Dashboard",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/delphix/dashboards/my-dashboard/my-dashboard.png"
-        ]
-      }
-    ],
-    "alerts": [
-      {
-        "name": "Delphix Storage Utilization",
-        "details": "Alert to monitor Delphix engines storage utilization",
-        "type": "STATIC",
-        "url": null
-      }
-    ],
-    "documentation": [
-      {
-        "name": "Installation Docs",
-        "description": "Configure the Delphix Virtualization integration for New Relic",
-        "url": "https://github.com/delphix/dct-newrelic-integration"
-      }
-    ],
-    "installPlans": [
-      {
-        "name": "Delphix",
-        "id": "third-party-delphix"
-      }
-    ]
-  },
-  {
     "title": "Episerver CMS",
     "name": "episerver-cms",
     "description": "## Why monitor Episerver CMS?\n\nEpiserver offers a web content management system (CMS), digital marketing, and digital commerce services via its Episerver Digital Experience Platform Cloud Service. New Relic quickstart instruments Episerver CMS with the New Relic .NET agent to instantly monitor Episerver CMS with best-in-class dashboards and alerts.\n\n### Episerver CMS quickstart highlights\nThe New Relic Episerver CMS quickstart has the following features:\n- Dashboards: Our dashboards provide you a clear overview of transactions, errors, and the virtual machine. The dashboards also help you monitor other key indicators like  top 10 failed transactions, latest errors, and more.\n- Alerts: You can get instant alerts on performance metrics like Apdex score, memory usage, and transaction errors.\n\nOur [.NET agent](https://docs.newrelic.com/docs/agents/net-agent/getting-started/compatibility-requirements-net-framework-agent/) supports both .NET Framework and [.NET Core](https://docs.newrelic.com/docs/agents/net-agent/getting-started/net-agent-compatibility-requirements-net-core/), and works with all .NET compatible languages. In addition to the .NET agent, you can also install New Relic’s infrastructure monitoring agent to view the performance of Episerver’s host environment.\n\n### New Relic + Episerver CMS = Optimum performance monitoring\n\nMonitor your Episerver CMS performance with our .NET agent. The integration provides a high-level overview of Episerver CMS, giving you access to code-level details like transaction traces, database queries, and errors. Also, it empowers you to track activities across a large Episerver distributed system.\nNew Relic Episerver CMS quickstart gives you proactive notifications from alerts to respond quickly when your app stops running seamlessly. You can use the query builder to create custom dashboards from your data. \nDownload New Relic Episerver CMS quickstart today to monitor Episerver CMS metrics in real-time. This quickstart is your gateway to instant monitoring of your Episerver CMS.",
@@ -14581,6 +14527,57 @@
       {
         "name": "speedscale",
         "id": "third-party-speedscale-integration"
+      }
+    ]
+  },
+  {
+    "title": "Delphix",
+    "name": "delphix",
+    "description": "This Delphix quickstart allows you to get visibility into all your Delphix Virtualization platforms. Use this quickstart together with this [integration](https://github.com/delphix/dct-newrelic-integration)",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/delphix",
+    "id": "98f77308-4ac3-4c55-bc56-eb9d12f52ab7",
+    "level": "COMMUNITY",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/delphix/logo.png",
+    "summary": "Monitor Delphix Virtualization operations with New Relic.",
+    "websiteUrl": null,
+    "keywords": [
+      "delphix",
+      "newrelic partner",
+      "virtualization"
+    ],
+    "authors": [
+      "Diego Loureda",
+      "Carlos Cuellar"
+    ],
+    "dashboards": [
+      {
+        "name": "Delphix Dashboard",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/delphix/dashboards/my-dashboard/my-dashboard.png"
+        ]
+      }
+    ],
+    "alerts": [
+      {
+        "name": "Delphix Storage Utilization",
+        "details": "Alert to monitor Delphix engines storage utilization",
+        "type": "STATIC",
+        "url": null
+      }
+    ],
+    "documentation": [
+      {
+        "name": "Installation Docs",
+        "description": "Configure the Delphix Virtualization integration for New Relic",
+        "url": "https://github.com/delphix/dct-newrelic-integration"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "Delphix",
+        "id": "third-party-delphix"
       }
     ]
   },
@@ -17764,6 +17761,63 @@
     ]
   },
   {
+    "title": "Akamai DataStream 2",
+    "name": "datastream2",
+    "description": "## Akamai Quickstart\n  \nAkamai Technologies is a leading content delivery network (CDN), cybersecurity, and cloud service provider.\n\n### DataStream 2\n\nDataStream 2 captures performance and security logs from your delivery properties and streams them in near real-time to provide complete monitoring.\n\nFor more information please go to https://techdocs.akamai.com/datastream2/docs\n\n### DataStream 2 quickstart\n\nThe Akamai DataStream 2 quickstart enables you to monitor your performance and security logs in real time. Here are a few of the monitoring tools available with this quickstart:\n- HTTP status code distribution\n- Error rate\n- Log ingest\n- Cache hit retio \n- TLS overhead time ranges\n- Overhead byte ranges\n- HTTP protocol distribution",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/datastream2-akamai",
+    "id": "cb995039-39d8-44d9-97c3-58174a1337f2",
+    "level": "COMMUNITY",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/datastream2-akamai/logo.png",
+    "summary": "The DataStream 2 quickstart will enable you to monitor and analyze your Akamai performance and security logs.",
+    "websiteUrl": null,
+    "keywords": [
+      "akamai",
+      "logs",
+      "cdn",
+      "datastream",
+      "performance",
+      "security",
+      "newrelic partner",
+      "featured"
+    ],
+    "authors": [
+      "Gayatri S (Akamai Technologies)"
+    ],
+    "dashboards": [
+      {
+        "name": "Akamai Datastream2",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/datastream2-akamai/dashboards/datastream2/datastream2-01.jpeg",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/datastream2-akamai/dashboards/datastream2/datastream2-02.jpeg",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/datastream2-akamai/dashboards/datastream2/datastream2-03.jpeg"
+        ]
+      }
+    ],
+    "alerts": [
+      {
+        "name": "Datastream2 - 5xx error greater than 1%",
+        "details": "Alert triggered when the error rate(5xx errors) exceeds 1%",
+        "type": "BASELINE",
+        "url": null
+      }
+    ],
+    "documentation": [
+      {
+        "name": "Installation docs",
+        "description": "Configure Akamai Datastream2 streaming logs to New Relic",
+        "url": "https://techdocs.akamai.com/datastream2/docs/stream-logs/"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "Datastream2",
+        "id": "third-party-datastream2-akamai"
+      }
+    ]
+  },
+  {
     "title": "Apple macOS (Beta)",
     "name": "macos",
     "description": "## Apple macOS?\nWith New Relic's infrastructure monitoring agent for macOS, you can monitor individual desktops or servers to analyze how your applications are performing as a whole. The macOS agent can run on your own hardware or in cloud systems such as AWS.\n\n## Supported versions\n- macOS 10.14 (Mohave), 10.15 (Catalina), 11 (Big Sur)\n- 64-bit x86 processor (M1 processor is not supported yet)",
@@ -18710,61 +18764,6 @@
       {
         "name": "AWS-Infrastructure-Monitoring",
         "id": "aws-infrastructure-monitoring"
-      }
-    ]
-  },
-  {
-    "title": "Akamai Datastream2",
-    "name": "datastream2",
-    "description": "DataStream2 captures performance and security logs from your delivery properties and streams them in near real-time to provide complete monitoring.\n\nFor more information please go to https://techdocs.akamai.com/datastream2/docs",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/datastream2-akamai",
-    "id": "cb995039-39d8-44d9-97c3-58174a1337f2",
-    "level": "COMMUNITY",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/datastream2-akamai/logo.png",
-    "summary": "The Datastream2 quickstart will enable you to monitor and analyze your performance and security logs.",
-    "websiteUrl": null,
-    "keywords": [
-      "akamai",
-      "logs",
-      "cdn",
-      "datastream",
-      "performance",
-      "security"
-    ],
-    "authors": [
-      "Gayatri S (Akamai Technologies)"
-    ],
-    "dashboards": [
-      {
-        "name": "Akamai Datastream2",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/datastream2-akamai/dashboards/datastream2/datastream2-01.jpeg",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/datastream2-akamai/dashboards/datastream2/datastream2-02.jpeg",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/datastream2-akamai/dashboards/datastream2/datastream2-03.jpeg"
-        ]
-      }
-    ],
-    "alerts": [
-      {
-        "name": "Datastream2 - 5xx error greater than 1%",
-        "details": "Alert triggered when the error rate(5xx errors) exceeds 1%",
-        "type": "BASELINE",
-        "url": null
-      }
-    ],
-    "documentation": [
-      {
-        "name": "Installation docs",
-        "description": "Configure Akamai Datastream2 streaming logs to New Relic",
-        "url": "https://techdocs.akamai.com/datastream2/docs/stream-logs/"
-      }
-    ],
-    "installPlans": [
-      {
-        "name": "Datastream2",
-        "id": "third-party-datastream2-akamai"
       }
     ]
   },
