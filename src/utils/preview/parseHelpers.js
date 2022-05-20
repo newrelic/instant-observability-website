@@ -25,14 +25,11 @@ const parseInstallPlans = (installPlans) => {
 };
 
 const parseQuickstartFiles = (quickstartFiles) => {
-  let quickstartContent = {};
-  let config;
+  const quickstartContent = {};
 
-  quickstartFiles.forEach((file) => {
-    if (file.type === 'yaml' && file.fileName.includes('config')) {
-      config = file;
-    }
-  });
+  const config = quickstartFiles.find(
+    (file) => file.type === 'yaml' && file.fileName.includes('config')
+  );
 
   //build the packUrl since it is not part of the raw github file contents
   //assumes the filePath is always directly under 'quickstarts/'
