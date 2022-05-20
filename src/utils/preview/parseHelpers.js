@@ -1,5 +1,5 @@
 const yaml = require('js-yaml');
-
+import { QUICKSTART_REPO_URL } from '../../data/constants';
 /**
  * @typedef {import('./fetchHelpers').FileMetadata} FileMetadata
  */
@@ -24,6 +24,11 @@ const parseInstallPlans = (installPlans) => {
   return parsedInstallPlans;
 };
 
+/**
+ * Parses quickstart files
+ * @param {FileMetadata[]} - quickstartFiles
+ * @returns {Object} A quickstart object to be rendered by QuickstartDetails
+ */
 const parseQuickstartFiles = (quickstartFiles) => {
   const quickstartContent = {};
 
@@ -33,14 +38,11 @@ const parseQuickstartFiles = (quickstartFiles) => {
 
   //build the packUrl since it is not part of the raw github file contents
   //assumes the filePath is always directly under 'quickstarts/'
-  const packUrl =
-    'https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/' +
-    config.filePath.split('/config')[0];
+  const packUrl = `${QUICKSTART_REPO_URL}/${config.filePath.split('/config')[0]}`;
 
   let loadYaml = yaml.load(config.content);
 
   //iterate through the array of documentation objects to trim new lines
-
   quickstartFiles.forEach((file) => {
     if (file.type === 'image' && file.fileName === loadYaml.icon) {
       quickstartContent.logoUrl = file.content;
@@ -48,24 +50,24 @@ const parseQuickstartFiles = (quickstartFiles) => {
   });
 
   const parsedQuickstartDocs =
-    loadYaml.documentation?.length > 0 ? parseDocs(loadYaml.documentation) : [];
+    loadYaml?.documentation?.length > 0 ? parseDocs(loadYaml.documentation) : [];
   const parsedInstallPlans =
-    loadYaml.installPlans?.length > 0
+    loadYaml?.installPlans?.length > 0
       ? parseInstallPlans(loadYaml.installPlans)
       : [];
 
-  quickstartContent.authors = loadYaml.authors ?? [];
-  quickstartContent.description = loadYaml.description?.trim() ?? '';
+  quickstartContent.authors = loadYaml?.authors ?? ['Placeholder author'];
+  quickstartContent.description = loadYaml?.description?.trim() ?? 'Placeholder description';
   quickstartContent.documentation = parsedQuickstartDocs;
-  quickstartContent.id = loadYaml.id ?? '';
+  quickstartContent.id = loadYaml?.id ?? '';
   quickstartContent.installPlans = parsedInstallPlans;
-  quickstartContent.keywords = loadYaml.keywords ?? [];
-  quickstartContent.level = loadYaml.level ?? '';
-  quickstartContent.name = loadYaml.slug ?? '';
+  quickstartContent.keywords = loadYaml?.keywords ?? ['Placeholder keyword'];
+  quickstartContent.level = loadYaml?.level.replace(' ', '_').toUpperCase() ?? 'COMMUNITY';
+  quickstartContent.name = loadYaml?.slug ?? '';
   quickstartContent.packUrl = packUrl ?? '';
   quickstartContent.relatedResources = []; //we don't get these from the config.yml
-  quickstartContent.summary = loadYaml.summary?.trim() ?? '';
-  quickstartContent.title = loadYaml.title ?? '';
+  quickstartContent.summary = loadYaml?.summary?.trim() ?? 'Placeholder summary';
+  quickstartContent.title = loadYaml?.title ?? 'Placeholder title';
 
   return quickstartContent;
 };
@@ -120,7 +122,7 @@ const parseAlertFiles = (alertFiles) => {
  * @param {FileMetadata[]} rawFiles - An array of FileContents for a particular quickstart
  * @returns {Object} A quickstart object ready for display within the `QuickstartDetails` component.
  */
-const parseFiles = (rawFiles) => {
+const parseRawQuickstartFiles = (rawFiles) => {
   let dashboardFiles = [];
   let alertFiles = [];
   let quickstartDirs = {};
@@ -147,19 +149,11 @@ const parseFiles = (rawFiles) => {
   return { ...quickstartDirs, ...quickstart };
 };
 
-/**
- * Async function handles parsing fetched files from pull request
- * Transforms them into shape needed for QuickstartDetails.js
- **/
-const parseQuickstartFilesFromPR = (rawFileContent) => {
-  return parseFiles(rawFileContent);
-};
-
 module.exports = {
   parseDocs,
   parseInstallPlans,
   parseQuickstartFiles,
   parseDashboardFiles,
   parseAlertFiles,
-  parseQuickstartFilesFromPR,
+  parseRawQuickstartFiles,
 };
