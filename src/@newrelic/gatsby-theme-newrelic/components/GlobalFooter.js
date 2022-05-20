@@ -36,6 +36,34 @@ const GlobalFooter = ({ className }) => {
     }
   `);
 
+  // these icons will be hidden on mobile view
+  const renderSocialIcons = () => {
+    return (
+      SOCIALS.map((social) => (
+        <ExternalLink
+          key={social.title}
+          href={social.href}
+          css={css`
+            @media screen and (max-width: ${MOBILE_BREAKPOINT}) {
+              display: none;
+            }
+          `}
+        >
+          <Icon
+            name={social.title}
+            size="24px"
+            css={css`
+              outline: none;
+              stroke-width: 0px;
+              color: var(--secondary-text-color);
+              fill: var(--secondary-text-color);
+            `}
+          />
+        </ExternalLink>
+      ))
+    )
+  }
+
   return (
     <footer
       data-swiftype-index={false}
@@ -174,7 +202,7 @@ const GlobalFooter = ({ className }) => {
 
                 > span {
                   grid-column: span 7;
-                  margin-bottom: 14px;
+                  margin-bottom: 2rem;
                 }
 
                 > a {
@@ -185,20 +213,41 @@ const GlobalFooter = ({ className }) => {
           >
             <span>Follow us</span>
 
-            {SOCIALS.map((social) => (
-              <ExternalLink key={social.title} href={social.href}>
-                <Icon
-                  name={social.title}
-                  size="24px"
-                  css={css`
-                    outline: none;
-                    stroke-width: 0px;
-                    color: var(--secondary-text-color);
-                    fill: var(--secondary-text-color);
-                  `}
-                />
-              </ExternalLink>
-            ))}
+            {/* hide icons on mobile view and display them on large screens */}
+            {renderSocialIcons()}
+
+            {/* display icons on mobile view and hide on large screens */}
+            <div
+              css={css`
+                display: none;
+                @media screen and (max-width: ${MOBILE_BREAKPOINT}) {
+                  padding: 0;
+                  row-gap: 2rem;
+                  column-gap: 1.5rem;
+                  flex-wrap: wrap;
+                  flex-direction: row;
+                  max-width: 10.5rem;
+                  display: flex;
+                  margin-bottom: 1rem;
+                  justify-content: flex-start;
+                }
+              `}
+            >
+              {SOCIALS.map((social) => (
+                <ExternalLink key={social.title} href={social.href}>
+                  <Icon
+                    name={social.title}
+                    size="24px"
+                    css={css`
+                      outline: none;
+                      stroke-width: 0px;
+                      color: var(--secondary-text-color);
+                      fill: var(--secondary-text-color);
+                    `}
+                  />
+                </ExternalLink>
+              ))}
+            </div>
           </div>
           <div
             css={css`
