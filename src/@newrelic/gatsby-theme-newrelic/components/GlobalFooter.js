@@ -356,6 +356,7 @@ const GlobalFooter = ({ className }) => {
               @media screen and (max-width: ${MOBILE_BREAKPOINT}) {
                 margin-top: 2rem;
                 margin-left: 40px;
+                margin-bottom: 2rem;
               }
             `}
           >
