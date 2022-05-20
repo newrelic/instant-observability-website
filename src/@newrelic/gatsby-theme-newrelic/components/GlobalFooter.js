@@ -233,10 +233,12 @@ const GlobalFooter = ({ className }) => {
               @media screen and (max-width: ${MOBILE_BREAKPOINT}) {
                 margin-left: 40px;
                 flex-direction: column;
+                display: grid;
+                grid-template-columns: 10rem 10rem;
 
                 a {
                   white-space: nowrap;
-                  margin-bottom: 32px;
+                  margin-bottom: 1rem;
                 }
               }
             `}
@@ -279,12 +281,16 @@ const GlobalFooter = ({ className }) => {
               @media screen and (max-width: ${MOBILE_BREAKPOINT}) {
                 margin-left: 40px;
                 justify-content: start;
+                display: grid;
+                grid-template-columns: 10rem 10rem;
+                justify-items: left;
+                margin-top: 2rem;
 
                 grid-template-column: 1fr;
                 grid-auto-flow: row;
 
                 > a {
-                  margin-bottom: 32px;
+                  margin-bottom: 1rem;
                 }
               }
             `}
@@ -295,11 +301,12 @@ const GlobalFooter = ({ className }) => {
           </div>
           <div
             css={css`
-              margin: 32px 0px 20px 0px;
+              margin-top: 1.25rem;
               font-size: 0.875rem;
               line-height: 1.25rem;
               @media screen and (max-width: ${MOBILE_BREAKPOINT}) {
-                margin: 32px 0px 20px 40px;
+                margin-top: 2rem;
+                margin-left: 40px;
               }
             `}
           >
