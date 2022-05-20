@@ -1,5 +1,9 @@
 const yaml = require('js-yaml');
 
+/**
+ * @typedef {import('./fetchHelpers').FileMetadata} FileMetadata
+ */
+
 const parseDocs = (docs) => {
   const parsedDocs = docs.map((doc) => {
     doc.description = doc.description?.trim();
@@ -69,53 +73,63 @@ const parseQuickstartFiles = (quickstartFiles) => {
   return quickstartContent;
 };
 
-const parseDashboardFiles = (dashboardFiles) => {
-  const dashboards = {};
-  //split each filepath to get its dashboard dir
-  dashboardFiles.forEach((file) => {
-    const getDir = file.filePath.split('/dashboards/')[1].split('/')[0];
-    //add it to the dashboard dirs object as a key if new
-    //or update it if not
-    if (!dashboards[getDir]) {
-      dashboards[getDir] = { name: '', description: '', screenshots: [] };
-    }
-    //parse and construct the dashboard object and push it to the array
-    if (file.type === 'json') {
-      const dashboardContent = JSON.parse(file.content);
-      dashboards[getDir]['name'] = dashboardContent.name ?? '';
-      dashboards[getDir]['description'] = dashboardContent.description ?? '';
-    }
-    if (file.type === 'image') {
-      dashboards[getDir]['screenshots'].push(file.content);
-    }
+/**
+ * Parses dashboard configuration files and screenshots
+ * @param {FileMetadata[]}
+ * @returns {Object[]} An array of quickstart dashboard objects, Ex: { name: '', description: '', screenshots: [''] }
+ */
+const parseDashboardFiles = (files) => {
+  const configs = files.filter((d) => d.filePath.includes('.json'));
+  const screenshots = files.filter((d) => !d.filePath.includes('.json'));
+  return configs.map((dashFileMetadata) => {
+    const parentDir = dashFileMetadata.filePath.split(
+      dashFileMetadata.fileName
+    )[0];
+
+    const { name = '', description = '' } = JSON.parse(
+      dashFileMetadata.content
+    );
+
+    return {
+      name,
+      description,
+      screenshots: screenshots
+        .filter((s) => s.filePath.includes(parentDir))
+        .map(({ content }) => content),
+    };
   });
-  return Object.values(dashboards);
 };
 
+/**
+ * Parses the details, name, and type fields out of an alert config
+ * @param {FileContent[]} alertFiles - alert config files
+ * @returns {Object[]} Ex: { details: '', name: '', type: '' }
+ */
 const parseAlertFiles = (alertFiles) => {
-  let alerts = [];
-  alertFiles.forEach((file) => {
+  return alertFiles.map((file) => {
     const loadYaml = yaml.load(file.content);
 
     //parse and build alert object and add it to the array
-    const alert = {
+    return {
       details: loadYaml.description?.trim() ?? '',
       name: loadYaml.name?.trim() ?? '',
       type: loadYaml.type?.trim() ?? '',
     };
-    alerts.push(alert);
   });
-
-  return alerts;
 };
 
-const parseFiles = (rawFile) => {
+/**
+ * Parses quickstart files to build an object similar to the quickstart definition in `src/data/quickstarts.json`
+ * @param {FileMetadata[]} rawFiles - An array of FileContents for a particular quickstart
+ * @returns {Object} A quickstart object ready for display within the `QuickstartDetails` component.
+ */
+const parseFiles = (rawFiles) => {
   let dashboardFiles = [];
   let alertFiles = [];
   let quickstartDirs = {};
   let quickstartFiles = [];
 
-  for (const file of rawFile) {
+  for (const file of rawFiles) {
     if (file.filePath.includes('/dashboards/')) {
       dashboardFiles.push(file);
     } else if (file.filePath.includes('/alerts/')) {
@@ -133,16 +147,13 @@ const parseFiles = (rawFile) => {
   const quickstart = parseQuickstartFiles(quickstartFiles);
 
   //merge together the parsed quickstart content and the alerts/dashboard arrrays
-  const parsedQuickstart = { ...quickstartDirs, ...quickstart };
-
-  return parsedQuickstart;
+  return { ...quickstartDirs, ...quickstart };
 };
 
 /**
  * Async function handles parsing fetched files from pull request
  * Transforms them into shape needed for QuickstartDetails.js
  **/
-
 const parseQuickstartFilesFromPR = (rawFileContent) => {
   return parseFiles(rawFileContent);
 };

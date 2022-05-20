@@ -32,9 +32,7 @@ const usePullRequestQuickstart = (location) => {
           quickstartPath
         );
 
-        const parsedQuickstart = await parseQuickstartFilesFromPR(
-          rawFileContent
-        );
+        const parsedQuickstart = parseQuickstartFilesFromPR(rawFileContent);
 
         setQuickstart(parsedQuickstart);
       } catch (error) {

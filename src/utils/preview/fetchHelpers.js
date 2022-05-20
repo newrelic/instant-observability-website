@@ -3,7 +3,7 @@ import { GITHUB_API_BASE_URL, GITHUB_API_PULL_URL } from '../../data/constants';
 /**
  * Recursive function to walk the file system in Github
  * @param {String} url - Github API URL to walk the file system
- * @returns {Array} array of files
+ * @returns {Promise<Array>} array of files
  **/
 export const iterateDirs = async (url) => {
   const response = await fetch(url);
@@ -47,11 +47,19 @@ export const getFileType = (fileName) => {
 };
 
 /**
+ * @typedef {Object} FileMetadata
+ * @property {string} type - the type of the file 'yaml', 'json', or 'image'
+ * @property {string} filePath - the path to the file within the newrelic-quickstarts repository
+ * @property {string} fileName - the name of the file, Ex: 'config.yml'
+ * @property {Object} content - the content of the file or a source URL if the type is 'image'
+ */
+
+/**
  * Function determines the type of content depending on type of image
  * @param {Object} - Metadata object to parse
  * @param {Object}.download_url - raw file URL
  * @param {Object}.name - name of the file
- * @returns {Object} - Object of file containing type, fileName, and content of
+ * @returns {Promise<FileMetadata>} - Object of file containing type, fileName, and content of
  * file
  **/
 export const determineContent = async ({
@@ -83,7 +91,7 @@ export const determineContent = async ({
 /**
  * Function grabs the raw content from files
  * @param {Array} fileAggregator - array of Github metadata objects
- * @returns {Promise<Array<Object>>} - array of objects containg raw content to parse
+ * @returns {Promise<Object[]>} - array of objects containg raw content to parse
  *
  **/
 export const getRawContent = (fileAggregator) => {
@@ -92,17 +100,17 @@ export const getRawContent = (fileAggregator) => {
 
 /**
  * Async function to get list of files from localhost
- * @param {number} port - Optional port env variable from the quickstart preview server. Defaults to 3000 
- * @returns {Array<string>} - List of file names to be used to fetch the files from the local server
+ * @param {number} port - Optional port env variable from the quickstart preview server. Defaults to 3000
+ * @returns {Promise<string[]>} - List of file names to be used to fetch the files from the local server
  */
- export const getFileListFromLocal = async (port) => {
+export const getFileListFromLocal = async (port) => {
   const response = await fetch(`http://localhost:${port}`);
 
   if (response.status !== 200 || !response.ok) {
     throw new Error(
       `Response from localhost came back with status ${response.status}\n`
     );
-  };
+  }
 
   const fileList = await response.json();
 
@@ -111,19 +119,19 @@ export const getRawContent = (fileAggregator) => {
 
 /**
  * Async function to get list of files from localhost
- * @param {Array<string>} fileList - List of file paths to fetch files from localhost
- * @param {number} port - Optional port env variable from the quickstart preview server. Defaults to 3000 
- * @returns {Array<object>} - Array of objects containing metadata and file contents
+ * @param {string[]} fileList - List of file paths to fetch files from localhost
+ * @param {number} port - Optional port env variable from the quickstart preview server. Defaults to 3000
+ * @returns {Promise<object[]>} - Array of objects containing metadata and file contents
  */
 export const getQuickstartFilesFromLocal = async (port) => {
   const fileList = await getFileListFromLocal(port);
 
-  const data = fileList.map(path => {
+  const data = fileList.map((path) => {
     return {
       path,
       name: path.split('/').pop(),
-      download_url: `http://localhost:${port}/${path}`
-    }
+      download_url: `http://localhost:${port}/${path}`,
+    };
   });
 
   return getRawContent(data);
@@ -131,6 +139,9 @@ export const getQuickstartFilesFromLocal = async (port) => {
 
 /**
  * Async function handles fetching changed files in pull request from Github
+ * @param {number} prNumber - The Github PR number
+ * @param {string} quickstartPath - the local path to a quickstart within the quickstart/ directory
+ * @returns {Promise<FileMetadata[]>}
  **/
 export const getQuickstartFilesFromPR = async (prNumber, quickstartPath) => {
   // Hit the Github API for SHA that references the PR branch
