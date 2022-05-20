@@ -10,6 +10,8 @@ import React from 'react';
 import { css } from '@emotion/react';
 import useThemeTranslation from '@newrelic/gatsby-theme-newrelic/src//hooks/useThemeTranslation';
 
+const HOME_LINK = 'https://newrelic.com';
+
 const MOBILE_BREAKPOINT = '920px';
 
 const getCurrentYear = () => {
@@ -208,7 +210,10 @@ const GlobalFooter = ({ className }) => {
               }
             `}
           >
-            <NewLogo />
+
+            <ExternalLink href={HOME_LINK}>
+              <NewLogo />
+            </ExternalLink>
           </div>
 
           <div

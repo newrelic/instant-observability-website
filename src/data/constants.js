@@ -84,6 +84,10 @@ export const RESOURCES = [
     href: 'https://newrelic.com/security',
   },
   {
+    title: 'ESG',
+    href: 'https://newrelic.com/about/environmental-social-governance',
+  },
+  {
     title: 'Contact Us',
     href: 'https://newrelic.com/about/contact-us',
   },
