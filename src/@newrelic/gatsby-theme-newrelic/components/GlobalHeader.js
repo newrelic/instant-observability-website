@@ -113,6 +113,9 @@ const GlobalHeader = ({ className, activeSite }) => {
               display: block;
               background: #1d252c;
             }
+            @media screen and (max-width: ${NAV_BREAKPOINT}) {
+              display: none;
+            }
           `,
         ]}
       >
@@ -124,7 +127,7 @@ const GlobalHeader = ({ className, activeSite }) => {
             max-width: 1248px;
             justify-content: space-between;
             padding: 0 var(--site-content-padding);
-            height: 96px;
+            height: 92px;
             align-items: center;
           `}
         >

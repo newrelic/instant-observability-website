@@ -62,6 +62,9 @@ const LandingBanner = ({ quickstart, className, location }) => {
             grid-template-columns: 1fr;
             grid-template-rows: 0.25fr 0.25fr auto auto;
           }
+          @media (max-width: 960px) {
+            padding: 0 var(--site-content-padding);
+          }
         `}
       >
         <Breadcrumbs segments={breadcrumbs} />

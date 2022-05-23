@@ -37,8 +37,12 @@ const BannerBackground = ({ children }) => {
       >
         <div
           css={css`
+            width: 6rem;
+            margin-top: -8rem;
+            margin-right: 92%;
+            position: absolute;
 
-            @media (max-width: 1440px) {
+            @media (max-width: 1310px) {
               display: none;
             }
           `}
@@ -52,8 +56,12 @@ const BannerBackground = ({ children }) => {
         {children}
         <div
           css={css`
+            width: 6rem;
+            margin-top: -5rem;
+            margin-left: 65%;
+            position: absolute;
 
-            @media (max-width: 1440px) {
+            @media (max-width: 1310px) {
               display: none;
             }
           `}
