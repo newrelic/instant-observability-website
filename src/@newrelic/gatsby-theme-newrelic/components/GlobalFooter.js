@@ -97,7 +97,10 @@ const GlobalFooter = ({ className }) => {
           css={css`
             display: grid;
             background: #1d252c;
-            justify-content: space-evenly;
+            justify-content: space-between;
+            max-width: 1248px;
+            margin: 0 auto;
+            padding: 0 var(--site-content-padding);
 
             /* Sets up the sizing of the columns */
             grid-template-columns: min-content 192px;
@@ -137,7 +140,7 @@ const GlobalFooter = ({ className }) => {
               }
 
               @media screen and (max-width: ${MOBILE_BREAKPOINT}) {
-                margin: 40px 0px 0px 40px;
+                margin-top: 40px;
 
                 justify-content: flex-start;
                 grid-template-rows: 1fr;
@@ -195,7 +198,6 @@ const GlobalFooter = ({ className }) => {
                 display: grid;
                 justify-content: start;
                 margin-top: 40px;
-                margin-left: 40px;
 
                 grid-template-rows: 1fr max-content;
                 grid-auto-flow: column;
@@ -255,7 +257,7 @@ const GlobalFooter = ({ className }) => {
               margin: 64px 0px 0px 0px;
 
               @media screen and (max-width: ${MOBILE_BREAKPOINT}) {
-                margin: 32px 0px 20px 40px;
+                margin: 32px 0px 0px 0px;
               }
             `}
           >
@@ -280,7 +282,6 @@ const GlobalFooter = ({ className }) => {
               }
 
               @media screen and (max-width: ${MOBILE_BREAKPOINT}) {
-                margin-left: 40px;
                 flex-direction: column;
                 display: grid;
                 grid-template-columns: 10rem 10rem;
@@ -328,7 +329,6 @@ const GlobalFooter = ({ className }) => {
               }
 
               @media screen and (max-width: ${MOBILE_BREAKPOINT}) {
-                margin-left: 40px;
                 justify-content: start;
                 display: grid;
                 grid-template-columns: 10rem 10rem;
@@ -355,7 +355,6 @@ const GlobalFooter = ({ className }) => {
               line-height: 1.25rem;
               @media screen and (max-width: ${MOBILE_BREAKPOINT}) {
                 margin-top: 2rem;
-                margin-left: 40px;
                 margin-bottom: 2rem;
               }
             `}
