@@ -13,7 +13,6 @@ const LandingPageFooter = ({
   trackQuickstart,
   tessenSupportTrack,
 }) => {
-  console.log(quickstart);
   const quickstartUrl = quickstart.packUrl || QUICKSTARTS_REPO;
   return (
     <>

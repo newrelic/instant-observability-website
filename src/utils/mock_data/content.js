@@ -9,7 +9,7 @@ slug: quickstart-slug
 description: example description 
 summary: example summary 
 icon: logo.png
-level: New Relic 
+level: NEW_RELIC
 authors:
   - New Relic
 title: Generic Quickstart
@@ -25,7 +25,7 @@ id: generic-quickstart-id-1
 slug: quickstart-slug
 description: example description 
 icon: logo.png
-level: New Relic 
+level: NEW_RELIC 
 authors:
   - New Relic
 keywords:
@@ -82,7 +82,7 @@ const expectedConfigOutput = {
     'https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/mock_quickstart_1',
 
   id: 'generic-quickstart-id-1',
-  level: 'New Relic',
+  level: 'NEW_RELIC',
   logoUrl: 'fake/path/to/logo.png',
   summary: 'example summary',
   keywords: ['os', 'operating system'],

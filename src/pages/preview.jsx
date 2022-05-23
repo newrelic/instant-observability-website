@@ -16,7 +16,7 @@ const PreviewPage = ({ location }) => {
   }
 
   const data = { quickstarts: contentFiles };
-  console.log(data);
+
   return !contentFiles ? <Spinner /> : <QuickstartDetails data={data} location={location} />;
 };
 
