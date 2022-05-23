@@ -1,5 +1,5 @@
 const yaml = require('js-yaml');
-import { QUICKSTART_REPO_URL } from '../../data/constants';
+const QUICKSTART_REPO_URL = require('../../data/constants').QUICKSTART_REPO_URL;
 /**
  * @typedef {import('./fetchHelpers').FileMetadata} FileMetadata
  */

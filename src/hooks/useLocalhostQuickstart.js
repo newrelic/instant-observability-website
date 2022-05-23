@@ -24,9 +24,7 @@ const useLocalhostQuickstart = (location) => {
         navigate('/');
         return;
       }
-      /**
-       * TODO: Uncomment these lines and delete setQuickstart(rawFileContent) once parsing is complete
-       */
+
       const quickstart = await parseRawQuickstartFiles(rawFileContent);
       setQuickstart(quickstart);
     };
