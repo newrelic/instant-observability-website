@@ -1,5 +1,5 @@
-const parseHelpers = require('../preview/parseHelpers');
-const {
+import * as parseHelpers from '../preview/parseHelpers';
+import {
   expectedConfigOutput,
   missingConfigOutput,
   configContentMissingFields,
@@ -12,9 +12,7 @@ const {
   installPlansOutput,
   documentationInput,
   documentationOutput,
-} = require('../mock_data/content');
-
-console.log(baseFiles);
+} from '../mock_data/content';
 
 describe('parseHelpers', () => {
   afterEach(() => {

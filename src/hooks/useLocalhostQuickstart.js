@@ -1,11 +1,11 @@
 import { useEffect, useState } from 'react';
 
 import { getQuickstartFilesFromLocal } from '../utils/preview/fetchHelpers';
-//import { parseQuickstartFiles } from '../utils/preview/parseHelpers';
+import { parseRawQuickstartFiles } from '../utils/preview/parseHelpers';
 import { navigate } from 'gatsby';
 
 const useLocalhostQuickstart = (location) => {
-  const [quickstart, setQuickstart] = useState([]);
+  const [quickstart, setQuickstart] = useState();
 
   useEffect(() => {
     const urlParams = new URLSearchParams(location.search);
@@ -21,15 +21,14 @@ const useLocalhostQuickstart = (location) => {
       try {
         rawFileContent = await getQuickstartFilesFromLocal(port);
       } catch (err) {
+        console.log(err.message);
+        console.log('Please make sure your local preview server is running.')
         navigate('/');
         return;
       }
-      /**
-       * TODO: Uncomment these lines and delete setQuickstart(rawFileContent) once parsing is complete
-       */
-      //const quickstart = await parseQuickstartFiles(rawFileContent);
-      //setQuickstart(quickstart);
-      setQuickstart(rawFileContent);
+
+      const quickstart = await parseRawQuickstartFiles(rawFileContent);
+      setQuickstart(quickstart);
     };
 
     fetchFiles();

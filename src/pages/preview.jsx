@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-
+import QuickstartDetails from '../templates/QuickstartDetails.js';
+import { Spinner } from '@newrelic/gatsby-theme-newrelic';
 import usePullRequestQuickstart from '../hooks/usePullRequestQuickstart';
 import useLocalhostQuickstart from '../hooks/useLocalhostQuickstart';
 
@@ -14,8 +15,9 @@ const PreviewPage = ({ location }) => {
     contentFiles = usePullRequestQuickstart(location);
   }
 
-  console.log('Parsed quickstart content:', contentFiles);
-  return <span>oh hai</span>;
+  const data = { quickstarts: contentFiles };
+
+  return !contentFiles ? <Spinner /> : <QuickstartDetails data={data} location={location} />;
 };
 
 PreviewPage.propTypes = {

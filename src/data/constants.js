@@ -139,3 +139,6 @@ export const GITHUB_API_BASE_URL =
 
 export const GITHUB_API_PULL_URL =
   'https://api.github.com/repos/newrelic/newrelic-quickstarts/pulls';
+
+export const QUICKSTART_REPO_URL =
+  'https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts';

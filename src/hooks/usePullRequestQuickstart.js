@@ -1,11 +1,11 @@
 import { useEffect, useState } from 'react';
 
 import { getQuickstartFilesFromPR } from '../utils/preview/fetchHelpers';
-import { parseQuickstartFilesFromPR } from '../utils/preview/parseHelpers';
+import { parseRawQuickstartFiles } from '../utils/preview/parseHelpers';
 import { navigate } from 'gatsby';
 
 const usePullRequestQuickstart = (location) => {
-  const [quickstart, setQuickstart] = useState([]);
+  const [quickstart, setQuickstart] = useState();
 
   useEffect(() => {
     // grab query parameters to determine if it is a local preview or
@@ -32,7 +32,7 @@ const usePullRequestQuickstart = (location) => {
           quickstartPath
         );
 
-        const parsedQuickstart = parseQuickstartFilesFromPR(rawFileContent);
+        const parsedQuickstart = parseRawQuickstartFiles(rawFileContent);
 
         setQuickstart(parsedQuickstart);
       } catch (error) {
