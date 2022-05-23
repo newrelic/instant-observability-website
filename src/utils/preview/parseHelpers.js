@@ -93,13 +93,16 @@ export const parseDashboardFiles = (files) => {
       dashFileMetadata.fileName
     )[0];
 
-    const { name = '', description = '' } = JSON.parse(
-      dashFileMetadata.content
-    );
+    let dashboard = {};
+    try {
+      dashboard = JSON.parse(dashFileMetadata.content);
+    } catch (err) {
+      console.error(err);
+    }
 
     return {
-      name,
-      description,
+      name: dashboard?.name ?? 'Placeholder name',
+      description: dashboard?.description ?? 'Placeholder description',
       screenshots: screenshots
         .filter((s) => s.filePath.includes(parentDir))
         .map(({ content }) => content),
@@ -114,13 +117,13 @@ export const parseDashboardFiles = (files) => {
  */
 export const parseAlertFiles = (alertFiles) => {
   return alertFiles.map((file) => {
-    const loadYaml = yaml.load(file.content);
+    const loadYaml = yaml.loadAll(file.content)[0];
 
     //parse and build alert object and add it to the array
     return {
-      details: loadYaml.description?.trim() ?? '',
-      name: loadYaml.name?.trim() ?? '',
-      type: loadYaml.type?.trim() ?? '',
+      details: loadYaml?.description?.trim() ?? 'Placeholder description',
+      name: loadYaml?.name?.trim() ?? 'Placeholder name',
+      type: loadYaml?.type?.trim() ?? 'Placeholder type',
     };
   });
 };
