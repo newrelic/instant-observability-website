@@ -21,6 +21,8 @@ const useLocalhostQuickstart = (location) => {
       try {
         rawFileContent = await getQuickstartFilesFromLocal(port);
       } catch (err) {
+        console.log(err.message);
+        console.log('Please make sure your local preview server is running.')
         navigate('/');
         return;
       }
