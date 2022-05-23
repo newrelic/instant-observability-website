@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import { css } from '@emotion/react';
 import AnimatedText from './AnimatedText';
+import DoubleUnderlineSVG from './Icons/DoubleUnderlineSVG'
 
 const MOBILE_BREAKPOINT = '800px';
 
@@ -35,7 +36,7 @@ const GetStartedFooter = ({
         height: 120px;
 
         display: flex;
-        justify-content: space-evenly;
+        justify-content: center;
         align-items: center;
 
         font-size: 33px;
@@ -49,20 +50,44 @@ const GetStartedFooter = ({
           font-size: 44px;
           line-height: 50px;
           letter: -1.5%;
+         
         }
 
         @media screen and (max-width: ${MOBILE_BREAKPOINT}) {
-          height: 315px;
+          padding: 4rem 2.5rem 4rem 2.5rem;
+          height: 425px;
           flex-direction: column;
 
           > h3 {
-            margin-top: 34px;
             width: 296px;
             font-size: 36px;
-            line-height: 40px;
+            line-height: 2.875rem;
             line-spacing: -0.015em;
+            margin-bottom: 3.375rem;
+            font-size: 2.75rem;
+            letter-spacing: -0.015em;
+           
+          }
+
+          .Underline {
+            left: 0;
+            top: 100%;
+            position: absolute;
+            width: 100%;
           }
         }
+
+        @media screen and (min-width: ${MOBILE_BREAKPOINT}) {
+          h3 {
+          padding-right: 180px;
+          }
+        .Underline {
+          position: absolute;
+          right: 0;
+          width: 100%;
+          display: block;
+        }
+      }
       `}
     >
       <h3
@@ -70,7 +95,15 @@ const GetStartedFooter = ({
           margin-bottom: 0px;
         `}
       >
-        Get started today for free.
+        Get started today&nbsp;
+        <span
+        css={css`
+        white-space: nowrap;
+        position: relative;
+        `}>
+        for free.
+          <DoubleUnderlineSVG className="Underline" />
+          </span>
       </h3>
       <div
         css={css`
@@ -122,7 +155,7 @@ const GetStartedFooter = ({
               : '--brand-secondary-text-color'}
         );
           background-color: var(
-              --nr1--color--background--button--primary--enabled
+              --background-color
             );
             color: var(--nr1--color--text--buttton--primary);
         border-radius: 4px;
@@ -133,7 +166,7 @@ const GetStartedFooter = ({
 
           &:hover {
               background-color: var(
-                --nr1--color--background--button--primary--hover
+                --background-color
               );
               color: var(--nr1--color--text--buttton--primary);
             }
@@ -162,7 +195,7 @@ const GetStartedFooter = ({
               : '--brand-secondary-text-color'}
           );
           background-color: var(
-                --nr1--color--background--button--primary-accent--enabled
+            --btn-background-green
               );
               color: var(--nr1--color--text--buttton--primary-accent);
               border: 1px solid var(--nr1--color--text--buttton--primary-accent);
@@ -174,7 +207,7 @@ const GetStartedFooter = ({
   
             &:hover {
                 background-color: var(
-                  --nr1--color--background--button--primary-accent--hover
+                  --btn-background-green
                 );
                 color: var(--nr1--color--text--buttton--primary-accent);
               }
