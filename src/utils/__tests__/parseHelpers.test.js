@@ -1,4 +1,4 @@
-import * as parseHelpers from '../preview/parseHelpers';
+const parseHelpers = require('../preview/parseHelpers');
 const {
   expectedConfigOutput,
   missingConfigOutput,

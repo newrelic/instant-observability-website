@@ -4,7 +4,7 @@ import { QUICKSTART_REPO_URL } from '../../data/constants';
  * @typedef {import('./fetchHelpers').FileMetadata} FileMetadata
  */
 
-export const parseDocs = (docs) => {
+const parseDocs = (docs) => {
   const parsedDocs = docs.map((doc) => {
     doc.description = doc.description?.trim();
     return doc;
@@ -13,7 +13,7 @@ export const parseDocs = (docs) => {
   return parsedDocs;
 };
 
-export const parseInstallPlans = (installPlans) => {
+const parseInstallPlans = (installPlans) => {
   const parsedInstallPlans = installPlans.map((planId) => {
     const installPlan = {
       id: planId,
@@ -29,7 +29,7 @@ export const parseInstallPlans = (installPlans) => {
  * @param {FileMetadata[]} - quickstartFiles
  * @returns {Object} A quickstart object to be rendered by QuickstartDetails
  */
-export const parseQuickstartFiles = (quickstartFiles) => {
+const parseQuickstartFiles = (quickstartFiles) => {
   const quickstartContent = {};
 
   const config = quickstartFiles.find(
@@ -77,7 +77,7 @@ export const parseQuickstartFiles = (quickstartFiles) => {
  * @param {FileMetadata[]}
  * @returns {Object[]} An array of quickstart dashboard objects, Ex: { name: '', description: '', screenshots: [''] }
  */
-export const parseDashboardFiles = (files) => {
+const parseDashboardFiles = (files) => {
   const configs = files.filter((d) => d.filePath.includes('.json'));
   const screenshots = files.filter((d) => !d.filePath.includes('.json'));
   return configs.map((dashFileMetadata) => {
@@ -104,7 +104,7 @@ export const parseDashboardFiles = (files) => {
  * @param {FileContent[]} alertFiles - alert config files
  * @returns {Object[]} Ex: { details: '', name: '', type: '' }
  */
-export const parseAlertFiles = (alertFiles) => {
+const parseAlertFiles = (alertFiles) => {
   return alertFiles.map((file) => {
     const loadYaml = yaml.load(file.content);
 
@@ -122,7 +122,7 @@ export const parseAlertFiles = (alertFiles) => {
  * @param {FileMetadata[]} rawFiles - An array of FileContents for a particular quickstart
  * @returns {Object} A quickstart object ready for display within the `QuickstartDetails` component.
  */
-export const parseRawQuickstartFiles = (rawFiles) => {
+const parseRawQuickstartFiles = (rawFiles) => {
   let dashboardFiles = [];
   let alertFiles = [];
   let quickstartDirs = {};
@@ -149,11 +149,11 @@ export const parseRawQuickstartFiles = (rawFiles) => {
   return { ...quickstartDirs, ...quickstart };
 };
 
-// module.exports = {
-//   parseDocs,
-//   parseInstallPlans,
-//   parseQuickstartFiles,
-//   parseDashboardFiles,
-//   parseAlertFiles,
-//   parseRawQuickstartFiles,
-// };
+module.exports = {
+  parseDocs,
+  parseInstallPlans,
+  parseQuickstartFiles,
+  parseDashboardFiles,
+  parseAlertFiles,
+  parseRawQuickstartFiles,
+};
