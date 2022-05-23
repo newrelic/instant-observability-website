@@ -20,7 +20,6 @@
     "test": "jest -i"
   },
   "dependencies": {
-    "@emotion/jest": "^11.9.1",
     "@emotion/react": "^11.1.5",
     "@emotion/styled": "^11.3.0",
     "@mdx-js/mdx": "^1.6.19",
@@ -54,6 +53,7 @@
     "use-query-params": "^1.2.2"
   },
   "devDependencies": {
+    "@emotion/jest": "^11.9.1",
     "@newrelic/eslint-plugin-newrelic": "^0.3.1",
     "@semantic-release/changelog": "^6.0.1",
     "@semantic-release/commit-analyzer": "^9.0.2",
