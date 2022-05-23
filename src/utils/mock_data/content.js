@@ -1,9 +1,9 @@
-const installPlansContent = `
+export const installPlansContent = `
 installPlans:
   - guided-install
 `;
 
-const configContent = `
+export const configContent = `
 id: generic-quickstart-id-1
 slug: quickstart-slug
 description: example description 
@@ -20,7 +20,7 @@ keywords:
 ${installPlansContent}
 `;
 
-const configContentMissingFields = `
+export const configContentMissingFields = `
 id: generic-quickstart-id-1
 slug: quickstart-slug
 description: example description 
@@ -35,19 +35,19 @@ keywords:
 ${installPlansContent}
 `;
 
-const dashboardContent = {
+export const dashboardContent = {
   name: 'mock dashboard name',
   description: 'mock dashboard description',
 };
 
-const missingConfigOutput = {
+export const missingConfigOutput = {
   title: 'Generic Quickstart',
   summary: 'example summary',
 };
 
-const installPlansInput = ['guided-install'];
+export const installPlansInput = ['guided-install'];
 
-const documentationInput = [
+export const documentationInput = [
   {
     name: 'Kamon installation docs',
     description:
@@ -57,7 +57,7 @@ const documentationInput = [
   },
 ];
 
-const documentationOutput = [
+export const documentationOutput = [
   {
     name: 'Kamon installation docs',
     description:
@@ -67,14 +67,14 @@ const documentationOutput = [
   },
 ];
 
-const installPlansOutput = [
+export const installPlansOutput = [
   {
     name: '',
     id: 'guided-install',
   },
 ];
 
-const expectedConfigOutput = {
+export const expectedConfigOutput = {
   title: 'Generic Quickstart',
   name: 'quickstart-slug',
   description: 'example description',
@@ -92,7 +92,7 @@ const expectedConfigOutput = {
   installPlans: installPlansOutput,
 };
 
-const baseFiles = (content) => [
+export const baseFiles = (content) => [
   {
     type: 'yaml',
     filePath: 'mock_quickstart_1/config.yml',
@@ -107,7 +107,7 @@ const baseFiles = (content) => [
   },
 ];
 
-const dashboardFiles = (content) => [
+export const dashboardFiles = (content) => [
   {
     type: 'json',
     filePath:
@@ -131,7 +131,7 @@ const dashboardFiles = (content) => [
   },
 ];
 
-const expectedDashboardOutput = [
+export const expectedDashboardOutput = [
   {
     name: 'mock dashboard name',
     description: 'mock dashboard description',
@@ -141,19 +141,3 @@ const expectedDashboardOutput = [
     ],
   },
 ];
-
-module.exports = {
-  installPlansContent,
-  configContent,
-  configContentMissingFields,
-  dashboardContent,
-  expectedConfigOutput,
-  missingConfigOutput,
-  baseFiles,
-  dashboardFiles,
-  expectedDashboardOutput,
-  installPlansInput,
-  installPlansOutput,
-  documentationInput,
-  documentationOutput,
-};
