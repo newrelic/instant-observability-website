@@ -4,9 +4,11 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import { css } from '@emotion/react';
 import AnimatedText from './AnimatedText';
-import DoubleUnderlineSVG from './Icons/DoubleUnderlineSVG';
+import DoubleUnderlineSVG from './Icons/DoubleUnderlineSVG'
 
 const MOBILE_BREAKPOINT = '800px';
+
+
 
 const GetStartedFooter = ({
   quickstart,
@@ -14,6 +16,8 @@ const GetStartedFooter = ({
   style = 'PRIMARY',
   ...props
 }) => {
+
+
   return (
     <div
       css={css`
@@ -46,6 +50,7 @@ const GetStartedFooter = ({
           font-size: 44px;
           line-height: 50px;
           letter: -1.5%;
+         
         }
 
         @media screen and (max-width: ${MOBILE_BREAKPOINT}) {
@@ -61,6 +66,7 @@ const GetStartedFooter = ({
             margin-bottom: 3.375rem;
             font-size: 2.75rem;
             letter-spacing: -0.015em;
+           
           }
 
           .Underline {
@@ -73,15 +79,15 @@ const GetStartedFooter = ({
 
         @media screen and (min-width: ${MOBILE_BREAKPOINT}) {
           h3 {
-            padding-right: 180px;
+          padding-right: 180px;
           }
-          .Underline {
-            position: absolute;
-            right: 0;
-            width: 100%;
-            display: block;
-          }
+        .Underline {
+          position: absolute;
+          right: 0;
+          width: 100%;
+          display: block;
         }
+      }
       `}
     >
       <h3
@@ -91,68 +97,62 @@ const GetStartedFooter = ({
       >
         Get started today&nbsp;
         <span
-          css={css`
-            white-space: nowrap;
-            position: relative;
-          `}
-        >
-          for free.
+        css={css`
+        white-space: nowrap;
+        position: relative;
+        `}>
+        for free.
           <DoubleUnderlineSVG className="Underline" />
-        </span>
+          </span>
       </h3>
       <div
         css={css`
-          max-width: 1248px;
-          padding: 1em var(--site-content-padding);
-          margin: 0 auto;
           display: flex;
-          justify-content: space-between;
-          font-size: 33px;
-          flex-wrap: wrap;
-        `}
-      >
-        <h3 css={css``}>Get started today for free.</h3>
-        <div
-          css={css`
-            display: flex;
+          justify-content: flex-start;
+
+          > a {
+            font-size: 18px;
+            font-weight: 400;
+            line-height: 24px;
+
+            width: 142px;
+            height: 64px;
+
+            :first-of-type {
+              margin: 0px 8px;
+            }
+          }
+
+          @media screen and (max-width: ${MOBILE_BREAKPOINT}) {
+            height: 315px;
+            flex-direction: column;
 
             > a {
-              font-size: 18px;
-              font-weight: 400;
-              line-height: 24px;
-
-              width: 142px;
-              margin-right: 0.5rem;
+              width: 296px;
               height: 64px;
-            }
 
-            @media screen and (max-width: ${MOBILE_BREAKPOINT}) {
-              > a {
-                height: 64px;
+              :first-of-type {
+                margin: 8px 0px;
               }
             }
           }
         `}
-        >
-          <Button
-            {...props}
-            as={ExternalLink}
-            variant={Button.VARIANT.PRIMARY}
-            href={SIGNUP_LINK}
-            css={css`
+      >
+        <Button
+          {...props}
+          as={ExternalLink}
+          variant={Button.VARIANT.PRIMARY}
+          href={SIGNUP_LINK}
+          css={css`
         --button-background: var(
-          ${
-            style === 'PRIMARY'
+          ${style === 'PRIMARY'
               ? '--btn-background-green'
-              : '--brand-secondary-background-color'
-          }
+              : '--brand-secondary-background-color'}
         );
         --button-text-color: var(
-          ${
-            style === 'PRIMARY'
+          ${style === 'PRIMARY'
               ? '--brand-primary-text-color'
-              : '--brand-secondary-text-color'
-          }
+              : '--brand-secondary-text-color'}
         );
           background-color: var(
               --background-color
@@ -169,50 +169,56 @@ const GetStartedFooter = ({
                 --background-color
               );
               color: var(--nr1--color--text--buttton--primary);
-              border-radius: 4px;
-              font-size: 14px;
-              line-height: 21px;
-              font-weight: 400;
-              padding: 1rem;
+            }
 
        `}
-          >
-            <AnimatedText text={'Sign Up'} />
-          </Button>
-          <Button
-            {...props}
-            as={ExternalLink}
-            variant={Button.VARIANT.PRIMARY}
-            href={DEMO_LINK}
-            css={css`
-              --button-background: var(
-                ${style === 'PRIMARY'
-                  ? '--btn-background-green'
-                  : '--brand-secondary-background-color'}
+        >
+          <AnimatedText
+            text={'Sign Up'}
+          />
+
+        </Button>
+        <Button
+          {...props}
+          as={ExternalLink}
+          variant={Button.VARIANT.PRIMARY}
+          href={DEMO_LINK}
+          css={css`
+          --button-background: var(
+            ${style === 'PRIMARY'
+              ? '--btn-background-green'
+              : '--brand-secondary-background-color'}
+          );
+          --button-text-color: var(
+            ${style === 'PRIMARY'
+              ? '--brand-primary-text-color'
+              : '--brand-secondary-text-color'}
+          );
+          background-color: var(
+            --btn-background-green
               );
-              --button-text-color: var(
-                ${style === 'PRIMARY'
-                  ? '--brand-primary-text-color'
-                  : '--brand-secondary-text-color'}
-              );
-              background-color: var(--btn-background-green);
               color: var(--nr1--color--text--buttton--primary-accent);
               border: 1px solid var(--nr1--color--text--buttton--primary-accent);
-              border-radius: 4px;
-              font-size: 14px;
-              line-height: 21px;
-              font-weight: 400;
-              padding: 1rem;
-
-              &:hover {
-                background-color: var(--btn-background-green);
+          border-radius: 4px;
+          font-size: 14px;
+          line-height: 21px;
+          font-weight: 400;
+          padding: 1rem;
+  
+            &:hover {
+                background-color: var(
+                  --btn-background-green
+                );
                 color: var(--nr1--color--text--buttton--primary-accent);
               }
-            `}
-          >
-            <AnimatedText text={'Get Demo'} />
-          </Button>
-        </div>
+  
+         `}
+        >
+          <AnimatedText
+            text={'Get Demo'}
+          />
+
+        </Button>
       </div>
     </div>
   );
