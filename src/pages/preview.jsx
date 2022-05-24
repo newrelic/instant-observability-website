@@ -9,14 +9,14 @@ const PreviewPage = ({ location }) => {
   const urlParams = new URLSearchParams(location.search);
   const prNumber = urlParams.get('pr');
   const quickstartPath = urlParams.get('quickstart');
-  const local = urlParams.get('local');
+  const local = urlParams.get('local') === 'true';
   const port = urlParams.get('port') || '3000';
 
   const contentFiles = useQuickstartPreview(
-    local,
-    port,
     prNumber,
-    quickstartPath
+    quickstartPath,
+    local,
+    port
   );
 
   const data = { quickstarts: contentFiles };
