@@ -1,22 +1,32 @@
 import { useEffect, useState } from 'react';
+import { navigate } from 'gatsby';
+import { useTessen } from '@newrelic/gatsby-theme-newrelic';
 
 import {
   getQuickstartFilesFromPR,
   getQuickstartFilesFromLocal,
 } from '../utils/preview/fetchHelpers';
 import { parseRawQuickstartFiles } from '../utils/preview/parseHelpers';
-import { navigate } from 'gatsby';
 
 const useQuickstartPreview = (isLocal, port, prNumber, quickstartPath) => {
   const [quickstart, setQuickstart] = useState();
+  const tessen = useTessen();
 
   useEffect(() => {
+    // Send event before any `navigate` calls
+    tessen.track({
+      eventName: 'viewPreview',
+      category: 'QuickstartPreview',
+      isLocal,
+      prNumber,
+      quickstartPath,
+    });
+
     // ensure the prNumber and quickstartPath are set if
     // quickstart preview is not local
-    
     if (!isLocal && (!prNumber || !quickstartPath)) {
       navigate('/');
-      return
+      return;
     }
 
     /**
@@ -45,6 +55,15 @@ const useQuickstartPreview = (isLocal, port, prNumber, quickstartPath) => {
         const parsedQuickstart = parseRawQuickstartFiles(rawFileContent);
         setQuickstart(parsedQuickstart);
       } catch (error) {
+        tessen.track({
+          eventName: 'fetchAndParseError',
+          category: 'QuickstartPreview',
+          prNumber,
+          quickstartPath,
+          isLocal,
+          error: error.message,
+        });
+
         console.log('Error:', error.message);
         navigate('/');
         return;
