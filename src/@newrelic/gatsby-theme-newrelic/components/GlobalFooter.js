@@ -38,31 +38,29 @@ const GlobalFooter = ({ className }) => {
 
   // these icons will be hidden on mobile view
   const renderSocialIcons = () => {
-    return (
-      SOCIALS.map((social) => (
-        <ExternalLink
-          key={social.title}
-          href={social.href}
+    return SOCIALS.map((social) => (
+      <ExternalLink
+        key={social.title}
+        href={social.href}
+        css={css`
+          @media screen and (max-width: ${MOBILE_BREAKPOINT}) {
+            display: none;
+          }
+        `}
+      >
+        <Icon
+          name={social.title}
+          size="24px"
           css={css`
-            @media screen and (max-width: ${MOBILE_BREAKPOINT}) {
-              display: none;
-            }
+            outline: none;
+            stroke-width: 0px;
+            color: var(--secondary-text-color);
+            fill: var(--secondary-text-color);
           `}
-        >
-          <Icon
-            name={social.title}
-            size="24px"
-            css={css`
-              outline: none;
-              stroke-width: 0px;
-              color: var(--secondary-text-color);
-              fill: var(--secondary-text-color);
-            `}
-          />
-        </ExternalLink>
-      ))
-    )
-  }
+        />
+      </ExternalLink>
+    ));
+  };
 
   return (
     <footer
@@ -97,10 +95,7 @@ const GlobalFooter = ({ className }) => {
           css={css`
             display: grid;
             background: #1d252c;
-            justify-content: space-between;
-            max-width: 1248px;
-            margin: 0 auto;
-            padding: 0 var(--site-content-padding);
+            justify-content: space-evenly;
 
             /* Sets up the sizing of the columns */
             grid-template-columns: min-content 192px;
@@ -140,7 +135,7 @@ const GlobalFooter = ({ className }) => {
               }
 
               @media screen and (max-width: ${MOBILE_BREAKPOINT}) {
-                margin-top: 40px;
+                margin: 40px 0px 0px 40px;
 
                 justify-content: flex-start;
                 grid-template-rows: 1fr;
@@ -154,7 +149,9 @@ const GlobalFooter = ({ className }) => {
             `}
           >
             {RESOURCES.map((resource) => (
-              <ExternalLink key={resource.title} href={resource.href}>{resource.title}</ExternalLink>
+              <ExternalLink key={resource.title} href={resource.href}>
+                {resource.title}
+              </ExternalLink>
             ))}
           </div>
           <div
@@ -198,6 +195,7 @@ const GlobalFooter = ({ className }) => {
                 display: grid;
                 justify-content: start;
                 margin-top: 40px;
+                margin-left: 40px;
 
                 grid-template-rows: 1fr max-content;
                 grid-auto-flow: column;
@@ -257,11 +255,10 @@ const GlobalFooter = ({ className }) => {
               margin: 64px 0px 0px 0px;
 
               @media screen and (max-width: ${MOBILE_BREAKPOINT}) {
-                margin: 32px 0px 0px 0px;
+                margin: 32px 0px 20px 40px;
               }
             `}
           >
-
             <ExternalLink href={HOME_LINK}>
               <NewLogo />
             </ExternalLink>
@@ -279,9 +276,14 @@ const GlobalFooter = ({ className }) => {
                 font-size: 14px;
                 white-space: nowrap;
                 margin-right: 52px;
+                &:hover {
+                  --tw-text-opacity: 1;
+                  color: rgb(228 229 230 / var(--tw-text-opacity));
+                }
               }
 
               @media screen and (max-width: ${MOBILE_BREAKPOINT}) {
+                margin-left: 40px;
                 flex-direction: column;
                 display: grid;
                 grid-template-columns: 10rem 10rem;
@@ -329,6 +331,7 @@ const GlobalFooter = ({ className }) => {
               }
 
               @media screen and (max-width: ${MOBILE_BREAKPOINT}) {
+                margin-left: 40px;
                 justify-content: start;
                 display: grid;
                 grid-template-columns: 10rem 10rem;
@@ -345,7 +348,9 @@ const GlobalFooter = ({ className }) => {
             `}
           >
             {LOCALS.map((locale) => (
-              <ExternalLink key={locale.title} href={locale.href}>{locale.title}</ExternalLink>
+              <ExternalLink key={locale.title} href={locale.href}>
+                {locale.title}
+              </ExternalLink>
             ))}
           </div>
           <div
@@ -355,6 +360,7 @@ const GlobalFooter = ({ className }) => {
               line-height: 1.25rem;
               @media screen and (max-width: ${MOBILE_BREAKPOINT}) {
                 margin-top: 2rem;
+                margin-left: 40px;
                 margin-bottom: 2rem;
               }
             `}
