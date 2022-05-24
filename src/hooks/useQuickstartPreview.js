@@ -20,7 +20,7 @@ const useQuickstartPreview = (isLocal, port, prNumber, quickstartPath) => {
     }
 
     /**
-     * Async function to check if ther eis a server connection
+     * Async function to check if there is a server connection
      * to localhost if isLocal is set to true
      */
     const checkServer = async () => {
