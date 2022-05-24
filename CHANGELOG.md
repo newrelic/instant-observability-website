@@ -1,3 +1,19 @@
+# [1.2.0](https://github.com/newrelic/instant-observability-website/compare/v1.1.2...v1.2.0) (2022-05-24)
+
+
+### Bug Fixes
+
+* handle empty files ([9b52723](https://github.com/newrelic/instant-observability-website/commit/9b52723fe5094cb714e4806704bdf998737d5840))
+* make @emotion/jest a dev dep ([936058a](https://github.com/newrelic/instant-observability-website/commit/936058a8af94c71ec40e049cc2822050d597b67d))
+* unit test issues ([a42fbe2](https://github.com/newrelic/instant-observability-website/commit/a42fbe2fbad9501ed28dd96ba23cab1daabb48c3))
+
+
+### Features
+
+* get query parameters for preview ([6d278b9](https://github.com/newrelic/instant-observability-website/commit/6d278b9f71bf34c7a3a209525ac56048117de7b4))
+* initial page for previews ([3993ff3](https://github.com/newrelic/instant-observability-website/commit/3993ff349d5d6deb9fe214748a6d2a35797543b2))
+* parse github PR files ([1d2c810](https://github.com/newrelic/instant-observability-website/commit/1d2c8106abbab0c69c9c517a2b84220869a65702))
+
 ## [1.1.2](https://github.com/newrelic/instant-observability-website/compare/v1.1.1...v1.1.2) (2022-05-23)
 
 
