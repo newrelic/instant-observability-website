@@ -216,6 +216,7 @@ const GlobalHeader = ({ className, activeSite }) => {
                 position: relative;
                 -webkit-overflow-scrolling: touch;
                 -ms-overflow-style: -ms-autohiding-scrollbar;
+                margin-left: -2px; 
                 > li {
                   margin: 0.3rem 0;
                   padding 2rem 0;
@@ -432,10 +433,10 @@ const GlobalHeader = ({ className, activeSite }) => {
 
                 ${isOpen
                   ? `
-                  color: #E4E5E6;
+                  color: var(--btn-text-color);
                   `
                   : `
-                  color: #E4E5E6;
+                  color: var(--btn-text-color);
                   `}
               `}
               title="Toggle menu"
