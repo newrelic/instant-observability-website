@@ -1,3 +1,10 @@
+## [1.1.2](https://github.com/newrelic/instant-observability-website/compare/v1.1.1...v1.1.2) (2022-05-23)
+
+
+### Bug Fixes
+
+* add import for QUICKSTARTS_REPO ([671b51f](https://github.com/newrelic/instant-observability-website/commit/671b51f2ff68a96a26599a0e3d513229d3c5abce))
+
 ## [1.1.1](https://github.com/newrelic/instant-observability-website/compare/v1.1.0...v1.1.1) (2022-05-17)
 
 

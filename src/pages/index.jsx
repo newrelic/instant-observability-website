@@ -384,7 +384,7 @@ const QuickstartsPage = ({ data, location }) => {
         <div
           css={css`
             grid-area: main;
-            padding: var(--site-content-padding);
+            padding: 1.5rem;
           `}
         >
           <div
