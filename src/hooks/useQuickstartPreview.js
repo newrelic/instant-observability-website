@@ -8,7 +8,7 @@ import {
 } from '../utils/preview/fetchHelpers';
 import { parseRawQuickstartFiles } from '../utils/preview/parseHelpers';
 
-const useQuickstartPreview = (isLocal, port, prNumber, quickstartPath) => {
+const useQuickstartPreview = (prNumber, quickstartPath, isLocal, port) => {
   const [quickstart, setQuickstart] = useState();
   const tessen = useTessen();
 
@@ -29,25 +29,19 @@ const useQuickstartPreview = (isLocal, port, prNumber, quickstartPath) => {
       return;
     }
 
-    /**
-     * Async function to check if there is a server connection
-     * to localhost if isLocal is set to true
-     */
-    const checkServer = async () => {
-      try {
-        await fetch(`http://localhost:${port}`);
-      } catch (error) {
-        console.log(err.message);
-        console.log('Please make sure your local preview server is running.');
-        navigate('/');
-      }
-    };
     /*
      * Async function to walk the file system in Github
      * and set the content to a stateful variable.
      **/
     const fetchFiles = async () => {
       try {
+        if (isLocal) {
+          const isRunning = await isPreviewServerRunning(port);
+          if (!isRunning) {
+            throw new Error('Local preview server is not running');
+          }
+        }
+
         const rawFileContent = isLocal
           ? await getQuickstartFilesFromLocal(port)
           : await getQuickstartFilesFromPR(prNumber, quickstartPath);
@@ -70,13 +64,29 @@ const useQuickstartPreview = (isLocal, port, prNumber, quickstartPath) => {
       }
     };
 
-    if (isLocal) {
-      checkServer();
-    }
     fetchFiles();
   }, []);
 
   return quickstart;
+};
+
+/**
+ * Async function to check if there is a server connection
+ * to localhost if isLocal is set to true
+ * @param {string} port - the port the local server is running on
+ * @returns {Promise<boolean>}
+ */
+const isPreviewServerRunning = async (port) => {
+  try {
+    await fetch(`http://localhost:${port}`);
+  } catch (error) {
+    console.log(error.message);
+    console.log('Please make sure your local preview server is running.');
+    // navigate to /
+    return false;
+  }
+
+  return true;
 };
 
 export default useQuickstartPreview;
