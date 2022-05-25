@@ -216,7 +216,9 @@ const GlobalHeader = ({ className, activeSite }) => {
                 position: relative;
                 -webkit-overflow-scrolling: touch;
                 -ms-overflow-style: -ms-autohiding-scrollbar;
-                margin-left: -2px; 
+                margin-left: -0.813rem; 
+                letter-spacing: -0.005em;
+                font-size: 1.125rem;
                 > li {
                   margin: 0.3rem 0;
                   padding 2rem 0;
@@ -268,7 +270,9 @@ const GlobalHeader = ({ className, activeSite }) => {
                   font-family: Söhne-Buch;
                   font-weight: 400;
                   font-size: 1.125rem;
-                  line-height: 1.625;
+                  line-height: 1.25;
+                  letter-spacing: -0.005em;
+                }
                 }
 
                 &:not(:first-of-type) {
@@ -295,11 +299,13 @@ const GlobalHeader = ({ className, activeSite }) => {
                 css={css`
                   font-size: 1rem;
                   white-space: nowrap;
-                  color: #e4e5e6;
-
+                > span {
+                  color: var(--white-hover-color);
                   &:hover {
-                    color: #e4e5e6;
+                    color: var(--white-hover-color);
+                    border-bottom: 1.5px solid var(--white-hover-color);
                   }
+                }
                   @media screen and (max-width: ${NAV_BREAKPOINT}) {
                     display: none;
                   }
@@ -322,9 +328,12 @@ const GlobalHeader = ({ className, activeSite }) => {
                 css={css`
                   font-size: 1rem;
                   white-space: nowrap;
-                  color: #1ce783;
+                  > span {
+                    color: var(--btn-background-green);
                   &:hover {
-                    color: #1ce783;
+                    color: var(--btn-background-green);
+                    border-bottom: 1.5px solid var(--btn-background-green);
+                  }
                   }
                   @media screen and (max-width: ${NAV_BREAKPOINT}) {
                     display: none;
@@ -430,6 +439,10 @@ const GlobalHeader = ({ className, activeSite }) => {
                 cursor: pointer;
                 width: 48;
                 height: 48;
+                >svg {
+                  width: 32px;
+                  height: 32px;
+                }
 
                 ${isOpen
                   ? `
@@ -476,18 +489,20 @@ const GlobalHeader = ({ className, activeSite }) => {
                 width: 100%;
                 margin: 0;
                 padding: 0;
+                letter-spacing: -0.005em;
                 > li {
                   margin: 0;
                   flex: 0 0 auto;
                   border-bottom: 1px solid #eeefef;
+                  height: 4rem;
                   > a {
                     --active-color: var(--color-white);
                     font-family: Söhne-Buch;
                     color: #54565a;
                     font-weight: 400;
-                    font-size: 1rem;
-                    line-height: 4;
-                    padding: 0 2.5rem;
+                    font-size: 1.125rem;
+                    line-height: 1.75rem;
+                    padding: 1rem 2.5rem;
                     text-align: left;
                 @media screen and (min-width: ${NAV_BREAKPOINT}) {
                   flex-direction: row;
