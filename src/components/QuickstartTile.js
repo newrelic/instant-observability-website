@@ -140,6 +140,7 @@ const QuickstartTile = ({
       <div
         css={css`
           grid-area: text;
+          overflow-wrap: anywhere;
         `}
       >
         <h4
