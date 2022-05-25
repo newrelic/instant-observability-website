@@ -2,12 +2,12 @@ import React from 'react';
 import { Link, Button, PageTools } from '@newrelic/gatsby-theme-newrelic';
 import { css } from '@emotion/react';
 import { quickstart } from '../types';
-import { QUICKSTARTS_REPO } from '../data/constants';
 import SupportSection from './SupportSection';
 import ExternalLink from '@newrelic/gatsby-theme-newrelic/src/components/ExternalLink';
 import RelatedResources from './RelatedResources';
 import TickIconSVG from './Icons/TickIconSVG';
 import GitHubIconSVG from './Icons/GitHubIconSVG';
+import AnimatedText from './AnimatedText';
 
 const LandingPageFooter = ({
   quickstart,
@@ -97,14 +97,20 @@ const LandingPageFooter = ({
           <div>
             <Button
               css={css`
+                --button-background: var(--brand-secondary-background-color);
+                --button-text-color: var(--brand-secondary-text-color);
+                background-color: var(--button-background);
+                border-radius: 4px;
+                color: var(--button-text-color);
                 background: var(--background-color);
                 color: var(--btn-text-color);
                 border-radius: 4px;
-                padding: 13.5px 20px 13.5px 22px;
-                column-gap: 14.45px;
                 font-weight: 400;
+                padding: 0px 6px 0px 20px;
                 &:hover {
-                  color: var(--white-hover-color);
+                  background-color: var(--button-background);
+                  color: var(--button-text-color);
+                  border-color: transparent;
                 }
 
                 @media (max-width: 760px) {
@@ -118,7 +124,7 @@ const LandingPageFooter = ({
               onClick={trackQuickstart('QuickstartViewRepoClick', quickstart)}
             >
               <GitHubIconSVG className="ViewRepo" />
-              View repo
+              <AnimatedText text={'View repo'} />
             </Button>
           </div>
           <div
@@ -145,6 +151,7 @@ const LandingPageFooter = ({
                 height: 48px;
                 &:hover {
                   color: var(--white-hover-color);
+                  border-color: transparent;
                 }
 
                 @media (max-width: 760px) {
@@ -153,7 +160,7 @@ const LandingPageFooter = ({
               `}
             >
               <TickIconSVG className="Tick" />
-              Build your own
+              <AnimatedText text={'Build your own'} />
             </Button>
           </div>
         </div>
