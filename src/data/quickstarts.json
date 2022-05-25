@@ -1976,19 +1976,19 @@
     ],
     "dashboards": [
       {
-        "name": "Battlesnake Performance",
-        "description": "Monitor your Battlesnake's performance and see how it stacks up against your competition!",
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/battlesnake/dashboards/battlesnake-performance/battlesnake-performance.png"
-        ]
-      },
-      {
         "name": "Battlesnake Server Status",
         "description": "A dashboard to monitor your Battlesnake server's performance. It's important to keep all responses to the `/move` endpoint under 500ms. Furthermore, it's possible that your snake may be in multiple concurrent matches at the same time. It's important to make sure you server and web application are running smoothly to keep you in the game!",
         "url": null,
         "screenshots": [
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/battlesnake/dashboards/battlesnake-server-status/battlesnake-server-status.png"
+        ]
+      },
+      {
+        "name": "Battlesnake Performance",
+        "description": "Monitor your Battlesnake's performance and see how it stacks up against your competition!",
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/battlesnake/dashboards/battlesnake-performance/battlesnake-performance.png"
         ]
       },
       {
@@ -3819,19 +3819,19 @@
     ],
     "dashboards": [
       {
-        "name": "Data Governance Entity Breakdowns",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/oma-data-gov/dashboards/data-ingest-entity-breakdown/data-ingest-entity-breakdown.png"
-        ]
-      },
-      {
         "name": "Data Governance Baseline",
         "description": null,
         "url": null,
         "screenshots": [
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/oma-data-gov/dashboards/data-ingest-baseline/data-ingest-baseline.png"
+        ]
+      },
+      {
+        "name": "Data Governance Entity Breakdowns",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/oma-data-gov/dashboards/data-ingest-entity-breakdown/data-ingest-entity-breakdown.png"
         ]
       }
     ],
@@ -5799,6 +5799,68 @@
       {
         "name": "Ruby Agent",
         "id": "setup-ruby-agent"
+      }
+    ]
+  },
+  {
+    "title": "Redis Enterprise",
+    "name": "redis-enterprise",
+    "description": "## Redis Enterprise Quickstart\n\n### Redis Enterprise is an enterprise offering of Redis that provides:\n- High availability: Up to 5 9's\n- Support: 24/7 Enterprise support\n- Geo-replication: Write data consistency across multiple data centers\n- Tiered storage: Store data on devices outside of RAM for cost savings\n- High performance: Serve up to 200M operations per second\n\nThis integration supports [Redis Enterprise Software](https://redis.com/redis-enterprise-software/overview/) installations.\n\n### With the Redis Enterprise quickstart you can:\n\n- Monitor real-time performance and trends of you Redis Enterprise cluster\n- Drill down into the performance of individual Redis databases\n- Understand the Redis Active/Active metrics\n\n### Cluster level metrics\n\n- License Status: Information on the Enterprise license status\n- License Capacity: Capacity licensed\n- Used Capacity: Capacity currently in use\n- Cluster Capacity: Information on memory and compute resources available on the cluster\n- Total Requests: Overall throughput of the cluster in total\n\n\n### Database level metrics\n\n- Database Latency: Metrics pertaining to the latency of operations at the database level\n- Database Throughput: Detailed information of the number of read/write operations per second\n- Database Capacity: Memory usage details for capacity planning\n- Network Usage: Information on the network usage per database\n- Redis Data Retention: Expiration and Eviction statistics on object retention\n\n\n### Active/Active metrics\n\n- Lag: Time between application on servers\n- Pending:  Details of the number of writes pending as part of the sync\n- Bandwidth:  Information on the amount of traffic between clusters \n\n### Contact us\nTo get help please contact the [Redis Enterprise Field Engineering](mailto:redis.observability@redis.com?subject=NewRelic%20Integration%20Support)",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/redisenterprise",
+    "id": "f15b39b2-bdc3-46d2-b28f-04ddbe23e299",
+    "level": "COMMUNITY",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/redisenterprise/logo.png",
+    "summary": "This quickstart will allow you to visualize your Redis Enterprise analytics.",
+    "websiteUrl": null,
+    "keywords": [
+      "newrelic partner",
+      "devops",
+      "redisenterprise",
+      "redis",
+      "featured"
+    ],
+    "authors": [
+      "Redis",
+      "Chris Mague"
+    ],
+    "dashboards": [
+      {
+        "name": "Redis Enterprise Cluster Metrics",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/redisenterprise/dashboards/cluster/cluster01.png"
+        ]
+      },
+      {
+        "name": "Redis Enterprise Database CRDT",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/redisenterprise/dashboards/active_active/active_active01.png"
+        ]
+      },
+      {
+        "name": "Redis Enterprise Database Metrics",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/redisenterprise/dashboards/database/database01.png"
+        ]
+      }
+    ],
+    "alerts": [],
+    "documentation": [
+      {
+        "name": "Full Redis Enterprise Documentation",
+        "description": "How to install and configure Redis Enterprise New Relic integration",
+        "url": "https://github.com/redis-field-engineering/newrelic-redis-enterprise"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "RedisEnterprise",
+        "id": "third-party-redisenterprise"
       }
     ]
   },
@@ -15137,33 +15199,6 @@
     "installPlans": []
   },
   {
-    "title": "Docker",
-    "name": "docker",
-    "description": "Docker is a set of platform as a service products that use OS-level\nvirtualization to deliver software in packages called containers.",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/docker",
-    "id": "ba8030a4-7351-4798-ae36-d74d08f39e4e",
-    "level": "NEW_RELIC",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/docker/logo.svg",
-    "summary": "Docker is a set of platform as a service products that use OS-level\nvirtualization to deliver software in packages called containers.",
-    "websiteUrl": null,
-    "keywords": [
-      "containers"
-    ],
-    "authors": [
-      "New Relic"
-    ],
-    "dashboards": [],
-    "alerts": [],
-    "documentation": [
-      {
-        "name": "Docker installation docs",
-        "description": "Docker is a set of platform as a service products that use OS-level\nvirtualization to deliver software in packages called containers.\n",
-        "url": "https://docs.newrelic.com/docs/infrastructure/new-relic-infrastructure/data-instrumentation/docker-instrumentation-infrastructure"
-      }
-    ],
-    "installPlans": []
-  },
-  {
     "title": "FubuMVC",
     "name": "fubumvc",
     "description": "## New Relic + FubuMVC\n\nNew Relic’s monitoring quickstart for FubuMVC monitors the performance and reliability of FubuMVC applications. \n\nIt includes visual dashboards which showcase real-time metrics of the FubuMVC stack, including:\n- Errors overview\n- VM overview\n- Latest error display\n- CPU utilization display\n- Amount of memory heap used, and more. \nThe quickstart also includes alerts when certain metrics such as the Apdex score, memory usage, and number of transaction errors hit a critical threshold.\n\n### Why monitor FubuMVC with New Relic?\n\nBuilding server-side systems can be a complex process. Between dealing with incoming and outgoing HTTP requests, interfacing with other APIs and backends, the nuances of the server-side code itself, and any sort of distributed interaction or job scheduling, there are many things that can go wrong. When you monitor your Fubumvc instance, it’s much easier to spot these errors before they occur. FubuMVC fails, your whole application will too. New Relic makes it easier to prevent that failure.\nFor example, if you get an  alert when your transaction errors hit a critical a threshold, it can give you advance notice about a dead server, a network bottleneck, or an attack against your web app. Similarly, the CPU utilization dashboard helps you to know when your server load is high and when traffic might be about to overwhelm a particular HTTP service. You can address your issues proactively, before they cause an outage.",
@@ -16862,11 +16897,11 @@
     ],
     "dashboards": [
       {
-        "name": "Catchpoint-Recent Errors",
+        "name": "Catchpoint-Overview",
         "description": null,
         "url": null,
         "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/catchpoint/dashboards/Catchpoint-Recent_Errors/Catchpoint-Recent_Errors.png"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/catchpoint/dashboards/Catchpoint-Overview/Catchpoint-Overview.png"
         ]
       },
       {
@@ -16878,19 +16913,19 @@
         ]
       },
       {
-        "name": "Catchpoint-Overview",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/catchpoint/dashboards/Catchpoint-Overview/Catchpoint-Overview.png"
-        ]
-      },
-      {
         "name": "Catchpoint-Response Size",
         "description": null,
         "url": null,
         "screenshots": [
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/catchpoint/dashboards/Catchpoint-Response_Size/Catchpoint-Response_Size.png"
+        ]
+      },
+      {
+        "name": "Catchpoint-Recent Errors",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/catchpoint/dashboards/Catchpoint-Recent_Errors/Catchpoint-Recent_Errors.png"
         ]
       }
     ],
@@ -16999,6 +17034,33 @@
         "name": "Port monitoring installation docs",
         "description": "Monitor the status for networking ports, such as TCP, UDP, etc.",
         "url": "https://docs.newrelic.com/docs/port-monitoring-open-source-integration"
+      }
+    ],
+    "installPlans": []
+  },
+  {
+    "title": "Docker",
+    "name": "docker",
+    "description": "## How to monitor Docker with New Relic?\n\nOur Docker monitoring integration automatically collects metrics for Docker containers running on hosts that have the New Relic infrastructure monitoring agent installed. The integration imports all the labels associated with the containers and helps you to group by the metadata associated with those labels.\n\nOur monitoring quickstart lets you filter down to see all the processes running inside a container using the New Relic “contained” attribute. In addition, you can pinpoint the CPU, memory, and I/O used by any process within a container.\n\n### Why monitor Docker with New Relic?\n\nNew Relic's Docker monitoring quickstart empowers you to get a 360° visibility for your apps, server infrastructure, and Dockerized containers—all in one place. Since your team is likely charged with delivering high-quality software that yields a great customer experience, monitoring Docker is essential. It allows you to keep up that customer experience with your users remaining unaffected by any changes to platforms, tools, languages, or frameworks. \n\nWith our Docker monitoring integration, you can easily identify which container is running which app, and quickly solve any issues. Install the New Relic Docker quickstart today to get instant performance metrics for containerized applications across your entire environment.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/docker",
+    "id": "ba8030a4-7351-4798-ae36-d74d08f39e4e",
+    "level": "NEW_RELIC",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/docker/logo.svg",
+    "summary": "Monitoring Docker is critical to get instant performance metrics for containerized applications across your entire environment. Install New Relic Docker monitoring quickstart to proactively instrument Docker with New Relic integration.",
+    "websiteUrl": null,
+    "keywords": [
+      "containers"
+    ],
+    "authors": [
+      "New Relic"
+    ],
+    "dashboards": [],
+    "alerts": [],
+    "documentation": [
+      {
+        "name": "Docker installation docs",
+        "description": "Docker is a set of platform as a service products that use OS-level\nvirtualization to deliver software in packages called containers.\n",
+        "url": "https://docs.newrelic.com/docs/infrastructure/new-relic-infrastructure/data-instrumentation/docker-instrumentation-infrastructure"
       }
     ],
     "installPlans": []
@@ -17658,64 +17720,6 @@
     ]
   },
   {
-    "title": "Tomcat",
-    "name": "tomcat",
-    "description": "# What is Tomcat?\n\nOpen-source implementation of the Java Servlet, JavaServer Pages, Java Expression Language and WebSocket technologies.\n\n\n## Get started!\n\nLeverage community expertise and instantly get value out of your telemetry data. This quickstart automatically instruments Tomcat with the New Relic Java agent, and allows you to instantly monitor your Java application with out-of-the-box dashboards and alerts. \nFurther leverage New Relic's APM capabilities by setting up [errors inbox](https://docs.newrelic.com/docs/apm/apm-ui-pages/errors-inbox/errors-inbox/), [transaction tracing](https://docs.newrelic.com/docs/apm/transactions/transaction-traces/introduction-transaction-traces/), and [service maps](https://docs.newrelic.com/docs/understand-dependencies/understand-system-dependencies/service-maps/introduction-service-maps/).\n\n## More info\n\nCheck out the [documentation](https://docs.newrelic.com/docs/agents/java-agent/getting-started/introduction-new-relic-java/) to learn more about New Relic monitoring for Tomcat.",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/java/tomcat",
-    "id": "d3e84281-6094-4cb2-b323-30e4f13b4f0c",
-    "level": "NEW_RELIC",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/java/tomcat/logo.svg",
-    "summary": "Monitor Tomcat with New Relic's Java agent",
-    "websiteUrl": null,
-    "keywords": [
-      "apm",
-      "java",
-      "server"
-    ],
-    "authors": [
-      "New Relic"
-    ],
-    "dashboards": [
-      {
-        "name": "Tomcat",
-        "description": "Java",
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/java/tomcat/dashboards/java/java01.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/java/tomcat/dashboards/java/java02.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/java/tomcat/dashboards/java/java.png"
-        ]
-      }
-    ],
-    "alerts": [
-      {
-        "name": "High CPU Utilization",
-        "details": "This alert is triggered when the CPU Utilization is above 90%.",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "Transaction Errors",
-        "details": "This alert is triggered when the the transactions fail more than 10% of the time in 5 minutes.",
-        "type": "STATIC",
-        "url": null
-      }
-    ],
-    "documentation": [
-      {
-        "name": "Tomcat installation docs",
-        "description": "Open-source implementation of the Java Servlet, JavaServer Pages, Java\nExpression Language and WebSocket technologies.\n",
-        "url": "https://docs.newrelic.com/docs/agents/java-agent/getting-started/compatibility-requirements-java-agent"
-      }
-    ],
-    "installPlans": [
-      {
-        "name": "Java Agent",
-        "id": "setup-java-targeted-install"
-      }
-    ]
-  },
-  {
     "title": "Azure Kubernetes Service",
     "name": "azure-kubernetes-service",
     "description": "Provides a managed environment for deploying, managing, and scaling your\ncontainerized applications using Azure infrastructure.",
@@ -18081,6 +18085,64 @@
       {
         "name": "PHP Agent",
         "id": "php-agent"
+      }
+    ]
+  },
+  {
+    "title": "Tomcat",
+    "name": "tomcat",
+    "description": "# What is Tomcat?\n\nOpen-source implementation of the Java Servlet, JavaServer Pages, Java Expression Language and WebSocket technologies.It implements Java enterprise specs like WebSocket technologies and JavaServer Pages. The Apache Tomcat software powers large-scale, mission-critical web applications across a diverse range of organizations.\n\n### New Relic Tomcat quickstart features\n\nOur Tomcat monitoring integration has the following features:\n\n- A standard dashboard that tracks key indicators like error overview, virtual machine overview, daily transaction errors, transaction errors today vs 1 week ago, CPU utilization, memory heap used, and more\n- Instant alerts on performance metrics like transaction errors and high CPU utilization\n- Custom queries and immediate data visualization\n\n### Why monitor Tomcat with New Relic?\n\nNew Relic’s Tomcat monitoring quickstart automatically instruments Tomcat with the New Relic Java agent. It helps you to immediately monitor Tomcat’s memory usage and other indicators with instant alerts and a standard dashboard, giving you valuable insights to improve Tomcat’s performance.\n\nOur Tomcat integration empowers teams to monitor micros-services under Tomcat. Your team can leverage the integration to report all data for each service to New Relic and drill into specific JVMs to see the data and details for each instance.\n\nGet started with New Relic Tomcat monitoring quickstart today to proactively monitor Tomcat.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/java/tomcat",
+    "id": "d3e84281-6094-4cb2-b323-30e4f13b4f0c",
+    "level": "NEW_RELIC",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/java/tomcat/logo.svg",
+    "summary": "Monitoring Tomcat is critical to track its performance via key metrics like transaction errors, memory usage, and CPU utilization. Download our Tomcat instant observability quickstart to instrument Tomcat with our Java agent.",
+    "websiteUrl": null,
+    "keywords": [
+      "apm",
+      "java",
+      "server"
+    ],
+    "authors": [
+      "New Relic"
+    ],
+    "dashboards": [
+      {
+        "name": "Tomcat",
+        "description": "Java",
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/java/tomcat/dashboards/java/java01.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/java/tomcat/dashboards/java/java02.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/java/tomcat/dashboards/java/java.png"
+        ]
+      }
+    ],
+    "alerts": [
+      {
+        "name": "High CPU Utilization",
+        "details": "This alert is triggered when the CPU Utilization is above 90%.",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "Transaction Errors",
+        "details": "This alert is triggered when the the transactions fail more than 10% of the time in 5 minutes.",
+        "type": "STATIC",
+        "url": null
+      }
+    ],
+    "documentation": [
+      {
+        "name": "Tomcat installation docs",
+        "description": "Open-source implementation of the Java Servlet, JavaServer Pages, Java\nExpression Language and WebSocket technologies.\n",
+        "url": "https://docs.newrelic.com/docs/agents/java-agent/getting-started/compatibility-requirements-java-agent"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "Java Agent",
+        "id": "setup-java-targeted-install"
       }
     ]
   },
@@ -20437,12 +20499,12 @@
   {
     "title": "Legacy SNMP",
     "name": "snmp",
-    "description": "Internet Standard protocol for collecting and organizing information about\nmanaged devices on IP networks.",
+    "description": "## What is SNMP?\n\nSimple Network Management Protocol (SNMP) is a networking protocol used for monitoring managed devices on IP networks. It unlocks insights into any device on your network, physical, or virtual.\n\n### How to monitor SNMP?\n\nNew Relic SNMP integration empowers you to monitor the health of your network. First, you need to poll SNMP data from network devices and send it to New Relic. Then, create a New Relic workload to logically group your devices and set up anomaly detection. Afterward, you can use your new data to understand behaviors within your network.\n\n### Why monitor SNMP with New Relic?\n\nOur SNMP infrastructure monitoring integration helps you to capture critical network performance metrics and inventory reported by SNMP servers.\n\nFollow in the footsteps of DevOps engineers at Synchrony Financial who are leveraging New Relic to monitor their network and other security-related hardware devices like the IBM DataPower gateway. Synchrony Financial runs various threat detection, prevention rules, and policies on the IBM DataPower gateway. However, their IBM DataPower API gateway is a single point of failure through which application traffic is routed. This exposes SNMP metric data about its own availability and performance. By using New Relic SNMP integration, Synchrony DevOps get real-time alerts on any security threats as soon as they are detected.\n\nInstall the New Relic SNMP monitoring quickstart today to proactively monitor the health of your network and correlate network performance with infrastructure, applications, and digital experiences.",
     "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/snmp",
     "id": "9eb6470e-fffd-4f16-b29a-9c78ae43f0e6",
     "level": "NEW_RELIC",
     "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/snmp/logo.svg",
-    "summary": "Internet Standard protocol for collecting and organizing information about\nmanaged devices on IP networks.",
+    "summary": "Monitoring SNMP is important to capture critical network performance metrics. Download the New Relic SNMP quickstart today to proactively monitor the health of your network and understand behaviors within the network.",
     "websiteUrl": null,
     "keywords": [
       "infrastructure",
@@ -21489,11 +21551,11 @@
     ],
     "dashboards": [
       {
-        "name": "GCP Integrations Data Ingest Analysis",
+        "name": "Kubernetes Data Ingest Analysis",
         "description": null,
         "url": null,
         "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/audit/infrastructure-integrations-data-analysis/dashboards/gcp-integrations-data-ingest-analysis/gcp-integrations-data-ingest-analysis.png"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/audit/infrastructure-integrations-data-analysis/dashboards/kubernetes-data-ingest-analysis/kubernetes-data-ingest-analysis.png"
         ]
       },
       {
@@ -21513,11 +21575,11 @@
         ]
       },
       {
-        "name": "Kubernetes Data Ingest Analysis",
+        "name": "GCP Integrations Data Ingest Analysis",
         "description": null,
         "url": null,
         "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/audit/infrastructure-integrations-data-analysis/dashboards/kubernetes-data-ingest-analysis/kubernetes-data-ingest-analysis.png"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/audit/infrastructure-integrations-data-analysis/dashboards/gcp-integrations-data-ingest-analysis/gcp-integrations-data-ingest-analysis.png"
         ]
       },
       {
@@ -22199,11 +22261,11 @@
     ],
     "dashboards": [
       {
-        "name": "Browser Traffic Analysis",
+        "name": "Browser Overview",
         "description": null,
         "url": null,
         "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/browser/dashboards/traffic_analysis/traffic_analysis.png"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/browser/dashboards/browser_overview/browser_overview.png"
         ]
       },
       {
@@ -22215,11 +22277,11 @@
         ]
       },
       {
-        "name": "Browser Overview",
+        "name": "Browser Traffic Analysis",
         "description": null,
         "url": null,
         "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/browser/dashboards/browser_overview/browser_overview.png"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/browser/dashboards/traffic_analysis/traffic_analysis.png"
         ]
       },
       {
