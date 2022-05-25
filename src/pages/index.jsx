@@ -215,7 +215,8 @@ const QuickstartsPage = ({ data, location }) => {
     mobileFirst: true, // necessary for breakpoints to work as expected
     prevArrow: <button
       css={css`
-    z-index: 0;`}>
+        z-index: 1;
+    `}>
       <LeftArrowSVG
         className="slick-prev"
         css={css`

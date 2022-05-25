@@ -486,7 +486,6 @@ const GlobalHeader = ({ className, activeSite }) => {
                 justify-content: center;
                 flex-direction: column;
                 list-style-type: none;
-                width: 100%;
                 margin: 0;
                 padding: 0;
                 letter-spacing: -0.005em;
@@ -495,15 +494,25 @@ const GlobalHeader = ({ className, activeSite }) => {
                   flex: 0 0 auto;
                   border-bottom: 1px solid #eeefef;
                   height: 4rem;
+                  border-bottom-color: rgb(228 229 230 / var(--tw-border-opacity));
+                  border-bottom-width: 1px;
+                  --tw-border-opacity: 1;
                   > a {
                     --active-color: var(--color-white);
                     font-family: Söhne-Buch;
-                    color: #54565a;
+                    color: var(--black-text-color);
                     font-weight: 400;
                     font-size: 1.125rem;
                     line-height: 1.75rem;
                     padding: 1rem 2.5rem;
                     text-align: left;
+                                  
+                > span {
+                  color: var(--black-hover-color);
+                  &:hover {
+                    color: var(--black-hover-color);
+                    border-bottom: 1.5px solid #1D252C;
+                  }
                 @media screen and (min-width: ${NAV_BREAKPOINT}) {
                   flex-direction: row;
                 }
@@ -526,6 +535,7 @@ const GlobalHeader = ({ className, activeSite }) => {
               box-shadow: 0 0.25rem 1.875rem rgb(84 86 90 / 10%);
               background-color: rgb(29, 37, 44);
               height: 6.375rem;
+              top: 37.375rem;
             `}
           >
             <Button
@@ -539,7 +549,9 @@ const GlobalHeader = ({ className, activeSite }) => {
                 font-family:Söhne-Buch;
                 font-weight: 400;
                 font-size: 0.875rem;
-                line-height: 1.625;
+                line-height: 1.93;
+                margin-left: 0;
+                margin-right: 5px;
                 text-decoration: none;
                 border: 1px solid transparent;
                 border-radius: 4px;
@@ -552,6 +564,10 @@ const GlobalHeader = ({ className, activeSite }) => {
                 border-color: var(--color-neutrals-100);
                 background-color: transparent;
                 color: var(--color-neutrals-100);
+                &:hover {
+                  color: var(--color-neutrals-100);
+                  background-color: transparent;
+                }
                   
                 `}
             >
@@ -575,7 +591,7 @@ const GlobalHeader = ({ className, activeSite }) => {
                 font-family: Söhne-Buch;
                 font-weight: 400;
                 font-size: 0.875rem;
-                line-height: 1.625;
+                line-height: 1.93;
                 text-decoration: none;
                 border: 1px solid transparent;
                 border-radius: 4px;
@@ -584,9 +600,20 @@ const GlobalHeader = ({ className, activeSite }) => {
                 text-align: center;
                 vertical-align: middle;
                 white-space: nowrap;
-                border-color: rgb(29, 37, 44);
                 background-color: var(--color-neutrals-100);
                 color: rgb(29, 37, 44);
+                border-color: var(--color-neutrals-100);
+                margin-left: -4.49px;
+                margin-right: 2px;
+              &:hover {
+                background-color: var(--color-neutrals-100);
+                color: rgb(29, 37, 44);
+              }
+           > span{
+              &:hover {
+                border-bottom: 1.5px solid rgb(29, 37, 44);
+              }
+  
               `}
             >
               <span>{t('Get Started')}</span>
