@@ -568,6 +568,15 @@ const GlobalHeader = ({ className, activeSite }) => {
                   color: var(--color-neutrals-100);
                   background-color: transparent;
                 }
+                &:focus {
+                  outline-style: solid;
+                  outline-width: 0.125rem;
+                  outline-color: rgb(28 231 131 / 0.3);
+                  --tw-border-opacity: 1;
+                  border-color: rgb(249 250 250 / var(--tw-border-opacity));
+                  --tw-text-opacity: 1;
+                  color: rgb(249 250 250 / var(--tw-text-opacity));
+                }
                   
                 `}
             >
