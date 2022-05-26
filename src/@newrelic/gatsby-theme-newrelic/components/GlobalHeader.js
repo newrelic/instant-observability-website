@@ -153,6 +153,7 @@ const GlobalHeader = ({ className, activeSite }) => {
             css={css`
             display: flex;
               align-items: center;
+              outline: none;
 
               @media screen and (max-width: ${NAV_BREAKPOINT}) {
                 width: 7.5rem;
@@ -225,20 +226,26 @@ const GlobalHeader = ({ className, activeSite }) => {
                   flex: 0 0 auto;
                   > a {
                     --active-color: #1d252c;
-                    color: #e4e5e6;
+                    color: var(--white-hover-color);
                     font-family: Söhne-Buch;
                     font-weight: 400;
                     font-size: 1.125rem;
                     padding: 2rem 1rem;
                     display: block;
                     &:hover {
-                      color: var(--category-hover-color);
+                      color: var(--white-hover-color);
+                    }
+                    &:focus {
+                      outline: none;
+                      text-decoration-line: underline;
+                      outline-width: 0.25rem;
+                      text-underline-offset: 0.25rem;
                     }
                     >span {
                       font-size: 100%;
                     &:hover {
-                      color: var(--category-hover-color);
-                      border-bottom: 1.5px solid #e4e5e6;
+                      color: var(--white-hover-color);
+                      border-bottom: 1.5px solid var(--white-hover-color);
                     }
                   }
                   }
@@ -262,7 +269,7 @@ const GlobalHeader = ({ className, activeSite }) => {
               align-items: center;
               justify-content: flex-end;
               flex: 1;
-
+              height: 5.75rem;
               > li {
                 transition: all 0.2s ease-out;
                 color: var(--secondary-text-color);
@@ -272,6 +279,13 @@ const GlobalHeader = ({ className, activeSite }) => {
                   font-size: 1.125rem;
                   line-height: 1.25;
                   letter-spacing: -0.005em;
+
+                  &:focus {
+                    outline: none;
+                    text-decoration-line: underline;
+                    outline-width: 0.25rem;
+                    text-underline-offset: 0.25rem;
+                  }
                 }
                 }
 
@@ -299,8 +313,16 @@ const GlobalHeader = ({ className, activeSite }) => {
                 css={css`
                   font-size: 1rem;
                   white-space: nowrap;
+                  text-underline-offset: 0.25rem;
+                  line-height: 1.1 !important;
+                  &:focus{
+                    --tw-text-opacity: 1;
+                    color: var(--white-hover-color);
+                  }
                 > span {
                   color: var(--white-hover-color);
+                  height: 1.375rem;
+
                   &:hover {
                     color: var(--white-hover-color);
                     border-bottom: 1.5px solid var(--white-hover-color);
@@ -321,6 +343,7 @@ const GlobalHeader = ({ className, activeSite }) => {
               `}
             >
               <Button
+                className="getstarted"
                 as={ExternalLink}
                 size={Button.SIZE.SMALL}
                 variant={Button.VARIANT.LINK}
@@ -328,8 +351,16 @@ const GlobalHeader = ({ className, activeSite }) => {
                 css={css`
                   font-size: 1rem;
                   white-space: nowrap;
+                  text-underline-offset: 0.25rem;
+                  line-height: 1.1 !important;
+                  &:focus{
+                    --tw-text-opacity: 1;
+                    color: rgb(28 231 131 / var(--tw-text-opacity)) !important;
+                  }
                   > span {
                     color: var(--btn-background-green);
+                    height: 1.375rem;
+               
                   &:hover {
                     color: var(--btn-background-green);
                     border-bottom: 1.5px solid var(--btn-background-green);
@@ -357,6 +388,7 @@ const GlobalHeader = ({ className, activeSite }) => {
           @media screen and (max-width: ${NAV_BREAKPOINT}) {
             display: flex;
             z-index: 0;
+            height: 4rem;
           }
 
           @media screen and (min-width: ${NAV_BREAKPOINT}) {
@@ -372,16 +404,15 @@ const GlobalHeader = ({ className, activeSite }) => {
           css={css`
             display: flex;
             width: 100%;
-           
             flex-wrap: wrap;
             justify-content: space-between;
             flex-direction: column;
-            @media screen and (max-width: ${MOBILE_BREAKPOINT}) {
+            @media screen and (max-width: ${NAV_BREAKPOINT}) {
               flex-direction: row;
               padding: 1rem;
             }
 
-            @media screen and (min-width: ${MOBILE_BREAKPOINT}) {
+            @media screen and (min-width: ${NAV_BREAKPOINT}) {
               flex-direction: row;
               padding: 1.5rem;
             }
@@ -398,12 +429,13 @@ const GlobalHeader = ({ className, activeSite }) => {
             css={css`
               display: flex;
               align-items: center;
-              margin-right: 3rem;
               height: 100%;
-              @media screen and (max-width: ${NAV_BREAKPOINT}) {
+              outline: none;
+             
+              @media screen and (max-width: ${MOBILE_BREAKPOINT}) {
                 width: 7.5rem;
               }
-              @media screen and (min-width: ${NAV_BREAKPOINT}) {
+              @media screen and (min-width: ${MOBILE_BREAKPOINT}) {
                 width: 10.625rem;
               }
             `}
@@ -439,6 +471,18 @@ const GlobalHeader = ({ className, activeSite }) => {
                 cursor: pointer;
                 width: 48;
                 height: 48;
+                &:focus {
+                  width: 2rem;
+                  height: 2rem;
+                  margin-right: 1rem;
+                  padding: 0;
+                }
+
+                &:hover {
+                  color: var(--white-hover-color);
+                  background-color: transparent;
+                }
+
                 >svg {
                   width: 32px;
                   height: 32px;
@@ -506,7 +550,13 @@ const GlobalHeader = ({ className, activeSite }) => {
                     line-height: 1.75rem;
                     padding: 1rem 2.5rem;
                     text-align: left;
-                                  
+                    &:focus {
+                      outline: none;
+                      outline-width: 0.25rem;
+                      text-decoration-line: underline;
+                      text-underline-offset: 0.25rem;
+                    }              
+
                 > span {
                   color: var(--black-hover-color);
                   &:hover {
@@ -535,7 +585,13 @@ const GlobalHeader = ({ className, activeSite }) => {
               box-shadow: 0 0.25rem 1.875rem rgb(84 86 90 / 10%);
               background-color: rgb(29, 37, 44);
               height: 6.375rem;
-              top: 37.375rem;
+              > a {
+                &:focus{
+                  outline-style: solid;
+                  outline-width: 0.125rem;
+                  outline-color: rgb(28 231 131 / 0.3);
+                }
+              }
             `}
           >
             <Button
@@ -569,9 +625,6 @@ const GlobalHeader = ({ className, activeSite }) => {
                   background-color: transparent;
                 }
                 &:focus {
-                  outline-style: solid;
-                  outline-width: 0.125rem;
-                  outline-color: rgb(28 231 131 / 0.3);
                   --tw-border-opacity: 1;
                   border-color: rgb(249 250 250 / var(--tw-border-opacity));
                   --tw-text-opacity: 1;
@@ -614,6 +667,10 @@ const GlobalHeader = ({ className, activeSite }) => {
                 border-color: var(--color-neutrals-100);
                 margin-left: -4.49px;
                 margin-right: 2px;
+                &:focus {
+                  text-decoration-line: underline;
+                  text-underline-offset: 0.25rem;
+                }
               &:hover {
                 background-color: var(--color-neutrals-100);
                 color: rgb(29, 37, 44);
