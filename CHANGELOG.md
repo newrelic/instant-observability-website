@@ -1,3 +1,10 @@
+## [1.2.1](https://github.com/newrelic/instant-observability-website/compare/v1.2.0...v1.2.1) (2022-05-26)
+
+
+### Bug Fixes
+
+* add redirect for cloudflare ([46c2283](https://github.com/newrelic/instant-observability-website/commit/46c2283f3f69d4c28c0dd3683312bce2d0f4474e))
+
 # [1.2.0](https://github.com/newrelic/instant-observability-website/compare/v1.1.2...v1.2.0) (2022-05-24)
 
 
