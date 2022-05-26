@@ -172,7 +172,7 @@ const IOBanner = ({ search, setSearch, setIsSearchInputEmpty }) => {
           css={css`
             margin-right: auto;
 
-            @media (max-width: 1440px) {
+            @media (max-width: 1439px) {
               display: none;
             }
           `}
@@ -199,7 +199,7 @@ const IOBanner = ({ search, setSearch, setIsSearchInputEmpty }) => {
           css={css`
             margin-left: auto;
 
-            @media (max-width: 1440px) {
+            @media (max-width: 1439px) {
               display: none;
             }
           `}
