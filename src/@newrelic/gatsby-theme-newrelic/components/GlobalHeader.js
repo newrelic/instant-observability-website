@@ -287,32 +287,6 @@ const GlobalHeader = ({ className, activeSite }) => {
                 <span>{t('Login')}</span>
               </Button>
             </li>
-            <li
-              css={css`
-                display: flex;
-                align-items: right;
-              `}
-            >
-              <Button
-                as={ExternalLink}
-                size={Button.SIZE.SMALL}
-                variant={Button.VARIANT.LINK}
-                href="https://one.newrelic.com"
-                css={css`
-                  font-size: 18px;
-                  white-space: nowrap;
-                  color: #1ce783;
-                  &:hover {
-                    color: #1ce783;
-                  }
-                  @media screen and (max-width: ${NAV_BREAKPOINT}) {
-                    display: none;
-                  }
-                `}
-              >
-                <span>{t('Get Started')}</span>
-              </Button>
-            </li>
           </ul>
         </div>
       </div>
@@ -503,40 +477,6 @@ const GlobalHeader = ({ className, activeSite }) => {
                 `}
             >
               <span>{t('Login')}</span>
-            </Button>
-
-            <Button
-              as={ExternalLink}
-              className={className}
-              href="https://newrelic.com/signup"
-              size={Button.SIZE.SMALL}
-              variant={Button.VARIANT.PRIMARY}
-              instrumentation={{
-                component: 'SignupButton',
-                layoutElement: 'globalHeader',
-              }}
-              css={css`
-                padding: 0.375rem 1rem;
-                transition: background-color 0.3s ease, color 0.3s ease,
-                  border-color 0.3s ease;
-                font-family: Söhne-Buch;
-                font-weight: 400;
-                font-size: 1rem;
-                line-height: 1.625;
-                text-decoration: none;
-                border: 1px solid transparent;
-                border-radius: 4px;
-                cursor: pointer;
-                display: inline-block;
-                text-align: center;
-                vertical-align: middle;
-                white-space: nowrap;
-                background-color: #1d252c;
-                color: #fff;
-                border-color: #1d252c;
-              `}
-            >
-              <span>{t('Get Started')}</span>
             </Button>
           </div>
         </div>
