@@ -167,10 +167,17 @@ const GuidedInstallTileMostPopular = () => {
           `}
         >
           Install New Relic
-          {startNavigation && (
+          {true && (
             <Spinner
               css={css`
                 margin-left: 1rem;
+                :after {
+                  width: 2rem;
+                  height: 2rem;
+                  border-width: thick;
+                  display: flex;
+                  position: initial;
+                }
               `}
             />
           )}
