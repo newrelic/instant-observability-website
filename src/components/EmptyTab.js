@@ -4,6 +4,7 @@ import { css } from '@emotion/react';
 import { Button, Icon, Link } from '@newrelic/gatsby-theme-newrelic';
 import { QUICKSTARTS_REPO } from '../data/constants';
 import GitHubIconSVG from '../components/Icons/GitHubIconSVG';
+import AnimatedText from './AnimatedText';
 
 const EmptyTab = ({
   quickstartName,
@@ -44,7 +45,7 @@ const EmptyTab = ({
               background: var(--background-color);
               color: var(--btn-text-color);
               border-radius: 4px;
-              padding: 13.5px 20px 13.5px 22px;
+              padding: 0px 20px 0px 22px;
               column-gap: 14.45px; 
               
               &:hover{
@@ -55,6 +56,10 @@ const EmptyTab = ({
                 @media (max-width: 760px) {
                     width: 100%;
                 }
+              div {
+                text-align: left;
+                width: auto;
+              }
             `}
         as={Link}
         variant={Button.VARIANT.PRIMARY}
@@ -63,7 +68,9 @@ const EmptyTab = ({
         instrumentation={{ quickstartName }}
       >
         <GitHubIconSVG className="ViewRepo" />
-        View repo
+        <AnimatedText
+          text={'View repo'}
+        />
       </Button>
 
     </div>
