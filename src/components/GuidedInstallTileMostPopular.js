@@ -1,9 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { css } from '@emotion/react';
 import {
   Surface,
   Button,
   useInstrumentedHandler,
+  Spinner,
 } from '@newrelic/gatsby-theme-newrelic';
 import {
   SIGNUP_LINK,
@@ -15,6 +16,9 @@ import Cookies from 'js-cookie';
 import { getGuidedInstallStackedNr1Url } from '../utils/get-pack-nr1-url';
 
 const GuidedInstallTileMostPopular = () => {
+  // used to start the spinner on clicking "Install New Relic" button
+  const [startNavigation, setStartNavigation] = useState(false);
+
   const isReturningUser = Boolean(Cookies.get('ajs_user_id'));
 
   const handleNavigation = () => {
@@ -144,7 +148,10 @@ const GuidedInstallTileMostPopular = () => {
         `}
       >
         <Button
-          onClick={handleButtonClick}
+          onClick={() => {
+            setStartNavigation(true);
+            return handleButtonClick();
+          }}
           variant={Button.VARIANT.PRIMARY}
           size={Button.SIZE.SMALL}
           css={css`
@@ -160,6 +167,20 @@ const GuidedInstallTileMostPopular = () => {
           `}
         >
           Install New Relic
+          {startNavigation && (
+            <Spinner
+              css={css`
+                margin-left: 1rem;
+                :after {
+                  width: 2rem;
+                  height: 2rem;
+                  border-width: thick;
+                  display: flex;
+                  position: initial;
+                }
+              `}
+            />
+          )}
         </Button>
       </div>
     </Surface>
