@@ -335,43 +335,6 @@ const GlobalHeader = ({ className, activeSite }) => {
                 <span>{t('Log in')}</span>
               </Button>
             </li>
-            <li
-              css={css`
-                display: flex;
-                align-items: right;
-              `}
-            >
-              <Button
-                className="getstarted"
-                as={ExternalLink}
-                size={Button.SIZE.SMALL}
-                variant={Button.VARIANT.LINK}
-                href="https://one.newrelic.com"
-                css={css`
-                  font-size: 1rem;
-                  white-space: nowrap;
-                  text-underline-offset: 0.25rem;
-                  &:focus{
-                    --tw-text-opacity: 1;
-                    color: rgb(28 231 131 / var(--tw-text-opacity));
-                  }
-                  > span {
-                    color: var(--btn-background-green);
-                    height: 1.375rem;
-               
-                  &:hover {
-                    color: var(--btn-background-green);
-                    border-bottom: 1.5px solid var(--btn-background-green);
-                  }
-                  }
-                  @media screen and (max-width: ${NAV_BREAKPOINT}) {
-                    display: none;
-                  }
-                `}
-              >
-                <span>{t('Get Started')}</span>
-              </Button>
-            </li>
           </ul>
         </div>
       </div>
@@ -638,54 +601,6 @@ const GlobalHeader = ({ className, activeSite }) => {
               <span>{t('Log in')}</span>
             </Button>
 
-            <Button
-              as={ExternalLink}
-              className={className}
-              href="https://newrelic.com/signup"
-              size={Button.SIZE.SMALL}
-              variant={Button.VARIANT.PRIMARY}
-              instrumentation={{
-                component: 'SignupButton',
-                layoutElement: 'globalHeader',
-              }}
-              css={css`
-                padding: 0.6rem 1rem;
-                transition: background-color 0.3s ease, color 0.3s ease,
-                  border-color 0.3s ease;
-                font-family: Söhne-Buch;
-                font-weight: 400;
-                font-size: 0.875rem;
-                line-height: 1.93;
-                text-decoration: none;
-                border: 1px solid transparent;
-                border-radius: 4px;
-                cursor: pointer;
-                display: inline-block;
-                text-align: center;
-                vertical-align: middle;
-                white-space: nowrap;
-                background-color: var(--color-neutrals-100);
-                color: rgb(29, 37, 44);
-                border-color: var(--color-neutrals-100);
-                margin-left: -4.49px;
-                margin-right: 2px;
-                &:focus {
-                  text-decoration-line: underline;
-                  text-underline-offset: 0.25rem;
-                }
-              &:hover {
-                background-color: var(--color-neutrals-100);
-                color: rgb(29, 37, 44);
-              }
-           > span{
-              &:hover {
-                border-bottom: 1.5px solid rgb(29, 37, 44);
-              }
-  
-              `}
-            >
-              <span>{t('Get Started')}</span>
-            </Button>
           </div>
         </div>
       )}
