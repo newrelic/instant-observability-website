@@ -8,6 +8,7 @@ import ExternalLink from '@newrelic/gatsby-theme-newrelic/src/components/Externa
 import RelatedResources from './RelatedResources';
 import TickIconSVG from './Icons/TickIconSVG';
 import GitHubIconSVG from './Icons/GitHubIconSVG';
+import AnimatedText from './AnimatedText';
 
 const LandingPageFooter = ({
   quickstart,
@@ -100,15 +101,21 @@ const LandingPageFooter = ({
                 background: var(--background-color);
                 color: var(--btn-text-color);
                 border-radius: 4px;
-                padding: 13.5px 20px 13.5px 22px;
+                padding: 0px 20px 0px 22px;
+                border-color: var(--background-color);
                 column-gap: 14.45px;
                 font-weight: 400;
                 &:hover {
                   color: var(--white-hover-color);
+                  border-color: var(--background-color);
                 }
 
                 @media (max-width: 760px) {
                   width: 100%;
+                }
+                div {
+                  text-align: left;
+                  width: auto;
                 }
               `}
               as={Link}
@@ -118,7 +125,9 @@ const LandingPageFooter = ({
               onClick={trackQuickstart('QuickstartViewRepoClick', quickstart)}
             >
               <GitHubIconSVG className="ViewRepo" />
-              View repo
+              <AnimatedText
+                text={'View repo'}
+              />
             </Button>
           </div>
           <div
@@ -143,17 +152,24 @@ const LandingPageFooter = ({
                 column-gap: 14.45px;
                 font-weight: 400;
                 height: 48px;
+                border-color: var(--background-color);
                 &:hover {
                   color: var(--white-hover-color);
+                  border-color: var(--background-color);
                 }
 
                 @media (max-width: 760px) {
                   width: 100%;
                 }
+                div {
+                  text-align: left;
+                }
               `}
             >
               <TickIconSVG className="Tick" />
-              Build your own
+              <AnimatedText
+                text={'Build your own'}
+              />
             </Button>
           </div>
         </div>

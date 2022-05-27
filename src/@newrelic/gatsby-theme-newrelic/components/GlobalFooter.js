@@ -88,7 +88,8 @@ const GlobalFooter = ({ className }) => {
         }
 
         a:hover {
-          color: white;
+          --tw-text-opacity: 1;
+          color: rgb(228 229 230 / var(--tw-text-opacity));
         }
       `}
     >
@@ -166,7 +167,8 @@ const GlobalFooter = ({ className }) => {
               grid-area: socials;
 
               svg:hover {
-                fill: white;
+                --tw-text-opacity: 1;
+                fill: rgb(228 229 230 / var(--tw-text-opacity));
               }
 
               @media screen and (min-width: calc(${MOBILE_BREAKPOINT} + 1px)) {
