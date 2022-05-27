@@ -277,7 +277,6 @@ const GlobalHeader = ({ className, activeSite }) => {
                   font-family: Söhne-Buch;
                   font-weight: 400;
                   font-size: 1.125rem;
-                  line-height: 1.25;
                   letter-spacing: -0.005em;
 
                   &:focus {
@@ -314,7 +313,7 @@ const GlobalHeader = ({ className, activeSite }) => {
                   font-size: 1rem;
                   white-space: nowrap;
                   text-underline-offset: 0.25rem;
-                  line-height: 1.1 !important;
+                  line-height: 1.1;
                   &:focus{
                     --tw-text-opacity: 1;
                     color: var(--white-hover-color);
@@ -352,10 +351,10 @@ const GlobalHeader = ({ className, activeSite }) => {
                   font-size: 1rem;
                   white-space: nowrap;
                   text-underline-offset: 0.25rem;
-                  line-height: 1.1 !important;
+                  line-height: 1.1;
                   &:focus{
                     --tw-text-opacity: 1;
-                    color: rgb(28 231 131 / var(--tw-text-opacity)) !important;
+                    color: rgb(28 231 131 / var(--tw-text-opacity));
                   }
                   > span {
                     color: var(--btn-background-green);
