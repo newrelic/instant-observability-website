@@ -269,6 +269,7 @@ const GlobalHeader = ({ className, activeSite }) => {
               justify-content: flex-end;
               flex: 1;
               height: 5.75rem;
+              line-height: 1.1;
               > li {
                 transition: all 0.2s ease-out;
                 color: var(--secondary-text-color);
@@ -312,7 +313,6 @@ const GlobalHeader = ({ className, activeSite }) => {
                   font-size: 1rem;
                   white-space: nowrap;
                   text-underline-offset: 0.25rem;
-                  line-height: 1.1;
                   &:focus{
                     --tw-text-opacity: 1;
                     color: var(--white-hover-color);
@@ -350,7 +350,6 @@ const GlobalHeader = ({ className, activeSite }) => {
                   font-size: 1rem;
                   white-space: nowrap;
                   text-underline-offset: 0.25rem;
-                  line-height: 1.1;
                   &:focus{
                     --tw-text-opacity: 1;
                     color: rgb(28 231 131 / var(--tw-text-opacity));
