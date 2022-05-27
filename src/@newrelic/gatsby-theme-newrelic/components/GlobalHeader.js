@@ -99,6 +99,7 @@ const GlobalHeader = ({ className, activeSite }) => {
   return (
     <>
       <AnnouncementBanner />
+      {/* web view - start point */}
       <div
         data-swiftype-index={false}
         className={className}
@@ -374,6 +375,9 @@ const GlobalHeader = ({ className, activeSite }) => {
           </ul>
         </div>
       </div>
+      {/* web view - end point */}
+
+      {/* small screen (NAV_BREAKPOINT - 1127px) - start point */}
 
       <div
         css={css`
@@ -685,6 +689,7 @@ const GlobalHeader = ({ className, activeSite }) => {
           </div>
         </div>
       )}
+       {/* small screen (NAV_BREAKPOINT - 1127px) - end point */}
     </>
   );
 };
