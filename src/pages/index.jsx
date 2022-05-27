@@ -220,20 +220,20 @@ const QuickstartsPage = ({ data, location }) => {
       <LeftArrowSVG
         className="slick-prev"
         css={css`
-                    width: auto;
-                    height: auto;
-                    margin: 0 1.5rem;
-                  `}
+          width: auto;
+          height: auto;
+          margin: 0 1.5rem;
+        `}
       />
     </button>,
     nextArrow: <button>
       <RightArrowSVG
         className="slick-next"
         css={css`
-                    width: auto;
-                    height: auto;
-                    margin: 0 1.5rem;
-                  `}
+          width: auto;
+          height: auto;
+          margin: 0 1.5rem;
+        `}
       />
     </button>,
     responsive: [

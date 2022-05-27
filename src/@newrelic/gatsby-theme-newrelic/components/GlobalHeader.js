@@ -136,7 +136,6 @@ const GlobalHeader = ({ className, activeSite }) => {
             @media screen and (min-width: ${NAV_BREAKPOINT}) {
               margin: 0 auto;
               max-width: 1248px;
-              justify-content: space-between;
             }
          
             
@@ -151,7 +150,7 @@ const GlobalHeader = ({ className, activeSite }) => {
               href: 'https://newrelic.com',
             })}
             css={css`
-            display: flex;
+              display: flex;
               align-items: center;
               outline: none;
 
@@ -387,7 +386,7 @@ const GlobalHeader = ({ className, activeSite }) => {
           @media screen and (max-width: ${NAV_BREAKPOINT}) {
             display: flex;
             z-index: 0;
-            height: 4rem;
+            height: var(--global-header-height);
           }
 
           @media screen and (min-width: ${NAV_BREAKPOINT}) {
@@ -536,7 +535,7 @@ const GlobalHeader = ({ className, activeSite }) => {
                   margin: 0;
                   flex: 0 0 auto;
                   border-bottom: 1px solid #eeefef;
-                  height: 4rem;
+                  height: var(--global-header-height);
                   border-bottom-color: rgb(228 229 230 / var(--tw-border-opacity));
                   border-bottom-width: 1px;
                   --tw-border-opacity: 1;
@@ -560,7 +559,7 @@ const GlobalHeader = ({ className, activeSite }) => {
                   color: var(--black-hover-color);
                   &:hover {
                     color: var(--black-hover-color);
-                    border-bottom: 1.5px solid #1D252C;
+                    border-bottom: 1.5px solid var(--black-hover-color);
                   }
                 @media screen and (min-width: ${NAV_BREAKPOINT}) {
                   flex-direction: row;
@@ -583,8 +582,9 @@ const GlobalHeader = ({ className, activeSite }) => {
               position: fixed;
               box-shadow: 0 0.25rem 1.875rem rgb(84 86 90 / 10%);
               background-color: rgb(29, 37, 44);
-              height: 6.375rem;
+              height: 6.6rem;
               > a {
+                height: 3rem; 
                 &:focus{
                   outline-style: solid;
                   outline-width: 0.125rem;
