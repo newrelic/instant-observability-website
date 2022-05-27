@@ -125,7 +125,7 @@ const GlobalHeader = ({ className, activeSite }) => {
             display: flex;
             align-items: center;
             height: 5.75rem;
-            padding: 0 3.75rem;
+            padding: 0 var(--site-content-padding);
             max-width: 78rem;
             justify-content: space-between;
            
@@ -515,7 +515,7 @@ const GlobalHeader = ({ className, activeSite }) => {
             background-color: var(--color-white);
             z-index: 10;
 
-            @media screen and (min-width: ${NAV_BREAKPOINT}) {
+            @media screen and (min-width: 1128px) {
               display: none;
             }
           `}
