@@ -10,10 +10,12 @@
   --background-grey-color : #D6D6D6;
   --btn-background-green: #1CE783;
   --category-hover-color: #E4E5E6;
+  --black-hover-color: #1D252C;
   --site-content-padding: 3.75rem !important;
   @media (max-width: 960px) {
     --site-content-padding: 2.5rem !important;
   }
+  --global-header-height: 4rem !important; 
 }
 h1,h2,h3{
   font-family: 'Söhne-Kräftig';

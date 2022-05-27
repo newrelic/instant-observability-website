@@ -213,26 +213,29 @@ const QuickstartsPage = ({ data, location }) => {
     adaptiveHeight: false,
     adaptiveWidth: true,
     mobileFirst: true, // necessary for breakpoints to work as expected
-    prevArrow: <button>
-                <LeftArrowSVG
-                  className="slick-prev"
-                  css={css`
-                    width: auto;
-                    height: auto;
-                    margin: 0 1.5rem;
-                  `}
-                />
-              </button>,
+    prevArrow: <button
+      css={css`
+        z-index: 1;
+    `}>
+      <LeftArrowSVG
+        className="slick-prev"
+        css={css`
+          width: auto;
+          height: auto;
+          margin: 0 1.5rem;
+        `}
+      />
+    </button>,
     nextArrow: <button>
-                <RightArrowSVG
-                  className="slick-next"
-                  css={css`
-                    width: auto;
-                    height: auto;
-                    margin: 0 1.5rem;
-                  `}
-                />
-              </button>,
+      <RightArrowSVG
+        className="slick-next"
+        css={css`
+          width: auto;
+          height: auto;
+          margin: 0 1.5rem;
+        `}
+      />
+    </button>,
     responsive: [
       {
         breakpoint: parseInt(TRIPLE_COLUMN_BREAKPOINT),
