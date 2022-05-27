@@ -6798,192 +6798,6 @@
     "installPlans": []
   },
   {
-    "title": "Generic JDBC",
-    "name": "generic-jdbc",
-    "description": "# What is Generic JDBC?\n\nJava Database Connectivity is a standard Java API for database-independent connectivity between Java and a wide range of databases.\n\n\n## Get started!\n\nLeverage community expertise and instantly get value out of your telemetry data. This quickstart automatically instruments Generic JDBC with the New Relic Java agent, and allows you to instantly monitor your Java application with out-of-the-box dashboards and alerts. \nFurther leverage New Relic's APM capabilities by setting up [errors inbox](https://docs.newrelic.com/docs/apm/apm-ui-pages/errors-inbox/errors-inbox/), [transaction tracing](https://docs.newrelic.com/docs/apm/transactions/transaction-traces/introduction-transaction-traces/), and [service maps](https://docs.newrelic.com/docs/understand-dependencies/understand-system-dependencies/service-maps/introduction-service-maps/).\n\n## More info\n\nCheck out the [documentation](https://docs.newrelic.com/docs/agents/java-agent/getting-started/introduction-new-relic-java/) to learn more about New Relic monitoring for Generic JDBC.",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/java/generic-jdbc",
-    "id": "495ecdd5-ba37-47b9-819f-c02a528c2c37",
-    "level": "NEW_RELIC",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/java/generic-jdbc/logo.svg",
-    "summary": "Monitor Generic JDBC with New Relic's Java agent",
-    "websiteUrl": null,
-    "keywords": [
-      "apm",
-      "java"
-    ],
-    "authors": [
-      "New Relic"
-    ],
-    "dashboards": [
-      {
-        "name": "Generic JDBC",
-        "description": "Java",
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/java/generic-jdbc/dashboards/java/java01.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/java/generic-jdbc/dashboards/java/java02.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/java/generic-jdbc/dashboards/java/java.png"
-        ]
-      }
-    ],
-    "alerts": [
-      {
-        "name": "High CPU Utilization",
-        "details": "This alert is triggered when the CPU Utilization is above 90%.",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "Transaction Errors",
-        "details": "This alert is triggered when the the transactions fail more than 10% of the time in 5 minutes.",
-        "type": "STATIC",
-        "url": null
-      }
-    ],
-    "documentation": [
-      {
-        "name": "Generic JDBC installation docs",
-        "description": "Java Database Connectivity is a standard Java API for database-independent\nconnectivity between Java and a wide range of databases.\n",
-        "url": "https://docs.newrelic.com/docs/agents/java-agent/getting-started/compatibility-requirements-java-agent"
-      }
-    ],
-    "installPlans": [
-      {
-        "name": "Java Agent",
-        "id": "setup-java-agent"
-      }
-    ]
-  },
-  {
-    "title": "Java",
-    "name": "java",
-    "description": "## Why monitoring Java is so important\n\nJava is a compiled language, with the potential to be very fast. However, there are a a lot of Java-specific quirks that make the average program slow such as high default memory usage and lags in the startup time of the JVM. \n\nIn order to get the most performance out of your Java applications, it’s important to continuously monitor them with tools such as the New Relic Java agent. \n\n### New Relic Java quickstart features\n\n- Dashboards showing average CPU utilization, memory heap used, garbage collection CPU time, top 5 slowest transactions, and more.\n- Alerts for various metrics including high cpu utilization and transaction errors\n\n### New Relic - the perfect Java observability tool\n\n[Proactive Java monitoring](https://docs.newrelic.com/docs/agents/java-agent/getting-started/introduction-new-relic-java/) yields reductions in site latency and improves the user experience. Our Java agent monitors app servers, databases, and message queuing systems, giving insight into all the key components which allow a web app to run. Custom instrumentation is also available for the add-on Java frameworks and libraries which may be used. \n\nThe agent reports metric time-slice and event data, giving insight at scheduled intervals. It also provides JVM-level observability, providing thread pools data, HTTP sessions, and transactions. You can trace request flows through distributed systems, allowing you to pinpoint points of failure and proactively prevent downtime. All metrics and interfaces are unified via an included dashboard which provides a visual display of an application’s performance.\n\nFurther leverage New Relic's APM capabilities by setting up [errors inbox](https://docs.newrelic.com/docs/apm/apm-ui-pages/errors-inbox/errors-inbox/), [transaction tracing](https://docs.newrelic.com/docs/apm/transactions/transaction-traces/introduction-transaction-traces/), and [service maps](https://docs.newrelic.com/docs/understand-dependencies/understand-system-dependencies/service-maps/introduction-service-maps/).",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/java/java",
-    "id": "3ebfb315-d0a6-4b27-9f89-b16a9a1ada5f",
-    "level": "NEW_RELIC",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/java/java/logo.svg",
-    "summary": "The New Relic Java quickstart provides insight into application performance, improves uptime, and reduces latency. Monitoring is reported using metric time-slice and event data, and all results are displayed in easy-to-use, visual dashboards.",
-    "websiteUrl": null,
-    "keywords": [
-      "apm",
-      "java",
-      "language agent",
-      "most popular"
-    ],
-    "authors": [
-      "New Relic",
-      "Emil Hammarstrand"
-    ],
-    "dashboards": [
-      {
-        "name": "Java",
-        "description": "Java",
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/java/java/dashboards/java/java01.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/java/java/dashboards/java/java02.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/java/java/dashboards/java/java.png"
-        ]
-      }
-    ],
-    "alerts": [
-      {
-        "name": "Apdex Score",
-        "details": "This alert is triggered when the Apdex score is below 0.5 for 5 minutes",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "High CPU Utilization",
-        "details": "This alert is triggered when the CPU Utilization is above 90%.",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "Memory Usage",
-        "details": "This alert is triggered when Memory usage is above 90%",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "Transaction Errors",
-        "details": "This alert is triggered when the the transactions fail more than 10% of the time in 5 minutes.",
-        "type": "STATIC",
-        "url": null
-      }
-    ],
-    "documentation": [
-      {
-        "name": "Java installation docs",
-        "description": "Popular object-oriented programming language with widespread platform and\noperating system support.\n",
-        "url": "https://docs.newrelic.com/docs/agents/java-agent/getting-started/compatibility-requirements-java-agent"
-      }
-    ],
-    "installPlans": [
-      {
-        "name": "Java Agent",
-        "id": "setup-java-agent"
-      }
-    ]
-  },
-  {
-    "title": "OC4J",
-    "name": "oc4j",
-    "description": "# What is OC4J?\nOC4J is Oracle's implementation of the Java EE specification.\n\n## Get started!\nLeverage community expertise and instantly get value out of your telemetry data. This quickstart automatically instruments OC4J with the New Relic Java agent, and allows you to instantly monitor your Java application with out-of-the-box dashboards and alerts.\nFurther leverage New Relic's APM capabilities by setting up [errors inbox](https://docs.newrelic.com/docs/apm/apm-ui-pages/errors-inbox/errors-inbox/), [transaction tracing](https://docs.newrelic.com/docs/apm/transactions/transaction-traces/introduction-transaction-traces/), and [service maps](https://docs.newrelic.com/docs/understand-dependencies/understand-system-dependencies/service-maps/introduction-service-maps/).\n\n## More info\nCheck out the [documentation](https://docs.newrelic.com/docs/agents/java-agent/getting-started/introduction-new-relic-java/) to learn more about New Relic monitoring for OC4J.",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/java/oc4j",
-    "id": "e69ba5e0-04bc-48df-a246-9d371a2ecdf5",
-    "level": "NEW_RELIC",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/java/oc4j/logo.svg",
-    "summary": "Monitor OC4J with New Relic's Java agent",
-    "websiteUrl": null,
-    "keywords": [
-      "apm",
-      "java"
-    ],
-    "authors": [
-      "New Relic"
-    ],
-    "dashboards": [
-      {
-        "name": "OC4J",
-        "description": "Java",
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/java/oc4j/dashboards/java/java01.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/java/oc4j/dashboards/java/java02.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/java/oc4j/dashboards/java/java.png"
-        ]
-      }
-    ],
-    "alerts": [
-      {
-        "name": "High CPU Utilization",
-        "details": "This alert is triggered when the CPU Utilization is above 90%.",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "Transaction Errors",
-        "details": "This alert is triggered when the the transactions fail more than 10% of the time in 5 minutes.",
-        "type": "STATIC",
-        "url": null
-      }
-    ],
-    "documentation": [
-      {
-        "name": "OC4J installation docs",
-        "description": "OC4J is Oracle's implementation of the Java EE specification.",
-        "url": "https://docs.newrelic.com/docs/agents/java-agent/getting-started/compatibility-requirements-java-agent"
-      }
-    ],
-    "installPlans": [
-      {
-        "name": "Java Agent",
-        "id": "setup-java-agent"
-      }
-    ]
-  },
-  {
     "title": "Spring-JMS",
     "name": "spring-jms",
     "description": "# What is Spring-JMS?\n\nSpring's JMS (Java Message Service) integration framework that simplifies the use of the JMS API.\n\n\n## Get started!\n\nLeverage community expertise and instantly get value out of your telemetry data. This quickstart automatically instruments Spring-JMS with the New Relic Java agent, and allows you to instantly monitor your Java application with out-of-the-box dashboards and alerts. \nFurther leverage New Relic's APM capabilities by setting up [errors inbox](https://docs.newrelic.com/docs/apm/apm-ui-pages/errors-inbox/errors-inbox/), [transaction tracing](https://docs.newrelic.com/docs/apm/transactions/transaction-traces/introduction-transaction-traces/), and [service maps](https://docs.newrelic.com/docs/understand-dependencies/understand-system-dependencies/service-maps/introduction-service-maps/).\n\n## More info\n\nCheck out the [documentation](https://docs.newrelic.com/docs/agents/java-agent/getting-started/introduction-new-relic-java/) to learn more about New Relic monitoring for Spring-JMS.",
@@ -7087,6 +6901,63 @@
       {
         "name": "WebSphere installation docs",
         "description": "Web application server built and maintained by IBM.",
+        "url": "https://docs.newrelic.com/docs/agents/java-agent/getting-started/compatibility-requirements-java-agent"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "Java Agent",
+        "id": "setup-java-agent"
+      }
+    ]
+  },
+  {
+    "title": "Generic JDBC",
+    "name": "generic-jdbc",
+    "description": "# What is Generic JDBC?\n\nJava Database Connectivity is a standard Java API for database-independent connectivity between Java and a wide range of databases.\n\n\n## Get started!\n\nLeverage community expertise and instantly get value out of your telemetry data. This quickstart automatically instruments Generic JDBC with the New Relic Java agent, and allows you to instantly monitor your Java application with out-of-the-box dashboards and alerts. \nFurther leverage New Relic's APM capabilities by setting up [errors inbox](https://docs.newrelic.com/docs/apm/apm-ui-pages/errors-inbox/errors-inbox/), [transaction tracing](https://docs.newrelic.com/docs/apm/transactions/transaction-traces/introduction-transaction-traces/), and [service maps](https://docs.newrelic.com/docs/understand-dependencies/understand-system-dependencies/service-maps/introduction-service-maps/).\n\n## More info\n\nCheck out the [documentation](https://docs.newrelic.com/docs/agents/java-agent/getting-started/introduction-new-relic-java/) to learn more about New Relic monitoring for Generic JDBC.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/java/generic-jdbc",
+    "id": "495ecdd5-ba37-47b9-819f-c02a528c2c37",
+    "level": "NEW_RELIC",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/java/generic-jdbc/logo.svg",
+    "summary": "Monitor Generic JDBC with New Relic's Java agent",
+    "websiteUrl": null,
+    "keywords": [
+      "apm",
+      "java"
+    ],
+    "authors": [
+      "New Relic"
+    ],
+    "dashboards": [
+      {
+        "name": "Generic JDBC",
+        "description": "Java",
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/java/generic-jdbc/dashboards/java/java01.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/java/generic-jdbc/dashboards/java/java02.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/java/generic-jdbc/dashboards/java/java.png"
+        ]
+      }
+    ],
+    "alerts": [
+      {
+        "name": "High CPU Utilization",
+        "details": "This alert is triggered when the CPU Utilization is above 90%.",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "Transaction Errors",
+        "details": "This alert is triggered when the the transactions fail more than 10% of the time in 5 minutes.",
+        "type": "STATIC",
+        "url": null
+      }
+    ],
+    "documentation": [
+      {
+        "name": "Generic JDBC installation docs",
+        "description": "Java Database Connectivity is a standard Java API for database-independent\nconnectivity between Java and a wide range of databases.\n",
         "url": "https://docs.newrelic.com/docs/agents/java-agent/getting-started/compatibility-requirements-java-agent"
       }
     ],
@@ -7989,6 +7860,78 @@
     ]
   },
   {
+    "title": "Java",
+    "name": "java",
+    "description": "## Why monitoring Java is so important\n\nJava is a compiled language, with the potential to be very fast. However, there are a a lot of Java-specific quirks that make the average program slow such as high default memory usage and lags in the startup time of the JVM. \n\nIn order to get the most performance out of your Java applications, it’s important to continuously monitor them with tools such as the New Relic Java agent. \n\n### New Relic Java quickstart features\n\n- Dashboards showing average CPU utilization, memory heap used, garbage collection CPU time, top 5 slowest transactions, and more.\n- Alerts for various metrics including high cpu utilization and transaction errors\n\n### New Relic - the perfect Java observability tool\n\n[Proactive Java monitoring](https://docs.newrelic.com/docs/agents/java-agent/getting-started/introduction-new-relic-java/) yields reductions in site latency and improves the user experience. Our Java agent monitors app servers, databases, and message queuing systems, giving insight into all the key components which allow a web app to run. Custom instrumentation is also available for the add-on Java frameworks and libraries which may be used. \n\nThe agent reports metric time-slice and event data, giving insight at scheduled intervals. It also provides JVM-level observability, providing thread pools data, HTTP sessions, and transactions. You can trace request flows through distributed systems, allowing you to pinpoint points of failure and proactively prevent downtime. All metrics and interfaces are unified via an included dashboard which provides a visual display of an application’s performance.\n\nFurther leverage New Relic's APM capabilities by setting up [errors inbox](https://docs.newrelic.com/docs/apm/apm-ui-pages/errors-inbox/errors-inbox/), [transaction tracing](https://docs.newrelic.com/docs/apm/transactions/transaction-traces/introduction-transaction-traces/), and [service maps](https://docs.newrelic.com/docs/understand-dependencies/understand-system-dependencies/service-maps/introduction-service-maps/).",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/java/java",
+    "id": "3ebfb315-d0a6-4b27-9f89-b16a9a1ada5f",
+    "level": "NEW_RELIC",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/java/java/logo.svg",
+    "summary": "The New Relic Quickstart for Java provides insight into application performance, improves uptime, and reduces latency. Monitoring is reported using metric time-slice and event data, and all results are displayed in easy-to-use, visual dashboards.",
+    "websiteUrl": null,
+    "keywords": [
+      "apm",
+      "java",
+      "language agent",
+      "most popular"
+    ],
+    "authors": [
+      "New Relic",
+      "Emil Hammarstrand"
+    ],
+    "dashboards": [
+      {
+        "name": "Java",
+        "description": "Java",
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/java/java/dashboards/java/java01.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/java/java/dashboards/java/java02.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/java/java/dashboards/java/java.png"
+        ]
+      }
+    ],
+    "alerts": [
+      {
+        "name": "Apdex Score",
+        "details": "This alert is triggered when the Apdex score is below 0.5 for 5 minutes",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "High CPU Utilization",
+        "details": "This alert is triggered when the CPU Utilization is above 90%.",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "Memory Usage",
+        "details": "This alert is triggered when Memory usage is above 90%",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "Transaction Errors",
+        "details": "This alert is triggered when the the transactions fail more than 10% of the time in 5 minutes.",
+        "type": "STATIC",
+        "url": null
+      }
+    ],
+    "documentation": [
+      {
+        "name": "Java installation docs",
+        "description": "Popular object-oriented programming language with widespread platform and\noperating system support.\n",
+        "url": "https://docs.newrelic.com/docs/agents/java-agent/getting-started/compatibility-requirements-java-agent"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "Java Agent",
+        "id": "setup-java-agent"
+      }
+    ]
+  },
+  {
     "title": "Video agent for Android.",
     "name": "video-android",
     "description": "Agent to monitor video applications for Android.",
@@ -8052,6 +7995,63 @@
       {
         "name": "Guided install",
         "id": "guided-install"
+      }
+    ]
+  },
+  {
+    "title": "OC4J",
+    "name": "oc4j",
+    "description": "# What is OC4J?\nOC4J is Oracle's implementation of the Java EE specification.\n\n## Get started!\nLeverage community expertise and instantly get value out of your telemetry data. This quickstart automatically instruments OC4J with the New Relic Java agent, and allows you to instantly monitor your Java application with out-of-the-box dashboards and alerts.\nFurther leverage New Relic's APM capabilities by setting up [errors inbox](https://docs.newrelic.com/docs/apm/apm-ui-pages/errors-inbox/errors-inbox/), [transaction tracing](https://docs.newrelic.com/docs/apm/transactions/transaction-traces/introduction-transaction-traces/), and [service maps](https://docs.newrelic.com/docs/understand-dependencies/understand-system-dependencies/service-maps/introduction-service-maps/).\n\n## More info\nCheck out the [documentation](https://docs.newrelic.com/docs/agents/java-agent/getting-started/introduction-new-relic-java/) to learn more about New Relic monitoring for OC4J.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/java/oc4j",
+    "id": "e69ba5e0-04bc-48df-a246-9d371a2ecdf5",
+    "level": "NEW_RELIC",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/java/oc4j/logo.svg",
+    "summary": "Monitor OC4J with New Relic's Java agent",
+    "websiteUrl": null,
+    "keywords": [
+      "apm",
+      "java"
+    ],
+    "authors": [
+      "New Relic"
+    ],
+    "dashboards": [
+      {
+        "name": "OC4J",
+        "description": "Java",
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/java/oc4j/dashboards/java/java01.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/java/oc4j/dashboards/java/java02.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/java/oc4j/dashboards/java/java.png"
+        ]
+      }
+    ],
+    "alerts": [
+      {
+        "name": "High CPU Utilization",
+        "details": "This alert is triggered when the CPU Utilization is above 90%.",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "Transaction Errors",
+        "details": "This alert is triggered when the the transactions fail more than 10% of the time in 5 minutes.",
+        "type": "STATIC",
+        "url": null
+      }
+    ],
+    "documentation": [
+      {
+        "name": "OC4J installation docs",
+        "description": "OC4J is Oracle's implementation of the Java EE specification.",
+        "url": "https://docs.newrelic.com/docs/agents/java-agent/getting-started/compatibility-requirements-java-agent"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "Java Agent",
+        "id": "setup-java-agent"
       }
     ]
   },
@@ -11382,6 +11382,62 @@
     ]
   },
   {
+    "title": "JDBC-ExecuteBatch Java Agent Extension",
+    "name": "jdbc-executebatch",
+    "description": "# What is executeBatch call?\n\nExecuteBatch method in jdbc submits a batch of commands to the database for execution. You\nIf all commands execute successfully, the call returns an array of update counts. \n\n\nOnce the instrumentation is deployed  it  will start to track the call to the executeBatch method as a database call in distributed traces. \n\nThe Performance tab for the call  will show the query as \"Batch Execute n Queries\" where n is the number of queries executed as part of the batch.\n  - For calls to addBatch(String sql), it will represent the number of calls to this method before the executeBatch method is executed. \n  - For PreparedStatment and CallableStatment it will represent the number of times that addBatch() is called.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/java/jdbc-executebatch",
+    "id": "dfb63d31-fcb1-431f-9b40-744c0b3f89ff",
+    "level": "COMMUNITY",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/java/jdbc-executebatch/logo.svg",
+    "summary": "Java agent extension to monitor the executeBatch method of the Statement, PreparedStatement and CallableStatement interfaces as a database call.",
+    "websiteUrl": null,
+    "keywords": [
+      "nrlabs",
+      "nrlabs-data",
+      "apm",
+      "java",
+      "jdbc",
+      "executebatch"
+    ],
+    "authors": [
+      "New Relic Labs"
+    ],
+    "dashboards": [
+      {
+        "name": "JDBC-ExecuteBatch Java Agent Extension",
+        "description": "Java",
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/java/jdbc-executebatch/dashboards/java/java01.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/java/jdbc-executebatch/dashboards/java/java02.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/java/jdbc-executebatch/dashboards/java/java.png"
+        ]
+      }
+    ],
+    "alerts": [
+      {
+        "name": "High CPU Utilization",
+        "details": "This alert is triggered when the CPU Utilization is above 90%.",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "Transaction Errors",
+        "details": "This alert is triggered when the the transactions fail more than 10% of the time in 5 minutes.",
+        "type": "STATIC",
+        "url": null
+      }
+    ],
+    "documentation": [
+      {
+        "name": "Java agent extension for JDBC ExecuteBatch method",
+        "description": "Java Agent instrumentation extension for tracking executeBatch method of the Statement, PreparedStatement and CallableStatement interfaces as a database call.\n",
+        "url": "https://github.com/newrelic-experimental/newrelic-java-JDBC-ExecuteBatch"
+      }
+    ],
+    "installPlans": []
+  },
+  {
     "title": "Anorm",
     "name": "anorm",
     "description": "# What is Anorm?\n\nData access layer that uses plain SQL to interact with the database and provides an API to parse and transform the resulting datasets.\n\n\n## Get started!\n\nLeverage community expertise and instantly get value out of your telemetry data. This quickstart automatically instruments Anorm with the New Relic Java agent, and allows you to instantly monitor your Java application with out-of-the-box dashboards and alerts. \nFurther leverage New Relic's APM capabilities by setting up [errors inbox](https://docs.newrelic.com/docs/apm/apm-ui-pages/errors-inbox/errors-inbox/), [transaction tracing](https://docs.newrelic.com/docs/apm/transactions/transaction-traces/introduction-transaction-traces/), and [service maps](https://docs.newrelic.com/docs/understand-dependencies/understand-system-dependencies/service-maps/introduction-service-maps/).\n\n## More info\n\nCheck out the [documentation](https://docs.newrelic.com/docs/agents/java-agent/getting-started/introduction-new-relic-java/) to learn more about New Relic monitoring for Anorm.",
@@ -11551,62 +11607,6 @@
         "id": "setup-java-agent"
       }
     ]
-  },
-  {
-    "title": "JDBC-ExecuteBatch Java Agent Extension",
-    "name": "jdbc-executebatch",
-    "description": "# What is executeBatch call?\n\nExecuteBatch method in jdbc submits a batch of commands to the database for execution. You\nIf all commands execute successfully, the call returns an array of update counts. \n\n\nOnce the instrumentation is deployed  it  will start to track the call to the executeBatch method as a database call in distributed traces. \n\nThe Performance tab for the call  will show the query as \"Batch Execute n Queries\" where n is the number of queries executed as part of the batch.\n  - For calls to addBatch(String sql), it will represent the number of calls to this method before the executeBatch method is executed. \n  - For PreparedStatment and CallableStatment it will represent the number of times that addBatch() is called.",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/java/jdbc-executebatch",
-    "id": "dfb63d31-fcb1-431f-9b40-744c0b3f89ff",
-    "level": "COMMUNITY",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/java/jdbc-executebatch/logo.svg",
-    "summary": "Java agent extension to monitor the executeBatch method of the Statement, PreparedStatement and CallableStatement interfaces as a database call.",
-    "websiteUrl": null,
-    "keywords": [
-      "nrlabs",
-      "nrlabs-data",
-      "apm",
-      "java",
-      "jdbc",
-      "executebatch"
-    ],
-    "authors": [
-      "New Relic Labs"
-    ],
-    "dashboards": [
-      {
-        "name": "JDBC-ExecuteBatch Java Agent Extension",
-        "description": "Java",
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/java/jdbc-executebatch/dashboards/java/java01.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/java/jdbc-executebatch/dashboards/java/java02.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/java/jdbc-executebatch/dashboards/java/java.png"
-        ]
-      }
-    ],
-    "alerts": [
-      {
-        "name": "High CPU Utilization",
-        "details": "This alert is triggered when the CPU Utilization is above 90%.",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "Transaction Errors",
-        "details": "This alert is triggered when the the transactions fail more than 10% of the time in 5 minutes.",
-        "type": "STATIC",
-        "url": null
-      }
-    ],
-    "documentation": [
-      {
-        "name": "Java agent extension for JDBC ExecuteBatch method",
-        "description": "Java Agent instrumentation extension for tracking executeBatch method of the Statement, PreparedStatement and CallableStatement interfaces as a database call.\n",
-        "url": "https://github.com/newrelic-experimental/newrelic-java-JDBC-ExecuteBatch"
-      }
-    ],
-    "installPlans": []
   },
   {
     "title": "Play",
@@ -13487,64 +13487,6 @@
     "installPlans": []
   },
   {
-    "title": "ASyncHTTPClient",
-    "name": "asynchttpclient",
-    "description": "# What is ASyncHTTPClient?\n\nLibrary that allows Java applications to easily execute HTTP requests and asynchronously process HTTP responses.\n\n\n## Get started!\n\nLeverage community expertise and instantly get value out of your telemetry data. This quickstart automatically instruments ASyncHTTPClient with the New Relic Java agent, and allows you to instantly monitor your Java application with out-of-the-box dashboards and alerts.\nFurther leverage New Relic's APM capabilities by setting up [errors inbox](https://docs.newrelic.com/docs/apm/apm-ui-pages/errors-inbox/errors-inbox/), [transaction tracing](https://docs.newrelic.com/docs/apm/transactions/transaction-traces/introduction-transaction-traces/), and [service maps](https://docs.newrelic.com/docs/understand-dependencies/understand-system-dependencies/service-maps/introduction-service-maps/).\n\n## More info\n\nCheck out the [documentation](https://docs.newrelic.com/docs/agents/java-agent/getting-started/introduction-new-relic-java/) to learn more about New Relic monitoring for ASyncHTTPClient.",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/java/asynchttpclient",
-    "id": "7659dfcd-54c1-46f8-8916-6a038300133c",
-    "level": "NEW_RELIC",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/java/asynchttpclient/logo.svg",
-    "summary": "Monitor ASyncHTTPClient with New Relic's Java agent",
-    "websiteUrl": null,
-    "keywords": [
-      "apm",
-      "http",
-      "java"
-    ],
-    "authors": [
-      "New Relic"
-    ],
-    "dashboards": [
-      {
-        "name": "ASyncHTTPClient",
-        "description": "Java",
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/java/asynchttpclient/dashboards/java/java01.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/java/asynchttpclient/dashboards/java/java02.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/java/asynchttpclient/dashboards/java/java.png"
-        ]
-      }
-    ],
-    "alerts": [
-      {
-        "name": "High CPU Utilization",
-        "details": "This alert is triggered when the CPU Utilization is above 90%.",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "Transaction Errors",
-        "details": "This alert is triggered when the the transactions fail more than 10% of the time in 5 minutes.",
-        "type": "STATIC",
-        "url": null
-      }
-    ],
-    "documentation": [
-      {
-        "name": "ASyncHTTPClient installation docs",
-        "description": "Library that allows Java applications to easily execute HTTP requests and\nasynchronously process HTTP responses.\n",
-        "url": "https://docs.newrelic.com/docs/agents/java-agent/getting-started/compatibility-requirements-java-agent"
-      }
-    ],
-    "installPlans": [
-      {
-        "name": "Java Agent",
-        "id": "setup-java-agent"
-      }
-    ]
-  },
-  {
     "title": "gRPC",
     "name": "grpc",
     "description": "# What is gRPC?\n\nOpen source framework for remote procedure calls designed for multi-platform usage.\n\n\n## Get started!\n\nLeverage community expertise and instantly get value out of your telemetry data. This quickstart automatically instruments gRPC with the New Relic Java agent, and allows you to instantly monitor your Java application with out-of-the-box dashboards and alerts. \nFurther leverage New Relic's APM capabilities by setting up [errors inbox](https://docs.newrelic.com/docs/apm/apm-ui-pages/errors-inbox/errors-inbox/), [transaction tracing](https://docs.newrelic.com/docs/apm/transactions/transaction-traces/introduction-transaction-traces/), and [service maps](https://docs.newrelic.com/docs/understand-dependencies/understand-system-dependencies/service-maps/introduction-service-maps/).\n\n## More info\n\nCheck out the [documentation](https://docs.newrelic.com/docs/agents/java-agent/getting-started/introduction-new-relic-java/) to learn more about New Relic monitoring for gRPC.",
@@ -14863,6 +14805,64 @@
       }
     ],
     "installPlans": []
+  },
+  {
+    "title": "ASyncHTTPClient",
+    "name": "asynchttpclient",
+    "description": "# What is ASyncHTTPClient?\n\nLibrary that allows Java applications to easily execute HTTP requests and asynchronously process HTTP responses.\n\n\n## Get started!\n\nLeverage community expertise and instantly get value out of your telemetry data. This quickstart automatically instruments ASyncHTTPClient with the New Relic Java agent, and allows you to instantly monitor your Java application with out-of-the-box dashboards and alerts.\nFurther leverage New Relic's APM capabilities by setting up [errors inbox](https://docs.newrelic.com/docs/apm/apm-ui-pages/errors-inbox/errors-inbox/), [transaction tracing](https://docs.newrelic.com/docs/apm/transactions/transaction-traces/introduction-transaction-traces/), and [service maps](https://docs.newrelic.com/docs/understand-dependencies/understand-system-dependencies/service-maps/introduction-service-maps/).\n\n## More info\n\nCheck out the [documentation](https://docs.newrelic.com/docs/agents/java-agent/getting-started/introduction-new-relic-java/) to learn more about New Relic monitoring for ASyncHTTPClient.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/java/asynchttpclient",
+    "id": "7659dfcd-54c1-46f8-8916-6a038300133c",
+    "level": "NEW_RELIC",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/java/asynchttpclient/logo.svg",
+    "summary": "Monitor ASyncHTTPClient with New Relic's Java agent",
+    "websiteUrl": null,
+    "keywords": [
+      "apm",
+      "http",
+      "java"
+    ],
+    "authors": [
+      "New Relic"
+    ],
+    "dashboards": [
+      {
+        "name": "ASyncHTTPClient",
+        "description": "Java",
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/java/asynchttpclient/dashboards/java/java01.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/java/asynchttpclient/dashboards/java/java02.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/java/asynchttpclient/dashboards/java/java.png"
+        ]
+      }
+    ],
+    "alerts": [
+      {
+        "name": "High CPU Utilization",
+        "details": "This alert is triggered when the CPU Utilization is above 90%.",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "Transaction Errors",
+        "details": "This alert is triggered when the the transactions fail more than 10% of the time in 5 minutes.",
+        "type": "STATIC",
+        "url": null
+      }
+    ],
+    "documentation": [
+      {
+        "name": "ASyncHTTPClient installation docs",
+        "description": "Library that allows Java applications to easily execute HTTP requests and\nasynchronously process HTTP responses.\n",
+        "url": "https://docs.newrelic.com/docs/agents/java-agent/getting-started/compatibility-requirements-java-agent"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "Java Agent",
+        "id": "setup-java-agent"
+      }
+    ]
   },
   {
     "title": "Amazon EKS on AWS Fargate",
@@ -17606,63 +17606,6 @@
     ]
   },
   {
-    "title": "JMS",
-    "name": "jms",
-    "description": "# What is JMS?\n\nJava Messaging Library for asynchronously sending and receiving data and events.\n\n\n## Get started!\n\nLeverage community expertise and instantly get value out of your telemetry data. This quickstart automatically instruments JMS with the New Relic Java agent, and allows you to instantly monitor your Java application with out-of-the-box dashboards and alerts. \nFurther leverage New Relic's APM capabilities by setting up [errors inbox](https://docs.newrelic.com/docs/apm/apm-ui-pages/errors-inbox/errors-inbox/), [transaction tracing](https://docs.newrelic.com/docs/apm/transactions/transaction-traces/introduction-transaction-traces/), and [service maps](https://docs.newrelic.com/docs/understand-dependencies/understand-system-dependencies/service-maps/introduction-service-maps/).\n\n## More info\n\nCheck out the [documentation](https://docs.newrelic.com/docs/agents/java-agent/getting-started/introduction-new-relic-java/) to learn more about New Relic monitoring for JMS.",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/java/jms",
-    "id": "b4d77144-cbb8-4e08-9266-a13c33e1cb40",
-    "level": "NEW_RELIC",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/java/jms/logo.svg",
-    "summary": "Monitor JMS with New Relic's Java agent",
-    "websiteUrl": null,
-    "keywords": [
-      "apm",
-      "java"
-    ],
-    "authors": [
-      "New Relic"
-    ],
-    "dashboards": [
-      {
-        "name": "JMS",
-        "description": "Java",
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/java/jms/dashboards/java/java01.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/java/jms/dashboards/java/java02.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/java/jms/dashboards/java/java.png"
-        ]
-      }
-    ],
-    "alerts": [
-      {
-        "name": "High CPU Utilization",
-        "details": "This alert is triggered when the CPU Utilization is above 90%.",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "Transaction Errors",
-        "details": "This alert is triggered when the the transactions fail more than 10% of the time in 5 minutes.",
-        "type": "STATIC",
-        "url": null
-      }
-    ],
-    "documentation": [
-      {
-        "name": "JMS installation docs",
-        "description": "Java Messaging Library for asynchronously sending and receiving data and\nevents.\n",
-        "url": "https://docs.newrelic.com/docs/agents/java-agent/getting-started/compatibility-requirements-java-agent"
-      }
-    ],
-    "installPlans": [
-      {
-        "name": "Java Agent",
-        "id": "setup-java-agent"
-      }
-    ]
-  },
-  {
     "title": "RESTeasy",
     "name": "resteasy",
     "description": "# What is RESTeasy?\n\nRESTEasy provides various frameworks to help you build RESTful Web Services and RESTful Java applications.\n\n\n## Get started!\n\nLeverage community expertise and instantly get value out of your telemetry data. This quickstart automatically instruments RESTeasy with the New Relic Java agent, and allows you to instantly monitor your Java application with out-of-the-box dashboards and alerts. \nFurther leverage New Relic's APM capabilities by setting up [errors inbox](https://docs.newrelic.com/docs/apm/apm-ui-pages/errors-inbox/errors-inbox/), [transaction tracing](https://docs.newrelic.com/docs/apm/transactions/transaction-traces/introduction-transaction-traces/), and [service maps](https://docs.newrelic.com/docs/understand-dependencies/understand-system-dependencies/service-maps/introduction-service-maps/).\n\n## More info\n\nCheck out the [documentation](https://docs.newrelic.com/docs/agents/java-agent/getting-started/introduction-new-relic-java/) to learn more about New Relic monitoring for RESTeasy.",
@@ -18580,6 +18523,63 @@
       {
         "name": "Ruby Agent",
         "id": "setup-ruby-agent"
+      }
+    ]
+  },
+  {
+    "title": "JMS",
+    "name": "jms",
+    "description": "# What is JMS?\n\nJava Messaging Library for asynchronously sending and receiving data and events.\n\n\n## Get started!\n\nLeverage community expertise and instantly get value out of your telemetry data. This quickstart automatically instruments JMS with the New Relic Java agent, and allows you to instantly monitor your Java application with out-of-the-box dashboards and alerts. \nFurther leverage New Relic's APM capabilities by setting up [errors inbox](https://docs.newrelic.com/docs/apm/apm-ui-pages/errors-inbox/errors-inbox/), [transaction tracing](https://docs.newrelic.com/docs/apm/transactions/transaction-traces/introduction-transaction-traces/), and [service maps](https://docs.newrelic.com/docs/understand-dependencies/understand-system-dependencies/service-maps/introduction-service-maps/).\n\n## More info\n\nCheck out the [documentation](https://docs.newrelic.com/docs/agents/java-agent/getting-started/introduction-new-relic-java/) to learn more about New Relic monitoring for JMS.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/java/jms",
+    "id": "b4d77144-cbb8-4e08-9266-a13c33e1cb40",
+    "level": "NEW_RELIC",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/java/jms/logo.svg",
+    "summary": "Monitor JMS with New Relic's Java agent",
+    "websiteUrl": null,
+    "keywords": [
+      "apm",
+      "java"
+    ],
+    "authors": [
+      "New Relic"
+    ],
+    "dashboards": [
+      {
+        "name": "JMS",
+        "description": "Java",
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/java/jms/dashboards/java/java01.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/java/jms/dashboards/java/java02.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/java/jms/dashboards/java/java.png"
+        ]
+      }
+    ],
+    "alerts": [
+      {
+        "name": "High CPU Utilization",
+        "details": "This alert is triggered when the CPU Utilization is above 90%.",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "Transaction Errors",
+        "details": "This alert is triggered when the the transactions fail more than 10% of the time in 5 minutes.",
+        "type": "STATIC",
+        "url": null
+      }
+    ],
+    "documentation": [
+      {
+        "name": "JMS installation docs",
+        "description": "Java Messaging Library for asynchronously sending and receiving data and\nevents.\n",
+        "url": "https://docs.newrelic.com/docs/agents/java-agent/getting-started/compatibility-requirements-java-agent"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "Java Agent",
+        "id": "setup-java-agent"
       }
     ]
   },
