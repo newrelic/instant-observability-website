@@ -665,6 +665,26 @@ const QuickstartsPage = ({ data, location }) => {
               <span> for: </span>
               <strong>{search || getDisplayName()}</strong>
             </span>
+            <span
+              css={css`
+                text-align: end;
+              `}
+            >
+              Showing:&nbsp;
+              <select onSelect={() => handleCategory(value)}>
+                {categoriesWithCount.map(({ displayName, value, count }) => {
+                  if (count !== 0) {
+                    return (
+                      <option value={value}>
+                        {`${displayName} (${count})`}
+                      </option>
+                    )
+                  } else {
+                    return null;
+                  }
+                })}
+              </select>
+            </span>
           </div>
           <div
             css={css`
