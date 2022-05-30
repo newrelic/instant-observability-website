@@ -25,6 +25,7 @@ import { navigate } from '@reach/router';
 import { useDebounce } from 'react-use';
 import LeftArrowSVG from '../components/Icons/LeftArrowSVG';
 import RightArrowSVG from '../components/Icons/RightArrowSVG';
+import featherIcons from '../@newrelic/gatsby-theme-newrelic/icons/feather';
 
 const TRIPLE_COLUMN_BREAKPOINT = '1420px';
 const DOUBLE_COLUMN_BREAKPOINT = '1180px';
@@ -202,7 +203,6 @@ const QuickstartsPage = ({ data, location }) => {
     return found.displayName;
   };
 
-
   // Settings for Slick-Carousel
   const settings = {
     dots: false,
@@ -213,26 +213,31 @@ const QuickstartsPage = ({ data, location }) => {
     adaptiveHeight: false,
     adaptiveWidth: true,
     mobileFirst: true, // necessary for breakpoints to work as expected
-    prevArrow: <button>
-                <LeftArrowSVG
-                  className="slick-prev"
-                  css={css`
-                    width: auto;
-                    height: auto;
-                    margin: 0 1.5rem;
-                  `}
-                />
-              </button>,
-    nextArrow: <button>
-                <RightArrowSVG
-                  className="slick-next"
-                  css={css`
-                    width: auto;
-                    height: auto;
-                    margin: 0 1.5rem;
-                  `}
-                />
-              </button>,
+    prevArrow: (
+      <button>
+        <LeftArrowSVG
+          className="slick-prev"
+          css={css`
+            width: auto;
+            height: auto;
+            margin: 0 1.5rem;
+          `}
+        />
+      </button>
+    ),
+    nextArrow: (
+      <button>
+        <RightArrowSVG
+          className="slick-next"
+          css={css`
+            width: auto;
+            height: auto;
+            margin: 0 1.5rem;
+          `}
+        />
+      </button>
+    ),
+
     responsive: [
       {
         breakpoint: parseInt(TRIPLE_COLUMN_BREAKPOINT),
@@ -260,6 +265,35 @@ const QuickstartsPage = ({ data, location }) => {
         },
       },
     ],
+  };
+
+  function topFunction() {
+    document.documentElement.scrollTop = 0;
+  }
+
+  const renderGoToTopButton = () => {
+    if (document.documentElement.scrollTop > 3000) {
+      return (
+        <Button
+          onClick={topFunction}
+          css={css`
+            position: fixed;
+            width: 60px;
+            height: 60px;
+            bottom: 40px;
+            right: 40px;
+            border-radius: 50px;
+            text-align: center;
+            background-color: rgb(28 231 131);
+            color: rgb(29 37 44);
+          `}
+        >
+          {featherIcons.chevronUp}
+        </Button>
+      );
+    } else {
+      return null;
+    }
   };
 
   return (
@@ -292,7 +326,7 @@ const QuickstartsPage = ({ data, location }) => {
           max-width: var(--site-max-width);
 
           @media screen and (min-width: ${COLUMN_BREAKPOINT}) {
-          --banner-height: 394px;
+            --banner-height: 394px;
           }
 
           @media screen and (max-width: ${QUICKSTARTS_COLLAPSE_BREAKPOINT}) {
@@ -364,10 +398,10 @@ const QuickstartsPage = ({ data, location }) => {
                     background: ${category === value
                       ? 'var(--divider-color)'
                       : 'none'};
-                      &:hover {
-                        color: var(--black-text-color);
-                        background: var(--category-hover-color);
-                      }
+                    &:hover {
+                      color: var(--black-text-color);
+                      background: var(--category-hover-color);
+                    }
                   `}
                 >
                   {`${displayName}`}
@@ -598,7 +632,7 @@ const QuickstartsPage = ({ data, location }) => {
               </div>
               <div
                 css={css`
-                  margin-bottom: 75px
+                  margin-bottom: 75px;
                 `}
               >
                 {!loadComplete && <Spinner />}
@@ -691,6 +725,8 @@ const QuickstartsPage = ({ data, location }) => {
           </div>
         </div>
       </div>
+
+      {renderGoToTopButton()}
     </>
   );
 };
