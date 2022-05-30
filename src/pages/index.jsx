@@ -671,7 +671,9 @@ const QuickstartsPage = ({ data, location }) => {
               `}
             >
               Showing:&nbsp;
-              <select onSelect={() => handleCategory(value)}>
+              <select onChange={(event) => {
+                handleCategory(event.target.value);
+              }}>
                 {categoriesWithCount.map(({ displayName, value, count }) => {
                   if (count !== 0) {
                     return (
