@@ -8,11 +8,11 @@ import { css } from '@emotion/react';
       <div
         css={css`
         overflow: hidden;
-        line-height: 30px;
+        line-height: 0.09;
+        transition-delay: 300ms;
+        height: 1.5rem;
         text-align: center;
         margin: 0;
-        width: 106px;
-        height: 48px;
 
         > div {
           margin: 10px auto 0;
@@ -40,7 +40,7 @@ import { css } from '@emotion/react';
             forwards;
         }
 
-        --translateY-distance: -40px;
+        --translateY-distance: -22px;
 
         @-webkit-keyframes scroll {
           0% {
@@ -86,7 +86,11 @@ import { css } from '@emotion/react';
       `}
       >
         <div className="scroll scroll-top">{text}</div>
-        <div className="scroll scroll-bottom">{text}</div>
+        <div
+        css={css`
+        margin-top: 1.25rem !important;
+        `}
+         className="scroll scroll-bottom">{text}</div>
       </div>
     );
   };

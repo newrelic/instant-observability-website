@@ -213,6 +213,7 @@ const InstallButton = ({
         css`
           padding: 0;
           width: 106px;
+          height: 3.125rem;
         `};
       `}
     >

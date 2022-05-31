@@ -105,6 +105,7 @@ const LandingPageFooter = ({
                 border-color: var(--background-color);
                 column-gap: 14.45px;
                 font-weight: 400;
+                height: 3rem;
                 &:hover {
                   color: var(--white-hover-color);
                   border-color: var(--background-color);
@@ -160,6 +161,9 @@ const LandingPageFooter = ({
 
                 @media (max-width: 760px) {
                   width: 100%;
+                }
+                @media (min-width: 760px) {
+                  width: 11.375rem;
                 }
                 div {
                   text-align: left;

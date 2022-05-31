@@ -33,7 +33,7 @@ const GetStartedFooter = ({
         --nr1--color--text--buttton--primary-accent: #000;
 
         width: 100%;
-        height: 120px;
+        height: 7rem;
 
         display: flex;
         justify-content: center;
