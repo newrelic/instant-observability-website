@@ -97,7 +97,6 @@ const GlobalHeader = ({ className, activeSite }) => {
 
   const hideLogoText = useMedia({ maxWidth: '350px' });
   const location = useLocation();
-  console.log(location, location.pathname)
   const UserIsInMainPage = location.pathname === '/instant-observability';
   const showGetStarted = UserIsInMainPage ? true : false;
 
