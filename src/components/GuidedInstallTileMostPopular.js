@@ -145,6 +145,7 @@ const GuidedInstallTileMostPopular = () => {
       <div
         css={css`
           grid-area: install;
+          display: flex;
         `}
       >
         <Button
@@ -167,21 +168,22 @@ const GuidedInstallTileMostPopular = () => {
           `}
         >
           Install New Relic
-          {startNavigation && (
-            <Spinner
-              css={css`
-                margin-left: 1rem;
-                :after {
-                  width: 2rem;
-                  height: 2rem;
-                  border-width: thick;
-                  display: flex;
-                  position: initial;
-                }
-              `}
-            />
-          )}
         </Button>
+        {startNavigation && (
+          <Spinner
+            css={css`
+              margin-left: 1rem;
+              :after {
+                width: 2rem;
+                height: 2rem;
+                border-width: thick;
+                display: flex;
+                position: initial;
+                color: #FFFFFF
+              }
+            `}
+          />
+        )}
       </div>
     </Surface>
   );
