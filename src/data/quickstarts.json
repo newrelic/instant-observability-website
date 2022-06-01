@@ -21334,41 +21334,6 @@
     ]
   },
   {
-    "title": "Ansible",
-    "name": "ansible",
-    "description": "# What is Ansible?\nAnsible is a radically simple IT automation engine that automates cloud provisioning, configuration management, application deployment, intra-service orchestration, and many other IT needs.\n\nDesigned for multi-tier deployments since day one, Ansible models your IT infrastructure by describing how all of your systems inter-relate, rather than just managing one system at a time.\n\nIt uses no agents and no additional custom security infrastructure, so it's easy to deploy - and most importantly, it uses a very simple language (YAML, in the form of Ansible Playbooks) that allow you to describe your automation jobs in a way that approaches plain English.\n\n# What does New Relic provide\nNew Relic has developed a Ansible playbook for the Ansible agent to deploy the [New Relic Infrastructure agent](https://docs.newrelic.com/docs/infrastructure/infrastructure-monitoring/get-started/get-started-infrastructure-monitoring/) and [On Host Integrations](https://docs.newrelic.com/docs/infrastructure/host-integrations/get-started/introduction-host-integrations) throughout your environment.\n\n# How to get started?\nFollow the instructions on New Relic documentation: [Configure the infrastructure agent using Ansible](https://docs.newrelic.com/docs/infrastructure/new-relic-infrastructure/config-management-tools/configure-new-relic-infrastructure-using-ansible)",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/observability-as-code/ansible",
-    "id": "c377d781-da77-4dd6-b5a8-6a25a39e2582",
-    "level": "NEW_RELIC",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/observability-as-code/ansible/logo.svg",
-    "summary": "New Relic Ansible playbook to deploy the New Relic Infrastructure agent and On Host Integrations throughout your environment.",
-    "websiteUrl": null,
-    "keywords": [
-      "automation",
-      "devops",
-      "sre",
-      "gitops"
-    ],
-    "authors": [
-      "New Relic"
-    ],
-    "dashboards": [],
-    "alerts": [],
-    "documentation": [
-      {
-        "name": "Ansible installation docs",
-        "description": "Open-source software provisioning, configuration management, and\napplication-deployment tool enabling infrastructure as code.\n",
-        "url": "https://docs.newrelic.com/docs/infrastructure/new-relic-infrastructure/config-management-tools/configure-new-relic-infrastructure-using-ansible"
-      },
-      {
-        "name": "Ansible Galaxy",
-        "description": "Ansible Galaxy page for the New Relic Ansible role\n",
-        "url": "https://galaxy.ansible.com/newrelic/newrelic_agents"
-      }
-    ],
-    "installPlans": []
-  },
-  {
     "title": "Kubernetes Log Ingest Analysis",
     "name": "audit-kubernetes-log-data-ingest-analysis",
     "description": "Shows log bytes ingest for Kubernetes faceted by several common attributes k8s logs: application, environment, container, namespace, pod and cluster. Total logs and GB ingested is shown.",
@@ -21413,6 +21378,46 @@
       {
         "name": "Kubernetes integration",
         "id": "kubernetes-install"
+      }
+    ]
+  },
+  {
+    "title": "Ansible",
+    "name": "ansible",
+    "description": "# What is Ansible?\nAnsible is a radically simple IT automation engine that automates cloud provisioning, configuration management, application deployment, intra-service orchestration, and many other IT needs.\n\nDesigned for multi-tier deployments since day one, Ansible models your IT infrastructure by describing how all of your systems inter-relate, rather than just managing one system at a time.\n\nIt uses no agents and no additional custom security infrastructure, so it's easy to deploy - and most importantly, it uses a very simple language (YAML, in the form of Ansible Playbooks) that allow you to describe your automation jobs in a way that approaches plain English.\n\n# What does New Relic provide\nNew Relic has developed a Ansible playbook for the Ansible agent to deploy the [New Relic Infrastructure agent](https://docs.newrelic.com/docs/infrastructure/infrastructure-monitoring/get-started/get-started-infrastructure-monitoring/) and [On Host Integrations](https://docs.newrelic.com/docs/infrastructure/host-integrations/get-started/introduction-host-integrations) throughout your environment.\n\n# How to get started?\nFollow the instructions on New Relic documentation: [Configure the infrastructure agent using Ansible](https://docs.newrelic.com/docs/infrastructure/new-relic-infrastructure/config-management-tools/configure-new-relic-infrastructure-using-ansible)",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/observability-as-code/ansible",
+    "id": "c377d781-da77-4dd6-b5a8-6a25a39e2582",
+    "level": "NEW_RELIC",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/observability-as-code/ansible/logo.svg",
+    "summary": "New Relic Ansible playbook to deploy the New Relic Infrastructure agent and On Host Integrations throughout your environment.",
+    "websiteUrl": null,
+    "keywords": [
+      "automation",
+      "devops",
+      "sre",
+      "gitops"
+    ],
+    "authors": [
+      "New Relic"
+    ],
+    "dashboards": [],
+    "alerts": [],
+    "documentation": [
+      {
+        "name": "Ansible installation docs",
+        "description": "Open-source software provisioning, configuration management, and\napplication-deployment tool enabling infrastructure as code.\n",
+        "url": "https://docs.newrelic.com/docs/infrastructure/new-relic-infrastructure/config-management-tools/configure-new-relic-infrastructure-using-ansible"
+      },
+      {
+        "name": "Ansible Galaxy",
+        "description": "Ansible Galaxy page for the New Relic Ansible role\n",
+        "url": "https://galaxy.ansible.com/newrelic/newrelic_agents"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "Ansible",
+        "id": "third-party-ansible"
       }
     ]
   },
