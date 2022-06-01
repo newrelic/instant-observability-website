@@ -6,7 +6,12 @@ import bannerOverlayLeft from '../images/io-banner/banner-style-left.svg';
 import { SearchInput } from '@newrelic/gatsby-theme-newrelic';
 import { QUICKSTARTS_COLLAPSE_BREAKPOINT } from '../data/constants';
 
-const BannerHeaderContent = ({ search, setSearch, setIsSearchInputEmpty }) => {
+const BannerHeaderContent = ({
+  search,
+  setSearch,
+  setIsSearchInputEmpty,
+  handleSearch
+}) => {
   const handleSearchInput = (e) => {
     let searchInputValue = e.target.value;
     setSearch(searchInputValue);
@@ -78,6 +83,7 @@ const BannerHeaderContent = ({ search, setSearch, setIsSearchInputEmpty }) => {
             setSearch('');
             setIsSearchInputEmpty(true);
           }}
+          onSubmit={(value) => handleSearch(value)}
           onChange={handleSearchInput}
           css={css`
             box-shadow: none;
@@ -127,7 +133,12 @@ const BannerHeaderContent = ({ search, setSearch, setIsSearchInputEmpty }) => {
     </div>
   );
 };
-const IOBanner = ({ search, setSearch, setIsSearchInputEmpty }) => {
+const IOBanner = ({
+  search,
+  setSearch,
+  setIsSearchInputEmpty,
+  handleSearch
+}) => {
   return (
     <div
       css={css`
@@ -194,6 +205,7 @@ const IOBanner = ({ search, setSearch, setIsSearchInputEmpty }) => {
           search={search}
           setSearch={setSearch}
           setIsSearchInputEmpty={setIsSearchInputEmpty}
+          handleSearch={handleSearch}
         />
         <div
           css={css`
