@@ -234,22 +234,24 @@ const featherIcons = {
       />
     </>
   ),
-  chevronUp: (
+
+  topArrow: (
     <>
       <svg
         xmlns="http://www.w3.org/2000/svg"
-        width="24"
-        height="24"
+        width="12"
+        height="12"
         viewBox="0 0 24 24"
         fill="none"
         stroke="currentColor"
         stroke-width="2"
         stroke-linecap="round"
         stroke-linejoin="round"
-        class="feather feather-chevrons-up"
+        class="feather feather-arrow-up"
+        color="#F9FAFA"
       >
-        <polyline points="17 11 12 6 7 11" />
-        <polyline points="17 18 12 13 7 18" />
+        <line x1="12" y1="19" x2="12" y2="5" />
+        <polyline points="5 12 12 5 19 12" />
       </svg>
     </>
   ),

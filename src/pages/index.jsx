@@ -267,33 +267,55 @@ const QuickstartsPage = ({ data, location }) => {
     ],
   };
 
+  const handleScroll = () => {
+    const btn = document.getElementById('go-to-page-top-btn');
+    if (
+      document.body.scrollTop > 3000 ||
+      document.documentElement.scrollTop > 3000
+    ) {
+      btn.style.display = 'block';
+    } else {
+      btn.style.display = 'none';
+    }
+  };
+
+  useEffect(() => {
+    // Anything in here is fired on component mount.
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      // Anything in here is fired on component unmount.
+      window.removeEventListener('scroll', handleScroll);
+    };
+  });
+
   function topFunction() {
     document.documentElement.scrollTop = 0;
   }
 
   const renderGoToTopButton = () => {
-    if (document.documentElement.scrollTop > 3000) {
-      return (
-        <Button
-          onClick={topFunction}
-          css={css`
-            position: fixed;
-            width: 60px;
-            height: 60px;
-            bottom: 40px;
-            right: 40px;
-            border-radius: 50px;
-            text-align: center;
-            background-color: rgb(28 231 131);
-            color: rgb(29 37 44);
-          `}
-        >
-          {featherIcons.chevronUp}
-        </Button>
-      );
-    } else {
-      return null;
-    }
+    return (
+      <Button
+        onClick={topFunction}
+        css={css`
+          display: none;
+          flex-direction: row;
+          justify-content: center;
+          align-items: center;
+          padding: 8px 12px;
+          gap: 8px;
+          position: fixed;
+          width: 40px;
+          height: 40px;
+          right: 9px;
+          bottom: 43px;
+          background: #1d252c;
+          border-radius: 97px;
+        `}
+        id="go-to-page-top-btn"
+      >
+        {featherIcons.topArrow}
+      </Button>
+    );
   };
 
   return (
