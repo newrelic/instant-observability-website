@@ -9,6 +9,7 @@ import useMedia from 'use-media';
 import useThemeTranslation from '@newrelic/gatsby-theme-newrelic/src/hooks/useThemeTranslation';
 import { useInstrumentedHandler } from '@newrelic/gatsby-theme-newrelic';
 import { Menu, X } from 'react-feather';
+import { useLocation } from "@reach/router"
 import NewLogo from './NewLogo';
 
 const action = css`
@@ -95,8 +96,9 @@ const GlobalHeader = ({ className, activeSite }) => {
   }, [isOpen]);
 
   const hideLogoText = useMedia({ maxWidth: '350px' });
-  const UserIsInMainPage =
-    window.location.pathname === '/instant-observability';
+  const location = useLocation();
+  console.log(location, location.pathname)
+  const UserIsInMainPage = location.pathname === '/instant-observability';
   const showGetStarted = UserIsInMainPage ? true : false;
 
   return (
