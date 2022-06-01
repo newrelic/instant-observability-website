@@ -160,7 +160,7 @@ const QuickstartDashboards = ({ quickstart }) => {
                           src={imgUrl}
                           css={css`
                             width: 100%;
-                            height: 25rem;
+                            height: 17.5rem;
                             @media screen and (max-width: ${MOBILE_BREAKPOINT}) {
                               height: 100%;
                             }
