@@ -19,14 +19,14 @@ export const pageContext = PropTypes.shape({
 
 export const quickstartDashboard = PropTypes.shape({
   name: PropTypes.string.isRequired,
-  url: PropTypes.string.isRequired,
+  url: PropTypes.string,
   description: PropTypes.string,
   screenshots: PropTypes.arrayOf(PropTypes.string),
 });
 
 export const quickstartAlert = PropTypes.shape({
   name: PropTypes.string.isRequired,
-  url: PropTypes.string.isRequired,
+  url: PropTypes.string,
   type: PropTypes.oneOf(Object.values(QUICKSTART_ALERT_TYPES)).isRequired,
   details: PropTypes.string,
 });

@@ -58,7 +58,7 @@ const createNavList = (listType, activeSite = null) => {
               href={href}
               activeSite={activeSite && HEADER_LINKS.get(activeSite)}
             >
-              {text}
+              <span>{text}</span>
             </GlobalNavLink>
           </li>
         );
@@ -99,12 +99,12 @@ const GlobalHeader = ({ className, activeSite }) => {
   return (
     <>
       <AnnouncementBanner />
+      {/* web view - start point */}
       <div
         data-swiftype-index={false}
         className={className}
         css={[
           css`
-            position: relative;
             top: 0;
             z-index: 80;
             border-bottom: 1px solid #83878b;
@@ -112,20 +112,34 @@ const GlobalHeader = ({ className, activeSite }) => {
             @media screen and (min-width: ${NAV_BREAKPOINT}) {
               display: block;
               background: #1d252c;
+              position: sticky;
+            }
+            @media screen and (max-width: ${NAV_BREAKPOINT}) {
+              display: none;
+              position: relative;
             }
           `,
         ]}
       >
         <div
           css={css`
-            height: var(--global-header-height);
             display: flex;
-            margin: 0 auto;
-            max-width: 1440px;
-            justify-content: space-between;
-            padding: 0 var(--site-content-padding);
-            height: 96px;
             align-items: center;
+            height: 5.75rem;
+            padding: 0 var(--site-content-padding);
+            max-width: 78rem;
+            justify-content: space-between;
+           
+            @media screen and (max-width: ${NAV_BREAKPOINT}) {
+              margin: 0 13.5rem; 
+            }
+
+            @media screen and (min-width: ${NAV_BREAKPOINT}) {
+              margin: 0 auto;
+              max-width: 1248px;
+            }
+         
+            
           `}
         >
           <a
@@ -139,9 +153,14 @@ const GlobalHeader = ({ className, activeSite }) => {
             css={css`
               display: flex;
               align-items: center;
+              outline: none;
 
               @media screen and (max-width: ${NAV_BREAKPOINT}) {
-                display: none;
+                width: 7.5rem;
+              }
+
+              @media screen and (min-width: ${NAV_BREAKPOINT}) {
+                width: 10.625rem;
               }
             `}
           >
@@ -198,22 +217,37 @@ const GlobalHeader = ({ className, activeSite }) => {
                 position: relative;
                 -webkit-overflow-scrolling: touch;
                 -ms-overflow-style: -ms-autohiding-scrollbar;
+                margin-left: -0.813rem; 
+                letter-spacing: -0.005em;
+                font-size: 1.125rem;
                 > li {
-                  margin: 1.5rem 0;
-                  padding: 0px 32px;
+                  margin: 0.3rem 0;
+                  padding 2rem 0;
                   flex: 0 0 auto;
                   > a {
                     --active-color: #1d252c;
-                    color: #e4e5e6;
+                    color: var(--white-hover-color);
                     font-family: Söhne-Buch;
                     font-weight: 400;
-                    font-size: 18px;
-                    padding: 17px 0px;
+                    font-size: 1.125rem;
+                    padding: 2rem 1rem;
                     display: block;
                     &:hover {
-                      color: #e4e5e6;
-                      border-bottom: 1.5px solid #e4e5e6;
+                      color: var(--white-hover-color);
                     }
+                    &:focus {
+                      outline: none;
+                      text-decoration-line: underline;
+                      outline-width: 0.25rem;
+                      text-underline-offset: 0.25rem;
+                    }
+                    >span {
+                      font-size: 100%;
+                    &:hover {
+                      color: var(--white-hover-color);
+                      border-bottom: 1.5px solid var(--white-hover-color);
+                    }
+                  }
                   }
                 }
 
@@ -235,15 +269,24 @@ const GlobalHeader = ({ className, activeSite }) => {
               align-items: center;
               justify-content: flex-end;
               flex: 1;
-
+              height: 5.75rem;
+              line-height: 1.1;
               > li {
                 transition: all 0.2s ease-out;
                 color: var(--secondary-text-color);
                 > a {
                   font-family: Söhne-Buch;
                   font-weight: 400;
-                  font-size: 18px;
-                  line-height: 1.625;
+                  font-size: 1.125rem;
+                  letter-spacing: -0.005em;
+
+                  &:focus {
+                    outline: none;
+                    text-decoration-line: underline;
+                    outline-width: 0.25rem;
+                    text-underline-offset: 0.25rem;
+                  }
+                }
                 }
 
                 &:not(:first-of-type) {
@@ -268,62 +311,52 @@ const GlobalHeader = ({ className, activeSite }) => {
                 variant={Button.VARIANT.LINK}
                 href="https://one.newrelic.com"
                 css={css`
-                  margin: 0 0.625rem;
-                  font-size: 18px;
+                  font-size: 1rem;
                   white-space: nowrap;
-                  color: #e4e5e6;
+                  text-underline-offset: 0.25rem;
+                  &:focus{
+                    --tw-text-opacity: 1;
+                    color: var(--white-hover-color);
+                  }
+                > span {
+                  color: var(--white-hover-color);
+                  height: 1.375rem;
 
                   &:hover {
-                    color: #e4e5e6;
+                    color: var(--white-hover-color);
+                    border-bottom: 1.5px solid var(--white-hover-color);
                   }
+                }
                   @media screen and (max-width: ${NAV_BREAKPOINT}) {
                     display: none;
                   }
                 `}
               >
-                <span>{t('Login')}</span>
-              </Button>
-            </li>
-            <li
-              css={css`
-                display: flex;
-                align-items: right;
-              `}
-            >
-              <Button
-                as={ExternalLink}
-                size={Button.SIZE.SMALL}
-                variant={Button.VARIANT.LINK}
-                href="https://one.newrelic.com"
-                css={css`
-                  font-size: 18px;
-                  white-space: nowrap;
-                  color: #1ce783;
-                  &:hover {
-                    color: #1ce783;
-                  }
-                  @media screen and (max-width: ${NAV_BREAKPOINT}) {
-                    display: none;
-                  }
-                `}
-              >
-                <span>{t('Get Started')}</span>
+                <span>{t('Log in')}</span>
               </Button>
             </li>
           </ul>
         </div>
       </div>
+      {/* web view - end point */}
+
+      {/* small screen (NAV_BREAKPOINT - 1127px) - start point */}
 
       <div
         css={css`
           display: none;
           position: relative;
-          z-index: 10;
           box-shadow: 0 0.25rem 1.875rem rgb(84 86 90 / 10%);
           background: #1d252c;
           border-bottom: 1px solid #83878b;
           @media screen and (max-width: ${NAV_BREAKPOINT}) {
             display: flex;
+            z-index: 0;
+            height: var(--global-header-height);
+          }
+
+          @media screen and (min-width: ${NAV_BREAKPOINT}) {
+            z-index: 10;
           }
           ${isOpen &&
           `
@@ -335,12 +368,17 @@ const GlobalHeader = ({ className, activeSite }) => {
           css={css`
             display: flex;
             width: 100%;
-            padding: 1.5rem;
             flex-wrap: wrap;
             justify-content: space-between;
             flex-direction: column;
-            @media screen and (max-width: ${MOBILE_BREAKPOINT}) {
+            @media screen and (max-width: ${NAV_BREAKPOINT}) {
               flex-direction: row;
+              padding: 1rem;
+            }
+
+            @media screen and (min-width: ${NAV_BREAKPOINT}) {
+              flex-direction: row;
+              padding: 1.5rem;
             }
           `}
         >
@@ -355,14 +393,20 @@ const GlobalHeader = ({ className, activeSite }) => {
             css={css`
               display: flex;
               align-items: center;
-              margin-right: 3rem;
               height: 100%;
+              outline: none;
+             
+              @media screen and (max-width: ${MOBILE_BREAKPOINT}) {
+                width: 7.5rem;
+              }
+              @media screen and (min-width: ${MOBILE_BREAKPOINT}) {
+                width: 10.625rem;
+              }
             `}
           >
             <NewLogo
               size={hideLogoText ? '24px' : '104px'}
               css={css`
-                width: 7.5rem;
                 .logo-text {
                   fill: var(--color-neutrals-900);
                 }
@@ -391,16 +435,33 @@ const GlobalHeader = ({ className, activeSite }) => {
                 cursor: pointer;
                 width: 48;
                 height: 48;
+                &:focus {
+                  width: 2rem;
+                  height: 2rem;
+                  margin-right: 1rem;
+                  padding: 0;
+                }
+
+                &:hover {
+                  color: var(--white-hover-color);
+                  background-color: transparent;
+                }
+
+                >svg {
+                  width: 32px;
+                  height: 32px;
+                }
 
                 ${isOpen
                   ? `
-                  color: #E4E5E6;
+                  color: var(--btn-text-color);
                   `
                   : `
-                  color: #E4E5E6;
+                  color: var(--btn-text-color);
                   `}
               `}
               title="Toggle menu"
+              variant={Button.VARIANT.LINK}
               onClick={() => setOpen(!isOpen)}
             >
               {isOpen ? <X /> : <Menu />}
@@ -418,7 +479,7 @@ const GlobalHeader = ({ className, activeSite }) => {
             background-color: var(--color-white);
             z-index: 10;
 
-            @media screen and (min-width: ${NAV_BREAKPOINT}) {
+            @media screen and (min-width: 1128px) {
               display: none;
             }
           `}
@@ -433,22 +494,39 @@ const GlobalHeader = ({ className, activeSite }) => {
                 justify-content: center;
                 flex-direction: column;
                 list-style-type: none;
-                width: 100%;
                 margin: 0;
                 padding: 0;
+                letter-spacing: -0.005em;
                 > li {
                   margin: 0;
                   flex: 0 0 auto;
                   border-bottom: 1px solid #eeefef;
+                  height: var(--global-header-height);
+                  border-bottom-color: rgb(228 229 230 / var(--tw-border-opacity));
+                  border-bottom-width: 1px;
+                  --tw-border-opacity: 1;
                   > a {
                     --active-color: var(--color-white);
                     font-family: Söhne-Buch;
-                    color: #54565a;
+                    color: var(--black-text-color);
                     font-weight: 400;
-                    font-size: 1rem;
-                    line-height: 4;
-                    padding: 0 2.5rem;
+                    font-size: 1.125rem;
+                    line-height: 1.75rem;
+                    padding: 1rem 2.5rem;
                     text-align: left;
+                    &:focus {
+                      outline: none;
+                      outline-width: 0.25rem;
+                      text-decoration-line: underline;
+                      text-underline-offset: 0.25rem;
+                    }              
+
+                > span {
+                  color: var(--black-hover-color);
+                  &:hover {
+                    color: var(--black-hover-color);
+                    border-bottom: 1.5px solid var(--black-hover-color);
+                  }
                 @media screen and (min-width: ${NAV_BREAKPOINT}) {
                   flex-direction: row;
                 }
@@ -469,6 +547,16 @@ const GlobalHeader = ({ className, activeSite }) => {
               bottom: 0;
               position: fixed;
               box-shadow: 0 0.25rem 1.875rem rgb(84 86 90 / 10%);
+              background-color: rgb(29, 37, 44);
+              height: 6.6rem;
+              > a {
+                height: 3rem; 
+                &:focus{
+                  outline-style: solid;
+                  outline-width: 0.125rem;
+                  outline-color: rgb(28 231 131 / 0.3);
+                }
+              }
             `}
           >
             <Button
@@ -481,8 +569,10 @@ const GlobalHeader = ({ className, activeSite }) => {
                 transition: background-color 0.3s ease,color 0.3s ease,border-color 0.3s ease;
                 font-family:Söhne-Buch;
                 font-weight: 400;
-                font-size: 1rem;
-                line-height: 1.625;
+                font-size: 0.875rem;
+                line-height: 1.93;
+                margin-left: 0;
+                margin-right: 5px;
                 text-decoration: none;
                 border: 1px solid transparent;
                 border-radius: 4px;
@@ -491,52 +581,30 @@ const GlobalHeader = ({ className, activeSite }) => {
                 text-align: center;
                 vertical-align: middle;
                 white-space: nowrap;
-                background-color: #fff;
-                color: #1D252C;
-                border-color:#1D252C;
-                padding: 0.375rem 1rem;
+                padding: 0.6rem 1rem;
+                border-color: var(--color-neutrals-100);
+                background-color: transparent;
+                color: var(--color-neutrals-100);
+                &:hover {
+                  color: var(--color-neutrals-100);
+                  background-color: transparent;
+                }
+                &:focus {
+                  --tw-border-opacity: 1;
+                  border-color: rgb(249 250 250 / var(--tw-border-opacity));
+                  --tw-text-opacity: 1;
+                  color: rgb(249 250 250 / var(--tw-text-opacity));
+                }
                   
                 `}
             >
-              <span>{t('Login')}</span>
+              <span>{t('Log in')}</span>
             </Button>
 
-            <Button
-              as={ExternalLink}
-              className={className}
-              href="https://newrelic.com/signup"
-              size={Button.SIZE.SMALL}
-              variant={Button.VARIANT.PRIMARY}
-              instrumentation={{
-                component: 'SignupButton',
-                layoutElement: 'globalHeader',
-              }}
-              css={css`
-                padding: 0.375rem 1rem;
-                transition: background-color 0.3s ease, color 0.3s ease,
-                  border-color 0.3s ease;
-                font-family: Söhne-Buch;
-                font-weight: 400;
-                font-size: 1rem;
-                line-height: 1.625;
-                text-decoration: none;
-                border: 1px solid transparent;
-                border-radius: 4px;
-                cursor: pointer;
-                display: inline-block;
-                text-align: center;
-                vertical-align: middle;
-                white-space: nowrap;
-                background-color: #1d252c;
-                color: #fff;
-                border-color: #1d252c;
-              `}
-            >
-              <span>{t('Get Started')}</span>
-            </Button>
           </div>
         </div>
       )}
+       {/* small screen (NAV_BREAKPOINT - 1127px) - end point */}
     </>
   );
 };

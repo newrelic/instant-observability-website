@@ -29,26 +29,25 @@ const BannerBackground = ({ children }) => {
             width: 100%;
             margin: 0 auto 0px;
           }
+          max-width: 98rem;
+          margin-left: auto;
+          margin-right: auto;
+          margin-bottom: 1rem;
         `}
       >
         <div
           css={css`
-            margin-left: auto;
+            width: 6rem;
+            margin-top: -8rem;
+            margin-right: 92%;
+            position: absolute;
 
-            @media (max-width: 1440px) {
+            @media (max-width: 1310px) {
               display: none;
             }
           `}
         >
           <img
-            css={css`
-              position: absolute;
-              width: 157.03px;
-              height: 148px;
-              left: 5px;
-              top: 50px;
-              z-index: auto;
-            `}
             src={bannerOverlayLeft}
             alt="banner-left"
             loading="lazy"
@@ -57,20 +56,17 @@ const BannerBackground = ({ children }) => {
         {children}
         <div
           css={css`
-            margin-right: auto;
+            width: 6rem;
+            margin-top: -5rem;
+            margin-left: 65%;
+            position: absolute;
 
-            @media (max-width: 1440px) {
+            @media (max-width: 1310px) {
               display: none;
             }
           `}
         >
           <img
-            css={css`
-              position: absolute;
-              right: 5px;
-              top: 0px;
-              z-index: auto;
-            `}
             src={bannerOverlayRight}
             alt="banner-right"
             loading="lazy"

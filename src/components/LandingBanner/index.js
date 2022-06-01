@@ -8,7 +8,7 @@ import { quickstart } from '../../types';
 import defaultImage from '../../images/defaultQuickstartImage.png';
 import BannerBackground from './BannerBackground';
 
-const IMAGE_DISPLAY_BREAKPOINT = '1200px';
+const IMAGE_DISPLAY_BREAKPOINT = '1248px';
 
 const LandingBanner = ({ quickstart, className, location }) => {
   const bannerImg = useDetermineBannerImg(quickstart, defaultImage);
@@ -46,6 +46,9 @@ const LandingBanner = ({ quickstart, className, location }) => {
           row-gap: 1rem;
           z-index: 2;
 
+          padding: 0 var(--site-content-padding);
+          max-width: 1248px;
+
           h2 {
             color: white;
           }
@@ -58,6 +61,9 @@ const LandingBanner = ({ quickstart, className, location }) => {
               'cta';
             grid-template-columns: 1fr;
             grid-template-rows: 0.25fr 0.25fr auto auto;
+          }
+          @media (max-width: 960px) {
+            padding: 0 var(--site-content-padding);
           }
         `}
       >
@@ -121,7 +127,6 @@ const LandingBanner = ({ quickstart, className, location }) => {
             css={css`
               grid-area: summ;
               font-size: 1.25vw;
-              line-height: 32px;
 
               @media (max-width: ${IMAGE_DISPLAY_BREAKPOINT}) {
                 font-size: 2vw;

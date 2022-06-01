@@ -10,7 +10,16 @@ import React from 'react';
 import { css } from '@emotion/react';
 import useThemeTranslation from '@newrelic/gatsby-theme-newrelic/src//hooks/useThemeTranslation';
 
+const HOME_LINK = 'https://newrelic.com';
+
 const MOBILE_BREAKPOINT = '920px';
+
+const getCurrentYear = () => {
+  let currentYear = '';
+  const fullYear = new Date().getFullYear().toString();
+  currentYear = fullYear.substring(fullYear.length - 2);
+  return currentYear;
+};
 
 const GlobalFooter = ({ className }) => {
   const { t } = useThemeTranslation();
@@ -26,6 +35,34 @@ const GlobalFooter = ({ className }) => {
       }
     }
   `);
+
+  // these icons will be hidden on mobile view
+  const renderSocialIcons = () => {
+    return (
+      SOCIALS.map((social) => (
+        <ExternalLink
+          key={social.title}
+          href={social.href}
+          css={css`
+            @media screen and (max-width: ${MOBILE_BREAKPOINT}) {
+              display: none;
+            }
+          `}
+        >
+          <Icon
+            name={social.title}
+            size="24px"
+            css={css`
+              outline: none;
+              stroke-width: 0px;
+              color: var(--secondary-text-color);
+              fill: var(--secondary-text-color);
+            `}
+          />
+        </ExternalLink>
+      ))
+    )
+  }
 
   return (
     <footer
@@ -51,7 +88,8 @@ const GlobalFooter = ({ className }) => {
         }
 
         a:hover {
-          color: white;
+          --tw-text-opacity: 1;
+          color: rgb(228 229 230 / var(--tw-text-opacity));
         }
       `}
     >
@@ -59,7 +97,11 @@ const GlobalFooter = ({ className }) => {
         <div
           css={css`
             display: grid;
-            justify-content: space-evenly;
+            background: #1d252c;
+            justify-content: space-between;
+            max-width: 1248px;
+            margin: 0 auto;
+            padding: 0 var(--site-content-padding);
 
             /* Sets up the sizing of the columns */
             grid-template-columns: min-content 192px;
@@ -99,21 +141,21 @@ const GlobalFooter = ({ className }) => {
               }
 
               @media screen and (max-width: ${MOBILE_BREAKPOINT}) {
-                margin: 40px 0px 0px 40px;
+                margin-top: 40px;
 
                 justify-content: flex-start;
                 grid-template-rows: 1fr;
                 grid-auto-flow: row;
 
                 /* Decrease margin of last item for mobile view */
-                > a:nth-last-child(1) {
+                > a:nth-last-of-type(1) {
                   margin-bottom: 10px;
                 }
               }
             `}
           >
             {RESOURCES.map((resource) => (
-              <ExternalLink href={resource.href}>{resource.title}</ExternalLink>
+              <ExternalLink key={resource.title} href={resource.href}>{resource.title}</ExternalLink>
             ))}
           </div>
           <div
@@ -125,7 +167,8 @@ const GlobalFooter = ({ className }) => {
               grid-area: socials;
 
               svg:hover {
-                fill: white;
+                --tw-text-opacity: 1;
+                fill: rgb(228 229 230 / var(--tw-text-opacity));
               }
 
               @media screen and (min-width: calc(${MOBILE_BREAKPOINT} + 1px)) {
@@ -157,14 +200,13 @@ const GlobalFooter = ({ className }) => {
                 display: grid;
                 justify-content: start;
                 margin-top: 40px;
-                margin-left: 40px;
 
                 grid-template-rows: 1fr max-content;
                 grid-auto-flow: column;
 
                 > span {
                   grid-column: span 7;
-                  margin-bottom: 14px;
+                  margin-bottom: 2rem;
                 }
 
                 > a {
@@ -175,20 +217,41 @@ const GlobalFooter = ({ className }) => {
           >
             <span>Follow us</span>
 
-            {SOCIALS.map((social) => (
-              <ExternalLink href={social.href}>
-                <Icon
-                  name={social.title}
-                  size="24px"
-                  css={css`
-                    outline: none;
-                    stroke-width: 0px;
-                    color: var(--secondary-text-color);
-                    fill: var(--secondary-text-color);
-                  `}
-                />
-              </ExternalLink>
-            ))}
+            {/* hide icons on mobile view and display them on large screens */}
+            {renderSocialIcons()}
+
+            {/* display icons on mobile view and hide on large screens */}
+            <div
+              css={css`
+                display: none;
+                @media screen and (max-width: ${MOBILE_BREAKPOINT}) {
+                  padding: 0;
+                  row-gap: 2rem;
+                  column-gap: 1.5rem;
+                  flex-wrap: wrap;
+                  flex-direction: row;
+                  max-width: 10.5rem;
+                  display: flex;
+                  margin-bottom: 1rem;
+                  justify-content: flex-start;
+                }
+              `}
+            >
+              {SOCIALS.map((social) => (
+                <ExternalLink key={social.title} href={social.href}>
+                  <Icon
+                    name={social.title}
+                    size="24px"
+                    css={css`
+                      outline: none;
+                      stroke-width: 0px;
+                      color: var(--secondary-text-color);
+                      fill: var(--secondary-text-color);
+                    `}
+                  />
+                </ExternalLink>
+              ))}
+            </div>
           </div>
           <div
             css={css`
@@ -196,11 +259,14 @@ const GlobalFooter = ({ className }) => {
               margin: 64px 0px 0px 0px;
 
               @media screen and (max-width: ${MOBILE_BREAKPOINT}) {
-                margin: 32px 0px 20px 40px;
+                margin: 32px 0px 0px 0px;
               }
             `}
           >
-            <NewLogo />
+
+            <ExternalLink href={HOME_LINK}>
+              <NewLogo />
+            </ExternalLink>
           </div>
 
           <div
@@ -218,12 +284,13 @@ const GlobalFooter = ({ className }) => {
               }
 
               @media screen and (max-width: ${MOBILE_BREAKPOINT}) {
-                margin-left: 40px;
                 flex-direction: column;
+                display: grid;
+                grid-template-columns: 10rem 10rem;
 
                 a {
                   white-space: nowrap;
-                  margin-bottom: 32px;
+                  margin-bottom: 1rem;
                 }
               }
             `}
@@ -264,21 +331,37 @@ const GlobalFooter = ({ className }) => {
               }
 
               @media screen and (max-width: ${MOBILE_BREAKPOINT}) {
-                margin-left: 40px;
                 justify-content: start;
+                display: grid;
+                grid-template-columns: 10rem 10rem;
+                justify-items: left;
+                margin-top: 2rem;
 
                 grid-template-column: 1fr;
                 grid-auto-flow: row;
 
                 > a {
-                  margin-bottom: 32px;
+                  margin-bottom: 1rem;
                 }
               }
             `}
           >
             {LOCALS.map((locale) => (
-              <ExternalLink href={locale.href}>{locale.title}</ExternalLink>
+              <ExternalLink key={locale.title} href={locale.href}>{locale.title}</ExternalLink>
             ))}
+          </div>
+          <div
+            css={css`
+              margin-top: 1.25rem;
+              font-size: 0.875rem;
+              line-height: 1.25rem;
+              @media screen and (max-width: ${MOBILE_BREAKPOINT}) {
+                margin-top: 2rem;
+                margin-bottom: 2rem;
+              }
+            `}
+          >
+            ©2008-{getCurrentYear()} New Relic, Inc. All rights reserved
           </div>
         </div>
       </div>

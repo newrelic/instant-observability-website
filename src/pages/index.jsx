@@ -23,10 +23,13 @@ import { css } from '@emotion/react';
 import { graphql } from 'gatsby';
 import { navigate } from '@reach/router';
 import { useDebounce } from 'react-use';
+import LeftArrowSVG from '../components/Icons/LeftArrowSVG';
+import RightArrowSVG from '../components/Icons/RightArrowSVG';
 
 const TRIPLE_COLUMN_BREAKPOINT = '1420px';
 const DOUBLE_COLUMN_BREAKPOINT = '1180px';
 const SINGLE_COLUMN_BREAKPOINT = '900px';
+const COLUMN_BREAKPOINT = '1131px';
 
 /**
  * Determines if one string is a substring of the other, case insensitive
@@ -199,36 +202,6 @@ const QuickstartsPage = ({ data, location }) => {
     return found.displayName;
   };
 
-  const PrevArrow = (
-    <Icon
-      name="carousel-left"
-      size="120%"
-      viewBox="0 0 30 30"
-      css={css`
-        fill: white;
-        stroke: #00838f;
-        z-index: 100;
-        stroke-width: 1px;
-        width: 29px;
-        height: 29px;
-      `}
-    />
-  );
-  const NextArrow = (
-    <Icon
-      name="carousel-right"
-      size="120%"
-      viewBox="0 0 30 30"
-      css={css`
-        fill: white;
-        stroke: #00838f;
-        z-index: 100;
-        stroke-width: 1px;
-        width: 29px;
-        height: 29px;
-      `}
-    />
-  );
 
   // Settings for Slick-Carousel
   const settings = {
@@ -240,8 +213,29 @@ const QuickstartsPage = ({ data, location }) => {
     adaptiveHeight: false,
     adaptiveWidth: true,
     mobileFirst: true, // necessary for breakpoints to work as expected
-    prevArrow: PrevArrow,
-    nextArrow: NextArrow,
+    prevArrow: <button
+      css={css`
+        z-index: 1;
+    `}>
+      <LeftArrowSVG
+        className="slick-prev"
+        css={css`
+          width: auto;
+          height: auto;
+          margin: 0 1.5rem;
+        `}
+      />
+    </button>,
+    nextArrow: <button>
+      <RightArrowSVG
+        className="slick-next"
+        css={css`
+          width: auto;
+          height: auto;
+          margin: 0 1.5rem;
+        `}
+      />
+    </button>,
     responsive: [
       {
         breakpoint: parseInt(TRIPLE_COLUMN_BREAKPOINT),
@@ -296,9 +290,13 @@ const QuickstartsPage = ({ data, location }) => {
           grid-gap: 20px;
           min-height: calc(100vh - var(--global-header-height));
           margin: 0 auto;
-          padding: var(--banner-height) 0;
+          padding: var(--banner-height) 0 15vh 0;
 
           max-width: var(--site-max-width);
+
+          @media screen and (min-width: ${COLUMN_BREAKPOINT}) {
+          --banner-height: 394px;
+          }
 
           @media screen and (max-width: ${QUICKSTARTS_COLLAPSE_BREAKPOINT}) {
             grid-gap: 0;
@@ -313,8 +311,6 @@ const QuickstartsPage = ({ data, location }) => {
           data-swiftype-index={false}
           css={css`
             grid-area: sidebar;
-            height: calc(100vh - var(--global-header-height));
-            position: sticky;
             top: var(--global-header-height);
             width: 100%;
 
@@ -329,7 +325,7 @@ const QuickstartsPage = ({ data, location }) => {
         >
           <div
             css={css`
-              padding: 32px 0 32px 32px;
+              padding: 1.5rem 0 1.5rem 1.5rem;
               height: 100%;
               overflow: auto;
 
@@ -353,6 +349,7 @@ const QuickstartsPage = ({ data, location }) => {
                   type="button"
                   key={value}
                   disabled={count === 0}
+                  variant={Button.VARIANT.PRIMARY}
                   onClick={() => handleCategory(value)}
                   css={css`
                     padding: 8px 12px;
@@ -368,6 +365,10 @@ const QuickstartsPage = ({ data, location }) => {
                     background: ${category === value
                       ? 'var(--divider-color)'
                       : 'none'};
+                      &:hover {
+                        color: var(--black-text-color);
+                        background: var(--category-hover-color);
+                      }
                   `}
                 >
                   {`${displayName}`}
@@ -384,7 +385,7 @@ const QuickstartsPage = ({ data, location }) => {
         <div
           css={css`
             grid-area: main;
-            padding: var(--site-content-padding);
+            padding: 1.5rem;
           `}
         >
           <div
@@ -464,6 +465,7 @@ const QuickstartsPage = ({ data, location }) => {
                     <Button
                       type="button"
                       key={value}
+                      variant={Button.VARIANT.PRIMARY}
                       onClick={() => handleCategory(value)}
                       css={css`
                         width: 100%;
@@ -576,7 +578,7 @@ const QuickstartsPage = ({ data, location }) => {
                   font-size: 16px;
                   color: var(--color-neutrals-800);
                   align-text: center;
-                  margin: 75px 0 35px 4px;
+                  margin: 75px 0 13px 4px;
 
                   strong {
                     font-family: 'Söhne-Leicht';
@@ -595,7 +597,11 @@ const QuickstartsPage = ({ data, location }) => {
                   <strong>Featured</strong>
                 </span>
               </div>
-              <div>
+              <div
+                css={css`
+                  margin-bottom: 75px
+                `}
+              >
                 {!loadComplete && <Spinner />}
                 {loadComplete && (
                   <Slider {...settings}>
@@ -614,8 +620,9 @@ const QuickstartsPage = ({ data, location }) => {
           <div
             css={css`
               --text-color: var(--primary-text-color);
+              margin: 0px 0 13px 4px;
 
-              padding: 1.25rem 0;
+              padding: 0 0 1.25rem 0;
               font-size: 18px;
               color: var(--color-neutrals-800);
               display: flex;

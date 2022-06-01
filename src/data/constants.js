@@ -84,6 +84,10 @@ export const RESOURCES = [
     href: 'https://newrelic.com/security',
   },
   {
+    title: 'ESG',
+    href: 'https://newrelic.com/about/environmental-social-governance',
+  },
+  {
     title: 'Contact Us',
     href: 'https://newrelic.com/about/contact-us',
   },
@@ -91,31 +95,31 @@ export const RESOURCES = [
 
 export const SOCIALS = [
   {
-    title: 'facebook',
+    title: 'fe-facebook',
     href: 'http://www.facebook.com/NewRelic',
   },
   {
-    title: 'linkedin',
+    title: 'fe-linkedin',
     href: 'https://www.linkedin.com/company/new-relic-inc-',
   },
   {
-    title: 'instagram',
+    title: 'fe-instagram',
     href: 'https://www.instagram.com/newrelic/',
   },
   {
-    title: 'youtube',
+    title: 'fe-youtube',
     href: 'https://www.youtube.com/user/NewRelicInc/featured',
   },
   {
-    title: 'github',
+    title: 'fe-github',
     href: 'https://github.com/newrelic',
   },
   {
-    title: 'twitch',
+    title: 'fe-twitch',
     href: 'https://www.twitch.tv/new_relic',
   },
   {
-    title: 'twitter',
+    title: 'fe-twitter',
     href: 'https://twitter.com/newrelic',
   },
 ];
@@ -131,3 +135,14 @@ export const LOCALS = [
   },
 ];
 
+
+/* Quickstart Preview */
+
+export const GITHUB_API_BASE_URL =
+  'https://api.github.com/repos/newrelic/newrelic-quickstarts/contents';
+
+export const GITHUB_API_PULL_URL =
+  'https://api.github.com/repos/newrelic/newrelic-quickstarts/pulls';
+
+export const QUICKSTART_REPO_URL =
+  'https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts';

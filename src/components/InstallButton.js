@@ -17,6 +17,7 @@ import {
 import { quickstart } from '../types';
 import Cookies from 'js-cookie';
 import useTreatment from '../hooks/useTreatment';
+import AnimatedText from './AnimatedText';
 
 /**
  * @param {Object} parameters
@@ -135,13 +136,13 @@ const InstallButton = ({
   // first documentation supplied.
   const url = hasInstallableComponent
     ? createInstallLink(
-        quickstart.id,
-        nerdletId,
-        hasGuidedInstall,
-        hasUtmParameters,
-        checkIfReturningUser(),
-        parameters
-      )
+      quickstart.id,
+      nerdletId,
+      hasGuidedInstall,
+      hasUtmParameters,
+      checkIfReturningUser(),
+      parameters
+    )
     : quickstart.documentation[0].url;
 
   const writeCookie = () => {
@@ -177,97 +178,6 @@ const InstallButton = ({
     });
   };
 
-  const InstallAnimationStyles = () => {
-    return (
-      <div
-        css={css`
-          overflow: hidden;
-          line-height: 30px;
-          text-align: center;
-          margin: 0;
-          width: 106px;
-          height: 48px;
-          position: relative;
-
-          > div {
-            margin: 10px auto 0;
-            white-space: nowrap;
-          }
-          > span {
-            width: 106px;
-            height: 48px;
-            background: none;
-            border: 15px solid var(--button-background);
-            position: absolute;
-            z-index: 100;
-            top: 0;
-            left: 0;
-          }
-
-          .scroll {
-            -webkit-animation: scroll-back 0.3s
-              cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
-            animation: scroll-back 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275)
-              forwards;
-          }
-          &:hover .scroll {
-            -webkit-animation: scroll 0.3s
-              cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
-            animation: scroll 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275)
-              forwards;
-          }
-
-          --translateY-distance: -40px;
-
-          @-webkit-keyframes scroll {
-            0% {
-              -webkit-transform: translateY(0);
-              transform: translateY(0);
-            }
-            100% {
-              -webkit-transform: translateY(var(--translateY-distance));
-              transform: translateY(var(--translateY-distance));
-            }
-          }
-          @-webkit-keyframes scroll-back {
-            0% {
-              -webkit-transform: translateY(var(--translateY-distance));
-              transform: translateY(var(--translateY-distance));
-            }
-            100% {
-              -webkit-transform: translateY(0);
-              transform: translateY(0);
-            }
-          }
-
-          @keyframes scroll {
-            0% {
-              -webkit-transform: translateY(0);
-              transform: translateY(0);
-            }
-            100% {
-              -webkit-transform: translateY(var(--translateY-distance));
-              transform: translateY(var(--translateY-distance));
-            }
-          }
-          @keyframes scroll-back {
-            0% {
-              -webkit-transform: translateY(var(--translateY-distance));
-              transform: translateY(var(--translateY-distance));
-            }
-            100% {
-              -webkit-transform: translateY(0);
-              transform: translateY(0);
-            }
-          }
-        `}
-      >
-        <span />
-        <div class="scroll scroll-top">Install now</div>
-        <div class="scroll scroll-bottom">Install now</div>
-      </div>
-    );
-  };
   return (
     <Button
       {...props}
@@ -278,13 +188,13 @@ const InstallButton = ({
       css={css`
         --button-background: var(
           ${style === 'PRIMARY'
-            ? '--btn-background-green'
-            : '--brand-secondary-background-color'}
+          ? '--btn-background-green'
+          : '--brand-secondary-background-color'}
         );
         --button-text-color: var(
           ${style === 'PRIMARY'
-            ? '--brand-primary-text-color'
-            : '--brand-secondary-text-color'}
+          ? '--brand-primary-text-color'
+          : '--brand-secondary-text-color'}
         );
         background-color: var(--button-background);
         border-radius: 4px;
@@ -307,7 +217,9 @@ const InstallButton = ({
       `}
     >
       {hasInstallableComponent ? (
-        <InstallAnimationStyles />
+        <AnimatedText
+          text={'Install now'}
+        />
       ) : (
         'See installation docs'
       )}
@@ -317,7 +229,7 @@ const InstallButton = ({
 
 InstallButton.propTypes = {
   quickstart: quickstart.isRequired,
-  onClick: PropTypes.func.isRequired,
+  onClick: PropTypes.func,
   location: PropTypes.object.isRequired,
   style: PropTypes.oneOf(['PRIMARY', 'SECONDARY']),
 };
