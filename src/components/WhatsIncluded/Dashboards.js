@@ -2,6 +2,7 @@ import { quickstart } from '../../types';
 import QuickstartDashboards from '../../components/QuickstartDashboards';
 import { css } from '@emotion/react';
 import EmptyTab from '../../components/EmptyTab';
+import Share from '../../components/Share';
 
 const Dashboards = ({ quickstart }) => {
   return (
@@ -20,6 +21,10 @@ const Dashboards = ({ quickstart }) => {
 
         h6 {
           font-weight: 400;
+          @media (max-width: 760px) {
+              padding-top: 60px;
+            
+          }
         }
 
         @media not all and (min-resolution: 0.001dpcm) and max-width: 760px {
@@ -31,7 +36,37 @@ const Dashboards = ({ quickstart }) => {
         }
       `}
     >
-      <h3>What&apos;s included?</h3>
+      <h3>What&apos;s included?
+
+        {/* Share on social media */}
+        <div
+          css={css`
+          @media (min-width: 760px) {
+            float: right;
+          }
+        
+        @media (max-width: 760px) {
+          --page-margin: 30px;
+          float: left;
+          margin-top: 19px;
+          margin-bottom: 37px;
+        }
+        `}>
+          <p
+            css={css`
+         display: contents;`}>
+            Share this : </p>
+          &nbsp;
+          <div
+            css={css`
+              float: right;
+              line-height: 0.9;
+         `}>
+            <Share url={window.location.href} />
+          </div>
+        </div>
+
+      </h3>
       <h6>
         Dashboard &nbsp;
         <div
