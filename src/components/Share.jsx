@@ -11,12 +11,19 @@ import TwitterSVG from './Icons/TwitterSVG';
 import LinkedinSVG from './Icons/LinkedinSVG';
 import MailSVG from './Icons/MailSVG';
 import { css } from '@emotion/react';
+import { MIN_WIDTH_BREAKPOINT } from '../data/constants';
+
 const Share = (url) => (
 
     <div
         css={css`
         .button {
-        margin-right: 0;
+            margin-right: 0;
+            
+            @media (max-width: ${MIN_WIDTH_BREAKPOINT}) {
+                margin: 0;
+                margin-right: 3px;
+            }
         }
         `}
         className="post-social">
