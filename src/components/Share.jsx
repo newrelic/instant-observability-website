@@ -10,9 +10,16 @@ import FacebookSVG from './Icons/FacebookSVG';
 import TwitterSVG from './Icons/TwitterSVG';
 import LinkedinSVG from './Icons/LinkedinSVG';
 import MailSVG from './Icons/MailSVG';
+import { css } from '@emotion/react';
 const Share = (url) => (
 
-    <div className="post-social">
+    <div
+        css={css`
+        .button {
+        margin-right: 0;
+        }
+        `}
+        className="post-social">
         <FacebookShareButton url={url} className="button" >
             <FacebookSVG
                 width="24"
