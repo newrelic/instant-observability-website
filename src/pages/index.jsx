@@ -310,6 +310,7 @@ const QuickstartsPage = ({ data, location }) => {
           bottom: 43px;
           background: #1d252c;
           border-radius: 97px;
+          border: 1px solid #898e91;
         `}
         id="go-to-page-top-btn"
       >
