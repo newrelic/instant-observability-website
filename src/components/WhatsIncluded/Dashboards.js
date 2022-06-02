@@ -3,8 +3,10 @@ import QuickstartDashboards from '../../components/QuickstartDashboards';
 import { css } from '@emotion/react';
 import EmptyTab from '../../components/EmptyTab';
 import Share from '../../components/Share';
+import { useLocation } from "@reach/router";
 
 const Dashboards = ({ quickstart }) => {
+  const location = useLocation();
   return (
     <div
       css={css`
@@ -62,7 +64,7 @@ const Dashboards = ({ quickstart }) => {
               float: right;
               line-height: 0.9;
          `}>
-            <Share url={window.location.href} />
+            <Share url={location.href} />
           </div>
         </div>
 
