@@ -24,7 +24,7 @@ const Dashboards = ({ quickstart }) => {
         h6 {
           font-weight: 400;
           @media (max-width: 760px) {
-              padding-top: 60px;
+              padding-top: 45px;
             
           }
         }
@@ -38,37 +38,39 @@ const Dashboards = ({ quickstart }) => {
         }
       `}
     >
-      <h3>What&apos;s included?
+      <div
+        css={css`
+      display: grid;
+      grid-template-columns: repeat(auto, 1fr);
+      grid-auto-flow: column;
+      @media (max-width: 760px) {
+        grid-template-columns: repeat(1, 1fr);
+          grid-template-rows: repeat(2, 40px);
+        h3 {
+          display: contents;
+        }
+      }
+
+      `}>
+        <h3>What&apos;s included? </h3>
 
         {/* Share on social media */}
         <div
           css={css`
-          @media (min-width: 760px) {
-            float: right;
-          }
+          display: inline-flex;
+          line-height: 3.9;
+          justify-content: end;
         
         @media (max-width: 760px) {
-          --page-margin: 30px;
-          float: left;
-          margin-top: 19px;
-          margin-bottom: 37px;
+          justify-content: left;
         }
         `}>
-          <p
-            css={css`
-         display: contents;`}>
-            Share this : </p>
-          &nbsp;
-          <div
-            css={css`
-              float: right;
-              line-height: 0.9;
-         `}>
-            <Share url={location.href} />
-          </div>
-        </div>
+          Share this : &nbsp;
+          <Share url={location.href} />
 
-      </h3>
+        </div>
+      </div>
+
       <h6>
         Dashboard &nbsp;
         <div
