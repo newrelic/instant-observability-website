@@ -1976,19 +1976,19 @@
     ],
     "dashboards": [
       {
-        "name": "Battlesnake Server Status",
-        "description": "A dashboard to monitor your Battlesnake server's performance. It's important to keep all responses to the `/move` endpoint under 500ms. Furthermore, it's possible that your snake may be in multiple concurrent matches at the same time. It's important to make sure you server and web application are running smoothly to keep you in the game!",
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/battlesnake/dashboards/battlesnake-server-status/battlesnake-server-status.png"
-        ]
-      },
-      {
         "name": "Battlesnake Performance",
         "description": "Monitor your Battlesnake's performance and see how it stacks up against your competition!",
         "url": null,
         "screenshots": [
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/battlesnake/dashboards/battlesnake-performance/battlesnake-performance.png"
+        ]
+      },
+      {
+        "name": "Battlesnake Server Status",
+        "description": "A dashboard to monitor your Battlesnake server's performance. It's important to keep all responses to the `/move` endpoint under 500ms. Furthermore, it's possible that your snake may be in multiple concurrent matches at the same time. It's important to make sure you server and web application are running smoothly to keep you in the game!",
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/battlesnake/dashboards/battlesnake-server-status/battlesnake-server-status.png"
         ]
       },
       {
@@ -3819,19 +3819,19 @@
     ],
     "dashboards": [
       {
-        "name": "Data Governance Baseline",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/oma-data-gov/dashboards/data-ingest-baseline/data-ingest-baseline.png"
-        ]
-      },
-      {
         "name": "Data Governance Entity Breakdowns",
         "description": null,
         "url": null,
         "screenshots": [
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/oma-data-gov/dashboards/data-ingest-entity-breakdown/data-ingest-entity-breakdown.png"
+        ]
+      },
+      {
+        "name": "Data Governance Baseline",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/oma-data-gov/dashboards/data-ingest-baseline/data-ingest-baseline.png"
         ]
       }
     ],
@@ -8307,6 +8307,52 @@
     ]
   },
   {
+    "title": "Bitbucket",
+    "name": "bitbucket",
+    "description": "## Atlassian Bitbucket quickstart\n\n### About Bitbucket\n\nWith best-in-class Jira integration, and built-in CI/CD, Bitbucket Cloud is the native Git tool in Atlassian’s Open DevOps solution.\n\n### About this quickstart\n\nThis quickstart is built around a [Bitbucket Pipe](https://bitbucket.org/product/features/pipelines/integrations) integration. This tool will enable you to send CI/CD events into New Relic, where you can monitor your Bitbucket Pipelines. \n\nWith this visualization you can monitor:\n  - Number of events/pipeline builds\n  - Track priority events\n  - Real time event log from your pipeline\n  - Events and priority events over time",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/atlassian/bitbucket",
+    "id": "fdc99da8-0061-4c5f-bd90-ef67a8b2419f",
+    "level": "COMMUNITY",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/atlassian/bitbucket/logo.svg",
+    "summary": "Monitor your Bitbucket Pipeline.",
+    "websiteUrl": null,
+    "keywords": [
+      "atlassian",
+      "bitbucket",
+      "cicd",
+      "featured",
+      "newrelic partner",
+      "pipeline"
+    ],
+    "authors": [
+      "Joseph Counts (New Relic)"
+    ],
+    "dashboards": [
+      {
+        "name": "bitbucket",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/atlassian/bitbucket/dashboards/bitbucket/dashboard01.png"
+        ]
+      }
+    ],
+    "alerts": [],
+    "documentation": [
+      {
+        "name": "Bitbucket pipe integration docs",
+        "description": "Bitbucket pipe integration to send an event to New Relic from your Bitbucket pipeline.",
+        "url": "https://bitbucket.org/product/features/pipelines/integrations?p=jcountsnr/newrelic_observability_event"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "Bitbucket",
+        "id": "third-party-bitbucket"
+      }
+    ]
+  },
+  {
     "title": "ArgoCD Quickstart",
     "name": "argocd-quickstart",
     "description": "## What is Argo CD?\nArgo CD is a declarative, GitOps continuous delivery tool for Kubernetes.\n\n## Why Argo CD?\nApplication definitions, configurations, and environments should be declarative and version controlled. Application deployment and lifecycle management should be automated, auditable, and easy to understand.\n\nThis dashboard mirrors the official Argo CD Grafana dashboard ([Link](https://github.com/argoproj/argo-cd/blob/master/examples/dashboard.json)).\n\n## Argo CD Getting started:\n- [Getting Started](https://argo-cd.readthedocs.io/en/stable/getting_started)\n- [Docs](https://argo-cd.readthedocs.io/en/stable/)\n- [Available Metrics](https://argo-cd.readthedocs.io/en/stable/operator-manual/metrics/)\n\n## ArgoCD Dashboard Highlights:\n- Sync Activity\n- Health Status\n- Controller Stats\n- Repo Server Stats\n- Argo Server Stats\n\n## Requirements:\n1. NewRelic Kubernetes Integration ([Link](https://docs.newrelic.com/docs/kubernetes-pixie/kubernetes-integration/installation/kubernetes-integration-install-configure/)) with the Prometheus OpenMetrics Integration ([Link](https://docs.newrelic.com/docs/infrastructure/prometheus-integrations/get-started/send-prometheus-metric-data-new-relic/#OpenMetrics))\n2. Patch the ArgoCD pods with `prometheus.io/scrape=true` podAnnotations.  This will enable the New Relic Prometheus Integration to scrape ArgoCD metrics:\n\n    `kubectl patch deployment argocd-server -n argocd -p '{\"spec\": {\"template\":{\"metadata\":{\"annotations\":{\"prometheus.io/scrape\":\"true\",\"prometheus.io/port\": \"8083\",\"prometheus.io/path\": \"metrics\"}}}} }'`\n\n    `kubectl patch statefulset argocd-application-controller -n argocd -p '{\"spec\": {\"template\":{\"metadata\":{\"annotations\":{\"prometheus.io/scrape\":\"true\",\"prometheus.io/port\": \"8082\",\"prometheus.io/path\": \"metrics\"}}}} }'`\n\n    `kubectl patch deployment argocd-repo-server -n argocd -p '{\"spec\": {\"template\":{\"metadata\":{\"annotations\":{\"prometheus.io/scrape\":\"true\",\"prometheus.io/port\": \"8084\",\"prometheus.io/path\": \"metrics\"}}}} }'`",
@@ -12759,19 +12805,19 @@
     ],
     "dashboards": [
       {
-        "name": "Lacework Security Overview",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/lacework/dashboards/lacework-security-overview/lacework-security-overview.png"
-        ]
-      },
-      {
         "name": "Lacework Anomaly Detections",
         "description": null,
         "url": null,
         "screenshots": [
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/lacework/dashboards/lacework-anomaly-detections/lacework-anomaly-detections.png"
+        ]
+      },
+      {
+        "name": "Lacework Security Overview",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/lacework/dashboards/lacework-security-overview/lacework-security-overview.png"
         ]
       },
       {
@@ -12810,20 +12856,21 @@
     "websiteUrl": null,
     "keywords": [
       "devops",
-      "Zebrium",
+      "zebrium",
       "featured",
       "logs",
       "ML",
       "AI",
-      "machine learning",
+      "machine-learning",
       "root cause",
       "newrelic partner",
       "partner",
-      "SRE"
+      "SRE",
+      "mlops"
     ],
     "authors": [
-      "Rod Bagg",
-      "Gavin Cohen"
+      "Rod Bagg (Zebrium)",
+      "Gavin Cohen (Zebrium)"
     ],
     "dashboards": [
       {
@@ -16897,22 +16944,6 @@
     ],
     "dashboards": [
       {
-        "name": "Catchpoint-Overview",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/catchpoint/dashboards/Catchpoint-Overview/Catchpoint-Overview.png"
-        ]
-      },
-      {
-        "name": "Catchpoint-Test Times",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/catchpoint/dashboards/Catchpoint-Test_Times/Catchpoint-Test_Times.png"
-        ]
-      },
-      {
         "name": "Catchpoint-Response Size",
         "description": null,
         "url": null,
@@ -16921,11 +16952,27 @@
         ]
       },
       {
+        "name": "Catchpoint-Overview",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/catchpoint/dashboards/Catchpoint-Overview/Catchpoint-Overview.png"
+        ]
+      },
+      {
         "name": "Catchpoint-Recent Errors",
         "description": null,
         "url": null,
         "screenshots": [
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/catchpoint/dashboards/Catchpoint-Recent_Errors/Catchpoint-Recent_Errors.png"
+        ]
+      },
+      {
+        "name": "Catchpoint-Test Times",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/catchpoint/dashboards/Catchpoint-Test_Times/Catchpoint-Test_Times.png"
         ]
       }
     ],
@@ -21334,41 +21381,6 @@
     ]
   },
   {
-    "title": "Ansible",
-    "name": "ansible",
-    "description": "# What is Ansible?\nAnsible is a radically simple IT automation engine that automates cloud provisioning, configuration management, application deployment, intra-service orchestration, and many other IT needs.\n\nDesigned for multi-tier deployments since day one, Ansible models your IT infrastructure by describing how all of your systems inter-relate, rather than just managing one system at a time.\n\nIt uses no agents and no additional custom security infrastructure, so it's easy to deploy - and most importantly, it uses a very simple language (YAML, in the form of Ansible Playbooks) that allow you to describe your automation jobs in a way that approaches plain English.\n\n# What does New Relic provide\nNew Relic has developed a Ansible playbook for the Ansible agent to deploy the [New Relic Infrastructure agent](https://docs.newrelic.com/docs/infrastructure/infrastructure-monitoring/get-started/get-started-infrastructure-monitoring/) and [On Host Integrations](https://docs.newrelic.com/docs/infrastructure/host-integrations/get-started/introduction-host-integrations) throughout your environment.\n\n# How to get started?\nFollow the instructions on New Relic documentation: [Configure the infrastructure agent using Ansible](https://docs.newrelic.com/docs/infrastructure/new-relic-infrastructure/config-management-tools/configure-new-relic-infrastructure-using-ansible)",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/observability-as-code/ansible",
-    "id": "c377d781-da77-4dd6-b5a8-6a25a39e2582",
-    "level": "NEW_RELIC",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/observability-as-code/ansible/logo.svg",
-    "summary": "New Relic Ansible playbook to deploy the New Relic Infrastructure agent and On Host Integrations throughout your environment.",
-    "websiteUrl": null,
-    "keywords": [
-      "automation",
-      "devops",
-      "sre",
-      "gitops"
-    ],
-    "authors": [
-      "New Relic"
-    ],
-    "dashboards": [],
-    "alerts": [],
-    "documentation": [
-      {
-        "name": "Ansible installation docs",
-        "description": "Open-source software provisioning, configuration management, and\napplication-deployment tool enabling infrastructure as code.\n",
-        "url": "https://docs.newrelic.com/docs/infrastructure/new-relic-infrastructure/config-management-tools/configure-new-relic-infrastructure-using-ansible"
-      },
-      {
-        "name": "Ansible Galaxy",
-        "description": "Ansible Galaxy page for the New Relic Ansible role\n",
-        "url": "https://galaxy.ansible.com/newrelic/newrelic_agents"
-      }
-    ],
-    "installPlans": []
-  },
-  {
     "title": "Kubernetes Log Ingest Analysis",
     "name": "audit-kubernetes-log-data-ingest-analysis",
     "description": "Shows log bytes ingest for Kubernetes faceted by several common attributes k8s logs: application, environment, container, namespace, pod and cluster. Total logs and GB ingested is shown.",
@@ -21413,6 +21425,46 @@
       {
         "name": "Kubernetes integration",
         "id": "kubernetes-install"
+      }
+    ]
+  },
+  {
+    "title": "Ansible",
+    "name": "ansible",
+    "description": "# What is Ansible?\nAnsible is a radically simple IT automation engine that automates cloud provisioning, configuration management, application deployment, intra-service orchestration, and many other IT needs.\n\nDesigned for multi-tier deployments since day one, Ansible models your IT infrastructure by describing how all of your systems inter-relate, rather than just managing one system at a time.\n\nIt uses no agents and no additional custom security infrastructure, so it's easy to deploy - and most importantly, it uses a very simple language (YAML, in the form of Ansible Playbooks) that allow you to describe your automation jobs in a way that approaches plain English.\n\n# What does New Relic provide\nNew Relic has developed a Ansible playbook for the Ansible agent to deploy the [New Relic Infrastructure agent](https://docs.newrelic.com/docs/infrastructure/infrastructure-monitoring/get-started/get-started-infrastructure-monitoring/) and [On Host Integrations](https://docs.newrelic.com/docs/infrastructure/host-integrations/get-started/introduction-host-integrations) throughout your environment.\n\n# How to get started?\nFollow the instructions on New Relic documentation: [Configure the infrastructure agent using Ansible](https://docs.newrelic.com/docs/infrastructure/new-relic-infrastructure/config-management-tools/configure-new-relic-infrastructure-using-ansible)",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/observability-as-code/ansible",
+    "id": "c377d781-da77-4dd6-b5a8-6a25a39e2582",
+    "level": "NEW_RELIC",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/observability-as-code/ansible/logo.svg",
+    "summary": "New Relic Ansible playbook to deploy the New Relic Infrastructure agent and On Host Integrations throughout your environment.",
+    "websiteUrl": null,
+    "keywords": [
+      "automation",
+      "devops",
+      "sre",
+      "gitops"
+    ],
+    "authors": [
+      "New Relic"
+    ],
+    "dashboards": [],
+    "alerts": [],
+    "documentation": [
+      {
+        "name": "Ansible installation docs",
+        "description": "Open-source software provisioning, configuration management, and\napplication-deployment tool enabling infrastructure as code.\n",
+        "url": "https://docs.newrelic.com/docs/infrastructure/new-relic-infrastructure/config-management-tools/configure-new-relic-infrastructure-using-ansible"
+      },
+      {
+        "name": "Ansible Galaxy",
+        "description": "Ansible Galaxy page for the New Relic Ansible role\n",
+        "url": "https://galaxy.ansible.com/newrelic/newrelic_agents"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "Ansible",
+        "id": "third-party-ansible"
       }
     ]
   },
@@ -21559,19 +21611,11 @@
         ]
       },
       {
-        "name": "AWS Integrations Data Ingest Analysis",
+        "name": "On-Host Integrations Data Analysis",
         "description": null,
         "url": null,
         "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/audit/infrastructure-integrations-data-analysis/dashboards/aws-integrations-data-ingest-analysis/aws-integrations-data-ingest-analysis.png"
-        ]
-      },
-      {
-        "name": "Azure Integrations Data Ingest Analysis",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/audit/infrastructure-integrations-data-analysis/dashboards/azure-integrations-data-ingest-analysis/azure-integrations-data-ingest-analysis.png"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/audit/infrastructure-integrations-data-analysis/dashboards/on-host-integrations-data-analysis/on-host-integrations-data-analysis.png"
         ]
       },
       {
@@ -21583,11 +21627,19 @@
         ]
       },
       {
-        "name": "On-Host Integrations Data Analysis",
+        "name": "Azure Integrations Data Ingest Analysis",
         "description": null,
         "url": null,
         "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/audit/infrastructure-integrations-data-analysis/dashboards/on-host-integrations-data-analysis/on-host-integrations-data-analysis.png"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/audit/infrastructure-integrations-data-analysis/dashboards/azure-integrations-data-ingest-analysis/azure-integrations-data-ingest-analysis.png"
+        ]
+      },
+      {
+        "name": "AWS Integrations Data Ingest Analysis",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/audit/infrastructure-integrations-data-analysis/dashboards/aws-integrations-data-ingest-analysis/aws-integrations-data-ingest-analysis.png"
         ]
       }
     ],
@@ -22261,6 +22313,14 @@
     ],
     "dashboards": [
       {
+        "name": "Browser Traffic Analysis",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/browser/dashboards/traffic_analysis/traffic_analysis.png"
+        ]
+      },
+      {
         "name": "Browser Overview",
         "description": null,
         "url": null,
@@ -22274,14 +22334,6 @@
         "url": null,
         "screenshots": [
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/browser/dashboards/javascript_errors/javascript_errors.png"
-        ]
-      },
-      {
-        "name": "Browser Traffic Analysis",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/browser/dashboards/traffic_analysis/traffic_analysis.png"
         ]
       },
       {

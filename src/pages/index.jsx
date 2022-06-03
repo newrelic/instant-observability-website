@@ -25,6 +25,7 @@ import { navigate } from '@reach/router';
 import { useDebounce } from 'react-use';
 import LeftArrowSVG from '../components/Icons/LeftArrowSVG';
 import RightArrowSVG from '../components/Icons/RightArrowSVG';
+import featherIcons from '../@newrelic/gatsby-theme-newrelic/icons/feather';
 
 const TRIPLE_COLUMN_BREAKPOINT = '1420px';
 const DOUBLE_COLUMN_BREAKPOINT = '1180px';
@@ -202,7 +203,6 @@ const QuickstartsPage = ({ data, location }) => {
     return found.displayName;
   };
 
-
   // Settings for Slick-Carousel
   const settings = {
     dots: false,
@@ -213,29 +213,31 @@ const QuickstartsPage = ({ data, location }) => {
     adaptiveHeight: false,
     adaptiveWidth: true,
     mobileFirst: true, // necessary for breakpoints to work as expected
-    prevArrow: <button
-      css={css`
-        z-index: 1;
-    `}>
-      <LeftArrowSVG
-        className="slick-prev"
-        css={css`
-          width: auto;
-          height: auto;
-          margin: 0 1.5rem;
-        `}
-      />
-    </button>,
-    nextArrow: <button>
-      <RightArrowSVG
-        className="slick-next"
-        css={css`
-          width: auto;
-          height: auto;
-          margin: 0 1.5rem;
-        `}
-      />
-    </button>,
+    prevArrow: (
+      <button>
+        <LeftArrowSVG
+          className="slick-prev"
+          css={css`
+            width: auto;
+            height: auto;
+            margin: 0 1.5rem;
+          `}
+        />
+      </button>
+    ),
+    nextArrow: (
+      <button>
+        <RightArrowSVG
+          className="slick-next"
+          css={css`
+            width: auto;
+            height: auto;
+            margin: 0 1.5rem;
+          `}
+        />
+      </button>
+    ),
+
     responsive: [
       {
         breakpoint: parseInt(TRIPLE_COLUMN_BREAKPOINT),
@@ -263,6 +265,58 @@ const QuickstartsPage = ({ data, location }) => {
         },
       },
     ],
+  };
+
+  const handleScroll = () => {
+    const btn = document.getElementById('go-to-page-top-btn');
+    if (
+      document.body.scrollTop > 3000 ||
+      document.documentElement.scrollTop > 3000
+    ) {
+      btn.style.display = 'block';
+    } else {
+      btn.style.display = 'none';
+    }
+  };
+
+  useEffect(() => {
+    // Anything in here is fired on component mount.
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      // Anything in here is fired on component unmount.
+      window.removeEventListener('scroll', handleScroll);
+    };
+  });
+
+  function topFunction() {
+    document.documentElement.scrollTop = 0;
+  }
+
+  const renderGoToTopButton = () => {
+    return (
+      <Button
+        onClick={topFunction}
+        css={css`
+          display: none;
+          flex-direction: row;
+          justify-content: center;
+          align-items: center;
+          padding: 8px 12px;
+          gap: 8px;
+          position: fixed;
+          width: 40px;
+          height: 40px;
+          right: 9px;
+          bottom: 43px;
+          background: #1d252c;
+          border-radius: 97px;
+          border: 1px solid #898e91;
+        `}
+        id="go-to-page-top-btn"
+      >
+        {featherIcons.topArrow}
+      </Button>
+    );
   };
 
   return (
@@ -295,7 +349,7 @@ const QuickstartsPage = ({ data, location }) => {
           max-width: var(--site-max-width);
 
           @media screen and (min-width: ${COLUMN_BREAKPOINT}) {
-          --banner-height: 394px;
+            --banner-height: 394px;
           }
 
           @media screen and (max-width: ${QUICKSTARTS_COLLAPSE_BREAKPOINT}) {
@@ -311,6 +365,8 @@ const QuickstartsPage = ({ data, location }) => {
           data-swiftype-index={false}
           css={css`
             grid-area: sidebar;
+            height: calc(100vh - var(--global-header-height));
+            position: sticky;
             top: var(--global-header-height);
             width: 100%;
 
@@ -325,7 +381,7 @@ const QuickstartsPage = ({ data, location }) => {
         >
           <div
             css={css`
-              padding: 1.5rem 0 1.5rem 1.5rem;
+              padding: 32px 0 32px 32px;
               height: 100%;
               overflow: auto;
 
@@ -365,10 +421,10 @@ const QuickstartsPage = ({ data, location }) => {
                     background: ${category === value
                       ? 'var(--divider-color)'
                       : 'none'};
-                      &:hover {
-                        color: var(--black-text-color);
-                        background: var(--category-hover-color);
-                      }
+                    &:hover {
+                      color: var(--black-text-color);
+                      background: var(--category-hover-color);
+                    }
                   `}
                 >
                   {`${displayName}`}
@@ -599,7 +655,7 @@ const QuickstartsPage = ({ data, location }) => {
               </div>
               <div
                 css={css`
-                  margin-bottom: 75px
+                  margin-bottom: 75px;
                 `}
               >
                 {!loadComplete && <Spinner />}
@@ -692,6 +748,8 @@ const QuickstartsPage = ({ data, location }) => {
           </div>
         </div>
       </div>
+
+      {renderGoToTopButton()}
     </>
   );
 };
