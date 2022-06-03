@@ -13,7 +13,9 @@ import MailSVG from './Icons/MailSVG';
 import { css } from '@emotion/react';
 import { MIN_WIDTH_BREAKPOINT } from '../data/constants';
 
-const Share = (url) => (
+const Share = ({
+    url
+}) => (
 
     <div
         css={css`
