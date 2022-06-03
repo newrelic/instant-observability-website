@@ -124,6 +124,7 @@ const QuickstartTile = ({
             packName={title || name}
             css={css`
               object-fit: scale-down;
+              object-position: left;
               height: 45px;
               margin: 35px 0 0;
 
