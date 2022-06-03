@@ -2304,35 +2304,6 @@
     ]
   },
   {
-    "title": "Apigee API Distributed Tracing",
-    "name": "apigee-api",
-    "description": "Apigee API JavaScript Resources to create or propagate W3C Trace Context through Apigee Flows and on to the Apigee Target. Apigee Flow Spans are reported back to New Relic's Trace API. Sample Policies are included to demonstrate use.",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/gcp/apigee-api",
-    "id": "aff5a3b7-e0ec-4c64-8940-e1fec0a45f3e",
-    "level": "COMMUNITY",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/gcp/apigee-api/logo.svg",
-    "summary": "Monitor Apigee API Flows with New Relic's Trace API.",
-    "websiteUrl": null,
-    "keywords": [
-      "nrlabs",
-      "nrlabs-data",
-      "apigee"
-    ],
-    "authors": [
-      "New Relic Labs"
-    ],
-    "dashboards": [],
-    "alerts": [],
-    "documentation": [
-      {
-        "name": "Apigee Distributed Tracing documentation",
-        "description": "Installation and configuration instructions\n",
-        "url": "https://github.com/newrelic-experimental/apigee-distributed-tracing"
-      }
-    ],
-    "installPlans": []
-  },
-  {
     "title": "GCP Router",
     "name": "gcp-router",
     "description": "## What is GCP Router?\n\nService that exchanges routes between Virtual Private Clouds (VPC) and\non-premises networks by using Border Gateway Protocol (BGP).\n\n\n### Get started!\n\nStart monitoring GCP Router by connecting Google Cloud Platform (GCP) to New Relic!\n\nCheck out our GCP Router documentation to instrument your cloud service and manage the stability, scalability, and reliability of your systems with New Relic's infrastructure monitoring capabilities.\n\n### More info\n\nCheck out the [documentation](https://docs.newrelic.com/docs/infrastructure/google-cloud-platform-integrations/gcp-integrations-list/google-cloud-router-monitoring-integration/) to learn more about New Relic monitoring for GCP Router.",
@@ -2978,6 +2949,40 @@
       }
     ],
     "installPlans": []
+  },
+  {
+    "title": "Apigee API Distributed Tracing",
+    "name": "apigee-api",
+    "description": "Apigee API JavaScript Resources to create or propagate W3C Trace Context through Apigee Flows and on to the Apigee Target. Apigee Flow Spans are reported back to New Relic's Trace API. Sample Policies are included to demonstrate use.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/gcp/apigee-api",
+    "id": "aff5a3b7-e0ec-4c64-8940-e1fec0a45f3e",
+    "level": "COMMUNITY",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/gcp/apigee-api/logo.svg",
+    "summary": "Monitor Apigee API Flows with New Relic's Trace API.",
+    "websiteUrl": null,
+    "keywords": [
+      "nrlabs",
+      "nrlabs-data",
+      "apigee"
+    ],
+    "authors": [
+      "New Relic Labs"
+    ],
+    "dashboards": [],
+    "alerts": [],
+    "documentation": [
+      {
+        "name": "Apigee Distributed Tracing documentation",
+        "description": "Installation and configuration instructions\n",
+        "url": "https://github.com/newrelic-experimental/apigee-distributed-tracing"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "Apigee API Distributed Tracing",
+        "id": "third-party-apigee-api"
+      }
+    ]
   },
   {
     "title": "Joomla",
@@ -5865,6 +5870,41 @@
     ]
   },
   {
+    "title": "AWS FireLens plugin for Logs",
+    "name": "aws-firelens-plugin-for-logs",
+    "description": "Collect log data and export to AWS or other services for analysis.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/aws/aws-firelens-plugin-for-logs",
+    "id": "2e34f06f-8338-41e9-a89a-1293326ee8bb",
+    "level": "NEW_RELIC",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/aws/aws-firelens-plugin-for-logs/logo.svg",
+    "summary": "Collect log data and export to AWS or other services for analysis.",
+    "websiteUrl": null,
+    "keywords": [
+      "aws",
+      "amazon web services",
+      "logs",
+      "logging"
+    ],
+    "authors": [
+      "New Relic"
+    ],
+    "dashboards": [],
+    "alerts": [],
+    "documentation": [
+      {
+        "name": "AWS FireLens plugin for Logs installation docs",
+        "description": "Collect log data and export to AWS or other services for analysis.",
+        "url": "https://docs.newrelic.com/docs/logs/enable-logs/enable-logs/aws-firelens-plugin-logs"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "AWS FireLens plugin for Logs",
+        "id": "third-party-aws-firelens-plugin-for-logs"
+      }
+    ]
+  },
+  {
     "title": "VictorOps",
     "name": "victorops",
     "description": "## What is VictorOps?\n\nGet notified via VictorOps when incidents are opened, acknowledged, or closed.\nNotifications can include charts about the incident.\n\n### Get started!\n\nCheck out our VictorOps documentation to set up a notification channel and provide fast and consistent ways for the right personnel to be notified about incidents\n\n### More info\n\nCheck out the [documentation](https://docs.newrelic.com/docs/alerts/new-relic-alerts/managing-notification-channels/notification-channels-control-where-send-alerts) to learn more about New Relic alerting for VictorOps.",
@@ -6179,36 +6219,6 @@
         "id": "aws-cloudwatch-metric-streams"
       }
     ]
-  },
-  {
-    "title": "AWS FireLens plugin for Logs",
-    "name": "aws-firelens-plugin-for-logs",
-    "description": "Collect log data and export to AWS or other services for analysis.",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/aws/aws-firelens-plugin-for-logs",
-    "id": "2e34f06f-8338-41e9-a89a-1293326ee8bb",
-    "level": "NEW_RELIC",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/aws/aws-firelens-plugin-for-logs/logo.svg",
-    "summary": "Collect log data and export to AWS or other services for analysis.",
-    "websiteUrl": null,
-    "keywords": [
-      "aws",
-      "amazon web services",
-      "logs",
-      "logging"
-    ],
-    "authors": [
-      "New Relic"
-    ],
-    "dashboards": [],
-    "alerts": [],
-    "documentation": [
-      {
-        "name": "AWS FireLens plugin for Logs installation docs",
-        "description": "Collect log data and export to AWS or other services for analysis.",
-        "url": "https://docs.newrelic.com/docs/logs/enable-logs/enable-logs/aws-firelens-plugin-logs"
-      }
-    ],
-    "installPlans": []
   },
   {
     "title": "AWS NeptuneDB",
@@ -9615,41 +9625,6 @@
     ]
   },
   {
-    "title": "Chef",
-    "name": "chef",
-    "description": "# What is Chef?\nChef Infrastructure Management enables DevOps teams to model and deploy secure and scalable infrastructure automation across any cloud, VM, and/or physical infrastructure.\n\nThe Chef Infra agent is self-updating, self-automating and works well in low bandwidth or remote environments. It also allows Chef to scale up and down as customers demands change. Security keys are managed and rotated regularly using  Chef automated cookbooks which allows admins to turn off port access to SSH and WinRM further securing their environments in line with recommendations from industry standards like CIS (Center for Internet Security) benchmarks.\n\n# What does New Relic provide\nNew Relic has developed a Chef recipe for the Chef Infra agent to deploy the [New Relic Infrastructure agent](https://docs.newrelic.com/docs/infrastructure/infrastructure-monitoring/get-started/get-started-infrastructure-monitoring/) and [On Host Integrations](https://docs.newrelic.com/docs/infrastructure/host-integrations/get-started/introduction-host-integrations) throughout your environment.\n\n# How to get started?\nFollow the instructions on New Relic documentation: [Configure the infrastructure agent using Chef](https://docs.newrelic.com/docs/infrastructure/new-relic-infrastructure/config-management-tools/configure-new-relic-infrastructure-using-chef)",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/observability-as-code/chef",
-    "id": "ad40ccc2-f7ef-44bf-b961-07813088fce0",
-    "level": "NEW_RELIC",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/observability-as-code/chef/logo.svg",
-    "summary": "New Relic Chef recipe to deploy the New Relic Infrastructure agent and On Host Integrations throughout your environment.",
-    "websiteUrl": null,
-    "keywords": [
-      "automation",
-      "devops",
-      "sre",
-      "gitops"
-    ],
-    "authors": [
-      "New Relic"
-    ],
-    "dashboards": [],
-    "alerts": [],
-    "documentation": [
-      {
-        "name": "Chef installation docs",
-        "description": "Chef is a configuration management tool written in Ruby and Erlang.",
-        "url": "https://docs.newrelic.com/docs/infrastructure/new-relic-infrastructure/config-management-tools/configure-new-relic-infrastructure-using-chef"
-      },
-      {
-        "name": "Chef Supermarket",
-        "description": "Chef Supermarket page for the New Relic Chef Recipe",
-        "url": "https://supermarket.chef.io/cookbooks/newrelic-infra"
-      }
-    ],
-    "installPlans": []
-  },
-  {
     "title": "Pulumi",
     "name": "pulumi",
     "description": "# What is Pulumi?\nPulumi is a popular infrastructure-as-code software tool. Pulumi enables teams to use a unified software engineering process to deliver infrastructure and applications together and faster. This increases agility, reduces risks, and speeds innovation. You use it to provision all kinds of infrastructure and services, including New Relic entities, dashboard, alerts and synthetics.\n\n# What does New Relic provide\nPulumi has developed a New Relic Package to configure alerts, synthetics, dashboards, and other parts of New Relic through declarative configuration files.\n\n# How to get started?\nFollow the instructions on Pulumi package documentation: [Getting Started with the New Relic Package](https://www.pulumi.com/registry/packages/newrelic/)",
@@ -10531,6 +10506,46 @@
       {
         "name": "Syslog",
         "id": "network-syslog"
+      }
+    ]
+  },
+  {
+    "title": "Chef",
+    "name": "chef",
+    "description": "# What is Chef?\nChef Infrastructure Management enables DevOps teams to model and deploy secure and scalable infrastructure automation across any cloud, VM, and/or physical infrastructure.\n\nThe Chef Infra agent is self-updating, self-automating and works well in low bandwidth or remote environments. It also allows Chef to scale up and down as customers demands change. Security keys are managed and rotated regularly using  Chef automated cookbooks which allows admins to turn off port access to SSH and WinRM further securing their environments in line with recommendations from industry standards like CIS (Center for Internet Security) benchmarks.\n\n# What does New Relic provide\nNew Relic has developed a Chef recipe for the Chef Infra agent to deploy the [New Relic Infrastructure agent](https://docs.newrelic.com/docs/infrastructure/infrastructure-monitoring/get-started/get-started-infrastructure-monitoring/) and [On Host Integrations](https://docs.newrelic.com/docs/infrastructure/host-integrations/get-started/introduction-host-integrations) throughout your environment.\n\n# How to get started?\nFollow the instructions on New Relic documentation: [Configure the infrastructure agent using Chef](https://docs.newrelic.com/docs/infrastructure/new-relic-infrastructure/config-management-tools/configure-new-relic-infrastructure-using-chef)",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/observability-as-code/chef",
+    "id": "ad40ccc2-f7ef-44bf-b961-07813088fce0",
+    "level": "NEW_RELIC",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/observability-as-code/chef/logo.svg",
+    "summary": "New Relic Chef recipe to deploy the New Relic Infrastructure agent and On Host Integrations throughout your environment.",
+    "websiteUrl": null,
+    "keywords": [
+      "automation",
+      "devops",
+      "sre",
+      "gitops"
+    ],
+    "authors": [
+      "New Relic"
+    ],
+    "dashboards": [],
+    "alerts": [],
+    "documentation": [
+      {
+        "name": "Chef installation docs",
+        "description": "Chef is a configuration management tool written in Ruby and Erlang.",
+        "url": "https://docs.newrelic.com/docs/infrastructure/new-relic-infrastructure/config-management-tools/configure-new-relic-infrastructure-using-chef"
+      },
+      {
+        "name": "Chef Supermarket",
+        "description": "Chef Supermarket page for the New Relic Chef Recipe",
+        "url": "https://supermarket.chef.io/cookbooks/newrelic-infra"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "Chef",
+        "id": "third-party-chef"
       }
     ]
   },
@@ -12898,39 +12913,6 @@
     ]
   },
   {
-    "title": "Atlassian Jira for Errors Inbox",
-    "name": "jira-errors-inbox",
-    "description": "[Connect errors inbox to Jira (Cloud)](https://docs.newrelic.com/docs/errors-inbox/errors-inbox/#jira) to easily create tickets for your errors, allowing for faster collaboration and resolution. Check out our documentation to learn how to set up Jira templates, which allow you to quickly create a ticket containing error details and links directly to the stack trace and APM for quick access and resolution.",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/jira-errors",
-    "id": "06734d77-b06a-4410-aafa-eed1944c0ac4",
-    "level": "NEW_RELIC",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/jira-errors/logo.svg",
-    "summary": "Integrated errors inbox with Atlassian Jira (cloud) to easily create tickets for your errors.",
-    "websiteUrl": null,
-    "keywords": [
-      "jira",
-      "error",
-      "inbox",
-      "newrelic",
-      "atlassian",
-      "newrelic partner"
-    ],
-    "authors": [
-      "Joseph Counts",
-      "New Relic"
-    ],
-    "dashboards": [],
-    "alerts": [],
-    "documentation": [
-      {
-        "name": "How to Docs",
-        "description": "How to integrate Jira with New Relic Errors Inbox",
-        "url": "https://docs.newrelic.com/docs/errors-inbox/errors-inbox/#jira"
-      }
-    ],
-    "installPlans": []
-  },
-  {
     "title": "Golden Signals for Web Servers",
     "name": "golden-signals-for-web-servers",
     "description": "Golden signals alerts for web servers. Includes alerts and a dashboard for throughput, errors, response time, CPU usage, and memory usage.",
@@ -13047,6 +13029,44 @@
       }
     ],
     "installPlans": []
+  },
+  {
+    "title": "Atlassian Jira for Errors Inbox",
+    "name": "jira-errors-inbox",
+    "description": "[Connect errors inbox to Jira (Cloud)](https://docs.newrelic.com/docs/errors-inbox/errors-inbox/#jira) to easily create tickets for your errors, allowing for faster collaboration and resolution. Check out our documentation to learn how to set up Jira templates, which allow you to quickly create a ticket containing error details and links directly to the stack trace and APM for quick access and resolution.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/jira-errors",
+    "id": "06734d77-b06a-4410-aafa-eed1944c0ac4",
+    "level": "NEW_RELIC",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/jira-errors/logo.svg",
+    "summary": "Integrated errors inbox with Atlassian Jira (cloud) to easily create tickets for your errors.",
+    "websiteUrl": null,
+    "keywords": [
+      "jira",
+      "error",
+      "inbox",
+      "newrelic",
+      "atlassian",
+      "newrelic partner"
+    ],
+    "authors": [
+      "Joseph Counts",
+      "New Relic"
+    ],
+    "dashboards": [],
+    "alerts": [],
+    "documentation": [
+      {
+        "name": "How to Docs",
+        "description": "How to integrate Jira with New Relic Errors Inbox",
+        "url": "https://docs.newrelic.com/docs/errors-inbox/errors-inbox/#jira"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "Atlassian Jira for Errors Inbox",
+        "id": "third-party-jira-errors-inbox"
+      }
+    ]
   },
   {
     "title": "Amazon DocumentDB",
@@ -14939,7 +14959,12 @@
         "url": "https://docs.newrelic.com/docs/integrations/kubernetes-integration/installation/install-fargate-integration/"
       }
     ],
-    "installPlans": []
+    "installPlans": [
+      {
+        "name": "Amazon EKS on AWS Fargate",
+        "id": "third-party-amazon-eks-on-aws-fargate"
+      }
+    ]
   },
   {
     "title": "AWS CloudTrail",
@@ -15213,34 +15238,6 @@
         "name": "New Relic CodeStream Demo",
         "description": "See New Relic CodeStream in action",
         "url": "https://codestream.com/demo"
-      }
-    ],
-    "installPlans": []
-  },
-  {
-    "title": "Collectd",
-    "name": "collectd",
-    "description": "## What is CollectD?\n\nUnix daemon for gathering and storing performance data across application and network infrastructure.\n\n## Get started!\n\nNew Relic's CollectD integration lets you easily get CollectD-format data into New Relic.\nFollow [the documentation](https://docs.newrelic.com/docs/integrations/host-integrations/open-source-host-integrations-list/collectd-open-source-integration) to get started!",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/collectd",
-    "id": "b0ba29c2-be55-4da2-bf24-f8cc3c27715c",
-    "level": "NEW_RELIC",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/collectd/logo.svg",
-    "summary": "Get CollectD data into New Relic.",
-    "websiteUrl": null,
-    "keywords": [
-      "infrastructure",
-      "open source monitoring"
-    ],
-    "authors": [
-      "New Relic"
-    ],
-    "dashboards": [],
-    "alerts": [],
-    "documentation": [
-      {
-        "name": "Collectd installation docs",
-        "description": "Unix daemon for gathering and storing performance data across application\nand network infrastructure.\n",
-        "url": "https://docs.newrelic.com/docs/integrations/host-integrations/open-source-host-integrations-list/collectd-open-source-integration"
       }
     ],
     "installPlans": []
@@ -17113,6 +17110,74 @@
     "installPlans": []
   },
   {
+    "title": "AWS Cloudwatch plugin for Logs",
+    "name": "aws-cloudwatch-plugin-for-logs",
+    "description": "Collect and manage log data coming in from Amazon's Cloudwatch observability framework.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/aws/aws-cloudwatch-plugin-for-logs",
+    "id": "d62097ef-91df-4c13-9939-a694cb4d2322",
+    "level": "NEW_RELIC",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/aws/aws-cloudwatch-plugin-for-logs/logo.svg",
+    "summary": "Collect and manage log data coming in from Amazon's Cloudwatch observability framework.",
+    "websiteUrl": null,
+    "keywords": [
+      "aws",
+      "amazon web services",
+      "logs",
+      "logging"
+    ],
+    "authors": [
+      "New Relic"
+    ],
+    "dashboards": [],
+    "alerts": [],
+    "documentation": [
+      {
+        "name": "AWS Cloudwatch plugin for Logs",
+        "description": "Collect and manage log data coming in from Amazon's Cloudwatch observability framework.",
+        "url": "https://docs.newrelic.com/docs/logs/enable-log-management-new-relic/enable-log-monitoring-new-relic/aws-lambda-sending-cloudwatch-logs/"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "AWS Cloudwatch plugin for Logs",
+        "id": "third-party-aws-cloudwatch-plugin-for-logs"
+      }
+    ]
+  },
+  {
+    "title": "Collectd",
+    "name": "collectd",
+    "description": "## What is CollectD?\n\nUnix daemon for gathering and storing performance data across application and network infrastructure.\n\n## Get started!\n\nNew Relic's CollectD integration lets you easily get CollectD-format data into New Relic.\nFollow [the documentation](https://docs.newrelic.com/docs/integrations/host-integrations/open-source-host-integrations-list/collectd-open-source-integration) to get started!",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/collectd",
+    "id": "b0ba29c2-be55-4da2-bf24-f8cc3c27715c",
+    "level": "NEW_RELIC",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/collectd/logo.svg",
+    "summary": "Get CollectD data into New Relic.",
+    "websiteUrl": null,
+    "keywords": [
+      "infrastructure",
+      "open source monitoring"
+    ],
+    "authors": [
+      "New Relic"
+    ],
+    "dashboards": [],
+    "alerts": [],
+    "documentation": [
+      {
+        "name": "Collectd installation docs",
+        "description": "Unix daemon for gathering and storing performance data across application\nand network infrastructure.\n",
+        "url": "https://docs.newrelic.com/docs/integrations/host-integrations/open-source-host-integrations-list/collectd-open-source-integration"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "Collectd",
+        "id": "third-party-collectd"
+      }
+    ]
+  },
+  {
     "title": "Amazon Linux",
     "name": "amazon-linux",
     "description": "## What is Amazon Linux?\n\nAmazon supported and maintained Linux image provided by Amazon Web Services\nfor use on Amazon Elastic Compute Cloud.\n\n## Get started!\n\nChoose this quickstart and follow New Relic's guided install process to monitor your Amazon Linux environment.",
@@ -17162,36 +17227,6 @@
         "id": "guided-install"
       }
     ]
-  },
-  {
-    "title": "AWS Cloudwatch plugin for Logs",
-    "name": "aws-cloudwatch-plugin-for-logs",
-    "description": "Collect and manage log data coming in from Amazon's Cloudwatch observability framework.",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/aws/aws-cloudwatch-plugin-for-logs",
-    "id": "d62097ef-91df-4c13-9939-a694cb4d2322",
-    "level": "NEW_RELIC",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/aws/aws-cloudwatch-plugin-for-logs/logo.svg",
-    "summary": "Collect and manage log data coming in from Amazon's Cloudwatch observability framework.",
-    "websiteUrl": null,
-    "keywords": [
-      "aws",
-      "amazon web services",
-      "logs",
-      "logging"
-    ],
-    "authors": [
-      "New Relic"
-    ],
-    "dashboards": [],
-    "alerts": [],
-    "documentation": [
-      {
-        "name": "AWS Cloudwatch plugin for Logs",
-        "description": "Collect and manage log data coming in from Amazon's Cloudwatch observability framework.",
-        "url": "https://docs.newrelic.com/docs/logs/enable-log-management-new-relic/enable-log-monitoring-new-relic/aws-lambda-sending-cloudwatch-logs/"
-      }
-    ],
-    "installPlans": []
   },
   {
     "title": "AWS ElastiCache",
@@ -17847,39 +17882,6 @@
         "id": "guided-install"
       }
     ]
-  },
-  {
-    "title": "Amazon SageMaker",
-    "name": "mlops-sagemaker",
-    "description": "Use this integration to quickly monitor your Amazon SageMaker metrics and objects (sent to AWS CloudWatch) and view them as entities and dashboards in New Relic One.",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/mlops/sagemaker",
-    "id": "cee03961-f9e3-46e1-89fd-70a626cfe8ce",
-    "level": "NEW_RELIC",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/mlops/sagemaker/logo.svg",
-    "summary": "By integrating Amazon SageMaker telemetry into New Relic One you will be able to get a view of the performance metrics, visualize sophisticated ML models and create a comprehensive monitoring dashboards in New Relic for your ML models and applications pipelines.",
-    "websiteUrl": null,
-    "keywords": [
-      "mlops",
-      "ml",
-      "ai",
-      "sagemaker",
-      "amazon-sagemaker",
-      "aws-sagemaker",
-      "machine-learning"
-    ],
-    "authors": [
-      "New Relic"
-    ],
-    "dashboards": [],
-    "alerts": [],
-    "documentation": [
-      {
-        "name": "Sagemaker Docs",
-        "description": "Documentation on the Amazon SageMaker integration\n",
-        "url": "https://docs.newrelic.com/docs/mlops/integrations/aws-sagemaker-mlops-integration/"
-      }
-    ],
-    "installPlans": []
   },
   {
     "title": "Nginx",
@@ -18829,6 +18831,44 @@
       {
         "name": "Prometheus remote write",
         "id": "setup-prometheus"
+      }
+    ]
+  },
+  {
+    "title": "Amazon SageMaker",
+    "name": "mlops-sagemaker",
+    "description": "Use this integration to quickly monitor your Amazon SageMaker metrics and objects (sent to AWS CloudWatch) and view them as entities and dashboards in New Relic One.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/mlops/sagemaker",
+    "id": "cee03961-f9e3-46e1-89fd-70a626cfe8ce",
+    "level": "NEW_RELIC",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/mlops/sagemaker/logo.svg",
+    "summary": "By integrating Amazon SageMaker telemetry into New Relic One you will be able to get a view of the performance metrics, visualize sophisticated ML models and create a comprehensive monitoring dashboards in New Relic for your ML models and applications pipelines.",
+    "websiteUrl": null,
+    "keywords": [
+      "mlops",
+      "ml",
+      "ai",
+      "sagemaker",
+      "amazon-sagemaker",
+      "aws-sagemaker",
+      "machine-learning"
+    ],
+    "authors": [
+      "New Relic"
+    ],
+    "dashboards": [],
+    "alerts": [],
+    "documentation": [
+      {
+        "name": "Sagemaker Docs",
+        "description": "Documentation on the Amazon SageMaker integration\n",
+        "url": "https://docs.newrelic.com/docs/mlops/integrations/aws-sagemaker-mlops-integration/"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "Amazon SageMaker",
+        "id": "third-party-amazon-sagemaker"
       }
     ]
   },
@@ -21687,7 +21727,12 @@
         "url": "https://github.com/newrelic/tracker-google-publisher-tags-js"
       }
     ],
-    "installPlans": []
+    "installPlans": [
+      {
+        "name": "Agent for Google Publisher Tags",
+        "id": "third-party-ads-web-gpt"
+      }
+    ]
   },
   {
     "title": "Android",
