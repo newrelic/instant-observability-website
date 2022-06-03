@@ -181,8 +181,6 @@ input[type='text'] {
     animation: scroll 0.5s cubic-bezier(0.6, 0, 0, 1) forwards;
   }
 
-  --translateY-distance: -22px;
-
   @-webkit-keyframes scroll {
     0% {
       -webkit-transform: translateY(0);
@@ -252,5 +250,11 @@ input[type='text'] {
     text-decoration-line: underline;
     outline-width: 0.25rem;
     text-underline-offset: 0.25rem;
+  }
+}
+
+.post-social {
+  .button {
+    margin: 0.5rem 0.5rem;
   }
 }

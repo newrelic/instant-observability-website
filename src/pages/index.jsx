@@ -141,13 +141,6 @@ const QuickstartsPage = ({ data, location }) => {
     closeCategoriesOverlay();
   };
 
-  useDebounce(
-    () => {
-      handleSearch(search);
-    },
-    400,
-    [search]
-  );
 
   const quickstarts = data.allQuickstarts.nodes;
 
@@ -330,6 +323,7 @@ const QuickstartsPage = ({ data, location }) => {
         search={search}
         setSearch={setSearch}
         setIsSearchInputEmpty={setIsSearchInputEmpty}
+        handleSearch={handleSearch}
       />
       <div
         css={css`
