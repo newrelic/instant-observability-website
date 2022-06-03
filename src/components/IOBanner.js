@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { css } from '@emotion/react';
 import bannerOverlayRight from '../images/io-banner/banner-style-right.svg';
 import bannerOverlayLeft from '../images/io-banner/banner-style-left.svg';
-import { SearchInput } from '@newrelic/gatsby-theme-newrelic';
+import SearchInput from '../@newrelic/gatsby-theme-newrelic/components/SearchInput';
 import { QUICKSTARTS_COLLAPSE_BREAKPOINT } from '../data/constants';
 
 const BannerHeaderContent = ({

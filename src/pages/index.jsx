@@ -22,7 +22,6 @@ import SuperTiles from '../components/SuperTiles';
 import { css } from '@emotion/react';
 import { graphql } from 'gatsby';
 import { navigate } from '@reach/router';
-import { useDebounce } from 'react-use';
 import LeftArrowSVG from '../components/Icons/LeftArrowSVG';
 import RightArrowSVG from '../components/Icons/RightArrowSVG';
 import featherIcons from '../@newrelic/gatsby-theme-newrelic/icons/feather';
