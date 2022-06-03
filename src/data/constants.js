@@ -41,6 +41,7 @@ export const RESERVED_QUICKSTART_IDS = {
 
 export const QUICKSTARTS_COLLAPSE_BREAKPOINT = '760px';
 export const LISTVIEW_BREAKPOINT = '1080px';
+export const MIN_WIDTH_BREAKPOINT = '355px';
 
 export const RESOURCES = [
   {
