@@ -4,7 +4,6 @@ import { css } from '@emotion/react';
 import { Button, Icon, Link } from '@newrelic/gatsby-theme-newrelic';
 import { QUICKSTARTS_REPO } from '../data/constants';
 import GitHubIconSVG from '../components/Icons/GitHubIconSVG';
-import AnimatedText from './AnimatedText';
 
 const EmptyTab = ({
   quickstartName,
@@ -38,6 +37,7 @@ const EmptyTab = ({
       css={css`
         display: flex;
         justify-content: left;
+        height: 3rem;
       `}
     >
       <Button
@@ -46,33 +46,45 @@ const EmptyTab = ({
               color: var(--btn-text-color);
               border-radius: 4px;
               padding: 0px 20px 0px 22px;
-              column-gap: 14.45px; 
-              
+              column-gap: 14.45px;        
               &:hover{
                 color: var(--white-hover-color);
                 background-color: var(--background-color);
                 }
-
                 @media (max-width: 760px) {
                     width: 100%;
                 }
-              div {
-                text-align: left;
-                width: auto;
-              }
+                .btn-animation-styles{
+                  padding-top: 0.188rem;
+                }
+                .scroll {
+                  margin-bottom: 0.125rem;
+                }
+                .btn-text {       
+                  float: right;
+                  margin-left: 0.938rem;
+                  padding-top: 0.125rem;
+                  height: 1.25rem;     
+                }
             `}
         as={Link}
         variant={Button.VARIANT.PRIMARY}
         to={quickstartUrl}
         rel="noopener noreferrer"
         instrumentation={{ quickstartName }}
+        className="btn-styles btn1"
       >
-        <GitHubIconSVG className="ViewRepo" />
-        <AnimatedText
-          text={'View repo'}
-        />
+        <div className="btn-animation-styles">
+          <div className="scroll scroll-top">
+            <GitHubIconSVG />
+            <div className="btn-text">View repo</div>
+          </div>
+          <div className="scroll scroll-bottom">
+            <GitHubIconSVG />
+            <div className="btn-text">View repo</div>
+          </div>
+        </div>
       </Button>
-
     </div>
   </div>
 );

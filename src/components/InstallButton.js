@@ -17,8 +17,6 @@ import {
 import { quickstart } from '../types';
 import Cookies from 'js-cookie';
 import useTreatment from '../hooks/useTreatment';
-import AnimatedText from './AnimatedText';
-
 /**
  * @param {Object} parameters
  * @returns {Boolean}
@@ -185,6 +183,7 @@ const InstallButton = ({
       to={installUrl}
       onClick={handleInstallClick}
       variant={Button.VARIANT.PRIMARY}
+      className="btn-styles btn1"
       css={css`
         --button-background: var(
           ${style === 'PRIMARY'
@@ -213,13 +212,19 @@ const InstallButton = ({
         css`
           padding: 0;
           width: 106px;
+          height: 3.125rem;
         `};
       `}
     >
       {hasInstallableComponent ? (
-        <AnimatedText
-          text={'Install now'}
-        />
+        <div className="btn-animation-styles">
+          <div className="scroll scroll-top">
+            Install now
+          </div>
+          <div className="scroll scroll-bottom">
+            Install now
+          </div>
+        </div>
       ) : (
         'See installation docs'
       )}

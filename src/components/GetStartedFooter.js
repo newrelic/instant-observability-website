@@ -3,7 +3,6 @@ import { DEMO_LINK, SIGNUP_LINK } from '../data/constants';
 import PropTypes from 'prop-types';
 import React from 'react';
 import { css } from '@emotion/react';
-import AnimatedText from './AnimatedText';
 import DoubleUnderlineSVG from './Icons/DoubleUnderlineSVG'
 
 const MOBILE_BREAKPOINT = '800px';
@@ -33,7 +32,7 @@ const GetStartedFooter = ({
         --nr1--color--text--buttton--primary-accent: #000;
 
         width: 100%;
-        height: 120px;
+        height: 7rem;
 
         display: flex;
         justify-content: center;
@@ -97,13 +96,13 @@ const GetStartedFooter = ({
       >
         Get started today&nbsp;
         <span
-        css={css`
+          css={css`
         white-space: nowrap;
         position: relative;
         `}>
-        for free.
+          for free.
           <DoubleUnderlineSVG className="Underline" />
-          </span>
+        </span>
       </h3>
       <div
         css={css`
@@ -143,6 +142,7 @@ const GetStartedFooter = ({
           as={ExternalLink}
           variant={Button.VARIANT.PRIMARY}
           href={SIGNUP_LINK}
+          className="btn-styles btn1"
           css={css`
         --button-background: var(
           ${style === 'PRIMARY'
@@ -163,19 +163,26 @@ const GetStartedFooter = ({
         line-height: 21px;
         font-weight: 400;
         padding: 1rem;
-
           &:hover {
               background-color: var(
                 --background-color
               );
               color: var(--nr1--color--text--buttton--primary);
             }
+            .scroll {
+              margin-top: -1px;
+            }
 
        `}
         >
-          <AnimatedText
-            text={'Sign Up'}
-          />
+          <div className="btn-animation-styles">
+            <div className="scroll scroll-top">
+              Sign Up
+            </div>
+            <div className="scroll scroll-bottom">
+              Sign Up
+            </div>
+          </div>
 
         </Button>
         <Button
@@ -183,6 +190,7 @@ const GetStartedFooter = ({
           as={ExternalLink}
           variant={Button.VARIANT.PRIMARY}
           href={DEMO_LINK}
+          className="btn-styles btn1"
           css={css`
           --button-background: var(
             ${style === 'PRIMARY'
@@ -211,12 +219,24 @@ const GetStartedFooter = ({
                 );
                 color: var(--nr1--color--text--buttton--primary-accent);
               }
+              &:focus {
+                outline: none;
+                text-decoration-line: none !important;
+              }
+              .scroll {
+                margin-top: -1px;
+              }
   
          `}
         >
-          <AnimatedText
-            text={'Get Demo'}
-          />
+          <div className="btn-animation-styles">
+            <div className="scroll scroll-top">
+              Get Demo
+            </div>
+            <div className="scroll scroll-bottom">
+              Get Demo
+            </div>
+          </div>
 
         </Button>
       </div>

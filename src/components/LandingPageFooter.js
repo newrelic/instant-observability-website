@@ -8,7 +8,6 @@ import ExternalLink from '@newrelic/gatsby-theme-newrelic/src/components/Externa
 import RelatedResources from './RelatedResources';
 import TickIconSVG from './Icons/TickIconSVG';
 import GitHubIconSVG from './Icons/GitHubIconSVG';
-import AnimatedText from './AnimatedText';
 
 const LandingPageFooter = ({
   quickstart,
@@ -105,29 +104,44 @@ const LandingPageFooter = ({
                 border-color: var(--background-color);
                 column-gap: 14.45px;
                 font-weight: 400;
+                height: 3rem;
                 &:hover {
                   color: var(--white-hover-color);
                   border-color: var(--background-color);
                 }
-
                 @media (max-width: 760px) {
                   width: 100%;
                 }
-                div {
-                  text-align: left;
-                  width: auto;
+                .btn-animation-styles{
+                  padding-top: 0.188rem;
+                }
+                .scroll {
+                  margin-bottom: 0.125rem;
+                }
+                .btn-text {       
+                  float: right;
+                  margin-left: 0.938rem;
+                  padding-top: 0.125rem;
+                  height: 1.25rem;     
                 }
               `}
+              className="btn-styles btn1"
               as={Link}
               variant={Button.VARIANT.OUTLINE}
               to={quickstartUrl}
               rel="noopener noreferrer"
               onClick={trackQuickstart('QuickstartViewRepoClick', quickstart)}
             >
-              <GitHubIconSVG className="ViewRepo" />
-              <AnimatedText
-                text={'View repo'}
-              />
+              <div className="btn-animation-styles">
+                <div className="scroll scroll-top">
+                  <GitHubIconSVG />
+                  <div className="btn-text">View repo</div>
+                </div>
+                <div className="scroll scroll-bottom">
+                  <GitHubIconSVG />
+                  <div className="btn-text">View repo</div>
+                </div>
+              </div>
             </Button>
           </div>
           <div
@@ -144,6 +158,7 @@ const LandingPageFooter = ({
                 eventName: 'instantObservability',
                 category: 'BuildYourOwnQuickstartClick',
               }}
+              className="btn-styles btn1"
               css={css`
                 background: var(--background-color);
                 color: var(--btn-text-color);
@@ -156,20 +171,35 @@ const LandingPageFooter = ({
                 &:hover {
                   color: var(--white-hover-color);
                   border-color: var(--background-color);
-                }
-
+                }    
                 @media (max-width: 760px) {
                   width: 100%;
                 }
-                div {
-                  text-align: left;
+                @media (min-width: 760px) {
+                  width: 11.375rem;
+                }
+                .scroll {
+                  margin-bottom: 5px;
+                  margin-top: 6px;
+                }
+
+                .btn-text {       
+                  float:right;
+                  margin-left: 13px;
+                  margin-right: 7px;    
                 }
               `}
             >
-              <TickIconSVG className="Tick" />
-              <AnimatedText
-                text={'Build your own'}
-              />
+              <div className="btn-animation-styles">
+                <div className="scroll scroll-top">
+                  <TickIconSVG />
+                  <div className="btn-text">Build your own</div>
+                </div>
+                <div className="scroll scroll-bottom">
+                  <TickIconSVG />
+                  <div className="btn-text">Build your own</div>
+                </div>
+              </div>
             </Button>
           </div>
         </div>
