@@ -12,11 +12,24 @@ import LinkedinSVG from './Icons/LinkedinSVG';
 import MailSVG from './Icons/MailSVG';
 import { css } from '@emotion/react';
 import { MIN_WIDTH_BREAKPOINT } from '../data/constants';
+import { useTessen } from '@newrelic/gatsby-theme-newrelic';
 
-const Share = ({
-    url
-}) => (
 
+
+export default function Share({ url }) {
+    const tessen = useTessen();
+    const tessenOnShareClick = (value) => {
+
+        console.log({ value }, "comein")
+
+        tessen.track({
+            eventName: 'instantObservability',
+            category: 'TessenOnShareClick',
+            buttonClicked: value
+        });
+    };
+
+return (
     <div
         css={css`
         .button {
@@ -29,28 +42,29 @@ const Share = ({
         }
         `}
         className="post-social">
-        <FacebookShareButton url={url} className="button" >
+        <FacebookShareButton url={url} className="button" onClick={() => tessenOnShareClick('FaceBook')} >
             <FacebookSVG
                 width="24"
                 height="24"
             />
         </FacebookShareButton>
 
-        <TwitterShareButton url={url} className="button" >
+        <TwitterShareButton url={url} className="button" onClick={() => tessenOnShareClick('Twitter')}>
             <TwitterSVG width="24"
                 height="24" />
         </TwitterShareButton>
 
-        <LinkedinShareButton url={url} className="button">
+        <LinkedinShareButton url={url} className="button" onClick={() => tessenOnShareClick('Linkedin')}>
             <LinkedinSVG width="24"
                 height="24" />
         </LinkedinShareButton>
 
-        <EmailShareButton url={url} className="button" >
+        <EmailShareButton url={url} className="button" onClick={() => tessenOnShareClick('EmailShare')}>
             <MailSVG width="24"
                 height="24" />
         </EmailShareButton>
     </div>
 );
+    
+};
 
-export default Share;
