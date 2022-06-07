@@ -1,5 +1,60 @@
 [
   {
+    "title": "React Native",
+    "name": "react-native",
+    "description": "## React Native Quickstart\n\nReact Native is a technology which brings the power of the React.js frontend javascript framework to mobile devices.Mobile programming brings with it a unique set of challenges. These devices have sensors such as the touchscreen, accelerometer, and gyroscope that interface with the world and send data back to the application. An effective mobile application must make use of this unique data and also be able to detect and fail gracefully when a sensor fails. \n\nProgramming for mobile devices introduces hardware constraints, so monitoring and managing memory consumption and CPU usage become very important. New Relic provides a React Native Quickstart that allows developers to monitor their mobile applications, giving them full control and peace of mind over their application’s performance.\n\n### New Relic - React Native Quickstart Features\n\n## Get started!\nThe [React Native Quickstart](https://docs.newrelic.com/whats-new/2020/10/three-big-updates-your-native-mobile-apps/) provides both visual dashboards and alerts that provide comprehensive React Native monitoring. These include…\n\nDashboards\n- Transaction overview - an overview of all JS transactions initiated and received by React Native\n- Top OS’s - the top mobile OS’s on which users are accessing a React Native app\n- Top 10 transactions - the top 10 app transactions being made at any given time\n- Most popular methods - most popular app methods as decided by user application usage\n- Average interaction duration(s) - average time spent by users interacting with the RN app\n\n Alerts\n - Low APDEX score - alerts the developer when the apdex score falls below a certain threshold\n - Transaction errors - alerts the developer when the number of transaction errors climbs above a certain threshold\n\n### New Relic - Complete React Native Dashboard Tool\n\nThe dashboards and alerts allow developers to extensively optimize their React Native applications and they are the ultimate React Native performance monitor. For example, understanding the Top OS’s allows users to understand which devices are primarily being used to access their applications. While React Native apps are cross-platform, there are still actions that can be taken to optimize for one platform vs. another, i.e. Android vs. Apple or vice versa. The Top OS’s dashboard allows developers to decide how to best enhance OS-specific application performance.\n\nSimilarly, understanding interaction duration can help developers to understand which application features are popular. They can then add or remove features to help increase average interaction duration and improve the app’s popularity or usefulness.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/react-native",
+    "id": "b87283f1-be71-4a8b-a04d-e10406b7e391",
+    "level": "NEW_RELIC",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/react-native/logo.svg",
+    "summary": "The React Native Quickstart is the ultimate performance monitoring solution for mobile applications. The included dashboards and alerts allow developers to optimize their application’s usability and understand how changes impact its performance.",
+    "websiteUrl": null,
+    "keywords": [
+      "mobile"
+    ],
+    "authors": [
+      "New Relic",
+      "Emil Hammarstrand"
+    ],
+    "dashboards": [
+      {
+        "name": "React Native",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/react-native/dashboards/react-native/react-native.png"
+        ]
+      }
+    ],
+    "alerts": [
+      {
+        "name": "Apdex Score",
+        "details": "This alert is triggered when the Apdex score is below 0.5 for 5 minutes",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "Transaction Errors",
+        "details": "This alert is triggered when the the transactions fail more than 10% of the time in 5 minutes.",
+        "type": "STATIC",
+        "url": null
+      }
+    ],
+    "documentation": [
+      {
+        "name": "React Native installation docs",
+        "description": "React Native is an open source framework for building native apps using\nReact.\n",
+        "url": "https://docs.newrelic.com/docs/mobile-monitoring/new-relic-mobile-react-native/get-started/introduction-mobile-react-native"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "React Native",
+        "id": "third-party-react-native"
+      }
+    ]
+  },
+  {
     "title": "Linux",
     "name": "linux",
     "description": "## What is Linux?\n\nLinux is a family of open-source Unix-like operating systems, typically\npackaged in a distribution.\n\n## Get started!\n\nChoose this quickstart and follow New Relic's guided install process to monitor your Linux environment.",
@@ -146,6 +201,39 @@
     "alerts": [],
     "documentation": [],
     "installPlans": []
+  },
+  {
+    "title": "StatsD",
+    "name": "statsd",
+    "description": "## What is StatsD?\n\nLightweight, open-source Node.js application that listens for metrics from different applications and aggregates them.\n\n## Get started!\n\nNew Relic's StatsD integration lets you easily get StatsD-format data into New Relic.\nFollow [the documentation](https://docs.newrelic.com/docs/integrations/host-integrations/host-integrations-list/statsd-monitoring-integration-version-2) to get started!",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/statsd",
+    "id": "293c4da1-11cd-4942-8e40-8b6e85663003",
+    "level": "NEW_RELIC",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/statsd/logo.svg",
+    "summary": "Get StatsD data into New Relic.",
+    "websiteUrl": null,
+    "keywords": [
+      "infrastructure",
+      "open source monitoring"
+    ],
+    "authors": [
+      "New Relic"
+    ],
+    "dashboards": [],
+    "alerts": [],
+    "documentation": [
+      {
+        "name": "StatsD installation docs",
+        "description": "Lightweight, open-source Node.js application that listens for metrics from\ndifferent applications and aggregates them.\n",
+        "url": "https://docs.newrelic.com/docs/integrations/host-integrations/host-integrations-list/statsd-monitoring-integration-version-2"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "statsd",
+        "id": "third-party-statsd"
+      }
+    ]
   },
   {
     "title": "CakePHP",
@@ -512,56 +600,6 @@
     ]
   },
   {
-    "title": "React Native",
-    "name": "react-native",
-    "description": "## React Native Quickstart\n\nReact Native is a technology which brings the power of the React.js frontend javascript framework to mobile devices.Mobile programming brings with it a unique set of challenges. These devices have sensors such as the touchscreen, accelerometer, and gyroscope that interface with the world and send data back to the application. An effective mobile application must make use of this unique data and also be able to detect and fail gracefully when a sensor fails. \n\nProgramming for mobile devices introduces hardware constraints, so monitoring and managing memory consumption and CPU usage become very important. New Relic provides a React Native Quickstart that allows developers to monitor their mobile applications, giving them full control and peace of mind over their application’s performance.\n\n### New Relic - React Native Quickstart Features\n\n## Get started!\nThe [React Native Quickstart](https://docs.newrelic.com/whats-new/2020/10/three-big-updates-your-native-mobile-apps/) provides both visual dashboards and alerts that provide comprehensive React Native monitoring. These include…\n\nDashboards\n- Transaction overview - an overview of all JS transactions initiated and received by React Native\n- Top OS’s - the top mobile OS’s on which users are accessing a React Native app\n- Top 10 transactions - the top 10 app transactions being made at any given time\n- Most popular methods - most popular app methods as decided by user application usage\n- Average interaction duration(s) - average time spent by users interacting with the RN app\n\n Alerts\n - Low APDEX score - alerts the developer when the apdex score falls below a certain threshold\n - Transaction errors - alerts the developer when the number of transaction errors climbs above a certain threshold\n\n### New Relic - Complete React Native Dashboard Tool\n\nThe dashboards and alerts allow developers to extensively optimize their React Native applications and they are the ultimate React Native performance monitor. For example, understanding the Top OS’s allows users to understand which devices are primarily being used to access their applications. While React Native apps are cross-platform, there are still actions that can be taken to optimize for one platform vs. another, i.e. Android vs. Apple or vice versa. The Top OS’s dashboard allows developers to decide how to best enhance OS-specific application performance.\n\nSimilarly, understanding interaction duration can help developers to understand which application features are popular. They can then add or remove features to help increase average interaction duration and improve the app’s popularity or usefulness.",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/react-native",
-    "id": "b87283f1-be71-4a8b-a04d-e10406b7e391",
-    "level": "NEW_RELIC",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/react-native/logo.svg",
-    "summary": "The React Native Quickstart is the ultimate performance monitoring solution for mobile applications. The included dashboards and alerts allow developers to optimize their application’s usability and understand how changes impact its performance.",
-    "websiteUrl": null,
-    "keywords": [
-      "mobile"
-    ],
-    "authors": [
-      "New Relic",
-      "Emil Hammarstrand"
-    ],
-    "dashboards": [
-      {
-        "name": "React Native",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/react-native/dashboards/react-native/react-native.png"
-        ]
-      }
-    ],
-    "alerts": [
-      {
-        "name": "Apdex Score",
-        "details": "This alert is triggered when the Apdex score is below 0.5 for 5 minutes",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "Transaction Errors",
-        "details": "This alert is triggered when the the transactions fail more than 10% of the time in 5 minutes.",
-        "type": "STATIC",
-        "url": null
-      }
-    ],
-    "documentation": [
-      {
-        "name": "React Native installation docs",
-        "description": "React Native is an open source framework for building native apps using\nReact.\n",
-        "url": "https://docs.newrelic.com/docs/mobile-monitoring/new-relic-mobile-react-native/get-started/introduction-mobile-react-native"
-      }
-    ],
-    "installPlans": []
-  },
-  {
     "title": "Customer Experience Quality Foundation",
     "name": "customer-experience-quality-foundation",
     "description": "Quality foundation helps you see what your user's perception of web performance is. It does this in two ways: (1) focuses on user experience metrics for availability, page load, and in-page actions (2) segments data by device type, region, and user journey \n\nFor more information view the [implementation guide](https://docs.newrelic.com/docs/new-relic-solutions/observability-maturity/customer-experience/quality-foundation-implementation-guide)",
@@ -821,34 +859,6 @@
         "id": "setup-ruby-agent"
       }
     ]
-  },
-  {
-    "title": "StatsD",
-    "name": "statsd",
-    "description": "## What is StatsD?\n\nLightweight, open-source Node.js application that listens for metrics from different applications and aggregates them.\n\n## Get started!\n\nNew Relic's StatsD integration lets you easily get StatsD-format data into New Relic.\nFollow [the documentation](https://docs.newrelic.com/docs/integrations/host-integrations/host-integrations-list/statsd-monitoring-integration-version-2) to get started!",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/statsd",
-    "id": "293c4da1-11cd-4942-8e40-8b6e85663003",
-    "level": "NEW_RELIC",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/statsd/logo.svg",
-    "summary": "Get StatsD data into New Relic.",
-    "websiteUrl": null,
-    "keywords": [
-      "infrastructure",
-      "open source monitoring"
-    ],
-    "authors": [
-      "New Relic"
-    ],
-    "dashboards": [],
-    "alerts": [],
-    "documentation": [
-      {
-        "name": "StatsD installation docs",
-        "description": "Lightweight, open-source Node.js application that listens for metrics from\ndifferent applications and aggregates them.\n",
-        "url": "https://docs.newrelic.com/docs/integrations/host-integrations/host-integrations-list/statsd-monitoring-integration-version-2"
-      }
-    ],
-    "installPlans": []
   },
   {
     "title": "tvOS",
@@ -2094,36 +2104,6 @@
     ]
   },
   {
-    "title": "Slack for CodeStream",
-    "name": "slack-for-codestream",
-    "description": "Slack is a messaging app for business that connects people to the information they need. \n\nWhen you post a comment, issue, or feedback request, your teammates are notified via the activity feed, and potentially via email. Sometimes, though, you might want to share to Slack as well. This allows you to reach people who haven’t yet joined CodeStream, or maybe don’t spend a lot of time in their IDE.\n\n[Check out our documentation](https://docs.newrelic.com/docs/codestream/codestream-integrations/slack-integration) to connect New Relic CodeStream to your team's Slack channel.",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/codestream/slack-cs",
-    "id": "5837b456-5f5b-4539-8b71-77193298d253",
-    "level": "NEW_RELIC",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/codestream/slack-cs/logo.png",
-    "summary": "Connect New Relic CodeStream to your team's Slack channel.",
-    "websiteUrl": null,
-    "keywords": [
-      "slack",
-      "codestream",
-      "ide",
-      "errors inbox"
-    ],
-    "authors": [
-      "New Relic"
-    ],
-    "dashboards": [],
-    "alerts": [],
-    "documentation": [
-      {
-        "name": "Slack Integration Docs",
-        "description": "Documentation about the New Relic - Slack CodeStream integration",
-        "url": "https://docs.newrelic.com/docs/codestream/codestream-integrations/slack-integration"
-      }
-    ],
-    "installPlans": []
-  },
-  {
     "title": "C++",
     "name": "cplusplus",
     "description": "## What is C++?\n\nGeneral-purpose programming language that extends C with modern\nobject-oriented, generic, and functional features.\n\n## Get started!\n\nLeverage community expertise and instantly get value out of your telemetry data. This quickstart automatically instruments C++ with the New Relic C SDK, and allows you to further leverage New Relic's APM capabilities by setting up [custom dashboards](https://docs.newrelic.com/docs/query-your-data/explore-query-data/dashboards/introduction-dashboards/), [errors inbox](https://docs.newrelic.com/docs/apm/apm-ui-pages/errors-inbox/errors-inbox/), [transaction tracing](https://docs.newrelic.com/docs/apm/transactions/transaction-traces/introduction-transaction-traces/), and [service maps](https://docs.newrelic.com/docs/understand-dependencies/understand-system-dependencies/service-maps/introduction-service-maps/).\n\n## More info\n\nCheck out the [documentation](https://docs.newrelic.com/docs/agents/c-sdk/get-started/introduction-c-sdk/) to learn more about New Relic monitoring for C++.",
@@ -2499,58 +2479,6 @@
         "id": "setup-go-agent"
       }
     ]
-  },
-  {
-    "title": "EJB Session Beans",
-    "name": "ejb-session-beans",
-    "description": "# What are EJB session beans?\n\nIndividual components in EJB that are created on request of a client for a single session.\n\n## Get started!\n\nLeverage community expertise and instantly get value out of your telemetry data. This quickstart automatically instruments EJB session beans with the New Relic Java agent, and allows you to instantly monitor your Java application with out-of-the-box dashboards and alerts. \nFurther leverage New Relic's APM capabilities by setting up [errors inbox](https://docs.newrelic.com/docs/apm/apm-ui-pages/errors-inbox/errors-inbox/), [transaction tracing](https://docs.newrelic.com/docs/apm/transactions/transaction-traces/introduction-transaction-traces/), and [service maps](https://docs.newrelic.com/docs/understand-dependencies/understand-system-dependencies/service-maps/introduction-service-maps/).\n\n## More info\n\nCheck out the [documentation](https://docs.newrelic.com/docs/agents/java-agent/getting-started/introduction-new-relic-java/) to learn more about New Relic monitoring for EJB session beans.",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/java/ejb-session-beans",
-    "id": "d3935d9c-ddc1-47a7-ac6c-7d1ee513a6b4",
-    "level": "NEW_RELIC",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/java/ejb-session-beans/logo.svg",
-    "summary": "Monitor EJB session beans with New Relic's Java agent",
-    "websiteUrl": null,
-    "keywords": [
-      "apm",
-      "java"
-    ],
-    "authors": [
-      "New Relic"
-    ],
-    "dashboards": [
-      {
-        "name": "EJB session beans",
-        "description": "Java",
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/java/ejb-session-beans/dashboards/java/java01.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/java/ejb-session-beans/dashboards/java/java02.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/java/ejb-session-beans/dashboards/java/java.png"
-        ]
-      }
-    ],
-    "alerts": [
-      {
-        "name": "High CPU Utilization",
-        "details": "This alert is triggered when the CPU Utilization is above 90%.",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "Transaction Errors",
-        "details": "This alert is triggered when the the transactions fail more than 10% of the time in 5 minutes.",
-        "type": "STATIC",
-        "url": null
-      }
-    ],
-    "documentation": [
-      {
-        "name": "EJB Session Beans installation docs",
-        "description": "Individual components in EJB that are created on request of a client for a\nsingle session.\n",
-        "url": "https://docs.newrelic.com/docs/agents/java-agent/getting-started/compatibility-requirements-java-agent"
-      }
-    ],
-    "installPlans": []
   },
   {
     "title": "IBM DB2",
@@ -3702,6 +3630,90 @@
     ]
   },
   {
+    "title": "Synthetics Endpoint Availability",
+    "name": "synthetics-endpoint-availability",
+    "description": "# What is Synthetics monitoring?\nSynthetic monitoring is a suite of automated, scriptable tools to monitor your websites, critical business transactions, and API endpoints. You can simulate user traffic to proactively detect and resolve outages and poor performance of critical endpoints before your customers notice.\n\n# What is a Synthetics Endpoint Availability check\nSynthetics Endpoint Availability uses an HTTP client to monitor remote API endpoints (REST, healthchecks, etc) and allows for customisation for your specific environment.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/synthetics/endpoint-availability",
+    "id": "d78a22cb-1e17-47fe-b9f6-00a80ece4764",
+    "level": "NEW_RELIC",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/synthetics/endpoint-availability/logo.svg",
+    "summary": "Synthetic API tests are used to monitor your API endpoints. This can ensure that your app server works in addition to your website.",
+    "websiteUrl": null,
+    "keywords": [
+      "http",
+      "ping",
+      "uptime",
+      "api",
+      "url",
+      "www",
+      "synthetics"
+    ],
+    "authors": [
+      "New Relic"
+    ],
+    "dashboards": [],
+    "alerts": [],
+    "documentation": [
+      {
+        "name": "Getting started",
+        "description": "Get started with synthetic monitoring",
+        "url": "https://docs.newrelic.com/docs/synthetics/synthetic-monitoring/getting-started/get-started-synthetic-monitoring/"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "Synthetics Endpoint Availability",
+        "id": "third-party-synthetics-endpoint-availability"
+      }
+    ]
+  },
+  {
+    "title": "Browser Segment Investigation Quickstart",
+    "name": "browser-segment-investigation",
+    "description": "Review the extent of crushed urls so you know which urls you need to add segments for in the browser segment allow list.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/browser-segment-investigation",
+    "id": "eb24e234-90aa-4908-972d-64d6d56b557e",
+    "level": "NEW_RELIC",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/browser-segment-investigation/logo.svg",
+    "summary": "Check for crushed urls so you can remedy them.",
+    "websiteUrl": null,
+    "keywords": [
+      "oma",
+      "crushed",
+      "urls",
+      "browser",
+      "segment",
+      "segments"
+    ],
+    "authors": [
+      "Kim Hickey"
+    ],
+    "dashboards": [
+      {
+        "name": "Browser Segment Investigation",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/browser-segment-investigation/dashboards/browser-segment-investigation/browser-segment-investigation.png"
+        ]
+      }
+    ],
+    "alerts": [],
+    "documentation": [
+      {
+        "name": "Usage instructions",
+        "description": "The _Validate Browser URL grouping_ section of Quality foundation explains how to use the segment investigation dashboard as well as resolve any crushed URLs you might find.",
+        "url": "https://docs.newrelic.com/docs/new-relic-solutions/observability-maturity/customer-experience/quality-foundation-implementation-guide#validate-browser-url-grouping"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "Browser Segment Investigation Quickstart",
+        "id": "third-party-browser-segment-investigation"
+      }
+    ]
+  },
+  {
     "title": "Redis (Prometheus)",
     "name": "redis-prometheus",
     "description": "## A complete Redis monitoring system\n\nRedis operates in-memory and achieves I/O faster than traditional database systems. It includes several data structures which make it ready to use right out of the box.\n\nNew Relic provides a Redis quickstart which allows you to monitor your Redis instances out-of-the-box.\n\n### New Relic - a perfect tool to monitor Redis using Prometheus.\n\nRedis is known for its speed, so ensuring that it stays operating at peak performance is paramount. Slowdowns can lead to a compromised user experience or even a complete application failure.\n\nUsing the [New Relic Prometheus Remote-Write](https://docs.newrelic.com/docs/infrastructure/prometheus-integrations/install-configure-remote-write/set-your-prometheus-remote-write-integration/) integration you can deliver your critical Redis metrics from your internally supported instance of Prometheus directly to New Relic where the rest of your observability data resides.\n\n### New Relic Redis quickstart features\n\nOur Redis quickstart include out-of-the-box dashboards and alerts, including data such as:\n- Overview Snapshot (# masters, # slaves) + charts with commands/sec and commands/sec by node\n- Charts showing connected clients, connected clients by node, changes since last save by node, expired keys/second by node, memory used by node, and blocked clients.\n- Charts showing keyspace hit ratio by node, evicted keys/second by node, input bytes/second by node, network I/O per second, and output bytes / second by node.\n\n### Value of the Redis (Prometheus) quickstart\n\nThe Redis (Prometheus) Quickstart provides a visual snapshot of all the key health information related to your Redis nodes and clusters. Monitoring is made easy via the clear, color-coded dashboard which showcases memory usage, network I/O, node health, and much more.\n\n### Redis Prometheus Exporter (Kubernetes)\n\nIf you are supporting Redis and Prometheus in a Kubernetes cluster, you can easily export Redis metrics to Prometheus using the [Prometheus Redis Exporter](https://github.com/prometheus-community/helm-charts/tree/main/charts/prometheus-redis-exporter).",
@@ -3750,45 +3762,61 @@
     ]
   },
   {
-    "title": "Browser Segment Investigation Quickstart",
-    "name": "browser-segment-investigation",
-    "description": "Review the extent of crushed urls so you know which urls you need to add segments for in the browser segment allow list.",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/browser-segment-investigation",
-    "id": "eb24e234-90aa-4908-972d-64d6d56b557e",
+    "title": "EJB Session Beans",
+    "name": "ejb-session-beans",
+    "description": "# What are EJB session beans?\n\nIndividual components in EJB that are created on request of a client for a single session.\n\n## Get started!\n\nLeverage community expertise and instantly get value out of your telemetry data. This quickstart automatically instruments EJB session beans with the New Relic Java agent, and allows you to instantly monitor your Java application with out-of-the-box dashboards and alerts. \nFurther leverage New Relic's APM capabilities by setting up [errors inbox](https://docs.newrelic.com/docs/apm/apm-ui-pages/errors-inbox/errors-inbox/), [transaction tracing](https://docs.newrelic.com/docs/apm/transactions/transaction-traces/introduction-transaction-traces/), and [service maps](https://docs.newrelic.com/docs/understand-dependencies/understand-system-dependencies/service-maps/introduction-service-maps/).\n\n## More info\n\nCheck out the [documentation](https://docs.newrelic.com/docs/agents/java-agent/getting-started/introduction-new-relic-java/) to learn more about New Relic monitoring for EJB session beans.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/java/ejb-session-beans",
+    "id": "d3935d9c-ddc1-47a7-ac6c-7d1ee513a6b4",
     "level": "NEW_RELIC",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/browser-segment-investigation/logo.svg",
-    "summary": "Check for crushed urls so you can remedy them.",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/java/ejb-session-beans/logo.svg",
+    "summary": "Monitor EJB session beans with New Relic's Java agent",
     "websiteUrl": null,
     "keywords": [
-      "oma",
-      "crushed",
-      "urls",
-      "browser",
-      "segment",
-      "segments"
+      "apm",
+      "java"
     ],
     "authors": [
-      "Kim Hickey"
+      "New Relic"
     ],
     "dashboards": [
       {
-        "name": "Browser Segment Investigation",
-        "description": null,
+        "name": "EJB session beans",
+        "description": "Java",
         "url": null,
         "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/browser-segment-investigation/dashboards/browser-segment-investigation/browser-segment-investigation.png"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/java/ejb-session-beans/dashboards/java/java01.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/java/ejb-session-beans/dashboards/java/java02.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/java/ejb-session-beans/dashboards/java/java.png"
         ]
       }
     ],
-    "alerts": [],
-    "documentation": [
+    "alerts": [
       {
-        "name": "Usage instructions",
-        "description": "The _Validate Browser URL grouping_ section of Quality foundation explains how to use the segment investigation dashboard as well as resolve any crushed URLs you might find.",
-        "url": "https://docs.newrelic.com/docs/new-relic-solutions/observability-maturity/customer-experience/quality-foundation-implementation-guide#validate-browser-url-grouping"
+        "name": "High CPU Utilization",
+        "details": "This alert is triggered when the CPU Utilization is above 90%.",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "Transaction Errors",
+        "details": "This alert is triggered when the the transactions fail more than 10% of the time in 5 minutes.",
+        "type": "STATIC",
+        "url": null
       }
     ],
-    "installPlans": []
+    "documentation": [
+      {
+        "name": "EJB Session Beans installation docs",
+        "description": "Individual components in EJB that are created on request of a client for a\nsingle session.\n",
+        "url": "https://docs.newrelic.com/docs/agents/java-agent/getting-started/compatibility-requirements-java-agent"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "EJB Session Beans",
+        "id": "third-party-ejb-session-beans"
+      }
+    ]
   },
   {
     "title": "Infrastructure",
@@ -3824,6 +3852,41 @@
       {
         "name": "Guided install",
         "id": "guided-install"
+      }
+    ]
+  },
+  {
+    "title": "Slack for CodeStream",
+    "name": "slack-for-codestream",
+    "description": "Slack is a messaging app for business that connects people to the information they need. \n\nWhen you post a comment, issue, or feedback request, your teammates are notified via the activity feed, and potentially via email. Sometimes, though, you might want to share to Slack as well. This allows you to reach people who haven’t yet joined CodeStream, or maybe don’t spend a lot of time in their IDE.\n\n[Check out our documentation](https://docs.newrelic.com/docs/codestream/codestream-integrations/slack-integration) to connect New Relic CodeStream to your team's Slack channel.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/codestream/slack-cs",
+    "id": "5837b456-5f5b-4539-8b71-77193298d253",
+    "level": "NEW_RELIC",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/codestream/slack-cs/logo.png",
+    "summary": "Connect New Relic CodeStream to your team's Slack channel.",
+    "websiteUrl": null,
+    "keywords": [
+      "slack",
+      "codestream",
+      "ide",
+      "errors inbox"
+    ],
+    "authors": [
+      "New Relic"
+    ],
+    "dashboards": [],
+    "alerts": [],
+    "documentation": [
+      {
+        "name": "Slack Integration Docs",
+        "description": "Documentation about the New Relic - Slack CodeStream integration",
+        "url": "https://docs.newrelic.com/docs/codestream/codestream-integrations/slack-integration"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "Slack for CodeStream",
+        "id": "third-party-slack-for-codestream"
       }
     ]
   },
@@ -3879,39 +3942,6 @@
         "id": "solutions-hub-dashboards"
       }
     ]
-  },
-  {
-    "title": "Synthetics Endpoint Availability",
-    "name": "synthetics-endpoint-availability",
-    "description": "# What is Synthetics monitoring?\nSynthetic monitoring is a suite of automated, scriptable tools to monitor your websites, critical business transactions, and API endpoints. You can simulate user traffic to proactively detect and resolve outages and poor performance of critical endpoints before your customers notice.\n\n# What is a Synthetics Endpoint Availability check\nSynthetics Endpoint Availability uses an HTTP client to monitor remote API endpoints (REST, healthchecks, etc) and allows for customisation for your specific environment.",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/synthetics/endpoint-availability",
-    "id": "d78a22cb-1e17-47fe-b9f6-00a80ece4764",
-    "level": "NEW_RELIC",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/synthetics/endpoint-availability/logo.svg",
-    "summary": "Synthetic API tests are used to monitor your API endpoints. This can ensure that your app server works in addition to your website.",
-    "websiteUrl": null,
-    "keywords": [
-      "http",
-      "ping",
-      "uptime",
-      "api",
-      "url",
-      "www",
-      "synthetics"
-    ],
-    "authors": [
-      "New Relic"
-    ],
-    "dashboards": [],
-    "alerts": [],
-    "documentation": [
-      {
-        "name": "Getting started",
-        "description": "Get started with synthetic monitoring",
-        "url": "https://docs.newrelic.com/docs/synthetics/synthetic-monitoring/getting-started/get-started-synthetic-monitoring/"
-      }
-    ],
-    "installPlans": []
   },
   {
     "title": "AWS AppSync",
@@ -4103,6 +4133,67 @@
     ]
   },
   {
+    "title": "Google Cloud Pub/Sub Java Agent Extension",
+    "name": "gcp-pubsub",
+    "description": "# What is Pub/Sub?\n\nMessaging and ingestion for event-driven systems and streaming analytics.\n  - Pub/Sub enables you to create systems of event producers and consumers, called publishers and subscribers.\n  - Publishers communicate with subscribers asynchronously by broadcasting events, rather than by synchronous remote procedure calls (RPCs).\n  - Publishers send events to the Pub/Sub service, without regard to how or when these events will be processed.\n  Pub/Sub then delivers events to all services that need to react to them.\n  Compared to systems communicating through RPCs, where publishers must wait for subscribers to receive the data,\n  such asynchronous integration increases the flexibility and robustness of the system overall.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/java/gcp-pubsub",
+    "id": "ca1d4f11-5dea-4c8c-8a83-d59fb0b9e52b",
+    "level": "COMMUNITY",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/java/gcp-pubsub/logo.svg",
+    "summary": "Java agent extension to monitor Google Cloud Pub/Sub with New Relic. Once installed, the instrumentation will monitor both the publish and the subscribe of messages sent via the PubSub framework.\nIn addition, the instrumentation will take care of distributed tracing so that the publish will provide the distributed tracing headers on the message and the subscribe will read the headers and process them appropriately.",
+    "websiteUrl": null,
+    "keywords": [
+      "nrlabs",
+      "nrlabs-data",
+      "apm",
+      "java",
+      "pubsub",
+      "gcp"
+    ],
+    "authors": [
+      "New Relic Labs"
+    ],
+    "dashboards": [
+      {
+        "name": "Google Cloud Pub/Sub Java Agent Extension",
+        "description": "Java",
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/java/gcp-pubsub/dashboards/java/java01.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/java/gcp-pubsub/dashboards/java/java02.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/java/gcp-pubsub/dashboards/java/java.png"
+        ]
+      }
+    ],
+    "alerts": [
+      {
+        "name": "High CPU Utilization",
+        "details": "This alert is triggered when the CPU Utilization is above 90%.",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "Transaction Errors",
+        "details": "This alert is triggered when the the transactions fail more than 10% of the time in 5 minutes.",
+        "type": "STATIC",
+        "url": null
+      }
+    ],
+    "documentation": [
+      {
+        "name": "Java agent extension for Google Cloud Pub/Sub",
+        "description": "Java Agent instrumentation extension for the Google Cloud Platform PubSub framework\n",
+        "url": "https://github.com/newrelic-experimental/newrelic-java-gcp-pubsub"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "Google Cloud Pub/Sub Java Agent Extension",
+        "id": "third-party-gcp-pubsub"
+      }
+    ]
+  },
+  {
     "title": "Azure Functions",
     "name": "azure-functions",
     "description": "## What is Azure Functions?\n\nEvent-driven serverless compute platform that enables you to build locally and\ndeploy on the cloud.\n\n\n### Get started!\n\nStart monitoring Azure Functions by connecting Microsoft Azure to New Relic!\n\nCheck out our Azure Functions documentation to instrument your cloud service and manage the stability, scalability, and reliability of your systems with New Relic's infrastructure monitoring capabilities.\n\n### More info\n\nCheck out the [documentation](https://docs.newrelic.com/docs/infrastructure/microsoft-azure-integrations/azure-integrations-list/azure-functions-monitoring-integration/) to learn more about New Relic monitoring for Azure Functions.",
@@ -4185,6 +4276,60 @@
       {
         "name": "Cassandra",
         "id": "cassandra-integration"
+      }
+    ]
+  },
+  {
+    "title": "Synthetics Page Link Crawler",
+    "name": "synthetics-page-link-crawler",
+    "description": "## What is a link crawler?\n\nLink crawler helps you to automatically test your webpage links to detect broken links. When a website URL is provided, synthetic Link Crawler will visit the URL, test all the links on the website, and return any broken links.\n\n### New Relic synthetic link crawler\n\nBroken links in a website can lead to many problems, including missing web pages,  site performance issues, and a reduction in site conversion rates. The New Relic synthetic link crawler quickstart offers you a broken link monitor for your website links. This monitor is one of the seven types of New Relic synthetic monitors. Others include certificate check monitor, ping monitor, step monitor, simple browser monitors, scripted browser monitors, and API tests.\n\n### Why should you monitor your site links with New Relic?\n\nMonitoring website links with New Relic synthetic link crawler quickstart is crucial to quickly detect broken links and resolve outages. The [synthetic monitor](https://docs.newrelic.com/docs/synthetics/synthetic-monitoring/getting-started/types-synthetic-monitors/) provides detailed statistics for each web page resource and downtime incidents. You can also collect [custom response codes](https://docs.newrelic.com/docs/synthetics/new-relic-synthetics/using-monitors/synthetics-response-codes) for more details on your monitor runs.\n\nNew Relic synthetic broken link monitor quickstart also leverages the [host-not-reporting](https://docs.newrelic.com/docs/infrastructure/new-relic-infrastructure/configuration/create-infrastructure-host-not-reporting-condition) feature in infrastructure monitoring. This gives you the advantage of enhanced monitoring options, and you can get notified when New Relic stops receiving data from your hosts.\n\nDownload and install the New Relic synthetic broken link monitor quickstart today to start monitoring your websites for broken links.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/synthetics/page-link-crawler",
+    "id": "4ff03759-36c0-4052-bb8b-588a93eb1fae",
+    "level": "NEW_RELIC",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/synthetics/page-link-crawler/logo.svg",
+    "summary": "Monitoring website links is crucial to ensure that you detect broken links and resolve outages swiftly. Download the New Relic Synthetic Link Crawler quickstart to start monitoring your websites for broken links.",
+    "websiteUrl": null,
+    "keywords": [
+      "http",
+      "uptime",
+      "web",
+      "url",
+      "www",
+      "synthetics"
+    ],
+    "authors": [
+      "New Relic",
+      "Emil Hammarstrand"
+    ],
+    "dashboards": [
+      {
+        "name": "Page Link Crawler",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/synthetics/page-link-crawler/dashboards/page-link-crawler/page-link-crawler.png"
+        ]
+      }
+    ],
+    "alerts": [
+      {
+        "name": "Low Success Rate",
+        "details": "This alert is triggered when the link crawler fails more than 10% of the times.",
+        "type": "STATIC",
+        "url": null
+      }
+    ],
+    "documentation": [
+      {
+        "name": "Getting started",
+        "description": "Get started with synthetic monitoring",
+        "url": "https://docs.newrelic.com/docs/synthetics/synthetic-monitoring/getting-started/get-started-synthetic-monitoring/"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "Synthetics Page Link Crawler",
+        "id": "third-party-synthetics-page-link-crawler"
       }
     ]
   },
@@ -4668,62 +4813,6 @@
         "id": "ios-mobile"
       }
     ]
-  },
-  {
-    "title": "Google Cloud Pub/Sub Java Agent Extension",
-    "name": "gcp-pubsub",
-    "description": "# What is Pub/Sub?\n\nMessaging and ingestion for event-driven systems and streaming analytics.\n  - Pub/Sub enables you to create systems of event producers and consumers, called publishers and subscribers.\n  - Publishers communicate with subscribers asynchronously by broadcasting events, rather than by synchronous remote procedure calls (RPCs).\n  - Publishers send events to the Pub/Sub service, without regard to how or when these events will be processed.\n  Pub/Sub then delivers events to all services that need to react to them.\n  Compared to systems communicating through RPCs, where publishers must wait for subscribers to receive the data,\n  such asynchronous integration increases the flexibility and robustness of the system overall.",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/java/gcp-pubsub",
-    "id": "ca1d4f11-5dea-4c8c-8a83-d59fb0b9e52b",
-    "level": "COMMUNITY",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/java/gcp-pubsub/logo.svg",
-    "summary": "Java agent extension to monitor Google Cloud Pub/Sub with New Relic. Once installed, the instrumentation will monitor both the publish and the subscribe of messages sent via the PubSub framework.\nIn addition, the instrumentation will take care of distributed tracing so that the publish will provide the distributed tracing headers on the message and the subscribe will read the headers and process them appropriately.",
-    "websiteUrl": null,
-    "keywords": [
-      "nrlabs",
-      "nrlabs-data",
-      "apm",
-      "java",
-      "pubsub",
-      "gcp"
-    ],
-    "authors": [
-      "New Relic Labs"
-    ],
-    "dashboards": [
-      {
-        "name": "Google Cloud Pub/Sub Java Agent Extension",
-        "description": "Java",
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/java/gcp-pubsub/dashboards/java/java01.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/java/gcp-pubsub/dashboards/java/java02.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/java/gcp-pubsub/dashboards/java/java.png"
-        ]
-      }
-    ],
-    "alerts": [
-      {
-        "name": "High CPU Utilization",
-        "details": "This alert is triggered when the CPU Utilization is above 90%.",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "Transaction Errors",
-        "details": "This alert is triggered when the the transactions fail more than 10% of the time in 5 minutes.",
-        "type": "STATIC",
-        "url": null
-      }
-    ],
-    "documentation": [
-      {
-        "name": "Java agent extension for Google Cloud Pub/Sub",
-        "description": "Java Agent instrumentation extension for the Google Cloud Platform PubSub framework\n",
-        "url": "https://github.com/newrelic-experimental/newrelic-java-gcp-pubsub"
-      }
-    ],
-    "installPlans": []
   },
   {
     "title": "Inet Merlia",
@@ -6007,55 +6096,6 @@
     ]
   },
   {
-    "title": "Synthetics Page Link Crawler",
-    "name": "synthetics-page-link-crawler",
-    "description": "## What is a link crawler?\n\nLink crawler helps you to automatically test your webpage links to detect broken links. When a website URL is provided, synthetic Link Crawler will visit the URL, test all the links on the website, and return any broken links.\n\n### New Relic synthetic link crawler\n\nBroken links in a website can lead to many problems, including missing web pages,  site performance issues, and a reduction in site conversion rates. The New Relic synthetic link crawler quickstart offers you a broken link monitor for your website links. This monitor is one of the seven types of New Relic synthetic monitors. Others include certificate check monitor, ping monitor, step monitor, simple browser monitors, scripted browser monitors, and API tests.\n\n### Why should you monitor your site links with New Relic?\n\nMonitoring website links with New Relic synthetic link crawler quickstart is crucial to quickly detect broken links and resolve outages. The [synthetic monitor](https://docs.newrelic.com/docs/synthetics/synthetic-monitoring/getting-started/types-synthetic-monitors/) provides detailed statistics for each web page resource and downtime incidents. You can also collect [custom response codes](https://docs.newrelic.com/docs/synthetics/new-relic-synthetics/using-monitors/synthetics-response-codes) for more details on your monitor runs.\n\nNew Relic synthetic broken link monitor quickstart also leverages the [host-not-reporting](https://docs.newrelic.com/docs/infrastructure/new-relic-infrastructure/configuration/create-infrastructure-host-not-reporting-condition) feature in infrastructure monitoring. This gives you the advantage of enhanced monitoring options, and you can get notified when New Relic stops receiving data from your hosts.\n\nDownload and install the New Relic synthetic broken link monitor quickstart today to start monitoring your websites for broken links.",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/synthetics/page-link-crawler",
-    "id": "4ff03759-36c0-4052-bb8b-588a93eb1fae",
-    "level": "NEW_RELIC",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/synthetics/page-link-crawler/logo.svg",
-    "summary": "Monitoring website links is crucial to ensure that you detect broken links and resolve outages swiftly. Download the New Relic Synthetic Link Crawler quickstart to start monitoring your websites for broken links.",
-    "websiteUrl": null,
-    "keywords": [
-      "http",
-      "uptime",
-      "web",
-      "url",
-      "www",
-      "synthetics"
-    ],
-    "authors": [
-      "New Relic",
-      "Emil Hammarstrand"
-    ],
-    "dashboards": [
-      {
-        "name": "Page Link Crawler",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/synthetics/page-link-crawler/dashboards/page-link-crawler/page-link-crawler.png"
-        ]
-      }
-    ],
-    "alerts": [
-      {
-        "name": "Low Success Rate",
-        "details": "This alert is triggered when the link crawler fails more than 10% of the times.",
-        "type": "STATIC",
-        "url": null
-      }
-    ],
-    "documentation": [
-      {
-        "name": "Getting started",
-        "description": "Get started with synthetic monitoring",
-        "url": "https://docs.newrelic.com/docs/synthetics/synthetic-monitoring/getting-started/get-started-synthetic-monitoring/"
-      }
-    ],
-    "installPlans": []
-  },
-  {
     "title": "VMWare Tanzu",
     "name": "vmware-tanzu",
     "description": "Kubernetes management built and maintained by VMWare.",
@@ -7205,6 +7245,43 @@
     ]
   },
   {
+    "title": "Synthetics Page Load performance",
+    "name": "synthetics-page-load-performance",
+    "description": "# What is Synthetics monitoring?\nSynthetic monitoring is a suite of automated, scriptable tools to monitor your websites, critical business transactions, and API endpoints. You can simulate user traffic to proactively detect and resolve outages and poor performance of critical endpoints before your customers notice.\n\n# What is a Synthetics Page Link Crawler\nSynthetics Page Load performance monitors essentially are simple, pre-built scripted browser monitors. They make a request to your site using an instance of Google Chrome and wait for a full page load.\n\nCompared to a simple ping monitor, this is a more accurate emulation of an actual customer visit. The user agent is identified as Google Chrome.\n\nThe check will return you detailed resource breakdowns and timelines to debug performance and latency issues.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/synthetics/page-load-performance",
+    "id": "07237bca-7867-405c-9bf0-9bafd17dd095",
+    "level": "NEW_RELIC",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/synthetics/page-load-performance/logo.svg",
+    "summary": "Full page load of a given URL which provides deep data insights like resource breakdowns and timelines.",
+    "websiteUrl": null,
+    "keywords": [
+      "http",
+      "uptime",
+      "web",
+      "url",
+      "www",
+      "synthetics"
+    ],
+    "authors": [
+      "New Relic"
+    ],
+    "dashboards": [],
+    "alerts": [],
+    "documentation": [
+      {
+        "name": "Getting started",
+        "description": "Get started with synthetic monitoring",
+        "url": "https://docs.newrelic.com/docs/synthetics/synthetic-monitoring/getting-started/get-started-synthetic-monitoring/"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "Synthetics Page Load performance",
+        "id": "third-party-synthetics-page-load-performance"
+      }
+    ]
+  },
+  {
     "title": "MongoDB",
     "name": "mongodb",
     "description": "## MongoDB Monitoring\n\nMongoDB enables the unlimited virtual scaling of applications. Utilities like mongostat and mongotop offer immediate results but fail to provide insights into trends in a highly graphical visual dashboard. MongoDB dashboards provide insights into key metrics like RAM usage, operations per second, page fault, disk size, lock %, and app and database performance at a glance. \n\nAvoid slow queries with  proper indexes that impact performance. Instantly monitor your entire MongoDB database with our instant observability kit or the MongoDB free monitoring tool.  \n\nThe critical differences between MongoDB free monitoring and monitoring MongoDB with New Relic’s instant observability quickstart are efficiency, usability, scope, and cost. MongoDB free monitoring focuses on standalone instances and replica sets. Data collected on disk utilization, memory, and operation execution times are uploaded periodically. \n\n\n### What’s Included?\n\nNew Relic + MongoDB quickstart - New Relic’s instant observability quickstart provides multiple monitoring parameters like operations per second, transactions, and queries by default (with Nagios, you must configure each parameter).\n\nNew Relic’s MongoDB quickstart contains multiple dashboards, including:\n- Total Commands, failed commands per second, bytes in & out per second, available connections, and more. \n\nMonitor MongoDB with New Relic to quickly gain improved distribution and increased visibility into real-time user and app response times, throughput and breakdown by component and layer, and long-term data trends over time.  \n\n### Value of MongoDB Quickstarts\n\n[MongoDB performance monitoring with New Relic](https://docs.newrelic.com/docs/integrations/host-integrations/host-integrations-list/mongodb-monitoring-integration/) offers advanced features, including:\n- Obtain app performance insights (without logging in to DB instances).\n- Create custom queries and charts of your data integrations.\n- Filter and analyze configuration data and metrics in Infrastructure UI.\n\nNew Relic’s instant observability quickstart helps developers reduce administrative overheads and accelerate time to value. As New Relic is SaaS-based, you also don’t have to worry about maintenance or onboarding.",
@@ -8348,38 +8425,6 @@
         "id": "setup-go-agent"
       }
     ]
-  },
-  {
-    "title": "Synthetics Page Load performance",
-    "name": "synthetics-page-load-performance",
-    "description": "# What is Synthetics monitoring?\nSynthetic monitoring is a suite of automated, scriptable tools to monitor your websites, critical business transactions, and API endpoints. You can simulate user traffic to proactively detect and resolve outages and poor performance of critical endpoints before your customers notice.\n\n# What is a Synthetics Page Link Crawler\nSynthetics Page Load performance monitors essentially are simple, pre-built scripted browser monitors. They make a request to your site using an instance of Google Chrome and wait for a full page load.\n\nCompared to a simple ping monitor, this is a more accurate emulation of an actual customer visit. The user agent is identified as Google Chrome.\n\nThe check will return you detailed resource breakdowns and timelines to debug performance and latency issues.",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/synthetics/page-load-performance",
-    "id": "07237bca-7867-405c-9bf0-9bafd17dd095",
-    "level": "NEW_RELIC",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/synthetics/page-load-performance/logo.svg",
-    "summary": "Full page load of a given URL which provides deep data insights like resource breakdowns and timelines.",
-    "websiteUrl": null,
-    "keywords": [
-      "http",
-      "uptime",
-      "web",
-      "url",
-      "www",
-      "synthetics"
-    ],
-    "authors": [
-      "New Relic"
-    ],
-    "dashboards": [],
-    "alerts": [],
-    "documentation": [
-      {
-        "name": "Getting started",
-        "description": "Get started with synthetic monitoring",
-        "url": "https://docs.newrelic.com/docs/synthetics/synthetic-monitoring/getting-started/get-started-synthetic-monitoring/"
-      }
-    ],
-    "installPlans": []
   },
   {
     "title": "Bitbucket",
@@ -11087,62 +11132,6 @@
     "installPlans": []
   },
   {
-    "title": "JDBC-ExecuteBatch Java Agent Extension",
-    "name": "jdbc-executebatch",
-    "description": "# What is executeBatch call?\n\nExecuteBatch method in jdbc submits a batch of commands to the database for execution. You\nIf all commands execute successfully, the call returns an array of update counts. \n\n\nOnce the instrumentation is deployed  it  will start to track the call to the executeBatch method as a database call in distributed traces. \n\nThe Performance tab for the call  will show the query as \"Batch Execute n Queries\" where n is the number of queries executed as part of the batch.\n  - For calls to addBatch(String sql), it will represent the number of calls to this method before the executeBatch method is executed. \n  - For PreparedStatment and CallableStatment it will represent the number of times that addBatch() is called.",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/java/jdbc-executebatch",
-    "id": "dfb63d31-fcb1-431f-9b40-744c0b3f89ff",
-    "level": "COMMUNITY",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/java/jdbc-executebatch/logo.svg",
-    "summary": "Java agent extension to monitor the executeBatch method of the Statement, PreparedStatement and CallableStatement interfaces as a database call.",
-    "websiteUrl": null,
-    "keywords": [
-      "nrlabs",
-      "nrlabs-data",
-      "apm",
-      "java",
-      "jdbc",
-      "executebatch"
-    ],
-    "authors": [
-      "New Relic Labs"
-    ],
-    "dashboards": [
-      {
-        "name": "JDBC-ExecuteBatch Java Agent Extension",
-        "description": "Java",
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/java/jdbc-executebatch/dashboards/java/java01.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/java/jdbc-executebatch/dashboards/java/java02.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/java/jdbc-executebatch/dashboards/java/java.png"
-        ]
-      }
-    ],
-    "alerts": [
-      {
-        "name": "High CPU Utilization",
-        "details": "This alert is triggered when the CPU Utilization is above 90%.",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "Transaction Errors",
-        "details": "This alert is triggered when the the transactions fail more than 10% of the time in 5 minutes.",
-        "type": "STATIC",
-        "url": null
-      }
-    ],
-    "documentation": [
-      {
-        "name": "Java agent extension for JDBC ExecuteBatch method",
-        "description": "Java Agent instrumentation extension for tracking executeBatch method of the Statement, PreparedStatement and CallableStatement interfaces as a database call.\n",
-        "url": "https://github.com/newrelic-experimental/newrelic-java-JDBC-ExecuteBatch"
-      }
-    ],
-    "installPlans": []
-  },
-  {
     "title": "Deeper Network",
     "name": "deeper-network",
     "description": "## Deeper Connect Monitoring Quickstart\n\nGet deep visibility into the health, performance, connections, logs and balance of your Deeper Connect device.\n\nAlert and identify potential issues, or simply use for remote monitoring.",
@@ -11955,6 +11944,112 @@
     ]
   },
   {
+    "title": "JDBC-ExecuteBatch Java Agent Extension",
+    "name": "jdbc-executebatch",
+    "description": "# What is executeBatch call?\n\nExecuteBatch method in jdbc submits a batch of commands to the database for execution. You\nIf all commands execute successfully, the call returns an array of update counts. \n\n\nOnce the instrumentation is deployed  it  will start to track the call to the executeBatch method as a database call in distributed traces. \n\nThe Performance tab for the call  will show the query as \"Batch Execute n Queries\" where n is the number of queries executed as part of the batch.\n  - For calls to addBatch(String sql), it will represent the number of calls to this method before the executeBatch method is executed. \n  - For PreparedStatment and CallableStatment it will represent the number of times that addBatch() is called.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/java/jdbc-executebatch",
+    "id": "dfb63d31-fcb1-431f-9b40-744c0b3f89ff",
+    "level": "COMMUNITY",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/java/jdbc-executebatch/logo.svg",
+    "summary": "Java agent extension to monitor the executeBatch method of the Statement, PreparedStatement and CallableStatement interfaces as a database call.",
+    "websiteUrl": null,
+    "keywords": [
+      "nrlabs",
+      "nrlabs-data",
+      "apm",
+      "java",
+      "jdbc",
+      "executebatch"
+    ],
+    "authors": [
+      "New Relic Labs"
+    ],
+    "dashboards": [
+      {
+        "name": "JDBC-ExecuteBatch Java Agent Extension",
+        "description": "Java",
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/java/jdbc-executebatch/dashboards/java/java01.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/java/jdbc-executebatch/dashboards/java/java02.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/java/jdbc-executebatch/dashboards/java/java.png"
+        ]
+      }
+    ],
+    "alerts": [
+      {
+        "name": "High CPU Utilization",
+        "details": "This alert is triggered when the CPU Utilization is above 90%.",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "Transaction Errors",
+        "details": "This alert is triggered when the the transactions fail more than 10% of the time in 5 minutes.",
+        "type": "STATIC",
+        "url": null
+      }
+    ],
+    "documentation": [
+      {
+        "name": "Java agent extension for JDBC ExecuteBatch method",
+        "description": "Java Agent instrumentation extension for tracking executeBatch method of the Statement, PreparedStatement and CallableStatement interfaces as a database call.\n",
+        "url": "https://github.com/newrelic-experimental/newrelic-java-JDBC-ExecuteBatch"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "JDBC-ExecuteBatch Java Agent Extension",
+        "id": "third-party-jdbc-executebatch"
+      }
+    ]
+  },
+  {
+    "title": "Terraform",
+    "name": "terraform",
+    "description": "# What is Terraform?\nTerraform is an open-source infrastructure as code software tool that provides a consistent CLI workflow to manage hundreds of cloud services. Terraform codifies cloud APIs into declarative configuration files.\n\n# What does New Relic provide\nNew Relic has developed a Terraform provider to configure alerts, synthetics, dashboards, and other parts of New Relic through declarative configuration files.\n\n# How to get started?\nFollow the instructions on Terraform provider documentation: [Getting Started with the New Relic Provider](https://registry.terraform.io/providers/newrelic/newrelic/latest/docs/guides/getting_started)",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/observability-as-code/terraform",
+    "id": "ba9ce393-d85f-4e40-81a7-d52b2c6ad213",
+    "level": "NEW_RELIC",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/observability-as-code/terraform/logo.svg",
+    "summary": "Terraform is a popular, infrastructure-as-code software tool built by HashiCorp.\nYou use it to provision all kinds of infrastructure and services, including New Relic entities, dashboard, alerts and synthetics.",
+    "websiteUrl": null,
+    "keywords": [
+      "automation",
+      "devops",
+      "sre",
+      "gitops"
+    ],
+    "authors": [
+      "New Relic"
+    ],
+    "dashboards": [],
+    "alerts": [],
+    "documentation": [
+      {
+        "name": "Getting started with New Relic and Terraform",
+        "description": "In this guide, you learn how to set up New Relic alerts with Terraform.\n",
+        "url": "https://developer.newrelic.com/terraform/get-started-terraform/"
+      },
+      {
+        "name": "Github repository",
+        "description": "Github repository for the New Relic Provider.",
+        "url": "https://github.com/newrelic/terraform-provider-newrelic"
+      },
+      {
+        "name": "New Relic Provider",
+        "description": "Terraform documentation for the New Relic Provider",
+        "url": "https://registry.terraform.io/providers/newrelic/newrelic/latest/docs"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "Terraform",
+        "id": "third-party-terraform"
+      }
+    ]
+  },
+  {
     "title": "Algorithmia",
     "name": "mlops-algorithmia",
     "description": "## What is Algorithmia?\n\nAlgorithmia is an enterprise platform for automating the deployment of machine-learning models into production. \n\n### New Relic + Algorithmia\n\nThe New Relic Algorithmia quickstart helps you track the performance of machine learning models in production. The quickstart enables full-stack observability of your machine learning models so that you can achieve maximum performance and uptime, as well as build more intelligent apps by unlocking end-to-end. The quickstart’s dashboards provide a high-level overview of Algorithmia metrics, like runtime duration by algorithm and throughput by algorithm.\n\n### Why monitor Algorithmia with New Relic?\n\nMonitoring your ML models after production is critical to understanding the effectiveness of your algorithm. The New Relic Algorithmia monitoring quickstart empowers you to track and detect model drift, model bias, and data drift. The Algorithmia [integration](https://newrelic.com/blog/how-to-relic/monitor-model-performance-algorithmia) helps you to instrument, analyze, troubleshoot, and optimize ML model performance across your entire system. \nIn addition, the quickstart enables you to send model performance metrics from Algorithmia Insights to New Relic where you can monitor your algorithms in real-time. You can also explore metrics data and view the state of your algorithm through a user-friendly dashboard.\nInstall the New Relic Algorithmia quickstart today to streamline models in New Relic’s observability platform and build sophisticated ML models. It’s the key to creating a seamless collaboration between your data science and DevOps teams.",
@@ -12155,46 +12250,6 @@
         "id": "node-agent"
       }
     ]
-  },
-  {
-    "title": "Terraform",
-    "name": "terraform",
-    "description": "# What is Terraform?\nTerraform is an open-source infrastructure as code software tool that provides a consistent CLI workflow to manage hundreds of cloud services. Terraform codifies cloud APIs into declarative configuration files.\n\n# What does New Relic provide\nNew Relic has developed a Terraform provider to configure alerts, synthetics, dashboards, and other parts of New Relic through declarative configuration files.\n\n# How to get started?\nFollow the instructions on Terraform provider documentation: [Getting Started with the New Relic Provider](https://registry.terraform.io/providers/newrelic/newrelic/latest/docs/guides/getting_started)",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/observability-as-code/terraform",
-    "id": "ba9ce393-d85f-4e40-81a7-d52b2c6ad213",
-    "level": "NEW_RELIC",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/observability-as-code/terraform/logo.svg",
-    "summary": "Terraform is a popular, infrastructure-as-code software tool built by HashiCorp.\nYou use it to provision all kinds of infrastructure and services, including New Relic entities, dashboard, alerts and synthetics.",
-    "websiteUrl": null,
-    "keywords": [
-      "automation",
-      "devops",
-      "sre",
-      "gitops"
-    ],
-    "authors": [
-      "New Relic"
-    ],
-    "dashboards": [],
-    "alerts": [],
-    "documentation": [
-      {
-        "name": "Getting started with New Relic and Terraform",
-        "description": "In this guide, you learn how to set up New Relic alerts with Terraform.\n",
-        "url": "https://developer.newrelic.com/terraform/get-started-terraform/"
-      },
-      {
-        "name": "Github repository",
-        "description": "Github repository for the New Relic Provider.",
-        "url": "https://github.com/newrelic/terraform-provider-newrelic"
-      },
-      {
-        "name": "New Relic Provider",
-        "description": "Terraform documentation for the New Relic Provider",
-        "url": "https://registry.terraform.io/providers/newrelic/newrelic/latest/docs"
-      }
-    ],
-    "installPlans": []
   },
   {
     "title": "Magento",
@@ -13689,37 +13744,6 @@
     ]
   },
   {
-    "title": "Grafana Dashboard Migration",
-    "name": "grafana-dashboard-migration",
-    "description": "Telemetry Data Platform allows customers to onboard Prometheus Metrics and support New Relic as a Prometheus data source for Grafana dashboards. To help our customers that want to get rid of their Grafana instance we've build a toolset to migrate Grafana Prometheus dashboards to New Relic dashboards.\n\nFollow the easy to execute instructions on our Github repository to start converting Grafana dashboards in minutes.\n\nOne important note is that this isn’t a perfect solution, but it should get you 95% of the way. New Relic and Grafana are very different solutions, and the tool relies heavily on our PromQL to NRQL conversion service which is not feature complete. For these reasons, not all dashboards may get imported perfectly and some clean up may be required.",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/grafana/grafana-dashboard-migration",
-    "id": "ded004b4-a259-492f-92f9-d1bbead3ccb9",
-    "level": "VERIFIED",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/grafana/grafana-dashboard-migration/logo.png",
-    "summary": "Convert Grafana Prometheus dashboards to New Relic dashboards.",
-    "websiteUrl": null,
-    "keywords": [
-      "grafana",
-      "prometheus",
-      "migration"
-    ],
-    "authors": [
-      "New Relic",
-      "Amine Benzaied",
-      "Samuel Vandamme"
-    ],
-    "dashboards": [],
-    "alerts": [],
-    "documentation": [
-      {
-        "name": "Convert Grafana Prometheus dashboards to New Relic dashboards.",
-        "description": "Toolset to help New Relic customers migrate from Grafana and Prometheus to New Relic.",
-        "url": "https://github.com/newrelic-experimental/nr-grafana-migration"
-      }
-    ],
-    "installPlans": []
-  },
-  {
     "title": "Build your own ML Integration",
     "name": "mlops-bring-your-own",
     "description": "With bring your own data (BYO), after just a few minutes, you can quickly send your model's inference and metric data to the New Relic platform, directly from a notebook or any other environment.# Displayed in search results and recommendations. Summarizes a quickstarts functionality.",
@@ -13980,6 +14004,42 @@
       {
         "name": "Java Agent",
         "id": "setup-java-agent"
+      }
+    ]
+  },
+  {
+    "title": "Grafana Dashboard Migration",
+    "name": "grafana-dashboard-migration",
+    "description": "Telemetry Data Platform allows customers to onboard Prometheus Metrics and support New Relic as a Prometheus data source for Grafana dashboards. To help our customers that want to get rid of their Grafana instance we've build a toolset to migrate Grafana Prometheus dashboards to New Relic dashboards.\n\nFollow the easy to execute instructions on our Github repository to start converting Grafana dashboards in minutes.\n\nOne important note is that this isn’t a perfect solution, but it should get you 95% of the way. New Relic and Grafana are very different solutions, and the tool relies heavily on our PromQL to NRQL conversion service which is not feature complete. For these reasons, not all dashboards may get imported perfectly and some clean up may be required.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/grafana/grafana-dashboard-migration",
+    "id": "ded004b4-a259-492f-92f9-d1bbead3ccb9",
+    "level": "VERIFIED",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/grafana/grafana-dashboard-migration/logo.png",
+    "summary": "Convert Grafana Prometheus dashboards to New Relic dashboards.",
+    "websiteUrl": null,
+    "keywords": [
+      "grafana",
+      "prometheus",
+      "migration"
+    ],
+    "authors": [
+      "New Relic",
+      "Amine Benzaied",
+      "Samuel Vandamme"
+    ],
+    "dashboards": [],
+    "alerts": [],
+    "documentation": [
+      {
+        "name": "Convert Grafana Prometheus dashboards to New Relic dashboards.",
+        "description": "Toolset to help New Relic customers migrate from Grafana and Prometheus to New Relic.",
+        "url": "https://github.com/newrelic-experimental/nr-grafana-migration"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "Grafana Dashboard Migration",
+        "id": "third-party-grafana-dashboard-migration"
       }
     ]
   },
@@ -15726,6 +15786,48 @@
     ]
   },
   {
+    "title": "Port monitoring",
+    "name": "port-monitoring",
+    "description": "## Why port monitoring?\n\nA port is a point where network connections start and end. It is a logical construct that identifies a specific process or service. The New Relic port monitoring quickstart empowers you to monitor the status of networking ports such as Transmission Control Protocol (TCP) and User Datagram Protocol (UDP).\n\n### Port quickstart highlights\n\nThe New Relic port monitoring quickstart has the following features:\nDashboards: Our dashboards effectively track metrics like total ports open, latest port connected, samples/port, open ports’ timeseries, and open ports by host.\nDetailed installation, configuration, and changelog details in [GitHub](https://github.com/newrelic/nri-port-monitor).\n\n### New Relic + port = Optimum performance monitoring\n\n[New Relic on-host integration](https://docs.newrelic.com/docs/infrastructure/host-integrations/host-integrations-list/port-monitoring-integration/) for port monitoring tracks the up and down status of a network port like TCP, UDP, etc. It then reports the data for you to identify issues and solve them quickly. The dashboards provide interactive visualizations to explore your data and understand context. In particular, the dashboard offers you the ability to drill down into performance details  like the total number of open ports or identify the latest port connected.\nThe port instant observability quickstart provides the necessary insights to make your port troubleshooting easier and more efficient. To use our port monitoring integration, you need to install the [New Relic infrastructure agent](https://docs.newrelic.com/docs/infrastructure/install-infrastructure-agent/linux-installation/install-infrastructure-monitoring-agent-linux/). You’ll also need to configure the port-monitor-config.yml.sample file.\nDownload the New Relic port quickstart today to monitor your port’s key performance indicators and address issues efficiently. It’s the fastest path to a seamless network port or switch port monitoring.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/port-monitoring",
+    "id": "650d963a-8568-49a8-81d4-fc226f12ec10",
+    "level": "NEW_RELIC",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/port-monitoring/logo.svg",
+    "summary": "Efficient port monitoring is essential to understand context for status changes and respond quickly. Download the New Relic port monitoring quickstart to track your network port’s critical metrics and improve performance.",
+    "websiteUrl": null,
+    "keywords": [
+      "infrastructure",
+      "networking"
+    ],
+    "authors": [
+      "New Relic"
+    ],
+    "dashboards": [
+      {
+        "name": "Port monitoring",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/port-monitoring/dashboards/port-monitoring/port-monitoring.png"
+        ]
+      }
+    ],
+    "alerts": [],
+    "documentation": [
+      {
+        "name": "Port monitoring installation docs",
+        "description": "Monitor the status for networking ports, such as TCP, UDP, etc.",
+        "url": "https://docs.newrelic.com/docs/port-monitoring-open-source-integration"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "Port monitoring",
+        "id": "third-party-port-monitoring"
+      }
+    ]
+  },
+  {
     "title": "Istio Service",
     "name": "istio-service",
     "description": "This dashboard will give you insight into services and applications running\nin Kubernetes clusters with an Istio Service Mesh enabled. Includes client/server focused service metrics,\nand an additional page for displaying Ingress Gateway metrics.\n\nThe only requirement for installing this along with the New Relic Kubernetes agent is the\nPrometheus OpenMetrics Integration. [POMI](https://docs.newrelic.com/docs/infrastructure/prometheus-integrations/get-started/send-prometheus-metric-data-new-relic)\n\n[Istio Standard Metrics](https://istio.io/latest/docs/reference/config/metrics/)",
@@ -16124,6 +16226,39 @@
     ]
   },
   {
+    "title": "PerfMon",
+    "name": "perfmon",
+    "description": "Windows Performance Monitor is a toolkit that enables system performance data\nand analytics.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/perfmon",
+    "id": "db769025-d3a7-437b-896d-64f5a7a26cac",
+    "level": "NEW_RELIC",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/perfmon/logo.svg",
+    "summary": "Windows Performance Monitor is a toolkit that enables system performance data\nand analytics.",
+    "websiteUrl": null,
+    "keywords": [
+      "infrastructure",
+      "windows"
+    ],
+    "authors": [
+      "New Relic"
+    ],
+    "dashboards": [],
+    "alerts": [],
+    "documentation": [
+      {
+        "name": "PerfMon installation docs",
+        "description": "Windows Performance Monitor is a toolkit that enables system performance\ndata and analytics.\n",
+        "url": "https://docs.newrelic.com/docs/perfmon-open-source-integration"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "PerfMon",
+        "id": "third-party-perfmon"
+      }
+    ]
+  },
+  {
     "title": "Comet",
     "name": "mlops-comet",
     "description": "[Comet](https://www.comet.ml/site/) is a machine learning (ML) development platform built to meet the intense demands of enterprise teams deploying ML at scale. Comet’s integration with New Relic allows you to manage and optimize your ML models in production from your New Relic One dashboard. With Comet and New Relic, you can accelerate ML development and realize business value faster.",
@@ -16232,34 +16367,6 @@
     "dashboards": [],
     "alerts": [],
     "documentation": [],
-    "installPlans": []
-  },
-  {
-    "title": "PerfMon",
-    "name": "perfmon",
-    "description": "Windows Performance Monitor is a toolkit that enables system performance data\nand analytics.",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/perfmon",
-    "id": "db769025-d3a7-437b-896d-64f5a7a26cac",
-    "level": "NEW_RELIC",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/perfmon/logo.svg",
-    "summary": "Windows Performance Monitor is a toolkit that enables system performance data\nand analytics.",
-    "websiteUrl": null,
-    "keywords": [
-      "infrastructure",
-      "windows"
-    ],
-    "authors": [
-      "New Relic"
-    ],
-    "dashboards": [],
-    "alerts": [],
-    "documentation": [
-      {
-        "name": "PerfMon installation docs",
-        "description": "Windows Performance Monitor is a toolkit that enables system performance\ndata and analytics.\n",
-        "url": "https://docs.newrelic.com/docs/perfmon-open-source-integration"
-      }
-    ],
     "installPlans": []
   },
   {
@@ -16990,43 +17097,6 @@
         "id": "aws-infrastructure-monitoring"
       }
     ]
-  },
-  {
-    "title": "Port monitoring",
-    "name": "port-monitoring",
-    "description": "## Why port monitoring?\n\nA port is a point where network connections start and end. It is a logical construct that identifies a specific process or service. The New Relic port monitoring quickstart empowers you to monitor the status of networking ports such as Transmission Control Protocol (TCP) and User Datagram Protocol (UDP).\n\n### Port quickstart highlights\n\nThe New Relic port monitoring quickstart has the following features:\nDashboards: Our dashboards effectively track metrics like total ports open, latest port connected, samples/port, open ports’ timeseries, and open ports by host.\nDetailed installation, configuration, and changelog details in [GitHub](https://github.com/newrelic/nri-port-monitor).\n\n### New Relic + port = Optimum performance monitoring\n\n[New Relic on-host integration](https://docs.newrelic.com/docs/infrastructure/host-integrations/host-integrations-list/port-monitoring-integration/) for port monitoring tracks the up and down status of a network port like TCP, UDP, etc. It then reports the data for you to identify issues and solve them quickly. The dashboards provide interactive visualizations to explore your data and understand context. In particular, the dashboard offers you the ability to drill down into performance details  like the total number of open ports or identify the latest port connected.\nThe port instant observability quickstart provides the necessary insights to make your port troubleshooting easier and more efficient. To use our port monitoring integration, you need to install the [New Relic infrastructure agent](https://docs.newrelic.com/docs/infrastructure/install-infrastructure-agent/linux-installation/install-infrastructure-monitoring-agent-linux/). You’ll also need to configure the port-monitor-config.yml.sample file.\nDownload the New Relic port quickstart today to monitor your port’s key performance indicators and address issues efficiently. It’s the fastest path to a seamless network port or switch port monitoring.",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/port-monitoring",
-    "id": "650d963a-8568-49a8-81d4-fc226f12ec10",
-    "level": "NEW_RELIC",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/port-monitoring/logo.svg",
-    "summary": "Efficient port monitoring is essential to understand context for status changes and respond quickly. Download the New Relic port monitoring quickstart to track your network port’s critical metrics and improve performance.",
-    "websiteUrl": null,
-    "keywords": [
-      "infrastructure",
-      "networking"
-    ],
-    "authors": [
-      "New Relic"
-    ],
-    "dashboards": [
-      {
-        "name": "Port monitoring",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/port-monitoring/dashboards/port-monitoring/port-monitoring.png"
-        ]
-      }
-    ],
-    "alerts": [],
-    "documentation": [
-      {
-        "name": "Port monitoring installation docs",
-        "description": "Monitor the status for networking ports, such as TCP, UDP, etc.",
-        "url": "https://docs.newrelic.com/docs/port-monitoring-open-source-integration"
-      }
-    ],
-    "installPlans": []
   },
   {
     "title": "AWS Cloudwatch plugin for Logs",
@@ -18206,6 +18276,45 @@
     ]
   },
   {
+    "title": "Synthetics Availability (Ping)",
+    "name": "synthetics-availability",
+    "description": "# What is Synthetics monitoring?\nSynthetic monitoring is a suite of automated, scriptable tools to monitor your websites, critical business transactions, and API endpoints. You can simulate user traffic to proactively detect and resolve outages and poor performance of critical endpoints before your customers notice.\n\n# What is a Synthetics Availability (Ping) check\nAvailabilty or Ping monitors are the simplest type of Synthetics monitor. They simply check to see if an application is online. The synthetic ping monitor uses a simple Java HTTP client to make requests to your site.\n\nFor consistency with other synthetic monitor types, the user agent is identified as Google Chrome. However, the HTTP client is not a full browser, and it does not execute JavaScript. If you need JavaScript functionality, use a simple browser monitor.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/synthetics/availability",
+    "id": "260027d0-9d8f-4a35-a676-73b5ee6c0d2d",
+    "level": "NEW_RELIC",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/synthetics/availability/logo.svg",
+    "summary": "Availabilty or Ping monitors are the simplest type of monitor. They simply check to see if an application is online.",
+    "websiteUrl": null,
+    "keywords": [
+      "http",
+      "ping",
+      "uptime",
+      "web",
+      "api",
+      "url",
+      "www",
+      "synthetics"
+    ],
+    "authors": [
+      "New Relic"
+    ],
+    "dashboards": [],
+    "alerts": [],
+    "documentation": [
+      {
+        "name": "Getting started",
+        "description": "Get started with Synthetic monitoring",
+        "url": "https://docs.newrelic.com/docs/synthetics/synthetic-monitoring/getting-started/get-started-synthetic-monitoring/"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "Synthetics Availability (Ping)",
+        "id": "third-party-synthetics-availability"
+      }
+    ]
+  },
+  {
     "title": "Guzzle",
     "name": "guzzle",
     "description": "## What is Guzzle?\n\nPHP-based HTTP client built for ease of use and integration with popular web\nservices.\n\n\n## Get started!\n\nLeverage community expertise and instantly get value out of your telemetry data. This quickstart automatically instruments Guzzle with the New Relic PHP agent, and allows you to further leverage New Relic's APM capabilities by setting up [custom dashboards](https://docs.newrelic.com/docs/query-your-data/explore-query-data/dashboards/introduction-dashboards/), [errors inbox](https://docs.newrelic.com/docs/apm/apm-ui-pages/errors-inbox/errors-inbox/), [transaction tracing](https://docs.newrelic.com/docs/apm/transactions/transaction-traces/introduction-transaction-traces/), and [service maps](https://docs.newrelic.com/docs/understand-dependencies/understand-system-dependencies/service-maps/introduction-service-maps/).\n\n## More info\n\nCheck out the [documentation](https://docs.newrelic.com/docs/agents/php-agent/) to learn more about New Relic monitoring for Guzzle.",
@@ -19125,40 +19234,6 @@
         "id": "guided-install"
       }
     ]
-  },
-  {
-    "title": "Synthetics Availability (Ping)",
-    "name": "synthetics-availability",
-    "description": "# What is Synthetics monitoring?\nSynthetic monitoring is a suite of automated, scriptable tools to monitor your websites, critical business transactions, and API endpoints. You can simulate user traffic to proactively detect and resolve outages and poor performance of critical endpoints before your customers notice.\n\n# What is a Synthetics Availability (Ping) check\nAvailabilty or Ping monitors are the simplest type of Synthetics monitor. They simply check to see if an application is online. The synthetic ping monitor uses a simple Java HTTP client to make requests to your site.\n\nFor consistency with other synthetic monitor types, the user agent is identified as Google Chrome. However, the HTTP client is not a full browser, and it does not execute JavaScript. If you need JavaScript functionality, use a simple browser monitor.",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/synthetics/availability",
-    "id": "260027d0-9d8f-4a35-a676-73b5ee6c0d2d",
-    "level": "NEW_RELIC",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/synthetics/availability/logo.svg",
-    "summary": "Availabilty or Ping monitors are the simplest type of monitor. They simply check to see if an application is online.",
-    "websiteUrl": null,
-    "keywords": [
-      "http",
-      "ping",
-      "uptime",
-      "web",
-      "api",
-      "url",
-      "www",
-      "synthetics"
-    ],
-    "authors": [
-      "New Relic"
-    ],
-    "dashboards": [],
-    "alerts": [],
-    "documentation": [
-      {
-        "name": "Getting started",
-        "description": "Get started with Synthetic monitoring",
-        "url": "https://docs.newrelic.com/docs/synthetics/synthetic-monitoring/getting-started/get-started-synthetic-monitoring/"
-      }
-    ],
-    "installPlans": []
   },
   {
     "title": "AWS Cognito",
