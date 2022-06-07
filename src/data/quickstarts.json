@@ -6007,33 +6007,6 @@
     ]
   },
   {
-    "title": "New Relic CLI",
-    "name": "newrelic-cli",
-    "description": "Access the New Relic platform from the comfort of your terminal. You can use the New Relic CLI to manage entity tags, define workloads, record deployment markers, and much more. In short, you can use the CLI to automate common tasks in your DevOps workflow.",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/observability-as-code/cli",
-    "id": "80b839a3-2000-4bf5-86dd-4a888146043a",
-    "level": "NEW_RELIC",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/observability-as-code/cli/logo.svg",
-    "summary": "The New Relic CLI enables the integration of New Relic into your existing workflows.\nBe it fetching data from your laptop while troubleshooting an issue, or adding New Relic into your CI/CD pipeline.",
-    "websiteUrl": null,
-    "keywords": [
-      "automation"
-    ],
-    "authors": [
-      "New Relic"
-    ],
-    "dashboards": [],
-    "alerts": [],
-    "documentation": [
-      {
-        "name": "Get started with the New Relic CLI",
-        "description": "This guide walks you through the essentials of New Relic CLI, from install and configuration to basic usage.\n",
-        "url": "https://developer.newrelic.com/automate-workflows/get-started-new-relic-cli/"
-      }
-    ],
-    "installPlans": []
-  },
-  {
     "title": "Synthetics Page Link Crawler",
     "name": "synthetics-page-link-crawler",
     "description": "## What is a link crawler?\n\nLink crawler helps you to automatically test your webpage links to detect broken links. When a website URL is provided, synthetic Link Crawler will visit the URL, test all the links on the website, and return any broken links.\n\n### New Relic synthetic link crawler\n\nBroken links in a website can lead to many problems, including missing web pages,  site performance issues, and a reduction in site conversion rates. The New Relic synthetic link crawler quickstart offers you a broken link monitor for your website links. This monitor is one of the seven types of New Relic synthetic monitors. Others include certificate check monitor, ping monitor, step monitor, simple browser monitors, scripted browser monitors, and API tests.\n\n### Why should you monitor your site links with New Relic?\n\nMonitoring website links with New Relic synthetic link crawler quickstart is crucial to quickly detect broken links and resolve outages. The [synthetic monitor](https://docs.newrelic.com/docs/synthetics/synthetic-monitoring/getting-started/types-synthetic-monitors/) provides detailed statistics for each web page resource and downtime incidents. You can also collect [custom response codes](https://docs.newrelic.com/docs/synthetics/new-relic-synthetics/using-monitors/synthetics-response-codes) for more details on your monitor runs.\n\nNew Relic synthetic broken link monitor quickstart also leverages the [host-not-reporting](https://docs.newrelic.com/docs/infrastructure/new-relic-infrastructure/configuration/create-infrastructure-host-not-reporting-condition) feature in infrastructure monitoring. This gives you the advantage of enhanced monitoring options, and you can get notified when New Relic stops receiving data from your hosts.\n\nDownload and install the New Relic synthetic broken link monitor quickstart today to start monitoring your websites for broken links.",
@@ -6151,6 +6124,38 @@
       {
         "name": "OpenCensus",
         "id": "third-party-opencensus"
+      }
+    ]
+  },
+  {
+    "title": "New Relic CLI",
+    "name": "newrelic-cli",
+    "description": "Access the New Relic platform from the comfort of your terminal. You can use the New Relic CLI to manage entity tags, define workloads, record deployment markers, and much more. In short, you can use the CLI to automate common tasks in your DevOps workflow.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/observability-as-code/cli",
+    "id": "80b839a3-2000-4bf5-86dd-4a888146043a",
+    "level": "NEW_RELIC",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/observability-as-code/cli/logo.svg",
+    "summary": "The New Relic CLI enables the integration of New Relic into your existing workflows.\nBe it fetching data from your laptop while troubleshooting an issue, or adding New Relic into your CI/CD pipeline.",
+    "websiteUrl": null,
+    "keywords": [
+      "automation"
+    ],
+    "authors": [
+      "New Relic"
+    ],
+    "dashboards": [],
+    "alerts": [],
+    "documentation": [
+      {
+        "name": "Get started with the New Relic CLI",
+        "description": "This guide walks you through the essentials of New Relic CLI, from install and configuration to basic usage.\n",
+        "url": "https://developer.newrelic.com/automate-workflows/get-started-new-relic-cli/"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "New Relic CLI",
+        "id": "third-party-newrelic-cli"
       }
     ]
   },
@@ -9704,46 +9709,6 @@
     ]
   },
   {
-    "title": "Pulumi",
-    "name": "pulumi",
-    "description": "# What is Pulumi?\nPulumi is a popular infrastructure-as-code software tool. Pulumi enables teams to use a unified software engineering process to deliver infrastructure and applications together and faster. This increases agility, reduces risks, and speeds innovation. You use it to provision all kinds of infrastructure and services, including New Relic entities, dashboard, alerts and synthetics.\n\n# What does New Relic provide\nPulumi has developed a New Relic Package to configure alerts, synthetics, dashboards, and other parts of New Relic through declarative configuration files.\n\n# How to get started?\nFollow the instructions on Pulumi package documentation: [Getting Started with the New Relic Package](https://www.pulumi.com/registry/packages/newrelic/)",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/observability-as-code/pulumi",
-    "id": "cdcab89c-c83f-4216-9e1a-9c271ce7e0cf",
-    "level": "COMMUNITY",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/observability-as-code/pulumi/logo.svg",
-    "summary": "Pulumi is a popular infrastructure-as-code software tool.\nYou use it to provision all kinds of infrastructure and services, including New Relic entities, dashboard, alerts and synthetics.",
-    "websiteUrl": null,
-    "keywords": [
-      "automation",
-      "devops",
-      "sre",
-      "gitops"
-    ],
-    "authors": [
-      "Pulumi"
-    ],
-    "dashboards": [],
-    "alerts": [],
-    "documentation": [
-      {
-        "name": "Getting started with New Relic and Pulumi",
-        "description": "In this guide, you learn how to set up New Relic alerts with Pulumi.\n",
-        "url": "https://www.pulumi.com/registry/packages/newrelic/"
-      },
-      {
-        "name": "Github repository",
-        "description": "Github repository for the New Relic Package.",
-        "url": "https://github.com/pulumi/pulumi-newrelic"
-      },
-      {
-        "name": "New Relic Package",
-        "description": "Pulumi documentation for the New Relic Package",
-        "url": "https://www.pulumi.com/registry/packages/newrelic/api-docs/"
-      }
-    ],
-    "installPlans": []
-  },
-  {
     "title": "Webhook Notifications",
     "name": "webhook-notifications",
     "description": "Webhook is a method of augmenting or altering the behavior of a web page or web application with custom callbacks.\n\nIntegrate New Relic with Webhook to use the webhook notifier to send the notification messages to any endpoint you like.\n\n[Check out our documentation](https://docs.newrelic.com/docs/alerts-applied-intelligence/notifications/notification-integrations/#webhook) to set up a Webhook notification channel and provide fast and consistent ways for the right personnel to be notified about incidents",
@@ -10616,6 +10581,51 @@
       {
         "name": "Logstash plugin for Logs",
         "id": "third-party-logstash-plugin-for-logs"
+      }
+    ]
+  },
+  {
+    "title": "Pulumi",
+    "name": "pulumi",
+    "description": "# What is Pulumi?\nPulumi is a popular infrastructure-as-code software tool. Pulumi enables teams to use a unified software engineering process to deliver infrastructure and applications together and faster. This increases agility, reduces risks, and speeds innovation. You use it to provision all kinds of infrastructure and services, including New Relic entities, dashboard, alerts and synthetics.\n\n# What does New Relic provide\nPulumi has developed a New Relic Package to configure alerts, synthetics, dashboards, and other parts of New Relic through declarative configuration files.\n\n# How to get started?\nFollow the instructions on Pulumi package documentation: [Getting Started with the New Relic Package](https://www.pulumi.com/registry/packages/newrelic/)",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/observability-as-code/pulumi",
+    "id": "cdcab89c-c83f-4216-9e1a-9c271ce7e0cf",
+    "level": "COMMUNITY",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/observability-as-code/pulumi/logo.svg",
+    "summary": "Pulumi is a popular infrastructure-as-code software tool.\nYou use it to provision all kinds of infrastructure and services, including New Relic entities, dashboard, alerts and synthetics.",
+    "websiteUrl": null,
+    "keywords": [
+      "automation",
+      "devops",
+      "sre",
+      "gitops"
+    ],
+    "authors": [
+      "Pulumi"
+    ],
+    "dashboards": [],
+    "alerts": [],
+    "documentation": [
+      {
+        "name": "Getting started with New Relic and Pulumi",
+        "description": "In this guide, you learn how to set up New Relic alerts with Pulumi.\n",
+        "url": "https://www.pulumi.com/registry/packages/newrelic/"
+      },
+      {
+        "name": "Github repository",
+        "description": "Github repository for the New Relic Package.",
+        "url": "https://github.com/pulumi/pulumi-newrelic"
+      },
+      {
+        "name": "New Relic Package",
+        "description": "Pulumi documentation for the New Relic Package",
+        "url": "https://www.pulumi.com/registry/packages/newrelic/api-docs/"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "Pulumi",
+        "id": "third-party-pulumi"
       }
     ]
   },
@@ -13974,33 +13984,6 @@
     ]
   },
   {
-    "title": "LaunchDarkly",
-    "name": "launchdarkly",
-    "description": "LaunchDarkly provides simple, scalable feature flag &amp; toggle management\n(feature management) for the modern enterprise.",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/launchdarkly",
-    "id": "f81fac99-351c-4e50-9991-69cff5bf7798",
-    "level": "COMMUNITY",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/launchdarkly/logo.svg",
-    "summary": "LaunchDarkly provides simple, scalable feature flag &amp; toggle management\n(feature management) for the modern enterprise.",
-    "websiteUrl": null,
-    "keywords": [
-      "testing"
-    ],
-    "authors": [
-      "LaunchDarkly"
-    ],
-    "dashboards": [],
-    "alerts": [],
-    "documentation": [
-      {
-        "name": "LaunchDarkly installation docs",
-        "description": "LaunchDarkly provides simple, scalable feature flag &amp; toggle\nmanagement (feature management) for the modern enterprise.\n",
-        "url": "https://docs.launchdarkly.com/integrations/new-relic"
-      }
-    ],
-    "installPlans": []
-  },
-  {
     "title": "Nagios",
     "name": "nagios",
     "description": "Use the New Relic Nagios On Host Integration to run Nagios custom scripts and display the data in New Relic.",
@@ -15073,6 +15056,38 @@
       {
         "name": "Synthetics User Step Execution",
         "id": "third-party-synthetics-user-step-execution"
+      }
+    ]
+  },
+  {
+    "title": "LaunchDarkly",
+    "name": "launchdarkly",
+    "description": "LaunchDarkly provides simple, scalable feature flag &amp; toggle management\n(feature management) for the modern enterprise.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/launchdarkly",
+    "id": "f81fac99-351c-4e50-9991-69cff5bf7798",
+    "level": "COMMUNITY",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/launchdarkly/logo.svg",
+    "summary": "LaunchDarkly provides simple, scalable feature flag &amp; toggle management\n(feature management) for the modern enterprise.",
+    "websiteUrl": null,
+    "keywords": [
+      "testing"
+    ],
+    "authors": [
+      "LaunchDarkly"
+    ],
+    "dashboards": [],
+    "alerts": [],
+    "documentation": [
+      {
+        "name": "LaunchDarkly installation docs",
+        "description": "LaunchDarkly provides simple, scalable feature flag &amp; toggle\nmanagement (feature management) for the modern enterprise.\n",
+        "url": "https://docs.launchdarkly.com/integrations/new-relic"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "LaunchDarkly",
+        "id": "third-party-launchdarkly"
       }
     ]
   },
