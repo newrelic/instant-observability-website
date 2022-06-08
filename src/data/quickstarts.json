@@ -961,6 +961,57 @@
     ]
   },
   {
+    "title": "Synthetics Private Locations",
+    "name": "synthetics-private-locations",
+    "description": "## What are private locations?\n\nIn synthetic monitoring, a private location is a collection of private minions. A minion is a containerized application that receives and manages jobs set up through the Synthetics UI. For details see our [Private locations overview](https://docs.newrelic.com/docs/synthetics/synthetic-monitoring/private-locations/private-locations-overview-monitor-internal-sites-add-new-locations).\n\n### New Relic Synthetics Containerized Private Minion\n\nThe Containerized Private Minion (CPM) runs on your private network to monitor internal endpoints not accessible from the Internet. Each CPM is configured to process jobs for a specific private location identified by the private location key. For CPM installation instructions see [Install containerized private minions](https://docs.newrelic.com/docs/synthetics/synthetic-monitoring/private-locations/install-containerized-private-minions-cpms).\n\n### Why should you monitor your private locations and CPMs?\n\nMonitoring private locations is critical to knowing when the CPM might be struggling to process jobs. Some common issues include:\n\n- DNS/firewall/proxy blocking connections on your local network\n- overloaded CPM\n- mis-configured CPM\n- under-provisioned host\n- internal engine errors.\n\nIf the CPM fails to process jobs in a timely manner, it can lead to gaps in reported results, false positive alerts, or delayed results.\n\nDownload and install the New Relic Synthetics Private Locations quickstart today to be informed about the health of your private locations and CPMs.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/synthetics/private-locations",
+    "id": "c1703f99-a3c5-425d-817d-375a0f54959a",
+    "level": "NEW_RELIC",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/synthetics/private-locations/logo.png",
+    "summary": "Monitoring private locations is crucial to ensure that you detect issues with the CPM and resolve outages swiftly. Download the New Relic Synthetics Private Location quickstart to be informed about the health of your private locations and CPMs before they lead to false positive alerts.",
+    "websiteUrl": null,
+    "keywords": [
+      "cpm",
+      "private locations",
+      "private location queue",
+      "minion",
+      "minion dashboard",
+      "synthetics"
+    ],
+    "authors": [
+      "New Relic",
+      "Keegan Mullaney"
+    ],
+    "dashboards": [
+      {
+        "name": "Synthetics Private Minions",
+        "description": "Details on events from SyntheticsPrivateLocationStatus, SyntheticsPrivateMinion, SyntheticCheck, SyntheticRequest, NrAuditEvent, plus a page for Performance Analysis.",
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/synthetics/private-locations/dashboards/synthetics-private-minions/synthetics-private-minions01.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/synthetics/private-locations/dashboards/synthetics-private-minions/synthetics-private-minions02.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/synthetics/private-locations/dashboards/synthetics-private-minions/synthetics-private-minions03.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/synthetics/private-locations/dashboards/synthetics-private-minions/synthetics-private-minions04.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/synthetics/private-locations/dashboards/synthetics-private-minions/synthetics-private-minions05.png"
+        ]
+      }
+    ],
+    "alerts": [],
+    "documentation": [
+      {
+        "name": "Monitor Private Locations",
+        "description": "Be informed about the health of your private locations.",
+        "url": "https://docs.newrelic.com/docs/synthetics/synthetic-monitoring/private-locations/monitor-private-locations"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "Synthetics Private Locations",
+        "id": "synthetics-private-locations"
+      }
+    ]
+  },
+  {
     "title": "Network Routers and Switches",
     "name": "network-routers-and-switches",
     "description": "The Network Routers and Switches quickstart provides a dashboard that gives you a holistic view of the interface traffic across all of the routers and switches in your network.\nUse this quickstart together with New Relic's Network Performance Monitoring (NPM) feature to visualize anomalies and/or bottlenecks in your network.",
@@ -22487,6 +22538,40 @@
     ]
   },
   {
+    "title": "Blameless",
+    "name": "blameless",
+    "description": "Site reliability engineering (SRE) platform with AI-driven incident\nresolution, SLOs/Error budgets, and reliability insights.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/blameless",
+    "id": "16f63478-7238-4c52-8145-ec5a2f56162e",
+    "level": "COMMUNITY",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/blameless/logo.svg",
+    "summary": "Site reliability engineering (SRE) platform with AI-driven incident\nresolution, SLOs/Error budgets, and reliability insights.",
+    "websiteUrl": null,
+    "keywords": [
+      "SRE",
+      "site reliability",
+      "incident resolution"
+    ],
+    "authors": [
+      "Blameless"
+    ],
+    "dashboards": [],
+    "alerts": [],
+    "documentation": [
+      {
+        "name": "Blameless installation docs",
+        "description": "Site reliability engineering (SRE) platform with AI-driven incident\nresolution, SLOs/Error budgets, and reliability insights.\n",
+        "url": "https://docsend.com/view/29zr6uk9ktuz9ctv"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "Blameless",
+        "id": "third-party-blameless"
+      }
+    ]
+  },
+  {
     "title": "Azure Service Bus",
     "name": "azure-service-bus",
     "description": "## What is Azure Service Bus?\n\nFully managed message broker designed to bridge the gaps between applications\nand services.\n\n\n### Get started!\n\nStart monitoring Azure Service Bus by connecting Microsoft Azure to New Relic!\n\nCheck out our Azure Service Bus documentation to instrument your cloud service and manage the stability, scalability, and reliability of your systems with New Relic's infrastructure monitoring capabilities.\n\n### More info\n\nCheck out the [documentation](https://docs.newrelic.com/docs/infrastructure/microsoft-azure-integrations/azure-integrations-list/azure-service-bus-monitoring-integration/) to learn more about New Relic monitoring for Azure Service Bus.",
@@ -22518,35 +22603,6 @@
         "id": "azure-infrastructure-monitoring"
       }
     ]
-  },
-  {
-    "title": "Blameless",
-    "name": "blameless",
-    "description": "Site reliability engineering (SRE) platform with AI-driven incident\nresolution, SLOs/Error budgets, and reliability insights.",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/blameless",
-    "id": "16f63478-7238-4c52-8145-ec5a2f56162e",
-    "level": "COMMUNITY",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/blameless/logo.svg",
-    "summary": "Site reliability engineering (SRE) platform with AI-driven incident\nresolution, SLOs/Error budgets, and reliability insights.",
-    "websiteUrl": null,
-    "keywords": [
-      "SRE",
-      "site reliability",
-      "incident resolution"
-    ],
-    "authors": [
-      "Blameless"
-    ],
-    "dashboards": [],
-    "alerts": [],
-    "documentation": [
-      {
-        "name": "Blameless installation docs",
-        "description": "Site reliability engineering (SRE) platform with AI-driven incident\nresolution, SLOs/Error budgets, and reliability insights.\n",
-        "url": "https://docsend.com/view/29zr6uk9ktuz9ctv"
-      }
-    ],
-    "installPlans": []
   },
   {
     "title": "Slick",
