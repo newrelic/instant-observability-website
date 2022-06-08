@@ -2856,41 +2856,6 @@
     ]
   },
   {
-    "title": "Puppet",
-    "name": "puppet",
-    "description": "# What is Puppet?\nPuppet is the industry standard for IT automation. Modernize, manage and bring your hybrid infrastructure into compliance through Puppet's powerful continuous automation.\n\n# What does New Relic provide\nNew Relic has developed a Puppet module for the Puppet agent to deploy the [New Relic Infrastructure agent](https://docs.newrelic.com/docs/infrastructure/infrastructure-monitoring/get-started/get-started-infrastructure-monitoring/) and [On Host Integrations](https://docs.newrelic.com/docs/infrastructure/host-integrations/get-started/introduction-host-integrations) throughout your environment.\n\n# How to get started?\nFollow the instructions on New Relic documentation: [Configure the infrastructure agent using Puppet](https://docs.newrelic.com/docs/infrastructure/new-relic-infrastructure/config-management-tools/configure-new-relic-infrastructure-puppet)",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/observability-as-code/puppet",
-    "id": "b70291ad-ff88-4ff9-9173-d4b2f99656af",
-    "level": "NEW_RELIC",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/observability-as-code/puppet/logo.svg",
-    "summary": "New Relic Puppet module to deploy the New Relic Infrastructure agent and On Host Integrations throughout your environment.",
-    "websiteUrl": null,
-    "keywords": [
-      "automation",
-      "devops",
-      "sre",
-      "gitops"
-    ],
-    "authors": [
-      "New Relic"
-    ],
-    "dashboards": [],
-    "alerts": [],
-    "documentation": [
-      {
-        "name": "Puppet installation docs",
-        "description": "Puppet is a configuration management tool used to manage various stages of\nthe IT infrastructure lifecycle.\n",
-        "url": "https://docs.newrelic.com/docs/infrastructure/new-relic-infrastructure/config-management-tools/configure-new-relic-infrastructure-puppet"
-      },
-      {
-        "name": "Puppet Forge",
-        "description": "Puppet Forge page for the New Relic Puppet Module",
-        "url": "https://forge.puppet.com/modules/newrelic/newrelic_infra"
-      }
-    ],
-    "installPlans": []
-  },
-  {
     "title": "Apigee API Distributed Tracing",
     "name": "apigee-api",
     "description": "Apigee API JavaScript Resources to create or propagate W3C Trace Context through Apigee Flows and on to the Apigee Target. Apigee Flow Spans are reported back to New Relic's Trace API. Sample Policies are included to demonstrate use.",
@@ -3940,6 +3905,46 @@
       {
         "name": "solutions-hub",
         "id": "solutions-hub-dashboards"
+      }
+    ]
+  },
+  {
+    "title": "Puppet",
+    "name": "puppet",
+    "description": "# What is Puppet?\nPuppet is the industry standard for IT automation. Modernize, manage and bring your hybrid infrastructure into compliance through Puppet's powerful continuous automation.\n\n# What does New Relic provide\nNew Relic has developed a Puppet module for the Puppet agent to deploy the [New Relic Infrastructure agent](https://docs.newrelic.com/docs/infrastructure/infrastructure-monitoring/get-started/get-started-infrastructure-monitoring/) and [On Host Integrations](https://docs.newrelic.com/docs/infrastructure/host-integrations/get-started/introduction-host-integrations) throughout your environment.\n\n# How to get started?\nFollow the instructions on New Relic documentation: [Configure the infrastructure agent using Puppet](https://docs.newrelic.com/docs/infrastructure/new-relic-infrastructure/config-management-tools/configure-new-relic-infrastructure-puppet)",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/observability-as-code/puppet",
+    "id": "b70291ad-ff88-4ff9-9173-d4b2f99656af",
+    "level": "NEW_RELIC",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/observability-as-code/puppet/logo.svg",
+    "summary": "New Relic Puppet module to deploy the New Relic Infrastructure agent and On Host Integrations throughout your environment.",
+    "websiteUrl": null,
+    "keywords": [
+      "automation",
+      "devops",
+      "sre",
+      "gitops"
+    ],
+    "authors": [
+      "New Relic"
+    ],
+    "dashboards": [],
+    "alerts": [],
+    "documentation": [
+      {
+        "name": "Puppet installation docs",
+        "description": "Puppet is a configuration management tool used to manage various stages of\nthe IT infrastructure lifecycle.\n",
+        "url": "https://docs.newrelic.com/docs/infrastructure/new-relic-infrastructure/config-management-tools/configure-new-relic-infrastructure-puppet"
+      },
+      {
+        "name": "Puppet Forge",
+        "description": "Puppet Forge page for the New Relic Puppet Module",
+        "url": "https://forge.puppet.com/modules/newrelic/newrelic_infra"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "puppet",
+        "id": "third-party-puppet"
       }
     ]
   },
@@ -5025,46 +5030,6 @@
     ]
   },
   {
-    "title": "Microsoft SQL Server Query Plans",
-    "name": "nri-mssql-query-plans",
-    "description": "This quickstart includes a modified version of the Microsoft SQL Server on-host integration that captures query plan data for slowest running queries, and a dashboard to view the query plans using the SQL Query Plans custom visualization.\n\n## On-host integration\n\nThe modified version of the Microsoft on-host integration ingests query plan data using the New Relic Log API.\n\n## Dashboard\n\nThe dashboard displays SQL Server information on multiple pages: \n- SQL Overview: The SQL Overview tab displays Database/Log Space, Memory, Waits/Blocking, Blocked Processes\n- Query Performance: This page includes the Query Plans widget",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/mssql-queryplan",
-    "id": "8c173efb-b75f-4dcb-a7b7-1c80746fd903",
-    "level": "COMMUNITY",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/mssql-queryplan/logo.svg",
-    "summary": "Display MSSQL query plans on your dashboards",
-    "websiteUrl": null,
-    "keywords": [
-      "nrlabs",
-      "nrlabs-data",
-      "database",
-      "infrastructure"
-    ],
-    "authors": [
-      "New Relic Labs"
-    ],
-    "dashboards": [
-      {
-        "name": "MSSQL On-Host Integration w/ Query Plans",
-        "description": "Sample SQL Server dashboard with query plans included",
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/mssql-queryplan/dashboards/mssql-queryplan/mssql-queryplan01.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/mssql-queryplan/dashboards/mssql-queryplan/mssql-queryplan02.png"
-        ]
-      }
-    ],
-    "alerts": [],
-    "documentation": [
-      {
-        "name": "MSSQL on-host integration (query plans version)",
-        "description": "The installation and configuration instructions for the experimental version of the MSSQL on-host integration required to collect query plan data\n",
-        "url": "https://github.com/newrelic-experimental/nri-mssql-experimental"
-      }
-    ],
-    "installPlans": []
-  },
-  {
     "title": "Hapi",
     "name": "hapi",
     "description": "## What is Hapi?\n\nHapi is a lightweight and highly scalable backend server support built in Node.js.\n\n## Get started!\n\nLeverage community expertise and instantly get value out of your telemetry data. This quickstart automatically instruments Hapi with the New Relic Node.js agent, and allows you to instantly monitor your Node application with out-of-the-box dashboards and alerts. Further leverage New Relic's APM capabilities by setting up [errors inbox](https://docs.newrelic.com/docs/apm/apm-ui-pages/errors-inbox/errors-inbox/), [transaction tracing](https://docs.newrelic.com/docs/apm/transactions/transaction-traces/introduction-transaction-traces/), and [service maps](https://docs.newrelic.com/docs/understand-dependencies/understand-system-dependencies/service-maps/introduction-service-maps/).\n\n## More info\n\nCheck out the [documentation](https://docs.newrelic.com/docs/agents/nodejs-agent/getting-started/introduction-new-relic-nodejs/) to learn more about New Relic monitoring for Hapi.\n\n## EOL notice\n\nWe're discontinuing support for several capabilities in November 2021, including Hapi versions prior to Hapi 19.2. For more details, including how you can easily prepare for this transition, see our [Explorers Hub post](https://discuss.newrelic.com/t/important-upcoming-changes-to-capabilities-and-support-across-node-agents-suggested-pagerduty-responders-incident-workflows-and-kubernetes-instrumentation/164481?u=dholloran).",
@@ -5653,6 +5618,51 @@
       {
         "name": "Python Agent",
         "id": "setup-python-agent"
+      }
+    ]
+  },
+  {
+    "title": "Microsoft SQL Server Query Plans",
+    "name": "nri-mssql-query-plans",
+    "description": "This quickstart includes a modified version of the Microsoft SQL Server on-host integration that captures query plan data for slowest running queries, and a dashboard to view the query plans using the SQL Query Plans custom visualization.\n\n## On-host integration\n\nThe modified version of the Microsoft on-host integration ingests query plan data using the New Relic Log API.\n\n## Dashboard\n\nThe dashboard displays SQL Server information on multiple pages: \n- SQL Overview: The SQL Overview tab displays Database/Log Space, Memory, Waits/Blocking, Blocked Processes\n- Query Performance: This page includes the Query Plans widget",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/mssql-queryplan",
+    "id": "8c173efb-b75f-4dcb-a7b7-1c80746fd903",
+    "level": "COMMUNITY",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/mssql-queryplan/logo.svg",
+    "summary": "Display MSSQL query plans on your dashboards",
+    "websiteUrl": null,
+    "keywords": [
+      "nrlabs",
+      "nrlabs-data",
+      "database",
+      "infrastructure"
+    ],
+    "authors": [
+      "New Relic Labs"
+    ],
+    "dashboards": [
+      {
+        "name": "MSSQL On-Host Integration w/ Query Plans",
+        "description": "Sample SQL Server dashboard with query plans included",
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/mssql-queryplan/dashboards/mssql-queryplan/mssql-queryplan01.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/mssql-queryplan/dashboards/mssql-queryplan/mssql-queryplan02.png"
+        ]
+      }
+    ],
+    "alerts": [],
+    "documentation": [
+      {
+        "name": "MSSQL on-host integration (query plans version)",
+        "description": "The installation and configuration instructions for the experimental version of the MSSQL on-host integration required to collect query plan data\n",
+        "url": "https://github.com/newrelic-experimental/nri-mssql-experimental"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "Microsoft SQL Server Query Plans",
+        "id": "third-party-mssql-query-plans"
       }
     ]
   },
@@ -6929,62 +6939,6 @@
     ]
   },
   {
-    "title": "Apache Camel Java Agent Extension",
-    "name": "camel",
-    "description": "# What is camel ?\n\nCamel is an Open Source integration framework that empowers you to quickly and easily integrate various systems consuming or producing data.\n\nCamel empowers you to define routing and mediation rules in a variety of domain-specific languages (DSL, such as Java, XML, Groovy, Kotlin, and YAML). \nThis means you get smart completion of routing rules in your IDE, whether in a Java or XML editor.\nApache Camel uses URIs to work directly with any kind of transport or messaging model such as HTTP, ActiveMQ, JMS, JBI, SCA, MINA or CXF, as well as pluggable Components and Data Format options.",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/java/camel",
-    "id": "9a44c74d-f086-415e-89f3-3e12315b0256",
-    "level": "COMMUNITY",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/java/camel/logo.svg",
-    "summary": "Java agent extension to monitor instrumentation for the Apache Camel framework.\nOnce installed, the instrumentation will enable visibility parts of your Camel flows up in transaction traces.",
-    "websiteUrl": null,
-    "keywords": [
-      "nrlabs",
-      "nrlabs-data",
-      "apm",
-      "java",
-      "camel",
-      "apache camel"
-    ],
-    "authors": [
-      "New Relic Labs"
-    ],
-    "dashboards": [
-      {
-        "name": "Apache Camel Java Agent Extension",
-        "description": "Java",
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/java/camel/dashboards/java/java01.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/java/camel/dashboards/java/java02.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/java/camel/dashboards/java/java.png"
-        ]
-      }
-    ],
-    "alerts": [
-      {
-        "name": "High CPU Utilization",
-        "details": "This alert is triggered when the CPU Utilization is above 90%.",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "Transaction Errors",
-        "details": "This alert is triggered when the the transactions fail more than 10% of the time in 5 minutes.",
-        "type": "STATIC",
-        "url": null
-      }
-    ],
-    "documentation": [
-      {
-        "name": "Java agent extension for Camel",
-        "description": "Java Agent instrumentation extension for Apache Camel framework\n",
-        "url": "https://github.com/newrelic-experimental/newrelic-java-camel"
-      }
-    ],
-    "installPlans": []
-  },
-  {
     "title": "Generic JDBC",
     "name": "generic-jdbc",
     "description": "# What is Generic JDBC?\n\nJava Database Connectivity is a standard Java API for database-independent connectivity between Java and a wide range of databases.\n\n\n## Get started!\n\nLeverage community expertise and instantly get value out of your telemetry data. This quickstart automatically instruments Generic JDBC with the New Relic Java agent, and allows you to instantly monitor your Java application with out-of-the-box dashboards and alerts. \nFurther leverage New Relic's APM capabilities by setting up [errors inbox](https://docs.newrelic.com/docs/apm/apm-ui-pages/errors-inbox/errors-inbox/), [transaction tracing](https://docs.newrelic.com/docs/apm/transactions/transaction-traces/introduction-transaction-traces/), and [service maps](https://docs.newrelic.com/docs/understand-dependencies/understand-system-dependencies/service-maps/introduction-service-maps/).\n\n## More info\n\nCheck out the [documentation](https://docs.newrelic.com/docs/agents/java-agent/getting-started/introduction-new-relic-java/) to learn more about New Relic monitoring for Generic JDBC.",
@@ -8151,35 +8105,65 @@
     ]
   },
   {
-    "title": "Video agent for Android.",
-    "name": "video-android",
-    "description": "Agent to monitor video applications for Android.",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/video/video-android",
-    "id": "fa2ebce2-9dc0-4ff0-bcd4-c5d7de01e542",
+    "title": "Apache Camel Java Agent Extension",
+    "name": "camel",
+    "description": "# What is camel ?\n\nCamel is an Open Source integration framework that empowers you to quickly and easily integrate various systems consuming or producing data.\n\nCamel empowers you to define routing and mediation rules in a variety of domain-specific languages (DSL, such as Java, XML, Groovy, Kotlin, and YAML). \nThis means you get smart completion of routing rules in your IDE, whether in a Java or XML editor.\nApache Camel uses URIs to work directly with any kind of transport or messaging model such as HTTP, ActiveMQ, JMS, JBI, SCA, MINA or CXF, as well as pluggable Components and Data Format options.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/java/camel",
+    "id": "9a44c74d-f086-415e-89f3-3e12315b0256",
     "level": "COMMUNITY",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/video/video-android/logo.svg",
-    "summary": "Agent to monitor video applications for Android.",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/java/camel/logo.svg",
+    "summary": "Java agent extension to monitor instrumentation for the Apache Camel framework.\nOnce installed, the instrumentation will enable visibility parts of your Camel flows up in transaction traces.",
     "websiteUrl": null,
     "keywords": [
       "nrlabs",
       "nrlabs-data",
-      "video",
-      "tracking",
-      "Android"
+      "apm",
+      "java",
+      "camel",
+      "apache camel"
     ],
     "authors": [
       "New Relic Labs"
     ],
-    "dashboards": [],
-    "alerts": [],
-    "documentation": [
+    "dashboards": [
       {
-        "name": "Video Android. Installation Docs",
-        "description": "Agent to monitor video applications for Android.",
-        "url": "https://github.com/newrelic/video-agent-android"
+        "name": "Apache Camel Java Agent Extension",
+        "description": "Java",
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/java/camel/dashboards/java/java01.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/java/camel/dashboards/java/java02.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/java/camel/dashboards/java/java.png"
+        ]
       }
     ],
-    "installPlans": []
+    "alerts": [
+      {
+        "name": "High CPU Utilization",
+        "details": "This alert is triggered when the CPU Utilization is above 90%.",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "Transaction Errors",
+        "details": "This alert is triggered when the the transactions fail more than 10% of the time in 5 minutes.",
+        "type": "STATIC",
+        "url": null
+      }
+    ],
+    "documentation": [
+      {
+        "name": "Java agent extension for Camel",
+        "description": "Java Agent instrumentation extension for Apache Camel framework\n",
+        "url": "https://github.com/newrelic-experimental/newrelic-java-camel"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "Apache Camel Java Agent Extension",
+        "id": "third-party-camel"
+      }
+    ]
   },
   {
     "title": "Microsoft Windows Desktop",
@@ -8214,6 +8198,42 @@
       {
         "name": "Guided install",
         "id": "guided-install"
+      }
+    ]
+  },
+  {
+    "title": "Video agent for Android.",
+    "name": "video-android",
+    "description": "Agent to monitor video applications for Android.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/video/video-android",
+    "id": "fa2ebce2-9dc0-4ff0-bcd4-c5d7de01e542",
+    "level": "COMMUNITY",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/video/video-android/logo.svg",
+    "summary": "Agent to monitor video applications for Android.",
+    "websiteUrl": null,
+    "keywords": [
+      "nrlabs",
+      "nrlabs-data",
+      "video",
+      "tracking",
+      "Android"
+    ],
+    "authors": [
+      "New Relic Labs"
+    ],
+    "dashboards": [],
+    "alerts": [],
+    "documentation": [
+      {
+        "name": "Video Android. Installation Docs",
+        "description": "Agent to monitor video applications for Android.",
+        "url": "https://github.com/newrelic/video-agent-android"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "Video agent for Android",
+        "id": "third-party-video-android"
       }
     ]
   },
@@ -8978,6 +8998,38 @@
     ]
   },
   {
+    "title": "Prometheus OpenMetrics integration",
+    "name": "prometheus-openmetrics",
+    "description": "## Prometheus monitoring \n\nPrometheus is an open-source monitoring and alerting toolkit. Setting up Prometheus is straightforward, but scaling up and managing is not. That’s where New Relic steps in.\n\n### New Relic's Prometheus quickstart\n\nNew Relic offers two Prometheus integration schemes, Remote Write and OpenMetrics. \n\n[Remote Write](https://docs.newrelic.com/docs/integrations/prometheus-integrations/install-configure-remote-write/prometheus-remote-write-integration/) is ideal for well-established Prometheus infrastructures. It provides easy access to your metrics and only takes one line of yaml in your configuration for access. \n\n[OpenMetrics](https://docs.newrelic.com/docs/integrations/prometheus-integrations/install-configure-openmetrics/configure-prometheus-openmetrics-integrations/) allows for more visibility across multiple container platforms. Once the integration is set up, you can query data on memory usage for pods in deployment, facet any metrics, and view raw metric values all in one place.\n\nNew Relic's Prometheus Integration stores various kinds of telemetry data - whether open-source, vendor-specific, or vendor-agnostic. \n\n### Value of the Prometheus quickstart \n\nNew Relic’s quickstart makes DevOps easier. Although there are many ways to use Prometheus data in New Relic, we’ll break these down into OpenMetrics and Remote Write to help you decide on the best option for you:\n\n#### OpenMetrics:\n\n- Use pre-built dashboards to monitor Kubernetes HPA capacity, or build your own!\n- Monitor node readiness, and create alerts to let you know if a node is having issues and should not accept workloads\n- Automatically instrument and monitor any OpenMetrics endpoint. \n\n#### Remote Write:\n\nSee all of your metrics in one place\n- Combine and group all data across an entire software stack\n- Connect Grafana dashboards\n- Better understand the relationship between data and behaviors related to your software stack",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/prometheus-openmetrics",
+    "id": "d7db4b03-f2a6-4282-b9e7-90bbfdaa0e8d",
+    "level": "NEW_RELIC",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/prometheus-openmetrics/logo.svg",
+    "summary": "Prometheus' ability to monitor a wide variety of data necessitates monitoring the toolkit itself. New Relic helps store, manage, and view telemetry data from your Prometheus setup, relieving you of a significant operational burden.",
+    "websiteUrl": null,
+    "keywords": [
+      "open source monitoring"
+    ],
+    "authors": [
+      "New Relic"
+    ],
+    "dashboards": [],
+    "alerts": [],
+    "documentation": [
+      {
+        "name": "Prometheus installation docs",
+        "description": "Use Prometheus remote_write or New Relic's Prometheus OpenMetrics integration\n",
+        "url": "https://docs.newrelic.com/docs/integrations/prometheus-integrations/get-started/send-prometheus-metric-data-new-relic/"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "Prometheus OpenMetrics integration",
+        "id": "third-party-prometheus-openmetrics"
+      }
+    ]
+  },
+  {
     "title": "GCP Dataproc",
     "name": "gcp-dataproc",
     "description": "## What is GCP Dataproc?\n\nRun Apache Spark and Hadoop clusters in a fully managed Google Cloud\nenvironment.\n\n\n### Get started!\n\nStart monitoring GCP Dataproc by connecting Google Cloud Platform (GCP) to New Relic!\n\nCheck out our GCP Dataproc documentation to instrument your cloud service and manage the stability, scalability, and reliability of your systems with New Relic's infrastructure monitoring capabilities.\n\n### More info\n\nCheck out the [documentation](https://docs.newrelic.com/docs/infrastructure/google-cloud-platform-integrations/gcp-integrations-list/google-cloud-dataproc-monitoring-integration/) to learn more about New Relic monitoring for GCP Dataproc.",
@@ -9297,61 +9349,6 @@
     ]
   },
   {
-    "title": "Elasticsearch query Java Agent Extension",
-    "name": "elasticsearch-query",
-    "description": "# What is elasticsearch?\nElasticsearch is a search engine based on the Lucene library. It provides a distributed, multitenant-capable full-text search engine with an HTTP web interface and schema-free JSON documents.\nElasticsearch provides a full Query DSL (Domain Specific Language) based on JSON to define queries\n\nThe elastic search query java agent extension enables monitoring of elasticsearch queries in a java application.\nOnce deployed elasticsearch queries begin to show up in the New Relic UI under Databases section",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/java/elasticsearch-query",
-    "id": "ee8b8041-c9ca-4352-96ca-8f1c5c399cdd",
-    "level": "COMMUNITY",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/java/elasticsearch-query/logo.svg",
-    "summary": "Java agent extension to monitor elasticsearch queries as dataStore queries with New Relic. \nOnce deployed elasticsearch queries begin to show up in the New Relic UI under Databases for the application using elasticsearch queries.",
-    "websiteUrl": null,
-    "keywords": [
-      "nrlabs",
-      "nrlabs-data",
-      "apm",
-      "java",
-      "elasticsearch"
-    ],
-    "authors": [
-      "New Relic Labs"
-    ],
-    "dashboards": [
-      {
-        "name": "Elasticsearch query Java Agent Extension",
-        "description": "Java",
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/java/elasticsearch-query/dashboards/java/java01.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/java/elasticsearch-query/dashboards/java/java02.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/java/elasticsearch-query/dashboards/java/java.png"
-        ]
-      }
-    ],
-    "alerts": [
-      {
-        "name": "High CPU Utilization",
-        "details": "This alert is triggered when the CPU Utilization is above 90%.",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "Transaction Errors",
-        "details": "This alert is triggered when the the transactions fail more than 10% of the time in 5 minutes.",
-        "type": "STATIC",
-        "url": null
-      }
-    ],
-    "documentation": [
-      {
-        "name": "Java agent extension for Elasticsearch queries",
-        "description": "Java Agent instrumentation extension to track and record ElasticSearch queries as dataStore queries\n",
-        "url": "https://github.com/newrelic-experimental/newrelic-java-elasticsearch"
-      }
-    ],
-    "installPlans": []
-  },
-  {
     "title": "JAX-RS",
     "name": "jax-rs",
     "description": "# What is JAX-RS?\nAPI specification for Java that enables faster web application development.\n\n## Get started!\nLeverage community expertise and instantly get value out of your telemetry data. This quickstart automatically instruments JAX-RS with the New Relic Java agent, and allows you to instantly monitor your Java application with out-of-the-box dashboards and alerts.\nFurther leverage New Relic's APM capabilities by setting up [errors inbox](https://docs.newrelic.com/docs/apm/apm-ui-pages/errors-inbox/errors-inbox/), [transaction tracing](https://docs.newrelic.com/docs/apm/transactions/transaction-traces/introduction-transaction-traces/), and [service maps](https://docs.newrelic.com/docs/understand-dependencies/understand-system-dependencies/service-maps/introduction-service-maps/).\n\n## More info\nCheck out the [documentation](https://docs.newrelic.com/docs/agents/java-agent/getting-started/introduction-new-relic-java/) to learn more about New Relic monitoring for JAX-RS.",
@@ -9640,6 +9637,66 @@
     ]
   },
   {
+    "title": "Elasticsearch query Java Agent Extension",
+    "name": "elasticsearch-query",
+    "description": "# What is elasticsearch?\nElasticsearch is a search engine based on the Lucene library. It provides a distributed, multitenant-capable full-text search engine with an HTTP web interface and schema-free JSON documents.\nElasticsearch provides a full Query DSL (Domain Specific Language) based on JSON to define queries\n\nThe elastic search query java agent extension enables monitoring of elasticsearch queries in a java application.\nOnce deployed elasticsearch queries begin to show up in the New Relic UI under Databases section",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/java/elasticsearch-query",
+    "id": "ee8b8041-c9ca-4352-96ca-8f1c5c399cdd",
+    "level": "COMMUNITY",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/java/elasticsearch-query/logo.svg",
+    "summary": "Java agent extension to monitor elasticsearch queries as dataStore queries with New Relic. \nOnce deployed elasticsearch queries begin to show up in the New Relic UI under Databases for the application using elasticsearch queries.",
+    "websiteUrl": null,
+    "keywords": [
+      "nrlabs",
+      "nrlabs-data",
+      "apm",
+      "java",
+      "elasticsearch"
+    ],
+    "authors": [
+      "New Relic Labs"
+    ],
+    "dashboards": [
+      {
+        "name": "Elasticsearch query Java Agent Extension",
+        "description": "Java",
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/java/elasticsearch-query/dashboards/java/java01.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/java/elasticsearch-query/dashboards/java/java02.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/java/elasticsearch-query/dashboards/java/java.png"
+        ]
+      }
+    ],
+    "alerts": [
+      {
+        "name": "High CPU Utilization",
+        "details": "This alert is triggered when the CPU Utilization is above 90%.",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "Transaction Errors",
+        "details": "This alert is triggered when the the transactions fail more than 10% of the time in 5 minutes.",
+        "type": "STATIC",
+        "url": null
+      }
+    ],
+    "documentation": [
+      {
+        "name": "Java agent extension for Elasticsearch queries",
+        "description": "Java Agent instrumentation extension to track and record ElasticSearch queries as dataStore queries\n",
+        "url": "https://github.com/newrelic-experimental/newrelic-java-elasticsearch"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "Elasticsearch query Java Agent Extension",
+        "id": "third-party-elasticsearch-query"
+      }
+    ]
+  },
+  {
     "title": "Mona Labs",
     "name": "mlops-monalabs",
     "description": "Mona provides the best visibility into AI systems in order to reduce associated risks with production AI, optimize operational processes, and enable teams to plan better AI roadmaps. The Mona - New Relic integration provides users with the ability to automatically view Mona generated insights directly on their New Relic dashboard, explore production AI / ML data with NRQL, and connect specific Mona insight events to New Relic Incident Intelligence.\n\nInstantly get alerted on latency issues and automatically detect anomalies to ensure the best performance within production systems.",
@@ -9915,33 +9972,6 @@
         "id": "php-agent"
       }
     ]
-  },
-  {
-    "title": "Prometheus OpenMetrics integration",
-    "name": "prometheus-openmetrics",
-    "description": "## Prometheus monitoring \n\nPrometheus is an open-source monitoring and alerting toolkit. Setting up Prometheus is straightforward, but scaling up and managing is not. That’s where New Relic steps in.\n\n### New Relic's Prometheus quickstart\n\nNew Relic offers two Prometheus integration schemes, Remote Write and OpenMetrics. \n\n[Remote Write](https://docs.newrelic.com/docs/integrations/prometheus-integrations/install-configure-remote-write/prometheus-remote-write-integration/) is ideal for well-established Prometheus infrastructures. It provides easy access to your metrics and only takes one line of yaml in your configuration for access. \n\n[OpenMetrics](https://docs.newrelic.com/docs/integrations/prometheus-integrations/install-configure-openmetrics/configure-prometheus-openmetrics-integrations/) allows for more visibility across multiple container platforms. Once the integration is set up, you can query data on memory usage for pods in deployment, facet any metrics, and view raw metric values all in one place.\n\nNew Relic's Prometheus Integration stores various kinds of telemetry data - whether open-source, vendor-specific, or vendor-agnostic. \n\n### Value of the Prometheus quickstart \n\nNew Relic’s quickstart makes DevOps easier. Although there are many ways to use Prometheus data in New Relic, we’ll break these down into OpenMetrics and Remote Write to help you decide on the best option for you:\n\n#### OpenMetrics:\n\n- Use pre-built dashboards to monitor Kubernetes HPA capacity, or build your own!\n- Monitor node readiness, and create alerts to let you know if a node is having issues and should not accept workloads\n- Automatically instrument and monitor any OpenMetrics endpoint. \n\n#### Remote Write:\n\nSee all of your metrics in one place\n- Combine and group all data across an entire software stack\n- Connect Grafana dashboards\n- Better understand the relationship between data and behaviors related to your software stack",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/prometheus-openmetrics",
-    "id": "d7db4b03-f2a6-4282-b9e7-90bbfdaa0e8d",
-    "level": "NEW_RELIC",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/prometheus-openmetrics/logo.svg",
-    "summary": "Prometheus' ability to monitor a wide variety of data necessitates monitoring the toolkit itself. New Relic helps store, manage, and view telemetry data from your Prometheus setup, relieving you of a significant operational burden.",
-    "websiteUrl": null,
-    "keywords": [
-      "open source monitoring"
-    ],
-    "authors": [
-      "New Relic"
-    ],
-    "dashboards": [],
-    "alerts": [],
-    "documentation": [
-      {
-        "name": "Prometheus installation docs",
-        "description": "Use Prometheus remote_write or New Relic's Prometheus OpenMetrics integration\n",
-        "url": "https://docs.newrelic.com/docs/integrations/prometheus-integrations/get-started/send-prometheus-metric-data-new-relic/"
-      }
-    ],
-    "installPlans": []
   },
   {
     "title": "Falcon",
@@ -12890,7 +12920,12 @@
         "url": "https://www.signl4.com/blog/portfolio_item/new_relic_mobile_alerting/"
       }
     ],
-    "installPlans": []
+    "installPlans": [
+      {
+        "name": "SIGNL4",
+        "id": "third-party-signl4"
+      }
+    ]
   },
   {
     "title": "Microsoft Windows Server",
@@ -14095,6 +14130,39 @@
     ]
   },
   {
+    "title": "Quantum Metric",
+    "name": "quantum-metric",
+    "description": "Quantum Metric is a platform for continuous product design.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/quantum-metric",
+    "id": "a9b96df0-fb21-4bca-adcf-5501bc9a7756",
+    "level": "COMMUNITY",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/quantum-metric/logo.svg",
+    "summary": "Quantum Metric is a platform for continuous product design.",
+    "websiteUrl": null,
+    "keywords": [
+      "product design",
+      "quantum metrics"
+    ],
+    "authors": [
+      "Quantum Metric"
+    ],
+    "dashboards": [],
+    "alerts": [],
+    "documentation": [
+      {
+        "name": "Quantum Metric installation docs",
+        "description": "Quantum Metric is a platform for continuous product design.",
+        "url": "https://www.quantummetric.com/partners/integration-new-relic/"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "Quantum Metric",
+        "id": "third-party-quantum-metric"
+      }
+    ]
+  },
+  {
     "title": "Nagios",
     "name": "nagios",
     "description": "Use the New Relic Nagios On Host Integration to run Nagios custom scripts and display the data in New Relic.",
@@ -14533,34 +14601,6 @@
         "id": "setup-python-agent"
       }
     ]
-  },
-  {
-    "title": "Quantum Metric",
-    "name": "quantum-metric",
-    "description": "Quantum Metric is a platform for continuous product design.",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/quantum-metric",
-    "id": "a9b96df0-fb21-4bca-adcf-5501bc9a7756",
-    "level": "COMMUNITY",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/quantum-metric/logo.svg",
-    "summary": "Quantum Metric is a platform for continuous product design.",
-    "websiteUrl": null,
-    "keywords": [
-      "product design",
-      "quantum metrics"
-    ],
-    "authors": [
-      "Quantum Metric"
-    ],
-    "dashboards": [],
-    "alerts": [],
-    "documentation": [
-      {
-        "name": "Quantum Metric installation docs",
-        "description": "Quantum Metric is a platform for continuous product design.",
-        "url": "https://www.quantummetric.com/partners/integration-new-relic/"
-      }
-    ],
-    "installPlans": []
   },
   {
     "title": "Bunny",
@@ -16906,33 +16946,6 @@
     ]
   },
   {
-    "title": "Split",
-    "name": "split",
-    "description": "A feature delivery platform that powers feature flag management, software\nexperimentation, and continuous delivery.",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/split",
-    "id": "772501cd-2b71-4544-9768-aec5efb91ef5",
-    "level": "COMMUNITY",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/split/logo.svg",
-    "summary": "A feature delivery platform that powers feature flag management, software\nexperimentation, and continuous delivery.",
-    "websiteUrl": null,
-    "keywords": [
-      "testing"
-    ],
-    "authors": [
-      "Split"
-    ],
-    "dashboards": [],
-    "alerts": [],
-    "documentation": [
-      {
-        "name": "Split installation docs",
-        "description": "A feature delivery platform that powers feature flag management, software\nexperimentation, and continuous delivery.\n",
-        "url": "https://www.split.io/blog/querying-split-impressions-in-new-relic-for-more-insight-into-your-metrics/"
-      }
-    ],
-    "installPlans": []
-  },
-  {
     "title": "Trend Micro Cloud One - Conformity",
     "name": "trendmicro-cloudone-conformity",
     "description": "New Relic’s integration with Trend Micro Cloud One - Conformity ingests cloud security posture management (CSPM) data from Conformity into New Relic in real-time.\nThe integration deploys a Amazon Web Services (AWS) CloudFormation stack in your AWS account.  Bring your Conformity generated CSPM data into New Relic one to contextualize and correlate it with workload telemetry data, delivering AI powered visualizations and quick insights.\nConformity generated CSPM data into New Relic One where it's contextualized and correlated with workload telemetry data delivering AI powered visualizations and quick insights.\n\nFor more information about this IO quickstart, [see this how to video](https://www.youtube.com/watch?v=_-QtMWuq1nA).",
@@ -17054,6 +17067,38 @@
       {
         "name": "Html5 Player",
         "id": "video-web-html5"
+      }
+    ]
+  },
+  {
+    "title": "Split",
+    "name": "split",
+    "description": "A feature delivery platform that powers feature flag management, software\nexperimentation, and continuous delivery.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/split",
+    "id": "772501cd-2b71-4544-9768-aec5efb91ef5",
+    "level": "COMMUNITY",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/split/logo.svg",
+    "summary": "A feature delivery platform that powers feature flag management, software\nexperimentation, and continuous delivery.",
+    "websiteUrl": null,
+    "keywords": [
+      "testing"
+    ],
+    "authors": [
+      "Split"
+    ],
+    "dashboards": [],
+    "alerts": [],
+    "documentation": [
+      {
+        "name": "Split installation docs",
+        "description": "A feature delivery platform that powers feature flag management, software\nexperimentation, and continuous delivery.\n",
+        "url": "https://www.split.io/blog/querying-split-impressions-in-new-relic-for-more-insight-into-your-metrics/"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "Split",
+        "id": "third-party-split"
       }
     ]
   },
