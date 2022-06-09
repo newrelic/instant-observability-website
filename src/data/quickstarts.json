@@ -7513,69 +7513,6 @@
     ]
   },
   {
-    "title": "Laravel",
-    "name": "laravel",
-    "description": "## Laravel PHP Monitoring \n\nLaravel is a free, open-source PHP model-view-controller web framework that empowers developers to carry out common tasks in web and app development projects with ease.\n\n### New Relic Laravel quickstart features\n\nThe New Relic Laravel monitoring quickstart has the following features:\n- Our standard dashboard provides a clear overview of transactions, errors and virtual machines. \n- The Laravel PHP dashboard also helps you track other key indicators like daily transaction errors, comparison between weekly transaction errors, most popular transactions, and more.\n- Pre-defined alert conditions notify you on performance metrics like duration, error rate and throughput.\n\n### Why monitor Laravel with New Relic?\n\nThe New Relic Laravel quickstart installs the [New Relic PHP agent](https://docs.newrelic.com/docs/apm/agents/php-agent/frameworks-libraries/php-frameworks-integrate-support-new-relic/) so that you can instrument and monitor your  Laravel application. It is your gateway to instant detection of changes in Laravel’s critical metrics.\nThe integration helps you to monitor Laravel through a standard dashboard and three instant alerts. It can trigger low-throughput, high-error rate, and high-duration alerts when specific pre-defined alert conditions are met.\nThe quickstart also supports Laravel to identify the appropriate place to insert JavaScript headers and footers for browser monitoring. Install the New Relic Laravel quickstart today to start monitoring your Laravel PHP framework’s key performance indicators.",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/php/laravel",
-    "id": "919aad44-52ba-47fd-9e29-12195979015e",
-    "level": "NEW_RELIC",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/php/laravel/logo.svg",
-    "summary": "Monitoring Laravel is crucial to gain instant visibility into changes in Laravel PHP framework’s key performance indicators. Download New Relic Laravel quickstart to proactively instrument Laravel with the New Relic PHP agent and start monitoring.",
-    "websiteUrl": null,
-    "keywords": [
-      "apm",
-      "php"
-    ],
-    "authors": [
-      "New Relic"
-    ],
-    "dashboards": [
-      {
-        "name": "Laravel",
-        "description": "PHP",
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/php/laravel/dashboards/php/php01.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/php/laravel/dashboards/php/php02.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/php/laravel/dashboards/php/php.png"
-        ]
-      }
-    ],
-    "alerts": [
-      {
-        "name": "High duration",
-        "details": "This alert is triggered when the total duration of the web transaction is longer than 10 seconds during 5 minutes",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "High error rate",
-        "details": "This alert is triggered when the error percentage of web transactions is higher than 5% during 5 minutes",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "Low throughput",
-        "details": "This alert is triggered when the throughput is 0 for 5 minutes",
-        "type": "STATIC",
-        "url": null
-      }
-    ],
-    "documentation": [
-      {
-        "name": "Laravel installation docs",
-        "description": "Laravel is a free, open-source PHP MVC web framework.",
-        "url": "https://docs.newrelic.com/docs/agents/php-agent/getting-started/php-agent-compatibility-requirements"
-      }
-    ],
-    "installPlans": [
-      {
-        "name": "PHP Agent",
-        "id": "php-agent"
-      }
-    ]
-  },
-  {
     "title": "SQLite",
     "name": "sqlite",
     "description": "## What is SQLite?\n\nSQLite is a relational database management system that is embedded into\napplications.\n\n\n## Get started!\n\nLeverage community expertise and instantly get value out of your telemetry data. This quickstart automatically instruments SQLite with the New Relic PHP agent, and allows you to further leverage New Relic's APM capabilities by setting up [custom dashboards](https://docs.newrelic.com/docs/query-your-data/explore-query-data/dashboards/introduction-dashboards/), [errors inbox](https://docs.newrelic.com/docs/apm/apm-ui-pages/errors-inbox/errors-inbox/), [transaction tracing](https://docs.newrelic.com/docs/apm/transactions/transaction-traces/introduction-transaction-traces/), and [service maps](https://docs.newrelic.com/docs/understand-dependencies/understand-system-dependencies/service-maps/introduction-service-maps/).\n\n## More info\n\nCheck out the [documentation](https://docs.newrelic.com/docs/agents/php-agent/) to learn more about New Relic monitoring for SQLite.",
@@ -8504,6 +8441,70 @@
       {
         "name": "Go Agent",
         "id": "setup-go-agent"
+      }
+    ]
+  },
+  {
+    "title": "Laravel",
+    "name": "laravel",
+    "description": "## Laravel PHP Monitoring \n\nLaravel is a free, open-source PHP model-view-controller web framework that empowers developers to carry out common tasks in web and app development projects with ease.\n\n### New Relic Laravel quickstart features\n\nThe New Relic Laravel monitoring quickstart has the following features:\n- Our standard dashboard provides a clear overview of transactions, errors and virtual machines. \n- The Laravel PHP dashboard also helps you track other key indicators like daily transaction errors, comparison between weekly transaction errors, most popular transactions, and more.\n- Pre-defined alert conditions notify you on performance metrics like duration, error rate and throughput.\n\n### Why monitor Laravel with New Relic?\n\nThe New Relic Laravel quickstart installs the [New Relic PHP agent](https://docs.newrelic.com/docs/apm/agents/php-agent/frameworks-libraries/php-frameworks-integrate-support-new-relic/) so that you can instrument and monitor your  Laravel application. It is your gateway to instant detection of changes in Laravel’s critical metrics.\nThe integration helps you to monitor Laravel through a standard dashboard and three instant alerts. It can trigger low-throughput, high-error rate, and high-duration alerts when specific pre-defined alert conditions are met.\nThe quickstart also supports Laravel to identify the appropriate place to insert JavaScript headers and footers for browser monitoring. Install the New Relic Laravel quickstart today to start monitoring your Laravel PHP framework’s key performance indicators.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/php/laravel",
+    "id": "919aad44-52ba-47fd-9e29-12195979015e",
+    "level": "NEW_RELIC",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/php/laravel/logo.svg",
+    "summary": "Monitoring Laravel is crucial to gain instant visibility into changes in Laravel PHP framework’s key performance indicators. Download New Relic Laravel quickstart to proactively instrument Laravel with the New Relic PHP agent and start monitoring.",
+    "websiteUrl": null,
+    "keywords": [
+      "apm",
+      "php",
+      "featured"
+    ],
+    "authors": [
+      "New Relic"
+    ],
+    "dashboards": [
+      {
+        "name": "Laravel",
+        "description": "PHP",
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/php/laravel/dashboards/php/php01.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/php/laravel/dashboards/php/php02.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/php/laravel/dashboards/php/php.png"
+        ]
+      }
+    ],
+    "alerts": [
+      {
+        "name": "High duration",
+        "details": "This alert is triggered when the total duration of the web transaction is longer than 10 seconds during 5 minutes",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "High error rate",
+        "details": "This alert is triggered when the error percentage of web transactions is higher than 5% during 5 minutes",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "Low throughput",
+        "details": "This alert is triggered when the throughput is 0 for 5 minutes",
+        "type": "STATIC",
+        "url": null
+      }
+    ],
+    "documentation": [
+      {
+        "name": "Laravel installation docs",
+        "description": "Laravel is a free, open-source PHP MVC web framework.",
+        "url": "https://docs.newrelic.com/docs/agents/php-agent/getting-started/php-agent-compatibility-requirements"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "PHP Agent",
+        "id": "php-agent"
       }
     ]
   },
@@ -11600,54 +11601,6 @@
     ]
   },
   {
-    "title": "JMX (Java)",
-    "name": "jmx-java",
-    "description": "Official New Relic quickstart for JMX\nUse this quickstart together with the New Relic JMX On Host Integration to get insight into the performance of your Java instances.",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/jmx",
-    "id": "63785e32-4153-41af-a70b-18e896e37f44",
-    "level": "NEW_RELIC",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/jmx/logo.png",
-    "summary": "Official New Relic quickstart for JMX",
-    "websiteUrl": null,
-    "keywords": [
-      "infrastructure",
-      "java"
-    ],
-    "authors": [
-      "New Relic",
-      "Jakub Kotkowiak"
-    ],
-    "dashboards": [
-      {
-        "name": "JMX",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/jmx/dashboards/jmx/jmx01.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/jmx/dashboards/jmx/jmx02.png"
-        ]
-      }
-    ],
-    "alerts": [],
-    "documentation": [
-      {
-        "name": "JMX",
-        "description": "Java technology that supplies tools for managing and monitoring applications, system objects, devices, and service-oriented networks.\n",
-        "url": "https://docs.newrelic.com/docs/integrations/host-integrations/host-integrations-list/jmx-monitoring-integration/"
-      }
-    ],
-    "installPlans": [
-      {
-        "name": "Infrastructure Agent",
-        "id": "infra-agent-targeted"
-      },
-      {
-        "name": "JMX",
-        "id": "jmx-integration-docs"
-      }
-    ]
-  },
-  {
     "title": "Anorm",
     "name": "anorm",
     "description": "# What is Anorm?\n\nData access layer that uses plain SQL to interact with the database and provides an API to parse and transform the resulting datasets.\n\n\n## Get started!\n\nLeverage community expertise and instantly get value out of your telemetry data. This quickstart automatically instruments Anorm with the New Relic Java agent, and allows you to instantly monitor your Java application with out-of-the-box dashboards and alerts. \nFurther leverage New Relic's APM capabilities by setting up [errors inbox](https://docs.newrelic.com/docs/apm/apm-ui-pages/errors-inbox/errors-inbox/), [transaction tracing](https://docs.newrelic.com/docs/apm/transactions/transaction-traces/introduction-transaction-traces/), and [service maps](https://docs.newrelic.com/docs/understand-dependencies/understand-system-dependencies/service-maps/introduction-service-maps/).\n\n## More info\n\nCheck out the [documentation](https://docs.newrelic.com/docs/agents/java-agent/getting-started/introduction-new-relic-java/) to learn more about New Relic monitoring for Anorm.",
@@ -12975,6 +12928,54 @@
       {
         "name": "SIGNL4",
         "id": "third-party-signl4"
+      }
+    ]
+  },
+  {
+    "title": "JMX (Java)",
+    "name": "jmx-java",
+    "description": "Official New Relic quickstart for JMX\nUse this quickstart together with the New Relic JMX On Host Integration to get insight into the performance of your Java instances.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/jmx",
+    "id": "63785e32-4153-41af-a70b-18e896e37f44",
+    "level": "NEW_RELIC",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/jmx/logo.png",
+    "summary": "Official New Relic quickstart for JMX",
+    "websiteUrl": null,
+    "keywords": [
+      "infrastructure",
+      "java"
+    ],
+    "authors": [
+      "New Relic",
+      "Jakub Kotkowiak"
+    ],
+    "dashboards": [
+      {
+        "name": "JMX",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/jmx/dashboards/jmx/jmx01.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/jmx/dashboards/jmx/jmx02.png"
+        ]
+      }
+    ],
+    "alerts": [],
+    "documentation": [
+      {
+        "name": "JMX",
+        "description": "Java technology that supplies tools for managing and monitoring applications, system objects, devices, and service-oriented networks.\n",
+        "url": "https://docs.newrelic.com/docs/integrations/host-integrations/host-integrations-list/jmx-monitoring-integration/"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "Infrastructure Agent",
+        "id": "infra-agent-targeted"
+      },
+      {
+        "name": "JMX",
+        "id": "jmx-integration-docs"
       }
     ]
   },
@@ -15034,6 +15035,53 @@
     ]
   },
   {
+    "title": "Azure MariaDB",
+    "name": "azure-mariadb",
+    "description": "## What is Azure MariaDB?\n\nFully managed database as a service with predictable performance and\nscalability for applications using open-source tools and platforms.\n\n\n### Get started!\n\nStart monitoring Azure MariaDB by connecting Microsoft Azure to New Relic!\n\nCheck out our Azure MariaDB documentation to instrument your cloud service and manage the stability, scalability, and reliability of your systems with New Relic's infrastructure monitoring capabilities.\n\n### More info\n\nCheck out the [documentation](https://docs.newrelic.com/docs/infrastructure/microsoft-azure-integrations/azure-integrations-list/azure-database-mariadb-monitoring-integration/) to learn more about New Relic monitoring for Azure MariaDB.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/azure/azure-mariadb",
+    "id": "55eab714-b85f-4e75-9eda-2a612ec3e6bf",
+    "level": "NEW_RELIC",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/azure/azure-mariadb/logo.svg",
+    "summary": "Monitor Azure MariaDB by connecting Azure to New Relic",
+    "websiteUrl": null,
+    "keywords": [
+      "azure",
+      "database"
+    ],
+    "authors": [
+      "New Relic",
+      "Emil Hammarstrand"
+    ],
+    "dashboards": [],
+    "alerts": [
+      {
+        "name": "High CPU Utilization",
+        "details": "This alert is triggered when the CPU Utilization is above 90% for at least 10 minutes.",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "High Memory Usage",
+        "details": "This alert is triggered when the Memory Usage is above 95% for at least 15 minutes.",
+        "type": "STATIC",
+        "url": null
+      }
+    ],
+    "documentation": [
+      {
+        "name": "Azure MariaDB installation docs",
+        "description": "Monitor Azure MariaDB by connecting Azure to New Relic.\n",
+        "url": "https://docs.newrelic.com/docs/infrastructure/microsoft-azure-integrations/azure-integrations-list/azure-database-mariadb-monitoring-integration/"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "Azure-Infrastructure-Monitoring",
+        "id": "azure-infrastructure-monitoring"
+      }
+    ]
+  },
+  {
     "title": "Jumpstart quickstart tool",
     "name": "jumpstart-quickstart",
     "description": "The Jumpstart quickstart is a tool that has everything you need to help you get started building your own quickstart. It has some basic steps to follow to get started, some sample dashboards and queries, as well as a list of resources to help you build your own quickstart faster!",
@@ -15464,39 +15512,6 @@
         "name": "Azure Cosmos DB installation docs",
         "description": "Monitor Azure Cosmos DB by connecting Azure to New Relic.\n",
         "url": "https://docs.newrelic.com/docs/infrastructure/microsoft-azure-integrations/azure-integrations-list/azure-cosmos-db-document-db-monitoring-integration/"
-      }
-    ],
-    "installPlans": [
-      {
-        "name": "Azure-Infrastructure-Monitoring",
-        "id": "azure-infrastructure-monitoring"
-      }
-    ]
-  },
-  {
-    "title": "Azure MariaDB",
-    "name": "azure-mariadb",
-    "description": "## What is Azure MariaDB?\n\nFully managed database as a service with predictable performance and\nscalability for applications using open-source tools and platforms.\n\n\n### Get started!\n\nStart monitoring Azure MariaDB by connecting Microsoft Azure to New Relic!\n\nCheck out our Azure MariaDB documentation to instrument your cloud service and manage the stability, scalability, and reliability of your systems with New Relic's infrastructure monitoring capabilities.\n\n### More info\n\nCheck out the [documentation](https://docs.newrelic.com/docs/infrastructure/microsoft-azure-integrations/azure-integrations-list/azure-database-mariadb-monitoring-integration/) to learn more about New Relic monitoring for Azure MariaDB.",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/azure/azure-mariadb",
-    "id": "55eab714-b85f-4e75-9eda-2a612ec3e6bf",
-    "level": "NEW_RELIC",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/azure/azure-mariadb/logo.svg",
-    "summary": "Monitor Azure MariaDB by connecting Azure to New Relic",
-    "websiteUrl": null,
-    "keywords": [
-      "azure",
-      "database"
-    ],
-    "authors": [
-      "New Relic"
-    ],
-    "dashboards": [],
-    "alerts": [],
-    "documentation": [
-      {
-        "name": "Azure MariaDB installation docs",
-        "description": "Monitor Azure MariaDB by connecting Azure to New Relic.\n",
-        "url": "https://docs.newrelic.com/docs/infrastructure/microsoft-azure-integrations/azure-integrations-list/azure-database-mariadb-monitoring-integration/"
       }
     ],
     "installPlans": [
