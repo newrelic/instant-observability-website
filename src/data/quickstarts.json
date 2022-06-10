@@ -5145,58 +5145,6 @@
     ]
   },
   {
-    "title": "Basic Dashboard",
-    "name": "basic-dashboard",
-    "description": "This quickstart offers a set of basic dashboards for commonly used New Relic metrics.",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/basic-dashboard",
-    "id": "0d6577a3-d53e-4b12-82df-0296d69b2d0a",
-    "level": "NEW_RELIC",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/basic-dashboard/logo.svg",
-    "summary": "Basic dashboard for common New Relic metrics",
-    "websiteUrl": null,
-    "keywords": [
-      "infra",
-      "infrastructure",
-      "apm",
-      "application performance",
-      "browser",
-      "mobile",
-      "network performance",
-      "synthetic",
-      "alert",
-      "ai",
-      "usage"
-    ],
-    "authors": [
-      "Astin Choi 최길우"
-    ],
-    "dashboards": [
-      {
-        "name": "Basic Dashboard",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/basic-dashboard/dashboards/basic-dashboard/basic-dashboard2.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/basic-dashboard/dashboards/basic-dashboard/basic-dashboard3.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/basic-dashboard/dashboards/basic-dashboard/basic-dashboard4.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/basic-dashboard/dashboards/basic-dashboard/basic-dashboard5.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/basic-dashboard/dashboards/basic-dashboard/basic-dashboard6.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/basic-dashboard/dashboards/basic-dashboard/basic-dashboard7.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/basic-dashboard/dashboards/basic-dashboard/basic-dashboard8.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/basic-dashboard/dashboards/basic-dashboard/basic-dashboard9.png"
-        ]
-      }
-    ],
-    "alerts": [],
-    "documentation": [],
-    "installPlans": [
-      {
-        "name": "Basic Dashboard",
-        "id": "basic-dashboard"
-      }
-    ]
-  },
-  {
     "title": "Microsoft Teams for CodeStream",
     "name": "microsoft-teams-for-codestream",
     "description": "Microsoft Teams helps bring people together so that they can get things done.\n\nWhen you post a codemark your teammates will get notified via the activity feed, and potentially via email. Sometimes, though, you might want to share to Microsoft Teams as well. This would allow you to reach people who haven’t yet joined CodeStream, or maybe don’t spend a lot of time in their IDE.\n\n[Check out our documentation](https://docs.newrelic.com/docs/codestream/codestream-integrations/msteams-integration/) to learn how to connect New Relic CodeStream to your Microsoft Teams channel.",
