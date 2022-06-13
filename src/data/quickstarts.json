@@ -3907,59 +3907,6 @@
     ]
   },
   {
-    "title": "OMA Data Ingest Governance",
-    "name": "oma-data-governance",
-    "description": "Data ingest governance is a practice of ensuring optimal value for telemetry data collected by an organization particularly a complex organization with numerous business units and working groups.",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/oma-data-gov",
-    "id": "30593cae-4cfb-435c-9170-310e3f38ab40",
-    "level": "NEW_RELIC",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/oma-data-gov/logo.svg",
-    "summary": "The prerequisite step of data governance includes developing an accurate baseline of your telemetry data ingest levels.  A good ingest baseline will break your ingest out by sub-account and telemetry type.  This is particularly necessary in a complex organization with numerous business units and working groups.",
-    "websiteUrl": null,
-    "keywords": [
-      "OMA",
-      "Data Governance",
-      "Data Consumption",
-      "Manage Data Ingest"
-    ],
-    "authors": [
-      "Jim Hagan",
-      "Kim Hickey"
-    ],
-    "dashboards": [
-      {
-        "name": "Data Governance Entity Breakdowns",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/oma-data-gov/dashboards/data-ingest-entity-breakdown/data-ingest-entity-breakdown.png"
-        ]
-      },
-      {
-        "name": "Data Governance Baseline",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/oma-data-gov/dashboards/data-ingest-baseline/data-ingest-baseline.png"
-        ]
-      }
-    ],
-    "alerts": [],
-    "documentation": [
-      {
-        "name": "Observability Maturity",
-        "description": "Observability Maturity Solutions Guide",
-        "url": "https://docs.newrelic.com/docs/new-relic-solutions/observability-maturity/introduction"
-      }
-    ],
-    "installPlans": [
-      {
-        "name": "solutions-hub",
-        "id": "solutions-hub-dashboards"
-      }
-    ]
-  },
-  {
     "title": "Puppet",
     "name": "puppet",
     "description": "# What is Puppet?\nPuppet is the industry standard for IT automation. Modernize, manage and bring your hybrid infrastructure into compliance through Puppet's powerful continuous automation.\n\n# What does New Relic provide\nNew Relic has developed a Puppet module for the Puppet agent to deploy the [New Relic Infrastructure agent](https://docs.newrelic.com/docs/infrastructure/infrastructure-monitoring/get-started/get-started-infrastructure-monitoring/) and [On Host Integrations](https://docs.newrelic.com/docs/infrastructure/host-integrations/get-started/introduction-host-integrations) throughout your environment.\n\n# How to get started?\nFollow the instructions on New Relic documentation: [Configure the infrastructure agent using Puppet](https://docs.newrelic.com/docs/infrastructure/new-relic-infrastructure/config-management-tools/configure-new-relic-infrastructure-puppet)",
@@ -3996,6 +3943,59 @@
       {
         "name": "puppet",
         "id": "third-party-puppet"
+      }
+    ]
+  },
+  {
+    "title": "OMA Data Ingest Governance",
+    "name": "oma-data-governance",
+    "description": "Data ingest governance is a practice of ensuring optimal value for telemetry data collected by an organization particularly a complex organization with numerous business units and working groups.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/oma-data-gov",
+    "id": "30593cae-4cfb-435c-9170-310e3f38ab40",
+    "level": "NEW_RELIC",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/oma-data-gov/logo.svg",
+    "summary": "The prerequisite step of data governance includes developing an accurate baseline of your telemetry data ingest levels.  A good ingest baseline will break your ingest out by sub-account and telemetry type.  This is particularly necessary in a complex organization with numerous business units and working groups.",
+    "websiteUrl": null,
+    "keywords": [
+      "OMA",
+      "Data Governance",
+      "Data Consumption",
+      "Manage Data Ingest"
+    ],
+    "authors": [
+      "Jim Hagan",
+      "Kim Hickey"
+    ],
+    "dashboards": [
+      {
+        "name": "Data Ingest Governance Entity Breakdowns",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/oma-data-gov/dashboards/data-ingest-entity-breakdown/data-ingest-entity-breakdown.png"
+        ]
+      },
+      {
+        "name": "Data Ingest Governance Baseline",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/oma-data-gov/dashboards/data-ingest-baseline/data-ingest-baseline.png"
+        ]
+      }
+    ],
+    "alerts": [],
+    "documentation": [
+      {
+        "name": "Observability Maturity",
+        "description": "Observability Maturity Solutions Guide",
+        "url": "https://docs.newrelic.com/docs/new-relic-solutions/observability-maturity/introduction"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "solutions-hub",
+        "id": "solutions-hub-dashboards"
       }
     ]
   },
@@ -5828,14 +5828,6 @@
     ],
     "dashboards": [
       {
-        "name": "Redis Enterprise Cluster Metrics",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/redisenterprise/dashboards/cluster/cluster01.png"
-        ]
-      },
-      {
         "name": "Redis Enterprise Database CRDT",
         "description": null,
         "url": null,
@@ -5849,6 +5841,14 @@
         "url": null,
         "screenshots": [
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/redisenterprise/dashboards/database/database01.png"
+        ]
+      },
+      {
+        "name": "Redis Enterprise Cluster Metrics",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/redisenterprise/dashboards/cluster/cluster01.png"
         ]
       }
     ],
@@ -12995,19 +12995,19 @@
         ]
       },
       {
-        "name": "Lacework Security Overview",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/lacework/dashboards/lacework-security-overview/lacework-security-overview.png"
-        ]
-      },
-      {
         "name": "Lacework Compliance Violations",
         "description": null,
         "url": null,
         "screenshots": [
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/lacework/dashboards/lacework-compliance-violations/lacework-compliance-violations.png"
+        ]
+      },
+      {
+        "name": "Lacework Security Overview",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/lacework/dashboards/lacework-security-overview/lacework-security-overview.png"
         ]
       }
     ],
@@ -17281,19 +17281,19 @@
         ]
       },
       {
-        "name": "Catchpoint-Overview",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/catchpoint/dashboards/Catchpoint-Overview/Catchpoint-Overview.png"
-        ]
-      },
-      {
         "name": "Catchpoint-Recent Errors",
         "description": null,
         "url": null,
         "screenshots": [
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/catchpoint/dashboards/Catchpoint-Recent_Errors/Catchpoint-Recent_Errors.png"
+        ]
+      },
+      {
+        "name": "Catchpoint-Overview",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/catchpoint/dashboards/Catchpoint-Overview/Catchpoint-Overview.png"
         ]
       },
       {
@@ -22033,11 +22033,11 @@
     ],
     "dashboards": [
       {
-        "name": "Kubernetes Data Ingest Analysis",
+        "name": "Azure Integrations Data Ingest Analysis",
         "description": null,
         "url": null,
         "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/audit/infrastructure-integrations-data-analysis/dashboards/kubernetes-data-ingest-analysis/kubernetes-data-ingest-analysis.png"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/audit/infrastructure-integrations-data-analysis/dashboards/azure-integrations-data-ingest-analysis/azure-integrations-data-ingest-analysis.png"
         ]
       },
       {
@@ -22049,19 +22049,19 @@
         ]
       },
       {
+        "name": "Kubernetes Data Ingest Analysis",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/audit/infrastructure-integrations-data-analysis/dashboards/kubernetes-data-ingest-analysis/kubernetes-data-ingest-analysis.png"
+        ]
+      },
+      {
         "name": "GCP Integrations Data Ingest Analysis",
         "description": null,
         "url": null,
         "screenshots": [
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/audit/infrastructure-integrations-data-analysis/dashboards/gcp-integrations-data-ingest-analysis/gcp-integrations-data-ingest-analysis.png"
-        ]
-      },
-      {
-        "name": "Azure Integrations Data Ingest Analysis",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/audit/infrastructure-integrations-data-analysis/dashboards/azure-integrations-data-ingest-analysis/azure-integrations-data-ingest-analysis.png"
         ]
       },
       {
@@ -22752,6 +22752,22 @@
     ],
     "dashboards": [
       {
+        "name": "Browser Pages Dashboard",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/browser/dashboards/browser_pages_dashboard/browser_pages_dashboard.png"
+        ]
+      },
+      {
+        "name": "JavaScript Errors",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/browser/dashboards/javascript_errors/javascript_errors.png"
+        ]
+      },
+      {
         "name": "Browser Traffic Analysis",
         "description": null,
         "url": null,
@@ -22765,22 +22781,6 @@
         "url": null,
         "screenshots": [
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/browser/dashboards/browser_overview/browser_overview.png"
-        ]
-      },
-      {
-        "name": "JavaScript Errors",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/browser/dashboards/javascript_errors/javascript_errors.png"
-        ]
-      },
-      {
-        "name": "Browser Pages Dashboard",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/browser/dashboards/browser_pages_dashboard/browser_pages_dashboard.png"
         ]
       }
     ],
