@@ -20053,54 +20053,6 @@
     ]
   },
   {
-    "title": "LAMP stack",
-    "name": "lamp-stack",
-    "description": "This LAMP quickstart allows you to monitor a LAMP stack (Linux, Apache, MySQL, PHP).\nIt includes a specific dashboard to get observability for an entire LAMP stack.",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/lamp",
-    "id": "816e3eba-ffea-4b0c-9150-b7a0f3a025d9",
-    "level": "NEW_RELIC",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/lamp/logo.png",
-    "summary": "This LAMP quickstart allows you to monitor a LAMP stack (Linux, Apache, MySQL, PHP).\nIt includes a specific dashboard to get observability for an entire LAMP stack.",
-    "websiteUrl": null,
-    "keywords": [
-      "LAMP",
-      "linux",
-      "apache",
-      "mysql",
-      "php"
-    ],
-    "authors": [
-      "New Relic",
-      "Stijn Polfliet"
-    ],
-    "dashboards": [
-      {
-        "name": "LAMP",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/lamp/dashboards/dashboard/dashboard.png"
-        ]
-      }
-    ],
-    "alerts": [],
-    "documentation": [],
-    "installPlans": [
-      {
-        "name": "Apache",
-        "id": "apache-integration"
-      },
-      {
-        "name": "PHP Agent",
-        "id": "php-agent"
-      },
-      {
-        "name": "MySQL",
-        "id": "mysql-integration"
-      }
-    ]
-  },
-  {
     "title": "Aporia",
     "name": "mlops-aporia",
     "description": "Aporia’s integration with New Relic provides you with full access to a customized ML monitoring dashboard in New Relic. The dashboard contains six different charts: Most Active Models, Most Active Model Versions, Model Inferences, Average Numeric Inferences, Numeric Inferences Heatmaps, and Categorical Inferences for a comprehensive inferences investigation for all your models in production.\n\nThis integration also supports monitoring for almost all model use cases, including: fraud detection, NLP, Recommendations, Sales Forecast, Churn Prediction, Lead Prioritization, and Tabular Data.\n\nBy leveraging New Relic Alerts and Applied Intelligence, you will be able to monitor and manage alerts for all your operational needs. Find, troubleshoot, and resolve problems faster and automatically detect anomalies and combine related alerts and incidents to enable root cause analysis for any operational issues that may arise, even beyond the model itself.",
@@ -21061,6 +21013,54 @@
       {
         "name": "PHP Agent",
         "id": "php-agent"
+      }
+    ]
+  },
+  {
+    "title": "LAMP stack",
+    "name": "lamp-stack",
+    "description": "This LAMP quickstart allows you to monitor a LAMP stack (Linux, Apache, MySQL, PHP).\nIt includes a specific dashboard to get observability for an entire LAMP stack.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/lamp",
+    "id": "816e3eba-ffea-4b0c-9150-b7a0f3a025d9",
+    "level": "NEW_RELIC",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/lamp/logo.png",
+    "summary": "This LAMP quickstart allows you to monitor a LAMP stack (Linux, Apache, MySQL, PHP).\nIt includes a specific dashboard to get observability for an entire LAMP stack.",
+    "websiteUrl": null,
+    "keywords": [
+      "LAMP",
+      "linux",
+      "apache",
+      "mysql",
+      "php"
+    ],
+    "authors": [
+      "New Relic",
+      "Stijn Polfliet"
+    ],
+    "dashboards": [
+      {
+        "name": "LAMP",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/lamp/dashboards/dashboard/dashboard.png"
+        ]
+      }
+    ],
+    "alerts": [],
+    "documentation": [],
+    "installPlans": [
+      {
+        "name": "Apache",
+        "id": "apache-integration"
+      },
+      {
+        "name": "PHP Agent",
+        "id": "php-agent"
+      },
+      {
+        "name": "MySQL",
+        "id": "mysql-integration"
       }
     ]
   },
