@@ -136,7 +136,6 @@ export const LOCALS = [
   },
 ];
 
-
 /* Quickstart Preview */
 
 export const GITHUB_API_BASE_URL =

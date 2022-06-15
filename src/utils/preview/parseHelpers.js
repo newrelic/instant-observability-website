@@ -37,15 +37,15 @@ export const parseQuickstartFiles = (quickstartFiles) => {
     (file) => file.type === 'yaml' && file.fileName.includes('config')
   );
 
-  //build the packUrl since it is not part of the raw github file contents
-  //assumes the filePath is always directly under 'quickstarts/'
+  // build the packUrl since it is not part of the raw github file contents
+  // assumes the filePath is always directly under 'quickstarts/'
   const packUrl = `${QUICKSTART_REPO_URL}/${
     config.filePath.split('/config')[0]
   }`;
 
-  let loadYaml = yaml.load(config.content);
+  const loadYaml = yaml.load(config.content);
 
-  //iterate through the array of documentation objects to trim new lines
+  // iterate through the array of documentation objects to trim new lines
   quickstartFiles.forEach((file) => {
     if (file.type === 'image' && file.fileName === loadYaml.icon) {
       quickstartContent.logoUrl = file.content;
@@ -72,7 +72,7 @@ export const parseQuickstartFiles = (quickstartFiles) => {
     loadYaml?.level.replace(' ', '_').toUpperCase() ?? 'COMMUNITY';
   quickstartContent.name = loadYaml?.slug ?? '';
   quickstartContent.packUrl = packUrl ?? '';
-  quickstartContent.relatedResources = []; //we don't get these from the config.yml
+  quickstartContent.relatedResources = []; // we don't get these from the config.yml
   quickstartContent.summary =
     loadYaml?.summary?.trim() ?? 'Placeholder summary';
   quickstartContent.title = loadYaml?.title ?? 'Placeholder title';
@@ -97,7 +97,7 @@ export const parseDashboardFiles = (files) => {
     try {
       dashboard = JSON.parse(dashFileMetadata.content);
     } catch (err) {
-      console.error(err);
+      console.error(err); // eslint-disable-line no-console
     }
 
     return {
@@ -119,7 +119,7 @@ export const parseAlertFiles = (alertFiles) => {
   return alertFiles.map((file) => {
     const loadYaml = yaml.loadAll(file.content)[0];
 
-    //parse and build alert object and add it to the array
+    // parse and build alert object and add it to the array
     return {
       details: loadYaml?.description?.trim() ?? 'Placeholder description',
       name: loadYaml?.name?.trim() ?? 'Placeholder name',
@@ -134,10 +134,10 @@ export const parseAlertFiles = (alertFiles) => {
  * @returns {Object} A quickstart object ready for display within the `QuickstartDetails` component.
  */
 export const parseRawQuickstartFiles = (rawFiles) => {
-  let dashboardFiles = [];
-  let alertFiles = [];
-  let quickstartDirs = {};
-  let quickstartFiles = [];
+  const dashboardFiles = [];
+  const alertFiles = [];
+  const quickstartDirs = {};
+  const quickstartFiles = [];
 
   for (const file of rawFiles) {
     if (file.filePath.includes('/dashboards/')) {
@@ -156,6 +156,6 @@ export const parseRawQuickstartFiles = (rawFiles) => {
   quickstartDirs.alerts = alertsDir;
   const quickstart = parseQuickstartFiles(quickstartFiles);
 
-  //merge together the parsed quickstart content and the alerts/dashboard arrrays
+  // merge together the parsed quickstart content and the alerts/dashboard arrrays
   return { ...quickstartDirs, ...quickstart };
 };

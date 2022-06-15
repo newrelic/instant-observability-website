@@ -47,11 +47,7 @@ const BannerBackground = ({ children }) => {
             }
           `}
         >
-          <img
-            src={bannerOverlayLeft}
-            alt="banner-left"
-            loading="lazy"
-          />
+          <img src={bannerOverlayLeft} alt="banner-left" loading="lazy" />
         </div>
         {children}
         <div
@@ -66,11 +62,7 @@ const BannerBackground = ({ children }) => {
             }
           `}
         >
-          <img
-            src={bannerOverlayRight}
-            alt="banner-right"
-            loading="lazy"
-          />
+          <img src={bannerOverlayRight} alt="banner-right" loading="lazy" />
         </div>
       </div>
     </div>

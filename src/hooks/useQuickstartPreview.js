@@ -58,14 +58,13 @@ const useQuickstartPreview = (prNumber, quickstartPath, isLocal, port) => {
           error: error.message,
         });
 
-        console.log('Error:', error.message);
+        console.log('Error:', error.message); // eslint-disable-line no-console
         navigate('/');
-        return;
       }
     };
 
     fetchFiles();
-  }, []);
+  });
 
   return quickstart;
 };
@@ -80,8 +79,8 @@ const isPreviewServerRunning = async (port) => {
   try {
     await fetch(`http://localhost:${port}`);
   } catch (error) {
-    console.log(error.message);
-    console.log('Please make sure your local preview server is running.');
+    console.log(error.message); // eslint-disable-line no-console
+    console.log('Please make sure your local preview server is running.'); // eslint-disable-line no-console
     // navigate to /
     return false;
   }

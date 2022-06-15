@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import { css } from '@emotion/react';
-import { Button, Link, Icon, useTessen } from '@newrelic/gatsby-theme-newrelic';
+import { Button, Link, useTessen } from '@newrelic/gatsby-theme-newrelic';
 import {
   getPackNr1Url,
   getGuidedInstallStackedNr1Url,
@@ -87,7 +87,7 @@ const hasComponent = (quickstart, key) =>
 const InstallButton = ({
   quickstart,
   location,
-  style = 'PRIMARY',
+  buttonStyle = 'PRIMARY',
   ...props
 }) => {
   const { treatment } = useTreatment('super_tiles');
@@ -134,13 +134,13 @@ const InstallButton = ({
   // first documentation supplied.
   const url = hasInstallableComponent
     ? createInstallLink(
-      quickstart.id,
-      nerdletId,
-      hasGuidedInstall,
-      hasUtmParameters,
-      checkIfReturningUser(),
-      parameters
-    )
+        quickstart.id,
+        nerdletId,
+        hasGuidedInstall,
+        hasUtmParameters,
+        checkIfReturningUser(),
+        parameters
+      )
     : quickstart.documentation[0].url;
 
   const writeCookie = () => {
@@ -186,14 +186,14 @@ const InstallButton = ({
       className="btn-styles btn1"
       css={css`
         --button-background: var(
-          ${style === 'PRIMARY'
-          ? '--btn-background-green'
-          : '--brand-secondary-background-color'}
+          ${buttonStyle === 'PRIMARY'
+            ? '--btn-background-green'
+            : '--brand-secondary-background-color'}
         );
         --button-text-color: var(
-          ${style === 'PRIMARY'
-          ? '--brand-primary-text-color'
-          : '--brand-secondary-text-color'}
+          ${buttonStyle === 'PRIMARY'
+            ? '--brand-primary-text-color'
+            : '--brand-secondary-text-color'}
         );
         background-color: var(--button-background);
         border-radius: 4px;
@@ -218,12 +218,8 @@ const InstallButton = ({
     >
       {hasInstallableComponent ? (
         <div className="btn-animation-styles">
-          <div className="scroll scroll-top">
-            Install now
-          </div>
-          <div className="scroll scroll-bottom">
-            Install now
-          </div>
+          <div className="scroll scroll-top">Install now</div>
+          <div className="scroll scroll-bottom">Install now</div>
         </div>
       ) : (
         'See installation docs'
@@ -236,7 +232,7 @@ InstallButton.propTypes = {
   quickstart: quickstart.isRequired,
   onClick: PropTypes.func,
   location: PropTypes.object.isRequired,
-  style: PropTypes.oneOf(['PRIMARY', 'SECONDARY']),
+  buttonStyle: PropTypes.oneOf(['PRIMARY', 'SECONDARY']),
 };
 
 export default InstallButton;

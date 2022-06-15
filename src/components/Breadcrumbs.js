@@ -18,8 +18,8 @@ const Breadcrumbs = ({ segments, separator }) => {
             css={css`
               color: var(--brand-highlight-green);
               text-decoration: none;
-              &:hover{
-              color: var(--brand-highlight-green);
+              &:hover {
+                color: var(--brand-highlight-green);
               }
             `}
           >

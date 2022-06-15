@@ -9,13 +9,8 @@ import useMedia from 'use-media';
 import useThemeTranslation from '@newrelic/gatsby-theme-newrelic/src/hooks/useThemeTranslation';
 import { useInstrumentedHandler } from '@newrelic/gatsby-theme-newrelic';
 import { Menu, X } from 'react-feather';
-import { useLocation } from "@reach/router"
+import { useLocation } from '@reach/router';
 import NewLogo from './NewLogo';
-
-const action = css`
-  color: var(--secondary-text-color);
-  transition: all 0.2s ease-out;
-`;
 
 export const NR_SITES = {
   PLATFORM: 'PLATFORM',
@@ -78,11 +73,6 @@ const NAV_BREAKPOINT = '1127px';
 // changes layout for mobile view
 const MOBILE_BREAKPOINT = '600px';
 
-const actionIcon = css`
-  display: block;
-  cursor: pointer;
-`;
-
 const GlobalHeader = ({ className, activeSite }) => {
   const { t } = useThemeTranslation();
   const [isOpen, setOpen] = React.useState(false);
@@ -98,7 +88,7 @@ const GlobalHeader = ({ className, activeSite }) => {
   const hideLogoText = useMedia({ maxWidth: '350px' });
   const location = useLocation();
   const UserIsInMainPage = location.pathname === '/instant-observability/';
-  const showGetStarted = UserIsInMainPage ? true : false;
+  const showGetStarted = !!UserIsInMainPage;
 
   return (
     <>

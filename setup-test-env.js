@@ -1,3 +1,5 @@
+import * as jest from 'jest';
+
 /* global expect */
 import { createSerializer, matchers } from '@emotion/jest';
 import * as emotion from '@emotion/react';

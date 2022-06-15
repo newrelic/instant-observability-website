@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 
-import Breadcrumbs from '../../components/Breadcrumbs';
-import InstallButton from '../../components/InstallButton';
+import Breadcrumbs from '../Breadcrumbs';
+import InstallButton from '../InstallButton';
 import { css } from '@emotion/react';
 import { quickstart } from '../../types';
 import defaultImage from '../../images/defaultQuickstartImage.png';
@@ -175,7 +175,7 @@ const LandingBanner = ({ quickstart, className, location }) => {
             css={css``}
             quickstart={quickstart}
             location={location}
-            style="PRIMARY"
+            buttonStyle="PRIMARY"
           />
         </div>
       </div>
@@ -208,7 +208,7 @@ function useDetermineBannerImg(quickstart, defaultImage) {
       const { width, height } = await getURLMeta(screenshot);
       const aspectRatio = width / height;
       if (aspectRatio > 1.6 && aspectRatio < 2.2) {
-        //set image to this screenshot if its the ideal aspect ratio  of ~1.9
+        // set image to this screenshot if its the ideal aspect ratio  of ~1.9
         image = screenshot;
         break;
       }
@@ -218,7 +218,7 @@ function useDetermineBannerImg(quickstart, defaultImage) {
 
   useEffect(() => {
     checkImgAspectRatio();
-  }, []);
+  });
 
   return bannerImg;
 }

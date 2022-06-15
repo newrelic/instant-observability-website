@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { css } from '@emotion/react';
 
-import { Link, Surface, Tag } from '@newrelic/gatsby-theme-newrelic';
+import { Surface, Tag } from '@newrelic/gatsby-theme-newrelic';
 import useTabs from './Tabs/useTabs';
 
 const truncateDescription = (description) => {
@@ -14,7 +14,7 @@ const truncateDescription = (description) => {
 };
 
 const OverviewTile = ({ key, title, image, description, tag }) => {
-  const [currentTab, setCurrentTab] = useTabs();
+  const [_currentTab, setCurrentTab] = useTabs();
 
   const navigateToTab = (tag) => {
     switch (tag) {
@@ -42,7 +42,12 @@ const OverviewTile = ({ key, title, image, description, tag }) => {
           position: relative;
           min-height: 200px;
         `}
+        role="button"
+        tabIndex={0}
         onClick={() => navigateToTab(tag)}
+        onKeyUp={(e) => {
+          if (e.key === 'Enter') navigateToTab(tag);
+        }}
       >
         <h3>{title}</h3>
         <div>
@@ -94,4 +99,3 @@ OverviewTile.propTypes = {
 };
 
 export default OverviewTile;
-

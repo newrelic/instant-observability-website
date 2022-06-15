@@ -1,7 +1,7 @@
 import React from 'react';
 import { css } from '@emotion/react';
 import pluralize from 'pluralize';
-import { Surface, Link, Tag, useTessen } from '@newrelic/gatsby-theme-newrelic';
+import { Surface, Link, useTessen } from '@newrelic/gatsby-theme-newrelic';
 import Intro from './Intro';
 import { quickstart } from '../types';
 import EbookIconSVG from './Icons/EbookIconSVG';
@@ -43,8 +43,8 @@ const QuickstartDataSources = ({ quickstart }) => {
           }
 
           .esuq8iu0 {
-          box-shadow: none;
-        }
+            box-shadow: none;
+          }
         `}
       >
         {quickstart.documentation.map((doc, index) => (
@@ -57,37 +57,32 @@ const QuickstartDataSources = ({ quickstart }) => {
             css={css`
               padding: 2rem;
               color: inherit;
-              &:hover{
-                color: #1D252C;
+              &:hover {
+                color: #1d252c;
               }
             `}
             interactive
           >
-            <EbookIconSVG className="Ebook"
+            <EbookIconSVG
+              className="Ebook"
               css={css`
-             width: 0.75rem;
-             height: 1rem;
-             margin-left: 0.5rem;
-             margin-top: 27px;
-             
-           `}
+                width: 0.75rem;
+                height: 1rem;
+                margin-left: 0.5rem;
+                margin-top: 27px;
+              `}
             />
             <p
               css={css`
                 font-family: 'Söhne-Kräftig';
                 margin-top: 16px;
                 margin-bottom: 16px;
-                `}>
+              `}
+            >
               {doc.name}
             </p>
 
-            {doc.description &&
-              <p>
-                {doc.description}
-              </p>
-
-            }
-
+            {doc.description && <p>{doc.description}</p>}
           </Surface>
         ))}
       </div>

@@ -1,11 +1,17 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { Link } from '@newrelic/gatsby-theme-newrelic';
 import { css } from '@emotion/react';
 import { quickstart } from '../types';
 import { LOGIN_LINK, SIGNUP_LINK } from '../data/constants';
 import InstallButton from './InstallButton';
 
-const QuickstartHowToUse = ({ quickstart, trackQuickstart, location, layoutContentSpacing }) => {
+const QuickstartHowToUse = ({
+  quickstart,
+  trackQuickstart,
+  location,
+  layoutContentSpacing,
+}) => {
   return (
     <>
       <div
@@ -93,16 +99,17 @@ const QuickstartHowToUse = ({ quickstart, trackQuickstart, location, layoutConte
           </li>
         </ul>
         <div
-        css={css`
-        @media (max-width: 760px) {
-        margin-bottom: 33px;
-        }
-        `}>
-        <InstallButton
-          quickstart={quickstart}
-          location={location}
-          style="SECONDARY"
-        />
+          css={css`
+            @media (max-width: 760px) {
+              margin-bottom: 33px;
+            }
+          `}
+        >
+          <InstallButton
+            quickstart={quickstart}
+            location={location}
+            buttonStyle="SECONDARY"
+          />
         </div>
       </div>
     </>
@@ -111,6 +118,11 @@ const QuickstartHowToUse = ({ quickstart, trackQuickstart, location, layoutConte
 
 QuickstartHowToUse.propTypes = {
   quickstart: quickstart.isRequired,
+  location: PropTypes.shape({
+    pathname: PropTypes.string.isRequired,
+  }),
+  trackQuickstart: PropTypes.func,
+  layoutContentSpacing: PropTypes.object,
 };
 
 export default QuickstartHowToUse;

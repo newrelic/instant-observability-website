@@ -55,6 +55,8 @@ const QuickstartDashboards = ({ quickstart }) => {
           infinite: true,
           dots: false,
         },
+      },
+      {
         breakpoint: 1081,
         settings: {
           slidesToShow: 1,
@@ -158,6 +160,7 @@ const QuickstartDashboards = ({ quickstart }) => {
                       >
                         <img
                           src={imgUrl}
+                          alt="Content cannot be displayed"
                           css={css`
                             width: 100%;
                             height: 17.5rem;

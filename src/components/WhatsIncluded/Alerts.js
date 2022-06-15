@@ -1,6 +1,8 @@
-import QuickstartAlerts from '../../components/QuickstartAlerts';
-import EmptyTab from '../../components/EmptyTab';
+import React from 'react';
+import QuickstartAlerts from '../QuickstartAlerts';
+import EmptyTab from '../EmptyTab';
 import { css } from '@emotion/react';
+import { quickstart } from '../../types';
 
 const Alerts = ({ quickstart }) => {
   return (
@@ -49,5 +51,8 @@ const Alerts = ({ quickstart }) => {
   );
 };
 
-export default Alerts;
+Alerts.propTypes = {
+  quickstart,
+};
 
+export default Alerts;
