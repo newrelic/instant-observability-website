@@ -15,7 +15,7 @@
     "serve": "gatsby serve",
     "serve:production": "yarn serve --prefix-paths",
     "clean": "gatsby clean",
-    "lint": "yarn eslint . --fix",
+    "lint": "yarn eslint .",
     "lint-fix": "yarn eslint . --fix",
     "fetch-quickstarts": "node ./scripts/actions/fetch-quickstarts.js",
     "build:related-content": "BUILD_RELATED_CONTENT=true yarn run build",
