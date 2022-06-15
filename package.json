@@ -17,6 +17,7 @@
     "clean": "gatsby clean",
     "lint": "yarn eslint .",
     "lint-fix": "yarn eslint . --fix",
+    "format": "prettier --write \"./**/*.js\"",
     "fetch-quickstarts": "node ./scripts/actions/fetch-quickstarts.js",
     "build:related-content": "BUILD_RELATED_CONTENT=true yarn run build",
     "test": "jest -i"
