@@ -1370,7 +1370,7 @@
     ],
     "dashboards": [
       {
-        "name": "RIQ Dashboard",
+        "name": "ReleaseIQ Dashboard",
         "description": null,
         "url": null,
         "screenshots": [
@@ -2052,19 +2052,19 @@
     ],
     "dashboards": [
       {
-        "name": "Battlesnake Performance",
-        "description": "Monitor your Battlesnake's performance and see how it stacks up against your competition!",
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/battlesnake/dashboards/battlesnake-performance/battlesnake-performance.png"
-        ]
-      },
-      {
         "name": "Battlesnake Server Status",
         "description": "A dashboard to monitor your Battlesnake server's performance. It's important to keep all responses to the `/move` endpoint under 500ms. Furthermore, it's possible that your snake may be in multiple concurrent matches at the same time. It's important to make sure you server and web application are running smoothly to keep you in the game!",
         "url": null,
         "screenshots": [
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/battlesnake/dashboards/battlesnake-server-status/battlesnake-server-status.png"
+        ]
+      },
+      {
+        "name": "Battlesnake Performance",
+        "description": "Monitor your Battlesnake's performance and see how it stacks up against your competition!",
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/battlesnake/dashboards/battlesnake-performance/battlesnake-performance.png"
         ]
       },
       {
@@ -3968,19 +3968,19 @@
     ],
     "dashboards": [
       {
-        "name": "Data Ingest Governance Entity Breakdowns",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/oma-data-gov/dashboards/data-ingest-entity-breakdown/data-ingest-entity-breakdown.png"
-        ]
-      },
-      {
         "name": "Data Ingest Governance Baseline",
         "description": null,
         "url": null,
         "screenshots": [
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/oma-data-gov/dashboards/data-ingest-baseline/data-ingest-baseline.png"
+        ]
+      },
+      {
+        "name": "Data Ingest Governance Entity Breakdowns",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/oma-data-gov/dashboards/data-ingest-entity-breakdown/data-ingest-entity-breakdown.png"
         ]
       }
     ],
@@ -4386,56 +4386,6 @@
       {
         "name": "Synthetics Page Link Crawler",
         "id": "third-party-synthetics-page-link-crawler"
-      }
-    ]
-  },
-  {
-    "title": "Cribl Logstream",
-    "name": "cribl-logstream",
-    "description": "## About Cribl\n\nCribl Logstream unlocks [data sources](https://docs.cribl.io/logstream/sources), including metrics, events, and logs, in an observability pipeline. \n\nDeploying this quickstart will allow you to add context to your data, by enriching it with information from external data sources, help secure your data, by redacting, obfuscating, or encrypting sensitive fields, and optimize your data, per your performance and cost requirements.\n\nFor more information about Cribl.Cloud, or the self-hosted Cribl Logstream platform, please go to [cribl.io/logstream/about](https://docs.cribl.io/logstream/about/)\n\nFor Cribl support, please go to [cribl.io/support](https://cribl.io/support/)\n\n\n## Getting started with Cribl\n\nTo get started with Cribl, you can sign up for a [free cloud account](https://cribl.cloud/signup/) and up to 1 TB/day of data.  Check out the [licensing page](https://docs.cribl.io/logstream/licensing) for more details.\n\nReady to start using Cribl Logstream to send Metrics, Events, and Logs to New Relic? Check out the [New Relic Logs & Metrics](https://docs.cribl.io/logstream/destinations-newrelic) destinations and the [New Relic Events](https://docs.cribl.io/logstream/destinations-newrelic-events) destinations.\n\nNeed an introductory course on Cribl Logstream? Get started with the [Cribl sandbox](https://sandbox.cribl.io/).\n\n\n## About this integration\n\nThe Cribl LogStream quickstart gives you a way to quickly integrate your Cribl LogStream metrics and Worker Node Logs with New Relic’s observability platform. The quickstart also has several ready-to-use visualizations to get you started right away with observing your data.\n\nFor more information about this integration, check out the [blogpost](https://cribl.io/blog/a-low-code-approach-to-getting-your-logs-and-metrics-into-new-relic-with-cribl-logstream/)",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/cribl-logstream",
-    "id": "e67f2859-80c1-4234-bbcf-bcbeeb31d70d",
-    "level": "VERIFIED",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/cribl-logstream/Cribl-Logo.png",
-    "summary": "Observe the Cribl Logstream control plane performance including sources, pipelines, workers, and destinations.",
-    "websiteUrl": null,
-    "keywords": [
-      "logstream",
-      "cribl",
-      "control plane",
-      "splunk",
-      "elastic",
-      "etl",
-      "newrelic partner"
-    ],
-    "authors": [
-      "Carley Rosato (Cribl)"
-    ],
-    "dashboards": [
-      {
-        "name": "LogStream Metrics",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/cribl-logstream/dashboards/cribl-logstream-metrics/cribl-logstream-metrics01.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/cribl-logstream/dashboards/cribl-logstream-metrics/cribl-logstream-metrics02.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/cribl-logstream/dashboards/cribl-logstream-metrics/cribl-logstream-metrics03.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/cribl-logstream/dashboards/cribl-logstream-metrics/cribl-logstream-metrics04.png"
-        ]
-      }
-    ],
-    "alerts": [],
-    "documentation": [
-      {
-        "name": "Installation Docs",
-        "description": "Configure a Logstream destination to send Metrics, Events, and Logs",
-        "url": "https://docs.cribl.io/docs/destinations-newrelic"
-      }
-    ],
-    "installPlans": [
-      {
-        "name": "Cribl-Logstream",
-        "id": "third-party-cribl-logstream"
       }
     ]
   },
@@ -5828,19 +5778,19 @@
     ],
     "dashboards": [
       {
-        "name": "Redis Enterprise Database CRDT",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/redisenterprise/dashboards/active_active/active_active01.png"
-        ]
-      },
-      {
         "name": "Redis Enterprise Database Metrics",
         "description": null,
         "url": null,
         "screenshots": [
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/redisenterprise/dashboards/database/database01.png"
+        ]
+      },
+      {
+        "name": "Redis Enterprise Database CRDT",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/redisenterprise/dashboards/active_active/active_active01.png"
         ]
       },
       {
@@ -5948,6 +5898,56 @@
       {
         "name": "Prometheus OpenMetrics Integration Stats",
         "id": "third-party-audit-prometheus-data-ingest-analysis"
+      }
+    ]
+  },
+  {
+    "title": "Cribl Logstream",
+    "name": "cribl-logstream",
+    "description": "## About Cribl\n\nCribl Logstream unlocks [data sources](https://docs.cribl.io/logstream/sources), including metrics, events, and logs, in an observability pipeline. \n\nDeploying this quickstart will allow you to add context to your data, by enriching it with information from external data sources, help secure your data, by redacting, obfuscating, or encrypting sensitive fields, and optimize your data, per your performance and cost requirements.\n\nFor more information about Cribl.Cloud, or the self-hosted Cribl Logstream platform, please go to [cribl.io/logstream/about](https://docs.cribl.io/logstream/about/)\n\nFor Cribl support, please go to [cribl.io/support](https://cribl.io/support/)\n\n\n## Getting started with Cribl\n\nTo get started with Cribl, you can sign up for a [free cloud account](https://cribl.cloud/signup/) and up to 1 TB/day of data.  Check out the [licensing page](https://docs.cribl.io/logstream/licensing) for more details.\n\nReady to start using Cribl Logstream to send Metrics, Events, and Logs to New Relic? Check out the [New Relic Logs & Metrics](https://docs.cribl.io/logstream/destinations-newrelic) destinations and the [New Relic Events](https://docs.cribl.io/logstream/destinations-newrelic-events) destinations.\n\nNeed an introductory course on Cribl Logstream? Get started with the [Cribl sandbox](https://sandbox.cribl.io/).\n\n\n## About this integration\n\nThe Cribl LogStream quickstart gives you a way to quickly integrate your Cribl LogStream metrics and Worker Node Logs with New Relic’s observability platform. The quickstart also has several ready-to-use visualizations to get you started right away with observing your data.\n\nFor more information about this integration, check out the [blogpost](https://cribl.io/blog/a-low-code-approach-to-getting-your-logs-and-metrics-into-new-relic-with-cribl-logstream/)",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/cribl-logstream",
+    "id": "e67f2859-80c1-4234-bbcf-bcbeeb31d70d",
+    "level": "VERIFIED",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/cribl-logstream/Cribl-Logo.png",
+    "summary": "Observe the Cribl Logstream control plane performance including sources, pipelines, workers, and destinations.",
+    "websiteUrl": null,
+    "keywords": [
+      "logstream",
+      "cribl",
+      "control plane",
+      "splunk",
+      "elastic",
+      "etl",
+      "newrelic partner"
+    ],
+    "authors": [
+      "Carley Rosato (Cribl)"
+    ],
+    "dashboards": [
+      {
+        "name": "Cribl LogStream Metrics",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/cribl-logstream/dashboards/cribl-logstream-metrics/cribl-logstream-metrics01.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/cribl-logstream/dashboards/cribl-logstream-metrics/cribl-logstream-metrics02.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/cribl-logstream/dashboards/cribl-logstream-metrics/cribl-logstream-metrics03.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/cribl-logstream/dashboards/cribl-logstream-metrics/cribl-logstream-metrics04.png"
+        ]
+      }
+    ],
+    "alerts": [],
+    "documentation": [
+      {
+        "name": "Installation Docs",
+        "description": "Configure a Logstream destination to send Metrics, Events, and Logs",
+        "url": "https://docs.cribl.io/docs/destinations-newrelic"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "Cribl-Logstream",
+        "id": "third-party-cribl-logstream"
       }
     ]
   },
@@ -6469,52 +6469,6 @@
       {
         "name": "Guided install",
         "id": "guided-install"
-      }
-    ]
-  },
-  {
-    "title": "Databricks Integration",
-    "name": "databricks",
-    "description": "Databricks is an orchestration platform for Apache Spark. Instantly monitor Databricks Spark applications with our New Relic Spark integration quickstart.\nOur integration provides a script run in a notebook to generate an installation script, which you can attach to a cluster and populate Spark metrics to New relic Insights events. Easily track the health of your Databricks clusters, fine-tune your Spark jobs for peak performance, and troubleshoot problems with this quickstart.\n\nDatabricks cluster’s driver node runs each job in scheduled stages. Individual stages are broken down into tasks and distributed across executor nodes. Our New Relic Spark integration collects detailed job and stage metrics so you can get granular insight into job performance at a glance. For example , break down the Job metric by status (successful, pending, or failed) to see in real-time if a high number of jobs are failing, which could indicate a code error or memory issue at the executor level. Metrics on the number of jobs in realtime can also help you make decisions for provisioning clusters in the future.",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/databricks",
-    "id": "533cdd19-8232-42cb-b134-e7d17bfff581",
-    "level": "COMMUNITY",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/databricks/logo.png",
-    "summary": "Monitor Databricks Spark applications with New Relic Spark integration using notebook script",
-    "websiteUrl": null,
-    "keywords": [
-      "nrlabs",
-      "nrlabs-data",
-      "apache spark",
-      "spark",
-      "databricks",
-      "newrelic partner"
-    ],
-    "authors": [
-      "New Relic Labs"
-    ],
-    "dashboards": [
-      {
-        "name": "Spark - Overview v2",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/databricks/dashboards/databricks/databricks.png"
-        ]
-      }
-    ],
-    "alerts": [],
-    "documentation": [
-      {
-        "name": "Databricks init script creator notebook",
-        "description": "Databricks notebook to create init script to be used during initialization of Databricks cluster\n",
-        "url": "https://github.com/newrelic-experimental/nri-spark#databricks-init-script-creator-notebook"
-      }
-    ],
-    "installPlans": [
-      {
-        "name": "Databricks",
-        "id": "third-party-databricks"
       }
     ]
   },
@@ -8484,7 +8438,7 @@
     ],
     "dashboards": [
       {
-        "name": "bitbucket",
+        "name": "Bitbucket",
         "description": null,
         "url": null,
         "screenshots": [
@@ -8504,6 +8458,52 @@
       {
         "name": "Bitbucket",
         "id": "third-party-bitbucket"
+      }
+    ]
+  },
+  {
+    "title": "Databricks Integration",
+    "name": "databricks",
+    "description": "Databricks is an orchestration platform for Apache Spark. Instantly monitor Databricks Spark applications with our New Relic Spark integration quickstart.\nOur integration provides a script run in a notebook to generate an installation script, which you can attach to a cluster and populate Spark metrics to New relic Insights events. Easily track the health of your Databricks clusters, fine-tune your Spark jobs for peak performance, and troubleshoot problems with this quickstart.\n\nDatabricks cluster’s driver node runs each job in scheduled stages. Individual stages are broken down into tasks and distributed across executor nodes. Our New Relic Spark integration collects detailed job and stage metrics so you can get granular insight into job performance at a glance. For example , break down the Job metric by status (successful, pending, or failed) to see in real-time if a high number of jobs are failing, which could indicate a code error or memory issue at the executor level. Metrics on the number of jobs in realtime can also help you make decisions for provisioning clusters in the future.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/databricks",
+    "id": "533cdd19-8232-42cb-b134-e7d17bfff581",
+    "level": "COMMUNITY",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/databricks/logo.png",
+    "summary": "Monitor Databricks Spark applications with New Relic Spark integration using notebook script",
+    "websiteUrl": null,
+    "keywords": [
+      "nrlabs",
+      "nrlabs-data",
+      "apache spark",
+      "spark",
+      "databricks",
+      "newrelic partner"
+    ],
+    "authors": [
+      "New Relic Labs"
+    ],
+    "dashboards": [
+      {
+        "name": "Databricks: Spark - Overview v2",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/databricks/dashboards/databricks/databricks.png"
+        ]
+      }
+    ],
+    "alerts": [],
+    "documentation": [
+      {
+        "name": "Databricks init script creator notebook",
+        "description": "Databricks notebook to create init script to be used during initialization of Databricks cluster\n",
+        "url": "https://github.com/newrelic-experimental/nri-spark#databricks-init-script-creator-notebook"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "Databricks",
+        "id": "third-party-databricks"
       }
     ]
   },
@@ -12992,14 +12992,6 @@
     ],
     "dashboards": [
       {
-        "name": "Lacework Anomaly Detections",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/lacework/dashboards/lacework-anomaly-detections/lacework-anomaly-detections.png"
-        ]
-      },
-      {
         "name": "Lacework Compliance Violations",
         "description": null,
         "url": null,
@@ -13013,6 +13005,14 @@
         "url": null,
         "screenshots": [
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/lacework/dashboards/lacework-security-overview/lacework-security-overview.png"
+        ]
+      },
+      {
+        "name": "Lacework Anomaly Detections",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/lacework/dashboards/lacework-anomaly-detections/lacework-anomaly-detections.png"
         ]
       }
     ],
@@ -13034,7 +13034,7 @@
   {
     "title": "Zebrium Root Cause as a Service",
     "name": "zebrium",
-    "description": "## Zebrium Quickstart\n\nZebrium Root Cause as a Service reduces downtime by helping users find the root cause of problems more quickly. It works by using statistical machine learning on logs and achieves a proven accuracy rate of 95%. This is done without any manual training or rules. When there's a problem, you can now automatically see the root cause directly on any New Relic dashboard.\n\n\n### How to use Zebrium\n\n- Send your logs to Zebrium by installing an open source log collector (Zebrium does not retain your logs, it analyzes them inline). \n- When you know there is a problem, simply look at the Zebrium dashboard and you will see root cause indicators to explain what happened\n\n### Benefits\n\n- For problems that require digging through logs, speed up resolution by 10x\n- Proactively catch problems without requiring any rules\n- Reduce the burden on engineering, SREs and Devops when solving complex incidents\n\n### The Zebrium quickstart includes a dashboard that shows:\n\n- A vertical bar whenever Zebrium detects a potential problem\n- A listing of Zebrium detection summaries that includes an NLP generated summary and a link to the full report in the Zebrium UI\n- Metric charts showing log counts, error counts and anomaly counts\n\nQuestions? [Please contact Zebrium.](mailto:hello@zebrium.com)",
+    "description": "## Zebrium\n\nZebrium Root Cause as a Service reduces downtime by helping users find the root cause of problems more quickly. It works by using statistical machine learning on logs and achieves a proven accuracy rate of 95%. This is done without any manual training or rules. When there's a problem, you can now automatically see the root cause directly on any New Relic dashboard.\n\n\n### How to use Zebrium\n\n- Send your logs to Zebrium by installing an open source log collector (Zebrium does not retain your logs, it analyzes them inline). \n- When you know there is a problem, simply look at the Zebrium dashboard and you will see root cause indicators to explain what happened\n\n### Benefits\n\n- For problems that require digging through logs, speed up resolution by 10x\n- Proactively catch problems without requiring any rules\n- Reduce the burden on engineering, SREs and Devops when solving complex incidents\n\n### The Zebrium quickstart includes a dashboard that shows:\n\n- A vertical bar whenever Zebrium detects a potential problem\n- A listing of Zebrium detection summaries that includes an NLP generated summary and a link to the full report in the Zebrium UI\n- Metric charts showing log counts, error counts and anomaly counts\n\nQuestions? [Please contact Zebrium.](mailto:hello@zebrium.com)",
     "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/zebrium",
     "id": "2135562c-bdf4-41bd-bca4-f11bcdee72ca",
     "level": "VERIFIED",
@@ -13046,13 +13046,11 @@
       "zebrium",
       "featured",
       "logs",
-      "ML",
-      "AI",
+      "ai",
       "machine-learning",
       "root cause",
       "newrelic partner",
-      "partner",
-      "SRE",
+      "sre",
       "mlops"
     ],
     "authors": [
@@ -17278,14 +17276,6 @@
     ],
     "dashboards": [
       {
-        "name": "Catchpoint-Response Size",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/catchpoint/dashboards/Catchpoint-Response_Size/Catchpoint-Response_Size.png"
-        ]
-      },
-      {
         "name": "Catchpoint-Recent Errors",
         "description": null,
         "url": null,
@@ -17307,6 +17297,14 @@
         "url": null,
         "screenshots": [
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/catchpoint/dashboards/Catchpoint-Test_Times/Catchpoint-Test_Times.png"
+        ]
+      },
+      {
+        "name": "Catchpoint-Response Size",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/catchpoint/dashboards/Catchpoint-Response_Size/Catchpoint-Response_Size.png"
         ]
       }
     ],
@@ -18194,63 +18192,6 @@
     ]
   },
   {
-    "title": "Akamai DataStream 2",
-    "name": "datastream2",
-    "description": "## Akamai Quickstart\n  \nAkamai Technologies is a leading content delivery network (CDN), cybersecurity, and cloud service provider.\n\n### DataStream 2\n\nDataStream 2 captures performance and security logs from your delivery properties and streams them in near real-time to provide complete monitoring.\n\nFor more information please go to https://techdocs.akamai.com/datastream2/docs\n\n### DataStream 2 quickstart\n\nThe Akamai DataStream 2 quickstart enables you to monitor your performance and security logs in real time. Here are a few of the monitoring tools available with this quickstart:\n- HTTP status code distribution\n- Error rate\n- Log ingest\n- Cache hit retio \n- TLS overhead time ranges\n- Overhead byte ranges\n- HTTP protocol distribution",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/datastream2-akamai",
-    "id": "cb995039-39d8-44d9-97c3-58174a1337f2",
-    "level": "COMMUNITY",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/datastream2-akamai/logo.png",
-    "summary": "The DataStream 2 quickstart will enable you to monitor and analyze your Akamai performance and security logs.",
-    "websiteUrl": null,
-    "keywords": [
-      "akamai",
-      "logs",
-      "cdn",
-      "datastream",
-      "performance",
-      "security",
-      "newrelic partner",
-      "featured"
-    ],
-    "authors": [
-      "Gayatri S (Akamai Technologies)"
-    ],
-    "dashboards": [
-      {
-        "name": "Akamai Datastream2",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/datastream2-akamai/dashboards/datastream2/datastream2-01.jpeg",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/datastream2-akamai/dashboards/datastream2/datastream2-02.jpeg",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/datastream2-akamai/dashboards/datastream2/datastream2-03.jpeg"
-        ]
-      }
-    ],
-    "alerts": [
-      {
-        "name": "Datastream2 - 5xx error greater than 1%",
-        "details": "Alert triggered when the error rate(5xx errors) exceeds 1%",
-        "type": "BASELINE",
-        "url": null
-      }
-    ],
-    "documentation": [
-      {
-        "name": "Installation docs",
-        "description": "Configure Akamai Datastream2 streaming logs to New Relic",
-        "url": "https://techdocs.akamai.com/datastream2/docs/stream-logs/"
-      }
-    ],
-    "installPlans": [
-      {
-        "name": "Datastream2",
-        "id": "third-party-datastream2-akamai"
-      }
-    ]
-  },
-  {
     "title": "Apple macOS (Beta)",
     "name": "macos",
     "description": "## Apple macOS?\nWith New Relic's infrastructure monitoring agent for macOS, you can monitor individual desktops or servers to analyze how your applications are performing as a whole. The macOS agent can run on your own hardware or in cloud systems such as AWS.\n\n## Supported versions\n- macOS 10.14 (Mohave), 10.15 (Catalina), 11 (Big Sur)\n- 64-bit x86 processor (M1 processor is not supported yet)",
@@ -18782,6 +18723,62 @@
       {
         "name": "Python Agent",
         "id": "setup-python-agent"
+      }
+    ]
+  },
+  {
+    "title": "Akamai DataStream 2",
+    "name": "datastream2",
+    "description": "## Akamai Quickstart\n  \nAkamai Technologies is a leading content delivery network (CDN), cybersecurity, and cloud service provider.\n\n### DataStream 2\n\nDataStream 2 captures performance and security logs from your delivery properties and streams them in near real-time to provide complete monitoring.\n\nFor more information please go to https://techdocs.akamai.com/datastream2/docs\n\n### DataStream 2 quickstart\n\nThe Akamai DataStream 2 quickstart enables you to monitor your performance and security logs in real time. Here are a few of the monitoring tools available with this quickstart:\n- HTTP status code distribution\n- Error rate\n- Log ingest\n- Cache hit retio \n- TLS overhead time ranges\n- Overhead byte ranges\n- HTTP protocol distribution",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/datastream2-akamai",
+    "id": "cb995039-39d8-44d9-97c3-58174a1337f2",
+    "level": "COMMUNITY",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/datastream2-akamai/logo.png",
+    "summary": "The DataStream 2 quickstart will enable you to monitor and analyze your Akamai performance and security logs.",
+    "websiteUrl": null,
+    "keywords": [
+      "akamai",
+      "logs",
+      "cdn",
+      "datastream",
+      "performance",
+      "security",
+      "newrelic partner"
+    ],
+    "authors": [
+      "Gayatri S (Akamai Technologies)"
+    ],
+    "dashboards": [
+      {
+        "name": "Akamai Datastream2",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/datastream2-akamai/dashboards/datastream2/datastream2-01.jpeg",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/datastream2-akamai/dashboards/datastream2/datastream2-02.jpeg",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/datastream2-akamai/dashboards/datastream2/datastream2-03.jpeg"
+        ]
+      }
+    ],
+    "alerts": [
+      {
+        "name": "Datastream2 - 5xx error greater than 1%",
+        "details": "Alert triggered when the error rate(5xx errors) exceeds 1%",
+        "type": "BASELINE",
+        "url": null
+      }
+    ],
+    "documentation": [
+      {
+        "name": "Installation docs",
+        "description": "Configure Akamai Datastream2 streaming logs to New Relic",
+        "url": "https://techdocs.akamai.com/datastream2/docs/stream-logs/"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "Datastream2",
+        "id": "third-party-datastream2-akamai"
       }
     ]
   },
@@ -22038,27 +22035,19 @@
     ],
     "dashboards": [
       {
+        "name": "AWS Integrations Data Ingest Analysis",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/audit/infrastructure-integrations-data-analysis/dashboards/aws-integrations-data-ingest-analysis/aws-integrations-data-ingest-analysis.png"
+        ]
+      },
+      {
         "name": "Azure Integrations Data Ingest Analysis",
         "description": null,
         "url": null,
         "screenshots": [
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/audit/infrastructure-integrations-data-analysis/dashboards/azure-integrations-data-ingest-analysis/azure-integrations-data-ingest-analysis.png"
-        ]
-      },
-      {
-        "name": "On-Host Integrations Data Analysis",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/audit/infrastructure-integrations-data-analysis/dashboards/on-host-integrations-data-analysis/on-host-integrations-data-analysis.png"
-        ]
-      },
-      {
-        "name": "Kubernetes Data Ingest Analysis",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/audit/infrastructure-integrations-data-analysis/dashboards/kubernetes-data-ingest-analysis/kubernetes-data-ingest-analysis.png"
         ]
       },
       {
@@ -22070,11 +22059,19 @@
         ]
       },
       {
-        "name": "AWS Integrations Data Ingest Analysis",
+        "name": "Kubernetes Data Ingest Analysis",
         "description": null,
         "url": null,
         "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/audit/infrastructure-integrations-data-analysis/dashboards/aws-integrations-data-ingest-analysis/aws-integrations-data-ingest-analysis.png"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/audit/infrastructure-integrations-data-analysis/dashboards/kubernetes-data-ingest-analysis/kubernetes-data-ingest-analysis.png"
+        ]
+      },
+      {
+        "name": "On-Host Integrations Data Analysis",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/audit/infrastructure-integrations-data-analysis/dashboards/on-host-integrations-data-analysis/on-host-integrations-data-analysis.png"
         ]
       }
     ],
@@ -22757,19 +22754,19 @@
     ],
     "dashboards": [
       {
+        "name": "Browser Overview",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/browser/dashboards/browser_overview/browser_overview.png"
+        ]
+      },
+      {
         "name": "Browser Pages Dashboard",
         "description": null,
         "url": null,
         "screenshots": [
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/browser/dashboards/browser_pages_dashboard/browser_pages_dashboard.png"
-        ]
-      },
-      {
-        "name": "JavaScript Errors",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/browser/dashboards/javascript_errors/javascript_errors.png"
         ]
       },
       {
@@ -22781,11 +22778,11 @@
         ]
       },
       {
-        "name": "Browser Overview",
+        "name": "JavaScript Errors",
         "description": null,
         "url": null,
         "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/browser/dashboards/browser_overview/browser_overview.png"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/browser/dashboards/javascript_errors/javascript_errors.png"
         ]
       }
     ],
