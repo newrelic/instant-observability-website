@@ -28,7 +28,7 @@ module.exports = {
     '**/__tests__/**/*',
     '**/node_modules/**/*',
     '**/public/**/*',
-    '**/static/**/*',
+    '**/static/*',
   ],
   rules: {
     'jsx-a11y/no-onchange': 0,
