@@ -24,7 +24,7 @@ const Overlay = ({ children, onCloseOverlay, isOpen = false, className }) => {
         onCloseOverlay();
       }
     },
-    [ref.current]
+    [ref.current, onCloseOverlay]
   );
 
   useEffect(() => {
