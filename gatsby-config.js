@@ -46,8 +46,8 @@ module.exports = {
               }
             },
             getParams: ({ node }) => {
-              let tags = node.keywords;
-              let title = node.title;
+              const tags = node.keywords;
+              const title = node.title;
 
               return {
                 q: tags ? tags.map(quote).join(' OR ') : title,

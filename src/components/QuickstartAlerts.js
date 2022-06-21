@@ -35,7 +35,6 @@ const QuickstartAlerts = ({ quickstart }) => (
           box-shadow: none;
         }
       `}
-
     >
       {quickstart.alerts.map((alert, index) => (
         <Surface
@@ -45,20 +44,21 @@ const QuickstartAlerts = ({ quickstart }) => (
             padding: 2rem;
           `}
         >
-          <AlertIconSVG className="Alert"
+          <AlertIconSVG
+            className="Alert"
             css={css`
-            width: 0.75rem;
-            height: 1rem;
-            margin-left: 0.5rem;
-      
-          `}
+              width: 0.75rem;
+              height: 1rem;
+              margin-left: 0.5rem;
+            `}
           />
           <p
             css={css`
-            font-family: 'Söhne-Kräftig';
-          margin-top: 16px;
-          margin-bottom: 16px;
-          `}>
+              font-family: 'Söhne-Kräftig';
+              margin-top: 16px;
+              margin-bottom: 16px;
+            `}
+          >
             {alert.name}
           </p>
           {alert.details && <p>{alert.details}</p>}

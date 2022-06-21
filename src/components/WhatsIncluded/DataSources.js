@@ -1,6 +1,8 @@
+import React from 'react';
 import QuickstartDataSources from '../QuickstartDataSources';
 import EmptyTab from '../EmptyTab';
 import { css } from '@emotion/react';
+import { quickstart } from '../../types';
 
 const DataSources = ({ quickstart }) => {
   return (
@@ -49,5 +51,8 @@ const DataSources = ({ quickstart }) => {
   );
 };
 
-export default DataSources;
+DataSources.propTypes = {
+  quickstart,
+};
 
+export default DataSources;

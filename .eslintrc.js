@@ -24,7 +24,12 @@ module.exports = {
     browser: true,
     es6: true,
   },
-  ignorePatterns: ['**/__tests__/**/*'],
+  ignorePatterns: [
+    '**/__tests__/**/*',
+    '**/node_modules/**/*',
+    '**/public/**/*',
+    '**/static/*',
+  ],
   rules: {
     'jsx-a11y/no-onchange': 0,
     'no-unused-vars': [

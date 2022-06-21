@@ -7100,6 +7100,13 @@ eslint-plugin-jsx-a11y@^6.5.1:
     language-tags "^1.0.5"
     minimatch "^3.0.4"
 
+eslint-plugin-markdown@^2.2.1:
+  version "2.2.1"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-markdown/-/eslint-plugin-markdown-2.2.1.tgz#76b8a970099fbffc6cc1ffcad9772b96911c027a"
+  integrity sha512-FgWp4iyYvTFxPwfbxofTvXxgzPsDuSKHQy2S+a8Ve6savbujey+lgrFFbXQA0HPygISpRYWYBjooPzhYSF81iA==
+  dependencies:
+    mdast-util-from-markdown "^0.8.5"
+
 eslint-plugin-prettier@^3.1.1:
   version "3.4.1"
   resolved "https://registry.npmjs.org/eslint-plugin-prettier/-/eslint-plugin-prettier-3.4.1.tgz"
@@ -11356,7 +11363,7 @@ mdast-util-definitions@^4.0.0:
   dependencies:
     unist-util-visit "^2.0.0"
 
-mdast-util-from-markdown@^0.8.0:
+mdast-util-from-markdown@^0.8.0, mdast-util-from-markdown@^0.8.5:
   version "0.8.5"
   resolved "https://registry.npmjs.org/mdast-util-from-markdown/-/mdast-util-from-markdown-0.8.5.tgz"
   integrity sha512-2hkTXtYYnr+NubD/g6KGBS/0mFmBcifAsI0yIWRiRo0PjVs6SSOSOdtzbp6kSGnShDN6G5aWZpKQ2lWRy27mWQ==

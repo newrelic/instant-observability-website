@@ -2,8 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { css } from '@emotion/react';
 import { graphql, useStaticQuery } from 'gatsby';
-import { PageTools, Tag, Icon, Link } from '@newrelic/gatsby-theme-newrelic';
-import useThemeTranslation from '@newrelic/gatsby-theme-newrelic/src/hooks/useThemeTranslation';
+import { PageTools, Icon, Link } from '@newrelic/gatsby-theme-newrelic';
 import { useLocation } from '@reach/router';
 
 const isRelative = (url) => url.startsWith('/');
@@ -13,8 +12,7 @@ const findLabel = (url, labels) => {
   return label;
 };
 
-const RelatedResources = ({ className, resources, title }) => {
-  const { t } = useThemeTranslation();
+const RelatedResources = ({ className, resources }) => {
   const location = useLocation();
   const {
     site: {
@@ -45,7 +43,7 @@ const RelatedResources = ({ className, resources, title }) => {
     return null;
   }
 
-  const currentSiteLabel = (url) => {
+  const _currentSiteLabel = (url) => {
     // this can be simplified once we have a subdomain for IO
     if (url.startsWith('/instant-observability')) {
       return 'quickstarts';
@@ -68,17 +66,12 @@ const RelatedResources = ({ className, resources, title }) => {
               url = url.replace(siteUrl, '');
             }
 
-            const label = isRelative(url)
-              ? currentSiteLabel(url)
-              : findLabel(url, labels);
-
             return (
               <li
                 key={url}
                 css={css`
-                font-size: 18px;
+                  font-size: 18px;
                   margin-top: 0;
-
 
                   &:not(:last-child) {
                     margin-bottom: 0.75rem;
@@ -91,7 +84,7 @@ const RelatedResources = ({ className, resources, title }) => {
                     display: block;
                     margin-bottom: 0.25rem;
                     color: var(--link-font-color);
-                    &:hover{
+                    &:hover {
                       color: var(--hover-color);
                     }
                   `}
@@ -129,7 +122,6 @@ RelatedResources.propTypes = {
       url: PropTypes.string.isRequired,
     })
   ).isRequired,
-  title: PropTypes.string,
 };
 
 export default RelatedResources;

@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
 const NewLogo = () => {
   return (
@@ -67,10 +66,6 @@ const NewLogo = () => {
       </defs>
     </svg>
   );
-};
-NewLogo.propTypes = {
-  className: PropTypes.string,
-  width: PropTypes.string,
 };
 
 export default NewLogo;

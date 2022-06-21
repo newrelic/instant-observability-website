@@ -3,20 +3,11 @@ import { DEMO_LINK, SIGNUP_LINK } from '../data/constants';
 import PropTypes from 'prop-types';
 import React from 'react';
 import { css } from '@emotion/react';
-import DoubleUnderlineSVG from './Icons/DoubleUnderlineSVG'
+import DoubleUnderlineSVG from './Icons/DoubleUnderlineSVG';
 
 const MOBILE_BREAKPOINT = '800px';
 
-
-
-const GetStartedFooter = ({
-  quickstart,
-  location,
-  style = 'PRIMARY',
-  ...props
-}) => {
-
-
+const GetStartedFooter = ({ style = 'PRIMARY', ...props }) => {
   return (
     <div
       css={css`
@@ -49,7 +40,6 @@ const GetStartedFooter = ({
           font-size: 44px;
           line-height: 50px;
           letter: -1.5%;
-         
         }
 
         @media screen and (max-width: ${MOBILE_BREAKPOINT}) {
@@ -65,7 +55,6 @@ const GetStartedFooter = ({
             margin-bottom: 3.375rem;
             font-size: 2.75rem;
             letter-spacing: -0.015em;
-           
           }
 
           .Underline {
@@ -78,15 +67,15 @@ const GetStartedFooter = ({
 
         @media screen and (min-width: ${MOBILE_BREAKPOINT}) {
           h3 {
-          padding-right: 180px;
+            padding-right: 180px;
           }
-        .Underline {
-          position: absolute;
-          right: 0;
-          width: 100%;
-          display: block;
+          .Underline {
+            position: absolute;
+            right: 0;
+            width: 100%;
+            display: block;
+          }
         }
-      }
       `}
     >
       <h3
@@ -97,9 +86,10 @@ const GetStartedFooter = ({
         Get started today&nbsp;
         <span
           css={css`
-        white-space: nowrap;
-        position: relative;
-        `}>
+            white-space: nowrap;
+            position: relative;
+          `}
+        >
           for free.
           <DoubleUnderlineSVG className="Underline" />
         </span>
@@ -144,46 +134,36 @@ const GetStartedFooter = ({
           href={SIGNUP_LINK}
           className="btn-styles btn1"
           css={css`
-        --button-background: var(
-          ${style === 'PRIMARY'
-              ? '--btn-background-green'
-              : '--brand-secondary-background-color'}
-        );
-        --button-text-color: var(
-          ${style === 'PRIMARY'
-              ? '--brand-primary-text-color'
-              : '--brand-secondary-text-color'}
-        );
-          background-color: var(
-              --background-color
+            --button-background: var(
+              ${style === 'PRIMARY'
+                ? '--btn-background-green'
+                : '--brand-secondary-background-color'}
             );
+            --button-text-color: var(
+              ${style === 'PRIMARY'
+                ? '--brand-primary-text-color'
+                : '--brand-secondary-text-color'}
+            );
+            background-color: var(--background-color);
             color: var(--nr1--color--text--buttton--primary);
-        border-radius: 4px;
-        font-size: 14px;
-        line-height: 21px;
-        font-weight: 400;
-        padding: 1rem;
-          &:hover {
-              background-color: var(
-                --background-color
-              );
+            border-radius: 4px;
+            font-size: 14px;
+            line-height: 21px;
+            font-weight: 400;
+            padding: 1rem;
+            &:hover {
+              background-color: var(--background-color);
               color: var(--nr1--color--text--buttton--primary);
             }
             .scroll {
               margin-top: -1px;
             }
-
-       `}
+          `}
         >
           <div className="btn-animation-styles">
-            <div className="scroll scroll-top">
-              Sign Up
-            </div>
-            <div className="scroll scroll-bottom">
-              Sign Up
-            </div>
+            <div className="scroll scroll-top">Sign Up</div>
+            <div className="scroll scroll-bottom">Sign Up</div>
           </div>
-
         </Button>
         <Button
           {...props}
@@ -192,56 +172,50 @@ const GetStartedFooter = ({
           href={DEMO_LINK}
           className="btn-styles btn1"
           css={css`
-          --button-background: var(
-            ${style === 'PRIMARY'
-              ? '--btn-background-green'
-              : '--brand-secondary-background-color'}
-          );
-          --button-text-color: var(
-            ${style === 'PRIMARY'
-              ? '--brand-primary-text-color'
-              : '--brand-secondary-text-color'}
-          );
-          background-color: var(
-            --btn-background-green
-              );
-              color: var(--nr1--color--text--buttton--primary-accent);
-              border: 1px solid var(--nr1--color--text--buttton--primary-accent);
-          border-radius: 4px;
-          font-size: 14px;
-          line-height: 21px;
-          font-weight: 400;
-          padding: 1rem;
-  
+            --button-background: var(
+              ${style === 'PRIMARY'
+                ? '--btn-background-green'
+                : '--brand-secondary-background-color'}
+            );
+            --button-text-color: var(
+              ${style === 'PRIMARY'
+                ? '--brand-primary-text-color'
+                : '--brand-secondary-text-color'}
+            );
+            background-color: var(--btn-background-green);
+            color: var(--nr1--color--text--buttton--primary-accent);
+            border: 1px solid var(--nr1--color--text--buttton--primary-accent);
+            border-radius: 4px;
+            font-size: 14px;
+            line-height: 21px;
+            font-weight: 400;
+            padding: 1rem;
+
             &:hover {
-                background-color: var(
-                  --btn-background-green
-                );
-                color: var(--nr1--color--text--buttton--primary-accent);
-              }
-              &:focus {
-                outline: none;
-                text-decoration-line: none !important;
-              }
-              .scroll {
-                margin-top: -1px;
-              }
-  
-         `}
+              background-color: var(--btn-background-green);
+              color: var(--nr1--color--text--buttton--primary-accent);
+            }
+            &:focus {
+              outline: none;
+              text-decoration-line: none !important;
+            }
+            .scroll {
+              margin-top: -1px;
+            }
+          `}
         >
           <div className="btn-animation-styles">
-            <div className="scroll scroll-top">
-              Get Demo
-            </div>
-            <div className="scroll scroll-bottom">
-              Get Demo
-            </div>
+            <div className="scroll scroll-top">Get Demo</div>
+            <div className="scroll scroll-bottom">Get Demo</div>
           </div>
-
         </Button>
       </div>
     </div>
   );
+};
+
+GetStartedFooter.propTypes = {
+  style: PropTypes.string,
 };
 
 export default GetStartedFooter;

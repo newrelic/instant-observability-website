@@ -1,17 +1,21 @@
+import React from 'react';
 import { quickstart } from '../../types';
-import QuickstartDashboards from '../../components/QuickstartDashboards';
+import QuickstartDashboards from '../QuickstartDashboards';
 import { css } from '@emotion/react';
-import EmptyTab from '../../components/EmptyTab';
+import EmptyTab from '../EmptyTab';
 import Share from '../../components/Share';
-import { useLocation } from "@reach/router";
-import { QUICKSTARTS_COLLAPSE_BREAKPOINT, MIN_WIDTH_BREAKPOINT } from '../../data/constants';
+import { useLocation } from '@reach/router';
+import {
+  QUICKSTARTS_COLLAPSE_BREAKPOINT,
+  MIN_WIDTH_BREAKPOINT,
+} from '../../data/constants';
 
 const Dashboards = ({ quickstart }) => {
   const location = useLocation();
   return (
     <div
       css={css`
-        h3 {   
+        h3 {
           font-weight: 400;
           @media (max-width: ${QUICKSTARTS_COLLAPSE_BREAKPOINT}) {
             margin-bottom: 45px;
@@ -24,7 +28,7 @@ const Dashboards = ({ quickstart }) => {
         h6 {
           font-weight: 400;
           @media (max-width: ${QUICKSTARTS_COLLAPSE_BREAKPOINT}) {
-              padding-top: 45px; 
+            padding-top: 45px;
           }
           @media (max-width: ${MIN_WIDTH_BREAKPOINT}) {
             padding-top: 80px;
@@ -47,30 +51,31 @@ const Dashboards = ({ quickstart }) => {
           grid-auto-flow: column;
           @media (max-width: ${QUICKSTARTS_COLLAPSE_BREAKPOINT}) {
             grid-template-columns: repeat(1, 1fr);
-              grid-template-rows: repeat(2, 40px);
+            grid-template-rows: repeat(2, 40px);
             h3 {
               display: contents;
             }
           }
-      `}>
+        `}
+      >
         <h3>What&apos;s included?</h3>
 
         {/* Share on social media */}
         <div
           css={css`
-          display: inline-flex;
-          line-height: 3.9;
-          justify-content: end;
-          @media (max-width: ${QUICKSTARTS_COLLAPSE_BREAKPOINT}) {
-            justify-content: left;
-          }
-          @media (max-width: ${MIN_WIDTH_BREAKPOINT}) {
-            padding-top: 40px;
-          }
-        `}>
+            display: inline-flex;
+            line-height: 3.9;
+            justify-content: end;
+            @media (max-width: ${QUICKSTARTS_COLLAPSE_BREAKPOINT}) {
+              justify-content: left;
+            }
+            @media (max-width: ${MIN_WIDTH_BREAKPOINT}) {
+              padding-top: 40px;
+            }
+          `}
+        >
           Share this : &nbsp;
           <Share url={location.href} />
-
         </div>
       </div>
 

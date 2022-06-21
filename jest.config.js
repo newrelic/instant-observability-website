@@ -6,8 +6,12 @@ module.exports = {
   globals: {
     __PATH_PREFIX__: '',
   },
+  testMatch: ['<rootDir>/**/__tests__/?(*.)+(test).[jt]s?(x)'],
   transformIgnorePatterns: ['node_modules/(?!(gatsby||gatsby-plugin-mdx)/)'],
-  setupFiles: ['<rootDir>/loadershim.js'],
+  setupFiles: [
+    '<rootDir>/src/utils/__tests__/loadershim.js',
+    '<rootDir>/scripts/actions/__tests__/loadershim.js',
+  ],
   setupFilesAfterEnv: ['<rootDir>/setup-test-env.js'],
   moduleNameMapper: {
     '^@reach/router(.*)': '<rootDir>/node_modules/@gatsbyjs/reach-router$1',

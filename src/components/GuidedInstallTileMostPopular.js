@@ -179,7 +179,7 @@ const GuidedInstallTileMostPopular = () => {
                 border-width: thick;
                 display: flex;
                 position: initial;
-                color: #FFFFFF
+                color: #ffffff;
               }
             `}
           />

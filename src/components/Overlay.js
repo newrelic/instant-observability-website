@@ -18,20 +18,23 @@ const Overlay = ({ children, onCloseOverlay, isOpen = false, className }) => {
 
   const ref = useRef(null);
 
-  const clickListener = useCallback((e) => {
-    if (ref.current.contains(e.target)) {
-      onCloseOverlay();
-    }
-  }, [ref.current])
+  const clickListener = useCallback(
+    (e) => {
+      if (ref.current.contains(e.target)) {
+        onCloseOverlay();
+      }
+    },
+    [ref.current, onCloseOverlay]
+  );
 
   useEffect(() => {
-    //capture click event
+    // capture click event
     document.addEventListener('click', clickListener);
     return () => {
-      //remove click event
+      // remove click event
       document.removeEventListener('click', clickListener);
-    }
-  }, [])
+    };
+  });
 
   return (
     <Portal>

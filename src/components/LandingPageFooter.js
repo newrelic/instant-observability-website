@@ -1,5 +1,6 @@
 import React from 'react';
-import { Link, Button, PageTools } from '@newrelic/gatsby-theme-newrelic';
+import PropTypes from 'prop-types';
+import { Link, Button } from '@newrelic/gatsby-theme-newrelic';
 import { css } from '@emotion/react';
 import { quickstart } from '../types';
 import { QUICKSTARTS_REPO } from '../data/constants';
@@ -112,17 +113,17 @@ const LandingPageFooter = ({
                 @media (max-width: 760px) {
                   width: 100%;
                 }
-                .btn-animation-styles{
+                .btn-animation-styles {
                   padding-top: 0.188rem;
                 }
                 .scroll {
                   margin-bottom: 0.125rem;
                 }
-                .btn-text {       
+                .btn-text {
                   float: right;
                   margin-left: 0.938rem;
                   padding-top: 0.125rem;
-                  height: 1.25rem;     
+                  height: 1.25rem;
                 }
               `}
               className="btn-styles btn1"
@@ -171,7 +172,7 @@ const LandingPageFooter = ({
                 &:hover {
                   color: var(--white-hover-color);
                   border-color: var(--background-color);
-                }    
+                }
                 @media (max-width: 760px) {
                   width: 100%;
                 }
@@ -183,10 +184,10 @@ const LandingPageFooter = ({
                   margin-top: 6px;
                 }
 
-                .btn-text {       
-                  float:right;
+                .btn-text {
+                  float: right;
                   margin-left: 13px;
-                  margin-right: 7px;    
+                  margin-right: 7px;
                 }
               `}
             >
@@ -231,6 +232,8 @@ const LandingPageFooter = ({
 
 LandingPageFooter.propTypes = {
   quickstart: quickstart.isRequired,
+  trackQuickstart: PropTypes.func,
+  tessenSupportTrack: PropTypes.func,
 };
 
 export default LandingPageFooter;

@@ -8,15 +8,16 @@ import {
   Tag,
   Link,
 } from '@newrelic/gatsby-theme-newrelic';
-import { SHIELD_LEVELS, RESERVED_QUICKSTART_IDS } from '../data/constants';
+import {
+  SHIELD_LEVELS,
+  RESERVED_QUICKSTART_IDS,
+  QUICKSTARTS_COLLAPSE_BREAKPOINT,
+} from '../data/constants';
 import QuickstartImg from './QuickstartImg';
-
-import { QUICKSTARTS_COLLAPSE_BREAKPOINT } from '../data/constants';
 
 const QuickstartTile = ({
   id,
   title,
-  featured,
   name,
   fields,
   logoUrl,
@@ -247,7 +248,6 @@ QuickstartTile.propTypes = {
   summary: PropTypes.string,
   level: PropTypes.string,
   className: PropTypes.string,
-  featured: PropTypes.bool,
   href: PropTypes.string,
 };
 

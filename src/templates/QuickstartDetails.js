@@ -129,7 +129,7 @@ const QuickstartDetails = ({ data, location }) => {
         </div>
         {/* How to use this quickstart here */}
         <div
-          css={css` 
+          css={css`
             @media not all and (min-resolution: 0.001dpcm) and max-width: 760px {
               @media {
                 grid-template-columns: repeat(1, 1fr);
@@ -137,16 +137,16 @@ const QuickstartDetails = ({ data, location }) => {
                 margin-right: 23px;
               }
             }
-          
-            @media (min-width: 760px) { 
+
+            @media (min-width: 760px) {
               padding-top: 38px;
               padding-bottom: 49px;
             }
 
             @media (max-width: 760px) {
               padding-top: 53px;
-              padding-bottom:  63px;
-              }
+              padding-bottom: 63px;
+            }
 
             background-color: #f1f2f2;
           `}

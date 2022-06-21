@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { SEO as Seo } from '@newrelic/gatsby-theme-newrelic';
 import { useStaticQuery, graphql } from 'gatsby';
 
-function IOSeo ({ description, meta, title, tags, location, type }) {
+function IOSeo({ description, meta, title, tags, location, type }) {
   const { site } = useStaticQuery(
     graphql`
       query {

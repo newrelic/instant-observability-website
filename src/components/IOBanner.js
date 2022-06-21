@@ -10,10 +10,10 @@ const BannerHeaderContent = ({
   search,
   setSearch,
   setIsSearchInputEmpty,
-  handleSearch
+  handleSearch,
 }) => {
   const handleSearchInput = (e) => {
-    let searchInputValue = e.target.value;
+    const searchInputValue = e.target.value;
     setSearch(searchInputValue);
     searchInputValue.length > 0
       ? setIsSearchInputEmpty(false)
@@ -133,11 +133,19 @@ const BannerHeaderContent = ({
     </div>
   );
 };
+
+BannerHeaderContent.propTypes = {
+  search: PropTypes.string,
+  setSearch: PropTypes.func,
+  setIsSearchInputEmpty: PropTypes.func,
+  handleSearch: PropTypes.func,
+};
+
 const IOBanner = ({
   search,
   setSearch,
   setIsSearchInputEmpty,
-  handleSearch
+  handleSearch,
 }) => {
   return (
     <div
@@ -231,9 +239,12 @@ const IOBanner = ({
     </div>
   );
 };
+
 IOBanner.propTypes = {
   search: PropTypes.string,
   setSearch: PropTypes.func,
+  setIsSearchInputEmpty: PropTypes.func,
+  handleSearch: PropTypes.func,
 };
 
 export default IOBanner;

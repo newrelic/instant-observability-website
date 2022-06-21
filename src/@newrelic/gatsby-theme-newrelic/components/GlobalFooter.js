@@ -23,7 +23,7 @@ const getCurrentYear = () => {
 
 const GlobalFooter = ({ className }) => {
   const { t } = useThemeTranslation();
-  const { site, sitePage } = useStaticQuery(graphql`
+  const { sitePage } = useStaticQuery(graphql`
     query FooterQueryIO {
       site {
         siteMetadata {
@@ -38,31 +38,29 @@ const GlobalFooter = ({ className }) => {
 
   // these icons will be hidden on mobile view
   const renderSocialIcons = () => {
-    return (
-      SOCIALS.map((social) => (
-        <ExternalLink
-          key={social.title}
-          href={social.href}
+    return SOCIALS.map((social) => (
+      <ExternalLink
+        key={social.title}
+        href={social.href}
+        css={css`
+          @media screen and (max-width: ${MOBILE_BREAKPOINT}) {
+            display: none;
+          }
+        `}
+      >
+        <Icon
+          name={social.title}
+          size="24px"
           css={css`
-            @media screen and (max-width: ${MOBILE_BREAKPOINT}) {
-              display: none;
-            }
+            outline: none;
+            stroke-width: 0px;
+            color: var(--secondary-text-color);
+            fill: var(--secondary-text-color);
           `}
-        >
-          <Icon
-            name={social.title}
-            size="24px"
-            css={css`
-              outline: none;
-              stroke-width: 0px;
-              color: var(--secondary-text-color);
-              fill: var(--secondary-text-color);
-            `}
-          />
-        </ExternalLink>
-      ))
-    )
-  }
+        />
+      </ExternalLink>
+    ));
+  };
 
   return (
     <footer
@@ -155,7 +153,9 @@ const GlobalFooter = ({ className }) => {
             `}
           >
             {RESOURCES.map((resource) => (
-              <ExternalLink key={resource.title} href={resource.href}>{resource.title}</ExternalLink>
+              <ExternalLink key={resource.title} href={resource.href}>
+                {resource.title}
+              </ExternalLink>
             ))}
           </div>
           <div
@@ -263,7 +263,6 @@ const GlobalFooter = ({ className }) => {
               }
             `}
           >
-
             <ExternalLink href={HOME_LINK}>
               <NewLogo />
             </ExternalLink>
@@ -347,7 +346,9 @@ const GlobalFooter = ({ className }) => {
             `}
           >
             {LOCALS.map((locale) => (
-              <ExternalLink key={locale.title} href={locale.href}>{locale.title}</ExternalLink>
+              <ExternalLink key={locale.title} href={locale.href}>
+                {locale.title}
+              </ExternalLink>
             ))}
           </div>
           <div
@@ -370,9 +371,7 @@ const GlobalFooter = ({ className }) => {
 };
 
 GlobalFooter.propTypes = {
-  fileRelativePath: PropTypes.string,
   className: PropTypes.string,
-  pageTitle: PropTypes.string,
 };
 
 export default GlobalFooter;
