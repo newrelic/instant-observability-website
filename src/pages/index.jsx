@@ -191,7 +191,7 @@ const QuickstartsPage = ({ data, location }) => {
   const getDisplayName = (defaultName = 'All quickstarts') => {
     const found = CATEGORIES.find((cat) => cat.value === category);
 
-    if (!found.value) return defaultName;
+    if (!found || !found.value) return defaultName;
 
     return found.displayName;
   };
