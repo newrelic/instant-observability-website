@@ -45,43 +45,8 @@ const QuickstartDashboards = ({ quickstart }) => {
         `}
       />
     ),
-    responsive: [
-      {
-        // 4k resolution
-        breakpoint: 3840,
-        settings: {
-          slidesToShow: 3,
-          slidesToScroll: 1,
-          infinite: true,
-          dots: false,
-        },
-      },
-      {
-        breakpoint: 1081,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-          infinite: true,
-          dots: false,
-        },
-      },
-      {
-        breakpoint: 760,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-          infinite: true,
-          dots: false,
-        },
-      },
-      {
-        breakpoint: 480,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-        },
-      },
-    ],
+    // the carousel is acting responsive by default
+    responsive: [],
   };
 
   const renderDescription = (dashboard) => {
