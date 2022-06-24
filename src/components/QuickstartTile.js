@@ -68,7 +68,6 @@ const QuickstartTile = ({
         overflow: hidden;
         height: 360px;
         min-width: 250px;
-        margin: 0 auto;
         border: 1px solid #e4e5e6;
         border-radius: 8px;
         box-shadow: none;
