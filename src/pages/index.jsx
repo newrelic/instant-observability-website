@@ -95,9 +95,10 @@ const QuickstartsPage = ({ data, location }) => {
     const params = new URLSearchParams(location.search);
     const searchParam = params.get('search');
     const categoryParam = params.get('category');
-
+    const validCategory = CATEGORIES.some((cat) => cat.value === categoryParam);
+    
     setSearch(searchParam);
-    setCategory(categoryParam || '');
+    setCategory(categoryParam && validCategory ? categoryParam : '');
     if (searchParam || categoryParam) {
       tessen.track({
         eventName: 'instantObservability',
