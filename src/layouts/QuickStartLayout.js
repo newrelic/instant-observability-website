@@ -1,4 +1,4 @@
-import 'components/styles.scss';
+import '@components/styles.scss';
 
 import {
   GlobalFooter,

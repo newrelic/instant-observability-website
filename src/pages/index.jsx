@@ -1,6 +1,6 @@
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-import 'Components/styles.scss';
+import '@components/styles.scss';
 
 import {
   Button,
