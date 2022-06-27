@@ -1,6 +1,6 @@
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-import '../components/styles.scss';
+import 'components/styles.scss';
 
 import {
   Button,
@@ -11,20 +11,20 @@ import {
 import React, { useEffect, useState } from 'react';
 
 import CATEGORIES from '../data/instant-observability-categories';
-import IOBanner from '../components/IOBanner';
-import IOSeo from '../components/IOSeo';
-import Overlay from '../components/Overlay';
+import IOBanner from 'components/IOBanner';
+import IOSeo from 'components/IOSeo';
+import Overlay from 'components/Overlay';
 import PropTypes from 'prop-types';
 import { QUICKSTARTS_COLLAPSE_BREAKPOINT } from '../data/constants';
-import QuickstartTile from '../components/QuickstartTile';
+import QuickstartTile from 'components/QuickstartTile';
 import Slider from 'react-slick';
-import SuperTiles from '../components/SuperTiles';
+import SuperTiles from 'components/SuperTiles';
 import { css } from '@emotion/react';
 import { graphql } from 'gatsby';
 import { navigate } from '@reach/router';
 import { useDebounce } from 'react-use';
-import LeftArrowSVG from '../components/Icons/LeftArrowSVG';
-import RightArrowSVG from '../components/Icons/RightArrowSVG';
+import LeftArrowSVG from 'components/Icons/LeftArrowSVG';
+import RightArrowSVG from 'components/Icons/RightArrowSVG';
 import featherIcons from '../@newrelic/gatsby-theme-newrelic/icons/feather';
 
 const TRIPLE_COLUMN_BREAKPOINT = '1420px';
@@ -96,7 +96,7 @@ const QuickstartsPage = ({ data, location }) => {
     const searchParam = params.get('search');
     const categoryParam = params.get('category');
     const validCategory = CATEGORIES.some((cat) => cat.value === categoryParam);
-    
+
     setSearch(searchParam);
     setCategory(categoryParam && validCategory ? categoryParam : '');
     if (searchParam || categoryParam) {

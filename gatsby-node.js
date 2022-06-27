@@ -91,6 +91,9 @@ exports.onCreateWebpackConfig = ({ actions, plugins }) => {
         https: false,
         zlib: false,
       },
+      alias: {
+        components: path.resolve(__dirname, 'src/components/'),
+      },
     },
   });
 };
