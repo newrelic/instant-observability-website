@@ -1,5 +1,5 @@
 import { useContext } from 'react';
-import PageLayout from 'components/PageLayout';
+import PageLayout from '@components/PageLayout';
 
 const usePageLayout = () => useContext(PageLayout.Context);
 

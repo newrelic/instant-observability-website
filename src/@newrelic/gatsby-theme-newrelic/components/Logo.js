@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-import IOLogo from 'components/IOLogo';
+import IOLogo from '@components/IOLogo';
 
 const Logo = ({ className, width }) => {
   const instantObservabilityLogo = (

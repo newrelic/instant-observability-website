@@ -13,7 +13,7 @@ import {
 } from '../data/constants';
 import { navigate } from 'gatsby';
 import Cookies from 'js-cookie';
-import { getGuidedInstallStackedNr1Url } from '../utils/get-pack-nr1-url';
+import { getGuidedInstallStackedNr1Url } from '@utils/get-pack-nr1-url';
 
 const GuidedInstallTileMostPopular = () => {
   // used to start the spinner on clicking "Install New Relic" button

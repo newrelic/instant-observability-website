@@ -3,7 +3,7 @@ import { quickstart } from '../../types';
 import QuickstartDashboards from '../QuickstartDashboards';
 import { css } from '@emotion/react';
 import EmptyTab from '../EmptyTab';
-import Share from 'components/Share';
+import Share from '@components/Share';
 import { useLocation } from '@reach/router';
 import {
   QUICKSTARTS_COLLAPSE_BREAKPOINT,

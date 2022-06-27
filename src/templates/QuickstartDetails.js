@@ -1,20 +1,20 @@
 import { useTessen } from '@newrelic/gatsby-theme-newrelic';
 import React from 'react';
 
-import IOSeo from 'components/IOSeo';
-import PageLayout from 'components/PageLayout';
+import IOSeo from '@components/IOSeo';
+import PageLayout from '@components/PageLayout';
 import PropTypes from 'prop-types';
 import { css } from '@emotion/react';
 import { graphql } from 'gatsby';
 import { quickstart } from '../types';
-import QuickstartHowToUse from 'components/QuickstartHowToUse';
-import LandingPageFooter from 'components/LandingPageFooter';
-import Dashboards from 'components/WhatsIncluded/Dashboards';
-import Alerts from 'components/WhatsIncluded/Alerts';
-import DataSources from 'components/WhatsIncluded/DataSources';
-import Layout from 'components/Layout';
-import QuickstartOverview from 'components/QuickstartOverview';
-import LandingBanner from 'components/LandingBanner';
+import QuickstartHowToUse from '@components/QuickstartHowToUse';
+import LandingPageFooter from '@components/LandingPageFooter';
+import Dashboards from '@components/WhatsIncluded/Dashboards';
+import Alerts from '@components/WhatsIncluded/Alerts';
+import DataSources from '@components/WhatsIncluded/DataSources';
+import Layout from '@components/Layout';
+import QuickstartOverview from '@components/QuickstartOverview';
+import LandingBanner from '@components/LandingBanner';
 
 const layoutContentSpacing = css`
   --page-margin: 156px;

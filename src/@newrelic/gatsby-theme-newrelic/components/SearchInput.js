@@ -2,8 +2,8 @@ import React, { forwardRef, useState } from 'react';
 import PropTypes from 'prop-types';
 import { css } from '@emotion/react';
 import { Icon, useKeyPress } from '@newrelic/gatsby-theme-newrelic';
-import useSyncedRef from '../hooks/useSyncedRef';
-import composeHandlers from '../utils/composeHandlers';
+import useSyncedRef from '@hooks/useSyncedRef';
+import composeHandlers from '@utils/composeHandlers';
 
 const SIZES = {
   SMALL: 'small',
