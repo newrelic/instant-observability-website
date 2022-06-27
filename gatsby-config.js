@@ -157,6 +157,7 @@ module.exports = {
       resolve: 'gatsby-plugin-gatsby-cloud',
       options: {
         allPageHeaders: ['Referrer-Policy: no-referrer-when-downgrade'],
+        mergeCachingHeaders: true,
       },
     },
   ],
