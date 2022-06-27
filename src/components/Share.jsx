@@ -11,7 +11,7 @@ import TwitterSVG from './Icons/TwitterSVG';
 import LinkedinSVG from './Icons/LinkedinSVG';
 import MailSVG from './Icons/MailSVG';
 import { css } from '@emotion/react';
-import { MIN_WIDTH_BREAKPOINT } from '../data/constants';
+import { MIN_WIDTH_BREAKPOINT } from '@data/constants';
 import PropTypes from 'prop-types';
 import { useTessen } from '@newrelic/gatsby-theme-newrelic';
 

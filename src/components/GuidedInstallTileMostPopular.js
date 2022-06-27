@@ -10,7 +10,7 @@ import {
   SIGNUP_LINK,
   NR1_GUIDED_INSTALL_NERDLET,
   QUICKSTARTS_COLLAPSE_BREAKPOINT,
-} from '../data/constants';
+} from '@data/constants';
 import { navigate } from 'gatsby';
 import Cookies from 'js-cookie';
 import { getGuidedInstallStackedNr1Url } from '@utils/get-pack-nr1-url';

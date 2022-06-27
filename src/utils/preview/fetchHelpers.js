@@ -1,4 +1,4 @@
-import { GITHUB_API_BASE_URL, GITHUB_API_PULL_URL } from '../../data/constants';
+import { GITHUB_API_BASE_URL, GITHUB_API_PULL_URL } from '@data/constants';
 
 /**
  * Recursive function to walk the file system in Github

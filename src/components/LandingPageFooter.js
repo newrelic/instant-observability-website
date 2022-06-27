@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { Link, Button } from '@newrelic/gatsby-theme-newrelic';
 import { css } from '@emotion/react';
 import { quickstart } from '../types';
-import { QUICKSTARTS_REPO } from '../data/constants';
+import { QUICKSTARTS_REPO } from '@data/constants';
 import SupportSection from './SupportSection';
 import ExternalLink from '@newrelic/gatsby-theme-newrelic/src/components/ExternalLink';
 import RelatedResources from './RelatedResources';

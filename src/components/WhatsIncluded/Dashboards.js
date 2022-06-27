@@ -8,7 +8,7 @@ import { useLocation } from '@reach/router';
 import {
   QUICKSTARTS_COLLAPSE_BREAKPOINT,
   MIN_WIDTH_BREAKPOINT,
-} from '../../data/constants';
+} from '@data/constants';
 
 const Dashboards = ({ quickstart }) => {
   const location = useLocation();

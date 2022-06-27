@@ -10,12 +10,12 @@ import {
 } from '@newrelic/gatsby-theme-newrelic';
 import React, { useEffect, useState } from 'react';
 
-import CATEGORIES from '../data/instant-observability-categories';
+import CATEGORIES from '@data/instant-observability-categories';
 import IOBanner from '@components/IOBanner';
 import IOSeo from '@components/IOSeo';
 import Overlay from '@components/Overlay';
 import PropTypes from 'prop-types';
-import { QUICKSTARTS_COLLAPSE_BREAKPOINT } from '../data/constants';
+import { QUICKSTARTS_COLLAPSE_BREAKPOINT } from '@data/constants';
 import QuickstartTile from '@components/QuickstartTile';
 import Slider from 'react-slick';
 import SuperTiles from '@components/SuperTiles';

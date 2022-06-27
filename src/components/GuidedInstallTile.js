@@ -7,7 +7,7 @@ import {
 } from '@newrelic/gatsby-theme-newrelic';
 import { navigate } from 'gatsby';
 import Cookies from 'js-cookie';
-import { SIGNUP_LINK, NR1_GUIDED_INSTALL_NERDLET } from '../data/constants';
+import { SIGNUP_LINK, NR1_GUIDED_INSTALL_NERDLET } from '@data/constants';
 import { getGuidedInstallStackedNr1Url } from '@utils/get-pack-nr1-url';
 
 const GuidedInstallTile = () => {

@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import {
   QUICKSTART_SUPPORT_LEVELS,
   QUICKSTART_ALERT_TYPES,
-} from './data/constants';
+} from '@data/constants';
 
 // NOTE: while creating a recursive data structure is feasible,
 // it is not very performant.

@@ -13,7 +13,7 @@ import {
   CODESTREAM_QUICKSTART_ID,
   UTM_PARAMETERS,
   SIGNUP_LINK,
-} from '../data/constants';
+} from '@data/constants';
 import { quickstart } from '../types';
 import Cookies from 'js-cookie';
 import useTreatment from '@hooks/useTreatment';
