@@ -1,6 +1,7 @@
 const path = require(`path`);
 const resolveQuickstartSlug = require('./src/utils/resolveQuickstartSlug.js');
 const externalRedirects = require('./src/data/quickstart-redirects.json');
+const { createRemoteFileNode } = require('gatsby-source-filesystem');
 
 exports.createPages = async ({ actions, graphql, reporter }) => {
   const { createPage, createRedirect } = actions;
@@ -62,8 +63,19 @@ exports.onCreatePage = async ({ page, actions }) => {
   createPage(page);
 };
 
-exports.onCreateNode = ({ node, actions }) => {
-  const { createNodeField } = actions;
+exports.createSchemaCustomization = ({ actions }) => {
+  const { createTypes } = actions;
+
+  // Extend the Quickstarts schema to include image types for use with sharp
+  createTypes(`
+    type Quickstarts implements Node {
+      logo: File @link(from: "fields.logo")
+    }
+  `);
+};
+
+exports.onCreateNode = async ({ node, actions, createNodeId, getCache }) => {
+  const { createNodeField, createNode } = actions;
 
   if (node.internal.type === 'Quickstarts') {
     createNodeField({
@@ -71,6 +83,21 @@ exports.onCreateNode = ({ node, actions }) => {
       name: 'slug',
       value: `${resolveQuickstartSlug(node.name, node.id)}`,
     });
+
+    // If a logo URL is provided, source the file and save the ID for use with sharp
+    if (node.logoUrl) {
+      const fileNode = await createRemoteFileNode({
+        url: node.logoUrl,
+        parentNodeId: node.id,
+        createNode,
+        createNodeId,
+        getCache,
+      });
+
+      if (fileNode) {
+        createNodeField({ node, name: 'logo', value: fileNode.id });
+      }
+    }
   }
 };
 
