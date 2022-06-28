@@ -12,7 +12,7 @@ import {
   SHIELD_LEVELS,
   RESERVED_QUICKSTART_IDS,
   QUICKSTARTS_COLLAPSE_BREAKPOINT,
-} from '../data/constants';
+} from '@data/constants';
 import QuickstartImg from './QuickstartImg';
 
 const QuickstartTile = ({

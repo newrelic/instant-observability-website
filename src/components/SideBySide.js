@@ -1,10 +1,10 @@
 import React, { Children, Fragment } from 'react';
 import PropTypes from 'prop-types';
 import { css } from '@emotion/react';
-import splitUsing from '../utils/splitUsing';
-import splitWhen from '../utils/splitWhen';
-import { isMdxType } from '../utils/mdx';
-import usePageLayout from '../hooks/usePageLayout';
+import splitUsing from '@utils/splitUsing';
+import splitWhen from '@utils/splitWhen';
+import { isMdxType } from '@utils/mdx';
+import usePageLayout from '@hooks/usePageLayout';
 
 const BREAKPOINTS = {
   SINGLE_COLUMN: '1240px',

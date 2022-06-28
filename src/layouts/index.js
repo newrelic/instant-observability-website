@@ -1,7 +1,7 @@
 import React from 'react';
 import QuickStartLayout from './QuickStartLayout';
 import PropTypes from 'prop-types';
-import GlobalStyles from '../components/GlobalStyles';
+import GlobalStyles from '@components/GlobalStyles';
 
 const Layout = ({ children, pageContext }) => {
   if (pageContext.layout === 'QuickStartLayout') {

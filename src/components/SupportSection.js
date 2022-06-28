@@ -6,7 +6,7 @@ import {
   SUPPORT_LINK,
   COMMUNITY_LINK,
   QUICKSTART_SUPPORT_LEVELS,
-} from '../data/constants';
+} from '@data/constants';
 
 const SupportSection = ({ supportLevel, onClick: onLinkClick }) => {
   const supportLink = (

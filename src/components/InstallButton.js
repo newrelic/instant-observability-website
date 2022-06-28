@@ -5,7 +5,7 @@ import { Button, Link, useTessen } from '@newrelic/gatsby-theme-newrelic';
 import {
   getPackNr1Url,
   getGuidedInstallStackedNr1Url,
-} from '../utils/get-pack-nr1-url';
+} from '@utils/get-pack-nr1-url';
 import {
   NR1_GUIDED_INSTALL_NERDLET,
   NR1_PACK_DETAILS_NERDLET,
@@ -13,10 +13,10 @@ import {
   CODESTREAM_QUICKSTART_ID,
   UTM_PARAMETERS,
   SIGNUP_LINK,
-} from '../data/constants';
+} from '@data/constants';
 import { quickstart } from '../types';
 import Cookies from 'js-cookie';
-import useTreatment from '../hooks/useTreatment';
+import useTreatment from '@hooks/useTreatment';
 /**
  * @param {Object} parameters
  * @returns {Boolean}

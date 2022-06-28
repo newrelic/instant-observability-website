@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import QuickstartDetails from '../templates/QuickstartDetails.js';
 import { Spinner } from '@newrelic/gatsby-theme-newrelic';
-import useQuickstartPreview from '../hooks/useQuickstartPreview';
+import useQuickstartPreview from '@hooks/useQuickstartPreview';
 
 const PreviewPage = ({ location }) => {
   // grab all query parameters that can be used for quickstart preview

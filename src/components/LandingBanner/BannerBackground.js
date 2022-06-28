@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { css } from '@emotion/react';
 import bannerOverlayRight from '../../images/io-banner/banner-style-right.svg';
 import bannerOverlayLeft from '../../images/io-banner/banner-style-left.svg';
-import { QUICKSTARTS_COLLAPSE_BREAKPOINT } from '../../data/constants';
+import { QUICKSTARTS_COLLAPSE_BREAKPOINT } from '@data/constants';
 
 const BannerBackground = ({ children }) => {
   return (

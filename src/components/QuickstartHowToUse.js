@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { Link } from '@newrelic/gatsby-theme-newrelic';
 import { css } from '@emotion/react';
 import { quickstart } from '../types';
-import { LOGIN_LINK, SIGNUP_LINK } from '../data/constants';
+import { LOGIN_LINK, SIGNUP_LINK } from '@data/constants';
 import InstallButton from './InstallButton';
 
 const QuickstartHowToUse = ({

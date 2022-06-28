@@ -1,5 +1,5 @@
 import { Button, ExternalLink } from '@newrelic/gatsby-theme-newrelic';
-import { DEMO_LINK, SIGNUP_LINK } from '../data/constants';
+import { DEMO_LINK, SIGNUP_LINK } from '@data/constants';
 import PropTypes from 'prop-types';
 import React from 'react';
 import { css } from '@emotion/react';
