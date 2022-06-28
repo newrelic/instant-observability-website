@@ -18,9 +18,10 @@ const getNameAcronym = (name) =>
     .map((word) => word.charAt(0))
     .join('');
 
-const QuickstartImg = ({ className, packName, imageNode }) => {
+const QuickstartImg = ({ className, logoUrl, packName, imageNode }) => {
   const image = getImage(imageNode);
 
+  // If we have an image for sharp to optimize, use GatsbyImage
   if (image) {
     return (
       <GatsbyImage
@@ -36,7 +37,28 @@ const QuickstartImg = ({ className, packName, imageNode }) => {
     );
   }
 
-  // If no image available, create a "placeholder" using the acronym
+  // if we don't have a sharp-capable image, but we have a URL, it's an
+  // SVG (already performant).
+  if (logoUrl) {
+    return (
+      <img
+        css={css`
+          display: block;
+          max-width: 100%;
+          max-height: 100%;
+        `}
+        src={logoUrl}
+        alt={packName}
+        onError={(e) => {
+          e.preventDefault();
+          e.target.src = DEFAULT_IMAGE;
+        }}
+        className={className}
+      />
+    );
+  }
+
+  // If no images available, create a "placeholder" using the acronym
   // for the quickstart name.
   const acronym = getNameAcronym(packName);
 
@@ -63,6 +85,7 @@ const QuickstartImg = ({ className, packName, imageNode }) => {
 
 QuickstartImg.propTypes = {
   packName: PropTypes.string.isRequired,
+  logoUrl: PropTypes.string,
   className: PropTypes.string,
   imageNode: PropTypes.object,
 };

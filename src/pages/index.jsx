@@ -769,8 +769,7 @@ export const pageQuery = graphql`
         logo {
           childImageSharp {
             gatsbyImageData(
-              width: 100
-              layout: FIXED
+              height: 45
               placeholder: BLURRED
               formats: [AUTO, WEBP]
             )
