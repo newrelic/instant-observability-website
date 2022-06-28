@@ -1,3 +1,5 @@
+import * as yaml from 'js-yaml';
+
 import { GITHUB_API_BASE_URL, GITHUB_API_PULL_URL } from '../../data/constants';
 
 /**
@@ -117,6 +119,51 @@ export const getFileListFromLocal = async (port) => {
   return fileList;
 };
 
+const QUICKSTART_CONFIG_REGEX = /config.(yml|yaml)/;
+
+export const getFileListFromPR = async (quickstartUrl, ref) => {
+  const quickstartFiles = await iterateDirs(`${quickstartUrl}?ref=${ref}`);
+  const configFile = quickstartFiles.find((f) =>
+    QUICKSTART_CONFIG_REGEX.test(f.name)
+  );
+
+  if (!configFile) {
+    throw new Error(`Could not find quickstart config file in Github's API`);
+  }
+
+  const res = await fetch(configFile.download_url);
+  if (!res.ok) {
+    throw new Error(
+      `Unable to fetch quickstart config file content from Github's API`
+    );
+  }
+
+  const rawConfig = await res.text();
+  const config = yaml.load(rawConfig);
+  const alerts = config.alerts ?? [];
+  const dashboards = config.dashboards ?? [];
+
+  const alertFiles = await Promise.all(
+    alerts.map((a) => {
+      const url = new URL(
+        `${GITHUB_API_BASE_URL}/alert-policies/${a}?ref=${ref}`
+      );
+      return iterateDirs(url);
+    })
+  );
+
+  const dashboardFiles = await Promise.all(
+    dashboards.map((d) => {
+      const url = new URL(`${GITHUB_API_BASE_URL}/dashboards/${d}?ref=${ref}`);
+      return iterateDirs(url);
+    })
+  );
+
+  const allFiles = [configFile, ...alertFiles.flat(), ...dashboardFiles.flat()];
+  console.log('All files', allFiles);
+  return allFiles;
+};
+
 /**
  * Async function to get list of files from localhost
  * @param {string[]} fileList - List of file paths to fetch files from localhost
@@ -158,8 +205,9 @@ export const getQuickstartFilesFromPR = async (prNumber, quickstartPath) => {
   const branchSHA = json.head.sha;
 
   // Recursively walk the Github API from the root of the quickstart
-  const fileAggregator = await iterateDirs(
-    `${GITHUB_API_BASE_URL}/quickstarts/${quickstartPath}?ref=${branchSHA}`
+  const fileAggregator = await getFileListFromPR(
+    `${GITHUB_API_BASE_URL}/quickstarts/${quickstartPath}`,
+    branchSHA
   );
   return getRawContent(fileAggregator);
 };
