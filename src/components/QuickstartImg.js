@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { css } from '@emotion/react';
+import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import DEFAULT_IMAGE from '../images/default-logo-background.svg';
 
 /**
@@ -17,34 +18,20 @@ const getNameAcronym = (name) =>
     .map((word) => word.charAt(0))
     .join('');
 
-  const getPackNameAcronym = () => {
-    let packNameAcronym = '';
-    packName.split(' ').forEach((word) => {
-      packNameAcronym = packNameAcronym.concat('', word.charAt(0));
-    });
-    setPackAcronym(packNameAcronym.toUpperCase());
-  };
-  useEffect(() => {
-    if (!logoUrl) {
-      getPackNameAcronym();
-    }
-  });
+const QuickstartImg = ({ className, packName, imageNode }) => {
+  const image = getImage(imageNode);
 
-  if (logoUrl) {
+  if (image) {
     return (
-      <img
+      <GatsbyImage
         css={css`
           display: block;
           max-width: 100%;
           max-height: 100%;
         `}
-        src={logoUrl}
-        alt={packName}
-        onError={(e) => {
-          e.preventDefault();
-          e.target.src = DEFAULT_IMAGE;
-        }}
         className={className}
+        image={image}
+        alt={packName}
       />
     );
   }
@@ -69,15 +56,15 @@ const getNameAcronym = (name) =>
         align-items: center;
       `}
     >
-      <p>{packAcronym}</p>
+      <p>{acronym}</p>
     </div>
   );
 };
 
 QuickstartImg.propTypes = {
   packName: PropTypes.string.isRequired,
-  logoUrl: PropTypes.string,
   className: PropTypes.string,
+  imageNode: PropTypes.object,
 };
 
 export default QuickstartImg;

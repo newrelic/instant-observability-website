@@ -20,6 +20,7 @@ const QuickstartTile = ({
   title,
   name,
   fields,
+  logo,
   logoUrl,
   level,
   className,
@@ -120,6 +121,7 @@ const QuickstartTile = ({
           `}
         >
           <QuickstartImg
+            imageNode={logo}
             logoUrl={logoUrl}
             packName={title || name}
             css={css`

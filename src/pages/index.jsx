@@ -141,7 +141,6 @@ const QuickstartsPage = ({ data, location }) => {
     closeCategoriesOverlay();
   };
 
-
   const quickstarts = data.allQuickstarts.nodes;
 
   const featuredQuickStarts = quickstarts?.filter((product) =>
@@ -767,6 +766,16 @@ export const pageQuery = graphql`
         packUrl
         level
         keywords
+        logo {
+          childImageSharp {
+            gatsbyImageData(
+              width: 100
+              layout: FIXED
+              placeholder: BLURRED
+              formats: [AUTO, WEBP]
+            )
+          }
+        }
         dashboards {
           description
           name
