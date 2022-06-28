@@ -20,7 +20,9 @@ module.exports = {
     branch: 'main',
   },
   plugins: [
+    'gatsby-plugin-image',
     'gatsby-plugin-sharp',
+    'gatsby-transformer-sharp',
     {
       resolve: '@newrelic/gatsby-theme-newrelic',
       options: {
