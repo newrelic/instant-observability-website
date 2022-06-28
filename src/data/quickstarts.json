@@ -3945,6 +3945,38 @@
     ]
   },
   {
+    "title": "HCP Consul",
+    "name": "hcp-consul",
+    "description": "This Quickstart provides example configuration for HCP Consul reporting metrics into New Relic via New Relic's statsd integration.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/hashicorp/hcp-consul",
+    "id": "bc99ad15-7aba-450e-8236-6ea667d50cae",
+    "level": "COMMUNITY",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/hashicorp/hcp-consul/logo.svg",
+    "summary": "HCP Consul Quick Start sample statsd configuration",
+    "websiteUrl": null,
+    "keywords": [
+      "hcp",
+      "hcp-consul",
+      "hashicorp",
+      "consul",
+      "nrlabs",
+      "nrlabs-data"
+    ],
+    "authors": [
+      "New Relic Labs"
+    ],
+    "dashboards": [],
+    "alerts": [],
+    "documentation": [
+      {
+        "name": "Configuration documentation",
+        "description": "HCP Consul configuration documentation",
+        "url": "https://github.com/newrelic-experimental/hashicorp-quickstart-annex/tree/main/hcp-consul/README.md"
+      }
+    ],
+    "installPlans": []
+  },
+  {
     "title": "AWS AppSync",
     "name": "aws-appsync",
     "description": "## What is AWS AppSync?\n\nFully managed serverless GraphQL service for real-time data queries,\nsynchronization, communications and offline programming features.\n\n\n### Get started!\n\nStart monitoring AWS AppSync by connecting Amazon Web Services (AWS) to New Relic!\n\nCheck out our AWS AppSync documentation to instrument your cloud service and manage the stability, scalability, and reliability of your systems with New Relic's infrastructure monitoring capabilities.\n\n### More info\n\nCheck out the [documentation](https://docs.newrelic.com/docs/integrations/amazon-integrations/aws-integrations-list/aws-appsync-monitoring-integration) to learn more about New Relic monitoring for AWS AppSync.",
@@ -6102,6 +6134,39 @@
         "id": "third-party-contentsquare"
       }
     ]
+  },
+  {
+    "title": "HCP Envoy",
+    "name": "hcp-envoy",
+    "description": "This Quickstart provides example configuration for HCP Envoy reporting metrics into New Relic via New Relic's statsd integration.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/hashicorp/hcp-envoy",
+    "id": "64da4a3b-bfc9-4c18-9d98-55e250c955bd",
+    "level": "COMMUNITY",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/hashicorp/hcp-envoy/logo.svg",
+    "summary": "HCP Envoy Quick Start sample statsd configuration",
+    "websiteUrl": null,
+    "keywords": [
+      "hcp",
+      "hcp-envoy",
+      "hashicorp",
+      "envoy",
+      "envoy-proxy",
+      "nrlabs",
+      "nrlabs-data"
+    ],
+    "authors": [
+      "New Relic Labs"
+    ],
+    "dashboards": [],
+    "alerts": [],
+    "documentation": [
+      {
+        "name": "Configuration documentation",
+        "description": "HCP Envoy configuration documentation",
+        "url": "https://github.com/newrelic-experimental/hashicorp-quickstart-annex/tree/main/hcp-envoy/README.md"
+      }
+    ],
+    "installPlans": []
   },
   {
     "title": "VMWare Tanzu",
@@ -11028,39 +11093,6 @@
     ]
   },
   {
-    "title": "Azure Containers",
-    "name": "azure-containers",
-    "description": "## What is Azure Containers?\n\nFramework for building and running microservice applications on Azure.\n\n### Get started!\n\nStart monitoring Azure Containers by connecting Microsoft Azure to New Relic!\n\nCheck out our Azure Containers documentation to instrument your cloud service and manage the stability, scalability, and reliability of your systems with New Relic's infrastructure monitoring capabilities.\n\n### More info\n\nCheck out the [documentation](https://docs.newrelic.com/docs/infrastructure/microsoft-azure-integrations/azure-integrations-list/azure-containers-monitoring-integration/) to learn more about New Relic monitoring for Azure Containers.",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/azure/azure-containers",
-    "id": "fde01772-978b-40c4-9339-51f57c6f60a8",
-    "level": "NEW_RELIC",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/azure/azure-containers/logo.svg",
-    "summary": "Monitor Azure Containers by connecting Azure to New Relic",
-    "websiteUrl": null,
-    "keywords": [
-      "azure",
-      "containers"
-    ],
-    "authors": [
-      "New Relic"
-    ],
-    "dashboards": [],
-    "alerts": [],
-    "documentation": [
-      {
-        "name": "Azure Containers installation docs",
-        "description": "Monitor Azure Containers by connecting Azure to New Relic.",
-        "url": "https://docs.newrelic.com/docs/infrastructure/microsoft-azure-integrations/azure-integrations-list/azure-containers-monitoring-integration/"
-      }
-    ],
-    "installPlans": [
-      {
-        "name": "Azure-Infrastructure-Monitoring",
-        "id": "azure-infrastructure-monitoring"
-      }
-    ]
-  },
-  {
     "title": "Azure Machine Learning Services",
     "name": "azure-machine-learning-services",
     "description": "## What is Azure Machine Learning Services?\n\nBuild and manage machine-learning applications on Azure.\n\n### Get started!\n\nStart monitoring Azure Machine Learning Services by connecting Microsoft Azure to New Relic!\n\nCheck out our Azure Machine Learning Services documentation to instrument your cloud service and manage the stability, scalability, and reliability of your systems with New Relic's infrastructure monitoring capabilities.\n\n### More info\n\nCheck out the [documentation](https://docs.newrelic.com/docs/infrastructure/microsoft-azure-integrations/azure-integrations-list/azure-machine-learning-integration/) to learn more about New Relic monitoring for Azure Machine Learning Services.",
@@ -11147,14 +11179,14 @@
     ],
     "documentation": [
       {
-        "name": "Deeper Network",
-        "description": "The Decentralized Gateway and Infrastructure for Web3.0. Deeper Network combines blockchain, network security, and sharing economy to create a global peer to peer network that empowers the real users of the internet and paves the way for the next generation of the web.\n",
-        "url": "https://deeper.network/"
-      },
-      {
         "name": "Deeper Network Monitoring Guide",
         "description": "A guide detailing how to configure and use the `deeper-cli` with New Relic.\n",
         "url": "https://github.com/Kav91/deeper-connect-monitoring"
+      },
+      {
+        "name": "Deeper Network",
+        "description": "The Decentralized Gateway and Infrastructure for Web3.0. Deeper Network combines blockchain, network security, and sharing economy to create a global peer to peer network that empowers the real users of the internet and paves the way for the next generation of the web.\n",
+        "url": "https://deeper.network/"
       }
     ],
     "installPlans": [
@@ -12937,11 +12969,11 @@
     ],
     "dashboards": [
       {
-        "name": "Lacework Security Overview",
+        "name": "Lacework Compliance Violations",
         "description": null,
         "url": null,
         "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/lacework/dashboards/lacework-security-overview/lacework-security-overview.png"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/lacework/dashboards/lacework-compliance-violations/lacework-compliance-violations.png"
         ]
       },
       {
@@ -12953,11 +12985,11 @@
         ]
       },
       {
-        "name": "Lacework Compliance Violations",
+        "name": "Lacework Security Overview",
         "description": null,
         "url": null,
         "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/lacework/dashboards/lacework-compliance-violations/lacework-compliance-violations.png"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/lacework/dashboards/lacework-security-overview/lacework-security-overview.png"
         ]
       }
     ],
@@ -13109,6 +13141,55 @@
       {
         "name": "Infrastructure Agent",
         "id": "infra-agent-targeted"
+      }
+    ]
+  },
+  {
+    "title": "Azure Containers",
+    "name": "azure-containers",
+    "description": "## What is Azure Containers?\n\nFramework for building and running microservice applications on Azure.\n\n### Get started!\n\nStart monitoring Azure Containers by connecting Microsoft Azure to New Relic!\n\nCheck out our Azure Containers documentation to instrument your cloud service and manage the stability, scalability, and reliability of your systems with New Relic's infrastructure monitoring capabilities.\n\n### More info\n\nCheck out the [documentation](https://docs.newrelic.com/docs/infrastructure/microsoft-azure-integrations/azure-integrations-list/azure-containers-monitoring-integration/) to learn more about New Relic monitoring for Azure Containers.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/azure/azure-containers",
+    "id": "fde01772-978b-40c4-9339-51f57c6f60a8",
+    "level": "NEW_RELIC",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/azure/azure-containers/logo.svg",
+    "summary": "Monitor Azure Containers by connecting Azure to New Relic",
+    "websiteUrl": null,
+    "keywords": [
+      "azure",
+      "containers"
+    ],
+    "authors": [
+      "New Relic"
+    ],
+    "dashboards": [
+      {
+        "name": "Azure Container Instances",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/azure/azure-containers/dashboards/azure-containers/azure-containers.png"
+        ]
+      }
+    ],
+    "alerts": [
+      {
+        "name": "High CPU Utilization",
+        "details": "This alert is triggered when the CPU Utilization is above 90% for at least 10 minutes.",
+        "type": "STATIC",
+        "url": null
+      }
+    ],
+    "documentation": [
+      {
+        "name": "Azure Containers installation docs",
+        "description": "Monitor Azure Containers by connecting Azure to New Relic.",
+        "url": "https://docs.newrelic.com/docs/infrastructure/microsoft-azure-integrations/azure-integrations-list/azure-containers-monitoring-integration/"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "Azure-Infrastructure-Monitoring",
+        "id": "azure-infrastructure-monitoring"
       }
     ]
   },
@@ -17244,22 +17325,6 @@
     ],
     "dashboards": [
       {
-        "name": "Catchpoint-Response Size",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/catchpoint/dashboards/Catchpoint-Response_Size/Catchpoint-Response_Size.png"
-        ]
-      },
-      {
-        "name": "Catchpoint-Test Times",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/catchpoint/dashboards/Catchpoint-Test_Times/Catchpoint-Test_Times.png"
-        ]
-      },
-      {
         "name": "Catchpoint-Recent Errors",
         "description": null,
         "url": null,
@@ -17273,6 +17338,22 @@
         "url": null,
         "screenshots": [
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/catchpoint/dashboards/Catchpoint-Overview/Catchpoint-Overview.png"
+        ]
+      },
+      {
+        "name": "Catchpoint-Response Size",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/catchpoint/dashboards/Catchpoint-Response_Size/Catchpoint-Response_Size.png"
+        ]
+      },
+      {
+        "name": "Catchpoint-Test Times",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/catchpoint/dashboards/Catchpoint-Test_Times/Catchpoint-Test_Times.png"
         ]
       }
     ],
@@ -18695,62 +18776,6 @@
     ]
   },
   {
-    "title": "Akamai DataStream 2",
-    "name": "datastream2",
-    "description": "## Akamai Quickstart\n  \nAkamai Technologies is a leading content delivery network (CDN), cybersecurity, and cloud service provider.\n\n### DataStream 2\n\nDataStream 2 captures performance and security logs from your delivery properties and streams them in near real-time to provide complete monitoring.\n\nFor more information please go to https://techdocs.akamai.com/datastream2/docs\n\n### DataStream 2 quickstart\n\nThe Akamai DataStream 2 quickstart enables you to monitor your performance and security logs in real time. Here are a few of the monitoring tools available with this quickstart:\n- HTTP status code distribution\n- Error rate\n- Log ingest\n- Cache hit retio \n- TLS overhead time ranges\n- Overhead byte ranges\n- HTTP protocol distribution",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/datastream2-akamai",
-    "id": "cb995039-39d8-44d9-97c3-58174a1337f2",
-    "level": "COMMUNITY",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/datastream2-akamai/logo.png",
-    "summary": "The DataStream 2 quickstart will enable you to monitor and analyze your Akamai performance and security logs.",
-    "websiteUrl": null,
-    "keywords": [
-      "akamai",
-      "logs",
-      "cdn",
-      "datastream",
-      "performance",
-      "security",
-      "newrelic partner"
-    ],
-    "authors": [
-      "Gayatri S (Akamai Technologies)"
-    ],
-    "dashboards": [
-      {
-        "name": "Akamai Datastream2",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/datastream2-akamai/dashboards/datastream2/datastream2-01.jpeg",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/datastream2-akamai/dashboards/datastream2/datastream2-02.jpeg",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/datastream2-akamai/dashboards/datastream2/datastream2-03.jpeg"
-        ]
-      }
-    ],
-    "alerts": [
-      {
-        "name": "Datastream2 - 5xx error greater than 1%",
-        "details": "Alert triggered when the error rate(5xx errors) exceeds 1%",
-        "type": "BASELINE",
-        "url": null
-      }
-    ],
-    "documentation": [
-      {
-        "name": "Installation docs",
-        "description": "Configure Akamai Datastream2 streaming logs to New Relic",
-        "url": "https://techdocs.akamai.com/datastream2/docs/stream-logs/"
-      }
-    ],
-    "installPlans": [
-      {
-        "name": "Datastream2",
-        "id": "third-party-datastream2-akamai"
-      }
-    ]
-  },
-  {
     "title": "Excon",
     "name": "excon",
     "description": "## What is Excon?\n\nSimple and straightforward HTTP client built on Ruby.\n\n## Get started!\n\nLeverage community expertise and instantly get value out of your telemetry data. This quickstart automatically instruments Excon with the New Relic Ruby agent, and allows you to further leverage New Relic's APM capabilities by setting up [custom dashboards](https://docs.newrelic.com/docs/query-your-data/explore-query-data/dashboards/introduction-dashboards/), [errors inbox](https://docs.newrelic.com/docs/apm/apm-ui-pages/errors-inbox/errors-inbox/), [transaction tracing](https://docs.newrelic.com/docs/apm/transactions/transaction-traces/introduction-transaction-traces/), and [service maps](https://docs.newrelic.com/docs/understand-dependencies/understand-system-dependencies/service-maps/introduction-service-maps/).\n\n## More info\n\nCheck out the [documentation](https://docs.newrelic.com/docs/agents/ruby-agent/) to learn more about New Relic monitoring for Excon.",
@@ -18990,6 +19015,62 @@
       {
         "name": "OKHTTP",
         "id": "third-party-okhttp"
+      }
+    ]
+  },
+  {
+    "title": "Akamai DataStream 2",
+    "name": "datastream2",
+    "description": "## Akamai Quickstart\n  \nAkamai Technologies is a leading content delivery network (CDN), cybersecurity, and cloud service provider.\n\n### DataStream 2\n\nDataStream 2 captures performance and security logs from your delivery properties and streams them in near real-time to provide complete monitoring.\n\nFor more information please go to https://techdocs.akamai.com/datastream2/docs\n\n### DataStream 2 quickstart\n\nThe Akamai DataStream 2 quickstart enables you to monitor your performance and security logs in real time. Here are a few of the monitoring tools available with this quickstart:\n- HTTP status code distribution\n- Error rate\n- Log ingest\n- Cache hit retio \n- TLS overhead time ranges\n- Overhead byte ranges\n- HTTP protocol distribution",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/datastream2-akamai",
+    "id": "cb995039-39d8-44d9-97c3-58174a1337f2",
+    "level": "COMMUNITY",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/datastream2-akamai/logo.png",
+    "summary": "The DataStream 2 quickstart will enable you to monitor and analyze your Akamai performance and security logs.",
+    "websiteUrl": null,
+    "keywords": [
+      "akamai",
+      "logs",
+      "cdn",
+      "datastream",
+      "performance",
+      "security",
+      "newrelic partner"
+    ],
+    "authors": [
+      "Gayatri S (Akamai Technologies)"
+    ],
+    "dashboards": [
+      {
+        "name": "Akamai Datastream2",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/datastream2-akamai/dashboards/datastream2/datastream2-01.jpeg",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/datastream2-akamai/dashboards/datastream2/datastream2-02.jpeg",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/datastream2-akamai/dashboards/datastream2/datastream2-03.jpeg"
+        ]
+      }
+    ],
+    "alerts": [
+      {
+        "name": "Datastream2 - 5xx error greater than 1%",
+        "details": "Alert triggered when the error rate(5xx errors) exceeds 1%",
+        "type": "BASELINE",
+        "url": null
+      }
+    ],
+    "documentation": [
+      {
+        "name": "Installation docs",
+        "description": "Configure Akamai Datastream2 streaming logs to New Relic",
+        "url": "https://techdocs.akamai.com/datastream2/docs/stream-new-relic"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "Datastream2",
+        "id": "third-party-datastream2-akamai"
       }
     ]
   },
@@ -22003,19 +22084,19 @@
     ],
     "dashboards": [
       {
+        "name": "Kubernetes Data Ingest Analysis",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/audit/infrastructure-integrations-data-analysis/dashboards/kubernetes-data-ingest-analysis/kubernetes-data-ingest-analysis.png"
+        ]
+      },
+      {
         "name": "GCP Integrations Data Ingest Analysis",
         "description": null,
         "url": null,
         "screenshots": [
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/audit/infrastructure-integrations-data-analysis/dashboards/gcp-integrations-data-ingest-analysis/gcp-integrations-data-ingest-analysis.png"
-        ]
-      },
-      {
-        "name": "On-Host Integrations Data Analysis",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/audit/infrastructure-integrations-data-analysis/dashboards/on-host-integrations-data-analysis/on-host-integrations-data-analysis.png"
         ]
       },
       {
@@ -22035,11 +22116,11 @@
         ]
       },
       {
-        "name": "Kubernetes Data Ingest Analysis",
+        "name": "On-Host Integrations Data Analysis",
         "description": null,
         "url": null,
         "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/audit/infrastructure-integrations-data-analysis/dashboards/kubernetes-data-ingest-analysis/kubernetes-data-ingest-analysis.png"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/audit/infrastructure-integrations-data-analysis/dashboards/on-host-integrations-data-analysis/on-host-integrations-data-analysis.png"
         ]
       }
     ],
@@ -22722,11 +22803,11 @@
     ],
     "dashboards": [
       {
-        "name": "Browser Pages Dashboard",
+        "name": "Browser Traffic Analysis",
         "description": null,
         "url": null,
         "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/browser/dashboards/browser_pages_dashboard/browser_pages_dashboard.png"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/browser/dashboards/traffic_analysis/traffic_analysis.png"
         ]
       },
       {
@@ -22738,11 +22819,11 @@
         ]
       },
       {
-        "name": "Browser Traffic Analysis",
+        "name": "Browser Pages Dashboard",
         "description": null,
         "url": null,
         "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/browser/dashboards/traffic_analysis/traffic_analysis.png"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/browser/dashboards/browser_pages_dashboard/browser_pages_dashboard.png"
         ]
       },
       {
