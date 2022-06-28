@@ -16,10 +16,10 @@ module.exports = {
   moduleNameMapper: {
     '^@reach/router(.*)': '<rootDir>/node_modules/@gatsbyjs/reach-router$1',
     '^gatsby-page-utils/(.*)$': `gatsby-page-utils/dist/$1`,
-    "^@components(.*)$": "<rootDir>/src/components$1",
-    "^@hooks(.*)$": "<rootDir>/src/hooks$1",
-    "^@utils(.*)$": "<rootDir>/src/utils$1",
-    "^@layouts(.*)$": "<rootDir>/src/layouts$1",
-    "^@data(.*)$": "<rootDir>/src/data$1"
+    '^@components(.*)$': '<rootDir>/src/components$1',
+    '^@hooks(.*)$': '<rootDir>/src/hooks$1',
+    '^@utils(.*)$': '<rootDir>/src/utils$1',
+    '^@layouts(.*)$': '<rootDir>/src/layouts$1',
+    '^@data(.*)$': '<rootDir>/src/data$1',
   },
 };
