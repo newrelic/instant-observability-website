@@ -1,10 +1,21 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import { css } from '@emotion/react';
 import DEFAULT_IMAGE from '../images/default-logo-background.svg';
 
-const QuickstartImg = ({ className, logoUrl, packName }) => {
-  const [packAcronym, setPackAcronym] = useState('');
+/**
+ * Given a quickstart name, this will return the acronym.
+ *
+ * @example getNameAcronym("New Relic Java Agent"); // "NRJA"
+ *
+ * @param {string} name
+ * @returns {string}
+ */
+const getNameAcronym = (name) =>
+  name
+    .split(' ')
+    .map((word) => word.charAt(0))
+    .join('');
 
   const getPackNameAcronym = () => {
     let packNameAcronym = '';
@@ -37,13 +48,18 @@ const QuickstartImg = ({ className, logoUrl, packName }) => {
       />
     );
   }
+
+  // If no image available, create a "placeholder" using the acronym
+  // for the quickstart name.
+  const acronym = getNameAcronym(packName);
+
   return (
     <div
       className={className}
       css={css`
         color: var(--color-brand-400);
         font-family: var(--code-font);
-        font-size: ${packAcronym.length < 4 ? '4rem' : '2rem'};
+        font-size: ${acronym.length < 4 ? '4rem' : '2rem'};
         background-image: url(${DEFAULT_IMAGE});
         background-repeat: no-repeat;
         background-position: center;
