@@ -64,7 +64,7 @@ const useQuickstartPreview = (prNumber, quickstartPath, isLocal, port) => {
     };
 
     fetchFiles();
-  });
+  }, []);
 
   return quickstart;
 };

@@ -140,9 +140,8 @@ export const getFileListFromPR = async (quickstartUrl, ref) => {
 
   const rawConfig = await res.text();
   const config = yaml.load(rawConfig);
-  const alerts = config.alerts ?? [];
+  const alerts = config.alertPolicies ?? [];
   const dashboards = config.dashboards ?? [];
-
   const alertFiles = await Promise.all(
     alerts.map((a) => {
       const url = new URL(
@@ -160,7 +159,7 @@ export const getFileListFromPR = async (quickstartUrl, ref) => {
   );
 
   const allFiles = [configFile, ...alertFiles.flat(), ...dashboardFiles.flat()];
-  console.log('All files', allFiles);
+
   return allFiles;
 };
 
