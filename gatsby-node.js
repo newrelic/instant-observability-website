@@ -84,8 +84,9 @@ exports.onCreateNode = async ({ node, actions, createNodeId, getCache }) => {
       value: `${resolveQuickstartSlug(node.name, node.id)}`,
     });
 
-    // If a logo URL is provided, source the file and save the ID for use with sharp
-    if (node.logoUrl && path.extname(node.logoUrl) !== '.svg') {
+    // if a logoUrl is provided
+    if (node.logoUrl) {
+      // fetch the logo and create a "File" node
       const fileNode = await createRemoteFileNode({
         url: node.logoUrl,
         parentNodeId: node.id,

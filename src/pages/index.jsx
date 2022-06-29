@@ -767,6 +767,8 @@ export const pageQuery = graphql`
         level
         keywords
         logo {
+          ext
+          publicURL
           childImageSharp {
             gatsbyImageData(
               height: 45

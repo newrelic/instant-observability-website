@@ -21,7 +21,6 @@ const QuickstartTile = ({
   name,
   fields,
   logo,
-  logoUrl,
   level,
   className,
   summary,
@@ -122,7 +121,6 @@ const QuickstartTile = ({
         >
           <QuickstartImg
             imageNode={logo}
-            logoUrl={logoUrl}
             packName={title || name}
             css={css`
               object-fit: scale-down;
