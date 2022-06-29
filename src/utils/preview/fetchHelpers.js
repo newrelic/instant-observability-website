@@ -1,6 +1,10 @@
+<<<<<<< HEAD
 import * as yaml from 'js-yaml';
 
 import { GITHUB_API_BASE_URL, GITHUB_API_PULL_URL } from '../../data/constants';
+=======
+import { GITHUB_API_BASE_URL, GITHUB_API_PULL_URL } from '@data/constants';
+>>>>>>> a254aead7ca664e2db9e70509bad5ad7863f17fa
 
 /**
  * Recursive function to walk the file system in Github

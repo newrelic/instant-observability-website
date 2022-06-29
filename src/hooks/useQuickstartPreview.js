@@ -5,8 +5,8 @@ import { useTessen } from '@newrelic/gatsby-theme-newrelic';
 import {
   getQuickstartFilesFromPR,
   getQuickstartFilesFromLocal,
-} from '../utils/preview/fetchHelpers';
-import { parseRawQuickstartFiles } from '../utils/preview/parseHelpers';
+} from '@utils/preview/fetchHelpers';
+import { parseRawQuickstartFiles } from '@utils/preview/parseHelpers';
 
 const useQuickstartPreview = (prNumber, quickstartPath, isLocal, port) => {
   const [quickstart, setQuickstart] = useState();

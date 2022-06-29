@@ -1,4 +1,4 @@
-import { LOCALS, RESOURCES, SOCIALS } from '../../../data/constants';
+import { LOCALS, RESOURCES, SOCIALS } from '@data/constants';
 import { graphql, useStaticQuery } from 'gatsby';
 
 import ExternalLink from '@newrelic/gatsby-theme-newrelic/src/components/ExternalLink';

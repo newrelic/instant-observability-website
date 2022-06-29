@@ -1,5 +1,5 @@
 import * as yaml from 'js-yaml';
-import { QUICKSTART_REPO_URL } from '../../data/constants';
+import { QUICKSTART_REPO_URL } from '@data/constants';
 
 /**
  * @typedef {import('./fetchHelpers').FileMetadata} FileMetadata
