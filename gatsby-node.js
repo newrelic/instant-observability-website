@@ -63,17 +63,6 @@ exports.onCreatePage = async ({ page, actions }) => {
   createPage(page);
 };
 
-exports.createSchemaCustomization = ({ actions }) => {
-  const { createTypes } = actions;
-
-  // Extend the Quickstarts schema to include image types for use with sharp
-  createTypes(`
-    type Quickstarts implements Node {
-      logo: File @link(from: "fields.logo")
-    }
-  `);
-};
-
 exports.onCreateNode = async ({ node, actions, createNodeId, getCache }) => {
   const { createNodeField, createNode } = actions;
 
@@ -96,7 +85,7 @@ exports.onCreateNode = async ({ node, actions, createNodeId, getCache }) => {
       });
 
       if (fileNode) {
-        createNodeField({ node, name: 'logo', value: fileNode.id });
+        node.logo___NODE = fileNode.id;
       }
     }
   }
