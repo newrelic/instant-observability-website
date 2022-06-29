@@ -9,6 +9,7 @@ import {
   useTessen,
 } from '@newrelic/gatsby-theme-newrelic';
 import React, { useEffect, useState } from 'react';
+import { FixedSizeGrid as Grid } from 'react-window';
 
 import CATEGORIES from '@data/instant-observability-categories';
 import IOBanner from '@components/IOBanner';
@@ -739,9 +740,17 @@ const QuickstartsPage = ({ data, location }) => {
             `}
           >
             {!isSearchInputEmpty && <SuperTiles />}
-            {filteredQuickstarts.map((pack) => (
-              <QuickstartTile key={pack.id} featured={false} {...pack} />
-            ))}
+            <Grid
+              columnCount={4}
+              columnWidth={300}
+              rowHeight={400}
+              itemData={filteredQuickstarts}
+              rowCount={Math.floor(filteredQuickstarts.length / 4)}
+              width={1500}
+              height={1000}
+            >
+              {Cell}
+            </Grid>
           </div>
         </div>
       </div>
@@ -754,6 +763,20 @@ const QuickstartsPage = ({ data, location }) => {
 QuickstartsPage.propTypes = {
   data: PropTypes.object.isRequired,
   location: PropTypes.object,
+};
+
+const Cell = ({ rowIndex, columnIndex, style, data }) => {
+  const pack = data[rowIndex * 4 + columnIndex];
+  const styling = {
+    paddingLeft: '2rem',
+    paddingRight: '2rem',
+    ...style,
+  };
+  return (
+    <div style={styling}>
+      <QuickstartTile featured={false} {...pack} />
+    </div>
+  );
 };
 
 export const pageQuery = graphql`
