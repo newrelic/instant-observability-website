@@ -243,7 +243,7 @@ QuickstartTile.propTypes = {
   fields: PropTypes.shape({
     slug: PropTypes.string.isRequired,
   }).isRequired,
-  logoUrl: PropTypes.string,
+  logo: PropTypes.object,
   summary: PropTypes.string,
   level: PropTypes.string,
   className: PropTypes.string,

@@ -45,6 +45,11 @@ const FallbackImg = ({ className, name }) => {
   );
 };
 
+FallbackImg.propTypes = {
+  name: PropTypes.string.isRequired,
+  className: PropTypes.string,
+};
+
 const QuickstartImg = ({ className, packName, imageNode }) => {
   if (imageNode) {
     // If we have an image for sharp to optimize, use GatsbyImage
