@@ -7,7 +7,10 @@ import Button from '@newrelic/gatsby-theme-newrelic/src/components/Button';
 import GlobalNavLink from '@newrelic/gatsby-theme-newrelic/src/components/GlobalNavLink';
 import useMedia from 'use-media';
 import useThemeTranslation from '@newrelic/gatsby-theme-newrelic/src/hooks/useThemeTranslation';
-import { useInstrumentedHandler } from '@newrelic/gatsby-theme-newrelic';
+import {
+  useInstrumentedHandler,
+  usePrevious,
+} from '@newrelic/gatsby-theme-newrelic';
 import { Menu, X } from 'react-feather';
 import { useLocation } from '@reach/router';
 import NewLogo from './NewLogo';
@@ -75,6 +78,12 @@ const MOBILE_BREAKPOINT = '600px';
 
 const GlobalHeader = ({ className, activeSite }) => {
   const { t } = useThemeTranslation();
+  const hideLogoText = useMedia({ maxWidth: '350px' });
+  const location = useLocation();
+  const previousLocation = usePrevious(location);
+  const hasChangedPage = location.pathname !== previousLocation?.pathname;
+  const UserIsInMainPage = location.pathname === '/instant-observability/';
+  const showGetStarted = !!UserIsInMainPage;
   const [isOpen, setOpen] = React.useState(false);
 
   React.useEffect(() => {
@@ -85,10 +94,11 @@ const GlobalHeader = ({ className, activeSite }) => {
     }
   }, [isOpen]);
 
-  const hideLogoText = useMedia({ maxWidth: '350px' });
-  const location = useLocation();
-  const UserIsInMainPage = location.pathname === '/instant-observability/';
-  const showGetStarted = !!UserIsInMainPage;
+  React.useEffect(() => {
+    if (isOpen && hasChangedPage) {
+      setOpen(!isOpen);
+    }
+  }, [hasChangedPage, setOpen, isOpen]);
 
   return (
     <>
