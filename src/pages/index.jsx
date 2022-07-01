@@ -353,6 +353,10 @@ const QuickstartsPage = ({ data, location }) => {
             grid-template-rows: unset;
             padding-bottom: 20px;
           }
+
+          @media screen and (max-width: 359px) {
+            padding: calc(var(--banner-height) + 50px) 0 15vh 0;
+          }
         `}
       >
         <aside
