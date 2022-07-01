@@ -1,3 +1,10 @@
+## [1.2.2](https://github.com/newrelic/instant-observability-website/compare/v1.2.1...v1.2.2) (2022-07-01)
+
+
+### Bug Fixes
+
+* page url changes close mobile menu ([6e6ff42](https://github.com/newrelic/instant-observability-website/commit/6e6ff4261bb994935d7f4250560db99e84b24eff))
+
 ## [1.2.1](https://github.com/newrelic/instant-observability-website/compare/v1.2.0...v1.2.1) (2022-05-26)
 
 
