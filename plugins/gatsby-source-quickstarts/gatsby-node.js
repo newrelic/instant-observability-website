@@ -44,7 +44,7 @@ exports.createSchemaCustomization = ({ actions }) => {
   const { createTypes } = actions;
 
   createTypes(`
-    type Quickstart implements Node {
+    type Quickstarts implements Node {
       name: String
       title: String
       description: String
@@ -105,7 +105,7 @@ exports.createSchemaCustomization = ({ actions }) => {
  */
 exports.createResolvers = ({ createResolvers }) => {
   createResolvers({
-    Quickstart: {
+    Quickstarts: {
       slug: {
         type: 'String',
         resolve: ({ name, id }) => {
@@ -178,7 +178,7 @@ exports.sourceNodes = async ({
       children: [],
       plugin: 'gatsby-source-quickstarts',
       internal: {
-        type: 'Quickstart',
+        type: 'Quickstarts',
         contentDigest: createContentDigest({ id, name }),
       },
     });

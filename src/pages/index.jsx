@@ -141,7 +141,7 @@ const QuickstartsPage = ({ data, location }) => {
     closeCategoriesOverlay();
   };
 
-  const quickstarts = data.allQuickstart.nodes;
+  const quickstarts = data.allQuickstarts.nodes;
 
   const featuredQuickStarts = quickstarts?.filter((product) =>
     product.keywords.includes('featured')
@@ -754,7 +754,7 @@ QuickstartsPage.propTypes = {
 
 export const pageQuery = graphql`
   query {
-    allQuickstart {
+    allQuickstarts {
       nodes {
         id
         name

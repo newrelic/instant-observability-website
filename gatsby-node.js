@@ -5,7 +5,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
   const { createPage, createRedirect } = actions;
   const result = await graphql(`
     query {
-      allQuickstart {
+      allQuickstarts {
         edges {
           node {
             id
@@ -29,9 +29,9 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
     reporter.panicOnBuild(`Error while running GraphQL query.`);
     return;
   }
-  const { allQuickstart } = result.data;
+  const { allQuickstarts } = result.data;
 
-  allQuickstart.edges.forEach(({ node }) => {
+  allQuickstarts.edges.forEach(({ node }) => {
     const { id, slug } = node;
 
     createPage({

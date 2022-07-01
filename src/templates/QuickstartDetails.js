@@ -188,6 +188,7 @@ QuickstartDetails.propTypes = {
 export const pageQuery = graphql`
   query($id: String!) {
     quickstarts(id: { eq: $id }) {
+      id
       name
       title
       relatedResources(limit: 5) {
@@ -196,15 +197,28 @@ export const pageQuery = graphql`
       }
       level
       keywords
-      id
       description
       summary
-      logoUrl
+      logo {
+        ext
+        publicURL
+        childImageSharp {
+          gatsbyImageData(
+            height: 45
+            placeholder: BLURRED
+            formats: [AUTO, WEBP]
+          )
+        }
+      }
       packUrl
       dashboards {
         description
         name
-        screenshots
+        screenshots {
+          childImageSharp {
+            gatsbyImageData(placeholder: BLURRED, formats: [AUTO, WEBP])
+          }
+        }
       }
       alerts {
         details
