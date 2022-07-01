@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import { css } from '@emotion/react';
 import AnnouncementBanner from '@newrelic/gatsby-theme-newrelic/src/components/AnnouncementBanner';
@@ -84,9 +84,9 @@ const GlobalHeader = ({ className, activeSite }) => {
   const hasChangedPage = location.pathname !== previousLocation?.pathname;
   const UserIsInMainPage = location.pathname === '/instant-observability/';
   const showGetStarted = !!UserIsInMainPage;
-  const [isOpen, setOpen] = React.useState(false);
+  const [isOpen, setOpen] = useState(false);
 
-  React.useEffect(() => {
+  useEffect(() => {
     if (isOpen) {
       document.body.style.overflowY = 'hidden';
     } else {
@@ -94,7 +94,7 @@ const GlobalHeader = ({ className, activeSite }) => {
     }
   }, [isOpen]);
 
-  React.useEffect(() => {
+  useEffect(() => {
     if (isOpen && hasChangedPage) {
       setOpen(!isOpen);
     }
