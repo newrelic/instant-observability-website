@@ -140,9 +140,9 @@ export const parseRawQuickstartFiles = (rawFiles) => {
   const quickstartFiles = [];
 
   for (const file of rawFiles) {
-    if (file.filePath.includes('/dashboards/')) {
+    if (file.filePath.includes('dashboards/')) {
       dashboardFiles.push(file);
-    } else if (file.filePath.includes('/alerts/')) {
+    } else if (file.filePath.includes('alert-policies/')) {
       alertFiles.push(file);
     } else {
       quickstartFiles.push(file);
