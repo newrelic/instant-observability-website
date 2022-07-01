@@ -204,7 +204,7 @@ const getDashboardData = async ({
   const id = createNodeId(`${parentNodeId}-dashboard-${name}`);
 
   // loop through all the screenshot URLs and create file nodes
-  let screenshots = [];
+  const screenshots = [];
 
   for (const url of dashboard.screenshots) {
     const screenshotNode = await createRemoteFileNode({

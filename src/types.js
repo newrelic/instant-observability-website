@@ -21,7 +21,7 @@ export const quickstartDashboard = PropTypes.shape({
   name: PropTypes.string.isRequired,
   url: PropTypes.string,
   description: PropTypes.string,
-  screenshots: PropTypes.arrayOf(PropTypes.any),
+  screenshots: PropTypes.arrayOf(PropTypes.object),
 });
 
 export const quickstartAlert = PropTypes.shape({
@@ -50,7 +50,7 @@ export const quickstart = PropTypes.shape({
   authors: PropTypes.arrayOf(PropTypes.string).isRequired,
   summary: PropTypes.string,
   iconUrl: PropTypes.string,
-  logo: PropTypes.any,
+  logo: PropTypes.object,
   websiteUrl: PropTypes.string,
   tags: PropTypes.arrayOf(PropTypes.string),
   dashboards: PropTypes.arrayOf(quickstartDashboard),
