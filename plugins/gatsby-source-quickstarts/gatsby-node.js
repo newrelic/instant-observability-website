@@ -132,16 +132,23 @@ exports.sourceNodes = async ({
   for (const quickstart of QUICKSTARTS) {
     const { name, id, logoUrl } = quickstart;
 
-    // if we have a logoUrl, fetch it and create a "File" node
-    const logoNode = logoUrl
-      ? await createRemoteFileNode({
-          url: logoUrl,
-          parentNodeId: id,
-          createNode,
-          createNodeId,
-          getCache,
-        })
-      : null;
+    let logoNode = null;
+    try {
+      // if we have a logoUrl, fetch it and create a "File" node
+      logoNode = logoUrl
+        ? await createRemoteFileNode({
+            url: logoUrl,
+            parentNodeId: id,
+            createNode,
+            createNodeId,
+            getCache,
+          })
+        : null;
+    } catch (e) {
+      // catch any errors when fetching image so that build still succeeds
+      console.log(`Unable to fetch logo for ${name}: ${logoUrl}`);
+      console.log(e);
+    }
 
     // loop over the dashboard(s) for this quickstart, fetch all the
     // screenshot(s) and create "File" nodes for each.
@@ -171,7 +178,7 @@ exports.sourceNodes = async ({
       documentation: quickstart.documentation,
       alerts: quickstart.alerts,
       installPlans: quickstart.installPlans,
-      logo: logoNode,
+      logo: logoNode || null,
       dashboards,
       // gatsby fields
       parent: null,
@@ -207,16 +214,22 @@ const getDashboardData = async ({
   const screenshots = [];
 
   for (const url of dashboard.screenshots) {
-    const screenshotNode = await createRemoteFileNode({
-      url,
-      parentNodeId: id,
-      createNode,
-      createNodeId,
-      getCache,
-    });
+    try {
+      const screenshotNode = await createRemoteFileNode({
+        url,
+        parentNodeId: id,
+        createNode,
+        createNodeId,
+        getCache,
+      });
 
-    if (screenshotNode) {
-      screenshots.push(screenshotNode);
+      if (screenshotNode) {
+        screenshots.push(screenshotNode);
+      }
+    } catch (e) {
+      // catch any errors when fetching image so that build still succeeds
+      console.log(`Unable to fetch screenshot for ${name}: ${url}`);
+      console.log(e);
     }
   }
 
