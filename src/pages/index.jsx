@@ -141,7 +141,7 @@ const QuickstartsPage = ({ data, location }) => {
     closeCategoriesOverlay();
   };
 
-  const quickstarts = data.allQuickstarts.nodes;
+  const quickstarts = data.allQuickstart.nodes;
 
   const featuredQuickStarts = quickstarts?.filter((product) =>
     product.keywords.includes('featured')
@@ -754,16 +754,13 @@ QuickstartsPage.propTypes = {
 
 export const pageQuery = graphql`
   query {
-    allQuickstarts {
+    allQuickstart {
       nodes {
-        fields {
-          slug
-        }
         id
-        title
         name
-        logoUrl
-        packUrl
+        title
+        slug
+        summary
         level
         keywords
         logo {
@@ -776,28 +773,6 @@ export const pageQuery = graphql`
               formats: [AUTO, WEBP]
             )
           }
-        }
-        dashboards {
-          description
-          name
-          screenshots
-        }
-        alerts {
-          details
-          name
-          type
-        }
-        documentation {
-          name
-          url
-          description
-        }
-        authors
-        description
-        summary
-        installPlans {
-          id
-          name
         }
       }
     }

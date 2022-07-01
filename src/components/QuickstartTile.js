@@ -17,9 +17,9 @@ import QuickstartImg from './QuickstartImg';
 
 const QuickstartTile = ({
   id,
+  slug,
   title,
   name,
-  fields,
   logo,
   level,
   className,
@@ -56,7 +56,7 @@ const QuickstartTile = ({
   return (
     <Surface
       as={Link}
-      to={href || fields?.slug || '/'}
+      to={href || slug || '/'}
       key={id}
       base={Surface.BASE.PRIMARY}
       className={className}
@@ -240,9 +240,7 @@ QuickstartTile.propTypes = {
   id: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
-  fields: PropTypes.shape({
-    slug: PropTypes.string.isRequired,
-  }).isRequired,
+  slug: PropTypes.string.isRequired,
   logo: PropTypes.object,
   summary: PropTypes.string,
   level: PropTypes.string,

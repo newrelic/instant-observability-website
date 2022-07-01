@@ -1,19 +1,15 @@
 const path = require(`path`);
-const resolveQuickstartSlug = require('./src/utils/resolveQuickstartSlug.js');
 const externalRedirects = require('./src/data/quickstart-redirects.json');
-const { createRemoteFileNode } = require('gatsby-source-filesystem');
 
 exports.createPages = async ({ actions, graphql, reporter }) => {
   const { createPage, createRedirect } = actions;
   const result = await graphql(`
     query {
-      allQuickstarts {
+      allQuickstart {
         edges {
           node {
-            fields {
-              slug
-            }
             id
+            slug
           }
         }
       }
@@ -33,13 +29,10 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
     reporter.panicOnBuild(`Error while running GraphQL query.`);
     return;
   }
-  const { allQuickstarts } = result.data;
+  const { allQuickstart } = result.data;
 
-  allQuickstarts.edges.forEach(({ node }) => {
-    const {
-      fields: { slug },
-      id,
-    } = node;
+  allQuickstart.edges.forEach(({ node }) => {
+    const { id, slug } = node;
 
     createPage({
       path: path.join(slug, '/'),
@@ -61,34 +54,6 @@ exports.onCreatePage = async ({ page, actions }) => {
   }
   deletePage(oldPage);
   createPage(page);
-};
-
-exports.onCreateNode = async ({ node, actions, createNodeId, getCache }) => {
-  const { createNodeField, createNode } = actions;
-
-  if (node.internal.type === 'Quickstarts') {
-    createNodeField({
-      node,
-      name: 'slug',
-      value: `${resolveQuickstartSlug(node.name, node.id)}`,
-    });
-
-    // if a logoUrl is provided
-    if (node.logoUrl) {
-      // fetch the logo and create a "File" node
-      const fileNode = await createRemoteFileNode({
-        url: node.logoUrl,
-        parentNodeId: node.id,
-        createNode,
-        createNodeId,
-        getCache,
-      });
-
-      if (fileNode) {
-        node.logo___NODE = fileNode.id;
-      }
-    }
-  }
 };
 
 exports.onCreateWebpackConfig = ({ actions, plugins }) => {
