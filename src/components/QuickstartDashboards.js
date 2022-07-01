@@ -1,6 +1,7 @@
 import React from 'react';
 import { css } from '@emotion/react';
 import pluralize from 'pluralize';
+import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import Intro from './Intro';
 import { quickstart } from '../types';
 import Slider from 'react-slick';
@@ -99,8 +100,9 @@ const QuickstartDashboards = ({ quickstart }) => {
             </p>
             {renderDescription(dashboard)}
             <Slider {...settings}>
-              {dashboard.screenshots.map((imgUrl, index) => {
+              {dashboard.screenshots.map((node, index) => {
                 const elementKey = `imgurl_${index}`;
+                const image = getImage(node);
                 return (
                   <div
                     css={css`
@@ -116,16 +118,16 @@ const QuickstartDashboards = ({ quickstart }) => {
                       `}
                     >
                       <a
-                        href={imgUrl}
+                        href={node.publicURL}
                         target="_blank"
                         rel="noreferrer"
                         css={css`
                           margin: auto;
                         `}
                       >
-                        <img
-                          src={imgUrl}
-                          alt="Content cannot be displayed"
+                        <GatsbyImage
+                          image={image}
+                          alt={`${dashboard.name} screenshot ${index}`}
                           css={css`
                             width: 100%;
                             height: 17.5rem;
