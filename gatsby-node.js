@@ -1,5 +1,4 @@
 const path = require(`path`);
-const resolveQuickstartSlug = require('./src/utils/resolveQuickstartSlug.js');
 const externalRedirects = require('./src/data/quickstart-redirects.json');
 
 exports.createPages = async ({ actions, graphql, reporter }) => {
@@ -9,10 +8,8 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
       allQuickstarts {
         edges {
           node {
-            fields {
-              slug
-            }
             id
+            slug
           }
         }
       }
@@ -35,10 +32,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
   const { allQuickstarts } = result.data;
 
   allQuickstarts.edges.forEach(({ node }) => {
-    const {
-      fields: { slug },
-      id,
-    } = node;
+    const { id, slug } = node;
 
     createPage({
       path: path.join(slug, '/'),
@@ -60,18 +54,6 @@ exports.onCreatePage = async ({ page, actions }) => {
   }
   deletePage(oldPage);
   createPage(page);
-};
-
-exports.onCreateNode = ({ node, actions }) => {
-  const { createNodeField } = actions;
-
-  if (node.internal.type === 'Quickstarts') {
-    createNodeField({
-      node,
-      name: 'slug',
-      value: `${resolveQuickstartSlug(node.name, node.id)}`,
-    });
-  }
 };
 
 exports.onCreateWebpackConfig = ({ actions, plugins }) => {

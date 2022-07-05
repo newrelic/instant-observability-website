@@ -185,9 +185,12 @@ QuickstartDetails.propTypes = {
   location: PropTypes.object.isRequired,
 };
 
+// NOTE: we hard-code `height: 45` for logos to match the CSS
+// height set for the logo img tags.
 export const pageQuery = graphql`
   query($id: String!) {
     quickstarts(id: { eq: $id }) {
+      id
       name
       title
       relatedResources(limit: 5) {
@@ -196,15 +199,29 @@ export const pageQuery = graphql`
       }
       level
       keywords
-      id
       description
       summary
-      logoUrl
+      logo {
+        ext
+        publicURL
+        childImageSharp {
+          gatsbyImageData(
+            height: 45
+            placeholder: BLURRED
+            formats: [AUTO, WEBP]
+          )
+        }
+      }
       packUrl
       dashboards {
         description
         name
-        screenshots
+        screenshots {
+          publicURL
+          childImageSharp {
+            gatsbyImageData(placeholder: BLURRED, formats: [AUTO, WEBP])
+          }
+        }
       }
       alerts {
         details
