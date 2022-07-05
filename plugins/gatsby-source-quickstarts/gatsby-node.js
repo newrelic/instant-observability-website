@@ -56,7 +56,6 @@ exports.createSchemaCustomization = ({ actions }) => {
       alerts: [QuickstartAlertCondition]
       dashboards: [QuickstartDashboard]
       installPlans: [QuickstartInstallPlan]
-
     }
 
     type QuickstartDocumentation {
