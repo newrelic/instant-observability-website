@@ -37,8 +37,6 @@ exports.onPreInit = ({ store }) => {
  * define the types here. This allows us to return different values for
  * some of the fields (in `createResolvers`) and to fetch remote resources
  * as needed (in `sourceNodes`).
- *
- * @todo Verify that `relatedResources` gets properly added from theme.
  */
 exports.createSchemaCustomization = ({ actions }) => {
   const { createTypes } = actions;
