@@ -1,7 +1,6 @@
 import React from 'react';
 import { css } from '@emotion/react';
 import pluralize from 'pluralize';
-import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import Intro from './Intro';
 import { quickstart } from '../types';
 import Slider from 'react-slick';
@@ -70,6 +69,9 @@ const QuickstartDashboards = ({ quickstart }) => {
     return <p>{descriptionToShow}</p>;
   };
 
+  // NOTE: we're not using `<GatsbyImage>` for the dashboard screenshots because
+  // it did not play well with the slider. In the future, we should evaluate re-introducing
+  // this so that we can gain some additional benefits from sharp.
   return (
     <>
       <Intro
@@ -100,49 +102,45 @@ const QuickstartDashboards = ({ quickstart }) => {
             </p>
             {renderDescription(dashboard)}
             <Slider {...settings}>
-              {dashboard.screenshots.map((node, index) => {
-                const elementKey = `imgurl_${index}`;
-                const image = getImage(node);
-                return (
-                  <div
+              {dashboard.screenshots.map((node, index) => (
+                <div
+                  css={css`
+                    border: solid 1px var(--border-color);
+                  `}
+                  key={`imgurl_${index}`}
+                >
+                  <animated.div
                     css={css`
-                      border: solid 1px var(--border-color);
+                      display: flex;
+                      height: 100%;
+                      align-items: center;
                     `}
-                    key={elementKey}
                   >
-                    <animated.div
+                    <a
+                      href={node.publicURL}
+                      target="_blank"
+                      rel="noreferrer"
                       css={css`
-                        display: flex;
-                        height: 100%;
-                        align-items: center;
+                        margin: auto;
                       `}
                     >
-                      <a
-                        href={node.publicURL}
-                        target="_blank"
-                        rel="noreferrer"
+                      <img
+                        src={node.publicURL}
+                        alt={`${dashboard.name} screenshot ${index}`}
                         css={css`
-                          margin: auto;
+                          width: 100%;
+                          height: 17.5rem;
+                          @media screen and (max-width: ${MOBILE_BREAKPOINT}) {
+                            height: 100%;
+                          }
+                          border-radius: 4px;
+                          padding: 0.25rem;
                         `}
-                      >
-                        <GatsbyImage
-                          image={image}
-                          alt={`${dashboard.name} screenshot ${index}`}
-                          css={css`
-                            width: 100%;
-                            height: 17.5rem;
-                            @media screen and (max-width: ${MOBILE_BREAKPOINT}) {
-                              height: 100%;
-                            }
-                            border-radius: 4px;
-                            padding: 0.25rem;
-                          `}
-                        />
-                      </a>
-                    </animated.div>
-                  </div>
-                );
-              })}
+                      />
+                    </a>
+                  </animated.div>
+                </div>
+              ))}
             </Slider>
           </div>
         </div>
