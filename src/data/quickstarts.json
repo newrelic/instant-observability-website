@@ -4139,6 +4139,71 @@
     ]
   },
   {
+    "title": "Redis Enterprise",
+    "name": "redis-enterprise",
+    "description": "## Redis Enterprise Quickstart\n\n### Redis Enterprise is an enterprise offering of Redis that provides:\n- High availability: Up to 5 9's\n- Support: 24/7 Enterprise support\n- Geo-replication: Write data consistency across multiple data centers\n- Tiered storage: Store data on devices outside of RAM for cost savings\n- High performance: Serve up to 200M operations per second\n\nThis integration supports [Redis Enterprise Software](https://redis.com/redis-enterprise-software/overview/) installations.\n\n### With the Redis Enterprise quickstart you can:\n\n- Monitor real-time performance and trends of you Redis Enterprise cluster\n- Drill down into the performance of individual Redis databases\n- Understand the Redis Active/Active metrics\n\n### Cluster level metrics\n\n- License Status: Information on the Enterprise license status\n- License Capacity: Capacity licensed\n- Used Capacity: Capacity currently in use\n- Cluster Capacity: Information on memory and compute resources available on the cluster\n- Total Requests: Overall throughput of the cluster in total\n\n\n### Database level metrics\n\n- Database Latency: Metrics pertaining to the latency of operations at the database level\n- Database Throughput: Detailed information of the number of read/write operations per second\n- Database Capacity: Memory usage details for capacity planning\n- Network Usage: Information on the network usage per database\n- Redis Data Retention: Expiration and Eviction statistics on object retention\n\n\n### Active/Active metrics\n\n- Lag: Time between application on servers\n- Pending:  Details of the number of writes pending as part of the sync\n- Bandwidth:  Information on the amount of traffic between clusters \n\n### Contact us\nTo get help please contact the [Redis Enterprise Field Engineering](mailto:redis.observability@redis.com?subject=NewRelic%20Integration%20Support)",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/redisenterprise",
+    "id": "f15b39b2-bdc3-46d2-b28f-04ddbe23e299",
+    "level": "COMMUNITY",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/redisenterprise/logo.png",
+    "summary": "This quickstart will allow you to visualize your Redis Enterprise analytics.",
+    "websiteUrl": null,
+    "keywords": [
+      "newrelic partner",
+      "devops",
+      "redis enterprise",
+      "redis",
+      "featured",
+      "cluster",
+      "database",
+      "active"
+    ],
+    "authors": [
+      "Redis",
+      "Chris Mague"
+    ],
+    "dashboards": [
+      {
+        "name": "Redis Enterprise Database Metrics",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/database/database01.png"
+        ]
+      },
+      {
+        "name": "Redis Enterprise Database CRDT",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/active-active/active_active01.png"
+        ]
+      },
+      {
+        "name": "Redis Enterprise Cluster Metrics",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/cluster/cluster01.png"
+        ]
+      }
+    ],
+    "alerts": [],
+    "documentation": [
+      {
+        "name": "Redis Enterprise Documentation",
+        "description": "How to install and configure Redis Enterprise New Relic integration",
+        "url": "https://docs.newrelic.com/docs/infrastructure/host-integrations/host-integrations-list/redis/redis-enterprise-integration/"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "RedisEnterprise",
+        "id": "third-party-redisenterprise"
+      }
+    ]
+  },
+  {
     "title": "DNN Evoq",
     "name": "dnn-evoq",
     "description": "## What is DNN Evoq?\n\nDNN Evoq is a commercial edition of the DNN platform, the largest and most popular open source Content Management System (CMS) on the Microsoft ASP.NET stack. [DNN Evoq](https://developer.newrelic.com/instant-observability/dnn-evoq/82672f5f-48ec-477c-ae49-7eb24a91595f/) includes customer support and provides premium features not available in the DNN platform. These premium features include personalization, in-page analytics, workflow and built-in connectors to Marketo, SharePoint, Amazon S3, and Dropbox.\n\nIntegrate New Relic .NET agent with your DNN Evoq to monitor the platform’s performance metrics in real time.\n\n### Get started!\n\nLeverage community expertise and instantly get value out of your telemetry data. This quickstart automatically instruments DNN Evoq with the New Relic .Net agent, and allows you to instantly monitor your .Net application with out-of-the-box dashboards and alerts. Further leverage New Relic's APM capabilities by setting up [errors inbox](https://docs.newrelic.com/docs/apm/apm-ui-pages/errors-inbox/errors-inbox/), [transaction tracing](https://docs.newrelic.com/docs/apm/transactions/transaction-traces/introduction-transaction-traces/), and [service maps](https://docs.newrelic.com/docs/understand-dependencies/understand-system-dependencies/service-maps/introduction-service-maps/).\n\n## DNN Evoq and New Relic highlights\n\nNew Relic’s DNN Evoq quickstart instruments DNN Evoq with the [New Relic .NET agent](https://docs.newrelic.com/docs/apm/agents/net-agent/getting-started/introduction-new-relic-net/), and empowers you to seamlessly monitor your DNN Evoq platform through out-of-the-box dashboards and alerts.\n\nOur .NET agent supports both .NET Framework and .NET Core, and it works with all .NET compatible languages. You can track your DNN Evoq platform in dynamic or distributed environments such as on-host VM servers, Microsoft Azure app services, cloud-managed server VM images, self-hosted Windows and Linux systems and Amazon AWS EC2 VMs.\n\n### DNN Evoq ideal performance monitoring\n\nThe DNN Evoq observability quickstart instruments DNN Evoq with New Relic .NET agent. The integration enables you to use [Application Performance Monitoring](https://newrelic.com/products/application-monitoring) (APM) to get a high-level overview of your DNN Evoq platform, and to track activity across the platform. With the integration, you can install [infrastructure monitoring](https://developer.newrelic.com/instant-observability/infrastructure/71419258-a96f-4845-b4f7-723f3b29d6a5/) to view the performance of your platform’s host environment.\n\nOnce you install our .NET agent, wait for a few minutes for your DNN Evoq platform to generate traffic, data will appear in the APM summary page. The agent includes a variety of configuration options to further customize your installation. You can extend your instrumentation by integrating the .NET agent with [browser monitoring](https://docs.newrelic.com/docs/browser/new-relic-browser/getting-started/new-relic-browser/) to gain visibility into end-user activity. You can also enable distributed tracing to understand activity across your platform.\n\nDownload the New Relic DNN Evoq quickstart to effectively get value out of your telemetry data and monitor your DNN Evoq platform. This quickstart is your gateway to instant monitoring of your platform via our .NET agent.",
@@ -5778,68 +5843,6 @@
       {
         "name": "Ruby Agent",
         "id": "setup-ruby-agent"
-      }
-    ]
-  },
-  {
-    "title": "Redis Enterprise",
-    "name": "redis-enterprise",
-    "description": "## Redis Enterprise Quickstart\n\n### Redis Enterprise is an enterprise offering of Redis that provides:\n- High availability: Up to 5 9's\n- Support: 24/7 Enterprise support\n- Geo-replication: Write data consistency across multiple data centers\n- Tiered storage: Store data on devices outside of RAM for cost savings\n- High performance: Serve up to 200M operations per second\n\nThis integration supports [Redis Enterprise Software](https://redis.com/redis-enterprise-software/overview/) installations.\n\n### With the Redis Enterprise quickstart you can:\n\n- Monitor real-time performance and trends of you Redis Enterprise cluster\n- Drill down into the performance of individual Redis databases\n- Understand the Redis Active/Active metrics\n\n### Cluster level metrics\n\n- License Status: Information on the Enterprise license status\n- License Capacity: Capacity licensed\n- Used Capacity: Capacity currently in use\n- Cluster Capacity: Information on memory and compute resources available on the cluster\n- Total Requests: Overall throughput of the cluster in total\n\n\n### Database level metrics\n\n- Database Latency: Metrics pertaining to the latency of operations at the database level\n- Database Throughput: Detailed information of the number of read/write operations per second\n- Database Capacity: Memory usage details for capacity planning\n- Network Usage: Information on the network usage per database\n- Redis Data Retention: Expiration and Eviction statistics on object retention\n\n\n### Active/Active metrics\n\n- Lag: Time between application on servers\n- Pending:  Details of the number of writes pending as part of the sync\n- Bandwidth:  Information on the amount of traffic between clusters \n\n### Contact us\nTo get help please contact the [Redis Enterprise Field Engineering](mailto:redis.observability@redis.com?subject=NewRelic%20Integration%20Support)",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/redisenterprise",
-    "id": "f15b39b2-bdc3-46d2-b28f-04ddbe23e299",
-    "level": "COMMUNITY",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/redisenterprise/logo.png",
-    "summary": "This quickstart will allow you to visualize your Redis Enterprise analytics.",
-    "websiteUrl": null,
-    "keywords": [
-      "newrelic partner",
-      "devops",
-      "redisenterprise",
-      "redis",
-      "featured"
-    ],
-    "authors": [
-      "Redis",
-      "Chris Mague"
-    ],
-    "dashboards": [
-      {
-        "name": "Redis Enterprise Database Metrics",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/database/database01.png"
-        ]
-      },
-      {
-        "name": "Redis Enterprise Database CRDT",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/active-active/active_active01.png"
-        ]
-      },
-      {
-        "name": "Redis Enterprise Cluster Metrics",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/cluster/cluster01.png"
-        ]
-      }
-    ],
-    "alerts": [],
-    "documentation": [
-      {
-        "name": "Full Redis Enterprise Documentation",
-        "description": "How to install and configure Redis Enterprise New Relic integration",
-        "url": "https://github.com/redis-field-engineering/newrelic-redis-enterprise"
-      }
-    ],
-    "installPlans": [
-      {
-        "name": "RedisEnterprise",
-        "id": "third-party-redisenterprise"
       }
     ]
   },
@@ -17869,6 +17872,63 @@
     ]
   },
   {
+    "title": "Akamai DataStream 2",
+    "name": "datastream2",
+    "description": "## Akamai Quickstart\n  \nAkamai Technologies is a leading content delivery network (CDN), cybersecurity, and cloud service provider.\n\n### DataStream 2\n\nDataStream 2 captures performance and security logs from your delivery properties and streams them in near real-time to provide complete monitoring.\n\nFor more information please go to https://techdocs.akamai.com/datastream2/docs\n\n### DataStream 2 quickstart\n\nThe Akamai DataStream 2 quickstart enables you to monitor your performance and security logs in real time. Here are a few of the monitoring tools available with this quickstart:\n- HTTP status code distribution\n- Error rate\n- Log ingest\n- Cache hit retio \n- TLS overhead time ranges\n- Overhead byte ranges\n- HTTP protocol distribution",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/datastream2-akamai",
+    "id": "cb995039-39d8-44d9-97c3-58174a1337f2",
+    "level": "COMMUNITY",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/datastream2-akamai/logo.png",
+    "summary": "The DataStream 2 quickstart will enable you to monitor and analyze your Akamai performance and security logs.",
+    "websiteUrl": null,
+    "keywords": [
+      "akamai",
+      "logs",
+      "cdn",
+      "datastream",
+      "performance",
+      "security",
+      "newrelic partner",
+      "featured"
+    ],
+    "authors": [
+      "Gayatri S (Akamai Technologies)"
+    ],
+    "dashboards": [
+      {
+        "name": "Akamai Datastream2",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/datastream2/datastream2-01.jpeg",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/datastream2/datastream2-02.jpeg",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/datastream2/datastream2-03.jpeg"
+        ]
+      }
+    ],
+    "alerts": [
+      {
+        "name": "Datastream2 - 5xx error greater than 1%",
+        "details": "Alert triggered when the error rate(5xx errors) exceeds 1%",
+        "type": "BASELINE",
+        "url": null
+      }
+    ],
+    "documentation": [
+      {
+        "name": "Installation docs",
+        "description": "Configure Akamai Datastream2 streaming logs to New Relic",
+        "url": "https://techdocs.akamai.com/datastream2/docs/stream-new-relic"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "Datastream2",
+        "id": "third-party-datastream2-akamai"
+      }
+    ]
+  },
+  {
     "title": "Unix",
     "name": "unix",
     "description": "The Unix monitoring integration allows for system-level monitoring of AIX,\nLinux, macOS, Solaris/SunOS and other Unix-based servers.",
@@ -18250,62 +18310,6 @@
       {
         "name": "Java Agent",
         "id": "setup-java-agent"
-      }
-    ]
-  },
-  {
-    "title": "Akamai DataStream 2",
-    "name": "datastream2",
-    "description": "## Akamai Quickstart\n  \nAkamai Technologies is a leading content delivery network (CDN), cybersecurity, and cloud service provider.\n\n### DataStream 2\n\nDataStream 2 captures performance and security logs from your delivery properties and streams them in near real-time to provide complete monitoring.\n\nFor more information please go to https://techdocs.akamai.com/datastream2/docs\n\n### DataStream 2 quickstart\n\nThe Akamai DataStream 2 quickstart enables you to monitor your performance and security logs in real time. Here are a few of the monitoring tools available with this quickstart:\n- HTTP status code distribution\n- Error rate\n- Log ingest\n- Cache hit retio \n- TLS overhead time ranges\n- Overhead byte ranges\n- HTTP protocol distribution",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/datastream2-akamai",
-    "id": "cb995039-39d8-44d9-97c3-58174a1337f2",
-    "level": "COMMUNITY",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/datastream2-akamai/logo.png",
-    "summary": "The DataStream 2 quickstart will enable you to monitor and analyze your Akamai performance and security logs.",
-    "websiteUrl": null,
-    "keywords": [
-      "akamai",
-      "logs",
-      "cdn",
-      "datastream",
-      "performance",
-      "security",
-      "newrelic partner"
-    ],
-    "authors": [
-      "Gayatri S (Akamai Technologies)"
-    ],
-    "dashboards": [
-      {
-        "name": "Akamai Datastream2",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/datastream2/datastream2-01.jpeg",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/datastream2/datastream2-02.jpeg",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/datastream2/datastream2-03.jpeg"
-        ]
-      }
-    ],
-    "alerts": [
-      {
-        "name": "Datastream2 - 5xx error greater than 1%",
-        "details": "Alert triggered when the error rate(5xx errors) exceeds 1%",
-        "type": "BASELINE",
-        "url": null
-      }
-    ],
-    "documentation": [
-      {
-        "name": "Installation docs",
-        "description": "Configure Akamai Datastream2 streaming logs to New Relic",
-        "url": "https://techdocs.akamai.com/datastream2/docs/stream-new-relic"
-      }
-    ],
-    "installPlans": [
-      {
-        "name": "Datastream2",
-        "id": "third-party-datastream2-akamai"
       }
     ]
   },
