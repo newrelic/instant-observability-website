@@ -146,8 +146,7 @@ exports.sourceNodes = async ({
         : null;
     } catch (e) {
       // catch any errors when fetching image so that build still succeeds
-      console.log(`Unable to fetch logo for ${name}: ${logoUrl}`);
-      console.log(e);
+      console.log(`Unable to fetch logo for ${name}: ${logoUrl}`); // eslint-disable-line no-console
     }
 
     // loop over the dashboard(s) for this quickstart, fetch all the
@@ -228,8 +227,7 @@ const getDashboardData = async ({
       }
     } catch (e) {
       // catch any errors when fetching image so that build still succeeds
-      console.log(`Unable to fetch screenshot for ${name}: ${url}`);
-      console.log(e);
+      console.log(`Unable to fetch screenshot for ${name}: ${url}`); // eslint-disable-line no-console
     }
   }
 
