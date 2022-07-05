@@ -761,6 +761,7 @@ export const pageQuery = graphql`
         title
         slug
         summary
+        description
         level
         keywords
         logo {
