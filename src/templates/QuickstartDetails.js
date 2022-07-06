@@ -16,6 +16,7 @@ import DataSources from '@components/WhatsIncluded/DataSources';
 import Layout from '@components/Layout';
 import QuickstartOverview from '@components/QuickstartOverview';
 import LandingBanner from '@components/LandingBanner';
+import { QUICKSTARTS_COLLAPSE_BREAKPOINT } from '@data/constants';
 
 const layoutContentSpacing = css`
   --page-margin: 156px;
@@ -97,8 +98,10 @@ const QuickstartDetails = ({ data, location }) => {
             ${layoutContentSpacing};
             > * {
               padding-top: 3rem;
-              :nth-child(2) {
-                padding-top: 1rem;
+              @media screen and (min-width: ${QUICKSTARTS_COLLAPSE_BREAKPOINT}) {
+                :nth-child(2) {
+                  padding-top: 1rem;
+                }
               }
             }
           `}
