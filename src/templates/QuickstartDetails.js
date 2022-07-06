@@ -26,31 +26,21 @@ const layoutContentSpacing = css`
   margin: auto;
 `;
 
-const moveToBack = (componentsAndCounts) => {
-  const n = componentsAndCounts.length;
-  const newOrder = [];
-
-  // add components with content
-  // to the beginning of array
-  let i = 0;
-  while (i < n) {
-    if (componentsAndCounts[i].count !== 0) {
-      // Push element to end of array.
-      // This keeps the same order if all components
-      // have a length of 0.
-      newOrder.push(componentsAndCounts.splice(i, 1)[0]);
-    }
-    i++;
+/*
+ * Callback function for sorting data sources and
+ * prioritizing default ordering
+ * @param {Object} a - Object with react component and length of quickstart component
+ * @param {Object} b - Object with react component and length of quickstart component
+ * @returns number
+ */
+const sortComponents = (a, b) => {
+  if (a.count < 1) {
+    return 1;
+  } else if (b.count < 1) {
+    return -1;
+  } else {
+    return 0;
   }
-
-  // add components without content
-  // to the end of array
-  while (componentsAndCounts.length > 0) {
-    // push the remaining elements in order to
-    // new ordered array
-    newOrder.push(componentsAndCounts.shift());
-  }
-  return newOrder;
 };
 
 const sortOrderedQuickstartComponents = (quickstart) => {
@@ -71,15 +61,7 @@ const sortOrderedQuickstartComponents = (quickstart) => {
     { component: DataSources, count: dataSourceLength },
   ];
 
-  // Check to see if we need to move empty components to
-  // the end of the array
-  const hasEmptyComponent = componentsAndCounts.filter(
-    (component) => component.count
-  );
-
-  return hasEmptyComponent.length > 0
-    ? moveToBack(componentsAndCounts)
-    : componentsAndCounts;
+  return componentsAndCounts.sort(sortComponents);
 };
 
 const QuickstartDetails = ({ data, location }) => {
