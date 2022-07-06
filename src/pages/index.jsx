@@ -25,6 +25,7 @@ import { navigate } from '@reach/router';
 import LeftArrowSVG from '@components/Icons/LeftArrowSVG';
 import RightArrowSVG from '@components/Icons/RightArrowSVG';
 import featherIcons from '../@newrelic/gatsby-theme-newrelic/icons/feather';
+import QuickstartCatalog from '@components/QuickstartCatalog';
 
 const TRIPLE_COLUMN_BREAKPOINT = '1420px';
 const DOUBLE_COLUMN_BREAKPOINT = '1180px';
@@ -739,9 +740,7 @@ const QuickstartsPage = ({ data, location }) => {
             `}
           >
             {!isSearchInputEmpty && <SuperTiles />}
-            {filteredQuickstarts.map((pack) => (
-              <QuickstartTile key={pack.id} featured={false} {...pack} />
-            ))}
+            <QuickstartCatalog quickstarts={filteredQuickstarts} />
           </div>
         </div>
       </div>
