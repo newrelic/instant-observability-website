@@ -12,7 +12,6 @@ const WhatsIncludedHeader = () => (
       display: grid;
       grid-template-columns: repeat(auto, 1fr);
       grid-auto-flow: column;
-      font-weight: 400;
       @media (max-width: ${QUICKSTARTS_COLLAPSE_BREAKPOINT}) {
         grid-template-columns: repeat(1, 1fr);
         grid-template-rows: repeat(2, 40px);

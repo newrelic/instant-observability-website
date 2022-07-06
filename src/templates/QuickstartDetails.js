@@ -97,6 +97,9 @@ const QuickstartDetails = ({ data, location }) => {
             ${layoutContentSpacing};
             > * {
               padding-top: 3rem;
+              :nth-child(2) {
+                padding-top: 1rem;
+              }
             }
           `}
         >

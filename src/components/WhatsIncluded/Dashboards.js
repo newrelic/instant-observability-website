@@ -17,12 +17,6 @@ const Dashboards = ({ quickstart }) => {
       css={css`
         h6 {
           font-weight: 400;
-          @media (max-width: ${QUICKSTARTS_COLLAPSE_BREAKPOINT}) {
-            padding-top: 45px;
-          }
-          @media (max-width: ${MIN_WIDTH_BREAKPOINT}) {
-            padding-top: 80px;
-          }
         }
 
         @media not all and (min-resolution: 0.001dpcm) and max-width: ${QUICKSTARTS_COLLAPSE_BREAKPOINT} {
