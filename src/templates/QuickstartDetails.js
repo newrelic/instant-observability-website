@@ -26,6 +26,56 @@ const layoutContentSpacing = css`
   margin: auto;
 `;
 
+const moveToBack = (componentsAndCounts) => {
+  const newOrder = [];
+
+  // traverse array from back to front
+  // to remain same order of components for render.
+  let i = componentsAndCounts.length - 1;
+
+  while (i >= 0) {
+    if (componentsAndCounts[i].count === 0) {
+      // Push element to end of array.
+      // This keeps the same order if all components
+      // have a length of 0.
+      newOrder.push(componentsAndCounts[i--]);
+    } else {
+      // if there are components, add to the front of the array
+      newOrder.unshift(componentsAndCounts[i--]);
+    }
+  }
+  return newOrder;
+};
+
+const sortOrderedQuickstartComponents = (quickstart) => {
+  // get length of all components
+  const dashboardLength = quickstart.dashboards?.length ?? 0;
+  const alertLength = quickstart.alerts?.length ?? 0;
+
+  // we use documentation for datasources at the moment
+  const dataSourceLength = quickstart.documentation?.length ?? 0;
+
+  // sort by length
+  const componentsAndCounts = [
+    {
+      component: Dashboards,
+      count: dashboardLength,
+    },
+    { component: Alerts, count: alertLength },
+    { component: DataSources, count: dataSourceLength },
+  ];
+
+  // Check to see if we need to move empty components to
+  // the end of the array
+  const hasEmptyComponent = componentsAndCounts.filter(
+    (component) => component.count
+  );
+
+  return hasEmptyComponent.length > 0
+    ? moveToBack(componentsAndCounts)
+    : componentsAndCounts;
+};
+
 const QuickstartDetails = ({ data, location }) => {
   const quickstart = data.quickstarts;
   const tessen = useTessen();
@@ -95,13 +145,17 @@ const QuickstartDetails = ({ data, location }) => {
           css={css`
             ${layoutContentSpacing};
             > * {
+              :first-child {
+                padding-top: 0px;
+              }
+
               padding-top: 3rem;
             }
           `}
         >
-          <Dashboards quickstart={quickstart} />
-          <Alerts quickstart={quickstart} />
-          <DataSources quickstart={quickstart} />
+          {sortOrderedQuickstartComponents(quickstart).map((obj, index) => (
+            <obj.component key={index} quickstart={quickstart} />
+          ))}
         </div>
         <div
           css={css`
