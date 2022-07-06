@@ -9,6 +9,7 @@ import { graphql } from 'gatsby';
 import { quickstart } from '../types';
 import QuickstartHowToUse from '@components/QuickstartHowToUse';
 import LandingPageFooter from '@components/LandingPageFooter';
+import WhatsIncludedHeader from '@components/WhatsIncluded/WhatsIncludedHeader';
 import Dashboards from '@components/WhatsIncluded/Dashboards';
 import Alerts from '@components/WhatsIncluded/Alerts';
 import DataSources from '@components/WhatsIncluded/DataSources';
@@ -99,6 +100,7 @@ const QuickstartDetails = ({ data, location }) => {
             }
           `}
         >
+          <WhatsIncludedHeader />
           <Dashboards quickstart={quickstart} />
           <Alerts quickstart={quickstart} />
           <DataSources quickstart={quickstart} />
