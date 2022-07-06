@@ -3,11 +3,9 @@ import { quickstart } from '../../types';
 import QuickstartDashboards from '../QuickstartDashboards';
 import { css } from '@emotion/react';
 import EmptyTab from '../EmptyTab';
-import { useLocation } from '@reach/router';
 import { QUICKSTARTS_COLLAPSE_BREAKPOINT } from '@data/constants';
 
 const Dashboards = ({ quickstart }) => {
-  const location = useLocation();
   return (
     <div
       css={css`

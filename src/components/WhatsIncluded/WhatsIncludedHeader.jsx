@@ -1,14 +1,17 @@
 import React from 'react';
 import { css } from '@emotion/react';
 import Share from '@components/Share';
+import { useLocation } from '@react/router';
 import {
   QUICKSTARTS_COLLAPSE_BREAKPOINT,
   MIN_WIDTH_BREAKPOINT,
 } from '@data/constants';
 
-const WhatsIncludedHeader = () => (
-  <div
-    css={css`
+const WhatsIncludedHeader = () => {
+  const location = useLocation();
+  return (
+    <div
+      css={css`
       display: grid;
       grid-template-columns: repeat(auto, 1fr);
       grid-auto-flow: column;
@@ -34,27 +37,28 @@ const WhatsIncludedHeader = () => (
           }
 
     `}
-  >
-    <h3>What&apos;s included?</h3>
-
-    {/* Share on social media */}
-    <div
-      css={css`
-        display: inline-flex;
-        line-height: 3.9;
-        justify-content: end;
-        @media (max-width: ${QUICKSTARTS_COLLAPSE_BREAKPOINT}) {
-          justify-content: left;
-        }
-        @media (max-width: ${MIN_WIDTH_BREAKPOINT}) {
-          padding-top: 40px;
-        }
-      `}
     >
-      Share this : &nbsp;
-      <Share url={location.href} />
+      <h3>What&apos;s included?</h3>
+
+      {/* Share on social media */}
+      <div
+        css={css`
+          display: inline-flex;
+          line-height: 3.9;
+          justify-content: end;
+          @media (max-width: ${QUICKSTARTS_COLLAPSE_BREAKPOINT}) {
+            justify-content: left;
+          }
+          @media (max-width: ${MIN_WIDTH_BREAKPOINT}) {
+            padding-top: 40px;
+          }
+        `}
+      >
+        Share this : &nbsp;
+        <Share url={location.href} />
+      </div>
     </div>
-  </div>
-);
+  );
+};
 
 export default WhatsIncludedHeader;
