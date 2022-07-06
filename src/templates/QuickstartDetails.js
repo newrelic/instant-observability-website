@@ -151,10 +151,6 @@ const QuickstartDetails = ({ data, location }) => {
           css={css`
             ${layoutContentSpacing};
             > * {
-              :first-child {
-                padding-top: 0px;
-              }
-
               padding-top: 3rem;
             }
           `}
