@@ -27,22 +27,28 @@ const layoutContentSpacing = css`
 `;
 
 const moveToBack = (componentsAndCounts) => {
+  const n = componentsAndCounts.length;
   const newOrder = [];
 
-  // traverse array from back to front
-  // to remain same order of components for render.
-  let i = componentsAndCounts.length - 1;
-
-  while (i >= 0) {
-    if (componentsAndCounts[i].count === 0) {
+  // add components with content
+  // to the beginning of array
+  let i = 0;
+  while (i < n) {
+    if (componentsAndCounts[i].count !== 0) {
       // Push element to end of array.
       // This keeps the same order if all components
       // have a length of 0.
-      newOrder.push(componentsAndCounts[i--]);
-    } else {
-      // if there are components, add to the front of the array
-      newOrder.unshift(componentsAndCounts[i--]);
+      newOrder.push(componentsAndCounts.splice(i, 1)[0]);
     }
+    i++;
+  }
+
+  // add components without content
+  // to the end of array
+  while (componentsAndCounts.length > 0) {
+    // push the remaining elements in order to
+    // new ordered array
+    newOrder.push(componentsAndCounts.shift());
   }
   return newOrder;
 };
