@@ -1,7 +1,7 @@
 import React from 'react';
 import { css } from '@emotion/react';
 import Share from '@components/Share';
-import { useLocation } from '@react/router';
+import { useLocation } from '@reach/router';
 import {
   QUICKSTARTS_COLLAPSE_BREAKPOINT,
   MIN_WIDTH_BREAKPOINT,
