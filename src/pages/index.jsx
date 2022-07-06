@@ -9,7 +9,6 @@ import {
   useTessen,
 } from '@newrelic/gatsby-theme-newrelic';
 import React, { useEffect, useState } from 'react';
-import { FixedSizeGrid as Grid } from 'react-window';
 
 import CATEGORIES from '@data/instant-observability-categories';
 import IOBanner from '@components/IOBanner';
@@ -25,6 +24,7 @@ import { graphql } from 'gatsby';
 import { navigate } from '@reach/router';
 import LeftArrowSVG from '@components/Icons/LeftArrowSVG';
 import RightArrowSVG from '@components/Icons/RightArrowSVG';
+import QuickstartCatalog from '@components/QuickstartCatalog';
 import featherIcons from '../@newrelic/gatsby-theme-newrelic/icons/feather';
 
 const TRIPLE_COLUMN_BREAKPOINT = '1420px';
@@ -720,37 +720,9 @@ const QuickstartsPage = ({ data, location }) => {
               <strong>{search || getDisplayName()}</strong>
             </span>
           </div>
-          <div
-            css={css`
-              display: grid;
-              grid-gap: 40px 15px;
-              grid-template-columns: repeat(4, 1fr);
-              grid-auto-rows: 1fr;
-              @media (max-width: ${TRIPLE_COLUMN_BREAKPOINT}) {
-                grid-template-columns: repeat(3, 1fr);
-              }
-
-              @media (max-width: ${DOUBLE_COLUMN_BREAKPOINT}) {
-                grid-template-columns: repeat(2, 1fr);
-              }
-
-              @media (max-width: ${SINGLE_COLUMN_BREAKPOINT}) {
-                grid-template-columns: repeat(1, 1fr);
-              }
-            `}
-          >
+          <div css={css``}>
             {!isSearchInputEmpty && <SuperTiles />}
-            <Grid
-              columnCount={4}
-              columnWidth={300}
-              rowHeight={400}
-              itemData={filteredQuickstarts}
-              rowCount={Math.floor(filteredQuickstarts.length / 4)}
-              width={1500}
-              height={1000}
-            >
-              {Cell}
-            </Grid>
+            <QuickstartCatalog quickstarts={quickstarts} />
           </div>
         </div>
       </div>
@@ -763,20 +735,6 @@ const QuickstartsPage = ({ data, location }) => {
 QuickstartsPage.propTypes = {
   data: PropTypes.object.isRequired,
   location: PropTypes.object,
-};
-
-const Cell = ({ rowIndex, columnIndex, style, data }) => {
-  const pack = data[rowIndex * 4 + columnIndex];
-  const styling = {
-    paddingLeft: '2rem',
-    paddingRight: '2rem',
-    ...style,
-  };
-  return (
-    <div style={styling}>
-      <QuickstartTile featured={false} {...pack} />
-    </div>
-  );
 };
 
 export const pageQuery = graphql`
