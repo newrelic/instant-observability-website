@@ -80,15 +80,7 @@ const BannerHeaderContent = ({
           value={search || ''}
           placeholder="Search"
           onClear={() => {
-            const params = new URLSearchParams(location.search);
-            const category = params.get('category');
-
-            window.history.replaceState(
-              null,
-              '',
-              category ? `?category=${category}` : '/'
-            );
-            setSearch('');
+            handleSearch('');
             setIsSearchInputEmpty(true);
           }}
           onSubmit={(value) => handleSearch(value)}
