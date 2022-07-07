@@ -3,26 +3,15 @@ import { quickstart } from '../../types';
 import QuickstartDashboards from '../QuickstartDashboards';
 import { css } from '@emotion/react';
 import EmptyTab from '../EmptyTab';
-import { QUICKSTARTS_COLLAPSE_BREAKPOINT } from '@data/constants';
 
 const Dashboards = ({ quickstart }) => {
   return (
-    <div
-      css={css`
-        h6 {
+    <div>
+      <h6
+        css={css`
           font-weight: 400;
-        }
-
-        @media not all and (min-resolution: 0.001dpcm) and max-width: ${QUICKSTARTS_COLLAPSE_BREAKPOINT} {
-          @media {
-            grid-template-columns: repeat(1, 1fr);
-            margin-left: 40px;
-            margin-right: 23px;
-          }
-        }
-      `}
-    >
-      <h6>
+        `}
+      >
         Dashboard &nbsp;
         <div
           css={css`
