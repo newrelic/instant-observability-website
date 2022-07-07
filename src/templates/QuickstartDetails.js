@@ -93,15 +93,15 @@ const QuickstartDetails = ({ data, location }) => {
 
       <Layout.Content>
         {/* What's included section here */}
+
         <div
           css={css`
             ${layoutContentSpacing};
             > * {
-              padding-top: 3rem;
-              @media screen and (min-width: ${QUICKSTARTS_COLLAPSE_BREAKPOINT}) {
-                :nth-child(2) {
-                  padding-top: 1rem;
-                }
+              padding-bottom: 2rem;
+
+              @media (min-width: ${QUICKSTARTS_COLLAPSE_BREAKPOINT}) {
+                padding-bottom: 1rem;
               }
             }
           `}
