@@ -4,21 +4,23 @@ import { Button } from '@newrelic/gatsby-theme-newrelic';
 import QuickstartTile from '@components/QuickstartTile';
 
 const QuickstartCatalog = ({ quickstarts }) => {
-  const [displayed, showMore] = usePagination(quickstarts, 10);
+  const [displayed, showMore] = usePagination(quickstarts, 11);
 
   return (
     <>
       {displayed.map((q) => (
         <QuickstartTile key={q.id} featured={false} {...q} />
       ))}
-      <div
-        css={css`
-          display: flex;
-          flex-direction: row;
-        `}
-      >
-        <Button onClick={showMore}>Show more</Button>
-      </div>
+      {quickstarts.length > displayed.length && (
+        <Button
+          css={css`
+            border-radius: 8px;
+          `}
+          onClick={showMore}
+        >
+          Show more
+        </Button>
+      )}
     </>
   );
 };
@@ -32,7 +34,7 @@ const usePagination = (quickstarts, size) => {
   }, [numDisplayed, quickstarts]);
 
   const showMore = () => {
-    setNumDisplayed(numDisplayed + size);
+    setNumDisplayed(numDisplayed + size + 1);
   };
 
   return [qs, showMore];
