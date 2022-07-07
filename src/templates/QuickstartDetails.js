@@ -16,7 +16,6 @@ import DataSources from '@components/WhatsIncluded/DataSources';
 import Layout from '@components/Layout';
 import QuickstartOverview from '@components/QuickstartOverview';
 import LandingBanner from '@components/LandingBanner';
-import { QUICKSTARTS_COLLAPSE_BREAKPOINT } from '@data/constants';
 
 const layoutContentSpacing = css`
   --page-margin: 156px;
@@ -27,6 +26,44 @@ const layoutContentSpacing = css`
   padding: 0 var(--site-content-padding);
   margin: auto;
 `;
+
+/*
+ * Callback function for sorting data sources and
+ * prioritizing default ordering
+ * @param {Object} a - Object with react component and length of quickstart component
+ * @param {Object} b - Object with react component and length of quickstart component
+ * @returns number
+ */
+const sortComponents = (a, b) => {
+  if (a.count < 1) {
+    return 1;
+  } else if (b.count < 1) {
+    return -1;
+  } else {
+    return 0;
+  }
+};
+
+const sortOrderedQuickstartComponents = (quickstart) => {
+  // get length of all components
+  const dashboardLength = quickstart.dashboards?.length ?? 0;
+  const alertLength = quickstart.alerts?.length ?? 0;
+
+  // we use documentation for datasources at the moment
+  const dataSourceLength = quickstart.documentation?.length ?? 0;
+
+  // sort by length
+  const componentsAndCounts = [
+    {
+      component: Dashboards,
+      count: dashboardLength,
+    },
+    { component: Alerts, count: alertLength },
+    { component: DataSources, count: dataSourceLength },
+  ];
+
+  return componentsAndCounts.sort(sortComponents);
+};
 
 const QuickstartDetails = ({ data, location }) => {
   const quickstart = data.quickstarts;
@@ -98,18 +135,14 @@ const QuickstartDetails = ({ data, location }) => {
           css={css`
             ${layoutContentSpacing};
             > * {
-              padding-bottom: 2rem;
-
-              @media (min-width: ${QUICKSTARTS_COLLAPSE_BREAKPOINT}) {
-                padding-bottom: 1rem;
-              }
+              margin-bottom: 3rem;
             }
           `}
         >
           <WhatsIncludedHeader />
-          <Dashboards quickstart={quickstart} />
-          <Alerts quickstart={quickstart} />
-          <DataSources quickstart={quickstart} />
+          {sortOrderedQuickstartComponents(quickstart).map((obj, index) => (
+            <obj.component key={index} quickstart={quickstart} />
+          ))}
         </div>
         <div
           css={css`

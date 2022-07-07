@@ -15,12 +15,12 @@ const WhatsIncludedHeader = () => {
         display: grid;
         grid-template-columns: repeat(auto, 1fr);
         grid-auto-flow: column;
-        padding-top: 3rem;
+        margin-top: 3rem;
 
         @media (max-width: ${QUICKSTARTS_COLLAPSE_BREAKPOINT}) {
           grid-template-columns: repeat(1, 1fr);
           grid-template-rows: repeat(2, 40px);
-          margin-bottom: 1rem;
+          margin-bottom: 3rem;
         }
       `}
     >
