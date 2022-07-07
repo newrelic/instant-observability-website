@@ -9,6 +9,7 @@ import { graphql } from 'gatsby';
 import { quickstart } from '../types';
 import QuickstartHowToUse from '@components/QuickstartHowToUse';
 import LandingPageFooter from '@components/LandingPageFooter';
+import WhatsIncludedHeader from '@components/WhatsIncluded/WhatsIncludedHeader';
 import Dashboards from '@components/WhatsIncluded/Dashboards';
 import Alerts from '@components/WhatsIncluded/Alerts';
 import DataSources from '@components/WhatsIncluded/DataSources';
@@ -25,6 +26,44 @@ const layoutContentSpacing = css`
   padding: 0 var(--site-content-padding);
   margin: auto;
 `;
+
+/*
+ * Callback function for sorting data sources and
+ * prioritizing default ordering
+ * @param {Object} a - Object with react component and length of quickstart component
+ * @param {Object} b - Object with react component and length of quickstart component
+ * @returns number
+ */
+const sortComponents = (a, b) => {
+  if (a.count < 1) {
+    return 1;
+  } else if (b.count < 1) {
+    return -1;
+  } else {
+    return 0;
+  }
+};
+
+const sortOrderedQuickstartComponents = (quickstart) => {
+  // get length of all components
+  const dashboardLength = quickstart.dashboards?.length ?? 0;
+  const alertLength = quickstart.alerts?.length ?? 0;
+
+  // we use documentation for datasources at the moment
+  const dataSourceLength = quickstart.documentation?.length ?? 0;
+
+  // sort by length
+  const componentsAndCounts = [
+    {
+      component: Dashboards,
+      count: dashboardLength,
+    },
+    { component: Alerts, count: alertLength },
+    { component: DataSources, count: dataSourceLength },
+  ];
+
+  return componentsAndCounts.sort(sortComponents);
+};
 
 const QuickstartDetails = ({ data, location }) => {
   const quickstart = data.quickstarts;
@@ -91,17 +130,19 @@ const QuickstartDetails = ({ data, location }) => {
 
       <Layout.Content>
         {/* What's included section here */}
+
         <div
           css={css`
             ${layoutContentSpacing};
             > * {
-              padding-top: 3rem;
+              margin-bottom: 3rem;
             }
           `}
         >
-          <Dashboards quickstart={quickstart} />
-          <Alerts quickstart={quickstart} />
-          <DataSources quickstart={quickstart} />
+          <WhatsIncludedHeader />
+          {sortOrderedQuickstartComponents(quickstart).map((obj, index) => (
+            <obj.component key={index} quickstart={quickstart} />
+          ))}
         </div>
         <div
           css={css`
@@ -185,9 +226,12 @@ QuickstartDetails.propTypes = {
   location: PropTypes.object.isRequired,
 };
 
+// NOTE: we hard-code `height: 45` for logos to match the CSS
+// height set for the logo img tags.
 export const pageQuery = graphql`
   query($id: String!) {
     quickstarts(id: { eq: $id }) {
+      id
       name
       title
       relatedResources(limit: 5) {
@@ -196,15 +240,29 @@ export const pageQuery = graphql`
       }
       level
       keywords
-      id
       description
       summary
-      logoUrl
+      logo {
+        ext
+        publicURL
+        childImageSharp {
+          gatsbyImageData(
+            height: 45
+            placeholder: BLURRED
+            formats: [AUTO, WEBP]
+          )
+        }
+      }
       packUrl
       dashboards {
         description
         name
-        screenshots
+        screenshots {
+          publicURL
+          childImageSharp {
+            gatsbyImageData(placeholder: BLURRED, formats: [AUTO, WEBP])
+          }
+        }
       }
       alerts {
         details

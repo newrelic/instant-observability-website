@@ -1,3 +1,26 @@
+# [1.4.0](https://github.com/newrelic/instant-observability-website/compare/v1.3.0...v1.4.0) (2022-07-07)
+
+
+### Features
+
+* sort quickstart components by available content ([90798da](https://github.com/newrelic/instant-observability-website/commit/90798da68086bd87c1f156189baa546d22e99103))
+
+# [1.3.0](https://github.com/newrelic/instant-observability-website/compare/v1.2.2...v1.3.0) (2022-07-05)
+
+
+### Bug Fixes
+
+* only use sharp for non-SVG images ([803458b](https://github.com/newrelic/instant-observability-website/commit/803458b5364111d44309d3731ea982749557d601))
+* remove `<GatsbyImage>` for now ([67ae37c](https://github.com/newrelic/instant-observability-website/commit/67ae37c81c3a05c2432443421c6f74016eb0fefe))
+* search should include descriptions ([f1ee631](https://github.com/newrelic/instant-observability-website/commit/f1ee6313ce14cd482659165da6031219a5a1f7fe))
+* using the  component for logo ([4689710](https://github.com/newrelic/instant-observability-website/commit/4689710bd0ef09d9f02082cf6df2f22dfe026233))
+
+
+### Features
+
+* load SVGs from local cache ([a0f591c](https://github.com/newrelic/instant-observability-website/commit/a0f591c00960e85989bb06cb6a1318bd42e505d2))
+* Use `GatsbyImage` for screenshots in slick slider ([f06d4b6](https://github.com/newrelic/instant-observability-website/commit/f06d4b694f98268d7e1d50bf1cc222de7991aab8))
+
 ## [1.2.2](https://github.com/newrelic/instant-observability-website/compare/v1.2.1...v1.2.2) (2022-07-01)
 
 

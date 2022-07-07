@@ -5,6 +5,7 @@ import Breadcrumbs from '../Breadcrumbs';
 import InstallButton from '../InstallButton';
 import { css } from '@emotion/react';
 import { quickstart } from '../../types';
+import QuickstartImg from '../QuickstartImg';
 import defaultImage from '../../images/defaultQuickstartImage.png';
 import BannerBackground from './BannerBackground';
 
@@ -68,7 +69,7 @@ const LandingBanner = ({ quickstart, className, location }) => {
         `}
       >
         <Breadcrumbs segments={breadcrumbs} />
-        {quickstart.logoUrl && (
+        {quickstart.logo && (
           <div
             css={css`
               position: absolute;
@@ -90,9 +91,9 @@ const LandingBanner = ({ quickstart, className, location }) => {
                 }
               `}
             >
-              <img
-                src={quickstart.logoUrl}
-                alt={quickstart.title}
+              <QuickstartImg
+                packName={quickstart.name}
+                imageNode={quickstart.logo}
                 css={css`
                   max-width: 350px;
                   margin: auto;
