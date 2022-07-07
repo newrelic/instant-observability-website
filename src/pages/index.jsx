@@ -2,12 +2,7 @@ import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import '@components/styles.scss';
 
-import {
-  Button,
-  Icon,
-  Spinner,
-  useTessen,
-} from '@newrelic/gatsby-theme-newrelic';
+import { Button, Icon, useTessen } from '@newrelic/gatsby-theme-newrelic';
 import React, { useEffect, useState } from 'react';
 
 import CATEGORIES from '@data/instant-observability-categories';
