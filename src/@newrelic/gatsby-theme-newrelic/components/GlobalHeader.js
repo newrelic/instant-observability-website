@@ -517,7 +517,7 @@ const GlobalHeader = ({ className, activeSite }) => {
             width: 100vw;
             height: 100vh;
             background-color: var(--color-white);
-            z-index: 10;
+            z-index: 200;
 
             @media screen and (min-width: 1128px) {
               display: none;

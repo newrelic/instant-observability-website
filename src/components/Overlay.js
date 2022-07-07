@@ -41,7 +41,6 @@ const Overlay = ({ children, onCloseOverlay, isOpen = false, className }) => {
       <div
         ref={ref}
         css={css`
-          z-index: 1000;
           position: fixed;
           top: 0;
           left: 0;
