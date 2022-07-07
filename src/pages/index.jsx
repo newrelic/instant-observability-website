@@ -30,6 +30,8 @@ const TRIPLE_COLUMN_BREAKPOINT = '1420px';
 const DOUBLE_COLUMN_BREAKPOINT = '1180px';
 const SINGLE_COLUMN_BREAKPOINT = '900px';
 const COLUMN_BREAKPOINT = '1131px';
+//used to set the height of the Spinner to reduce layout shift on page load
+const TILE_HEIGHT = '362px';
 
 /**
  * Determines if one string is a substring of the other, case insensitive
@@ -206,7 +208,7 @@ const QuickstartsPage = ({ data, location }) => {
     adaptiveWidth: true,
     mobileFirst: true, // necessary for breakpoints to work as expected
     prevArrow: (
-      <button>
+      <button type="button">
         <LeftArrowSVG
           className="slick-prev"
           css={css`
@@ -218,7 +220,7 @@ const QuickstartsPage = ({ data, location }) => {
       </button>
     ),
     nextArrow: (
-      <button>
+      <button type="button">
         <RightArrowSVG
           className="slick-next"
           css={css`
@@ -605,7 +607,7 @@ const QuickstartsPage = ({ data, location }) => {
                   </div>
                   <div
                     css={css`
-                      height: 362px;
+                      height: ${TILE_HEIGHT};
                     `}
                   >
                     {!loadComplete && <Spinner />}
@@ -657,7 +659,7 @@ const QuickstartsPage = ({ data, location }) => {
               <div
                 css={css`
                   margin-bottom: 75px;
-                  height: 362px;
+                  height: ${TILE_HEIGHT};
                 `}
               >
                 {!loadComplete && <Spinner />}
