@@ -9,12 +9,14 @@ import { graphql } from 'gatsby';
 import { quickstart } from '../types';
 import QuickstartHowToUse from '@components/QuickstartHowToUse';
 import LandingPageFooter from '@components/LandingPageFooter';
+import WhatsIncludedHeader from '@components/WhatsIncluded/WhatsIncludedHeader';
 import Dashboards from '@components/WhatsIncluded/Dashboards';
 import Alerts from '@components/WhatsIncluded/Alerts';
 import DataSources from '@components/WhatsIncluded/DataSources';
 import Layout from '@components/Layout';
 import QuickstartOverview from '@components/QuickstartOverview';
 import LandingBanner from '@components/LandingBanner';
+import { QUICKSTARTS_COLLAPSE_BREAKPOINT } from '@data/constants';
 
 const layoutContentSpacing = css`
   --page-margin: 156px;
@@ -91,14 +93,20 @@ const QuickstartDetails = ({ data, location }) => {
 
       <Layout.Content>
         {/* What's included section here */}
+
         <div
           css={css`
             ${layoutContentSpacing};
             > * {
-              padding-top: 3rem;
+              padding-bottom: 2rem;
+
+              @media (min-width: ${QUICKSTARTS_COLLAPSE_BREAKPOINT}) {
+                padding-bottom: 1rem;
+              }
             }
           `}
         >
+          <WhatsIncludedHeader />
           <Dashboards quickstart={quickstart} />
           <Alerts quickstart={quickstart} />
           <DataSources quickstart={quickstart} />
