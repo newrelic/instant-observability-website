@@ -133,7 +133,7 @@ const QuickstartsPage = ({ data, location }) => {
       params.set('category', value);
 
       navigate(`?${params.toString()}`);
-      if (value != '') {
+      if (value !== '') {
         setIsSelectCategory(false);
       }
     }
@@ -152,7 +152,7 @@ const QuickstartsPage = ({ data, location }) => {
   );
 
   const alphaSort = quickstarts.sort((a, b) => a.title.localeCompare(b.title));
-  //let sortedQuickstarts = sortFeaturedQuickstarts(alphaSort);
+  // let sortedQuickstarts = sortFeaturedQuickstarts(alphaSort);
   let sortedQuickstarts = alphaSort;
 
   // Hard-code for moving codestream object to front of sortedQuickstarts array - CM
