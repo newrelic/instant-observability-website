@@ -16,7 +16,6 @@ import DataSources from '@components/WhatsIncluded/DataSources';
 import Layout from '@components/Layout';
 import QuickstartOverview from '@components/QuickstartOverview';
 import LandingBanner from '@components/LandingBanner';
-import { QUICKSTARTS_COLLAPSE_BREAKPOINT } from '@data/constants';
 
 const layoutContentSpacing = css`
   --page-margin: 156px;
