@@ -16,10 +16,6 @@ const WhatsIncludedHeader = () => {
         grid-template-columns: repeat(auto, 1fr);
         grid-auto-flow: column;
         padding-top: 3rem;
-        h3 {
-          font-weight: 400;
-          display: contents;
-        }
 
         @media (max-width: ${QUICKSTARTS_COLLAPSE_BREAKPOINT}) {
           grid-template-columns: repeat(1, 1fr);
@@ -28,7 +24,13 @@ const WhatsIncludedHeader = () => {
         }
       `}
     >
-      <h3>What&apos;s included?</h3>
+      <h3
+        css={css`
+          font-weight: 400;
+        `}
+      >
+        What&apos;s included?
+      </h3>
 
       {/* Share on social media */}
       <div
