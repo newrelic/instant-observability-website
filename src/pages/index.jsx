@@ -603,7 +603,11 @@ const QuickstartsPage = ({ data, location }) => {
                       <strong>Most Popular</strong>
                     </span>
                   </div>
-                  <div>
+                  <div
+                    css={css`
+                      height: 362px;
+                    `}
+                  >
                     {!loadComplete && <Spinner />}
                     {loadComplete && (
                       <Slider
@@ -653,6 +657,7 @@ const QuickstartsPage = ({ data, location }) => {
               <div
                 css={css`
                   margin-bottom: 75px;
+                  height: 362px;
                 `}
               >
                 {!loadComplete && <Spinner />}
