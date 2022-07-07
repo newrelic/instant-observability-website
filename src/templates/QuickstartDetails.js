@@ -136,10 +136,10 @@ const QuickstartDetails = ({ data, location }) => {
           css={css`
             ${layoutContentSpacing};
             > * {
-              padding-bottom: 2rem;
+              margin-bottom: 1rem;
 
               @media (min-width: ${QUICKSTARTS_COLLAPSE_BREAKPOINT}) {
-                padding-bottom: 1rem;
+                margin-bottom: 3rem;
               }
             }
           `}
