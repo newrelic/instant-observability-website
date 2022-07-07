@@ -26,13 +26,6 @@ const WhatsIncludedHeader = () => {
           grid-template-rows: repeat(2, 40px);
           margin-bottom: 1rem;
         }
-        @media not all and (min-resolution: 0.001dpcm) and max-width: ${QUICKSTARTS_COLLAPSE_BREAKPOINT} {
-          @media {
-            grid-template-columns: repeat(1, 1fr);
-            margin-left: 40px;
-            margin-right: 23px;
-          }
-        }
       `}
     >
       <h3>What&apos;s included?</h3>
