@@ -1,3 +1,10 @@
+# [1.4.0](https://github.com/newrelic/instant-observability-website/compare/v1.3.0...v1.4.0) (2022-07-07)
+
+
+### Features
+
+* sort quickstart components by available content ([90798da](https://github.com/newrelic/instant-observability-website/commit/90798da68086bd87c1f156189baa546d22e99103))
+
 # [1.3.0](https://github.com/newrelic/instant-observability-website/compare/v1.2.2...v1.3.0) (2022-07-05)
 
 
