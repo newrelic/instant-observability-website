@@ -87,8 +87,6 @@ const QuickstartsPage = ({ data, location }) => {
   const [isCategoriesOverlayOpen, setIsCategoriesOverlayOpen] = useState(false);
   const [isSearchInputEmpty, setIsSearchInputEmpty] = useState(true);
   const [isSelectCategory, setIsSelectCategory] = useState(true);
-  // variable to check if the page load completed
-  const [loadComplete, setLoadComplete] = useState(false);
 
   useEffect(() => {
     const params = new URLSearchParams(location.search);
@@ -107,11 +105,6 @@ const QuickstartsPage = ({ data, location }) => {
       });
     }
   }, [location.search, tessen]);
-
-  // mark the value as true, if the page is loaded
-  useEffect(() => {
-    setLoadComplete(true);
-  }, []);
 
   const closeCategoriesOverlay = () => {
     setIsCategoriesOverlayOpen(false);
@@ -604,24 +597,21 @@ const QuickstartsPage = ({ data, location }) => {
                     </span>
                   </div>
                   <div>
-                    {!loadComplete && <Spinner />}
-                    {loadComplete && (
-                      <Slider
-                        {...settings}
-                        css={css`
-                          display: flex;
-                        `}
-                      >
-                        <SuperTiles />
-                        {mostPopularQuickStarts.map((pack) => (
-                          <QuickstartTile
-                            key={pack.id}
-                            featured={false}
-                            {...pack}
-                          />
-                        ))}
-                      </Slider>
-                    )}
+                    <Slider
+                      {...settings}
+                      css={css`
+                        display: flex;
+                      `}
+                    >
+                      <SuperTiles />
+                      {mostPopularQuickStarts.map((pack) => (
+                        <QuickstartTile
+                          key={pack.id}
+                          featured={false}
+                          {...pack}
+                        />
+                      ))}
+                    </Slider>
                   </div>
                 </>
               )}
@@ -655,18 +645,11 @@ const QuickstartsPage = ({ data, location }) => {
                   margin-bottom: 75px;
                 `}
               >
-                {!loadComplete && <Spinner />}
-                {loadComplete && (
-                  <Slider {...settings}>
-                    {featuredQuickStarts.map((pack) => (
-                      <QuickstartTile
-                        key={pack.id}
-                        featured={false}
-                        {...pack}
-                      />
-                    ))}
-                  </Slider>
-                )}
+                <Slider {...settings}>
+                  {featuredQuickStarts.map((pack) => (
+                    <QuickstartTile key={pack.id} featured={false} {...pack} />
+                  ))}
+                </Slider>
               </div>
             </>
           )}
