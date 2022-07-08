@@ -134,6 +134,10 @@ const QuickstartsPage = ({ data, location }) => {
       const params = new URLSearchParams(location.search);
       params.set('category', value);
 
+      if (search) {
+        params.set('search', search);
+      }
+
       navigate(`?${params.toString()}`);
       if (value != '') {
         setIsSelectCategory(false);
