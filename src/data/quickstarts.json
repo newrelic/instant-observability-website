@@ -6445,39 +6445,6 @@
     ]
   },
   {
-    "title": "Azure API Management",
-    "name": "azure-api-management",
-    "description": "## What is Azure API Management?\n\nComplete API management platform built for multi-cloud environments.\n\n### Get started!\n\nStart monitoring Azure API Management by connecting Microsoft Azure to New Relic!\n\nCheck out our Azure API Management documentation to instrument your cloud service and manage the stability, scalability, and reliability of your systems with New Relic's infrastructure monitoring capabilities.\n\n### More info\n\nCheck out the [documentation](https://docs.newrelic.com/docs/infrastructure/microsoft-azure-integrations/azure-integrations-list/azure-api-management-monitoring-integration/) to learn more about New Relic monitoring for Azure API Management.",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/azure/azure-api-management",
-    "id": "86047b47-5628-4c80-8202-03ebd3133357",
-    "level": "NEW_RELIC",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/azure/azure-api-management/logo.svg",
-    "summary": "Monitor Azure API Management by connecting Azure to New Relic",
-    "websiteUrl": null,
-    "keywords": [
-      "azure",
-      "api"
-    ],
-    "authors": [
-      "New Relic"
-    ],
-    "dashboards": [],
-    "alerts": [],
-    "documentation": [
-      {
-        "name": "Azure API Management installation docs",
-        "description": "Monitor Azure API Management by connecting Azure to New Relic.",
-        "url": "https://docs.newrelic.com/docs/infrastructure/microsoft-azure-integrations/azure-integrations-list/azure-api-management-monitoring-integration/"
-      }
-    ],
-    "installPlans": [
-      {
-        "name": "Azure-Infrastructure-Monitoring",
-        "id": "azure-infrastructure-monitoring"
-      }
-    ]
-  },
-  {
     "title": "Azure Load Balancer",
     "name": "azure-load-balancer",
     "description": "## What is Azure Load Balancer?\n\nWatches incoming TCP and UDP traffic from different services, and uses health\nto distribute those requests across different instances.\n\n\n### Get started!\n\nStart monitoring Azure Load Balancer by connecting Microsoft Azure to New Relic!\n\nCheck out our Azure Load Balancer documentation to instrument your cloud service and manage the stability, scalability, and reliability of your systems with New Relic's infrastructure monitoring capabilities.\n\n### More info\n\nCheck out the [documentation](https://docs.newrelic.com/docs/infrastructure/microsoft-azure-integrations/azure-integrations-list/azure-load-balancer-monitoring-integration/) to learn more about New Relic monitoring for Azure Load Balancer.",
@@ -6540,6 +6507,86 @@
       {
         "name": "Guided install",
         "id": "guided-install"
+      }
+    ]
+  },
+  {
+    "title": "MongoDB",
+    "name": "mongodb",
+    "description": "## MongoDB Monitoring\n\nMongoDB enables the unlimited virtual scaling of applications. Utilities like mongostat and mongotop offer immediate results but fail to provide insights into trends in a highly graphical visual dashboard. MongoDB dashboards provide insights into key metrics like RAM usage, operations per second, page fault, disk size, lock %, and app and database performance at a glance. \n\nAvoid slow queries with  proper indexes that impact performance. Instantly monitor your entire MongoDB database with our instant observability kit or the MongoDB free monitoring tool.  \n\nThe critical differences between MongoDB free monitoring and monitoring MongoDB with New Relic’s instant observability quickstart are efficiency, usability, scope, and cost. MongoDB free monitoring focuses on standalone instances and replica sets. Data collected on disk utilization, memory, and operation execution times are uploaded periodically. \n\n\n### What’s Included?\n\nNew Relic + MongoDB quickstart - New Relic’s instant observability quickstart provides multiple monitoring parameters like operations per second, transactions, and queries by default (with Nagios, you must configure each parameter).\n\nNew Relic’s MongoDB quickstart contains multiple dashboards, including:\n- Total Commands, failed commands per second, bytes in & out per second, available connections, and more. \n\nMonitor MongoDB with New Relic to quickly gain improved distribution and increased visibility into real-time user and app response times, throughput and breakdown by component and layer, and long-term data trends over time.  \n\n### Value of MongoDB Quickstarts\n\n[MongoDB performance monitoring with New Relic](https://docs.newrelic.com/docs/integrations/host-integrations/host-integrations-list/mongodb-monitoring-integration/) offers advanced features, including:\n- Obtain app performance insights (without logging in to DB instances).\n- Create custom queries and charts of your data integrations.\n- Filter and analyze configuration data and metrics in Infrastructure UI.\n\nNew Relic’s instant observability quickstart helps developers reduce administrative overheads and accelerate time to value. As New Relic is SaaS-based, you also don’t have to worry about maintenance or onboarding.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/mongodb",
+    "id": "6183e12f-a398-48e6-8431-a48db03e4443",
+    "level": "NEW_RELIC",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/mongodb/logo.jpeg",
+    "summary": "New Relic's MongoDB quickstart provides multiple customized dashboards including total commands, requests per second, and database size. Install the quickstart to better understand utilization of resources and monitor performance issues.",
+    "websiteUrl": null,
+    "keywords": [
+      "infrastructure",
+      "database",
+      "featured"
+    ],
+    "authors": [
+      "New Relic",
+      "Daniel Gola"
+    ],
+    "dashboards": [
+      {
+        "name": "MongoDB",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/mongodb/mongodb01.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/mongodb/mongodb02.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/mongodb/mongodb03.png"
+        ]
+      }
+    ],
+    "alerts": [],
+    "documentation": [
+      {
+        "name": "MongoDB",
+        "description": "Open source, document-oriented database where you store data in JSON-like files with dynamic schemas.\n",
+        "url": "https://docs.newrelic.com/docs/integrations/host-integrations/host-integrations-list/mongodb-monitoring-integration/"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "MongoDB",
+        "id": "mongodb-integration"
+      }
+    ]
+  },
+  {
+    "title": "Azure API Management",
+    "name": "azure-api-management",
+    "description": "## What is Azure API Management?\n\nComplete API management platform built for multi-cloud environments.\n\n### Get started!\n\nStart monitoring Azure API Management by connecting Microsoft Azure to New Relic!\n\nCheck out our Azure API Management documentation to instrument your cloud service and manage the stability, scalability, and reliability of your systems with New Relic's infrastructure monitoring capabilities.\n\n### More info\n\nCheck out the [documentation](https://docs.newrelic.com/docs/infrastructure/microsoft-azure-integrations/azure-integrations-list/azure-api-management-monitoring-integration/) to learn more about New Relic monitoring for Azure API Management.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/azure/azure-api-management",
+    "id": "86047b47-5628-4c80-8202-03ebd3133357",
+    "level": "NEW_RELIC",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/azure/azure-api-management/logo.svg",
+    "summary": "Monitor Azure API Management by connecting Azure to New Relic",
+    "websiteUrl": null,
+    "keywords": [
+      "azure",
+      "api"
+    ],
+    "authors": [
+      "New Relic",
+      "Emil Hammarstrand"
+    ],
+    "dashboards": [],
+    "alerts": [],
+    "documentation": [
+      {
+        "name": "Azure API Management installation docs",
+        "description": "Monitor Azure API Management by connecting Azure to New Relic.",
+        "url": "https://docs.newrelic.com/docs/infrastructure/microsoft-azure-integrations/azure-integrations-list/azure-api-management-monitoring-integration/"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "Azure-Infrastructure-Monitoring",
+        "id": "azure-infrastructure-monitoring"
       }
     ]
   },
@@ -8621,52 +8668,6 @@
       {
         "name": "Databricks",
         "id": "third-party-databricks"
-      }
-    ]
-  },
-  {
-    "title": "MongoDB",
-    "name": "mongodb",
-    "description": "## MongoDB Monitoring\n\nMongoDB enables the unlimited virtual scaling of applications. Utilities like mongostat and mongotop offer immediate results but fail to provide insights into trends in a highly graphical visual dashboard. MongoDB dashboards provide insights into key metrics like RAM usage, operations per second, page fault, disk size, lock %, and app and database performance at a glance. \n\nAvoid slow queries with  proper indexes that impact performance. Instantly monitor your entire MongoDB database with our instant observability kit or the MongoDB free monitoring tool.  \n\nThe critical differences between MongoDB free monitoring and monitoring MongoDB with New Relic’s instant observability quickstart are efficiency, usability, scope, and cost. MongoDB free monitoring focuses on standalone instances and replica sets. Data collected on disk utilization, memory, and operation execution times are uploaded periodically. \n\n\n### What’s Included?\n\nNew Relic + MongoDB quickstart - New Relic’s instant observability quickstart provides multiple monitoring parameters like operations per second, transactions, and queries by default (with Nagios, you must configure each parameter).\n\nNew Relic’s MongoDB quickstart contains multiple dashboards, including:\n- Total Commands, failed commands per second, bytes in & out per second, available connections, and more. \n\nMonitor MongoDB with New Relic to quickly gain improved distribution and increased visibility into real-time user and app response times, throughput and breakdown by component and layer, and long-term data trends over time.  \n\n### Value of MongoDB Quickstarts\n\n[MongoDB performance monitoring with New Relic](https://docs.newrelic.com/docs/integrations/host-integrations/host-integrations-list/mongodb-monitoring-integration/) offers advanced features, including:\n- Obtain app performance insights (without logging in to DB instances).\n- Create custom queries and charts of your data integrations.\n- Filter and analyze configuration data and metrics in Infrastructure UI.\n\nNew Relic’s instant observability quickstart helps developers reduce administrative overheads and accelerate time to value. As New Relic is SaaS-based, you also don’t have to worry about maintenance or onboarding.",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/mongodb",
-    "id": "6183e12f-a398-48e6-8431-a48db03e4443",
-    "level": "NEW_RELIC",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/mongodb/logo.jpeg",
-    "summary": "New Relic's MongoDB quickstart provides multiple customized dashboards including total commands, requests per second, and database size. Install the quickstart to better understand utilization of resources and monitor performance issues.",
-    "websiteUrl": null,
-    "keywords": [
-      "infrastructure",
-      "database",
-      "featured"
-    ],
-    "authors": [
-      "New Relic",
-      "Daniel Gola"
-    ],
-    "dashboards": [
-      {
-        "name": "MongoDB",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/mongodb/mongodb01.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/mongodb/mongodb02.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/mongodb/mongodb03.png"
-        ]
-      }
-    ],
-    "alerts": [],
-    "documentation": [
-      {
-        "name": "MongoDB",
-        "description": "Open source, document-oriented database where you store data in JSON-like files with dynamic schemas.\n",
-        "url": "https://docs.newrelic.com/docs/integrations/host-integrations/host-integrations-list/mongodb-monitoring-integration/"
-      }
-    ],
-    "installPlans": [
-      {
-        "name": "MongoDB",
-        "id": "mongodb-integration"
       }
     ]
   },
