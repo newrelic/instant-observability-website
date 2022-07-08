@@ -80,6 +80,7 @@ const BannerHeaderContent = ({
           value={search || ''}
           placeholder="Search"
           onClear={() => {
+            setSearch('');
             handleSearch('');
             setIsSearchInputEmpty(true);
           }}
