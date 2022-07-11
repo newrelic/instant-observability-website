@@ -1,23 +1,15 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import { css } from '@emotion/react';
+import PropTypes from 'prop-types';
 import bannerOverlayRight from '../images/io-banner/banner-style-right.svg';
 import bannerOverlayLeft from '../images/io-banner/banner-style-left.svg';
 import { SearchInput } from '@newrelic/gatsby-theme-newrelic';
 import { QUICKSTARTS_COLLAPSE_BREAKPOINT } from '@data/constants';
 
-const BannerHeaderContent = ({
-  search,
-  setSearch,
-  setIsSearchInputEmpty,
-  handleSearch,
-}) => {
-  const handleSearchInput = (e) => {
-    const searchInputValue = e.target.value;
-    setSearch(searchInputValue);
-    searchInputValue.length > 0
-      ? setIsSearchInputEmpty(false)
-      : setIsSearchInputEmpty(true);
+const BannerHeaderContent = ({ search, handleSearch }) => {
+  const updateSearch = (e) => {
+    const value = e.target.value;
+    handleSearch(value);
   };
 
   return (
@@ -80,11 +72,10 @@ const BannerHeaderContent = ({
           value={search || ''}
           placeholder="Search"
           onClear={() => {
-            setSearch('');
-            setIsSearchInputEmpty(true);
+            handleSearch('');
           }}
           onSubmit={(value) => handleSearch(value)}
-          onChange={handleSearchInput}
+          onChange={updateSearch}
           css={css`
             box-shadow: none;
             max-width: 816px;
@@ -134,19 +125,7 @@ const BannerHeaderContent = ({
   );
 };
 
-BannerHeaderContent.propTypes = {
-  search: PropTypes.string,
-  setSearch: PropTypes.func,
-  setIsSearchInputEmpty: PropTypes.func,
-  handleSearch: PropTypes.func,
-};
-
-const IOBanner = ({
-  search,
-  setSearch,
-  setIsSearchInputEmpty,
-  handleSearch,
-}) => {
+const IOBanner = ({ search, handleSearch }) => {
   return (
     <div
       css={css`
@@ -209,12 +188,7 @@ const IOBanner = ({
             loading="lazy"
           />
         </div>
-        <BannerHeaderContent
-          search={search}
-          setSearch={setSearch}
-          setIsSearchInputEmpty={setIsSearchInputEmpty}
-          handleSearch={handleSearch}
-        />
+        <BannerHeaderContent search={search} handleSearch={handleSearch} />
         <div
           css={css`
             margin-left: auto;
@@ -240,11 +214,10 @@ const IOBanner = ({
   );
 };
 
-IOBanner.propTypes = {
+BannerHeaderContent.propTypes = {
   search: PropTypes.string,
-  setSearch: PropTypes.func,
-  setIsSearchInputEmpty: PropTypes.func,
   handleSearch: PropTypes.func,
 };
+IOBanner.propTypes = { search: PropTypes.string, handleSearch: PropTypes.func };
 
 export default IOBanner;

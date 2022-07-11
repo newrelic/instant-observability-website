@@ -11,6 +11,7 @@ import {
 import React, { useEffect, useState } from 'react';
 
 import CATEGORIES from '@data/instant-observability-categories';
+import useSearchAndCategory from '@hooks/useSearchAndCategory';
 import IOBanner from '@components/IOBanner';
 import IOSeo from '@components/IOSeo';
 import Overlay from '@components/Overlay';
@@ -79,34 +80,16 @@ const filterByCategory = (category) => {
 };
 
 const QuickstartsPage = ({ data, location }) => {
-  const tessen = useTessen();
-
-  const [search, setSearch] = useState('');
-  const [category, setCategory] = useState('');
+  const {
+    search,
+    category,
+    handleCategory,
+    handleSearch,
+  } = useSearchAndCategory();
 
   const [isCategoriesOverlayOpen, setIsCategoriesOverlayOpen] = useState(false);
-  const [isSearchInputEmpty, setIsSearchInputEmpty] = useState(true);
-  const [isSelectCategory, setIsSelectCategory] = useState(true);
   // variable to check if the page load completed
   const [loadComplete, setLoadComplete] = useState(false);
-
-  useEffect(() => {
-    const params = new URLSearchParams(location.search);
-    const searchParam = params.get('search');
-    const categoryParam = params.get('category');
-    const validCategory = CATEGORIES.some((cat) => cat.value === categoryParam);
-
-    setSearch(searchParam);
-    setCategory(categoryParam && validCategory ? categoryParam : '');
-    if (searchParam || categoryParam) {
-      tessen.track({
-        eventName: 'instantObservability',
-        category: 'QuickstartCatalogSearch',
-        search: searchParam,
-        quickstartCategory: categoryParam,
-      });
-    }
-  }, [location.search, tessen]);
 
   // mark the value as true, if the page is loaded
   useEffect(() => {
@@ -115,30 +98,6 @@ const QuickstartsPage = ({ data, location }) => {
 
   const closeCategoriesOverlay = () => {
     setIsCategoriesOverlayOpen(false);
-  };
-
-  const handleSearch = (value) => {
-    if (value !== null && value !== undefined) {
-      const params = new URLSearchParams(location.search);
-      params.set('search', value);
-
-      navigate(`?${params.toString()}`);
-    }
-  };
-
-  const handleCategory = (value) => {
-    setIsSelectCategory(true);
-    if (value !== null && value !== undefined) {
-      const params = new URLSearchParams(location.search);
-      params.set('category', value);
-
-      navigate(`?${params.toString()}`);
-      if (value !== '') {
-        setIsSelectCategory(false);
-      }
-    }
-
-    closeCategoriesOverlay();
   };
 
   const quickstarts = data.allQuickstarts.nodes;
@@ -206,7 +165,7 @@ const QuickstartsPage = ({ data, location }) => {
     adaptiveWidth: true,
     mobileFirst: true, // necessary for breakpoints to work as expected
     prevArrow: (
-      <button>
+      <button type="button">
         <LeftArrowSVG
           className="slick-prev"
           css={css`
@@ -218,7 +177,7 @@ const QuickstartsPage = ({ data, location }) => {
       </button>
     ),
     nextArrow: (
-      <button>
+      <button type="button">
         <RightArrowSVG
           className="slick-next"
           css={css`
@@ -287,7 +246,7 @@ const QuickstartsPage = ({ data, location }) => {
   const renderGoToTopButton = () => {
     return (
       <Button
-        onClick={topFunction}
+        onClick={() => topFunction()}
         css={css`
           display: none;
           flex-direction: row;
@@ -318,12 +277,7 @@ const QuickstartsPage = ({ data, location }) => {
         location={location}
         type="quickstarts"
       />
-      <IOBanner
-        search={search}
-        setSearch={setSearch}
-        setIsSearchInputEmpty={setIsSearchInputEmpty}
-        handleSearch={handleSearch}
-      />
+      handleSearch && <IOBanner search={search} handleSearch={handleSearch} />
       <div
         css={css`
           --sidebar-width: 300px;
@@ -573,7 +527,7 @@ const QuickstartsPage = ({ data, location }) => {
             </Overlay>
           </div>
 
-          {isSelectCategory && isSearchInputEmpty && (
+          {Boolean(category) && Boolean(!search) && (
             <>
               {mostPopularQuickStarts.length > 0 && (
                 <>
@@ -738,14 +692,13 @@ const QuickstartsPage = ({ data, location }) => {
               }
             `}
           >
-            {!isSearchInputEmpty && <SuperTiles />}
+            {Boolean(search) && <SuperTiles />}
             {filteredQuickstarts.map((pack) => (
               <QuickstartTile key={pack.id} featured={false} {...pack} />
             ))}
           </div>
         </div>
       </div>
-
       {renderGoToTopButton()}
     </>
   );
