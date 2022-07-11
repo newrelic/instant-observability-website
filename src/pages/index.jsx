@@ -30,7 +30,7 @@ const TRIPLE_COLUMN_BREAKPOINT = '1420px';
 const DOUBLE_COLUMN_BREAKPOINT = '1180px';
 const SINGLE_COLUMN_BREAKPOINT = '900px';
 const COLUMN_BREAKPOINT = '1131px';
-//used to set the height of the Spinner to reduce layout shift on page load
+// used to set the height of the Spinner to reduce layout shift on page load
 const TILE_HEIGHT = '362px';
 
 /**
@@ -384,7 +384,7 @@ const QuickstartsPage = ({ data, location }) => {
         >
           <div
             css={css`
-              padding: 32px 0 32px 32px;
+              padding: 24px 0 32px 32px;
               height: 100%;
               overflow: auto;
 
@@ -589,7 +589,7 @@ const QuickstartsPage = ({ data, location }) => {
                       font-size: 16px;
                       color: var(--color-neutrals-800);
                       align-text: center;
-                      margin: 0 0 13px 4px;
+                      margin: 0 0 13px 0;
                       span {
                       }
                       strong {
@@ -641,7 +641,7 @@ const QuickstartsPage = ({ data, location }) => {
                   font-size: 16px;
                   color: var(--color-neutrals-800);
                   align-text: center;
-                  margin: 75px 0 13px 4px;
+                  margin: 75px 0 13px 0;
 
                   strong {
                     font-family: 'Söhne-Leicht';

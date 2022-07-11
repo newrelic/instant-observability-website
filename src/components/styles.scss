@@ -101,7 +101,8 @@ input[type='text'] {
 }
 
 .slick-list {
-  margin: 0 -2px !important;
+  margin: 0 -7px !important;
+  // padding: 0 7px !important;
 }
 
 .slick-dots li button {
@@ -125,13 +126,14 @@ input[type='text'] {
   display: flex !important;
   margin-top: 2px;
   flex-direction: row;
-  column-gap: 15px;
+  column-gap: 0px;
   flex-wrap: nowrap;
   align-items: flex-start;
 }
 
 .slick-slide {
   height: inherit !important;
+  margin: 6.5px !important;
 }
 
 @media only screen and (max-width: 425px) {
