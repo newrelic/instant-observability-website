@@ -393,7 +393,7 @@ const QuickstartsPage = ({ data, location }) => {
                 font-size: 28px;
                 line-height: 36px;
                 font-weight: normal;
-                margin-bottom: 12px;
+                margin-bottom: 23px;
                 letter-spacing: -0.5px;
               }
               @media screen and (max-width: ${QUICKSTARTS_COLLAPSE_BREAKPOINT}) {
