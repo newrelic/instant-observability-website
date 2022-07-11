@@ -101,8 +101,7 @@ input[type='text'] {
 }
 
 .slick-list {
-  margin: 0 -7px !important;
-  // padding: 0 7px !important;
+  margin: 0 -6.5px !important;
 }
 
 .slick-dots li button {
@@ -111,6 +110,10 @@ input[type='text'] {
 
 .slick-prev {
   z-index: 100;
+  left: -27px !important;
+}
+.slick-next {
+  right: -28px !important;
 }
 
 .slick-disabled .arrow-bg {
