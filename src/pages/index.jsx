@@ -2,12 +2,7 @@ import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import '@components/styles.scss';
 
-import {
-  Button,
-  Icon,
-  Spinner,
-  useTessen,
-} from '@newrelic/gatsby-theme-newrelic';
+import { Button, Icon, Spinner } from '@newrelic/gatsby-theme-newrelic';
 import React, { useEffect, useState } from 'react';
 
 import CATEGORIES from '@data/instant-observability-categories';
@@ -22,7 +17,6 @@ import Slider from 'react-slick';
 import SuperTiles from '@components/SuperTiles';
 import { css } from '@emotion/react';
 import { graphql } from 'gatsby';
-import { navigate } from '@reach/router';
 import LeftArrowSVG from '@components/Icons/LeftArrowSVG';
 import RightArrowSVG from '@components/Icons/RightArrowSVG';
 import featherIcons from '../@newrelic/gatsby-theme-newrelic/icons/feather';
@@ -80,13 +74,13 @@ const filterByCategory = (category) => {
 };
 
 const QuickstartsPage = ({ data, location }) => {
-  const [search, setSearch] = useState('');
-  const [category, setCategory] = useState('');
-  const { handleParam, clearParam } = useSearchAndCategory(
+  const {
+    search,
+    category,
     setSearch,
-    setCategory,
-    location
-  );
+    handleParam,
+    clearParam,
+  } = useSearchAndCategory(location);
 
   const [isCategoriesOverlayOpen, setIsCategoriesOverlayOpen] = useState(false);
   // variable to check if the page load completed
@@ -481,7 +475,7 @@ const QuickstartsPage = ({ data, location }) => {
                       type="button"
                       key={value}
                       variant={Button.VARIANT.PRIMARY}
-                      onClick={() => handleCategory(value)}
+                      onClick={() => handleParam('category')(value)}
                       css={css`
                         width: 100%;
                         display: flex;

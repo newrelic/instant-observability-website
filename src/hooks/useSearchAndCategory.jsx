@@ -1,9 +1,11 @@
-import { useEffect, useCallback } from 'react';
+import { useState, useEffect } from 'react';
 import { navigate } from 'gatsby';
 import { useTessen } from '@newrelic/gatsby-theme-newrelic';
 import CATEGORIES from '@data/instant-observability-categories';
 
-const useSearchAndCategory = (setSearch, setCategory, location) => {
+const useSearchAndCategory = (location) => {
+  const [search, setSearch] = useState('');
+  const [category, setCategory] = useState('');
   const tessen = useTessen();
 
   // used to update search and category values
@@ -23,7 +25,7 @@ const useSearchAndCategory = (setSearch, setCategory, location) => {
         quickstartCategory: categoryParam,
       });
     }
-  }, [location.search, tessen, setSearch, setCategory]);
+  }, [location.search, tessen]);
 
   /**
    * Updates search parameter from location
@@ -57,7 +59,15 @@ const useSearchAndCategory = (setSearch, setCategory, location) => {
     setSearch((s) => s + value);
   };
 
-  return { handleParam, updateSearch, clearParam };
+  return {
+    search,
+    category,
+    setSearch,
+    setCategory,
+    handleParam,
+    updateSearch,
+    clearParam,
+  };
 };
 
 export default useSearchAndCategory;
