@@ -50,7 +50,7 @@ FallbackImg.propTypes = {
   className: PropTypes.string,
 };
 
-const QuickstartImg = ({ className, packName, imageNode }) => {
+const QuickstartImg = ({ className, packName, imageNode, svgNode }) => {
   if (imageNode) {
     // If we have an image for sharp to optimize, use GatsbyImage
     const image = getImage(imageNode);
@@ -69,25 +69,23 @@ const QuickstartImg = ({ className, packName, imageNode }) => {
         />
       );
     }
+  }
 
-    // If we don't have a sharp-capable image, but we have a URL, it's an
-    // SVG (already performant) and is already built with the site.
-    const { ext, publicURL } = imageNode;
-
-    if (ext === '.svg' && publicURL) {
-      return (
-        <img
-          css={css`
-            display: block;
-            max-width: 100%;
-            max-height: 100%;
-          `}
-          src={publicURL}
-          alt={packName}
-          className={className}
-        />
-      );
-    }
+  // If we don't have a sharp-capable image, but we have a URL, it's an
+  // SVG (already performant) and is already built with the site.
+  if (svgNode) {
+    return (
+      <img
+        css={css`
+          display: block;
+          max-width: 100%;
+          max-height: 100%;
+        `}
+        src={svgNode.publicURL}
+        alt={packName}
+        className={className}
+      />
+    );
   }
 
   // In all other cases, render the fallback.
@@ -98,6 +96,7 @@ QuickstartImg.propTypes = {
   packName: PropTypes.string.isRequired,
   className: PropTypes.string,
   imageNode: PropTypes.object,
+  svgNode: PropTypes.object,
 };
 
 export default QuickstartImg;

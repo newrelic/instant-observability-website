@@ -26,6 +26,8 @@ const TRIPLE_COLUMN_BREAKPOINT = '1420px';
 const DOUBLE_COLUMN_BREAKPOINT = '1180px';
 const SINGLE_COLUMN_BREAKPOINT = '900px';
 const COLUMN_BREAKPOINT = '1131px';
+// used to set the height of the Spinner to reduce layout shift on page load
+const TILE_HEIGHT = '362px';
 
 const QuickstartsPage = ({ data, location }) => {
   const { search, category, setSearch, handleParam } = useSearchAndCategory(
@@ -249,7 +251,7 @@ const QuickstartsPage = ({ data, location }) => {
         >
           <div
             css={css`
-              padding: 32px 0 32px 32px;
+              padding: 24px 0 32px 32px;
               height: 100%;
               overflow: auto;
 
@@ -258,7 +260,7 @@ const QuickstartsPage = ({ data, location }) => {
                 font-size: 28px;
                 line-height: 36px;
                 font-weight: normal;
-                margin-bottom: 12px;
+                margin-bottom: 23px;
                 letter-spacing: -0.5px;
               }
               @media screen and (max-width: ${QUICKSTARTS_COLLAPSE_BREAKPOINT}) {
@@ -454,7 +456,7 @@ const QuickstartsPage = ({ data, location }) => {
                       font-size: 16px;
                       color: var(--color-neutrals-800);
                       align-text: center;
-                      margin: 0 0 13px 4px;
+                      margin: 0 0 13px 0;
                       span {
                       }
                       strong {
@@ -474,7 +476,11 @@ const QuickstartsPage = ({ data, location }) => {
                       <strong>Most Popular</strong>
                     </span>
                   </div>
-                  <div>
+                  <div
+                    css={css`
+                      height: ${TILE_HEIGHT};
+                    `}
+                  >
                     {!loadComplete && <Spinner />}
                     {loadComplete && (
                       <Slider
@@ -502,7 +508,7 @@ const QuickstartsPage = ({ data, location }) => {
                   font-size: 16px;
                   color: var(--color-neutrals-800);
                   align-text: center;
-                  margin: 75px 0 13px 4px;
+                  margin: 75px 0 13px 0;
 
                   strong {
                     font-family: 'Söhne-Leicht';
@@ -524,6 +530,7 @@ const QuickstartsPage = ({ data, location }) => {
               <div
                 css={css`
                   margin-bottom: 75px;
+                  height: ${TILE_HEIGHT};
                 `}
               >
                 {!loadComplete && <Spinner />}
@@ -638,9 +645,11 @@ export const pageQuery = graphql`
         description
         level
         keywords
-        logo {
+        logoSvg {
           ext
           publicURL
+        }
+        logo {
           childImageSharp {
             gatsbyImageData(
               height: 45

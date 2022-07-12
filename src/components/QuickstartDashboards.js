@@ -25,9 +25,9 @@ const QuickstartDashboards = ({ quickstart }) => {
         css={css`
           width: 62px;
           height: 62px;
-          margin-left: -3.5rem;
+          margin-left: -2rem;
           @media screen and (max-width: ${MOBILE_BREAKPOINT}) {
-            margin-left: -1.5rem;
+            margin-left: -1.6rem;
           }
         `}
       />
@@ -38,9 +38,9 @@ const QuickstartDashboards = ({ quickstart }) => {
         css={css`
           width: 62px;
           height: 62px;
-          margin-right: -3.5rem;
+          margin-right: -2rem;
           @media screen and (max-width: ${MOBILE_BREAKPOINT}) {
-            margin-right: -2rem;
+            margin-right: -1.5rem;
           }
         `}
       />

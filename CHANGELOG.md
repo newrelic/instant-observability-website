@@ -1,3 +1,17 @@
+# [1.5.0](https://github.com/newrelic/instant-observability-website/compare/v1.4.1...v1.5.0) (2022-07-12)
+
+
+### Features
+
+* source quickstarts concurrently ([b018b2e](https://github.com/newrelic/instant-observability-website/commit/b018b2e4d8d3e5faee67ec7c35f3458ad0327da8))
+
+## [1.4.1](https://github.com/newrelic/instant-observability-website/compare/v1.4.0...v1.4.1) (2022-07-12)
+
+
+### Bug Fixes
+
+* quickstart tile summary overlap ([79ce54e](https://github.com/newrelic/instant-observability-website/commit/79ce54e2d3428630442979ae996e4a07631a74b9))
+
 # [1.4.0](https://github.com/newrelic/instant-observability-website/compare/v1.3.0...v1.4.0) (2022-07-07)
 
 
