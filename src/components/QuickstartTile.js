@@ -82,13 +82,12 @@ const QuickstartTile = ({
         h4,
         p,
         span {
-          font-family: 'Söhne-Leicht';
           letter-spacing: -0.5%;
-          color: #1d252c;
+          color: var(--primary-text-color);
+          font-weight: 300;
 
           @media screen and (max-width: ${QUICKSTARTS_COLLAPSE_BREAKPOINT}) {
             width: 100%;
-            font-family: 'Söhne-Buch';
             font-weight: 400;
           }
         }

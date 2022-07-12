@@ -335,7 +335,6 @@ const QuickstartsPage = ({ data, location }) => {
           --sidebar-width: 300px;
           --banner-height: 450px;
           --divider-color: #e4e5e6;
-          --primary-text-color: #1d252c;
           display: grid;
           grid-template-columns: var(--sidebar-width) minmax(0, 1fr);
           grid-template-areas: 'sidebar main';
@@ -389,10 +388,9 @@ const QuickstartsPage = ({ data, location }) => {
               overflow: auto;
 
               label {
-                font-family: 'Söhne-Leicht';
                 font-size: 28px;
                 line-height: 36px;
-                font-weight: normal;
+                font-weight: 300;
                 margin-bottom: 23px;
                 letter-spacing: -0.5px;
               }
@@ -412,9 +410,8 @@ const QuickstartsPage = ({ data, location }) => {
                   onClick={() => handleCategory(value)}
                   css={css`
                     padding: 8px 12px;
-                    font-family: 'Söhne-Leicht';
                     font-size: 18px;
-                    font-weight: 400;
+                    font-weight: 300;
                     line-height: 54px;
                     width: 100%;
                     display: flex;
@@ -503,7 +500,6 @@ const QuickstartsPage = ({ data, location }) => {
                 <h3
                   css={css`
                     padding: 0.5rem 0 0 0.5rem;
-                    font-family: 'Söhne-Buch';
                     font-size: 28px;
                     line-height: 36px;
                     margin-bottom: 12px;
@@ -533,7 +529,6 @@ const QuickstartsPage = ({ data, location }) => {
                         color: var(--primary-text-color);
                         border-radius: 3px;
                         padding: 8px 12px;
-                        font-family: 'Söhne-Buch';
                         font-size: 18px;
                         line-height: 54px;
                         background: ${category === value
@@ -593,12 +588,10 @@ const QuickstartsPage = ({ data, location }) => {
                       span {
                       }
                       strong {
-                        font-family: 'Söhne-Leicht';
                         font-size: 28px;
                         line-height: 36px;
                         letter-spacing: -0.5px;
-                        color: #1d252c;
-                        font-weight: normal;
+                        font-weight: 300;
                       }
                       @media screen and (max-width: ${QUICKSTARTS_COLLAPSE_BREAKPOINT}) {
                         padding: 0 0 0.5rem;
@@ -644,12 +637,10 @@ const QuickstartsPage = ({ data, location }) => {
                   margin: 75px 0 13px 0;
 
                   strong {
-                    font-family: 'Söhne-Leicht';
                     font-size: 28px;
                     line-height: 36px;
                     letter-spacing: -0.5px;
-                    color: #1d252c;
-                    font-weight: normal;
+                    font-weight: 300;
                   }
                   @media screen and (max-width: ${QUICKSTARTS_COLLAPSE_BREAKPOINT}) {
                     padding: 0 0 0.5rem;
@@ -683,25 +674,20 @@ const QuickstartsPage = ({ data, location }) => {
           )}
           <div
             css={css`
-              --text-color: var(--primary-text-color);
               margin: 0px 0 13px 4px;
 
               padding: 0 0 1.25rem 0;
               font-size: 18px;
-              color: var(--color-neutrals-800);
               display: flex;
               justify-content: space-between;
               align-text: center;
 
               span {
                 width: 100%;
-                color: var(--text-color);
 
                 /* target inner children of parent span */
                 span,
                 strong {
-                  font-family: 'Söhne-Leicht';
-
                   letter-space: -0.5px;
                   @media screen and (max-width: ${QUICKSTARTS_COLLAPSE_BREAKPOINT}) {
                     display: none;
@@ -710,12 +696,11 @@ const QuickstartsPage = ({ data, location }) => {
               }
 
               strong {
-                color: var(--text-color);
                 display: block;
                 text-overflow: ellipsis;
                 overflow-x: hidden;
                 whitespace: nowrap;
-                font-weight: 100;
+                font-weight: 300;
                 font-size: 28px;
               }
 

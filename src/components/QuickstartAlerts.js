@@ -11,7 +11,6 @@ const QuickstartAlerts = ({ quickstart }) => (
     <Intro
       css={css`
         margin-bottom: 16px;
-        color: var(--black-text-color);
       `}
     >
       {quickstart.title} observability quickstart contains{' '}
@@ -26,7 +25,6 @@ const QuickstartAlerts = ({ quickstart }) => (
         display: grid;
         grid-gap: 1rem;
         grid-template-columns: repeat(4, 1fr);
-        color: var(--black-text-color);
 
         @media (max-width: 760px) {
           grid-template-columns: repeat(1, 1fr);
@@ -54,8 +52,8 @@ const QuickstartAlerts = ({ quickstart }) => (
           />
           <p
             css={css`
-              font-family: 'Söhne-Kräftig';
               margin-top: 16px;
+              font-weight: 500;
               margin-bottom: 16px;
             `}
           >

@@ -98,18 +98,11 @@ const LandingPageFooter = ({
           <div>
             <Button
               css={css`
-                background: var(--background-color);
-                color: var(--btn-text-color);
                 border-radius: 4px;
                 padding: 0px 20px 0px 22px;
-                border-color: var(--background-color);
                 column-gap: 14.45px;
                 font-weight: 400;
                 height: 3rem;
-                &:hover {
-                  color: var(--white-hover-color);
-                  border-color: var(--background-color);
-                }
                 @media (max-width: 760px) {
                   width: 100%;
                 }
@@ -128,7 +121,7 @@ const LandingPageFooter = ({
               `}
               className="btn-styles btn1"
               as={Link}
-              variant={Button.VARIANT.OUTLINE}
+              variant={Button.VARIANT.NORMAL}
               to={quickstartUrl}
               rel="noopener noreferrer"
               onClick={trackQuickstart('QuickstartViewRepoClick', quickstart)}
@@ -152,7 +145,7 @@ const LandingPageFooter = ({
           >
             <Button
               as={ExternalLink}
-              variant={Button.VARIANT.OUTLINE}
+              variant={Button.VARIANT.NORMAL}
               to="https://developer.newrelic.com/contribute-to-quickstarts/"
               instrumentation={{
                 component: 'GlobalFooter',
@@ -161,18 +154,11 @@ const LandingPageFooter = ({
               }}
               className="btn-styles btn1"
               css={css`
-                background: var(--background-color);
-                color: var(--btn-text-color);
                 border-radius: 4px;
                 padding: 13.5px 20px 13.5px 22px;
                 column-gap: 14.45px;
                 font-weight: 400;
                 height: 48px;
-                border-color: var(--background-color);
-                &:hover {
-                  color: var(--white-hover-color);
-                  border-color: var(--background-color);
-                }
                 @media (max-width: 760px) {
                   width: 100%;
                 }

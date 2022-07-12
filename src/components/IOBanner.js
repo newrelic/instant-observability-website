@@ -29,11 +29,6 @@ const BannerHeaderContent = ({
         justify-content: center;
         text-align: center;
 
-        h1,
-        div {
-          font-family: 'Söhne-Buch';
-        }
-
         width: 1100px;
 
         @media (max-width: ${QUICKSTARTS_COLLAPSE_BREAKPOINT}) {
@@ -44,7 +39,8 @@ const BannerHeaderContent = ({
     >
       <h1
         css={css`
-          color: #f9fafa;
+          color: var(--secondary-text-color-inverted);
+          font-weight: 500;
           font-size: 72px;
           letter-spacing: -0.03em;
           margin: 72px 0 0;
@@ -104,12 +100,12 @@ const BannerHeaderContent = ({
               height: 64px;
               font-size: 18px;
               padding: 20px 55px 20px 24px;
-              background: #1d252c;
+              background: var(--system-text-primary-light);
               border: 1px solid #f9fafa;
               border-radius: 4px;
               color: #f9fafa;
               &::placeholder {
-                color: var(--color-neutrals-600);
+                color: var(--accent-text-color);
               }
               &:focus {
                 outline: none;
@@ -163,7 +159,7 @@ const IOBanner = ({
         margin: 0 0 0 var(--left-margin);
         padding: 0 40px;
 
-        background: #1d252c;
+        background: var(--system-text-primary-light);
         box-sizing: border-box;
         @media (max-width: 1130px) {
           --banner-height: 425px;

@@ -14,7 +14,7 @@ const BannerBackground = ({ children }) => {
         left: var(--left-margin);
         margin: 0 0 0 var(--left-margin);
 
-        background: var(--brand-secondary-background-color);
+        background: var(--system-text-primary-light);
         box-sizing: border-box;
       `}
     >

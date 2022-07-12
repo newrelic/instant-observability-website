@@ -75,7 +75,6 @@ const GuidedInstallTileMostPopular = () => {
 
           @media screen and (max-width: ${QUICKSTARTS_COLLAPSE_BREAKPOINT}) {
             width: 100%;
-            font-family: 'Söhne-Buch';
             font-weight: 400;
           }
         }
@@ -88,8 +87,6 @@ const GuidedInstallTileMostPopular = () => {
       >
         <h2
           css={css`
-            font-family: 'Söhne-Buch';
-
             font-weight: normal;
             font-size: 18px;
             line-height: 24px;
@@ -101,7 +98,6 @@ const GuidedInstallTileMostPopular = () => {
         <span
           css={css`
             font-size: 18px;
-            font-family: 'Söhne-Leicht';
             line-height: 24px;
             color: #898e91;
           `}
@@ -118,11 +114,9 @@ const GuidedInstallTileMostPopular = () => {
         <p
           css={css`
             font-size: 24px;
-            font-family: 'Söhne-Leicht';
             letter-spacing: -0.025em;
             line-height: 32px;
-
-            color: var(--secondary-text-color);
+            font-weight: 300;
 
             /* Limit the number of lines */
             word-break: break-word;
@@ -157,10 +151,10 @@ const GuidedInstallTileMostPopular = () => {
           size={Button.SIZE.SMALL}
           css={css`
             background: none;
-            font-weight: normal;
+            font-weight: 300;
             font-size: 18px;
-            font-family: 'Söhne-Leicht';
             padding: 0 0 3px 0;
+            color: var(--system-text-primary-dark);
             border-bottom: 1px solid white;
             &:hover {
               background: none;

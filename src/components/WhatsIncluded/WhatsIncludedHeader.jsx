@@ -26,7 +26,7 @@ const WhatsIncludedHeader = () => {
     >
       <h3
         css={css`
-          font-weight: 400;
+          font-weight: 500;
         `}
       >
         What&apos;s included?

@@ -11,17 +11,6 @@ const GetStartedFooter = ({ style = 'PRIMARY', ...props }) => {
   return (
     <div
       css={css`
-        --nr1--color--accent: #1ce783;
-        --nr1--color--text--primary: #293338;
-
-        --nr1--color--background--button--primary--enabled: #293338;
-        --nr1--color--background--button--primary--hover: #000;
-        --nr1--color--text--buttton--primary: #1ce783;
-
-        --nr1--color--background--button--primary-accent--enabled: #1CE78;
-        --nr1--color--background--button--primary-accent--hover: #00ce7c;
-        --nr1--color--text--buttton--primary-accent: #000;
-
         width: 100%;
         height: 7rem;
 
@@ -31,15 +20,13 @@ const GetStartedFooter = ({ style = 'PRIMARY', ...props }) => {
 
         font-size: 33px;
 
-        background-color: var(--nr1--color--accent);
+        background-color: var(--brand-button-primary-accent);
 
         > h3 {
-          color: var(--nr1--color--text--primary);
-
-          font-family: Söhne-Buch;
           font-size: 44px;
           line-height: 50px;
           letter: -1.5%;
+          font-weight: 500;
         }
 
         @media screen and (max-width: ${MOBILE_BREAKPOINT}) {
@@ -101,7 +88,6 @@ const GetStartedFooter = ({ style = 'PRIMARY', ...props }) => {
 
           > a {
             font-size: 18px;
-            font-weight: 400;
             line-height: 24px;
 
             width: 142px;
@@ -130,31 +116,16 @@ const GetStartedFooter = ({ style = 'PRIMARY', ...props }) => {
         <Button
           {...props}
           as={ExternalLink}
-          variant={Button.VARIANT.PRIMARY}
+          variant={Button.VARIANT.NORMAL}
           href={SIGNUP_LINK}
           className="btn-styles btn1"
           css={css`
-            --button-background: var(
-              ${style === 'PRIMARY'
-                ? '--btn-background-green'
-                : '--brand-secondary-background-color'}
-            );
-            --button-text-color: var(
-              ${style === 'PRIMARY'
-                ? '--brand-primary-text-color'
-                : '--brand-secondary-text-color'}
-            );
-            background-color: var(--background-color);
-            color: var(--nr1--color--text--buttton--primary);
+            color: var(--brand-button-primary-accent);
             border-radius: 4px;
             font-size: 14px;
             line-height: 21px;
             font-weight: 400;
             padding: 1rem;
-            &:hover {
-              background-color: var(--background-color);
-              color: var(--nr1--color--text--buttton--primary);
-            }
             .scroll {
               margin-top: -1px;
             }
@@ -168,40 +139,15 @@ const GetStartedFooter = ({ style = 'PRIMARY', ...props }) => {
         <Button
           {...props}
           as={ExternalLink}
-          variant={Button.VARIANT.PRIMARY}
+          variant={Button.VARIANT.OUTLINE}
           href={DEMO_LINK}
           className="btn-styles btn1"
           css={css`
-            --button-background: var(
-              ${style === 'PRIMARY'
-                ? '--btn-background-green'
-                : '--brand-secondary-background-color'}
-            );
-            --button-text-color: var(
-              ${style === 'PRIMARY'
-                ? '--brand-primary-text-color'
-                : '--brand-secondary-text-color'}
-            );
-            background-color: var(--btn-background-green);
-            color: var(--nr1--color--text--buttton--primary-accent);
-            border: 1px solid var(--nr1--color--text--buttton--primary-accent);
             border-radius: 4px;
             font-size: 14px;
             line-height: 21px;
             font-weight: 400;
             padding: 1rem;
-
-            &:hover {
-              background-color: var(--btn-background-green);
-              color: var(--nr1--color--text--buttton--primary-accent);
-            }
-            &:focus {
-              outline: none;
-              text-decoration-line: none !important;
-            }
-            .scroll {
-              margin-top: -1px;
-            }
           `}
         >
           <div className="btn-animation-styles">

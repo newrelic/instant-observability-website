@@ -8,7 +8,7 @@ import NewLogo from './NewLogo';
 import PropTypes from 'prop-types';
 import React from 'react';
 import { css } from '@emotion/react';
-import useThemeTranslation from '@newrelic/gatsby-theme-newrelic/src//hooks/useThemeTranslation';
+import useThemeTranslation from '@newrelic/gatsby-theme-newrelic/src/hooks/useThemeTranslation';
 
 const HOME_LINK = 'https://newrelic.com';
 
@@ -67,20 +67,15 @@ const GlobalFooter = ({ className }) => {
       data-swiftype-index={false}
       className={className}
       css={css`
-        /* Color variables */
-        --background-color: #1d252c;
-        --secondary-text-color: #898e91;
-
-        color: var(--secondary-text-color);
-        background-color: var(--background-color);
+        background-color: var(--system-text-primary-light);
+        color: var(--system-text-secondary-light);
 
         /* fonts  */
-        font-family: Söhne-Buch;
         font-size: 18px;
         line-height: 24px;
 
         a {
-          color: var(--secondary-text-color);
+          color: var(--system-text-secondary-light);
           text-decoration: none;
           text-decoration-thickness: none;
         }
@@ -95,7 +90,6 @@ const GlobalFooter = ({ className }) => {
         <div
           css={css`
             display: grid;
-            background: #1d252c;
             justify-content: space-between;
             max-width: 1248px;
             margin: 0 auto;

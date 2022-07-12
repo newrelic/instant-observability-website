@@ -30,7 +30,7 @@ const LandingBanner = ({ quickstart, className, location }) => {
         className={className}
         css={css`
           border-bottom: none;
-          color: var(--brand-secondary-text-color);
+          color: var(--system-text-primary-dark);
           display: grid;
           width: 100%;
           grid-column-gap: 1rem;
@@ -106,7 +106,7 @@ const LandingBanner = ({ quickstart, className, location }) => {
         )}
         <h2
           css={css`
-            font-weight: normal;
+            font-weight: 500;
             grid-area: title;
             margin-bottom: 0;
 

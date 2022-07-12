@@ -110,8 +110,6 @@ const QuickstartDetails = ({ data, location }) => {
           @media (max-width: 760px) {
             --page-margin: 30px;
           }
-
-          font-family: 'Söhne-Buch';
         `}
       >
         <LandingBanner
@@ -189,7 +187,7 @@ const QuickstartDetails = ({ data, location }) => {
               padding-bottom: 63px;
             }
 
-            background-color: #f1f2f2;
+            background: #e8e8e8;
           `}
         >
           <QuickstartHowToUse
