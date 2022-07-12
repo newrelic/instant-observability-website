@@ -64,6 +64,7 @@ const QuickstartTile = ({
       css={css`
         --tile-image-height: 100px; /* Logo image height */
         --title-row-height: auto; /* Title height to allow space for longer string */
+        --tile-content-height: 180px;
         padding: 0 22px 35px 24px;
         overflow: hidden;
         height: 360px;
@@ -95,7 +96,7 @@ const QuickstartTile = ({
         display: grid;
         align-items: flex-start;
         grid-gap: 0.2rem;
-        grid-template-rows: var(--tile-image-height) 152px auto;
+        grid-template-rows: var(--tile-image-height) var(--tile-content-height) auto;
         grid-template-columns: auto;
         grid-template-areas:
           'logo logo'
@@ -141,12 +142,14 @@ const QuickstartTile = ({
       <div
         css={css`
           grid-area: text;
-          overflow-wrap: anywhere;
+          height: var(--tile-content-height);
+          overflow: hidden;
+          display: flex;
+          flex-flow: column wrap;
         `}
       >
         <h4
           css={css`
-            grid-area: title;
             font-weight: normal;
             font-size: 24px;
             letter-spacing: -0.5%;
@@ -156,12 +159,7 @@ const QuickstartTile = ({
           {SHIELD_LEVELS.includes(level) && <Icon name="nr-check-shield" />}
         </h4>
 
-        <div
-          css={css`
-            grid-area: summary;
-            align-self: flex-start;
-          `}
-        >
+        <div>
           <p
             css={css`
               font-size: 18px;
