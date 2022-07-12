@@ -38,6 +38,10 @@ const useSearchAndCategory = (location) => {
       params.set(param, value);
 
       navigate(`?${params.toString()}`);
+
+      if (param === 'category' && search) {
+        params.set('search', search);
+      }
     }
   };
 
