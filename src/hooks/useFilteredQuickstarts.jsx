@@ -1,6 +1,5 @@
-import React, { useEffect, useState, useRef } from 'react';
+import { useEffect, useState } from 'react';
 import CATEGORIES from '@data/instant-observability-categories';
-import useSearchAndCategory from '@hooks/useSearchAndCategory';
 
 /**
  * Callback function for alphabetical sort.
@@ -34,6 +33,7 @@ const useFilteredQuickstarts = (quickstarts, search, category) => {
   const [filteredQuickstarts, setFilteredQuickstarts] = useState(
     sortedQuickstarts
   );
+
   const [categoriesWithCount, setCategoriesWithCount] = useState(
     sortedQuickstarts
   );

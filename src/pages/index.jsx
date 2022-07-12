@@ -28,13 +28,9 @@ const SINGLE_COLUMN_BREAKPOINT = '900px';
 const COLUMN_BREAKPOINT = '1131px';
 
 const QuickstartsPage = ({ data, location }) => {
-  const {
-    search,
-    category,
-    setSearch,
-    handleParam,
-    clearParam,
-  } = useSearchAndCategory(location);
+  const { search, category, setSearch, handleParam } = useSearchAndCategory(
+    location
+  );
   const {
     featuredQuickstarts,
     filteredQuickstarts,
@@ -48,8 +44,10 @@ const QuickstartsPage = ({ data, location }) => {
 
   // mark the value as true, if the page is loaded
   useEffect(() => {
-    setLoadComplete(true);
-  }, []);
+    if (categoriesWithCount) {
+      setLoadComplete(true);
+    }
+  }, [categoriesWithCount]);
 
   const closeCategoriesOverlay = () => {
     setIsCategoriesOverlayOpen(false);
@@ -193,8 +191,7 @@ const QuickstartsPage = ({ data, location }) => {
       {handleParam && (
         <IOBanner
           handleSearch={handleParam('search')}
-          clearParam={clearParam}
-          updateSearch={setSearch}
+          setSearch={setSearch}
           search={search}
         />
       )}

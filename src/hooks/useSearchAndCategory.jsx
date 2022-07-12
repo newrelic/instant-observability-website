@@ -35,28 +35,10 @@ const useSearchAndCategory = (location) => {
   const handleParam = (param) => (value) => {
     if (value !== null && value !== undefined) {
       const params = new URLSearchParams(location.search);
-
-      if (value === '') {
-        params.delete(param);
-      } else {
-        params.set(param, value);
-      }
+      params.set(param, value);
 
       navigate(`?${params.toString()}`);
     }
-  };
-
-  const clearParam = (param) => {
-    if (param === 'search') {
-      setSearch('');
-    }
-    if (param === 'category') {
-      setCategory('');
-    }
-  };
-
-  const updateSearch = (value) => {
-    setSearch((s) => s + value);
   };
 
   return {
@@ -65,8 +47,6 @@ const useSearchAndCategory = (location) => {
     setSearch,
     setCategory,
     handleParam,
-    updateSearch,
-    clearParam,
   };
 };
 
