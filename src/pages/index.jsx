@@ -270,41 +270,44 @@ const QuickstartsPage = ({ data, location }) => {
           >
             <FormControl>
               <Label htmlFor="quickstartCategory">Categories</Label>
-              {categoriesWithCount.map(({ displayName, value, count }) => (
-                <Button
-                  type="button"
-                  key={value}
-                  disabled={count === 0}
-                  variant={Button.VARIANT.PRIMARY}
-                  onClick={() => handleParam('category')(value)}
-                  css={css`
-                    padding: 8px 12px;
-                    font-family: 'Söhne-Leicht';
-                    font-size: 18px;
-                    font-weight: 400;
-                    line-height: 54px;
-                    width: 100%;
-                    display: flex;
-                    justify-content: flex-start;
-                    color: var(--primary-text-color);
-                    border-radius: 3px;
-                    background: ${category === value
-                      ? 'var(--divider-color)'
-                      : 'none'};
-                    &:hover {
-                      color: var(--black-text-color);
-                      background: var(--category-hover-color);
-                    }
-                  `}
-                >
-                  {`${displayName}`}
-                  <span
+
+              {!loadComplete && <Spinner />}
+              {loadComplete &&
+                categoriesWithCount.map(({ displayName, value, count }) => (
+                  <Button
+                    type="button"
+                    key={value}
+                    disabled={count === 0}
+                    variant={Button.VARIANT.PRIMARY}
+                    onClick={() => handleParam('category')(value)}
                     css={css`
-                      padding-left: 0.25rem;
+                      padding: 8px 12px;
+                      font-family: 'Söhne-Leicht';
+                      font-size: 18px;
+                      font-weight: 400;
+                      line-height: 54px;
+                      width: 100%;
+                      display: flex;
+                      justify-content: flex-start;
+                      color: var(--primary-text-color);
+                      border-radius: 3px;
+                      background: ${category === value
+                        ? 'var(--divider-color)'
+                        : 'none'};
+                      &:hover {
+                        color: var(--black-text-color);
+                        background: var(--category-hover-color);
+                      }
                     `}
-                  >{`(${count})`}</span>
-                </Button>
-              ))}
+                  >
+                    {`${displayName}`}
+                    <span
+                      css={css`
+                        padding-left: 0.25rem;
+                      `}
+                    >{`(${count})`}</span>
+                  </Button>
+                ))}
             </FormControl>
           </div>
         </aside>
@@ -387,30 +390,32 @@ const QuickstartsPage = ({ data, location }) => {
                     overflow-y: scroll;
                   `}
                 >
-                  {categoriesWithCount.map(({ displayName, value, count }) => (
-                    <Button
-                      type="button"
-                      key={value}
-                      variant={Button.VARIANT.PRIMARY}
-                      onClick={() => handleParam('category')(value)}
-                      css={css`
-                        width: 100%;
-                        display: flex;
-                        justify-content: flex-start;
-                        color: var(--primary-text-color);
-                        border-radius: 3px;
-                        padding: 8px 12px;
-                        font-family: 'Söhne-Buch';
-                        font-size: 18px;
-                        line-height: 54px;
-                        background: ${category === value
-                          ? 'var(--divider-color)'
-                          : 'none'};
-                      `}
-                    >
-                      {`${displayName} (${count})`}
-                    </Button>
-                  ))}
+                  {!loadComplete && <Spinner />}
+                  {loadComplete &&
+                    categoriesWithCount.map(({ displayName, value, count }) => (
+                      <Button
+                        type="button"
+                        key={value}
+                        variant={Button.VARIANT.PRIMARY}
+                        onClick={() => handleParam('category')(value)}
+                        css={css`
+                          width: 100%;
+                          display: flex;
+                          justify-content: flex-start;
+                          color: var(--primary-text-color);
+                          border-radius: 3px;
+                          padding: 8px 12px;
+                          font-family: 'Söhne-Buch';
+                          font-size: 18px;
+                          line-height: 54px;
+                          background: ${category === value
+                            ? 'var(--divider-color)'
+                            : 'none'};
+                        `}
+                      >
+                        {`${displayName} (${count})`}
+                      </Button>
+                    ))}
                 </div>
                 <div
                   css={css`
