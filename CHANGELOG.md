@@ -1,3 +1,10 @@
+# [1.5.0](https://github.com/newrelic/instant-observability-website/compare/v1.4.1...v1.5.0) (2022-07-12)
+
+
+### Features
+
+* source quickstarts concurrently ([b018b2e](https://github.com/newrelic/instant-observability-website/commit/b018b2e4d8d3e5faee67ec7c35f3458ad0327da8))
+
 ## [1.4.1](https://github.com/newrelic/instant-observability-website/compare/v1.4.0...v1.4.1) (2022-07-12)
 
 
