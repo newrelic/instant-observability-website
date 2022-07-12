@@ -101,7 +101,7 @@ input[type='text'] {
 }
 
 .slick-list {
-  margin: 0 -2px !important;
+  margin: 0 -6.5px !important;
 }
 
 .slick-dots li button {
@@ -110,6 +110,10 @@ input[type='text'] {
 
 .slick-prev {
   z-index: 100;
+  left: -27px !important;
+}
+.slick-next {
+  right: -28px !important;
 }
 
 .slick-disabled .arrow-bg {
@@ -125,13 +129,14 @@ input[type='text'] {
   display: flex !important;
   margin-top: 2px;
   flex-direction: row;
-  column-gap: 15px;
+  column-gap: 0px;
   flex-wrap: nowrap;
   align-items: flex-start;
 }
 
 .slick-slide {
   height: inherit !important;
+  margin: 6.5px !important;
 }
 
 @media only screen and (max-width: 425px) {
