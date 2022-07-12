@@ -119,74 +119,73 @@ exports.createResolvers = ({ createResolvers }) => {
  * download all of the related images for use with `<GatsbyImage>` (sharp).
  */
 exports.sourceNodes = async ({
-  actions,
+  actions: { createNode },
   createNodeId,
   createContentDigest,
   getCache,
-}) => {
-  const { createNode } = actions;
+}) =>
+  Promise.all(
+    QUICKSTARTS.map(async (quickstart) => {
+      const { name, id, logoUrl } = quickstart;
 
-  for (const quickstart of QUICKSTARTS) {
-    const { name, id, logoUrl } = quickstart;
+      let logoNode = null;
+      try {
+        // if we have a logoUrl, fetch it and create a "File" node
+        logoNode = logoUrl
+          ? await createRemoteFileNode({
+              url: logoUrl,
+              parentNodeId: id,
+              createNode,
+              createNodeId,
+              getCache,
+            })
+          : null;
+      } catch (e) {
+        // catch any errors when fetching image so that build still succeeds
+        console.log(`Unable to fetch logo for ${name}: ${logoUrl}`); // eslint-disable-line no-console
+      }
 
-    let logoNode = null;
-    try {
-      // if we have a logoUrl, fetch it and create a "File" node
-      logoNode = logoUrl
-        ? await createRemoteFileNode({
-            url: logoUrl,
+      // loop over the dashboard(s) for this quickstart, fetch all the
+      // screenshot(s) and create "File" nodes for each.
+      const dashboards = await Promise.all(
+        quickstart.dashboards.map((dashboard) =>
+          getDashboardData({
+            dashboard,
             parentNodeId: id,
             createNode,
             createNodeId,
             getCache,
           })
-        : null;
-    } catch (e) {
-      // catch any errors when fetching image so that build still succeeds
-      console.log(`Unable to fetch logo for ${name}: ${logoUrl}`); // eslint-disable-line no-console
-    }
+        )
+      );
 
-    // loop over the dashboard(s) for this quickstart, fetch all the
-    // screenshot(s) and create "File" nodes for each.
-    const dashboards = await Promise.all(
-      quickstart.dashboards.map((dashboard) =>
-        getDashboardData({
-          dashboard,
-          parentNodeId: id,
-          createNode,
-          createNodeId,
-          getCache,
-        })
-      )
-    );
-
-    createNode({
-      // quickstart fields
-      id,
-      name,
-      packUrl: quickstart.packUrl,
-      description: quickstart.description,
-      title: quickstart.title,
-      level: quickstart.level,
-      summary: quickstart.summary,
-      keywords: quickstart.keywords,
-      authors: quickstart.authors,
-      documentation: quickstart.documentation,
-      alerts: quickstart.alerts,
-      installPlans: quickstart.installPlans,
-      logo: logoNode || null,
-      dashboards,
-      // gatsby fields
-      parent: null,
-      children: [],
-      plugin: 'gatsby-source-quickstarts',
-      internal: {
-        type: 'Quickstarts',
-        contentDigest: createContentDigest({ id, name }),
-      },
-    });
-  }
-};
+      createNode({
+        // quickstart fields
+        id,
+        name,
+        packUrl: quickstart.packUrl,
+        description: quickstart.description,
+        title: quickstart.title,
+        level: quickstart.level,
+        summary: quickstart.summary,
+        keywords: quickstart.keywords,
+        authors: quickstart.authors,
+        documentation: quickstart.documentation,
+        alerts: quickstart.alerts,
+        installPlans: quickstart.installPlans,
+        logo: logoNode || null,
+        dashboards,
+        // gatsby fields
+        parent: null,
+        children: [],
+        plugin: 'gatsby-source-quickstarts',
+        internal: {
+          type: 'Quickstarts',
+          contentDigest: createContentDigest({ id, name }),
+        },
+      });
+    })
+  );
 
 /**
  * Gets the information for a `QuickstartDashboard` node. This will download
