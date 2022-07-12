@@ -6,12 +6,12 @@ import bannerOverlayLeft from '../images/io-banner/banner-style-left.svg';
 import { SearchInput } from '@newrelic/gatsby-theme-newrelic';
 import { QUICKSTARTS_COLLAPSE_BREAKPOINT } from '@data/constants';
 
-const BannerHeaderContent = ({ search, handleSearch }) => {
-  const updateSearch = (e) => {
-    const value = e.target.value;
-    handleSearch(value);
-  };
-
+const BannerHeaderContent = ({
+  search,
+  updateSearch,
+  handleSearch,
+  clearParam,
+}) => {
   return (
     <div
       css={css`
@@ -72,10 +72,11 @@ const BannerHeaderContent = ({ search, handleSearch }) => {
           value={search || ''}
           placeholder="Search"
           onClear={() => {
+            clearParam('search');
             handleSearch('');
           }}
           onSubmit={(value) => handleSearch(value)}
-          onChange={updateSearch}
+          onChange={(e) => updateSearch(e.target.value)}
           css={css`
             box-shadow: none;
             max-width: 816px;
@@ -125,7 +126,7 @@ const BannerHeaderContent = ({ search, handleSearch }) => {
   );
 };
 
-const IOBanner = ({ search, handleSearch }) => {
+const IOBanner = (props) => {
   return (
     <div
       css={css`
@@ -188,7 +189,7 @@ const IOBanner = ({ search, handleSearch }) => {
             loading="lazy"
           />
         </div>
-        <BannerHeaderContent search={search} handleSearch={handleSearch} />
+        <BannerHeaderContent {...props} />
         <div
           css={css`
             margin-left: auto;
@@ -214,10 +215,18 @@ const IOBanner = ({ search, handleSearch }) => {
   );
 };
 
+IOBanner.propTypes = {
+  search: PropTypes.string,
+  updateSearch: PropTypes.func,
+  handleSearch: PropTypes.func,
+  clearParam: PropTypes.func,
+};
+
 BannerHeaderContent.propTypes = {
   search: PropTypes.string,
+  updateSearch: PropTypes.func,
   handleSearch: PropTypes.func,
+  clearParam: PropTypes.func,
 };
-IOBanner.propTypes = { search: PropTypes.string, handleSearch: PropTypes.func };
 
 export default IOBanner;

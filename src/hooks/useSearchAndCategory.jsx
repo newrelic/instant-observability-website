@@ -1,14 +1,10 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useCallback } from 'react';
+import { navigate } from 'gatsby';
 import { useTessen } from '@newrelic/gatsby-theme-newrelic';
-import { navigate, useLocation } from '@reach/router';
 import CATEGORIES from '@data/instant-observability-categories';
 
-const useSearchAndCategory = () => {
+const useSearchAndCategory = (setSearch, setCategory, location) => {
   const tessen = useTessen();
-  const location = useLocation();
-
-  const [search, setSearch] = useState('');
-  const [category, setCategory] = useState('');
 
   // used to update search and category values
   useEffect(() => {
@@ -17,7 +13,7 @@ const useSearchAndCategory = () => {
     const categoryParam = params.get('category');
     const validCategory = CATEGORIES.some((cat) => cat.value === categoryParam);
 
-    setSearch(searchParam);
+    setSearch(searchParam || '');
     setCategory(categoryParam && validCategory ? categoryParam : '');
     if (searchParam || categoryParam) {
       tessen.track({
@@ -27,45 +23,41 @@ const useSearchAndCategory = () => {
         quickstartCategory: categoryParam,
       });
     }
-  }, [location.search, tessen]);
+  }, [location.search, tessen, setSearch, setCategory]);
 
   /**
    * Updates search parameter from location
-   * @param {String} value to update search term
+   * @param {String} parameter to set
+   * @param {Function => void} callback function to update search term
    */
-  const handleSearch = (value) => {
-    if (value !== null && value !== undefined && value !== '') {
+  const handleParam = (param) => (value) => {
+    if (value !== null && value !== undefined) {
       const params = new URLSearchParams(location.search);
-      params.set('search', value);
+
+      if (value === '') {
+        params.delete(param);
+      } else {
+        params.set(param, value);
+      }
 
       navigate(`?${params.toString()}`);
-    } else {
-      const params = new URLSearchParams(location.search);
-      params.delete('search');
-
-      navigate(location.pathname);
     }
   };
 
-  /**
-   * Updates category parameter from location
-   * @param {String} value to update category term
-   */
-  const handleCategory = (value) => {
-    if (value !== null && value !== undefined && value !== '') {
-      const params = new URLSearchParams(location.search);
-      params.set('category', value);
-
-      navigate(`?${params.toString()}`);
-    } else {
-      const params = new URLSearchParams(location.search);
-      params.delete('category');
-
-      navigate(location.pathname);
+  const clearParam = (param) => {
+    if (param === 'search') {
+      setSearch('');
+    }
+    if (param === 'category') {
+      setCategory('');
     }
   };
 
-  return { search, category, handleSearch, handleCategory };
+  const updateSearch = (value) => {
+    setSearch((s) => s + value);
+  };
+
+  return { handleParam, updateSearch, clearParam };
 };
 
 export default useSearchAndCategory;

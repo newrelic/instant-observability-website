@@ -80,12 +80,13 @@ const filterByCategory = (category) => {
 };
 
 const QuickstartsPage = ({ data, location }) => {
-  const {
-    search,
-    category,
-    handleCategory,
-    handleSearch,
-  } = useSearchAndCategory();
+  const [search, setSearch] = useState('');
+  const [category, setCategory] = useState('');
+  const { handleParam, clearParam } = useSearchAndCategory(
+    setSearch,
+    setCategory,
+    location
+  );
 
   const [isCategoriesOverlayOpen, setIsCategoriesOverlayOpen] = useState(false);
   // variable to check if the page load completed
@@ -277,7 +278,14 @@ const QuickstartsPage = ({ data, location }) => {
         location={location}
         type="quickstarts"
       />
-      handleSearch && <IOBanner search={search} handleSearch={handleSearch} />
+      {handleParam && (
+        <IOBanner
+          handleSearch={handleParam('search')}
+          clearParam={clearParam}
+          updateSearch={setSearch}
+          search={search}
+        />
+      )}
       <div
         css={css`
           --sidebar-width: 300px;
@@ -357,7 +365,7 @@ const QuickstartsPage = ({ data, location }) => {
                   key={value}
                   disabled={count === 0}
                   variant={Button.VARIANT.PRIMARY}
-                  onClick={() => handleCategory(value)}
+                  onClick={() => handleParam('category')(value)}
                   css={css`
                     padding: 8px 12px;
                     font-family: 'Söhne-Leicht';
@@ -527,7 +535,7 @@ const QuickstartsPage = ({ data, location }) => {
             </Overlay>
           </div>
 
-          {Boolean(category) && Boolean(!search) && (
+          {!category && !search && (
             <>
               {mostPopularQuickStarts.length > 0 && (
                 <>
