@@ -7,6 +7,7 @@ import React, { useEffect, useState } from 'react';
 
 import CATEGORIES from '@data/instant-observability-categories';
 import useSearchAndCategory from '@hooks/useSearchAndCategory';
+import useFilteredQuickstarts from '@hooks/useFilteredQuickstarts';
 import IOBanner from '@components/IOBanner';
 import IOSeo from '@components/IOSeo';
 import Overlay from '@components/Overlay';
@@ -26,53 +27,6 @@ const DOUBLE_COLUMN_BREAKPOINT = '1180px';
 const SINGLE_COLUMN_BREAKPOINT = '900px';
 const COLUMN_BREAKPOINT = '1131px';
 
-/**
- * Determines if one string is a substring of the other, case insensitive
- * @param {String} substring the substring to test against
- * @returns {(Function) => Boolean} Callback function that determines if the argument has the substring
- */
-const stringIncludes = (substring) => (fullstring) =>
-  fullstring.toLowerCase().includes(substring.toLowerCase());
-
-/**
- * Filters a quickstart based on a provided search term.
- * @param {String} search Search term.
- * @returns {(Function) => Boolean} Callback function to be used by filter.
- */
-const filterBySearch = (search) => ({
-  title,
-  summary,
-  description,
-  keywords,
-}) => {
-  if (!search) {
-    return true;
-  }
-
-  const searchIncludes = stringIncludes(search);
-  return (
-    searchIncludes(title) ||
-    searchIncludes(summary) ||
-    searchIncludes(description) ||
-    keywords.some(searchIncludes)
-  );
-};
-
-/**
- * Filters a quickstart based on a category.
- * @param {String} category The category type (e.g. 'featured').
- * @returns {(Function) => Boolean} Callback function to be used by filter.
- */
-const filterByCategory = (category) => {
-  const { associatedKeywords = [] } =
-    CATEGORIES.find(({ value }) => value === category) || {};
-
-  return (quickstart) =>
-    !category ||
-    (quickstart.keywords &&
-      quickstart.keywords.find((k) => associatedKeywords.includes(k)));
-};
-
 const QuickstartsPage = ({ data, location }) => {
   const {
     search,
@@ -81,6 +35,12 @@ const QuickstartsPage = ({ data, location }) => {
     handleParam,
     clearParam,
   } = useSearchAndCategory(location);
+  const {
+    featuredQuickstarts,
+    filteredQuickstarts,
+    mostPopularQuickstarts,
+    categoriesWithCount,
+  } = useFilteredQuickstarts(data.allQuickstarts.nodes, search, category);
 
   const [isCategoriesOverlayOpen, setIsCategoriesOverlayOpen] = useState(false);
   // variable to check if the page load completed
@@ -94,48 +54,6 @@ const QuickstartsPage = ({ data, location }) => {
   const closeCategoriesOverlay = () => {
     setIsCategoriesOverlayOpen(false);
   };
-
-  const quickstarts = data.allQuickstarts.nodes;
-
-  const featuredQuickStarts = quickstarts?.filter((product) =>
-    product.keywords.includes('featured')
-  );
-
-  const mostPopularQuickStarts = quickstarts?.filter((product) =>
-    product.keywords.includes('most popular')
-  );
-
-  const alphaSort = quickstarts.sort((a, b) => a.title.localeCompare(b.title));
-  // let sortedQuickstarts = sortFeaturedQuickstarts(alphaSort);
-  let sortedQuickstarts = alphaSort;
-
-  // Hard-code for moving codestream object to front of sortedQuickstarts array - CM
-  if ((!category && !search) || (category === 'featured' && !search)) {
-    // uuid is codestream id specifically - CM
-    const codestreamIndex = sortedQuickstarts.findIndex(
-      ({ id }) => id === '29bd9a4a-1c19-4219-9694-0942f6411ce7'
-    );
-
-    if (codestreamIndex > -1) {
-      const codestreamObject = sortedQuickstarts[codestreamIndex];
-      sortedQuickstarts = [
-        codestreamObject,
-        ...sortedQuickstarts.slice(0, codestreamIndex),
-        ...sortedQuickstarts.slice(codestreamIndex + 1),
-      ];
-    }
-  }
-
-  const filteredQuickstarts = sortedQuickstarts
-    .filter(filterBySearch(search))
-    .filter(filterByCategory(category));
-
-  const categoriesWithCount = CATEGORIES.map((cat) => ({
-    ...cat,
-    count: quickstarts
-      .filter(filterBySearch(search))
-      .filter(filterByCategory(cat.value)).length,
-  }));
 
   /**
    * Finds display name for selected category.
@@ -531,7 +449,7 @@ const QuickstartsPage = ({ data, location }) => {
 
           {!category && !search && (
             <>
-              {mostPopularQuickStarts.length > 0 && (
+              {mostPopularQuickstarts.length > 0 && (
                 <>
                   <div
                     css={css`
@@ -569,7 +487,7 @@ const QuickstartsPage = ({ data, location }) => {
                         `}
                       >
                         <SuperTiles />
-                        {mostPopularQuickStarts.map((pack) => (
+                        {mostPopularQuickstarts.map((pack) => (
                           <QuickstartTile
                             key={pack.id}
                             featured={false}
@@ -614,7 +532,7 @@ const QuickstartsPage = ({ data, location }) => {
                 {!loadComplete && <Spinner />}
                 {loadComplete && (
                   <Slider {...settings}>
-                    {featuredQuickStarts.map((pack) => (
+                    {featuredQuickstarts.map((pack) => (
                       <QuickstartTile
                         key={pack.id}
                         featured={false}
