@@ -127,11 +127,11 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-manifest',
       options: {
-        name: 'gatsby-starter-default',
-        short_name: 'starter',
+        name: 'New Relic Instant Observability',
+        short_name: 'IO',
         start_url: '/',
-        background_color: '#663399',
-        theme_color: '#663399',
+        background_color: '#1d252c',
+        theme_color: '#1d252c',
         display: 'minimal-ui',
         icon: 'src/images/favicon.png',
       },
