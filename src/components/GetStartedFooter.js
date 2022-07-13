@@ -129,6 +129,9 @@ const GetStartedFooter = ({ ...props }) => {
             .scroll {
               margin-top: -1px;
             }
+            > div {
+              color: var(--brand-button-primary-accent);
+            }
           `}
         >
           <div className="btn-animation-styles">
@@ -148,6 +151,9 @@ const GetStartedFooter = ({ ...props }) => {
             line-height: 21px;
             font-weight: 400;
             padding: 1rem;
+            > div {
+              color: var(--button-outline-color);
+            }
           `}
         >
           <div className="btn-animation-styles">
