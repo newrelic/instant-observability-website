@@ -42,15 +42,9 @@ const EmptyTab = ({
     >
       <Button
         css={css`
-          background: var(--background-color);
-          color: var(--btn-text-color);
           border-radius: 4px;
           padding: 0px 20px 0px 22px;
           column-gap: 14.45px;
-          &:hover {
-            color: var(--white-hover-color);
-            background-color: var(--background-color);
-          }
           @media (max-width: 760px) {
             width: 100%;
           }
@@ -68,7 +62,7 @@ const EmptyTab = ({
           }
         `}
         as={Link}
-        variant={Button.VARIANT.PRIMARY}
+        variant={Button.VARIANT.NORMAL}
         to={quickstartUrl}
         rel="noopener noreferrer"
         instrumentation={{ quickstartName }}

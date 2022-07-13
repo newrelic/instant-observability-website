@@ -115,7 +115,7 @@ const GlobalHeader = ({ className, activeSite }) => {
             display: none;
             @media screen and (min-width: ${NAV_BREAKPOINT}) {
               display: block;
-              background: var(--system-text-primary-light);
+              background: var(--website-banner-background-color);
               position: sticky;
             }
             @media screen and (max-width: ${NAV_BREAKPOINT}) {
@@ -268,7 +268,7 @@ const GlobalHeader = ({ className, activeSite }) => {
               line-height: 1.1;
               > li {
                 transition: all 0.2s ease-out;
-                color: var(--secondary-text-color-inverted);
+                color: var(--header-text-color);
                 > a {
                   font-weight: 400;
                   font-size: 1.125rem;
@@ -310,14 +310,14 @@ const GlobalHeader = ({ className, activeSite }) => {
                   text-underline-offset: 0.25rem;
                   &:focus {
                     --tw-text-opacity: 1;
-                    color: var(--system-text-primary-dark);
+                    color: var(--header-text-color);
                   }
                   > span {
-                    color: var(--system-text-primary-dark);
+                    color: var(--header-text-color);
                     height: 1.375rem;
 
                     &:hover {
-                      border-bottom: 1.5px solid var(--system-text-primary-dark);
+                      border-bottom: 1.5px solid var(--header-text-color);
                     }
                   }
                   @media screen and (max-width: ${NAV_BREAKPOINT}) {
@@ -379,7 +379,7 @@ const GlobalHeader = ({ className, activeSite }) => {
           display: none;
           position: relative;
           box-shadow: 0 0.25rem 1.875rem rgb(84 86 90 / 10%);
-          background: var(--system-text-primary-light);
+          background: var(--website-banner-background-color);
           border-bottom: 1px solid #83878b;
           @media screen and (max-width: ${NAV_BREAKPOINT}) {
             display: flex;
@@ -390,10 +390,6 @@ const GlobalHeader = ({ className, activeSite }) => {
           @media screen and (min-width: ${NAV_BREAKPOINT}) {
             z-index: 10;
           }
-          ${isOpen &&
-          `
-          background: #1D252C;
-          `}
         `}
       >
         <div
@@ -467,6 +463,7 @@ const GlobalHeader = ({ className, activeSite }) => {
                 cursor: pointer;
                 width: 48;
                 height: 48;
+                color: var(--system-text-primary-dark);
                 &:focus {
                   width: 2rem;
                   height: 2rem;
@@ -483,14 +480,6 @@ const GlobalHeader = ({ className, activeSite }) => {
                   width: 32px;
                   height: 32px;
                 }
-
-                ${isOpen
-                  ? `
-                  color: var(--system-text-primary-dark);
-                  `
-                  : `
-                  color: var(--system-text-primary-dark);
-                  `}
               `}
               title="Toggle menu"
               variant={Button.VARIANT.LINK}

@@ -37,16 +37,10 @@ const QuickStartLayout = ({ children }) => {
       <GetStartedFooter />
       <GlobalFooter
         css={css`
-          --footer-height: 570px;
-
-          height: var(--footer-height);
+          padding-bottom: 3rem;
           max-width: 100% @media screen and
             (max-width: ${QUICKSTARTS_COLLAPSE_BREAKPOINT}) {
             margin-left: 0;
-          }
-
-          @media screen and (max-width: 920px) {
-            --footer-height: 72rem;
           }
         `}
       />

@@ -422,8 +422,7 @@ const QuickstartsPage = ({ data, location }) => {
                       ? 'var(--divider-color)'
                       : 'none'};
                     &:hover {
-                      color: var(--black-text-color);
-                      background: var(--category-hover-color);
+                      background: var(--divider-color);
                     }
                   `}
                 >
@@ -534,6 +533,9 @@ const QuickstartsPage = ({ data, location }) => {
                         background: ${category === value
                           ? 'var(--divider-color)'
                           : 'none'};
+                        &:hover {
+                          background: var(--divider-color);
+                        }
                       `}
                     >
                       {`${displayName} (${count})`}
@@ -559,13 +561,9 @@ const QuickstartsPage = ({ data, location }) => {
                     css={css`
                       height: 2rem;
                       margin-right: 1rem;
-                      background: #1d252c;
-                      &:hover {
-                        background: #1d252c;
-                      }
                     `}
                     onClick={closeCategoriesOverlay}
-                    variant={Button.VARIANT.PRIMARY}
+                    variant={Button.VARIANT.NORMAL}
                   >
                     Cancel
                   </Button>

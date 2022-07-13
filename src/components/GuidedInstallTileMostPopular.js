@@ -158,6 +158,7 @@ const GuidedInstallTileMostPopular = () => {
             border-bottom: 1px solid white;
             &:hover {
               background: none;
+              color: var(--system-text-primary-dark);
             }
           `}
         >

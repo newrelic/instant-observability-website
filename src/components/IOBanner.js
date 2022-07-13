@@ -39,7 +39,7 @@ const BannerHeaderContent = ({
     >
       <h1
         css={css`
-          color: var(--secondary-text-color-inverted);
+          color: var(--header-text-color);
           font-weight: 500;
           font-size: 72px;
           letter-spacing: -0.03em;
@@ -56,7 +56,7 @@ const BannerHeaderContent = ({
       <div
         css={css`
           background: none;
-          color: #f9fafa;
+          color: var(--header-text-color);
           font-size: 16px;
           letter-spacing: -0.005em;
           margin: 20px 0;
@@ -100,12 +100,12 @@ const BannerHeaderContent = ({
               height: 64px;
               font-size: 18px;
               padding: 20px 55px 20px 24px;
-              background: var(--system-text-primary-light);
+              background: var(--header-background-color);
               border: 1px solid #f9fafa;
               border-radius: 4px;
               color: #f9fafa;
               &::placeholder {
-                color: var(--accent-text-color);
+                color: #8e9494;
               }
               &:focus {
                 outline: none;
@@ -148,7 +148,6 @@ const IOBanner = ({
     <div
       css={css`
         --banner-height: 368px;
-
         --left-margin: calc(50% - 50vw);
 
         position: absolute;
@@ -159,7 +158,7 @@ const IOBanner = ({
         margin: 0 0 0 var(--left-margin);
         padding: 0 40px;
 
-        background: var(--system-text-primary-light);
+        background: var(--website-banner-background-color);
         box-sizing: border-box;
         @media (max-width: 1130px) {
           --banner-height: 425px;

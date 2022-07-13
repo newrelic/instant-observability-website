@@ -72,6 +72,7 @@ const QuickstartTile = ({
         border: 1px solid #e4e5e6;
         border-radius: 8px;
         box-shadow: none;
+        background-color: var(--color-white);
 
         @media screen and (max-width: ${QUICKSTARTS_COLLAPSE_BREAKPOINT}) {
           padding: 0 32px 24px 32px;
