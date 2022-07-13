@@ -84,7 +84,7 @@ const filterByCategory = (category) => {
  * Custom hook to get filtered quickstarts
  * @param {Array} array of quickstarts
  */
-const filteredQuickstarts = (quickstarts, search, category) => {
+const allFilteredQuickstarts = (quickstarts, search, category) => {
   const filterQuickstartsByKeyword = filterQuickstarts(quickstarts);
   const featuredQuickstarts = filterQuickstartsByKeyword('featured');
   const mostPopularQuickstarts = filterQuickstartsByKeyword('most popular');
@@ -109,4 +109,4 @@ const filteredQuickstarts = (quickstarts, search, category) => {
   };
 };
 
-export default filteredQuickstarts;
+export default allFilteredQuickstarts;

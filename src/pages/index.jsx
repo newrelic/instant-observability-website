@@ -7,7 +7,7 @@ import React, { useEffect, useState } from 'react';
 
 import CATEGORIES from '@data/instant-observability-categories';
 import useSearchAndCategory from '@hooks/useSearchAndCategory';
-import filteredQuickstarts from '@utils/filteredQuickstarts';
+import allFilteredQuickstarts from '@utils/allFilteredQuickstarts';
 import IOBanner from '@components/IOBanner';
 import IOSeo from '@components/IOSeo';
 import Overlay from '@components/Overlay';
@@ -45,7 +45,7 @@ const QuickstartsPage = ({ data, location }) => {
     filteredQuickstarts,
     mostPopularQuickstarts,
     categoriesWithCount,
-  } = filteredQuickstarts(data.allQuickstarts.nodes, search, category);
+  } = allFilteredQuickstarts(data.allQuickstarts.nodes, search, category);
 
   const [isCategoriesOverlayOpen, setIsCategoriesOverlayOpen] = useState(false);
   // variable to check if the page load completed
