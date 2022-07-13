@@ -7,7 +7,7 @@ import DoubleUnderlineSVG from './Icons/DoubleUnderlineSVG';
 
 const MOBILE_BREAKPOINT = '800px';
 
-const GetStartedFooter = ({ style = 'PRIMARY', ...props }) => {
+const GetStartedFooter = ({ ...props }) => {
   return (
     <div
       css={css`
