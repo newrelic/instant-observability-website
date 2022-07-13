@@ -6,9 +6,9 @@ import CATEGORIES from '@data/instant-observability-categories';
 const useSearchAndCategory = (location) => {
   const [search, setSearch] = useState('');
   const [category, setCategory] = useState('');
+
   const tessen = useTessen();
 
-  // used to update search and category values
   useEffect(() => {
     const params = new URLSearchParams(location.search);
     const searchParam = params.get('search');
@@ -28,9 +28,9 @@ const useSearchAndCategory = (location) => {
   }, [location.search, tessen]);
 
   /**
-   * Updates search parameter from location
+   * Updates a single query parameter from location
    * @param {String} parameter to set
-   * @param {Function => void} callback function to update search term
+   * @param {Function => void} callback function to update query parameter
    */
   const handleParam = (param) => (value) => {
     if (value !== null && value !== undefined) {
@@ -38,11 +38,25 @@ const useSearchAndCategory = (location) => {
       params.set(param, value);
 
       navigate(`?${params.toString()}`);
-
-      if (param === 'category' && search) {
-        params.set('search', search);
-      }
     }
+  };
+
+  /**
+   * Updates two sorting parameters from location
+   * @param {String, String} Curried function for params
+   * @returns (Function () => void) callback function to update query parameters
+   *
+   */
+  const handleParams = (param1, param2) => (value1, value2) => {
+    const params = new URLSearchParams(location.search);
+    if (value1 !== null && value1 !== undefined) {
+      params.set(param1, value1);
+    }
+    if (value2 !== null && value2 !== undefined) {
+      params.set(param2, value2);
+    }
+
+    navigate(`?${params.toString()}`);
   };
 
   return {
@@ -51,6 +65,7 @@ const useSearchAndCategory = (location) => {
     setSearch,
     setCategory,
     handleParam,
+    handleParams,
   };
 };
 

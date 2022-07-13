@@ -7,7 +7,7 @@ import React, { useEffect, useState } from 'react';
 
 import CATEGORIES from '@data/instant-observability-categories';
 import useSearchAndCategory from '@hooks/useSearchAndCategory';
-import useFilteredQuickstarts from '@hooks/useFilteredQuickstarts';
+import getFilteredQuickstarts from '@utils/getFilteredQuickstarts';
 import IOBanner from '@components/IOBanner';
 import IOSeo from '@components/IOSeo';
 import Overlay from '@components/Overlay';
@@ -30,15 +30,19 @@ const COLUMN_BREAKPOINT = '1131px';
 const TILE_HEIGHT = '362px';
 
 const QuickstartsPage = ({ data, location }) => {
-  const { search, category, setSearch, handleParam } = useSearchAndCategory(
-    location
-  );
+  const {
+    search,
+    category,
+    setSearch,
+    handleParam,
+    handleParams,
+  } = useSearchAndCategory(location);
   const {
     featuredQuickstarts,
     filteredQuickstarts,
     mostPopularQuickstarts,
     categoriesWithCount,
-  } = useFilteredQuickstarts(data.allQuickstarts.nodes, search, category);
+  } = getFilteredQuickstarts(data.allQuickstarts.nodes, search, category);
 
   const [isCategoriesOverlayOpen, setIsCategoriesOverlayOpen] = useState(false);
   // variable to check if the page load completed
@@ -279,7 +283,9 @@ const QuickstartsPage = ({ data, location }) => {
                     key={value}
                     disabled={count === 0}
                     variant={Button.VARIANT.PRIMARY}
-                    onClick={() => handleParam('category')(value)}
+                    onClick={() => {
+                      handleParams('category', 'search')(value, search);
+                    }}
                     css={css`
                       padding: 8px 12px;
                       font-family: 'Söhne-Leicht';
