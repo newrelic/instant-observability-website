@@ -113,6 +113,7 @@ const GlobalHeader = ({ className, activeSite }) => {
             z-index: 80;
             border-bottom: 1px solid #83878b;
             display: none;
+            color: var(--header-text-color);
             @media screen and (min-width: ${NAV_BREAKPOINT}) {
               display: block;
               background: var(--website-banner-background-color);
@@ -227,6 +228,7 @@ const GlobalHeader = ({ className, activeSite }) => {
                   padding 2rem 0;
                   flex: 0 0 auto;
                   > a {
+                    color: var(--header-text-color);
                     font-weight: 400;
                     font-size: 1.125rem;
                     padding: 2rem 1rem;
@@ -240,7 +242,7 @@ const GlobalHeader = ({ className, activeSite }) => {
                     >span {
                       font-size: 100%;
                     &:hover {
-                      border-bottom: 1.5px solid var(--secondary-text-color-inverted);
+                      border-bottom: 1.5px solid var(--header-text-color);
                     }
                   }
                   }
@@ -463,7 +465,7 @@ const GlobalHeader = ({ className, activeSite }) => {
                 cursor: pointer;
                 width: 48;
                 height: 48;
-                color: var(--system-text-primary-dark);
+                color: var(--header-text-color);
                 &:focus {
                   width: 2rem;
                   height: 2rem;
@@ -472,7 +474,6 @@ const GlobalHeader = ({ className, activeSite }) => {
                 }
 
                 &:hover {
-                  color: var(--white-hover-color);
                   background-color: transparent;
                 }
 
