@@ -3,6 +3,8 @@ import { navigate } from 'gatsby';
 import { useTessen } from '@newrelic/gatsby-theme-newrelic';
 import CATEGORIES from '@data/instant-observability-categories';
 
+const isValueValid = (value) => value !== null && value !== undefined;
+
 const useSearchAndCategory = (location) => {
   const [search, setSearch] = useState('');
   const [category, setCategory] = useState('');
@@ -33,7 +35,7 @@ const useSearchAndCategory = (location) => {
    * @param {Function => void} callback function to update query parameter
    */
   const handleParam = (param) => (value) => {
-    if (value !== null && value !== undefined) {
+    if (isValueValid(value)) {
       const params = new URLSearchParams(location.search);
       params.set(param, value);
 
@@ -49,10 +51,10 @@ const useSearchAndCategory = (location) => {
    */
   const handleParams = (param1, param2) => (value1, value2) => {
     const params = new URLSearchParams(location.search);
-    if (value1 !== null && value1 !== undefined) {
+    if (isValueValid(value1)) {
       params.set(param1, value1);
     }
-    if (value2 !== null && value2 !== undefined) {
+    if (isValueValid(value2)) {
       params.set(param2, value2);
     }
 
