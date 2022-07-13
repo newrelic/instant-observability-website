@@ -4,8 +4,26 @@ import CATEGORIES from '@data/instant-observability-categories';
  * Callback function for alphabetical sort.
  * @param {Object} quickstart node
  * @param {Object} quickstart node
+ * @returns {Number}
  */
 const alphaSort = (a, b) => a.title.localeCompare(b.title);
+
+/**
+ * Callback function for moving codestream to the front of array
+ * @param {Object} quickstart node
+ * @param {Object} quickstart node
+ * @returns {Number}
+ */
+const shiftCodestream = (a, b) => {
+  const codestreamId = '29bd9a4a-1c19-4219-9694-0942f6411ce7';
+  if (a.id === codestreamId) {
+    return 1;
+  }
+  if (b.id === codestreamId) {
+    return 1;
+  }
+  return 0;
+};
 
 /**
  * Curried function for filtering by keyword
@@ -63,24 +81,6 @@ const filterByCategory = (category) => {
 };
 
 /**
- * Shifts the codestream quickstart to the front
- * of the array if it is included in the quickstarts
- * array. Otherwise, it returns the default array.
- * @param {Array} array of quickstarts
- * @returns {Array} array of quickstarts
- */
-const shiftCodestream = (alphaSortedQuickstarts, codestreamIndex) => {
-  // Hard-code for moving codestream object to front of sortedQuickstarts array
-  // hardcoded codestream uuid
-  const codestreamObject = alphaSortedQuickstarts[codestreamIndex];
-  return [
-    codestreamObject,
-    ...alphaSortedQuickstarts.slice(0, codestreamIndex),
-    ...alphaSortedQuickstarts.slice(codestreamIndex + 1),
-  ];
-};
-
-/**
  * Custom hook to get filtered quickstarts
  * @param {Array} array of quickstarts
  */
@@ -88,23 +88,7 @@ const getFilteredQuickstarts = (quickstarts, search, category) => {
   const filterQuickstartsByKeyword = filterQuickstarts(quickstarts);
   const featuredQuickstarts = filterQuickstartsByKeyword('featured');
   const mostPopularQuickstarts = filterQuickstartsByKeyword('most popular');
-  const alphaSortedQuickstarts = quickstarts.sort(alphaSort);
-
-  // hardcoded: grab the codestream index
-  const codestreamIndex = alphaSortedQuickstarts.findIndex(
-    ({ id }) => id === '29bd9a4a-1c19-4219-9694-0942f6411ce7'
-  );
-
-  // boolean parameter to run shiftCodestream if criteria matches
-  const hasCodestreamEdgeCase =
-    (!category && !search) || (category === 'featured' && !search);
-
-  const hasCodestreamIndex = codestreamIndex > -1;
-
-  const sortedQuickstarts =
-    hasCodestreamEdgeCase && hasCodestreamIndex
-      ? shiftCodestream(alphaSortedQuickstarts, codestreamIndex)
-      : alphaSortedQuickstarts;
+  const sortedQuickstarts = quickstarts.sort(alphaSort).sort(shiftCodestream);
 
   const filteredQuickstarts = sortedQuickstarts
     .filter(filterBySearch(search))
