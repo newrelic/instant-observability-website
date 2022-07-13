@@ -83,7 +83,7 @@ const LandingBanner = ({ quickstart, className, location }) => {
           >
             <div
               css={css`
-                background-color: var(--brand-white);
+                background-color: var(--color-white);
                 border-radius: 0 0 7px 7px;
                 padding: 5px;
                 @media (max-width: ${IMAGE_DISPLAY_BREAKPOINT}) {
