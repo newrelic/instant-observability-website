@@ -37,6 +37,9 @@ const QuickstartsPage = ({ data, location }) => {
     handleParam,
     handleParams,
   } = useSearchAndCategory(location);
+
+  const handleSearchAndCategory = handleParams('category', 'search');
+
   const {
     featuredQuickstarts,
     filteredQuickstarts,
@@ -281,9 +284,7 @@ const QuickstartsPage = ({ data, location }) => {
                     key={value}
                     disabled={count === 0}
                     variant={Button.VARIANT.PRIMARY}
-                    onClick={() => {
-                      handleParams('category', 'search')(value, search);
-                    }}
+                    onClick={() => handleSearchAndCategory(value, search)}
                     css={css`
                       padding: 8px 12px;
                       font-family: 'Söhne-Leicht';
