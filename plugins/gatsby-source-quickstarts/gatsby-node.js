@@ -139,6 +139,9 @@ exports.sourceNodes = async ({
               createNode,
               createNodeId,
               getCache,
+              ext: path.extname(logoUrl),
+              // grab the file name and remove the extname from the string
+              name: path.basename(logoUrl, path.extname(logoUrl)).toLowerCase(),
             })
           : null;
       } catch (e) {
