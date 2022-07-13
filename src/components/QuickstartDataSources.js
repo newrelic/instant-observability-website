@@ -55,6 +55,7 @@ const QuickstartDataSources = ({ quickstart }) => {
             css={css`
               padding: 2rem;
               color: inherit;
+              background-color: var(--color-white);
               &:hover {
                 color: #1d252c;
               }

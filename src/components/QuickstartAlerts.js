@@ -40,6 +40,7 @@ const QuickstartAlerts = ({ quickstart }) => (
           base={Surface.BASE.PRIMARY}
           css={css`
             padding: 2rem;
+            background-color: var(--color-white);
           `}
         >
           <AlertIconSVG
