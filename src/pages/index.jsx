@@ -194,13 +194,11 @@ const QuickstartsPage = ({ data, location }) => {
         location={location}
         type="quickstarts"
       />
-      {handleParam && (
-        <IOBanner
-          handleSearch={handleParam('search')}
-          setSearch={setSearch}
-          search={search}
-        />
-      )}
+      <IOBanner
+        handleSearch={handleParam('search')}
+        setSearch={setSearch}
+        search={search}
+      />
       <div
         css={css`
           --sidebar-width: 300px;
