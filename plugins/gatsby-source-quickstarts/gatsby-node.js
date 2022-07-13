@@ -220,6 +220,9 @@ const getDashboardData = async ({
         createNode,
         createNodeId,
         getCache,
+        ext: path.extname(url),
+        // grab the file name and remove the extname from the string
+        name: path.basename(url, path.extname(url)).toLowerCase(),
       });
 
       if (screenshotNode) {
