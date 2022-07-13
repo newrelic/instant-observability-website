@@ -3,7 +3,7 @@ import { navigate } from 'gatsby';
 import { useTessen } from '@newrelic/gatsby-theme-newrelic';
 import CATEGORIES from '@data/instant-observability-categories';
 
-const isValueValid = (value) => value !== null && value !== undefined;
+const isValid = (value) => value !== null && value !== undefined;
 
 const useSearchAndCategory = (location) => {
   const [search, setSearch] = useState('');
@@ -16,9 +16,10 @@ const useSearchAndCategory = (location) => {
     const searchParam = params.get('search');
     const categoryParam = params.get('category');
     const validCategory = CATEGORIES.some((cat) => cat.value === categoryParam);
+    const isCategoryValid = categoryParam && validCategory;
 
     setSearch(searchParam || '');
-    setCategory(categoryParam && validCategory ? categoryParam : '');
+    setCategory(isCategoryValid ? categoryParam : '');
     if (searchParam || categoryParam) {
       tessen.track({
         eventName: 'instantObservability',
@@ -35,7 +36,7 @@ const useSearchAndCategory = (location) => {
    * @param {Function => void} callback function to update query parameter
    */
   const handleParam = (param) => (value) => {
-    if (isValueValid(value)) {
+    if (isValid(value)) {
       const params = new URLSearchParams(location.search);
       params.set(param, value);
 
@@ -51,10 +52,10 @@ const useSearchAndCategory = (location) => {
    */
   const handleParams = (param1, param2) => (value1, value2) => {
     const params = new URLSearchParams(location.search);
-    if (isValueValid(value1)) {
+    if (isValid(value1)) {
       params.set(param1, value1);
     }
-    if (isValueValid(value2)) {
+    if (isValid(value2)) {
       params.set(param2, value2);
     }
 
