@@ -50,6 +50,7 @@ exports.createSchemaCustomization = ({ actions }) => {
       summary: String
       keywords: [String]
       authors: [String]
+      logoSvg: File
       logo: File
       level: QuickstartSupportLevel
       documentation: [QuickstartDocumentation]
@@ -138,12 +139,17 @@ exports.sourceNodes = async ({
               createNode,
               createNodeId,
               getCache,
+              ext: path.extname(logoUrl),
+              // grab the file name and remove the extname from the string
+              name: path.basename(logoUrl, path.extname(logoUrl)).toLowerCase(),
             })
           : null;
       } catch (e) {
         // catch any errors when fetching image so that build still succeeds
         console.log(`Unable to fetch logo for ${name}: ${logoUrl}`); // eslint-disable-line no-console
       }
+
+      const isLogoSvg = logoNode && logoNode.ext === '.svg';
 
       // loop over the dashboard(s) for this quickstart, fetch all the
       // screenshot(s) and create "File" nodes for each.
@@ -173,7 +179,8 @@ exports.sourceNodes = async ({
         documentation: quickstart.documentation,
         alerts: quickstart.alerts,
         installPlans: quickstart.installPlans,
-        logo: logoNode || null,
+        logo: !isLogoSvg ? logoNode : null,
+        logoSvg: isLogoSvg ? logoNode : null,
         dashboards,
         // gatsby fields
         parent: null,
@@ -216,6 +223,9 @@ const getDashboardData = async ({
         createNode,
         createNodeId,
         getCache,
+        ext: path.extname(url),
+        // grab the file name and remove the extname from the string
+        name: path.basename(url, path.extname(url)).toLowerCase(),
       });
 
       if (screenshotNode) {

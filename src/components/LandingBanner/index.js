@@ -69,7 +69,7 @@ const LandingBanner = ({ quickstart, className, location }) => {
         `}
       >
         <Breadcrumbs segments={breadcrumbs} />
-        {quickstart.logo && (
+        {(quickstart.logo || quickstart.logoSvg) && (
           <div
             css={css`
               position: absolute;
@@ -94,6 +94,7 @@ const LandingBanner = ({ quickstart, className, location }) => {
               <QuickstartImg
                 packName={quickstart.name}
                 imageNode={quickstart.logo}
+                svgNode={quickstart.logoSvg}
                 css={css`
                   max-width: 350px;
                   margin: auto;

@@ -21,6 +21,7 @@ const QuickstartTile = ({
   title,
   name,
   logo,
+  logoSvg,
   level,
   className,
   summary,
@@ -122,6 +123,7 @@ const QuickstartTile = ({
         >
           <QuickstartImg
             imageNode={logo}
+            svgNode={logoSvg}
             packName={title || name}
             css={css`
               object-fit: scale-down;
@@ -240,6 +242,7 @@ QuickstartTile.propTypes = {
   title: PropTypes.string.isRequired,
   slug: PropTypes.string.isRequired,
   logo: PropTypes.object,
+  logoSvg: PropTypes.object,
   summary: PropTypes.string,
   level: PropTypes.string,
   className: PropTypes.string,

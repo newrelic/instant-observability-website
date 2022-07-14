@@ -2,15 +2,12 @@ import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import '@components/styles.scss';
 
-import {
-  Button,
-  Icon,
-  Spinner,
-  useTessen,
-} from '@newrelic/gatsby-theme-newrelic';
+import { Button, Icon, Spinner } from '@newrelic/gatsby-theme-newrelic';
 import React, { useEffect, useState } from 'react';
 
 import CATEGORIES from '@data/instant-observability-categories';
+import useSearchAndCategory from '@hooks/useSearchAndCategory';
+import allFilteredQuickstarts from '@utils/allFilteredQuickstarts';
 import IOBanner from '@components/IOBanner';
 import IOSeo from '@components/IOSeo';
 import Overlay from '@components/Overlay';
@@ -21,7 +18,6 @@ import Slider from 'react-slick';
 import SuperTiles from '@components/SuperTiles';
 import { css } from '@emotion/react';
 import { graphql } from 'gatsby';
-import { navigate } from '@reach/router';
 import LeftArrowSVG from '@components/Icons/LeftArrowSVG';
 import RightArrowSVG from '@components/Icons/RightArrowSVG';
 import featherIcons from '../@newrelic/gatsby-theme-newrelic/icons/feather';
@@ -33,161 +29,38 @@ const COLUMN_BREAKPOINT = '1131px';
 // used to set the height of the Spinner to reduce layout shift on page load
 const TILE_HEIGHT = '362px';
 
-/**
- * Determines if one string is a substring of the other, case insensitive
- * @param {String} substring the substring to test against
- * @returns {(Function) => Boolean} Callback function that determines if the argument has the substring
- */
-const stringIncludes = (substring) => (fullstring) =>
-  fullstring.toLowerCase().includes(substring.toLowerCase());
-
-/**
- * Filters a quickstart based on a provided search term.
- * @param {String} search Search term.
- * @returns {(Function) => Boolean} Callback function to be used by filter.
- */
-const filterBySearch = (search) => ({
-  title,
-  summary,
-  description,
-  keywords,
-}) => {
-  if (!search) {
-    return true;
-  }
-
-  const searchIncludes = stringIncludes(search);
-  return (
-    searchIncludes(title) ||
-    searchIncludes(summary) ||
-    searchIncludes(description) ||
-    keywords.some(searchIncludes)
-  );
-};
-
-/**
- * Filters a quickstart based on a category.
- * @param {String} category The category type (e.g. 'featured').
- * @returns {(Function) => Boolean} Callback function to be used by filter.
- */
-const filterByCategory = (category) => {
-  const { associatedKeywords = [] } =
-    CATEGORIES.find(({ value }) => value === category) || {};
-
-  return (quickstart) =>
-    !category ||
-    (quickstart.keywords &&
-      quickstart.keywords.find((k) => associatedKeywords.includes(k)));
-};
-
 const QuickstartsPage = ({ data, location }) => {
-  const tessen = useTessen();
+  const {
+    search,
+    category,
+    setSearch,
+    handleParam,
+    handleParams,
+  } = useSearchAndCategory(location);
 
-  const [search, setSearch] = useState('');
-  const [category, setCategory] = useState('');
+  const handleSearchAndCategory = handleParams('category', 'search');
+
+  const {
+    featuredQuickstarts,
+    filteredQuickstarts,
+    mostPopularQuickstarts,
+    categoriesWithCount,
+  } = allFilteredQuickstarts(data.allQuickstarts.nodes, search, category);
 
   const [isCategoriesOverlayOpen, setIsCategoriesOverlayOpen] = useState(false);
-  const [isSearchInputEmpty, setIsSearchInputEmpty] = useState(true);
-  const [isSelectCategory, setIsSelectCategory] = useState(true);
   // variable to check if the page load completed
   const [loadComplete, setLoadComplete] = useState(false);
 
-  useEffect(() => {
-    const params = new URLSearchParams(location.search);
-    const searchParam = params.get('search');
-    const categoryParam = params.get('category');
-    const validCategory = CATEGORIES.some((cat) => cat.value === categoryParam);
-
-    setSearch(searchParam);
-    setCategory(categoryParam && validCategory ? categoryParam : '');
-    if (searchParam || categoryParam) {
-      tessen.track({
-        eventName: 'instantObservability',
-        category: 'QuickstartCatalogSearch',
-        search: searchParam,
-        quickstartCategory: categoryParam,
-      });
-    }
-  }, [location.search, tessen]);
-
   // mark the value as true, if the page is loaded
   useEffect(() => {
-    setLoadComplete(true);
-  }, []);
+    if (categoriesWithCount) {
+      setLoadComplete(true);
+    }
+  }, [categoriesWithCount]);
 
   const closeCategoriesOverlay = () => {
     setIsCategoriesOverlayOpen(false);
   };
-
-  const handleSearch = (value) => {
-    if (value !== null && value !== undefined) {
-      const params = new URLSearchParams(location.search);
-      params.set('search', value);
-
-      navigate(`?${params.toString()}`);
-    }
-  };
-
-  const handleCategory = (value) => {
-    setIsSelectCategory(true);
-    if (value !== null && value !== undefined) {
-      const params = new URLSearchParams(location.search);
-      params.set('category', value);
-
-      if (search) {
-        params.set('search', search);
-      }
-
-      navigate(`?${params.toString()}`);
-      if (value != '') {
-        setIsSelectCategory(false);
-      }
-    }
-
-    closeCategoriesOverlay();
-  };
-
-  const quickstarts = data.allQuickstarts.nodes;
-
-  const featuredQuickStarts = quickstarts?.filter((product) =>
-    product.keywords.includes('featured')
-  );
-
-  const mostPopularQuickStarts = quickstarts?.filter((product) =>
-    product.keywords.includes('most popular')
-  );
-
-  const alphaSort = quickstarts.sort((a, b) => a.title.localeCompare(b.title));
-  //let sortedQuickstarts = sortFeaturedQuickstarts(alphaSort);
-  let sortedQuickstarts = alphaSort;
-
-  // Hard-code for moving codestream object to front of sortedQuickstarts array - CM
-  if ((!category && !search) || (category === 'featured' && !search)) {
-    // uuid is codestream id specifically - CM
-    const codestreamIndex = sortedQuickstarts.findIndex(
-      ({ id }) => id === '29bd9a4a-1c19-4219-9694-0942f6411ce7'
-    );
-
-    if (codestreamIndex > -1) {
-      const codestreamObject = sortedQuickstarts[codestreamIndex];
-      sortedQuickstarts = [
-        codestreamObject,
-        ...sortedQuickstarts.slice(0, codestreamIndex),
-        ...sortedQuickstarts.slice(codestreamIndex + 1),
-      ];
-    }
-  }
-
-  const filteredQuickstarts = sortedQuickstarts
-    .filter(filterBySearch(search))
-    .filter(filterByCategory(category));
-
-  const categoriesWithCount = CATEGORIES.map((cat) => ({
-    ...cat,
-    count: quickstarts
-      .filter(filterBySearch(search))
-      .filter(filterByCategory(cat.value)).length,
-  }));
 
   /**
    * Finds display name for selected category.
@@ -293,7 +166,7 @@ const QuickstartsPage = ({ data, location }) => {
   const renderGoToTopButton = () => {
     return (
       <Button
-        onClick={topFunction}
+        onClick={() => topFunction()}
         css={css`
           display: none;
           flex-direction: row;
@@ -325,10 +198,9 @@ const QuickstartsPage = ({ data, location }) => {
         type="quickstarts"
       />
       <IOBanner
-        search={search}
+        handleSearch={handleParam('search')}
         setSearch={setSearch}
-        setIsSearchInputEmpty={setIsSearchInputEmpty}
-        handleSearch={handleSearch}
+        search={search}
       />
       <div
         css={css`
@@ -401,39 +273,41 @@ const QuickstartsPage = ({ data, location }) => {
           >
             <FormControl>
               <Label htmlFor="quickstartCategory">Categories</Label>
-              {categoriesWithCount.map(({ displayName, value, count }) => (
-                <Button
-                  type="button"
-                  key={value}
-                  disabled={count === 0}
-                  variant={Button.VARIANT.PRIMARY}
-                  onClick={() => handleCategory(value)}
-                  css={css`
-                    padding: 8px 12px;
-                    font-size: 18px;
-                    font-weight: 300;
-                    line-height: 54px;
-                    width: 100%;
-                    display: flex;
-                    justify-content: flex-start;
-                    color: var(--primary-text-color);
-                    border-radius: 3px;
-                    background: ${category === value
-                      ? 'var(--divider-color)'
-                      : 'none'};
-                    &:hover {
-                      background: var(--divider-color);
-                    }
-                  `}
-                >
-                  {`${displayName}`}
-                  <span
+              {!loadComplete && <Spinner />}
+              {loadComplete &&
+                categoriesWithCount.map(({ displayName, value, count }) => (
+                  <Button
+                    type="button"
+                    key={value}
+                    disabled={count === 0}
+                    variant={Button.VARIANT.PRIMARY}
+                    onClick={() => handleSearchAndCategory(value, search)}
                     css={css`
-                      padding-left: 0.25rem;
+                      padding: 8px 12px;
+                      font-size: 18px;
+                      font-weight: 300;
+                      line-height: 54px;
+                      width: 100%;
+                      display: flex;
+                      justify-content: flex-start;
+                      color: var(--primary-text-color);
+                      border-radius: 3px;
+                      background: ${category === value
+                        ? 'var(--divider-color)'
+                        : 'none'};
+                      &:hover {
+                        background: var(--divider-color);
+                      }
                     `}
-                  >{`(${count})`}</span>
-                </Button>
-              ))}
+                  >
+                    {`${displayName}`}
+                    <span
+                      css={css`
+                        padding-left: 0.25rem;
+                      `}
+                    >{`(${count})`}</span>
+                  </Button>
+                ))}
             </FormControl>
           </div>
         </aside>
@@ -515,32 +389,34 @@ const QuickstartsPage = ({ data, location }) => {
                     overflow-y: scroll;
                   `}
                 >
-                  {categoriesWithCount.map(({ displayName, value, count }) => (
-                    <Button
-                      type="button"
-                      key={value}
-                      variant={Button.VARIANT.PRIMARY}
-                      onClick={() => handleCategory(value)}
-                      css={css`
-                        width: 100%;
-                        display: flex;
-                        justify-content: flex-start;
-                        color: var(--primary-text-color);
-                        border-radius: 3px;
-                        padding: 8px 12px;
-                        font-size: 18px;
-                        line-height: 54px;
-                        background: ${category === value
-                          ? 'var(--divider-color)'
-                          : 'none'};
-                        &:hover {
-                          background: var(--divider-color);
-                        }
-                      `}
-                    >
-                      {`${displayName} (${count})`}
-                    </Button>
-                  ))}
+                  {!loadComplete && <Spinner />}
+                  {loadComplete &&
+                    categoriesWithCount.map(({ displayName, value, count }) => (
+                      <Button
+                        type="button"
+                        key={value}
+                        variant={Button.VARIANT.PRIMARY}
+                        onClick={() => handleParam('category')(value)}
+                        css={css`
+                          width: 100%;
+                          display: flex;
+                          justify-content: flex-start;
+                          color: var(--primary-text-color);
+                          border-radius: 3px;
+                          padding: 8px 12px;
+                          font-size: 18px;
+                          line-height: 54px;
+                          background: ${category === value
+                            ? 'var(--divider-color)'
+                            : 'none'};
+                          &:hover {
+                            background: var(--divider-color);
+                          }
+                        `}
+                      >
+                        {`${displayName} (${count})`}
+                      </Button>
+                    ))}
                 </div>
                 <div
                   css={css`
@@ -572,9 +448,9 @@ const QuickstartsPage = ({ data, location }) => {
             </Overlay>
           </div>
 
-          {isSelectCategory && isSearchInputEmpty && (
+          {!category && !search && (
             <>
-              {mostPopularQuickStarts.length > 0 && (
+              {mostPopularQuickstarts.length > 0 && (
                 <>
                   <div
                     css={css`
@@ -614,7 +490,7 @@ const QuickstartsPage = ({ data, location }) => {
                         `}
                       >
                         <SuperTiles />
-                        {mostPopularQuickStarts.map((pack) => (
+                        {mostPopularQuickstarts.map((pack) => (
                           <QuickstartTile
                             key={pack.id}
                             featured={false}
@@ -658,7 +534,7 @@ const QuickstartsPage = ({ data, location }) => {
                 {!loadComplete && <Spinner />}
                 {loadComplete && (
                   <Slider {...settings}>
-                    {featuredQuickStarts.map((pack) => (
+                    {featuredQuickstarts.map((pack) => (
                       <QuickstartTile
                         key={pack.id}
                         featured={false}
@@ -732,14 +608,13 @@ const QuickstartsPage = ({ data, location }) => {
               }
             `}
           >
-            {!isSearchInputEmpty && <SuperTiles />}
+            {Boolean(search) && <SuperTiles />}
             {filteredQuickstarts.map((pack) => (
               <QuickstartTile key={pack.id} featured={false} {...pack} />
             ))}
           </div>
         </div>
       </div>
-
       {renderGoToTopButton()}
     </>
   );
@@ -762,9 +637,11 @@ export const pageQuery = graphql`
         description
         level
         keywords
-        logo {
+        logoSvg {
           ext
           publicURL
+        }
+        logo {
           childImageSharp {
             gatsbyImageData(
               height: 45
