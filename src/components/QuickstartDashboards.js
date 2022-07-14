@@ -5,50 +5,11 @@ import Intro from './Intro';
 import { quickstart } from '../types';
 import Slider from 'react-slick';
 import { animated } from 'react-spring';
-import RightArrowSVG from './Icons/RightArrowSVG';
-import LeftArrowSVG from './Icons/LeftArrowSVG';
 
-const MOBILE_BREAKPOINT = '920px';
+import { dashboardSettings } from '../data/slick-settings';
+import { MOBILE_BREAKPOINT } from '../data/constants';
 
 const QuickstartDashboards = ({ quickstart }) => {
-  // declaring react-slick settings
-  const settings = {
-    variableWidth: true,
-    variableHeight: true,
-    dots: false,
-    infinite: false,
-    speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    prevArrow: (
-      <LeftArrowSVG
-        css={css`
-          width: 62px;
-          height: 62px;
-          margin-left: -2rem;
-          @media screen and (max-width: ${MOBILE_BREAKPOINT}) {
-            margin-left: -1.6rem;
-          }
-        `}
-      />
-    ),
-
-    nextArrow: (
-      <RightArrowSVG
-        css={css`
-          width: 62px;
-          height: 62px;
-          margin-right: -2rem;
-          @media screen and (max-width: ${MOBILE_BREAKPOINT}) {
-            margin-right: -1.5rem;
-          }
-        `}
-      />
-    ),
-    // the carousel is acting responsive by default
-    responsive: [],
-  };
-
   const renderDescription = (dashboard) => {
     let descriptionToShow = '';
     // check if description field is present
@@ -99,7 +60,7 @@ const QuickstartDashboards = ({ quickstart }) => {
               {dashboard.name}
             </p>
             {renderDescription(dashboard)}
-            <Slider {...settings}>
+            <Slider {...dashboardSettings}>
               {dashboard.screenshots.map((node, index) => (
                 <div
                   css={css`

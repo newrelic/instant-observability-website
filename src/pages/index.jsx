@@ -12,19 +12,20 @@ import IOBanner from '@components/IOBanner';
 import IOSeo from '@components/IOSeo';
 import Overlay from '@components/Overlay';
 import PropTypes from 'prop-types';
-import { QUICKSTARTS_COLLAPSE_BREAKPOINT } from '@data/constants';
+import {
+  QUICKSTARTS_COLLAPSE_BREAKPOINT,
+  TRIPLE_COLUMN_BREAKPOINT,
+  DOUBLE_COLUMN_BREAKPOINT,
+  SINGLE_COLUMN_BREAKPOINT,
+} from '@data/constants';
+import { indexSettings } from '../data/slick-settings';
 import QuickstartTile from '@components/QuickstartTile';
 import Slider from 'react-slick';
 import SuperTiles from '@components/SuperTiles';
 import { css } from '@emotion/react';
 import { graphql } from 'gatsby';
-import LeftArrowSVG from '@components/Icons/LeftArrowSVG';
-import RightArrowSVG from '@components/Icons/RightArrowSVG';
 import featherIcons from '../@newrelic/gatsby-theme-newrelic/icons/feather';
 
-const TRIPLE_COLUMN_BREAKPOINT = '1420px';
-const DOUBLE_COLUMN_BREAKPOINT = '1180px';
-const SINGLE_COLUMN_BREAKPOINT = '900px';
 const COLUMN_BREAKPOINT = '1131px';
 // used to set the height of the Spinner to reduce layout shift on page load
 const TILE_HEIGHT = '362px';
@@ -72,70 +73,6 @@ const QuickstartsPage = ({ data, location }) => {
     if (!found || !found.value) return defaultName;
 
     return found.displayName;
-  };
-
-  // Settings for Slick-Carousel
-  const settings = {
-    dots: false,
-    infinite: false,
-    speed: 300,
-    slidesToShow: 4,
-    slidesToScroll: 4,
-    adaptiveHeight: false,
-    adaptiveWidth: true,
-    mobileFirst: true, // necessary for breakpoints to work as expected
-    prevArrow: (
-      <button type="button">
-        <LeftArrowSVG
-          className="slick-prev"
-          css={css`
-            width: auto;
-            height: auto;
-            margin: 0 1.5rem;
-          `}
-        />
-      </button>
-    ),
-    nextArrow: (
-      <button type="button">
-        <RightArrowSVG
-          className="slick-next"
-          css={css`
-            width: auto;
-            height: auto;
-            margin: 0 1.5rem;
-          `}
-        />
-      </button>
-    ),
-
-    responsive: [
-      {
-        breakpoint: parseInt(TRIPLE_COLUMN_BREAKPOINT),
-        settings: {
-          slidesToShow: 3,
-          slidesToScroll: 3,
-          infinite: true,
-          dots: false,
-        },
-      },
-      {
-        breakpoint: parseInt(DOUBLE_COLUMN_BREAKPOINT),
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 2,
-          infinite: true,
-          dots: false,
-        },
-      },
-      {
-        breakpoint: parseInt(SINGLE_COLUMN_BREAKPOINT),
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-        },
-      },
-    ],
   };
 
   const handleScroll = () => {
@@ -484,7 +421,7 @@ const QuickstartsPage = ({ data, location }) => {
                     {!loadComplete && <Spinner />}
                     {loadComplete && (
                       <Slider
-                        {...settings}
+                        {...indexSettings}
                         css={css`
                           display: flex;
                         `}
@@ -533,7 +470,7 @@ const QuickstartsPage = ({ data, location }) => {
               >
                 {!loadComplete && <Spinner />}
                 {loadComplete && (
-                  <Slider {...settings}>
+                  <Slider {...indexSettings}>
                     {featuredQuickstarts.map((pack) => (
                       <QuickstartTile
                         key={pack.id}
