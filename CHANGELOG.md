@@ -1,3 +1,11 @@
+# [1.6.0](https://github.com/newrelic/instant-observability-website/compare/v1.5.0...v1.6.0) (2022-07-14)
+
+
+### Features
+
+* move filtered quickstarts to hook ([dc1ca46](https://github.com/newrelic/instant-observability-website/commit/dc1ca46e452df70eeb82d1f365e54a90553a5377))
+* move search and category to custom hook ([0d6bda0](https://github.com/newrelic/instant-observability-website/commit/0d6bda0def654a4970bc1d1d23c0186ae28a8070))
+
 # [1.5.0](https://github.com/newrelic/instant-observability-website/compare/v1.4.1...v1.5.0) (2022-07-12)
 
 
