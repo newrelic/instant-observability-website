@@ -396,7 +396,7 @@ const QuickstartsPage = ({ data, location }) => {
                         type="button"
                         key={value}
                         variant={Button.VARIANT.PRIMARY}
-                        onClick={() => handleParam('category')(value)}
+                        onClick={() => handleSearchAndCategory(value, search)}
                         css={css`
                           width: 100%;
                           display: flex;
