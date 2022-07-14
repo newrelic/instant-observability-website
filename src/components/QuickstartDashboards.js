@@ -77,7 +77,6 @@ const QuickstartDashboards = ({ quickstart }) => {
       <Intro
         css={css`
           margin-bottom: 16px;
-          color: var(--black-text-color);
           @media screen and (max-width: 760px) {
             display: none;
           }
@@ -94,8 +93,7 @@ const QuickstartDashboards = ({ quickstart }) => {
           <div>
             <p
               css={css`
-                font-weight: 700 !important;
-                font-family: 'Söhne-Kräftig';
+                font-weight: 600;
               `}
             >
               {dashboard.name}

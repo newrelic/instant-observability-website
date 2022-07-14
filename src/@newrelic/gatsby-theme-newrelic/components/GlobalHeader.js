@@ -113,9 +113,10 @@ const GlobalHeader = ({ className, activeSite }) => {
             z-index: 80;
             border-bottom: 1px solid #83878b;
             display: none;
+            color: var(--header-text-color);
             @media screen and (min-width: ${NAV_BREAKPOINT}) {
               display: block;
-              background: #1d252c;
+              background: var(--website-banner-background-color);
               position: sticky;
             }
             @media screen and (max-width: ${NAV_BREAKPOINT}) {
@@ -227,16 +228,11 @@ const GlobalHeader = ({ className, activeSite }) => {
                   padding 2rem 0;
                   flex: 0 0 auto;
                   > a {
-                    --active-color: #1d252c;
-                    color: var(--white-hover-color);
-                    font-family: Söhne-Buch;
+                    color: var(--header-text-color);
                     font-weight: 400;
                     font-size: 1.125rem;
                     padding: 2rem 1rem;
                     display: block;
-                    &:hover {
-                      color: var(--white-hover-color);
-                    }
                     &:focus {
                       outline: none;
                       text-decoration-line: underline;
@@ -246,8 +242,7 @@ const GlobalHeader = ({ className, activeSite }) => {
                     >span {
                       font-size: 100%;
                     &:hover {
-                      color: var(--white-hover-color);
-                      border-bottom: 1.5px solid var(--white-hover-color);
+                      border-bottom: 1.5px solid var(--header-text-color);
                     }
                   }
                   }
@@ -275,9 +270,8 @@ const GlobalHeader = ({ className, activeSite }) => {
               line-height: 1.1;
               > li {
                 transition: all 0.2s ease-out;
-                color: var(--secondary-text-color);
+                color: var(--header-text-color);
                 > a {
-                  font-family: Söhne-Buch;
                   font-weight: 400;
                   font-size: 1.125rem;
                   letter-spacing: -0.005em;
@@ -318,15 +312,14 @@ const GlobalHeader = ({ className, activeSite }) => {
                   text-underline-offset: 0.25rem;
                   &:focus {
                     --tw-text-opacity: 1;
-                    color: var(--white-hover-color);
+                    color: var(--header-text-color);
                   }
                   > span {
-                    color: var(--white-hover-color);
+                    color: var(--header-text-color);
                     height: 1.375rem;
 
                     &:hover {
-                      color: var(--white-hover-color);
-                      border-bottom: 1.5px solid var(--white-hover-color);
+                      border-bottom: 1.5px solid var(--header-text-color);
                     }
                   }
                   @media screen and (max-width: ${NAV_BREAKPOINT}) {
@@ -359,11 +352,12 @@ const GlobalHeader = ({ className, activeSite }) => {
                       color: rgb(28 231 131 / var(--tw-text-opacity));
                     }
                     > span {
-                      color: var(--btn-background-green);
+                      color: var(--brand-button-primary-accent);
                       height: 1.375rem;
                       &:hover {
-                        color: var(--btn-background-green);
-                        border-bottom: 1.5px solid var(--btn-background-green);
+                        color: var(--brand-button-primary-accent);
+                        border-bottom: 1.5px solid
+                          var(--brand-button-primary-accent);
                       }
                     }
                     @media screen and (max-width: ${NAV_BREAKPOINT}) {
@@ -387,7 +381,7 @@ const GlobalHeader = ({ className, activeSite }) => {
           display: none;
           position: relative;
           box-shadow: 0 0.25rem 1.875rem rgb(84 86 90 / 10%);
-          background: #1d252c;
+          background: var(--website-banner-background-color);
           border-bottom: 1px solid #83878b;
           @media screen and (max-width: ${NAV_BREAKPOINT}) {
             display: flex;
@@ -398,10 +392,6 @@ const GlobalHeader = ({ className, activeSite }) => {
           @media screen and (min-width: ${NAV_BREAKPOINT}) {
             z-index: 10;
           }
-          ${isOpen &&
-          `
-          background: #1D252C;
-          `}
         `}
       >
         <div
@@ -475,6 +465,7 @@ const GlobalHeader = ({ className, activeSite }) => {
                 cursor: pointer;
                 width: 48;
                 height: 48;
+                color: var(--header-text-color);
                 &:focus {
                   width: 2rem;
                   height: 2rem;
@@ -483,7 +474,6 @@ const GlobalHeader = ({ className, activeSite }) => {
                 }
 
                 &:hover {
-                  color: var(--white-hover-color);
                   background-color: transparent;
                 }
 
@@ -491,14 +481,6 @@ const GlobalHeader = ({ className, activeSite }) => {
                   width: 32px;
                   height: 32px;
                 }
-
-                ${isOpen
-                  ? `
-                  color: var(--btn-text-color);
-                  `
-                  : `
-                  color: var(--btn-text-color);
-                  `}
               `}
               title="Toggle menu"
               variant={Button.VARIANT.LINK}
@@ -516,7 +498,7 @@ const GlobalHeader = ({ className, activeSite }) => {
             position: absolute;
             width: 100vw;
             height: 100vh;
-            background-color: var(--color-white);
+            background-color: var(--primary-background-color);
             z-index: 200;
 
             @media screen and (min-width: 1128px) {
@@ -546,9 +528,6 @@ const GlobalHeader = ({ className, activeSite }) => {
                   border-bottom-width: 1px;
                   --tw-border-opacity: 1;
                   > a {
-                    --active-color: var(--color-white);
-                    font-family: Söhne-Buch;
-                    color: var(--black-text-color);
                     font-weight: 400;
                     font-size: 1.125rem;
                     line-height: 1.75rem;
@@ -557,21 +536,24 @@ const GlobalHeader = ({ className, activeSite }) => {
                     &:focus {
                       outline: none;
                       outline-width: 0.25rem;
-                      text-decoration-line: underline;
                       text-underline-offset: 0.25rem;
                     }              
 
-                > span {
-                  color: var(--black-hover-color);
-                  &:hover {
-                    color: var(--black-hover-color);
-                    border-bottom: 1.5px solid var(--black-hover-color);
+                    > span {
+                      color: var(--primary-text-color);
+                      &:hover {
+                        color: var(--primary-text-color);
+                        border-bottom: 1.5px solid var(--primary-text-color);
+                      }
+                    }
                   }
+                }
                 @media screen and (min-width: ${NAV_BREAKPOINT}) {
                   flex-direction: row;
                 }
                 --list style--
                 list-style: none;
+                    
               `}
             >
               {createNavList('main', activeSite)}
@@ -607,7 +589,6 @@ const GlobalHeader = ({ className, activeSite }) => {
               css={css`
                 ease;
                 transition: background-color 0.3s ease,color 0.3s ease,border-color 0.3s ease;
-                font-family:Söhne-Buch;
                 font-weight: 400;
                 font-size: 0.875rem;
                 line-height: 1.93;
@@ -622,11 +603,11 @@ const GlobalHeader = ({ className, activeSite }) => {
                 vertical-align: middle;
                 white-space: nowrap;
                 padding: 0.6rem 1rem;
-                border-color: var(--color-neutrals-100);
+                border-color: var(--button-text-color);
                 background-color: transparent;
-                color: var(--color-neutrals-100);
+                color: var(--button-text-color);
                 &:hover {
-                  color: var(--color-neutrals-100);
+                  color: var(--button-text-color);
                   background-color: transparent;
                 }
                 &:focus {
@@ -655,7 +636,6 @@ const GlobalHeader = ({ className, activeSite }) => {
                 padding: 0.6rem 1rem;
                 transition: background-color 0.3s ease, color 0.3s ease,
                   border-color 0.3s ease;
-                font-family: Söhne-Buch;
                 font-weight: 400;
                 font-size: 0.875rem;
                 line-height: 1.93;
@@ -667,9 +647,9 @@ const GlobalHeader = ({ className, activeSite }) => {
                 text-align: center;
                 vertical-align: middle;
                 white-space: nowrap;
-                background-color: var(--color-neutrals-100);
+                background-color: var(--color-white);
                 color: rgb(29, 37, 44);
-                border-color: var(--color-neutrals-100);
+                border-color: var(--color-white);
                 margin-left: -4.49px;
                 margin-right: 2px;
                 &:focus {
@@ -677,7 +657,7 @@ const GlobalHeader = ({ className, activeSite }) => {
                   text-underline-offset: 0.25rem;
                 }
               &:hover {
-                background-color: var(--color-neutrals-100);
+                background-color: var(--color-white);
                 color: rgb(29, 37, 44);
               }
            > span{

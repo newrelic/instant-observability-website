@@ -16,11 +16,6 @@ const BannerHeaderContent = ({ search, setSearch, handleSearch }) => {
         justify-content: center;
         text-align: center;
 
-        h1,
-        div {
-          font-family: 'Söhne-Buch';
-        }
-
         width: 1100px;
 
         @media (max-width: ${QUICKSTARTS_COLLAPSE_BREAKPOINT}) {
@@ -31,7 +26,8 @@ const BannerHeaderContent = ({ search, setSearch, handleSearch }) => {
     >
       <h1
         css={css`
-          color: #f9fafa;
+          color: var(--header-text-color);
+          font-weight: 500;
           font-size: 72px;
           letter-spacing: -0.03em;
           margin: 72px 0 0;
@@ -47,7 +43,7 @@ const BannerHeaderContent = ({ search, setSearch, handleSearch }) => {
       <div
         css={css`
           background: none;
-          color: #f9fafa;
+          color: var(--header-text-color);
           font-size: 16px;
           letter-spacing: -0.005em;
           margin: 20px 0;
@@ -90,12 +86,12 @@ const BannerHeaderContent = ({ search, setSearch, handleSearch }) => {
               height: 64px;
               font-size: 18px;
               padding: 20px 55px 20px 24px;
-              background: #1d252c;
+              background: var(--header-background-color);
               border: 1px solid #f9fafa;
               border-radius: 4px;
               color: #f9fafa;
               &::placeholder {
-                color: var(--color-neutrals-600);
+                color: #8e9494;
               }
               &:focus {
                 outline: none;
@@ -126,7 +122,6 @@ const IOBanner = (props) => {
     <div
       css={css`
         --banner-height: 368px;
-
         --left-margin: calc(50% - 50vw);
 
         position: absolute;
@@ -137,7 +132,7 @@ const IOBanner = (props) => {
         margin: 0 0 0 var(--left-margin);
         padding: 0 40px;
 
-        background: #1d252c;
+        background: var(--website-banner-background-color);
         box-sizing: border-box;
         @media (max-width: 1130px) {
           --banner-height: 425px;

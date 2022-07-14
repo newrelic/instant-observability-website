@@ -16,10 +16,10 @@ const Breadcrumbs = ({ segments, separator }) => {
           <Link
             to={segment.url}
             css={css`
-              color: var(--brand-highlight-green);
+              color: var(--brand-button-primary-accent);
               text-decoration: none;
               &:hover {
-                color: var(--brand-highlight-green);
+                color: var(--brand-button-primary-accent);
               }
             `}
           >

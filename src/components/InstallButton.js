@@ -182,31 +182,18 @@ const InstallButton = ({
       as={Link}
       to={installUrl}
       onClick={handleInstallClick}
-      variant={Button.VARIANT.PRIMARY}
+      variant={
+        buttonStyle === 'PRIMARY'
+          ? Button.VARIANT.PRIMARY
+          : Button.VARIANT.NORMAL
+      }
       className="btn-styles btn1"
       css={css`
-        --button-background: var(
-          ${buttonStyle === 'PRIMARY'
-            ? '--btn-background-green'
-            : '--brand-secondary-background-color'}
-        );
-        --button-text-color: var(
-          ${buttonStyle === 'PRIMARY'
-            ? '--brand-primary-text-color'
-            : '--brand-secondary-text-color'}
-        );
-        background-color: var(--button-background);
         border-radius: 4px;
-        color: var(--button-text-color);
         font-size: 14px;
         line-height: 21px;
         font-weight: 400;
         padding: 1rem;
-
-        &:hover {
-          background-color: var(--button-background);
-          color: var(--button-text-color);
-        }
 
         ${hasInstallableComponent &&
         css`

@@ -23,7 +23,7 @@ const QuickstartHowToUse = ({
           css={css`
             top: 0;
             width: 100%;
-            font-weight: 400;
+            font-weight: 500;
             padding-bottom: 2rem;
           `}
         >
@@ -32,7 +32,6 @@ const QuickstartHowToUse = ({
 
         <ul
           css={css`
-            color: var(--black-text-color);
             font-size: 18px;
             padding-bottom: 2rem;
           `}
@@ -40,15 +39,15 @@ const QuickstartHowToUse = ({
           <li
             css={css`
               ::marker {
-                color: var(--link-font-color);
+                color: var(--primary-text-color);
               }
             `}
           >
             <Link
               css={css`
-                color: var(--link-font-color);
+                color: var(--primary-text-color);
                 &:hover {
-                  color: var(--hover-color);
+                  color: var(--primary-text-color);
                 }
               `}
               to={SIGNUP_LINK}
@@ -62,9 +61,9 @@ const QuickstartHowToUse = ({
             for a free New Relic account or{' '}
             <Link
               css={css`
-                color: var(--link-font-color);
+                color: var(--primary-text-color);
                 &:hover {
-                  color: var(--hover-color);
+                  color: var(--primary-text-color);
                 }
               `}
               to={LOGIN_LINK}
@@ -80,7 +79,7 @@ const QuickstartHowToUse = ({
           <li
             css={css`
               ::marker {
-                color: var(--link-font-color);
+                color: var(--primary-text-color);
               }
             `}
           >
@@ -89,7 +88,7 @@ const QuickstartHowToUse = ({
           <li
             css={css`
               ::marker {
-                color: var(--link-font-color);
+                color: var(--primary-text-color);
               }
             `}
           >

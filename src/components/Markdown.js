@@ -32,7 +32,7 @@ const h2Tag = (props) => {
       css={css`
         line-height: 50px;
         margin-top: 104px;
-        font-weight: 100;
+        font-weight: 500;
       `}
     >
       {' '}
@@ -46,7 +46,6 @@ const h3Tag = (props) => {
       css={css`
         line-height: 32px;
         margin-top: 60px;
-        font-weight: 50;
       `}
     >
       {' '}

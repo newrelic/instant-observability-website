@@ -13,8 +13,6 @@ const Layout = ({ className, children }) => {
       className={className}
       css={css`
         --sidebar-width: 300px;
-        --primary-font-family: 'Söhne-Buch';
-        font-family: 'Söhne-Buch', sans-serif;
 
         display: grid;
         grid-template-columns: var(--sidebar-width) minmax(0, 1fr);

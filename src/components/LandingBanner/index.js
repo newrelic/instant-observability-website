@@ -30,7 +30,7 @@ const LandingBanner = ({ quickstart, className, location }) => {
         className={className}
         css={css`
           border-bottom: none;
-          color: var(--brand-secondary-text-color);
+          color: var(--system-text-primary-dark);
           display: grid;
           width: 100%;
           grid-column-gap: 1rem;
@@ -83,7 +83,7 @@ const LandingBanner = ({ quickstart, className, location }) => {
           >
             <div
               css={css`
-                background-color: var(--brand-white);
+                background-color: var(--color-white);
                 border-radius: 0 0 7px 7px;
                 padding: 5px;
                 @media (max-width: ${IMAGE_DISPLAY_BREAKPOINT}) {
@@ -107,7 +107,7 @@ const LandingBanner = ({ quickstart, className, location }) => {
         )}
         <h2
           css={css`
-            font-weight: normal;
+            font-weight: 500;
             grid-area: title;
             margin-bottom: 0;
 

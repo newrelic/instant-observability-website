@@ -73,6 +73,7 @@ const QuickstartTile = ({
         border: 1px solid #e4e5e6;
         border-radius: 8px;
         box-shadow: none;
+        background-color: var(--color-white);
 
         @media screen and (max-width: ${QUICKSTARTS_COLLAPSE_BREAKPOINT}) {
           padding: 0 32px 24px 32px;
@@ -83,13 +84,12 @@ const QuickstartTile = ({
         h4,
         p,
         span {
-          font-family: 'Söhne-Leicht';
           letter-spacing: -0.5%;
-          color: #1d252c;
+          color: var(--primary-text-color);
+          font-weight: 300;
 
           @media screen and (max-width: ${QUICKSTARTS_COLLAPSE_BREAKPOINT}) {
             width: 100%;
-            font-family: 'Söhne-Buch';
             font-weight: 400;
           }
         }
