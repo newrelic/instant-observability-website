@@ -2,7 +2,7 @@ import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import '@components/styles.scss';
 
-import { Button, Icon, Spinner } from '@newrelic/gatsby-theme-newrelic';
+import { Button, Spinner } from '@newrelic/gatsby-theme-newrelic';
 import React, { useEffect, useState } from 'react';
 
 import CATEGORIES from '@data/instant-observability-categories';
@@ -10,7 +10,6 @@ import useSearchAndCategory from '@hooks/useSearchAndCategory';
 import allFilteredQuickstarts from '@utils/allFilteredQuickstarts';
 import IOBanner from '@components/IOBanner';
 import IOSeo from '@components/IOSeo';
-import Overlay from '@components/Overlay';
 import PropTypes from 'prop-types';
 import {
   QUICKSTARTS_COLLAPSE_BREAKPOINT,
@@ -25,6 +24,8 @@ import SuperTiles from '@components/SuperTiles';
 import { css } from '@emotion/react';
 import { graphql } from 'gatsby';
 import featherIcons from '../@newrelic/gatsby-theme-newrelic/icons/feather';
+import CategoryList from '../components/CategoryList';
+import CategoryDropdown from '../components/CategoryDropdown';
 
 const COLUMN_BREAKPOINT = '1131px';
 // used to set the height of the Spinner to reduce layout shift on page load
@@ -190,63 +191,13 @@ const QuickstartsPage = ({ data, location }) => {
             }
           `}
         >
-          <div
-            css={css`
-              padding: 24px 0 32px 32px;
-              height: 100%;
-              overflow: auto;
-
-              label {
-                font-size: 28px;
-                line-height: 36px;
-                font-weight: 300;
-                margin-bottom: 23px;
-                letter-spacing: -0.5px;
-              }
-              @media screen and (max-width: ${QUICKSTARTS_COLLAPSE_BREAKPOINT}) {
-                position: relative;
-              }
-            `}
-          >
-            <FormControl>
-              <Label htmlFor="quickstartCategory">Categories</Label>
-              {!loadComplete && <Spinner />}
-              {loadComplete &&
-                categoriesWithCount.map(({ displayName, value, count }) => (
-                  <Button
-                    type="button"
-                    key={value}
-                    disabled={count === 0}
-                    variant={Button.VARIANT.PRIMARY}
-                    onClick={() => handleSearchAndCategory(value, search)}
-                    css={css`
-                      padding: 8px 12px;
-                      font-size: 18px;
-                      font-weight: 300;
-                      line-height: 54px;
-                      width: 100%;
-                      display: flex;
-                      justify-content: flex-start;
-                      color: var(--primary-text-color);
-                      border-radius: 3px;
-                      background: ${category === value
-                        ? 'var(--divider-color)'
-                        : 'none'};
-                      &:hover {
-                        background: var(--divider-color);
-                      }
-                    `}
-                  >
-                    {`${displayName}`}
-                    <span
-                      css={css`
-                        padding-left: 0.25rem;
-                      `}
-                    >{`(${count})`}</span>
-                  </Button>
-                ))}
-            </FormControl>
-          </div>
+          <CategoryList
+            loadComplete={loadComplete}
+            category={category}
+            categoriesWithCount={categoriesWithCount}
+            handleSearchAndCategory={handleSearchAndCategory}
+            search={search}
+          />
         </aside>
         <div
           css={css`
@@ -254,137 +205,16 @@ const QuickstartsPage = ({ data, location }) => {
             padding: 1.5rem;
           `}
         >
-          <div
-            css={css`
-              display: flex;
-              @media screen and (min-width: ${QUICKSTARTS_COLLAPSE_BREAKPOINT}) {
-                display: none;
-              }
-            `}
-          >
-            <Button
-              css={css`
-                width: 100%;
-                border-radius: 4px;
-                border: 1px solid #1d252c;
-                color: var(--primary-text-color);
-                font-weight: 400;
-                font-size: 18px;
-                justify-content: flex-start;
-                margin: 10px 10px 30px;
-                padding: 20px 24px;
-                display: flex;
-                justify-content: space-between;
-              `}
-              variant={Button.VARIANT.LINK}
-              onClick={() => setIsCategoriesOverlayOpen(true)}
-            >
-              {getDisplayName('Filter by Category')}
-              <Icon
-                css={css`
-                  color: #1d252c;
-                  width: 20px;
-                  transform: rotate(-90deg);
-                  margin: -4px;
-                `}
-                name="fe-chevron-left"
-                size="120%"
-              />
-            </Button>
-            <Overlay
-              isOpen={isCategoriesOverlayOpen}
-              onCloseOverlay={closeCategoriesOverlay}
-            >
-              <div
-                css={css`
-                  --divider-color: #e4e5e6;
-
-                  border-radius: 5px;
-                  position: relative;
-                  width: 100%;
-                  margin: 30% auto 0;
-                  padding: 1rem;
-                  background: var(--primary-background-color);
-                `}
-              >
-                <h3
-                  css={css`
-                    padding: 0.5rem 0 0 0.5rem;
-                    font-size: 28px;
-                    line-height: 36px;
-                    margin-bottom: 12px;
-                    letter-spacing: -0.5px;
-                    font-weight: normal;
-                  `}
-                >
-                  Category
-                </h3>
-                <div
-                  css={css`
-                    max-height: 400px;
-                    padding-bottom: 3rem;
-                    overflow-y: scroll;
-                  `}
-                >
-                  {!loadComplete && <Spinner />}
-                  {loadComplete &&
-                    categoriesWithCount.map(({ displayName, value, count }) => (
-                      <Button
-                        type="button"
-                        key={value}
-                        variant={Button.VARIANT.PRIMARY}
-                        onClick={() => handleParam('category')(value)}
-                        css={css`
-                          width: 100%;
-                          display: flex;
-                          justify-content: flex-start;
-                          color: var(--primary-text-color);
-                          border-radius: 3px;
-                          padding: 8px 12px;
-                          font-size: 18px;
-                          line-height: 54px;
-                          background: ${category === value
-                            ? 'var(--divider-color)'
-                            : 'none'};
-                          &:hover {
-                            background: var(--divider-color);
-                          }
-                        `}
-                      >
-                        {`${displayName} (${count})`}
-                      </Button>
-                    ))}
-                </div>
-                <div
-                  css={css`
-                    background: var(--divider-color);
-                    position: absolute;
-                    bottom: 0;
-                    left: 0;
-                    width: 100%;
-                    height: 4rem;
-                    border-bottom-right-radius: 5px;
-                    border-bottom-left-radius: 5px;
-                    display: flex;
-                    justify-content: flex-end;
-                    align-items: center;
-                  `}
-                >
-                  <Button
-                    css={css`
-                      height: 2rem;
-                      margin-right: 1rem;
-                    `}
-                    onClick={closeCategoriesOverlay}
-                    variant={Button.VARIANT.NORMAL}
-                  >
-                    Cancel
-                  </Button>
-                </div>
-              </div>
-            </Overlay>
-          </div>
-
+          <CategoryDropdown 
+            loadComplete={loadComplete}
+            category={category}
+            categoriesWithCount={categoriesWithCount}
+            setIsCategoriesOverlayOpen={setIsCategoriesOverlayOpen}
+            isCategoriesOverlayOpen={isCategoriesOverlayOpen}
+            closeCategoriesOverlay={closeCategoriesOverlay}
+            getDisplayName={getDisplayName}
+            handleParam={handleParam}
+          />
           {!category && !search && (
             <>
               {mostPopularQuickstarts.length > 0 && (
@@ -591,41 +421,5 @@ export const pageQuery = graphql`
     }
   }
 `;
-
-const Label = ({ children, htmlFor }) => (
-  <label
-    htmlFor={htmlFor}
-    css={css`
-      display: block;
-      font-size: 1rem;
-      font-weight: 600;
-      margin-bottom: 0.5rem;
-      color: var(--primary-text-color);
-    `}
-  >
-    {children}
-  </label>
-);
-
-Label.propTypes = {
-  children: PropTypes.node,
-  htmlFor: PropTypes.string,
-};
-
-const FormControl = ({ children }) => (
-  <div
-    css={css`
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-    `}
-  >
-    {children}
-  </div>
-);
-
-FormControl.propTypes = {
-  children: PropTypes.node,
-};
 
 export default QuickstartsPage;
