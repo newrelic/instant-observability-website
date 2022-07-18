@@ -1,5 +1,4 @@
 import React from 'react';
-import { graphql } from 'gatsby';
 import { quickstart } from '../../types';
 import QuickstartDashboards from '../QuickstartDashboards';
 import { css } from '@emotion/react';
@@ -41,13 +40,5 @@ const Dashboards = ({ quickstart }) => {
 Dashboards.propTypes = {
   quickstart: quickstart.isRequired,
 };
-
-export const fragmentQuery = graphql`
-  fragment Dashboards_quickstart on Quickstarts {
-    title
-    packUrl
-    ...QuickstartDashboards_quickstart
-  }
-`;
 
 export default Dashboards;

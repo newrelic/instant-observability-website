@@ -236,8 +236,6 @@ LandingBanner.propTypes = {
 // height set for the logo img tags.
 export const fragmentQuery = graphql`
   fragment LandingBanner_quickstart on Quickstarts {
-    name
-    title
     summary
     logoSvg {
       ext
@@ -248,8 +246,6 @@ export const fragmentQuery = graphql`
         gatsbyImageData(height: 45, placeholder: BLURRED, formats: [AUTO, WEBP])
       }
     }
-
-    ...InstallButton_quickstart
   }
 `;
 

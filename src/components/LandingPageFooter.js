@@ -225,7 +225,6 @@ LandingPageFooter.propTypes = {
 
 export const fragmentQuery = graphql`
   fragment LandingPageFooter_quickstart on Quickstarts {
-    packUrl
     level
     authors
     relatedResources(limit: 5) {

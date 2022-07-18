@@ -194,9 +194,11 @@ export const pageQuery = graphql`
       packUrl
 
       ...LandingBanner_quickstart
-      ...Dashboards_quickstart
-      ...Alerts_quickstart
-      ...DataSources_quickstart
+      ...InstallButton_quickstart
+
+      ...QuickstartDashboards_quickstart
+      ...QuickstartAlerts_quickstart
+      ...QuickstartDataSources_quickstart
 
       ...QuickstartOverview_quickstart
       ...QuickstartHowToUse_quickstart

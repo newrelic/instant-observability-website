@@ -1,7 +1,6 @@
 import React from 'react';
 import QuickstartAlerts from '../QuickstartAlerts';
 import EmptyTab from '../EmptyTab';
-import { graphql } from 'gatsby';
 import { css } from '@emotion/react';
 import { quickstart } from '../../types';
 
@@ -55,13 +54,5 @@ const Alerts = ({ quickstart }) => {
 Alerts.propTypes = {
   quickstart,
 };
-
-export const fragmentQuery = graphql`
-  fragment Alerts_quickstart on Quickstarts {
-    title
-    packUrl
-    ...QuickstartAlerts_quickstart
-  }
-`;
 
 export default Alerts;
