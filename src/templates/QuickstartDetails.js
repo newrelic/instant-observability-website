@@ -7,12 +7,10 @@ import PropTypes from 'prop-types';
 import { css } from '@emotion/react';
 import { graphql } from 'gatsby';
 import { quickstart } from '../types';
+import sortedQuickstartComponents from '@utls/sortedQuickstartComponents';
 import QuickstartHowToUse from '@components/QuickstartHowToUse';
 import LandingPageFooter from '@components/LandingPageFooter';
 import WhatsIncludedHeader from '@components/WhatsIncluded/WhatsIncludedHeader';
-import Dashboards from '@components/WhatsIncluded/Dashboards';
-import Alerts from '@components/WhatsIncluded/Alerts';
-import DataSources from '@components/WhatsIncluded/DataSources';
 import Layout from '@components/Layout';
 import QuickstartOverview from '@components/QuickstartOverview';
 import LandingBanner from '@components/LandingBanner';
@@ -26,44 +24,6 @@ const layoutContentSpacing = css`
   padding: 0 var(--site-content-padding);
   margin: auto;
 `;
-
-/*
- * Callback function for sorting data sources and
- * prioritizing default ordering
- * @param {Object} a - Object with react component and length of quickstart component
- * @param {Object} b - Object with react component and length of quickstart component
- * @returns number
- */
-const sortComponents = (a, b) => {
-  if (a.count < 1) {
-    return 1;
-  } else if (b.count < 1) {
-    return -1;
-  } else {
-    return 0;
-  }
-};
-
-const sortOrderedQuickstartComponents = (quickstart) => {
-  // get length of all components
-  const dashboardLength = quickstart.dashboards?.length ?? 0;
-  const alertLength = quickstart.alerts?.length ?? 0;
-
-  // we use documentation for datasources at the moment
-  const dataSourceLength = quickstart.documentation?.length ?? 0;
-
-  // sort by length
-  const componentsAndCounts = [
-    {
-      component: Dashboards,
-      count: dashboardLength,
-    },
-    { component: Alerts, count: alertLength },
-    { component: DataSources, count: dataSourceLength },
-  ];
-
-  return componentsAndCounts.sort(sortComponents);
-};
 
 const QuickstartDetails = ({ data, location }) => {
   const quickstart = data.quickstarts;
@@ -138,7 +98,7 @@ const QuickstartDetails = ({ data, location }) => {
           `}
         >
           <WhatsIncludedHeader />
-          {sortOrderedQuickstartComponents(quickstart).map((obj, index) => (
+          {sortedQuickstartComponents(quickstart).map((obj, index) => (
             <obj.component key={index} quickstart={quickstart} />
           ))}
         </div>
