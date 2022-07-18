@@ -58,6 +58,8 @@ Alerts.propTypes = {
 
 export const fragmentQuery = graphql`
   fragment Alerts_quickstart on Quickstarts {
+    title
+    packUrl
     ...QuickstartAlerts_quickstart
   }
 `;

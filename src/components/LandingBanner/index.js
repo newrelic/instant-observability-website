@@ -232,6 +232,8 @@ LandingBanner.propTypes = {
   location: PropTypes.object.isRequired,
 };
 
+// NOTE: we hard-code `height: 45` for logos to match the CSS
+// height set for the logo img tags.
 export const fragmentQuery = graphql`
   fragment LandingBanner_quickstart on Quickstarts {
     name

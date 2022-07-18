@@ -7,7 +7,7 @@ import PropTypes from 'prop-types';
 import { css } from '@emotion/react';
 import { graphql } from 'gatsby';
 import { quickstart } from '../types';
-import sortedQuickstartComponents from '@utls/sortedQuickstartComponents';
+import sortedQuickstartComponents from '@utils/sortedQuickstartComponents';
 import QuickstartHowToUse from '@components/QuickstartHowToUse';
 import LandingPageFooter from '@components/LandingPageFooter';
 import WhatsIncludedHeader from '@components/WhatsIncluded/WhatsIncludedHeader';
@@ -184,18 +184,20 @@ QuickstartDetails.propTypes = {
   location: PropTypes.object.isRequired,
 };
 
-// NOTE: we hard-code `height: 45` for logos to match the CSS
-// height set for the logo img tags.
 export const pageQuery = graphql`
   query($id: String!) {
     quickstarts(id: { eq: $id }) {
       id
+      name
       title
       keywords
+      packUrl
+
       ...LandingBanner_quickstart
       ...Dashboards_quickstart
       ...Alerts_quickstart
       ...DataSources_quickstart
+
       ...QuickstartOverview_quickstart
       ...QuickstartHowToUse_quickstart
       ...LandingPageFooter_quickstart

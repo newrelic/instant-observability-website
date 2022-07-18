@@ -44,6 +44,8 @@ Dashboards.propTypes = {
 
 export const fragmentQuery = graphql`
   fragment Dashboards_quickstart on Quickstarts {
+    title
+    packUrl
     ...QuickstartDashboards_quickstart
   }
 `;
