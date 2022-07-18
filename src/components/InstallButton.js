@@ -225,9 +225,6 @@ InstallButton.propTypes = {
 
 export const fragmentQuery = graphql`
   fragment InstallButton_quickstart on Quickstarts {
-    id
-    name
-    packUrl
     installPlans {
       id
       name
