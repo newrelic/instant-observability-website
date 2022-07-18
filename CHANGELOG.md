@@ -1,3 +1,10 @@
+# [1.7.0](https://github.com/newrelic/instant-observability-website/compare/v1.6.0...v1.7.0) (2022-07-14)
+
+
+### Features
+
+* integrate branding changes from the theme ([f2828a5](https://github.com/newrelic/instant-observability-website/commit/f2828a5e42a3dddf389e0d9f5e6c325fe4516ce1))
+
 # [1.6.0](https://github.com/newrelic/instant-observability-website/compare/v1.5.0...v1.6.0) (2022-07-14)
 
 
