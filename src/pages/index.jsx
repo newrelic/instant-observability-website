@@ -1,30 +1,36 @@
+import React, { useEffect, useState } from 'react';
+import PropTypes from 'prop-types';
+import { graphql } from 'gatsby';
+
+// Styles
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import '@components/styles.scss';
-
-import { Button, Icon, Spinner } from '@newrelic/gatsby-theme-newrelic';
-import React, { useEffect, useState } from 'react';
-
-import CATEGORIES from '@data/instant-observability-categories';
+import { css } from '@emotion/react';
+// Data
+import {
+  QUICKSTARTS_COLLAPSE_BREAKPOINT,
+  TRIPLE_COLUMN_BREAKPOINT,
+  DOUBLE_COLUMN_BREAKPOINT,
+  SINGLE_COLUMN_BREAKPOINT,
+} from '@data/constants';
+import { indexSettings } from '@data/slick-settings';
+// Hooks
 import useSearchAndCategory from '@hooks/useSearchAndCategory';
+// Utils
 import allFilteredQuickstarts from '@utils/allFilteredQuickstarts';
+import getDisplayName from '@utils/getDisplayName';
+// Components
+import Slider from 'react-slick';
+import { Button, Spinner } from '@newrelic/gatsby-theme-newrelic';
+import featherIcons from '../@newrelic/gatsby-theme-newrelic/icons/feather';
 import IOBanner from '@components/IOBanner';
 import IOSeo from '@components/IOSeo';
-import Overlay from '@components/Overlay';
-import PropTypes from 'prop-types';
-import { QUICKSTARTS_COLLAPSE_BREAKPOINT } from '@data/constants';
 import QuickstartTile from '@components/QuickstartTile';
-import Slider from 'react-slick';
 import SuperTiles from '@components/SuperTiles';
-import { css } from '@emotion/react';
-import { graphql } from 'gatsby';
-import LeftArrowSVG from '@components/Icons/LeftArrowSVG';
-import RightArrowSVG from '@components/Icons/RightArrowSVG';
-import featherIcons from '../@newrelic/gatsby-theme-newrelic/icons/feather';
+import CategoryList from '@components/indexComponents/CategoryList';
+import CategoryDropdown from '@components/indexComponents/CategoryDropdown';
 
-const TRIPLE_COLUMN_BREAKPOINT = '1420px';
-const DOUBLE_COLUMN_BREAKPOINT = '1180px';
-const SINGLE_COLUMN_BREAKPOINT = '900px';
 const COLUMN_BREAKPOINT = '1131px';
 // used to set the height of the Spinner to reduce layout shift on page load
 const TILE_HEIGHT = '362px';
@@ -47,96 +53,11 @@ const QuickstartsPage = ({ data, location }) => {
     categoriesWithCount,
   } = allFilteredQuickstarts(data.allQuickstarts.nodes, search, category);
 
-  const [isCategoriesOverlayOpen, setIsCategoriesOverlayOpen] = useState(false);
-  // variable to check if the page load completed
   const [loadComplete, setLoadComplete] = useState(false);
 
-  // mark the value as true, if the page is loaded
   useEffect(() => {
-    if (categoriesWithCount) {
       setLoadComplete(true);
-    }
-  }, [categoriesWithCount]);
-
-  const closeCategoriesOverlay = () => {
-    setIsCategoriesOverlayOpen(false);
-  };
-
-  /**
-   * Finds display name for selected category.
-   * @returns {String} Display name for results found.
-   */
-  const getDisplayName = (defaultName = 'All quickstarts') => {
-    const found = CATEGORIES.find((cat) => cat.value === category);
-
-    if (!found || !found.value) return defaultName;
-
-    return found.displayName;
-  };
-
-  // Settings for Slick-Carousel
-  const settings = {
-    dots: false,
-    infinite: false,
-    speed: 300,
-    slidesToShow: 4,
-    slidesToScroll: 4,
-    adaptiveHeight: false,
-    adaptiveWidth: true,
-    mobileFirst: true, // necessary for breakpoints to work as expected
-    prevArrow: (
-      <button type="button">
-        <LeftArrowSVG
-          className="slick-prev"
-          css={css`
-            width: auto;
-            height: auto;
-            margin: 0 1.5rem;
-          `}
-        />
-      </button>
-    ),
-    nextArrow: (
-      <button type="button">
-        <RightArrowSVG
-          className="slick-next"
-          css={css`
-            width: auto;
-            height: auto;
-            margin: 0 1.5rem;
-          `}
-        />
-      </button>
-    ),
-
-    responsive: [
-      {
-        breakpoint: parseInt(TRIPLE_COLUMN_BREAKPOINT),
-        settings: {
-          slidesToShow: 3,
-          slidesToScroll: 3,
-          infinite: true,
-          dots: false,
-        },
-      },
-      {
-        breakpoint: parseInt(DOUBLE_COLUMN_BREAKPOINT),
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 2,
-          infinite: true,
-          dots: false,
-        },
-      },
-      {
-        breakpoint: parseInt(SINGLE_COLUMN_BREAKPOINT),
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-        },
-      },
-    ],
-  };
+  }, []);
 
   const handleScroll = () => {
     const btn = document.getElementById('go-to-page-top-btn');
@@ -253,63 +174,13 @@ const QuickstartsPage = ({ data, location }) => {
             }
           `}
         >
-          <div
-            css={css`
-              padding: 24px 0 32px 32px;
-              height: 100%;
-              overflow: auto;
-
-              label {
-                font-size: 28px;
-                line-height: 36px;
-                font-weight: 300;
-                margin-bottom: 23px;
-                letter-spacing: -0.5px;
-              }
-              @media screen and (max-width: ${QUICKSTARTS_COLLAPSE_BREAKPOINT}) {
-                position: relative;
-              }
-            `}
-          >
-            <FormControl>
-              <Label htmlFor="quickstartCategory">Categories</Label>
-              {!loadComplete && <Spinner />}
-              {loadComplete &&
-                categoriesWithCount.map(({ displayName, value, count }) => (
-                  <Button
-                    type="button"
-                    key={value}
-                    disabled={count === 0}
-                    variant={Button.VARIANT.PRIMARY}
-                    onClick={() => handleSearchAndCategory(value, search)}
-                    css={css`
-                      padding: 8px 12px;
-                      font-size: 18px;
-                      font-weight: 300;
-                      line-height: 54px;
-                      width: 100%;
-                      display: flex;
-                      justify-content: flex-start;
-                      color: var(--primary-text-color);
-                      border-radius: 3px;
-                      background: ${category === value
-                        ? 'var(--divider-color)'
-                        : 'none'};
-                      &:hover {
-                        background: var(--divider-color);
-                      }
-                    `}
-                  >
-                    {`${displayName}`}
-                    <span
-                      css={css`
-                        padding-left: 0.25rem;
-                      `}
-                    >{`(${count})`}</span>
-                  </Button>
-                ))}
-            </FormControl>
-          </div>
+          <CategoryList
+            category={category}
+            categoriesWithCount={categoriesWithCount}
+            handleSearchAndCategory={handleSearchAndCategory}
+            search={search}
+            loadComplete={loadComplete}
+          />
         </aside>
         <div
           css={css`
@@ -317,137 +188,12 @@ const QuickstartsPage = ({ data, location }) => {
             padding: 1.5rem;
           `}
         >
-          <div
-            css={css`
-              display: flex;
-              @media screen and (min-width: ${QUICKSTARTS_COLLAPSE_BREAKPOINT}) {
-                display: none;
-              }
-            `}
-          >
-            <Button
-              css={css`
-                width: 100%;
-                border-radius: 4px;
-                border: 1px solid #1d252c;
-                color: var(--primary-text-color);
-                font-weight: 400;
-                font-size: 18px;
-                justify-content: flex-start;
-                margin: 10px 10px 30px;
-                padding: 20px 24px;
-                display: flex;
-                justify-content: space-between;
-              `}
-              variant={Button.VARIANT.LINK}
-              onClick={() => setIsCategoriesOverlayOpen(true)}
-            >
-              {getDisplayName('Filter by Category')}
-              <Icon
-                css={css`
-                  color: #1d252c;
-                  width: 20px;
-                  transform: rotate(-90deg);
-                  margin: -4px;
-                `}
-                name="fe-chevron-left"
-                size="120%"
-              />
-            </Button>
-            <Overlay
-              isOpen={isCategoriesOverlayOpen}
-              onCloseOverlay={closeCategoriesOverlay}
-            >
-              <div
-                css={css`
-                  --divider-color: #e4e5e6;
-
-                  border-radius: 5px;
-                  position: relative;
-                  width: 100%;
-                  margin: 30% auto 0;
-                  padding: 1rem;
-                  background: var(--primary-background-color);
-                `}
-              >
-                <h3
-                  css={css`
-                    padding: 0.5rem 0 0 0.5rem;
-                    font-size: 28px;
-                    line-height: 36px;
-                    margin-bottom: 12px;
-                    letter-spacing: -0.5px;
-                    font-weight: normal;
-                  `}
-                >
-                  Category
-                </h3>
-                <div
-                  css={css`
-                    max-height: 400px;
-                    padding-bottom: 3rem;
-                    overflow-y: scroll;
-                  `}
-                >
-                  {!loadComplete && <Spinner />}
-                  {loadComplete &&
-                    categoriesWithCount.map(({ displayName, value, count }) => (
-                      <Button
-                        type="button"
-                        key={value}
-                        variant={Button.VARIANT.PRIMARY}
-                        onClick={() => handleSearchAndCategory(value, search)}
-                        css={css`
-                          width: 100%;
-                          display: flex;
-                          justify-content: flex-start;
-                          color: var(--primary-text-color);
-                          border-radius: 3px;
-                          padding: 8px 12px;
-                          font-size: 18px;
-                          line-height: 54px;
-                          background: ${category === value
-                            ? 'var(--divider-color)'
-                            : 'none'};
-                          &:hover {
-                            background: var(--divider-color);
-                          }
-                        `}
-                      >
-                        {`${displayName} (${count})`}
-                      </Button>
-                    ))}
-                </div>
-                <div
-                  css={css`
-                    background: var(--divider-color);
-                    position: absolute;
-                    bottom: 0;
-                    left: 0;
-                    width: 100%;
-                    height: 4rem;
-                    border-bottom-right-radius: 5px;
-                    border-bottom-left-radius: 5px;
-                    display: flex;
-                    justify-content: flex-end;
-                    align-items: center;
-                  `}
-                >
-                  <Button
-                    css={css`
-                      height: 2rem;
-                      margin-right: 1rem;
-                    `}
-                    onClick={closeCategoriesOverlay}
-                    variant={Button.VARIANT.NORMAL}
-                  >
-                    Cancel
-                  </Button>
-                </div>
-              </div>
-            </Overlay>
-          </div>
-
+          <CategoryDropdown 
+            category={category}
+            categoriesWithCount={categoriesWithCount}
+            handleParam={handleParam}
+            loadComplete={loadComplete}
+          />
           {!category && !search && (
             <>
               {mostPopularQuickstarts.length > 0 && (
@@ -482,9 +228,9 @@ const QuickstartsPage = ({ data, location }) => {
                     `}
                   >
                     {!loadComplete && <Spinner />}
-                    {loadComplete && (
+                    { loadComplete &&
                       <Slider
-                        {...settings}
+                        {...indexSettings}
                         css={css`
                           display: flex;
                         `}
@@ -498,7 +244,7 @@ const QuickstartsPage = ({ data, location }) => {
                           />
                         ))}
                       </Slider>
-                    )}
+                    }
                   </div>
                 </>
               )}
@@ -532,8 +278,8 @@ const QuickstartsPage = ({ data, location }) => {
                 `}
               >
                 {!loadComplete && <Spinner />}
-                {loadComplete && (
-                  <Slider {...settings}>
+                { loadComplete &&
+                  <Slider {...indexSettings}>
                     {featuredQuickstarts.map((pack) => (
                       <QuickstartTile
                         key={pack.id}
@@ -542,7 +288,7 @@ const QuickstartsPage = ({ data, location }) => {
                       />
                     ))}
                   </Slider>
-                )}
+                }
               </div>
             </>
           )}
@@ -586,7 +332,7 @@ const QuickstartsPage = ({ data, location }) => {
             <span>
               Showing {filteredQuickstarts.length} results
               <span> for: </span>
-              <strong>{search || getDisplayName()}</strong>
+              <strong>{search || getDisplayName(category)}</strong>
             </span>
           </div>
           <div
@@ -654,41 +400,5 @@ export const pageQuery = graphql`
     }
   }
 `;
-
-const Label = ({ children, htmlFor }) => (
-  <label
-    htmlFor={htmlFor}
-    css={css`
-      display: block;
-      font-size: 1rem;
-      font-weight: 600;
-      margin-bottom: 0.5rem;
-      color: var(--primary-text-color);
-    `}
-  >
-    {children}
-  </label>
-);
-
-Label.propTypes = {
-  children: PropTypes.node,
-  htmlFor: PropTypes.string,
-};
-
-const FormControl = ({ children }) => (
-  <div
-    css={css`
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-    `}
-  >
-    {children}
-  </div>
-);
-
-FormControl.propTypes = {
-  children: PropTypes.node,
-};
 
 export default QuickstartsPage;
