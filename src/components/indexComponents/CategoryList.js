@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import { css } from '@emotion/react';
-import { Button } from '@newrelic/gatsby-theme-newrelic';
+import { Button, Spinner } from '@newrelic/gatsby-theme-newrelic';
 import { QUICKSTARTS_COLLAPSE_BREAKPOINT } from '@data/constants';
 
 const CategoryList = ({
@@ -9,6 +9,7 @@ const CategoryList = ({
   categoriesWithCount,
   handleSearchAndCategory,
   search,
+  loadComplete,
 }) => {
   return (
     <div
@@ -31,7 +32,8 @@ const CategoryList = ({
     >
       <FormControl>
         <Label htmlFor="quickstartCategory">Categories</Label>
-        {
+        {!loadComplete && <Spinner />}
+        {loadComplete &&
           categoriesWithCount.map(({ displayName, value, count }) => (
             <Button
               type="button"
@@ -111,6 +113,7 @@ CategoryList.propTypes = {
   categoriesWithCount: PropTypes.array,
   handleSearchAndCategory: PropTypes.func,
   search: PropTypes.string,
+  loadComplete: PropTypes.bool,
 };
 
 export default CategoryList;

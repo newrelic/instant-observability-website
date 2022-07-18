@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import { graphql } from 'gatsby';
 
@@ -22,7 +22,7 @@ import allFilteredQuickstarts from '@utils/allFilteredQuickstarts';
 import getDisplayName from '@utils/getDisplayName';
 // Components
 import Slider from 'react-slick';
-import { Button } from '@newrelic/gatsby-theme-newrelic';
+import { Button, Spinner } from '@newrelic/gatsby-theme-newrelic';
 import featherIcons from '../@newrelic/gatsby-theme-newrelic/icons/feather';
 import IOBanner from '@components/IOBanner';
 import IOSeo from '@components/IOSeo';
@@ -52,6 +52,14 @@ const QuickstartsPage = ({ data, location }) => {
     mostPopularQuickstarts,
     categoriesWithCount,
   } = allFilteredQuickstarts(data.allQuickstarts.nodes, search, category);
+
+  const [loadComplete, setLoadComplete] = useState(false);
+
+  useEffect(() => {
+    if (categoriesWithCount) {
+      setLoadComplete(true);
+    }
+  }, [categoriesWithCount]);
 
   const handleScroll = () => {
     const btn = document.getElementById('go-to-page-top-btn');
@@ -173,6 +181,7 @@ const QuickstartsPage = ({ data, location }) => {
             categoriesWithCount={categoriesWithCount}
             handleSearchAndCategory={handleSearchAndCategory}
             search={search}
+            loadComplete={loadComplete}
           />
         </aside>
         <div
@@ -185,6 +194,7 @@ const QuickstartsPage = ({ data, location }) => {
             category={category}
             categoriesWithCount={categoriesWithCount}
             handleParam={handleParam}
+            loadComplete={loadComplete}
           />
           {!category && !search && (
             <>
@@ -219,8 +229,8 @@ const QuickstartsPage = ({ data, location }) => {
                       height: ${TILE_HEIGHT};
                     `}
                   >
-                    
-                    { 
+                    {!loadComplete && <Spinner />}
+                    { loadComplete &&
                       <Slider
                         {...indexSettings}
                         css={css`
@@ -269,8 +279,8 @@ const QuickstartsPage = ({ data, location }) => {
                   height: ${TILE_HEIGHT};
                 `}
               >
-                
-                {
+                {!loadComplete && <Spinner />}
+                { loadComplete &&
                   <Slider {...indexSettings}>
                     {featuredQuickstarts.map((pack) => (
                       <QuickstartTile
