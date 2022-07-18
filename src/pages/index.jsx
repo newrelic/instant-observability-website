@@ -24,8 +24,8 @@ import SuperTiles from '@components/SuperTiles';
 import { css } from '@emotion/react';
 import { graphql } from 'gatsby';
 import featherIcons from '../@newrelic/gatsby-theme-newrelic/icons/feather';
-import CategoryList from '../components/CategoryList';
-import CategoryDropdown from '../components/indexComponents/CategoryDropdown';
+import CategoryList from '@components/indexComponents/CategoryList';
+import CategoryDropdown from '@components/indexComponents/CategoryDropdown';
 
 const COLUMN_BREAKPOINT = '1131px';
 // used to set the height of the Spinner to reduce layout shift on page load
