@@ -1,7 +1,6 @@
 import React from 'react';
 import QuickstartDataSources from '../QuickstartDataSources';
 import EmptyTab from '../EmptyTab';
-import { graphql } from 'gatsby';
 import { css } from '@emotion/react';
 import { quickstart } from '../../types';
 
