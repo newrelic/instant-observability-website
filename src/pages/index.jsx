@@ -56,9 +56,7 @@ const QuickstartsPage = ({ data, location }) => {
   const [loadComplete, setLoadComplete] = useState(false);
 
   useEffect(() => {
-    if (categoriesWithCount) {
       setLoadComplete(true);
-    }
   }, [categoriesWithCount]);
 
   const handleScroll = () => {

@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { css } from '@emotion/react';
 import { Button, Icon, Spinner } from '@newrelic/gatsby-theme-newrelic';
 import Overlay from '@components/Overlay';
@@ -11,9 +11,13 @@ const CategoryDropdown = ({
   category,
   categoriesWithCount,
   handleParam,
-  loadComplete,
 }) => {
   const [isCategoriesOverlayOpen, setIsCategoriesOverlayOpen] = useState(false);
+  const [loadComplete, setLoadComplete] = useState(false);
+
+  useEffect(() => {
+    setLoadComplete(true);
+  }, [categoriesWithCount]);
 
   const closeCategoriesOverlay = () => {
     setIsCategoriesOverlayOpen(false);
@@ -157,7 +161,6 @@ CategoryDropdown.propTypes = {
   category: PropTypes.string,
   categoriesWithCount: PropTypes.array,
   handleParam: PropTypes.func,
-  loadComplete: PropTypes.bool,
 };
 
 export default CategoryDropdown;

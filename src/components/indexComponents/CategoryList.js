@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { css } from '@emotion/react';
 import { Button, Spinner } from '@newrelic/gatsby-theme-newrelic';
 import { QUICKSTARTS_COLLAPSE_BREAKPOINT } from '@data/constants';
@@ -9,8 +9,13 @@ const CategoryList = ({
   categoriesWithCount,
   handleSearchAndCategory,
   search,
-  loadComplete,
 }) => {
+  const [loadComplete, setLoadComplete] = useState(false);
+
+  useEffect(() => {
+    setLoadComplete(true);
+  }, [categoriesWithCount]);
+
   return (
     <div
       css={css`
@@ -113,7 +118,6 @@ CategoryList.propTypes = {
   categoriesWithCount: PropTypes.array,
   handleSearchAndCategory: PropTypes.func,
   search: PropTypes.string,
-  loadComplete: PropTypes.bool,
 };
 
 export default CategoryList;
