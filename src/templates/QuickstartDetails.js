@@ -194,15 +194,18 @@ export const pageQuery = graphql`
       packUrl
 
       ...LandingBanner_quickstart
-      ...InstallButton_quickstart
 
       ...QuickstartDashboards_quickstart
+
       ...QuickstartAlerts_quickstart
+
       ...QuickstartDataSources_quickstart
 
       ...QuickstartOverview_quickstart
-      ...QuickstartHowToUse_quickstart
+
       ...LandingPageFooter_quickstart
+
+      ...InstallButton_quickstart
     }
   }
 `;
