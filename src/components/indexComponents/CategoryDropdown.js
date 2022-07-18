@@ -13,7 +13,7 @@ const CategoryDropdown = ({ category, categoriesWithCount, handleParam }) => {
 
   useEffect(() => {
     setLoadComplete(true);
-  }, [categoriesWithCount]);
+  }, []);
 
   const closeCategoriesOverlay = () => {
     setIsCategoriesOverlayOpen(false);

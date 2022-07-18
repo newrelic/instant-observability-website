@@ -14,7 +14,7 @@ const CategoryList = ({
 
   useEffect(() => {
     setLoadComplete(true);
-  }, [categoriesWithCount]);
+  }, []);
 
   return (
     <div

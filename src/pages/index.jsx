@@ -57,7 +57,7 @@ const QuickstartsPage = ({ data, location }) => {
 
   useEffect(() => {
       setLoadComplete(true);
-  }, [categoriesWithCount]);
+  }, []);
 
   const handleScroll = () => {
     const btn = document.getElementById('go-to-page-top-btn');
