@@ -4,6 +4,7 @@ import pluralize from 'pluralize';
 import Intro from './Intro';
 import { quickstart } from '../types';
 import Slider from 'react-slick';
+import { graphql } from 'gatsby';
 import { animated } from 'react-spring';
 import RightArrowSVG from './Icons/RightArrowSVG';
 import LeftArrowSVG from './Icons/LeftArrowSVG';
@@ -150,5 +151,20 @@ const QuickstartDashboards = ({ quickstart }) => {
 QuickstartDashboards.propTypes = {
   quickstart: quickstart.isRequired,
 };
+
+export const fragmentQuery = graphql`
+  fragment QuickstartDashboards_quickstart on Quickstarts {
+    dashboards {
+      description
+      name
+      screenshots {
+        publicURL
+        childImageSharp {
+          gatsbyImageData(placeholder: BLURRED, formats: [AUTO, WEBP])
+        }
+      }
+    }
+  }
+`;
 
 export default QuickstartDashboards;

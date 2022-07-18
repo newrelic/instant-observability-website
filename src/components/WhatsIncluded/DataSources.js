@@ -1,6 +1,7 @@
 import React from 'react';
 import QuickstartDataSources from '../QuickstartDataSources';
 import EmptyTab from '../EmptyTab';
+import { graphql } from 'gatsby';
 import { css } from '@emotion/react';
 import { quickstart } from '../../types';
 
@@ -54,5 +55,18 @@ const DataSources = ({ quickstart }) => {
 DataSources.propTypes = {
   quickstart,
 };
+
+export const fragmentQuery = graphql`
+  fragment DataSources_quickstart on Quickstarts {
+    title
+    packUrl
+    documentation {
+      name
+      url
+      description
+    }
+    ...QuickstartDataSources_quickstart
+  }
+`;
 
 export default DataSources;

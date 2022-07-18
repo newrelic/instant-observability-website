@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { graphql } from 'gatsby';
 import { Link } from '@newrelic/gatsby-theme-newrelic';
 import { css } from '@emotion/react';
 import { quickstart } from '../types';
@@ -123,5 +124,11 @@ QuickstartHowToUse.propTypes = {
   trackQuickstart: PropTypes.func,
   layoutContentSpacing: PropTypes.object,
 };
+
+export const fragmentQuery = graphql`
+  fragment QuickstartHowToUse_quickstart on Quickstarts {
+    ...InstallButton_quickstart
+  }
+`;
 
 export default QuickstartHowToUse;

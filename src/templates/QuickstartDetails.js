@@ -230,55 +230,15 @@ export const pageQuery = graphql`
   query($id: String!) {
     quickstarts(id: { eq: $id }) {
       id
-      name
       title
-      relatedResources(limit: 5) {
-        title
-        url
-      }
-      level
       keywords
-      description
-      summary
-      logoSvg {
-        ext
-        publicURL
-      }
-      logo {
-        childImageSharp {
-          gatsbyImageData(
-            height: 45
-            placeholder: BLURRED
-            formats: [AUTO, WEBP]
-          )
-        }
-      }
-      packUrl
-      dashboards {
-        description
-        name
-        screenshots {
-          publicURL
-          childImageSharp {
-            gatsbyImageData(placeholder: BLURRED, formats: [AUTO, WEBP])
-          }
-        }
-      }
-      alerts {
-        details
-        name
-        type
-      }
-      documentation {
-        name
-        url
-        description
-      }
-      authors
-      installPlans {
-        id
-        name
-      }
+      ...LandingBanner_quickstart
+      ...Dashboards_quickstart
+      ...Alerts_quickstart
+      ...DataSources_quickstart
+      ...QuickstartOverview_quickstart
+      ...QuickstartHowToUse_quickstart
+      ...LandingPageFooter_quickstart
     }
   }
 `;

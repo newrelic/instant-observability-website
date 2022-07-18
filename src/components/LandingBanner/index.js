@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 
 import Breadcrumbs from '../Breadcrumbs';
 import InstallButton from '../InstallButton';
+import { graphql } from 'gatsby';
 import { css } from '@emotion/react';
 import { quickstart } from '../../types';
 import QuickstartImg from '../QuickstartImg';
@@ -230,5 +231,24 @@ LandingBanner.propTypes = {
   className: PropTypes.string,
   location: PropTypes.object.isRequired,
 };
+
+export const fragmentQuery = graphql`
+  fragment LandingBanner_quickstart on Quickstarts {
+    name
+    title
+    summary
+    logoSvg {
+      ext
+      publicURL
+    }
+    logo {
+      childImageSharp {
+        gatsbyImageData(height: 45, placeholder: BLURRED, formats: [AUTO, WEBP])
+      }
+    }
+
+    ...InstallButton_quickstart
+  }
+`;
 
 export default LandingBanner;

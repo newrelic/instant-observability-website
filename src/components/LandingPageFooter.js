@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { graphql } from 'gatsby';
 import { Link, Button } from '@newrelic/gatsby-theme-newrelic';
 import { css } from '@emotion/react';
 import { quickstart } from '../types';
@@ -221,5 +222,17 @@ LandingPageFooter.propTypes = {
   trackQuickstart: PropTypes.func,
   tessenSupportTrack: PropTypes.func,
 };
+
+export const fragmentQuery = graphql`
+  fragment LandingPageFooter_quickstart on Quickstarts {
+    packUrl
+    level
+    authors
+    relatedResources(limit: 5) {
+      title
+      url
+    }
+  }
+`;
 
 export default LandingPageFooter;
