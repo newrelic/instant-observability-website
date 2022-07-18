@@ -1,21 +1,23 @@
 import PropTypes from 'prop-types';
-import React from 'react';
+import React, { useState } from 'react';
 import { css } from '@emotion/react';
-import { Button, Icon, Spinner } from '@newrelic/gatsby-theme-newrelic';
+import { Button, Icon } from '@newrelic/gatsby-theme-newrelic';
 import Overlay from '@components/Overlay';
 
+import getDisplayName from '@utils/getDisplayName';
 import { QUICKSTARTS_COLLAPSE_BREAKPOINT } from '@data/constants';
 
 const CategoryDropdown = ({
-  loadComplete,
   category,
   categoriesWithCount,
-  setIsCategoriesOverlayOpen,
-  isCategoriesOverlayOpen,
-  closeCategoriesOverlay,
-  getDisplayName,
   handleParam,
 }) => {
+  const [isCategoriesOverlayOpen, setIsCategoriesOverlayOpen] = useState(false);
+  
+  const closeCategoriesOverlay = () => {
+    setIsCategoriesOverlayOpen(false);
+  };
+
   return (
     <div
       css={css`
@@ -42,7 +44,7 @@ const CategoryDropdown = ({
         variant={Button.VARIANT.LINK}
         onClick={() => setIsCategoriesOverlayOpen(true)}
       >
-        {getDisplayName('Filter by Category')}
+        {getDisplayName('')}
         <Icon
           css={css`
             color: #1d252c;
@@ -89,8 +91,7 @@ const CategoryDropdown = ({
               overflow-y: scroll;
             `}
           >
-            {!loadComplete && <Spinner />}
-            {loadComplete &&
+            {
               categoriesWithCount.map(({ displayName, value, count }) => (
                 <Button
                   type="button"
@@ -151,13 +152,8 @@ const CategoryDropdown = ({
 };
 
 CategoryDropdown.propTypes = {
-  loadComplete: PropTypes.bool,
   category: PropTypes.string,
   categoriesWithCount: PropTypes.array,
-  setIsCategoriesOverlayOpen: PropTypes.func,
-  isCategoriesOverlayOpen: PropTypes.bool,
-  closeCategoriesOverlay: PropTypes.func,
-  getDisplayName: PropTypes.func,
   handleParam: PropTypes.func,
 };
 

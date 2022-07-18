@@ -1,29 +1,33 @@
+import React, { useEffect } from 'react';
+import PropTypes from 'prop-types';
+import { graphql } from 'gatsby';
+
+// Styles
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import '@components/styles.scss';
-
-import { Button, Spinner } from '@newrelic/gatsby-theme-newrelic';
-import React, { useEffect, useState } from 'react';
-
-import CATEGORIES from '@data/instant-observability-categories';
-import useSearchAndCategory from '@hooks/useSearchAndCategory';
-import allFilteredQuickstarts from '@utils/allFilteredQuickstarts';
-import IOBanner from '@components/IOBanner';
-import IOSeo from '@components/IOSeo';
-import PropTypes from 'prop-types';
+import { css } from '@emotion/react';
+// Data
 import {
   QUICKSTARTS_COLLAPSE_BREAKPOINT,
   TRIPLE_COLUMN_BREAKPOINT,
   DOUBLE_COLUMN_BREAKPOINT,
   SINGLE_COLUMN_BREAKPOINT,
 } from '@data/constants';
-import { indexSettings } from '../data/slick-settings';
-import QuickstartTile from '@components/QuickstartTile';
+import { indexSettings } from '@data/slick-settings';
+// Hooks
+import useSearchAndCategory from '@hooks/useSearchAndCategory';
+// Utils
+import allFilteredQuickstarts from '@utils/allFilteredQuickstarts';
+import getDisplayName from '@utils/getDisplayName';
+// Components
 import Slider from 'react-slick';
-import SuperTiles from '@components/SuperTiles';
-import { css } from '@emotion/react';
-import { graphql } from 'gatsby';
+import { Button } from '@newrelic/gatsby-theme-newrelic';
 import featherIcons from '../@newrelic/gatsby-theme-newrelic/icons/feather';
+import IOBanner from '@components/IOBanner';
+import IOSeo from '@components/IOSeo';
+import QuickstartTile from '@components/QuickstartTile';
+import SuperTiles from '@components/SuperTiles';
 import CategoryList from '@components/indexComponents/CategoryList';
 import CategoryDropdown from '@components/indexComponents/CategoryDropdown';
 
@@ -48,33 +52,6 @@ const QuickstartsPage = ({ data, location }) => {
     mostPopularQuickstarts,
     categoriesWithCount,
   } = allFilteredQuickstarts(data.allQuickstarts.nodes, search, category);
-
-  const [isCategoriesOverlayOpen, setIsCategoriesOverlayOpen] = useState(false);
-  // variable to check if the page load completed
-  const [loadComplete, setLoadComplete] = useState(false);
-
-  // mark the value as true, if the page is loaded
-  useEffect(() => {
-    if (categoriesWithCount) {
-      setLoadComplete(true);
-    }
-  }, [categoriesWithCount]);
-
-  const closeCategoriesOverlay = () => {
-    setIsCategoriesOverlayOpen(false);
-  };
-
-  /**
-   * Finds display name for selected category.
-   * @returns {String} Display name for results found.
-   */
-  const getDisplayName = (defaultName = 'All quickstarts') => {
-    const found = CATEGORIES.find((cat) => cat.value === category);
-
-    if (!found || !found.value) return defaultName;
-
-    return found.displayName;
-  };
 
   const handleScroll = () => {
     const btn = document.getElementById('go-to-page-top-btn');
@@ -192,7 +169,6 @@ const QuickstartsPage = ({ data, location }) => {
           `}
         >
           <CategoryList
-            loadComplete={loadComplete}
             category={category}
             categoriesWithCount={categoriesWithCount}
             handleSearchAndCategory={handleSearchAndCategory}
@@ -206,13 +182,8 @@ const QuickstartsPage = ({ data, location }) => {
           `}
         >
           <CategoryDropdown 
-            loadComplete={loadComplete}
             category={category}
             categoriesWithCount={categoriesWithCount}
-            setIsCategoriesOverlayOpen={setIsCategoriesOverlayOpen}
-            isCategoriesOverlayOpen={isCategoriesOverlayOpen}
-            closeCategoriesOverlay={closeCategoriesOverlay}
-            getDisplayName={getDisplayName}
             handleParam={handleParam}
           />
           {!category && !search && (
@@ -248,8 +219,8 @@ const QuickstartsPage = ({ data, location }) => {
                       height: ${TILE_HEIGHT};
                     `}
                   >
-                    {!loadComplete && <Spinner />}
-                    {loadComplete && (
+                    
+                    { 
                       <Slider
                         {...indexSettings}
                         css={css`
@@ -265,7 +236,7 @@ const QuickstartsPage = ({ data, location }) => {
                           />
                         ))}
                       </Slider>
-                    )}
+                    }
                   </div>
                 </>
               )}
@@ -298,8 +269,8 @@ const QuickstartsPage = ({ data, location }) => {
                   height: ${TILE_HEIGHT};
                 `}
               >
-                {!loadComplete && <Spinner />}
-                {loadComplete && (
+                
+                {
                   <Slider {...indexSettings}>
                     {featuredQuickstarts.map((pack) => (
                       <QuickstartTile
@@ -309,7 +280,7 @@ const QuickstartsPage = ({ data, location }) => {
                       />
                     ))}
                   </Slider>
-                )}
+                }
               </div>
             </>
           )}
@@ -353,7 +324,7 @@ const QuickstartsPage = ({ data, location }) => {
             <span>
               Showing {filteredQuickstarts.length} results
               <span> for: </span>
-              <strong>{search || getDisplayName()}</strong>
+              <strong>{search || getDisplayName(category)}</strong>
             </span>
           </div>
           <div
