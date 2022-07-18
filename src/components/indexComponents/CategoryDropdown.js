@@ -7,11 +7,7 @@ import Overlay from '@components/Overlay';
 import getDisplayName from '@utils/getDisplayName';
 import { QUICKSTARTS_COLLAPSE_BREAKPOINT } from '@data/constants';
 
-const CategoryDropdown = ({
-  category,
-  categoriesWithCount,
-  handleParam,
-}) => {
+const CategoryDropdown = ({ category, categoriesWithCount, handleParam }) => {
   const [isCategoriesOverlayOpen, setIsCategoriesOverlayOpen] = useState(false);
   const [loadComplete, setLoadComplete] = useState(false);
 
