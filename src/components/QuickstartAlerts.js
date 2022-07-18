@@ -74,7 +74,6 @@ QuickstartAlerts.propTypes = {
 
 export const fragmentQuery = graphql`
   fragment QuickstartAlerts_quickstart on Quickstarts {
-    title
     alerts {
       details
       name

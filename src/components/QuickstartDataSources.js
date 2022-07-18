@@ -96,7 +96,6 @@ QuickstartDataSources.propTypes = {
 
 export const fragmentQuery = graphql`
   fragment QuickstartDataSources_quickstart on Quickstarts {
-    title
     documentation {
       name
       url
