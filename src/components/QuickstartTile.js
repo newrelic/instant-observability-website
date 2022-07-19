@@ -229,7 +229,6 @@ const QuickstartTile = ({
             }
           `}
           name="fe-arrow-right"
-          size="120%"
         />
       </div>
     </Surface>
