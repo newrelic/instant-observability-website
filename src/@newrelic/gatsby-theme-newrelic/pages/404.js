@@ -12,6 +12,8 @@ import {
 
 import QuickstartLayout from '../../../layouts/QuickStartLayout';
 
+const uuidRegex = /^[0-9a-fA-F]{8}\b-[0-9a-fA-F]{4}\b-[0-9a-fA-F]{4}\b-[0-9a-fA-F]{4}\b-[0-9a-fA-F]{12}$/;
+
 const NotFoundPage = ({ location, pageContext: { swiftypeEngineKey } }) => {
   const [searchTerm, setSearchTerm] = useState(null);
   const [searchResult, setSearchResult] = useState(null);
@@ -60,7 +62,13 @@ const NotFoundPage = ({ location, pageContext: { swiftypeEngineKey } }) => {
   }, [searchTerm, swiftypeEngineKey]);
 
   useEffect(() => {
-    setSearchTerm(location.pathname.split('/').join(' '));
+    setSearchTerm(
+      location.pathname
+        .split('/')
+        .filter((p) => p !== 'instant-observability')
+        .filter((p) => !uuidRegex.test(p))
+        .join(' ')
+    );
   }, [location.pathname]);
 
   useEffect(() => {
