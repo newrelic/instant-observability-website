@@ -1,3 +1,10 @@
+## [1.7.1](https://github.com/newrelic/instant-observability-website/compare/v1.7.0...v1.7.1) (2022-07-19)
+
+
+### Bug Fixes
+
+* set content policy header for all pages ([8735eaf](https://github.com/newrelic/instant-observability-website/commit/8735eafe039f717b5d8e5d76d7e37a8368acb947))
+
 # [1.7.0](https://github.com/newrelic/instant-observability-website/compare/v1.6.0...v1.7.0) (2022-07-14)
 
 
