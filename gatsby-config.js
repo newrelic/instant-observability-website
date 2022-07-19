@@ -2,7 +2,6 @@ const quote = (str) => `"${str}"`;
 const resolveQuickstartSlug = require('./src/utils/resolveQuickstartSlug');
 
 module.exports = {
-  pathPrefix: `/instant-observability`,
   trailingSlash: 'never',
   flags: {
     DEV_SSR: true,
@@ -143,7 +142,6 @@ module.exports = {
       resolve: 'gatsby-plugin-gatsby-cloud',
       options: {
         allPageHeaders: ['Referrer-Policy: no-referrer-when-downgrade'],
-        mergeCachingHeaders: true,
       },
     },
   ],
