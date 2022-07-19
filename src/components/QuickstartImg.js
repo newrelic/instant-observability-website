@@ -64,6 +64,7 @@ const QuickstartImg = ({ className, packName, imageNode, svgNode }) => {
             max-height: 100%;
           `}
           className={className}
+          imgStyle={{ 'object-fit': 'contain' }}
           image={image}
           alt={packName}
         />
