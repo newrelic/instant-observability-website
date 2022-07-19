@@ -1747,6 +1747,68 @@
     ]
   },
   {
+    "title": "Battlesnake",
+    "name": "battlesnake",
+    "description": "[Battlesnake](https://play.battlesnake.com/) is a multi-player programming game played by developers all over the world. All you need to play is a live web server that implements the [Battlesnake API](https://docs.battlesnake.com/).\n\nWith New Relic, you can monitor you Battlesnake [server](https://docs.newrelic.com/docs/infrastructure/infrastructure-monitoring/get-started/get-started-infrastructure-monitoring/) and [web application](https://docs.newrelic.com/docs/apm/new-relic-apm/getting-started/introduction-apm). This quickstart includes a few helpful dashboards to ensure your server is compliant with the game's server requirements and your Battlesnake is set up for success!\n\nAdditional features coming soon!",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/battlesnake",
+    "id": "63a65857-a25e-4654-9174-928e5894b3b9",
+    "level": "NEW_RELIC",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/battlesnake/logo.png",
+    "summary": "Battlesnake is a multi-player programming game played by developers all over the world. All you need to play is a live web server that implements the Battlesnake API.",
+    "websiteUrl": null,
+    "keywords": [
+      "game",
+      "infrastructure",
+      "snake",
+      "battlesnake"
+    ],
+    "authors": [
+      "New Relic",
+      "Zack Stickles (New Relic)",
+      "Alec Swanson (New Relic)"
+    ],
+    "dashboards": [
+      {
+        "name": "Battlesnake Server Status",
+        "description": "A dashboard to monitor your Battlesnake server's performance. It's important to keep all responses to the `/move` endpoint under 500ms. Furthermore, it's possible that your snake may be in multiple concurrent matches at the same time. It's important to make sure you server and web application are running smoothly to keep you in the game!",
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/battlesnake-server-status/battlesnake-server-status.png"
+        ]
+      },
+      {
+        "name": "Battlesnake Performance",
+        "description": "Monitor your Battlesnake's performance and see how it stacks up against your competition!",
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/battlesnake-performance/battlesnake-performance.png"
+        ]
+      },
+      {
+        "name": "Battlesnake Game Tracking",
+        "description": "Monitor your Battlesnake's performance and see how it stacks up against your competition!",
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/battlesnake-game-tracking/battlesnake-game-tracking-1.png"
+        ]
+      }
+    ],
+    "alerts": [],
+    "documentation": [
+      {
+        "name": "Battlesnake installation docs",
+        "description": "With New Relic, you can monitor Battlesnake server and web application.\n",
+        "url": "https://docs.newrelic.com/docs/data-apis/custom-data/custom-events/apm-report-custom-events-attributes/"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "Custom Attributes",
+        "id": "battlesnake"
+      }
+    ]
+  },
+  {
     "title": "AWS MQ",
     "name": "aws-mq",
     "description": "## What is AWS MQ?\n\nMessage brokering service for Apache ActiveMQ managed by AWS.\n\n### Get started!\n\nStart monitoring AWS MQ by connecting Amazon Web Services (AWS) to New Relic!\n\nCheck out our AWS MQ documentation to instrument your cloud service and manage the stability, scalability, and reliability of your systems with New Relic's infrastructure monitoring capabilities.\n\n### More info\n\nCheck out the [documentation](https://docs.newrelic.com/docs/infrastructure/amazon-integrations/aws-integrations-list/aws-mq-integration/) to learn more about New Relic monitoring for AWS MQ.",
@@ -3608,57 +3670,6 @@
       {
         "name": "Alert Quality Management",
         "id": "third-party-alert-quality-management"
-      }
-    ]
-  },
-  {
-    "title": "Battlesnake",
-    "name": "battlesnake",
-    "description": "[Battlesnake](https://play.battlesnake.com/) is a multi-player programming game played by developers all over the world. All you need to play is a live web server that implements the [Battlesnake API](https://docs.battlesnake.com/).\n\nWith New Relic, you can monitor you Battlesnake [server](https://docs.newrelic.com/docs/infrastructure/infrastructure-monitoring/get-started/get-started-infrastructure-monitoring/) and [web application](https://docs.newrelic.com/docs/apm/new-relic-apm/getting-started/introduction-apm). This quickstart includes a few helpful dashboards to ensure your server is compliant with the game's server requirements and your Battlesnake is set up for success!\n\nAdditional features coming soon!",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/battlesnake",
-    "id": "63a65857-a25e-4654-9174-928e5894b3b9",
-    "level": "NEW_RELIC",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/battlesnake/logo.png",
-    "summary": "Battlesnake is a multi-player programming game played by developers all over the world. All you need to play is a live web server that implements the Battlesnake API.",
-    "websiteUrl": null,
-    "keywords": [],
-    "authors": [
-      "New Relic",
-      "Zack Stickles (New Relic)",
-      "Alec Swanson (New Relic)"
-    ],
-    "dashboards": [
-      {
-        "name": "Battlesnake Server Status",
-        "description": "A dashboard to monitor your Battlesnake server's performance. It's important to keep all responses to the `/move` endpoint under 500ms. Furthermore, it's possible that your snake may be in multiple concurrent matches at the same time. It's important to make sure you server and web application are running smoothly to keep you in the game!",
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/battlesnake-server-status/battlesnake-server-status.png"
-        ]
-      },
-      {
-        "name": "Battlesnake Performance",
-        "description": "Monitor your Battlesnake's performance and see how it stacks up against your competition!",
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/battlesnake-performance/battlesnake-performance.png"
-        ]
-      },
-      {
-        "name": "Battlesnake Game Tracking",
-        "description": "Monitor your Battlesnake's performance and see how it stacks up against your competition!",
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/battlesnake-game-tracking/battlesnake-game-tracking-1.png"
-        ]
-      }
-    ],
-    "alerts": [],
-    "documentation": [],
-    "installPlans": [
-      {
-        "name": "Custom Attributes",
-        "id": "battlesnake"
       }
     ]
   },
