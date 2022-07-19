@@ -204,4 +204,16 @@ const displaySearchResults = (term, results) => {
     </div>
   );
 };
+
+displaySearchResults.propTypes = {
+  term: PropTypes.string.isRequired,
+  results: PropTypes.arrayOf(
+    PropTypes.shape({
+      url: PropTypes.string.isRequired,
+      title: PropTypes.string.isRequired,
+      type: PropTypes.string,
+    })
+  ),
+};
+
 export default NotFoundPage;
