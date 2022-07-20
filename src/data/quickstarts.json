@@ -4198,19 +4198,19 @@
         ]
       },
       {
-        "name": "Redis Enterprise Database CRDT",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/active-active/active_active01.png"
-        ]
-      },
-      {
         "name": "Redis Enterprise Database Metrics",
         "description": null,
         "url": null,
         "screenshots": [
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/database/database01.png"
+        ]
+      },
+      {
+        "name": "Redis Enterprise Database CRDT",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/active-active/active_active01.png"
         ]
       }
     ],
@@ -6598,6 +6598,57 @@
       {
         "name": "Azure-Infrastructure-Monitoring",
         "id": "azure-infrastructure-monitoring"
+      }
+    ]
+  },
+  {
+    "title": "DBmarlin",
+    "name": "dbmarlin",
+    "description": "The DBmarlin quickstart allows you to get visibility into the performance and availability of your database services from within New Relic.\n\nTo get started with DBmarlin, visit the [DBmarlin introduction page](https://docs.dbmarlin.com/docs/DBmarlin/introduction).\n\n# About DBmarlin\nDBmarlin monitors database performance, tracks changes and helps your databases run fast.\n\nIt provides an easy-to-use and consistent way to monitor CockroachDB, DB2, MariaDB, MySQL, Oracle, PostgreSQL and SQL Server, self-hosted or in the cloud.\n\nIt captures SQL statement text and wait events so you can see exactly where the time is spent executing SQL within your database.\n\nIt auto-detects changes to schema objects, database parameters and execution plans so you can see their impact on performance.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/dbmarlin",
+    "id": "a0daa1f8-99de-41ba-b7cb-7dd87c1bf7f2",
+    "level": "COMMUNITY",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/dbmarlin/logo.svg",
+    "summary": "View database performance from within New Relic with this integration with DBmarlin.",
+    "websiteUrl": null,
+    "keywords": [
+      "database",
+      "performance",
+      "availability",
+      "cockroach",
+      "db2",
+      "mysql",
+      "maria",
+      "oracle",
+      "postgres",
+      "sql",
+      "newrelic partner"
+    ],
+    "authors": [
+      "DBmarlin"
+    ],
+    "dashboards": [
+      {
+        "name": "DBmarlin dashboard",
+        "description": "See where your databases were spending their time. View wait events and top SQL.",
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/dbmarlin/dbmarlin-dashboard01.png"
+        ]
+      }
+    ],
+    "alerts": [],
+    "documentation": [
+      {
+        "name": "Installation docs",
+        "description": "Installation instructions for DBmarlin and the DBmarlin quickstart.",
+        "url": "https://docs.dbmarlin.com/docs/integrations/newrelic"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "dbmarlin",
+        "id": "third-party-dbmarlin"
       }
     ]
   },
@@ -13234,19 +13285,19 @@
     ],
     "dashboards": [
       {
-        "name": "Lacework Anomaly Detections",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/lacework-anomaly-detections/lacework-anomaly-detections.png"
-        ]
-      },
-      {
         "name": "Lacework Security Overview",
         "description": null,
         "url": null,
         "screenshots": [
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/lacework-security-overview/lacework-security-overview.png"
+        ]
+      },
+      {
+        "name": "Lacework Anomaly Detections",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/lacework-anomaly-detections/lacework-anomaly-detections.png"
         ]
       },
       {
@@ -16218,14 +16269,6 @@
     ],
     "dashboards": [
       {
-        "name": "Catchpoint-Recent Errors",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/catchpoint-recent-errors/Catchpoint-Recent_Errors.png"
-        ]
-      },
-      {
         "name": "Catchpoint-Test Times",
         "description": null,
         "url": null,
@@ -16239,6 +16282,14 @@
         "url": null,
         "screenshots": [
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/catchpoint-response-size/Catchpoint-Response_Size.png"
+        ]
+      },
+      {
+        "name": "Catchpoint-Recent Errors",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/catchpoint-recent-errors/Catchpoint-Recent_Errors.png"
         ]
       },
       {
@@ -22328,6 +22379,14 @@
         ]
       },
       {
+        "name": "GCP Integrations Data Ingest Analysis",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/gcp-integrations-data-ingest-analysis/gcp-integrations-data-ingest-analysis.png"
+        ]
+      },
+      {
         "name": "AWS Integrations Data Ingest Analysis",
         "description": null,
         "url": null,
@@ -22341,14 +22400,6 @@
         "url": null,
         "screenshots": [
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/azure-integrations-data-ingest-analysis/azure-integrations-data-ingest-analysis.png"
-        ]
-      },
-      {
-        "name": "GCP Integrations Data Ingest Analysis",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/gcp-integrations-data-ingest-analysis/gcp-integrations-data-ingest-analysis.png"
         ]
       }
     ],
@@ -23182,19 +23233,19 @@
     ],
     "dashboards": [
       {
-        "name": "Browser Traffic Analysis",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/traffic-analysis/traffic_analysis.png"
-        ]
-      },
-      {
         "name": "JavaScript Errors",
         "description": null,
         "url": null,
         "screenshots": [
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/javascript-errors/javascript_errors.png"
+        ]
+      },
+      {
+        "name": "Browser Traffic Analysis",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/traffic-analysis/traffic_analysis.png"
         ]
       },
       {
