@@ -1,6 +1,7 @@
 import React from 'react';
 import { css } from '@emotion/react';
 import pluralize from 'pluralize';
+import { graphql } from 'gatsby';
 import { Surface } from '@newrelic/gatsby-theme-newrelic';
 import Intro from './Intro';
 import { quickstart } from '../types';
@@ -70,5 +71,14 @@ const QuickstartAlerts = ({ quickstart }) => (
 QuickstartAlerts.propTypes = {
   quickstart: quickstart.isRequired,
 };
+
+export const fragmentQuery = graphql`
+  fragment QuickstartAlerts_quickstart on Quickstarts {
+    alerts {
+      details
+      name
+    }
+  }
+`;
 
 export default QuickstartAlerts;
