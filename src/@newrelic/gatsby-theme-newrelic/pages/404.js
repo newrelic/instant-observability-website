@@ -20,45 +20,14 @@ const NotFoundPage = ({ location, pageContext: { swiftypeEngineKey } }) => {
   const tessen = useTessen();
 
   const getSearchResults = useCallback(async () => {
-    const search = async () => {
-      const res = await fetch(
-        'https://search-api.swiftype.com/api/v1/public/engines/search.json',
-        {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify({
-            q: searchTerm,
-            engine_key: swiftypeEngineKey,
-            per_page: 5,
-            filters: {
-              page: {
-                type: [`docs`, `developers`, `opensource`, `quickstarts`],
-                document_type: [
-                  '!views_page_menu',
-                  '!term_page_api_menu',
-                  '!term_page_landing_page',
-                ],
-              },
-            },
-          }),
-        }
-      );
-
-      const { records } = await res.json();
-
-      return records.page;
-    };
-
+    let trimmedResults = null;
     if (searchTerm !== null) {
-      const results = await search();
-      const trimmedResults = results.map((r) => {
+      const results = await search(searchTerm, swiftypeEngineKey);
+      trimmedResults = results.map((r) => {
         return { url: r.url, title: r.title, type: r.type };
       });
-
-      setSearchResult(trimmedResults);
     }
+    setSearchResult(trimmedResults);
   }, [searchTerm, swiftypeEngineKey]);
 
   useEffect(() => {
@@ -222,6 +191,49 @@ displaySearchResults.propTypes = {
       type: PropTypes.string,
     })
   ),
+};
+
+const search = async (searchTerm, token) => {
+  try {
+    const res = await fetch(
+      'https://search-api.swiftype.com/api/v1/public/engines/search.json',
+      {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          q: searchTerm,
+          engine_key: token,
+          per_page: 5,
+          filters: {
+            page: {
+              type: [`docs`, `developers`, `opensource`, `quickstarts`],
+              document_type: [
+                '!views_page_menu',
+                '!term_page_api_menu',
+                '!term_page_landing_page',
+              ],
+            },
+          },
+        }),
+      }
+    );
+
+    if (!res.ok) {
+      throw new Error(
+        `Could not fetch related pages. ${res.status} ${res.statusText}`
+      );
+    }
+
+    const { records } = await res.json();
+
+    return records.page;
+  } catch (err) {
+    console.error(err);
+
+    return [];
+  }
 };
 
 export default NotFoundPage;
