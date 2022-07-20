@@ -1,7 +1,6 @@
 import React from 'react';
 import { css } from '@emotion/react';
 import pluralize from 'pluralize';
-import { graphql } from 'gatsby';
 import { Surface, Link, useTessen } from '@newrelic/gatsby-theme-newrelic';
 import Intro from './Intro';
 import { quickstart } from '../types';
@@ -93,15 +92,5 @@ const QuickstartDataSources = ({ quickstart }) => {
 QuickstartDataSources.propTypes = {
   quickstart: quickstart.isRequired,
 };
-
-export const fragmentQuery = graphql`
-  fragment QuickstartDataSources_quickstart on Quickstarts {
-    documentation {
-      name
-      url
-      description
-    }
-  }
-`;
 
 export default QuickstartDataSources;

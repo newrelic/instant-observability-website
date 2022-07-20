@@ -1,5 +1,4 @@
 import React from 'react';
-import { graphql } from 'gatsby';
 import { css } from '@emotion/react';
 import { quickstart } from '../types';
 import Markdown from './Markdown';
@@ -66,11 +65,5 @@ const QuickstartOverview = ({ quickstart }) => {
 QuickstartOverview.propTypes = {
   quickstart: quickstart.isRequired,
 };
-
-export const fragmentQuery = graphql`
-  fragment QuickstartOverview_quickstart on Quickstarts {
-    description
-  }
-`;
 
 export default QuickstartOverview;
