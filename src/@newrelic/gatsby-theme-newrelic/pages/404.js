@@ -230,8 +230,13 @@ const search = async (searchTerm, token) => {
 
     return records.page;
   } catch (err) {
-    console.error(err);
-
+    const nr = window.newrelic;
+    if (nr) {
+      nr.noticeError(err);
+    } else {
+      // eslint-disable-next-line no-console
+      console.error(err);
+    }
     return [];
   }
 };
