@@ -1,3 +1,10 @@
+# [1.8.0](https://github.com/newrelic/instant-observability-website/compare/v1.7.1...v1.8.0) (2022-07-20)
+
+
+### Features
+
+* upgrade theme to 6.8.0 ([a16f087](https://github.com/newrelic/instant-observability-website/commit/a16f08746d3082e1db7700f1ca9f9f9bbaf28cd3))
+
 ## [1.7.1](https://github.com/newrelic/instant-observability-website/compare/v1.7.0...v1.7.1) (2022-07-19)
 
 
