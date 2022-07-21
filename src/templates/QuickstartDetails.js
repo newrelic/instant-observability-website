@@ -112,18 +112,7 @@ const QuickstartDetails = ({ data, location }) => {
           }
         `}
       >
-        <LandingBanner
-          css={css`
-            padding: 0 var(--site-content-padding);
-
-            @media screen and (max-width: 920px) {
-              margin: 0 0 1rem 0;
-              padding: 0 var(--site-content-padding);
-            }
-          `}
-          quickstart={quickstart}
-          location={location}
-        />
+       
       </PageLayout.Header>
 
       <Layout.Content>
