@@ -309,8 +309,8 @@
         "url": null,
         "screenshots": [
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/php/php01.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/php/php.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/php/php02.png"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/php/php02.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/php/php.png"
         ]
       }
     ],
@@ -372,9 +372,9 @@
         "description": null,
         "url": null,
         "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/dalli/Dalli.png",
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/dalli/Dalli2.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/dalli/Dalli3.png"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/dalli/Dalli3.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/dalli/Dalli.png"
         ]
       }
     ],
@@ -442,9 +442,9 @@
         "description": "Python",
         "url": null,
         "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/python/python02.png",
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/python/python03.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/python/python.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/python/python02.png"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/python/python.png"
         ]
       }
     ],
@@ -568,9 +568,9 @@
         "description": "Python",
         "url": null,
         "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/python/python02.png",
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/python/python03.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/python/python.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/python/python02.png"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/python/python.png"
         ]
       }
     ],
@@ -634,8 +634,8 @@
         "url": null,
         "screenshots": [
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/php/php01.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/php/php.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/php/php02.png"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/php/php02.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/php/php.png"
         ]
       }
     ],
@@ -697,9 +697,9 @@
         "description": "Python",
         "url": null,
         "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/python/python02.png",
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/python/python03.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/python/python.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/python/python02.png"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/python/python.png"
         ]
       }
     ],
@@ -761,9 +761,9 @@
         "description": null,
         "url": null,
         "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/rack/Rack.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/rack/Rack2.png",
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/rack/Rack3.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/rack/Rack2.png"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/rack/Rack.png"
         ]
       }
     ],
@@ -832,8 +832,8 @@
         "url": null,
         "screenshots": [
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/thin/Thin2.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/thin/Thin.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/thin/Thin3.png"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/thin/Thin3.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/thin/Thin.png"
         ]
       }
     ],
@@ -1440,11 +1440,11 @@
         "description": "Details on events from SyntheticsPrivateLocationStatus, SyntheticsPrivateMinion, SyntheticCheck, SyntheticRequest, NrAuditEvent, plus a page for Performance Analysis.",
         "url": null,
         "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/synthetics-private-minions/synthetics-private-minions02.png",
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/synthetics-private-minions/synthetics-private-minions01.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/synthetics-private-minions/synthetics-private-minions02.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/synthetics-private-minions/synthetics-private-minions03.png",
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/synthetics-private-minions/synthetics-private-minions04.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/synthetics-private-minions/synthetics-private-minions05.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/synthetics-private-minions/synthetics-private-minions03.png"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/synthetics-private-minions/synthetics-private-minions05.png"
         ]
       }
     ],
@@ -2383,8 +2383,8 @@
         "description": "C",
         "url": null,
         "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/c/C3.png",
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/c/C2.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/c/C3.png",
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/c/C.png"
         ]
       }
@@ -2454,8 +2454,8 @@
         "description": ".NET",
         "url": null,
         "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/dotnet/dotnet03.png",
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/dotnet/dotnet02.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/dotnet/dotnet03.png",
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/dotnet/dotnet.png"
         ]
       }
@@ -2518,8 +2518,8 @@
         "description": ".NET",
         "url": null,
         "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/dotnet/dotnet03.png",
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/dotnet/dotnet02.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/dotnet/dotnet03.png",
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/dotnet/dotnet.png"
         ]
       }
@@ -2581,9 +2581,9 @@
         "description": "Java",
         "url": null,
         "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/java/java.png",
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/java/java01.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/java/java02.png"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/java/java02.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/java/java.png"
         ]
       }
     ],
@@ -2639,8 +2639,8 @@
         "url": null,
         "screenshots": [
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/nodejs/node01.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/nodejs/nodejs.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/nodejs/nodejs02.png"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/nodejs/nodejs02.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/nodejs/nodejs.png"
         ]
       }
     ],
@@ -2703,9 +2703,9 @@
         "description": null,
         "url": null,
         "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/feedparser/feedparser.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/feedparser/feedparser-2.png",
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/feedparser/feedparser-3.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/feedparser/feedparser-2.png"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/feedparser/feedparser.png"
         ]
       }
     ],
@@ -2775,8 +2775,8 @@
         "description": null,
         "url": null,
         "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/google-kubernetes-engine/google-kubernetes-engine.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/google-kubernetes-engine/google-kubernetes-engine-2.png"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/google-kubernetes-engine/google-kubernetes-engine-2.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/google-kubernetes-engine/google-kubernetes-engine.png"
         ]
       }
     ],
@@ -2832,8 +2832,8 @@
         "description": null,
         "url": null,
         "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/grape/Grape3.png",
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/grape/Grape2.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/grape/Grape3.png",
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/grape/Grape.png"
         ]
       }
@@ -2902,9 +2902,9 @@
         "description": "Java",
         "url": null,
         "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/java/java.png",
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/java/java01.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/java/java02.png"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/java/java02.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/java/java.png"
         ]
       }
     ],
@@ -2960,9 +2960,9 @@
         "description": "Java",
         "url": null,
         "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/java/java.png",
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/java/java01.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/java/java02.png"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/java/java02.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/java/java.png"
         ]
       }
     ],
@@ -3017,9 +3017,9 @@
         "description": "Java",
         "url": null,
         "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/java/java.png",
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/java/java01.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/java/java02.png"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/java/java02.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/java/java.png"
         ]
       }
     ],
@@ -3074,9 +3074,9 @@
         "description": "Java",
         "url": null,
         "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/java/java.png",
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/java/java01.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/java/java02.png"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/java/java02.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/java/java.png"
         ]
       }
     ],
@@ -3134,8 +3134,8 @@
         "url": null,
         "screenshots": [
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/php/php01.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/php/php.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/php/php02.png"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/php/php02.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/php/php.png"
         ]
       }
     ],
@@ -3196,9 +3196,9 @@
         "description": "Java",
         "url": null,
         "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/java/java.png",
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/java/java01.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/java/java02.png"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/java/java02.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/java/java.png"
         ]
       }
     ],
@@ -3253,9 +3253,9 @@
         "description": null,
         "url": null,
         "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/mux/Mux.png",
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/mux/Mux2.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/mux/Mux3.png"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/mux/Mux3.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/mux/Mux.png"
         ]
       }
     ],
@@ -3323,8 +3323,8 @@
         "url": null,
         "screenshots": [
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/php/php01.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/php/php.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/php/php02.png"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/php/php02.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/php/php.png"
         ]
       }
     ],
@@ -3385,9 +3385,9 @@
         "description": "Python",
         "url": null,
         "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/python/python02.png",
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/python/python03.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/python/python.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/python/python02.png"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/python/python.png"
         ]
       }
     ],
@@ -3448,9 +3448,9 @@
         "description": "Python",
         "url": null,
         "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/python/python02.png",
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/python/python03.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/python/python.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/python/python02.png"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/python/python.png"
         ]
       }
     ],
@@ -3512,9 +3512,9 @@
         "description": null,
         "url": null,
         "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/rake/Rake.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/rake/Rake2.png",
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/rake/Rake3.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/rake/Rake2.png"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/rake/Rake.png"
         ]
       }
     ],
@@ -3582,8 +3582,8 @@
         "description": null,
         "url": null,
         "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/webrick/Webrick3.png",
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/webrick/Webrick2.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/webrick/Webrick3.png",
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/webrick/Webrick.png"
         ]
       }
@@ -3747,8 +3747,8 @@
         "description": null,
         "url": null,
         "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/ciscohardware/ciscoHardware02.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/ciscohardware/ciscoHardware01.png"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/ciscohardware/ciscoHardware01.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/ciscohardware/ciscoHardware02.png"
         ]
       }
     ],
@@ -3888,8 +3888,8 @@
         "description": null,
         "url": null,
         "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/network-data-ingest-and-cardinality/network-data-ingest-and-cardinality2.jpg",
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/network-data-ingest-and-cardinality/network-data-ingest-and-cardinality1.jpg",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/network-data-ingest-and-cardinality/network-data-ingest-and-cardinality2.jpg",
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/network-data-ingest-and-cardinality/network-data-ingest-and-cardinality3.jpg",
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/network-data-ingest-and-cardinality/network-data-ingest-and-cardinality4.jpg"
         ]
@@ -3982,9 +3982,9 @@
         "description": "Dashboard for displaying Redis metrics from Prometheus",
         "url": null,
         "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/redis-prometheus/redis03.png",
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/redis-prometheus/redis01.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/redis-prometheus/redis02.png"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/redis-prometheus/redis02.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/redis-prometheus/redis03.png"
         ]
       }
     ],
@@ -4075,9 +4075,9 @@
         "description": null,
         "url": null,
         "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/varnish/varnish03.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/varnish/varnish01.png",
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/varnish/varnish02.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/varnish/varnish01.png"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/varnish/varnish03.png"
         ]
       }
     ],
@@ -4777,9 +4777,9 @@
         "description": "Python",
         "url": null,
         "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/python/python02.png",
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/python/python03.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/python/python.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/python/python02.png"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/python/python.png"
         ]
       }
     ],
@@ -4840,8 +4840,8 @@
         "description": ".NET",
         "url": null,
         "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/dotnet/dotnet03.png",
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/dotnet/dotnet02.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/dotnet/dotnet03.png",
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/dotnet/dotnet.png"
         ]
       }
@@ -4994,9 +4994,9 @@
         "description": null,
         "url": null,
         "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/flask/flask2.png",
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/flask/flask3.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/flask/flask.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/flask/flask2.png"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/flask/flask.png"
         ]
       }
     ],
@@ -5067,9 +5067,9 @@
         "description": "Java",
         "url": null,
         "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/java/java.png",
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/java/java01.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/java/java02.png"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/java/java02.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/java/java.png"
         ]
       }
     ],
@@ -5126,8 +5126,8 @@
         "url": null,
         "screenshots": [
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/nodejs/node01.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/nodejs/nodejs.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/nodejs/nodejs02.png"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/nodejs/nodejs02.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/nodejs/nodejs.png"
         ]
       }
     ],
@@ -5190,8 +5190,8 @@
         "url": null,
         "screenshots": [
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/httpclient/Httpclient2.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/httpclient/Httpclient.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/httpclient/Httpclient3.png"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/httpclient/Httpclient3.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/httpclient/Httpclient.png"
         ]
       }
     ],
@@ -5258,9 +5258,9 @@
         "description": "Java",
         "url": null,
         "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/java/java.png",
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/java/java01.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/java/java02.png"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/java/java02.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/java/java.png"
         ]
       }
     ],
@@ -5315,9 +5315,9 @@
         "description": "Java",
         "url": null,
         "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/java/java.png",
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/java/java01.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/java/java02.png"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/java/java02.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/java/java.png"
         ]
       }
     ],
@@ -5373,8 +5373,8 @@
         "url": null,
         "screenshots": [
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/php/php01.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/php/php.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/php/php02.png"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/php/php02.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/php/php.png"
         ]
       }
     ],
@@ -5505,8 +5505,8 @@
         "description": "Netty",
         "url": null,
         "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/netty/netty02.png",
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/netty/netty01.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/netty/netty02.png",
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/netty/netty.png"
         ]
       }
@@ -5629,8 +5629,8 @@
         "url": null,
         "screenshots": [
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/php/php01.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/php/php.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/php/php02.png"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/php/php02.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/php/php.png"
         ]
       }
     ],
@@ -5692,9 +5692,9 @@
         "description": null,
         "url": null,
         "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/python-python-psycopg2/psycopg01.png",
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/python-python-psycopg2/psycopg202.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/python-python-psycopg2/psycopg203.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/python-python-psycopg2/psycopg01.png"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/python-python-psycopg2/psycopg203.png"
         ]
       }
     ],
@@ -5762,9 +5762,9 @@
         "description": "Python",
         "url": null,
         "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/python/python02.png",
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/python/python03.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/python/python.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/python/python02.png"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/python/python.png"
         ]
       }
     ],
@@ -5827,8 +5827,8 @@
         "url": null,
         "screenshots": [
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/resque/Resque2.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/resque/Resque.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/resque/Resque3.png"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/resque/Resque3.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/resque/Resque.png"
         ]
       }
     ],
@@ -5986,9 +5986,9 @@
         "description": null,
         "url": null,
         "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/cribl-logstream-metrics/cribl-logstream-metrics03.png",
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/cribl-logstream-metrics/cribl-logstream-metrics01.png",
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/cribl-logstream-metrics/cribl-logstream-metrics02.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/cribl-logstream-metrics/cribl-logstream-metrics03.png",
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/cribl-logstream-metrics/cribl-logstream-metrics04.png"
         ]
       }
@@ -6214,8 +6214,8 @@
         "description": null,
         "url": null,
         "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/pomi-stats/pomi-stats2.jpg",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/pomi-stats/pomi-stats1.jpg"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/pomi-stats/pomi-stats1.jpg",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/pomi-stats/pomi-stats2.jpg"
         ]
       }
     ],
@@ -6260,8 +6260,8 @@
         "description": null,
         "url": null,
         "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/postman-dashboard/postman-dashboard02.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/postman-dashboard/postman-dashboard01.png"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/postman-dashboard/postman-dashboard01.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/postman-dashboard/postman-dashboard02.png"
         ]
       }
     ],
@@ -6306,16 +6306,16 @@
         "description": null,
         "url": null,
         "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/sfdc-overview/sfdc-overview-08.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/sfdc-overview/sfdc-overview-06.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/sfdc-overview/sfdc-overview-09.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/sfdc-overview/sfdc-overview-05.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/sfdc-overview/sfdc-overview-04.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/sfdc-overview/sfdc-overview-03.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/sfdc-overview/sfdc-overview-02.png",
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/sfdc-overview/sfdc-overview-01.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/sfdc-overview/sfdc-overview-10.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/sfdc-overview/sfdc-overview-07.png"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/sfdc-overview/sfdc-overview-02.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/sfdc-overview/sfdc-overview-03.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/sfdc-overview/sfdc-overview-04.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/sfdc-overview/sfdc-overview-05.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/sfdc-overview/sfdc-overview-06.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/sfdc-overview/sfdc-overview-07.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/sfdc-overview/sfdc-overview-08.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/sfdc-overview/sfdc-overview-09.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/sfdc-overview/sfdc-overview-10.png"
         ]
       }
     ],
@@ -6547,8 +6547,8 @@
         "url": null,
         "screenshots": [
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/mongodb/mongodb01.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/mongodb/mongodb03.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/mongodb/mongodb02.png"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/mongodb/mongodb02.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/mongodb/mongodb03.png"
         ]
       }
     ],
@@ -6993,9 +6993,9 @@
         "description": "Java",
         "url": null,
         "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/java/java.png",
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/java/java01.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/java/java02.png"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/java/java02.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/java/java.png"
         ]
       }
     ],
@@ -7052,8 +7052,8 @@
         "url": null,
         "screenshots": [
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/activerecord/Activerecord2.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/activerecord/Activerecord.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/activerecord/Activerecord3.png"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/activerecord/Activerecord3.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/activerecord/Activerecord.png"
         ]
       }
     ],
@@ -7120,9 +7120,9 @@
         "description": "Python",
         "url": null,
         "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/python/python02.png",
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/python/python03.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/python/python.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/python/python02.png"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/python/python.png"
         ]
       }
     ],
@@ -7238,9 +7238,9 @@
         "description": "Java",
         "url": null,
         "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/java/java.png",
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/java/java01.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/java/java02.png"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/java/java02.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/java/java.png"
         ]
       }
     ],
@@ -7295,8 +7295,8 @@
         "description": ".NET",
         "url": null,
         "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/dotnet/dotnet03.png",
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/dotnet/dotnet02.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/dotnet/dotnet03.png",
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/dotnet/dotnet.png"
         ]
       }
@@ -7358,8 +7358,8 @@
         "description": ".NET",
         "url": null,
         "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/dotnet/dotnet03.png",
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/dotnet/dotnet02.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/dotnet/dotnet03.png",
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/dotnet/dotnet.png"
         ]
       }
@@ -7490,9 +7490,9 @@
         "description": "Java",
         "url": null,
         "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/java/java.png",
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/java/java01.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/java/java02.png"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/java/java02.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/java/java.png"
         ]
       }
     ],
@@ -7547,9 +7547,9 @@
         "description": "Python",
         "url": null,
         "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/python/python02.png",
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/python/python03.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/python/python.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/python/python02.png"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/python/python.png"
         ]
       }
     ],
@@ -7611,9 +7611,9 @@
         "description": null,
         "url": null,
         "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/bunny-ruby-httprb/Httprb.png",
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/bunny-ruby-httprb/Httprb2.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/bunny-ruby-httprb/Httprb3.png"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/bunny-ruby-httprb/Httprb3.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/bunny-ruby-httprb/Httprb.png"
         ]
       }
     ],
@@ -7683,9 +7683,9 @@
         "description": "Java",
         "url": null,
         "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/java/java.png",
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/java/java01.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/java/java02.png"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/java/java02.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/java/java.png"
         ]
       }
     ],
@@ -7752,9 +7752,9 @@
         "description": "Java",
         "url": null,
         "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/java/java.png",
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/java/java01.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/java/java02.png"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/java/java02.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/java/java.png"
         ]
       }
     ],
@@ -7809,9 +7809,9 @@
         "description": "Java",
         "url": null,
         "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/java/java.png",
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/java/java01.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/java/java02.png"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/java/java02.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/java/java.png"
         ]
       }
     ],
@@ -7866,9 +7866,9 @@
         "description": "Java",
         "url": null,
         "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/java/java.png",
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/java/java01.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/java/java02.png"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/java/java02.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/java/java.png"
         ]
       }
     ],
@@ -7924,8 +7924,8 @@
         "url": null,
         "screenshots": [
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/nodejs/node01.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/nodejs/nodejs.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/nodejs/nodejs02.png"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/nodejs/nodejs02.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/nodejs/nodejs.png"
         ]
       }
     ],
@@ -7988,8 +7988,8 @@
         "url": null,
         "screenshots": [
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/php/php01.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/php/php.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/php/php02.png"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/php/php02.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/php/php.png"
         ]
       }
     ],
@@ -8122,12 +8122,12 @@
         "description": null,
         "url": null,
         "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/netlify-builds/netlify-builds05.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/netlify-builds/netlify-builds03.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/netlify-builds/netlify-builds06.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/netlify-builds/netlify-builds04.png",
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/netlify-builds/netlify-builds01.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/netlify-builds/netlify-builds02.png"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/netlify-builds/netlify-builds02.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/netlify-builds/netlify-builds03.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/netlify-builds/netlify-builds04.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/netlify-builds/netlify-builds05.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/netlify-builds/netlify-builds06.png"
         ]
       }
     ],
@@ -8190,8 +8190,8 @@
         "url": null,
         "screenshots": [
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/php/php01.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/php/php.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/php/php02.png"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/php/php02.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/php/php.png"
         ]
       }
     ],
@@ -8253,9 +8253,9 @@
         "description": null,
         "url": null,
         "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/pkg-errors/PkgErros.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/pkg-errors/PkgErrors2.png",
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/pkg-errors/PkgErrors3.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/pkg-errors/PkgErrors2.png"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/pkg-errors/PkgErros.png"
         ]
       }
     ],
@@ -8322,9 +8322,9 @@
         "description": "Python",
         "url": null,
         "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/python/python02.png",
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/python/python03.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/python/python.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/python/python02.png"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/python/python.png"
         ]
       }
     ],
@@ -8386,9 +8386,9 @@
         "description": "Python",
         "url": null,
         "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/python/python02.png",
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/python/python03.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/python/python.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/python/python02.png"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/python/python.png"
         ]
       }
     ],
@@ -8453,8 +8453,8 @@
         "url": null,
         "screenshots": [
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/ruby/Ruby2.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/ruby/Ruby.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/ruby/Ruby3.png"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/ruby/Ruby3.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/ruby/Ruby.png"
         ]
       }
     ],
@@ -9122,9 +9122,9 @@
         "description": "Java",
         "url": null,
         "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/java/java.png",
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/java/java01.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/java/java02.png"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/java/java02.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/java/java.png"
         ]
       }
     ],
@@ -9305,8 +9305,8 @@
         "url": null,
         "screenshots": [
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/php/php01.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/php/php.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/php/php02.png"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/php/php02.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/php/php.png"
         ]
       }
     ],
@@ -9369,8 +9369,8 @@
         "url": null,
         "screenshots": [
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/delayed-job/Delayed-job2.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/delayed-job/Delayed-job.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/delayed-job/Delayed-job3.png"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/delayed-job/Delayed-job3.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/delayed-job/Delayed-job.png"
         ]
       }
     ],
@@ -9555,8 +9555,8 @@
         "description": ".NET",
         "url": null,
         "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/dotnet/dotnet03.png",
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/dotnet/dotnet02.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/dotnet/dotnet03.png",
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/dotnet/dotnet.png"
         ]
       }
@@ -9618,8 +9618,8 @@
         "description": ".NET",
         "url": null,
         "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/dotnet/dotnet03.png",
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/dotnet/dotnet02.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/dotnet/dotnet03.png",
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/dotnet/dotnet.png"
         ]
       }
@@ -9684,9 +9684,9 @@
         "description": "Java",
         "url": null,
         "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/java/java.png",
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/java/java01.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/java/java02.png"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/java/java02.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/java/java.png"
         ]
       }
     ],
@@ -9741,9 +9741,9 @@
         "description": "Python",
         "url": null,
         "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/python/python02.png",
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/python/python03.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/python/python.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/python/python02.png"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/python/python.png"
         ]
       }
     ],
@@ -9804,9 +9804,9 @@
         "description": "Java",
         "url": null,
         "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/java/java.png",
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/java/java01.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/java/java02.png"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/java/java02.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/java/java.png"
         ]
       }
     ],
@@ -9930,9 +9930,9 @@
         "description": "Java",
         "url": null,
         "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/java/java.png",
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/java/java01.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/java/java02.png"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/java/java02.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/java/java.png"
         ]
       }
     ],
@@ -9987,9 +9987,9 @@
         "description": "Java",
         "url": null,
         "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/java/java.png",
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/java/java01.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/java/java02.png"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/java/java02.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/java/java.png"
         ]
       }
     ],
@@ -10044,9 +10044,9 @@
         "description": "Java",
         "url": null,
         "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/java/java.png",
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/java/java01.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/java/java02.png"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/java/java02.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/java/java.png"
         ]
       }
     ],
@@ -10102,9 +10102,9 @@
         "description": "Java",
         "url": null,
         "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/java/java.png",
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/java/java01.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/java/java02.png"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/java/java02.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/java/java.png"
         ]
       }
     ],
@@ -10175,8 +10175,8 @@
         "description": null,
         "url": null,
         "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/network-flow-devices/network-flow-devices02.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/network-flow-devices/network-flow-devices01.png"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/network-flow-devices/network-flow-devices01.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/network-flow-devices/network-flow-devices02.png"
         ]
       }
     ],
@@ -10220,8 +10220,8 @@
         "url": null,
         "screenshots": [
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/php/php01.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/php/php.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/php/php02.png"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/php/php02.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/php/php.png"
         ]
       }
     ],
@@ -10282,9 +10282,9 @@
         "description": "Python",
         "url": null,
         "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/python/python02.png",
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/python/python03.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/python/python.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/python/python02.png"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/python/python.png"
         ]
       }
     ],
@@ -10348,9 +10348,9 @@
         "description": "Python",
         "url": null,
         "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/python/python02.png",
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/python/python03.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/python/python.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/python/python02.png"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/python/python.png"
         ]
       }
     ],
@@ -10418,9 +10418,9 @@
         "description": null,
         "url": null,
         "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/rails/Rails.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/rails/Rails2.png",
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/rails/Rails3.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/rails/Rails2.png"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/rails/Rails.png"
         ]
       }
     ],
@@ -10488,8 +10488,8 @@
         "description": null,
         "url": null,
         "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/typhoeus/Typhoeus3.png",
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/typhoeus/Typhoeus2.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/typhoeus/Typhoeus3.png",
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/typhoeus/Typhoeus.png"
         ]
       }
@@ -10625,9 +10625,9 @@
         "description": null,
         "url": null,
         "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/zap/Zap.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/zap/Zap2.png",
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/zap/Zap3.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/zap/Zap2.png"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/zap/Zap.png"
         ]
       }
     ],
@@ -11730,9 +11730,9 @@
         "description": "Java",
         "url": null,
         "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/java/java.png",
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/java/java01.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/java/java02.png"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/java/java02.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/java/java.png"
         ]
       }
     ],
@@ -11837,9 +11837,9 @@
         "description": "Python",
         "url": null,
         "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/python/python02.png",
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/python/python03.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/python/python.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/python/python02.png"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/python/python.png"
         ]
       }
     ],
@@ -11905,8 +11905,8 @@
         "description": null,
         "url": null,
         "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/deeper-connect/deeperconnect02.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/deeper-connect/deeperconnect01.png"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/deeper-connect/deeperconnect01.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/deeper-connect/deeperconnect02.png"
         ]
       }
     ],
@@ -11975,8 +11975,8 @@
         "description": ".NET",
         "url": null,
         "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/dotnet/dotnet03.png",
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/dotnet/dotnet02.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/dotnet/dotnet03.png",
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/dotnet/dotnet.png"
         ]
       }
@@ -12044,8 +12044,8 @@
         "description": ".NET",
         "url": null,
         "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/dotnet/dotnet03.png",
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/dotnet/dotnet02.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/dotnet/dotnet03.png",
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/dotnet/dotnet.png"
         ]
       }
@@ -12254,9 +12254,9 @@
         "description": null,
         "url": null,
         "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/golang/Golang.png",
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/golang/Golang2.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/golang/Golang3.png"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/golang/Golang3.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/golang/Golang.png"
         ]
       }
     ],
@@ -12324,9 +12324,9 @@
         "description": "Python",
         "url": null,
         "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/python/python02.png",
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/python/python03.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/python/python.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/python/python02.png"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/python/python.png"
         ]
       }
     ],
@@ -12387,9 +12387,9 @@
         "description": "Java",
         "url": null,
         "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/java/java.png",
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/java/java01.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/java/java02.png"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/java/java02.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/java/java.png"
         ]
       }
     ],
@@ -12444,9 +12444,9 @@
         "description": "Java",
         "url": null,
         "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/java/java.png",
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/java/java01.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/java/java02.png"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/java/java02.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/java/java.png"
         ]
       }
     ],
@@ -12505,9 +12505,9 @@
         "description": "Java",
         "url": null,
         "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/java/java.png",
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/java/java01.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/java/java02.png"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/java/java02.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/java/java.png"
         ]
       }
     ],
@@ -12562,9 +12562,9 @@
         "description": "Java",
         "url": null,
         "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/java/java.png",
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/java/java01.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/java/java02.png"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/java/java02.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/java/java.png"
         ]
       }
     ],
@@ -12619,9 +12619,9 @@
         "description": "Java",
         "url": null,
         "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/java/java.png",
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/java/java01.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/java/java02.png"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/java/java02.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/java/java.png"
         ]
       }
     ],
@@ -12679,8 +12679,8 @@
         "url": null,
         "screenshots": [
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/php/php01.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/php/php.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/php/php02.png"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/php/php02.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/php/php.png"
         ]
       }
     ],
@@ -12743,8 +12743,8 @@
         "description": null,
         "url": null,
         "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/nethttp/Nethttp3.png",
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/nethttp/Nethttp2.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/nethttp/Nethttp3.png",
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/nethttp/Nethttp.png"
         ]
       }
@@ -12816,8 +12816,8 @@
         "url": null,
         "screenshots": [
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/nodejs/node01.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/nodejs/nodejs.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/nodejs/nodejs02.png"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/nodejs/nodejs02.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/nodejs/nodejs.png"
         ]
       }
     ],
@@ -12885,8 +12885,8 @@
         "url": null,
         "screenshots": [
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/php/php01.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/php/php.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/php/php02.png"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/php/php02.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/php/php.png"
         ]
       }
     ],
@@ -12948,9 +12948,9 @@
         "description": "Python",
         "url": null,
         "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/python/python02.png",
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/python/python03.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/python/python.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/python/python02.png"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/python/python.png"
         ]
       }
     ],
@@ -13012,9 +13012,9 @@
         "description": "Python",
         "url": null,
         "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/python/python02.png",
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/python/python03.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/python/python.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/python/python02.png"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/python/python.png"
         ]
       }
     ],
@@ -13237,8 +13237,8 @@
         "description": null,
         "url": null,
         "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/jmx/jmx02.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/jmx/jmx01.png"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/jmx/jmx01.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/jmx/jmx02.png"
         ]
       }
     ],
@@ -13354,8 +13354,8 @@
         "description": "Netlify traffic and function log drain dashboard",
         "url": null,
         "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/netlify-logs/netlify-logs02.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/netlify-logs/netlify-logs01.png"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/netlify-logs/netlify-logs01.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/netlify-logs/netlify-logs02.png"
         ]
       }
     ],
@@ -13900,9 +13900,9 @@
         "description": "Java",
         "url": null,
         "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/java/java.png",
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/java/java01.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/java/java02.png"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/java/java02.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/java/java.png"
         ]
       }
     ],
@@ -14221,9 +14221,9 @@
         "description": null,
         "url": null,
         "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/cherrypy/cherrypy02.png",
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/cherrypy/cherrypy03.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/cherrypy/cherrypy.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/cherrypy/cherrypy02.png"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/cherrypy/cherrypy.png"
         ]
       }
     ],
@@ -14343,8 +14343,8 @@
         "description": ".NET",
         "url": null,
         "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/dotnet/dotnet03.png",
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/dotnet/dotnet02.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/dotnet/dotnet03.png",
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/dotnet/dotnet.png"
         ]
       }
@@ -14406,8 +14406,8 @@
         "description": ".NET",
         "url": null,
         "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/dotnet/dotnet03.png",
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/dotnet/dotnet02.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/dotnet/dotnet03.png",
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/dotnet/dotnet.png"
         ]
       }
@@ -14469,9 +14469,9 @@
         "description": "Java",
         "url": null,
         "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/java/java.png",
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/java/java01.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/java/java02.png"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/java/java02.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/java/java.png"
         ]
       }
     ],
@@ -14526,8 +14526,8 @@
         "description": null,
         "url": null,
         "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/httprouter/Httprouter3.png",
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/httprouter/Httprouter2.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/httprouter/Httprouter3.png",
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/httprouter/Httprouter.png"
         ]
       }
@@ -14595,9 +14595,9 @@
         "description": "Java",
         "url": null,
         "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/java/java.png",
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/java/java01.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/java/java02.png"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/java/java02.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/java/java.png"
         ]
       }
     ],
@@ -14652,9 +14652,9 @@
         "description": "Java",
         "url": null,
         "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/java/java.png",
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/java/java01.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/java/java02.png"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/java/java02.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/java/java.png"
         ]
       }
     ],
@@ -14709,9 +14709,9 @@
         "description": "Java",
         "url": null,
         "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/java/java.png",
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/java/java01.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/java/java02.png"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/java/java02.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/java/java.png"
         ]
       }
     ],
@@ -14766,9 +14766,9 @@
         "description": "Python",
         "url": null,
         "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/python/python02.png",
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/python/python03.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/python/python.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/python/python02.png"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/python/python.png"
         ]
       }
     ],
@@ -14831,8 +14831,8 @@
         "url": null,
         "screenshots": [
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/php/php01.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/php/php.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/php/php02.png"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/php/php02.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/php/php.png"
         ]
       }
     ],
@@ -14894,9 +14894,9 @@
         "description": null,
         "url": null,
         "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/passenger/Passenger2.png",
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/passenger/Passenger3.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/passenger/Passenger.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/passenger/Passenger2.png"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/passenger/Passenger.png"
         ]
       }
     ],
@@ -14968,8 +14968,8 @@
         "description": null,
         "url": null,
         "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/pixie-quickstart/pixie-quickstart02.jpg",
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/pixie-quickstart/pixie-quickstart01.jpg",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/pixie-quickstart/pixie-quickstart02.jpg",
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/pixie-quickstart/pixie-quickstart03.jpg"
         ]
       }
@@ -15026,9 +15026,9 @@
         "description": "Python",
         "url": null,
         "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/python/python02.png",
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/python/python03.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/python/python.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/python/python02.png"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/python/python.png"
         ]
       }
     ],
@@ -15090,9 +15090,9 @@
         "description": null,
         "url": null,
         "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/sinatra/Sinatra2.png",
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/sinatra/Sinatra3.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/sinatra/Sinatra.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/sinatra/Sinatra2.png"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/sinatra/Sinatra.png"
         ]
       }
     ],
@@ -15208,8 +15208,8 @@
         "description": null,
         "url": null,
         "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/cloudflare/cloudflare02.png",
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/cloudflare/cloudflare01.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/cloudflare/cloudflare02.png",
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/cloudflare/cloudflare03.png"
         ]
       }
@@ -15296,8 +15296,8 @@
         "description": null,
         "url": null,
         "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/nagios/nagios02.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/nagios/nagios01.png"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/nagios/nagios01.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/nagios/nagios02.png"
         ]
       }
     ],
@@ -16351,9 +16351,9 @@
         "description": "Java",
         "url": null,
         "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/java/java.png",
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/java/java01.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/java/java02.png"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/java/java02.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/java/java.png"
         ]
       }
     ],
@@ -16410,8 +16410,8 @@
         "url": null,
         "screenshots": [
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/curb/Curb2.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/curb/Curb.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/curb/Curb3.png"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/curb/Curb3.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/curb/Curb.png"
         ]
       }
     ],
@@ -16479,9 +16479,9 @@
         "description": "Python",
         "url": null,
         "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/python/python02.png",
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/python/python03.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/python/python.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/python/python02.png"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/python/python.png"
         ]
       }
     ],
@@ -16542,8 +16542,8 @@
         "description": ".NET",
         "url": null,
         "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/dotnet/dotnet03.png",
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/dotnet/dotnet02.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/dotnet/dotnet03.png",
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/dotnet/dotnet.png"
         ]
       }
@@ -16605,8 +16605,8 @@
         "description": ".NET",
         "url": null,
         "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/dotnet/dotnet03.png",
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/dotnet/dotnet02.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/dotnet/dotnet03.png",
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/dotnet/dotnet.png"
         ]
       }
@@ -16669,9 +16669,9 @@
         "description": "Java",
         "url": null,
         "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/java/java.png",
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/java/java01.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/java/java02.png"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/java/java02.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/java/java.png"
         ]
       }
     ],
@@ -16788,9 +16788,9 @@
         "description": "Java",
         "url": null,
         "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/java/java.png",
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/java/java01.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/java/java02.png"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/java/java02.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/java/java.png"
         ]
       }
     ],
@@ -16845,9 +16845,9 @@
         "description": "Java",
         "url": null,
         "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/java/java.png",
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/java/java01.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/java/java02.png"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/java/java02.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/java/java.png"
         ]
       }
     ],
@@ -16902,9 +16902,9 @@
         "description": "Java",
         "url": null,
         "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/java/java.png",
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/java/java01.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/java/java02.png"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/java/java02.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/java/java.png"
         ]
       }
     ],
@@ -16961,8 +16961,8 @@
         "url": null,
         "screenshots": [
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/lambdago/Lambdago2.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/lambdago/Lambdago.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/lambdago/Lambdago3.png"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/lambdago/Lambdago3.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/lambdago/Lambdago.png"
         ]
       }
     ],
@@ -17030,9 +17030,9 @@
         "description": "Python",
         "url": null,
         "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/python/python02.png",
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/python/python03.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/python/python.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/python/python02.png"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/python/python.png"
         ]
       }
     ],
@@ -17103,8 +17103,8 @@
         "description": null,
         "url": null,
         "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/network-flow-devices/network-flow-devices02.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/network-flow-devices/network-flow-devices01.png"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/network-flow-devices/network-flow-devices01.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/network-flow-devices/network-flow-devices02.png"
         ]
       }
     ],
@@ -17161,8 +17161,8 @@
         "url": null,
         "screenshots": [
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/php/php01.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/php/php.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/php/php02.png"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/php/php02.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/php/php.png"
         ]
       }
     ],
@@ -17224,9 +17224,9 @@
         "description": null,
         "url": null,
         "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/puma/Puma.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/puma/Puma2.png",
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/puma/Puma3.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/puma/Puma2.png"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/puma/Puma.png"
         ]
       }
     ],
@@ -17295,9 +17295,9 @@
         "description": "Python",
         "url": null,
         "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/python/python02.png",
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/python/python03.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/python/python.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/python/python02.png"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/python/python.png"
         ]
       }
     ],
@@ -17359,9 +17359,9 @@
         "description": null,
         "url": null,
         "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/sunspot/Sunspot2.png",
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/sunspot/Sunspot3.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/sunspot/Sunspot.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/sunspot/Sunspot2.png"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/sunspot/Sunspot.png"
         ]
       }
     ],
@@ -17591,10 +17591,10 @@
         "description": null,
         "url": null,
         "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/kafka/kafka04.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/kafka/kafka03.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/kafka/kafka01.png",
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/kafka/kafka02.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/kafka/kafka01.png"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/kafka/kafka03.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/kafka/kafka04.png"
         ]
       }
     ],
@@ -17979,8 +17979,8 @@
         "url": null,
         "screenshots": [
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/datastream2/datastream2-01.jpeg",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/datastream2/datastream2-03.jpeg",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/datastream2/datastream2-02.jpeg"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/datastream2/datastream2-02.jpeg",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/datastream2/datastream2-03.jpeg"
         ]
       }
     ],
@@ -18029,8 +18029,8 @@
         "description": ".NET",
         "url": null,
         "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/dotnet/dotnet03.png",
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/dotnet/dotnet02.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/dotnet/dotnet03.png",
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/dotnet/dotnet.png"
         ]
       }
@@ -18420,9 +18420,9 @@
         "description": "Java",
         "url": null,
         "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/java/java.png",
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/java/java01.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/java/java02.png"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/java/java02.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/java/java.png"
         ]
       }
     ],
@@ -18477,8 +18477,8 @@
         "description": ".NET",
         "url": null,
         "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/dotnet/dotnet03.png",
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/dotnet/dotnet02.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/dotnet/dotnet03.png",
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/dotnet/dotnet.png"
         ]
       }
@@ -18540,8 +18540,8 @@
         "description": ".NET",
         "url": null,
         "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/dotnet/dotnet03.png",
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/dotnet/dotnet02.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/dotnet/dotnet03.png",
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/dotnet/dotnet.png"
         ]
       }
@@ -18604,9 +18604,9 @@
         "description": null,
         "url": null,
         "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/excon/Excon.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/excon/Excon2.png",
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/excon/Excon3.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/excon/Excon2.png"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/excon/Excon.png"
         ]
       }
     ],
@@ -18718,9 +18718,9 @@
         "description": null,
         "url": null,
         "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/fastapi/fastAPI.png",
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/fastapi/fastAPI-02.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/fastapi/fastAPI-03.png"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/fastapi/fastAPI-03.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/fastapi/fastAPI.png"
         ]
       }
     ],
@@ -18788,8 +18788,8 @@
         "url": null,
         "screenshots": [
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/php/php01.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/php/php.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/php/php02.png"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/php/php02.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/php/php.png"
         ]
       }
     ],
@@ -18851,9 +18851,9 @@
         "description": "Java",
         "url": null,
         "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/java/java.png",
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/java/java01.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/java/java02.png"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/java/java02.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/java/java.png"
         ]
       }
     ],
@@ -18908,9 +18908,9 @@
         "description": "Java",
         "url": null,
         "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/java/java.png",
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/java/java01.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/java/java02.png"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/java/java02.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/java/java.png"
         ]
       }
     ],
@@ -18965,9 +18965,9 @@
         "description": "Java",
         "url": null,
         "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/java/java.png",
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/java/java01.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/java/java02.png"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/java/java02.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/java/java.png"
         ]
       }
     ],
@@ -19023,9 +19023,9 @@
         "description": "Java",
         "url": null,
         "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/java/java.png",
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/java/java01.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/java/java02.png"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/java/java02.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/java/java.png"
         ]
       }
     ],
@@ -19152,8 +19152,8 @@
         "url": null,
         "screenshots": [
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/php/php01.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/php/php.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/php/php02.png"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/php/php02.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/php/php.png"
         ]
       }
     ],
@@ -19214,9 +19214,9 @@
         "description": "Python",
         "url": null,
         "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/python/python02.png",
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/python/python03.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/python/python.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/python/python02.png"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/python/python.png"
         ]
       }
     ],
@@ -19277,9 +19277,9 @@
         "description": "Python",
         "url": null,
         "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/python/python02.png",
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/python/python03.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/python/python.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/python/python02.png"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/python/python.png"
         ]
       }
     ],
@@ -19341,9 +19341,9 @@
         "description": null,
         "url": null,
         "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/rainbows/Rainbows.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/rainbows/Rainbows2.png",
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/rainbows/Rainbows3.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/rainbows/Rainbows2.png"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/rainbows/Rainbows.png"
         ]
       }
     ],
@@ -19678,11 +19678,11 @@
         "description": null,
         "url": null,
         "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/full-stack-observability/full-stack-observability.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/full-stack-observability/full-stack-observability1.png",
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/full-stack-observability/full-stack-observability2.png",
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/full-stack-observability/full-stack-observability3.png",
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/full-stack-observability/full-stack-observability4.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/full-stack-observability/full-stack-observability1.png"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/full-stack-observability/full-stack-observability.png"
         ]
       }
     ],
@@ -19719,10 +19719,10 @@
         "description": null,
         "url": null,
         "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/haproxy/haproxy03.png",
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/haproxy/haproxy01.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/haproxy/haproxy04.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/haproxy/haproxy02.png"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/haproxy/haproxy02.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/haproxy/haproxy03.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/haproxy/haproxy04.png"
         ]
       }
     ],
@@ -19850,8 +19850,8 @@
         "description": "Monitoring for Prometheus Remote Write. Displays Prometheus server statistics, resulting metric cardinality and any errors during ingest.",
         "url": null,
         "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/prometheus-remote-write-monitoring/prometheus-remote-write-monitoring.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/prometheus-remote-write-monitoring/prometheus-remote-write-monitoring01.png"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/prometheus-remote-write-monitoring/prometheus-remote-write-monitoring01.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/prometheus-remote-write-monitoring/prometheus-remote-write-monitoring.png"
         ]
       }
     ],
@@ -20234,8 +20234,8 @@
         "description": ".NET",
         "url": null,
         "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/dotnet/dotnet03.png",
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/dotnet/dotnet02.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/dotnet/dotnet03.png",
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/dotnet/dotnet.png"
         ]
       }
@@ -20298,9 +20298,9 @@
         "description": null,
         "url": null,
         "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/bunny/Bunny2.png",
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/bunny/Bunny3.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/bunny/Bunny.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/bunny/Bunny2.png"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/bunny/Bunny.png"
         ]
       }
     ],
@@ -20368,9 +20368,9 @@
         "description": "Python",
         "url": null,
         "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/python/python02.png",
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/python/python03.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/python/python.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/python/python02.png"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/python/python.png"
         ]
       }
     ],
@@ -20431,8 +20431,8 @@
         "description": ".NET",
         "url": null,
         "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/dotnet/dotnet03.png",
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/dotnet/dotnet02.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/dotnet/dotnet03.png",
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/dotnet/dotnet.png"
         ]
       }
@@ -20495,9 +20495,9 @@
         "description": "Java",
         "url": null,
         "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/java/java.png",
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/java/java01.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/java/java02.png"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/java/java02.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/java/java.png"
         ]
       }
     ],
@@ -20553,9 +20553,9 @@
         "description": "Python",
         "url": null,
         "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/python/python02.png",
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/python/python03.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/python/python.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/python/python02.png"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/python/python.png"
         ]
       }
     ],
@@ -20616,9 +20616,9 @@
         "description": "Java",
         "url": null,
         "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/java/java.png",
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/java/java01.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/java/java02.png"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/java/java02.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/java/java.png"
         ]
       }
     ],
@@ -20673,9 +20673,9 @@
         "description": "Java",
         "url": null,
         "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/java/java.png",
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/java/java01.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/java/java02.png"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/java/java02.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/java/java.png"
         ]
       }
     ],
@@ -20730,9 +20730,9 @@
         "description": "Java",
         "url": null,
         "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/java/java.png",
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/java/java01.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/java/java02.png"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/java/java02.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/java/java.png"
         ]
       }
     ],
@@ -20790,8 +20790,8 @@
         "url": null,
         "screenshots": [
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/php/php01.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/php/php.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/php/php02.png"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/php/php02.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/php/php.png"
         ]
       }
     ],
@@ -20854,9 +20854,9 @@
         "description": null,
         "url": null,
         "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/logxi/Logxi.png",
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/logxi/Logxi2.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/logxi/Logxi3.png"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/logxi/Logxi3.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/logxi/Logxi.png"
         ]
       }
     ],
@@ -20924,8 +20924,8 @@
         "description": "Official New Relic dashboard to show MySQL data",
         "url": null,
         "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/mysql/mysql02.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/mysql/mysql01.png"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/mysql/mysql01.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/mysql/mysql02.png"
         ]
       }
     ],
@@ -20993,9 +20993,9 @@
         "description": null,
         "url": null,
         "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/padrino/Padrino.png",
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/padrino/Padrino2.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/padrino/Padrino3.png"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/padrino/Padrino3.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/padrino/Padrino.png"
         ]
       }
     ],
@@ -21063,8 +21063,8 @@
         "url": null,
         "screenshots": [
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/php/php01.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/php/php.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/php/php02.png"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/php/php02.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/php/php.png"
         ]
       }
     ],
@@ -21125,9 +21125,9 @@
         "description": "Python",
         "url": null,
         "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/python/python02.png",
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/python/python03.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/python/python.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/python/python02.png"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/python/python.png"
         ]
       }
     ],
@@ -21189,8 +21189,8 @@
         "url": null,
         "screenshots": [
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/nodejs/node01.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/nodejs/nodejs.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/nodejs/nodejs02.png"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/nodejs/nodejs02.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/nodejs/nodejs.png"
         ]
       }
     ],
@@ -21252,8 +21252,8 @@
         "description": null,
         "url": null,
         "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/sidekiq/Sidekiq3.png",
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/sidekiq/Sidekiq2.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/sidekiq/Sidekiq3.png",
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/sidekiq/Sidekiq.png"
         ]
       }
@@ -21323,8 +21323,8 @@
         "description": null,
         "url": null,
         "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/webpy/webpy3.png",
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/webpy/webpy2.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/webpy/webpy3.png",
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/webpy/webpy.png"
         ]
       }
@@ -22271,9 +22271,9 @@
         "description": null,
         "url": null,
         "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/apache/apache03.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/apache/apache01.png",
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/apache/apache02.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/apache/apache01.png"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/apache/apache03.png"
         ]
       }
     ],
@@ -22630,10 +22630,10 @@
         "description": null,
         "url": null,
         "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/biztalk360/biztalk360_03.jpeg",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/biztalk360/biztalk360_04.jpeg",
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/biztalk360/biztalk360_01.jpeg",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/biztalk360/biztalk360_02.jpeg"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/biztalk360/biztalk360_02.jpeg",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/biztalk360/biztalk360_03.jpeg",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/biztalk360/biztalk360_04.jpeg"
         ]
       }
     ],
@@ -22775,8 +22775,8 @@
         "description": ".NET",
         "url": null,
         "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/dotnet/dotnet03.png",
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/dotnet/dotnet02.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/dotnet/dotnet03.png",
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/dotnet/dotnet.png"
         ]
       }
@@ -22871,9 +22871,9 @@
         "description": "Java",
         "url": null,
         "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/java/java.png",
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/java/java01.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/java/java02.png"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/java/java02.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/java/java.png"
         ]
       }
     ],
@@ -22928,8 +22928,8 @@
         "description": ".NET",
         "url": null,
         "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/dotnet/dotnet03.png",
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/dotnet/dotnet02.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/dotnet/dotnet03.png",
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/dotnet/dotnet.png"
         ]
       }
@@ -22991,9 +22991,9 @@
         "description": "Java",
         "url": null,
         "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/java/java.png",
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/java/java01.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/java/java02.png"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/java/java02.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/java/java.png"
         ]
       }
     ],
@@ -23048,9 +23048,9 @@
         "description": "Java",
         "url": null,
         "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/java/java.png",
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/java/java01.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/java/java02.png"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/java/java02.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/java/java.png"
         ]
       }
     ],
@@ -23105,9 +23105,9 @@
         "description": "Java",
         "url": null,
         "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/java/java.png",
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/java/java01.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/java/java02.png"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/java/java02.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/java/java.png"
         ]
       }
     ],
@@ -23162,8 +23162,8 @@
         "description": null,
         "url": null,
         "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/micro/Micro3.png",
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/micro/Micro2.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/micro/Micro3.png",
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/micro/Micro.png"
         ]
       }
@@ -23346,12 +23346,12 @@
         "description": null,
         "url": null,
         "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/gatsby-build/gatsby-build.png",
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/gatsby-build/gatsby-build01.png",
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/gatsby-build/gatsby-build02.png",
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/gatsby-build/gatsby-build03.png",
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/gatsby-build/gatsby-build04.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/gatsby-build/gatsby-build05.png"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/gatsby-build/gatsby-build05.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/gatsby-build/gatsby-build.png"
         ]
       }
     ],
@@ -23396,8 +23396,8 @@
         "description": null,
         "url": null,
         "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/ibmmq/ibmmq02.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/ibmmq/ibmmq01.png"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/ibmmq/ibmmq01.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/ibmmq/ibmmq02.png"
         ]
       }
     ],
