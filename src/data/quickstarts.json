@@ -1667,53 +1667,6 @@
     ]
   },
   {
-    "title": "HCP Consul",
-    "name": "hcp-consul",
-    "description": "This Quickstart provides example configuration for HCP Consul reporting metrics into New Relic via New Relic's statsd integration.",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/hashicorp/hcp-consul",
-    "id": "bc99ad15-7aba-450e-8236-6ea667d50cae",
-    "level": "VERIFIED",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/hashicorp/hcp-consul/logo.svg",
-    "summary": "HCP Consul Quick Start sample statsd configuration",
-    "websiteUrl": null,
-    "keywords": [
-      "hcp",
-      "hcp-consul",
-      "hashicorp",
-      "consul",
-      "nrlabs",
-      "nrlabs-data"
-    ],
-    "authors": [
-      "New Relic Labs"
-    ],
-    "dashboards": [
-      {
-        "name": "HCP Consul",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/hashicorp-hcp-consul/hashicorp-hcp-consul01.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/hashicorp-hcp-consul/hashicorp-hcp-consul02.png"
-        ]
-      }
-    ],
-    "alerts": [],
-    "documentation": [
-      {
-        "name": "Configuration documentation",
-        "description": "HCP Consul configuration documentation",
-        "url": "https://github.com/newrelic-experimental/hashicorp-quickstart-annex/tree/main/hcp-consul/README.md"
-      }
-    ],
-    "installPlans": [
-      {
-        "name": "HCP Consul",
-        "id": "third-party-hashicorp-hcp-consul"
-      }
-    ]
-  },
-  {
     "title": "AWS EMR",
     "name": "aws-emr",
     "description": "## What is AWS EMR?\n\nProcess and manage big data inputs from popular frameworks.\n\n### Get started!\n\nStart monitoring AWS EMR by connecting Amazon Web Services (AWS) to New Relic!\n\nCheck out our AWS EMR documentation to instrument your cloud service and manage the stability, scalability, and reliability of your systems with New Relic's infrastructure monitoring capabilities.\n\n### More info\n\nCheck out the [documentation](https://docs.newrelic.com/docs/infrastructure/amazon-integrations/aws-integrations-list/aws-emr-monitoring-integration/) to learn more about New Relic monitoring for AWS EMR.",
@@ -1840,6 +1793,53 @@
       {
         "name": "AWS-Infrastructure-Monitoring",
         "id": "aws-infrastructure-monitoring"
+      }
+    ]
+  },
+  {
+    "title": "HCP Consul",
+    "name": "hcp-consul",
+    "description": "This Quickstart provides example configuration for HCP Consul reporting metrics into New Relic via New Relic's statsd integration.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/hashicorp/hcp-consul",
+    "id": "bc99ad15-7aba-450e-8236-6ea667d50cae",
+    "level": "VERIFIED",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/hashicorp/hcp-consul/logo.svg",
+    "summary": "HCP Consul Quick Start sample statsd configuration",
+    "websiteUrl": null,
+    "keywords": [
+      "hcp",
+      "hcp-consul",
+      "hashicorp",
+      "consul",
+      "nrlabs",
+      "nrlabs-data"
+    ],
+    "authors": [
+      "New Relic Labs"
+    ],
+    "dashboards": [
+      {
+        "name": "HCP Consul",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/hashicorp-hcp-consul/hashicorp-hcp-consul01.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/hashicorp-hcp-consul/hashicorp-hcp-consul02.png"
+        ]
+      }
+    ],
+    "alerts": [],
+    "documentation": [
+      {
+        "name": "Configuration documentation",
+        "description": "HCP Consul configuration documentation",
+        "url": "https://github.com/newrelic-experimental/hashicorp-quickstart-annex/tree/main/hcp-consul/README.md"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "HCP Consul",
+        "id": "third-party-hashicorp-hcp-consul"
       }
     ]
   },
