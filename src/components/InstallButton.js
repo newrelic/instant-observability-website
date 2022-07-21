@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import { css } from '@emotion/react';
-import { graphql } from 'gatsby';
 import { Button, Link, useTessen } from '@newrelic/gatsby-theme-newrelic';
 import {
   getPackNr1Url,
@@ -222,19 +221,5 @@ InstallButton.propTypes = {
   location: PropTypes.object.isRequired,
   buttonStyle: PropTypes.oneOf(['PRIMARY', 'SECONDARY']),
 };
-
-export const fragmentQuery = graphql`
-  fragment InstallButton_quickstart on Quickstarts {
-    installPlans {
-      id
-      name
-    }
-    documentation {
-      name
-      url
-      description
-    }
-  }
-`;
 
 export default InstallButton;
