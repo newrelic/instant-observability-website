@@ -174,6 +174,13 @@ const QuickstartsPage = ({ data, location }) => {
             }
           `}
         >
+          <CategoryList
+            category={category}
+            categoriesWithCount={categoriesWithCount}
+            handleSearchAndCategory={handleSearchAndCategory}
+            search={search}
+            loadComplete={loadComplete}
+          />
         </aside>
         <div
           css={css`
