@@ -143,7 +143,7 @@ module.exports = {
       resolve: 'gatsby-plugin-gatsby-cloud',
       options: {
         headers: {
-          '/*': ['Referrer-Policy: no-referrer-when-downgrade', 'Cache-Control: no-cache'],
+          '/*': ['Referrer-Policy: no-referrer-when-downgrade', 'Cache-Control: no-cache', 'X-Test-Header: test'],
         },
       },
     },
