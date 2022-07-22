@@ -1,3 +1,16 @@
+# [1.9.0](https://github.com/newrelic/instant-observability-website/compare/v1.8.0...v1.9.0) (2022-07-22)
+
+
+### Bug Fixes
+
+* add error logging ([21448fb](https://github.com/newrelic/instant-observability-website/commit/21448fb97d8d77166a7e801aa6458349cd06cbdc))
+* add try/catch logic ([2827045](https://github.com/newrelic/instant-observability-website/commit/2827045ebdd873d135bb9640be34a677409baf93))
+
+
+### Features
+
+* shadow theme's 404 page ([1a4b2aa](https://github.com/newrelic/instant-observability-website/commit/1a4b2aaff0c82d9aa4a4b8a80707ea9e06fc6040))
+
 # [1.8.0](https://github.com/newrelic/instant-observability-website/compare/v1.7.1...v1.8.0) (2022-07-20)
 
 
