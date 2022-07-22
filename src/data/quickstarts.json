@@ -6602,57 +6602,6 @@
     ]
   },
   {
-    "title": "DBmarlin",
-    "name": "dbmarlin",
-    "description": "The DBmarlin quickstart allows you to get visibility into the performance and availability of your database services from within New Relic.\n\nTo get started with DBmarlin, visit the [DBmarlin introduction page](https://docs.dbmarlin.com/docs/DBmarlin/introduction).\n\n# About DBmarlin\nDBmarlin monitors database performance, tracks changes and helps your databases run fast.\n\nIt provides an easy-to-use and consistent way to monitor CockroachDB, DB2, MariaDB, MySQL, Oracle, PostgreSQL and SQL Server, self-hosted or in the cloud.\n\nIt captures SQL statement text and wait events so you can see exactly where the time is spent executing SQL within your database.\n\nIt auto-detects changes to schema objects, database parameters and execution plans so you can see their impact on performance.",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/dbmarlin",
-    "id": "a0daa1f8-99de-41ba-b7cb-7dd87c1bf7f2",
-    "level": "COMMUNITY",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/dbmarlin/logo.svg",
-    "summary": "View database performance from within New Relic with this integration with DBmarlin.",
-    "websiteUrl": null,
-    "keywords": [
-      "database",
-      "performance",
-      "availability",
-      "cockroach",
-      "db2",
-      "mysql",
-      "maria",
-      "oracle",
-      "postgres",
-      "sql",
-      "newrelic partner"
-    ],
-    "authors": [
-      "DBmarlin"
-    ],
-    "dashboards": [
-      {
-        "name": "DBmarlin dashboard",
-        "description": "See where your databases were spending their time. View wait events and top SQL.",
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/dbmarlin/dbmarlin-dashboard01.png"
-        ]
-      }
-    ],
-    "alerts": [],
-    "documentation": [
-      {
-        "name": "Installation docs",
-        "description": "Installation instructions for DBmarlin and the DBmarlin quickstart.",
-        "url": "https://docs.dbmarlin.com/docs/integrations/newrelic"
-      }
-    ],
-    "installPlans": [
-      {
-        "name": "dbmarlin",
-        "id": "third-party-dbmarlin"
-      }
-    ]
-  },
-  {
     "title": "Elixir",
     "name": "elixir",
     "description": "## What is Elixir?\n\nPopular open source programming language with automated features.\n\n## Get started!\n\nLeverage community expertise and instantly get value out of your telemetry data. This quickstart automatically instruments Elixir with the New Relic Elixir agent, and allows you to further leverage New Relic's APM capabilities by setting up [custom dashboards](https://docs.newrelic.com/docs/query-your-data/explore-query-data/dashboards/introduction-dashboards/), [errors inbox](https://docs.newrelic.com/docs/apm/apm-ui-pages/errors-inbox/errors-inbox/), [transaction tracing](https://docs.newrelic.com/docs/apm/transactions/transaction-traces/introduction-transaction-traces/), and [service maps](https://docs.newrelic.com/docs/understand-dependencies/understand-system-dependencies/service-maps/introduction-service-maps/).\n\n## More info\n\nCheck out the [documentation](https://docs.newrelic.com/docs/integrations/open-source-telemetry-integrations/elixir/elixir-open-source-agent) to learn more about New Relic monitoring for Elixir.",
@@ -6749,6 +6698,58 @@
       {
         "name": "GCP-Infrastructure-Monitoring",
         "id": "gcp-infrastructure-monitoring"
+      }
+    ]
+  },
+  {
+    "title": "DBmarlin",
+    "name": "dbmarlin",
+    "description": "The DBmarlin quickstart allows you to get visibility into the performance and availability of your database services from within New Relic.\n\nTo get started with DBmarlin, visit the [DBmarlin introduction page](https://docs.dbmarlin.com/docs/DBmarlin/introduction).\n\n# About DBmarlin\nDBmarlin monitors database performance, tracks changes and helps your databases run fast.\n\nIt provides an easy-to-use and consistent way to monitor CockroachDB, DB2, MariaDB, MySQL, Oracle, PostgreSQL and SQL Server, self-hosted or in the cloud.\n\nIt captures SQL statement text and wait events so you can see exactly where the time is spent executing SQL within your database.\n\nIt auto-detects changes to schema objects, database parameters and execution plans so you can see their impact on performance.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/dbmarlin",
+    "id": "a0daa1f8-99de-41ba-b7cb-7dd87c1bf7f2",
+    "level": "COMMUNITY",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/dbmarlin/logo.svg",
+    "summary": "View database performance from within New Relic with this integration with DBmarlin.",
+    "websiteUrl": null,
+    "keywords": [
+      "database",
+      "performance",
+      "cockroach",
+      "db2",
+      "mysql",
+      "maria",
+      "oracle",
+      "postgres",
+      "sql",
+      "infrastructure",
+      "newrelic partner",
+      "featured"
+    ],
+    "authors": [
+      "DBmarlin"
+    ],
+    "dashboards": [
+      {
+        "name": "DBmarlin dashboard",
+        "description": "See where your databases were spending their time. View wait events and top SQL.",
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/dbmarlin/dbmarlin-dashboard01.png"
+        ]
+      }
+    ],
+    "alerts": [],
+    "documentation": [
+      {
+        "name": "Installation docs",
+        "description": "Installation instructions for DBmarlin and the DBmarlin quickstart.",
+        "url": "https://docs.dbmarlin.com/docs/integrations/newrelic"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "dbmarlin",
+        "id": "third-party-dbmarlin"
       }
     ]
   },
