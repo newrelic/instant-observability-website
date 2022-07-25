@@ -67,6 +67,11 @@ Runs every 4 hours to pull in new quickstarts from Nerdgraph (New Relic's GraphQ
 
 Runs every day to get various pages that relate to each quickstart from our vendor.
 
+### Clear website cache
+
+Runs on every push to the `main` branch and clears out the `newrelic.com/instant-observability` cache.
+This can also be kicked off manually via a workflow run.
+
 ## ☁️  Hosting
 
 - This site is built and hosted on [Gatsby Cloud](https://www.gatsbyjs.com/products/cloud/)
