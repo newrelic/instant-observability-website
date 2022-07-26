@@ -1,3 +1,10 @@
+# [1.10.0](https://github.com/newrelic/instant-observability-website/compare/v1.9.0...v1.10.0) (2022-07-26)
+
+
+### Features
+
+* add workflow to clear cache on push ([6721ad7](https://github.com/newrelic/instant-observability-website/commit/6721ad76636863d76b2116840ceeb992036d2e16))
+
 # [1.9.0](https://github.com/newrelic/instant-observability-website/compare/v1.8.0...v1.9.0) (2022-07-22)
 
 
