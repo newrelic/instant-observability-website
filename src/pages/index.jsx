@@ -99,7 +99,7 @@ const QuickstartsPage = ({ data, location }) => {
           position: fixed;
           width: 40px;
           height: 40px;
-          right: 9px;
+          left: 9px;
           bottom: 43px;
           background: #1d252c;
           border-radius: 97px;
