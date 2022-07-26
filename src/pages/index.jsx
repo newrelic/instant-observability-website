@@ -30,6 +30,7 @@ import QuickstartTile from '@components/QuickstartTile';
 import SuperTiles from '@components/SuperTiles';
 import CategoryList from '@components/indexComponents/CategoryList';
 import CategoryDropdown from '@components/indexComponents/CategoryDropdown';
+import QuickstartGrid from '@components/QuickstartGrid';
 
 const COLUMN_BREAKPOINT = '1131px';
 // used to set the height of the Spinner to reduce layout shift on page load
@@ -56,7 +57,7 @@ const QuickstartsPage = ({ data, location }) => {
   const [loadComplete, setLoadComplete] = useState(false);
 
   useEffect(() => {
-      setLoadComplete(true);
+    setLoadComplete(true);
   }, []);
 
   const handleScroll = () => {
@@ -188,7 +189,7 @@ const QuickstartsPage = ({ data, location }) => {
             padding: 1.5rem;
           `}
         >
-          <CategoryDropdown 
+          <CategoryDropdown
             category={category}
             categoriesWithCount={categoriesWithCount}
             handleParam={handleParam}
@@ -228,7 +229,7 @@ const QuickstartsPage = ({ data, location }) => {
                     `}
                   >
                     {!loadComplete && <Spinner />}
-                    { loadComplete &&
+                    {loadComplete && (
                       <Slider
                         {...indexSettings}
                         css={css`
@@ -244,7 +245,7 @@ const QuickstartsPage = ({ data, location }) => {
                           />
                         ))}
                       </Slider>
-                    }
+                    )}
                   </div>
                 </>
               )}
@@ -278,7 +279,7 @@ const QuickstartsPage = ({ data, location }) => {
                 `}
               >
                 {!loadComplete && <Spinner />}
-                { loadComplete &&
+                {loadComplete && (
                   <Slider {...indexSettings}>
                     {featuredQuickstarts.map((pack) => (
                       <QuickstartTile
@@ -288,7 +289,7 @@ const QuickstartsPage = ({ data, location }) => {
                       />
                     ))}
                   </Slider>
-                }
+                )}
               </div>
             </>
           )}
@@ -355,9 +356,7 @@ const QuickstartsPage = ({ data, location }) => {
             `}
           >
             {Boolean(search) && <SuperTiles />}
-            {filteredQuickstarts.map((pack) => (
-              <QuickstartTile key={pack.id} featured={false} {...pack} />
-            ))}
+            <QuickstartGrid quickstarts={filteredQuickstarts} />
           </div>
         </div>
       </div>

@@ -67,7 +67,7 @@ const GuidedInstallTileMostPopular = () => {
           min-width: 250px;
         }
 
-        background: #1a3c34;
+        background: var(--button-background-color);
 
         h2,
         p {
