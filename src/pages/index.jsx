@@ -161,8 +161,6 @@ const QuickstartsPage = ({ data, location }) => {
           data-swiftype-index={false}
           css={css`
             grid-area: sidebar;
-            height: calc(100vh - var(--global-header-height));
-            position: sticky;
             top: var(--global-header-height);
             width: 100%;
 
