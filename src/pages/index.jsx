@@ -354,7 +354,15 @@ const QuickstartsPage = ({ data, location }) => {
             `}
           >
             {Boolean(search) && <SuperTiles />}
-            <QuickstartGrid quickstarts={filteredQuickstarts} />
+
+            {/* Add pagination grid if no search term or category selected */}
+            {Boolean(search) && Boolean(!category) ? (
+              filteredQuickstarts.map((pack) => (
+                <QuickstartTile key={pack.id} featured={false} {...pack} />
+              ))
+            ) : (
+              <QuickstartGrid quickstarts={filteredQuickstarts} />
+            )}
           </div>
         </div>
       </div>
