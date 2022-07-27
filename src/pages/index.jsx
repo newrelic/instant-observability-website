@@ -65,8 +65,8 @@ const QuickstartsPage = ({ data, location }) => {
   const handleScroll = () => {
     const btn = document.getElementById('go-to-page-top-btn');
     if (
-      document.body.scrollTop > 3000 ||
-      document.documentElement.scrollTop > 3000
+      document.body.scrollTop > 1000 ||
+      document.documentElement.scrollTop > 1000
     ) {
       btn.style.display = 'block';
     } else {
