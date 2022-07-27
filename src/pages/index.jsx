@@ -360,7 +360,7 @@ const QuickstartsPage = ({ data, location }) => {
             {/* Add pagination grid if no search term or category selected */}
             {isParamPresent(search) || isParamPresent(category) ? (
               filteredQuickstarts.map((pack) => (
-                <QuickstartTile key={pack.id} featured={false} {...pack} />
+                <QuickstartTile key={pack.id} {...pack} />
               ))
             ) : (
               <QuickstartGrid quickstarts={filteredQuickstarts} />
