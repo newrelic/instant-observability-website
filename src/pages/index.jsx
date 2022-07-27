@@ -47,6 +47,8 @@ const QuickstartsPage = ({ data, location }) => {
 
   const handleSearchAndCategory = handleParams('category', 'search');
 
+  const isParamPresent = (value) => value !== '' && value !== undefined;
+
   const {
     featuredQuickstarts,
     filteredQuickstarts,
@@ -356,7 +358,7 @@ const QuickstartsPage = ({ data, location }) => {
             {Boolean(search) && <SuperTiles />}
 
             {/* Add pagination grid if no search term or category selected */}
-            {Boolean(search) && Boolean(!category) ? (
+            {isParamPresent(search) || isParamPresent(category) ? (
               filteredQuickstarts.map((pack) => (
                 <QuickstartTile key={pack.id} featured={false} {...pack} />
               ))
