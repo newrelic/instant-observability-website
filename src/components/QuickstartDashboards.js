@@ -9,7 +9,6 @@ import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import { animated } from 'react-spring';
 
 import { dashboardSettings } from '../data/slick-settings';
-import { MOBILE_BREAKPOINT } from '../data/constants';
 
 const QuickstartDashboards = ({ quickstart }) => {
   const renderDescription = (dashboard) => {
