@@ -18072,6 +18072,65 @@
     ]
   },
   {
+    "title": "Tomcat",
+    "name": "tomcat",
+    "description": "# What is Tomcat?\n\nOpen-source implementation of the Java Servlet, JavaServer Pages, Java Expression Language and WebSocket technologies.It implements Java enterprise specs like WebSocket technologies and JavaServer Pages. The Apache Tomcat software powers large-scale, mission-critical web applications across a diverse range of organizations.\n\n### New Relic Tomcat quickstart features\n\nOur Tomcat monitoring integration has the following features:\n\n- A standard dashboard that tracks key indicators like error overview, virtual machine overview, daily transaction errors, transaction errors today vs 1 week ago, CPU utilization, memory heap used, and more\n- Instant alerts on performance metrics like transaction errors and high CPU utilization\n- Custom queries and immediate data visualization\n\n### Why monitor Tomcat with New Relic?\n\nNew Relic’s Tomcat monitoring quickstart automatically instruments Tomcat with the New Relic Java agent. It helps you to immediately monitor Tomcat’s memory usage and other indicators with instant alerts and a standard dashboard, giving you valuable insights to improve Tomcat’s performance.\n\nOur Tomcat integration empowers teams to monitor micros-services under Tomcat. Your team can leverage the integration to report all data for each service to New Relic and drill into specific JVMs to see the data and details for each instance.\n\nGet started with New Relic Tomcat monitoring quickstart today to proactively monitor Tomcat.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/java/tomcat",
+    "id": "d3e84281-6094-4cb2-b323-30e4f13b4f0c",
+    "level": "NEW_RELIC",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/java/tomcat/logo.svg",
+    "summary": "Monitoring Tomcat is critical to track its performance via key metrics like transaction errors, memory usage, and CPU utilization. Download our Tomcat instant observability quickstart to instrument Tomcat with our Java agent.",
+    "websiteUrl": null,
+    "keywords": [
+      "apm",
+      "java",
+      "server",
+      "most popular"
+    ],
+    "authors": [
+      "New Relic"
+    ],
+    "dashboards": [
+      {
+        "name": "Java",
+        "description": "Java",
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/java/java01.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/java/java02.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/java/java.png"
+        ]
+      }
+    ],
+    "alerts": [
+      {
+        "name": "High CPU Utilization",
+        "details": "This alert is triggered when the CPU Utilization is above 90%.",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "Transaction Errors",
+        "details": "This alert is triggered when the the transactions fail more than 10% of the time in 5 minutes.",
+        "type": "STATIC",
+        "url": null
+      }
+    ],
+    "documentation": [
+      {
+        "name": "Tomcat installation docs",
+        "description": "Open-source implementation of the Java Servlet, JavaServer Pages, Java\nExpression Language and WebSocket technologies.\n",
+        "url": "https://docs.newrelic.com/docs/agents/java-agent/getting-started/compatibility-requirements-java-agent"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "Java Agent",
+        "id": "setup-java-targeted-install"
+      }
+    ]
+  },
+  {
     "title": "Unix",
     "name": "unix",
     "description": "The Unix monitoring integration allows for system-level monitoring of AIX,\nLinux, macOS, Solaris/SunOS and other Unix-based servers.",
@@ -18998,64 +19057,6 @@
       {
         "name": "Java Agent",
         "id": "setup-java-agent"
-      }
-    ]
-  },
-  {
-    "title": "Tomcat",
-    "name": "tomcat",
-    "description": "# What is Tomcat?\n\nOpen-source implementation of the Java Servlet, JavaServer Pages, Java Expression Language and WebSocket technologies.It implements Java enterprise specs like WebSocket technologies and JavaServer Pages. The Apache Tomcat software powers large-scale, mission-critical web applications across a diverse range of organizations.\n\n### New Relic Tomcat quickstart features\n\nOur Tomcat monitoring integration has the following features:\n\n- A standard dashboard that tracks key indicators like error overview, virtual machine overview, daily transaction errors, transaction errors today vs 1 week ago, CPU utilization, memory heap used, and more\n- Instant alerts on performance metrics like transaction errors and high CPU utilization\n- Custom queries and immediate data visualization\n\n### Why monitor Tomcat with New Relic?\n\nNew Relic’s Tomcat monitoring quickstart automatically instruments Tomcat with the New Relic Java agent. It helps you to immediately monitor Tomcat’s memory usage and other indicators with instant alerts and a standard dashboard, giving you valuable insights to improve Tomcat’s performance.\n\nOur Tomcat integration empowers teams to monitor micros-services under Tomcat. Your team can leverage the integration to report all data for each service to New Relic and drill into specific JVMs to see the data and details for each instance.\n\nGet started with New Relic Tomcat monitoring quickstart today to proactively monitor Tomcat.",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/java/tomcat",
-    "id": "d3e84281-6094-4cb2-b323-30e4f13b4f0c",
-    "level": "NEW_RELIC",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/java/tomcat/logo.svg",
-    "summary": "Monitoring Tomcat is critical to track its performance via key metrics like transaction errors, memory usage, and CPU utilization. Download our Tomcat instant observability quickstart to instrument Tomcat with our Java agent.",
-    "websiteUrl": null,
-    "keywords": [
-      "apm",
-      "java",
-      "server"
-    ],
-    "authors": [
-      "New Relic"
-    ],
-    "dashboards": [
-      {
-        "name": "Java",
-        "description": "Java",
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/java/java01.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/java/java02.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/java/java.png"
-        ]
-      }
-    ],
-    "alerts": [
-      {
-        "name": "High CPU Utilization",
-        "details": "This alert is triggered when the CPU Utilization is above 90%.",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "Transaction Errors",
-        "details": "This alert is triggered when the the transactions fail more than 10% of the time in 5 minutes.",
-        "type": "STATIC",
-        "url": null
-      }
-    ],
-    "documentation": [
-      {
-        "name": "Tomcat installation docs",
-        "description": "Open-source implementation of the Java Servlet, JavaServer Pages, Java\nExpression Language and WebSocket technologies.\n",
-        "url": "https://docs.newrelic.com/docs/agents/java-agent/getting-started/compatibility-requirements-java-agent"
-      }
-    ],
-    "installPlans": [
-      {
-        "name": "Java Agent",
-        "id": "setup-java-targeted-install"
       }
     ]
   },
