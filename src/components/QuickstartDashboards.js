@@ -77,7 +77,7 @@ const QuickstartDashboards = ({ quickstart }) => {
                     `}
                   >
                     <a
-                      href={node}
+                      href={node.publicURL}
                       target="_blank"
                       rel="noreferrer"
                       css={css`
@@ -85,7 +85,7 @@ const QuickstartDashboards = ({ quickstart }) => {
                       `}
                     >
                       <img
-                        src={node}
+                        src={node.publicURL}
                         alt={`${dashboard.name} screenshot ${index}`}
                         css={css`
                           height: 17.5rem;
