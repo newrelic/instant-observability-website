@@ -1,7 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { css } from '@emotion/react';
-import { Button, Icon, Link } from '@newrelic/gatsby-theme-newrelic';
+import Button from '@newrelic/gatsby-theme-newrelic/src/components/Button';
+import Icon from '@newrelic/gatsby-theme-newrelic/src/components/Icon';
+import Link from '@newrelic/gatsby-theme-newrelic/src/components/Link';
 import { QUICKSTARTS_REPO } from '@data/constants';
 import GitHubIconSVG from './Icons/GitHubIconSVG';
 

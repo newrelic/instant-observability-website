@@ -1,7 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { graphql } from 'gatsby';
-import { Link, Button } from '@newrelic/gatsby-theme-newrelic';
+import Button from '@newrelic/gatsby-theme-newrelic/src/components/Button';
+import Link from '@newrelic/gatsby-theme-newrelic/src/components/Link';
 import { css } from '@emotion/react';
 import { quickstart } from '../types';
 import { QUICKSTARTS_REPO } from '@data/constants';

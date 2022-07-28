@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { navigate } from 'gatsby';
-import { useTessen } from '@newrelic/gatsby-theme-newrelic';
+import useTessen from '@newrelic/gatsby-theme-newrelic/src/hooks/useTessen';
 import CATEGORIES from '@data/instant-observability-categories';
 
 const isValid = (value) => value !== null && value !== undefined;

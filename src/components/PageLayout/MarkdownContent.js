@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import MDXContainer from '../MDXContainer';
-import { Layout } from '@newrelic/gatsby-theme-newrelic';
+import Layout from '@newrelic/gatsby-theme-newrelic/src/components/Layout';
 
 const MarkdownContent = ({ children }) => (
   <Layout.Content>

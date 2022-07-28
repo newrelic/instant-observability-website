@@ -1,7 +1,9 @@
 import PropTypes from 'prop-types';
 import React, { useState, useEffect } from 'react';
 import { css } from '@emotion/react';
-import { Button, Icon, Spinner } from '@newrelic/gatsby-theme-newrelic';
+import Button from '@newrelic/gatsby-theme-newrelic/src/components/Button';
+import Icon from '@newrelic/gatsby-theme-newrelic/src/components/Icon';
+import Spinner from '@newrelic/gatsby-theme-newrelic/src/components/Spinner';
 import Overlay from '@components/Overlay';
 
 import getDisplayName from '@utils/getDisplayName';
