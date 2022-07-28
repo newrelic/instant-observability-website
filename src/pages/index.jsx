@@ -358,13 +358,14 @@ const QuickstartsPage = ({ data, location }) => {
             {Boolean(search) && <SuperTiles />}
 
             {/* Add pagination grid if no search term or category selected */}
-            {isParamPresent(search) || isParamPresent(category) ? (
-              filteredQuickstarts.map((pack) => (
-                <QuickstartTile key={pack.id} {...pack} />
-              ))
-            ) : (
-              <QuickstartGrid quickstarts={filteredQuickstarts} />
-            )}
+            <QuickstartGrid
+              quickstarts={filteredQuickstarts}
+              stepSize={
+                isParamPresent(search) || isParamPresent(category)
+                  ? filteredQuickstarts.length
+                  : 11
+              }
+            />
           </div>
         </div>
       </div>

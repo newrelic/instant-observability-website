@@ -5,8 +5,8 @@ import { Button, Surface } from '@newrelic/gatsby-theme-newrelic';
 import QuickstartTile from '@components/QuickstartTile';
 import { quickstart } from '../types';
 
-const QuickstartGrid = ({ quickstarts }) => {
-  const [displayed, showMore] = usePagination(quickstarts, 11);
+const QuickstartGrid = ({ quickstarts, stepSize }) => {
+  const [displayed, showMore] = usePagination(quickstarts, stepSize);
 
   return (
     <>
@@ -48,6 +48,10 @@ const usePagination = (quickstarts, size) => {
     setQs(quickstarts.slice(0, numDisplayed));
   }, [numDisplayed, quickstarts]);
 
+  useEffect(() => {
+    setNumDisplayed(size);
+  }, [size]);
+
   const showMore = () => {
     setNumDisplayed(numDisplayed + size + 1);
   };
@@ -57,6 +61,7 @@ const usePagination = (quickstarts, size) => {
 
 QuickstartGrid.propTypes = {
   quickstarts: PropTypes.arrayOf(quickstart),
+  stepSize: PropTypes.number,
 };
 
 export default QuickstartGrid;
