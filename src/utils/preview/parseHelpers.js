@@ -105,7 +105,7 @@ export const parseDashboardFiles = (files) => {
       description: dashboard?.description ?? 'Placeholder description',
       screenshots: screenshots
         .filter((s) => s.filePath.includes(parentDir))
-        .map(({ content }) => content),
+        .map(({ content }) => ({ publicURL: content })),
     };
   });
 };
