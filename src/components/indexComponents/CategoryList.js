@@ -1,7 +1,8 @@
 import PropTypes from 'prop-types';
 import React, { useEffect, useState } from 'react';
 import { css } from '@emotion/react';
-import { Button, Spinner } from '@newrelic/gatsby-theme-newrelic';
+import { Button } from '@newrelic/gatsby-theme-newrelic/src/components/Button';
+import { Spinner } from '@newrelic/gatsby-theme-newrelic/src/components/Spinner';
 import { QUICKSTARTS_COLLAPSE_BREAKPOINT } from '@data/constants';
 
 const CategoryList = ({

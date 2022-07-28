@@ -1,7 +1,8 @@
 import React, { useEffect, useCallback, useRef } from 'react';
 import PropTypes from 'prop-types';
 import { css } from '@emotion/react';
-import { Portal, useKeyPress } from '@newrelic/gatsby-theme-newrelic';
+import Portal from '@newrelic/gatsby-theme-newrelic/src/components/Portal';
+import useKeyPress from '@newrelic/gatsby-theme-newrelic/src/hooks/useKeyPress';
 
 const Overlay = ({ children, onCloseOverlay, isOpen = false, className }) => {
   useEffect(() => {

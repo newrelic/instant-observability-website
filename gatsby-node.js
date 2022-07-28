@@ -56,7 +56,7 @@ exports.onCreatePage = async ({ page, actions }) => {
   createPage(page);
 };
 
-exports.onCreateWebpackConfig = ({ actions, plugins }) => {
+exports.onCreateWebpackConfig = ({ actions, plugins, getConfig }) => {
   actions.setWebpackConfig({
     // The `debug` library is causing issues when building the site by including
     // invalid JS. This ensures the module resolves to the browser-capatible

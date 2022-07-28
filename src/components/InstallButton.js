@@ -2,7 +2,9 @@ import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import { css } from '@emotion/react';
 import { graphql } from 'gatsby';
-import { Button, Link, useTessen } from '@newrelic/gatsby-theme-newrelic';
+import Button from '@newrelic/gatsby-theme-newrelic/src/components/Button';
+import Link from '@newrelic/gatsby-theme-newrelic/src/components/Link';
+import useTessen from '@newrelic/gatsby-theme-newrelic/src/hooks/useTessen';
 import {
   getPackNr1Url,
   getGuidedInstallStackedNr1Url,

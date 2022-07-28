@@ -1,10 +1,7 @@
 import '@components/styles.scss';
 
-import {
-  GlobalFooter,
-  GlobalHeader,
-  NR_SITES,
-} from '@newrelic/gatsby-theme-newrelic';
+import GlobalFooter from '@newrelic/gatsby-theme-newrelic/src/components/GlobalFooter';
+import GlobalHeader, { NR_SITES } from '@newrelic/gatsby-theme-newrelic/src/components/GlobalHeader';
 
 import GetStartedFooter from '@components/GetStartedFooter';
 import Layout from '@components/Layout';

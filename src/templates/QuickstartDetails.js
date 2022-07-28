@@ -1,4 +1,4 @@
-import { useTessen } from '@newrelic/gatsby-theme-newrelic';
+import useTessen from '@newrelic/gatsby-theme-newrelic/src/hooks/useTessen';
 import React from 'react';
 
 import IOSeo from '@components/IOSeo';

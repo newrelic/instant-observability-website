@@ -23,8 +23,6 @@
     "test": "jest -i"
   },
   "dependencies": {
-    "@emotion/react": "^11.1.5",
-    "@emotion/styled": "^11.3.0",
     "@mdx-js/mdx": "^1.6.19",
     "@mdx-js/react": "^1.6.19",
     "@newrelic/gatsby-theme-newrelic": "^6.8.0",
@@ -51,7 +49,6 @@
     "react-markdown": "^6.0.0",
     "react-share": "^4.4.0",
     "react-slick": "^0.28.1",
-    "sass": "^1.49.9",
     "sharp": "^0.29.1",
     "slick-carousel": "^1.8.1",
     "use-mobile-detect-hook": "^1.0.5",
@@ -59,6 +56,8 @@
   },
   "devDependencies": {
     "@emotion/jest": "^11.9.1",
+    "@emotion/react": "^11.1.5",
+    "@emotion/styled": "^11.3.0",
     "@newrelic/eslint-plugin-newrelic": "^0.3.1",
     "@semantic-release/changelog": "^6.0.1",
     "@semantic-release/commit-analyzer": "^9.0.2",
@@ -71,7 +70,9 @@
     "babel-jest": "^26.0.1",
     "babel-preset-gatsby": "^1.0.0",
     "eslint-plugin-markdown": "^2.2.1",
+    "gatsby-plugin-webpack-bundle-analyser-v2": "^1.1.27",
     "jest": "^26.4.0",
-    "prettier": "2.2.1"
+    "prettier": "2.2.1",
+    "sass": "^1.49.9"
   }
 }

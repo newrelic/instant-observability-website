@@ -2,7 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { css } from '@emotion/react';
 
-import { Surface, Tag } from '@newrelic/gatsby-theme-newrelic';
+import Surface from '@newrelic/gatsby-theme-newrelic/src/components/Surface';
+import Tag from '@newrelic/gatsby-theme-newrelic/src/components/Tag';
 import useTabs from './Tabs/useTabs';
 
 const truncateDescription = (description) => {

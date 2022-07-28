@@ -2,7 +2,7 @@ import { LOCALS, RESOURCES, SOCIALS } from '@data/constants';
 import { graphql, useStaticQuery } from 'gatsby';
 
 import ExternalLink from '@newrelic/gatsby-theme-newrelic/src/components/ExternalLink';
-import { Icon } from '@newrelic/gatsby-theme-newrelic';
+import Icon from '@newrelic/gatsby-theme-newrelic/src/components/Icon';
 import Link from '@newrelic/gatsby-theme-newrelic/src/components/Link';
 import NewLogo from './NewLogo';
 import PropTypes from 'prop-types';

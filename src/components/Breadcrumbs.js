@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import { css } from '@emotion/react';
-import { Link } from '@newrelic/gatsby-theme-newrelic';
+import Link from '@newrelic/gatsby-theme-newrelic/src/components/Link';
 
 const Breadcrumbs = ({ segments, separator }) => {
   return (

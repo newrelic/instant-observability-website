@@ -23,6 +23,7 @@ module.exports = {
     'gatsby-plugin-image',
     'gatsby-plugin-sharp',
     'gatsby-transformer-sharp',
+    'gatsby-plugin-webpack-bundle-analyser-v2',
     {
       resolve: '@newrelic/gatsby-theme-newrelic',
       options: {

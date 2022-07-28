@@ -1,4 +1,5 @@
-import { Button, ExternalLink } from '@newrelic/gatsby-theme-newrelic';
+import Button from '@newrelic/gatsby-theme-newrelic/src/components/Button';
+import ExternalLink from '@newrelic/gatsby-theme-newrelic/src/components/ExternalLink';
 import { DEMO_LINK, SIGNUP_LINK } from '@data/constants';
 import PropTypes from 'prop-types';
 import React from 'react';
