@@ -85,6 +85,7 @@ const QuickstartImg = ({ className, packName, imageNode, svgNode }) => {
         src={svgNode.publicURL}
         alt={packName}
         className={className}
+        loading="lazy"
       />
     );
   }

@@ -5,6 +5,7 @@ import Intro from './Intro';
 import { quickstart } from '../types';
 import Slider from 'react-slick';
 import { graphql } from 'gatsby';
+import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import { animated } from 'react-spring';
 
 import { dashboardSettings } from '../data/slick-settings';
@@ -84,16 +85,14 @@ const QuickstartDashboards = ({ quickstart }) => {
                         margin: auto;
                       `}
                     >
-                      <img
-                        src={node.publicURL}
-                        alt={`${dashboard.name} screenshot ${index}`}
+                      <GatsbyImage
                         css={css`
-                          height: 17.5rem;
-                          @media screen and (max-width: ${MOBILE_BREAKPOINT}) {
-                          }
-                          border-radius: 4px;
                           padding: 0.25rem;
                         `}
+                        imgStyle={{ borderRadius: '4px' }}
+                        objectFit="contain"
+                        image={getImage(node)}
+                        alt={`${dashboard.name} screenshot ${index}`}
                       />
                     </a>
                   </animated.div>
@@ -119,7 +118,12 @@ export const fragmentQuery = graphql`
       screenshots {
         publicURL
         childImageSharp {
-          gatsbyImageData(placeholder: BLURRED, formats: [AUTO, WEBP])
+          gatsbyImageData(
+            placeholder: BLURRED
+            layout: CONSTRAINED
+            formats: [AUTO, WEBP]
+            height: 272
+          )
         }
       }
     }
