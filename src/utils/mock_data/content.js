@@ -135,9 +135,11 @@ export const expectedDashboardOutput = [
   {
     name: 'mock dashboard name',
     description: 'mock dashboard description',
-    screenshots: [
-      'mock/url/for/mock_dashboard01.png',
-      'mock/url/for/mock_dashboard02.png',
-    ],
+    screenshots: {
+      publicURL: [
+        'mock/url/for/mock_dashboard01.png',
+        'mock/url/for/mock_dashboard02.png',
+      ],
+    },
   },
 ];
