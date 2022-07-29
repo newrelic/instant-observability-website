@@ -89,6 +89,7 @@ const QuickstartDashboards = ({ quickstart }) => {
                       <SafeImage
                         css={css`
                           padding: 0.25rem;
+                          height: 272px;
                         `}
                         imageNode={node}
                         rawNode={node}
