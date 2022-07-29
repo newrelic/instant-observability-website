@@ -1,11 +1,9 @@
 import React, { useState } from 'react';
 import { css } from '@emotion/react';
-import {
-  Surface,
-  Button,
-  useInstrumentedHandler,
-  Spinner,
-} from '@newrelic/gatsby-theme-newrelic';
+import Button from '@newrelic/gatsby-theme-newrelic/src/components/Button';
+import Surface from '@newrelic/gatsby-theme-newrelic/src/components/Surface';
+import Spinner from '@newrelic/gatsby-theme-newrelic/src/components/Spinner';
+import useInstrumentedHandler from '@newrelic/gatsby-theme-newrelic/src/hooks/useInstrumentedHandler';
 import {
   SIGNUP_LINK,
   NR1_GUIDED_INSTALL_NERDLET,

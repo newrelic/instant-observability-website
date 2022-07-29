@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { css } from '@emotion/react';
-import { Link } from '@newrelic/gatsby-theme-newrelic';
+import Link from '@newrelic/gatsby-theme-newrelic/src/components/Link';
 import {
   SUPPORT_LINK,
   COMMUNITY_LINK,

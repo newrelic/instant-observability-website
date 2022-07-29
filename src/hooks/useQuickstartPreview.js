@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { navigate } from 'gatsby';
-import { useTessen } from '@newrelic/gatsby-theme-newrelic';
+import useTessen from '@newrelic/gatsby-theme-newrelic/src/hooks/useTessen';
 
 import {
   getQuickstartFilesFromPR,

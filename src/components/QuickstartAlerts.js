@@ -2,7 +2,7 @@ import React from 'react';
 import { css } from '@emotion/react';
 import pluralize from 'pluralize';
 import { graphql } from 'gatsby';
-import { Surface } from '@newrelic/gatsby-theme-newrelic';
+import Surface from '@newrelic/gatsby-theme-newrelic/src/components/Surface';
 import Intro from './Intro';
 import { quickstart } from '../types';
 import AlertIconSVG from './Icons/AlertIconSVG';

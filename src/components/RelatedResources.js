@@ -2,7 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { css } from '@emotion/react';
 import { graphql, useStaticQuery } from 'gatsby';
-import { PageTools, Icon, Link } from '@newrelic/gatsby-theme-newrelic';
+import PageTools from '@newrelic/gatsby-theme-newrelic/src/components/PageTools';
+import Icon from '@newrelic/gatsby-theme-newrelic/src/components/Icon';
+import Link from '@newrelic/gatsby-theme-newrelic/src/components/Link';
 import { useLocation } from '@reach/router';
 
 const isRelative = (url) => url.startsWith('/');

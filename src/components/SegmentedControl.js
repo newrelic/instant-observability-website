@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { css } from '@emotion/react';
-import { Icon } from '@newrelic/gatsby-theme-newrelic';
+import Icon from '@newrelic/gatsby-theme-newrelic/src/components/Icon';
 
 const getViewType = (fullView) => fullView.split(' ')[0].toLowerCase();
 

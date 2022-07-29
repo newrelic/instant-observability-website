@@ -13,7 +13,7 @@ import MailSVG from './Icons/MailSVG';
 import { css } from '@emotion/react';
 import { MIN_WIDTH_BREAKPOINT } from '@data/constants';
 import PropTypes from 'prop-types';
-import { useTessen } from '@newrelic/gatsby-theme-newrelic';
+import useTessen from '@newrelic/gatsby-theme-newrelic/src/hooks/useTessen';
 
 const Share = ({ url }) => {
   const tessen = useTessen();
