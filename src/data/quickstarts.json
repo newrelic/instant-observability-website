@@ -4165,65 +4165,6 @@
     ]
   },
   {
-    "title": "Salesforce Event Logs integration for New Relic Logs",
-    "name": "salesforce-eventlog-for-logs",
-    "description": "## What is Salesforce Event Log?\n\nSalesforce event log refers to a log file generated when an event occurs in your organization. There are up to 50 event types that can be consumed. Some of the event types include logins, logouts, visualforce page loads, report exports, apex executions, URI (web clicks in Salesforce Classic), application programming interface (API) calls, etc. To collect Salesforce event log data, you have to have read access to the Salesforce event log and enable the Salesforce event log file API. Create a Salesforce 'Connected App' to use OAuth authentication.\n\n### New Relic and Salesforce Event Log\n\nThe New Relic Salesforce Event Log integration allows you to process and forward Salesforce Event Log files to New Relic Logs. Our event monitoring product gathers information about your Salesforce org’s operational events, which you can use to analyze usage trends and user behavior.\n\n### Why monitor Salesforce Event Logs with New Relic?\n\nThe [New Relic Salesforce Event Log](https://newrelic.com/resources/datasheets/salesforce-solution-brief) monitoring quickstart helps you view the granular details of user activities in your organization. With the integration, you can track trends in events, identify suspicious user behavior, and protect your firm’s data. What’s more, you can identify parts of your organization that aren’t performing up to expectation, thereby gaining insights on which performance to optimize.\nTo allow New Relic monitoring products to collect Salesforce Event Log data, you need to have read access to the Salesforce Event Logs, and enable the Salesforce event log file API.\nInstall the New Relic Salesforce Event Log quickstart today to instantly monitor your organization’s Salesforce events in real-time. The instant observability quickstart is the key to a seamless Salesforce Event Log monitoring.\n\n## Dashboards\n\nVisualize the following security aspects of any Salesforce org to get a clear picture of your environment's security and ensure that sensitive data in your organization is not breached:\n- Users and where they login from\n- What reports users access/export and how large these reports are\n- Lightning CRUDs\n- Apex Triggers for Account, Contact, Opportunity, Lead databases and more\n- Platform Encryption Actions\n- Admin Impersonations",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/salesforce-eventlog-for-logs",
-    "id": "9e721dc6-e854-4a7f-86ef-c256209fbc91",
-    "level": "COMMUNITY",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/salesforce-eventlog-for-logs/logo.png",
-    "summary": "Monitoring Salesforce Event Log is critical to ensure that you track events’ trends, and detect suspicious user behavior. Install the New Relic quicksart to proactively monitor Saleforce Event Logs.",
-    "websiteUrl": null,
-    "keywords": [
-      "nrlabs",
-      "nrlabs-data",
-      "nrlabs-viz",
-      "salesforce",
-      "salesforce event log"
-    ],
-    "authors": [
-      "New Relic Labs"
-    ],
-    "dashboards": [
-      {
-        "name": "SFDC Overview",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/sfdc-overview/sfdc-overview-01.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/sfdc-overview/sfdc-overview-02.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/sfdc-overview/sfdc-overview-03.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/sfdc-overview/sfdc-overview-04.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/sfdc-overview/sfdc-overview-05.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/sfdc-overview/sfdc-overview-06.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/sfdc-overview/sfdc-overview-07.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/sfdc-overview/sfdc-overview-08.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/sfdc-overview/sfdc-overview-09.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/sfdc-overview/sfdc-overview-10.png"
-        ]
-      }
-    ],
-    "alerts": [],
-    "documentation": [
-      {
-        "name": "Salesforce Event Logs integration for New Relic Logs",
-        "description": "Salesforce Event Logs integration for New Relic Logs offers an integration to process and forward Salesforce event log files to New Relic Logs.\n",
-        "url": "https://github.com/newrelic-experimental/newrelic-logs-salesforce-eventlogfile"
-      },
-      {
-        "name": "Salesforce Security Dashboards",
-        "description": "Salesforce Security Dashboard provides visualization into the security details of your salesforce organization.\n",
-        "url": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/salesforce-eventlog-for-logs/sfdc_security.md"
-      }
-    ],
-    "installPlans": [
-      {
-        "name": "Salesforce Event Logs Monitoring",
-        "id": "third-party-salesforce-eventlog-for-logs"
-      }
-    ]
-  },
-  {
     "title": "Cribl Logstream",
     "name": "cribl-logstream",
     "description": "## About Cribl\n\nCribl Logstream unlocks [data sources](https://docs.cribl.io/logstream/sources), including metrics, events, and logs, in an observability pipeline. \n\nDeploying this quickstart will allow you to add context to your data, by enriching it with information from external data sources, help secure your data, by redacting, obfuscating, or encrypting sensitive fields, and optimize your data, per your performance and cost requirements.\n\nFor more information about Cribl.Cloud, or the self-hosted Cribl Logstream platform, please go to [cribl.io/logstream/about](https://docs.cribl.io/logstream/about/)\n\nFor Cribl support, please go to [cribl.io/support](https://cribl.io/support/)\n\n\n## Getting started with Cribl\n\nTo get started with Cribl, you can sign up for a [free cloud account](https://cribl.cloud/signup/) and up to 1 TB/day of data.  Check out the [licensing page](https://docs.cribl.io/logstream/licensing) for more details.\n\nReady to start using Cribl Logstream to send Metrics, Events, and Logs to New Relic? Check out the [New Relic Logs & Metrics](https://docs.cribl.io/logstream/destinations-newrelic) destinations and the [New Relic Events](https://docs.cribl.io/logstream/destinations-newrelic-events) destinations.\n\nNeed an introductory course on Cribl Logstream? Get started with the [Cribl sandbox](https://sandbox.cribl.io/).\n\n\n## About this integration\n\nThe Cribl LogStream quickstart gives you a way to quickly integrate your Cribl LogStream metrics and Worker Node Logs with New Relic’s observability platform. The quickstart also has several ready-to-use visualizations to get you started right away with observing your data.\n\nFor more information about this integration, check out the [blogpost](https://cribl.io/blog/a-low-code-approach-to-getting-your-logs-and-metrics-into-new-relic-with-cribl-logstream/)",
@@ -4510,6 +4451,65 @@
       {
         "name": ".NET agent",
         "id": "dotnet-agent"
+      }
+    ]
+  },
+  {
+    "title": "Salesforce Event Logs integration for New Relic Logs",
+    "name": "salesforce-eventlog-for-logs",
+    "description": "## What is Salesforce Event Log?\n\nSalesforce event log refers to a log file generated when an event occurs in your organization. There are up to 50 event types that can be consumed. Some of the event types include logins, logouts, visualforce page loads, report exports, apex executions, URI (web clicks in Salesforce Classic), application programming interface (API) calls, etc. To collect Salesforce event log data, you have to have read access to the Salesforce event log and enable the Salesforce event log file API. Create a Salesforce 'Connected App' to use OAuth authentication.\n\n### New Relic and Salesforce Event Log\n\nThe New Relic Salesforce Event Log integration allows you to process and forward Salesforce Event Log files to New Relic Logs. Our event monitoring product gathers information about your Salesforce org’s operational events, which you can use to analyze usage trends and user behavior.\n\n### Why monitor Salesforce Event Logs with New Relic?\n\nThe [New Relic Salesforce Event Log](https://newrelic.com/resources/datasheets/salesforce-solution-brief) monitoring quickstart helps you view the granular details of user activities in your organization. With the integration, you can track trends in events, identify suspicious user behavior, and protect your firm’s data. What’s more, you can identify parts of your organization that aren’t performing up to expectation, thereby gaining insights on which performance to optimize.\nTo allow New Relic monitoring products to collect Salesforce Event Log data, you need to have read access to the Salesforce Event Logs, and enable the Salesforce event log file API.\nInstall the New Relic Salesforce Event Log quickstart today to instantly monitor your organization’s Salesforce events in real-time. The instant observability quickstart is the key to a seamless Salesforce Event Log monitoring.\n\n## Dashboards\n\nVisualize the following security aspects of any Salesforce org to get a clear picture of your environment's security and ensure that sensitive data in your organization is not breached:\n- Users and where they login from\n- What reports users access/export and how large these reports are\n- Lightning CRUDs\n- Apex Triggers for Account, Contact, Opportunity, Lead databases and more\n- Platform Encryption Actions\n- Admin Impersonations",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/salesforce-eventlog-for-logs",
+    "id": "9e721dc6-e854-4a7f-86ef-c256209fbc91",
+    "level": "COMMUNITY",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/salesforce-eventlog-for-logs/logo.png",
+    "summary": "Monitoring Salesforce Event Log is critical to ensure that you track events’ trends, and detect suspicious user behavior. Install the New Relic quicksart to proactively monitor Saleforce Event Logs.",
+    "websiteUrl": null,
+    "keywords": [
+      "nrlabs",
+      "nrlabs-data",
+      "nrlabs-viz",
+      "salesforce",
+      "salesforce event log"
+    ],
+    "authors": [
+      "New Relic Labs"
+    ],
+    "dashboards": [
+      {
+        "name": "SFDC Overview",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/sfdc-overview/sfdc-overview-01.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/sfdc-overview/sfdc-overview-02.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/sfdc-overview/sfdc-overview-03.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/sfdc-overview/sfdc-overview-04.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/sfdc-overview/sfdc-overview-05.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/sfdc-overview/sfdc-overview-06.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/sfdc-overview/sfdc-overview-07.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/sfdc-overview/sfdc-overview-08.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/sfdc-overview/sfdc-overview-09.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/sfdc-overview/sfdc-overview-10.png"
+        ]
+      }
+    ],
+    "alerts": [],
+    "documentation": [
+      {
+        "name": "Salesforce Event Logs integration for New Relic Logs",
+        "description": "Salesforce Event Logs integration for New Relic Logs offers an integration to process and forward Salesforce event log files to New Relic Logs.\n",
+        "url": "https://github.com/newrelic-experimental/newrelic-logs-salesforce-eventlogfile"
+      },
+      {
+        "name": "Salesforce Security Dashboards",
+        "description": "Salesforce Security Dashboard provides visualization into the security details of your salesforce organization.\n",
+        "url": "https://github.com/newrelic-experimental/newrelic-logs-salesforce-eventlogfile/blob/main/dashboards/sfdc-overview/sfdc-overview.md"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "Salesforce Event Logs Monitoring",
+        "id": "third-party-salesforce-eventlog-for-logs"
       }
     ]
   },
