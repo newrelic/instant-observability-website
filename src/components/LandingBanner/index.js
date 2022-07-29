@@ -17,7 +17,6 @@ const LandingBanner = ({ quickstart, className, location }) => {
   const bannerImg = useDetermineBannerImg(quickstart, {
     publicURL: defaultImage,
   });
-  //const bannerImg = determineBannerImg(quickstart, defaultImage);
 
   const breadcrumbs = [
     {

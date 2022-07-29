@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { css } from '@emotion/react';
-import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import DEFAULT_IMAGE from '../images/default-logo-background.svg';
 import SafeImage from '@components/SafeImage';
 
