@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { css } from '@emotion/react';
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import DEFAULT_IMAGE from '../images/default-logo-background.svg';
+import SafeImage from '@components/SafeImage';
 
 /**
  * Given a quickstart name, this will return the acronym.
@@ -51,41 +52,13 @@ FallbackImg.propTypes = {
 };
 
 const QuickstartImg = ({ className, packName, imageNode, svgNode }) => {
-  if (imageNode) {
-    // If we have an image for sharp to optimize, use GatsbyImage
-    const image = getImage(imageNode);
-
-    if (image) {
-      return (
-        <GatsbyImage
-          css={css`
-            display: block;
-            max-width: 100%;
-            max-height: 100%;
-          `}
-          className={className}
-          imgStyle={{ 'object-fit': 'contain' }}
-          image={image}
-          alt={packName}
-        />
-      );
-    }
-  }
-
-  // If we don't have a sharp-capable image, but we have a URL, it's an
-  // SVG (already performant) and is already built with the site.
-  if (svgNode) {
+  if (imageNode || svgNode) {
     return (
-      <img
-        css={css`
-          display: block;
-          max-width: 100%;
-          max-height: 100%;
-        `}
-        src={svgNode.publicURL}
+      <SafeImage
         alt={packName}
+        imageNode={imageNode}
+        rawNode={svgNode}
         className={className}
-        loading="lazy"
       />
     );
   }

@@ -9,11 +9,12 @@ import { quickstart } from '../../types';
 import QuickstartImg from '../QuickstartImg';
 import defaultImage from '../../images/defaultQuickstartImage.png';
 import BannerBackground from './BannerBackground';
+import SafeImage from '../SafeImage';
 
 const IMAGE_DISPLAY_BREAKPOINT = '1248px';
 
 const LandingBanner = ({ quickstart, className, location }) => {
-  const bannerImg = useDetermineBannerImg(quickstart, defaultImage);
+  const bannerImg = determineBannerImg(quickstart, defaultImage);
 
   const breadcrumbs = [
     {
@@ -158,13 +159,16 @@ const LandingBanner = ({ quickstart, className, location }) => {
             }
           `}
         >
-          <img
+          <SafeImage
             src={bannerImg}
+            imageNode={bannerImg}
+            rawNode={bannerImg}
             alt={quickstart.title}
             css={css`
               border: 28px solid #000000;
               border-radius: 26px;
               height: 250px;
+              max-width: unset;
               background: white;
             `}
           />
@@ -186,45 +190,25 @@ const LandingBanner = ({ quickstart, className, location }) => {
   );
 };
 
-function useDetermineBannerImg(quickstart, defaultImage) {
-  const [bannerImg, setBannerImg] = useState(defaultImage);
+const determineBannerImg = (quickstart, defaultImage) => {
+  let image = { publicURL: defaultImage };
 
-  // get image resolution from URL
-  const getURLMeta = async (url) => {
-    const img = new Image();
-    img.src = url;
-    const { width, height } = await new Promise((resolve) => {
-      img.onload = function () {
-        resolve({
-          width: this.width,
-          height: this.height,
-        });
-      };
-    });
-    return { width, height };
-  };
-
-  const checkImgAspectRatio = async () => {
-    let image = bannerImg;
-
-    for (const screenshot of quickstart.dashboards[0]?.screenshots ?? []) {
-      const { width, height } = await getURLMeta(screenshot);
-      const aspectRatio = width / height;
-      if (aspectRatio > 1.6 && aspectRatio < 2.2) {
-        // set image to this screenshot if its the ideal aspect ratio  of ~1.9
-        image = screenshot;
-        break;
-      }
+  for (const screenshot of quickstart.dashboards[0]?.screenshots ?? []) {
+    if (!quickstart.bannerImg) {
+      continue;
     }
-    setBannerImg(image);
-  };
 
-  useEffect(() => {
-    checkImgAspectRatio();
-  });
+    const { width, height } = screenshot.bannerImg?.gatsbyImageData;
+    const aspectRatio = width / height;
 
-  return bannerImg;
-}
+    if (aspectRatio > 1.6 && aspectRatio < 2.2) {
+      image = screenshot;
+      break;
+    }
+  }
+
+  return image;
+};
 
 LandingBanner.propTypes = {
   quickstart: quickstart.isRequired,
@@ -244,6 +228,19 @@ export const fragmentQuery = graphql`
     logo {
       childImageSharp {
         gatsbyImageData(height: 45, placeholder: BLURRED, formats: [AUTO, WEBP])
+      }
+    }
+    dashboards {
+      screenshots {
+        publicURL
+        bannerImg: childImageSharp {
+          gatsbyImageData(
+            placeholder: BLURRED
+            layout: FIXED
+            formats: [AUTO, WEBP]
+            height: 250
+          )
+        }
       }
     }
   }

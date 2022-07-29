@@ -1,12 +1,14 @@
 import React from 'react';
-import { css } from '@emotion/react';
-import pluralize from 'pluralize';
-import Intro from './Intro';
-import { quickstart } from '../types';
-import Slider from 'react-slick';
-import { graphql } from 'gatsby';
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
+import { graphql } from 'gatsby';
+import Slider from 'react-slick';
 import { animated } from 'react-spring';
+import pluralize from 'pluralize';
+
+import { css } from '@emotion/react';
+import { quickstart } from '../types';
+import Intro from './Intro';
+import SafeImage from './SafeImage';
 
 import { dashboardSettings } from '../data/slick-settings';
 
@@ -84,13 +86,12 @@ const QuickstartDashboards = ({ quickstart }) => {
                         margin: auto;
                       `}
                     >
-                      <GatsbyImage
+                      <SafeImage
                         css={css`
                           padding: 0.25rem;
                         `}
-                        imgStyle={{ borderRadius: '4px' }}
-                        objectFit="contain"
-                        image={getImage(node)}
+                        imageNode={node}
+                        rawNode={node}
                         alt={`${dashboard.name} screenshot ${index}`}
                       />
                     </a>
