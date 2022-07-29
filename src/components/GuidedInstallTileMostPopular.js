@@ -67,12 +67,10 @@ const GuidedInstallTileMostPopular = () => {
           min-width: 250px;
         }
 
-        background: var(--button-background-color);
+        background: var(--brand-button-primary-accent);
 
         h2,
         p {
-          color: #f9fafa;
-
           @media screen and (max-width: ${QUICKSTARTS_COLLAPSE_BREAKPOINT}) {
             width: 100%;
             font-weight: 400;
@@ -99,7 +97,7 @@ const GuidedInstallTileMostPopular = () => {
           css={css`
             font-size: 18px;
             line-height: 24px;
-            color: #898e91;
+            color: var(--system-text-muted-light);
           `}
         >
           First step
@@ -154,11 +152,10 @@ const GuidedInstallTileMostPopular = () => {
             font-weight: 300;
             font-size: 18px;
             padding: 0 0 3px 0;
-            color: var(--system-text-primary-dark);
-            border-bottom: 1px solid white;
+            border-bottom: 1px solid var(--primary-text-color);
             &:hover {
               background: none;
-              color: var(--system-text-primary-dark);
+              color: var(--system-text-muted-light);
             }
           `}
         >

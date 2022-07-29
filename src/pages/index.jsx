@@ -90,26 +90,53 @@ const QuickstartsPage = ({ data, location }) => {
   const renderGoToTopButton = () => {
     return (
       <Button
+        className="btn-styles"
         onClick={() => topFunction()}
         css={css`
           display: none;
           flex-direction: row;
           justify-content: center;
           align-items: center;
-          padding: 8px 12px;
+          padding: 12px 12px;
           gap: 8px;
           position: fixed;
-          width: 40px;
-          height: 40px;
+          width: 137px;
+          height: 48px;
           left: 9px;
           bottom: 43px;
           background: #1d252c;
-          border-radius: 97px;
-          border: 1px solid #898e91;
+          border-radius: 4px;
+          border: 1px solid var(--color-white);
+          .scroll {
+            display: flex;
+            column-gap: 8px;
+            justify-content: center;
+            align-items: center;
+          }
+          svg {
+            stroke: 4px;
+            width: 14px;
+            height: 14px;
+          }
+          p {
+            font-size: 14px;
+            line-height: 1.55;
+            margin-right: 2px;
+            color: var(--color-white);
+          }
         `}
         id="go-to-page-top-btn"
       >
-        {featherIcons.topArrow}
+        <div className="btn-animation-styles">
+          <div className="scroll scroll-top">
+            {featherIcons.topArrow}
+            <p className="btn-text">Back to Top</p>
+          </div>
+          <div className="scroll scroll-bottom">
+            {featherIcons.topArrow}
+            <p className="btn-text">Back to Top</p>
+          </div>
+        </div>
       </Button>
     );
   };
