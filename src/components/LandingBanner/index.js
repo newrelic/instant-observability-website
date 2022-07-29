@@ -221,13 +221,12 @@ function useDetermineBannerImg(quickstart, defaultImage) {
 
     for (const screenshot of quickstart.dashboards[0]?.screenshots ?? []) {
       const { width, height } =
-        screenshot.bannerImg?.gatsbyImageData ??
-        (await getURLMeta(screenshot.publicURL));
+        screenshot.gatsbyImageData ?? (await getURLMeta(screenshot.publicURL));
 
       const aspectRatio = width / height;
       if (aspectRatio > 1.6 && aspectRatio < 2.2) {
         // set image to this screenshot if its the ideal aspect ratio  of ~1.9
-        image = screenshot?.bannerImg ?? screenshot;
+        image = screenshot;
         break;
       }
     }
@@ -264,12 +263,12 @@ export const fragmentQuery = graphql`
     dashboards {
       screenshots {
         publicURL
-        bannerImg: childImageSharp {
+        childImageSharp {
           gatsbyImageData(
             placeholder: BLURRED
-            layout: FIXED
+            layout: CONSTRAINED
             formats: [AUTO, WEBP]
-            height: 250
+            height: 272
           )
         }
       }
