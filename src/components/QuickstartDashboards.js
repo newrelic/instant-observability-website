@@ -1,14 +1,15 @@
 import React from 'react';
-import { css } from '@emotion/react';
-import pluralize from 'pluralize';
-import Intro from './Intro';
-import { quickstart } from '../types';
-import Slider from 'react-slick';
 import { graphql } from 'gatsby';
+import Slider from 'react-slick';
 import { animated } from 'react-spring';
+import pluralize from 'pluralize';
+
+import { css } from '@emotion/react';
+import { quickstart } from '../types';
+import Intro from './Intro';
+import SafeImage from './SafeImage';
 
 import { dashboardSettings } from '../data/slick-settings';
-import { MOBILE_BREAKPOINT } from '../data/constants';
 
 const QuickstartDashboards = ({ quickstart }) => {
   const renderDescription = (dashboard) => {
@@ -84,16 +85,14 @@ const QuickstartDashboards = ({ quickstart }) => {
                         margin: auto;
                       `}
                     >
-                      <img
-                        src={node.publicURL}
-                        alt={`${dashboard.name} screenshot ${index}`}
+                      <SafeImage
                         css={css`
-                          height: 17.5rem;
-                          @media screen and (max-width: ${MOBILE_BREAKPOINT}) {
-                          }
-                          border-radius: 4px;
                           padding: 0.25rem;
+                          height: 272px;
                         `}
+                        imageNode={node}
+                        rawNode={node}
+                        alt={`${dashboard.name} screenshot ${index}`}
                       />
                     </a>
                   </animated.div>
@@ -119,7 +118,12 @@ export const fragmentQuery = graphql`
       screenshots {
         publicURL
         childImageSharp {
-          gatsbyImageData(placeholder: BLURRED, formats: [AUTO, WEBP])
+          gatsbyImageData(
+            placeholder: BLURRED
+            layout: CONSTRAINED
+            formats: [AUTO, WEBP]
+            height: 272
+          )
         }
       }
     }
