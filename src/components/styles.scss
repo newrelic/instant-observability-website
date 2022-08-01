@@ -229,13 +229,13 @@ input[type='text'] {
 
 .btn-styles:focus {
   outline: none;
-  text-decoration-line: underline;
+  text-decoration-line: none;
   outline-width: 0.25rem;
   text-underline-offset: 0.25rem;
 
   .btn-text {
     outline: none;
-    text-decoration-line: underline;
+    text-decoration-line: none;
     outline-width: 0.25rem;
     text-underline-offset: 0.25rem;
   }
