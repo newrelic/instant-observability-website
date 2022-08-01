@@ -1,10 +1,10 @@
 import React from 'react';
-import QuickstartDataSources from '../QuickstartDataSources';
+import QuickstartDocumentation from '../QuickstartDocumentation';
 import EmptyTab from '../EmptyTab';
 import { css } from '@emotion/react';
 import { quickstart } from '../../types';
 
-const DataSources = ({ quickstart }) => {
+const Documentation = ({ quickstart }) => {
   return (
     <div
       css={css`
@@ -26,7 +26,7 @@ const DataSources = ({ quickstart }) => {
       `}
     >
       <h6>
-        Data Sources &nbsp;
+        Documentation &nbsp;
         <div
           css={css`
             display: inline-block;
@@ -39,7 +39,7 @@ const DataSources = ({ quickstart }) => {
         </div>
       </h6>
       {quickstart.documentation?.length > 0 ? (
-        <QuickstartDataSources quickstart={quickstart} />
+        <QuickstartDocumentation quickstart={quickstart} />
       ) : (
         <EmptyTab
           quickstartUrl={quickstart.packUrl}
@@ -51,8 +51,8 @@ const DataSources = ({ quickstart }) => {
   );
 };
 
-DataSources.propTypes = {
+Documentation.propTypes = {
   quickstart,
 };
 
-export default DataSources;
+export default Documentation;

@@ -1,6 +1,6 @@
 import Dashboards from '@components/WhatsIncluded/Dashboards';
 import Alerts from '@components/WhatsIncluded/Alerts';
-import DataSources from '@components/WhatsIncluded/DataSources';
+import Documentation from '@components/WhatsIncluded/Documentation';
 
 /**
  * Callback function for sorting data sources and
@@ -41,7 +41,7 @@ const sortedQuickstartComponents = (quickstart) => {
       count: dashboardLength,
     },
     { component: Alerts, count: alertLength },
-    { component: DataSources, count: dataSourceLength },
+    { component: Documentation, count: dataSourceLength },
   ];
 
   return componentsAndCounts.sort(sortComponents);
