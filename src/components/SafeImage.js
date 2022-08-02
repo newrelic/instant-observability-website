@@ -5,10 +5,11 @@ import PropTypes from 'prop-types';
 
 /**
  * Renders a `GatsbyImage` with an optional fallback to `img`
- * @param {Object} imageNode - a `childImageSharp` image node
- * @param {Object} rawNode - a raw image node, this will be used if `imageNode` is undefined
- * @param {String} alt - the alt tag for the image
- * @param {String} className - used to pass around `@emotion` css classes
+ * @param {Object} props
+ * @param {Object} props.imageNode - a `childImageSharp` image node
+ * @param {Object} props.rawNode - a raw image node, this will be used if `imageNode` is undefined
+ * @param {String} props.alt - the alt tag for the image
+ * @param {String} props.className - used to pass around `@emotion` css classes
  */
 const SafeImage = ({ className, alt, imageNode, rawNode }) => {
   if (imageNode) {
