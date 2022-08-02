@@ -20,13 +20,16 @@ const QuickstartGrid = ({ quickstarts, stepSize }) => {
           css={css`
             box-shadow: none;
             display: flex;
+            &:hover {
+              box-shadow: none;
+            }
           `}
         >
           <Button
             variant={Button.VARIANT.SECONDARY}
             css={css`
               border: 1px solid var(--primary-text-color);
-              background: var(--color-white);
+              background: none;
               border-radius: 8px;
               font-size: 1rem;
               width: 100%;

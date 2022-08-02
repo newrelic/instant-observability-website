@@ -97,7 +97,7 @@ const GuidedInstallTileMostPopular = () => {
           css={css`
             font-size: 18px;
             line-height: 24px;
-            color: var(--system-text-muted-light);
+            color: #00ac69;
           `}
         >
           First step
