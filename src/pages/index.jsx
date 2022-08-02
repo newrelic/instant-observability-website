@@ -22,8 +22,7 @@ import allFilteredQuickstarts from '@utils/allFilteredQuickstarts';
 import getDisplayName from '@utils/getDisplayName';
 // Components
 import Slider from 'react-slick';
-import { Button, Spinner } from '@newrelic/gatsby-theme-newrelic';
-import featherIcons from '../@newrelic/gatsby-theme-newrelic/icons/feather';
+import { Spinner } from '@newrelic/gatsby-theme-newrelic';
 import IOBanner from '@components/IOBanner';
 import IOSeo from '@components/IOSeo';
 import QuickstartTile from '@components/QuickstartTile';
@@ -31,6 +30,7 @@ import SuperTiles from '@components/SuperTiles';
 import CategoryList from '@components/indexComponents/CategoryList';
 import CategoryDropdown from '@components/indexComponents/CategoryDropdown';
 import QuickstartGrid from '@components/QuickstartGrid';
+import GoToTopButton from '../components/GoToTopButton';
 
 const COLUMN_BREAKPOINT = '1131px';
 // used to set the height of the Spinner to reduce layout shift on page load
@@ -61,85 +61,6 @@ const QuickstartsPage = ({ data, location }) => {
   useEffect(() => {
     setLoadComplete(true);
   }, []);
-
-  const handleScroll = () => {
-    const btn = document.getElementById('go-to-page-top-btn');
-    if (
-      document.body.scrollTop > 1000 ||
-      document.documentElement.scrollTop > 1000
-    ) {
-      btn.style.display = 'block';
-    } else {
-      btn.style.display = 'none';
-    }
-  };
-
-  useEffect(() => {
-    // Anything in here is fired on component mount.
-    window.addEventListener('scroll', handleScroll);
-    return () => {
-      // Anything in here is fired on component unmount.
-      window.removeEventListener('scroll', handleScroll);
-    };
-  });
-
-  function topFunction() {
-    document.documentElement.scrollTop = 0;
-  }
-
-  const renderGoToTopButton = () => {
-    return (
-      <Button
-        className="btn-styles"
-        onClick={() => topFunction()}
-        css={css`
-          display: none;
-          flex-direction: row;
-          justify-content: center;
-          align-items: center;
-          padding: 12px 12px;
-          gap: 8px;
-          position: fixed;
-          width: 137px;
-          height: 48px;
-          left: 9px;
-          bottom: 43px;
-          background: #1d252c;
-          border-radius: 4px;
-          border: 1px solid var(--color-white);
-          .scroll {
-            display: flex;
-            column-gap: 8px;
-            justify-content: center;
-            align-items: center;
-          }
-          svg {
-            stroke: 4px;
-            width: 14px;
-            height: 14px;
-          }
-          p {
-            font-size: 14px;
-            line-height: 1.55;
-            margin-right: 2px;
-            color: var(--color-white);
-          }
-        `}
-        id="go-to-page-top-btn"
-      >
-        <div className="btn-animation-styles">
-          <div className="scroll scroll-top">
-            {featherIcons.topArrow}
-            <p className="btn-text">Back to Top</p>
-          </div>
-          <div className="scroll scroll-bottom">
-            {featherIcons.topArrow}
-            <p className="btn-text">Back to Top</p>
-          </div>
-        </div>
-      </Button>
-    );
-  };
 
   return (
     <>
@@ -396,7 +317,7 @@ const QuickstartsPage = ({ data, location }) => {
           </div>
         </div>
       </div>
-      {renderGoToTopButton()}
+      <GoToTopButton scrollDistance={1000} />
     </>
   );
 };
