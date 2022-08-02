@@ -1,0 +1,25 @@
+{
+  "compilerOptions": {
+    "target": "esnext",
+    "lib": ["dom", "esnext"],
+    "jsx": "react",
+    "module": "esnext",
+    "moduleResolution": "node",
+
+    "resolveJsonModule": true,
+
+    "allowJs": true,
+
+    "declaration": true,
+    "declarationMap": true,
+    "declarationDir": "./src/types",
+    "emitDeclarationOnly": true,
+
+    "esModuleInterop": true,
+
+    "strict": true,
+    "skipLibCheck": true
+  },
+  "include": ["src/"],
+  "extends": "./tsconfig.paths.json"
+}
