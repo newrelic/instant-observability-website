@@ -44,7 +44,7 @@ const Documentation = ({ quickstart }) => {
         <EmptyTab
           quickstartUrl={quickstart.packUrl}
           quickstartName={quickstart.title}
-          tabName="data sources"
+          tabName="documentation"
         />
       )}
     </div>
