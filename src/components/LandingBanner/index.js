@@ -205,7 +205,7 @@ function useDetermineBannerImg(quickstart, defaultImage) {
   const getURLMeta = async (url) => {
     const img = new Image();
     img.src = url;
-    const { width, height } = await new Promise((resolve) => {
+    const { width = 0, height = 0 } = await new Promise((resolve) => {
       img.onload = function () {
         resolve({
           width: this.width,
@@ -258,19 +258,6 @@ export const fragmentQuery = graphql`
     logo {
       childImageSharp {
         gatsbyImageData(height: 45, placeholder: BLURRED, formats: [AUTO, WEBP])
-      }
-    }
-    dashboards {
-      screenshots {
-        publicURL
-        childImageSharp {
-          gatsbyImageData(
-            placeholder: BLURRED
-            layout: CONSTRAINED
-            formats: [AUTO, WEBP]
-            height: 272
-          )
-        }
       }
     }
   }
