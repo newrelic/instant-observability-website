@@ -2,13 +2,11 @@ import React, { useEffect, useState, useCallback } from 'react';
 import PropTypes from 'prop-types';
 import { css } from '@emotion/react';
 
-import {
-  useTessen,
-  Button,
-  CreateIssueButton,
-  Tag,
-  Link,
-} from '@newrelic/gatsby-theme-newrelic';
+import useTessen from '@newrelic/gatsby-theme-newrelic/src/hooks/useTessen';
+import Button from '@newrelic/gatsby-theme-newrelic/src/components/Button';
+import CreateIssueButton from '@newrelic/gatsby-theme-newrelic/src/components/CreateIssueButton';
+import Tag from '@newrelic/gatsby-theme-newrelic/src/components/Tag';
+import Link from '@newrelic/gatsby-theme-newrelic/src/components/Link';
 
 import QuickstartLayout from '../../../layouts/QuickStartLayout';
 

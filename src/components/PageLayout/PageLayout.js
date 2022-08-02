@@ -3,7 +3,8 @@ import PropTypes from 'prop-types';
 import { css } from '@emotion/react';
 import Header from './Header';
 import Context from './Context';
-import { Layout, useLayout } from '@newrelic/gatsby-theme-newrelic';
+import Layout from '@newrelic/gatsby-theme-newrelic/src/components/Layout';
+import useLayout from '@newrelic/gatsby-theme-newrelic/src/hooks/useLayout';
 
 const TYPES = {
   SINGLE_COLUMN: 'SINGLE_COLUMN',

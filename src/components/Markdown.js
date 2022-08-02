@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { css } from '@emotion/react';
 import ReactMarkdown from 'react-markdown';
-import { Link } from '@newrelic/gatsby-theme-newrelic';
+import Link from '@newrelic/gatsby-theme-newrelic/src/components/Link';
 
 const aTagToLink = ({
   // eslint-disable-next-line no-unused-vars

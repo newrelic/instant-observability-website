@@ -7,10 +7,8 @@ import Button from '@newrelic/gatsby-theme-newrelic/src/components/Button';
 import GlobalNavLink from '@newrelic/gatsby-theme-newrelic/src/components/GlobalNavLink';
 import useMedia from 'use-media';
 import useThemeTranslation from '@newrelic/gatsby-theme-newrelic/src/hooks/useThemeTranslation';
-import {
-  useInstrumentedHandler,
-  usePrevious,
-} from '@newrelic/gatsby-theme-newrelic';
+import useInstrumentedHandler from '@newrelic/gatsby-theme-newrelic/src/hooks/useInstrumentedHandler';
+import usePrevious from '@newrelic/gatsby-theme-newrelic/src/hooks/usePrevious';
 import { Menu, X } from 'react-feather';
 import { useLocation } from '@reach/router';
 import NewLogo from './NewLogo';

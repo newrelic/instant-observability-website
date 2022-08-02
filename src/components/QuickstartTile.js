@@ -1,13 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { css } from '@emotion/react';
-import {
-  Surface,
-  Icon,
-  useTessen,
-  Tag,
-  Link,
-} from '@newrelic/gatsby-theme-newrelic';
+import Surface from '@newrelic/gatsby-theme-newrelic/src/components/Surface';
+import Icon from '@newrelic/gatsby-theme-newrelic/src/components/Icon';
+import Tag from '@newrelic/gatsby-theme-newrelic/src/components/Tag';
+import Link from '@newrelic/gatsby-theme-newrelic/src/components/Link';
+import useTessen from '@newrelic/gatsby-theme-newrelic/src/hooks/useTessen';
 import {
   SHIELD_LEVELS,
   RESERVED_QUICKSTART_IDS,

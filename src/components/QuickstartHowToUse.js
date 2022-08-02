@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Link } from '@newrelic/gatsby-theme-newrelic';
+import Link from '@newrelic/gatsby-theme-newrelic/src/components/Link';
 import { css } from '@emotion/react';
 import { quickstart } from '../types';
 import { LOGIN_LINK, SIGNUP_LINK } from '@data/constants';

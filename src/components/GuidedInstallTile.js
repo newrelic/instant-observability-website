@@ -1,10 +1,8 @@
 import React from 'react';
 import { css } from '@emotion/react';
 import SuperTile from './SuperTile';
-import {
-  Button,
-  useInstrumentedHandler,
-} from '@newrelic/gatsby-theme-newrelic';
+import Button from '@newrelic/gatsby-theme-newrelic/src/components/Button';
+import useInstrumentedHandler from '@newrelic/gatsby-theme-newrelic/src/hooks/useInstrumentedHandler';
 import { navigate } from 'gatsby';
 import Cookies from 'js-cookie';
 import { SIGNUP_LINK, NR1_GUIDED_INSTALL_NERDLET } from '@data/constants';

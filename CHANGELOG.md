@@ -1,3 +1,10 @@
+## [1.10.1](https://github.com/newrelic/instant-observability-website/compare/v1.10.0...v1.10.1) (2022-07-27)
+
+
+### Bug Fixes
+
+* dashboard images no longer stretch on safari ([f891d35](https://github.com/newrelic/instant-observability-website/commit/f891d352063c2a71a9b45b7bb0fca73beb4f90f5))
+
 # [1.10.0](https://github.com/newrelic/instant-observability-website/compare/v1.9.0...v1.10.0) (2022-07-26)
 
 
