@@ -1,9 +1,9 @@
 {
   "compilerOptions": {
-    "target": "esnext",
+    "target": "es6",
     "lib": ["dom", "esnext"],
     "jsx": "react",
-    "module": "esnext",
+    "module": "es6",
     "moduleResolution": "node",
 
     "resolveJsonModule": true,
