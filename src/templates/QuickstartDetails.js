@@ -63,6 +63,7 @@ const QuickstartDetails = ({ data, location }) => {
         location={location}
         tags={quickstart.keywords}
         meta={quickStartMeta}
+        summary={quickstart.summary}
       />
       <PageLayout.Header
         css={css`

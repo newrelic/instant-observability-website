@@ -2,8 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Seo from '@newrelic/gatsby-theme-newrelic/src/components/SEO';
 import { useStaticQuery, graphql } from 'gatsby';
+import quickstartMetadata from '@data/quickstart-metadata';
 
-function IOSeo({ description, meta, title, tags, location, type }) {
+function IOSeo({ description, meta, title, tags, location, type, summary }) {
   const { site } = useStaticQuery(
     graphql`
       query {
@@ -38,8 +39,17 @@ function IOSeo({ description, meta, title, tags, location, type }) {
         />
       );
   };
-
-  const metaDescription = description || site.siteMetadata.description;
+  const slug = location.pathname.split('/')[1];
+  const customMetadata = quickstartMetadata.find((x) => x.slug === slug);
+  const isHomeRoute = location.pathname === '/';
+  const quickstartMetaDescription = customMetadata
+    ? customMetadata.description
+    : summary;
+  const metaDescription = isHomeRoute
+    ? site.siteMetadata.description
+    : quickstartMetaDescription;
+  const metaTitle =
+    isHomeRoute || !customMetadata ? title : customMetadata.title;
 
   const globalMetadata = [
     { name: 'description', content: metaDescription },
@@ -52,12 +62,12 @@ function IOSeo({ description, meta, title, tags, location, type }) {
   ];
 
   const social = [
-    { property: 'og:title', content: title },
+    { property: 'og:title', content: metaTitle },
     { property: 'og:description', content: metaDescription },
     { property: 'og:type', content: 'website' },
     { name: 'twitter:card', content: 'summary_large_image' },
     { name: 'twitter:creator', content: site.siteMetadata.author },
-    { name: 'twitter:title', content: title },
+    { name: 'twitter:title', content: metaTitle },
     { name: 'twitter:description', content: metaDescription },
   ];
 
@@ -120,6 +130,7 @@ IOSeo.propTypes = {
   tags: PropTypes.arrayOf(PropTypes.string),
   type: PropTypes.string,
   quickStartName: PropTypes.string,
+  summary: PropTypes.string,
 };
 
 export default IOSeo;
