@@ -120,7 +120,6 @@ function IOSeo({ meta, title, tags, location, type, summary }) {
 
 IOSeo.defaultProps = {
   meta: [],
-  description: '',
 };
 
 IOSeo.propTypes = {
