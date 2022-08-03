@@ -91,7 +91,7 @@ This can also be kicked off manually via a workflow run.
 ## Adding custom meta tags
 
 Custom meta tags can be added for a quickstart in [quickstart-metadata.json](src/data/quickstart-metadata.json)
-You will need to add a key to the object within this file in the following format:
+To add a new set of meta tags for a quickstart, add the following to the quickstart-metadata.json file.
 
 ```
 {
