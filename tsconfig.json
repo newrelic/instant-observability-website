@@ -10,11 +10,6 @@
 
     "allowJs": true,
 
-    "declaration": true,
-    "declarationMap": true,
-    "declarationDir": "./src/types",
-    "emitDeclarationOnly": true,
-
     "esModuleInterop": true,
 
     "strict": true,
