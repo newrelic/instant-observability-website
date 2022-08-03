@@ -91,56 +91,6 @@
     ]
   },
   {
-    "title": "Datazoom",
-    "name": "datazoom",
-    "description": "The Datazoom quickstart provides a fast and easy launching point into video metrics built on top of New Relic One dashboards, allowing you to gain insights about your viewers, content, ads and your platform's performance. Customize the dashboard to use only the metrics that fit your goals and easily edit metric calculations and tailor them to your needs.",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/datazoom",
-    "id": "2ffed926-6ee2-43b2-a942-344192fdf418",
-    "level": "COMMUNITY",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/datazoom/logo.png",
-    "summary": "The Datazoom quickstart will help you gain insights into your viewers streaming video experience.",
-    "websiteUrl": null,
-    "keywords": [
-      "datazoom",
-      "video quality",
-      "video experience",
-      "quality of experience",
-      "video streaming",
-      "video metrics",
-      "featured",
-      "newrelic partner"
-    ],
-    "authors": [
-      "Datazoom",
-      "New Relic"
-    ],
-    "dashboards": [
-      {
-        "name": "Datazoom",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/datazoom-dashboard/datazoom_dashboard01.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/datazoom-dashboard/datazoom_dashboard02.png"
-        ]
-      }
-    ],
-    "alerts": [],
-    "documentation": [
-      {
-        "name": "Installation docs",
-        "description": "Configure Datazoom Connector for New Relic One",
-        "url": "https://help.datazoom.io/hc/en-us/articles/360022667532-New-Relic-One"
-      }
-    ],
-    "installPlans": [
-      {
-        "name": "Datazoom",
-        "id": "third-party-datazoom"
-      }
-    ]
-  },
-  {
     "title": "Zipkin",
     "name": "zipkin",
     "description": "## What is Zipkin?\n\nDistributed Tracing system built in Java.\n\n## Get started!\n\nYou can easily reuse your Zipkin-format trace data and use it in New Relic.\nFollow [this Zipkin guide](https://docs.newrelic.com/docs/distributed-tracing/trace-api/report-zipkin-format-traces-trace-api/) to get started.",
@@ -514,6 +464,55 @@
       {
         "name": "WayScript",
         "id": "wayscript"
+      }
+    ]
+  },
+  {
+    "title": "Datazoom",
+    "name": "datazoom",
+    "description": "The Datazoom quickstart provides a fast and easy launching point into video metrics built on top of New Relic One dashboards, allowing you to gain insights about your viewers, content, ads and your platform's performance. Customize the dashboard to use only the metrics that fit your goals and easily edit metric calculations and tailor them to your needs.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/datazoom",
+    "id": "2ffed926-6ee2-43b2-a942-344192fdf418",
+    "level": "COMMUNITY",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/datazoom/logo.png",
+    "summary": "The Datazoom quickstart will help you gain insights into your viewers streaming video experience.",
+    "websiteUrl": null,
+    "keywords": [
+      "datazoom",
+      "video quality",
+      "video experience",
+      "quality of experience",
+      "video streaming",
+      "video metrics",
+      "newrelic partner"
+    ],
+    "authors": [
+      "Datazoom",
+      "New Relic"
+    ],
+    "dashboards": [
+      {
+        "name": "Datazoom",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/datazoom-dashboard/datazoom_dashboard01.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/datazoom-dashboard/datazoom_dashboard02.png"
+        ]
+      }
+    ],
+    "alerts": [],
+    "documentation": [
+      {
+        "name": "Installation docs",
+        "description": "Configure Datazoom Connector for New Relic One",
+        "url": "https://help.datazoom.io/hc/en-us/articles/360022667532-New-Relic-One"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "Datazoom",
+        "id": "third-party-datazoom"
       }
     ]
   },
@@ -4165,101 +4164,6 @@
     ]
   },
   {
-    "title": "Cribl Logstream",
-    "name": "cribl-logstream",
-    "description": "## About Cribl\n\nCribl Logstream unlocks [data sources](https://docs.cribl.io/logstream/sources), including metrics, events, and logs, in an observability pipeline. \n\nDeploying this quickstart will allow you to add context to your data, by enriching it with information from external data sources, help secure your data, by redacting, obfuscating, or encrypting sensitive fields, and optimize your data, per your performance and cost requirements.\n\nFor more information about Cribl.Cloud, or the self-hosted Cribl Logstream platform, please go to [cribl.io/logstream/about](https://docs.cribl.io/logstream/about/)\n\nFor Cribl support, please go to [cribl.io/support](https://cribl.io/support/)\n\n\n## Getting started with Cribl\n\nTo get started with Cribl, you can sign up for a [free cloud account](https://cribl.cloud/signup/) and up to 1 TB/day of data.  Check out the [licensing page](https://docs.cribl.io/logstream/licensing) for more details.\n\nReady to start using Cribl Logstream to send Metrics, Events, and Logs to New Relic? Check out the [New Relic Logs & Metrics](https://docs.cribl.io/logstream/destinations-newrelic) destinations and the [New Relic Events](https://docs.cribl.io/logstream/destinations-newrelic-events) destinations.\n\nNeed an introductory course on Cribl Logstream? Get started with the [Cribl sandbox](https://sandbox.cribl.io/).\n\n\n## About this integration\n\nThe Cribl LogStream quickstart gives you a way to quickly integrate your Cribl LogStream metrics and Worker Node Logs with New Relic’s observability platform. The quickstart also has several ready-to-use visualizations to get you started right away with observing your data.\n\nFor more information about this integration, check out the [blogpost](https://cribl.io/blog/a-low-code-approach-to-getting-your-logs-and-metrics-into-new-relic-with-cribl-logstream/)",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/cribl-logstream",
-    "id": "e67f2859-80c1-4234-bbcf-bcbeeb31d70d",
-    "level": "VERIFIED",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/cribl-logstream/Cribl-Logo.png",
-    "summary": "Observe the Cribl Logstream control plane performance including sources, pipelines, workers, and destinations.",
-    "websiteUrl": null,
-    "keywords": [
-      "logstream",
-      "cribl",
-      "control plane",
-      "splunk",
-      "elastic",
-      "etl",
-      "newrelic partner"
-    ],
-    "authors": [
-      "Carley Rosato (Cribl)"
-    ],
-    "dashboards": [
-      {
-        "name": "Cribl LogStream Metrics",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/cribl-logstream-metrics/cribl-logstream-metrics01.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/cribl-logstream-metrics/cribl-logstream-metrics02.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/cribl-logstream-metrics/cribl-logstream-metrics03.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/cribl-logstream-metrics/cribl-logstream-metrics04.png"
-        ]
-      }
-    ],
-    "alerts": [],
-    "documentation": [
-      {
-        "name": "Installation Docs",
-        "description": "Configure a Logstream destination to send Metrics, Events, and Logs",
-        "url": "https://docs.cribl.io/docs/destinations-newrelic"
-      }
-    ],
-    "installPlans": [
-      {
-        "name": "Cribl-Logstream",
-        "id": "third-party-cribl-logstream"
-      }
-    ]
-  },
-  {
-    "title": "Gigamon Newrelic",
-    "name": "gigamon-newrelic",
-    "description": "Gigamon helps the world’s leading organizations run fast, stay secure and innovate. We provide the industry’s first elastic visibility and analytics fabric, which closes the cloud visibility gap by enabling cloud tools to see the network and network tools to see the cloud. With visibility across their entire hybrid cloud network, organizations can improve customer experience, eliminate security blind spots, and reduce cost and complexity. Gigamon has been awarded over 90 technology patents and enjoys world-class customer satisfaction with more than 4,000 organizations, including over 80 percent of the Fortune 100 and hundreds of government and educational organizations worldwide.\n\nTo try this integration in your environment please reach out to tme@gigamon.com. If you are not aware of Gigamon Cloud Suite please reach out to sales@gigamon.com.",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/gigamon",
-    "id": "d6b36ecf-bf99-475c-938f-370153db8e70",
-    "level": "VERIFIED",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/gigamon/logo.png",
-    "summary": "Gigamon Cloud Suite enables collection of network traffic from every instance in the cloud collecting metadata of over 5,000 network traffic-related attributes for a holistic overview of and a much deeper level of security-related inspection.",
-    "websiteUrl": null,
-    "keywords": [
-      "Gigamon",
-      "Gigamon Cloud Suite",
-      "Gigamon Integration",
-      "featured",
-      "newrelic partner"
-    ],
-    "authors": [
-      "Haider Jarral"
-    ],
-    "dashboards": [
-      {
-        "name": "Agentless Gigamon View",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/gigamon-hawk/gigamon-hawk01.png"
-        ]
-      }
-    ],
-    "alerts": [],
-    "documentation": [
-      {
-        "name": "Gigamon integration guide",
-        "description": "An overview of the architecture and deployment methodology for Gigamon Hawk integrated with New Relic\n",
-        "url": "https://www.gigamon.com/content/dam/resource-library/english/deployment-guide/gigamon-new-relic-integration-quick-start-guide.pdf"
-      }
-    ],
-    "installPlans": [
-      {
-        "name": "Gigamon-Cloud-Observability",
-        "id": "third-party-gigamon"
-      }
-    ]
-  },
-  {
     "title": "Truera",
     "name": "truera",
     "description": "TruEra provides best in class AI Quality diagnostics and monitoring solution. TruEra and NewRelic users can go beyond standard accuracy, input and output drift monitoring by identifying consequential data drift, and other AI Quality diagnostics such as fairness, conceptual soundness and segment behavior. When combined with NewRelic’s comprehensive observability capabilities, MLOps teams can correlate signals throughout the ML lifecycle.",
@@ -4514,6 +4418,50 @@
     ]
   },
   {
+    "title": "Gigamon Newrelic",
+    "name": "gigamon-newrelic",
+    "description": "Gigamon helps the world’s leading organizations run fast, stay secure and innovate. We provide the industry’s first elastic visibility and analytics fabric, which closes the cloud visibility gap by enabling cloud tools to see the network and network tools to see the cloud. With visibility across their entire hybrid cloud network, organizations can improve customer experience, eliminate security blind spots, and reduce cost and complexity. Gigamon has been awarded over 90 technology patents and enjoys world-class customer satisfaction with more than 4,000 organizations, including over 80 percent of the Fortune 100 and hundreds of government and educational organizations worldwide.\n\nTo try this integration in your environment please reach out to tme@gigamon.com. If you are not aware of Gigamon Cloud Suite please reach out to sales@gigamon.com.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/gigamon",
+    "id": "d6b36ecf-bf99-475c-938f-370153db8e70",
+    "level": "VERIFIED",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/gigamon/logo.png",
+    "summary": "Gigamon Cloud Suite enables collection of network traffic from every instance in the cloud collecting metadata of over 5,000 network traffic-related attributes for a holistic overview of and a much deeper level of security-related inspection.",
+    "websiteUrl": null,
+    "keywords": [
+      "Gigamon",
+      "Gigamon Cloud Suite",
+      "Gigamon Integration",
+      "newrelic partner"
+    ],
+    "authors": [
+      "Haider Jarral"
+    ],
+    "dashboards": [
+      {
+        "name": "Agentless Gigamon View",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/gigamon-hawk/gigamon-hawk01.png"
+        ]
+      }
+    ],
+    "alerts": [],
+    "documentation": [
+      {
+        "name": "Gigamon integration guide",
+        "description": "An overview of the architecture and deployment methodology for Gigamon Hawk integrated with New Relic\n",
+        "url": "https://www.gigamon.com/content/dam/resource-library/english/deployment-guide/gigamon-new-relic-integration-quick-start-guide.pdf"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "Gigamon-Cloud-Observability",
+        "id": "third-party-gigamon"
+      }
+    ]
+  },
+  {
     "title": "GCP Cloud Run",
     "name": "gcp-cloud-run",
     "description": "## What is GCP Cloud Run?\n\nFully managed platform for taking locally developed applications and deploying\nthem on containers for simple scaling.\n\n\n### Get started!\n\nStart monitoring GCP Cloud Run by connecting Google Cloud Platform (GCP) to New Relic!\n\nCheck out our GCP Cloud Run documentation to instrument your cloud service and manage the stability, scalability, and reliability of your systems with New Relic's infrastructure monitoring capabilities.\n\n### More info\n\nCheck out the [documentation](https://docs.newrelic.com/docs/infrastructure/google-cloud-platform-integrations/gcp-integrations-list/google-cloud-run-monitoring-integration/) to learn more about New Relic monitoring for GCP Cloud Run.",
@@ -4578,6 +4526,57 @@
       {
         "name": "GCP-Infrastructure-Monitoring",
         "id": "gcp-infrastructure-monitoring"
+      }
+    ]
+  },
+  {
+    "title": "Cribl Logstream",
+    "name": "cribl-logstream",
+    "description": "## About Cribl\n\nCribl Stream unlocks [data sources](https://docs.cribl.io/stream/sources), including metrics, events, and logs, in an observability pipeline. \n\nDeploying this quickstart will allow you to add context to your data, by enriching it with information from external data sources, help secure your data, by redacting, obfuscating, or encrypting sensitive fields, and optimize your data, per your performance and cost requirements.\n\nFor more information about Cribl.Cloud, or the self-hosted Cribl Stream platform, please go to [cribl.io/Stream/about](https://docs.cribl.io/stream/about/)\n\nFor Cribl support, please go to [cribl.io/support](https://cribl.io/support/)\n\n\n## Getting started with Cribl\n\nTo get started with Cribl, you can sign up for a [free cloud account](https://cribl.cloud/signup/) and up to 1 TB/day of data.  Check out the [licensing page](https://docs.cribl.io/stream/licensing) for more details.\n\nReady to start using Cribl Stream to send Metrics, Events, and Logs to New Relic? Check out the [New Relic Logs & Metrics](https://docs.cribl.io/stream/destinations-newrelic) destinations and the [New Relic Events](https://docs.cribl.io/stream/destinations-newrelic-events) destinations.\n\nNeed an introductory course on Cribl Stream? Get started with the [Cribl sandbox](https://sandbox.cribl.io/).\n\n\n## About this integration\n\nThe Cribl Stream quickstart gives you a way to quickly integrate your Cribl Stream metrics and Worker Node s with New Relic’s observability platform. The quickstart also has several ready-to-use visualizations to get you started right away with observing your data.\n\nFor more information about this integration, check out the [blogpost](https://cribl.io/blog/a-low-code-approach-to-getting-your-logs-and-metrics-into-new-relic-with-cribl-logstream/)",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/cribl-logstream",
+    "id": "e67f2859-80c1-4234-bbcf-bcbeeb31d70d",
+    "level": "VERIFIED",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/cribl-logstream/Cribl-Logo.png",
+    "summary": "Observe the Cribl Stream control plane performance including sources, pipelines, workers, and destinations.",
+    "websiteUrl": null,
+    "keywords": [
+      "stream",
+      "log",
+      "cribl",
+      "control plane",
+      "splunk",
+      "elastic",
+      "etl",
+      "newrelic partner"
+    ],
+    "authors": [
+      "Carley Rosato (Cribl)"
+    ],
+    "dashboards": [
+      {
+        "name": "Cribl Stream Metrics",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/cribl-stream-metrics/cribl-stream-metrics01.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/cribl-stream-metrics/cribl-stream-metrics02.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/cribl-stream-metrics/cribl-stream-metrics03.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/cribl-stream-metrics/cribl-stream-metrics04.png"
+        ]
+      }
+    ],
+    "alerts": [],
+    "documentation": [
+      {
+        "name": "Installation Docs",
+        "description": "Configure a Stream destination to send Metrics, Events, and Logs",
+        "url": "https://docs.cribl.io/docs/destinations-newrelic"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "Cribl Stream",
+        "id": "third-party-cribl-stream"
       }
     ]
   },
@@ -11377,69 +11376,6 @@
     ]
   },
   {
-    "title": "Lacework Integration",
-    "name": "lacework",
-    "description": "Lacework is a comprehensive cloud security platform. We aim to turn security into a data problem and replace the frictionful processes for things like breach investigations or achieving compliance standards with simple, contextualized workflows.\nTechnically, our approach is that we replace the traditional 'rules' based mentality that requires you to predict attacker patterns ahead of time with a fully ML based approach.  We baseline what normal user, application and network behaviors look like across your workloads and cloud accounts automatically and then only alert you to deviations from the norm.  This significantly reduces the amount of toil in setting up and maintaining our solution, but also drastically improves the efficacy and amount of security alerts you will receive.\nThe following Quickstart brings the curated security alerts for misconfigurations and anomalous security behaviors into the New Relic platform so you can easily triage against your wealth of observability data or easily transition from monitoring to security investigations from a single interface!\nIf you encounter any issues, have feedback or would like more details on how to get started, please head over to support.lacework.com or send an email to adam.larson@lacework.net!",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/lacework",
-    "id": "8a7a7220-e8ec-4959-b35d-0fe082be8039",
-    "level": "VERIFIED",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/lacework/logo.jpg",
-    "summary": "Integrate Lacework's security events into the New Relic platform",
-    "websiteUrl": null,
-    "keywords": [
-      "security",
-      "compliance",
-      "lacework",
-      "anomaly",
-      "configuration",
-      "featured",
-      "newrelic partner"
-    ],
-    "authors": [
-      "Lacework, Inc"
-    ],
-    "dashboards": [
-      {
-        "name": "Lacework Security Overview",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/lacework-security-overview/lacework-security-overview.png"
-        ]
-      },
-      {
-        "name": "Lacework Anomaly Detections",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/lacework-anomaly-detections/lacework-anomaly-detections.png"
-        ]
-      },
-      {
-        "name": "Lacework Compliance Violations",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/lacework-compliance-violations/lacework-compliance-violations.png"
-        ]
-      }
-    ],
-    "alerts": [],
-    "documentation": [
-      {
-        "name": "Lacework installation docs",
-        "description": "The only prerequisite is to setup the New Relic integration within the Lacework UI.  Details on how to do that can be found below!",
-        "url": "https://support.lacework.com/hc/en-us/articles/360005842354-New-Relic"
-      }
-    ],
-    "installPlans": [
-      {
-        "name": "lacework",
-        "id": "third-party-lacework-integration"
-      }
-    ]
-  },
-  {
     "title": "Algorithmia",
     "name": "mlops-algorithmia",
     "description": "## What is Algorithmia?\n\nAlgorithmia is an enterprise platform for automating the deployment of machine-learning models into production. \n\n### New Relic + Algorithmia\n\nThe New Relic Algorithmia quickstart helps you track the performance of machine learning models in production. The quickstart enables full-stack observability of your machine learning models so that you can achieve maximum performance and uptime, as well as build more intelligent apps by unlocking end-to-end. The quickstart’s dashboards provide a high-level overview of Algorithmia metrics, like runtime duration by algorithm and throughput by algorithm.\n\n### Why monitor Algorithmia with New Relic?\n\nMonitoring your ML models after production is critical to understanding the effectiveness of your algorithm. The New Relic Algorithmia monitoring quickstart empowers you to track and detect model drift, model bias, and data drift. The Algorithmia [integration](https://newrelic.com/blog/how-to-relic/monitor-model-performance-algorithmia) helps you to instrument, analyze, troubleshoot, and optimize ML model performance across your entire system. \nIn addition, the quickstart enables you to send model performance metrics from Algorithmia Insights to New Relic where you can monitor your algorithms in real-time. You can also explore metrics data and view the state of your algorithm through a user-friendly dashboard.\nInstall the New Relic Algorithmia quickstart today to streamline models in New Relic’s observability platform and build sophisticated ML models. It’s the key to creating a seamless collaboration between your data science and DevOps teams.",
@@ -11584,6 +11520,68 @@
       {
         "name": "Zebrium",
         "id": "third-party-zebrium"
+      }
+    ]
+  },
+  {
+    "title": "Lacework Integration",
+    "name": "lacework",
+    "description": "Lacework is a comprehensive cloud security platform. We aim to turn security into a data problem and replace the frictionful processes for things like breach investigations or achieving compliance standards with simple, contextualized workflows.\nTechnically, our approach is that we replace the traditional 'rules' based mentality that requires you to predict attacker patterns ahead of time with a fully ML based approach.  We baseline what normal user, application and network behaviors look like across your workloads and cloud accounts automatically and then only alert you to deviations from the norm.  This significantly reduces the amount of toil in setting up and maintaining our solution, but also drastically improves the efficacy and amount of security alerts you will receive.\nThe following Quickstart brings the curated security alerts for misconfigurations and anomalous security behaviors into the New Relic platform so you can easily triage against your wealth of observability data or easily transition from monitoring to security investigations from a single interface!\nIf you encounter any issues, have feedback or would like more details on how to get started, please head over to support.lacework.com or send an email to adam.larson@lacework.net!",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/lacework",
+    "id": "8a7a7220-e8ec-4959-b35d-0fe082be8039",
+    "level": "VERIFIED",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/lacework/logo.jpg",
+    "summary": "Integrate Lacework's security events into the New Relic platform",
+    "websiteUrl": null,
+    "keywords": [
+      "security",
+      "compliance",
+      "lacework",
+      "anomaly",
+      "configuration",
+      "newrelic partner"
+    ],
+    "authors": [
+      "Lacework, Inc"
+    ],
+    "dashboards": [
+      {
+        "name": "Lacework Anomaly Detections",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/lacework-anomaly-detections/lacework-anomaly-detections.png"
+        ]
+      },
+      {
+        "name": "Lacework Security Overview",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/lacework-security-overview/lacework-security-overview.png"
+        ]
+      },
+      {
+        "name": "Lacework Compliance Violations",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/lacework-compliance-violations/lacework-compliance-violations.png"
+        ]
+      }
+    ],
+    "alerts": [],
+    "documentation": [
+      {
+        "name": "Lacework installation docs",
+        "description": "The only prerequisite is to setup the New Relic integration within the Lacework UI.  Details on how to do that can be found below!",
+        "url": "https://support.lacework.com/hc/en-us/articles/360005842354-New-Relic"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "lacework",
+        "id": "third-party-lacework-integration"
       }
     ]
   },
@@ -16510,6 +16508,14 @@
     ],
     "dashboards": [
       {
+        "name": "Catchpoint-Overview",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/catchpoint-overview/Catchpoint-Overview.png"
+        ]
+      },
+      {
         "name": "Catchpoint-Test Times",
         "description": null,
         "url": null,
@@ -16531,14 +16537,6 @@
         "url": null,
         "screenshots": [
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/catchpoint-recent-errors/Catchpoint-Recent_Errors.png"
-        ]
-      },
-      {
-        "name": "Catchpoint-Overview",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/catchpoint-overview/Catchpoint-Overview.png"
         ]
       }
     ],
@@ -22366,30 +22364,6 @@
     ],
     "dashboards": [
       {
-        "name": "Kubernetes Data Ingest Analysis",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/kubernetes-data-ingest-analysis/kubernetes-data-ingest-analysis.png"
-        ]
-      },
-      {
-        "name": "On-Host Integrations Data Analysis",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/on-host-integrations-data-analysis/on-host-integrations-data-analysis.png"
-        ]
-      },
-      {
-        "name": "GCP Integrations Data Ingest Analysis",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/gcp-integrations-data-ingest-analysis/gcp-integrations-data-ingest-analysis.png"
-        ]
-      },
-      {
         "name": "AWS Integrations Data Ingest Analysis",
         "description": null,
         "url": null,
@@ -22403,6 +22377,30 @@
         "url": null,
         "screenshots": [
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/azure-integrations-data-ingest-analysis/azure-integrations-data-ingest-analysis.png"
+        ]
+      },
+      {
+        "name": "GCP Integrations Data Ingest Analysis",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/gcp-integrations-data-ingest-analysis/gcp-integrations-data-ingest-analysis.png"
+        ]
+      },
+      {
+        "name": "Kubernetes Data Ingest Analysis",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/kubernetes-data-ingest-analysis/kubernetes-data-ingest-analysis.png"
+        ]
+      },
+      {
+        "name": "On-Host Integrations Data Analysis",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/on-host-integrations-data-analysis/on-host-integrations-data-analysis.png"
         ]
       }
     ],
@@ -23236,6 +23234,14 @@
     ],
     "dashboards": [
       {
+        "name": "Browser Pages Dashboard",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/browser-pages-dashboard/browser_pages_dashboard.png"
+        ]
+      },
+      {
         "name": "JavaScript Errors",
         "description": null,
         "url": null,
@@ -23249,14 +23255,6 @@
         "url": null,
         "screenshots": [
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/traffic-analysis/traffic_analysis.png"
-        ]
-      },
-      {
-        "name": "Browser Pages Dashboard",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/browser-pages-dashboard/browser_pages_dashboard.png"
         ]
       },
       {
