@@ -18,21 +18,6 @@ Before submitting an Issue, please search for similar ones in the
 2. Increase the version numbers in any examples files and the README.md to the new version that this Pull Request would represent. The versioning scheme we use is [SemVer](http://semver.org/).
 3. You may merge the Pull Request in once you have the sign-off of two other developers, or if you do not have permission to do that, you may request the second reviewer to merge it for you.
 
-## Adding custom meta tags
-
-Custom meta tags can be added for a quickstart in [quickstart-metadata.json](src/data/quickstart-metadata.json)
-You will need to add an object to the array within this file in the following format:
-
-```
-{
-  "slug": <slug of quickstart>,
-  "title": <title which should be in title meta tag>,
-  "description": <description which should be in description meta tag>
-}
-```
-
-Create a pull request following the above guidelines with this change and we will get it merged as soon as possible.
-
 ## Contributor License Agreement
 
 Keep in mind that when you submit your Pull Request, you'll need to sign the CLA via the click-through using CLA-Assistant. If you'd like to execute our corporate CLA, or if you have any questions, please drop us an email at opensource@newrelic.com.

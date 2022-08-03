@@ -4,7 +4,7 @@ import Seo from '@newrelic/gatsby-theme-newrelic/src/components/SEO';
 import { useStaticQuery, graphql } from 'gatsby';
 import quickstartMetadata from '@data/quickstart-metadata';
 
-function IOSeo({ description, meta, title, tags, location, type, summary }) {
+function IOSeo({ meta, title, tags, location, type, summary }) {
   const { site } = useStaticQuery(
     graphql`
       query {
@@ -39,8 +39,9 @@ function IOSeo({ description, meta, title, tags, location, type, summary }) {
         />
       );
   };
+
   const slug = location.pathname.split('/')[1];
-  const customMetadata = quickstartMetadata.find((x) => x.slug === slug);
+  const customMetadata = quickstartMetadata[slug];
   const isHomeRoute = location.pathname === '/';
   const quickstartMetaDescription = customMetadata
     ? customMetadata.description
@@ -89,7 +90,7 @@ function IOSeo({ description, meta, title, tags, location, type, summary }) {
       name: 'info',
       class: 'swiftype',
       'data-type': 'string',
-      content: description,
+      content: metaDescription,
     },
     ...(tags ?? []).map((tag) => ({
       name: 'tags',
@@ -124,7 +125,6 @@ IOSeo.defaultProps = {
 
 IOSeo.propTypes = {
   location: PropTypes.object.isRequired,
-  description: PropTypes.string,
   meta: PropTypes.arrayOf(PropTypes.object),
   title: PropTypes.string,
   tags: PropTypes.arrayOf(PropTypes.string),
