@@ -59,6 +59,7 @@ const QuickstartDetails = ({ data, location }) => {
     <>
       <IOSeo
         title={quickstart.title}
+        name={quickstart.name}
         type="quickstarts"
         location={location}
         tags={quickstart.keywords}
