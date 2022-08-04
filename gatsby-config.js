@@ -4,6 +4,7 @@ const resolveQuickstartSlug = require('./src/utils/resolveQuickstartSlug');
 module.exports = {
   pathPrefix: `/instant-observability`,
   trailingSlash: 'never',
+  graphqlTypegen: true,
   flags: {
     DEV_SSR: true,
     PRESERVE_WEBPACK_CACHE: true,
