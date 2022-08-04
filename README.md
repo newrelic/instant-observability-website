@@ -95,14 +95,23 @@ To add a new set of meta tags for a quickstart, add the following to the quickst
 
 ```
 {
-  "slug": {
+  "<quickstart slug>": {
     "title": <title which should be in title meta tag>,
     "description": <description which should be in description meta tag>
   }
 }
 ```
 
-Create a pull request following the guidelines from [CONTRIBUTING.md](CONTRIBUTING.md)
+For example, to add a custom meta title and description to a quickstart with the slug cool-qs:
+
+```
+{
+  "cool-qs": {
+    "title": "Cool QS",
+    "description": "Cool qs description for SEO purposes"
+  }
+}
+```
 
 ### Environment variables
 
