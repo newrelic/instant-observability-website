@@ -22,15 +22,15 @@ import allFilteredQuickstarts from '@utils/allFilteredQuickstarts';
 import getDisplayName from '@utils/getDisplayName';
 // Components
 import Slider from 'react-slick';
-import Button from '@newrelic/gatsby-theme-newrelic/src/components/Button';
-import Spinner from '@newrelic/gatsby-theme-newrelic/src/components/Spinner';
-import featherIcons from '../@newrelic/gatsby-theme-newrelic/icons/feather';
+import { Spinner } from '@newrelic/gatsby-theme-newrelic';
 import IOBanner from '@components/IOBanner';
 import IOSeo from '@components/IOSeo';
 import QuickstartTile from '@components/QuickstartTile';
 import SuperTiles from '@components/SuperTiles';
 import CategoryList from '@components/indexComponents/CategoryList';
 import CategoryDropdown from '@components/indexComponents/CategoryDropdown';
+import QuickstartGrid from '@components/QuickstartGrid';
+import GoToTopButton from '../components/GoToTopButton';
 
 const COLUMN_BREAKPOINT = '1131px';
 // used to set the height of the Spinner to reduce layout shift on page load
@@ -47,6 +47,8 @@ const QuickstartsPage = ({ data, location }) => {
 
   const handleSearchAndCategory = handleParams('category', 'search');
 
+  const isParamPresent = (value) => value !== '' && value !== undefined;
+
   const {
     featuredQuickstarts,
     filteredQuickstarts,
@@ -59,58 +61,6 @@ const QuickstartsPage = ({ data, location }) => {
   useEffect(() => {
     setLoadComplete(true);
   }, []);
-
-  const handleScroll = () => {
-    const btn = document.getElementById('go-to-page-top-btn');
-    if (
-      document.body.scrollTop > 3000 ||
-      document.documentElement.scrollTop > 3000
-    ) {
-      btn.style.display = 'block';
-    } else {
-      btn.style.display = 'none';
-    }
-  };
-
-  useEffect(() => {
-    // Anything in here is fired on component mount.
-    window.addEventListener('scroll', handleScroll);
-    return () => {
-      // Anything in here is fired on component unmount.
-      window.removeEventListener('scroll', handleScroll);
-    };
-  });
-
-  function topFunction() {
-    document.documentElement.scrollTop = 0;
-  }
-
-  const renderGoToTopButton = () => {
-    return (
-      <Button
-        onClick={() => topFunction()}
-        css={css`
-          display: none;
-          flex-direction: row;
-          justify-content: center;
-          align-items: center;
-          padding: 8px 12px;
-          gap: 8px;
-          position: fixed;
-          width: 40px;
-          height: 40px;
-          right: 9px;
-          bottom: 43px;
-          background: #1d252c;
-          border-radius: 97px;
-          border: 1px solid #898e91;
-        `}
-        id="go-to-page-top-btn"
-      >
-        {featherIcons.topArrow}
-      </Button>
-    );
-  };
 
   return (
     <>
@@ -161,8 +111,6 @@ const QuickstartsPage = ({ data, location }) => {
           data-swiftype-index={false}
           css={css`
             grid-area: sidebar;
-            height: calc(100vh - var(--global-header-height));
-            position: sticky;
             top: var(--global-header-height);
             width: 100%;
 
@@ -356,13 +304,20 @@ const QuickstartsPage = ({ data, location }) => {
             `}
           >
             {Boolean(search) && <SuperTiles />}
-            {filteredQuickstarts.map((pack) => (
-              <QuickstartTile key={pack.id} featured={false} {...pack} />
-            ))}
+
+            {/* Add pagination grid if no search term or category selected */}
+            <QuickstartGrid
+              quickstarts={filteredQuickstarts}
+              stepSize={
+                isParamPresent(search) || isParamPresent(category)
+                  ? filteredQuickstarts.length
+                  : 11
+              }
+            />
           </div>
         </div>
       </div>
-      {renderGoToTopButton()}
+      <GoToTopButton scrollDistance={1000} />
     </>
   );
 };
