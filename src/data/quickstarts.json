@@ -11340,12 +11340,12 @@
   {
     "title": "Atlassian Jira for Errors Inbox",
     "name": "jira-errors-inbox",
-    "description": "[Connect errors inbox to Jira (Cloud)](https://docs.newrelic.com/docs/errors-inbox/errors-inbox/#jira) to easily create tickets for your errors, allowing for faster collaboration and resolution. Check out our documentation to learn how to set up Jira templates, which allow you to quickly create a ticket containing error details and links directly to the stack trace and APM for quick access and resolution.",
+    "description": "## Integrate your error management with automatic Jira ticketing\n\n[Errors inbox](https://newrelic.com/platform/errors-inbox) is an error-tracking solution that helps you proactively detect, triage, and resolve errors to help you to fix them before they impact your users.\n[Connect errors inbox to Jira Software](https://docs.newrelic.com/docs/errors-inbox/error-external-services#jira) to easily create Jira Software issues for your errors in seconds, allowing for faster collaboration and resolution.\n\n### Why use New Relic errors inbox?\n- **Track, triage, and resolve errors in one place:** Errors are grouped and displayed on a single screen for visibility and easy triaging. Tackle errors across the full application stack with APM, RUM, Mobile, and Serverless (Lambda Functions) data tracked.\n- **Resolve errors before impacting customers:** Proactively review and triage errors before they affect customers. Get to the root cause faster with full error details, including stack traces and logs in context, provided in the error inbox.\n- **Collaborate across teams:** Squash bugs as a team with shared error visibility, shared comments, and an integration with Slack. \n\n### File Jira Software issues without leaving your workflow\nWith this built-in two way integration, you can connect New Relic errors inbox with Jira Software to easily create Jira issues in seconds, to drive faster collaboration and resolution. Leverage issue templates that automatically contain error details and link directly to the stack trace and for quick access. Plus, Jira issues are stored alongside the associated error group, so if the error occurs again, you can easily access associated tickets.\n\nThe connection between errors inbox and Jira Software is automatically included in the errors inbox UI. All you have to do is connect your account and API token.\n\nErrors inbox for Jira is available for free to all New Relic full platform users and Jira Cloud users. \n\n### Set up the integration in minutes\nConnecting errors inbox and Jira Software is simple. Check out the resources below to help you get started:\n- Video: [Create Jira Tickets using Error Data from Errors Inbox](https://www.youtube.com/watch?v=v2frs2Pyjfw)\n- Blog: [How to integrate Jira with New Relic Errors Inbox](https://newrelic.com/blog/how-to-relic/errors-inbox-with-jira)\n- Demo: [Errors inbox for Jira](https://www.loom.com/share/d766c855094749aca608638bf0ac5b12)",
     "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/jira-errors",
     "id": "06734d77-b06a-4410-aafa-eed1944c0ac4",
     "level": "NEW_RELIC",
     "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/jira-errors/logo.svg",
-    "summary": "Integrated errors inbox with Atlassian Jira (cloud) to easily create tickets for your errors.",
+    "summary": "Integrate errors inbox with Atlassian Jira Software to easily create tickets for your errors.",
     "websiteUrl": null,
     "keywords": [
       "jira",
@@ -11353,6 +11353,9 @@
       "inbox",
       "newrelic",
       "atlassian",
+      "ticket",
+      "issue",
+      "error tracking",
       "newrelic partner"
     ],
     "authors": [
@@ -11365,7 +11368,7 @@
       {
         "name": "How to Docs",
         "description": "How to integrate Jira with New Relic Errors Inbox",
-        "url": "https://docs.newrelic.com/docs/errors-inbox/errors-inbox/#jira"
+        "url": "https://docs.newrelic.com/docs/errors-inbox/error-external-services#jira"
       }
     ],
     "installPlans": [
