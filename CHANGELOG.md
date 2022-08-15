@@ -1,3 +1,11 @@
+# [1.11.0](https://github.com/newrelic/instant-observability-website/compare/v1.10.1...v1.11.0) (2022-08-15)
+
+
+### Features
+
+* add conditional pagination ([2f7c9da](https://github.com/newrelic/instant-observability-website/commit/2f7c9da9ab83dfb543721d7749416a8e3b187c63))
+* begin adding pagination to catalogue ([d563b42](https://github.com/newrelic/instant-observability-website/commit/d563b420e87e828fb0265e91e681c2a579e948fc))
+
 ## [1.10.1](https://github.com/newrelic/instant-observability-website/compare/v1.10.0...v1.10.1) (2022-07-27)
 
 
