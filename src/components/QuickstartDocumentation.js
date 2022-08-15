@@ -9,7 +9,7 @@ import Intro from './Intro';
 import { quickstart } from '../types';
 import EbookIconSVG from './Icons/EbookIconSVG';
 
-const QuickstartDataSources = ({ quickstart }) => {
+const QuickstartDocumentation = ({ quickstart }) => {
   const tessen = useTessen();
 
   const handleDocsTileClick = () => {
@@ -29,8 +29,12 @@ const QuickstartDataSources = ({ quickstart }) => {
         `}
       >
         {quickstart.title} observability quickstart contains{' '}
-        {pluralize('data source', quickstart.documentation?.length ?? 0, true)}.
-        This is how you'll get your data into New Relic.{' '}
+        {pluralize(
+          'documentation reference',
+          quickstart.documentation?.length ?? 0,
+          true
+        )}
+        . This is how you'll get your data into New Relic.{' '}
       </Intro>
 
       <div
@@ -92,12 +96,12 @@ const QuickstartDataSources = ({ quickstart }) => {
   );
 };
 
-QuickstartDataSources.propTypes = {
+QuickstartDocumentation.propTypes = {
   quickstart: quickstart.isRequired,
 };
 
 export const fragmentQuery = graphql`
-  fragment QuickstartDataSources_quickstart on Quickstarts {
+  fragment QuickstartDocumentation_quickstart on Quickstarts {
     documentation {
       name
       url
@@ -106,4 +110,4 @@ export const fragmentQuery = graphql`
   }
 `;
 
-export default QuickstartDataSources;
+export default QuickstartDocumentation;

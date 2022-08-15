@@ -199,7 +199,7 @@ export const pageQuery = graphql`
 
       ...QuickstartAlerts_quickstart
 
-      ...QuickstartDataSources_quickstart
+      ...QuickstartDocumentation_quickstart
 
       ...QuickstartOverview_quickstart
 
