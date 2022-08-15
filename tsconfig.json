@@ -1,0 +1,29 @@
+{
+  "compilerOptions": {
+    "outDir": "./built",
+    "target": "es6",
+    "lib": ["dom", "esnext"],
+    "jsx": "react",
+    "module": "es6",
+    "moduleResolution": "node",
+
+    "resolveJsonModule": true,
+
+    "allowJs": true,
+
+    "esModuleInterop": true,
+
+    "strict": true,
+    "skipLibCheck": true,
+    "baseUrl": "src",
+    "paths": {
+      "@components/*": ["components/*"],
+      "@hooks/*": ["hooks/*"],
+      "@utils/*": ["utils/*"],
+      "@layouts/*": ["layouts/*"],
+      "@data/*": ["data/*"]
+    }
+  },
+  "include": ["src/**/*"],
+  "exclude": ["node_modules"]
+}
