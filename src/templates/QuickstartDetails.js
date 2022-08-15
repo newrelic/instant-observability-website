@@ -59,10 +59,12 @@ const QuickstartDetails = ({ data, location }) => {
     <>
       <IOSeo
         title={quickstart.title}
+        name={quickstart.name}
         type="quickstarts"
         location={location}
         tags={quickstart.keywords}
         meta={quickStartMeta}
+        summary={quickstart.summary}
       />
       <PageLayout.Header
         css={css`

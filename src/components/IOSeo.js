@@ -2,8 +2,57 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Seo from '@newrelic/gatsby-theme-newrelic/src/components/SEO';
 import { useStaticQuery, graphql } from 'gatsby';
+import quickstartsMetadata from '@data/quickstart-metadata';
 
-function IOSeo({ description, meta, title, tags, location, type }) {
+/**
+ * @param {string} siteMetadataDescription
+ * @param {string} [summary]
+ * @param {Object} [quickstartMetadata]
+ * @param {string} [quickstartMetadata.description]
+ * @returns {string}
+ */
+const getMetaDescription = (
+  siteMetadataDescription,
+  summary,
+  quickstartMetadata
+) => {
+  // if we have a quickstart-specific description
+  if (quickstartMetadata && quickstartMetadata.description) {
+    return quickstartMetadata.description;
+  }
+
+  // if we have a summary
+  if (summary) {
+    return summary;
+  }
+
+  // default to site metadata description
+  return siteMetadataDescription;
+};
+
+/**
+ * @param {string} siteMetadataTitle
+ * @param {string} [title]
+ * @param {Object} [quickstartMetadata]
+ * @param {string} [quickstartMetadata.title]
+ * @returns {string}
+ */
+const getMetaTitle = (siteMetadataTitle, title, quickstartMetadata) => {
+  // if we have custom metadata defined (with a title)
+  if (quickstartMetadata && quickstartMetadata.title) {
+    return quickstartMetadata.title;
+  }
+
+  // If we have a title prop
+  if (title) {
+    return title;
+  }
+
+  // default to site metadata title
+  return siteMetadataTitle;
+};
+
+function IOSeo({ meta, name, title, tags, location, type, summary }) {
   const { site } = useStaticQuery(
     graphql`
       query {
@@ -39,7 +88,20 @@ function IOSeo({ description, meta, title, tags, location, type }) {
       );
   };
 
-  const metaDescription = description || site.siteMetadata.description;
+  const {
+    description: siteMetadataDescription,
+    title: siteMetadataTitle,
+  } = site.siteMetadata;
+
+  const quickstartMetadata = quickstartsMetadata[name];
+
+  const metaDescription = getMetaDescription(
+    siteMetadataDescription,
+    summary,
+    quickstartMetadata
+  );
+
+  const metaTitle = getMetaTitle(siteMetadataTitle, title, quickstartMetadata);
 
   const globalMetadata = [
     { name: 'description', content: metaDescription },
@@ -52,12 +114,12 @@ function IOSeo({ description, meta, title, tags, location, type }) {
   ];
 
   const social = [
-    { property: 'og:title', content: title },
+    { property: 'og:title', content: metaTitle },
     { property: 'og:description', content: metaDescription },
     { property: 'og:type', content: 'website' },
     { name: 'twitter:card', content: 'summary_large_image' },
     { name: 'twitter:creator', content: site.siteMetadata.author },
-    { name: 'twitter:title', content: title },
+    { name: 'twitter:title', content: metaTitle },
     { name: 'twitter:description', content: metaDescription },
   ];
 
@@ -79,7 +141,7 @@ function IOSeo({ description, meta, title, tags, location, type }) {
       name: 'info',
       class: 'swiftype',
       'data-type': 'string',
-      content: description,
+      content: metaDescription,
     },
     ...(tags ?? []).map((tag) => ({
       name: 'tags',
@@ -109,17 +171,23 @@ function IOSeo({ description, meta, title, tags, location, type }) {
 
 IOSeo.defaultProps = {
   meta: [],
-  description: '',
 };
 
 IOSeo.propTypes = {
   location: PropTypes.object.isRequired,
-  description: PropTypes.string,
   meta: PropTypes.arrayOf(PropTypes.object),
   title: PropTypes.string,
   tags: PropTypes.arrayOf(PropTypes.string),
   type: PropTypes.string,
   quickStartName: PropTypes.string,
+  summary: PropTypes.string,
+  /**
+   * The `slug` field in the quickstart configuration and the NerdGraph
+   * API.
+   *
+   * @note that this is considered `name` in the Gatsby GraphQL.
+   */
+  name: PropTypes.string,
 };
 
 export default IOSeo;

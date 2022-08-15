@@ -1,10 +1,21 @@
 [![Community Project header](https://github.com/newrelic/open-source-office/raw/master/examples/categories/images/Community_Project.png)](https://github.com/newrelic/open-source-office/blob/master/examples/categories/index.md#category-community-project)
 
-
 # Instant Observability Website
 
 _Dashboards, alerts, and integrations all in one place._
 This site hosts the public version of the Instant Observability Marketplace
+
+- [Dependencies](#dependencies)
+- [Production build](#production-build)
+- [Path prefix](#path-prefix)
+- [CI/CD](#cicd)
+- [Adding custom meta tags](#adding-custom-meta-tags)
+- [Support](#support)
+- [Contributing](#contributing)
+- [Code of conduct](#code-of-conduct)
+- [Issues / enhancement requests](#issues-enhancement-requests)
+- [License](#license)
+- [Security](#security)
 
 ## Dependencies
 
@@ -72,17 +83,42 @@ Runs every day to get various pages that relate to each quickstart from our vend
 Runs on every push to the `main` branch and clears out the `newrelic.com/instant-observability` cache.
 This can also be kicked off manually via a workflow run.
 
-## ☁️  Hosting
+## ☁️ Hosting
 
 - This site is built and hosted on [Gatsby Cloud](https://www.gatsbyjs.com/products/cloud/)
 - Changes are published on pushes to `main`.
 
+## Adding custom meta tags
+
+Custom meta tags can be added for a quickstart in [quickstart-metadata.json](src/data/quickstart-metadata.json)
+To add a new set of meta tags for a quickstart, add the following to the quickstart-metadata.json file.
+
+```
+{
+  "<quickstart slug>": {
+    "title": <title which should be in title meta tag>,
+    "description": <description which should be in description meta tag>
+  }
+}
+```
+
+For example, to add a custom meta title and description to a quickstart with the slug cool-qs:
+
+```
+{
+  "cool-qs": {
+    "title": "Cool QS",
+    "description": "Cool qs description for SEO purposes"
+  }
+}
+```
+
 ### Environment variables
 
-|key|possible values|notes|
-|-|-|-|
-|`GATSBY_NEWRELIC_ENV`|`development` or `production`| Used by the [New Relic Gatsby Theme](https://github.com/newrelic/gatsby-theme-newrelic) to determine the running environment. Set to `production` on prod.|
-|`PREFIX_PATHS`|`true` or `false`|Enables path prefixing during builds and deployments. Set to `true` on prod.|
+| key                   | possible values               | notes                                                                                                                                                      |
+| --------------------- | ----------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `GATSBY_NEWRELIC_ENV` | `development` or `production` | Used by the [New Relic Gatsby Theme](https://github.com/newrelic/gatsby-theme-newrelic) to determine the running environment. Set to `production` on prod. |
+| `PREFIX_PATHS`        | `true` or `false`             | Enables path prefixing during builds and deployments. Set to `true` on prod.                                                                               |
 
 ## 🩹 Support
 
@@ -110,7 +146,8 @@ issue to prevent the submission of duplicate issues.
 ## 🖋 License
 
 The Instant Observability Website is licensed under the [Apache 2.0](http://apache.org/licenses/LICENSE-2.0.txt) License.
->The Instant Observability Website also uses source code from third-party libraries. You can find full details on which libraries are used and the terms under which they are licensed in the third-party notices document
+
+> The Instant Observability Website also uses source code from third-party libraries. You can find full details on which libraries are used and the terms under which they are licensed in the third-party notices document
 
 ## 🔒 Security
 
