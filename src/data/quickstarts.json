@@ -4284,14 +4284,6 @@
     ],
     "dashboards": [
       {
-        "name": "Redis Enterprise Cluster Metrics",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/cluster/cluster01.png"
-        ]
-      },
-      {
         "name": "Redis Enterprise Database Metrics",
         "description": null,
         "url": null,
@@ -4305,6 +4297,14 @@
         "url": null,
         "screenshots": [
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/active-active/active_active01.png"
+        ]
+      },
+      {
+        "name": "Redis Enterprise Cluster Metrics",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/cluster/cluster01.png"
         ]
       }
     ],
@@ -6455,6 +6455,49 @@
     ]
   },
   {
+    "title": "AWS Billing",
+    "name": "aws-billing",
+    "description": "## What is AWS Billing?\n\nThe AWS Billing console provides features to manage and report your AWS cost and usage based on user-defined methods. With this, you can easily understand your AWS spending, pay invoices, analyze and control costs, manage billing preferences and tax settings, and access other cloud financial management services.\n\n### New Relic AWS Billing features\n\nThe New Relic AWS Billing integration empowers you with an [AWS Billing integration](https://docs.newrelic.com/docs/integrations/amazon-integrations/aws-integrations-list/aws-billing-monitoring-integration) that collects AWS financial data and splits it into two groups, billing costs and billing budgets, to make it easier for your team to gain cost visibility.\n\n### Why monitor AWS Billing with New Relic?\n\nWith our AWS Billing integration, you can gain visibility into all of your financial data. Our integration aggregates data from different sub-accounts and services and looks at your budgets in actual and forecasted spend. The best part? It’s all in one place. \n\nStart ingesting your AWS billing data today and visualize your AWS billing metrics in real-time.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/aws/aws-billing",
+    "id": "c7f15a54-e243-4e23-95dd-ff08937041ed",
+    "level": "NEW_RELIC",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/aws/aws-billing/logo.svg",
+    "summary": "Monitoring AWS Billing is critical to effectively track AWS cost and usage. Download the New Relic AWS Billing quickstart to proactively monitor AWS financial data including AWS billing metrics and AWS budget metrics.",
+    "websiteUrl": null,
+    "keywords": [
+      "aws",
+      "amazon web services",
+      "aws billing"
+    ],
+    "authors": [
+      "New Relic"
+    ],
+    "dashboards": [
+      {
+        "name": "AWS Billing",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/aws-billing/aws-billing.png"
+        ]
+      }
+    ],
+    "alerts": [],
+    "documentation": [
+      {
+        "name": "AWS Billing installation docs",
+        "description": "Monitor AWS Billing by connecting AWS to New Relic.\n",
+        "url": "https://docs.newrelic.com/docs/integrations/amazon-integrations/aws-integrations-list/aws-billing-monitoring-integration"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "AWS-Infrastructure-Monitoring",
+        "id": "aws-infrastructure-monitoring"
+      }
+    ]
+  },
+  {
     "title": "Azure Load Balancer",
     "name": "azure-load-balancer",
     "description": "## What is Azure Load Balancer?\n\nWatches incoming TCP and UDP traffic from different services, and uses health\nto distribute those requests across different instances.\n\n\n### Get started!\n\nStart monitoring Azure Load Balancer by connecting Microsoft Azure to New Relic!\n\nCheck out our Azure Load Balancer documentation to instrument your cloud service and manage the stability, scalability, and reliability of your systems with New Relic's infrastructure monitoring capabilities.\n\n### More info\n\nCheck out the [documentation](https://docs.newrelic.com/docs/infrastructure/microsoft-azure-integrations/azure-integrations-list/azure-load-balancer-monitoring-integration/) to learn more about New Relic monitoring for Azure Load Balancer.",
@@ -7235,40 +7278,6 @@
       {
         "name": "Video agent for Android",
         "id": "third-party-video-android"
-      }
-    ]
-  },
-  {
-    "title": "AWS Billing",
-    "name": "aws-billing",
-    "description": "## What is AWS Billing?\n\nThe AWS Billing console provides features to manage and report your AWS cost and usage based on user-defined methods. With this, you can easily understand your AWS spending, pay invoices, analyze and control costs, manage billing preferences and tax settings, and access other cloud financial management services.\n\n### New Relic AWS Billing features\n\nThe New Relic AWS Billing integration empowers you with an [AWS Billing integration](https://docs.newrelic.com/docs/integrations/amazon-integrations/aws-integrations-list/aws-billing-monitoring-integration) that collects AWS financial data and splits it into two groups, billing costs and billing budgets, to make it easier for your team to gain cost visibility.\n\n### Why monitor AWS Billing with New Relic?\n\nWith our AWS Billing integration, you can gain visibility into all of your financial data. Our integration aggregates data from different sub-accounts and services and looks at your budgets in actual and forecasted spend. The best part? It’s all in one place. \n\nStart ingesting your AWS billing data today and visualize your AWS billing metrics in real-time.",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/aws/aws-billing",
-    "id": "c7f15a54-e243-4e23-95dd-ff08937041ed",
-    "level": "NEW_RELIC",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/aws/aws-billing/logo.svg",
-    "summary": "Monitoring AWS Billing is critical to effectively track AWS cost and usage. Download the New Relic AWS Billing quickstart to proactively monitor AWS financial data including AWS billing metrics and AWS budget metrics.",
-    "websiteUrl": null,
-    "keywords": [
-      "aws",
-      "amazon web services",
-      "aws billing"
-    ],
-    "authors": [
-      "New Relic"
-    ],
-    "dashboards": [],
-    "alerts": [],
-    "documentation": [
-      {
-        "name": "AWS Billing installation docs",
-        "description": "Monitor AWS Billing by connecting AWS to New Relic.\n",
-        "url": "https://docs.newrelic.com/docs/integrations/amazon-integrations/aws-integrations-list/aws-billing-monitoring-integration"
-      }
-    ],
-    "installPlans": [
-      {
-        "name": "AWS-Infrastructure-Monitoring",
-        "id": "aws-infrastructure-monitoring"
       }
     ]
   },
@@ -11549,6 +11558,14 @@
     ],
     "dashboards": [
       {
+        "name": "Lacework Compliance Violations",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/lacework-compliance-violations/lacework-compliance-violations.png"
+        ]
+      },
+      {
         "name": "Lacework Anomaly Detections",
         "description": null,
         "url": null,
@@ -11562,14 +11579,6 @@
         "url": null,
         "screenshots": [
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/lacework-security-overview/lacework-security-overview.png"
-        ]
-      },
-      {
-        "name": "Lacework Compliance Violations",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/lacework-compliance-violations/lacework-compliance-violations.png"
         ]
       }
     ],
@@ -16511,11 +16520,11 @@
     ],
     "dashboards": [
       {
-        "name": "Catchpoint-Overview",
+        "name": "Catchpoint-Response Size",
         "description": null,
         "url": null,
         "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/catchpoint-overview/Catchpoint-Overview.png"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/catchpoint-response-size/Catchpoint-Response_Size.png"
         ]
       },
       {
@@ -16527,19 +16536,19 @@
         ]
       },
       {
-        "name": "Catchpoint-Response Size",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/catchpoint-response-size/Catchpoint-Response_Size.png"
-        ]
-      },
-      {
         "name": "Catchpoint-Recent Errors",
         "description": null,
         "url": null,
         "screenshots": [
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/catchpoint-recent-errors/Catchpoint-Recent_Errors.png"
+        ]
+      },
+      {
+        "name": "Catchpoint-Overview",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/catchpoint-overview/Catchpoint-Overview.png"
         ]
       }
     ],
@@ -23237,11 +23246,11 @@
     ],
     "dashboards": [
       {
-        "name": "Browser Pages Dashboard",
+        "name": "Browser Traffic Analysis",
         "description": null,
         "url": null,
         "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/browser-pages-dashboard/browser_pages_dashboard.png"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/traffic-analysis/traffic_analysis.png"
         ]
       },
       {
@@ -23253,11 +23262,11 @@
         ]
       },
       {
-        "name": "Browser Traffic Analysis",
+        "name": "Browser Pages Dashboard",
         "description": null,
         "url": null,
         "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/traffic-analysis/traffic_analysis.png"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/browser-pages-dashboard/browser_pages_dashboard.png"
         ]
       },
       {
