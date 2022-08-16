@@ -7,8 +7,11 @@ import { Button } from '@newrelic/gatsby-theme-newrelic';
 import featherIcons from '@newrelic/gatsby-theme-newrelic/src/icons/feather';
 
 const GoToTopButton = ({ scrollDistance }) => {
+  const buttonRef = useRef();
+
   const handleScroll = () => {
     const btn = useRef();
+
     //const btn = document.getElementById('go-to-page-top-btn');
     if (
       document.body.scrollTop > scrollDistance ||
