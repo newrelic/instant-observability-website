@@ -9,14 +9,15 @@ import featherIcons from '@newrelic/gatsby-theme-newrelic/src/icons/feather';
 const GoToTopButton = ({ scrollDistance }) => {
   const btn = useRef();
   const handleScroll = () => {
-    //const btn = document.getElementById('go-to-page-top-btn');
-    if (
-      document.body.scrollTop > scrollDistance ||
-      document.documentElement.scrollTop > scrollDistance
-    ) {
-      btn.current.style.display = 'block';
-    } else {
-      btn.current.style.display = 'none';
+    if (btn) {
+      if (
+        document.body.scrollTop > scrollDistance ||
+        document.documentElement.scrollTop > scrollDistance
+      ) {
+        btn.current.style.display = 'block';
+      } else {
+        btn.current.style.display = 'none';
+      }
     }
   };
 
