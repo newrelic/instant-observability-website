@@ -67,7 +67,7 @@ module.exports = {
       },
     ],
     // This prevents us from accidently importing from the theme's `index` file
-    // and pulling in a bunch of extra dependecies.
+    // and pulling in a bunch of extra dependencies.
     'no-restricted-imports': [
       'error',
       {
