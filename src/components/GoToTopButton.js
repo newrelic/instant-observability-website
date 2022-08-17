@@ -9,7 +9,7 @@ import featherIcons from '@newrelic/gatsby-theme-newrelic/src/icons/feather';
 const GoToTopButton = ({ scrollDistance }) => {
   const btn = useRef();
   const handleScroll = () => {
-    if (btn) {
+    if (btn && btn.current) {
       if (
         document.body.scrollTop > scrollDistance ||
         document.documentElement.scrollTop > scrollDistance
