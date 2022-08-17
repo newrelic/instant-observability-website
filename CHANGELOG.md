@@ -1,3 +1,10 @@
+## [1.11.1](https://github.com/newrelic/instant-observability-website/compare/v1.11.0...v1.11.1) (2022-08-17)
+
+
+### Bug Fixes
+
+* re-reduce bundle size ([84d8f40](https://github.com/newrelic/instant-observability-website/commit/84d8f40b23459b4a890b71de3d47ecbe0fc4ecf1))
+
 # [1.11.0](https://github.com/newrelic/instant-observability-website/compare/v1.10.1...v1.11.0) (2022-08-15)
 
 
