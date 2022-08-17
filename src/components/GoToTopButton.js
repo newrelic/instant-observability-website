@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from 'react';
 import PropTypes from 'prop-types';
 import { css } from '@emotion/react';
 
-import { Button } from '@newrelic/gatsby-theme-newrelic';
+import Button from '@newrelic/gatsby-theme-newrelic/src/components/Button';
 
 import featherIcons from '@newrelic/gatsby-theme-newrelic/src/icons/feather';
 

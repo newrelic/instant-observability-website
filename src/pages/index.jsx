@@ -22,7 +22,7 @@ import allFilteredQuickstarts from '@utils/allFilteredQuickstarts';
 import getDisplayName from '@utils/getDisplayName';
 // Components
 import Slider from 'react-slick';
-import { Spinner } from '@newrelic/gatsby-theme-newrelic';
+import Spinner from '@newrelic/gatsby-theme-newrelic/src/components/Spinner';
 import IOBanner from '@components/IOBanner';
 import IOSeo from '@components/IOSeo';
 import QuickstartTile from '@components/QuickstartTile';
