@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import { css } from '@emotion/react';
-import { Button, Surface } from '@newrelic/gatsby-theme-newrelic';
+import Button from '@newrelic/gatsby-theme-newrelic/src/components/Button';
+import Surface from '@newrelic/gatsby-theme-newrelic/src/components/Surface';
 import QuickstartTile from '@components/QuickstartTile';
 import { quickstart } from '../types';
 

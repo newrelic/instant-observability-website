@@ -66,5 +66,20 @@ module.exports = {
         ignoreRestSiblings: false,
       },
     ],
+    // This prevents us from accidently importing from the theme's `index` file
+    // and pulling in a bunch of extra dependecies.
+    'no-restricted-imports': [
+      'error',
+      {
+        paths: [
+          {
+            name: '@newrelic/gatsby-theme-newrelic',
+            message:
+              'Please import the module directly from @newrelic/gatsby-theme-newrelic/src/[module] instead.',
+          },
+        ],
+        patterns: ['!@newrelic/gatsby-theme-newrelic/*'],
+      },
+    ],
   },
 };
