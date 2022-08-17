@@ -20,6 +20,7 @@ import useSearchAndCategory from '@hooks/useSearchAndCategory';
 // Utils
 import allFilteredQuickstarts from '@utils/allFilteredQuickstarts';
 import getDisplayName from '@utils/getDisplayName';
+import shuffleArray from '../utils/shuffleArray';
 // Components
 import Slider from 'react-slick';
 import Spinner from '@newrelic/gatsby-theme-newrelic/src/components/Spinner';
@@ -30,7 +31,8 @@ import SuperTiles from '@components/SuperTiles';
 import CategoryList from '@components/indexComponents/CategoryList';
 import CategoryDropdown from '@components/indexComponents/CategoryDropdown';
 import QuickstartGrid from '@components/QuickstartGrid';
-import GoToTopButton from '../components/GoToTopButton';
+import GoToTopButton from '@components/GoToTopButton';
+import asFeaturedTile from '@components/AsFeaturedTile';
 
 const COLUMN_BREAKPOINT = '1131px';
 // used to set the height of the Spinner to reduce layout shift on page load
@@ -57,7 +59,8 @@ const QuickstartsPage = ({ data, location }) => {
   } = allFilteredQuickstarts(data.allQuickstarts.nodes, search, category);
 
   const [loadComplete, setLoadComplete] = useState(false);
-
+  const shuffledFeaturedQuickstarts = shuffleArray(featuredQuickstarts);
+  
   useEffect(() => {
     setLoadComplete(true);
   }, []);
@@ -229,13 +232,15 @@ const QuickstartsPage = ({ data, location }) => {
                 {!loadComplete && <Spinner />}
                 {loadComplete && (
                   <Slider {...indexSettings}>
-                    {featuredQuickstarts.map((pack) => (
-                      <QuickstartTile
+                    {shuffledFeaturedQuickstarts.map((pack) => {
+                      const FeaturedTileComponent = asFeaturedTile(QuickstartTile);
+                     
+                      return <FeaturedTileComponent
                         key={pack.id}
                         featured={false}
                         {...pack}
                       />
-                    ))}
+                      })}
                   </Slider>
                 )}
               </div>
