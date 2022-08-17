@@ -140,7 +140,6 @@ const SearchInput = forwardRef(
               margin: 0;
               padding: 0;
               outline: none;
-              z-index: 123;
             `}
             type="button"
           >
@@ -176,7 +175,6 @@ const SearchInput = forwardRef(
               margin: 0;
               padding: 0;
               outline: none;
-              z-index: 123;
             `}
             type="button"
           >
