@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useRef } from 'react';
 import PropTypes from 'prop-types';
 import { css } from '@emotion/react';
 
@@ -7,15 +7,17 @@ import { Button } from '@newrelic/gatsby-theme-newrelic';
 import featherIcons from '@newrelic/gatsby-theme-newrelic/src/icons/feather';
 
 const GoToTopButton = ({ scrollDistance }) => {
+  const btn = useRef();
   const handleScroll = () => {
-    const btn = document.getElementById('go-to-page-top-btn');
-    if (
-      document.body.scrollTop > scrollDistance ||
-      document.documentElement.scrollTop > scrollDistance
-    ) {
-      btn.style.display = 'block';
-    } else {
-      btn.style.display = 'none';
+    if (btn && btn.current) {
+      if (
+        document.body.scrollTop > scrollDistance ||
+        document.documentElement.scrollTop > scrollDistance
+      ) {
+        btn.current.style.display = 'block';
+      } else {
+        btn.current.style.display = 'none';
+      }
     }
   };
 
@@ -69,6 +71,7 @@ const GoToTopButton = ({ scrollDistance }) => {
           color: var(--color-white);
         }
       `}
+      ref={btn}
       id="go-to-page-top-btn"
     >
       <div className="btn-animation-styles">
