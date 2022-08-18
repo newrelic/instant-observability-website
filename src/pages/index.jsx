@@ -32,8 +32,8 @@ import CategoryList from '@components/indexComponents/CategoryList';
 import CategoryDropdown from '@components/indexComponents/CategoryDropdown';
 import QuickstartGrid from '@components/QuickstartGrid';
 import GoToTopButton from '@components/GoToTopButton';
-import useFeaturedInstrumentation from '@components/useFeaturedInstrumentation';
-import useMostPopularInstrumentation from '@components/useMostPopularInstrumentation';
+import withFeaturedInstrumentation from '@components/withFeaturedInstrumentation';
+import withMostPopularInstrumentation from '@components/withMostPopularInstrumentation';
 
 const COLUMN_BREAKPOINT = '1131px';
 // used to set the height of the Spinner to reduce layout shift on page load
@@ -190,7 +190,7 @@ const QuickstartsPage = ({ data, location }) => {
                       >
                         <SuperTiles />
                         {mostPopularQuickstarts.map((pack, i) => {
-                          const MostPopularTile = useMostPopularInstrumentation(QuickstartTile);
+                          const MostPopularTile = withMostPopularInstrumentation(QuickstartTile);
                           
                           return <MostPopularTile
                             index={i}
@@ -237,7 +237,7 @@ const QuickstartsPage = ({ data, location }) => {
                 {loadComplete && (
                   <Slider {...indexSettings}>
                     {shuffledFeaturedQuickstarts.map((pack, i) => {
-                      const FeaturedTile = useFeaturedInstrumentation(QuickstartTile);
+                      const FeaturedTile = withFeaturedInstrumentation(QuickstartTile);
                      
                       return <FeaturedTile
                         index={i}

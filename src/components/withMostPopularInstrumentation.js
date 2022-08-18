@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import useTessen from '@newrelic/gatsby-theme-newrelic/src/hooks/useTessen';
 
-const useFeaturedInstrumentation = (QuickstartTile) => {
+const withMostPopularInstrumentation = (QuickstartTile) => {
   const WrappedComponent = (props) => {
     const tessen = useTessen();
     const { name, index } = props;
@@ -10,7 +10,7 @@ const useFeaturedInstrumentation = (QuickstartTile) => {
     const customClickHandler = () => {
       tessen.track({
         eventName: 'instantObservability',
-        category: 'FeaturedQuickstartClick',
+        category: 'MostPopularQuickstartClick',
         quickstartName: name,
         index: index,
       });
@@ -29,4 +29,4 @@ const useFeaturedInstrumentation = (QuickstartTile) => {
   return WrappedComponent;
 };
 
-export default useFeaturedInstrumentation;
+export default withMostPopularInstrumentation;
