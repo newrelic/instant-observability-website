@@ -103,7 +103,9 @@ const QuickstartTile = ({
           'text text'
           'tag arrow';
       `}
-      onClick={() => customClickHandler ? customClickHandler() : handlePackClick(id)}
+      onClick={() =>
+        customClickHandler ? customClickHandler() : handlePackClick(id)
+      }
     >
       <div
         css={css`
