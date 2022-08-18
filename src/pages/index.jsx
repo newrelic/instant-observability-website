@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useMemo } from 'react';
 import PropTypes from 'prop-types';
 import { graphql } from 'gatsby';
 
@@ -32,7 +32,8 @@ import CategoryList from '@components/indexComponents/CategoryList';
 import CategoryDropdown from '@components/indexComponents/CategoryDropdown';
 import QuickstartGrid from '@components/QuickstartGrid';
 import GoToTopButton from '@components/GoToTopButton';
-import asFeaturedTile from '@components/AsFeaturedTile';
+import useFeaturedInstrumentation from '@components/useFeaturedInstrumentation';
+import useMostPopularInstrumentation from '@components/useMostPopularInstrumentation';
 
 const COLUMN_BREAKPOINT = '1131px';
 // used to set the height of the Spinner to reduce layout shift on page load
@@ -59,7 +60,7 @@ const QuickstartsPage = ({ data, location }) => {
   } = allFilteredQuickstarts(data.allQuickstarts.nodes, search, category);
 
   const [loadComplete, setLoadComplete] = useState(false);
-  const shuffledFeaturedQuickstarts = shuffleArray(featuredQuickstarts);
+  const shuffledFeaturedQuickstarts = useMemo(() => shuffleArray(featuredQuickstarts), []);
   
   useEffect(() => {
     setLoadComplete(true);
@@ -188,13 +189,16 @@ const QuickstartsPage = ({ data, location }) => {
                         `}
                       >
                         <SuperTiles />
-                        {mostPopularQuickstarts.map((pack) => (
-                          <QuickstartTile
+                        {mostPopularQuickstarts.map((pack, i) => {
+                          const MostPopularTile = useMostPopularInstrumentation(QuickstartTile);
+                          
+                          return <MostPopularTile
+                            index={i}
                             key={pack.id}
                             featured={false}
                             {...pack}
                           />
-                        ))}
+                        })}
                       </Slider>
                     )}
                   </div>
@@ -232,10 +236,11 @@ const QuickstartsPage = ({ data, location }) => {
                 {!loadComplete && <Spinner />}
                 {loadComplete && (
                   <Slider {...indexSettings}>
-                    {shuffledFeaturedQuickstarts.map((pack) => {
-                      const FeaturedTileComponent = asFeaturedTile(QuickstartTile);
+                    {shuffledFeaturedQuickstarts.map((pack, i) => {
+                      const FeaturedTile = useFeaturedInstrumentation(QuickstartTile);
                      
-                      return <FeaturedTileComponent
+                      return <FeaturedTile
+                        index={i}
                         key={pack.id}
                         featured={false}
                         {...pack}

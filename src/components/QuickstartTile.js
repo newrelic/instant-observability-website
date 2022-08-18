@@ -24,6 +24,7 @@ const QuickstartTile = ({
   className,
   summary,
   href,
+  customClickHandler,
 }) => {
   const tessen = useTessen();
 
@@ -102,7 +103,7 @@ const QuickstartTile = ({
           'text text'
           'tag arrow';
       `}
-      onClick={() => handlePackClick(id)}
+      onClick={() => customClickHandler ? customClickHandler() : handlePackClick(id)}
     >
       <div
         css={css`
@@ -244,6 +245,7 @@ QuickstartTile.propTypes = {
   level: PropTypes.string,
   className: PropTypes.string,
   href: PropTypes.string,
+  customClickHandler: PropTypes.func,
 };
 
 export default QuickstartTile;
