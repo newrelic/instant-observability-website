@@ -60,8 +60,10 @@ const QuickstartsPage = ({ data, location }) => {
   } = allFilteredQuickstarts(data.allQuickstarts.nodes, search, category);
 
   const [loadComplete, setLoadComplete] = useState(false);
+
   const shuffledFeaturedQuickstarts = useMemo(() => shuffleArray(featuredQuickstarts), []);
-  
+  const shuffledMostPopularQuickstarts = useMemo(() => shuffleArray(mostPopularQuickstarts), []);
+
   useEffect(() => {
     setLoadComplete(true);
   }, []);
@@ -189,7 +191,7 @@ const QuickstartsPage = ({ data, location }) => {
                         `}
                       >
                         <SuperTiles />
-                        {mostPopularQuickstarts.map((pack, i) => {
+                        {shuffledMostPopularQuickstarts.map((pack, i) => {
                           const MostPopularTile = withMostPopularInstrumentation(QuickstartTile);
                           
                           return <MostPopularTile
