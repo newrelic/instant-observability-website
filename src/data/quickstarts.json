@@ -91,6 +91,64 @@
     ]
   },
   {
+    "title": "Cisco IP SLA Operations",
+    "name": "cisco-ip-sla-operations",
+    "description": "The Cisco IP SLA Operations quickstart provides a dashboard that gives you a holistic view of your configured IP SLA operations in your Cisco ecosystem.\nUse this quickstart together with New Relic's Network Monitoring feature to visualize anomalies and/or bottlenecks in your network.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/network-monitoring/cisco-ip-sla-operations",
+    "id": "f4fb8621-63a8-475b-b4a3-1e81edf6d24f",
+    "level": "VERIFIED",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/network-monitoring/cisco-ip-sla-operations/logo.svg",
+    "summary": "Easily install a curated dashboard to monitor the health of your Cisco IP SLA Operations with New Relic's Network Monitoring.",
+    "websiteUrl": null,
+    "keywords": [
+      "npm",
+      "network",
+      "networking",
+      "ktranslate",
+      "kentik",
+      "infrastructure",
+      "cisco",
+      "ipsla",
+      "ip sla"
+    ],
+    "authors": [
+      "New Relic",
+      "Marc Netterfield",
+      "Zack Mutchler"
+    ],
+    "dashboards": [
+      {
+        "name": "Cisco IP SLA Operations",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/cisco-ip-sla-operations/cisco-ip-sla-operations.png"
+        ]
+      }
+    ],
+    "alerts": [
+      {
+        "name": "Cisco IP SLA Operation Status",
+        "details": "This alert monitors the status of all active Cisco IP SLA Operations and will trigger when the latest sense code for a single operation is not equal to 'ok' for at least 60 seconds.",
+        "type": "STATIC",
+        "url": null
+      }
+    ],
+    "documentation": [
+      {
+        "name": "Network SNMP collection installation docs",
+        "description": "Install Network Monitoring for SNMP data collection using a simple Docker container.\n",
+        "url": "https://docs.newrelic.com/docs/network-performance-monitoring/setup-performance-monitoring/snmp-performance-monitoring/"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "SNMP",
+        "id": "network-snmp"
+      }
+    ]
+  },
+  {
     "title": "Zipkin",
     "name": "zipkin",
     "description": "## What is Zipkin?\n\nDistributed Tracing system built in Java.\n\n## Get started!\n\nYou can easily reuse your Zipkin-format trace data and use it in New Relic.\nFollow [this Zipkin guide](https://docs.newrelic.com/docs/distributed-tracing/trace-api/report-zipkin-format-traces-trace-api/) to get started.",
@@ -517,6 +575,134 @@
     ]
   },
   {
+    "title": "CakePHP",
+    "name": "cakephp",
+    "description": "## What is CakePHP?\n\nPHP open-source web framework that follows the model–view–controller approach,\nmodeled after the concepts of Ruby on Rails.\n\n\n## Get started!\n\nLeverage community expertise and instantly get value out of your telemetry data. This quickstart automatically instruments CakePHP with the New Relic PHP agent, and allows you to further leverage New Relic's APM capabilities by setting up [custom dashboards](https://docs.newrelic.com/docs/query-your-data/explore-query-data/dashboards/introduction-dashboards/), [errors inbox](https://docs.newrelic.com/docs/apm/apm-ui-pages/errors-inbox/errors-inbox/), [transaction tracing](https://docs.newrelic.com/docs/apm/transactions/transaction-traces/introduction-transaction-traces/), and [service maps](https://docs.newrelic.com/docs/understand-dependencies/understand-system-dependencies/service-maps/introduction-service-maps/).\n\n## More info\n\nCheck out the [documentation](https://docs.newrelic.com/docs/agents/php-agent/) to learn more about New Relic monitoring for CakePHP.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/php/cakephp",
+    "id": "64bbbba3-10ab-4f15-8151-5079cecda894",
+    "level": "NEW_RELIC",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/php/cakephp/logo.svg",
+    "summary": "Monitor CakePHP with New Relic's PHP agent",
+    "websiteUrl": null,
+    "keywords": [
+      "apm",
+      "php"
+    ],
+    "authors": [
+      "New Relic"
+    ],
+    "dashboards": [
+      {
+        "name": "PHP",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/php/php01.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/php/php02.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/php/php03.png"
+        ]
+      }
+    ],
+    "alerts": [
+      {
+        "name": "High duration",
+        "details": "This alert is triggered when the total duration of the web transaction is longer than 10 seconds during 5 minutes",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "High error rate",
+        "details": "This alert is triggered when the error percentage of web transactions is higher than 5% during 5 minutes",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "Low throughput",
+        "details": "This alert is triggered when the throughput is 0 for 5 minutes",
+        "type": "STATIC",
+        "url": null
+      }
+    ],
+    "documentation": [
+      {
+        "name": "CakePHP installation docs",
+        "description": "PHP open-source web framework that follows the model–view–controller\napproach, modeled after the concepts of Ruby on Rails.\n",
+        "url": "https://docs.newrelic.com/docs/agents/php-agent/getting-started/php-agent-compatibility-requirements"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "PHP Agent",
+        "id": "php-agent"
+      }
+    ]
+  },
+  {
+    "title": "PHP",
+    "name": "php",
+    "description": "## Complete solution to PHP monitoring\n\nUse our PHP monitoring agent to see a high-level summary of their app performance in a comprehensive PHP dashboard. Help teams monitor the app's Apdex, build architectural maps, and find and resolve errors quickly.\n\nA [PHP agent](https://docs.newrelic.com/docs/agents/php-agent/getting-started/introduction-new-relic-php/) collects and analyzes application data that drive data-driven decisions. Organize data, query data using NRQL, and visualize data (in customizable interactive dashboards) that directly impact customer experiences. \n\n### How to speed up PHP with New Relic\n\nIdentify slow AJAX request performance issues at a glance through our PHP dashboard that boasts broader visibility. Proactively monitor where you should concentrate your efforts and address potential errors quickly.\n\n### What’s included?\n\nOur PHP quickstart include out-of-the-box dashboards and alerts, including:\n- Alerts including error rates, duration, and throughput\n- Multiple ready-to-use dashboards including throughput, error rate percentage, transaction time in milliseconds, and latest transactions\n\n### Value of PHP quickstarts\n\nNew Relic's instant observability quickstart helps developers leverage broader visibility in a PHP dashboard to resolve errors and speed up processes that enhance customer experiences.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/php/php",
+    "id": "475dec69-10c9-4bc6-8312-3caa266fb028",
+    "level": "NEW_RELIC",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/php/php/logo.jpg",
+    "summary": "New Relic's instant observability quickstart with a PHP server monitor agent helps app developers quickly identify and resolve errors, including slow responses, to enhance customer experiences.",
+    "websiteUrl": null,
+    "keywords": [
+      "apm",
+      "php",
+      "language agent",
+      "most popular"
+    ],
+    "authors": [
+      "New Relic"
+    ],
+    "dashboards": [
+      {
+        "name": "PHP",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/php/php01.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/php/php02.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/php/php03.png"
+        ]
+      }
+    ],
+    "alerts": [
+      {
+        "name": "High duration",
+        "details": "This alert is triggered when the total duration of the web transaction is longer than 10 seconds during 5 minutes",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "High error rate",
+        "details": "This alert is triggered when the error percentage of web transactions is higher than 5% during 5 minutes",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "Low throughput",
+        "details": "This alert is triggered when the throughput is 0 for 5 minutes",
+        "type": "STATIC",
+        "url": null
+      }
+    ],
+    "documentation": [
+      {
+        "name": "PHP",
+        "description": "PHP is a general-purpose scripting language especially suited to web development.\n",
+        "url": "https://docs.newrelic.com/docs/agents/php-agent/getting-started/php-agent-compatibility-requirements/"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "PHP Agent",
+        "id": "php-agent"
+      }
+    ]
+  },
+  {
     "title": "tvOS",
     "name": "tvos",
     "description": "## New Relic Mobile monitoring\n\nNew Relic's mobile monitoring for tvOS gives you a comprehensive view of your app's performance.\n\n## Get started!\n\nFollow [the documentation](https://docs.newrelic.com/docs/mobile-monitoring/new-relic-mobile-ios/tvos/tvos-installation-configuration/) to get started!",
@@ -628,69 +814,6 @@
       {
         "name": "AWS-CloudWatch-Metric-Streams",
         "id": "aws-cloudwatch-metric-streams"
-      }
-    ]
-  },
-  {
-    "title": "CakePHP",
-    "name": "cakephp",
-    "description": "## What is CakePHP?\n\nPHP open-source web framework that follows the model–view–controller approach,\nmodeled after the concepts of Ruby on Rails.\n\n\n## Get started!\n\nLeverage community expertise and instantly get value out of your telemetry data. This quickstart automatically instruments CakePHP with the New Relic PHP agent, and allows you to further leverage New Relic's APM capabilities by setting up [custom dashboards](https://docs.newrelic.com/docs/query-your-data/explore-query-data/dashboards/introduction-dashboards/), [errors inbox](https://docs.newrelic.com/docs/apm/apm-ui-pages/errors-inbox/errors-inbox/), [transaction tracing](https://docs.newrelic.com/docs/apm/transactions/transaction-traces/introduction-transaction-traces/), and [service maps](https://docs.newrelic.com/docs/understand-dependencies/understand-system-dependencies/service-maps/introduction-service-maps/).\n\n## More info\n\nCheck out the [documentation](https://docs.newrelic.com/docs/agents/php-agent/) to learn more about New Relic monitoring for CakePHP.",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/php/cakephp",
-    "id": "64bbbba3-10ab-4f15-8151-5079cecda894",
-    "level": "NEW_RELIC",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/php/cakephp/logo.svg",
-    "summary": "Monitor CakePHP with New Relic's PHP agent",
-    "websiteUrl": null,
-    "keywords": [
-      "apm",
-      "php"
-    ],
-    "authors": [
-      "New Relic"
-    ],
-    "dashboards": [
-      {
-        "name": "PHP",
-        "description": "PHP",
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/php/php01.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/php/php02.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/php/php.png"
-        ]
-      }
-    ],
-    "alerts": [
-      {
-        "name": "High duration",
-        "details": "This alert is triggered when the total duration of the web transaction is longer than 10 seconds during 5 minutes",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "High error rate",
-        "details": "This alert is triggered when the error percentage of web transactions is higher than 5% during 5 minutes",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "Low throughput",
-        "details": "This alert is triggered when the throughput is 0 for 5 minutes",
-        "type": "STATIC",
-        "url": null
-      }
-    ],
-    "documentation": [
-      {
-        "name": "CakePHP installation docs",
-        "description": "PHP open-source web framework that follows the model–view–controller\napproach, modeled after the concepts of Ruby on Rails.\n",
-        "url": "https://docs.newrelic.com/docs/agents/php-agent/getting-started/php-agent-compatibility-requirements"
-      }
-    ],
-    "installPlans": [
-      {
-        "name": "PHP Agent",
-        "id": "php-agent"
       }
     ]
   },
@@ -889,71 +1012,6 @@
       {
         "name": "Python Agent",
         "id": "setup-python-agent"
-      }
-    ]
-  },
-  {
-    "title": "PHP",
-    "name": "php",
-    "description": "## Complete solution to PHP monitoring\n\nUse our PHP monitoring agent to see a high-level summary of their app performance in a comprehensive PHP dashboard. Help teams monitor the app's Apdex, build architectural maps, and find and resolve errors quickly.\n\nA [PHP agent](https://docs.newrelic.com/docs/agents/php-agent/getting-started/introduction-new-relic-php/) collects and analyzes application data that drive data-driven decisions. Organize data, query data using NRQL, and visualize data (in customizable interactive dashboards) that directly impact customer experiences. \n\n### How to speed up PHP with New Relic\n\nIdentify slow AJAX request performance issues at a glance through our PHP dashboard that boasts broader visibility. Proactively monitor where you should concentrate your efforts and address potential errors quickly.\n\n### What’s included?\n\nOur PHP quickstart include out-of-the-box dashboards and alerts, including:\n- Alerts including error rates, duration, and throughput\n- Multiple ready-to-use dashboards including throughput, error rate percentage, transaction time in milliseconds, and latest transactions\n\n### Value of PHP quickstarts\n\nNew Relic's instant observability quickstart helps developers leverage broader visibility in a PHP dashboard to resolve errors and speed up processes that enhance customer experiences.",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/php/php",
-    "id": "475dec69-10c9-4bc6-8312-3caa266fb028",
-    "level": "NEW_RELIC",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/php/php/logo.jpg",
-    "summary": "New Relic's instant observability quickstart with a PHP server monitor agent helps app developers quickly identify and resolve errors, including slow responses, to enhance customer experiences.",
-    "websiteUrl": null,
-    "keywords": [
-      "apm",
-      "php",
-      "language agent",
-      "most popular"
-    ],
-    "authors": [
-      "New Relic"
-    ],
-    "dashboards": [
-      {
-        "name": "PHP",
-        "description": "PHP",
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/php/php01.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/php/php02.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/php/php.png"
-        ]
-      }
-    ],
-    "alerts": [
-      {
-        "name": "High duration",
-        "details": "This alert is triggered when the total duration of the web transaction is longer than 10 seconds during 5 minutes",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "High error rate",
-        "details": "This alert is triggered when the error percentage of web transactions is higher than 5% during 5 minutes",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "Low throughput",
-        "details": "This alert is triggered when the throughput is 0 for 5 minutes",
-        "type": "STATIC",
-        "url": null
-      }
-    ],
-    "documentation": [
-      {
-        "name": "PHP",
-        "description": "PHP is a general-purpose scripting language especially suited to web development.\n",
-        "url": "https://docs.newrelic.com/docs/agents/php-agent/getting-started/php-agent-compatibility-requirements/"
-      }
-    ],
-    "installPlans": [
-      {
-        "name": "PHP Agent",
-        "id": "php-agent"
       }
     ]
   },
@@ -1666,6 +1724,71 @@
     ]
   },
   {
+    "title": "Joomla",
+    "name": "joomla",
+    "description": "## What is Joomla?\n\nJoomla is a free and open-source PHP content management system for publishing\nweb content.\n\n\n## Get started!\n\nLeverage community expertise and instantly get value out of your telemetry data. This quickstart automatically instruments Joomla with the New Relic PHP agent, and allows you to further leverage New Relic's APM capabilities by setting up [custom dashboards](https://docs.newrelic.com/docs/query-your-data/explore-query-data/dashboards/introduction-dashboards/), [errors inbox](https://docs.newrelic.com/docs/apm/apm-ui-pages/errors-inbox/errors-inbox/), [transaction tracing](https://docs.newrelic.com/docs/apm/transactions/transaction-traces/introduction-transaction-traces/), and [service maps](https://docs.newrelic.com/docs/understand-dependencies/understand-system-dependencies/service-maps/introduction-service-maps/).\n\n## More info\n\nCheck out the [documentation](https://docs.newrelic.com/docs/agents/php-agent/) to learn more about New Relic monitoring for Joomla.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/php/joomla",
+    "id": "64a0fd15-349e-4083-96cc-3ef1f2b31e1a",
+    "level": "NEW_RELIC",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/php/joomla/logo.svg",
+    "summary": "Monitor Joomla with New Relic's PHP agent",
+    "websiteUrl": null,
+    "keywords": [
+      "apm",
+      "php",
+      "cms",
+      "content management system"
+    ],
+    "authors": [
+      "New Relic"
+    ],
+    "dashboards": [
+      {
+        "name": "PHP",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/php/php01.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/php/php02.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/php/php03.png"
+        ]
+      }
+    ],
+    "alerts": [
+      {
+        "name": "High duration",
+        "details": "This alert is triggered when the total duration of the web transaction is longer than 10 seconds during 5 minutes",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "High error rate",
+        "details": "This alert is triggered when the error percentage of web transactions is higher than 5% during 5 minutes",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "Low throughput",
+        "details": "This alert is triggered when the throughput is 0 for 5 minutes",
+        "type": "STATIC",
+        "url": null
+      }
+    ],
+    "documentation": [
+      {
+        "name": "Joomla installation docs",
+        "description": "Joomla is a free and open-source PHP content management system for\npublishing web content.\n",
+        "url": "https://docs.newrelic.com/docs/agents/php-agent/getting-started/php-agent-compatibility-requirements"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "PHP Agent",
+        "id": "php-agent"
+      }
+    ]
+  },
+  {
     "title": "AWS EMR",
     "name": "aws-emr",
     "description": "## What is AWS EMR?\n\nProcess and manage big data inputs from popular frameworks.\n\n### Get started!\n\nStart monitoring AWS EMR by connecting Amazon Web Services (AWS) to New Relic!\n\nCheck out our AWS EMR documentation to instrument your cloud service and manage the stability, scalability, and reliability of your systems with New Relic's infrastructure monitoring capabilities.\n\n### More info\n\nCheck out the [documentation](https://docs.newrelic.com/docs/infrastructure/amazon-integrations/aws-integrations-list/aws-emr-monitoring-integration/) to learn more about New Relic monitoring for AWS EMR.",
@@ -1721,19 +1844,19 @@
     ],
     "dashboards": [
       {
-        "name": "Battlesnake Server Status",
-        "description": "A dashboard to monitor your Battlesnake server's performance. It's important to keep all responses to the `/move` endpoint under 500ms. Furthermore, it's possible that your snake may be in multiple concurrent matches at the same time. It's important to make sure you server and web application are running smoothly to keep you in the game!",
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/battlesnake-server-status/battlesnake-server-status.png"
-        ]
-      },
-      {
         "name": "Battlesnake Performance",
         "description": "Monitor your Battlesnake's performance and see how it stacks up against your competition!",
         "url": null,
         "screenshots": [
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/battlesnake-performance/battlesnake-performance.png"
+        ]
+      },
+      {
+        "name": "Battlesnake Server Status",
+        "description": "A dashboard to monitor your Battlesnake server's performance. It's important to keep all responses to the `/move` endpoint under 500ms. Furthermore, it's possible that your snake may be in multiple concurrent matches at the same time. It's important to make sure you server and web application are running smoothly to keep you in the game!",
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/battlesnake-server-status/battlesnake-server-status.png"
         ]
       },
       {
@@ -2145,6 +2268,69 @@
       {
         "name": "C SDK Agent",
         "id": "setup-c-agent"
+      }
+    ]
+  },
+  {
+    "title": "Silex",
+    "name": "silex",
+    "description": "Silex is a PHP micro-framework based on the Symfony Components.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/php/silex",
+    "id": "d154455e-ae50-4feb-a277-9b6ea0eb998e",
+    "level": "NEW_RELIC",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/php/silex/logo.svg",
+    "summary": "Silex is a PHP micro-framework based on the Symfony Components.",
+    "websiteUrl": null,
+    "keywords": [
+      "apm",
+      "php"
+    ],
+    "authors": [
+      "New Relic"
+    ],
+    "dashboards": [
+      {
+        "name": "PHP",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/php/php01.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/php/php02.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/php/php03.png"
+        ]
+      }
+    ],
+    "alerts": [
+      {
+        "name": "High duration",
+        "details": "This alert is triggered when the total duration of the web transaction is longer than 10 seconds during 5 minutes",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "High error rate",
+        "details": "This alert is triggered when the error percentage of web transactions is higher than 5% during 5 minutes",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "Low throughput",
+        "details": "This alert is triggered when the throughput is 0 for 5 minutes",
+        "type": "STATIC",
+        "url": null
+      }
+    ],
+    "documentation": [
+      {
+        "name": "Silex installation docs",
+        "description": "Silex is a PHP micro-framework based on the Symfony Components.",
+        "url": "https://docs.newrelic.com/docs/agents/php-agent/getting-started/php-agent-compatibility-requirements"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "PHP Agent",
+        "id": "php-agent"
       }
     ]
   },
@@ -3257,71 +3443,6 @@
     ]
   },
   {
-    "title": "Joomla",
-    "name": "joomla",
-    "description": "## What is Joomla?\n\nJoomla is a free and open-source PHP content management system for publishing\nweb content.\n\n\n## Get started!\n\nLeverage community expertise and instantly get value out of your telemetry data. This quickstart automatically instruments Joomla with the New Relic PHP agent, and allows you to further leverage New Relic's APM capabilities by setting up [custom dashboards](https://docs.newrelic.com/docs/query-your-data/explore-query-data/dashboards/introduction-dashboards/), [errors inbox](https://docs.newrelic.com/docs/apm/apm-ui-pages/errors-inbox/errors-inbox/), [transaction tracing](https://docs.newrelic.com/docs/apm/transactions/transaction-traces/introduction-transaction-traces/), and [service maps](https://docs.newrelic.com/docs/understand-dependencies/understand-system-dependencies/service-maps/introduction-service-maps/).\n\n## More info\n\nCheck out the [documentation](https://docs.newrelic.com/docs/agents/php-agent/) to learn more about New Relic monitoring for Joomla.",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/php/joomla",
-    "id": "64a0fd15-349e-4083-96cc-3ef1f2b31e1a",
-    "level": "NEW_RELIC",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/php/joomla/logo.svg",
-    "summary": "Monitor Joomla with New Relic's PHP agent",
-    "websiteUrl": null,
-    "keywords": [
-      "apm",
-      "php",
-      "cms",
-      "content management system"
-    ],
-    "authors": [
-      "New Relic"
-    ],
-    "dashboards": [
-      {
-        "name": "PHP",
-        "description": "PHP",
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/php/php01.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/php/php02.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/php/php.png"
-        ]
-      }
-    ],
-    "alerts": [
-      {
-        "name": "High duration",
-        "details": "This alert is triggered when the total duration of the web transaction is longer than 10 seconds during 5 minutes",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "High error rate",
-        "details": "This alert is triggered when the error percentage of web transactions is higher than 5% during 5 minutes",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "Low throughput",
-        "details": "This alert is triggered when the throughput is 0 for 5 minutes",
-        "type": "STATIC",
-        "url": null
-      }
-    ],
-    "documentation": [
-      {
-        "name": "Joomla installation docs",
-        "description": "Joomla is a free and open-source PHP content management system for\npublishing web content.\n",
-        "url": "https://docs.newrelic.com/docs/agents/php-agent/getting-started/php-agent-compatibility-requirements"
-      }
-    ],
-    "installPlans": [
-      {
-        "name": "PHP Agent",
-        "id": "php-agent"
-      }
-    ]
-  },
-  {
     "title": "WebLogic",
     "name": "weblogic",
     "description": "# What is WebLogic?\nJava Enterprise Edition application server built and maintained by Oracle.\n\n## Get started!\nLeverage community expertise and instantly get value out of your telemetry data. This quickstart automatically instruments WebLogic with the New Relic Java agent, and allows you to instantly monitor your Java application with out-of-the-box dashboards and alerts\nFurther leverage New Relic's APM capabilities by setting up [errors inbox](https://docs.newrelic.com/docs/apm/apm-ui-pages/errors-inbox/errors-inbox/), [transaction tracing](https://docs.newrelic.com/docs/apm/transactions/transaction-traces/introduction-transaction-traces/), and [service maps](https://docs.newrelic.com/docs/understand-dependencies/understand-system-dependencies/service-maps/introduction-service-maps/).\n\n## More info\nCheck out the [documentation](https://docs.newrelic.com/docs/agents/java-agent/getting-started/introduction-new-relic-java/) to learn more about New Relic monitoring for WebLogic.",
@@ -3444,69 +3565,6 @@
       {
         "name": "Go Agent",
         "id": "setup-go-agent"
-      }
-    ]
-  },
-  {
-    "title": "Silex",
-    "name": "silex",
-    "description": "Silex is a PHP micro-framework based on the Symfony Components.",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/php/silex",
-    "id": "d154455e-ae50-4feb-a277-9b6ea0eb998e",
-    "level": "NEW_RELIC",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/php/silex/logo.svg",
-    "summary": "Silex is a PHP micro-framework based on the Symfony Components.",
-    "websiteUrl": null,
-    "keywords": [
-      "apm",
-      "php"
-    ],
-    "authors": [
-      "New Relic"
-    ],
-    "dashboards": [
-      {
-        "name": "PHP",
-        "description": "PHP",
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/php/php01.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/php/php02.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/php/php.png"
-        ]
-      }
-    ],
-    "alerts": [
-      {
-        "name": "High duration",
-        "details": "This alert is triggered when the total duration of the web transaction is longer than 10 seconds during 5 minutes",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "High error rate",
-        "details": "This alert is triggered when the error percentage of web transactions is higher than 5% during 5 minutes",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "Low throughput",
-        "details": "This alert is triggered when the throughput is 0 for 5 minutes",
-        "type": "STATIC",
-        "url": null
-      }
-    ],
-    "documentation": [
-      {
-        "name": "Silex installation docs",
-        "description": "Silex is a PHP micro-framework based on the Symfony Components.",
-        "url": "https://docs.newrelic.com/docs/agents/php-agent/getting-started/php-agent-compatibility-requirements"
-      }
-    ],
-    "installPlans": [
-      {
-        "name": "PHP Agent",
-        "id": "php-agent"
       }
     ]
   },
@@ -4164,6 +4222,132 @@
     ]
   },
   {
+    "title": "Kohana",
+    "name": "kohana",
+    "description": "## What is Kohana PHP?\n\nKohana PHP monitoring provides complete visibility into your applications to detect and resolve performance issues. DevOps teams can automatically instrument the Kohana framework and gain instant value with out-of-the-box dashboards by leveraging [New Relic's Kohana PHP monitoring quickstart](https://docs.newrelic.com/docs/apm/agents/php-agent/getting-started/introduction-new-relic-php/). Enhance performance monitoring protocols and drive smart business decisions with this approach.\n\n### Value of Kohana PHP\n\nDevelopment teams benefit from instant observability with Kohana PHP monitoring. Developers can also take advantage of high-level app summary, monitor user satisfaction, and build architectural maps of the application.\n\nYou can quickly find errors and issues by tracking key transactions, monitoring the Kohana dashboard for critical metrics, and alerting your team to errors or problems before they impact users.\n\n### New Relic Kohana PHP Quickstart Features\n\nNew Relic's Kohana PHP monitoring quickstart offers:\n- Alerts (duration, error rate, and throughput)\n- Code-level transactions, error traces, and database query traces\n- Distributed tracing to see the path taken by requests through a distributed system\n- Customizable charts for metric timeslice data and other custom metrics sent to New Relic\n- Kohana dashboards (for transactions overview, errors overview, VM overview, top five slowest transactions, latest error, and more)\n\nWhen you accelerate troubleshooting with distributed tracing and enhanced visibility into application and data lags in a Kohana dashboard, it's much easier for your team to quickly identify and resolve potential errors and ensure uptime. \n\n### The Complete Kohana PHP Dashboard Tool\n\nHelp developers optimize the entire infrastructure and help DevOps teams capture discrete events with key-value attributes attached to them, and analyze and query both application and business data.\n\nIn addition to the above, New Relic's Kohana PHP quickstart also helps teams organize, query, and visualize data to answer critical questions about app performance and customer experiences.\n\nConnect more than 500 applications to one daemon to impose sampling once you reach the harvest cycle limits. This approach helps reduce complexity and improve efficiency through the  instant observability provided by the Kohana dashboard.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/php/kohana",
+    "id": "5435090b-1267-4341-b53b-fcad31274e56",
+    "level": "NEW_RELIC",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/php/kohana/logo.svg",
+    "summary": "New Relic's Kohana PHP monitoring quickstart provides instant observability into the whole app and alerts your team to errors or problems before impacting users.",
+    "websiteUrl": null,
+    "keywords": [
+      "apm",
+      "php"
+    ],
+    "authors": [
+      "New Relic"
+    ],
+    "dashboards": [
+      {
+        "name": "PHP",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/php/php01.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/php/php02.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/php/php03.png"
+        ]
+      }
+    ],
+    "alerts": [
+      {
+        "name": "High duration",
+        "details": "This alert is triggered when the total duration of the web transaction is longer than 10 seconds during 5 minutes",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "High error rate",
+        "details": "This alert is triggered when the error percentage of web transactions is higher than 5% during 5 minutes",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "Low throughput",
+        "details": "This alert is triggered when the throughput is 0 for 5 minutes",
+        "type": "STATIC",
+        "url": null
+      }
+    ],
+    "documentation": [
+      {
+        "name": "Kohana installation docs",
+        "description": "Kohana is an HMVC PHP5 framework that provides a rich set of components\nfor building web applications.\n",
+        "url": "https://docs.newrelic.com/docs/agents/php-agent/getting-started/php-agent-compatibility-requirements"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "PHP Agent",
+        "id": "php-agent"
+      }
+    ]
+  },
+  {
+    "title": "Slim",
+    "name": "slim",
+    "description": "## What is Slim?\n\nPHP micro framework that helps you quickly write simple yet powerful web\napplications and APIs.\n\n\n## Get started!\n\nLeverage community expertise and instantly get value out of your telemetry data. This quickstart automatically instruments Slim with the New Relic PHP agent, and allows you to further leverage New Relic's APM capabilities by setting up [custom dashboards](https://docs.newrelic.com/docs/query-your-data/explore-query-data/dashboards/introduction-dashboards/), [errors inbox](https://docs.newrelic.com/docs/apm/apm-ui-pages/errors-inbox/errors-inbox/), [transaction tracing](https://docs.newrelic.com/docs/apm/transactions/transaction-traces/introduction-transaction-traces/), and [service maps](https://docs.newrelic.com/docs/understand-dependencies/understand-system-dependencies/service-maps/introduction-service-maps/).\n\n## More info\n\nCheck out the [documentation](https://docs.newrelic.com/docs/agents/php-agent/) to learn more about New Relic monitoring for Slim.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/php/slim",
+    "id": "c2bbf5f0-e04b-4450-97a6-362e027ff316",
+    "level": "NEW_RELIC",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/php/slim/logo.svg",
+    "summary": "Monitor Slim with New Relic's PHP agent",
+    "websiteUrl": null,
+    "keywords": [
+      "apm",
+      "php"
+    ],
+    "authors": [
+      "New Relic"
+    ],
+    "dashboards": [
+      {
+        "name": "PHP",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/php/php01.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/php/php02.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/php/php03.png"
+        ]
+      }
+    ],
+    "alerts": [
+      {
+        "name": "High duration",
+        "details": "This alert is triggered when the total duration of the web transaction is longer than 10 seconds during 5 minutes",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "High error rate",
+        "details": "This alert is triggered when the error percentage of web transactions is higher than 5% during 5 minutes",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "Low throughput",
+        "details": "This alert is triggered when the throughput is 0 for 5 minutes",
+        "type": "STATIC",
+        "url": null
+      }
+    ],
+    "documentation": [
+      {
+        "name": "Slim installation docs",
+        "description": "PHP micro framework that helps you quickly write simple yet powerful web\napplications and APIs.\n",
+        "url": "https://docs.newrelic.com/docs/agents/php-agent/getting-started/php-agent-compatibility-requirements"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "PHP Agent",
+        "id": "php-agent"
+      }
+    ]
+  },
+  {
     "title": "Truera",
     "name": "truera",
     "description": "TruEra provides best in class AI Quality diagnostics and monitoring solution. TruEra and NewRelic users can go beyond standard accuracy, input and output drift monitoring by identifying consequential data drift, and other AI Quality diagnostics such as fairness, conceptual soundness and segment behavior. When combined with NewRelic’s comprehensive observability capabilities, MLOps teams can correlate signals throughout the ML lifecycle.",
@@ -4284,11 +4468,11 @@
     ],
     "dashboards": [
       {
-        "name": "Redis Enterprise Database Metrics",
+        "name": "Redis Enterprise Cluster Metrics",
         "description": null,
         "url": null,
         "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/database/database01.png"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/cluster/cluster01.png"
         ]
       },
       {
@@ -4300,11 +4484,11 @@
         ]
       },
       {
-        "name": "Redis Enterprise Cluster Metrics",
+        "name": "Redis Enterprise Database Metrics",
         "description": null,
         "url": null,
         "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/cluster/cluster01.png"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/database/database01.png"
         ]
       }
     ],
@@ -5598,69 +5782,6 @@
     ]
   },
   {
-    "title": "Kohana",
-    "name": "kohana",
-    "description": "## What is Kohana PHP?\n\nKohana PHP monitoring provides complete visibility into your applications to detect and resolve performance issues. DevOps teams can automatically instrument the Kohana framework and gain instant value with out-of-the-box dashboards by leveraging [New Relic's Kohana PHP monitoring quickstart](https://docs.newrelic.com/docs/apm/agents/php-agent/getting-started/introduction-new-relic-php/). Enhance performance monitoring protocols and drive smart business decisions with this approach.\n\n### Value of Kohana PHP\n\nDevelopment teams benefit from instant observability with Kohana PHP monitoring. Developers can also take advantage of high-level app summary, monitor user satisfaction, and build architectural maps of the application.\n\nYou can quickly find errors and issues by tracking key transactions, monitoring the Kohana dashboard for critical metrics, and alerting your team to errors or problems before they impact users.\n\n### New Relic Kohana PHP Quickstart Features\n\nNew Relic's Kohana PHP monitoring quickstart offers:\n- Alerts (duration, error rate, and throughput)\n- Code-level transactions, error traces, and database query traces\n- Distributed tracing to see the path taken by requests through a distributed system\n- Customizable charts for metric timeslice data and other custom metrics sent to New Relic\n- Kohana dashboards (for transactions overview, errors overview, VM overview, top five slowest transactions, latest error, and more)\n\nWhen you accelerate troubleshooting with distributed tracing and enhanced visibility into application and data lags in a Kohana dashboard, it's much easier for your team to quickly identify and resolve potential errors and ensure uptime. \n\n### The Complete Kohana PHP Dashboard Tool\n\nHelp developers optimize the entire infrastructure and help DevOps teams capture discrete events with key-value attributes attached to them, and analyze and query both application and business data.\n\nIn addition to the above, New Relic's Kohana PHP quickstart also helps teams organize, query, and visualize data to answer critical questions about app performance and customer experiences.\n\nConnect more than 500 applications to one daemon to impose sampling once you reach the harvest cycle limits. This approach helps reduce complexity and improve efficiency through the  instant observability provided by the Kohana dashboard.",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/php/kohana",
-    "id": "5435090b-1267-4341-b53b-fcad31274e56",
-    "level": "NEW_RELIC",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/php/kohana/logo.svg",
-    "summary": "New Relic's Kohana PHP monitoring quickstart provides instant observability into the whole app and alerts your team to errors or problems before impacting users.",
-    "websiteUrl": null,
-    "keywords": [
-      "apm",
-      "php"
-    ],
-    "authors": [
-      "New Relic"
-    ],
-    "dashboards": [
-      {
-        "name": "PHP",
-        "description": "PHP",
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/php/php01.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/php/php02.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/php/php.png"
-        ]
-      }
-    ],
-    "alerts": [
-      {
-        "name": "High duration",
-        "details": "This alert is triggered when the total duration of the web transaction is longer than 10 seconds during 5 minutes",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "High error rate",
-        "details": "This alert is triggered when the error percentage of web transactions is higher than 5% during 5 minutes",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "Low throughput",
-        "details": "This alert is triggered when the throughput is 0 for 5 minutes",
-        "type": "STATIC",
-        "url": null
-      }
-    ],
-    "documentation": [
-      {
-        "name": "Kohana installation docs",
-        "description": "Kohana is an HMVC PHP5 framework that provides a rich set of components\nfor building web applications.\n",
-        "url": "https://docs.newrelic.com/docs/agents/php-agent/getting-started/php-agent-compatibility-requirements"
-      }
-    ],
-    "installPlans": [
-      {
-        "name": "PHP Agent",
-        "id": "php-agent"
-      }
-    ]
-  },
-  {
     "title": "NATS",
     "name": "nats",
     "description": "## What is NATS?\n\nNATS is an open-source messaging system written in Go.\n\n## Get started!\n\nLeverage community expertise and instantly get value out of your telemetry data. This quickstart automatically instruments NATS with the New Relic Go agent, and allows you to further leverage New Relic's APM capabilities by setting up [custom dashboards](https://docs.newrelic.com/docs/query-your-data/explore-query-data/dashboards/introduction-dashboards/), [errors inbox](https://docs.newrelic.com/docs/apm/apm-ui-pages/errors-inbox/errors-inbox/), [transaction tracing](https://docs.newrelic.com/docs/apm/transactions/transaction-traces/introduction-transaction-traces/), and [service maps](https://docs.newrelic.com/docs/understand-dependencies/understand-system-dependencies/service-maps/introduction-service-maps/).\n\n## More info\n\nCheck out the [documentation](https://docs.newrelic.com/docs/agents/go-agent/) to learn more about New Relic monitoring for NATS.",
@@ -5850,69 +5971,6 @@
       {
         "name": "Synthetics Page Link Crawler",
         "id": "third-party-synthetics-page-link-crawler"
-      }
-    ]
-  },
-  {
-    "title": "Slim",
-    "name": "slim",
-    "description": "## What is Slim?\n\nPHP micro framework that helps you quickly write simple yet powerful web\napplications and APIs.\n\n\n## Get started!\n\nLeverage community expertise and instantly get value out of your telemetry data. This quickstart automatically instruments Slim with the New Relic PHP agent, and allows you to further leverage New Relic's APM capabilities by setting up [custom dashboards](https://docs.newrelic.com/docs/query-your-data/explore-query-data/dashboards/introduction-dashboards/), [errors inbox](https://docs.newrelic.com/docs/apm/apm-ui-pages/errors-inbox/errors-inbox/), [transaction tracing](https://docs.newrelic.com/docs/apm/transactions/transaction-traces/introduction-transaction-traces/), and [service maps](https://docs.newrelic.com/docs/understand-dependencies/understand-system-dependencies/service-maps/introduction-service-maps/).\n\n## More info\n\nCheck out the [documentation](https://docs.newrelic.com/docs/agents/php-agent/) to learn more about New Relic monitoring for Slim.",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/php/slim",
-    "id": "c2bbf5f0-e04b-4450-97a6-362e027ff316",
-    "level": "NEW_RELIC",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/php/slim/logo.svg",
-    "summary": "Monitor Slim with New Relic's PHP agent",
-    "websiteUrl": null,
-    "keywords": [
-      "apm",
-      "php"
-    ],
-    "authors": [
-      "New Relic"
-    ],
-    "dashboards": [
-      {
-        "name": "PHP",
-        "description": "PHP",
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/php/php01.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/php/php02.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/php/php.png"
-        ]
-      }
-    ],
-    "alerts": [
-      {
-        "name": "High duration",
-        "details": "This alert is triggered when the total duration of the web transaction is longer than 10 seconds during 5 minutes",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "High error rate",
-        "details": "This alert is triggered when the error percentage of web transactions is higher than 5% during 5 minutes",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "Low throughput",
-        "details": "This alert is triggered when the throughput is 0 for 5 minutes",
-        "type": "STATIC",
-        "url": null
-      }
-    ],
-    "documentation": [
-      {
-        "name": "Slim installation docs",
-        "description": "PHP micro framework that helps you quickly write simple yet powerful web\napplications and APIs.\n",
-        "url": "https://docs.newrelic.com/docs/agents/php-agent/getting-started/php-agent-compatibility-requirements"
-      }
-    ],
-    "installPlans": [
-      {
-        "name": "PHP Agent",
-        "id": "php-agent"
       }
     ]
   },
@@ -6744,6 +6802,71 @@
     ]
   },
   {
+    "title": "Laravel",
+    "name": "laravel",
+    "description": "## Laravel PHP Monitoring \n\nLaravel is a free, open-source PHP model-view-controller web framework that empowers developers to carry out common tasks in web and app development projects with ease.\n\n### New Relic Laravel quickstart features\n\nThe New Relic Laravel monitoring quickstart has the following features:\n- Our standard dashboard provides a clear overview of transactions, errors and virtual machines. \n- The Laravel PHP dashboard also helps you track other key indicators like daily transaction errors, comparison between weekly transaction errors, most popular transactions, and more.\n- Pre-defined alert conditions notify you on performance metrics like duration, error rate and throughput.\n\n### Why monitor Laravel with New Relic?\n\nThe New Relic Laravel quickstart installs the [New Relic PHP agent](https://docs.newrelic.com/docs/apm/agents/php-agent/frameworks-libraries/php-frameworks-integrate-support-new-relic/) so that you can instrument and monitor your  Laravel application. It is your gateway to instant detection of changes in Laravel’s critical metrics.\nThe integration helps you to monitor Laravel through a standard dashboard and three instant alerts. It can trigger low-throughput, high-error rate, and high-duration alerts when specific pre-defined alert conditions are met.\nThe quickstart also supports Laravel to identify the appropriate place to insert JavaScript headers and footers for browser monitoring. Install the New Relic Laravel quickstart today to start monitoring your Laravel PHP framework’s key performance indicators.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/php/laravel",
+    "id": "919aad44-52ba-47fd-9e29-12195979015e",
+    "level": "NEW_RELIC",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/php/laravel/logo.svg",
+    "summary": "Monitoring Laravel is crucial to gain instant visibility into changes in Laravel PHP framework’s key performance indicators. Download New Relic Laravel quickstart to proactively instrument Laravel with the New Relic PHP agent and start monitoring.",
+    "websiteUrl": null,
+    "keywords": [
+      "apm",
+      "php",
+      "featured",
+      "most popular"
+    ],
+    "authors": [
+      "New Relic"
+    ],
+    "dashboards": [
+      {
+        "name": "PHP",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/php/php01.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/php/php02.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/php/php03.png"
+        ]
+      }
+    ],
+    "alerts": [
+      {
+        "name": "High duration",
+        "details": "This alert is triggered when the total duration of the web transaction is longer than 10 seconds during 5 minutes",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "High error rate",
+        "details": "This alert is triggered when the error percentage of web transactions is higher than 5% during 5 minutes",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "Low throughput",
+        "details": "This alert is triggered when the throughput is 0 for 5 minutes",
+        "type": "STATIC",
+        "url": null
+      }
+    ],
+    "documentation": [
+      {
+        "name": "Laravel installation docs",
+        "description": "Laravel is a free, open-source PHP MVC web framework.",
+        "url": "https://docs.newrelic.com/docs/agents/php-agent/getting-started/php-agent-compatibility-requirements"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "PHP Agent",
+        "id": "php-agent"
+      }
+    ]
+  },
+  {
     "title": "Bitbucket",
     "name": "bitbucket",
     "description": "## Atlassian Bitbucket quickstart\n\n### About Bitbucket\n\nWith best-in-class Jira integration, and built-in CI/CD, Bitbucket Cloud is the native Git tool in Atlassian’s Open DevOps solution.\n\n### About this quickstart\n\nThis quickstart is built around a [Bitbucket Pipe](https://bitbucket.org/product/features/pipelines/integrations) integration. This tool will enable you to send CI/CD events into New Relic, where you can monitor your Bitbucket Pipelines. \n\nWith this visualization you can monitor:\n  - Number of events/pipeline builds\n  - Track priority events\n  - Real time event log from your pipeline\n  - Events and priority events over time",
@@ -6962,71 +7085,6 @@
     ]
   },
   {
-    "title": "Laravel",
-    "name": "laravel",
-    "description": "## Laravel PHP Monitoring \n\nLaravel is a free, open-source PHP model-view-controller web framework that empowers developers to carry out common tasks in web and app development projects with ease.\n\n### New Relic Laravel quickstart features\n\nThe New Relic Laravel monitoring quickstart has the following features:\n- Our standard dashboard provides a clear overview of transactions, errors and virtual machines. \n- The Laravel PHP dashboard also helps you track other key indicators like daily transaction errors, comparison between weekly transaction errors, most popular transactions, and more.\n- Pre-defined alert conditions notify you on performance metrics like duration, error rate and throughput.\n\n### Why monitor Laravel with New Relic?\n\nThe New Relic Laravel quickstart installs the [New Relic PHP agent](https://docs.newrelic.com/docs/apm/agents/php-agent/frameworks-libraries/php-frameworks-integrate-support-new-relic/) so that you can instrument and monitor your  Laravel application. It is your gateway to instant detection of changes in Laravel’s critical metrics.\nThe integration helps you to monitor Laravel through a standard dashboard and three instant alerts. It can trigger low-throughput, high-error rate, and high-duration alerts when specific pre-defined alert conditions are met.\nThe quickstart also supports Laravel to identify the appropriate place to insert JavaScript headers and footers for browser monitoring. Install the New Relic Laravel quickstart today to start monitoring your Laravel PHP framework’s key performance indicators.",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/php/laravel",
-    "id": "919aad44-52ba-47fd-9e29-12195979015e",
-    "level": "NEW_RELIC",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/php/laravel/logo.svg",
-    "summary": "Monitoring Laravel is crucial to gain instant visibility into changes in Laravel PHP framework’s key performance indicators. Download New Relic Laravel quickstart to proactively instrument Laravel with the New Relic PHP agent and start monitoring.",
-    "websiteUrl": null,
-    "keywords": [
-      "apm",
-      "php",
-      "featured",
-      "most popular"
-    ],
-    "authors": [
-      "New Relic"
-    ],
-    "dashboards": [
-      {
-        "name": "PHP",
-        "description": "PHP",
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/php/php01.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/php/php02.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/php/php.png"
-        ]
-      }
-    ],
-    "alerts": [
-      {
-        "name": "High duration",
-        "details": "This alert is triggered when the total duration of the web transaction is longer than 10 seconds during 5 minutes",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "High error rate",
-        "details": "This alert is triggered when the error percentage of web transactions is higher than 5% during 5 minutes",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "Low throughput",
-        "details": "This alert is triggered when the throughput is 0 for 5 minutes",
-        "type": "STATIC",
-        "url": null
-      }
-    ],
-    "documentation": [
-      {
-        "name": "Laravel installation docs",
-        "description": "Laravel is a free, open-source PHP MVC web framework.",
-        "url": "https://docs.newrelic.com/docs/agents/php-agent/getting-started/php-agent-compatibility-requirements"
-      }
-    ],
-    "installPlans": [
-      {
-        "name": "PHP Agent",
-        "id": "php-agent"
-      }
-    ]
-  },
-  {
     "title": "Micrometer",
     "name": "micrometer",
     "description": "## What is Micrometer?\n\nLibrary for viewing and managing instrumentation clients for popular services and applications.\n\n## Get started!\n\nNew Relic's Micrometer metrics registry sends your Micrometer telemetry data to your New Relic account.\nFollow [the documentation](https://docs.newrelic.com/docs/integrations/open-source-telemetry-integrations/open-source-telemetry-integration-list/new-relics-micrometer-integration) to get started!",
@@ -7135,6 +7193,70 @@
     ]
   },
   {
+    "title": "SQLite",
+    "name": "sqlite",
+    "description": "## What is SQLite?\n\nSQLite is a relational database management system that is embedded into\napplications.\n\n\n## Get started!\n\nLeverage community expertise and instantly get value out of your telemetry data. This quickstart automatically instruments SQLite with the New Relic PHP agent, and allows you to further leverage New Relic's APM capabilities by setting up [custom dashboards](https://docs.newrelic.com/docs/query-your-data/explore-query-data/dashboards/introduction-dashboards/), [errors inbox](https://docs.newrelic.com/docs/apm/apm-ui-pages/errors-inbox/errors-inbox/), [transaction tracing](https://docs.newrelic.com/docs/apm/transactions/transaction-traces/introduction-transaction-traces/), and [service maps](https://docs.newrelic.com/docs/understand-dependencies/understand-system-dependencies/service-maps/introduction-service-maps/).\n\n## More info\n\nCheck out the [documentation](https://docs.newrelic.com/docs/agents/php-agent/) to learn more about New Relic monitoring for SQLite.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/php/sqlite",
+    "id": "4e928e1a-0e78-4c2f-bba2-fb0804774e86",
+    "level": "NEW_RELIC",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/php/sqlite/logo.svg",
+    "summary": "Monitor SQLite with New Relic's PHP agent",
+    "websiteUrl": null,
+    "keywords": [
+      "apm",
+      "php",
+      "database"
+    ],
+    "authors": [
+      "New Relic"
+    ],
+    "dashboards": [
+      {
+        "name": "PHP",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/php/php01.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/php/php02.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/php/php03.png"
+        ]
+      }
+    ],
+    "alerts": [
+      {
+        "name": "High duration",
+        "details": "This alert is triggered when the total duration of the web transaction is longer than 10 seconds during 5 minutes",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "High error rate",
+        "details": "This alert is triggered when the error percentage of web transactions is higher than 5% during 5 minutes",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "Low throughput",
+        "details": "This alert is triggered when the throughput is 0 for 5 minutes",
+        "type": "STATIC",
+        "url": null
+      }
+    ],
+    "documentation": [
+      {
+        "name": "SQLite installation docs",
+        "description": "SQLite is a relational database management system that is embedded into\napplications.\n",
+        "url": "https://docs.newrelic.com/docs/agents/php-agent/getting-started/php-agent-compatibility-requirements"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "PHP Agent",
+        "id": "php-agent"
+      }
+    ]
+  },
+  {
     "title": "Synthetics Page Load performance",
     "name": "synthetics-page-load-performance",
     "description": "# What is Synthetics monitoring?\nSynthetic monitoring is a suite of automated, scriptable tools to monitor your websites, critical business transactions, and API endpoints. You can simulate user traffic to proactively detect and resolve outages and poor performance of critical endpoints before your customers notice.\n\n# What is a Synthetics Page Link Crawler\nSynthetics Page Load performance monitors essentially are simple, pre-built scripted browser monitors. They make a request to your site using an instance of Google Chrome and wait for a full page load.\n\nCompared to a simple ping monitor, this is a more accurate emulation of an actual customer visit. The user agent is identified as Google Chrome.\n\nThe check will return you detailed resource breakdowns and timelines to debug performance and latency issues.",
@@ -7206,6 +7328,70 @@
       {
         "name": "OpenTelemetry",
         "id": "third-party-opentelemetry"
+      }
+    ]
+  },
+  {
+    "title": "Kubernetes",
+    "name": "kubernetes",
+    "description": "## Why monitor Kubernetes?\n\nKubernetes is an open-source system for automating deployment, scaling, and, management of containerized applications. The New Relic Kubernetes monitoring quickstart gives you visibility into your Kubernetes clusters and workloads in minutes, whether your clusters are hosted on-premises or in the cloud.\n\n### Kubernetes quickstart highlights\n\nThe New Relic Kubernetes quickstart uses dashboards to proactively monitor your metrics, like:\n\n- resources used\n- number of K8s objects\n- namespaces per cluster\n- pods by namespace\n- container cpu usage\n- container restarts\n- missing pods by deployment\n- node resource consumption, and more.\n\nThis quickstart is also compatible with on-host integrations like:\n\n- Cassandra\n- MySQL\n- Apache, and more.\n\n### New Relic + Kubernetes = Optimum performance monitoring\n\nThe [New Relic Kubernetes](https://docs.newrelic.com/docs/integrations/kubernetes-integration/installation/kubernetes-integration-install-configure/) quickstart has multiple components that work together to give you end-to-end observability across your clusters. While you have the flexibility to deploy the components that you prefer, to achieve full observability, you need to install the complete package to monitor all metrics. Use our quickstart to generate a Kubernetes manifest and add Pixie for more fine-grained telemetry data. You can also do the installation with Pixie for fine-grained telemetry data.\nOur quickstart monitors the aggregated core and memory usage across all nodes in your cluster. This allows you to meet resource requirements for optimal application performance. It also empowers you to track resource consumption, find pods that aren't running, monitor disk usage, and troubleshoot container restarts. The New Relic Kubernetes integration has dashboards and a cluster explorer that provide a multi-dimensional representation of a Kubernetes cluster from which you can explore your namespaces, deployments, nodes, pods, containers, and applications. Download the New Relic Kubernetes quickstart today to gain instant visibility into your Kubernetes services, clusters and workloads in minutes.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/kubernetes/kubernetes",
+    "id": "88a79f52-81c1-4fa2-99f8-3cb5b012f160",
+    "level": "NEW_RELIC",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/kubernetes/kubernetes/logo.svg",
+    "summary": "Monitoring Kubernetes is crucial to gain instant visibility into Kubernetes clusters and workloads. Download New Relic Kubernetes quickstart to proactively monitor Kubernetes cluster health and capacity.",
+    "websiteUrl": null,
+    "keywords": [
+      "kubernetes",
+      "containers",
+      "pixie",
+      "k8s"
+    ],
+    "authors": [
+      "New Relic",
+      "Emil Hammarstrand"
+    ],
+    "dashboards": [
+      {
+        "name": "Kubernetes Dashboard",
+        "description": "Get a high level overview of your Kubernetes instances",
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/kubernetes/kubernetes.png"
+        ]
+      }
+    ],
+    "alerts": [
+      {
+        "name": "High CPU Utilization",
+        "details": "This alert is triggered when the CPU utilization is above 90% for at least 10 minutes.",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "High Disk Utlilzation",
+        "details": "This alert is triggered when the Disk Utilization is above 95% for at least 15 minutes.",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "High Memory Usage",
+        "details": "This alert is triggered when the Memory Usage is above 85%.",
+        "type": "STATIC",
+        "url": null
+      }
+    ],
+    "documentation": [
+      {
+        "name": "Kubernetes installation docs",
+        "description": "Kubernetes is an open-source container-orchestration system for automating\ncomputer application deployment, scaling, and management.\n",
+        "url": "https://docs.newrelic.com/docs/integrations/host-integrations/host-integrations-list/kubernetes-monitoring-integration"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "Kubernetes integration",
+        "id": "kubernetes-install"
       }
     ]
   },
@@ -8275,134 +8461,6 @@
     ]
   },
   {
-    "title": "Kubernetes",
-    "name": "kubernetes",
-    "description": "## Why monitor Kubernetes?\n\nKubernetes is an open-source system for automating deployment, scaling, and, management of containerized applications. The New Relic Kubernetes monitoring quickstart gives you visibility into your Kubernetes clusters and workloads in minutes, whether your clusters are hosted on-premises or in the cloud.\n\n### Kubernetes quickstart highlights\n\nThe New Relic Kubernetes quickstart uses dashboards to proactively monitor your metrics, like:\n\n- resources used\n- number of K8s objects\n- namespaces per cluster\n- pods by namespace\n- container cpu usage\n- container restarts\n- missing pods by deployment\n- node resource consumption, and more.\n\nThis quickstart is also compatible with on-host integrations like:\n\n- Cassandra\n- MySQL\n- Apache, and more.\n\n### New Relic + Kubernetes = Optimum performance monitoring\n\nThe [New Relic Kubernetes](https://docs.newrelic.com/docs/integrations/kubernetes-integration/installation/kubernetes-integration-install-configure/) quickstart has multiple components that work together to give you end-to-end observability across your clusters. While you have the flexibility to deploy the components that you prefer, to achieve full observability, you need to install the complete package to monitor all metrics. Use our quickstart to generate a Kubernetes manifest and add Pixie for more fine-grained telemetry data. You can also do the installation with Pixie for fine-grained telemetry data.\nOur quickstart monitors the aggregated core and memory usage across all nodes in your cluster. This allows you to meet resource requirements for optimal application performance. It also empowers you to track resource consumption, find pods that aren't running, monitor disk usage, and troubleshoot container restarts. The New Relic Kubernetes integration has dashboards and a cluster explorer that provide a multi-dimensional representation of a Kubernetes cluster from which you can explore your namespaces, deployments, nodes, pods, containers, and applications. Download the New Relic Kubernetes quickstart today to gain instant visibility into your Kubernetes services, clusters and workloads in minutes.",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/kubernetes/kubernetes",
-    "id": "88a79f52-81c1-4fa2-99f8-3cb5b012f160",
-    "level": "NEW_RELIC",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/kubernetes/kubernetes/logo.svg",
-    "summary": "Monitoring Kubernetes is crucial to gain instant visibility into Kubernetes clusters and workloads. Download New Relic Kubernetes quickstart to proactively monitor Kubernetes cluster health and capacity.",
-    "websiteUrl": null,
-    "keywords": [
-      "kubernetes",
-      "containers",
-      "pixie",
-      "k8s"
-    ],
-    "authors": [
-      "New Relic",
-      "Emil Hammarstrand"
-    ],
-    "dashboards": [
-      {
-        "name": "Kubernetes Dashboard",
-        "description": "Get a high level overview of your Kubernetes instances",
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/kubernetes/kubernetes.png"
-        ]
-      }
-    ],
-    "alerts": [
-      {
-        "name": "High CPU Utilization",
-        "details": "This alert is triggered when the CPU utilization is above 90% for at least 10 minutes.",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "High Disk Utlilzation",
-        "details": "This alert is triggered when the Disk Utilization is above 95% for at least 15 minutes.",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "High Memory Usage",
-        "details": "This alert is triggered when the Memory Usage is above 85%.",
-        "type": "STATIC",
-        "url": null
-      }
-    ],
-    "documentation": [
-      {
-        "name": "Kubernetes installation docs",
-        "description": "Kubernetes is an open-source container-orchestration system for automating\ncomputer application deployment, scaling, and management.\n",
-        "url": "https://docs.newrelic.com/docs/integrations/host-integrations/host-integrations-list/kubernetes-monitoring-integration"
-      }
-    ],
-    "installPlans": [
-      {
-        "name": "Kubernetes integration",
-        "id": "kubernetes-install"
-      }
-    ]
-  },
-  {
-    "title": "SQLite",
-    "name": "sqlite",
-    "description": "## What is SQLite?\n\nSQLite is a relational database management system that is embedded into\napplications.\n\n\n## Get started!\n\nLeverage community expertise and instantly get value out of your telemetry data. This quickstart automatically instruments SQLite with the New Relic PHP agent, and allows you to further leverage New Relic's APM capabilities by setting up [custom dashboards](https://docs.newrelic.com/docs/query-your-data/explore-query-data/dashboards/introduction-dashboards/), [errors inbox](https://docs.newrelic.com/docs/apm/apm-ui-pages/errors-inbox/errors-inbox/), [transaction tracing](https://docs.newrelic.com/docs/apm/transactions/transaction-traces/introduction-transaction-traces/), and [service maps](https://docs.newrelic.com/docs/understand-dependencies/understand-system-dependencies/service-maps/introduction-service-maps/).\n\n## More info\n\nCheck out the [documentation](https://docs.newrelic.com/docs/agents/php-agent/) to learn more about New Relic monitoring for SQLite.",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/php/sqlite",
-    "id": "4e928e1a-0e78-4c2f-bba2-fb0804774e86",
-    "level": "NEW_RELIC",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/php/sqlite/logo.svg",
-    "summary": "Monitor SQLite with New Relic's PHP agent",
-    "websiteUrl": null,
-    "keywords": [
-      "apm",
-      "php",
-      "database"
-    ],
-    "authors": [
-      "New Relic"
-    ],
-    "dashboards": [
-      {
-        "name": "PHP",
-        "description": "PHP",
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/php/php01.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/php/php02.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/php/php.png"
-        ]
-      }
-    ],
-    "alerts": [
-      {
-        "name": "High duration",
-        "details": "This alert is triggered when the total duration of the web transaction is longer than 10 seconds during 5 minutes",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "High error rate",
-        "details": "This alert is triggered when the error percentage of web transactions is higher than 5% during 5 minutes",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "Low throughput",
-        "details": "This alert is triggered when the throughput is 0 for 5 minutes",
-        "type": "STATIC",
-        "url": null
-      }
-    ],
-    "documentation": [
-      {
-        "name": "SQLite installation docs",
-        "description": "SQLite is a relational database management system that is embedded into\napplications.\n",
-        "url": "https://docs.newrelic.com/docs/agents/php-agent/getting-started/php-agent-compatibility-requirements"
-      }
-    ],
-    "installPlans": [
-      {
-        "name": "PHP Agent",
-        "id": "php-agent"
-      }
-    ]
-  },
-  {
     "title": "pkg/errors",
     "name": "pkg-errors",
     "description": "## What is pkg/errors?\n\n[Package errors](https://github.com/pkg/errors) provides simple error handling primitives.\n\n## Get started!\n\nLeverage community expertise and instantly get value out of your telemetry data. This quickstart automatically instruments pkg/errors with the New Relic Go agent, and allows you to further leverage New Relic's APM capabilities by setting up [custom dashboards](https://docs.newrelic.com/docs/query-your-data/explore-query-data/dashboards/introduction-dashboards/), [errors inbox](https://docs.newrelic.com/docs/apm/apm-ui-pages/errors-inbox/errors-inbox/), [transaction tracing](https://docs.newrelic.com/docs/apm/transactions/transaction-traces/introduction-transaction-traces/), and [service maps](https://docs.newrelic.com/docs/understand-dependencies/understand-system-dependencies/service-maps/introduction-service-maps/).\n\n## More info\n\nCheck out the [documentation](https://docs.newrelic.com/docs/agents/go-agent/) to learn more about New Relic monitoring for pkg/errors.",
@@ -9232,6 +9290,133 @@
     ]
   },
   {
+    "title": "CodeIgniter",
+    "name": "codeigniter",
+    "description": "## What is CodeIgniter?\n\nOpen-source PHP-based web framework built for rapid development.\n\n## Get started!\n\nLeverage community expertise and instantly get value out of your telemetry data. This quickstart automatically instruments CodeIgniter with the New Relic PHP agent, and allows you to further leverage New Relic's APM capabilities by setting up [custom dashboards](https://docs.newrelic.com/docs/query-your-data/explore-query-data/dashboards/introduction-dashboards/), [errors inbox](https://docs.newrelic.com/docs/apm/apm-ui-pages/errors-inbox/errors-inbox/), [transaction tracing](https://docs.newrelic.com/docs/apm/transactions/transaction-traces/introduction-transaction-traces/), and [service maps](https://docs.newrelic.com/docs/understand-dependencies/understand-system-dependencies/service-maps/introduction-service-maps/).\n\n## More info\n\nCheck out the [documentation](https://docs.newrelic.com/docs/agents/php-agent/) to learn more about New Relic monitoring for CodeIgniter.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/php/codeigniter",
+    "id": "66a6a268-9a89-43be-9226-5f3ca0dfa268",
+    "level": "NEW_RELIC",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/php/codeigniter/logo.svg",
+    "summary": "Monitor CodeIgniter with New Relic's PHP agent",
+    "websiteUrl": null,
+    "keywords": [
+      "apm",
+      "php"
+    ],
+    "authors": [
+      "New Relic"
+    ],
+    "dashboards": [
+      {
+        "name": "PHP",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/php/php01.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/php/php02.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/php/php03.png"
+        ]
+      }
+    ],
+    "alerts": [
+      {
+        "name": "High duration",
+        "details": "This alert is triggered when the total duration of the web transaction is longer than 10 seconds during 5 minutes",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "High error rate",
+        "details": "This alert is triggered when the error percentage of web transactions is higher than 5% during 5 minutes",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "Low throughput",
+        "details": "This alert is triggered when the throughput is 0 for 5 minutes",
+        "type": "STATIC",
+        "url": null
+      }
+    ],
+    "documentation": [
+      {
+        "name": "CodeIgniter installation docs",
+        "description": "Open-source PHP-based web framework built for rapid development.",
+        "url": "https://docs.newrelic.com/docs/agents/php-agent/getting-started/php-agent-compatibility-requirements"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "PHP agent",
+        "id": "php-targeted-install"
+      }
+    ]
+  },
+  {
+    "title": "PHPunit",
+    "name": "phpunit",
+    "description": "## What is PHPunit?\n\nPHPUnit is a unit testing framework for the PHP programming language.\n\n## Get started!\n\nLeverage community expertise and instantly get value out of your telemetry data. This quickstart automatically instruments PHPunit with the New Relic PHP agent, and allows you to further leverage New Relic's APM capabilities by setting up [custom dashboards](https://docs.newrelic.com/docs/query-your-data/explore-query-data/dashboards/introduction-dashboards/), [errors inbox](https://docs.newrelic.com/docs/apm/apm-ui-pages/errors-inbox/errors-inbox/), [transaction tracing](https://docs.newrelic.com/docs/apm/transactions/transaction-traces/introduction-transaction-traces/), and [service maps](https://docs.newrelic.com/docs/understand-dependencies/understand-system-dependencies/service-maps/introduction-service-maps/).\n\n## More info\n\nCheck out the [documentation](https://docs.newrelic.com/docs/agents/php-agent/) to learn more about New Relic monitoring for PHPunit.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/php/phpunit",
+    "id": "17164f15-752d-435b-96c6-9d4803cdfa01",
+    "level": "NEW_RELIC",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/php/phpunit/logo.svg",
+    "summary": "Monitor PHPunit with New Relic's PHP agent",
+    "websiteUrl": null,
+    "keywords": [
+      "apm",
+      "php",
+      "testing"
+    ],
+    "authors": [
+      "New Relic"
+    ],
+    "dashboards": [
+      {
+        "name": "PHP",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/php/php01.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/php/php02.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/php/php03.png"
+        ]
+      }
+    ],
+    "alerts": [
+      {
+        "name": "High duration",
+        "details": "This alert is triggered when the total duration of the web transaction is longer than 10 seconds during 5 minutes",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "High error rate",
+        "details": "This alert is triggered when the error percentage of web transactions is higher than 5% during 5 minutes",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "Low throughput",
+        "details": "This alert is triggered when the throughput is 0 for 5 minutes",
+        "type": "STATIC",
+        "url": null
+      }
+    ],
+    "documentation": [
+      {
+        "name": "PHPunit installation docs",
+        "description": "PHPUnit is a unit testing framework for the PHP programming language.",
+        "url": "https://docs.newrelic.com/docs/agents/php-agent/getting-started/php-agent-compatibility-requirements"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "PHP Agent",
+        "id": "php-agent"
+      }
+    ]
+  },
+  {
     "title": "F5",
     "name": "f5",
     "description": "## What is F5?\n\nF5 is a family of software and hardware products designed around application availability, access control, and security.\n\n## Get started!\n\nUse New Relic's F5 BIG-IP integration to collect and send inventory and metrics from your F5 BIG-IP instance, where you can aggregate and visualize key performance metrics.\n\nWe collect data at the system, application, pool, pool member, virtual server, and node levels.\n\nFollow the [F5 monitoring integration documentation](https://docs.newrelic.com/docs/integrations/host-integrations/host-integrations-list/f5-monitoring-integration) to get started.",
@@ -9443,69 +9628,6 @@
       {
         "name": "Guided install",
         "id": "guided-install"
-      }
-    ]
-  },
-  {
-    "title": "CodeIgniter",
-    "name": "codeigniter",
-    "description": "## What is CodeIgniter?\n\nOpen-source PHP-based web framework built for rapid development.\n\n## Get started!\n\nLeverage community expertise and instantly get value out of your telemetry data. This quickstart automatically instruments CodeIgniter with the New Relic PHP agent, and allows you to further leverage New Relic's APM capabilities by setting up [custom dashboards](https://docs.newrelic.com/docs/query-your-data/explore-query-data/dashboards/introduction-dashboards/), [errors inbox](https://docs.newrelic.com/docs/apm/apm-ui-pages/errors-inbox/errors-inbox/), [transaction tracing](https://docs.newrelic.com/docs/apm/transactions/transaction-traces/introduction-transaction-traces/), and [service maps](https://docs.newrelic.com/docs/understand-dependencies/understand-system-dependencies/service-maps/introduction-service-maps/).\n\n## More info\n\nCheck out the [documentation](https://docs.newrelic.com/docs/agents/php-agent/) to learn more about New Relic monitoring for CodeIgniter.",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/php/codeigniter",
-    "id": "66a6a268-9a89-43be-9226-5f3ca0dfa268",
-    "level": "NEW_RELIC",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/php/codeigniter/logo.svg",
-    "summary": "Monitor CodeIgniter with New Relic's PHP agent",
-    "websiteUrl": null,
-    "keywords": [
-      "apm",
-      "php"
-    ],
-    "authors": [
-      "New Relic"
-    ],
-    "dashboards": [
-      {
-        "name": "PHP",
-        "description": "PHP",
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/php/php01.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/php/php02.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/php/php.png"
-        ]
-      }
-    ],
-    "alerts": [
-      {
-        "name": "High duration",
-        "details": "This alert is triggered when the total duration of the web transaction is longer than 10 seconds during 5 minutes",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "High error rate",
-        "details": "This alert is triggered when the error percentage of web transactions is higher than 5% during 5 minutes",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "Low throughput",
-        "details": "This alert is triggered when the throughput is 0 for 5 minutes",
-        "type": "STATIC",
-        "url": null
-      }
-    ],
-    "documentation": [
-      {
-        "name": "CodeIgniter installation docs",
-        "description": "Open-source PHP-based web framework built for rapid development.",
-        "url": "https://docs.newrelic.com/docs/agents/php-agent/getting-started/php-agent-compatibility-requirements"
-      }
-    ],
-    "installPlans": [
-      {
-        "name": "PHP agent",
-        "id": "php-targeted-install"
       }
     ]
   },
@@ -10298,70 +10420,6 @@
       {
         "name": "Java Agent",
         "id": "setup-java-targeted-install"
-      }
-    ]
-  },
-  {
-    "title": "PHPunit",
-    "name": "phpunit",
-    "description": "## What is PHPunit?\n\nPHPUnit is a unit testing framework for the PHP programming language.\n\n## Get started!\n\nLeverage community expertise and instantly get value out of your telemetry data. This quickstart automatically instruments PHPunit with the New Relic PHP agent, and allows you to further leverage New Relic's APM capabilities by setting up [custom dashboards](https://docs.newrelic.com/docs/query-your-data/explore-query-data/dashboards/introduction-dashboards/), [errors inbox](https://docs.newrelic.com/docs/apm/apm-ui-pages/errors-inbox/errors-inbox/), [transaction tracing](https://docs.newrelic.com/docs/apm/transactions/transaction-traces/introduction-transaction-traces/), and [service maps](https://docs.newrelic.com/docs/understand-dependencies/understand-system-dependencies/service-maps/introduction-service-maps/).\n\n## More info\n\nCheck out the [documentation](https://docs.newrelic.com/docs/agents/php-agent/) to learn more about New Relic monitoring for PHPunit.",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/php/phpunit",
-    "id": "17164f15-752d-435b-96c6-9d4803cdfa01",
-    "level": "NEW_RELIC",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/php/phpunit/logo.svg",
-    "summary": "Monitor PHPunit with New Relic's PHP agent",
-    "websiteUrl": null,
-    "keywords": [
-      "apm",
-      "php",
-      "testing"
-    ],
-    "authors": [
-      "New Relic"
-    ],
-    "dashboards": [
-      {
-        "name": "PHP",
-        "description": "PHP",
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/php/php01.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/php/php02.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/php/php.png"
-        ]
-      }
-    ],
-    "alerts": [
-      {
-        "name": "High duration",
-        "details": "This alert is triggered when the total duration of the web transaction is longer than 10 seconds during 5 minutes",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "High error rate",
-        "details": "This alert is triggered when the error percentage of web transactions is higher than 5% during 5 minutes",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "Low throughput",
-        "details": "This alert is triggered when the throughput is 0 for 5 minutes",
-        "type": "STATIC",
-        "url": null
-      }
-    ],
-    "documentation": [
-      {
-        "name": "PHPunit installation docs",
-        "description": "PHPUnit is a unit testing framework for the PHP programming language.",
-        "url": "https://docs.newrelic.com/docs/agents/php-agent/getting-started/php-agent-compatibility-requirements"
-      }
-    ],
-    "installPlans": [
-      {
-        "name": "PHP Agent",
-        "id": "php-agent"
       }
     ]
   },
@@ -11297,14 +11355,14 @@
     ],
     "documentation": [
       {
-        "name": "Deeper Network Monitoring Guide",
-        "description": "A guide detailing how to configure and use the `deeper-cli` with New Relic.\n",
-        "url": "https://github.com/Kav91/deeper-connect-monitoring"
-      },
-      {
         "name": "Deeper Network",
         "description": "The Decentralized Gateway and Infrastructure for Web3.0. Deeper Network combines blockchain, network security, and sharing economy to create a global peer to peer network that empowers the real users of the internet and paves the way for the next generation of the web.\n",
         "url": "https://deeper.network/"
+      },
+      {
+        "name": "Deeper Network Monitoring Guide",
+        "description": "A guide detailing how to configure and use the `deeper-cli` with New Relic.\n",
+        "url": "https://github.com/Kav91/deeper-connect-monitoring"
       }
     ],
     "installPlans": [
@@ -11566,19 +11624,19 @@
         ]
       },
       {
-        "name": "Lacework Anomaly Detections",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/lacework-anomaly-detections/lacework-anomaly-detections.png"
-        ]
-      },
-      {
         "name": "Lacework Security Overview",
         "description": null,
         "url": null,
         "screenshots": [
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/lacework-security-overview/lacework-security-overview.png"
+        ]
+      },
+      {
+        "name": "Lacework Anomaly Detections",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/lacework-anomaly-detections/lacework-anomaly-detections.png"
         ]
       }
     ],
@@ -11662,6 +11720,134 @@
       {
         "name": "GCP-Infrastructure-Monitoring",
         "id": "gcp-infrastructure-monitoring"
+      }
+    ]
+  },
+  {
+    "title": "Magento",
+    "name": "magento",
+    "description": "## What is Magento?\n\nMagento is an open-source e-commerce platform written in PHP.\n\n## Get started!\n\nLeverage community expertise and instantly get value out of your telemetry data. This quickstart automatically instruments Magento with the New Relic PHP agent, and allows you to further leverage New Relic's APM capabilities by setting up [custom dashboards](https://docs.newrelic.com/docs/query-your-data/explore-query-data/dashboards/introduction-dashboards/), [errors inbox](https://docs.newrelic.com/docs/apm/apm-ui-pages/errors-inbox/errors-inbox/), [transaction tracing](https://docs.newrelic.com/docs/apm/transactions/transaction-traces/introduction-transaction-traces/), and [service maps](https://docs.newrelic.com/docs/understand-dependencies/understand-system-dependencies/service-maps/introduction-service-maps/).\n\n## More info\n\nCheck out the [documentation](https://docs.newrelic.com/docs/agents/php-agent/) to learn more about New Relic monitoring for Magento.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/php/magento",
+    "id": "509a6b56-d580-4e8c-8c64-cb71a61b8a26",
+    "level": "NEW_RELIC",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/php/magento/logo.svg",
+    "summary": "Monitor Magento with New Relic's PHP agent",
+    "websiteUrl": null,
+    "keywords": [
+      "apm",
+      "php",
+      "cms",
+      "content management system"
+    ],
+    "authors": [
+      "New Relic"
+    ],
+    "dashboards": [
+      {
+        "name": "PHP",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/php/php01.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/php/php02.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/php/php03.png"
+        ]
+      }
+    ],
+    "alerts": [
+      {
+        "name": "High duration",
+        "details": "This alert is triggered when the total duration of the web transaction is longer than 10 seconds during 5 minutes",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "High error rate",
+        "details": "This alert is triggered when the error percentage of web transactions is higher than 5% during 5 minutes",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "Low throughput",
+        "details": "This alert is triggered when the throughput is 0 for 5 minutes",
+        "type": "STATIC",
+        "url": null
+      }
+    ],
+    "documentation": [
+      {
+        "name": "Magento installation docs",
+        "description": "Magento is an open-source e-commerce platform written in PHP.",
+        "url": "https://docs.newrelic.com/docs/agents/php-agent/getting-started/php-agent-compatibility-requirements"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "PHP Agent",
+        "id": "php-agent"
+      }
+    ]
+  },
+  {
+    "title": "Symfony",
+    "name": "symfony",
+    "description": "## What is Symfony?\n\nA set of reusable PHP components and a PHP framework to build web\napplications, APIs, microservices and web services.\n\n\n## Get started!\n\nLeverage community expertise and instantly get value out of your telemetry data. This quickstart automatically instruments Symfony with the New Relic PHP agent, and allows you to further leverage New Relic's APM capabilities by setting up [custom dashboards](https://docs.newrelic.com/docs/query-your-data/explore-query-data/dashboards/introduction-dashboards/), [errors inbox](https://docs.newrelic.com/docs/apm/apm-ui-pages/errors-inbox/errors-inbox/), [transaction tracing](https://docs.newrelic.com/docs/apm/transactions/transaction-traces/introduction-transaction-traces/), and [service maps](https://docs.newrelic.com/docs/understand-dependencies/understand-system-dependencies/service-maps/introduction-service-maps/).\n\n## More info\n\nCheck out the [documentation](https://docs.newrelic.com/docs/agents/php-agent/) to learn more about New Relic monitoring for Symfony.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/php/symfony",
+    "id": "ff0c7881-b5a5-4ccc-8596-b28a982b1586",
+    "level": "NEW_RELIC",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/php/symfony/logo.svg",
+    "summary": "Monitor Symfony with New Relic's PHP agent",
+    "websiteUrl": null,
+    "keywords": [
+      "apm",
+      "php"
+    ],
+    "authors": [
+      "New Relic"
+    ],
+    "dashboards": [
+      {
+        "name": "PHP",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/php/php01.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/php/php02.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/php/php03.png"
+        ]
+      }
+    ],
+    "alerts": [
+      {
+        "name": "High duration",
+        "details": "This alert is triggered when the total duration of the web transaction is longer than 10 seconds during 5 minutes",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "High error rate",
+        "details": "This alert is triggered when the error percentage of web transactions is higher than 5% during 5 minutes",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "Low throughput",
+        "details": "This alert is triggered when the throughput is 0 for 5 minutes",
+        "type": "STATIC",
+        "url": null
+      }
+    ],
+    "documentation": [
+      {
+        "name": "Symfony installation docs",
+        "description": "A set of reusable PHP components and a PHP framework to build web\napplications, APIs, microservices and web services.\n",
+        "url": "https://docs.newrelic.com/docs/agents/php-agent/getting-started/php-agent-compatibility-requirements"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "PHP Agent",
+        "id": "php-agent"
       }
     ]
   },
@@ -12876,71 +13062,6 @@
     ]
   },
   {
-    "title": "Magento",
-    "name": "magento",
-    "description": "## What is Magento?\n\nMagento is an open-source e-commerce platform written in PHP.\n\n## Get started!\n\nLeverage community expertise and instantly get value out of your telemetry data. This quickstart automatically instruments Magento with the New Relic PHP agent, and allows you to further leverage New Relic's APM capabilities by setting up [custom dashboards](https://docs.newrelic.com/docs/query-your-data/explore-query-data/dashboards/introduction-dashboards/), [errors inbox](https://docs.newrelic.com/docs/apm/apm-ui-pages/errors-inbox/errors-inbox/), [transaction tracing](https://docs.newrelic.com/docs/apm/transactions/transaction-traces/introduction-transaction-traces/), and [service maps](https://docs.newrelic.com/docs/understand-dependencies/understand-system-dependencies/service-maps/introduction-service-maps/).\n\n## More info\n\nCheck out the [documentation](https://docs.newrelic.com/docs/agents/php-agent/) to learn more about New Relic monitoring for Magento.",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/php/magento",
-    "id": "509a6b56-d580-4e8c-8c64-cb71a61b8a26",
-    "level": "NEW_RELIC",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/php/magento/logo.svg",
-    "summary": "Monitor Magento with New Relic's PHP agent",
-    "websiteUrl": null,
-    "keywords": [
-      "apm",
-      "php",
-      "cms",
-      "content management system"
-    ],
-    "authors": [
-      "New Relic"
-    ],
-    "dashboards": [
-      {
-        "name": "PHP",
-        "description": "PHP",
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/php/php01.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/php/php02.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/php/php.png"
-        ]
-      }
-    ],
-    "alerts": [
-      {
-        "name": "High duration",
-        "details": "This alert is triggered when the total duration of the web transaction is longer than 10 seconds during 5 minutes",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "High error rate",
-        "details": "This alert is triggered when the error percentage of web transactions is higher than 5% during 5 minutes",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "Low throughput",
-        "details": "This alert is triggered when the throughput is 0 for 5 minutes",
-        "type": "STATIC",
-        "url": null
-      }
-    ],
-    "documentation": [
-      {
-        "name": "Magento installation docs",
-        "description": "Magento is an open-source e-commerce platform written in PHP.",
-        "url": "https://docs.newrelic.com/docs/agents/php-agent/getting-started/php-agent-compatibility-requirements"
-      }
-    ],
-    "installPlans": [
-      {
-        "name": "PHP Agent",
-        "id": "php-agent"
-      }
-    ]
-  },
-  {
     "title": "Net::HTTP",
     "name": "net-http",
     "description": "## What is Net::HTTP?\n\nNet::HTTP for Ruby provides a rich library which can be used to build HTTP\nuser-agents.\n\n\n## Get started!\n\nLeverage community expertise and instantly get value out of your telemetry data. This quickstart automatically instruments Net::HTTP with the New Relic Ruby agent, and allows you to further leverage New Relic's APM capabilities by setting up [custom dashboards](https://docs.newrelic.com/docs/query-your-data/explore-query-data/dashboards/introduction-dashboards/), [errors inbox](https://docs.newrelic.com/docs/apm/apm-ui-pages/errors-inbox/errors-inbox/), [transaction tracing](https://docs.newrelic.com/docs/apm/transactions/transaction-traces/introduction-transaction-traces/), and [service maps](https://docs.newrelic.com/docs/understand-dependencies/understand-system-dependencies/service-maps/introduction-service-maps/).\n\n## More info\n\nCheck out the [documentation](https://docs.newrelic.com/docs/agents/ruby-agent/) to learn more about New Relic monitoring for Net::HTTP.",
@@ -13080,69 +13201,6 @@
       {
         "name": "Node Agent",
         "id": "node-agent"
-      }
-    ]
-  },
-  {
-    "title": "Symfony",
-    "name": "symfony",
-    "description": "## What is Symfony?\n\nA set of reusable PHP components and a PHP framework to build web\napplications, APIs, microservices and web services.\n\n\n## Get started!\n\nLeverage community expertise and instantly get value out of your telemetry data. This quickstart automatically instruments Symfony with the New Relic PHP agent, and allows you to further leverage New Relic's APM capabilities by setting up [custom dashboards](https://docs.newrelic.com/docs/query-your-data/explore-query-data/dashboards/introduction-dashboards/), [errors inbox](https://docs.newrelic.com/docs/apm/apm-ui-pages/errors-inbox/errors-inbox/), [transaction tracing](https://docs.newrelic.com/docs/apm/transactions/transaction-traces/introduction-transaction-traces/), and [service maps](https://docs.newrelic.com/docs/understand-dependencies/understand-system-dependencies/service-maps/introduction-service-maps/).\n\n## More info\n\nCheck out the [documentation](https://docs.newrelic.com/docs/agents/php-agent/) to learn more about New Relic monitoring for Symfony.",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/php/symfony",
-    "id": "ff0c7881-b5a5-4ccc-8596-b28a982b1586",
-    "level": "NEW_RELIC",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/php/symfony/logo.svg",
-    "summary": "Monitor Symfony with New Relic's PHP agent",
-    "websiteUrl": null,
-    "keywords": [
-      "apm",
-      "php"
-    ],
-    "authors": [
-      "New Relic"
-    ],
-    "dashboards": [
-      {
-        "name": "PHP",
-        "description": "PHP",
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/php/php01.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/php/php02.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/php/php.png"
-        ]
-      }
-    ],
-    "alerts": [
-      {
-        "name": "High duration",
-        "details": "This alert is triggered when the total duration of the web transaction is longer than 10 seconds during 5 minutes",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "High error rate",
-        "details": "This alert is triggered when the error percentage of web transactions is higher than 5% during 5 minutes",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "Low throughput",
-        "details": "This alert is triggered when the throughput is 0 for 5 minutes",
-        "type": "STATIC",
-        "url": null
-      }
-    ],
-    "documentation": [
-      {
-        "name": "Symfony installation docs",
-        "description": "A set of reusable PHP components and a PHP framework to build web\napplications, APIs, microservices and web services.\n",
-        "url": "https://docs.newrelic.com/docs/agents/php-agent/getting-started/php-agent-compatibility-requirements"
-      }
-    ],
-    "installPlans": [
-      {
-        "name": "PHP Agent",
-        "id": "php-agent"
       }
     ]
   },
@@ -13918,6 +13976,70 @@
       {
         "name": "speedscale",
         "id": "third-party-speedscale-integration"
+      }
+    ]
+  },
+  {
+    "title": "ODBC",
+    "name": "odbc",
+    "description": "## What is ODBC?\n\nOpen Database Connectivity (ODBC) is a standard application programming\ninterface (API) for accessing database management systems (DBMS).\n\n\n## Get started!\n\nLeverage community expertise and instantly get value out of your telemetry data. This quickstart automatically instruments ODBC with the New Relic PHP agent, and allows you to further leverage New Relic's APM capabilities by setting up [custom dashboards](https://docs.newrelic.com/docs/query-your-data/explore-query-data/dashboards/introduction-dashboards/), [errors inbox](https://docs.newrelic.com/docs/apm/apm-ui-pages/errors-inbox/errors-inbox/), [transaction tracing](https://docs.newrelic.com/docs/apm/transactions/transaction-traces/introduction-transaction-traces/), and [service maps](https://docs.newrelic.com/docs/understand-dependencies/understand-system-dependencies/service-maps/introduction-service-maps/).\n\n## More info\n\nCheck out the [documentation](https://docs.newrelic.com/docs/agents/php-agent/) to learn more about New Relic monitoring for ODBC.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/php/odbc",
+    "id": "f6728c42-38bb-4e23-b78f-298555640b98",
+    "level": "NEW_RELIC",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/php/odbc/logo.svg",
+    "summary": "Monitor ODBC with New Relic's PHP agent",
+    "websiteUrl": null,
+    "keywords": [
+      "apm",
+      "php",
+      "database"
+    ],
+    "authors": [
+      "New Relic"
+    ],
+    "dashboards": [
+      {
+        "name": "PHP",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/php/php01.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/php/php02.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/php/php03.png"
+        ]
+      }
+    ],
+    "alerts": [
+      {
+        "name": "High duration",
+        "details": "This alert is triggered when the total duration of the web transaction is longer than 10 seconds during 5 minutes",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "High error rate",
+        "details": "This alert is triggered when the error percentage of web transactions is higher than 5% during 5 minutes",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "Low throughput",
+        "details": "This alert is triggered when the throughput is 0 for 5 minutes",
+        "type": "STATIC",
+        "url": null
+      }
+    ],
+    "documentation": [
+      {
+        "name": "ODBC installation docs",
+        "description": "Open Database Connectivity (ODBC) is a standard application programming\ninterface (API) for accessing database management systems (DBMS).\n",
+        "url": "https://docs.newrelic.com/docs/agents/php-agent/getting-started/php-agent-compatibility-requirements"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "PHP Agent",
+        "id": "php-agent"
       }
     ]
   },
@@ -14968,70 +15090,6 @@
     ]
   },
   {
-    "title": "ODBC",
-    "name": "odbc",
-    "description": "## What is ODBC?\n\nOpen Database Connectivity (ODBC) is a standard application programming\ninterface (API) for accessing database management systems (DBMS).\n\n\n## Get started!\n\nLeverage community expertise and instantly get value out of your telemetry data. This quickstart automatically instruments ODBC with the New Relic PHP agent, and allows you to further leverage New Relic's APM capabilities by setting up [custom dashboards](https://docs.newrelic.com/docs/query-your-data/explore-query-data/dashboards/introduction-dashboards/), [errors inbox](https://docs.newrelic.com/docs/apm/apm-ui-pages/errors-inbox/errors-inbox/), [transaction tracing](https://docs.newrelic.com/docs/apm/transactions/transaction-traces/introduction-transaction-traces/), and [service maps](https://docs.newrelic.com/docs/understand-dependencies/understand-system-dependencies/service-maps/introduction-service-maps/).\n\n## More info\n\nCheck out the [documentation](https://docs.newrelic.com/docs/agents/php-agent/) to learn more about New Relic monitoring for ODBC.",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/php/odbc",
-    "id": "f6728c42-38bb-4e23-b78f-298555640b98",
-    "level": "NEW_RELIC",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/php/odbc/logo.svg",
-    "summary": "Monitor ODBC with New Relic's PHP agent",
-    "websiteUrl": null,
-    "keywords": [
-      "apm",
-      "php",
-      "database"
-    ],
-    "authors": [
-      "New Relic"
-    ],
-    "dashboards": [
-      {
-        "name": "PHP",
-        "description": "PHP",
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/php/php01.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/php/php02.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/php/php.png"
-        ]
-      }
-    ],
-    "alerts": [
-      {
-        "name": "High duration",
-        "details": "This alert is triggered when the total duration of the web transaction is longer than 10 seconds during 5 minutes",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "High error rate",
-        "details": "This alert is triggered when the error percentage of web transactions is higher than 5% during 5 minutes",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "Low throughput",
-        "details": "This alert is triggered when the throughput is 0 for 5 minutes",
-        "type": "STATIC",
-        "url": null
-      }
-    ],
-    "documentation": [
-      {
-        "name": "ODBC installation docs",
-        "description": "Open Database Connectivity (ODBC) is a standard application programming\ninterface (API) for accessing database management systems (DBMS).\n",
-        "url": "https://docs.newrelic.com/docs/agents/php-agent/getting-started/php-agent-compatibility-requirements"
-      }
-    ],
-    "installPlans": [
-      {
-        "name": "PHP Agent",
-        "id": "php-agent"
-      }
-    ]
-  },
-  {
     "title": "Passenger",
     "name": "passenger",
     "description": "## What is Passenger?\n\nWeb application server with support for several platforms, and can run\nstandalone or integrate with other servers.\n\n\n## Get started!\n\nLeverage community expertise and instantly get value out of your telemetry data. This quickstart automatically instruments Passenger with the New Relic Ruby agent, and allows you to further leverage New Relic's APM capabilities by setting up [custom dashboards](https://docs.newrelic.com/docs/query-your-data/explore-query-data/dashboards/introduction-dashboards/), [errors inbox](https://docs.newrelic.com/docs/apm/apm-ui-pages/errors-inbox/errors-inbox/), [transaction tracing](https://docs.newrelic.com/docs/apm/transactions/transaction-traces/introduction-transaction-traces/), and [service maps](https://docs.newrelic.com/docs/understand-dependencies/understand-system-dependencies/service-maps/introduction-service-maps/).\n\n## More info\n\nCheck out the [documentation](https://docs.newrelic.com/docs/agents/ruby-agent/) to learn more about New Relic monitoring for Passenger.",
@@ -16049,6 +16107,70 @@
     ]
   },
   {
+    "title": "PDO",
+    "name": "pdo",
+    "description": "## What is PDO?\n\nPDO is a lean, consistent way to access databases in PHP.\n\n## Get started!\n\nLeverage community expertise and instantly get value out of your telemetry data. This quickstart automatically instruments PDO with the New Relic PHP agent, and allows you to further leverage New Relic's APM capabilities by setting up [custom dashboards](https://docs.newrelic.com/docs/query-your-data/explore-query-data/dashboards/introduction-dashboards/), [errors inbox](https://docs.newrelic.com/docs/apm/apm-ui-pages/errors-inbox/errors-inbox/), [transaction tracing](https://docs.newrelic.com/docs/apm/transactions/transaction-traces/introduction-transaction-traces/), and [service maps](https://docs.newrelic.com/docs/understand-dependencies/understand-system-dependencies/service-maps/introduction-service-maps/).\n\n## More info\n\nCheck out the [documentation](https://docs.newrelic.com/docs/agents/php-agent/) to learn more about New Relic monitoring for PDO.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/php/pdo",
+    "id": "6de33cc8-dff7-4b25-8221-2ae01ca988af",
+    "level": "NEW_RELIC",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/php/pdo/logo.svg",
+    "summary": "Monitor PDO with New Relic's PHP agent",
+    "websiteUrl": null,
+    "keywords": [
+      "apm",
+      "php",
+      "database"
+    ],
+    "authors": [
+      "New Relic"
+    ],
+    "dashboards": [
+      {
+        "name": "PHP",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/php/php01.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/php/php02.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/php/php03.png"
+        ]
+      }
+    ],
+    "alerts": [
+      {
+        "name": "High duration",
+        "details": "This alert is triggered when the total duration of the web transaction is longer than 10 seconds during 5 minutes",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "High error rate",
+        "details": "This alert is triggered when the error percentage of web transactions is higher than 5% during 5 minutes",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "Low throughput",
+        "details": "This alert is triggered when the throughput is 0 for 5 minutes",
+        "type": "STATIC",
+        "url": null
+      }
+    ],
+    "documentation": [
+      {
+        "name": "PDO installation docs",
+        "description": "PDO is a lean, consistent way to access databases in PHP.",
+        "url": "https://docs.newrelic.com/docs/agents/php-agent/getting-started/php-agent-compatibility-requirements"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "PHP Agent",
+        "id": "php-agent"
+      }
+    ]
+  },
+  {
     "title": "PerfMon",
     "name": "perfmon",
     "description": "Windows Performance Monitor is a toolkit that enables system performance data\nand analytics.",
@@ -16520,6 +16642,22 @@
     ],
     "dashboards": [
       {
+        "name": "Catchpoint-Overview",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/catchpoint-overview/Catchpoint-Overview.png"
+        ]
+      },
+      {
+        "name": "Catchpoint-Recent Errors",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/catchpoint-recent-errors/Catchpoint-Recent_Errors.png"
+        ]
+      },
+      {
         "name": "Catchpoint-Response Size",
         "description": null,
         "url": null,
@@ -16533,22 +16671,6 @@
         "url": null,
         "screenshots": [
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/catchpoint-test-times/Catchpoint-Test_Times.png"
-        ]
-      },
-      {
-        "name": "Catchpoint-Recent Errors",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/catchpoint-recent-errors/Catchpoint-Recent_Errors.png"
-        ]
-      },
-      {
-        "name": "Catchpoint-Overview",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/catchpoint-overview/Catchpoint-Overview.png"
         ]
       }
     ],
@@ -17258,70 +17380,6 @@
     ]
   },
   {
-    "title": "PDO",
-    "name": "pdo",
-    "description": "## What is PDO?\n\nPDO is a lean, consistent way to access databases in PHP.\n\n## Get started!\n\nLeverage community expertise and instantly get value out of your telemetry data. This quickstart automatically instruments PDO with the New Relic PHP agent, and allows you to further leverage New Relic's APM capabilities by setting up [custom dashboards](https://docs.newrelic.com/docs/query-your-data/explore-query-data/dashboards/introduction-dashboards/), [errors inbox](https://docs.newrelic.com/docs/apm/apm-ui-pages/errors-inbox/errors-inbox/), [transaction tracing](https://docs.newrelic.com/docs/apm/transactions/transaction-traces/introduction-transaction-traces/), and [service maps](https://docs.newrelic.com/docs/understand-dependencies/understand-system-dependencies/service-maps/introduction-service-maps/).\n\n## More info\n\nCheck out the [documentation](https://docs.newrelic.com/docs/agents/php-agent/) to learn more about New Relic monitoring for PDO.",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/php/pdo",
-    "id": "6de33cc8-dff7-4b25-8221-2ae01ca988af",
-    "level": "NEW_RELIC",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/php/pdo/logo.svg",
-    "summary": "Monitor PDO with New Relic's PHP agent",
-    "websiteUrl": null,
-    "keywords": [
-      "apm",
-      "php",
-      "database"
-    ],
-    "authors": [
-      "New Relic"
-    ],
-    "dashboards": [
-      {
-        "name": "PHP",
-        "description": "PHP",
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/php/php01.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/php/php02.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/php/php.png"
-        ]
-      }
-    ],
-    "alerts": [
-      {
-        "name": "High duration",
-        "details": "This alert is triggered when the total duration of the web transaction is longer than 10 seconds during 5 minutes",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "High error rate",
-        "details": "This alert is triggered when the error percentage of web transactions is higher than 5% during 5 minutes",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "Low throughput",
-        "details": "This alert is triggered when the throughput is 0 for 5 minutes",
-        "type": "STATIC",
-        "url": null
-      }
-    ],
-    "documentation": [
-      {
-        "name": "PDO installation docs",
-        "description": "PDO is a lean, consistent way to access databases in PHP.",
-        "url": "https://docs.newrelic.com/docs/agents/php-agent/getting-started/php-agent-compatibility-requirements"
-      }
-    ],
-    "installPlans": [
-      {
-        "name": "PHP Agent",
-        "id": "php-agent"
-      }
-    ]
-  },
-  {
     "title": "Puma",
     "name": "puma",
     "description": "## What is Puma?\n\nPuma is an HTTP web server for Ruby and Rack.\n\n## Get started!\n\nLeverage community expertise and instantly get value out of your telemetry data. This quickstart automatically instruments Puma with the New Relic Ruby agent, and allows you to further leverage New Relic's APM capabilities by setting up [custom dashboards](https://docs.newrelic.com/docs/query-your-data/explore-query-data/dashboards/introduction-dashboards/), [errors inbox](https://docs.newrelic.com/docs/apm/apm-ui-pages/errors-inbox/errors-inbox/), [transaction tracing](https://docs.newrelic.com/docs/apm/transactions/transaction-traces/introduction-transaction-traces/), and [service maps](https://docs.newrelic.com/docs/understand-dependencies/understand-system-dependencies/service-maps/introduction-service-maps/).\n\n## More info\n\nCheck out the [documentation](https://docs.newrelic.com/docs/agents/ruby-agent/) to learn more about New Relic monitoring for Puma.",
@@ -17962,6 +18020,69 @@
     ]
   },
   {
+    "title": "Guzzle",
+    "name": "guzzle",
+    "description": "## What is Guzzle?\n\nPHP-based HTTP client built for ease of use and integration with popular web\nservices.\n\n\n## Get started!\n\nLeverage community expertise and instantly get value out of your telemetry data. This quickstart automatically instruments Guzzle with the New Relic PHP agent, and allows you to further leverage New Relic's APM capabilities by setting up [custom dashboards](https://docs.newrelic.com/docs/query-your-data/explore-query-data/dashboards/introduction-dashboards/), [errors inbox](https://docs.newrelic.com/docs/apm/apm-ui-pages/errors-inbox/errors-inbox/), [transaction tracing](https://docs.newrelic.com/docs/apm/transactions/transaction-traces/introduction-transaction-traces/), and [service maps](https://docs.newrelic.com/docs/understand-dependencies/understand-system-dependencies/service-maps/introduction-service-maps/).\n\n## More info\n\nCheck out the [documentation](https://docs.newrelic.com/docs/agents/php-agent/) to learn more about New Relic monitoring for Guzzle.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/php/guzzle",
+    "id": "6b6b1702-7636-4b60-a2b8-d5765d11ec13",
+    "level": "NEW_RELIC",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/php/guzzle/logo.svg",
+    "summary": "Monitor Guzzle with New Relic's PHP agent",
+    "websiteUrl": null,
+    "keywords": [
+      "apm",
+      "php"
+    ],
+    "authors": [
+      "New Relic"
+    ],
+    "dashboards": [
+      {
+        "name": "PHP",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/php/php01.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/php/php02.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/php/php03.png"
+        ]
+      }
+    ],
+    "alerts": [
+      {
+        "name": "High duration",
+        "details": "This alert is triggered when the total duration of the web transaction is longer than 10 seconds during 5 minutes",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "High error rate",
+        "details": "This alert is triggered when the error percentage of web transactions is higher than 5% during 5 minutes",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "Low throughput",
+        "details": "This alert is triggered when the throughput is 0 for 5 minutes",
+        "type": "STATIC",
+        "url": null
+      }
+    ],
+    "documentation": [
+      {
+        "name": "Guzzle installation docs",
+        "description": "PHP-based HTTP client built for ease of use and integration with popular\nweb services.\n",
+        "url": "https://docs.newrelic.com/docs/agents/php-agent/getting-started/php-agent-compatibility-requirements"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "PHP Agent",
+        "id": "php-agent"
+      }
+    ]
+  },
+  {
     "title": "ASP .NET MVC",
     "name": "asp-dotnet-mvc",
     "description": "## What is ASP .NET MVC?\n\nOpen-source web application framework developed by Microsoft, which implements\nthe model-view-controller pattern.\n\n\n## Get started!\n\nLeverage community expertise and instantly get value out of your telemetry data. This quickstart automatically instruments ASP .NET MVC with the New Relic .Net agent, and allows you to instantly monitor your .Net application with out-of-the-box dashboards and alerts. Further leverage New Relic's APM capabilities by setting up [errors inbox](https://docs.newrelic.com/docs/apm/apm-ui-pages/errors-inbox/errors-inbox/), [transaction tracing](https://docs.newrelic.com/docs/apm/transactions/transaction-traces/introduction-transaction-traces/), and [service maps](https://docs.newrelic.com/docs/understand-dependencies/understand-system-dependencies/service-maps/introduction-service-maps/).\n\n## More info\n\nCheck out the [documentation](https://docs.newrelic.com/docs/agents/net-agent/getting-started/introduction-new-relic-net/) to learn more about New Relic monitoring for ASP .NET MVC.",
@@ -18137,6 +18258,69 @@
       {
         "name": "Java Agent",
         "id": "setup-java-targeted-install"
+      }
+    ]
+  },
+  {
+    "title": "Predis",
+    "name": "predis",
+    "description": "## What is Predis?\n\nPredis is a flexible and feature-complete Redis client for PHP.\n\n## Get started!\n\nLeverage community expertise and instantly get value out of your telemetry data. This quickstart automatically instruments Predis with the New Relic PHP agent, and allows you to further leverage New Relic's APM capabilities by setting up [custom dashboards](https://docs.newrelic.com/docs/query-your-data/explore-query-data/dashboards/introduction-dashboards/), [errors inbox](https://docs.newrelic.com/docs/apm/apm-ui-pages/errors-inbox/errors-inbox/), [transaction tracing](https://docs.newrelic.com/docs/apm/transactions/transaction-traces/introduction-transaction-traces/), and [service maps](https://docs.newrelic.com/docs/understand-dependencies/understand-system-dependencies/service-maps/introduction-service-maps/).\n\n## More info\n\nCheck out the [documentation](https://docs.newrelic.com/docs/agents/php-agent/) to learn more about New Relic monitoring for Predis.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/php/predis",
+    "id": "e77de8fd-ae73-4853-b00a-2e42b0841464",
+    "level": "NEW_RELIC",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/php/predis/logo.svg",
+    "summary": "Monitor Predis with New Relic's PHP agent",
+    "websiteUrl": null,
+    "keywords": [
+      "apm",
+      "php"
+    ],
+    "authors": [
+      "New Relic"
+    ],
+    "dashboards": [
+      {
+        "name": "PHP",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/php/php01.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/php/php02.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/php/php03.png"
+        ]
+      }
+    ],
+    "alerts": [
+      {
+        "name": "High duration",
+        "details": "This alert is triggered when the total duration of the web transaction is longer than 10 seconds during 5 minutes",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "High error rate",
+        "details": "This alert is triggered when the error percentage of web transactions is higher than 5% during 5 minutes",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "Low throughput",
+        "details": "This alert is triggered when the throughput is 0 for 5 minutes",
+        "type": "STATIC",
+        "url": null
+      }
+    ],
+    "documentation": [
+      {
+        "name": "Predis installation docs",
+        "description": "Predis is a flexible and feature-complete Redis client for PHP.",
+        "url": "https://docs.newrelic.com/docs/agents/php-agent/frameworks-libraries/predis-library-php"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "PHP Agent",
+        "id": "php-agent"
       }
     ]
   },
@@ -18836,69 +19020,6 @@
     ]
   },
   {
-    "title": "Guzzle",
-    "name": "guzzle",
-    "description": "## What is Guzzle?\n\nPHP-based HTTP client built for ease of use and integration with popular web\nservices.\n\n\n## Get started!\n\nLeverage community expertise and instantly get value out of your telemetry data. This quickstart automatically instruments Guzzle with the New Relic PHP agent, and allows you to further leverage New Relic's APM capabilities by setting up [custom dashboards](https://docs.newrelic.com/docs/query-your-data/explore-query-data/dashboards/introduction-dashboards/), [errors inbox](https://docs.newrelic.com/docs/apm/apm-ui-pages/errors-inbox/errors-inbox/), [transaction tracing](https://docs.newrelic.com/docs/apm/transactions/transaction-traces/introduction-transaction-traces/), and [service maps](https://docs.newrelic.com/docs/understand-dependencies/understand-system-dependencies/service-maps/introduction-service-maps/).\n\n## More info\n\nCheck out the [documentation](https://docs.newrelic.com/docs/agents/php-agent/) to learn more about New Relic monitoring for Guzzle.",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/php/guzzle",
-    "id": "6b6b1702-7636-4b60-a2b8-d5765d11ec13",
-    "level": "NEW_RELIC",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/php/guzzle/logo.svg",
-    "summary": "Monitor Guzzle with New Relic's PHP agent",
-    "websiteUrl": null,
-    "keywords": [
-      "apm",
-      "php"
-    ],
-    "authors": [
-      "New Relic"
-    ],
-    "dashboards": [
-      {
-        "name": "PHP",
-        "description": "PHP",
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/php/php01.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/php/php02.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/php/php.png"
-        ]
-      }
-    ],
-    "alerts": [
-      {
-        "name": "High duration",
-        "details": "This alert is triggered when the total duration of the web transaction is longer than 10 seconds during 5 minutes",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "High error rate",
-        "details": "This alert is triggered when the error percentage of web transactions is higher than 5% during 5 minutes",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "Low throughput",
-        "details": "This alert is triggered when the throughput is 0 for 5 minutes",
-        "type": "STATIC",
-        "url": null
-      }
-    ],
-    "documentation": [
-      {
-        "name": "Guzzle installation docs",
-        "description": "PHP-based HTTP client built for ease of use and integration with popular\nweb services.\n",
-        "url": "https://docs.newrelic.com/docs/agents/php-agent/getting-started/php-agent-compatibility-requirements"
-      }
-    ],
-    "installPlans": [
-      {
-        "name": "PHP Agent",
-        "id": "php-agent"
-      }
-    ]
-  },
-  {
     "title": "Hibernate",
     "name": "hibernate",
     "description": "# What is Hibernate?\n\nObject-relational mapping tool with data query and retrieval functionality built in in Java.\n\n\n## Get started!\n\nLeverage community expertise and instantly get value out of your telemetry data. This quickstart automatically instruments Hibernate with the New Relic Java agent, and allows you to instantly monitor your Java application with out-of-the-box dashboards and alerts. \nFurther leverage New Relic's APM capabilities by setting up [errors inbox](https://docs.newrelic.com/docs/apm/apm-ui-pages/errors-inbox/errors-inbox/), [transaction tracing](https://docs.newrelic.com/docs/apm/transactions/transaction-traces/introduction-transaction-traces/), and [service maps](https://docs.newrelic.com/docs/understand-dependencies/understand-system-dependencies/service-maps/introduction-service-maps/).\n\n## More info\n\nCheck out the [documentation](https://docs.newrelic.com/docs/agents/java-agent/getting-started/introduction-new-relic-java/) to learn more about New Relic monitoring for Hibernate.",
@@ -19138,69 +19259,6 @@
       {
         "name": "Go Agent",
         "id": "setup-go-agent"
-      }
-    ]
-  },
-  {
-    "title": "Predis",
-    "name": "predis",
-    "description": "## What is Predis?\n\nPredis is a flexible and feature-complete Redis client for PHP.\n\n## Get started!\n\nLeverage community expertise and instantly get value out of your telemetry data. This quickstart automatically instruments Predis with the New Relic PHP agent, and allows you to further leverage New Relic's APM capabilities by setting up [custom dashboards](https://docs.newrelic.com/docs/query-your-data/explore-query-data/dashboards/introduction-dashboards/), [errors inbox](https://docs.newrelic.com/docs/apm/apm-ui-pages/errors-inbox/errors-inbox/), [transaction tracing](https://docs.newrelic.com/docs/apm/transactions/transaction-traces/introduction-transaction-traces/), and [service maps](https://docs.newrelic.com/docs/understand-dependencies/understand-system-dependencies/service-maps/introduction-service-maps/).\n\n## More info\n\nCheck out the [documentation](https://docs.newrelic.com/docs/agents/php-agent/) to learn more about New Relic monitoring for Predis.",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/php/predis",
-    "id": "e77de8fd-ae73-4853-b00a-2e42b0841464",
-    "level": "NEW_RELIC",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/php/predis/logo.svg",
-    "summary": "Monitor Predis with New Relic's PHP agent",
-    "websiteUrl": null,
-    "keywords": [
-      "apm",
-      "php"
-    ],
-    "authors": [
-      "New Relic"
-    ],
-    "dashboards": [
-      {
-        "name": "PHP",
-        "description": "PHP",
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/php/php01.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/php/php02.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/php/php.png"
-        ]
-      }
-    ],
-    "alerts": [
-      {
-        "name": "High duration",
-        "details": "This alert is triggered when the total duration of the web transaction is longer than 10 seconds during 5 minutes",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "High error rate",
-        "details": "This alert is triggered when the error percentage of web transactions is higher than 5% during 5 minutes",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "Low throughput",
-        "details": "This alert is triggered when the throughput is 0 for 5 minutes",
-        "type": "STATIC",
-        "url": null
-      }
-    ],
-    "documentation": [
-      {
-        "name": "Predis installation docs",
-        "description": "Predis is a flexible and feature-complete Redis client for PHP.",
-        "url": "https://docs.newrelic.com/docs/agents/php-agent/frameworks-libraries/predis-library-php"
-      }
-    ],
-    "installPlans": [
-      {
-        "name": "PHP Agent",
-        "id": "php-agent"
       }
     ]
   },
@@ -20177,6 +20235,134 @@
     ]
   },
   {
+    "title": "MediaWiki",
+    "name": "mediawiki",
+    "description": "## What is MediaWiki?\n\nMediaWiki is a free and open-source wiki engine developed for use on\nWikipedia.\n\n\n## Get started!\n\nLeverage community expertise and instantly get value out of your telemetry data. This quickstart automatically instruments MediaWiki with the New Relic PHP agent, and allows you to further leverage New Relic's APM capabilities by setting up [custom dashboards](https://docs.newrelic.com/docs/query-your-data/explore-query-data/dashboards/introduction-dashboards/), [errors inbox](https://docs.newrelic.com/docs/apm/apm-ui-pages/errors-inbox/errors-inbox/), [transaction tracing](https://docs.newrelic.com/docs/apm/transactions/transaction-traces/introduction-transaction-traces/), and [service maps](https://docs.newrelic.com/docs/understand-dependencies/understand-system-dependencies/service-maps/introduction-service-maps/).\n\n## More info\n\nCheck out the [documentation](https://docs.newrelic.com/docs/agents/php-agent/) to learn more about New Relic monitoring for MediaWiki.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/php/mediawiki",
+    "id": "f3dcd610-a35c-4464-b141-f1440508b23b",
+    "level": "NEW_RELIC",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/php/mediawiki/logo.svg",
+    "summary": "Monitor MediaWiki with New Relic's PHP agent",
+    "websiteUrl": null,
+    "keywords": [
+      "apm",
+      "php",
+      "cms",
+      "content management system"
+    ],
+    "authors": [
+      "New Relic"
+    ],
+    "dashboards": [
+      {
+        "name": "PHP",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/php/php01.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/php/php02.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/php/php03.png"
+        ]
+      }
+    ],
+    "alerts": [
+      {
+        "name": "High duration",
+        "details": "This alert is triggered when the total duration of the web transaction is longer than 10 seconds during 5 minutes",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "High error rate",
+        "details": "This alert is triggered when the error percentage of web transactions is higher than 5% during 5 minutes",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "Low throughput",
+        "details": "This alert is triggered when the throughput is 0 for 5 minutes",
+        "type": "STATIC",
+        "url": null
+      }
+    ],
+    "documentation": [
+      {
+        "name": "MediaWiki installation docs",
+        "description": "MediaWiki is a free and open-source wiki engine developed for use on\nWikipedia.\n",
+        "url": "https://docs.newrelic.com/docs/agents/php-agent/getting-started/php-agent-compatibility-requirements"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "PHP Agent",
+        "id": "php-agent"
+      }
+    ]
+  },
+  {
+    "title": "Yii",
+    "name": "yii",
+    "description": "## What is Yii?\n\nOpen source, object-oriented web framework for PHP.\n\n## Get started!\n\nLeverage community expertise and instantly get value out of your telemetry data. This quickstart automatically instruments Yii with the New Relic PHP agent, and allows you to further leverage New Relic's APM capabilities by setting up [custom dashboards](https://docs.newrelic.com/docs/query-your-data/explore-query-data/dashboards/introduction-dashboards/), [errors inbox](https://docs.newrelic.com/docs/apm/apm-ui-pages/errors-inbox/errors-inbox/), [transaction tracing](https://docs.newrelic.com/docs/apm/transactions/transaction-traces/introduction-transaction-traces/), and [service maps](https://docs.newrelic.com/docs/understand-dependencies/understand-system-dependencies/service-maps/introduction-service-maps/).\n\n## More info\n\nCheck out the [documentation](https://docs.newrelic.com/docs/agents/php-agent/) to learn more about New Relic monitoring for Yii.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/php/yii",
+    "id": "5d2be045-5f50-4b0e-a3c4-c61446c05152",
+    "level": "NEW_RELIC",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/php/yii/logo.svg",
+    "summary": "Monitor Yii with New Relic's PHP agent",
+    "websiteUrl": null,
+    "keywords": [
+      "apm",
+      "php"
+    ],
+    "authors": [
+      "New Relic"
+    ],
+    "dashboards": [
+      {
+        "name": "PHP",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/php/php01.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/php/php02.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/php/php03.png"
+        ]
+      }
+    ],
+    "alerts": [
+      {
+        "name": "High duration",
+        "details": "This alert is triggered when the total duration of the web transaction is longer than 10 seconds during 5 minutes",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "High error rate",
+        "details": "This alert is triggered when the error percentage of web transactions is higher than 5% during 5 minutes",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "Low throughput",
+        "details": "This alert is triggered when the throughput is 0 for 5 minutes",
+        "type": "STATIC",
+        "url": null
+      }
+    ],
+    "documentation": [
+      {
+        "name": "Yii installation docs",
+        "description": "Open source, object-oriented web framework for PHP.",
+        "url": "https://docs.newrelic.com/docs/agents/php-agent/getting-started/php-agent-compatibility-requirements"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "PHP Agent",
+        "id": "php-agent"
+      }
+    ]
+  },
+  {
     "title": "Cordova",
     "name": "cordova",
     "description": "## New Relic Mobile monitoring\n\nNew Relic's mobile monitoring for Cordova gives you a comprehensive view of your app's performance.  The official New Relic Cordova plugin for iOS and Android allows developers to easily embed the mobile agents into Cordova applications.\n\n## Get started!\n\nFollow [the documentation](https://docs.newrelic.com/docs/mobile-monitoring/new-relic-mobile-cordova-phonegap/get-started/introduction-new-relic-cordova) to get started!",
@@ -20906,71 +21092,6 @@
     ]
   },
   {
-    "title": "MediaWiki",
-    "name": "mediawiki",
-    "description": "## What is MediaWiki?\n\nMediaWiki is a free and open-source wiki engine developed for use on\nWikipedia.\n\n\n## Get started!\n\nLeverage community expertise and instantly get value out of your telemetry data. This quickstart automatically instruments MediaWiki with the New Relic PHP agent, and allows you to further leverage New Relic's APM capabilities by setting up [custom dashboards](https://docs.newrelic.com/docs/query-your-data/explore-query-data/dashboards/introduction-dashboards/), [errors inbox](https://docs.newrelic.com/docs/apm/apm-ui-pages/errors-inbox/errors-inbox/), [transaction tracing](https://docs.newrelic.com/docs/apm/transactions/transaction-traces/introduction-transaction-traces/), and [service maps](https://docs.newrelic.com/docs/understand-dependencies/understand-system-dependencies/service-maps/introduction-service-maps/).\n\n## More info\n\nCheck out the [documentation](https://docs.newrelic.com/docs/agents/php-agent/) to learn more about New Relic monitoring for MediaWiki.",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/php/mediawiki",
-    "id": "f3dcd610-a35c-4464-b141-f1440508b23b",
-    "level": "NEW_RELIC",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/php/mediawiki/logo.svg",
-    "summary": "Monitor MediaWiki with New Relic's PHP agent",
-    "websiteUrl": null,
-    "keywords": [
-      "apm",
-      "php",
-      "cms",
-      "content management system"
-    ],
-    "authors": [
-      "New Relic"
-    ],
-    "dashboards": [
-      {
-        "name": "PHP",
-        "description": "PHP",
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/php/php01.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/php/php02.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/php/php.png"
-        ]
-      }
-    ],
-    "alerts": [
-      {
-        "name": "High duration",
-        "details": "This alert is triggered when the total duration of the web transaction is longer than 10 seconds during 5 minutes",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "High error rate",
-        "details": "This alert is triggered when the error percentage of web transactions is higher than 5% during 5 minutes",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "Low throughput",
-        "details": "This alert is triggered when the throughput is 0 for 5 minutes",
-        "type": "STATIC",
-        "url": null
-      }
-    ],
-    "documentation": [
-      {
-        "name": "MediaWiki installation docs",
-        "description": "MediaWiki is a free and open-source wiki engine developed for use on\nWikipedia.\n",
-        "url": "https://docs.newrelic.com/docs/agents/php-agent/getting-started/php-agent-compatibility-requirements"
-      }
-    ],
-    "installPlans": [
-      {
-        "name": "PHP Agent",
-        "id": "php-agent"
-      }
-    ]
-  },
-  {
     "title": "Logxi",
     "name": "logxi",
     "description": "## What is Logxi?\n\nlog XI is a structured 12-factor app logger built for speed and happy\ndevelopment.\n\n\n## Get started!\n\nLeverage community expertise and instantly get value out of your telemetry data. This quickstart automatically instruments Logxi with the New Relic Go agent, and allows you to further leverage New Relic's APM capabilities by setting up [custom dashboards](https://docs.newrelic.com/docs/query-your-data/explore-query-data/dashboards/introduction-dashboards/), [errors inbox](https://docs.newrelic.com/docs/apm/apm-ui-pages/errors-inbox/errors-inbox/), [transaction tracing](https://docs.newrelic.com/docs/apm/transactions/transaction-traces/introduction-transaction-traces/), and [service maps](https://docs.newrelic.com/docs/understand-dependencies/understand-system-dependencies/service-maps/introduction-service-maps/).\n\n## More info\n\nCheck out the [documentation](https://docs.newrelic.com/docs/agents/go-agent/) to learn more about New Relic monitoring for Logxi.",
@@ -21177,69 +21298,6 @@
       {
         "name": "Ruby Agent",
         "id": "setup-ruby-agent"
-      }
-    ]
-  },
-  {
-    "title": "Yii",
-    "name": "yii",
-    "description": "## What is Yii?\n\nOpen source, object-oriented web framework for PHP.\n\n## Get started!\n\nLeverage community expertise and instantly get value out of your telemetry data. This quickstart automatically instruments Yii with the New Relic PHP agent, and allows you to further leverage New Relic's APM capabilities by setting up [custom dashboards](https://docs.newrelic.com/docs/query-your-data/explore-query-data/dashboards/introduction-dashboards/), [errors inbox](https://docs.newrelic.com/docs/apm/apm-ui-pages/errors-inbox/errors-inbox/), [transaction tracing](https://docs.newrelic.com/docs/apm/transactions/transaction-traces/introduction-transaction-traces/), and [service maps](https://docs.newrelic.com/docs/understand-dependencies/understand-system-dependencies/service-maps/introduction-service-maps/).\n\n## More info\n\nCheck out the [documentation](https://docs.newrelic.com/docs/agents/php-agent/) to learn more about New Relic monitoring for Yii.",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/php/yii",
-    "id": "5d2be045-5f50-4b0e-a3c4-c61446c05152",
-    "level": "NEW_RELIC",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/php/yii/logo.svg",
-    "summary": "Monitor Yii with New Relic's PHP agent",
-    "websiteUrl": null,
-    "keywords": [
-      "apm",
-      "php"
-    ],
-    "authors": [
-      "New Relic"
-    ],
-    "dashboards": [
-      {
-        "name": "PHP",
-        "description": "PHP",
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/php/php01.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/php/php02.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/php/php.png"
-        ]
-      }
-    ],
-    "alerts": [
-      {
-        "name": "High duration",
-        "details": "This alert is triggered when the total duration of the web transaction is longer than 10 seconds during 5 minutes",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "High error rate",
-        "details": "This alert is triggered when the error percentage of web transactions is higher than 5% during 5 minutes",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "Low throughput",
-        "details": "This alert is triggered when the throughput is 0 for 5 minutes",
-        "type": "STATIC",
-        "url": null
-      }
-    ],
-    "documentation": [
-      {
-        "name": "Yii installation docs",
-        "description": "Open source, object-oriented web framework for PHP.",
-        "url": "https://docs.newrelic.com/docs/agents/php-agent/getting-started/php-agent-compatibility-requirements"
-      }
-    ],
-    "installPlans": [
-      {
-        "name": "PHP Agent",
-        "id": "php-agent"
       }
     ]
   },
@@ -22376,11 +22434,11 @@
     ],
     "dashboards": [
       {
-        "name": "AWS Integrations Data Ingest Analysis",
+        "name": "Kubernetes Data Ingest Analysis",
         "description": null,
         "url": null,
         "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/aws-integrations-data-ingest-analysis/aws-integrations-data-ingest-analysis.png"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/kubernetes-data-ingest-analysis/kubernetes-data-ingest-analysis.png"
         ]
       },
       {
@@ -22400,19 +22458,19 @@
         ]
       },
       {
-        "name": "Kubernetes Data Ingest Analysis",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/kubernetes-data-ingest-analysis/kubernetes-data-ingest-analysis.png"
-        ]
-      },
-      {
         "name": "On-Host Integrations Data Analysis",
         "description": null,
         "url": null,
         "screenshots": [
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/on-host-integrations-data-analysis/on-host-integrations-data-analysis.png"
+        ]
+      },
+      {
+        "name": "AWS Integrations Data Ingest Analysis",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/aws-integrations-data-ingest-analysis/aws-integrations-data-ingest-analysis.png"
         ]
       }
     ],
@@ -23246,14 +23304,6 @@
     ],
     "dashboards": [
       {
-        "name": "Browser Traffic Analysis",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/traffic-analysis/traffic_analysis.png"
-        ]
-      },
-      {
         "name": "JavaScript Errors",
         "description": null,
         "url": null,
@@ -23275,6 +23325,14 @@
         "url": null,
         "screenshots": [
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/browser-overview/browser_overview.png"
+        ]
+      },
+      {
+        "name": "Browser Traffic Analysis",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/traffic-analysis/traffic_analysis.png"
         ]
       }
     ],
