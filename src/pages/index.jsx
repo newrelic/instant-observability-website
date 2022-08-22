@@ -30,7 +30,6 @@ import CategoryDropdown from '@components/indexComponents/CategoryDropdown';
 import QuickstartGrid from '@components/QuickstartGrid';
 import GoToTopButton from '@components/GoToTopButton';
 import SliderWrapper from '@components/SliderWrapper';
-
 const COLUMN_BREAKPOINT = '1131px';
 // used to set the height of the Spinner to reduce layout shift on page load
 const TILE_HEIGHT = '362px';
@@ -177,10 +176,11 @@ const QuickstartsPage = ({ data, location }) => {
                   >
                     {!loadComplete && <Spinner />}
                     {loadComplete && (
-                      <SliderWrapper 
+                      <SliderWrapper
                         indexSettings={indexSettings}
                         quickstarts={mostPopularQuickstarts}
                         category='MostPopularQuickstartClick'
+                        showSuperTiles={true}
                       />
                     )}
                   </div>
