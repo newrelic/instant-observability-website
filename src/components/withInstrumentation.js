@@ -12,7 +12,7 @@ const withFeaturedInstrumentation = (QuickstartTile) => {
         eventName: 'instantObservability',
         category,
         quickstartName: name,
-        index: index,
+        index,
       });
     };
 
@@ -24,6 +24,7 @@ const withFeaturedInstrumentation = (QuickstartTile) => {
   InstrumentedComponent.propTypes = {
     name: PropTypes.string.isRequired,
     index: PropTypes.number.isRequired,
+    category: PropTypes.string.isRequired,
   };
 
   return InstrumentedComponent;

@@ -13,22 +13,22 @@ import { quickstart } from '../types';
 
 const SliderWrapper = ({ indexSettings, quickstarts, category }) => {
   const shuffledQuickstarts = useMemo(() => shuffleArray(quickstarts), []);
-  
+
   return (
-    <Slider
-      {...indexSettings}
-    >
+    <Slider {...indexSettings}>
       {category === 'MostPopularQuickstartClick' && <SuperTiles />}
       {shuffledQuickstarts.map((pack, i) => {
         const InstrumentedTile = withInstrumentation(QuickstartTile);
-        
-        return <InstrumentedTile
-          category={category}
-          index={i}
-          key={pack.id}
-          featured={false}
-          {...pack}
-        />
+
+        return (
+          <InstrumentedTile
+            category={category}
+            index={i}
+            key={pack.id}
+            featured={false}
+            {...pack}
+          />
+        );
       })}
     </Slider>
   );
