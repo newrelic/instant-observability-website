@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useMemo } from 'react';
+import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import { graphql } from 'gatsby';
 
@@ -20,20 +20,16 @@ import useSearchAndCategory from '@hooks/useSearchAndCategory';
 // Utils
 import allFilteredQuickstarts from '@utils/allFilteredQuickstarts';
 import getDisplayName from '@utils/getDisplayName';
-import shuffleArray from '../utils/shuffleArray';
 // Components
-import Slider from 'react-slick';
 import Spinner from '@newrelic/gatsby-theme-newrelic/src/components/Spinner';
 import IOBanner from '@components/IOBanner';
 import IOSeo from '@components/IOSeo';
-import QuickstartTile from '@components/QuickstartTile';
 import SuperTiles from '@components/SuperTiles';
 import CategoryList from '@components/indexComponents/CategoryList';
 import CategoryDropdown from '@components/indexComponents/CategoryDropdown';
 import QuickstartGrid from '@components/QuickstartGrid';
 import GoToTopButton from '@components/GoToTopButton';
-import withFeaturedInstrumentation from '@components/withFeaturedInstrumentation';
-import withMostPopularInstrumentation from '@components/withMostPopularInstrumentation';
+import SliderWrapper from '@components/SliderWrapper';
 
 const COLUMN_BREAKPOINT = '1131px';
 // used to set the height of the Spinner to reduce layout shift on page load
@@ -60,9 +56,6 @@ const QuickstartsPage = ({ data, location }) => {
   } = allFilteredQuickstarts(data.allQuickstarts.nodes, search, category);
 
   const [loadComplete, setLoadComplete] = useState(false);
-
-  const shuffledFeaturedQuickstarts = useMemo(() => shuffleArray(featuredQuickstarts), []);
-  const shuffledMostPopularQuickstarts = useMemo(() => shuffleArray(mostPopularQuickstarts), []);
 
   useEffect(() => {
     setLoadComplete(true);
@@ -184,24 +177,11 @@ const QuickstartsPage = ({ data, location }) => {
                   >
                     {!loadComplete && <Spinner />}
                     {loadComplete && (
-                      <Slider
-                        {...indexSettings}
-                        css={css`
-                          display: flex;
-                        `}
-                      >
-                        <SuperTiles />
-                        {shuffledMostPopularQuickstarts.map((pack, i) => {
-                          const MostPopularTile = withMostPopularInstrumentation(QuickstartTile);
-                          
-                          return <MostPopularTile
-                            index={i}
-                            key={pack.id}
-                            featured={false}
-                            {...pack}
-                          />
-                        })}
-                      </Slider>
+                      <SliderWrapper 
+                        indexSettings={indexSettings}
+                        quickstarts={mostPopularQuickstarts}
+                        category='MostPopularQuickstartClick'
+                      />
                     )}
                   </div>
                 </>
@@ -237,18 +217,11 @@ const QuickstartsPage = ({ data, location }) => {
               >
                 {!loadComplete && <Spinner />}
                 {loadComplete && (
-                  <Slider {...indexSettings}>
-                    {shuffledFeaturedQuickstarts.map((pack, i) => {
-                      const FeaturedTile = withFeaturedInstrumentation(QuickstartTile);
-                     
-                      return <FeaturedTile
-                        index={i}
-                        key={pack.id}
-                        featured={false}
-                        {...pack}
-                      />
-                      })}
-                  </Slider>
+                  <SliderWrapper 
+                    indexSettings={indexSettings}
+                    quickstarts={featuredQuickstarts}
+                    category='FeaturedQuickstartClick'
+                  />
                 )}
               </div>
             </>

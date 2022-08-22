@@ -5,12 +5,12 @@ import useTessen from '@newrelic/gatsby-theme-newrelic/src/hooks/useTessen';
 const withFeaturedInstrumentation = (QuickstartTile) => {
   const WrappedComponent = (props) => {
     const tessen = useTessen();
-    const { name, index } = props;
+    const { name, index, category } = props;
 
     const customClickHandler = () => {
       tessen.track({
         eventName: 'instantObservability',
-        category: 'FeaturedQuickstartClick',
+        category,
         quickstartName: name,
         index: index,
       });
