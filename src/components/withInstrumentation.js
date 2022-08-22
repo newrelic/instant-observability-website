@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import useTessen from '@newrelic/gatsby-theme-newrelic/src/hooks/useTessen';
 
 const withFeaturedInstrumentation = (QuickstartTile) => {
-  const WrappedComponent = (props) => {
+  const InstrumentedComponent = (props) => {
     const tessen = useTessen();
     const { name, index, category } = props;
 
@@ -21,12 +21,12 @@ const withFeaturedInstrumentation = (QuickstartTile) => {
     );
   };
 
-  WrappedComponent.propTypes = {
+  InstrumentedComponent.propTypes = {
     name: PropTypes.string.isRequired,
     index: PropTypes.number.isRequired,
   };
 
-  return WrappedComponent;
+  return InstrumentedComponent;
 };
 
 export default withFeaturedInstrumentation;

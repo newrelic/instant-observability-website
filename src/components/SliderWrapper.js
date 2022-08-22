@@ -8,10 +8,12 @@ import withInstrumentation from '@components/withInstrumentation';
 import QuickstartTile from '@components/QuickstartTile';
 // Utils
 import shuffleArray from '@utils/shuffleArray';
+// Types
+import { quickstart } from '../types';
 
 const SliderWrapper = ({ indexSettings, quickstarts, category }) => {
   const shuffledQuickstarts = useMemo(() => shuffleArray(quickstarts), []);
-  console.log(shuffledQuickstarts)
+  
   return (
     <Slider
       {...indexSettings}
@@ -33,7 +35,7 @@ const SliderWrapper = ({ indexSettings, quickstarts, category }) => {
 };
 
 SliderWrapper.propTypes = {
-  quickstarts: PropTypes.object,
+  quickstarts: PropTypes.arrayOf(quickstart),
   indexSettings: PropTypes.object,
   category: PropTypes.string,
 };
