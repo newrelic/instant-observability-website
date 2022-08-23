@@ -21,17 +21,15 @@ import useSearchAndCategory from '@hooks/useSearchAndCategory';
 import allFilteredQuickstarts from '@utils/allFilteredQuickstarts';
 import getDisplayName from '@utils/getDisplayName';
 // Components
-import Slider from 'react-slick';
 import Spinner from '@newrelic/gatsby-theme-newrelic/src/components/Spinner';
 import IOBanner from '@components/IOBanner';
 import IOSeo from '@components/IOSeo';
-import QuickstartTile from '@components/QuickstartTile';
 import SuperTiles from '@components/SuperTiles';
 import CategoryList from '@components/indexComponents/CategoryList';
 import CategoryDropdown from '@components/indexComponents/CategoryDropdown';
 import QuickstartGrid from '@components/QuickstartGrid';
-import GoToTopButton from '../components/GoToTopButton';
-
+import GoToTopButton from '@components/GoToTopButton';
+import SliderWrapper from '@components/SliderWrapper';
 const COLUMN_BREAKPOINT = '1131px';
 // used to set the height of the Spinner to reduce layout shift on page load
 const TILE_HEIGHT = '362px';
@@ -178,21 +176,12 @@ const QuickstartsPage = ({ data, location }) => {
                   >
                     {!loadComplete && <Spinner />}
                     {loadComplete && (
-                      <Slider
-                        {...indexSettings}
-                        css={css`
-                          display: flex;
-                        `}
-                      >
-                        <SuperTiles />
-                        {mostPopularQuickstarts.map((pack) => (
-                          <QuickstartTile
-                            key={pack.id}
-                            featured={false}
-                            {...pack}
-                          />
-                        ))}
-                      </Slider>
+                      <SliderWrapper
+                        indexSettings={indexSettings}
+                        quickstarts={mostPopularQuickstarts}
+                        category='MostPopularQuickstartClick'
+                        showSuperTiles={true}
+                      />
                     )}
                   </div>
                 </>
@@ -228,15 +217,11 @@ const QuickstartsPage = ({ data, location }) => {
               >
                 {!loadComplete && <Spinner />}
                 {loadComplete && (
-                  <Slider {...indexSettings}>
-                    {featuredQuickstarts.map((pack) => (
-                      <QuickstartTile
-                        key={pack.id}
-                        featured={false}
-                        {...pack}
-                      />
-                    ))}
-                  </Slider>
+                  <SliderWrapper 
+                    indexSettings={indexSettings}
+                    quickstarts={featuredQuickstarts}
+                    category='FeaturedQuickstartClick'
+                  />
                 )}
               </div>
             </>

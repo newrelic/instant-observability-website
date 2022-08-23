@@ -78,6 +78,7 @@ function IOSeo({ meta, name, title, tags, location, type, summary }) {
       '/instant-observability/dotnet/2dff13b6-0fac-43a6-abc6-57f0a3299639/',
       '/instant-observability/codestream/29bd9a4a-1c19-4219-9694-0942f6411ce7/',
     ];
+
     if (crazyEggPathnames.includes(location.pathname))
       return (
         <script
