@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import useTessen from '@newrelic/gatsby-theme-newrelic/src/hooks/useTessen';
 
-const withFeaturedInstrumentation = (QuickstartTile) => {
+const withInstrumentation = (QuickstartTile) => {
   const InstrumentedComponent = (props) => {
     const tessen = useTessen();
     const { name, index, category } = props;
@@ -30,4 +30,4 @@ const withFeaturedInstrumentation = (QuickstartTile) => {
   return InstrumentedComponent;
 };
 
-export default withFeaturedInstrumentation;
+export default withInstrumentation;
