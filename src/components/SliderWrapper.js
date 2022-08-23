@@ -34,7 +34,7 @@ const SliderWrapper = ({
         return (
           <InstrumentedTile
             category={category}
-            index={i}
+            index={showSuperTiles ? i + 1 : i}
             key={pack.id}
             featured={false}
             {...pack}
