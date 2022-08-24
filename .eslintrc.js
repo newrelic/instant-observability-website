@@ -53,6 +53,7 @@ module.exports = {
     '**/node_modules/**/*',
     '**/public/**/*',
     '**/static/*',
+    'src/gatsby-types.d.ts',
   ],
   rules: {
     'jsx-a11y/no-onchange': 0,

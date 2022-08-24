@@ -1,4 +1,5 @@
 import CATEGORIES from '@data/instant-observability-categories';
+import { rank } from '@utils/searchRanking';
 
 /**
  * Callback function for alphabetical sort.
@@ -85,14 +86,16 @@ const filterByCategory = (category) => {
  * @param {Array} array of quickstarts
  */
 const allFilteredQuickstarts = (quickstarts, search, category) => {
+  const trimmedSearch = search.trim();
   const filterQuickstartsByKeyword = filterQuickstarts(quickstarts);
   const featuredQuickstarts = filterQuickstartsByKeyword('featured');
   const mostPopularQuickstarts = filterQuickstartsByKeyword('most popular');
   const sortedQuickstarts = quickstarts.sort(alphaSort).sort(shiftCodestream);
 
   const filteredQuickstarts = sortedQuickstarts
-    .filter(filterBySearch(search))
-    .filter(filterByCategory(category));
+    .filter(filterBySearch(trimmedSearch))
+    .filter(filterByCategory(category))
+    .sort((a, b) => rank(b, trimmedSearch) - rank(a, trimmedSearch));
 
   const categoriesWithCount = CATEGORIES.map((cat) => ({
     ...cat,
