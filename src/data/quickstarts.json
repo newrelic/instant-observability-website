@@ -2437,6 +2437,58 @@
     ]
   },
   {
+    "title": "Arista Switches",
+    "name": "arista-switches",
+    "description": "The Arista Switches quickstart provides a dashboard that gives you a holistic view of the Arista switches in your environment, including metrics collecting from Arista's eAPI endpoints for BGP and MLAG.\nUse this quickstart together with New Relic's Network Monitoring feature to visualize anomalies and/or bottlenecks in your network.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/network-monitoring/arista-switches",
+    "id": "c47ccf6c-a2a3-49ce-a675-c23ea1d588f5",
+    "level": "VERIFIED",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/network-monitoring/arista-switches/logo.svg",
+    "summary": "Easily install a curated dashboard to monitor the health of your Arista switches with New Relic's Network Monitoring.",
+    "websiteUrl": null,
+    "keywords": [
+      "npm",
+      "network",
+      "networking",
+      "ktranslate",
+      "kentik",
+      "infrastructure",
+      "arista",
+      "eapi",
+      "mlag"
+    ],
+    "authors": [
+      "New Relic",
+      "Zack Mutchler"
+    ],
+    "dashboards": [
+      {
+        "name": "Arista Switch Overview",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/arista-switches/arista-switches1.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/arista-switches/arista-switches2.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/arista-switches/arista-switches3.png"
+        ]
+      }
+    ],
+    "alerts": [],
+    "documentation": [
+      {
+        "name": "Network SNMP collection installation docs",
+        "description": "Install Network Monitoring for SNMP data collection using a simple Docker container.\n",
+        "url": "https://docs.newrelic.com/docs/network-performance-monitoring/setup-performance-monitoring/snmp-performance-monitoring/"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "SNMP",
+        "id": "network-snmp"
+      }
+    ]
+  },
+  {
     "title": "MariaDB",
     "name": "mariadb",
     "description": "MariaDB is a community-developed, commercially supported fork of the MySQL\nrelational database management system.",
@@ -4468,11 +4520,11 @@
     ],
     "dashboards": [
       {
-        "name": "Redis Enterprise Cluster Metrics",
+        "name": "Redis Enterprise Database Metrics",
         "description": null,
         "url": null,
         "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/cluster/cluster01.png"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/database/database01.png"
         ]
       },
       {
@@ -4484,11 +4536,11 @@
         ]
       },
       {
-        "name": "Redis Enterprise Database Metrics",
+        "name": "Redis Enterprise Cluster Metrics",
         "description": null,
         "url": null,
         "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/database/database01.png"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/cluster/cluster01.png"
         ]
       }
     ],
@@ -7203,70 +7255,6 @@
     ]
   },
   {
-    "title": "Kubernetes",
-    "name": "kubernetes",
-    "description": "## Why monitor Kubernetes?\n\nKubernetes is an open-source system for automating deployment, scaling, and, management of containerized applications. The New Relic Kubernetes monitoring quickstart gives you visibility into your Kubernetes clusters and workloads in minutes, whether your clusters are hosted on-premises or in the cloud.\n\n### Kubernetes quickstart highlights\n\nThe New Relic Kubernetes quickstart uses dashboards to proactively monitor your metrics, like:\n\n- resources used\n- number of K8s objects\n- namespaces per cluster\n- pods by namespace\n- container cpu usage\n- container restarts\n- missing pods by deployment\n- node resource consumption, and more.\n\nThis quickstart is also compatible with on-host integrations like:\n\n- Cassandra\n- MySQL\n- Apache, and more.\n\n### New Relic + Kubernetes = Optimum performance monitoring\n\nThe [New Relic Kubernetes](https://docs.newrelic.com/docs/integrations/kubernetes-integration/installation/kubernetes-integration-install-configure/) quickstart has multiple components that work together to give you end-to-end observability across your clusters. While you have the flexibility to deploy the components that you prefer, to achieve full observability, you need to install the complete package to monitor all metrics. Use our quickstart to generate a Kubernetes manifest and add Pixie for more fine-grained telemetry data. You can also do the installation with Pixie for fine-grained telemetry data.\nOur quickstart monitors the aggregated core and memory usage across all nodes in your cluster. This allows you to meet resource requirements for optimal application performance. It also empowers you to track resource consumption, find pods that aren't running, monitor disk usage, and troubleshoot container restarts. The New Relic Kubernetes integration has dashboards and a cluster explorer that provide a multi-dimensional representation of a Kubernetes cluster from which you can explore your namespaces, deployments, nodes, pods, containers, and applications. Download the New Relic Kubernetes quickstart today to gain instant visibility into your Kubernetes services, clusters and workloads in minutes.",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/kubernetes/kubernetes",
-    "id": "88a79f52-81c1-4fa2-99f8-3cb5b012f160",
-    "level": "NEW_RELIC",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/kubernetes/kubernetes/logo.svg",
-    "summary": "Monitoring Kubernetes is crucial to gain instant visibility into Kubernetes clusters and workloads. Download New Relic Kubernetes quickstart to proactively monitor Kubernetes cluster health and capacity.",
-    "websiteUrl": null,
-    "keywords": [
-      "kubernetes",
-      "containers",
-      "pixie",
-      "k8s"
-    ],
-    "authors": [
-      "New Relic",
-      "Emil Hammarstrand"
-    ],
-    "dashboards": [
-      {
-        "name": "Kubernetes Dashboard",
-        "description": "Get a high level overview of your Kubernetes instances",
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/kubernetes/kubernetes.png"
-        ]
-      }
-    ],
-    "alerts": [
-      {
-        "name": "High CPU Utilization",
-        "details": "This alert is triggered when the CPU utilization is above 90% for at least 10 minutes.",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "High Disk Utlilzation",
-        "details": "This alert is triggered when the Disk Utilization is above 95% for at least 15 minutes.",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "High Memory Usage",
-        "details": "This alert is triggered when the Memory Usage is above 85%.",
-        "type": "STATIC",
-        "url": null
-      }
-    ],
-    "documentation": [
-      {
-        "name": "Kubernetes installation docs",
-        "description": "Kubernetes is an open-source container-orchestration system for automating\ncomputer application deployment, scaling, and management.\n",
-        "url": "https://docs.newrelic.com/docs/integrations/host-integrations/host-integrations-list/kubernetes-monitoring-integration"
-      }
-    ],
-    "installPlans": [
-      {
-        "name": "Kubernetes integration",
-        "id": "kubernetes-install"
-      }
-    ]
-  },
-  {
     "title": "Laravel",
     "name": "laravel",
     "description": "## Laravel PHP Monitoring \n\nLaravel is a free, open-source PHP model-view-controller web framework that empowers developers to carry out common tasks in web and app development projects with ease.\n\n### New Relic Laravel quickstart features\n\nThe New Relic Laravel monitoring quickstart has the following features:\n- Our standard dashboard provides a clear overview of transactions, errors and virtual machines. \n- The Laravel PHP dashboard also helps you track other key indicators like daily transaction errors, comparison between weekly transaction errors, most popular transactions, and more.\n- Pre-defined alert conditions notify you on performance metrics like duration, error rate and throughput.\n\n### Why monitor Laravel with New Relic?\n\nThe New Relic Laravel quickstart installs the [New Relic PHP agent](https://docs.newrelic.com/docs/apm/agents/php-agent/frameworks-libraries/php-frameworks-integrate-support-new-relic/) so that you can instrument and monitor your  Laravel application. It is your gateway to instant detection of changes in Laravel’s critical metrics.\nThe integration helps you to monitor Laravel through a standard dashboard and three instant alerts. It can trigger low-throughput, high-error rate, and high-duration alerts when specific pre-defined alert conditions are met.\nThe quickstart also supports Laravel to identify the appropriate place to insert JavaScript headers and footers for browser monitoring. Install the New Relic Laravel quickstart today to start monitoring your Laravel PHP framework’s key performance indicators.",
@@ -7392,6 +7380,70 @@
       {
         "name": "PHP Agent",
         "id": "php-agent"
+      }
+    ]
+  },
+  {
+    "title": "Kubernetes",
+    "name": "kubernetes",
+    "description": "## Why monitor Kubernetes?\n\nKubernetes is an open-source system for automating deployment, scaling, and, management of containerized applications. The New Relic Kubernetes monitoring quickstart gives you visibility into your Kubernetes clusters and workloads in minutes, whether your clusters are hosted on-premises or in the cloud.\n\n### Kubernetes quickstart highlights\n\nThe New Relic Kubernetes quickstart uses dashboards to proactively monitor your metrics, like:\n\n- resources used\n- number of K8s objects\n- namespaces per cluster\n- pods by namespace\n- container cpu usage\n- container restarts\n- missing pods by deployment\n- node resource consumption, and more.\n\nThis quickstart is also compatible with on-host integrations like:\n\n- Cassandra\n- MySQL\n- Apache, and more.\n\n### New Relic + Kubernetes = Optimum performance monitoring\n\nThe [New Relic Kubernetes](https://docs.newrelic.com/docs/integrations/kubernetes-integration/installation/kubernetes-integration-install-configure/) quickstart has multiple components that work together to give you end-to-end observability across your clusters. While you have the flexibility to deploy the components that you prefer, to achieve full observability, you need to install the complete package to monitor all metrics. Use our quickstart to generate a Kubernetes manifest and add Pixie for more fine-grained telemetry data. You can also do the installation with Pixie for fine-grained telemetry data.\nOur quickstart monitors the aggregated core and memory usage across all nodes in your cluster. This allows you to meet resource requirements for optimal application performance. It also empowers you to track resource consumption, find pods that aren't running, monitor disk usage, and troubleshoot container restarts. The New Relic Kubernetes integration has dashboards and a cluster explorer that provide a multi-dimensional representation of a Kubernetes cluster from which you can explore your namespaces, deployments, nodes, pods, containers, and applications. Download the New Relic Kubernetes quickstart today to gain instant visibility into your Kubernetes services, clusters and workloads in minutes.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/kubernetes/kubernetes",
+    "id": "88a79f52-81c1-4fa2-99f8-3cb5b012f160",
+    "level": "NEW_RELIC",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/kubernetes/kubernetes/logo.svg",
+    "summary": "Monitoring Kubernetes is crucial to gain instant visibility into Kubernetes clusters and workloads. Download New Relic Kubernetes quickstart to proactively monitor Kubernetes cluster health and capacity.",
+    "websiteUrl": null,
+    "keywords": [
+      "kubernetes",
+      "containers",
+      "pixie",
+      "k8s"
+    ],
+    "authors": [
+      "New Relic",
+      "Emil Hammarstrand"
+    ],
+    "dashboards": [
+      {
+        "name": "Kubernetes Dashboard",
+        "description": "Get a high level overview of your Kubernetes instances",
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/kubernetes/kubernetes.png"
+        ]
+      }
+    ],
+    "alerts": [
+      {
+        "name": "High CPU Utilization",
+        "details": "This alert is triggered when the CPU utilization is above 90% for at least 10 minutes.",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "High Disk Utlilzation",
+        "details": "This alert is triggered when the Disk Utilization is above 95% for at least 15 minutes.",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "High Memory Usage",
+        "details": "This alert is triggered when the Memory Usage is above 85%.",
+        "type": "STATIC",
+        "url": null
+      }
+    ],
+    "documentation": [
+      {
+        "name": "Kubernetes installation docs",
+        "description": "Kubernetes is an open-source container-orchestration system for automating\ncomputer application deployment, scaling, and management.\n",
+        "url": "https://docs.newrelic.com/docs/integrations/host-integrations/host-integrations-list/kubernetes-monitoring-integration"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "Kubernetes integration",
+        "id": "kubernetes-install"
       }
     ]
   },
@@ -11616,6 +11668,14 @@
     ],
     "dashboards": [
       {
+        "name": "Lacework Anomaly Detections",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/lacework-anomaly-detections/lacework-anomaly-detections.png"
+        ]
+      },
+      {
         "name": "Lacework Compliance Violations",
         "description": null,
         "url": null,
@@ -11629,14 +11689,6 @@
         "url": null,
         "screenshots": [
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/lacework-security-overview/lacework-security-overview.png"
-        ]
-      },
-      {
-        "name": "Lacework Anomaly Detections",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/lacework-anomaly-detections/lacework-anomaly-detections.png"
         ]
       }
     ],
@@ -16642,22 +16694,6 @@
     ],
     "dashboards": [
       {
-        "name": "Catchpoint-Overview",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/catchpoint-overview/Catchpoint-Overview.png"
-        ]
-      },
-      {
-        "name": "Catchpoint-Recent Errors",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/catchpoint-recent-errors/Catchpoint-Recent_Errors.png"
-        ]
-      },
-      {
         "name": "Catchpoint-Response Size",
         "description": null,
         "url": null,
@@ -16671,6 +16707,22 @@
         "url": null,
         "screenshots": [
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/catchpoint-test-times/Catchpoint-Test_Times.png"
+        ]
+      },
+      {
+        "name": "Catchpoint-Overview",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/catchpoint-overview/Catchpoint-Overview.png"
+        ]
+      },
+      {
+        "name": "Catchpoint-Recent Errors",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/catchpoint-recent-errors/Catchpoint-Recent_Errors.png"
         ]
       }
     ],
@@ -22434,11 +22486,11 @@
     ],
     "dashboards": [
       {
-        "name": "Kubernetes Data Ingest Analysis",
+        "name": "GCP Integrations Data Ingest Analysis",
         "description": null,
         "url": null,
         "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/kubernetes-data-ingest-analysis/kubernetes-data-ingest-analysis.png"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/gcp-integrations-data-ingest-analysis/gcp-integrations-data-ingest-analysis.png"
         ]
       },
       {
@@ -22450,11 +22502,11 @@
         ]
       },
       {
-        "name": "GCP Integrations Data Ingest Analysis",
+        "name": "AWS Integrations Data Ingest Analysis",
         "description": null,
         "url": null,
         "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/gcp-integrations-data-ingest-analysis/gcp-integrations-data-ingest-analysis.png"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/aws-integrations-data-ingest-analysis/aws-integrations-data-ingest-analysis.png"
         ]
       },
       {
@@ -22466,11 +22518,11 @@
         ]
       },
       {
-        "name": "AWS Integrations Data Ingest Analysis",
+        "name": "Kubernetes Data Ingest Analysis",
         "description": null,
         "url": null,
         "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/aws-integrations-data-ingest-analysis/aws-integrations-data-ingest-analysis.png"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/kubernetes-data-ingest-analysis/kubernetes-data-ingest-analysis.png"
         ]
       }
     ],
@@ -23304,11 +23356,11 @@
     ],
     "dashboards": [
       {
-        "name": "JavaScript Errors",
+        "name": "Browser Traffic Analysis",
         "description": null,
         "url": null,
         "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/javascript-errors/javascript_errors.png"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/traffic-analysis/traffic_analysis.png"
         ]
       },
       {
@@ -23320,19 +23372,19 @@
         ]
       },
       {
+        "name": "JavaScript Errors",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/javascript-errors/javascript_errors.png"
+        ]
+      },
+      {
         "name": "Browser Overview",
         "description": null,
         "url": null,
         "screenshots": [
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/browser-overview/browser_overview.png"
-        ]
-      },
-      {
-        "name": "Browser Traffic Analysis",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/traffic-analysis/traffic_analysis.png"
         ]
       }
     ],
