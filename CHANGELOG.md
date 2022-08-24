@@ -1,3 +1,10 @@
+# [1.12.0](https://github.com/newrelic/instant-observability-website/compare/v1.11.1...v1.12.0) (2022-08-24)
+
+
+### Features
+
+* add search ranking ([25101ee](https://github.com/newrelic/instant-observability-website/commit/25101ee9cd3684fc33906ae68118f48b90d3db97))
+
 ## [1.11.1](https://github.com/newrelic/instant-observability-website/compare/v1.11.0...v1.11.1) (2022-08-17)
 
 
