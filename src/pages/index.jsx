@@ -288,7 +288,7 @@ const QuickstartsPage = ({ data, location }) => {
               }
             `}
           >
-            {Boolean(search) && <SuperTiles />}
+          <SuperTiles />
 
             {/* Add pagination grid if no search term or category selected */}
             <QuickstartGrid
