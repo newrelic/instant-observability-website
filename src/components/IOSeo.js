@@ -77,6 +77,9 @@ function IOSeo({ meta, name, title, tags, location, type, summary }) {
       '/instant-observability/java/3ebfb315-d0a6-4b27-9f89-b16a9a1ada5f/',
       '/instant-observability/dotnet/2dff13b6-0fac-43a6-abc6-57f0a3299639/',
       '/instant-observability/codestream/29bd9a4a-1c19-4219-9694-0942f6411ce7/',
+      '/instant-observability/ibmmq/924fd4b3-a6d1-4a6e-9e2c-b598f197f713/',
+      '/instant-observability/symfony/ff0c7881-b5a5-4ccc-8596-b28a982b1586/',
+      '/instant-observability/grpc/3473982b-d42a-4505-82be-9f3cda13bb8e/',
     ];
 
     if (crazyEggPathnames.includes(location.pathname))
