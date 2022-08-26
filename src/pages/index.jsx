@@ -30,6 +30,7 @@ import CategoryDropdown from '@components/indexComponents/CategoryDropdown';
 import QuickstartGrid from '@components/QuickstartGrid';
 import GoToTopButton from '@components/GoToTopButton';
 import SliderWrapper from '@components/SliderWrapper';
+
 const COLUMN_BREAKPOINT = '1131px';
 // used to set the height of the Spinner to reduce layout shift on page load
 const TILE_HEIGHT = '362px';
@@ -59,6 +60,9 @@ const QuickstartsPage = ({ data, location }) => {
   useEffect(() => {
     setLoadComplete(true);
   }, []);
+
+  const showCarouselSection = !category && !search;
+  const showGuidedInstallInGrid = !showCarouselSection;
 
   return (
     <>
@@ -141,7 +145,7 @@ const QuickstartsPage = ({ data, location }) => {
             handleParam={handleParam}
             loadComplete={loadComplete}
           />
-          {!category && !search && (
+          {showCarouselSection && (
             <>
               {mostPopularQuickstarts.length > 0 && (
                 <>
@@ -179,8 +183,8 @@ const QuickstartsPage = ({ data, location }) => {
                       <SliderWrapper
                         indexSettings={indexSettings}
                         quickstarts={mostPopularQuickstarts}
-                        category='MostPopularQuickstartClick'
-                        showSuperTiles={true}
+                        category="MostPopularQuickstartClick"
+                        showSuperTiles
                       />
                     )}
                   </div>
@@ -217,10 +221,10 @@ const QuickstartsPage = ({ data, location }) => {
               >
                 {!loadComplete && <Spinner />}
                 {loadComplete && (
-                  <SliderWrapper 
+                  <SliderWrapper
                     indexSettings={indexSettings}
                     quickstarts={featuredQuickstarts}
-                    category='FeaturedQuickstartClick'
+                    category="FeaturedQuickstartClick"
                   />
                 )}
               </div>
@@ -288,7 +292,7 @@ const QuickstartsPage = ({ data, location }) => {
               }
             `}
           >
-          <SuperTiles />
+            {showGuidedInstallInGrid && <SuperTiles />}
 
             {/* Add pagination grid if no search term or category selected */}
             <QuickstartGrid
