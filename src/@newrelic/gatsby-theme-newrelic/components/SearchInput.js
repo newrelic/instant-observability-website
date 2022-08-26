@@ -73,6 +73,7 @@ const SearchInput = forwardRef(
           size={styles.size[size].icon}
         />
         <input
+          id="catalogueSearch"
           ref={inputRef}
           value={value}
           {...props}

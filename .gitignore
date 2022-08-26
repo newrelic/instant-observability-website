@@ -76,3 +76,6 @@ package-lock.json
 
 # Auto generated types for graphql
 src/gatsby-types.d.ts
+/test-results/
+/playwright-report/
+/playwright/.cache/
