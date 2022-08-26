@@ -1,3 +1,10 @@
+## [1.12.1](https://github.com/newrelic/instant-observability-website/compare/v1.12.0...v1.12.1) (2022-08-26)
+
+
+### Bug Fixes
+
+* guided-install position and linting ([f35457d](https://github.com/newrelic/instant-observability-website/commit/f35457d50210d3aafac06dfed5a91f9bb4c9bd2a))
+
 # [1.12.0](https://github.com/newrelic/instant-observability-website/compare/v1.11.1...v1.12.0) (2022-08-24)
 
 
