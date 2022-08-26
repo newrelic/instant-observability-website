@@ -83,6 +83,8 @@ const GlobalHeader = ({ className, activeSite }) => {
   const UserIsInMainPage = location.pathname === '/instant-observability/';
   const showGetStarted = !!UserIsInMainPage;
   const [isOpen, setOpen] = useState(false);
+  const urlParams = new URLSearchParams(location.search);
+  const utmCode = urlParams.get('utm_medium');
 
   useEffect(() => {
     if (isOpen) {
@@ -155,7 +157,11 @@ const GlobalHeader = ({ className, activeSite }) => {
               display: flex;
               align-items: center;
               outline: none;
-
+              ${utmCode &&
+              `
+                pointer-events: none;
+                cursor: default;
+              `}
               @media screen and (max-width: ${NAV_BREAKPOINT}) {
                 width: 7.5rem;
               }
@@ -251,7 +257,7 @@ const GlobalHeader = ({ className, activeSite }) => {
                 }
               `}
             >
-              {createNavList('main', activeSite)}
+              {!utmCode && createNavList('main', activeSite)}
             </ul>
           </nav>
 
@@ -423,7 +429,11 @@ const GlobalHeader = ({ className, activeSite }) => {
               align-items: center;
               height: 100%;
               outline: none;
-
+              ${utmCode &&
+              `
+                pointer-events: none;
+                cursor: default;
+              `}
               @media screen and (max-width: ${MOBILE_BREAKPOINT}) {
                 width: 7.5rem;
               }
