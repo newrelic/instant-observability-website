@@ -1779,19 +1779,19 @@
     ],
     "dashboards": [
       {
-        "name": "Battlesnake Performance",
-        "description": "Monitor your Battlesnake's performance and see how it stacks up against your competition!",
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/battlesnake-performance/battlesnake-performance.png"
-        ]
-      },
-      {
         "name": "Battlesnake Server Status",
         "description": "A dashboard to monitor your Battlesnake server's performance. It's important to keep all responses to the `/move` endpoint under 500ms. Furthermore, it's possible that your snake may be in multiple concurrent matches at the same time. It's important to make sure you server and web application are running smoothly to keep you in the game!",
         "url": null,
         "screenshots": [
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/battlesnake-server-status/battlesnake-server-status.png"
+        ]
+      },
+      {
+        "name": "Battlesnake Performance",
+        "description": "Monitor your Battlesnake's performance and see how it stacks up against your competition!",
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/battlesnake-performance/battlesnake-performance.png"
         ]
       },
       {
@@ -4528,19 +4528,19 @@
         ]
       },
       {
-        "name": "Redis Enterprise Database CRDT",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/active-active/active_active01.png"
-        ]
-      },
-      {
         "name": "Redis Enterprise Cluster Metrics",
         "description": null,
         "url": null,
         "screenshots": [
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/cluster/cluster01.png"
+        ]
+      },
+      {
+        "name": "Redis Enterprise Database CRDT",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/active-active/active_active01.png"
         ]
       }
     ],
@@ -4813,6 +4813,55 @@
       {
         "name": "Cribl Stream",
         "id": "third-party-cribl-stream"
+      }
+    ]
+  },
+  {
+    "title": "Vercel Logs",
+    "name": "vercel",
+    "description": "## About Vercel\n\nVercel is the platform for frontend developers, providing the speed and reliability innovators need to create at the moment of inspiration.\n\nWe enable teams to iterate quickly and develop, preview, and ship delightful user experiences. Vercel has zero-configuration support for 35+ frontend frameworks and integrates with your headless content, commerce, or database of choice.\n\n## About this quickstart\n\nThis quickstart is the fastest way to jump straight into monitoring your end-to-end development logs.\n\n### Log parsing\n\nFor the serverless function monitoring, you will need to set-up a quick log parsing rule in order for the data to parse properly into the correct fields. Here are the steps to complete this.\n\n1. Open your [log viewer in New Relic](https://one.newrelic.com/logger)\n2. Select the \"Parsing\" option under manage data\n3. Select \"+Create parsing rule\"\n4. Set the query to \"`source` = 'lambda'\"\n5. Copy/paste this parsing rule into the parsing logic `%{UUID:requestid}%{DATA}%{BASE16FLOAT:duration} %{DATA} %{BASE16FLOAT:billed_duration} %{DATA} %{INT:max_mem} %{DATA} %{INT:used_mem}`\n\n\n### Core monitoring\n\n-  Track your cached hit rate\n-  Keep track of your errors and problematic IP addresses\n-  Real time error logs\n-  Monitoring for your build logs\n\n### Serverless function log monitoring\n\n-  Average & total duration\n-  Average & total memory used\n-  Average & total billed duration",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/vercel",
+    "id": "c18372e0-b849-408f-b2b1-3ea7096ef5a8",
+    "level": "COMMUNITY",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/vercel/logo.svg",
+    "summary": "The Vercel quickstart will help monitor your end-to-end platform for developers.",
+    "websiteUrl": null,
+    "keywords": [
+      "vercel",
+      "logs",
+      "newrelic partner",
+      "devops",
+      "cicd",
+      "build",
+      "deploy"
+    ],
+    "authors": [
+      "Joseph Counts",
+      "Vercel"
+    ],
+    "dashboards": [
+      {
+        "name": "Vercel",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/vercel/vercel-logs01.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/vercel/vercel-logs02.png"
+        ]
+      }
+    ],
+    "alerts": [],
+    "documentation": [
+      {
+        "name": "Enable New Relic destination doc",
+        "description": "Send Vercel logs to New Relic",
+        "url": "https://vercel.com/integrations/newrelic"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "Vercel",
+        "id": "third-party-vercel"
       }
     ]
   },
@@ -11668,19 +11717,19 @@
     ],
     "dashboards": [
       {
-        "name": "Lacework Anomaly Detections",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/lacework-anomaly-detections/lacework-anomaly-detections.png"
-        ]
-      },
-      {
         "name": "Lacework Compliance Violations",
         "description": null,
         "url": null,
         "screenshots": [
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/lacework-compliance-violations/lacework-compliance-violations.png"
+        ]
+      },
+      {
+        "name": "Lacework Anomaly Detections",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/lacework-anomaly-detections/lacework-anomaly-detections.png"
         ]
       },
       {
@@ -16694,19 +16743,19 @@
     ],
     "dashboards": [
       {
-        "name": "Catchpoint-Response Size",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/catchpoint-response-size/Catchpoint-Response_Size.png"
-        ]
-      },
-      {
         "name": "Catchpoint-Test Times",
         "description": null,
         "url": null,
         "screenshots": [
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/catchpoint-test-times/Catchpoint-Test_Times.png"
+        ]
+      },
+      {
+        "name": "Catchpoint-Recent Errors",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/catchpoint-recent-errors/Catchpoint-Recent_Errors.png"
         ]
       },
       {
@@ -16718,11 +16767,11 @@
         ]
       },
       {
-        "name": "Catchpoint-Recent Errors",
+        "name": "Catchpoint-Response Size",
         "description": null,
         "url": null,
         "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/catchpoint-recent-errors/Catchpoint-Recent_Errors.png"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/catchpoint-response-size/Catchpoint-Response_Size.png"
         ]
       }
     ],
@@ -22486,19 +22535,11 @@
     ],
     "dashboards": [
       {
-        "name": "GCP Integrations Data Ingest Analysis",
+        "name": "On-Host Integrations Data Analysis",
         "description": null,
         "url": null,
         "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/gcp-integrations-data-ingest-analysis/gcp-integrations-data-ingest-analysis.png"
-        ]
-      },
-      {
-        "name": "Azure Integrations Data Ingest Analysis",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/azure-integrations-data-ingest-analysis/azure-integrations-data-ingest-analysis.png"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/on-host-integrations-data-analysis/on-host-integrations-data-analysis.png"
         ]
       },
       {
@@ -22510,11 +22551,19 @@
         ]
       },
       {
-        "name": "On-Host Integrations Data Analysis",
+        "name": "Azure Integrations Data Ingest Analysis",
         "description": null,
         "url": null,
         "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/on-host-integrations-data-analysis/on-host-integrations-data-analysis.png"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/azure-integrations-data-ingest-analysis/azure-integrations-data-ingest-analysis.png"
+        ]
+      },
+      {
+        "name": "GCP Integrations Data Ingest Analysis",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/gcp-integrations-data-ingest-analysis/gcp-integrations-data-ingest-analysis.png"
         ]
       },
       {
@@ -23356,6 +23405,14 @@
     ],
     "dashboards": [
       {
+        "name": "Browser Overview",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/browser-overview/browser_overview.png"
+        ]
+      },
+      {
         "name": "Browser Traffic Analysis",
         "description": null,
         "url": null,
@@ -23377,14 +23434,6 @@
         "url": null,
         "screenshots": [
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/javascript-errors/javascript_errors.png"
-        ]
-      },
-      {
-        "name": "Browser Overview",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/browser-overview/browser_overview.png"
         ]
       }
     ],
