@@ -166,9 +166,9 @@ const GlobalHeader = ({ className, activeSite }) => {
               ${utmCode &&
               !UserIsInMainPage &&
               `
-                    pointer-events: none;
-                    cursor: default;
-                  `}
+                pointer-events: none;
+                cursor: default;
+              `}
               @media screen and (max-width: ${NAV_BREAKPOINT}) {
                 width: 7.5rem;
               }
@@ -264,10 +264,8 @@ const GlobalHeader = ({ className, activeSite }) => {
                 }
               `}
             >
-              {UserIsInMainPage ||
-                (!UserIsInMainPage &&
-                  !utmCode &&
-                  createNavList('main', activeSite))}
+              {(UserIsInMainPage || (!UserIsInMainPage && !utmCode)) &&
+                createNavList('main', activeSite)}
             </ul>
           </nav>
 
@@ -442,9 +440,9 @@ const GlobalHeader = ({ className, activeSite }) => {
               ${utmCode &&
               !UserIsInMainPage &&
               `
-                    pointer-events: none;
-                    cursor: default;
-                  `}
+                pointer-events: none;
+                cursor: default;
+              `}
               @media screen and (max-width: ${MOBILE_BREAKPOINT}) {
                 width: 7.5rem;
               }
