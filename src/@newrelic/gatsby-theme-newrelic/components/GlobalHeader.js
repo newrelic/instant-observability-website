@@ -84,7 +84,7 @@ const GlobalHeader = ({ className, activeSite }) => {
   const showGetStarted = !!UserIsInMainPage;
   const [isOpen, setOpen] = useState(false);
   const [utmCode, setUtmCode] = useState(true);
-console.log(location.pathname)
+
   useEffect(() => {
     if (isOpen) {
       document.body.style.overflowY = 'hidden';
@@ -264,9 +264,10 @@ console.log(location.pathname)
                 }
               `}
             >
-              {!UserIsInMainPage &&
-                !utmCode &&
-                createNavList('main', activeSite)}
+              {UserIsInMainPage ||
+                (!UserIsInMainPage &&
+                  !utmCode &&
+                  createNavList('main', activeSite))}
             </ul>
           </nav>
 
