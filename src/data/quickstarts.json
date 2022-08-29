@@ -4899,6 +4899,51 @@
     ]
   },
   {
+    "title": "Microsoft SQL Server Query Plans",
+    "name": "nri-mssql-query-plans",
+    "description": "This quickstart includes a modified version of the Microsoft SQL Server on-host integration that captures query plan data for slowest running queries, and a dashboard to view the query plans using the SQL Query Plans custom visualization.\n\n## On-host integration\n\nThe modified version of the Microsoft on-host integration ingests query plan data using the New Relic Log API.\n\n## Dashboard\n\nThe dashboard displays SQL Server information on multiple pages: \n- SQL Overview: The SQL Overview tab displays Database/Log Space, Memory, Waits/Blocking, Blocked Processes\n- Query Performance: This page includes the Query Plans widget",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/mssql-queryplan",
+    "id": "8c173efb-b75f-4dcb-a7b7-1c80746fd903",
+    "level": "COMMUNITY",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/mssql-queryplan/logo.svg",
+    "summary": "Display MSSQL query plans on your dashboards",
+    "websiteUrl": null,
+    "keywords": [
+      "nrlabs",
+      "nrlabs-data",
+      "database",
+      "infrastructure"
+    ],
+    "authors": [
+      "New Relic Labs"
+    ],
+    "dashboards": [
+      {
+        "name": "MSSQL On-Host Integration w/ Query Plans",
+        "description": "Sample SQL Server dashboard with query plans included",
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/mssql-queryplan/mssql-queryplan01.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/mssql-queryplan/mssql-queryplan02.png"
+        ]
+      }
+    ],
+    "alerts": [],
+    "documentation": [
+      {
+        "name": "MSSQL on-host integration (query plans version)",
+        "description": "The installation and configuration instructions for the experimental version of the MSSQL on-host integration required to collect query plan data\n",
+        "url": "https://github.com/newrelic-experimental/nri-mssql-experimental"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "Microsoft SQL Server Query Plans",
+        "id": "third-party-mssql-query-plans"
+      }
+    ]
+  },
+  {
     "title": "Websphere Liberty Profile",
     "name": "websphere-liberty-profile",
     "description": "## Monitoring WebSphere Liberty Profile\n\nLiberty Profile is a flexible server profile of IBM’s WebSphere Application Server (WAS) which enables the server to deploy only required custom features rather than deploying all available components.\n\nLeverage our New Relic WebSphere Liberty Profile quickstart to proactively monitor your Liberty Profile with the [New Relic Java agent](https://docs.newrelic.com/docs/apm/agents/java-agent/additional-installation/ibm-websphere-application-server/).\n\n### New Relic WebSphere Liberty Profile highlights\n\nNew Relic’s WebSphere Liberty Profile monitoring instruments WebSphere with the New Relic Java agent and allows you to instantly monitor your Java application.\n\nWith New Relic's Java agent, you can track everything from active connections to tiny errors within your code. Every minute, the agent posts metric timeslice and event data to the New Relic user interface, where you can monitor your website’s performance.\n\n### New Relic + WebSphere Liberty Profile = Optimum performance monitoring\n\nOur WebSphere Liberty Profile quickstart empowers you to [configure New Relic’s Java agent for your WebSphere Liberty Profile](https://docs.newrelic.com/docs/apm/agents/java-agent/additional-installation/ibm-websphere-application-server/). With a configuration customized for your application, you can monitor browser performance and WebSphere PMI metrics like memory, threads, and HTTP sessions.\n\nNew Relic supports all versions of WebSphere and IBM Java Virtual Machine that are compatible with the Java agent. (If you’re using Java 2 Security with WebSphere, you need to grant the Java agent additional permissions for proper execution).\n\nYou can also configure the Java agent to capture any WebSphere PMI metrics you want. Such metrics will be displayed on the New Relic JVM metrics page. These metrics will be listed under different tabs like memory, thread, HTTP sessions, and data sources.\n\nThe memory tab has heap memory usage, garbage collection and class count. The thread tab has thread count and thread pool. The HTTP sessions tab shows the active, invalidated by timeout, and invalidated HTTP session counts of your application. The data sources tab will show you metrics like wait time, max connections, active connections, and idle connections.\n\nInstall the New Relic WebSphere Liberty Profile quickstart to effectively monitor Liberty Profile key performance indicators with our Java agent. This quickstart is the key to making sure that you detect and respond to any incident quickly and efficiently.",
@@ -6449,51 +6494,6 @@
       {
         "name": "Memcached",
         "id": "memcached-integration"
-      }
-    ]
-  },
-  {
-    "title": "Microsoft SQL Server Query Plans",
-    "name": "nri-mssql-query-plans",
-    "description": "This quickstart includes a modified version of the Microsoft SQL Server on-host integration that captures query plan data for slowest running queries, and a dashboard to view the query plans using the SQL Query Plans custom visualization.\n\n## On-host integration\n\nThe modified version of the Microsoft on-host integration ingests query plan data using the New Relic Log API.\n\n## Dashboard\n\nThe dashboard displays SQL Server information on multiple pages: \n- SQL Overview: The SQL Overview tab displays Database/Log Space, Memory, Waits/Blocking, Blocked Processes\n- Query Performance: This page includes the Query Plans widget",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/mssql-queryplan",
-    "id": "8c173efb-b75f-4dcb-a7b7-1c80746fd903",
-    "level": "COMMUNITY",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/mssql-queryplan/logo.svg",
-    "summary": "Display MSSQL query plans on your dashboards",
-    "websiteUrl": null,
-    "keywords": [
-      "nrlabs",
-      "nrlabs-data",
-      "database",
-      "infrastructure"
-    ],
-    "authors": [
-      "New Relic Labs"
-    ],
-    "dashboards": [
-      {
-        "name": "MSSQL On-Host Integration w/ Query Plans",
-        "description": "Sample SQL Server dashboard with query plans included",
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/mssql-queryplan/mssql-queryplan01.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/mssql-queryplan/mssql-queryplan02.png"
-        ]
-      }
-    ],
-    "alerts": [],
-    "documentation": [
-      {
-        "name": "MSSQL on-host integration (query plans version)",
-        "description": "The installation and configuration instructions for the experimental version of the MSSQL on-host integration required to collect query plan data\n",
-        "url": "https://github.com/newrelic-experimental/nri-mssql-experimental"
-      }
-    ],
-    "installPlans": [
-      {
-        "name": "Microsoft SQL Server Query Plans",
-        "id": "third-party-mssql-query-plans"
       }
     ]
   },
