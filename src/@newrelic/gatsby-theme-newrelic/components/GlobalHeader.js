@@ -83,6 +83,7 @@ const GlobalHeader = ({ className, activeSite }) => {
   const UserIsInMainPage = location.pathname === '/instant-observability/';
   const showGetStarted = !!UserIsInMainPage;
   const [isOpen, setOpen] = useState(false);
+  const [utmCode, setUtmCode] = useState(true);
 
   useEffect(() => {
     if (isOpen) {
@@ -91,6 +92,13 @@ const GlobalHeader = ({ className, activeSite }) => {
       document.body.style.overflowY = 'visible';
     }
   }, [isOpen]);
+
+  useEffect(() => {
+    const urlParams = new URLSearchParams(location.search);
+    const utmCodeParam = urlParams.get('utm_medium');
+
+    setUtmCode(utmCodeParam);
+  }, [location.search]);
 
   useEffect(() => {
     if (isOpen && hasChangedPage) {
@@ -155,7 +163,12 @@ const GlobalHeader = ({ className, activeSite }) => {
               display: flex;
               align-items: center;
               outline: none;
-
+              ${utmCode &&
+              !UserIsInMainPage &&
+              `
+                pointer-events: none;
+                cursor: default;
+              `}
               @media screen and (max-width: ${NAV_BREAKPOINT}) {
                 width: 7.5rem;
               }
@@ -251,7 +264,8 @@ const GlobalHeader = ({ className, activeSite }) => {
                 }
               `}
             >
-              {createNavList('main', activeSite)}
+              {(UserIsInMainPage || (!UserIsInMainPage && !utmCode)) &&
+                createNavList('main', activeSite)}
             </ul>
           </nav>
 
@@ -423,7 +437,12 @@ const GlobalHeader = ({ className, activeSite }) => {
               align-items: center;
               height: 100%;
               outline: none;
-
+              ${utmCode &&
+              !UserIsInMainPage &&
+              `
+                pointer-events: none;
+                cursor: default;
+              `}
               @media screen and (max-width: ${MOBILE_BREAKPOINT}) {
                 width: 7.5rem;
               }

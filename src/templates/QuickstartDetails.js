@@ -28,6 +28,8 @@ const layoutContentSpacing = css`
 const QuickstartDetails = ({ data, location }) => {
   const quickstart = data.quickstarts;
   const tessen = useTessen();
+  const urlParams = new URLSearchParams(location.search);
+
   const quickStartMeta = [
     {
       name: 'quick_start_name',
@@ -44,6 +46,7 @@ const QuickstartDetails = ({ data, location }) => {
       quickstartName: quickstart.name,
       quickstartId: quickstart.id,
       quickstartUrl: quickstart.packUrl,
+      urlParams: Object.fromEntries([...urlParams]),
     });
 
   const tessenSupportTrack = (quickstart) => (action) => {
