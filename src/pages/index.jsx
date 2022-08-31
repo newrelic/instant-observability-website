@@ -24,12 +24,12 @@ import getDisplayName from '@utils/getDisplayName';
 import Spinner from '@newrelic/gatsby-theme-newrelic/src/components/Spinner';
 import IOBanner from '@components/IOBanner';
 import IOSeo from '@components/IOSeo';
-import SuperTiles from '@components/SuperTiles';
 import CategoryList from '@components/indexComponents/CategoryList';
 import CategoryDropdown from '@components/indexComponents/CategoryDropdown';
 import QuickstartGrid from '@components/QuickstartGrid';
 import GoToTopButton from '@components/GoToTopButton';
 import SliderWrapper from '@components/SliderWrapper';
+import GuidedInstallTileMostPopular from '@components/GuidedInstallTileMostPopular';
 
 const COLUMN_BREAKPOINT = '1131px';
 // used to set the height of the Spinner to reduce layout shift on page load
@@ -184,7 +184,7 @@ const QuickstartsPage = ({ data, location }) => {
                         indexSettings={indexSettings}
                         quickstarts={mostPopularQuickstarts}
                         category="MostPopularQuickstartClick"
-                        showSuperTiles
+                        showGuidedInstall
                       />
                     )}
                   </div>
@@ -292,7 +292,17 @@ const QuickstartsPage = ({ data, location }) => {
               }
             `}
           >
-            {showGuidedInstallInGrid && <SuperTiles />}
+            {showGuidedInstallInGrid && (
+              <div
+                css={css`
+                  display: grid;
+                  gap: 16px;
+                  grid-template-columns: repeat(1, 1fr);
+                `}
+              >
+                <GuidedInstallTileMostPopular />
+              </div>
+            )}
 
             {/* Add pagination grid if no search term or category selected */}
             <QuickstartGrid
