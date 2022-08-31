@@ -29,7 +29,7 @@ import CategoryDropdown from '@components/indexComponents/CategoryDropdown';
 import QuickstartGrid from '@components/QuickstartGrid';
 import GoToTopButton from '@components/GoToTopButton';
 import SliderWrapper from '@components/SliderWrapper';
-import GuidedInstallTileMostPopular from '@components/GuidedInstallTileMostPopular';
+import GuidedInstallTile from '@components/GuidedInstallTile';
 
 const COLUMN_BREAKPOINT = '1131px';
 // used to set the height of the Spinner to reduce layout shift on page load
@@ -300,7 +300,7 @@ const QuickstartsPage = ({ data, location }) => {
                   grid-template-columns: repeat(1, 1fr);
                 `}
               >
-                <GuidedInstallTileMostPopular />
+                <GuidedInstallTile />
               </div>
             )}
 

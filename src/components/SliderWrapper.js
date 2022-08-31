@@ -5,7 +5,7 @@ import { css } from '@emotion/react';
 import Slider from 'react-slick';
 import withInstrumentation from '@components/withInstrumentation';
 import QuickstartTile from '@components/QuickstartTile';
-import GuidedInstallTileMostPopular from '@components/GuidedInstallTileMostPopular';
+import GuidedInstallTile from '@components/GuidedInstallTile';
 // Utils
 import shuffleArray from '@utils/shuffleArray';
 // Types
@@ -35,7 +35,7 @@ const SliderWrapper = ({
             grid-template-columns: repeat(1, 1fr);
           `}
         >
-          <GuidedInstallTileMostPopular />
+          <GuidedInstallTile />
         </div>
       )}
       {shuffledQuickstarts.map((pack, i) => {
