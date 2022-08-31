@@ -1,6 +1,6 @@
 const slugify = require('./slugify.js');
 
-const resolveQuickstartSlug = (name, id) => {
+const resolveQuickstartSlug = (name) => {
   return `/${slugify(name)}`;
 };
 
