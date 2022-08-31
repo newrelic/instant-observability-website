@@ -6,6 +6,1937 @@
   {
     "to": "/cloudflare-network-logs/fc2bb0ac-6622-43c6-8c1f-6a4c26ab5434",
     "from": "/cloudflare/fc2bb0ac-6622-43c6-8c1f-6a4c26ab5434"
+  },
+  {
+    "to": "/ads-web-gpt",
+    "from": "/ads-web-gpt/a29dc26d-a05e-493e-8b97-eb9c2d90b763"
+  },
+  {
+    "to": "/ads-web-prebid",
+    "from": "/ads-web-prebid/f673909a-5a3a-44f2-b792-83b41c644c13"
+  },
+  {
+    "to": "/android",
+    "from": "/android/23802e4e-518b-409f-857e-dfe8c32d5562"
+  },
+  {
+    "to": "/apache",
+    "from": "/apache/ad5affab-545a-4355-ad48-cfd66e2fbf00"
+  },
+  {
+    "to": "/event-api",
+    "from": "/event-api/bc62e8f8-0d0c-4c86-9f05-b9e83e21d0fc"
+  },
+  {
+    "to": "/logs-api",
+    "from": "/logs-api/b40194c0-c7a0-497c-82c1-ca47b60726da"
+  },
+  {
+    "to": "/metric-api",
+    "from": "/metric-api/028e4c30-1567-4b9a-8417-6606bc9d83c8"
+  },
+  {
+    "to": "/trace-and-span-api",
+    "from": "/trace-and-span-api/07f0b96c-add9-43d5-962d-1865d0149082"
+  },
+  {
+    "to": "/apm-logs",
+    "from": "/apm-logs/c5c5dd30-abcf-46b6-3497-f9a1bba5b700"
+  },
+  {
+    "to": "/apollo-server",
+    "from": "/apollo-server/7befa2d3-aaa2-4e67-93a8-364f8d746b90"
+  },
+  {
+    "to": "/argocd-quickstart",
+    "from": "/argocd-quickstart/03b4a3b9-3a59-4603-91dd-6b0ced1d62de"
+  },
+  {
+    "to": "/atlassian-jira",
+    "from": "/atlassian-jira/a99b22a5-5666-4096-b239-8f315700fde0"
+  },
+  {
+    "to": "/bitbucket",
+    "from": "/bitbucket/fdc99da8-0061-4c5f-bd90-ef67a8b2419f"
+  },
+  {
+    "to": "/account-data-ingestion",
+    "from": "/account-data-ingestion/51e66f0d-153c-493c-a75c-a386c3f170ce"
+  },
+  {
+    "to": "/audit-events-analysis",
+    "from": "/audit-events-analysis/ec610a31-5374-47de-b8f7-ed240221412a"
+  },
+  {
+    "to": "/infrastructure-integrations-data-analysis",
+    "from": "/infrastructure-integrations-data-analysis/8e31a0ae-81c0-4df0-a119-a0ada9ec16fa"
+  },
+  {
+    "to": "/audit-kubernetes-log-data-ingest-analysis",
+    "from": "/audit-kubernetes-log-data-ingest-analysis/b3cafc0a-6876-41e5-876c-5ae3c8c9ecea"
+  },
+  {
+    "to": "/log-analysis",
+    "from": "/log-analysis/4d0ec923-b3d7-40dd-a0df-d32e403d666f"
+  },
+  {
+    "to": "/network-data-ingest-and-cardinality",
+    "from": "/network-data-ingest-and-cardinality/9ae44533-5dfa-4e8e-b72d-03b5b1bf9dba"
+  },
+  {
+    "to": "/undefined",
+    "from": "/undefined/c57f4c0b-824c-4b80-ac93-555763ee9549"
+  },
+  {
+    "to": "/audit-prometheus-data-ingest-analysis",
+    "from": "/audit-prometheus-data-ingest-analysis/1938d362-653f-4fee-83ac-fd8835a9ec8d"
+  },
+  {
+    "to": "/amazon-athena",
+    "from": "/amazon-athena/5f3d35d7-668b-41f3-98d7-ccc93a50933c"
+  },
+  {
+    "to": "/amazon-cloudwatch-metric-streams",
+    "from": "/amazon-cloudwatch-metric-streams/32688a77-f5c8-4a37-9b4b-6f83a66fa4a5"
+  },
+  {
+    "to": "/amazon-documentdb",
+    "from": "/amazon-documentdb/16dcca43-1a4f-4f94-8fd5-d05a085a99a3"
+  },
+  {
+    "to": "/amazon-eks-on-aws-fargate",
+    "from": "/amazon-eks-on-aws-fargate/066eb2a4-65a4-456d-a5ac-0e1fcc2740a2"
+  },
+  {
+    "to": "/amazon-linux",
+    "from": "/amazon-linux/bede2fa6-1325-4e58-9885-811beecaccad"
+  },
+  {
+    "to": "/amazon-msk",
+    "from": "/amazon-msk/2ac719f2-e3bf-4f7d-8cff-80c0bfecb516"
+  },
+  {
+    "to": "/amazon-web-services",
+    "from": "/amazon-web-services/6f8add13-d66a-4216-8914-905be5fb3bb7"
+  },
+  {
+    "to": "/aws-api-gateway",
+    "from": "/aws-api-gateway/b2fe368b-6e09-4f63-9c10-e888aa22a292"
+  },
+  {
+    "to": "/aws-appsync",
+    "from": "/aws-appsync/c97c5208-a83e-49dd-9555-45ab01692634"
+  },
+  {
+    "to": "/aws-auto-scaling",
+    "from": "/aws-auto-scaling/e6a1654d-2e00-4956-a2da-39f1f5f5f5e9"
+  },
+  {
+    "to": "/aws-billing",
+    "from": "/aws-billing/c7f15a54-e243-4e23-95dd-ff08937041ed"
+  },
+  {
+    "to": "/aws-cloudformation",
+    "from": "/aws-cloudformation/d8848b3c-2510-415e-be55-cd50014206f9"
+  },
+  {
+    "to": "/aws-cloudfront",
+    "from": "/aws-cloudfront/c6a0f98b-94f3-4f66-9217-83526d7c1afb"
+  },
+  {
+    "to": "/aws-cloudtrail",
+    "from": "/aws-cloudtrail/f38d0d8e-cbc6-4d0e-aaf3-d4a8229a5ff1"
+  },
+  {
+    "to": "/aws-cloudwatch-plugin-for-logs",
+    "from": "/aws-cloudwatch-plugin-for-logs/d62097ef-91df-4c13-9939-a694cb4d2322"
+  },
+  {
+    "to": "/aws-cognito",
+    "from": "/aws-cognito/70c5611b-51e8-41ca-8659-abc6b0d5c795"
+  },
+  {
+    "to": "/aws-connect",
+    "from": "/aws-connect/ddf0d06c-12c7-4951-9335-ab2c10dbd1c5"
+  },
+  {
+    "to": "/aws-direct-connect",
+    "from": "/aws-direct-connect/913f6003-d559-4538-a6b2-9c19a7cc7d46"
+  },
+  {
+    "to": "/aws-dynamodb",
+    "from": "/aws-dynamodb/af330c97-f27a-4160-a4e6-5495685f6852"
+  },
+  {
+    "to": "/aws-ebs",
+    "from": "/aws-ebs/e9aeb0ad-18d2-4e0f-b68b-356ef5788da4"
+  },
+  {
+    "to": "/aws-ec2",
+    "from": "/aws-ec2/4e11966f-04c2-49ca-8815-9e7de8645b1b"
+  },
+  {
+    "to": "/aws-ecs-ecr",
+    "from": "/aws-ecs-ecr/7360ba74-1822-474e-be8e-4636dd22e7ca"
+  },
+  {
+    "to": "/aws-efs",
+    "from": "/aws-efs/29b8f0ce-b573-48e3-98ab-52e4231d2225"
+  },
+  {
+    "to": "/aws-elastic-beanstalk",
+    "from": "/aws-elastic-beanstalk/b232f332-e27a-4d34-a966-e7f678d35145"
+  },
+  {
+    "to": "/aws-elasticache",
+    "from": "/aws-elasticache/5c1e7b31-df21-4acb-b72c-0a8786b88301"
+  },
+  {
+    "to": "/aws-elasticsearch",
+    "from": "/aws-elasticsearch/a69e9de8-2968-44a9-9fff-9065dd9075dd"
+  },
+  {
+    "to": "/aws-elb",
+    "from": "/aws-elb/ceb7f12e-fc9c-48c8-8fa8-a6d353c5f751"
+  },
+  {
+    "to": "/aws-elemental-mediapackage-vod",
+    "from": "/aws-elemental-mediapackage-vod/5e7868a3-df26-4c03-bad1-39b99ca89841"
+  },
+  {
+    "to": "/aws-emr",
+    "from": "/aws-emr/d84051ba-365f-4542-8db9-0829384ea55a"
+  },
+  {
+    "to": "/aws-firelens-plugin-for-logs",
+    "from": "/aws-firelens-plugin-for-logs/2e34f06f-8338-41e9-a89a-1293326ee8bb"
+  },
+  {
+    "to": "/aws-fsx",
+    "from": "/aws-fsx/4a669b03-90fe-471c-8562-78ed529d57b8"
+  },
+  {
+    "to": "/aws-glue",
+    "from": "/aws-glue/6f4ca9e9-5b33-4073-b609-948bd59da406"
+  },
+  {
+    "to": "/aws-health",
+    "from": "/aws-health/b9835593-aa0a-4d02-845b-33d5cec4da42"
+  },
+  {
+    "to": "/aws-iam",
+    "from": "/aws-iam/f9e383f7-5851-4296-9cdd-1ae94f21abd3"
+  },
+  {
+    "to": "/aws-iot",
+    "from": "/aws-iot/1ad84671-9c86-464e-aca0-87110057541c"
+  },
+  {
+    "to": "/aws-kinesis-data-firehose",
+    "from": "/aws-kinesis-data-firehose/2cbfb92b-9016-448b-993e-86d06a986c0a"
+  },
+  {
+    "to": "/aws-kinesis-data-streams",
+    "from": "/aws-kinesis-data-streams/15ba39d9-f2de-4c4f-8ae5-255e5cf40d4d"
+  },
+  {
+    "to": "/aws-lambda",
+    "from": "/aws-lambda/6908e6c3-fed5-4c6c-a3fc-f85e467cefa1"
+  },
+  {
+    "to": "/aws-mq",
+    "from": "/aws-mq/73de5982-8f59-4d2d-a90a-4838414d3304"
+  },
+  {
+    "to": "/aws-neptunedb",
+    "from": "/aws-neptunedb/3ed7e509-9e82-4357-b076-82e30eeb0d1d"
+  },
+  {
+    "to": "/aws-nlb-alb",
+    "from": "/aws-nlb-alb/739f2e65-4fb4-4db4-bb9a-34c7bffb7755"
+  },
+  {
+    "to": "/aws-outposts",
+    "from": "/aws-outposts/30a0b609-de2b-411f-a95a-f3083df738dd"
+  },
+  {
+    "to": "/aws-qldb",
+    "from": "/aws-qldb/e9d8985a-7ff0-450a-b037-0eed63a5a55f"
+  },
+  {
+    "to": "/aws-rds-enhanced",
+    "from": "/aws-rds-enhanced/998141b4-32dd-4c6b-a550-4e0d74faacf3"
+  },
+  {
+    "to": "/aws-rds",
+    "from": "/aws-rds/4f6d6f0c-a258-4c5f-9d0f-9820c3067a51"
+  },
+  {
+    "to": "/aws-redshift",
+    "from": "/aws-redshift/cfceb579-a15e-4a13-84ab-72bd0ffd69e8"
+  },
+  {
+    "to": "/aws-route-53",
+    "from": "/aws-route-53/bf043e5a-213c-411e-8eea-4e386a29a088"
+  },
+  {
+    "to": "/aws-route53-resolver",
+    "from": "/aws-route53-resolver/91a052fe-cb0f-4b98-ae79-56d61abef5ec"
+  },
+  {
+    "to": "/aws-s3",
+    "from": "/aws-s3/2e3b5255-667e-4084-8aad-3dd6e0df2f78"
+  },
+  {
+    "to": "/aws-ses",
+    "from": "/aws-ses/4d72d691-d338-4b53-9dbf-97c5030db09e"
+  },
+  {
+    "to": "/aws-sns",
+    "from": "/aws-sns/651e8b9f-955b-49b1-bd27-0db7623a2ca1"
+  },
+  {
+    "to": "/aws-sqs",
+    "from": "/aws-sqs/ef58d468-bcee-4a66-a641-8ff5453b5363"
+  },
+  {
+    "to": "/aws-step-functions",
+    "from": "/aws-step-functions/7a864c4a-5005-4419-a729-3da92426b49a"
+  },
+  {
+    "to": "/aws-transitgateway",
+    "from": "/aws-transitgateway/a77fc65d-c2a3-4025-94b6-4af11ec82739"
+  },
+  {
+    "to": "/aws-trusted-advisor",
+    "from": "/aws-trusted-advisor/a248809c-704c-440c-bdbc-fc2e7a183a3b"
+  },
+  {
+    "to": "/aws-vpc-flow-logs",
+    "from": "/aws-vpc-flow-logs/61d2ff67-f519-492c-a8de-6019b47d5bb2"
+  },
+  {
+    "to": "/aws-vpc",
+    "from": "/aws-vpc/3c6f4c9b-8369-4ec6-8b3a-b6e9f93b712a"
+  },
+  {
+    "to": "/aws-waf",
+    "from": "/aws-waf/8aa3f09f-63ad-416f-b505-b377ad88ff06"
+  },
+  {
+    "to": "/aws-x-ray",
+    "from": "/aws-x-ray/e7a26e5b-535e-4494-a770-3e8eef1390d5"
+  },
+  {
+    "to": "/newrelic-alert-cloudformation-resource",
+    "from": "/newrelic-alert-cloudformation-resource/908e2847-ee50-4cf7-8e15-f426a1d5e4d0"
+  },
+  {
+    "to": "/azure-api-management",
+    "from": "/azure-api-management/86047b47-5628-4c80-8202-03ebd3133357"
+  },
+  {
+    "to": "/azure-app-service",
+    "from": "/azure-app-service/d58c337e-476a-4c38-b5b2-b43f66945085"
+  },
+  {
+    "to": "/azure-containers",
+    "from": "/azure-containers/fde01772-978b-40c4-9339-51f57c6f60a8"
+  },
+  {
+    "to": "/azure-cosmos-db",
+    "from": "/azure-cosmos-db/81c38d53-5931-4fbc-9288-57c2c84cb1fd"
+  },
+  {
+    "to": "/azure-cost-management",
+    "from": "/azure-cost-management/e49b270c-5b73-4057-8254-7aed6d39f21d"
+  },
+  {
+    "to": "/azure-datafactories",
+    "from": "/azure-datafactories/17f25003-8917-4e5f-bcd1-86f2bbe367ef"
+  },
+  {
+    "to": "/azure-event-hubs",
+    "from": "/azure-event-hubs/235e5650-444d-4075-865f-5a580a2d94ef"
+  },
+  {
+    "to": "/azure-express-route",
+    "from": "/azure-express-route/083affcf-780d-4c42-8c5e-0f5c76d0cdb9"
+  },
+  {
+    "to": "/azure-front-door",
+    "from": "/azure-front-door/67cc48a3-5d43-4bca-8100-82f89b4e61dc"
+  },
+  {
+    "to": "/azure-functions",
+    "from": "/azure-functions/6ded839e-9df7-46db-8df9-e734cea1bd68"
+  },
+  {
+    "to": "/azure-key-vault",
+    "from": "/azure-key-vault/e0ffa85c-a9a4-4a39-bd6e-724e7d0fe8c8"
+  },
+  {
+    "to": "/azure-load-balancer",
+    "from": "/azure-load-balancer/b9db8bba-d817-47c1-9325-3eb9b75852ef"
+  },
+  {
+    "to": "/azure-logic-apps",
+    "from": "/azure-logic-apps/f0ba712c-8ffb-4d0b-a806-8cf3c444fb13"
+  },
+  {
+    "to": "/azure-machine-learning-services",
+    "from": "/azure-machine-learning-services/4022bc8b-c395-424e-9073-7d4174910da7"
+  },
+  {
+    "to": "/azure-mariadb",
+    "from": "/azure-mariadb/55eab714-b85f-4e75-9eda-2a612ec3e6bf"
+  },
+  {
+    "to": "/azure-mysql",
+    "from": "/azure-mysql/f126b6c1-a1e8-4473-b5d3-44c22ff93008"
+  },
+  {
+    "to": "/azure-postgresql",
+    "from": "/azure-postgresql/570c0703-52dc-4481-8b56-e6c0bcacb47d"
+  },
+  {
+    "to": "/azure-power-bi-dedicated-capacities",
+    "from": "/azure-power-bi-dedicated-capacities/258a1a34-165c-4911-bcd4-80bb60597b24"
+  },
+  {
+    "to": "/azure-redis-cache",
+    "from": "/azure-redis-cache/690d2dd3-0b67-415a-8616-f9ae9c9c5899"
+  },
+  {
+    "to": "/azure-service-bus",
+    "from": "/azure-service-bus/42a7c07b-da82-4c83-93fe-e5000060688d"
+  },
+  {
+    "to": "/azure-sql-database",
+    "from": "/azure-sql-database/d8d0d97f-4105-436f-ba25-1e57dbd175c7"
+  },
+  {
+    "to": "/azure-sql-managed-instances",
+    "from": "/azure-sql-managed-instances/16516e34-a906-4e5a-a173-1ce57a96339e"
+  },
+  {
+    "to": "/azure-storage",
+    "from": "/azure-storage/20a76661-a6f9-4f2a-a005-5fcd6589800e"
+  },
+  {
+    "to": "/azure-virtual-machine-scale-sets",
+    "from": "/azure-virtual-machine-scale-sets/6613fa94-df3d-4244-af9d-08987a713e76"
+  },
+  {
+    "to": "/azure-virtual-machines",
+    "from": "/azure-virtual-machines/71349789-a9f3-450a-bb0b-1d30fff7b0c8"
+  },
+  {
+    "to": "/azure-virtual-network",
+    "from": "/azure-virtual-network/f812a124-5443-4451-94d3-32b54c109555"
+  },
+  {
+    "to": "/azure-vms",
+    "from": "/azure-vms/d4d5667f-1c10-4b06-aa74-fbbf29dda8a8"
+  },
+  {
+    "to": "/azure-vpn-gateways",
+    "from": "/azure-vpn-gateways/22cf0fc1-a0ea-454a-b40b-5df015c1799e"
+  },
+  {
+    "to": "/battlesnake",
+    "from": "/battlesnake/63a65857-a25e-4654-9174-928e5894b3b9"
+  },
+  {
+    "to": "/biztalk360",
+    "from": "/biztalk360/95e5a505-7373-4980-9ce8-e6165930063e"
+  },
+  {
+    "to": "/blameless",
+    "from": "/blameless/16f63478-7238-4c52-8145-ec5a2f56162e"
+  },
+  {
+    "to": "/browser-segment-investigation",
+    "from": "/browser-segment-investigation/eb24e234-90aa-4908-972d-64d6d56b557e"
+  },
+  {
+    "to": "/browser-examples",
+    "from": "/browser-examples/721fd258-326d-41f4-8f5d-0d5538ac7487"
+  },
+  {
+    "to": "/c",
+    "from": "/c/7fa19c5e-b97b-4c4d-954e-bc209afec3ba"
+  },
+  {
+    "to": "/cassandra",
+    "from": "/cassandra/ea959955-15c6-4db2-9d35-bb57e4c0a283"
+  },
+  {
+    "to": "/catchpoint-quickstart",
+    "from": "/catchpoint-quickstart/ac2341e3-05bb-49c5-b445-b16b27fc6ea0"
+  },
+  {
+    "to": "/centos",
+    "from": "/centos/b3d951d1-82f3-4dc3-82bc-d7ecd56a749d"
+  },
+  {
+    "to": "/circleci",
+    "from": "/circleci/39109d3d-b1d8-4366-8ca9-b8925005f727"
+  },
+  {
+    "to": "/cloudflare",
+    "from": "/cloudflare/fc2bb0ac-6622-43c6-8c1f-6a4c26ab5434"
+  },
+  {
+    "to": "/cloudfoundry",
+    "from": "/cloudfoundry/944e2662-5ff7-4989-b9a6-66a200401d1e"
+  },
+  {
+    "to": "/codestream",
+    "from": "/codestream/29bd9a4a-1c19-4219-9694-0942f6411ce7"
+  },
+  {
+    "to": "/github-for-codestream",
+    "from": "/github-for-codestream/364b0de9-f9b3-4ce2-a084-e01ccc328c43"
+  },
+  {
+    "to": "/slack-for-codestream",
+    "from": "/slack-for-codestream/5837b456-5f5b-4539-8b71-77193298d253"
+  },
+  {
+    "to": "/microsoft-teams-for-codestream",
+    "from": "/microsoft-teams-for-codestream/c1a50e3c-f81a-4af2-b2ab-878076c9cc82"
+  },
+  {
+    "to": "/collectd",
+    "from": "/collectd/b0ba29c2-be55-4da2-bf24-f8cc3c27715c"
+  },
+  {
+    "to": "/consul",
+    "from": "/consul/b65825cc-faee-47b5-8d7c-6d60d6ab3c59"
+  },
+  {
+    "to": "/contentsquare",
+    "from": "/contentsquare/875f2e3d-7c1b-436b-ab77-602090de1134"
+  },
+  {
+    "to": "/cordova",
+    "from": "/cordova/b5845bee-2b61-454f-9e6a-1a14ffc3e052"
+  },
+  {
+    "to": "/couchbase",
+    "from": "/couchbase/f10edd8d-57d0-4b11-b074-eb20c6c3fd45"
+  },
+  {
+    "to": "/cplusplus",
+    "from": "/cplusplus/e9c70324-f5c2-48fc-943e-57b4600ebd3e"
+  },
+  {
+    "to": "/cribl-logstream",
+    "from": "/cribl-logstream/e67f2859-80c1-4234-bbcf-bcbeeb31d70d"
+  },
+  {
+    "to": "/databricks",
+    "from": "/databricks/533cdd19-8232-42cb-b134-e7d17bfff581"
+  },
+  {
+    "to": "/datastream2",
+    "from": "/datastream2/cb995039-39d8-44d9-97c3-58174a1337f2"
+  },
+  {
+    "to": "/datazoom",
+    "from": "/datazoom/2ffed926-6ee2-43b2-a942-344192fdf418"
+  },
+  {
+    "to": "/dbmarlin",
+    "from": "/dbmarlin/a0daa1f8-99de-41ba-b7cb-7dd87c1bf7f2"
+  },
+  {
+    "to": "/debian",
+    "from": "/debian/1961cd44-68b3-4a59-8d48-45a881c0e3c0"
+  },
+  {
+    "to": "/deeper-network",
+    "from": "/deeper-network/b5feb1f0-ca9f-4f31-92fc-f6e117ef91bb"
+  },
+  {
+    "to": "/delphix",
+    "from": "/delphix/98f77308-4ac3-4c55-bc56-eb9d12f52ab7"
+  },
+  {
+    "to": "/docker",
+    "from": "/docker/ba8030a4-7351-4798-ae36-d74d08f39e4e"
+  },
+  {
+    "to": "/asp-dotnet-mvc",
+    "from": "/asp-dotnet-mvc/8fb22c76-46c3-4720-bd82-bd101e5c890c"
+  },
+  {
+    "to": "/asp-dotnet-web-forms",
+    "from": "/asp-dotnet-web-forms/9ec196c6-1725-40fd-b18a-6224a7377851"
+  },
+  {
+    "to": "/csla-dotnet",
+    "from": "/csla-dotnet/29451385-d9b5-4f31-86b7-70b940531074"
+  },
+  {
+    "to": "/dnn-community",
+    "from": "/dnn-community/8808f632-18b7-4a81-b48e-fd4f3077be2a"
+  },
+  {
+    "to": "/dnn-evoq",
+    "from": "/dnn-evoq/82672f5f-48ec-477c-ae49-7eb24a91595f"
+  },
+  {
+    "to": "/dotnet-core",
+    "from": "/dotnet-core/cbffd8f3-11db-40d7-a723-50e744485651"
+  },
+  {
+    "to": "/dotnet-mvc-web-api",
+    "from": "/dotnet-mvc-web-api/5313d4e0-13e1-4f50-982a-09d0cb67618e"
+  },
+  {
+    "to": "/dotnet",
+    "from": "/dotnet/2dff13b6-0fac-43a6-abc6-57f0a3299639"
+  },
+  {
+    "to": "/episerver-cms",
+    "from": "/episerver-cms/abd04f74-c83f-47f5-a9f0-635ae12376d8"
+  },
+  {
+    "to": "/fubumvc",
+    "from": "/fubumvc/dbce65a2-5f9a-48cb-a957-966338a065d3"
+  },
+  {
+    "to": "/iis",
+    "from": "/iis/1df9c507-ceb3-46d6-be43-7d8c43a161b3"
+  },
+  {
+    "to": "/jayrock",
+    "from": "/jayrock/bc2343ee-5cf0-4213-8aaa-aad8569fd03c"
+  },
+  {
+    "to": "/monorail",
+    "from": "/monorail/3082c380-5cc1-48f7-976c-2b5157ecad92"
+  },
+  {
+    "to": "/msmq",
+    "from": "/msmq/8a2e0510-8a26-4a61-bd41-512dff1e2f01"
+  },
+  {
+    "to": "/nancyfx",
+    "from": "/nancyfx/d676107b-9f7d-4770-bda0-440d94eeac50"
+  },
+  {
+    "to": "/nservicebus",
+    "from": "/nservicebus/f3f28a00-8cea-41f1-a6fe-ebf5eae5791e"
+  },
+  {
+    "to": "/openrasta",
+    "from": "/openrasta/74600672-3ccb-4e18-baf9-459dc272d654"
+  },
+  {
+    "to": "/restsharp",
+    "from": "/restsharp/4967824f-1a29-417f-88f2-093d30a41fc2"
+  },
+  {
+    "to": "/servicestack",
+    "from": "/servicestack/a31a0d6f-0c4c-4652-849f-c5537fbe617a"
+  },
+  {
+    "to": "/silverlight",
+    "from": "/silverlight/fe42916f-1756-4c93-af10-7236de6d0f6e"
+  },
+  {
+    "to": "/springdotnet",
+    "from": "/springdotnet/a9e5eef7-efc9-475f-91d9-81981d968e90"
+  },
+  {
+    "to": "/umbraco",
+    "from": "/umbraco/f3b27140-ec22-4f7c-bd06-27d705370c6e"
+  },
+  {
+    "to": "/dropwizard",
+    "from": "/dropwizard/ad44341f-63a7-4fb0-be4e-61db55d28455"
+  },
+  {
+    "to": "/drupal",
+    "from": "/drupal/12c2e734-6da4-4723-b484-e3dcf2e20012"
+  },
+  {
+    "to": "/elasticsearch",
+    "from": "/elasticsearch/d42f2744-3d69-4860-97af-ec9e75885038"
+  },
+  {
+    "to": "/elixir",
+    "from": "/elixir/fe51eb6d-a18e-40b5-a208-f61228bf79d5"
+  },
+  {
+    "to": "/f5",
+    "from": "/f5/0da402d7-e8ef-4a97-8e3f-fc476a86a3c0"
+  },
+  {
+    "to": "/fastly-cdn",
+    "from": "/fastly-cdn/c5c5dd30-dcdf-46b6-9412-f9a1bba5a600"
+  },
+  {
+    "to": "/fluent-bit-plugin-for-logs",
+    "from": "/fluent-bit-plugin-for-logs/6cf85c11-8e07-40b1-9236-b1581c18bfd1"
+  },
+  {
+    "to": "/fluentd-plugin-for-logs",
+    "from": "/fluentd-plugin-for-logs/f556df41-4cff-4e22-a4aa-e674e4d6ade8"
+  },
+  {
+    "to": "/full-stack-observability",
+    "from": "/full-stack-observability/24da1e3a-035d-493c-a881-72c42b601027"
+  },
+  {
+    "to": "/full-story",
+    "from": "/full-story/7d67b885-4a85-4c2e-b639-8d8b704b6def"
+  },
+  {
+    "to": "/gatsby-build",
+    "from": "/gatsby-build/d234c09c-3338-4713-8340-ca75766445d6"
+  },
+  {
+    "to": "/apigee-api",
+    "from": "/apigee-api/aff5a3b7-e0ec-4c64-8940-e1fec0a45f3e"
+  },
+  {
+    "to": "/gcp-cloud-run",
+    "from": "/gcp-cloud-run/161abdd1-8d62-49c7-84cf-3b3f3abb59ef"
+  },
+  {
+    "to": "/gcp-dataflow",
+    "from": "/gcp-dataflow/dec05983-5c59-4fdd-9446-211d5bd7e20d"
+  },
+  {
+    "to": "/gcp-dataproc",
+    "from": "/gcp-dataproc/3128c4a1-0807-48f8-90e4-08314f450613"
+  },
+  {
+    "to": "/gcp-datastore",
+    "from": "/gcp-datastore/55107a4b-fb51-4ba2-9ac7-0fe1278c1310"
+  },
+  {
+    "to": "/gcp-dedicated-interconnect",
+    "from": "/gcp-dedicated-interconnect/4041f83f-32ba-4406-8c08-06b669a83d06"
+  },
+  {
+    "to": "/gcp-firebase-database",
+    "from": "/gcp-firebase-database/8737e244-282b-41a8-a25b-f527c40eaa4d"
+  },
+  {
+    "to": "/gcp-firebase-hosting",
+    "from": "/gcp-firebase-hosting/655923cb-651b-4b69-a790-1b0bb4ab906d"
+  },
+  {
+    "to": "/gcp-firebase-storage",
+    "from": "/gcp-firebase-storage/e336e54a-6b3c-4bbf-b869-3bca0e89e5c2"
+  },
+  {
+    "to": "/gcp-firestore",
+    "from": "/gcp-firestore/862aa133-98f2-407b-a807-7b9e6496cd89"
+  },
+  {
+    "to": "/gcp-router",
+    "from": "/gcp-router/8f682165-82e6-4cf4-b67f-348cd7624689"
+  },
+  {
+    "to": "/gcp-vpc",
+    "from": "/gcp-vpc/9ead6653-26c0-46c0-9e84-8cb5f2ad0f89"
+  },
+  {
+    "to": "/google-app-engine",
+    "from": "/google-app-engine/77bf282e-6a21-4d32-a805-de97cd06b595"
+  },
+  {
+    "to": "/google-bigquery",
+    "from": "/google-bigquery/c5a46745-81dd-4f5c-8918-398da04b03e6"
+  },
+  {
+    "to": "/google-cloud-functions",
+    "from": "/google-cloud-functions/b8d43c33-c1e3-4ce0-ac77-efa48f339ea7"
+  },
+  {
+    "to": "/google-cloud-spanner",
+    "from": "/google-cloud-spanner/98957106-b7dc-43d7-99c7-f367a9879813"
+  },
+  {
+    "to": "/google-cloud-sql",
+    "from": "/google-cloud-sql/139a99a9-d9b8-4b17-96b0-114c4434a023"
+  },
+  {
+    "to": "/google-cloud-storage",
+    "from": "/google-cloud-storage/88f15100-4a66-465c-9b4b-747c9ab32071"
+  },
+  {
+    "to": "/google-compute-engine",
+    "from": "/google-compute-engine/a88622bb-b942-444f-a4aa-8e034c237f41"
+  },
+  {
+    "to": "/google-load-balancing",
+    "from": "/google-load-balancing/11f68d4b-8a52-4b05-acce-08de24c99b09"
+  },
+  {
+    "to": "/google-pub-sub",
+    "from": "/google-pub-sub/7ee5466d-31ec-4b91-a7ca-18dc91b43424"
+  },
+  {
+    "to": "/gigamon-newrelic",
+    "from": "/gigamon-newrelic/d6b36ecf-bf99-475c-938f-370153db8e70"
+  },
+  {
+    "to": "/glassbox",
+    "from": "/glassbox/bdb952f3-28db-4ee7-89c6-b00244b0bb73"
+  },
+  {
+    "to": "/echo",
+    "from": "/echo/31e4cb0c-fdb0-4bdd-9631-1072be75bd8b"
+  },
+  {
+    "to": "/gin",
+    "from": "/gin/d0dee9c1-b67b-427d-bb85-303cc5dab2a8"
+  },
+  {
+    "to": "/golang",
+    "from": "/golang/87dc92ae-94df-4034-a9fa-d5edfb253e29"
+  },
+  {
+    "to": "/httprouter",
+    "from": "/httprouter/66433ac5-1908-4af0-b1f8-9c78e5eed8df"
+  },
+  {
+    "to": "/lambda-go",
+    "from": "/lambda-go/0ec4a7a7-9f9a-4c1d-af3d-07803619711b"
+  },
+  {
+    "to": "/logrus",
+    "from": "/logrus/075e9126-ea33-44e0-bae4-f7dec0db91fd"
+  },
+  {
+    "to": "/logxi",
+    "from": "/logxi/0c244f76-acd6-474f-86f6-1e65f324b976"
+  },
+  {
+    "to": "/micro",
+    "from": "/micro/1b217f59-7152-40f9-b63b-01b5952ff45a"
+  },
+  {
+    "to": "/mux",
+    "from": "/mux/dc906e6a-ff9c-4fe5-935f-e8a7673c14bf"
+  },
+  {
+    "to": "/nats",
+    "from": "/nats/ac4355fd-31bc-4753-a67f-7e24feb9cb55"
+  },
+  {
+    "to": "/pkg-errors",
+    "from": "/pkg-errors/1599c1e3-cd4d-4edf-bd44-32a7602fbcfd"
+  },
+  {
+    "to": "/zap",
+    "from": "/zap/f49bc8d7-8dee-4096-974f-109eb6cbb058"
+  },
+  {
+    "to": "/golden-signals-for-web-servers",
+    "from": "/golden-signals-for-web-servers/aae62e98-51c4-4e73-82b4-29d9ae95433a"
+  },
+  {
+    "to": "/grafana-dashboard-migration",
+    "from": "/grafana-dashboard-migration/ded004b4-a259-492f-92f9-d1bbead3ccb9"
+  },
+  {
+    "to": "/grafana-prometheus-integration",
+    "from": "/grafana-prometheus-integration/60e468fb-169e-45e9-a6aa-8dc78c1ae829"
+  },
+  {
+    "to": "/haproxy",
+    "from": "/haproxy/9ce1d531-ac54-4c70-809f-1e4e04db1fd2"
+  },
+  {
+    "to": "/hcp-consul",
+    "from": "/hcp-consul/bc99ad15-7aba-450e-8236-6ea667d50cae"
+  },
+  {
+    "to": "/hcp-envoy",
+    "from": "/hcp-envoy/64da4a3b-bfc9-4c18-9d98-55e250c955bd"
+  },
+  {
+    "to": "/heroku-logs",
+    "from": "/heroku-logs/30b8f247-a3c9-4f48-bcb5-9a02a398fc4b"
+  },
+  {
+    "to": "/ibmmq",
+    "from": "/ibmmq/924fd4b3-a6d1-4a6e-9e2c-b598f197f713"
+  },
+  {
+    "to": "/infrastructure",
+    "from": "/infrastructure/71419258-a96f-4845-b4f7-723f3b29d6a5"
+  },
+  {
+    "to": "/ios",
+    "from": "/ios/63bf288d-707e-4214-aac9-b51e7121b22d"
+  },
+  {
+    "to": "/istio-service",
+    "from": "/istio-service/cced731a-c027-4e19-ba77-474311bf43d2"
+  },
+  {
+    "to": "/adobe-cq",
+    "from": "/adobe-cq/5f832d4a-8563-44b0-aff0-f9449a993121"
+  },
+  {
+    "to": "/akka",
+    "from": "/akka/a117414a-959c-4830-af3c-55d612ad043e"
+  },
+  {
+    "to": "/anorm",
+    "from": "/anorm/ff7d6b8a-b6cd-445e-b679-65458b405453"
+  },
+  {
+    "to": "/asynchttpclient",
+    "from": "/asynchttpclient/7659dfcd-54c1-46f8-8916-6a038300133c"
+  },
+  {
+    "to": "/camel",
+    "from": "/camel/9a44c74d-f086-415e-89f3-3e12315b0256"
+  },
+  {
+    "to": "/coldfusion",
+    "from": "/coldfusion/c09a9f00-2339-45ae-b680-696ad467154a"
+  },
+  {
+    "to": "/cxf",
+    "from": "/cxf/7c880505-ed7d-4f2d-98b6-13fc2a3fa114"
+  },
+  {
+    "to": "/datastax-cassandra",
+    "from": "/datastax-cassandra/06bf5a72-2b2b-472d-83cc-af9b8156eea3"
+  },
+  {
+    "to": "/derby",
+    "from": "/derby/c3839af0-2041-4bb7-a330-fb6444c43097"
+  },
+  {
+    "to": "/ejb-session-beans",
+    "from": "/ejb-session-beans/d3935d9c-ddc1-47a7-ac6c-7d1ee513a6b4"
+  },
+  {
+    "to": "/elasticsearch-query",
+    "from": "/elasticsearch-query/ee8b8041-c9ca-4352-96ca-8f1c5c399cdd"
+  },
+  {
+    "to": "/gcp-pubsub",
+    "from": "/gcp-pubsub/ca1d4f11-5dea-4c8c-8a83-d59fb0b9e52b"
+  },
+  {
+    "to": "/generic-jdbc",
+    "from": "/generic-jdbc/495ecdd5-ba37-47b9-819f-c02a528c2c37"
+  },
+  {
+    "to": "/glassfish",
+    "from": "/glassfish/f325b81a-9d6f-46ee-8ac4-42815ec6cd1b"
+  },
+  {
+    "to": "/grails",
+    "from": "/grails/04619b1c-a26c-457e-b274-d8347a759631"
+  },
+  {
+    "to": "/grpc",
+    "from": "/grpc/3473982b-d42a-4505-82be-9f3cda13bb8e"
+  },
+  {
+    "to": "/h2",
+    "from": "/h2/33d2fa2c-edd9-4ad4-91a1-a2202df6d977"
+  },
+  {
+    "to": "/hibernate",
+    "from": "/hibernate/120df901-2cce-4ddc-bb47-c573dea92449"
+  },
+  {
+    "to": "/hsql",
+    "from": "/hsql/224a0391-6733-4472-8325-2e84d1eb71f3"
+  },
+  {
+    "to": "/hystrix",
+    "from": "/hystrix/05eaa88e-417e-48aa-aa85-ecef493a2b44"
+  },
+  {
+    "to": "/ibm-db2",
+    "from": "/ibm-db2/ccd61ecf-8f95-4fba-b57c-bff8f96b2877"
+  },
+  {
+    "to": "/inet-merlia",
+    "from": "/inet-merlia/bbb9953a-217b-4168-9316-891d65f2c90f"
+  },
+  {
+    "to": "/java",
+    "from": "/java/3ebfb315-d0a6-4b27-9f89-b16a9a1ada5f"
+  },
+  {
+    "to": "/jax-rs",
+    "from": "/jax-rs/c622cf23-937a-40be-873c-0af1f1e17d96"
+  },
+  {
+    "to": "/jcache-api",
+    "from": "/jcache-api/e2eac9ef-7fc7-4c7b-90bb-66d9d0a8ad9a"
+  },
+  {
+    "to": "/jdbc-executebatch",
+    "from": "/jdbc-executebatch/dfb63d31-fcb1-431f-9b40-744c0b3f89ff"
+  },
+  {
+    "to": "/jersey",
+    "from": "/jersey/11e3307b-961f-401a-8c70-6ba7e8281a61"
+  },
+  {
+    "to": "/jetty",
+    "from": "/jetty/bd25431c-30f4-4e48-80b5-737178ec9125"
+  },
+  {
+    "to": "/jms",
+    "from": "/jms/b4d77144-cbb8-4e08-9266-a13c33e1cb40"
+  },
+  {
+    "to": "/jsf",
+    "from": "/jsf/efd3c5ea-f478-47ed-bbfb-e730e48e3fd6"
+  },
+  {
+    "to": "/jsp",
+    "from": "/jsp/b95404a4-e64b-48c6-9bef-5d1697d95090"
+  },
+  {
+    "to": "/mule-esb",
+    "from": "/mule-esb/fb550b47-c33b-48a8-be4f-5cf469d34b59"
+  },
+  {
+    "to": "/netty",
+    "from": "/netty/6c25b345-1377-42be-b265-d511e0d170f8"
+  },
+  {
+    "to": "/oc4j",
+    "from": "/oc4j/e69ba5e0-04bc-48df-a246-9d371a2ecdf5"
+  },
+  {
+    "to": "/play-ws",
+    "from": "/play-ws/5df06d60-ba6c-4522-8536-21757c49a5f0"
+  },
+  {
+    "to": "/play",
+    "from": "/play/ff857ff5-2464-48f2-ab4b-27a2d58bf605"
+  },
+  {
+    "to": "/quartz-job-scheduler",
+    "from": "/quartz-job-scheduler/c4569c6c-1ef5-4be0-a235-8b2027e0813d"
+  },
+  {
+    "to": "/resin",
+    "from": "/resin/ffb08d84-b825-4550-baa0-1b8c6b94bde7"
+  },
+  {
+    "to": "/resteasy",
+    "from": "/resteasy/7d8d1010-ac74-44a0-92ba-84488fb85280"
+  },
+  {
+    "to": "/scala",
+    "from": "/scala/b946df67-a9d8-45e4-8af3-f96079d6ad38"
+  },
+  {
+    "to": "/slick",
+    "from": "/slick/c47bbe84-8279-4730-80cf-92563ff0f8bd"
+  },
+  {
+    "to": "/solr",
+    "from": "/solr/77c77c91-17c4-4448-89cb-b0068a4e45ac"
+  },
+  {
+    "to": "/spray-can",
+    "from": "/spray-can/2907733c-6b3d-4044-97e2-2677889017b8"
+  },
+  {
+    "to": "/spring-jms",
+    "from": "/spring-jms/f27c303f-4a6b-4cc6-b4ab-6d0d33e99d0a"
+  },
+  {
+    "to": "/spring",
+    "from": "/spring/a02ce528-4ba6-42bd-a109-25bfbb827b3e"
+  },
+  {
+    "to": "/spymemcached",
+    "from": "/spymemcached/523d68d1-aab4-4fc9-ae69-9dea53374a14"
+  },
+  {
+    "to": "/struts",
+    "from": "/struts/ae3c5a6c-4c3b-4b72-ae07-5f90a633073f"
+  },
+  {
+    "to": "/thrift",
+    "from": "/thrift/2c1daa78-fd43-4fd8-84f6-ffe4b2ced430"
+  },
+  {
+    "to": "/tomcat",
+    "from": "/tomcat/d3e84281-6094-4cb2-b323-30e4f13b4f0c"
+  },
+  {
+    "to": "/tomee",
+    "from": "/tomee/65a5accd-3395-4a8c-b385-03e4f2200137"
+  },
+  {
+    "to": "/vert-x",
+    "from": "/vert-x/6f1446cc-d4be-4de0-8716-cf60d38c01c2"
+  },
+  {
+    "to": "/weblogic",
+    "from": "/weblogic/dc6e140e-79fd-43ab-b113-26376e534e63"
+  },
+  {
+    "to": "/websphere-liberty-profile",
+    "from": "/websphere-liberty-profile/24dd2335-8e24-4923-9560-67612b409762"
+  },
+  {
+    "to": "/websphere",
+    "from": "/websphere/ace9ed93-a009-4245-b595-b386fbdd6590"
+  },
+  {
+    "to": "/wildfly",
+    "from": "/wildfly/51925d0c-0e76-45cb-97f9-4b0b8428f3cc"
+  },
+  {
+    "to": "/jira-errors-inbox",
+    "from": "/jira-errors-inbox/06734d77-b06a-4410-aafa-eed1944c0ac4"
+  },
+  {
+    "to": "/jmx-java",
+    "from": "/jmx-java/63785e32-4153-41af-a70b-18e896e37f44"
+  },
+  {
+    "to": "/jumpstart-quickstart",
+    "from": "/jumpstart-quickstart/fbca935b-5a3e-41d7-b708-c24d90fcd820"
+  },
+  {
+    "to": "/kafka",
+    "from": "/kafka/9c559112-90e1-4ff4-b38b-90c0ba3c56fe"
+  },
+  {
+    "to": "/kamon",
+    "from": "/kamon/24ac944c-c546-42df-891f-29fb89d51237"
+  },
+  {
+    "to": "/kentik-firehose-pack",
+    "from": "/kentik-firehose-pack/a781c760-fd25-458f-a170-dae8c722b2ea"
+  },
+  {
+    "to": "/azure-kubernetes-service",
+    "from": "/azure-kubernetes-service/ce59998f-0daf-434b-9e80-b8ba0f576300"
+  },
+  {
+    "to": "/coredns",
+    "from": "/coredns/c9ac4abb-4a61-4eee-9e1e-79506806684e"
+  },
+  {
+    "to": "/google-kubernetes-engine",
+    "from": "/google-kubernetes-engine/7ecb459a-eb29-4346-a6f0-c9fe1acf8830"
+  },
+  {
+    "to": "/kubernetes",
+    "from": "/kubernetes/88a79f52-81c1-4fa2-99f8-3cb5b012f160"
+  },
+  {
+    "to": "/nginx-ingress-controller",
+    "from": "/nginx-ingress-controller/689827ca-e78b-4d30-989e-aa404a4f6984"
+  },
+  {
+    "to": "/lacework",
+    "from": "/lacework/8a7a7220-e8ec-4959-b35d-0fe082be8039"
+  },
+  {
+    "to": "/lamp-stack",
+    "from": "/lamp-stack/816e3eba-ffea-4b0c-9150-b7a0f3a025d9"
+  },
+  {
+    "to": "/launchdarkly",
+    "from": "/launchdarkly/f81fac99-351c-4e50-9991-69cff5bf7798"
+  },
+  {
+    "to": "/lighthouse",
+    "from": "/lighthouse/4e3eb972-60a0-46c1-9983-0a40f7ee0cd9"
+  },
+  {
+    "to": "/linux",
+    "from": "/linux/5b420314-fbfb-4c62-85ed-42200d76cf9a"
+  },
+  {
+    "to": "/logstash-plugin-for-logs",
+    "from": "/logstash-plugin-for-logs/fc6425fb-4fe9-40c7-be05-a27214cb5772"
+  },
+  {
+    "to": "/macos",
+    "from": "/macos/2acd265d-427d-4064-ab71-915e3c2824fe"
+  },
+  {
+    "to": "/mariadb",
+    "from": "/mariadb/0919c174-0ce5-4b34-a5c0-255986ff9706"
+  },
+  {
+    "to": "/memcached",
+    "from": "/memcached/b892f939-8c3b-4419-b041-639117b14874"
+  },
+  {
+    "to": "/micrometer",
+    "from": "/micrometer/95e7fd2d-b9a9-4088-ba1d-a2f5d208dbdc"
+  },
+  {
+    "to": "/mlops-algorithmia",
+    "from": "/mlops-algorithmia/d0e829a6-ede4-4933-9065-9f0c56f8aa7e"
+  },
+  {
+    "to": "/mlops-aporia",
+    "from": "/mlops-aporia/879a5e0d-eda0-4af9-aa73-08e49a8a46c8"
+  },
+  {
+    "to": "/mlops-bring-your-own",
+    "from": "/mlops-bring-your-own/2ea87c6d-f819-4d41-b885-002b13bad099"
+  },
+  {
+    "to": "/mlops-comet",
+    "from": "/mlops-comet/dda42643-7efa-4ae3-8cad-5b4406e874e0"
+  },
+  {
+    "to": "/mlops-dagshub",
+    "from": "/mlops-dagshub/7ada1bce-43e4-4e32-a16d-58c71ecffaed"
+  },
+  {
+    "to": "/mlops-monalabs",
+    "from": "/mlops-monalabs/99df45ed-c710-4f21-80f8-b519101e0000"
+  },
+  {
+    "to": "/mlops-sagemaker",
+    "from": "/mlops-sagemaker/cee03961-f9e3-46e1-89fd-70a626cfe8ce"
+  },
+  {
+    "to": "/superwise-mlops",
+    "from": "/superwise-mlops/6c61cb57-c966-4435-b46c-f96b568d9873"
+  },
+  {
+    "to": "/truera",
+    "from": "/truera/81402789-9ae9-4cbd-8686-4d2d4de8951f"
+  },
+  {
+    "to": "/mongodb",
+    "from": "/mongodb/6183e12f-a398-48e6-8431-a48db03e4443"
+  },
+  {
+    "to": "/nri-mssql-query-plans",
+    "from": "/nri-mssql-query-plans/8c173efb-b75f-4dcb-a7b7-1c80746fd903"
+  },
+  {
+    "to": "/mssql",
+    "from": "/mssql/58b693d2-6e8d-4df0-b8b4-00a089376d2d"
+  },
+  {
+    "to": "/mysql",
+    "from": "/mysql/ad9f635b-6496-48a8-b373-9fab81a7f719"
+  },
+  {
+    "to": "/nagios",
+    "from": "/nagios/a55b5d3b-bff6-4caa-b56f-b28dfa3fc94b"
+  },
+  {
+    "to": "/netlify-builds",
+    "from": "/netlify-builds/5861d7f5-26c0-43ad-bda8-c893c4b27b25"
+  },
+  {
+    "to": "/netlify-logs",
+    "from": "/netlify-logs/63f08781-18ad-4a89-ae63-49718deee041"
+  },
+  {
+    "to": "/arista-switches",
+    "from": "/arista-switches/c47ccf6c-a2a3-49ce-a675-c23ea1d588f5"
+  },
+  {
+    "to": "/cisco-ip-sla-operations",
+    "from": "/cisco-ip-sla-operations/f4fb8621-63a8-475b-b4a3-1e81edf6d24f"
+  },
+  {
+    "to": "/network-cisco-hardware",
+    "from": "/network-cisco-hardware/b66acf30-6097-45fe-ad2f-d8f1a076feb6"
+  },
+  {
+    "to": "/network-flow-devices",
+    "from": "/network-flow-devices/6d275d10-9aaf-4351-b556-0174fca3ffca"
+  },
+  {
+    "to": "/network-ktranslate-health",
+    "from": "/network-ktranslate-health/f7119d5e-32b7-45ff-a814-0dca91ae0493"
+  },
+  {
+    "to": "/network-routers-and-switches",
+    "from": "/network-routers-and-switches/8d843fc7-ffcf-489a-93b1-c8499cdd16ec"
+  },
+  {
+    "to": "/network-syslog",
+    "from": "/network-syslog/478be4d3-134a-4738-995a-7bbe020edcad"
+  },
+  {
+    "to": "/nginx",
+    "from": "/nginx/2567c5e0-06de-4ff6-a4f2-6cbe5aed07b3"
+  },
+  {
+    "to": "/node-exporter",
+    "from": "/node-exporter/63f7cc4c-57d8-41e5-a496-a2e61efa992f"
+  },
+  {
+    "to": "/express",
+    "from": "/express/da8f3197-7766-4096-92db-32edc8a8a36e"
+  },
+  {
+    "to": "/hapi",
+    "from": "/hapi/2124da5b-0174-457a-be5a-e0068673b2b5"
+  },
+  {
+    "to": "/koa",
+    "from": "/koa/394619e0-fd94-47ce-98dd-6f6f5183264b"
+  },
+  {
+    "to": "/node-js",
+    "from": "/node-js/01fdea36-5a15-44b4-a864-c4c99866735b"
+  },
+  {
+    "to": "/restify",
+    "from": "/restify/027439cc-1ee3-40ba-be68-fc684bdbdc8b"
+  },
+  {
+    "to": "/email-notifications",
+    "from": "/email-notifications/92357393-03bb-4230-8600-032adad5ccb5"
+  },
+  {
+    "to": "/servicenow-notifications",
+    "from": "/servicenow-notifications/0e2c5c90-bda2-4147-82af-8b9bf8038ee6"
+  },
+  {
+    "to": "/slack-notifications",
+    "from": "/slack-notifications/db34c333-7b4a-4bb8-8fbf-becce43bfa44"
+  },
+  {
+    "to": "/webhook-notifications",
+    "from": "/webhook-notifications/ecb02f86-d2fd-478f-9ec9-1331dae3cc2d"
+  },
+  {
+    "to": "/ansible",
+    "from": "/ansible/c377d781-da77-4dd6-b5a8-6a25a39e2582"
+  },
+  {
+    "to": "/chef",
+    "from": "/chef/ad40ccc2-f7ef-44bf-b961-07813088fce0"
+  },
+  {
+    "to": "/newrelic-cli",
+    "from": "/newrelic-cli/80b839a3-2000-4bf5-86dd-4a888146043a"
+  },
+  {
+    "to": "/pulumi",
+    "from": "/pulumi/cdcab89c-c83f-4216-9e1a-9c271ce7e0cf"
+  },
+  {
+    "to": "/puppet",
+    "from": "/puppet/b70291ad-ff88-4ff9-9173-d4b2f99656af"
+  },
+  {
+    "to": "/terraform",
+    "from": "/terraform/ba9ce393-d85f-4e40-81a7-d52b2c6ad213"
+  },
+  {
+    "to": "/okhttp",
+    "from": "/okhttp/0b9f2f49-3a5d-4fda-a006-24be1ccf15e3"
+  },
+  {
+    "to": "/alert-quality-management",
+    "from": "/alert-quality-management/ccdf1cf7-29f0-42ca-ae0d-239dfb073fd0"
+  },
+  {
+    "to": "/customer-experience-bottom-funnel-analysis",
+    "from": "/customer-experience-bottom-funnel-analysis/8d339aa7-69e3-4efa-abc2-9eba600db91c"
+  },
+  {
+    "to": "/oma-data-governance",
+    "from": "/oma-data-governance/30593cae-4cfb-435c-9170-310e3f38ab40"
+  },
+  {
+    "to": "/customer-experience-quality-foundation",
+    "from": "/customer-experience-quality-foundation/7a5739bf-30ee-4be9-9705-14871cafd7f4"
+  },
+  {
+    "to": "/opencensus",
+    "from": "/opencensus/7ffcbd99-a8ac-4414-bdd1-f3bb9f02598e"
+  },
+  {
+    "to": "/opentelemetry",
+    "from": "/opentelemetry/55445c3b-36dc-4bea-b31f-9f82fd551650"
+  },
+  {
+    "to": "/inet-oracle-driver",
+    "from": "/inet-oracle-driver/6294013d-2179-4604-90c0-abe4460e815c"
+  },
+  {
+    "to": "/oracledb",
+    "from": "/oracledb/f344c2bd-3d86-43d9-9e6f-24bdc3873918"
+  },
+  {
+    "to": "/pagerduty",
+    "from": "/pagerduty/f2143fb1-5504-4850-8620-06e9341858ea"
+  },
+  {
+    "to": "/perfmon",
+    "from": "/perfmon/db769025-d3a7-437b-896d-64f5a7a26cac"
+  },
+  {
+    "to": "/cakephp",
+    "from": "/cakephp/64bbbba3-10ab-4f15-8151-5079cecda894"
+  },
+  {
+    "to": "/codeigniter",
+    "from": "/codeigniter/66a6a268-9a89-43be-9226-5f3ca0dfa268"
+  },
+  {
+    "to": "/guzzle",
+    "from": "/guzzle/6b6b1702-7636-4b60-a2b8-d5765d11ec13"
+  },
+  {
+    "to": "/joomla",
+    "from": "/joomla/64a0fd15-349e-4083-96cc-3ef1f2b31e1a"
+  },
+  {
+    "to": "/kohana",
+    "from": "/kohana/5435090b-1267-4341-b53b-fcad31274e56"
+  },
+  {
+    "to": "/laravel",
+    "from": "/laravel/919aad44-52ba-47fd-9e29-12195979015e"
+  },
+  {
+    "to": "/magento",
+    "from": "/magento/509a6b56-d580-4e8c-8c64-cb71a61b8a26"
+  },
+  {
+    "to": "/mediawiki",
+    "from": "/mediawiki/f3dcd610-a35c-4464-b141-f1440508b23b"
+  },
+  {
+    "to": "/odbc",
+    "from": "/odbc/f6728c42-38bb-4e23-b78f-298555640b98"
+  },
+  {
+    "to": "/pdo",
+    "from": "/pdo/6de33cc8-dff7-4b25-8221-2ae01ca988af"
+  },
+  {
+    "to": "/php",
+    "from": "/php/475dec69-10c9-4bc6-8312-3caa266fb028"
+  },
+  {
+    "to": "/phpunit",
+    "from": "/phpunit/17164f15-752d-435b-96c6-9d4803cdfa01"
+  },
+  {
+    "to": "/predis",
+    "from": "/predis/e77de8fd-ae73-4853-b00a-2e42b0841464"
+  },
+  {
+    "to": "/silex",
+    "from": "/silex/d154455e-ae50-4feb-a277-9b6ea0eb998e"
+  },
+  {
+    "to": "/slim",
+    "from": "/slim/c2bbf5f0-e04b-4450-97a6-362e027ff316"
+  },
+  {
+    "to": "/sqlite",
+    "from": "/sqlite/4e928e1a-0e78-4c2f-bba2-fb0804774e86"
+  },
+  {
+    "to": "/symfony",
+    "from": "/symfony/ff0c7881-b5a5-4ccc-8596-b28a982b1586"
+  },
+  {
+    "to": "/yii",
+    "from": "/yii/5d2be045-5f50-4b0e-a3c4-c61446c05152"
+  },
+  {
+    "to": "/pixie",
+    "from": "/pixie/4a2bc392-e39d-423d-a771-ef09dff5a4c2"
+  },
+  {
+    "to": "/port-monitoring",
+    "from": "/port-monitoring/650d963a-8568-49a8-81d4-fc226f12ec10"
+  },
+  {
+    "to": "/postresql",
+    "from": "/postresql/18ee5d2e-f5dd-4e0a-9616-af9deaa12cb2"
+  },
+  {
+    "to": "/postman",
+    "from": "/postman/d465bf08-b737-4bc5-b5ad-dd5be272967b"
+  },
+  {
+    "to": "/prometheus-openmetrics",
+    "from": "/prometheus-openmetrics/d7db4b03-f2a6-4282-b9e7-90bbfdaa0e8d"
+  },
+  {
+    "to": "/prometheus-remote-write",
+    "from": "/prometheus-remote-write/7dbd7355-c380-4211-bd32-fed9a65351af"
+  },
+  {
+    "to": "/public-api-performance",
+    "from": "/public-api-performance/7f8e7ef2-d94b-47bc-8d85-31471430b673"
+  },
+  {
+    "to": "/aiohttp",
+    "from": "/aiohttp/e7948525-8726-46a5-83fa-04732ad42fd1"
+  },
+  {
+    "to": "/amqplib",
+    "from": "/amqplib/1dd2fabd-8ab9-409d-a606-d1c0d1e694b9"
+  },
+  {
+    "to": "/bottle",
+    "from": "/bottle/38dc3bf5-e96c-43b8-98f4-80e444cdb657"
+  },
+  {
+    "to": "/celery",
+    "from": "/celery/c0484a1b-d778-47f5-879b-2d01dce3df78"
+  },
+  {
+    "to": "/cherrypy",
+    "from": "/cherrypy/a5b3b2d6-d3f9-4db9-8091-15615893bbc9"
+  },
+  {
+    "to": "/django",
+    "from": "/django/d8ab0fa9-205e-4c7d-92f1-09ef04b2b8e6"
+  },
+  {
+    "to": "/facepy",
+    "from": "/facepy/846aaa7d-ecce-455f-88f8-4ed1661fb966"
+  },
+  {
+    "to": "/falcon",
+    "from": "/falcon/70c647fd-114f-4b64-9e54-21f7fd1ed652"
+  },
+  {
+    "to": "/fastapi",
+    "from": "/fastapi/e559ec64-f765-4470-a15f-1901fcebb468"
+  },
+  {
+    "to": "/feedparser",
+    "from": "/feedparser/006a5c26-9aa0-4249-b83f-118d7057f5da"
+  },
+  {
+    "to": "/flask",
+    "from": "/flask/2c13db46-a9ce-4595-854f-32e76dac6793"
+  },
+  {
+    "to": "/gearman",
+    "from": "/gearman/989d6047-c0f3-437e-9d58-ac4c8cdd36ad"
+  },
+  {
+    "to": "/gevent",
+    "from": "/gevent/30e39b88-ad5f-4850-b4e6-d9960bceece6"
+  },
+  {
+    "to": "/httplib2",
+    "from": "/httplib2/6bab5c37-1444-4d47-a87a-80edbe316c46"
+  },
+  {
+    "to": "/jinja2",
+    "from": "/jinja2/09e0582c-dd93-4bf9-9b5c-d4faa4aa2c28"
+  },
+  {
+    "to": "/mako",
+    "from": "/mako/594f92b6-9996-4328-af75-129329a36a2c"
+  },
+  {
+    "to": "/oursql",
+    "from": "/oursql/fbf8ee31-2699-406f-ab38-2e1789ec76cd"
+  },
+  {
+    "to": "/pika",
+    "from": "/pika/7bdea1cd-d723-4655-ae9f-c13468d593b7"
+  },
+  {
+    "to": "/piston",
+    "from": "/piston/cf253fcd-6c6b-4834-912b-1f9e0e03dd08"
+  },
+  {
+    "to": "/proboscis",
+    "from": "/proboscis/073b82b5-0cb7-43c2-9f39-de4fc1411b88"
+  },
+  {
+    "to": "/psycopg2",
+    "from": "/psycopg2/e0dfa6c8-09b9-44e7-bae9-a0d5a0dca5f5"
+  },
+  {
+    "to": "/pyelasticsearch",
+    "from": "/pyelasticsearch/08489d43-4804-42b7-85d5-4e9e1597bb4b"
+  },
+  {
+    "to": "/pylibmc",
+    "from": "/pylibmc/50b770b5-03a3-4e0e-b981-c2df9ac18d53"
+  },
+  {
+    "to": "/pylons",
+    "from": "/pylons/906c1589-c412-4337-8c65-50619a322c95"
+  },
+  {
+    "to": "/pymongo",
+    "from": "/pymongo/29e0a497-4a67-440f-ac6c-e5a8b7620e19"
+  },
+  {
+    "to": "/pyramid",
+    "from": "/pyramid/02f1dc20-9034-405b-90c1-8ad1bbf7755e"
+  },
+  {
+    "to": "/pysqlite",
+    "from": "/pysqlite/a7dda741-365b-4d47-a1ad-538cff1ea467"
+  },
+  {
+    "to": "/python",
+    "from": "/python/986df593-98db-485b-8e8c-dd866fa28813"
+  },
+  {
+    "to": "/sanic",
+    "from": "/sanic/74a3783e-3601-442d-8b64-69b29ae0896b"
+  },
+  {
+    "to": "/tastypie",
+    "from": "/tastypie/f627481c-46b4-4d46-8646-9995e5475aaf"
+  },
+  {
+    "to": "/tornado",
+    "from": "/tornado/47934616-fc0c-4e02-8b25-0a92d3f43928"
+  },
+  {
+    "to": "/twisted",
+    "from": "/twisted/f697c86c-385f-40e9-83d2-c01215045912"
+  },
+  {
+    "to": "/web2py",
+    "from": "/web2py/272f1fcb-624f-41be-8ae3-19f552b15d7c"
+  },
+  {
+    "to": "/webpy",
+    "from": "/webpy/535f37ab-3b88-471d-b107-266f39d28819"
+  },
+  {
+    "to": "/quantum-metric",
+    "from": "/quantum-metric/a9b96df0-fb21-4bca-adcf-5501bc9a7756"
+  },
+  {
+    "to": "/rabbitmq",
+    "from": "/rabbitmq/523d091a-7949-433b-91cf-ae2736251af7"
+  },
+  {
+    "to": "/red-hat-enterprise-linux",
+    "from": "/red-hat-enterprise-linux/bd684b5a-a5ee-48fc-b97a-1ad041002370"
+  },
+  {
+    "to": "/red-hat-openshift",
+    "from": "/red-hat-openshift/accac9b5-ec27-4d15-8879-51220086b8a1"
+  },
+  {
+    "to": "/redis-prometheus",
+    "from": "/redis-prometheus/547a0d7c-e01c-4dab-ada7-c9dc5d2a3a71"
+  },
+  {
+    "to": "/redis",
+    "from": "/redis/289983fe-378e-4690-9302-2490e2afe11c"
+  },
+  {
+    "to": "/redis-enterprise",
+    "from": "/redis-enterprise/f15b39b2-bdc3-46d2-b28f-04ddbe23e299"
+  },
+  {
+    "to": "/releaseiq",
+    "from": "/releaseiq/88dee43d-f259-4423-9a14-d8553d8ac7a8"
+  },
+  {
+    "to": "/roku",
+    "from": "/roku/71e1b882-ce4e-4037-b8f1-997d9e317ddd"
+  },
+  {
+    "to": "/activerecord",
+    "from": "/activerecord/088e4f27-310c-49fb-b530-070607c911c2"
+  },
+  {
+    "to": "/actsassolr",
+    "from": "/actsassolr/62227703-3f2a-4e75-a457-5f74f26bc400"
+  },
+  {
+    "to": "/authlogic",
+    "from": "/authlogic/6b00d1b5-cf61-4d5d-a327-8227fdbea6b5"
+  },
+  {
+    "to": "/bunny",
+    "from": "/bunny/8623fe7e-9805-4778-a886-6b4c83720aed"
+  },
+  {
+    "to": "/curb",
+    "from": "/curb/dbe3684e-d688-4d2d-9279-f900c2f76c36"
+  },
+  {
+    "to": "/dalli",
+    "from": "/dalli/14a85e0d-9714-4a90-a2cb-ba17ead23e60"
+  },
+  {
+    "to": "/delayedjob",
+    "from": "/delayedjob/1a11f0ea-8f8b-422c-be1f-414dc0b81698"
+  },
+  {
+    "to": "/excon",
+    "from": "/excon/a6f3126e-8207-4295-b04a-b0a216974b16"
+  },
+  {
+    "to": "/grape",
+    "from": "/grape/99aad761-82a1-4298-b677-1b724d9a75eb"
+  },
+  {
+    "to": "/httpclient",
+    "from": "/httpclient/53d1e197-7ff5-4f52-9046-2f2d6a74dcab"
+  },
+  {
+    "to": "/httprb",
+    "from": "/httprb/18adf8b8-f2d2-47a5-b8a2-278f526b5243"
+  },
+  {
+    "to": "/net-http",
+    "from": "/net-http/932f757b-98aa-460c-8ce8-bbab9c2cbf09"
+  },
+  {
+    "to": "/padrino",
+    "from": "/padrino/7c11a5e8-d9fd-4dbe-9846-1181dfebbe11"
+  },
+  {
+    "to": "/passenger",
+    "from": "/passenger/d2ca1774-3493-4897-9bc2-f578ded4bd87"
+  },
+  {
+    "to": "/puma",
+    "from": "/puma/c1eeccb2-3995-41e3-94ec-d252b5836fce"
+  },
+  {
+    "to": "/rack",
+    "from": "/rack/c86fdad1-314b-4987-951f-ff4d3fd42151"
+  },
+  {
+    "to": "/rails",
+    "from": "/rails/c722b540-6e96-437d-9cd9-aa6625ab443f"
+  },
+  {
+    "to": "/rainbows",
+    "from": "/rainbows/5dd54f65-c84d-4830-8432-9a0be7d30d1b"
+  },
+  {
+    "to": "/rake",
+    "from": "/rake/f216a462-b82f-4baa-85f9-d4bbfb931a94"
+  },
+  {
+    "to": "/resque",
+    "from": "/resque/c5382aec-085d-428e-9aa6-daf0630fb0c2"
+  },
+  {
+    "to": "/ruby",
+    "from": "/ruby/1357d042-1f5b-4871-a14a-e2db10bec795"
+  },
+  {
+    "to": "/sequel",
+    "from": "/sequel/ad53676f-7384-4ce4-99d2-786f8566fc93"
+  },
+  {
+    "to": "/sidekiq",
+    "from": "/sidekiq/b93d4d1a-c90c-46da-8f82-086270b05fee"
+  },
+  {
+    "to": "/sinatra",
+    "from": "/sinatra/23a2fe56-bcd7-4466-91d2-b0b4e44ffb29"
+  },
+  {
+    "to": "/sunspot",
+    "from": "/sunspot/bddc7786-fe78-484c-a263-98cdf5d51f2f"
+  },
+  {
+    "to": "/thin",
+    "from": "/thin/9a027632-7df7-4e81-b2bc-4959b7b64615"
+  },
+  {
+    "to": "/typhoeus",
+    "from": "/typhoeus/fea37113-cb1b-4b10-8e2c-20fbd52be00b"
+  },
+  {
+    "to": "/unicorn",
+    "from": "/unicorn/b82fc20e-a8b6-449a-b6d7-241b4a6dfba7"
+  },
+  {
+    "to": "/webrick",
+    "from": "/webrick/6c327009-b269-49c1-b3a3-392f86ece8fe"
+  },
+  {
+    "to": "/salesforce-eventlog-for-logs",
+    "from": "/salesforce-eventlog-for-logs/9e721dc6-e854-4a7f-86ef-c256209fbc91"
+  },
+  {
+    "to": "/sendgrid-quickstart",
+    "from": "/sendgrid-quickstart/6e0cc60a-e6ae-4c97-b5d4-b99568f04e9d"
+  },
+  {
+    "to": "/signl4",
+    "from": "/signl4/c7117ee1-91aa-4ce1-997a-2ceab65dabad"
+  },
+  {
+    "to": "/snmp",
+    "from": "/snmp/9eb6470e-fffd-4f16-b29a-9c78ae43f0e6"
+  },
+  {
+    "to": "/speedscale",
+    "from": "/speedscale/c4512294-8f81-4efa-8f28-6c1db28d288c"
+  },
+  {
+    "to": "/split",
+    "from": "/split/772501cd-2b71-4544-9768-aec5efb91ef5"
+  },
+  {
+    "to": "/statsd",
+    "from": "/statsd/293c4da1-11cd-4942-8e40-8b6e85663003"
+  },
+  {
+    "to": "/suse-linux-enterprise-server",
+    "from": "/suse-linux-enterprise-server/902c5c2f-41db-44ed-8381-f3cb9b8a4b9e"
+  },
+  {
+    "to": "/synthetics-availability",
+    "from": "/synthetics-availability/260027d0-9d8f-4a35-a676-73b5ee6c0d2d"
+  },
+  {
+    "to": "/synthetics-endpoint-availability",
+    "from": "/synthetics-endpoint-availability/d78a22cb-1e17-47fe-b9f6-00a80ece4764"
+  },
+  {
+    "to": "/synthetics-page-link-crawler",
+    "from": "/synthetics-page-link-crawler/4ff03759-36c0-4052-bb8b-588a93eb1fae"
+  },
+  {
+    "to": "/synthetics-page-load-performance",
+    "from": "/synthetics-page-load-performance/07237bca-7867-405c-9bf0-9bafd17dd095"
+  },
+  {
+    "to": "/synthetics-private-locations",
+    "from": "/synthetics-private-locations/c1703f99-a3c5-425d-817d-375a0f54959a"
+  },
+  {
+    "to": "/synthetics-ssl-certification-check",
+    "from": "/synthetics-ssl-certification-check/e5ac132e-2da5-478a-afcf-7037601a9bea"
+  },
+  {
+    "to": "/synthetics-user-flow",
+    "from": "/synthetics-user-flow/931908a8-d6a0-4ca6-a3d0-d2d0266350ff"
+  },
+  {
+    "to": "/synthetics-user-step-execution",
+    "from": "/synthetics-user-step-execution/ef502f3e-4321-44f2-9668-e52619462cc3"
+  },
+  {
+    "to": "/trendmicro-cloudone-conformity",
+    "from": "/trendmicro-cloudone-conformity/c3ae3b79-260a-436f-ba25-1d97c61da3ad"
+  },
+  {
+    "to": "/tvos",
+    "from": "/tvos/36061f8f-c057-4a01-b578-c9b67bdf1859"
+  },
+  {
+    "to": "/ubuntu",
+    "from": "/ubuntu/bb4a3bc6-b595-45d5-b65d-f375c428f31a"
+  },
+  {
+    "to": "/unix",
+    "from": "/unix/9fdfa9b9-4a83-47e6-a8d5-b23cc05b653a"
+  },
+  {
+    "to": "/varnish",
+    "from": "/varnish/fc256226-d755-48a6-ac20-3334681ce43d"
+  },
+  {
+    "to": "/victorops",
+    "from": "/victorops/3937fc57-4414-4db7-8f23-b313892379ab"
+  },
+  {
+    "to": "/video-android",
+    "from": "/video-android/fa2ebce2-9dc0-4ff0-bcd4-c5d7de01e542"
+  },
+  {
+    "to": "/video-chromecast",
+    "from": "/video-chromecast/2a652488-858e-4f24-8a3f-f7281954a114"
+  },
+  {
+    "to": "/video-ios-tvos",
+    "from": "/video-ios-tvos/fa241f4a-b7df-43a6-8287-b21e3940a304"
+  },
+  {
+    "to": "/video-web-akamai",
+    "from": "/video-web-akamai/794055cb-eeb3-4cca-b478-6cd1fb97678e"
+  },
+  {
+    "to": "/video-web-html5",
+    "from": "/video-web-html5/7151989c-e4f2-4e51-a114-6951f3e783d4"
+  },
+  {
+    "to": "/video-web-jwplayer",
+    "from": "/video-web-jwplayer/f85451c5-657b-4e41-bf87-1e710b246992"
+  },
+  {
+    "to": "/video-web-theplatform",
+    "from": "/video-web-theplatform/22af96ba-47b0-44b4-9d58-6bad65ca2917"
+  },
+  {
+    "to": "/video-web-videojs",
+    "from": "/video-web-videojs/e0296927-4ea9-40a8-a1d4-3a2c1cced9af"
+  },
+  {
+    "to": "/vmware-esxi",
+    "from": "/vmware-esxi/1b913236-5aab-424c-8135-c1d2a4a03441"
+  },
+  {
+    "to": "/vmware-tanzu",
+    "from": "/vmware-tanzu/de3953e3-67c4-482f-819a-09e3a1f4da46"
+  },
+  {
+    "to": "/wayscript",
+    "from": "/wayscript/51294fb4-6b0a-4ee5-acad-c377b3b528d5"
+  },
+  {
+    "to": "/windows-desktop",
+    "from": "/windows-desktop/bffa596c-ec44-4995-a286-591bf9295dbb"
+  },
+  {
+    "to": "/windows-server",
+    "from": "/windows-server/4f9b5c6e-2c4f-44d9-bdd7-56490b9c5042"
+  },
+  {
+    "to": "/wordpress",
+    "from": "/wordpress/59ba7d1f-7833-4d9b-893d-2b493e5ddac8"
+  },
+  {
+    "to": "/xamarin",
+    "from": "/xamarin/c56c0992-fc96-4a07-977d-74c5619ff51f"
+  },
+  {
+    "to": "/xmatters",
+    "from": "/xmatters/9dce812a-d316-46d3-8f65-3cbc8bb3747d"
+  },
+  {
+    "to": "/zebrium",
+    "from": "/zebrium/2135562c-bdf4-41bd-bca4-f11bcdee72ca"
+  },
+  {
+    "to": "/zipkin",
+    "from": "/zipkin/51fe9abd-ecab-4d2a-aecf-97fbecf01c28"
   }
 ]
-
