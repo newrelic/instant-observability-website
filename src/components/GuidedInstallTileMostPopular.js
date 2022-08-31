@@ -39,6 +39,10 @@ const GuidedInstallTileMostPopular = () => {
 
   return (
     <Surface
+      onClick={() => {
+        setStartNavigation(true);
+        return handleButtonClick();
+      }}
       base={Surface.BASE.PRIMARY}
       css={css`
         padding: 32px;
@@ -58,6 +62,15 @@ const GuidedInstallTileMostPopular = () => {
           'heading'
           'summary'
           'install';
+        &:hover {
+          cursor: pointer;
+          border-color: var(--border-color);
+          -webkit-transform: translateY(-2px);
+          -moz-transform: translateY(-2px);
+          -ms-transform: translateY(-2px);
+          transform: translateY(-2px);
+          box-shadow: var(--shadow-4);
+        }
 
         @media screen and (max-width: ${QUICKSTARTS_COLLAPSE_BREAKPOINT}) {
           padding: 32px 32px 24px 32px;
@@ -109,20 +122,16 @@ const GuidedInstallTileMostPopular = () => {
       >
         <p
           css={css`
-            font-size: 24px;
+            font-size: 18px;
             letter-spacing: -0.025em;
             line-height: 32px;
             font-weight: 300;
 
             /* Limit the number of lines */
-            word-break: break-word;
 
             max-height: 8rem;
 
             /* Limits the number of lines */
-            overflow: hidden;
-            display: -webkit-box;
-            text-overflow: ellipsis;
             -webkit-box-orient: vertical;
             -webkit-line-clamp: 3;
           `}
