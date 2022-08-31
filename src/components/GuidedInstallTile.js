@@ -1,8 +1,7 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { css } from '@emotion/react';
 import Button from '@newrelic/gatsby-theme-newrelic/src/components/Button';
 import Surface from '@newrelic/gatsby-theme-newrelic/src/components/Surface';
-import Spinner from '@newrelic/gatsby-theme-newrelic/src/components/Spinner';
 import useInstrumentedHandler from '@newrelic/gatsby-theme-newrelic/src/hooks/useInstrumentedHandler';
 import {
   SIGNUP_LINK,
@@ -14,9 +13,6 @@ import Cookies from 'js-cookie';
 import { getGuidedInstallStackedNr1Url } from '@utils/get-pack-nr1-url';
 
 const GuidedInstallTile = () => {
-  // used to start the spinner on clicking "Install New Relic" button
-  const [startNavigation, setStartNavigation] = useState(false);
-
   const isReturningUser = Boolean(Cookies.get('ajs_user_id'));
 
   const handleNavigation = () => {
@@ -39,10 +35,7 @@ const GuidedInstallTile = () => {
 
   return (
     <Surface
-      onClick={() => {
-        setStartNavigation(true);
-        return handleButtonClick();
-      }}
+      onClick={handleButtonClick}
       base={Surface.BASE.PRIMARY}
       css={css`
         padding: 32px;
@@ -148,10 +141,6 @@ const GuidedInstallTile = () => {
         `}
       >
         <Button
-          onClick={() => {
-            setStartNavigation(true);
-            return handleButtonClick();
-          }}
           variant={Button.VARIANT.PRIMARY}
           size={Button.SIZE.SMALL}
           css={css`
@@ -168,21 +157,6 @@ const GuidedInstallTile = () => {
         >
           Install New Relic
         </Button>
-        {startNavigation && (
-          <Spinner
-            css={css`
-              margin-left: 1rem;
-              :after {
-                width: 2rem;
-                height: 2rem;
-                border-width: thick;
-                display: flex;
-                position: initial;
-                color: #ffffff;
-              }
-            `}
-          />
-        )}
       </div>
     </Surface>
   );
