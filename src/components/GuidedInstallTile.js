@@ -19,8 +19,9 @@ const GuidedInstallTile = () => {
     const platformUrl = isReturningUser
       ? getGuidedInstallStackedNr1Url(NR1_GUIDED_INSTALL_NERDLET)
       : SIGNUP_LINK;
-
+    console.log('before nav')
     navigate(platformUrl);
+    console.log('after nav');
   };
 
   const handleButtonClick = useInstrumentedHandler(
