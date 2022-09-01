@@ -1,10 +1,10 @@
 [
   {
-    "to": "/netlify-builds/5861d7f5-26c0-43ad-bda8-c893c4b27b25",
+    "to": "/netlify-builds",
     "from": "/netlify/5861d7f5-26c0-43ad-bda8-c893c4b27b25"
   },
   {
-    "to": "/cloudflare-network-logs/fc2bb0ac-6622-43c6-8c1f-6a4c26ab5434",
+    "to": "/cloudflare-network-logs",
     "from": "/cloudflare/fc2bb0ac-6622-43c6-8c1f-6a4c26ab5434"
   },
   {
@@ -84,8 +84,8 @@
     "from": "/network-data-ingest-and-cardinality/9ae44533-5dfa-4e8e-b72d-03b5b1bf9dba"
   },
   {
-    "to": "/undefined",
-    "from": "/undefined/c57f4c0b-824c-4b80-ac93-555763ee9549"
+    "to": "/new-relic-ingest-metric",
+    "from": "/new-relic-ingest-metric/c57f4c0b-824c-4b80-ac93-555763ee9549"
   },
   {
     "to": "/audit-prometheus-data-ingest-analysis",
