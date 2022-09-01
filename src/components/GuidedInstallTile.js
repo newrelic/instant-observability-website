@@ -2,7 +2,6 @@ import React from 'react';
 import { css } from '@emotion/react';
 import Button from '@newrelic/gatsby-theme-newrelic/src/components/Button';
 import Surface from '@newrelic/gatsby-theme-newrelic/src/components/Surface';
-import Link from '@newrelic/gatsby-theme-newrelic/src/components/Link';
 import useInstrumentedHandler from '@newrelic/gatsby-theme-newrelic/src/hooks/useInstrumentedHandler';
 import {
   SIGNUP_LINK,
@@ -16,17 +15,27 @@ const GuidedInstallTile = () => {
   const isReturningUser = Boolean(Cookies.get('ajs_user_id'));
 
   return (
-    <Surface
+    <a
+      css={css`
+        text-decoration: none;
+        color: initial;
+
+        &:hover {
+          color: initial;
+        }
+      `}
+      href={isReturningUser
+        ? getGuidedInstallStackedNr1Url(NR1_GUIDED_INSTALL_NERDLET)
+        : SIGNUP_LINK}
+    >
+      <Surface
       onClick={useInstrumentedHandler(null, {
         eventName: 'clickSuperTile',
         category: 'QuickstartLanding',
         tile: 'guided',
       }, 'tessen')}
+      interactive
       base={Surface.BASE.PRIMARY}
-      as={Link}
-      to={isReturningUser
-        ? getGuidedInstallStackedNr1Url(NR1_GUIDED_INSTALL_NERDLET)
-        : SIGNUP_LINK}
       css={css`
         padding: 32px;
         overflow: hidden;
@@ -41,23 +50,10 @@ const GuidedInstallTile = () => {
         grid-gap: 0.2rem;
         grid-template-rows: 68px 200px auto;
         grid-template-columns: auto;
-        transition: transform 0.15s ease-out,border-color 0.15s ease-out,box-shadow 0.15s ease-out;
         grid-template-areas:
           'heading'
           'summary'
           'install';
-        text-decoration: none;
-        color: initial;
-        &:hover {
-          cursor: pointer;
-          border-color: var(--border-color);
-          -webkit-transform: translateY(-2px);
-          -moz-transform: translateY(-2px);
-          -ms-transform: translateY(-2px);
-          transform: translateY(-2px);
-          box-shadow: var(--shadow-4);
-          color: initial;
-        }
 
         @media screen and (max-width: ${QUICKSTARTS_COLLAPSE_BREAKPOINT}) {
           padding: 32px 32px 24px 32px;
@@ -153,6 +149,7 @@ const GuidedInstallTile = () => {
         </Button>
       </div>
     </Surface>
+    </a>
   );
 };
 
