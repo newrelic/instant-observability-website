@@ -15,13 +15,13 @@ import { getGuidedInstallStackedNr1Url } from '@utils/get-pack-nr1-url';
 const GuidedInstallTile = () => {
   const isReturningUser = Boolean(Cookies.get('ajs_user_id'));
 
-  const handleNavigation = () => {
+  const handleNavigation = async () => {
     const platformUrl = isReturningUser
       ? getGuidedInstallStackedNr1Url(NR1_GUIDED_INSTALL_NERDLET)
       : SIGNUP_LINK;
-    console.log('before nav')
-    navigate(platformUrl);
-    console.log('after nav');
+      console.log('before nav');
+      await navigate(platformUrl);
+      console.log('after nav');
   };
 
   const handleButtonClick = useInstrumentedHandler(
