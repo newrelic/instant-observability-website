@@ -1,11 +1,11 @@
 import React, { useMemo } from 'react';
 import PropTypes from 'prop-types';
-
+import { css } from '@emotion/react';
 // Components
-import SuperTiles from '@components/SuperTiles';
 import Slider from 'react-slick';
 import withInstrumentation from '@components/withInstrumentation';
 import QuickstartTile from '@components/QuickstartTile';
+import GuidedInstallTile from '@components/GuidedInstallTile';
 // Utils
 import shuffleArray from '@utils/shuffleArray';
 // Types
@@ -15,7 +15,7 @@ const SliderWrapper = ({
   indexSettings,
   quickstarts,
   category,
-  showSuperTiles,
+  showGuidedInstall,
 }) => {
   /* 
     The following line is disabled because including `quickstarts` in the dependencies or not 
@@ -27,14 +27,24 @@ const SliderWrapper = ({
 
   return (
     <Slider {...indexSettings}>
-      {showSuperTiles && <SuperTiles />}
+      {showGuidedInstall && (
+        <div
+          css={css`
+            display: grid;
+            gap: 16px;
+            grid-template-columns: repeat(1, 1fr);
+          `}
+        >
+          <GuidedInstallTile />
+        </div>
+      )}
       {shuffledQuickstarts.map((pack, i) => {
         const InstrumentedTile = withInstrumentation(QuickstartTile);
 
         return (
           <InstrumentedTile
             category={category}
-            index={showSuperTiles ? i + 1 : i}
+            index={showGuidedInstall ? i + 1 : i}
             key={pack.id}
             featured={false}
             {...pack}
@@ -49,7 +59,7 @@ SliderWrapper.propTypes = {
   quickstarts: PropTypes.arrayOf(quickstart),
   indexSettings: PropTypes.object,
   category: PropTypes.string,
-  showSuperTiles: PropTypes.bool,
+  showGuidedInstall: PropTypes.bool,
 };
 
 export default SliderWrapper;
