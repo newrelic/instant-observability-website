@@ -2,5 +2,109 @@
     "python": {
         "title": "Python Application Performance Monitoring | New Relic",
         "description": "Python monitoring tool by New Relic helps business users and developers monitor Python application performance."
+    },
+    "amazon-web-services": {
+        "title": "Amazon Web Services Performance Monitoring | New Relic",
+        "description": "Amazon Web Services (AWS) monitoring tool by New Relic helps business users and developers monitor AWS performance."
+    },
+    "apache": {
+        "title": "Apache Web Server Performance Monitoring | New Relic",
+        "description": "Learn how Apache Web Server monitoring from New Relic helps business users and developers monitor performance of your HTTPD server. Get started today."
+    },
+    "circleci": {
+        "title": "CircleCI Performance Monitoring | New Relic",
+        "description": "CircleCI monitoring tool by New Relic helps business users and developers monitor CircleCI performance."
+    },
+    "codestream": {
+        "title": "CodeStream Performance Monitoring | New Relic",
+        "description": "Learn how CodeStream monitoring from New Relic helps business users and developers monitor performance. Get started today."
+    },
+    "databricks": {
+        "title": "Databricks Performance Monitoring | New Relic",
+        "description": "Databricks monitoring tool by New Relic helps business users and developers monitor performance on a real-time basis."
+    },
+    "django": {
+        "title": "Django Performance Monitoring | New Relic",
+        "description": "Django monitoring tool by New Relic helps business users and developers monitor Django performance with New Relic."
+    },
+    "dotnet": {
+        "title": ".NET Performance Monitoring | New Relic",
+        "description": "Learn how .NET monitoring from New Relic helps business users and developers monitor performance. Get started today."
+    },
+    "express": {
+        "title": "Express Performance Monitoring | New Relic",
+        "description": "Learn how Express monitoring from New Relic helps business users and developers monitor performance. Get started today."
+    },
+    "fastapi": {
+        "title": "FastAPI Performance Monitoring | New Relic",
+        "description": "FastAPI monitoring tool by New Relic helps business users and developers monitor performance. Install Now!"
+    },
+    "flask": {
+        "title": "Flask Application Performance Monitoring | New Relic",
+        "description": "Flask application monitoring tool by New Relic helps business users and developers monitor performance. Install Now!"
+    },
+    "ibmmq": {
+        "title": "IBM MQ Performance Monitoring | New Relic",
+        "description": "Learn how IBM MQ monitoring from New Relic helps business users and developers monitor performance. Get started today."
+    },
+    "java": {
+        "title": "Java Application Performance Monitoring | New Relic",
+        "description": "Learn how Java application monitoring from New Relic helps business users and developers monitor performance. Get started today."
+    },
+    "jmx-java": {
+        "title": "Java Management Extensions Performance Monitoring | New Relic",
+        "description": "Learn how JMX monitoring from New Relic helps business users and developers monitor performance. Get started today."
+    },
+    "kafka": {
+        "title": "Kafka Performance Monitoring | New Relic",
+        "description": "Kafka monitoring tool by New Relic helps business users and developers monitor Kafka performance with New Relic. Install Now!"
+    },
+    "lacework": {
+        "title": "Lacework Performance Monitoring | New Relic",
+        "description": "Lacework monitoring tool by New Relic helps business users and developers monitor performance. Install Now!"
+    },
+    "laravel": {
+        "title": "Laravel Performance Monitoring | New Relic",
+        "description": "Laravel application monitoring tool by New Relic helps business users and developers monitor performance. Install Now!"
+    },
+    "mongodb": {
+        "title": "MongoDB Performance Monitoring | New Relic",
+        "description": "Learn how MongoDB monitoring from New Relic helps business users and developers monitor performance. Get started today."
+    },
+    "mysql": {
+        "title": "MySQl Database Performance Monitoring | New Relic",
+        "description": "Learn how MySQL database monitoring from New Relic helps business users and developers monitor performance. Get started today."
+    },
+    "nginx": {
+        "title": "Nginx Performance Monitoring | New Relic",
+        "description": "Nginx web server monitoring tool by New Relic helps business users and developers monitor Kafka performance with New Relic. Install Now!"
+    },
+    "php": {
+        "title": "PHP Performance Monitoring | New Relic",
+        "description": "PHP application monitoring tool by New Relic helps business users and developers monitor performance. Install Now!"
+    },
+    "redis": {
+        "title": "Redis Performance Monitoring | New Relic",
+        "description": "Redis monitoring tool by New Relic helps business users and developers monitor Redis performance with New Relic. Install Now!"
+    },
+    "salesforce-eventlog-for-logs": {
+        "title": "Salesforce Event Logs Performance Monitoring | New Relic",
+        "description": "Salesforce Event Logs monitoring tool by New Relic helps business users and developers monitor performance. Install Now!"
+    },
+    "slack-notifications": {
+        "title": "Slack Notifications Performance Monitoring | New Relic",
+        "description": "Slack Notifications monitoring tool by New Relic helps business users and developers monitor performance. Get started today."
+    },
+    "synthetics-ssl-certification-check": {
+        "title": "Synthetics SSL Certification check Performance Monitoring | New Relic",
+        "description": "Learn how Synthetics SSL Certification Check from New Relic helps monitor the expiration and validity period of a given domain. Get started today."
+    },
+    "tomcat": {
+        "title": "Apache Tomcat Performance Monitoring | New Relic",
+        "description": "Apache Tomcat monitoring tool by New Relic helps business users and developers monitor Tomcat web server performance with New Relic. Install Now!"
+    },
+    "wordpress": {
+        "title": "WordPress Performance Monitoring | New Relic",
+        "description": "WordPress monitoring tool by New Relic helps business users and developers monitor WordPress website performance with New Relic. Install Now!"
     }
 }
