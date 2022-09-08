@@ -42,6 +42,15 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
         layout: 'QuickStartLayout',
       },
     });
+
+    createPage({
+      path: path.join(slug, '/', id),
+      component: path.resolve('./src/templates/QuickstartDetails.js'),
+      context: {
+        id,
+        layout: 'QuickStartLayout',
+      },
+    });
   });
 };
 
