@@ -12,6 +12,7 @@ import usePrevious from '@newrelic/gatsby-theme-newrelic/src/hooks/usePrevious';
 import { Menu, X } from 'react-feather';
 import { useLocation } from '@reach/router';
 import NewLogo from './NewLogo';
+import { MARKETING_UTM_CODES } from '@data/constants';
 
 export const NR_SITES = {
   PLATFORM: 'PLATFORM',
@@ -163,7 +164,7 @@ const GlobalHeader = ({ className, activeSite }) => {
               display: flex;
               align-items: center;
               outline: none;
-              ${utmCode &&
+              ${MARKETING_UTM_CODES.includes(utmCode) &&
               !UserIsInMainPage &&
               `
                 pointer-events: none;
@@ -264,7 +265,9 @@ const GlobalHeader = ({ className, activeSite }) => {
                 }
               `}
             >
-              {(UserIsInMainPage || (!UserIsInMainPage && !utmCode)) &&
+              {(UserIsInMainPage ||
+                (!UserIsInMainPage &&
+                  !MARKETING_UTM_CODES.includes(utmCode))) &&
                 createNavList('main', activeSite)}
             </ul>
           </nav>
@@ -437,7 +440,7 @@ const GlobalHeader = ({ className, activeSite }) => {
               align-items: center;
               height: 100%;
               outline: none;
-              ${utmCode &&
+              ${MARKETING_UTM_CODES.includes(utmCode) &&
               !UserIsInMainPage &&
               `
                 pointer-events: none;
