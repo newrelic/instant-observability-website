@@ -14163,6 +14163,38 @@
     ]
   },
   {
+    "title": "LaunchDarkly",
+    "name": "launchdarkly",
+    "description": "LaunchDarkly provides simple, scalable feature flag & toggle management\n(feature management) for the modern enterprise.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/launchdarkly",
+    "id": "f81fac99-351c-4e50-9991-69cff5bf7798",
+    "level": "COMMUNITY",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/launchdarkly/logo.svg",
+    "summary": "LaunchDarkly provides simple, scalable feature flag & toggle management\n(feature management) for the modern enterprise.",
+    "websiteUrl": null,
+    "keywords": [
+      "testing"
+    ],
+    "authors": [
+      "LaunchDarkly"
+    ],
+    "dashboards": [],
+    "alerts": [],
+    "documentation": [
+      {
+        "name": "LaunchDarkly installation docs",
+        "description": "LaunchDarkly provides simple, scalable feature flag &amp; toggle\nmanagement (feature management) for the modern enterprise.\n",
+        "url": "https://docs.launchdarkly.com/integrations/new-relic"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "LaunchDarkly",
+        "id": "third-party-launchdarkly"
+      }
+    ]
+  },
+  {
     "title": "Build your own ML Integration",
     "name": "mlops-bring-your-own",
     "description": "With bring your own data (BYO), after just a few minutes, you can quickly send your model's inference and metric data to the New Relic platform, directly from a notebook or any other environment.# Displayed in search results and recommendations. Summarizes a quickstarts functionality.",
@@ -14682,38 +14714,6 @@
       {
         "name": "Synthetics User Step Execution",
         "id": "third-party-synthetics-user-step-execution"
-      }
-    ]
-  },
-  {
-    "title": "LaunchDarkly",
-    "name": "launchdarkly",
-    "description": "LaunchDarkly provides simple, scalable feature flag &amp; toggle management\n(feature management) for the modern enterprise.",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/launchdarkly",
-    "id": "f81fac99-351c-4e50-9991-69cff5bf7798",
-    "level": "COMMUNITY",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/launchdarkly/logo.svg",
-    "summary": "LaunchDarkly provides simple, scalable feature flag &amp; toggle management\n(feature management) for the modern enterprise.",
-    "websiteUrl": null,
-    "keywords": [
-      "testing"
-    ],
-    "authors": [
-      "LaunchDarkly"
-    ],
-    "dashboards": [],
-    "alerts": [],
-    "documentation": [
-      {
-        "name": "LaunchDarkly installation docs",
-        "description": "LaunchDarkly provides simple, scalable feature flag &amp; toggle\nmanagement (feature management) for the modern enterprise.\n",
-        "url": "https://docs.launchdarkly.com/integrations/new-relic"
-      }
-    ],
-    "installPlans": [
-      {
-        "name": "LaunchDarkly",
-        "id": "third-party-launchdarkly"
       }
     ]
   },
