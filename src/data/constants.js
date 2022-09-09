@@ -33,6 +33,13 @@ export const LOGIN_LINK = 'https://login.newrelic.com/login';
 export const DEMO_LINK = 'https://newrelic.com/request-demo';
 
 export const UTM_PARAMETERS = { utm_medium: 'cpc' };
+export const MARKETING_UTM_CODES = [
+  'display',
+  'cpc',
+  'native',
+  'paid_social',
+  'paid_video',
+];
 
 export const RESERVED_QUICKSTART_IDS = {
   GUIDED_INSTALL: 'GUIDED_INSTALL',
