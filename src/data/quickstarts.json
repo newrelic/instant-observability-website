@@ -18209,6 +18209,44 @@
     ]
   },
   {
+    "title": "Amazon VPC Flow Logs",
+    "name": "aws-vpc-flow-logs",
+    "description": "## What is Amazon VPC Flow Logs monitoring via Kinesis Data Firehose?\n\nEnables you to capture information about the IP traffic going to and from\nnetwork interfaces in your Amazon VPC. Kinesis Data Firehose helps you reduce\nthe friction of sending logs to New Relic. With VPC flow logs from across\nyour Amazon estates, you can quickly understand key insights for performance\nanalytics and troubleshooting network connectivity.\n\n### Get started!\n\nStart monitoring Amazon VPC Flow Logs by connecting Amazon Web Services (AWS) to New Relic!\n\nCheck out our Amazon VPC Flow Logs documentation to instrument your cloud service and manage the stability, scalability, and reliability of your systems with New Relic's network monitoring capabilities.\n\n### More info\n\nCheck out the [documentation](https://docs.newrelic.com/docs/network-performance-monitoring/setup-performance-monitoring/cloud-flow-logs/aws-vpc-flow-log-monitoring/) to learn more about New Relic monitoring for Amazon VPC Flow Logs.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/aws/aws-vpc-flow-logs",
+    "id": "61d2ff67-f519-492c-a8de-6019b47d5bb2",
+    "level": "NEW_RELIC",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/aws/aws-vpc-flow-logs/logo.svg",
+    "summary": "Monitor Amazon VPC Flow Logs by connecting to New Relic via Kinesis Data Firehose",
+    "websiteUrl": null,
+    "keywords": [
+      "aws",
+      "amazon web services",
+      "vpc flow logs",
+      "cloud flow logs",
+      "kinesis firehose",
+      "kinesis data firehose",
+      "networking"
+    ],
+    "authors": [
+      "New Relic"
+    ],
+    "dashboards": [],
+    "alerts": [],
+    "documentation": [
+      {
+        "name": "Amazon VPC Flow Logs installation docs",
+        "description": "Monitor Amazon VPC Flow Logs by connecting AWS to New Relic.\n",
+        "url": "https://docs.newrelic.com/docs/network-performance-monitoring/setup-performance-monitoring/cloud-flow-logs/aws-vpc-flow-log-monitoring/"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "AWS-VPC-Flow-Logs",
+        "id": "aws-vpc-flow-logs"
+      }
+    ]
+  },
+  {
     "title": "ASP .NET MVC",
     "name": "asp-dotnet-mvc",
     "description": "## What is ASP .NET MVC?\n\nOpen-source web application framework developed by Microsoft, which implements\nthe model-view-controller pattern.\n\n\n## Get started!\n\nLeverage community expertise and instantly get value out of your telemetry data. This quickstart automatically instruments ASP .NET MVC with the New Relic .Net agent, and allows you to instantly monitor your .Net application with out-of-the-box dashboards and alerts. Further leverage New Relic's APM capabilities by setting up [errors inbox](https://docs.newrelic.com/docs/apm/apm-ui-pages/errors-inbox/errors-inbox/), [transaction tracing](https://docs.newrelic.com/docs/apm/transactions/transaction-traces/introduction-transaction-traces/), and [service maps](https://docs.newrelic.com/docs/understand-dependencies/understand-system-dependencies/service-maps/introduction-service-maps/).\n\n## More info\n\nCheck out the [documentation](https://docs.newrelic.com/docs/agents/net-agent/getting-started/introduction-new-relic-net/) to learn more about New Relic monitoring for ASP .NET MVC.",
@@ -20194,40 +20232,6 @@
         "name": "AWS Redshift installation docs",
         "description": "Monitor AWS Redshift by connecting AWS to New Relic.\n",
         "url": "https://docs.newrelic.com/docs/infrastructure/amazon-integrations/aws-integrations-list/aws-redshift-integration/"
-      }
-    ],
-    "installPlans": [
-      {
-        "name": "AWS-Infrastructure-Monitoring",
-        "id": "aws-infrastructure-monitoring"
-      }
-    ]
-  },
-  {
-    "title": "AWS VPC Flow Logs",
-    "name": "aws-vpc-flow-logs",
-    "description": "## What is AWS VPC Flow Logs?\n\nEnables you to capture information about the IP traffic going to and from\nnetwork interfaces in your AWS VPC.\n\n\n### Get started!\n\nStart monitoring AWS VPC Flow Logs by connecting Amazon Web Services (AWS) to New Relic!\n\nCheck out our AWS VPC Flow Logs documentation to instrument your cloud service and manage the stability, scalability, and reliability of your systems with New Relic's infrastructure monitoring capabilities.\n\n### More info\n\nCheck out the [documentation](https://docs.newrelic.com/docs/infrastructure/amazon-integrations/aws-integrations-list/aws-vpc-flow-logs-monitoring-integration/) to learn more about New Relic monitoring for AWS VPC Flow Logs.",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/aws/aws-vpc-flow-logs",
-    "id": "61d2ff67-f519-492c-a8de-6019b47d5bb2",
-    "level": "NEW_RELIC",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/aws/aws-vpc-flow-logs/logo.svg",
-    "summary": "Monitor AWS VPC Flow Logs by connecting AWS to New Relic",
-    "websiteUrl": null,
-    "keywords": [
-      "aws",
-      "amazon web services",
-      "networking"
-    ],
-    "authors": [
-      "New Relic"
-    ],
-    "dashboards": [],
-    "alerts": [],
-    "documentation": [
-      {
-        "name": "AWS VPC Flow Logs installation docs",
-        "description": "Monitor AWS VPC Flow Logs by connecting AWS to New Relic.\n",
-        "url": "https://docs.newrelic.com/docs/infrastructure/amazon-integrations/aws-integrations-list/aws-vpc-flow-logs-monitoring-integration/"
       }
     ],
     "installPlans": [
