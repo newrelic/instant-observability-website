@@ -35,6 +35,7 @@ const QuickstartTile = ({
           eventName: 'instantObservability',
           category: 'GuidedInstallClick',
           quickstartName: name,
+          partner: true,
         });
         break;
       case quickstartId === RESERVED_QUICKSTART_IDS.BUILD_YOUR_OWN_QUICKSTART:
@@ -42,6 +43,7 @@ const QuickstartTile = ({
           eventName: 'instantObservability',
           category: 'BuildYourOwnQuickstartClick',
           quickstartName: name,
+          partner: true,
         });
         break;
       default:
@@ -49,6 +51,7 @@ const QuickstartTile = ({
           eventName: 'instantObservability',
           category: 'QuickstartClick',
           quickstartName: name,
+          partner: true,
         });
     }
   };

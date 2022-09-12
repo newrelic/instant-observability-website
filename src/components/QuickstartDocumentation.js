@@ -18,6 +18,7 @@ const QuickstartDocumentation = ({ quickstart }) => {
       category: 'DocsTileClick',
       quickstartName: quickstart.name,
       quickstartId: quickstart.id,
+      partner: true,
     });
   };
 

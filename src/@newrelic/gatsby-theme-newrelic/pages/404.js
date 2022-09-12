@@ -50,6 +50,7 @@ const NotFoundPage = ({ location, pageContext: { swiftypeEngineKey } }) => {
         path: location.pathname,
         resultCount: searchResult.length,
         searchTerm,
+        partner: true,
       });
     }
   }, [location.pathname, searchResult, searchTerm, tessen]);

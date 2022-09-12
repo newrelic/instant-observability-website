@@ -13,6 +13,7 @@ const withInstrumentation = (QuickstartTile) => {
         category,
         quickstartName: name,
         index,
+        partner: true,
       });
     };
 
