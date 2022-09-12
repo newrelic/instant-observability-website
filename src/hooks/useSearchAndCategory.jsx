@@ -26,7 +26,6 @@ const useSearchAndCategory = (location) => {
         category: 'QuickstartCatalogSearch',
         search: searchParam,
         quickstartCategory: categoryParam,
-        partner: true,
       });
     }
   }, [location.search, tessen]);

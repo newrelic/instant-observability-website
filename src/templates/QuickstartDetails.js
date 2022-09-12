@@ -39,6 +39,8 @@ const QuickstartDetails = ({ data, location }) => {
     },
   ];
 
+  const partner = quickstart.keywords.includes('newrelic partner');
+
   const trackQuickstart = (action, quickstart) => () =>
     tessen.track({
       eventName: 'instantObservability',
@@ -47,6 +49,7 @@ const QuickstartDetails = ({ data, location }) => {
       quickstartId: quickstart.id,
       quickstartUrl: quickstart.packUrl,
       urlParams: Object.fromEntries([...urlParams]),
+      partner,
     });
 
   const tessenSupportTrack = (quickstart) => (action) => {
@@ -55,6 +58,7 @@ const QuickstartDetails = ({ data, location }) => {
       category: action,
       quickstartName: quickstart.name,
       quickstartId: quickstart.id,
+      partner,
     });
   };
 

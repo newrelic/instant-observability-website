@@ -25,17 +25,19 @@ const QuickstartTile = ({
   summary,
   href,
   customClickHandler,
+  keywords,
 }) => {
   const tessen = useTessen();
-
   const handlePackClick = (quickstartId) => {
+    const partner = keywords.includes('newrelic partner');
+
     switch (true) {
       case quickstartId === RESERVED_QUICKSTART_IDS.GUIDED_INSTALL:
         tessen.track({
           eventName: 'instantObservability',
           category: 'GuidedInstallClick',
           quickstartName: name,
-          partner: true,
+          partner,
         });
         break;
       case quickstartId === RESERVED_QUICKSTART_IDS.BUILD_YOUR_OWN_QUICKSTART:
@@ -43,7 +45,7 @@ const QuickstartTile = ({
           eventName: 'instantObservability',
           category: 'BuildYourOwnQuickstartClick',
           quickstartName: name,
-          partner: true,
+          partner,
         });
         break;
       default:
@@ -51,7 +53,7 @@ const QuickstartTile = ({
           eventName: 'instantObservability',
           category: 'QuickstartClick',
           quickstartName: name,
-          partner: true,
+          partner,
         });
     }
   };
@@ -248,6 +250,7 @@ QuickstartTile.propTypes = {
   logoSvg: PropTypes.object,
   summary: PropTypes.string,
   level: PropTypes.string,
+  keywords: PropTypes.arrayOf(PropTypes.string),
   className: PropTypes.string,
   href: PropTypes.string,
   customClickHandler: PropTypes.func,

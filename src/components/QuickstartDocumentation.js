@@ -18,7 +18,7 @@ const QuickstartDocumentation = ({ quickstart }) => {
       category: 'DocsTileClick',
       quickstartName: quickstart.name,
       quickstartId: quickstart.id,
-      partner: true,
+      partner: quickstart.keywords.includes('newrelic partner'),
     });
   };
 

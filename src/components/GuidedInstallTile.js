@@ -41,7 +41,6 @@ const GuidedInstallTile = () => {
             eventName: 'clickSuperTile',
             category: 'QuickstartLanding',
             tile: 'guided',
-            partner: true,
           },
           'tessen'
         )}

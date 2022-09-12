@@ -175,7 +175,7 @@ const InstallButton = ({
       quickstartUrl: quickstart.packUrl,
       super_tiles_treatment: treatment,
       urlParameters: Object.entries([...parameters]),
-      partner: true,
+      partner: quickstart.keywords.includes('newrelic partner'),
       quickstartButtonText: hasInstallableComponent
         ? 'Install quickstart'
         : 'See installation docs',
