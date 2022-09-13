@@ -6,6 +6,7 @@ import Icon from '@newrelic/gatsby-theme-newrelic/src/components/Icon';
 import Tag from '@newrelic/gatsby-theme-newrelic/src/components/Tag';
 import Link from '@newrelic/gatsby-theme-newrelic/src/components/Link';
 import useTessen from '@newrelic/gatsby-theme-newrelic/src/hooks/useTessen';
+import isNRPartner from '@utils/isNRPartner';
 import {
   SHIELD_LEVELS,
   RESERVED_QUICKSTART_IDS,
@@ -29,7 +30,7 @@ const QuickstartTile = ({
 }) => {
   const tessen = useTessen();
   const handlePackClick = (quickstartId) => {
-    const partner = keywords.includes('newrelic partner');
+    const partner = isNRPartner(keywords);
 
     switch (true) {
       case quickstartId === RESERVED_QUICKSTART_IDS.GUIDED_INSTALL:

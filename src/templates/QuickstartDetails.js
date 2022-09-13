@@ -14,6 +14,7 @@ import WhatsIncludedHeader from '@components/WhatsIncluded/WhatsIncludedHeader';
 import Layout from '@components/Layout';
 import QuickstartOverview from '@components/QuickstartOverview';
 import LandingBanner from '@components/LandingBanner';
+import isNRPartner from '@utils/isNRPartner';
 
 const layoutContentSpacing = css`
   --page-margin: 156px;
@@ -39,7 +40,7 @@ const QuickstartDetails = ({ data, location }) => {
     },
   ];
 
-  const partner = quickstart.keywords.includes('newrelic partner');
+  const partner = isNRPartner(quickstart.keywords);
 
   const trackQuickstart = (action, quickstart) => () =>
     tessen.track({

@@ -8,6 +8,7 @@ import useTessen from '@newrelic/gatsby-theme-newrelic/src/hooks/useTessen';
 import Intro from './Intro';
 import { quickstart } from '../types';
 import EbookIconSVG from './Icons/EbookIconSVG';
+import isNRPartner from '@utils/isNRPartner';
 
 const QuickstartDocumentation = ({ quickstart }) => {
   const tessen = useTessen();
@@ -18,7 +19,7 @@ const QuickstartDocumentation = ({ quickstart }) => {
       category: 'DocsTileClick',
       quickstartName: quickstart.name,
       quickstartId: quickstart.id,
-      partner: quickstart.keywords.includes('newrelic partner'),
+      partner: isNRPartner(quickstart.keywords),
     });
   };
 

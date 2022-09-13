@@ -5,6 +5,7 @@ import { graphql } from 'gatsby';
 import Button from '@newrelic/gatsby-theme-newrelic/src/components/Button';
 import Link from '@newrelic/gatsby-theme-newrelic/src/components/Link';
 import useTessen from '@newrelic/gatsby-theme-newrelic/src/hooks/useTessen';
+import isNRPartner from '@utils/isNRPartner';
 
 import {
   getPackNr1Url,
@@ -175,7 +176,7 @@ const InstallButton = ({
       quickstartUrl: quickstart.packUrl,
       super_tiles_treatment: treatment,
       urlParameters: Object.entries([...parameters]),
-      partner: quickstart.keywords.includes('newrelic partner'),
+      partner: isNRPartner(quickstart.keywords),
       quickstartButtonText: hasInstallableComponent
         ? 'Install quickstart'
         : 'See installation docs',
