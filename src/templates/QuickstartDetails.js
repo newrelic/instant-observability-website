@@ -14,6 +14,7 @@ import WhatsIncludedHeader from '@components/WhatsIncluded/WhatsIncludedHeader';
 import Layout from '@components/Layout';
 import QuickstartOverview from '@components/QuickstartOverview';
 import LandingBanner from '@components/LandingBanner';
+import isNRPartner from '@utils/isNRPartner';
 
 const layoutContentSpacing = css`
   --page-margin: 156px;
@@ -39,6 +40,8 @@ const QuickstartDetails = ({ data, location }) => {
     },
   ];
 
+  const partner = isNRPartner(quickstart.keywords);
+
   const trackQuickstart = (action, quickstart) => () =>
     tessen.track({
       eventName: 'instantObservability',
@@ -47,6 +50,7 @@ const QuickstartDetails = ({ data, location }) => {
       quickstartId: quickstart.id,
       quickstartUrl: quickstart.packUrl,
       urlParams: Object.fromEntries([...urlParams]),
+      partner,
     });
 
   const tessenSupportTrack = (quickstart) => (action) => {
@@ -55,6 +59,7 @@ const QuickstartDetails = ({ data, location }) => {
       category: action,
       quickstartName: quickstart.name,
       quickstartId: quickstart.id,
+      partner,
     });
   };
 

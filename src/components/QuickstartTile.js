@@ -6,6 +6,7 @@ import Icon from '@newrelic/gatsby-theme-newrelic/src/components/Icon';
 import Tag from '@newrelic/gatsby-theme-newrelic/src/components/Tag';
 import Link from '@newrelic/gatsby-theme-newrelic/src/components/Link';
 import useTessen from '@newrelic/gatsby-theme-newrelic/src/hooks/useTessen';
+import isNRPartner from '@utils/isNRPartner';
 import {
   SHIELD_LEVELS,
   RESERVED_QUICKSTART_IDS,
@@ -25,16 +26,19 @@ const QuickstartTile = ({
   summary,
   href,
   customClickHandler,
+  keywords,
 }) => {
   const tessen = useTessen();
-
   const handlePackClick = (quickstartId) => {
+    const partner = isNRPartner(keywords);
+
     switch (true) {
       case quickstartId === RESERVED_QUICKSTART_IDS.GUIDED_INSTALL:
         tessen.track({
           eventName: 'instantObservability',
           category: 'GuidedInstallClick',
           quickstartName: name,
+          partner,
         });
         break;
       case quickstartId === RESERVED_QUICKSTART_IDS.BUILD_YOUR_OWN_QUICKSTART:
@@ -42,6 +46,7 @@ const QuickstartTile = ({
           eventName: 'instantObservability',
           category: 'BuildYourOwnQuickstartClick',
           quickstartName: name,
+          partner,
         });
         break;
       default:
@@ -49,6 +54,7 @@ const QuickstartTile = ({
           eventName: 'instantObservability',
           category: 'QuickstartClick',
           quickstartName: name,
+          partner,
         });
     }
   };
@@ -245,6 +251,7 @@ QuickstartTile.propTypes = {
   logoSvg: PropTypes.object,
   summary: PropTypes.string,
   level: PropTypes.string,
+  keywords: PropTypes.arrayOf(PropTypes.string),
   className: PropTypes.string,
   href: PropTypes.string,
   customClickHandler: PropTypes.func,
