@@ -45,7 +45,7 @@ module.exports = {
             limit: 5,
             getSlug: ({ node }) => {
               if (node.internal.type === 'Quickstarts') {
-                return resolveQuickstartSlug(node.name, node.id);
+                return resolveQuickstartSlug(node.name);
               }
             },
             getParams: ({ node }) => {

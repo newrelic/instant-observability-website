@@ -106,8 +106,8 @@ exports.createResolvers = ({ createResolvers }) => {
     Quickstarts: {
       slug: {
         type: 'String',
-        resolve: ({ name, id }) => {
-          return resolveQuickstartSlug(name, id);
+        resolve: ({ name }) => {
+          return resolveQuickstartSlug(name);
         },
       },
     },
