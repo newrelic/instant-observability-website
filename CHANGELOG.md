@@ -1,3 +1,11 @@
+## [1.12.2](https://github.com/newrelic/instant-observability-website/compare/v1.12.1...v1.12.2) (2022-09-14)
+
+
+### Bug Fixes
+
+* package.json & yarn.lock to reduce vulnerabilities ([0ba6f30](https://github.com/newrelic/instant-observability-website/commit/0ba6f30eb973affba9d7738749b496632767b679))
+* package.json & yarn.lock to reduce vulnerabilities ([4b6e260](https://github.com/newrelic/instant-observability-website/commit/4b6e260392d876e2d4d6db5ae1367ba55af5994c))
+
 ## [1.12.1](https://github.com/newrelic/instant-observability-website/compare/v1.12.0...v1.12.1) (2022-08-26)
 
 
