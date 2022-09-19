@@ -1904,6 +1904,48 @@
     ]
   },
   {
+    "title": "Amazon Managed Workflows for Apache Airflow",
+    "name": "amazon-mwaa",
+    "description": "## What is Amazon Managed Workflows for Apache Airflow?\n\nAmazon Managed Workflows for Apache Airflow (MWAA) is a managed orchestration service for Apache Airflow that makes it easier to set up and operate end-to-end data pipelines in the cloud at scale.\n\n\n### Get started!\n\nStart monitoring Amazon Managed Workflows for Apache Airflow by connecting Amazon Web Services (AWS) to New Relic!\n\nCheck out our Amazon Managed Workflows for Apache Airflow documentation to instrument your cloud service and manage the stability, scalability, and reliability of your systems with New Relic's infrastructure monitoring capabilities.\n\n### More info\n\nCheck out the [documentation](https://docs.newrelic.com/docs/infrastructure/amazon-integrations/connect/aws-metric-stream-setup) to learn more about New Relic monitoring for Amazon Managed Workflows for Apache Airflow.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/aws/amazon-mwaa",
+    "id": "7414ed50-2a36-4558-b99a-639af053bef9",
+    "level": "COMMUNITY",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/aws/amazon-mwaa/logo.svg",
+    "summary": "Monitor Amazon Managed Workflows for Apache Airflow in New Relic",
+    "websiteUrl": null,
+    "keywords": [
+      "amazon",
+      "mwaa",
+      "apache",
+      "airflow",
+      "workflows"
+    ],
+    "authors": [
+      "New Relic",
+      "Peter Nguyen"
+    ],
+    "dashboards": [
+      {
+        "name": "Amazon Managed Workflows for Apache Airflow",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/amazon-mwaa/amazon-mwaa01.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/amazon-mwaa/amazon-mwaa02.png"
+        ]
+      }
+    ],
+    "alerts": [],
+    "documentation": [
+      {
+        "name": "Set up Amazon CloudWatch Metric Streams integration",
+        "description": "Monitor Amazon Managed Workflows for Apache Airflow (MWAA) by connecting to New Relic.",
+        "url": "https://docs.newrelic.com/docs/infrastructure/amazon-integrations/connect/aws-metric-stream-setup/"
+      }
+    ],
+    "installPlans": []
+  },
+  {
     "title": "AWS X-Ray",
     "name": "aws-x-ray",
     "description": "## What is AWS X-Ray?\n\nCapture data and debug protection for applications built on distributed\nframeworks.\n\n\n### Get started!\n\nStart monitoring AWS X-Ray by connecting Amazon Web Services (AWS) to New Relic!\n\nCheck out our AWS X-Ray documentation to instrument your cloud service and manage the stability, scalability, and reliability of your systems with New Relic's infrastructure monitoring capabilities.\n\n### More info\n\nCheck out the [documentation](https://docs.newrelic.com/docs/infrastructure/amazon-integrations/aws-integrations-list/aws-x-ray-monitoring-integration/) to learn more about New Relic monitoring for AWS X-Ray.",
@@ -11791,19 +11833,19 @@
     ],
     "dashboards": [
       {
-        "name": "Lacework Security Overview",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/lacework-security-overview/lacework-security-overview.png"
-        ]
-      },
-      {
         "name": "Lacework Anomaly Detections",
         "description": null,
         "url": null,
         "screenshots": [
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/lacework-anomaly-detections/lacework-anomaly-detections.png"
+        ]
+      },
+      {
+        "name": "Lacework Security Overview",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/lacework-security-overview/lacework-security-overview.png"
         ]
       },
       {
@@ -16886,6 +16928,22 @@
     ],
     "dashboards": [
       {
+        "name": "Catchpoint-Response Size",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/catchpoint-response-size/Catchpoint-Response_Size.png"
+        ]
+      },
+      {
+        "name": "Catchpoint-Overview",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/catchpoint-overview/Catchpoint-Overview.png"
+        ]
+      },
+      {
         "name": "Catchpoint-Test Times",
         "description": null,
         "url": null,
@@ -16899,22 +16957,6 @@
         "url": null,
         "screenshots": [
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/catchpoint-recent-errors/Catchpoint-Recent_Errors.png"
-        ]
-      },
-      {
-        "name": "Catchpoint-Overview",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/catchpoint-overview/Catchpoint-Overview.png"
-        ]
-      },
-      {
-        "name": "Catchpoint-Response Size",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/catchpoint-response-size/Catchpoint-Response_Size.png"
         ]
       }
     ],
@@ -22639,11 +22681,11 @@
     ],
     "dashboards": [
       {
-        "name": "Kubernetes Data Ingest Analysis",
+        "name": "GCP Integrations Data Ingest Analysis",
         "description": null,
         "url": null,
         "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/kubernetes-data-ingest-analysis/kubernetes-data-ingest-analysis.png"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/gcp-integrations-data-ingest-analysis/gcp-integrations-data-ingest-analysis.png"
         ]
       },
       {
@@ -22663,11 +22705,11 @@
         ]
       },
       {
-        "name": "GCP Integrations Data Ingest Analysis",
+        "name": "Kubernetes Data Ingest Analysis",
         "description": null,
         "url": null,
         "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/gcp-integrations-data-ingest-analysis/gcp-integrations-data-ingest-analysis.png"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/kubernetes-data-ingest-analysis/kubernetes-data-ingest-analysis.png"
         ]
       },
       {
@@ -23525,19 +23567,19 @@
         ]
       },
       {
-        "name": "Browser Traffic Analysis",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/traffic-analysis/traffic_analysis.png"
-        ]
-      },
-      {
         "name": "JavaScript Errors",
         "description": null,
         "url": null,
         "screenshots": [
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/javascript-errors/javascript_errors.png"
+        ]
+      },
+      {
+        "name": "Browser Traffic Analysis",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/traffic-analysis/traffic_analysis.png"
         ]
       }
     ],
