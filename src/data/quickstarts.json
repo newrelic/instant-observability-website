@@ -4422,9 +4422,9 @@
     ]
   },
   {
-    "title": "Typescript",
+    "title": "TypeScript",
     "name": "typescript",
-    "description": "## Comprehensive monitoring quickstart for TypeScript\nMicrosoft developed the TypeScript programming language, a free and open-source project. In addition to adding optional static typing, it is a strict syntactical superset of JavaScript. Its objective is to develop large-scale applications and transform their source code into JavaScript. \n\n## Why monitor TypeScript?\n- Access your TypeScript logs to identify errors in your application.\n- Find performance issues before they happen.\n- Scalable error monitoring without affecting production flow.\n- Maintain a low latency with fast throughput.\n\n## What’s included in this quickstart?\nGet these TypeScript monitoring features out of the box with our quickstartquickstar:\n- Understand the health of your with: throughput and error rate data, logs, web transaction time, Apdex score, and more apdex score and more).\n- Correlate TypeScript application metrics with your server’s primary health metrics, like CPU usage, memory, network usage, and disk space.\n- Create high-value baseline alerts that proactively inform developers about the status of their apps.",
+    "description": "## Comprehensive monitoring quickstart for TypeScript\nMicrosoft developed the TypeScript programming language, a free and open-source project. In addition to adding optional static typing, it is a strict syntactical superset of JavaScript. Its objective is to develop large-scale applications and transform their source code into JavaScript. \n\n## Why monitor TypeScript?\n- Access your TypeScript logs to identify errors in your application.\n- Find performance issues before they happen.\n- Scalable error monitoring without affecting production flow.\n- Maintain a low latency with fast throughput.\n\n## What’s included in this quickstart?\nGet these TypeScript monitoring features out of the box with our quickstart:\n- Understand the health of your with: throughput and error rate data, logs, web transaction time, Apdex score, and more apdex score and more).\n- Correlate TypeScript application metrics with your server’s primary health metrics, like CPU usage, memory, network usage, and disk space.\n- Create high-value baseline alerts that proactively inform developers about the status of their apps.",
     "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/node-js/typescript",
     "id": "88521b5e-17ed-4655-861c-a2681861597e",
     "level": "NEW_RELIC",
@@ -9618,6 +9618,46 @@
       {
         "name": "GCP-Infrastructure-Monitoring",
         "id": "gcp-infrastructure-monitoring"
+      }
+    ]
+  },
+  {
+    "title": "Zenduty",
+    "name": "zenduty",
+    "description": "## What is Zenduty?\n\nZenduty is a novel incident management platform providing end-to-end incident alerting, on-call management and response orchestration, giving teams greater control and automation over the incident management lifecycle.\n\n### Why Zenduty?\n\nZenduty provides your NOC, SRE and application engineers with detailed context around the New Relic APM alert along with playbooks and a complete incident command framework to triage, remediate and resolve incidents with speed.\n\n### Get started!\n\nCheck out the [Zenduty documentation](https://docs.zenduty.com/docs/newrelic) to learn how to setup best in class alerts around the New Relic APM.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/zenduty",
+    "id": "51ec1811-bb8d-4b9e-b94e-c856ab9b593b",
+    "level": "COMMUNITY",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/zenduty/logo.png",
+    "summary": "Zenduty provides robust incident response, automation and notification abilities when you send your New Relic alerts to Zenduty.",
+    "websiteUrl": null,
+    "keywords": [
+      "zenduty",
+      "incident management",
+      "automation",
+      "on call",
+      "support",
+      "site reliability",
+      "SRE",
+      "alerts"
+    ],
+    "authors": [
+      "Zenduty",
+      "Shubham Srivastava"
+    ],
+    "dashboards": [],
+    "alerts": [],
+    "documentation": [
+      {
+        "name": "Zenduty Installation docs",
+        "description": "Send your New Relic alerts to Zenduty",
+        "url": "https://docs.zenduty.com/docs/newrelic"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "Zenduty",
+        "id": "third-party-zenduty"
       }
     ]
   },
