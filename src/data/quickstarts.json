@@ -4612,11 +4612,11 @@
     ],
     "dashboards": [
       {
-        "name": "Redis Enterprise Database CRDT",
+        "name": "Redis Enterprise Database Metrics",
         "description": null,
         "url": null,
         "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/active-active/active_active01.png"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/database/database01.png"
         ]
       },
       {
@@ -4628,11 +4628,11 @@
         ]
       },
       {
-        "name": "Redis Enterprise Database Metrics",
+        "name": "Redis Enterprise Database CRDT",
         "description": null,
         "url": null,
         "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/database/database01.png"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/active-active/active_active01.png"
         ]
       }
     ],
@@ -11783,6 +11783,38 @@
     ]
   },
   {
+    "title": "Rafay",
+    "name": "rafay",
+    "description": "## What is Rafay\nRafay’s K8s Multi-Cluster Management Service provides lifecycle management and blueprinting support for managed Kubernetes services, such as Amazon EKS and Azure AKS, for packaged offerings such as RedHat OpenShift, and for upstream Kubernetes deployments. This service also incorporates logs/metrics collection, storage management, secrets management, and more.\n\n### About this quickstart\n\nThis quickstart is here to help you get started monitoring your K8's data from Rafay in New Relic. You can use our [infra K8's dashboard](https://one.newrelic.com/infra/services?&state=a1c4f610-6c8f-7796-687f-286af9040176) to monitor Rafay data from this integration.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/rafay",
+    "id": "77890f66-f540-45b8-a56c-f32aae0b7bf6",
+    "level": "VERIFIED",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/rafay/logo.svg",
+    "summary": "Monitor Multiple K8's Clusters with Rafay",
+    "websiteUrl": null,
+    "keywords": [
+      "rafay",
+      "k8s",
+      "kubernetes",
+      "cluster",
+      "multi-cluster",
+      "newrelic partner"
+    ],
+    "authors": [
+      "New Relic"
+    ],
+    "dashboards": [],
+    "alerts": [],
+    "documentation": [
+      {
+        "name": "Rafay || New Relic addon using Helm",
+        "description": "Send your Rafay K8's data to New Relic using New Relic's official Helm chart\n",
+        "url": "https://docs.rafay.co/recipes/monitoring/newrelic/"
+      }
+    ],
+    "installPlans": []
+  },
+  {
     "title": "Atlassian Jira for Errors Inbox",
     "name": "jira-errors-inbox",
     "description": "## Integrate your error management with automatic Jira ticketing\n\n[Errors inbox](https://newrelic.com/platform/errors-inbox) is an error-tracking solution that helps you proactively detect, triage, and resolve errors to help you to fix them before they impact your users.\n[Connect errors inbox to Jira Software](https://docs.newrelic.com/docs/errors-inbox/error-external-services#jira) to easily create Jira Software issues for your errors in seconds, allowing for faster collaboration and resolution.\n\n### Why use New Relic errors inbox?\n- **Track, triage, and resolve errors in one place:** Errors are grouped and displayed on a single screen for visibility and easy triaging. Tackle errors across the full application stack with APM, RUM, Mobile, and Serverless (Lambda Functions) data tracked.\n- **Resolve errors before impacting customers:** Proactively review and triage errors before they affect customers. Get to the root cause faster with full error details, including stack traces and logs in context, provided in the error inbox.\n- **Collaborate across teams:** Squash bugs as a team with shared error visibility, shared comments, and an integration with Slack. \n\n### File Jira Software issues without leaving your workflow\nWith this built-in two way integration, you can connect New Relic errors inbox with Jira Software to easily create Jira issues in seconds, to drive faster collaboration and resolution. Leverage issue templates that automatically contain error details and link directly to the stack trace and for quick access. Plus, Jira issues are stored alongside the associated error group, so if the error occurs again, you can easily access associated tickets.\n\nThe connection between errors inbox and Jira Software is automatically included in the errors inbox UI. All you have to do is connect your account and API token.\n\nErrors inbox for Jira is available for free to all New Relic full platform users and Jira Cloud users. \n\n### Set up the integration in minutes\nConnecting errors inbox and Jira Software is simple. Check out the resources below to help you get started:\n- Video: [Create Jira Tickets using Error Data from Errors Inbox](https://www.youtube.com/watch?v=v2frs2Pyjfw)\n- Blog: [How to integrate Jira with New Relic Errors Inbox](https://newrelic.com/blog/how-to-relic/errors-inbox-with-jira)\n- Demo: [Errors inbox for Jira](https://www.loom.com/share/d766c855094749aca608638bf0ac5b12)",
@@ -11994,14 +12026,6 @@
     ],
     "dashboards": [
       {
-        "name": "Lacework Security Overview",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/lacework-security-overview/lacework-security-overview.png"
-        ]
-      },
-      {
         "name": "Lacework Anomaly Detections",
         "description": null,
         "url": null,
@@ -12015,6 +12039,14 @@
         "url": null,
         "screenshots": [
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/lacework-compliance-violations/lacework-compliance-violations.png"
+        ]
+      },
+      {
+        "name": "Lacework Security Overview",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/lacework-security-overview/lacework-security-overview.png"
         ]
       }
     ],
@@ -14432,6 +14464,46 @@
         "id": "third-party-mlops-bring-your-own"
       }
     ]
+  },
+  {
+    "title": "Jenkins",
+    "name": "jenkins",
+    "description": "## What is Jenkins?\n\nThe leading open source automation server, Jenkins provides hundreds of plugins to support building, deploying and automating any project.\n\n### Get started!\n\nStart monitoring Jenkins jobs and pipeline executions in New Relic!\n\nCheck out our Monitoring Jenkins with OpenTelemetry and New Relic documentation to instrument your Jenkins instance with the OpenTelemetry plugin for Jenkins.\n\n### More info\n\nCheck out the [documentation](https://docs.newrelic.com/docs/more-integrations/open-source-telemetry-integrations/opentelemetry/jenkins/monitoring-jenkins-ot/) to learn more about New Relic monitoring for Jenkins.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/jenkins",
+    "id": "980ab07a-3483-4b44-bbac-ed9c0a9a41a1",
+    "level": "COMMUNITY",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/jenkins/logo.svg",
+    "summary": "Monitor Jenkins with the OpenTelemetry plugin in New Relic.",
+    "websiteUrl": null,
+    "keywords": [
+      "jenkins",
+      "opentelemetry",
+      "otel",
+      "pipelines"
+    ],
+    "authors": [
+      "New Relic",
+      "Peter Nguyen"
+    ],
+    "dashboards": [
+      {
+        "name": "Sample Dashboard - Jenkins",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/jenkins/jenkins-otel01.png"
+        ]
+      }
+    ],
+    "alerts": [],
+    "documentation": [
+      {
+        "name": "Set up Jenkins OpenTelemetry Plugin",
+        "description": "Monitor Jenkins with the OpenTelemetry plugin by visualizing jobs and pipeline executions as distributed traces.",
+        "url": "https://docs.newrelic.com/docs/more-integrations/open-source-telemetry-integrations/opentelemetry/jenkins/monitoring-jenkins-ot/"
+      }
+    ],
+    "installPlans": []
   },
   {
     "title": "ODBC",
@@ -17089,19 +17161,19 @@
     ],
     "dashboards": [
       {
-        "name": "Catchpoint-Overview",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/catchpoint-overview/Catchpoint-Overview.png"
-        ]
-      },
-      {
         "name": "Catchpoint-Recent Errors",
         "description": null,
         "url": null,
         "screenshots": [
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/catchpoint-recent-errors/Catchpoint-Recent_Errors.png"
+        ]
+      },
+      {
+        "name": "Catchpoint-Overview",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/catchpoint-overview/Catchpoint-Overview.png"
         ]
       },
       {
@@ -22850,6 +22922,14 @@
         ]
       },
       {
+        "name": "Kubernetes Data Ingest Analysis",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/kubernetes-data-ingest-analysis/kubernetes-data-ingest-analysis.png"
+        ]
+      },
+      {
         "name": "AWS Integrations Data Ingest Analysis",
         "description": null,
         "url": null,
@@ -22863,14 +22943,6 @@
         "url": null,
         "screenshots": [
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/azure-integrations-data-ingest-analysis/azure-integrations-data-ingest-analysis.png"
-        ]
-      },
-      {
-        "name": "Kubernetes Data Ingest Analysis",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/kubernetes-data-ingest-analysis/kubernetes-data-ingest-analysis.png"
         ]
       },
       {
@@ -23712,22 +23784,6 @@
     ],
     "dashboards": [
       {
-        "name": "Browser Traffic Analysis",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/traffic-analysis/traffic_analysis.png"
-        ]
-      },
-      {
-        "name": "Browser Pages Dashboard",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/browser-pages-dashboard/browser_pages_dashboard.png"
-        ]
-      },
-      {
         "name": "Browser Overview",
         "description": null,
         "url": null,
@@ -23741,6 +23797,22 @@
         "url": null,
         "screenshots": [
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/javascript-errors/javascript_errors.png"
+        ]
+      },
+      {
+        "name": "Browser Traffic Analysis",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/traffic-analysis/traffic_analysis.png"
+        ]
+      },
+      {
+        "name": "Browser Pages Dashboard",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/browser-pages-dashboard/browser_pages_dashboard.png"
         ]
       }
     ],
