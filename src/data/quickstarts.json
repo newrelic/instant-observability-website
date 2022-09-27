@@ -16623,49 +16623,6 @@
     ]
   },
   {
-    "title": "Amazon App Runner",
-    "name": "aws-apprunner",
-    "description": "## Monitor your Apps running in App Runner containers on New Relic Instant Observability Platform!\nWith New Relic's AWS App Runner integration, you now can see all your App Runner data on New Relic Instant Observability Platform.\n## Get started!\nCheck out the [documentation](https://docs.newrelic.com/docs/infrastructure/amazon-integrations/aws-integrations-list/aws-apprunner/) to learn more about New \n Relic monitoring and integration with AWS App Runner.",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/aws/aws-apprunner",
-    "id": "b70abf59-6db4-4d8d-81e6-d56bcf108f5a",
-    "level": "NEW_RELIC",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/aws/aws-apprunner/logo.png",
-    "summary": "Use New Relic - AWS App Runner Integration to Monitor Your Containerized Apps and Services with New Relic",
-    "websiteUrl": null,
-    "keywords": [
-      "aws",
-      "app runner",
-      "logs"
-    ],
-    "authors": [
-      "New Relic"
-    ],
-    "dashboards": [
-      {
-        "name": "App Runner Telemetry",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/aws-apprunner/aws-apprunner.png"
-        ]
-      }
-    ],
-    "alerts": [],
-    "documentation": [
-      {
-        "name": "Amazon App Runner integration docs",
-        "description": "Faster and comprehensive telemetry from Amazon App Runner Service for new and existing New Relic Customers\n",
-        "url": "https://docs.newrelic.com/docs/infrastructure/amazon-integrations/aws-integrations-list/aws-apprunner/"
-      }
-    ],
-    "installPlans": [
-      {
-        "name": "AWS-Apprunner",
-        "id": "aws-apprunner"
-      }
-    ]
-  },
-  {
     "title": "PDO",
     "name": "pdo",
     "description": "## What is PDO?\n\nPDO is a lean, consistent way to access databases in PHP.\n\n## Get started!\n\nLeverage community expertise and instantly get value out of your telemetry data. This quickstart automatically instruments PDO with the New Relic PHP agent, and allows you to further leverage New Relic's APM capabilities by setting up [custom dashboards](https://docs.newrelic.com/docs/query-your-data/explore-query-data/dashboards/introduction-dashboards/), [errors inbox](https://docs.newrelic.com/docs/apm/apm-ui-pages/errors-inbox/errors-inbox/), [transaction tracing](https://docs.newrelic.com/docs/apm/transactions/transaction-traces/introduction-transaction-traces/), and [service maps](https://docs.newrelic.com/docs/understand-dependencies/understand-system-dependencies/service-maps/introduction-service-maps/).\n\n## More info\n\nCheck out the [documentation](https://docs.newrelic.com/docs/agents/php-agent/) to learn more about New Relic monitoring for PDO.",
@@ -16729,6 +16686,49 @@
       {
         "name": "PHP Agent",
         "id": "php-agent"
+      }
+    ]
+  },
+  {
+    "title": "Amazon App Runner",
+    "name": "aws-apprunner",
+    "description": "## Monitor your Apps running in App Runner containers on New Relic Instant Observability Platform!\nWith New Relic's AWS App Runner integration, you now can see all your App Runner data on New Relic Instant Observability Platform.\n## Get started!\nCheck out the [documentation](https://docs.newrelic.com/docs/infrastructure/amazon-integrations/aws-integrations-list/aws-apprunner/) to learn more about New \n Relic monitoring and integration with AWS App Runner.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/aws/aws-apprunner",
+    "id": "b70abf59-6db4-4d8d-81e6-d56bcf108f5a",
+    "level": "NEW_RELIC",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/aws/aws-apprunner/logo.png",
+    "summary": "Use New Relic - AWS App Runner Integration to Monitor Your Containerized Apps and Services with New Relic",
+    "websiteUrl": null,
+    "keywords": [
+      "aws",
+      "app runner",
+      "logs"
+    ],
+    "authors": [
+      "New Relic"
+    ],
+    "dashboards": [
+      {
+        "name": "App Runner Telemetry",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/aws-apprunner/aws-apprunner01.png"
+        ]
+      }
+    ],
+    "alerts": [],
+    "documentation": [
+      {
+        "name": "Amazon App Runner integration docs",
+        "description": "Faster and comprehensive telemetry from Amazon App Runner Service for new and existing New Relic Customers\n",
+        "url": "https://docs.newrelic.com/docs/infrastructure/amazon-integrations/aws-integrations-list/aws-apprunner/"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "AWS-Apprunner",
+        "id": "aws-apprunner"
       }
     ]
   },
