@@ -1,3 +1,10 @@
+## [1.12.3](https://github.com/newrelic/instant-observability-website/compare/v1.12.2...v1.12.3) (2022-09-28)
+
+
+### Bug Fixes
+
+* Update crazy egg pages for basic urls ([a64ad8b](https://github.com/newrelic/instant-observability-website/commit/a64ad8b47f6d91cf9de8a6b0bc8f00e522c3b1d8))
+
 ## [1.12.2](https://github.com/newrelic/instant-observability-website/compare/v1.12.1...v1.12.2) (2022-09-14)
 
 
