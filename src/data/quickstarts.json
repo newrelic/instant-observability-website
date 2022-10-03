@@ -182,32 +182,6 @@
     ]
   },
   {
-    "title": "Slack Notifications",
-    "name": "slack-notifications",
-    "description": "Slack is a a messaging app for business that connects people to the information that they need.\n\nIntegrate New Relic with Slack to send notification messages to your Slack channels.\n\n[Check out our documentation](https://docs.newrelic.com/docs/alerts-applied-intelligence/notifications/notification-integrations/#slack) to set up a Slack notification channel and provide fast and consistent ways for the right personnel to be notified about incidents",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/notification-channels/slack-notifications",
-    "id": "db34c333-7b4a-4bb8-8fbf-becce43bfa44",
-    "level": "NEW_RELIC",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/notification-channels/slack-notifications/logo.png",
-    "summary": "Send your New Relic alerts to Slack",
-    "websiteUrl": null,
-    "keywords": [
-      "slack",
-      "notifications",
-      "AIOps",
-      "Incident Intelligence",
-      "Destinations"
-    ],
-    "authors": [
-      "Matan Moser (New Relic)",
-      "Ismail Azam (New Relic)"
-    ],
-    "dashboards": [],
-    "alerts": [],
-    "documentation": [],
-    "installPlans": []
-  },
-  {
     "title": "StatsD",
     "name": "statsd",
     "description": "## What is StatsD?\n\nLightweight, open-source Node.js application that listens for metrics from different applications and aggregates them.\n\n## Get started!\n\nNew Relic's StatsD integration lets you easily get StatsD-format data into New Relic.\nFollow [the documentation](https://docs.newrelic.com/docs/integrations/host-integrations/host-integrations-list/statsd-monitoring-integration-version-2) to get started!",
@@ -669,6 +643,38 @@
         "id": "wayscript"
       }
     ]
+  },
+  {
+    "title": "Slack Notifications",
+    "name": "slack-notifications",
+    "description": "Slack is a a messaging app for business that connects people to the information that they need.\n\nIntegrate New Relic with Slack to send notification messages to your Slack channels.\n\n[Check out our documentation](https://docs.newrelic.com/docs/alerts-applied-intelligence/notifications/notification-integrations/#slack) to set up a Slack notification channel and provide fast and consistent ways for the right personnel to be notified about incidents",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/notification-channels/slack-notifications",
+    "id": "db34c333-7b4a-4bb8-8fbf-becce43bfa44",
+    "level": "NEW_RELIC",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/notification-channels/slack-notifications/logo.png",
+    "summary": "Send your New Relic alerts to Slack",
+    "websiteUrl": null,
+    "keywords": [
+      "slack",
+      "notifications",
+      "AIOps",
+      "Incident Intelligence",
+      "Destinations"
+    ],
+    "authors": [
+      "Matan Moser (New Relic)",
+      "Ismail Azam (New Relic)"
+    ],
+    "dashboards": [],
+    "alerts": [],
+    "documentation": [
+      {
+        "name": "Slack installation docs",
+        "description": "If you use Slack to communicate with your organization, you can create a Slack workflow that sends notifications from New Relic to Slack. Check out our documentation so you can integrate Slack and New Relic.",
+        "url": "https://docs.newrelic.com/docs/alerts-applied-intelligence/notifications/notification-integrations/#slack"
+      }
+    ],
+    "installPlans": []
   },
   {
     "title": "CakePHP",
@@ -9788,6 +9794,38 @@
     ]
   },
   {
+    "title": "Webhook Notifications",
+    "name": "webhook-notifications",
+    "description": "Webhook is a method of augmenting or altering the behavior of a web page or web application with custom callbacks.\n\nIntegrate New Relic with Webhook to use the webhook notifier to send the notification messages to any endpoint you like.\n\n[Check out our documentation](https://docs.newrelic.com/docs/alerts-applied-intelligence/notifications/notification-integrations/#webhook) to set up a Webhook notification channel and provide fast and consistent ways for the right personnel to be notified about incidents",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/notification-channels/webhook-notifications",
+    "id": "ecb02f86-d2fd-478f-9ec9-1331dae3cc2d",
+    "level": "NEW_RELIC",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/notification-channels/webhook-notifications/logo.png",
+    "summary": "Send your New Relic alerts via Webhook",
+    "websiteUrl": null,
+    "keywords": [
+      "webhook",
+      "notifications",
+      "AIOps",
+      "Incident Intelligence",
+      "Destinations"
+    ],
+    "authors": [
+      "Matan Moser (New Relic)",
+      "Ismail Azam (New Relic)"
+    ],
+    "dashboards": [],
+    "alerts": [],
+    "documentation": [
+      {
+        "name": "Webhook installation docs",
+        "description": "Ready to integrate Webhook with New Relic? Check out our documentation to learn how to set up a Webhook workflow from New Relic.",
+        "url": "https://docs.newrelic.com/docs/alerts-applied-intelligence/notifications/notification-integrations/#webhook"
+      }
+    ],
+    "installPlans": []
+  },
+  {
     "title": "CodeIgniter",
     "name": "codeigniter",
     "description": "## What is CodeIgniter?\n\nOpen-source PHP-based web framework built for rapid development.\n\n## Get started!\n\nLeverage community expertise and instantly get value out of your telemetry data. This quickstart automatically instruments CodeIgniter with the New Relic PHP agent, and allows you to further leverage New Relic's APM capabilities by setting up [custom dashboards](https://docs.newrelic.com/docs/query-your-data/explore-query-data/dashboards/introduction-dashboards/), [errors inbox](https://docs.newrelic.com/docs/apm/apm-ui-pages/errors-inbox/errors-inbox/), [transaction tracing](https://docs.newrelic.com/docs/apm/transactions/transaction-traces/introduction-transaction-traces/), and [service maps](https://docs.newrelic.com/docs/understand-dependencies/understand-system-dependencies/service-maps/introduction-service-maps/).\n\n## More info\n\nCheck out the [documentation](https://docs.newrelic.com/docs/agents/php-agent/) to learn more about New Relic monitoring for CodeIgniter.",
@@ -10009,32 +10047,6 @@
         "id": "setup-java-agent"
       }
     ]
-  },
-  {
-    "title": "Webhook Notifications",
-    "name": "webhook-notifications",
-    "description": "Webhook is a method of augmenting or altering the behavior of a web page or web application with custom callbacks.\n\nIntegrate New Relic with Webhook to use the webhook notifier to send the notification messages to any endpoint you like.\n\n[Check out our documentation](https://docs.newrelic.com/docs/alerts-applied-intelligence/notifications/notification-integrations/#webhook) to set up a Webhook notification channel and provide fast and consistent ways for the right personnel to be notified about incidents",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/notification-channels/webhook-notifications",
-    "id": "ecb02f86-d2fd-478f-9ec9-1331dae3cc2d",
-    "level": "NEW_RELIC",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/notification-channels/webhook-notifications/logo.png",
-    "summary": "Send your New Relic alerts via Webhook",
-    "websiteUrl": null,
-    "keywords": [
-      "webhook",
-      "notifications",
-      "AIOps",
-      "Incident Intelligence",
-      "Destinations"
-    ],
-    "authors": [
-      "Matan Moser (New Relic)",
-      "Ismail Azam (New Relic)"
-    ],
-    "dashboards": [],
-    "alerts": [],
-    "documentation": [],
-    "installPlans": []
   },
   {
     "title": "Red Hat Enterprise Linux",
@@ -14466,46 +14478,6 @@
     ]
   },
   {
-    "title": "Jenkins",
-    "name": "jenkins",
-    "description": "## What is Jenkins?\n\nThe leading open source automation server, Jenkins provides hundreds of plugins to support building, deploying and automating any project.\n\n### Get started!\n\nStart monitoring Jenkins jobs and pipeline executions in New Relic!\n\nCheck out our Monitoring Jenkins with OpenTelemetry and New Relic documentation to instrument your Jenkins instance with the OpenTelemetry plugin for Jenkins.\n\n### More info\n\nCheck out the [documentation](https://docs.newrelic.com/docs/more-integrations/open-source-telemetry-integrations/opentelemetry/jenkins/monitoring-jenkins-ot/) to learn more about New Relic monitoring for Jenkins.",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/jenkins",
-    "id": "980ab07a-3483-4b44-bbac-ed9c0a9a41a1",
-    "level": "COMMUNITY",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/jenkins/logo.svg",
-    "summary": "Monitor Jenkins with the OpenTelemetry plugin in New Relic.",
-    "websiteUrl": null,
-    "keywords": [
-      "jenkins",
-      "opentelemetry",
-      "otel",
-      "pipelines"
-    ],
-    "authors": [
-      "New Relic",
-      "Peter Nguyen"
-    ],
-    "dashboards": [
-      {
-        "name": "Sample Dashboard - Jenkins",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/jenkins/jenkins-otel01.png"
-        ]
-      }
-    ],
-    "alerts": [],
-    "documentation": [
-      {
-        "name": "Set up Jenkins OpenTelemetry Plugin",
-        "description": "Monitor Jenkins with the OpenTelemetry plugin by visualizing jobs and pipeline executions as distributed traces.",
-        "url": "https://docs.newrelic.com/docs/more-integrations/open-source-telemetry-integrations/opentelemetry/jenkins/monitoring-jenkins-ot/"
-      }
-    ],
-    "installPlans": []
-  },
-  {
     "title": "ODBC",
     "name": "odbc",
     "description": "## What is ODBC?\n\nOpen Database Connectivity (ODBC) is a standard application programming\ninterface (API) for accessing database management systems (DBMS).\n\n\n## Get started!\n\nLeverage community expertise and instantly get value out of your telemetry data. This quickstart automatically instruments ODBC with the New Relic PHP agent, and allows you to further leverage New Relic's APM capabilities by setting up [custom dashboards](https://docs.newrelic.com/docs/query-your-data/explore-query-data/dashboards/introduction-dashboards/), [errors inbox](https://docs.newrelic.com/docs/apm/apm-ui-pages/errors-inbox/errors-inbox/), [transaction tracing](https://docs.newrelic.com/docs/apm/transactions/transaction-traces/introduction-transaction-traces/), and [service maps](https://docs.newrelic.com/docs/understand-dependencies/understand-system-dependencies/service-maps/introduction-service-maps/).\n\n## More info\n\nCheck out the [documentation](https://docs.newrelic.com/docs/agents/php-agent/) to learn more about New Relic monitoring for ODBC.",
@@ -14806,6 +14778,51 @@
     ]
   },
   {
+    "title": "Jenkins",
+    "name": "jenkins",
+    "description": "## What is Jenkins?\n\nThe leading open source automation server, Jenkins provides hundreds of plugins to support building, deploying and automating any project.\n\n### Get started!\n\nStart monitoring Jenkins jobs and pipeline executions in New Relic!\n\nCheck out our Monitoring Jenkins with OpenTelemetry and New Relic documentation to instrument your Jenkins instance with the OpenTelemetry plugin for Jenkins.\n\n### More info\n\nCheck out the [documentation](https://docs.newrelic.com/docs/more-integrations/open-source-telemetry-integrations/opentelemetry/jenkins/monitoring-jenkins-ot/) to learn more about New Relic monitoring for Jenkins.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/jenkins",
+    "id": "980ab07a-3483-4b44-bbac-ed9c0a9a41a1",
+    "level": "COMMUNITY",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/jenkins/logo.svg",
+    "summary": "Monitor Jenkins with the OpenTelemetry plugin in New Relic.",
+    "websiteUrl": null,
+    "keywords": [
+      "jenkins",
+      "opentelemetry",
+      "otel",
+      "pipelines"
+    ],
+    "authors": [
+      "New Relic",
+      "Peter Nguyen"
+    ],
+    "dashboards": [
+      {
+        "name": "Sample Dashboard - Jenkins",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/jenkins/jenkins-otel01.png"
+        ]
+      }
+    ],
+    "alerts": [],
+    "documentation": [
+      {
+        "name": "Set up Jenkins OpenTelemetry Plugin",
+        "description": "Monitor Jenkins with the OpenTelemetry plugin by visualizing jobs and pipeline executions as distributed traces.",
+        "url": "https://docs.newrelic.com/docs/more-integrations/open-source-telemetry-integrations/opentelemetry/jenkins/monitoring-jenkins-ot/"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "Jenkins",
+        "id": "third-party-jenkins-integration"
+      }
+    ]
+  },
+  {
     "title": "Email Notifications",
     "name": "email-notifications",
     "description": "Send your New Relic alert notifications via email. You can send email notifications to users with or without New Relic accounts.\n\n[Check out our documentation](https://docs.newrelic.com/docs/alerts-applied-intelligence/notifications/notification-integrations/#email) to set up an email notification channel and provide fast and consistent ways for the right personnel to be notified about incidents",
@@ -14828,7 +14845,13 @@
     ],
     "dashboards": [],
     "alerts": [],
-    "documentation": [],
+    "documentation": [
+      {
+        "name": "Email installation docs",
+        "description": "Want to send automated emails when your system meets certain thresholds? Check out our documentation about setting up a workflow that notifies the right teams when an alert is triggered.",
+        "url": "https://docs.newrelic.com/docs/alerts-applied-intelligence/notifications/notification-integrations/#email"
+      }
+    ],
     "installPlans": []
   },
   {
@@ -16859,6 +16882,38 @@
     ]
   },
   {
+    "title": "ServiceNow Notifications",
+    "name": "servicenow-notifications",
+    "description": "ServiceNow is a software that helps companies manage digital workflows for enterprise operations.\n\nIntegrate New Relic with ServiceNow Incident-Management and automatically create and update incidents.\n\n[Check out our documentation](https://docs.newrelic.com/docs/alerts-applied-intelligence/notifications/notification-integrations/#servicenow) to set up a ServiceNow notification channel and provide fast and consistent ways for the right personnel to be notified about incidents",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/notification-channels/servicenow-notifications",
+    "id": "0e2c5c90-bda2-4147-82af-8b9bf8038ee6",
+    "level": "NEW_RELIC",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/notification-channels/servicenow-notifications/logo.png",
+    "summary": "Send your New Relic alerts to ServiceNow",
+    "websiteUrl": null,
+    "keywords": [
+      "servicenow",
+      "notifications",
+      "AIOps",
+      "Incident Intelligence",
+      "Destinations"
+    ],
+    "authors": [
+      "Matan Moser (New Relic)",
+      "Ismail Azam (New Relic)"
+    ],
+    "dashboards": [],
+    "alerts": [],
+    "documentation": [
+      {
+        "name": "ServiceNow installation docs",
+        "description": "With our ServiceNow integration, sync issues caught in New Relic with ServiceNow incidents. Check out our documentation to set up ServiceNow destinations and configure a message template, so your personnel are always informed.",
+        "url": "https://docs.newrelic.com/docs/alerts-applied-intelligence/notifications/notification-integrations/#servicenow"
+      }
+    ],
+    "installPlans": []
+  },
+  {
     "title": "PerfMon",
     "name": "perfmon",
     "description": "Windows Performance Monitor is a toolkit that enables system performance data\nand analytics.",
@@ -16923,32 +16978,6 @@
         "id": "third-party-xmatters"
       }
     ]
-  },
-  {
-    "title": "ServiceNow Notifications",
-    "name": "servicenow-notifications",
-    "description": "ServiceNow is a software that helps companies manage digital workflows for enterprise operations.\n\nIntegrate New Relic with ServiceNow Incident-Management and automatically create and update incidents.\n\n[Check out our documentation](https://docs.newrelic.com/docs/alerts-applied-intelligence/notifications/notification-integrations/#servicenow) to set up a ServiceNow notification channel and provide fast and consistent ways for the right personnel to be notified about incidents",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/notification-channels/servicenow-notifications",
-    "id": "0e2c5c90-bda2-4147-82af-8b9bf8038ee6",
-    "level": "NEW_RELIC",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/notification-channels/servicenow-notifications/logo.png",
-    "summary": "Send your New Relic alerts to ServiceNow",
-    "websiteUrl": null,
-    "keywords": [
-      "servicenow",
-      "notifications",
-      "AIOps",
-      "Incident Intelligence",
-      "Destinations"
-    ],
-    "authors": [
-      "Matan Moser (New Relic)",
-      "Ismail Azam (New Relic)"
-    ],
-    "dashboards": [],
-    "alerts": [],
-    "documentation": [],
-    "installPlans": []
   },
   {
     "title": "Fluentd plugin for Logs",
@@ -22717,34 +22746,6 @@
     ]
   },
   {
-    "title": "Atlassian JIRA",
-    "name": "atlassian-jira",
-    "description": "Jira is a proprietary issue tracking product developed by Atlassian that allows bug tracking and agile project management. You can Integrate New Relic with Atlassian Jira(Cloud) and automatically create and update Jira issues.\n\n[Check out our documentation](https://docs.newrelic.com/docs/alerts-applied-intelligence/notifications/notification-integrations/#jira) to set up a JIRA notification channel and provide fast and consistent ways for the right personnel to be notified about incidents",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/atlassian/atlassian-jira",
-    "id": "a99b22a5-5666-4096-b239-8f315700fde0",
-    "level": "NEW_RELIC",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/atlassian/atlassian-jira/logo.png",
-    "summary": "Integrate New Relic with Atlassian Jira(Cloud) and automatically create and update Jira issues.",
-    "websiteUrl": null,
-    "keywords": [
-      "JIRA",
-      "Atlassian",
-      "notifications",
-      "AIOps",
-      "Incident Intelligence",
-      "Destinations",
-      "newrelic partner"
-    ],
-    "authors": [
-      "Matan Moser (New Relic)",
-      "Ismail Azam (New Relic)"
-    ],
-    "dashboards": [],
-    "alerts": [],
-    "documentation": [],
-    "installPlans": []
-  },
-  {
     "title": "Ansible",
     "name": "ansible",
     "description": "# What is Ansible?\nAnsible is a radically simple IT automation engine that automates cloud provisioning, configuration management, application deployment, intra-service orchestration, and many other IT needs.\n\nDesigned for multi-tier deployments since day one, Ansible models your IT infrastructure by describing how all of your systems inter-relate, rather than just managing one system at a time.\n\nIt uses no agents and no additional custom security infrastructure, so it's easy to deploy - and most importantly, it uses a very simple language (YAML, in the form of Ansible Playbooks) that allow you to describe your automation jobs in a way that approaches plain English.\n\n# What does New Relic provide\nNew Relic has developed a Ansible playbook for the Ansible agent to deploy the [New Relic Infrastructure agent](https://docs.newrelic.com/docs/infrastructure/infrastructure-monitoring/get-started/get-started-infrastructure-monitoring/) and [On Host Integrations](https://docs.newrelic.com/docs/infrastructure/host-integrations/get-started/introduction-host-integrations) throughout your environment.\n\n# How to get started?\nFollow the instructions on New Relic documentation: [Configure the infrastructure agent using Ansible](https://docs.newrelic.com/docs/infrastructure/new-relic-infrastructure/config-management-tools/configure-new-relic-infrastructure-using-ansible)",
@@ -22911,6 +22912,40 @@
         "id": "third-party-metric-api"
       }
     ]
+  },
+  {
+    "title": "Atlassian JIRA",
+    "name": "atlassian-jira",
+    "description": "Jira is a proprietary issue tracking product developed by Atlassian that allows bug tracking and agile project management. You can Integrate New Relic with Atlassian Jira(Cloud) and automatically create and update Jira issues.\n\n[Check out our documentation](https://docs.newrelic.com/docs/alerts-applied-intelligence/notifications/notification-integrations/#jira) to set up a JIRA notification channel and provide fast and consistent ways for the right personnel to be notified about incidents",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/atlassian/atlassian-jira",
+    "id": "a99b22a5-5666-4096-b239-8f315700fde0",
+    "level": "NEW_RELIC",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/atlassian/atlassian-jira/logo.png",
+    "summary": "Integrate New Relic with Atlassian Jira(Cloud) and automatically create and update Jira issues.",
+    "websiteUrl": null,
+    "keywords": [
+      "JIRA",
+      "Atlassian",
+      "notifications",
+      "AIOps",
+      "Incident Intelligence",
+      "Destinations",
+      "newrelic partner"
+    ],
+    "authors": [
+      "Matan Moser (New Relic)",
+      "Ismail Azam (New Relic)"
+    ],
+    "dashboards": [],
+    "alerts": [],
+    "documentation": [
+      {
+        "name": "Atlassian Jira (Cloud) installation docs",
+        "description": "See a potential problem developing in your stack? When you integrate New Relic with Atlassian Jira(Cloud), you can automate your jira processes like creating, updating, or deleting a ticket directly from New Relic.",
+        "url": "https://docs.newrelic.com/docs/alerts-applied-intelligence/notifications/notification-integrations/#jira"
+      }
+    ],
+    "installPlans": []
   },
   {
     "title": "Agent for Google Publisher Tags",
