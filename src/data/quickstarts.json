@@ -843,6 +843,51 @@
     ]
   },
   {
+    "title": "Amazon API Gateway",
+    "name": "aws-api-gateway",
+    "description": "## What is Amazon API Gateway?\n\nFully managed service for creating, publishing, maintaining, monitoring, and\nsecuring APIs at any scale.\n\n\n### Get started!\n\nStart monitoring Amazon API Gateway by connecting Amazon Web Services (AWS) to New Relic!\n\nCheck out our Amazon API Gateway documentation to instrument your cloud service and manage the stability, scalability, and reliability of your systems with New Relic's infrastructure monitoring capabilities.\n\n\n### More info\n\nCheck out the [documentation](https://docs.newrelic.com/docs/integrations/amazon-integrations/aws-integrations-list/aws-api-gateway-monitoring-integration) to learn more about New Relic monitoring for AWS API Gateway.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/aws/amazon-api-gateway",
+    "id": "b2fe368b-6e09-4f63-9c10-e888aa22a292",
+    "level": "NEW_RELIC",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/aws/amazon-api-gateway/logo.svg",
+    "summary": "Monitor Amazon API Gateway by connecting AWS to New Relic",
+    "websiteUrl": null,
+    "keywords": [
+      "aws",
+      "amazon web services",
+      "api",
+      "networking"
+    ],
+    "authors": [
+      "New Relic"
+    ],
+    "dashboards": [
+      {
+        "name": "Amazon API Gateway",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/amazon-api-gateway/amazon-api-gateway1.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/amazon-api-gateway/amazon-api-gateway2.png"
+        ]
+      }
+    ],
+    "alerts": [],
+    "documentation": [
+      {
+        "name": "Amazon API Gateway installation docs",
+        "description": "Monitor Amazon API Gateway by connecting AWS to New Relic.\n",
+        "url": "https://docs.newrelic.com/docs/integrations/amazon-integrations/aws-integrations-list/aws-api-gateway-monitoring-integration"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "AWS-CloudWatch-Metric-Streams",
+        "id": "aws-cloudwatch-metric-streams"
+      }
+    ]
+  },
+  {
     "title": "Kamon",
     "name": "kamon",
     "description": "## What is Kamon?\nKamon provides an instrumentation toolkit that specializes in automatic instrumentation of Scala and Akka applications. It consists of APIs for metric and tracing instrumentation and automatic instrumentation modules that create application metrics and distributed traces.\n\n## Get started!\n\nNew Relic's Kamon reporter is included in the Kamon Bundle, and you can configure it to send telemetry data from your Kamon-instrumented applications to your New Relic account.\nFollow the documentation for the [New Relic's Kamon reporter](https://docs.newrelic.com/docs/integrations/open-source-telemetry-integrations/kamon/kamon-reporter/) to get started!",
@@ -1578,41 +1623,6 @@
     ]
   },
   {
-    "title": "AWS API Gateway",
-    "name": "aws-api-gateway",
-    "description": "## What is AWS API Gateway?\n\nFully managed service for creating, publishing, maintaining, monitoring, and\nsecuring APIs at any scale.\n\n\n### Get started!\n\nStart monitoring AWS API Gateway by connecting Amazon Web Services (AWS) to New Relic!\n\nCheck out our AWS API Gateway documentation to instrument your cloud service and manage the stability, scalability, and reliability of your systems with New Relic's infrastructure monitoring capabilities.\n\n### More info\n\nCheck out the [documentation](https://docs.newrelic.com/docs/integrations/amazon-integrations/aws-integrations-list/aws-api-gateway-monitoring-integration) to learn more about New Relic monitoring for AWS API Gateway.",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/aws/aws-api-gateway",
-    "id": "b2fe368b-6e09-4f63-9c10-e888aa22a292",
-    "level": "NEW_RELIC",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/aws/aws-api-gateway/logo.svg",
-    "summary": "Monitor AWS API Gateway by connecting AWS to New Relic",
-    "websiteUrl": null,
-    "keywords": [
-      "aws",
-      "amazon web services",
-      "api",
-      "networking"
-    ],
-    "authors": [
-      "New Relic"
-    ],
-    "dashboards": [],
-    "alerts": [],
-    "documentation": [
-      {
-        "name": "AWS API Gateway installation docs",
-        "description": "Monitor AWS API Gateway by connecting AWS to New Relic.\n",
-        "url": "https://docs.newrelic.com/docs/integrations/amazon-integrations/aws-integrations-list/aws-api-gateway-monitoring-integration"
-      }
-    ],
-    "installPlans": [
-      {
-        "name": "AWS-Infrastructure-Monitoring",
-        "id": "aws-infrastructure-monitoring"
-      }
-    ]
-  },
-  {
     "title": "AWS Direct Connect",
     "name": "aws-direct-connect",
     "description": "## What is AWS Direct Connect?\n\nEstablish a private, secure connection to AWS that runs outside of your ISP.\n\n### Get started!\n\nStart monitoring AWS Direct Connect by connecting Amazon Web Services (AWS) to New Relic!\n\nCheck out our AWS Direct Connect documentation to instrument your cloud service and manage the stability, scalability, and reliability of your systems with New Relic's infrastructure monitoring capabilities.\n\n### More info\n\nCheck out the [documentation](https://docs.newrelic.com/docs/infrastructure/amazon-integrations/aws-integrations-list/aws-direct-connect-monitoring-integration/) to learn more about New Relic monitoring for AWS Direct Connect.",
@@ -1803,19 +1813,19 @@
     ],
     "dashboards": [
       {
-        "name": "Battlesnake Performance",
-        "description": "Monitor your Battlesnake's performance and see how it stacks up against your competition!",
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/battlesnake-performance/battlesnake-performance.png"
-        ]
-      },
-      {
         "name": "Battlesnake Server Status",
         "description": "A dashboard to monitor your Battlesnake server's performance. It's important to keep all responses to the `/move` endpoint under 500ms. Furthermore, it's possible that your snake may be in multiple concurrent matches at the same time. It's important to make sure you server and web application are running smoothly to keep you in the game!",
         "url": null,
         "screenshots": [
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/battlesnake-server-status/battlesnake-server-status.png"
+        ]
+      },
+      {
+        "name": "Battlesnake Performance",
+        "description": "Monitor your Battlesnake's performance and see how it stacks up against your competition!",
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/battlesnake-performance/battlesnake-performance.png"
         ]
       },
       {
@@ -2418,6 +2428,40 @@
       {
         "name": "PHP Agent",
         "id": "php-agent"
+      }
+    ]
+  },
+  {
+    "title": "AWS AppSync",
+    "name": "aws-appsync",
+    "description": "## What is AWS AppSync?\n\nFully managed serverless GraphQL service for real-time data queries,\nsynchronization, communications and offline programming features.\n\n\n### Get started!\n\nStart monitoring AWS AppSync by connecting Amazon Web Services (AWS) to New Relic!\n\nCheck out our AWS AppSync documentation to instrument your cloud service and manage the stability, scalability, and reliability of your systems with New Relic's infrastructure monitoring capabilities.\n\n\n### More info\n\nCheck out the [documentation](https://docs.newrelic.com/docs/integrations/amazon-integrations/aws-integrations-list/aws-appsync-monitoring-integration) to learn more about New Relic monitoring for AWS AppSync.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/aws/aws-appsync",
+    "id": "c97c5208-a83e-49dd-9555-45ab01692634",
+    "level": "NEW_RELIC",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/aws/aws-appsync/logo.svg",
+    "summary": "Monitor AWS AppSync by connecting AWS to New Relic",
+    "websiteUrl": null,
+    "keywords": [
+      "aws",
+      "amazon web services",
+      "api"
+    ],
+    "authors": [
+      "New Relic"
+    ],
+    "dashboards": [],
+    "alerts": [],
+    "documentation": [
+      {
+        "name": "AWS AppSync installation docs",
+        "description": "Monitor AWS AppSync by connecting AWS to New Relic.\n",
+        "url": "https://docs.newrelic.com/docs/integrations/amazon-integrations/aws-integrations-list/aws-appsync-monitoring-integration"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "AWS-CloudWatch-Metric-Streams",
+        "id": "aws-cloudwatch-metric-streams"
       }
     ]
   },
@@ -4104,19 +4148,19 @@
     ],
     "dashboards": [
       {
-        "name": "Data Ingest Governance Entity Breakdowns",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/data-ingest-entity-breakdown/data-ingest-entity-breakdown.png"
-        ]
-      },
-      {
         "name": "Data Ingest Governance Baseline",
         "description": null,
         "url": null,
         "screenshots": [
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/data-ingest-baseline/data-ingest-baseline.png"
+        ]
+      },
+      {
+        "name": "Data Ingest Governance Entity Breakdowns",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/data-ingest-entity-breakdown/data-ingest-entity-breakdown.png"
         ]
       }
     ],
@@ -4307,40 +4351,6 @@
       {
         "name": "Varnish Cache",
         "id": "varnish-cache-integration"
-      }
-    ]
-  },
-  {
-    "title": "AWS AppSync",
-    "name": "aws-appsync",
-    "description": "## What is AWS AppSync?\n\nFully managed serverless GraphQL service for real-time data queries,\nsynchronization, communications and offline programming features.\n\n\n### Get started!\n\nStart monitoring AWS AppSync by connecting Amazon Web Services (AWS) to New Relic!\n\nCheck out our AWS AppSync documentation to instrument your cloud service and manage the stability, scalability, and reliability of your systems with New Relic's infrastructure monitoring capabilities.\n\n### More info\n\nCheck out the [documentation](https://docs.newrelic.com/docs/integrations/amazon-integrations/aws-integrations-list/aws-appsync-monitoring-integration) to learn more about New Relic monitoring for AWS AppSync.",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/aws/aws-appsync",
-    "id": "c97c5208-a83e-49dd-9555-45ab01692634",
-    "level": "NEW_RELIC",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/aws/aws-appsync/logo.svg",
-    "summary": "Monitor AWS AppSync by connecting AWS to New Relic",
-    "websiteUrl": null,
-    "keywords": [
-      "aws",
-      "amazon web services",
-      "api"
-    ],
-    "authors": [
-      "New Relic"
-    ],
-    "dashboards": [],
-    "alerts": [],
-    "documentation": [
-      {
-        "name": "AWS AppSync installation docs",
-        "description": "Monitor AWS AppSync by connecting AWS to New Relic.\n",
-        "url": "https://docs.newrelic.com/docs/integrations/amazon-integrations/aws-integrations-list/aws-appsync-monitoring-integration"
-      }
-    ],
-    "installPlans": [
-      {
-        "name": "AWS-Infrastructure-Monitoring",
-        "id": "aws-infrastructure-monitoring"
       }
     ]
   },
@@ -4681,6 +4691,14 @@
     ],
     "dashboards": [
       {
+        "name": "Redis Enterprise Database Metrics",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/database/database01.png"
+        ]
+      },
+      {
         "name": "Redis Enterprise Cluster Metrics",
         "description": null,
         "url": null,
@@ -4694,14 +4712,6 @@
         "url": null,
         "screenshots": [
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/active-active/active_active01.png"
-        ]
-      },
-      {
-        "name": "Redis Enterprise Database Metrics",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/database/database01.png"
         ]
       }
     ],
@@ -5217,6 +5227,50 @@
       {
         "name": "PHP Agent",
         "id": "php-agent"
+      }
+    ]
+  },
+  {
+    "title": "AWS Auto Scaling",
+    "name": "aws-auto-scaling",
+    "description": "## What is AWS Auto Scaling?\n\nLaunch or terminate EC2 instances automatically, adapting capacity based on\nuser-defined policies, schedules, and health checks.\n\n\n### Get started!\n\nStart monitoring AWS Auto Scaling by connecting Amazon Web Services (AWS) to New Relic!\n\nCheck out our AWS Auto Scaling documentation to instrument your cloud service and manage the stability, scalability, and reliability of your systems with New Relic's infrastructure monitoring capabilities.\n\n### More info\n\nCheck out the [documentation](https://docs.newrelic.com/docs/integrations/amazon-integrations/aws-integrations-list/aws-auto-scaling-monitoring-integration) to learn more about New Relic monitoring for AWS Auto Scaling.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/aws/aws-auto-scaling",
+    "id": "e6a1654d-2e00-4956-a2da-39f1f5f5f5e9",
+    "level": "NEW_RELIC",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/aws/aws-auto-scaling/logo.svg",
+    "summary": "Monitor AWS Auto Scaling by connecting AWS to New Relic",
+    "websiteUrl": null,
+    "keywords": [
+      "aws",
+      "amazon web services",
+      "auto scaling"
+    ],
+    "authors": [
+      "New Relic"
+    ],
+    "dashboards": [
+      {
+        "name": "AWS Auto Scaling",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/aws-auto-scaling/aws-auto-scaling1.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/aws-auto-scaling/aws-auto-scaling2.png"
+        ]
+      }
+    ],
+    "alerts": [],
+    "documentation": [
+      {
+        "name": "AWS Auto Scaling installation docs",
+        "description": "Monitor AWS Auto Scaling by connecting AWS to New Relic.\n",
+        "url": "https://docs.newrelic.com/docs/integrations/amazon-integrations/aws-integrations-list/aws-auto-scaling-monitoring-integration"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "AWS-CloudWatch-Metric-Streams",
+        "id": "aws-cloudwatch-metric-streams"
       }
     ]
   },
@@ -6728,39 +6782,6 @@
     ]
   },
   {
-    "title": "AWS Auto Scaling",
-    "name": "aws-auto-scaling",
-    "description": "## What is AWS Auto Scaling?\n\nLaunch or terminate EC2 instances automatically, adapting capacity based on\nuser-defined policies, schedules, and health checks.\n\n\n### Get started!\n\nStart monitoring AWS Auto Scaling by connecting Amazon Web Services (AWS) to New Relic!\n\nCheck out our AWS Auto Scaling documentation to instrument your cloud service and manage the stability, scalability, and reliability of your systems with New Relic's infrastructure monitoring capabilities.\n\n### More info\n\nCheck out the [documentation](https://docs.newrelic.com/docs/integrations/amazon-integrations/aws-integrations-list/aws-auto-scaling-monitoring-integration) to learn more about New Relic monitoring for AWS Auto Scaling.",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/aws/aws-auto-scaling",
-    "id": "e6a1654d-2e00-4956-a2da-39f1f5f5f5e9",
-    "level": "NEW_RELIC",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/aws/aws-auto-scaling/logo.svg",
-    "summary": "Monitor AWS Auto Scaling by connecting AWS to New Relic",
-    "websiteUrl": null,
-    "keywords": [
-      "aws",
-      "amazon web services"
-    ],
-    "authors": [
-      "New Relic"
-    ],
-    "dashboards": [],
-    "alerts": [],
-    "documentation": [
-      {
-        "name": "AWS Auto Scaling installation docs",
-        "description": "Monitor AWS Auto Scaling by connecting AWS to New Relic.\n",
-        "url": "https://docs.newrelic.com/docs/integrations/amazon-integrations/aws-integrations-list/aws-auto-scaling-monitoring-integration"
-      }
-    ],
-    "installPlans": [
-      {
-        "name": "AWS-Infrastructure-Monitoring",
-        "id": "aws-infrastructure-monitoring"
-      }
-    ]
-  },
-  {
     "title": "AWS NeptuneDB",
     "name": "aws-neptunedb",
     "description": "## What is AWS NeptuneDB?\n\nDevelop applications on top of interconnected datasets with this AWS graph\ndatabase service.\n\n\n### Get started!\n\nStart monitoring AWS NeptuneDB by connecting Amazon Web Services (AWS) to New Relic!\n\nCheck out our AWS NeptuneDB documentation to instrument your cloud service and manage the stability, scalability, and reliability of your systems with New Relic's infrastructure monitoring capabilities.\n\n### More info\n\nCheck out the [documentation](https://docs.newrelic.com/docs/infrastructure/amazon-integrations/aws-integrations-list/aws-neptune-monitoring-integration/) to learn more about New Relic monitoring for AWS NeptuneDB.",
@@ -6785,49 +6806,6 @@
         "name": "AWS NeptuneDB installation docs",
         "description": "Monitor AWS NeptuneDB by connecting AWS to New Relic.\n",
         "url": "https://docs.newrelic.com/docs/infrastructure/amazon-integrations/aws-integrations-list/aws-neptune-monitoring-integration/"
-      }
-    ],
-    "installPlans": [
-      {
-        "name": "AWS-Infrastructure-Monitoring",
-        "id": "aws-infrastructure-monitoring"
-      }
-    ]
-  },
-  {
-    "title": "AWS Billing",
-    "name": "aws-billing",
-    "description": "## What is AWS Billing?\n\nThe AWS Billing console provides features to manage and report your AWS cost and usage based on user-defined methods. With this, you can easily understand your AWS spending, pay invoices, analyze and control costs, manage billing preferences and tax settings, and access other cloud financial management services.\n\n### New Relic AWS Billing features\n\nThe New Relic AWS Billing integration empowers you with an [AWS Billing integration](https://docs.newrelic.com/docs/integrations/amazon-integrations/aws-integrations-list/aws-billing-monitoring-integration) that collects AWS financial data and splits it into two groups, billing costs and billing budgets, to make it easier for your team to gain cost visibility.\n\n### Why monitor AWS Billing with New Relic?\n\nWith our AWS Billing integration, you can gain visibility into all of your financial data. Our integration aggregates data from different sub-accounts and services and looks at your budgets in actual and forecasted spend. The best part? It’s all in one place. \n\nStart ingesting your AWS billing data today and visualize your AWS billing metrics in real-time.",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/aws/aws-billing",
-    "id": "c7f15a54-e243-4e23-95dd-ff08937041ed",
-    "level": "NEW_RELIC",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/aws/aws-billing/logo.svg",
-    "summary": "Monitoring AWS Billing is critical to effectively track AWS cost and usage. Download the New Relic AWS Billing quickstart to proactively monitor AWS financial data including AWS billing metrics and AWS budget metrics.",
-    "websiteUrl": null,
-    "keywords": [
-      "aws",
-      "amazon web services",
-      "aws billing"
-    ],
-    "authors": [
-      "New Relic"
-    ],
-    "dashboards": [
-      {
-        "name": "AWS Billing",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/aws-billing/aws-billing.png"
-        ]
-      }
-    ],
-    "alerts": [],
-    "documentation": [
-      {
-        "name": "AWS Billing installation docs",
-        "description": "Monitor AWS Billing by connecting AWS to New Relic.\n",
-        "url": "https://docs.newrelic.com/docs/integrations/amazon-integrations/aws-integrations-list/aws-billing-monitoring-integration"
       }
     ],
     "installPlans": [
@@ -7657,6 +7635,132 @@
       {
         "name": "OpenTelemetry",
         "id": "third-party-opentelemetry"
+      }
+    ]
+  },
+  {
+    "title": "AWS Billing",
+    "name": "aws-billing",
+    "description": "## What is AWS Billing?\n\nThe AWS Billing console provides features to manage and report your AWS cost and usage based on user-defined methods. With this, you can easily understand your AWS spending, pay invoices, analyze and control costs, manage billing preferences and tax settings, and access other cloud financial management services.\n\n### New Relic AWS Billing features\n\nThe New Relic AWS Billing integration empowers you with an [AWS Billing integration](https://docs.newrelic.com/docs/integrations/amazon-integrations/aws-integrations-list/aws-billing-monitoring-integration) that collects AWS financial data and splits it into two groups, billing costs and billing budgets, to make it easier for your team to gain cost visibility.\n\n### Why monitor AWS Billing with New Relic?\n\nWith our AWS Billing integration, you can gain visibility into all of your financial data. Our integration aggregates data from different sub-accounts and services and looks at your budgets in actual and forecasted spend. The best part? It’s all in one place. \n\nStart ingesting your AWS billing data today and visualize your AWS billing metrics in real-time.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/aws/aws-billing",
+    "id": "c7f15a54-e243-4e23-95dd-ff08937041ed",
+    "level": "NEW_RELIC",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/aws/aws-billing/logo.svg",
+    "summary": "Monitoring AWS Billing is critical to effectively track AWS cost and usage. Download the New Relic AWS Billing quickstart to proactively monitor AWS financial data including AWS billing metrics and AWS budget metrics.",
+    "websiteUrl": null,
+    "keywords": [
+      "aws",
+      "amazon web services",
+      "aws billing",
+      "billing",
+      "budgets",
+      "costs"
+    ],
+    "authors": [
+      "New Relic"
+    ],
+    "dashboards": [
+      {
+        "name": "AWS Billing",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/aws-billing/aws-billing1.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/aws-billing/aws-billing2.png"
+        ]
+      }
+    ],
+    "alerts": [],
+    "documentation": [
+      {
+        "name": "AWS Billing installation docs",
+        "description": "Monitor AWS Billing by connecting AWS to New Relic.\n",
+        "url": "https://docs.newrelic.com/docs/integrations/amazon-integrations/aws-integrations-list/aws-billing-monitoring-integration"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "AWS-Infrastructure-Monitoring",
+        "id": "aws-infrastructure-monitoring"
+      }
+    ]
+  },
+  {
+    "title": "AWS NLB/ALB",
+    "name": "aws-nlb-alb",
+    "description": "## What is AWS NLB/ALB?\n\nDistributes incoming application traffic across multiple targets, such as EC2\ninstances, in multiple availability zones.\n\n\n### Get started!\n\nStart monitoring AWS NLB/ALB by connecting Amazon Web Services (AWS) to New Relic!\n\nCheck out our AWS NLB/ALB documentation to instrument your cloud service and manage the stability, scalability, and reliability of your systems with New Relic's infrastructure monitoring capabilities.\n\n### More info\n\nCheck out the [documentation](https://docs.newrelic.com/docs/infrastructure/amazon-integrations/aws-integrations-list/aws-albnlb-monitoring-integration/) to learn more about New Relic monitoring for AWS NLB/ALB.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/aws/aws-nlb-alb",
+    "id": "739f2e65-4fb4-4db4-bb9a-34c7bffb7755",
+    "level": "NEW_RELIC",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/aws/aws-nlb-alb/logo.svg",
+    "summary": "Monitor AWS NLB/ALB by connecting AWS to New Relic",
+    "websiteUrl": null,
+    "keywords": [
+      "aws",
+      "amazon web services",
+      "networking"
+    ],
+    "authors": [
+      "New Relic"
+    ],
+    "dashboards": [
+      {
+        "name": "AWS ALB",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/aws-alb/aws-alb1.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/aws-alb/aws-alb2.png"
+        ]
+      }
+    ],
+    "alerts": [],
+    "documentation": [
+      {
+        "name": "AWS NLB/ALB installation docs",
+        "description": "Monitor AWS NLB/ALB by connecting AWS to New Relic.",
+        "url": "https://docs.newrelic.com/docs/infrastructure/amazon-integrations/aws-integrations-list/aws-albnlb-monitoring-integration/"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "AWS-CloudWatch-Metric-Streams",
+        "id": "aws-cloudwatch-metric-streams"
+      }
+    ]
+  },
+  {
+    "title": "Amazon Athena",
+    "name": "amazon-athena",
+    "description": "## What is Amazon Athena?\n\nServerless, interactive query service to query data and analyze big data in\nAmazon S3 using standard SQL.\n\n\n### Get started!\n\nStart monitoring Amazon Athena by connecting Amazon Web Services (AWS) to New Relic!\n\nCheck out our Amazon Athena documentation to instrument your cloud service and manage the stability, scalability, and reliability of your systems with New Relic's infrastructure monitoring capabilities.\n\n\n### More info\n\nNew Relic offers an integration for reporting your Amazon Athena data. [This documentation](https://docs.newrelic.com/docs/integrations/amazon-integrations/aws-integrations-list/aws-athena-monitoring-integration)  explains how to activate this integration and describes the data that can be reported.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/aws/amazon-athena",
+    "id": "5f3d35d7-668b-41f3-98d7-ccc93a50933c",
+    "level": "NEW_RELIC",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/aws/amazon-athena/logo.svg",
+    "summary": "Monitor Amazon Athena by connecting AWS to New Relic",
+    "websiteUrl": null,
+    "keywords": [
+      "aws",
+      "amazon web services",
+      "database"
+    ],
+    "authors": [
+      "New Relic",
+      "Emil Hammarstrand"
+    ],
+    "dashboards": [],
+    "alerts": [],
+    "documentation": [
+      {
+        "name": "Amazon Athena installation docs",
+        "description": "Monitor Amazon Athena by connecting AWS to New Relic.\n",
+        "url": "https://docs.newrelic.com/docs/integrations/amazon-integrations/aws-integrations-list/aws-athena-monitoring-integration"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "AWS-CloudWatch-Metric-Streams",
+        "id": "aws-cloudwatch-metric-streams"
       }
     ]
   },
@@ -8992,93 +9096,6 @@
       {
         "name": "Python Agent",
         "id": "setup-python-agent"
-      }
-    ]
-  },
-  {
-    "title": "AWS NLB/ALB",
-    "name": "aws-nlb-alb",
-    "description": "## What is AWS NLB/ALB?\n\nDistributes incoming application traffic across multiple targets, such as EC2\ninstances, in multiple availability zones.\n\n\n### Get started!\n\nStart monitoring AWS NLB/ALB by connecting Amazon Web Services (AWS) to New Relic!\n\nCheck out our AWS NLB/ALB documentation to instrument your cloud service and manage the stability, scalability, and reliability of your systems with New Relic's infrastructure monitoring capabilities.\n\n### More info\n\nCheck out the [documentation](https://docs.newrelic.com/docs/infrastructure/amazon-integrations/aws-integrations-list/aws-albnlb-monitoring-integration/) to learn more about New Relic monitoring for AWS NLB/ALB.",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/aws/aws-nlb-alb",
-    "id": "739f2e65-4fb4-4db4-bb9a-34c7bffb7755",
-    "level": "NEW_RELIC",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/aws/aws-nlb-alb/logo.svg",
-    "summary": "Monitor AWS NLB/ALB by connecting AWS to New Relic",
-    "websiteUrl": null,
-    "keywords": [
-      "aws",
-      "amazon web services",
-      "networking"
-    ],
-    "authors": [
-      "New Relic"
-    ],
-    "dashboards": [
-      {
-        "name": "AWS ALB",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/alb/alb.png"
-        ]
-      }
-    ],
-    "alerts": [],
-    "documentation": [
-      {
-        "name": "AWS NLB/ALB installation docs",
-        "description": "Monitor AWS NLB/ALB by connecting AWS to New Relic.",
-        "url": "https://docs.newrelic.com/docs/infrastructure/amazon-integrations/aws-integrations-list/aws-albnlb-monitoring-integration/"
-      }
-    ],
-    "installPlans": [
-      {
-        "name": "AWS-CloudWatch-Metric-Streams",
-        "id": "aws-cloudwatch-metric-streams"
-      }
-    ]
-  },
-  {
-    "title": "Amazon Athena",
-    "name": "amazon-athena",
-    "description": "## What is Amazon Athena?\n\nServerless, interactive query service to query data and analyze big data in\nAmazon S3 using standard SQL.\n\n\n### Get started!\n\nStart monitoring Amazon Athena by connecting Amazon Web Services (AWS) to New Relic!\n\nCheck out our Amazon Athena documentation to instrument your cloud service and manage the stability, scalability, and reliability of your systems with New Relic's infrastructure monitoring capabilities.\n\n### More info\n\nNew Relic offers an integration for reporting your Amazon Athena data. [This documentation](https://docs.newrelic.com/docs/integrations/amazon-integrations/aws-integrations-list/aws-athena-monitoring-integration)  explains how to activate this integration and describes the data that can be reported.",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/aws/amazon-athena",
-    "id": "5f3d35d7-668b-41f3-98d7-ccc93a50933c",
-    "level": "NEW_RELIC",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/aws/amazon-athena/logo.svg",
-    "summary": "Monitor Amazon Athena by connecting AWS to New Relic",
-    "websiteUrl": null,
-    "keywords": [
-      "aws",
-      "amazon web services",
-      "database"
-    ],
-    "authors": [
-      "New Relic",
-      "Emil Hammarstrand"
-    ],
-    "dashboards": [
-      {
-        "name": "Amazon Athena",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/athena/athena.png"
-        ]
-      }
-    ],
-    "alerts": [],
-    "documentation": [
-      {
-        "name": "Amazon Athena installation docs",
-        "description": "Monitor Amazon Athena by connecting AWS to New Relic.\n",
-        "url": "https://docs.newrelic.com/docs/integrations/amazon-integrations/aws-integrations-list/aws-athena-monitoring-integration"
-      }
-    ],
-    "installPlans": [
-      {
-        "name": "AWS-Infrastructure-Monitoring",
-        "id": "aws-infrastructure-monitoring"
       }
     ]
   },
@@ -12281,6 +12298,50 @@
     ]
   },
   {
+    "title": "Amazon CloudFront",
+    "name": "aws-cloudfront",
+    "description": "## What is Amazon CloudFront?\n\nSpeeds up the distribution of web content served from Amazon Web Services.\n\n### Get started!\n\nStart monitoring Amazon CloudFront by connecting Amazon Web Services (AWS) to New Relic!\n\nCheck out our Amazon CloudFront documentation to instrument your cloud service and manage the stability, scalability, and reliability of your systems with New Relic's infrastructure monitoring capabilities.\n\n### More info\n\nCheck out the [documentation](https://docs.newrelic.com/docs/infrastructure/amazon-integrations/aws-integrations-list/aws-cloudfront-monitoring-integration/) to learn more about New Relic monitoring for Amazon CloudFront.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/aws/amazon-cloudfront",
+    "id": "c6a0f98b-94f3-4f66-9217-83526d7c1afb",
+    "level": "NEW_RELIC",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/aws/amazon-cloudfront/logo.svg",
+    "summary": "Monitor Amazon CloudFront by connecting AWS to New Relic",
+    "websiteUrl": null,
+    "keywords": [
+      "aws",
+      "amazon web services",
+      "web content"
+    ],
+    "authors": [
+      "New Relic",
+      "Emil Hammarstrand"
+    ],
+    "dashboards": [
+      {
+        "name": "Amazon CloudFront",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/amazon-cloudfront/amazon-cloudfront.png"
+        ]
+      }
+    ],
+    "alerts": [],
+    "documentation": [
+      {
+        "name": "Amazon CloudFront installation docs",
+        "description": "Monitor Amazon CloudFront by connecting AWS to New Relic.",
+        "url": "https://docs.newrelic.com/docs/infrastructure/amazon-integrations/aws-integrations-list/aws-cloudfront-monitoring-integration/"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "AWS-CloudWatch-Metric-Streams",
+        "id": "aws-cloudwatch-metric-streams"
+      }
+    ]
+  },
+  {
     "title": "Node.js",
     "name": "node-js",
     "description": "## The comprehensive Node.js monitoring system\n\nNode.js is an open-source platform built on Chrome's JavaScript runtime used to develop fast and scalable applications quickly with an event-driven, non-blocking input/output architecture. \n\nHowever, these attributes can be inconvenient because verifying the correctness of an application with asynchronous nested callbacks is complex. So, it’s important to watch executing Node.js systems closely. Monitoring your Node.js applications ensures optimal performance, allows the maximization of system availability, and ensures that a system’s health is well maintained.\n\n### What should you look for in a Node.js dashboard? \n\nA [reliable Node.js network monitor](https://docs.newrelic.com/docs/agents/nodejs-agent/getting-started/introduction-new-relic-nodejs/) must provide enough information to identify the problem sources. Some crucial information includes process ID, log management, request rate, application availability, resource usage, uptime, downtime, system health, error rates and handling, number of connections, load average, and latency. \n\n### What’s included in the Node.js quickstart?\n\nInstall this quickstart to install preconfigured observability solutions: \n- Multiple high-value alerts, including Apdex score and CPU utilization\n- Informative dashboards (Slowest transactions, throughput comparisons, and more)\n\n### The value of New Relic’s Node.js quickstart\n\nOur tool also provides other essential productivity and efficiency-enhancing innovations. Service Maps acquaints developers with their system's architecture providing vital insights to identify issues quickly. Error Analytics granularly pinpoints offending lines of code, relieving developers of a potentially arduous task so that they can concentrate on resolving issues. Our solution offers historical data that could prove essential in process improvement in addition to real-time information.",
@@ -13830,49 +13891,6 @@
       {
         "name": "Ruby Agent",
         "id": "setup-ruby-agent"
-      }
-    ]
-  },
-  {
-    "title": "AWS CloudFront",
-    "name": "aws-cloudfront",
-    "description": "## What is AWS CloudFront?\n\nSpeeds up the distribution of web content served from Amazon Web Services.\n\n### Get started!\n\nStart monitoring AWS CloudFront by connecting Amazon Web Services (AWS) to New Relic!\n\nCheck out our AWS CloudFront documentation to instrument your cloud service and manage the stability, scalability, and reliability of your systems with New Relic's infrastructure monitoring capabilities.\n\n### More info\n\nCheck out the [documentation](https://docs.newrelic.com/docs/infrastructure/amazon-integrations/aws-integrations-list/aws-cloudfront-monitoring-integration/) to learn more about New Relic monitoring for AWS CloudFront.",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/aws/aws-cloudfront",
-    "id": "c6a0f98b-94f3-4f66-9217-83526d7c1afb",
-    "level": "NEW_RELIC",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/aws/aws-cloudfront/logo.svg",
-    "summary": "Monitor AWS CloudFront by connecting AWS to New Relic",
-    "websiteUrl": null,
-    "keywords": [
-      "aws",
-      "amazon web services"
-    ],
-    "authors": [
-      "New Relic",
-      "Emil Hammarstrand"
-    ],
-    "dashboards": [
-      {
-        "name": "AWS Cloudfront",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/aws-cloudfront/aws-cloudfront.png"
-        ]
-      }
-    ],
-    "alerts": [],
-    "documentation": [
-      {
-        "name": "AWS CloudFront installation docs",
-        "description": "Monitor AWS CloudFront by connecting AWS to New Relic.",
-        "url": "https://docs.newrelic.com/docs/infrastructure/amazon-integrations/aws-integrations-list/aws-cloudfront-monitoring-integration/"
-      }
-    ],
-    "installPlans": [
-      {
-        "name": "AWS-Infrastructure-Monitoring",
-        "id": "aws-infrastructure-monitoring"
       }
     ]
   },
@@ -17359,22 +17377,6 @@
     ],
     "dashboards": [
       {
-        "name": "Catchpoint-Recent Errors",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/catchpoint-recent-errors/Catchpoint-Recent_Errors.png"
-        ]
-      },
-      {
-        "name": "Catchpoint-Response Size",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/catchpoint-response-size/Catchpoint-Response_Size.png"
-        ]
-      },
-      {
         "name": "Catchpoint-Test Times",
         "description": null,
         "url": null,
@@ -17388,6 +17390,22 @@
         "url": null,
         "screenshots": [
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/catchpoint-overview/Catchpoint-Overview.png"
+        ]
+      },
+      {
+        "name": "Catchpoint-Recent Errors",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/catchpoint-recent-errors/Catchpoint-Recent_Errors.png"
+        ]
+      },
+      {
+        "name": "Catchpoint-Response Size",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/catchpoint-response-size/Catchpoint-Response_Size.png"
         ]
       }
     ],
@@ -19245,6 +19263,70 @@
     ]
   },
   {
+    "title": "CoreDNS",
+    "name": "coredns",
+    "description": "## Why monitor CoreDNS?\n\nCoreDNS is DNS server that can serve as the Kubernetes cluster DNS (Kubernetes 1.23+ uses CoreDNS by default).\nCoreDNS is a critical component of a Kubernetes cluster that can be difficult to debug during an error scenario. Surfacing monitoring to this component can help teams respond faster to these unexpected scenarios.\n\n## CoreDNS quickstart highlights\n\nThe New Relic quickstart uses dashboards to proactively monitor your CoreDNS servers, like:\n\n- load shared amongst running instances\n- request & response stats (rate, payload size, etc.)\n- cache hit ratio\n- response codes and panics, and more.\n\n## Monitoring CoreDNS\n\nThis quickstart utilizes New Relic's ability to ingest Prometheus data (either from our OpenMetrics integration or via Prometheus remote write). See instructions for [sending Prometheus data to New Relic here](https://docs.newrelic.com/docs/infrastructure/prometheus-integrations/get-started/send-prometheus-metric-data-new-relic/).\n\n### How do I enable monitoring in CoreDNS\n\n[CoreDNS provides a plugin](https://coredns.io/plugins/metrics/) to surface Prometheus metrics on `localhost:9153/metrics`.\nBefore attempting to modify your CoreDNS configuration, you should be able to `kubectl port-forward pod/<pod_name> -n kube-system 9153` against a CoreDNS server in your cluster to verify it returns metrics.\n\nFor instructions on modifying your cluster's CoreDNS configuration see https://coredns.io/2018/01/29/deploying-kubernetes-with-coredns-using-kubeadm/\n\n\n### How do I configure my integration to scrape CoreDNS severs?\n\nThe approach to getting your Prometheus metrics into New Relic differs depending on which integration you use.\n\n#### Prometheus Remote Write\n\nIn addition to setting up your `remote_write` configuration as described [here](https://docs.newrelic.com/docs/infrastructure/prometheus-integrations/install-configure-remote-write/set-your-prometheus-remote-write-integration/), you will need to add the following scrape configuration to your `prometheus.yml` config file:\n\n```\n- job_name: 'kube-dns'\n  honor_labels: true\n  kubernetes_sd_configs:\n    - role: pod\n  relabel_configs:\n    - action: keep\n      source_labels:\n        - __meta_kubernetes_namespace\n        - __meta_kubernetes_pod_name\n      separator: '/'\n      regex: 'kube-system/coredns.+'\n    - source_labels:\n        - __meta_kubernetes_pod_container_port_name\n      action: keep\n      regex: metrics\n    - source_labels:\n        - __meta_kubernetes_pod_name\n      action: replace\n      target_label: instance\n    - action: labelmap\n      regex: __meta_kubernetes_pod_label_(.+)\n```\n(This helpful Prometheus job defnition sourced from [sysdig blog](https://sysdig.com/blog/how-to-monitor-coredns/))\n\nThen, after reloading Prometheus config, you can check that your CoreDNS pods are appearing under your [Prometheus targets](https://prometheus.io/docs/prometheus/latest/querying/api/#targets).\n\n#### Prometheus OpenMetrics integration\n\nPOMI will scrape any resource that contains the label or annotation `prometheus.io/scrape` (which is configurable value here https://github.com/newrelic/helm-charts/blob/ecef47fc938b7ddca8a50e63cb290924f654c56a/charts/nri-prometheus/values.yaml#L117).\nThis will make targets visible to POMI but to confiugre the `relabel_configs` as above, the defaults would have to be updated in the Helm chart here: https://github.com/newrelic/helm-charts/blob/ecef47fc938b7ddca8a50e63cb290924f654c56a/charts/nri-prometheus/values.yaml#L67-L244",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/kubernetes/coredns",
+    "id": "c9ac4abb-4a61-4eee-9e1e-79506806684e",
+    "level": "NEW_RELIC",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/kubernetes/coredns/logo.png",
+    "summary": "Visualize CoreDNS performance and alert on potential errors. CoreDNS is a critical Kubernetes cluster component and can be difficult to troubleshoot in an error scenario. Download New Relic CoreDNS quickstart to increase cluster visibility.",
+    "websiteUrl": null,
+    "keywords": [
+      "kubernetes",
+      "dns",
+      "k8s"
+    ],
+    "authors": [
+      "New Relic"
+    ],
+    "dashboards": [
+      {
+        "name": "CoreDNS",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/coredns-dashboard/coredns-dashboard.png"
+        ]
+      }
+    ],
+    "alerts": [
+      {
+        "name": "CoreDNS Panics",
+        "details": "CoreDNS panics can point to a system in an error state or degraded performance.",
+        "type": "STATIC",
+        "url": null
+      }
+    ],
+    "documentation": [
+      {
+        "name": "CoreDNS Prometheus monitoring",
+        "description": "Metric details exposed by Prometheus CoreDNS extension",
+        "url": "https://coredns.io/plugins/metrics/"
+      },
+      {
+        "name": "Installation docs",
+        "description": "Description about this doc reference",
+        "url": "https://docs.newrelic.com"
+      },
+      {
+        "name": "Kubernetes & CoreDNS",
+        "description": "Details on Kubernetes and CoreDNS",
+        "url": "https://kubernetes.io/docs/tasks/administer-cluster/coredns/"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "Kubernetes integration",
+        "id": "kubernetes-install"
+      },
+      {
+        "name": "CoreDNS",
+        "id": "third-party-coredns"
+      }
+    ]
+  },
+  {
     "title": "OKHTTP",
     "name": "okhttp",
     "description": "OkHttp is a third-party library developed by Square for sending and receive\nHTTP-based network requests.",
@@ -19362,70 +19444,6 @@
       {
         "name": "Amazon SageMaker",
         "id": "third-party-amazon-sagemaker"
-      }
-    ]
-  },
-  {
-    "title": "CoreDNS",
-    "name": "coredns",
-    "description": "## Why monitor CoreDNS?\n\nCoreDNS is DNS server that can serve as the Kubernetes cluster DNS (Kubernetes 1.23+ uses CoreDNS by default).\nCoreDNS is a critical component of a Kubernetes cluster that can be difficult to debug during an error scenario. Surfacing monitoring to this component can help teams respond faster to these unexpected scenarios.\n\n## CoreDNS quickstart highlights\n\nThe New Relic quickstart uses dashboards to proactively monitor your CoreDNS servers, like:\n\n- load shared amongst running instances\n- request & response stats (rate, payload size, etc.)\n- cache hit ratio\n- response codes and panics, and more.\n\n## Monitoring CoreDNS\n\nThis quickstart utilizes New Relic's ability to ingest Prometheus data (either from our OpenMetrics integration or via Prometheus remote write). See instructions for [sending Prometheus data to New Relic here](https://docs.newrelic.com/docs/infrastructure/prometheus-integrations/get-started/send-prometheus-metric-data-new-relic/).\n\n### How do I enable monitoring in CoreDNS\n\n[CoreDNS provides a plugin](https://coredns.io/plugins/metrics/) to surface Prometheus metrics on `localhost:9153/metrics`.\nBefore attempting to modify your CoreDNS configuration, you should be able to `kubectl port-forward pod/<pod_name> -n kube-system 9153` against a CoreDNS server in your cluster to verify it returns metrics.\n\nFor instructions on modifying your cluster's CoreDNS configuration see https://coredns.io/2018/01/29/deploying-kubernetes-with-coredns-using-kubeadm/\n\n\n### How do I configure my integration to scrape CoreDNS severs?\n\nThe approach to getting your Prometheus metrics into New Relic differs depending on which integration you use.\n\n#### Prometheus Remote Write\n\nIn addition to setting up your `remote_write` configuration as described [here](https://docs.newrelic.com/docs/infrastructure/prometheus-integrations/install-configure-remote-write/set-your-prometheus-remote-write-integration/), you will need to add the following scrape configuration to your `prometheus.yml` config file:\n\n```\n- job_name: 'kube-dns'\n  honor_labels: true\n  kubernetes_sd_configs:\n    - role: pod\n  relabel_configs:\n    - action: keep\n      source_labels:\n        - __meta_kubernetes_namespace\n        - __meta_kubernetes_pod_name\n      separator: '/'\n      regex: 'kube-system/coredns.+'\n    - source_labels:\n        - __meta_kubernetes_pod_container_port_name\n      action: keep\n      regex: metrics\n    - source_labels:\n        - __meta_kubernetes_pod_name\n      action: replace\n      target_label: instance\n    - action: labelmap\n      regex: __meta_kubernetes_pod_label_(.+)\n```\n(This helpful Prometheus job defnition sourced from [sysdig blog](https://sysdig.com/blog/how-to-monitor-coredns/))\n\nThen, after reloading Prometheus config, you can check that your CoreDNS pods are appearing under your [Prometheus targets](https://prometheus.io/docs/prometheus/latest/querying/api/#targets).\n\n#### Prometheus OpenMetrics integration\n\nPOMI will scrape any resource that contains the label or annotation `prometheus.io/scrape` (which is configurable value here https://github.com/newrelic/helm-charts/blob/ecef47fc938b7ddca8a50e63cb290924f654c56a/charts/nri-prometheus/values.yaml#L117).\nThis will make targets visible to POMI but to confiugre the `relabel_configs` as above, the defaults would have to be updated in the Helm chart here: https://github.com/newrelic/helm-charts/blob/ecef47fc938b7ddca8a50e63cb290924f654c56a/charts/nri-prometheus/values.yaml#L67-L244",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/kubernetes/coredns",
-    "id": "c9ac4abb-4a61-4eee-9e1e-79506806684e",
-    "level": "NEW_RELIC",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/kubernetes/coredns/logo.png",
-    "summary": "Visualize CoreDNS performance and alert on potential errors. CoreDNS is a critical Kubernetes cluster component and can be difficult to troubleshoot in an error scenario. Download New Relic CoreDNS quickstart to increase cluster visibility.",
-    "websiteUrl": null,
-    "keywords": [
-      "kubernetes",
-      "dns",
-      "k8s"
-    ],
-    "authors": [
-      "New Relic"
-    ],
-    "dashboards": [
-      {
-        "name": "CoreDNS",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/coredns-dashboard/coredns-dashboard.png"
-        ]
-      }
-    ],
-    "alerts": [
-      {
-        "name": "CoreDNS Panics",
-        "details": "CoreDNS panics can point to a system in an error state or degraded performance.",
-        "type": "STATIC",
-        "url": null
-      }
-    ],
-    "documentation": [
-      {
-        "name": "CoreDNS Prometheus monitoring",
-        "description": "Metric details exposed by Prometheus CoreDNS extension",
-        "url": "https://coredns.io/plugins/metrics/"
-      },
-      {
-        "name": "Installation docs",
-        "description": "Description about this doc reference",
-        "url": "https://docs.newrelic.com"
-      },
-      {
-        "name": "Kubernetes & CoreDNS",
-        "description": "Details on Kubernetes and CoreDNS",
-        "url": "https://kubernetes.io/docs/tasks/administer-cluster/coredns/"
-      }
-    ],
-    "installPlans": [
-      {
-        "name": "Kubernetes integration",
-        "id": "kubernetes-install"
-      },
-      {
-        "name": "CoreDNS",
-        "id": "third-party-coredns"
       }
     ]
   },
@@ -23161,14 +23179,6 @@
     ],
     "dashboards": [
       {
-        "name": "GCP Integrations Data Ingest Analysis",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/gcp-integrations-data-ingest-analysis/gcp-integrations-data-ingest-analysis.png"
-        ]
-      },
-      {
         "name": "AWS Integrations Data Ingest Analysis",
         "description": null,
         "url": null,
@@ -23177,11 +23187,11 @@
         ]
       },
       {
-        "name": "Azure Integrations Data Ingest Analysis",
+        "name": "On-Host Integrations Data Analysis",
         "description": null,
         "url": null,
         "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/azure-integrations-data-ingest-analysis/azure-integrations-data-ingest-analysis.png"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/on-host-integrations-data-analysis/on-host-integrations-data-analysis.png"
         ]
       },
       {
@@ -23193,11 +23203,19 @@
         ]
       },
       {
-        "name": "On-Host Integrations Data Analysis",
+        "name": "GCP Integrations Data Ingest Analysis",
         "description": null,
         "url": null,
         "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/on-host-integrations-data-analysis/on-host-integrations-data-analysis.png"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/gcp-integrations-data-ingest-analysis/gcp-integrations-data-ingest-analysis.png"
+        ]
+      },
+      {
+        "name": "Azure Integrations Data Ingest Analysis",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/azure-integrations-data-ingest-analysis/azure-integrations-data-ingest-analysis.png"
         ]
       }
     ],
@@ -23516,6 +23534,73 @@
     ]
   },
   {
+    "title": "HCP Vault",
+    "name": "ext-hcp-vault",
+    "description": "The HCP Vault quickstart allows you to get visibility into the performance and available of your HCP Vault service and dependencies. Use this quickstart together with the mock up integrations.\n\n## HCP Vault quickstart highlights\n\nThe New Relic quickstart uses dashboards to proactively monitor your HCP Vault servers, like:\n- whether a cluster node has been sealed by a user or during startup\n- number of authentication requests handled\n- the duration of requests handled\n\n## Monitoring HCP Vault\n\nThis quickstart utilizes New Relic's ability to ingest Prometheus data (either from our OpenMetrics integration or via Prometheus remote write). See instructions for [sending Prometheus data to New Relic here](https://docs.newrelic.com/docs/infrastructure/prometheus-integrations/get-started/send-prometheus-metric-data-new-relic/).\n\n### How do I configure my integration to scrape HCP Vault severs?\n\nThe approach to getting your Prometheus metrics into New Relic differs depending on which integration you use.\n\n#### Prometheus Remote Write\n\nIn addition to setting up your `remote_write` configuration as described [here](https://docs.newrelic.com/docs/infrastructure/prometheus-integrations/install-configure-remote-write/set-your-prometheus-remote-write-integration/), you will need to add the following scrape configuration to your `prometheus.yml` config file:\n\n```\n- job_name: 'vault'\n  metrics_path: \"/v1/sys/metrics\"\n  params:\n    format: ['prometheus']\n  scheme: https\n  tls_config:\n    ca_file: your_ca_here.pem\n  bearer_token: \"your_vault_token_here\"\n  static_configs:\n  - targets: ['your_vault_server_here:8200']\n```\n(This helpful Prometheus job defnition sourced from [HCP Vault Telemetry](https://www.vaultproject.io/docs/configuration/telemetry))\n\nThen, after reloading Prometheus config, you can check that your HCP Vault pods are appearing under your [Prometheus targets](https://prometheus.io/docs/prometheus/latest/querying/api/#targets).",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/ext-hcp-vault",
+    "id": "3022ff72-964b-409f-abfc-5b54708094fd",
+    "level": "COMMUNITY",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/ext-hcp-vault/logo.svg",
+    "summary": "The HCP Vault quickstart allows you to get visibility into the performance of your instances.",
+    "websiteUrl": null,
+    "keywords": [
+      "HCP",
+      "Vault",
+      "HashiCorp",
+      "Prometheus",
+      "remote-write"
+    ],
+    "authors": [
+      "Irvin Arias @Kinect-Consulting",
+      "Omar Castillo @Kinect-Consulting",
+      "Iara Silva @Kinect-Consulting",
+      "David Perez @Kinect-Consulting"
+    ],
+    "dashboards": [
+      {
+        "name": "HashiCorp Vault",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/ext-hcp-vault/HCP_Vault-screenshot.png"
+        ]
+      }
+    ],
+    "alerts": [
+      {
+        "name": "HCP Vault | Check Handles High Response Time for 5m",
+        "details": "This metric represents the duration of requests handled by Vault core.",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "HCP Vault | Check High Login Traffic for 5m",
+        "details": "This metric represents the number of authentication requests handled by Vault core.",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "HCP Vault | Check Instance in Sealed status for 5m",
+        "details": "This Boolean metric indicates whether a cluster node has been sealed by a user or during startup.",
+        "type": "STATIC",
+        "url": null
+      }
+    ],
+    "documentation": [
+      {
+        "name": "HashiCorp Vault installation docs",
+        "description": "The HCP Vault quickstart allows you to get visibility into the performance of your instances.\n",
+        "url": "https://www.vaultproject.io/docs/configuration/telemetry"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "HCP Vault",
+        "id": "ext-hcp-vault"
+      }
+    ]
+  },
+  {
     "title": "Azure Redis Cache",
     "name": "azure-redis-cache",
     "description": "## What is Azure Redis Cache?\n\nFully managed in-memory data store built for quickly scaling application\nperformance.\n\n\n### Get started!\n\nStart monitoring Azure Redis Cache by connecting Microsoft Azure to New Relic!\n\nCheck out our Azure Redis Cache documentation to instrument your cloud service and manage the stability, scalability, and reliability of your systems with New Relic's infrastructure monitoring capabilities.\n\n### More info\n\nCheck out the [documentation](https://docs.newrelic.com/docs/infrastructure/microsoft-azure-integrations/azure-integrations-list/azure-redis-cache-monitoring-integration/) to learn more about New Relic monitoring for Azure Redis Cache.",
@@ -23579,6 +23664,53 @@
       {
         "name": "Blameless",
         "id": "third-party-blameless"
+      }
+    ]
+  },
+  {
+    "title": "BGP Routing Neighbors",
+    "name": "bgp-routing-neighbors",
+    "description": "The BGP routing neighbor quickstart provides a dashboard that gives you a summary of the current state of your BGP neighbor connections.\nUse this quickstart together with New Relic's Network Monitoring feature to use SNMP data to visualize changes to the state of your network.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/network-monitoring/bgpNeighbor",
+    "id": "849ad74f-91a2-42de-b062-9aebaf7fbdc1",
+    "level": "VERIFIED",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/network-monitoring/bgpNeighbor/logo.svg",
+    "summary": "Easily install a curated dashboard to monitor the health of your BGP neighbor relationships with New Relic's Network Monitoring.",
+    "websiteUrl": null,
+    "keywords": [
+      "network",
+      "networking",
+      "kentik",
+      "routing",
+      "neighbor",
+      "bgp"
+    ],
+    "authors": [
+      "New Relic",
+      "Marc Netterfield"
+    ],
+    "dashboards": [
+      {
+        "name": "BGP Neighbor Summary",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/bgpNeighbor/bgpNeighbor.png"
+        ]
+      }
+    ],
+    "alerts": [],
+    "documentation": [
+      {
+        "name": "Network SNMP collection installation docs",
+        "description": "Install Network Monitoring for SNMP data collection using a simple Docker container.\n",
+        "url": "https://docs.newrelic.com/docs/network-performance-monitoring/setup-performance-monitoring/snmp-performance-monitoring/"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "SNMP",
+        "id": "network-snmp"
       }
     ]
   },
@@ -23738,6 +23870,132 @@
       {
         "name": ".NET agent",
         "id": "dotnet-agent"
+      }
+    ]
+  },
+  {
+    "title": "Jenkins (Prometheus)",
+    "name": "jenkins-prometheus",
+    "description": "## What is Jenkins?\nThe leading open source automation server, Jenkins provides hundreds of plugins to support building, deploying and automating any project.\n\n## Jenkins (Prometheus) quickstart highlights\nThe New Relic quickstart uses dashboards to proactively monitor your jenkin servers, like:\n- jenkins health\n- jenkins total jobs/successful jobs/failure jobs\n- jenkins last build status\n- jenkins queue rate\n\n### Requirements:\nThe approach to getting your Prometheus metrics into New Relic differs depending on which integration you use.\n\n#### Prometheus Remote Write\n1. [Prometheus Server](https://prometheus.io/docs/prometheus/latest/installation/)\n2. Enable Prometheus [Remote Write](https://docs.newrelic.com/docs/infrastructure/prometheus-integrations/install-configure-remote-write/set-your-prometheus-remote-write-integration/) to New Relic.\n\nyou will need to add the scrape configuration to your `prometheus.yml` config file:\nReload the prometheus configuration and restart the prometheus instance\n\n`\n  job_name: \"jenkins\"  \n  params:\n    format: [\"prometheus\"]\n  metrics_path: \"prometheus\"\n  scheme: \"http\"\n  static_configs:\n    targets: [\"localhost:9090\"]\n `    \n\n### More info\n\nCheck out the [documentation](https://plugins.jenkins.io/prometheus/) to learn more about New Relic monitoring for Jenkins.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/jenkins-prometheus",
+    "id": "60bc56a5-7018-4bc9-a1d0-8a1bc3ac6843",
+    "level": "COMMUNITY",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/jenkins-prometheus/logo.png",
+    "summary": "New Relic provides crucial tools for monitoring your Jenkins instances. It support feature such as monitor Jenkins with the prometheus remote writter plugin in New Relic.",
+    "websiteUrl": null,
+    "keywords": [
+      "jenkins",
+      "prometheus",
+      "remote",
+      "write"
+    ],
+    "authors": [
+      "Subhani Shaik @kinect-consulting.com"
+    ],
+    "dashboards": [
+      {
+        "name": "Quickstart - Jenkins",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/jenkins-prometheus/jenkins-prometheus.png"
+        ]
+      }
+    ],
+    "alerts": [
+      {
+        "name": "jenkins active plugins throughput",
+        "details": "This alert is triggered when the jenkins active plugins count is greater than 100 in 5 minutes",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "Jenkins Last Build Status - Error",
+        "details": "This alert is triggered when the last build start time is 0 for 5 minutes",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "Queued Rate latency",
+        "details": "This alert is triggered when the queued rate (latency) is greater than 0.02 during 60 minutes",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "Saturation",
+        "details": "This alert is triggered when the jenkins health goes down by 1 for 5 minutes",
+        "type": "STATIC",
+        "url": null
+      }
+    ],
+    "documentation": [
+      {
+        "name": "Jenkins Prometheus Metrics Plugin",
+        "description": "Jenkins Prometheus Plugin expose an endpoint (default /prometheus) with metrics where a Prometheus Server can scrape",
+        "url": "https://plugins.jenkins.io/prometheus/"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "Prometheus remote write",
+        "id": "setup-prometheus"
+      },
+      {
+        "name": "Jenkins (Prometheus)",
+        "id": "third-party-jenkins-prometheus"
+      }
+    ]
+  },
+  {
+    "title": "InfluxDB",
+    "name": "ext-influxdb",
+    "description": "The InfluxDB quickstart allows you to get visibility into the performance and available of your InfluxDB service and dependencies. Use this quickstart together with the mock up integrations.\n\n# InfluxDB quickstart highlights\n\nThe New Relic quickstart uses dashboards to proactively monitor your InfluxDB servers, like;\n- number of query requests\n- task execution failures\n- memory (cache/heap)\n\n## Monitoring InfluxDB\n\nThis quickstart utilizes New Relic's ability to ingest Prometheus data (either from our OpenMetrics integration or via Prometheus remote write). See instructions for [sending Prometheus data to New Relic here](https://docs.newrelic.com/docs/infrastructure/prometheus-integrations/get-started/send-prometheus-metric-data-new-relic/).\n\n### How do I configure my integration to scrape InfluxDB severs?\n\nThe approach to getting your Prometheus metrics into New Relic differs depending on which integration you use.\n\n#### Prometheus Remote Write\n\nIn addition to setting up your `remote_write` configuration as described [here](https://docs.newrelic.com/docs/infrastructure/prometheus-integrations/install-configure-remote-write/set-your-prometheus-remote-write-integration/), you will need to add the following scrape configuration to your `prometheus.yml` config file\n\n```\n- job_name: 'influxdb'\n  metrics_path: \"/metrics\"\n  scheme: http\n  static_configs:\n  - targets: ['your_influxdb_server_here:8086']\n```\nPrometheus job definition sourced from [InfluxDB - Prometheus](https://docs.influxdata.com/influxdb/v1.8/supported_protocols/prometheus/#prometheus-remote-read-and-write-api-support)\n\nUse this link to check that your InfluxDB services are appearing under your [Prometheus targets](https://prometheus.io/docs/prometheus/latest/querying/api/#targets).\n\n##### Integrating your Prometheus Data \nUsing the Prometheus Remote Write integration, you can point your Prometheus servers at New Relic to store and visualize your data.\n\n- Generate your Prometheus remote_write URL\n- Use 'InfluxDB_Prometheus' to identify your data source\n- This will add an attribute to your metrics that will enable the entity creation - *instrumentation.source = \"InfluxDB_Prometheus\"*",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/ext-influxdb",
+    "id": "235cda5f-f9e6-4c81-b1d2-55fc80717a06",
+    "level": "COMMUNITY",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/ext-influxdb/logo.png",
+    "summary": "The InfluxDB quickstart allows you to get visibility into the performance of your instances.",
+    "websiteUrl": null,
+    "keywords": [
+      "InfluxData",
+      "InfluxDB",
+      "Database",
+      "Timeseries"
+    ],
+    "authors": [
+      "David Perez @Kinect-Consulting",
+      "Omar Castillo @Kinect-Consulting",
+      "Irvin Arias @Kinect-Consulting"
+    ],
+    "dashboards": [
+      {
+        "name": "InfluxDB",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/ext-influxdb/InfluxDB.png"
+        ]
+      }
+    ],
+    "alerts": [
+      {
+        "name": "InfluxDB | Check Execution Failure Rate for 5m",
+        "details": "Failure rate on runs completed across all tasks is higher than 5%.",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "InfluxDB | Check High Number of Query Requests for 5m",
+        "details": "This metric represents the number of query requests handled by InfluxDB. Threshold should be defined based on the environment size.",
+        "type": "STATIC",
+        "url": null
+      }
+    ],
+    "documentation": [],
+    "installPlans": [
+      {
+        "name": "InfluxDB",
+        "id": "ext-influxdb"
       }
     ]
   },
@@ -24104,11 +24362,11 @@
         ]
       },
       {
-        "name": "JavaScript Errors",
+        "name": "Browser Pages Dashboard",
         "description": null,
         "url": null,
         "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/javascript-errors/javascript_errors.png"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/browser-pages-dashboard/browser_pages_dashboard.png"
         ]
       },
       {
@@ -24120,11 +24378,11 @@
         ]
       },
       {
-        "name": "Browser Pages Dashboard",
+        "name": "JavaScript Errors",
         "description": null,
         "url": null,
         "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/browser-pages-dashboard/browser_pages_dashboard.png"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/javascript-errors/javascript_errors.png"
         ]
       }
     ],
@@ -24378,6 +24636,56 @@
       {
         "name": "GCP-Infrastructure-Monitoring",
         "id": "gcp-infrastructure-monitoring"
+      }
+    ]
+  },
+  {
+    "title": "Harbor",
+    "name": "harbor",
+    "description": "## What is Harbor?\n\nHarbor Registry is an enterprise-class registry server that stores and distributes container images. Harbor extends the open source Docker Distribution by adding the functionalities usually required by an enterprise, such as security, identity, and management. As an enterprise private registry, Harbor offers enhanced performance and security. \n\n## Data sources for this quickstart\n\nThis quickstart was built based on `harbor` metrics sent to New Relic using Prometheus remote write.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/harbor",
+    "id": "784437c9-c447-4efa-a276-e99730d83a67",
+    "level": "COMMUNITY",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/harbor/logo.svg",
+    "summary": "New Relic's instant observability quickstart provides alerts, multiple instance monitoring, and dashboards to detect the health and availability of servers to resolve issues before impacting end-users. By leveraging Prometheus metrics we gain insights into the behavior of your Harbor installation.",
+    "websiteUrl": null,
+    "keywords": [
+      "harbor",
+      "container",
+      "registry",
+      "vmware",
+      "prometheus"
+    ],
+    "authors": [
+      "pyrotechnics-io"
+    ],
+    "dashboards": [
+      {
+        "name": "Harbor Prometheus",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/harbor/harbor.png"
+        ]
+      }
+    ],
+    "alerts": [],
+    "documentation": [
+      {
+        "name": "Harbor Metrics Documentation",
+        "description": "Learn more about the Prometheus metrics available for Harbor",
+        "url": "https://goharbor.io/docs/2.3.0/administration/metrics/"
+      },
+      {
+        "name": "Prometheus Remote Write Configuration",
+        "description": "Configure your Prometheus Server to remote write metrics to New Relic",
+        "url": "https://docs.newrelic.com/docs/infrastructure/prometheus-integrations/install-configure-remote-write/set-your-prometheus-remote-write-integration/"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "Prometheus remote write",
+        "id": "setup-prometheus"
       }
     ]
   },
