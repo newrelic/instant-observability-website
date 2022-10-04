@@ -1803,19 +1803,19 @@
     ],
     "dashboards": [
       {
-        "name": "Battlesnake Server Status",
-        "description": "A dashboard to monitor your Battlesnake server's performance. It's important to keep all responses to the `/move` endpoint under 500ms. Furthermore, it's possible that your snake may be in multiple concurrent matches at the same time. It's important to make sure you server and web application are running smoothly to keep you in the game!",
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/battlesnake-server-status/battlesnake-server-status.png"
-        ]
-      },
-      {
         "name": "Battlesnake Performance",
         "description": "Monitor your Battlesnake's performance and see how it stacks up against your competition!",
         "url": null,
         "screenshots": [
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/battlesnake-performance/battlesnake-performance.png"
+        ]
+      },
+      {
+        "name": "Battlesnake Server Status",
+        "description": "A dashboard to monitor your Battlesnake server's performance. It's important to keep all responses to the `/move` endpoint under 500ms. Furthermore, it's possible that your snake may be in multiple concurrent matches at the same time. It's important to make sure you server and web application are running smoothly to keep you in the game!",
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/battlesnake-server-status/battlesnake-server-status.png"
         ]
       },
       {
@@ -4681,19 +4681,19 @@
     ],
     "dashboards": [
       {
-        "name": "Redis Enterprise Database CRDT",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/active-active/active_active01.png"
-        ]
-      },
-      {
         "name": "Redis Enterprise Cluster Metrics",
         "description": null,
         "url": null,
         "screenshots": [
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/cluster/cluster01.png"
+        ]
+      },
+      {
+        "name": "Redis Enterprise Database CRDT",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/active-active/active_active01.png"
         ]
       },
       {
@@ -12038,6 +12038,14 @@
     ],
     "dashboards": [
       {
+        "name": "Lacework Anomaly Detections",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/lacework-anomaly-detections/lacework-anomaly-detections.png"
+        ]
+      },
+      {
         "name": "Lacework Security Overview",
         "description": null,
         "url": null,
@@ -12051,14 +12059,6 @@
         "url": null,
         "screenshots": [
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/lacework-compliance-violations/lacework-compliance-violations.png"
-        ]
-      },
-      {
-        "name": "Lacework Anomaly Detections",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/lacework-anomaly-detections/lacework-anomaly-detections.png"
         ]
       }
     ],
@@ -17359,22 +17359,6 @@
     ],
     "dashboards": [
       {
-        "name": "Catchpoint-Test Times",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/catchpoint-test-times/Catchpoint-Test_Times.png"
-        ]
-      },
-      {
-        "name": "Catchpoint-Overview",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/catchpoint-overview/Catchpoint-Overview.png"
-        ]
-      },
-      {
         "name": "Catchpoint-Recent Errors",
         "description": null,
         "url": null,
@@ -17388,6 +17372,22 @@
         "url": null,
         "screenshots": [
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/catchpoint-response-size/Catchpoint-Response_Size.png"
+        ]
+      },
+      {
+        "name": "Catchpoint-Test Times",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/catchpoint-test-times/Catchpoint-Test_Times.png"
+        ]
+      },
+      {
+        "name": "Catchpoint-Overview",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/catchpoint-overview/Catchpoint-Overview.png"
         ]
       }
     ],
@@ -23161,11 +23161,11 @@
     ],
     "dashboards": [
       {
-        "name": "Azure Integrations Data Ingest Analysis",
+        "name": "GCP Integrations Data Ingest Analysis",
         "description": null,
         "url": null,
         "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/azure-integrations-data-ingest-analysis/azure-integrations-data-ingest-analysis.png"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/gcp-integrations-data-ingest-analysis/gcp-integrations-data-ingest-analysis.png"
         ]
       },
       {
@@ -23177,11 +23177,11 @@
         ]
       },
       {
-        "name": "GCP Integrations Data Ingest Analysis",
+        "name": "Azure Integrations Data Ingest Analysis",
         "description": null,
         "url": null,
         "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/gcp-integrations-data-ingest-analysis/gcp-integrations-data-ingest-analysis.png"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/azure-integrations-data-ingest-analysis/azure-integrations-data-ingest-analysis.png"
         ]
       },
       {
@@ -23335,6 +23335,71 @@
       {
         "name": "android",
         "id": "android-mobile"
+      }
+    ]
+  },
+  {
+    "title": "ADO.NET",
+    "name": "ado-dotnet",
+    "description": "## Comprehensive monitoring quickstart for ADO.NET\n\nWhen you monitor ADO.NET with New Relic, you can observe your ADO.NET data set in real time. Our .NET agent will also let you correlate transactions moving across your application environment and troubleshoot while working in a live development environment.\n\n\n## Why monitor ADO.NET?\n\nDiscovering data access API calls can help in identifying the following issues:\n  - Inaccessible databases or issues with the network library.\n  - Database and client software schema incompatibility.\n  - Problems occur when different ADO.NET components interact with one another or your own components.\n  - Whether hard-coded or created by an application, incorrect SQL.\n  - Flawed programming logic.\n\n## What’s included in this quickstart?\n\nThe ADO.NET monitoring quickstart from New Relic provides immediate full-stack observability:\n  - Alerts (high load connection, hard connects exceeding max limit, pool size exceeding optimum limit).\n  - Dashboards (hard connects per second, hard disconnects per second, number of active connections, soft connects per second and more).\n  - Alerts inform end users about the quality of their applications on a proactive basis.\n  - Monitor web transactions.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/dotnet/ado-dotnet",
+    "id": "1dac516a-291d-416d-b8ca-aed61f2062df",
+    "level": "NEW_RELIC",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/dotnet/ado-dotnet/logo.svg",
+    "summary": "Discover how the ADO.NET quickstart gives you an advantage with comprehensive monitoring capabilities.",
+    "websiteUrl": null,
+    "keywords": [
+      "apm",
+      "dotnet",
+      ".net",
+      "ado.net",
+      "ado-dotnet"
+    ],
+    "authors": [
+      "New Relic"
+    ],
+    "dashboards": [
+      {
+        "name": "ADO.NET",
+        "description": ".NET",
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/ado-dotnet/ado-dotnet01.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/ado-dotnet/ado-dotnet02.png"
+        ]
+      }
+    ],
+    "alerts": [
+      {
+        "name": "Hard Connects Exceeding Max Limit",
+        "details": "This alert is triggered when the Hard Connect is above 10 for 1 minute.",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "High Connection Load",
+        "details": "This alert is triggered when the Connection Load is above 1000 for 5 minutes.",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "Pool Size Exceeding Optimum Limit",
+        "details": "This alert is triggered when the Pool Size is above 50 for 1 minute.",
+        "type": "STATIC",
+        "url": null
+      }
+    ],
+    "documentation": [
+      {
+        "name": "ADO.NET installation docs",
+        "description": "Open-source web application framework developed by Microsoft, which\nimplements the model-view-controller pattern.\n",
+        "url": "https://docs.newrelic.com/docs/apm/agents/net-agent/getting-started/net-agent-compatibility-requirements-net-framework#technologies"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": ".NET agent",
+        "id": "dotnet-agent"
       }
     ]
   },
@@ -24031,11 +24096,11 @@
     ],
     "dashboards": [
       {
-        "name": "Browser Overview",
+        "name": "Browser Traffic Analysis",
         "description": null,
         "url": null,
         "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/browser-overview/browser_overview.png"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/traffic-analysis/traffic_analysis.png"
         ]
       },
       {
@@ -24047,11 +24112,11 @@
         ]
       },
       {
-        "name": "Browser Traffic Analysis",
+        "name": "Browser Overview",
         "description": null,
         "url": null,
         "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/traffic-analysis/traffic_analysis.png"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/browser-overview/browser_overview.png"
         ]
       },
       {
