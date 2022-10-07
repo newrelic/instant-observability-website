@@ -182,6 +182,55 @@
     ]
   },
   {
+    "title": "Amazon CloudFront web logs",
+    "name": "amazon-cloudfront-web-logs",
+    "description": "## What is Amazon CloudFront?\n\nSpeeds up the distribution of web content served from Amazon Web Services.\n\n### Get started!\n\nStart monitoring Amazon CloudFront by sending your Amazon Cloudfront Web Logs to New Relic. \n\nCheck out our Amazon CloudFront documentation to instrument your cloud service and manage the stability, scalability, and reliability of your systems with New Relic's Log monitoring capabilities.\n\n### More info\n\nCheck out the [documentation](https://docs.newrelic.com/docs/logs/forward-logs/cloudfront-web-logs/) to learn more about New Relic monitoring for Amazon CloudFront.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/aws/amazon-cloudfront-logs",
+    "id": "fb4c4acc-e341-4b87-9bb1-5f98b9cc9310",
+    "level": "NEW_RELIC",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/aws/amazon-cloudfront-logs/logo.svg",
+    "summary": "Monitor Amazon CloudFront Web logs in New Relic",
+    "websiteUrl": null,
+    "keywords": [
+      "aws",
+      "amazon web services",
+      "web content",
+      "logs",
+      "logging",
+      "web logs"
+    ],
+    "authors": [
+      "New Relic",
+      "Joseph Counts"
+    ],
+    "dashboards": [
+      {
+        "name": "Amazon Cloudfront Web Logs",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/amazon-cloudfront-web-logs/amazon-cloudfront-web-logs01.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/amazon-cloudfront-web-logs/amazon-cloudfront-web-logs02.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/amazon-cloudfront-web-logs/amazon-cloudfront-web-logs03.png"
+        ]
+      }
+    ],
+    "alerts": [],
+    "documentation": [
+      {
+        "name": "Amazon CloudFront web logs installation docs",
+        "description": "Monitor Amazon CloudFront web logs in New Relic.",
+        "url": "https://docs.newrelic.com/docs/logs/forward-logs/cloudfront-web-logs/"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "Amazon-Cloudfront-Web-Logs",
+        "id": "amazon-cloudfront-web-logs"
+      }
+    ]
+  },
+  {
     "title": "StatsD",
     "name": "statsd",
     "description": "## What is StatsD?\n\nLightweight, open-source Node.js application that listens for metrics from different applications and aggregates them.\n\n## Get started!\n\nNew Relic's StatsD integration lets you easily get StatsD-format data into New Relic.\nFollow [the documentation](https://docs.newrelic.com/docs/integrations/host-integrations/host-integrations-list/statsd-monitoring-integration-version-2) to get started!",
@@ -1822,19 +1871,19 @@
     ],
     "dashboards": [
       {
-        "name": "Battlesnake Performance",
-        "description": "Monitor your Battlesnake's performance and see how it stacks up against your competition!",
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/battlesnake-performance/battlesnake-performance.png"
-        ]
-      },
-      {
         "name": "Battlesnake Server Status",
         "description": "A dashboard to monitor your Battlesnake server's performance. It's important to keep all responses to the `/move` endpoint under 500ms. Furthermore, it's possible that your snake may be in multiple concurrent matches at the same time. It's important to make sure you server and web application are running smoothly to keep you in the game!",
         "url": null,
         "screenshots": [
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/battlesnake-server-status/battlesnake-server-status.png"
+        ]
+      },
+      {
+        "name": "Battlesnake Performance",
+        "description": "Monitor your Battlesnake's performance and see how it stacks up against your competition!",
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/battlesnake-performance/battlesnake-performance.png"
         ]
       },
       {
@@ -2883,6 +2932,51 @@
       {
         "name": "AWS-CloudWatch-Metric-Streams",
         "id": "aws-cloudwatch-metric-streams"
+      }
+    ]
+  },
+  {
+    "title": "Alert Quality Management",
+    "name": "alert-quality-management",
+    "description": "Alert Quality Management (AQM) focuses on reducing the number of nuisance incidents so that you focus only on alerts with true business impact. This reduces alert fatigue and ensures that you and your team focus your attention on the right places at the right times.\n\nFor more information view the [implementation guide](https://docs.newrelic.com/docs/new-relic-solutions/observability-maturity/uptime-performance-reliability/aqm-implementation-guide/).",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/oma-aqm",
+    "id": "ccdf1cf7-29f0-42ca-ae0d-239dfb073fd0",
+    "level": "NEW_RELIC",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/oma-aqm/logo.png",
+    "summary": "Reduce the volume of nuisance incidents with the Alert Quality Management dashboard and process.",
+    "websiteUrl": null,
+    "keywords": [
+      "oma",
+      "observability maturity",
+      "AQM",
+      "alert quality management"
+    ],
+    "authors": [
+      "Alec Isaacson (New Relic)",
+      "Andrew Faria (New Relic)"
+    ],
+    "dashboards": [
+      {
+        "name": "Alert Quality Management",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/oma-aqm/alert-quality-management.png"
+        ]
+      }
+    ],
+    "alerts": [],
+    "documentation": [
+      {
+        "name": "Implementation guide",
+        "description": "The implementation guide will show you how to implement the AQM process, including the webhook required to generate the data that feeds this dashboard.\n",
+        "url": "https://docs.newrelic.com/docs/new-relic-solutions/observability-maturity/uptime-performance-reliability/aqm-implementation-guide/"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "Alert Quality Management",
+        "id": "third-party-alert-quality-management"
       }
     ]
   },
@@ -4105,51 +4199,6 @@
     ]
   },
   {
-    "title": "Alert Quality Management",
-    "name": "alert-quality-management",
-    "description": "Alert Quality Management (AQM) focuses on reducing the number of nuisance incidents so that you focus only on alerts with true business impact. This reduces alert fatigue and ensures that you and your team focus your attention on the right places at the right times.\n\nFor more information view the [implementation guide](https://docs.newrelic.com/docs/new-relic-solutions/observability-maturity/uptime-performance-reliability/aqm-implementation-guide/).",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/oma-aqm",
-    "id": "ccdf1cf7-29f0-42ca-ae0d-239dfb073fd0",
-    "level": "NEW_RELIC",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/oma-aqm/logo.svg",
-    "summary": "Reduce the volume of nuisance incidents with the Alert Quality Management dashboard and process.",
-    "websiteUrl": null,
-    "keywords": [
-      "oma",
-      "observability maturity",
-      "AQM",
-      "alert quality management"
-    ],
-    "authors": [
-      "Alec Isaacson (New Relic)",
-      "Andrew Faria (New Relic)"
-    ],
-    "dashboards": [
-      {
-        "name": "Alert Quality Management",
-        "description": "Alert quality management KPI dashboard",
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/alert-quality-management/alert-quality-management.png"
-        ]
-      }
-    ],
-    "alerts": [],
-    "documentation": [
-      {
-        "name": "Implementation guide",
-        "description": "The implementation guide will show you how to implement the AQM process, including the webhook required to generate the data that feeds this dashboard.\n",
-        "url": "https://docs.newrelic.com/docs/new-relic-solutions/observability-maturity/uptime-performance-reliability/aqm-implementation-guide/"
-      }
-    ],
-    "installPlans": [
-      {
-        "name": "Alert Quality Management",
-        "id": "third-party-alert-quality-management"
-      }
-    ]
-  },
-  {
     "title": "Browser Segment Investigation Quickstart",
     "name": "browser-segment-investigation",
     "description": "Review the extent of crushed urls so you know which urls you need to add segments for in the browser segment allow list.",
@@ -4712,19 +4761,19 @@
     ],
     "dashboards": [
       {
-        "name": "Redis Enterprise Cluster Metrics",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/cluster/cluster01.png"
-        ]
-      },
-      {
         "name": "Redis Enterprise Database Metrics",
         "description": null,
         "url": null,
         "screenshots": [
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/database/database01.png"
+        ]
+      },
+      {
+        "name": "Redis Enterprise Cluster Metrics",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/cluster/cluster01.png"
         ]
       },
       {
@@ -5087,6 +5136,61 @@
     ]
   },
   {
+    "title": "Roku",
+    "name": "roku",
+    "description": "## Why monitor Roku?\n\nRoku is one of the world's most popular streaming platforms. New Relic has developed the first and only open-source observabiilty agent for Roku, giving you unparalleled insight into the performance of your Roku application.\n\n### Analytics on HTTP requests and errors\n  This can be manifestations of ISP or CDN issues or unwanted changes to the application or backend services. Faster identification and understanding of these issues is critical to maintaining a positive user experience. \n### Video Quality of Experience (QoE) \n  Correlate video quality issues back through the rest of the streaming architecture. Acquire complete correlations between video playback sessions to the backend systems.\n### Customer journey tracking\n Follow customers as they navigate the application towards their content and their video playback experience. See where and when drop offs occur and the time it takes to complete critical actions.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/roku",
+    "id": "71e1b882-ce4e-4037-b8f1-997d9e317ddd",
+    "level": "NEW_RELIC",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/roku/logo.svg",
+    "summary": "The New Relic Roku observability agent monitors the system- and video- level performance of Roku over the top (OTT) streaming applications and devices. Specifically, the agent offers insights into an application’s network connectivity, viewer journey, and overall functionality.",
+    "websiteUrl": null,
+    "keywords": [
+      "nrlabs",
+      "nrlabs-data",
+      "video",
+      "tracker",
+      "roku",
+      "brightscript"
+    ],
+    "authors": [
+      "New Relic Labs"
+    ],
+    "dashboards": [
+      {
+        "name": "Roku Quickstart",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/roku/roku-1.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/roku/roku-2.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/roku/roku-3.png"
+        ]
+      }
+    ],
+    "alerts": [
+      {
+        "name": "Roku HTTP Error Rate",
+        "details": "Alert when the Roku Error Rate % increases significantly from its baseline.\nUseful for understanding when your users are experiencing connection issues",
+        "type": "BASELINE",
+        "url": null
+      }
+    ],
+    "documentation": [
+      {
+        "name": "Roku installation docs",
+        "description": "Use Roku agent to monitor Roku applications.",
+        "url": "https://github.com/newrelic/video-agent-roku#installation"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "roku",
+        "id": "third-party-roku"
+      }
+    ]
+  },
+  {
     "title": "Kohana",
     "name": "kohana",
     "description": "## What is Kohana PHP?\n\nKohana PHP monitoring provides complete visibility into your applications to detect and resolve performance issues. DevOps teams can automatically instrument the Kohana framework and gain instant value with out-of-the-box dashboards by leveraging [New Relic's Kohana PHP monitoring quickstart](https://docs.newrelic.com/docs/apm/agents/php-agent/getting-started/introduction-new-relic-php/). Enhance performance monitoring protocols and drive smart business decisions with this approach.\n\n### Value of Kohana PHP\n\nDevelopment teams benefit from instant observability with Kohana PHP monitoring. Developers can also take advantage of high-level app summary, monitor user satisfaction, and build architectural maps of the application.\n\nYou can quickly find errors and issues by tracking key transactions, monitoring the Kohana dashboard for critical metrics, and alerting your team to errors or problems before they impact users.\n\n### New Relic Kohana PHP Quickstart Features\n\nNew Relic's Kohana PHP monitoring quickstart offers:\n- Alerts (duration, error rate, and throughput)\n- Code-level transactions, error traces, and database query traces\n- Distributed tracing to see the path taken by requests through a distributed system\n- Customizable charts for metric timeslice data and other custom metrics sent to New Relic\n- Kohana dashboards (for transactions overview, errors overview, VM overview, top five slowest transactions, latest error, and more)\n\nWhen you accelerate troubleshooting with distributed tracing and enhanced visibility into application and data lags in a Kohana dashboard, it's much easier for your team to quickly identify and resolve potential errors and ensure uptime. \n\n### The Complete Kohana PHP Dashboard Tool\n\nHelp developers optimize the entire infrastructure and help DevOps teams capture discrete events with key-value attributes attached to them, and analyze and query both application and business data.\n\nIn addition to the above, New Relic's Kohana PHP quickstart also helps teams organize, query, and visualize data to answer critical questions about app performance and customer experiences.\n\nConnect more than 500 applications to one daemon to impose sampling once you reach the harvest cycle limits. This approach helps reduce complexity and improve efficiency through the  instant observability provided by the Kohana dashboard.",
@@ -5441,42 +5545,6 @@
       {
         "name": "CloudFormation custom Resource that creates New Relic NRQL Alerts",
         "id": "third-party-alert-cloudformation-resource"
-      }
-    ]
-  },
-  {
-    "title": "Roku",
-    "name": "roku",
-    "description": "The New Relic Roku Agent tracks the behaviour of a Roku App. It contains two parts, one to monitor general system level events and one to monitor video related events, for apps that use a video player.",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/roku",
-    "id": "71e1b882-ce4e-4037-b8f1-997d9e317ddd",
-    "level": "NEW_RELIC",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/roku/logo.svg",
-    "summary": "Use Roku agent to monitor Roku applications.",
-    "websiteUrl": null,
-    "keywords": [
-      "nrlabs",
-      "nrlabs-data",
-      "video",
-      "tracker",
-      "roku"
-    ],
-    "authors": [
-      "New Relic Labs"
-    ],
-    "dashboards": [],
-    "alerts": [],
-    "documentation": [
-      {
-        "name": "Roku installation docs",
-        "description": "Use Roku agent to monitor Roku applications.",
-        "url": "https://docs.newrelic.com/docs/integrations/open-source-telemetry-integrations/roku/roku-open-source-video-agent/"
-      }
-    ],
-    "installPlans": [
-      {
-        "name": "roku",
-        "id": "third-party-roku"
       }
     ]
   },
@@ -6837,6 +6905,58 @@
     ]
   },
   {
+    "title": "OpenTelemetry",
+    "name": "opentelemetry",
+    "description": "## What is OpenTelemetry?\n\nOpenTelemetry provides a secure, vendor-neutral specification for service instrumentation so that you can export data to New Relic. OpenTelemetry offers a single set of APIs and libraries that standardize how you collect and transfer telemetry data for your services.\n\nThe following components make up the OpenTelemetry project:\n\n* Specifications for the core pillars of observability to drive consistency across all projects. New Relic supports all of these signals: traces, metrics, and logs (see details below)\n* APIs that contain interfaces and implementations based on the specifications SDKs (reference implementations of the APIs) created specifically for languages like Java, Python, Go, Erlang, and more\n* Collectors that offer a vendor-agnostic implementation for processing and exporting\n* Exporters that enable you to send data to a backend of your choice\n\n## How OpenTelemetry works with New Relic\n\nNew Relic supports the native OpenTelemetry Protocol (OTLP) for exporting telemetry data. This allows you to use the vendor neutral components developed by the OpenTelemetry community to export your data to New Relic.\n\n## Get started!\n\nYou can easily instrument your service with OpenTelemetry and export your telemetry data to New Relic.\nFollow [this OpenTelemetry guide](https://docs.newrelic.com/docs/integrations/open-source-telemetry-integrations/opentelemetry/opentelemetry-quick-start/) to get started.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/opentelemetry",
+    "id": "55445c3b-36dc-4bea-b31f-9f82fd551650",
+    "level": "NEW_RELIC",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/opentelemetry/logo.svg",
+    "summary": "Instrument your services with OpenTelemetry and New Relic",
+    "websiteUrl": null,
+    "keywords": [
+      "open source monitoring",
+      "open telemetry",
+      "otel",
+      "java",
+      "dotnet",
+      ".net",
+      "golang",
+      "go",
+      "cplusplus",
+      "c++",
+      "erlang",
+      "python",
+      "node",
+      "nodejs",
+      "node.js",
+      "javascript",
+      "ruby",
+      "elixir",
+      "php",
+      "rust",
+      "swift"
+    ],
+    "authors": [
+      "New Relic"
+    ],
+    "dashboards": [],
+    "alerts": [],
+    "documentation": [
+      {
+        "name": "OpenTelemetry installation docs",
+        "description": "Suite of APIs and agents intended to capture metric, log, and trace data from\nyour software.\n",
+        "url": "https://docs.newrelic.com/docs/more-integrations/open-source-telemetry-integrations/opentelemetry/opentelemetry-setup"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "OpenTelemetry",
+        "id": "third-party-opentelemetry"
+      }
+    ]
+  },
+  {
     "title": "Azure Load Balancer",
     "name": "azure-load-balancer",
     "description": "## What is Azure Load Balancer?\n\nWatches incoming TCP and UDP traffic from different services, and uses health\nto distribute those requests across different instances.\n\n\n### Get started!\n\nStart monitoring Azure Load Balancer by connecting Microsoft Azure to New Relic!\n\nCheck out our Azure Load Balancer documentation to instrument your cloud service and manage the stability, scalability, and reliability of your systems with New Relic's infrastructure monitoring capabilities.\n\n### More info\n\nCheck out the [documentation](https://docs.newrelic.com/docs/infrastructure/microsoft-azure-integrations/azure-integrations-list/azure-load-balancer-monitoring-integration/) to learn more about New Relic monitoring for Azure Load Balancer.",
@@ -7618,44 +7738,6 @@
       {
         "name": "Synthetics Page Load performance",
         "id": "third-party-synthetics-page-load-performance"
-      }
-    ]
-  },
-  {
-    "title": "OpenTelemetry",
-    "name": "opentelemetry",
-    "description": "## What is OpenTelemetry?\n\nOpenTelemetry provides a secure, vendor-neutral specification for service instrumentation so that you can export data to New Relic. OpenTelemetry offers a single set of APIs and libraries that standardize how you collect and transfer telemetry data for your services.\n\nThe following components make up the OpenTelemetry project:\n\n* Specifications for the core pillars of observability to drive consistency across all projects. New Relic supports all of these signals: traces, metrics, and logs (see details below)\n* APIs that contain interfaces and implementations based on the specifications SDKs (reference implementations of the APIs) created specifically for languages like Java, Python, Go, Erlang, and more\n* Collectors that offer a vendor-agnostic implementation for processing and exporting\n* Exporters that enable you to send data to a backend of your choice\n\n## How OpenTelemetry works with New Relic\n\nNew Relic supports the native OpenTelemetry Protocol (OTLP) for exporting telemetry data. This allows you to use the vendor neutral components developed by the OpenTelemetry community to export your data to New Relic.\n\n## Get started!\n\nYou can easily instrument your service with OpenTelemetry and export your telemetry data to New Relic.\nFollow [this OpenTelemetry guide](https://docs.newrelic.com/docs/integrations/open-source-telemetry-integrations/opentelemetry/opentelemetry-quick-start/) to get started.",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/opentelemetry",
-    "id": "55445c3b-36dc-4bea-b31f-9f82fd551650",
-    "level": "NEW_RELIC",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/opentelemetry/logo.svg",
-    "summary": "Instrument your services with OpenTelemetry and New Relic",
-    "websiteUrl": null,
-    "keywords": [
-      "open source monitoring",
-      "open telemetry",
-      "java",
-      "dotnet",
-      "golang",
-      "cplusplus",
-      "erlang"
-    ],
-    "authors": [
-      "New Relic"
-    ],
-    "dashboards": [],
-    "alerts": [],
-    "documentation": [
-      {
-        "name": "OpenTelemetry installation docs",
-        "description": "Suite of APIs and agents intended to capture metric and trace data from\nyour software.\n",
-        "url": "https://docs.newrelic.com/docs/integrations/open-source-telemetry-integrations/open-source-telemetry-integration-list/new-relics-opentelemetry-integration"
-      }
-    ],
-    "installPlans": [
-      {
-        "name": "OpenTelemetry",
-        "id": "third-party-opentelemetry"
       }
     ]
   },
@@ -12084,11 +12166,11 @@
     ],
     "dashboards": [
       {
-        "name": "Lacework Compliance Violations",
+        "name": "Lacework Anomaly Detections",
         "description": null,
         "url": null,
         "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/lacework-compliance-violations/lacework-compliance-violations.png"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/lacework-anomaly-detections/lacework-anomaly-detections.png"
         ]
       },
       {
@@ -12100,11 +12182,11 @@
         ]
       },
       {
-        "name": "Lacework Anomaly Detections",
+        "name": "Lacework Compliance Violations",
         "description": null,
         "url": null,
         "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/lacework-anomaly-detections/lacework-anomaly-detections.png"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/lacework-compliance-violations/lacework-compliance-violations.png"
         ]
       }
     ],
@@ -14161,6 +14243,51 @@
     ]
   },
   {
+    "title": "Jenkins",
+    "name": "jenkins",
+    "description": "## What is Jenkins?\n\nThe leading open source automation server, Jenkins provides hundreds of plugins to support building, deploying and automating any project.\n\n### Get started!\n\nStart monitoring Jenkins jobs and pipeline executions in New Relic!\n\nCheck out our Monitoring Jenkins with OpenTelemetry and New Relic documentation to instrument your Jenkins instance with the OpenTelemetry plugin for Jenkins.\n\n### More info\n\nCheck out the [documentation](https://docs.newrelic.com/docs/more-integrations/open-source-telemetry-integrations/opentelemetry/jenkins/monitoring-jenkins-ot/) to learn more about New Relic monitoring for Jenkins.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/jenkins",
+    "id": "980ab07a-3483-4b44-bbac-ed9c0a9a41a1",
+    "level": "COMMUNITY",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/jenkins/logo.svg",
+    "summary": "Monitor Jenkins with the OpenTelemetry plugin in New Relic.",
+    "websiteUrl": null,
+    "keywords": [
+      "jenkins",
+      "opentelemetry",
+      "otel",
+      "pipelines"
+    ],
+    "authors": [
+      "New Relic",
+      "Peter Nguyen"
+    ],
+    "dashboards": [
+      {
+        "name": "Sample Dashboard - Jenkins",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/jenkins/jenkins-otel01.png"
+        ]
+      }
+    ],
+    "alerts": [],
+    "documentation": [
+      {
+        "name": "Set up Jenkins OpenTelemetry Plugin",
+        "description": "Monitor Jenkins with the OpenTelemetry plugin by visualizing jobs and pipeline executions as distributed traces.",
+        "url": "https://docs.newrelic.com/docs/more-integrations/open-source-telemetry-integrations/opentelemetry/jenkins/monitoring-jenkins-ot/"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "Jenkins",
+        "id": "third-party-jenkins-integration"
+      }
+    ]
+  },
+  {
     "title": "Delphix",
     "name": "delphix",
     "description": "This Delphix quickstart allows you to get visibility into all your Delphix Virtualization platforms. Use this quickstart together with this [integration](https://github.com/delphix/dct-newrelic-integration)",
@@ -14780,51 +14907,6 @@
       {
         "name": "Quantum Metric",
         "id": "third-party-quantum-metric"
-      }
-    ]
-  },
-  {
-    "title": "Jenkins",
-    "name": "jenkins",
-    "description": "## What is Jenkins?\n\nThe leading open source automation server, Jenkins provides hundreds of plugins to support building, deploying and automating any project.\n\n### Get started!\n\nStart monitoring Jenkins jobs and pipeline executions in New Relic!\n\nCheck out our Monitoring Jenkins with OpenTelemetry and New Relic documentation to instrument your Jenkins instance with the OpenTelemetry plugin for Jenkins.\n\n### More info\n\nCheck out the [documentation](https://docs.newrelic.com/docs/more-integrations/open-source-telemetry-integrations/opentelemetry/jenkins/monitoring-jenkins-ot/) to learn more about New Relic monitoring for Jenkins.",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/jenkins",
-    "id": "980ab07a-3483-4b44-bbac-ed9c0a9a41a1",
-    "level": "COMMUNITY",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/jenkins/logo.svg",
-    "summary": "Monitor Jenkins with the OpenTelemetry plugin in New Relic.",
-    "websiteUrl": null,
-    "keywords": [
-      "jenkins",
-      "opentelemetry",
-      "otel",
-      "pipelines"
-    ],
-    "authors": [
-      "New Relic",
-      "Peter Nguyen"
-    ],
-    "dashboards": [
-      {
-        "name": "Sample Dashboard - Jenkins",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/jenkins/jenkins-otel01.png"
-        ]
-      }
-    ],
-    "alerts": [],
-    "documentation": [
-      {
-        "name": "Set up Jenkins OpenTelemetry Plugin",
-        "description": "Monitor Jenkins with the OpenTelemetry plugin by visualizing jobs and pipeline executions as distributed traces.",
-        "url": "https://docs.newrelic.com/docs/more-integrations/open-source-telemetry-integrations/opentelemetry/jenkins/monitoring-jenkins-ot/"
-      }
-    ],
-    "installPlans": [
-      {
-        "name": "Jenkins",
-        "id": "third-party-jenkins-integration"
       }
     ]
   },
@@ -17458,11 +17540,11 @@
     ],
     "dashboards": [
       {
-        "name": "Catchpoint-Overview",
+        "name": "Catchpoint-Test Times",
         "description": null,
         "url": null,
         "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/catchpoint-overview/Catchpoint-Overview.png"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/catchpoint-test-times/Catchpoint-Test_Times.png"
         ]
       },
       {
@@ -17474,11 +17556,11 @@
         ]
       },
       {
-        "name": "Catchpoint-Test Times",
+        "name": "Catchpoint-Overview",
         "description": null,
         "url": null,
         "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/catchpoint-test-times/Catchpoint-Test_Times.png"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/catchpoint-overview/Catchpoint-Overview.png"
         ]
       },
       {
@@ -23226,14 +23308,6 @@
     ],
     "dashboards": [
       {
-        "name": "AWS Integrations Data Ingest Analysis",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/aws-integrations-data-ingest-analysis/aws-integrations-data-ingest-analysis.png"
-        ]
-      },
-      {
         "name": "On-Host Integrations Data Analysis",
         "description": null,
         "url": null,
@@ -23263,6 +23337,14 @@
         "url": null,
         "screenshots": [
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/azure-integrations-data-ingest-analysis/azure-integrations-data-ingest-analysis.png"
+        ]
+      },
+      {
+        "name": "AWS Integrations Data Ingest Analysis",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/aws-integrations-data-ingest-analysis/aws-integrations-data-ingest-analysis.png"
         ]
       }
     ],
@@ -24401,6 +24483,14 @@
     ],
     "dashboards": [
       {
+        "name": "Browser Pages Dashboard",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/browser-pages-dashboard/browser_pages_dashboard.png"
+        ]
+      },
+      {
         "name": "Browser Overview",
         "description": null,
         "url": null,
@@ -24422,14 +24512,6 @@
         "url": null,
         "screenshots": [
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/traffic-analysis/traffic_analysis.png"
-        ]
-      },
-      {
-        "name": "Browser Pages Dashboard",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/browser-pages-dashboard/browser_pages_dashboard.png"
         ]
       }
     ],
