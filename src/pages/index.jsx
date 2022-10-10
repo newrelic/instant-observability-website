@@ -36,6 +36,7 @@ const COLUMN_BREAKPOINT = '1131px';
 const TILE_HEIGHT = '362px';
 
 const QuickstartsPage = ({ data, location }) => {
+  console.log('mickey/NR-52304')
   const {
     search,
     category,
