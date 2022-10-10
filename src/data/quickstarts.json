@@ -4761,14 +4761,6 @@
     ],
     "dashboards": [
       {
-        "name": "Redis Enterprise Database Metrics",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/database/database01.png"
-        ]
-      },
-      {
         "name": "Redis Enterprise Cluster Metrics",
         "description": null,
         "url": null,
@@ -4782,6 +4774,14 @@
         "url": null,
         "screenshots": [
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/active-active/active_active01.png"
+        ]
+      },
+      {
+        "name": "Redis Enterprise Database Metrics",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/database/database01.png"
         ]
       }
     ],
@@ -7203,56 +7203,6 @@
     ]
   },
   {
-    "title": "Etcd",
-    "name": "etcd",
-    "description": "## What is Etcd?\n\nEtcd is a strongly consistent, distributed key-value store that provides a reliable way to store data that needs to be accessed by a distributed system or cluster of machines. It gracefully handles leader elections during network partitions and can tolerate machine failure, even in the leader node\n\n## Quickstart details\n\nThis quickstart was built based on `etcd` metrics sent to New Relic using Prometheus remote write.  If using with the Prometheus OpenMetrics Integration, the dashboard widgets will require some modification.",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/etcd",
-    "id": "83b4ef64-9af6-4bec-9707-674fa82c2837",
-    "level": "COMMUNITY",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/etcd/logo.png",
-    "summary": "A curated dashboard based on Prometheus metrics which helps you understand the health of your Etcd cluster.",
-    "websiteUrl": null,
-    "keywords": [
-      "etcd",
-      "kubernetes",
-      "k8s",
-      "prometheus",
-      "remote-write"
-    ],
-    "authors": [
-      "Brad Schmitt"
-    ],
-    "dashboards": [
-      {
-        "name": "Etcd Overview",
-        "description": "A dashboard for etcd based on Prometheus remote write metrics",
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/etcd/dashboard.png"
-        ]
-      }
-    ],
-    "alerts": [],
-    "documentation": [
-      {
-        "name": "Etcd Metrics Documentation",
-        "description": "Learn more about the Prometheus metrics available for Etcd",
-        "url": "https://etcd.io/docs/v3.5/metrics/"
-      },
-      {
-        "name": "Prometheus Remote Write Configuration",
-        "description": "Configure your Prometheus Server to remote write metrics to New Relic",
-        "url": "https://docs.newrelic.com/docs/infrastructure/prometheus-integrations/install-configure-remote-write/set-your-prometheus-remote-write-integration/"
-      }
-    ],
-    "installPlans": [
-      {
-        "name": "Prometheus remote write",
-        "id": "setup-prometheus"
-      }
-    ]
-  },
-  {
     "title": "Bitbucket",
     "name": "bitbucket",
     "description": "## Atlassian Bitbucket quickstart\n\n### About Bitbucket\n\nWith best-in-class Jira integration, and built-in CI/CD, Bitbucket Cloud is the native Git tool in Atlassian’s Open DevOps solution.\n\n### About this quickstart\n\nThis quickstart is built around a [Bitbucket Pipe](https://bitbucket.org/product/features/pipelines/integrations) integration. This tool will enable you to send CI/CD events into New Relic, where you can monitor your Bitbucket Pipelines. \n\nWith this visualization you can monitor:\n  - Number of events/pipeline builds\n  - Track priority events\n  - Real time event log from your pipeline\n  - Events and priority events over time",
@@ -8113,6 +8063,56 @@
       {
         "name": "AWS-CloudWatch-Metric-Streams",
         "id": "aws-cloudwatch-metric-streams"
+      }
+    ]
+  },
+  {
+    "title": "Etcd",
+    "name": "etcd",
+    "description": "## What is Etcd?\n\nEtcd is a strongly consistent, distributed key-value store that provides a reliable way to store data that needs to be accessed by a distributed system or cluster of machines. It gracefully handles leader elections during network partitions and can tolerate machine failure, even in the leader node\n\n## Quickstart details\n\nThis quickstart was built based on `etcd` metrics sent to New Relic using Prometheus remote write.  If using with the Prometheus OpenMetrics Integration, the dashboard widgets will require some modification.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/etcd",
+    "id": "83b4ef64-9af6-4bec-9707-674fa82c2837",
+    "level": "COMMUNITY",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/etcd/logo.png",
+    "summary": "A curated dashboard based on Prometheus metrics which helps you understand the health of your Etcd cluster.",
+    "websiteUrl": null,
+    "keywords": [
+      "etcd",
+      "kubernetes",
+      "k8s",
+      "prometheus",
+      "remote-write"
+    ],
+    "authors": [
+      "Brad Schmitt"
+    ],
+    "dashboards": [
+      {
+        "name": "Etcd Overview",
+        "description": "A dashboard for etcd based on Prometheus remote write metrics",
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/etcd/dashboard.png"
+        ]
+      }
+    ],
+    "alerts": [],
+    "documentation": [
+      {
+        "name": "Etcd Metrics Documentation",
+        "description": "Learn more about the Prometheus metrics available for Etcd",
+        "url": "https://etcd.io/docs/v3.5/metrics/"
+      },
+      {
+        "name": "Prometheus Remote Write Configuration",
+        "description": "Configure your Prometheus Server to remote write metrics to New Relic",
+        "url": "https://docs.newrelic.com/docs/infrastructure/prometheus-integrations/install-configure-remote-write/set-your-prometheus-remote-write-integration/"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "Prometheus remote write",
+        "id": "setup-prometheus"
       }
     ]
   },
@@ -12166,11 +12166,11 @@
     ],
     "dashboards": [
       {
-        "name": "Lacework Anomaly Detections",
+        "name": "Lacework Compliance Violations",
         "description": null,
         "url": null,
         "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/lacework-anomaly-detections/lacework-anomaly-detections.png"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/lacework-compliance-violations/lacework-compliance-violations.png"
         ]
       },
       {
@@ -12182,11 +12182,11 @@
         ]
       },
       {
-        "name": "Lacework Compliance Violations",
+        "name": "Lacework Anomaly Detections",
         "description": null,
         "url": null,
         "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/lacework-compliance-violations/lacework-compliance-violations.png"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/lacework-anomaly-detections/lacework-anomaly-detections.png"
         ]
       }
     ],
@@ -17540,14 +17540,6 @@
     ],
     "dashboards": [
       {
-        "name": "Catchpoint-Test Times",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/catchpoint-test-times/Catchpoint-Test_Times.png"
-        ]
-      },
-      {
         "name": "Catchpoint-Recent Errors",
         "description": null,
         "url": null,
@@ -17556,11 +17548,11 @@
         ]
       },
       {
-        "name": "Catchpoint-Overview",
+        "name": "Catchpoint-Test Times",
         "description": null,
         "url": null,
         "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/catchpoint-overview/Catchpoint-Overview.png"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/catchpoint-test-times/Catchpoint-Test_Times.png"
         ]
       },
       {
@@ -17569,6 +17561,14 @@
         "url": null,
         "screenshots": [
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/catchpoint-response-size/Catchpoint-Response_Size.png"
+        ]
+      },
+      {
+        "name": "Catchpoint-Overview",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/catchpoint-overview/Catchpoint-Overview.png"
         ]
       }
     ],
@@ -23308,14 +23308,6 @@
     ],
     "dashboards": [
       {
-        "name": "On-Host Integrations Data Analysis",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/on-host-integrations-data-analysis/on-host-integrations-data-analysis.png"
-        ]
-      },
-      {
         "name": "Kubernetes Data Ingest Analysis",
         "description": null,
         "url": null,
@@ -23345,6 +23337,14 @@
         "url": null,
         "screenshots": [
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/aws-integrations-data-ingest-analysis/aws-integrations-data-ingest-analysis.png"
+        ]
+      },
+      {
+        "name": "On-Host Integrations Data Analysis",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/on-host-integrations-data-analysis/on-host-integrations-data-analysis.png"
         ]
       }
     ],
@@ -23663,73 +23663,6 @@
     ]
   },
   {
-    "title": "HCP Vault",
-    "name": "ext-hcp-vault",
-    "description": "The HCP Vault quickstart allows you to get visibility into the performance and available of your HCP Vault service and dependencies. Use this quickstart together with the mock up integrations.\n\n## HCP Vault quickstart highlights\n\nThe New Relic quickstart uses dashboards to proactively monitor your HCP Vault servers, like:\n- whether a cluster node has been sealed by a user or during startup\n- number of authentication requests handled\n- the duration of requests handled\n\n## Monitoring HCP Vault\n\nThis quickstart utilizes New Relic's ability to ingest Prometheus data (either from our OpenMetrics integration or via Prometheus remote write). See instructions for [sending Prometheus data to New Relic here](https://docs.newrelic.com/docs/infrastructure/prometheus-integrations/get-started/send-prometheus-metric-data-new-relic/).\n\n### How do I configure my integration to scrape HCP Vault severs?\n\nThe approach to getting your Prometheus metrics into New Relic differs depending on which integration you use.\n\n#### Prometheus Remote Write\n\nIn addition to setting up your `remote_write` configuration as described [here](https://docs.newrelic.com/docs/infrastructure/prometheus-integrations/install-configure-remote-write/set-your-prometheus-remote-write-integration/), you will need to add the following scrape configuration to your `prometheus.yml` config file:\n\n```\n- job_name: 'vault'\n  metrics_path: \"/v1/sys/metrics\"\n  params:\n    format: ['prometheus']\n  scheme: https\n  tls_config:\n    ca_file: your_ca_here.pem\n  bearer_token: \"your_vault_token_here\"\n  static_configs:\n  - targets: ['your_vault_server_here:8200']\n```\n(This helpful Prometheus job defnition sourced from [HCP Vault Telemetry](https://www.vaultproject.io/docs/configuration/telemetry))\n\nThen, after reloading Prometheus config, you can check that your HCP Vault pods are appearing under your [Prometheus targets](https://prometheus.io/docs/prometheus/latest/querying/api/#targets).",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/ext-hcp-vault",
-    "id": "3022ff72-964b-409f-abfc-5b54708094fd",
-    "level": "COMMUNITY",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/ext-hcp-vault/logo.svg",
-    "summary": "The HCP Vault quickstart allows you to get visibility into the performance of your instances.",
-    "websiteUrl": null,
-    "keywords": [
-      "HCP",
-      "Vault",
-      "HashiCorp",
-      "Prometheus",
-      "remote-write"
-    ],
-    "authors": [
-      "Irvin Arias @Kinect-Consulting",
-      "Omar Castillo @Kinect-Consulting",
-      "Iara Silva @Kinect-Consulting",
-      "David Perez @Kinect-Consulting"
-    ],
-    "dashboards": [
-      {
-        "name": "HashiCorp Vault",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/ext-hcp-vault/HCP_Vault-screenshot.png"
-        ]
-      }
-    ],
-    "alerts": [
-      {
-        "name": "HCP Vault | Check Handles High Response Time for 5m",
-        "details": "This metric represents the duration of requests handled by Vault core.",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "HCP Vault | Check High Login Traffic for 5m",
-        "details": "This metric represents the number of authentication requests handled by Vault core.",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "HCP Vault | Check Instance in Sealed status for 5m",
-        "details": "This Boolean metric indicates whether a cluster node has been sealed by a user or during startup.",
-        "type": "STATIC",
-        "url": null
-      }
-    ],
-    "documentation": [
-      {
-        "name": "HashiCorp Vault installation docs",
-        "description": "The HCP Vault quickstart allows you to get visibility into the performance of your instances.\n",
-        "url": "https://www.vaultproject.io/docs/configuration/telemetry"
-      }
-    ],
-    "installPlans": [
-      {
-        "name": "HCP Vault",
-        "id": "ext-hcp-vault"
-      }
-    ]
-  },
-  {
     "title": "Azure Redis Cache",
     "name": "azure-redis-cache",
     "description": "## What is Azure Redis Cache?\n\nFully managed in-memory data store built for quickly scaling application\nperformance.\n\n\n### Get started!\n\nStart monitoring Azure Redis Cache by connecting Microsoft Azure to New Relic!\n\nCheck out our Azure Redis Cache documentation to instrument your cloud service and manage the stability, scalability, and reliability of your systems with New Relic's infrastructure monitoring capabilities.\n\n### More info\n\nCheck out the [documentation](https://docs.newrelic.com/docs/infrastructure/microsoft-azure-integrations/azure-integrations-list/azure-redis-cache-monitoring-integration/) to learn more about New Relic monitoring for Azure Redis Cache.",
@@ -23999,132 +23932,6 @@
       {
         "name": ".NET agent",
         "id": "dotnet-agent"
-      }
-    ]
-  },
-  {
-    "title": "Jenkins (Prometheus)",
-    "name": "jenkins-prometheus",
-    "description": "## What is Jenkins?\nThe leading open source automation server, Jenkins provides hundreds of plugins to support building, deploying and automating any project.\n\n## Jenkins (Prometheus) quickstart highlights\nThe New Relic quickstart uses dashboards to proactively monitor your jenkin servers, like:\n- jenkins health\n- jenkins total jobs/successful jobs/failure jobs\n- jenkins last build status\n- jenkins queue rate\n\n### Requirements:\nThe approach to getting your Prometheus metrics into New Relic differs depending on which integration you use.\n\n#### Prometheus Remote Write\n1. [Prometheus Server](https://prometheus.io/docs/prometheus/latest/installation/)\n2. Enable Prometheus [Remote Write](https://docs.newrelic.com/docs/infrastructure/prometheus-integrations/install-configure-remote-write/set-your-prometheus-remote-write-integration/) to New Relic.\n\nyou will need to add the scrape configuration to your `prometheus.yml` config file:\nReload the prometheus configuration and restart the prometheus instance\n\n`\n  job_name: \"jenkins\"  \n  params:\n    format: [\"prometheus\"]\n  metrics_path: \"prometheus\"\n  scheme: \"http\"\n  static_configs:\n    targets: [\"localhost:9090\"]\n `    \n\n### More info\n\nCheck out the [documentation](https://plugins.jenkins.io/prometheus/) to learn more about New Relic monitoring for Jenkins.",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/jenkins-prometheus",
-    "id": "60bc56a5-7018-4bc9-a1d0-8a1bc3ac6843",
-    "level": "COMMUNITY",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/jenkins-prometheus/logo.png",
-    "summary": "New Relic provides crucial tools for monitoring your Jenkins instances. It support feature such as monitor Jenkins with the prometheus remote writter plugin in New Relic.",
-    "websiteUrl": null,
-    "keywords": [
-      "jenkins",
-      "prometheus",
-      "remote",
-      "write"
-    ],
-    "authors": [
-      "Subhani Shaik @kinect-consulting.com"
-    ],
-    "dashboards": [
-      {
-        "name": "Quickstart - Jenkins",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/jenkins-prometheus/jenkins-prometheus.png"
-        ]
-      }
-    ],
-    "alerts": [
-      {
-        "name": "jenkins active plugins throughput",
-        "details": "This alert is triggered when the jenkins active plugins count is greater than 100 in 5 minutes",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "Jenkins Last Build Status - Error",
-        "details": "This alert is triggered when the last build start time is 0 for 5 minutes",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "Queued Rate latency",
-        "details": "This alert is triggered when the queued rate (latency) is greater than 0.02 during 60 minutes",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "Saturation",
-        "details": "This alert is triggered when the jenkins health goes down by 1 for 5 minutes",
-        "type": "STATIC",
-        "url": null
-      }
-    ],
-    "documentation": [
-      {
-        "name": "Jenkins Prometheus Metrics Plugin",
-        "description": "Jenkins Prometheus Plugin expose an endpoint (default /prometheus) with metrics where a Prometheus Server can scrape",
-        "url": "https://plugins.jenkins.io/prometheus/"
-      }
-    ],
-    "installPlans": [
-      {
-        "name": "Prometheus remote write",
-        "id": "setup-prometheus"
-      },
-      {
-        "name": "Jenkins (Prometheus)",
-        "id": "third-party-jenkins-prometheus"
-      }
-    ]
-  },
-  {
-    "title": "InfluxDB",
-    "name": "ext-influxdb",
-    "description": "The InfluxDB quickstart allows you to get visibility into the performance and available of your InfluxDB service and dependencies. Use this quickstart together with the mock up integrations.\n\n# InfluxDB quickstart highlights\n\nThe New Relic quickstart uses dashboards to proactively monitor your InfluxDB servers, like;\n- number of query requests\n- task execution failures\n- memory (cache/heap)\n\n## Monitoring InfluxDB\n\nThis quickstart utilizes New Relic's ability to ingest Prometheus data (either from our OpenMetrics integration or via Prometheus remote write). See instructions for [sending Prometheus data to New Relic here](https://docs.newrelic.com/docs/infrastructure/prometheus-integrations/get-started/send-prometheus-metric-data-new-relic/).\n\n### How do I configure my integration to scrape InfluxDB severs?\n\nThe approach to getting your Prometheus metrics into New Relic differs depending on which integration you use.\n\n#### Prometheus Remote Write\n\nIn addition to setting up your `remote_write` configuration as described [here](https://docs.newrelic.com/docs/infrastructure/prometheus-integrations/install-configure-remote-write/set-your-prometheus-remote-write-integration/), you will need to add the following scrape configuration to your `prometheus.yml` config file\n\n```\n- job_name: 'influxdb'\n  metrics_path: \"/metrics\"\n  scheme: http\n  static_configs:\n  - targets: ['your_influxdb_server_here:8086']\n```\nPrometheus job definition sourced from [InfluxDB - Prometheus](https://docs.influxdata.com/influxdb/v1.8/supported_protocols/prometheus/#prometheus-remote-read-and-write-api-support)\n\nUse this link to check that your InfluxDB services are appearing under your [Prometheus targets](https://prometheus.io/docs/prometheus/latest/querying/api/#targets).\n\n##### Integrating your Prometheus Data \nUsing the Prometheus Remote Write integration, you can point your Prometheus servers at New Relic to store and visualize your data.\n\n- Generate your Prometheus remote_write URL\n- Use 'InfluxDB_Prometheus' to identify your data source\n- This will add an attribute to your metrics that will enable the entity creation - *instrumentation.source = \"InfluxDB_Prometheus\"*",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/ext-influxdb",
-    "id": "235cda5f-f9e6-4c81-b1d2-55fc80717a06",
-    "level": "COMMUNITY",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/ext-influxdb/logo.png",
-    "summary": "The InfluxDB quickstart allows you to get visibility into the performance of your instances.",
-    "websiteUrl": null,
-    "keywords": [
-      "InfluxData",
-      "InfluxDB",
-      "Database",
-      "Timeseries"
-    ],
-    "authors": [
-      "David Perez @Kinect-Consulting",
-      "Omar Castillo @Kinect-Consulting",
-      "Irvin Arias @Kinect-Consulting"
-    ],
-    "dashboards": [
-      {
-        "name": "InfluxDB",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/ext-influxdb/InfluxDB.png"
-        ]
-      }
-    ],
-    "alerts": [
-      {
-        "name": "InfluxDB | Check Execution Failure Rate for 5m",
-        "details": "Failure rate on runs completed across all tasks is higher than 5%.",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "InfluxDB | Check High Number of Query Requests for 5m",
-        "details": "This metric represents the number of query requests handled by InfluxDB. Threshold should be defined based on the environment size.",
-        "type": "STATIC",
-        "url": null
-      }
-    ],
-    "documentation": [],
-    "installPlans": [
-      {
-        "name": "InfluxDB",
-        "id": "ext-influxdb"
       }
     ]
   },
@@ -24483,11 +24290,11 @@
     ],
     "dashboards": [
       {
-        "name": "Browser Pages Dashboard",
+        "name": "JavaScript Errors",
         "description": null,
         "url": null,
         "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/browser-pages-dashboard/browser_pages_dashboard.png"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/javascript-errors/javascript_errors.png"
         ]
       },
       {
@@ -24499,11 +24306,11 @@
         ]
       },
       {
-        "name": "JavaScript Errors",
+        "name": "Browser Pages Dashboard",
         "description": null,
         "url": null,
         "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/javascript-errors/javascript_errors.png"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/browser-pages-dashboard/browser_pages_dashboard.png"
         ]
       },
       {
