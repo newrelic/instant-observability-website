@@ -7,7 +7,7 @@ const HeadComponents = [
   />,
 ];
 
-const onRenderBody = async ({ setHeadComponents }) => {
+const onRenderBody = ({ setHeadComponents }) => {
   setHeadComponents(HeadComponents);
 };
 
