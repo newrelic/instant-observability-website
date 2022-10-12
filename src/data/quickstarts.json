@@ -4295,19 +4295,19 @@
     ],
     "dashboards": [
       {
-        "name": "Data Ingest Governance Entity Breakdowns",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/data-ingest-entity-breakdown/data-ingest-entity-breakdown.png"
-        ]
-      },
-      {
         "name": "Data Ingest Governance Baseline",
         "description": null,
         "url": null,
         "screenshots": [
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/data-ingest-baseline/data-ingest-baseline.png"
+        ]
+      },
+      {
+        "name": "Data Ingest Governance Entity Breakdowns",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/data-ingest-entity-breakdown/data-ingest-entity-breakdown.png"
         ]
       }
     ],
@@ -4790,11 +4790,11 @@
     ],
     "dashboards": [
       {
-        "name": "Redis Enterprise Cluster Metrics",
+        "name": "Redis Enterprise Database Metrics",
         "description": null,
         "url": null,
         "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/cluster/cluster01.png"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/database/database01.png"
         ]
       },
       {
@@ -4806,11 +4806,11 @@
         ]
       },
       {
-        "name": "Redis Enterprise Database Metrics",
+        "name": "Redis Enterprise Cluster Metrics",
         "description": null,
         "url": null,
         "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/database/database01.png"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/cluster/cluster01.png"
         ]
       }
     ],
@@ -5469,6 +5469,79 @@
       {
         "name": "AWS-CloudWatch-Metric-Streams",
         "id": "aws-cloudwatch-metric-streams"
+      }
+    ]
+  },
+  {
+    "title": "ActiveMQ",
+    "name": "activemq",
+    "description": "## Comprehensive monitoring quickstart for ActiveMQ\nNew Relic detects your ActiveMQ metrics like queues, brokers,  producers, consumers, garbage collection rate, heap memory usage and more. \n\n## Why monitor ActiveMQ?\nApache ActiveMQ is a fault-tolerant, scalable messaging system used to build real-time data pipelines. ActiveMQ also supports replications natively, and can help build streaming applications that run inside production environments.\n\nMonitoring ActiveMQ with our quickstart shows you performance metrics and inventory data on a real-time basis, create your own custom dashboard with charts and queries, and create alert policies.\n\n\n## What’s included in this quickstart?\nNew Relic’s performance monitoring provides instant observability out-of-the-box.\n\nWith this quickstart, you can:\n- Easily monitor and identify when your ActiveMQ nodes are underperforming.\n- View interactive dashboards show your tracked brokers, messages per sec, broker connections, memory usage, storage usage and more.\n- Know when message processing time is about to degrade.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/activemq",
+    "id": "2a0365a9-f14c-4611-b097-9ad3aee51f1a",
+    "level": "NEW_RELIC",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/activemq/logo.svg",
+    "summary": "Monitor the performance metrics of your Apache ActiveMQ instances in real-time with New Relic APM.",
+    "websiteUrl": null,
+    "keywords": [
+      "activemq",
+      "jmx monitoring",
+      "apache"
+    ],
+    "authors": [
+      "New Relic"
+    ],
+    "dashboards": [
+      {
+        "name": "ActiveMQ",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/activemq/activemq-1.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/activemq/activemq-2.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/activemq/activemq-3.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/activemq/activemq-4.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/activemq/activemq-5.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/activemq/activemq-6.png"
+        ]
+      }
+    ],
+    "alerts": [
+      {
+        "name": "Heap Memory Usage",
+        "details": "This alert is triggered when the used heap memory usage is higher than 100GB during 5 minutes.",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "Message Dequeue Rate",
+        "details": "This alert is triggered when the messages received are less than 1 during 5 minutes.",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "Message Enqueue Rate",
+        "details": "This alert is triggered when the messages sent are less than 1 during 5 minutes.",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "Total Connections",
+        "details": "This alert is triggered when the total connections are less than 1 during 5 minutes.",
+        "type": "STATIC",
+        "url": null
+      }
+    ],
+    "documentation": [
+      {
+        "name": "ActiveMQ integration documentation",
+        "description": "Monitor the performance metrics of your Apache ActiveMQ instances in real-time with New Relic APM.\n",
+        "url": "https://docs.newrelic.com/docs/infrastructure/host-integrations/host-integrations-list/jmx-monitoring-activemq"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "ActiveMQ",
+        "id": "activemq-integration"
       }
     ]
   },
@@ -12204,19 +12277,19 @@
         ]
       },
       {
-        "name": "Lacework Security Overview",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/lacework-security-overview/lacework-security-overview.png"
-        ]
-      },
-      {
         "name": "Lacework Anomaly Detections",
         "description": null,
         "url": null,
         "screenshots": [
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/lacework-anomaly-detections/lacework-anomaly-detections.png"
+        ]
+      },
+      {
+        "name": "Lacework Security Overview",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/lacework-security-overview/lacework-security-overview.png"
         ]
       }
     ],
@@ -17571,14 +17644,6 @@
     ],
     "dashboards": [
       {
-        "name": "Catchpoint-Recent Errors",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/catchpoint-recent-errors/Catchpoint-Recent_Errors.png"
-        ]
-      },
-      {
         "name": "Catchpoint-Test Times",
         "description": null,
         "url": null,
@@ -17587,19 +17652,27 @@
         ]
       },
       {
-        "name": "Catchpoint-Response Size",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/catchpoint-response-size/Catchpoint-Response_Size.png"
-        ]
-      },
-      {
         "name": "Catchpoint-Overview",
         "description": null,
         "url": null,
         "screenshots": [
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/catchpoint-overview/Catchpoint-Overview.png"
+        ]
+      },
+      {
+        "name": "Catchpoint-Recent Errors",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/catchpoint-recent-errors/Catchpoint-Recent_Errors.png"
+        ]
+      },
+      {
+        "name": "Catchpoint-Response Size",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/catchpoint-response-size/Catchpoint-Response_Size.png"
         ]
       }
     ],
@@ -23339,6 +23412,14 @@
     ],
     "dashboards": [
       {
+        "name": "On-Host Integrations Data Analysis",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/on-host-integrations-data-analysis/on-host-integrations-data-analysis.png"
+        ]
+      },
+      {
         "name": "Kubernetes Data Ingest Analysis",
         "description": null,
         "url": null,
@@ -23368,14 +23449,6 @@
         "url": null,
         "screenshots": [
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/aws-integrations-data-ingest-analysis/aws-integrations-data-ingest-analysis.png"
-        ]
-      },
-      {
-        "name": "On-Host Integrations Data Analysis",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/on-host-integrations-data-analysis/on-host-integrations-data-analysis.png"
         ]
       }
     ],
@@ -24321,11 +24394,11 @@
     ],
     "dashboards": [
       {
-        "name": "JavaScript Errors",
+        "name": "Browser Pages Dashboard",
         "description": null,
         "url": null,
         "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/javascript-errors/javascript_errors.png"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/browser-pages-dashboard/browser_pages_dashboard.png"
         ]
       },
       {
@@ -24337,11 +24410,11 @@
         ]
       },
       {
-        "name": "Browser Pages Dashboard",
+        "name": "JavaScript Errors",
         "description": null,
         "url": null,
         "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/browser-pages-dashboard/browser_pages_dashboard.png"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/javascript-errors/javascript_errors.png"
         ]
       },
       {
