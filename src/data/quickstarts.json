@@ -1871,19 +1871,19 @@
     ],
     "dashboards": [
       {
-        "name": "Battlesnake Server Status",
-        "description": "A dashboard to monitor your Battlesnake server's performance. It's important to keep all responses to the `/move` endpoint under 500ms. Furthermore, it's possible that your snake may be in multiple concurrent matches at the same time. It's important to make sure you server and web application are running smoothly to keep you in the game!",
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/battlesnake-server-status/battlesnake-server-status.png"
-        ]
-      },
-      {
         "name": "Battlesnake Performance",
         "description": "Monitor your Battlesnake's performance and see how it stacks up against your competition!",
         "url": null,
         "screenshots": [
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/battlesnake-performance/battlesnake-performance.png"
+        ]
+      },
+      {
+        "name": "Battlesnake Server Status",
+        "description": "A dashboard to monitor your Battlesnake server's performance. It's important to keep all responses to the `/move` endpoint under 500ms. Furthermore, it's possible that your snake may be in multiple concurrent matches at the same time. It's important to make sure you server and web application are running smoothly to keep you in the game!",
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/battlesnake-server-status/battlesnake-server-status.png"
         ]
       },
       {
@@ -1907,39 +1907,6 @@
       {
         "name": "Custom Attributes",
         "id": "battlesnake"
-      }
-    ]
-  },
-  {
-    "title": "AWS EMR",
-    "name": "aws-emr",
-    "description": "## What is AWS EMR?\n\nProcess and manage big data inputs from popular frameworks.\n\n### Get started!\n\nStart monitoring AWS EMR by connecting Amazon Web Services (AWS) to New Relic!\n\nCheck out our AWS EMR documentation to instrument your cloud service and manage the stability, scalability, and reliability of your systems with New Relic's infrastructure monitoring capabilities.\n\n### More info\n\nCheck out the [documentation](https://docs.newrelic.com/docs/infrastructure/amazon-integrations/aws-integrations-list/aws-emr-monitoring-integration/) to learn more about New Relic monitoring for AWS EMR.",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/aws/aws-emr",
-    "id": "d84051ba-365f-4542-8db9-0829384ea55a",
-    "level": "NEW_RELIC",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/aws/aws-emr/logo.svg",
-    "summary": "Monitor AWS EMR by connecting AWS to New Relic",
-    "websiteUrl": null,
-    "keywords": [
-      "aws",
-      "amazon web services"
-    ],
-    "authors": [
-      "New Relic"
-    ],
-    "dashboards": [],
-    "alerts": [],
-    "documentation": [
-      {
-        "name": "AWS EMR installation docs",
-        "description": "Monitor AWS EMR by connecting AWS to New Relic.",
-        "url": "https://docs.newrelic.com/docs/infrastructure/amazon-integrations/aws-integrations-list/aws-emr-monitoring-integration/"
-      }
-    ],
-    "installPlans": [
-      {
-        "name": "AWS-Infrastructure-Monitoring",
-        "id": "aws-infrastructure-monitoring"
       }
     ]
   },
@@ -2384,135 +2351,6 @@
       {
         "name": "C SDK Agent",
         "id": "setup-c-agent"
-      }
-    ]
-  },
-  {
-    "title": "DNN Community",
-    "name": "dnn-community",
-    "description": "## What is DNN Community?\n\nDNN is the largest and most popular open source CMS on the Microsoft ASP.NET\nstack.\n\n\n## Get started!\n\nLeverage community expertise and instantly get value out of your telemetry data. This quickstart automatically instruments DNN Community with the New Relic .Net agent, and allows you to instantly monitor your .Net application with out-of-the-box dashboards and alerts. Further leverage New Relic's APM capabilities by setting up [errors inbox](https://docs.newrelic.com/docs/apm/apm-ui-pages/errors-inbox/errors-inbox/), [transaction tracing](https://docs.newrelic.com/docs/apm/transactions/transaction-traces/introduction-transaction-traces/), and [service maps](https://docs.newrelic.com/docs/understand-dependencies/understand-system-dependencies/service-maps/introduction-service-maps/).\n\n## More info\n\nCheck out the [documentation](https://docs.newrelic.com/docs/agents/net-agent/getting-started/introduction-new-relic-net/) to learn more about New Relic monitoring for DNN Community.",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/dotnet/dnn-community",
-    "id": "8808f632-18b7-4a81-b48e-fd4f3077be2a",
-    "level": "NEW_RELIC",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/dotnet/dnn-community/logo.svg",
-    "summary": "Monitor DNN Community with New Relic's .NET agent",
-    "websiteUrl": null,
-    "keywords": [
-      "apm",
-      "dotnet",
-      "cms",
-      "content management system"
-    ],
-    "authors": [
-      "New Relic"
-    ],
-    "dashboards": [
-      {
-        "name": "Dotnet",
-        "description": ".NET",
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/dotnet/dotnet02.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/dotnet/dotnet03.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/dotnet/dotnet.png"
-        ]
-      }
-    ],
-    "alerts": [
-      {
-        "name": "Apdex Score",
-        "details": "This alert is triggered when the Apdex score is below 0.5 for 5 minutes",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "Memory Usage",
-        "details": "This alert is triggered when Memory usage is above 90%",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "Transaction Errors",
-        "details": "This alert is triggered when the the transactions fail more than 10% of the time in 5 minutes.",
-        "type": "STATIC",
-        "url": null
-      }
-    ],
-    "documentation": [
-      {
-        "name": "DNN Community installation docs",
-        "description": "DNN is the largest and most popular open source CMS on the Microsoft\nASP.NET stack.\n",
-        "url": "https://docs.newrelic.com/docs/agents/net-agent/getting-started/compatibility-requirements-net-framework-agent"
-      }
-    ],
-    "installPlans": [
-      {
-        "name": ".NET agent",
-        "id": "dotnet-agent"
-      }
-    ]
-  },
-  {
-    "title": "MSMQ",
-    "name": "msmq",
-    "description": "## What is MSMQ?\n\nMicrosoft Message Queueing is a messaging protocol that allows applications\nrunning on separate servers/processes to communicate.\n\n\n## Get started!\n\nLeverage community expertise and instantly get value out of your telemetry data. This quickstart automatically instruments MSMQ with the New Relic .Net agent, and allows you to instantly monitor your .Net application with out-of-the-box dashboards and alerts. Further leverage New Relic's APM capabilities by setting up [errors inbox](https://docs.newrelic.com/docs/apm/apm-ui-pages/errors-inbox/errors-inbox/), [transaction tracing](https://docs.newrelic.com/docs/apm/transactions/transaction-traces/introduction-transaction-traces/), and [service maps](https://docs.newrelic.com/docs/understand-dependencies/understand-system-dependencies/service-maps/introduction-service-maps/).\n\n## More info\n\nCheck out the [documentation](https://docs.newrelic.com/docs/agents/net-agent/getting-started/introduction-new-relic-net/) to learn more about New Relic monitoring for MSMQ.",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/dotnet/msmq",
-    "id": "8a2e0510-8a26-4a61-bd41-512dff1e2f01",
-    "level": "NEW_RELIC",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/dotnet/msmq/logo.svg",
-    "summary": "Monitor MSMQ with New Relic's .NET agent",
-    "websiteUrl": null,
-    "keywords": [
-      "apm",
-      "dotnet",
-      "queue"
-    ],
-    "authors": [
-      "New Relic"
-    ],
-    "dashboards": [
-      {
-        "name": "Dotnet",
-        "description": ".NET",
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/dotnet/dotnet02.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/dotnet/dotnet03.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/dotnet/dotnet.png"
-        ]
-      }
-    ],
-    "alerts": [
-      {
-        "name": "Apdex Score",
-        "details": "This alert is triggered when the Apdex score is below 0.5 for 5 minutes",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "Memory Usage",
-        "details": "This alert is triggered when Memory usage is above 90%",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "Transaction Errors",
-        "details": "This alert is triggered when the the transactions fail more than 10% of the time in 5 minutes.",
-        "type": "STATIC",
-        "url": null
-      }
-    ],
-    "documentation": [
-      {
-        "name": "MSMQ installation docs",
-        "description": "Microsoft Message Queueing is a messaging protocol that allows\napplications running on separate servers/processes to communicate.\n",
-        "url": "https://docs.newrelic.com/docs/agents/net-agent/getting-started/compatibility-requirements-net-framework-agent"
-      }
-    ],
-    "installPlans": [
-      {
-        "name": ".NET agent",
-        "id": "dotnet-windows-agent"
       }
     ]
   },
@@ -3043,6 +2881,117 @@
     "installPlans": []
   },
   {
+    "title": "Amazon EMR",
+    "name": "aws-emr",
+    "description": "## What is Amazon EMR?\n\nProcess and manage big data inputs from popular frameworks.\n\n### Get started!\n\nStart monitoring Amazon EMR by connecting Amazon Web Services (AWS) to New Relic!\n\nCheck out our Amazon EMR documentation to instrument your cloud service and manage the stability, scalability, and reliability of your systems with New Relic's infrastructure monitoring capabilities.\n\n\n### More info\n\nCheck out the [documentation](https://docs.newrelic.com/docs/infrastructure/amazon-integrations/aws-integrations-list/aws-emr-monitoring-integration/) to learn more about New Relic monitoring for Amazon EMR.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/aws/amazon-emr",
+    "id": "d84051ba-365f-4542-8db9-0829384ea55a",
+    "level": "NEW_RELIC",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/aws/amazon-emr/logo.svg",
+    "summary": "Monitor Amazon EMR by connecting AWS to New Relic",
+    "websiteUrl": null,
+    "keywords": [
+      "aws",
+      "amazon web services",
+      "big data",
+      "analytics"
+    ],
+    "authors": [
+      "New Relic"
+    ],
+    "dashboards": [
+      {
+        "name": "Amazon EMR",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/amazon-emr/amazon-emr1.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/amazon-emr/amazon-emr2.png"
+        ]
+      }
+    ],
+    "alerts": [],
+    "documentation": [
+      {
+        "name": "Amazon EMR installation docs",
+        "description": "Monitor Amazon EMR by connecting AWS to New Relic.",
+        "url": "https://docs.newrelic.com/docs/infrastructure/amazon-integrations/aws-integrations-list/aws-emr-monitoring-integration/"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "AWS-CloudWatch-Metric-Streams",
+        "id": "aws-cloudwatch-metric-streams"
+      }
+    ]
+  },
+  {
+    "title": "DNN Community",
+    "name": "dnn-community",
+    "description": "## What is DNN Community?\n\nDNN is the largest and most popular open source CMS on the Microsoft ASP.NET\nstack.\n\n\n## Get started!\n\nLeverage community expertise and instantly get value out of your telemetry data. This quickstart automatically instruments DNN Community with the New Relic .Net agent, and allows you to instantly monitor your .Net application with out-of-the-box dashboards and alerts. Further leverage New Relic's APM capabilities by setting up [errors inbox](https://docs.newrelic.com/docs/apm/apm-ui-pages/errors-inbox/errors-inbox/), [transaction tracing](https://docs.newrelic.com/docs/apm/transactions/transaction-traces/introduction-transaction-traces/), and [service maps](https://docs.newrelic.com/docs/understand-dependencies/understand-system-dependencies/service-maps/introduction-service-maps/).\n\n## More info\n\nCheck out the [documentation](https://docs.newrelic.com/docs/agents/net-agent/getting-started/introduction-new-relic-net/) to learn more about New Relic monitoring for DNN Community.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/dotnet/dnn-community",
+    "id": "8808f632-18b7-4a81-b48e-fd4f3077be2a",
+    "level": "NEW_RELIC",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/dotnet/dnn-community/logo.svg",
+    "summary": "Monitor DNN Community with New Relic's .NET agent",
+    "websiteUrl": null,
+    "keywords": [
+      "apm",
+      "dotnet",
+      "cms",
+      "content management system"
+    ],
+    "authors": [
+      "New Relic"
+    ],
+    "dashboards": [
+      {
+        "name": ".NET",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/dotnet/dotnet02.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/dotnet/dotnet03.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/dotnet/dotnet04.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/dotnet/dotnet.png"
+        ]
+      }
+    ],
+    "alerts": [
+      {
+        "name": "Apdex Score",
+        "details": "This alert is triggered when the Apdex score is below 0.5 for 5 minutes",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "Memory Usage",
+        "details": "This alert is triggered when Memory usage is above 90%",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "Transaction Errors",
+        "details": "This alert is triggered when the the transactions fail more than 10% of the time in 5 minutes.",
+        "type": "STATIC",
+        "url": null
+      }
+    ],
+    "documentation": [
+      {
+        "name": "DNN Community installation docs",
+        "description": "DNN is the largest and most popular open source CMS on the Microsoft\nASP.NET stack.\n",
+        "url": "https://docs.newrelic.com/docs/agents/net-agent/getting-started/compatibility-requirements-net-framework-agent"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": ".NET agent",
+        "id": "dotnet-agent"
+      }
+    ]
+  },
+  {
     "title": "Apigee API Distributed Tracing",
     "name": "apigee-api",
     "description": "Apigee API JavaScript Resources to create or propagate W3C Trace Context through Apigee Flows and on to the Apigee Target. Apigee Flow Spans are reported back to New Relic's Trace API. Sample Policies are included to demonstrate use.",
@@ -3105,6 +3054,71 @@
       {
         "name": "VMware ESXi",
         "id": "third-party-vmware-esxi"
+      }
+    ]
+  },
+  {
+    "title": "MSMQ",
+    "name": "msmq",
+    "description": "## What is MSMQ?\n\nMicrosoft Message Queueing is a messaging protocol that allows applications\nrunning on separate servers/processes to communicate.\n\n\n## Get started!\n\nLeverage community expertise and instantly get value out of your telemetry data. This quickstart automatically instruments MSMQ with the New Relic .Net agent, and allows you to instantly monitor your .Net application with out-of-the-box dashboards and alerts. Further leverage New Relic's APM capabilities by setting up [errors inbox](https://docs.newrelic.com/docs/apm/apm-ui-pages/errors-inbox/errors-inbox/), [transaction tracing](https://docs.newrelic.com/docs/apm/transactions/transaction-traces/introduction-transaction-traces/), and [service maps](https://docs.newrelic.com/docs/understand-dependencies/understand-system-dependencies/service-maps/introduction-service-maps/).\n\n## More info\n\nCheck out the [documentation](https://docs.newrelic.com/docs/agents/net-agent/getting-started/introduction-new-relic-net/) to learn more about New Relic monitoring for MSMQ.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/dotnet/msmq",
+    "id": "8a2e0510-8a26-4a61-bd41-512dff1e2f01",
+    "level": "NEW_RELIC",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/dotnet/msmq/logo.svg",
+    "summary": "Monitor MSMQ with New Relic's .NET agent",
+    "websiteUrl": null,
+    "keywords": [
+      "apm",
+      "dotnet",
+      "queue"
+    ],
+    "authors": [
+      "New Relic"
+    ],
+    "dashboards": [
+      {
+        "name": ".NET",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/dotnet/dotnet02.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/dotnet/dotnet03.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/dotnet/dotnet04.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/dotnet/dotnet.png"
+        ]
+      }
+    ],
+    "alerts": [
+      {
+        "name": "Apdex Score",
+        "details": "This alert is triggered when the Apdex score is below 0.5 for 5 minutes",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "Memory Usage",
+        "details": "This alert is triggered when Memory usage is above 90%",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "Transaction Errors",
+        "details": "This alert is triggered when the the transactions fail more than 10% of the time in 5 minutes.",
+        "type": "STATIC",
+        "url": null
+      }
+    ],
+    "documentation": [
+      {
+        "name": "MSMQ installation docs",
+        "description": "Microsoft Message Queueing is a messaging protocol that allows\napplications running on separate servers/processes to communicate.\n",
+        "url": "https://docs.newrelic.com/docs/agents/net-agent/getting-started/compatibility-requirements-net-framework-agent"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": ".NET agent",
+        "id": "dotnet-windows-agent"
       }
     ]
   },
@@ -4607,69 +4621,6 @@
     ]
   },
   {
-    "title": "NancyFX",
-    "name": "nancyfx",
-    "description": "## What is NancyFX?\n\nNancy is a lightweight, low-ceremony, framework for building HTTP based\nservices on .NET Framework/Core and Mono.\n\n\n## Get started!\n\nLeverage community expertise and instantly get value out of your telemetry data. This quickstart automatically instruments NancyFX with the New Relic .Net agent, and allows you to instantly monitor your .Net application with out-of-the-box dashboards and alerts. Further leverage New Relic's APM capabilities by setting up [errors inbox](https://docs.newrelic.com/docs/apm/apm-ui-pages/errors-inbox/errors-inbox/), [transaction tracing](https://docs.newrelic.com/docs/apm/transactions/transaction-traces/introduction-transaction-traces/), and [service maps](https://docs.newrelic.com/docs/understand-dependencies/understand-system-dependencies/service-maps/introduction-service-maps/).\n\n## More info\n\nCheck out the [documentation](https://docs.newrelic.com/docs/agents/net-agent/getting-started/introduction-new-relic-net/) to learn more about New Relic monitoring for NancyFX.",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/dotnet/nancyfx",
-    "id": "d676107b-9f7d-4770-bda0-440d94eeac50",
-    "level": "NEW_RELIC",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/dotnet/nancyfx/logo.svg",
-    "summary": "Monitor NancyFX with New Relic's .NET agent",
-    "websiteUrl": null,
-    "keywords": [
-      "apm",
-      "dotnet"
-    ],
-    "authors": [
-      "New Relic"
-    ],
-    "dashboards": [
-      {
-        "name": "Dotnet",
-        "description": ".NET",
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/dotnet/dotnet02.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/dotnet/dotnet03.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/dotnet/dotnet.png"
-        ]
-      }
-    ],
-    "alerts": [
-      {
-        "name": "Apdex Score",
-        "details": "This alert is triggered when the Apdex score is below 0.5 for 5 minutes",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "Memory Usage",
-        "details": "This alert is triggered when Memory usage is above 90%",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "Transaction Errors",
-        "details": "This alert is triggered when the the transactions fail more than 10% of the time in 5 minutes.",
-        "type": "STATIC",
-        "url": null
-      }
-    ],
-    "documentation": [
-      {
-        "name": "NancyFX installation docs",
-        "description": "Nancy is a lightweight, low-ceremony, framework for building HTTP based\nservices on .NET Framework/Core and Mono.\n",
-        "url": "https://docs.newrelic.com/docs/agents/net-agent/getting-started/compatibility-requirements-net-framework-agent"
-      }
-    ],
-    "installPlans": [
-      {
-        "name": ".NET agent",
-        "id": "dotnet-agent"
-      }
-    ]
-  },
-  {
     "title": "Truera",
     "name": "truera",
     "description": "TruEra provides best in class AI Quality diagnostics and monitoring solution. TruEra and NewRelic users can go beyond standard accuracy, input and output drift monitoring by identifying consequential data drift, and other AI Quality diagnostics such as fairness, conceptual soundness and segment behavior. When combined with NewRelic’s comprehensive observability capabilities, MLOps teams can correlate signals throughout the ML lifecycle.",
@@ -4798,19 +4749,19 @@
         ]
       },
       {
-        "name": "Redis Enterprise Database CRDT",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/active-active/active_active01.png"
-        ]
-      },
-      {
         "name": "Redis Enterprise Cluster Metrics",
         "description": null,
         "url": null,
         "screenshots": [
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/cluster/cluster01.png"
+        ]
+      },
+      {
+        "name": "Redis Enterprise Database CRDT",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/active-active/active_active01.png"
         ]
       }
     ],
@@ -5542,6 +5493,70 @@
       {
         "name": "ActiveMQ",
         "id": "activemq-integration"
+      }
+    ]
+  },
+  {
+    "title": "NancyFX",
+    "name": "nancyfx",
+    "description": "## What is NancyFX?\n\nNancy is a lightweight, low-ceremony, framework for building HTTP based\nservices on .NET Framework/Core and Mono.\n\n\n## Get started!\n\nLeverage community expertise and instantly get value out of your telemetry data. This quickstart automatically instruments NancyFX with the New Relic .Net agent, and allows you to instantly monitor your .Net application with out-of-the-box dashboards and alerts. Further leverage New Relic's APM capabilities by setting up [errors inbox](https://docs.newrelic.com/docs/apm/apm-ui-pages/errors-inbox/errors-inbox/), [transaction tracing](https://docs.newrelic.com/docs/apm/transactions/transaction-traces/introduction-transaction-traces/), and [service maps](https://docs.newrelic.com/docs/understand-dependencies/understand-system-dependencies/service-maps/introduction-service-maps/).\n\n## More info\n\nCheck out the [documentation](https://docs.newrelic.com/docs/agents/net-agent/getting-started/introduction-new-relic-net/) to learn more about New Relic monitoring for NancyFX.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/dotnet/nancyfx",
+    "id": "d676107b-9f7d-4770-bda0-440d94eeac50",
+    "level": "NEW_RELIC",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/dotnet/nancyfx/logo.svg",
+    "summary": "Monitor NancyFX with New Relic's .NET agent",
+    "websiteUrl": null,
+    "keywords": [
+      "apm",
+      "dotnet"
+    ],
+    "authors": [
+      "New Relic"
+    ],
+    "dashboards": [
+      {
+        "name": ".NET",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/dotnet/dotnet02.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/dotnet/dotnet03.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/dotnet/dotnet04.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/dotnet/dotnet.png"
+        ]
+      }
+    ],
+    "alerts": [
+      {
+        "name": "Apdex Score",
+        "details": "This alert is triggered when the Apdex score is below 0.5 for 5 minutes",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "Memory Usage",
+        "details": "This alert is triggered when Memory usage is above 90%",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "Transaction Errors",
+        "details": "This alert is triggered when the the transactions fail more than 10% of the time in 5 minutes.",
+        "type": "STATIC",
+        "url": null
+      }
+    ],
+    "documentation": [
+      {
+        "name": "NancyFX installation docs",
+        "description": "Nancy is a lightweight, low-ceremony, framework for building HTTP based\nservices on .NET Framework/Core and Mono.\n",
+        "url": "https://docs.newrelic.com/docs/agents/net-agent/getting-started/compatibility-requirements-net-framework-agent"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": ".NET agent",
+        "id": "dotnet-agent"
       }
     ]
   },
@@ -7471,69 +7486,6 @@
     ]
   },
   {
-    "title": ".NET core",
-    "name": "dotnet-core",
-    "description": "## What is .NET core?\n\nThe cross-platform successor to .NET Framework for building websites,\nservices, and console apps.\n\n\n## Get started!\n\nLeverage community expertise and instantly get value out of your telemetry data. This quickstart automatically instruments .NET core with the New Relic .Net agent, and allows you to instantly monitor your .Net application with out-of-the-box dashboards and alerts. Further leverage New Relic's APM capabilities by setting up [errors inbox](https://docs.newrelic.com/docs/apm/apm-ui-pages/errors-inbox/errors-inbox/), [transaction tracing](https://docs.newrelic.com/docs/apm/transactions/transaction-traces/introduction-transaction-traces/), and [service maps](https://docs.newrelic.com/docs/understand-dependencies/understand-system-dependencies/service-maps/introduction-service-maps/).\n\n## More info\n\nCheck out the [documentation](https://docs.newrelic.com/docs/agents/net-agent/getting-started/introduction-new-relic-net/) to learn more about New Relic monitoring for .NET core.",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/dotnet/dotnet-core",
-    "id": "cbffd8f3-11db-40d7-a723-50e744485651",
-    "level": "NEW_RELIC",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/dotnet/dotnet-core/logo.svg",
-    "summary": "Monitor .NET core with New Relic's .NET agent",
-    "websiteUrl": null,
-    "keywords": [
-      "apm",
-      "dotnet"
-    ],
-    "authors": [
-      "New Relic"
-    ],
-    "dashboards": [
-      {
-        "name": "Dotnet",
-        "description": ".NET",
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/dotnet/dotnet02.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/dotnet/dotnet03.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/dotnet/dotnet.png"
-        ]
-      }
-    ],
-    "alerts": [
-      {
-        "name": "Apdex Score",
-        "details": "This alert is triggered when the Apdex score is below 0.5 for 5 minutes",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "Memory Usage",
-        "details": "This alert is triggered when Memory usage is above 90%",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "Transaction Errors",
-        "details": "This alert is triggered when the the transactions fail more than 10% of the time in 5 minutes.",
-        "type": "STATIC",
-        "url": null
-      }
-    ],
-    "documentation": [
-      {
-        "name": ".NET core installation docs",
-        "description": "The cross-platform successor to .NET Framework for building websites,\nservices, and console apps.\n",
-        "url": "https://docs.newrelic.com/docs/agents/net-agent/getting-started/compatibility-requirements-net-core-20-agent"
-      }
-    ],
-    "installPlans": [
-      {
-        "name": ".NET agent",
-        "id": "dotnet-agent"
-      }
-    ]
-  },
-  {
     "title": "Micrometer",
     "name": "micrometer",
     "description": "## What is Micrometer?\n\nLibrary for viewing and managing instrumentation clients for popular services and applications.\n\n## Get started!\n\nNew Relic's Micrometer metrics registry sends your Micrometer telemetry data to your New Relic account.\nFollow [the documentation](https://docs.newrelic.com/docs/integrations/open-source-telemetry-integrations/open-source-telemetry-integration-list/new-relics-micrometer-integration) to get started!",
@@ -7638,69 +7590,6 @@
       {
         "name": "Ruby Agent",
         "id": "setup-ruby-agent"
-      }
-    ]
-  },
-  {
-    "title": "NServiceBus",
-    "name": "nservicebus",
-    "description": "## NService Bus\n\nNServiceBus is a messaging system for service-oriented backend architectures. It is specifically designed for [.NET applications](https://newrelic.com/products/application-monitoring/NET), and it implements a Pub/Sub brokering system, along with many other features, that make handling service messaging simple and intuitive. However, backend architectures are complicated, with many interacting services and processes, so it is not unusual for messages to get dropped or corrupted in some way. \n\nThe New Relic complete monitoring quickstart provides insight into all aspects of the NServiceBus application runtime, saving users from countless headaches that could arise when working with the system.\n\n### New Relic NServiceBus quickstart features\n\nThe New Relic NServiceBus Quickstart comes packaged with numerous features that ensure the health of the NServiceBus application. They are broken down into two categories. \nDashboards, which provide visual insight into application performance, and Alerts, which notify developers when a potential issue arises within NServiceBus.\n\nDashboards include the following \n- Transactions overview which gives an overview of all messaging transactions passing through NServiceBus\n- Errors overview documenting errors occurring within the system and their potential origins\n- VM overview which reports key VM utilization statistics such as memory and CPU usage\n- Top 10 failed transactions shares the highest impact failed transactions which are causing a backend to lag\n- Latest error report has the most recent error so that it can be immediately addressed\n- And more…\n\nAlerts include\n- Apdex score updates you when the apdex score, i.e. the ratio of satisfied/successful requests to total requests, falls below a certain threshold\n- Memory usage sends an alert when RAM usage exceeds a pre-set threshold\n- Transactions error alerts the user when transaction errors climb past a certain level\n\n### New Relic - the ideal NServiceBus monitoring tool\n\nNew Relic’s quickstart provides the ultimate in NServiceBus monitoring solutions. Having continual insight into NServiceBus performance is key to ensuring that backend systems run smoothly with consistent uptime, as messaging is a huge point of failure for backend architectures. When messages are not transacted successfully, communication between backend services breaks down leaving the application unable to function successfully as a whole. \n\nBy providing dashboard insight into the apdex score and commonly failed transactions, and alerts which notify the user prior to reaching critical thresholds, the New Relic quickstart allows weak points in the system to be identified immediately, before communication in the backend fails completely. \n\nSimilarly, proper management of the NServiceBus VM is critical to ensuring that the NServiceBus application itself doesn’t crash completely. The New Relic dashboards and alerts provide continual VM monitoring, allowing developers to make key decisions regarding throttling and other performance constraints when usage gets too high.",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/dotnet/nservicebus",
-    "id": "f3f28a00-8cea-41f1-a6fe-ebf5eae5791e",
-    "level": "NEW_RELIC",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/dotnet/nservicebus/logo.svg",
-    "summary": "NServiceBus is a message brokering application for backends having many services. The New Relic quickstart helps developers to ensure that NServiceBus is always functioning properly, so that they maintain highly stable and fault tolerant backends.",
-    "websiteUrl": null,
-    "keywords": [
-      "apm",
-      "dotnet"
-    ],
-    "authors": [
-      "New Relic"
-    ],
-    "dashboards": [
-      {
-        "name": "Dotnet",
-        "description": ".NET",
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/dotnet/dotnet02.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/dotnet/dotnet03.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/dotnet/dotnet.png"
-        ]
-      }
-    ],
-    "alerts": [
-      {
-        "name": "Apdex Score",
-        "details": "This alert is triggered when the Apdex score is below 0.5 for 5 minutes",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "Memory Usage",
-        "details": "This alert is triggered when Memory usage is above 90%",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "Transaction Errors",
-        "details": "This alert is triggered when the the transactions fail more than 10% of the time in 5 minutes.",
-        "type": "STATIC",
-        "url": null
-      }
-    ],
-    "documentation": [
-      {
-        "name": "NServiceBus installation docs",
-        "description": "NServiceBus is an implementation of a 'service bus' pattern for .NET.",
-        "url": "https://docs.newrelic.com/docs/agents/net-agent/getting-started/compatibility-requirements-net-framework-agent"
-      }
-    ],
-    "installPlans": [
-      {
-        "name": ".NET agent",
-        "id": "dotnet-agent"
       }
     ]
   },
@@ -8216,6 +8105,168 @@
       {
         "name": "OpenTelemetry",
         "id": "third-party-opentelemetry"
+      }
+    ]
+  },
+  {
+    "title": "Amazon FSx",
+    "name": "aws-fsx",
+    "description": "## What is Amazon FSx?\n\nCollect Amazon FSx data for WindowsFileServer; change polling frequency and\nfilter data using configuration options. Maintained by Amazon.\n\n\n### Get started!\n\nStart monitoring Amazon FSx by connecting Amazon Web Services (AWS) to New Relic!\n\nCheck out our Amazon FSx documentation to instrument your cloud service and manage the stability, scalability, and reliability of your systems with New Relic's infrastructure monitoring capabilities.\n\n\n### More info\n\nCheck out the [documentation](https://docs.newrelic.com/docs/infrastructure/amazon-integrations/aws-integrations-list/aws-fsx-monitoring-integration/) to learn more about New Relic monitoring for Amazon FSx.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/aws/amazon-fsx",
+    "id": "4a669b03-90fe-471c-8562-78ed529d57b8",
+    "level": "NEW_RELIC",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/aws/amazon-fsx/logo.png",
+    "summary": "Monitor AWS FSx by connecting AWS to New Relic",
+    "websiteUrl": null,
+    "keywords": [
+      "aws",
+      "amazon web services",
+      "windows file server"
+    ],
+    "authors": [
+      "New Relic"
+    ],
+    "dashboards": [],
+    "alerts": [],
+    "documentation": [
+      {
+        "name": "Amazon FSx installation docs",
+        "description": "Monitor Amazon FSx by connecting AWS to New Relic.\n",
+        "url": "https://docs.newrelic.com/docs/infrastructure/amazon-integrations/aws-integrations-list/aws-fsx-monitoring-integration/"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "AWS-CloudWatch-Metric-Streams",
+        "id": "aws-cloudwatch-metric-streams"
+      }
+    ]
+  },
+  {
+    "title": ".NET core",
+    "name": "dotnet-core",
+    "description": "## What is .NET core?\n\nThe cross-platform successor to .NET Framework for building websites,\nservices, and console apps.\n\n\n## Get started!\n\nLeverage community expertise and instantly get value out of your telemetry data. This quickstart automatically instruments .NET core with the New Relic .Net agent, and allows you to instantly monitor your .Net application with out-of-the-box dashboards and alerts. Further leverage New Relic's APM capabilities by setting up [errors inbox](https://docs.newrelic.com/docs/apm/apm-ui-pages/errors-inbox/errors-inbox/), [transaction tracing](https://docs.newrelic.com/docs/apm/transactions/transaction-traces/introduction-transaction-traces/), and [service maps](https://docs.newrelic.com/docs/understand-dependencies/understand-system-dependencies/service-maps/introduction-service-maps/).\n\n## More info\n\nCheck out the [documentation](https://docs.newrelic.com/docs/agents/net-agent/getting-started/introduction-new-relic-net/) to learn more about New Relic monitoring for .NET core.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/dotnet/dotnet-core",
+    "id": "cbffd8f3-11db-40d7-a723-50e744485651",
+    "level": "NEW_RELIC",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/dotnet/dotnet-core/logo.svg",
+    "summary": "Monitor .NET core with New Relic's .NET agent",
+    "websiteUrl": null,
+    "keywords": [
+      "apm",
+      "dotnet"
+    ],
+    "authors": [
+      "New Relic"
+    ],
+    "dashboards": [
+      {
+        "name": ".NET",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/dotnet/dotnet02.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/dotnet/dotnet03.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/dotnet/dotnet04.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/dotnet/dotnet.png"
+        ]
+      }
+    ],
+    "alerts": [
+      {
+        "name": "Apdex Score",
+        "details": "This alert is triggered when the Apdex score is below 0.5 for 5 minutes",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "Memory Usage",
+        "details": "This alert is triggered when Memory usage is above 90%",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "Transaction Errors",
+        "details": "This alert is triggered when the the transactions fail more than 10% of the time in 5 minutes.",
+        "type": "STATIC",
+        "url": null
+      }
+    ],
+    "documentation": [
+      {
+        "name": ".NET core installation docs",
+        "description": "The cross-platform successor to .NET Framework for building websites,\nservices, and console apps.\n",
+        "url": "https://docs.newrelic.com/docs/agents/net-agent/getting-started/compatibility-requirements-net-core-20-agent"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": ".NET agent",
+        "id": "dotnet-agent"
+      }
+    ]
+  },
+  {
+    "title": "NServiceBus",
+    "name": "nservicebus",
+    "description": "## NService Bus\n\nNServiceBus is a messaging system for service-oriented backend architectures. It is specifically designed for [.NET applications](https://newrelic.com/products/application-monitoring/NET), and it implements a Pub/Sub brokering system, along with many other features, that make handling service messaging simple and intuitive. However, backend architectures are complicated, with many interacting services and processes, so it is not unusual for messages to get dropped or corrupted in some way. \n\nThe New Relic complete monitoring quickstart provides insight into all aspects of the NServiceBus application runtime, saving users from countless headaches that could arise when working with the system.\n\n### New Relic NServiceBus quickstart features\n\nThe New Relic NServiceBus Quickstart comes packaged with numerous features that ensure the health of the NServiceBus application. They are broken down into two categories. \nDashboards, which provide visual insight into application performance, and Alerts, which notify developers when a potential issue arises within NServiceBus.\n\nDashboards include the following \n- Transactions overview which gives an overview of all messaging transactions passing through NServiceBus\n- Errors overview documenting errors occurring within the system and their potential origins\n- VM overview which reports key VM utilization statistics such as memory and CPU usage\n- Top 10 failed transactions shares the highest impact failed transactions which are causing a backend to lag\n- Latest error report has the most recent error so that it can be immediately addressed\n- And more…\n\nAlerts include\n- Apdex score updates you when the apdex score, i.e. the ratio of satisfied/successful requests to total requests, falls below a certain threshold\n- Memory usage sends an alert when RAM usage exceeds a pre-set threshold\n- Transactions error alerts the user when transaction errors climb past a certain level\n\n### New Relic - the ideal NServiceBus monitoring tool\n\nNew Relic’s quickstart provides the ultimate in NServiceBus monitoring solutions. Having continual insight into NServiceBus performance is key to ensuring that backend systems run smoothly with consistent uptime, as messaging is a huge point of failure for backend architectures. When messages are not transacted successfully, communication between backend services breaks down leaving the application unable to function successfully as a whole. \n\nBy providing dashboard insight into the apdex score and commonly failed transactions, and alerts which notify the user prior to reaching critical thresholds, the New Relic quickstart allows weak points in the system to be identified immediately, before communication in the backend fails completely. \n\nSimilarly, proper management of the NServiceBus VM is critical to ensuring that the NServiceBus application itself doesn’t crash completely. The New Relic dashboards and alerts provide continual VM monitoring, allowing developers to make key decisions regarding throttling and other performance constraints when usage gets too high.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/dotnet/nservicebus",
+    "id": "f3f28a00-8cea-41f1-a6fe-ebf5eae5791e",
+    "level": "NEW_RELIC",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/dotnet/nservicebus/logo.svg",
+    "summary": "NServiceBus is a message brokering application for backends having many services. The New Relic quickstart helps developers to ensure that NServiceBus is always functioning properly, so that they maintain highly stable and fault tolerant backends.",
+    "websiteUrl": null,
+    "keywords": [
+      "apm",
+      "dotnet"
+    ],
+    "authors": [
+      "New Relic"
+    ],
+    "dashboards": [
+      {
+        "name": ".NET",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/dotnet/dotnet02.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/dotnet/dotnet03.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/dotnet/dotnet04.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/dotnet/dotnet.png"
+        ]
+      }
+    ],
+    "alerts": [
+      {
+        "name": "Apdex Score",
+        "details": "This alert is triggered when the Apdex score is below 0.5 for 5 minutes",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "Memory Usage",
+        "details": "This alert is triggered when Memory usage is above 90%",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "Transaction Errors",
+        "details": "This alert is triggered when the the transactions fail more than 10% of the time in 5 minutes.",
+        "type": "STATIC",
+        "url": null
+      }
+    ],
+    "documentation": [
+      {
+        "name": "NServiceBus installation docs",
+        "description": "NServiceBus is an implementation of a 'service bus' pattern for .NET.",
+        "url": "https://docs.newrelic.com/docs/agents/net-agent/getting-started/compatibility-requirements-net-framework-agent"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": ".NET agent",
+        "id": "dotnet-agent"
       }
     ]
   },
@@ -9463,39 +9514,6 @@
     ]
   },
   {
-    "title": "AWS FSx",
-    "name": "aws-fsx",
-    "description": "## What is AWS FSx?\n\nCollect AWS FSx data for WindowsFileServer; change polling frequency and\nfilter data using configuration options. Maintained by Amazon.\n\n\n### Get started!\n\nStart monitoring AWS FSx by connecting Amazon Web Services (AWS) to New Relic!\n\nCheck out our AWS FSx documentation to instrument your cloud service and manage the stability, scalability, and reliability of your systems with New Relic's infrastructure monitoring capabilities.\n\n### More info\n\nCheck out the [documentation](https://docs.newrelic.com/docs/infrastructure/amazon-integrations/aws-integrations-list/aws-fsx-monitoring-integration/) to learn more about New Relic monitoring for AWS FSx.",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/aws/aws-fsx",
-    "id": "4a669b03-90fe-471c-8562-78ed529d57b8",
-    "level": "NEW_RELIC",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/aws/aws-fsx/logo.png",
-    "summary": "Monitor AWS FSx by connecting AWS to New Relic",
-    "websiteUrl": null,
-    "keywords": [
-      "aws",
-      "amazon web services"
-    ],
-    "authors": [
-      "New Relic"
-    ],
-    "dashboards": [],
-    "alerts": [],
-    "documentation": [
-      {
-        "name": "AWS FSx installation docs",
-        "description": "Monitor AWS FSx by connecting AWS to New Relic.\n",
-        "url": "https://docs.newrelic.com/docs/infrastructure/amazon-integrations/aws-integrations-list/aws-fsx-monitoring-integration/"
-      }
-    ],
-    "installPlans": [
-      {
-        "name": "AWS-Infrastructure-Monitoring",
-        "id": "aws-infrastructure-monitoring"
-      }
-    ]
-  },
-  {
     "title": "AWS SNS",
     "name": "aws-sns",
     "description": "## What is AWS SNS?\n\nFully managed push notification service compatible with pub/sub, SMS, email,\nand mobile.\n\n\n### Get started!\n\nStart monitoring AWS SNS by connecting Amazon Web Services (AWS) to New Relic!\n\nCheck out our AWS SNS documentation to instrument your cloud service and manage the stability, scalability, and reliability of your systems with New Relic's infrastructure monitoring capabilities.\n\n### More info\n\nCheck out the [documentation](https://docs.newrelic.com/docs/infrastructure/amazon-integrations/aws-integrations-list/aws-sns-monitoring-integration/) to learn more about New Relic monitoring for AWS SNS.",
@@ -9890,132 +9908,6 @@
     ]
   },
   {
-    "title": ".NET MVC Web API",
-    "name": "dotnet-mvc-web-api",
-    "description": "## What is .NET MVC Web API?\n\nWeb application framework developed by Microsoft, which implements the\nmodel-view-controller pattern for building web applications.\n\n\n## Get started!\n\nLeverage community expertise and instantly get value out of your telemetry data. This quickstart automatically instruments .NET MVC Web API with the New Relic .Net agent, and allows you to instantly monitor your .Net application with out-of-the-box dashboards and alerts. Further leverage New Relic's APM capabilities by setting up [errors inbox](https://docs.newrelic.com/docs/apm/apm-ui-pages/errors-inbox/errors-inbox/), [transaction tracing](https://docs.newrelic.com/docs/apm/transactions/transaction-traces/introduction-transaction-traces/), and [service maps](https://docs.newrelic.com/docs/understand-dependencies/understand-system-dependencies/service-maps/introduction-service-maps/).\n\n## More info\n\nCheck out the [documentation](https://docs.newrelic.com/docs/agents/net-agent/getting-started/introduction-new-relic-net/) to learn more about New Relic monitoring for .NET MVC Web API.",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/dotnet/dotnet-mvc-web-api",
-    "id": "5313d4e0-13e1-4f50-982a-09d0cb67618e",
-    "level": "NEW_RELIC",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/dotnet/dotnet-mvc-web-api/logo.svg",
-    "summary": "Monitor .NET MVC Web API with New Relic's .NET agent",
-    "websiteUrl": null,
-    "keywords": [
-      "apm",
-      "dotnet"
-    ],
-    "authors": [
-      "New Relic"
-    ],
-    "dashboards": [
-      {
-        "name": "Dotnet",
-        "description": ".NET",
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/dotnet/dotnet02.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/dotnet/dotnet03.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/dotnet/dotnet.png"
-        ]
-      }
-    ],
-    "alerts": [
-      {
-        "name": "Apdex Score",
-        "details": "This alert is triggered when the Apdex score is below 0.5 for 5 minutes",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "Memory Usage",
-        "details": "This alert is triggered when Memory usage is above 90%",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "Transaction Errors",
-        "details": "This alert is triggered when the the transactions fail more than 10% of the time in 5 minutes.",
-        "type": "STATIC",
-        "url": null
-      }
-    ],
-    "documentation": [
-      {
-        "name": ".NET MVC Web API installation docs",
-        "description": "Web application framework developed by Microsoft, which implements the\nmodel-view-controller pattern for building web applications.\n",
-        "url": "https://docs.newrelic.com/docs/agents/net-agent/getting-started/compatibility-requirements-net-framework-agent"
-      }
-    ],
-    "installPlans": [
-      {
-        "name": ".NET agent",
-        "id": "dotnet-windows-agent"
-      }
-    ]
-  },
-  {
-    "title": "OpenRasta",
-    "name": "openrasta",
-    "description": "## What is OpenRasta?\n\nOpenRasta is an open-source .NET framework for building everything web, from\nweb sites to RESTful APIs.\n\n\n## Get started!\n\nLeverage community expertise and instantly get value out of your telemetry data. This quickstart automatically instruments OpenRasta with the New Relic .Net agent, and allows you to instantly monitor your .Net application with out-of-the-box dashboards and alerts. Further leverage New Relic's APM capabilities by setting up [errors inbox](https://docs.newrelic.com/docs/apm/apm-ui-pages/errors-inbox/errors-inbox/), [transaction tracing](https://docs.newrelic.com/docs/apm/transactions/transaction-traces/introduction-transaction-traces/), and [service maps](https://docs.newrelic.com/docs/understand-dependencies/understand-system-dependencies/service-maps/introduction-service-maps/).\n\n## More info\n\nCheck out the [documentation](https://docs.newrelic.com/docs/agents/net-agent/getting-started/introduction-new-relic-net/) to learn more about New Relic monitoring for OpenRasta.",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/dotnet/openrasta",
-    "id": "74600672-3ccb-4e18-baf9-459dc272d654",
-    "level": "NEW_RELIC",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/dotnet/openrasta/logo.svg",
-    "summary": "Monitor OpenRasta with New Relic's .NET agent",
-    "websiteUrl": null,
-    "keywords": [
-      "apm",
-      "dotnet"
-    ],
-    "authors": [
-      "New Relic"
-    ],
-    "dashboards": [
-      {
-        "name": "Dotnet",
-        "description": ".NET",
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/dotnet/dotnet02.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/dotnet/dotnet03.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/dotnet/dotnet.png"
-        ]
-      }
-    ],
-    "alerts": [
-      {
-        "name": "Apdex Score",
-        "details": "This alert is triggered when the Apdex score is below 0.5 for 5 minutes",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "Memory Usage",
-        "details": "This alert is triggered when Memory usage is above 90%",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "Transaction Errors",
-        "details": "This alert is triggered when the the transactions fail more than 10% of the time in 5 minutes.",
-        "type": "STATIC",
-        "url": null
-      }
-    ],
-    "documentation": [
-      {
-        "name": "OpenRasta installation docs",
-        "description": "OpenRasta is an open-source .NET framework for building everything web,\nfrom web sites to RESTful APIs.\n",
-        "url": "https://docs.newrelic.com/docs/agents/net-agent/getting-started/compatibility-requirements-net-framework-agent"
-      }
-    ],
-    "installPlans": [
-      {
-        "name": ".NET agent",
-        "id": "dotnet-agent"
-      }
-    ]
-  },
-  {
     "title": "Webhook Notifications",
     "name": "webhook-notifications",
     "description": "Webhook is a method of augmenting or altering the behavior of a web page or web application with custom callbacks.\n\nIntegrate New Relic with Webhook to use the webhook notifier to send the notification messages to any endpoint you like.\n\n[Check out our documentation](https://docs.newrelic.com/docs/alerts-applied-intelligence/notifications/notification-integrations/#webhook) to set up a Webhook notification channel and provide fast and consistent ways for the right personnel to be notified about incidents",
@@ -10221,6 +10113,168 @@
       {
         "name": "AWS-CloudWatch-Metric-Streams",
         "id": "aws-cloudwatch-metric-streams"
+      }
+    ]
+  },
+  {
+    "title": "AWS Glue",
+    "name": "aws-glue",
+    "description": "## What is AWS Glue?\n\nFully managed service for data analytics and ETF operations.\n\n\n### Get started!\n\nStart monitoring AWS Glue by connecting Amazon Web Services (AWS) to New Relic!\n\nCheck out our AWS Glue documentation to instrument your cloud service and manage the stability, scalability, and reliability of your systems with New Relic's infrastructure monitoring capabilities.\n\n### More info\n\nCheck out the [documentation](https://docs.newrelic.com/docs/infrastructure/amazon-integrations/aws-integrations-list/aws-glue-monitoring-integration/) to learn more about New Relic monitoring for AWS Glue. \"",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/aws/aws-glue",
+    "id": "6f4ca9e9-5b33-4073-b609-948bd59da406",
+    "level": "NEW_RELIC",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/aws/aws-glue/logo.svg",
+    "summary": "Monitor AWS Glue by connecting AWS to New Relic",
+    "websiteUrl": null,
+    "keywords": [
+      "aws",
+      "amazon web services",
+      "data integration"
+    ],
+    "authors": [
+      "New Relic"
+    ],
+    "dashboards": [],
+    "alerts": [],
+    "documentation": [
+      {
+        "name": "AWS Glue installation docs",
+        "description": "Monitor AWS Glue by connecting AWS to New Relic",
+        "url": "https://docs.newrelic.com/docs/infrastructure/amazon-integrations/aws-integrations-list/aws-glue-monitoring-integration/"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "AWS-CloudWatch-Metric-Streams",
+        "id": "aws-cloudwatch-metric-streams"
+      }
+    ]
+  },
+  {
+    "title": ".NET MVC Web API",
+    "name": "dotnet-mvc-web-api",
+    "description": "## What is .NET MVC Web API?\n\nWeb application framework developed by Microsoft, which implements the\nmodel-view-controller pattern for building web applications.\n\n\n## Get started!\n\nLeverage community expertise and instantly get value out of your telemetry data. This quickstart automatically instruments .NET MVC Web API with the New Relic .Net agent, and allows you to instantly monitor your .Net application with out-of-the-box dashboards and alerts. Further leverage New Relic's APM capabilities by setting up [errors inbox](https://docs.newrelic.com/docs/apm/apm-ui-pages/errors-inbox/errors-inbox/), [transaction tracing](https://docs.newrelic.com/docs/apm/transactions/transaction-traces/introduction-transaction-traces/), and [service maps](https://docs.newrelic.com/docs/understand-dependencies/understand-system-dependencies/service-maps/introduction-service-maps/).\n\n## More info\n\nCheck out the [documentation](https://docs.newrelic.com/docs/agents/net-agent/getting-started/introduction-new-relic-net/) to learn more about New Relic monitoring for .NET MVC Web API.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/dotnet/dotnet-mvc-web-api",
+    "id": "5313d4e0-13e1-4f50-982a-09d0cb67618e",
+    "level": "NEW_RELIC",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/dotnet/dotnet-mvc-web-api/logo.svg",
+    "summary": "Monitor .NET MVC Web API with New Relic's .NET agent",
+    "websiteUrl": null,
+    "keywords": [
+      "apm",
+      "dotnet"
+    ],
+    "authors": [
+      "New Relic"
+    ],
+    "dashboards": [
+      {
+        "name": ".NET",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/dotnet/dotnet02.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/dotnet/dotnet03.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/dotnet/dotnet04.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/dotnet/dotnet.png"
+        ]
+      }
+    ],
+    "alerts": [
+      {
+        "name": "Apdex Score",
+        "details": "This alert is triggered when the Apdex score is below 0.5 for 5 minutes",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "Memory Usage",
+        "details": "This alert is triggered when Memory usage is above 90%",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "Transaction Errors",
+        "details": "This alert is triggered when the the transactions fail more than 10% of the time in 5 minutes.",
+        "type": "STATIC",
+        "url": null
+      }
+    ],
+    "documentation": [
+      {
+        "name": ".NET MVC Web API installation docs",
+        "description": "Web application framework developed by Microsoft, which implements the\nmodel-view-controller pattern for building web applications.\n",
+        "url": "https://docs.newrelic.com/docs/agents/net-agent/getting-started/compatibility-requirements-net-framework-agent"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": ".NET agent",
+        "id": "dotnet-windows-agent"
+      }
+    ]
+  },
+  {
+    "title": "OpenRasta",
+    "name": "openrasta",
+    "description": "## What is OpenRasta?\n\nOpenRasta is an open-source .NET framework for building everything web, from\nweb sites to RESTful APIs.\n\n\n## Get started!\n\nLeverage community expertise and instantly get value out of your telemetry data. This quickstart automatically instruments OpenRasta with the New Relic .Net agent, and allows you to instantly monitor your .Net application with out-of-the-box dashboards and alerts. Further leverage New Relic's APM capabilities by setting up [errors inbox](https://docs.newrelic.com/docs/apm/apm-ui-pages/errors-inbox/errors-inbox/), [transaction tracing](https://docs.newrelic.com/docs/apm/transactions/transaction-traces/introduction-transaction-traces/), and [service maps](https://docs.newrelic.com/docs/understand-dependencies/understand-system-dependencies/service-maps/introduction-service-maps/).\n\n## More info\n\nCheck out the [documentation](https://docs.newrelic.com/docs/agents/net-agent/getting-started/introduction-new-relic-net/) to learn more about New Relic monitoring for OpenRasta.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/dotnet/openrasta",
+    "id": "74600672-3ccb-4e18-baf9-459dc272d654",
+    "level": "NEW_RELIC",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/dotnet/openrasta/logo.svg",
+    "summary": "Monitor OpenRasta with New Relic's .NET agent",
+    "websiteUrl": null,
+    "keywords": [
+      "apm",
+      "dotnet"
+    ],
+    "authors": [
+      "New Relic"
+    ],
+    "dashboards": [
+      {
+        "name": ".NET",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/dotnet/dotnet02.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/dotnet/dotnet03.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/dotnet/dotnet04.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/dotnet/dotnet.png"
+        ]
+      }
+    ],
+    "alerts": [
+      {
+        "name": "Apdex Score",
+        "details": "This alert is triggered when the Apdex score is below 0.5 for 5 minutes",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "Memory Usage",
+        "details": "This alert is triggered when Memory usage is above 90%",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "Transaction Errors",
+        "details": "This alert is triggered when the the transactions fail more than 10% of the time in 5 minutes.",
+        "type": "STATIC",
+        "url": null
+      }
+    ],
+    "documentation": [
+      {
+        "name": "OpenRasta installation docs",
+        "description": "OpenRasta is an open-source .NET framework for building everything web,\nfrom web sites to RESTful APIs.\n",
+        "url": "https://docs.newrelic.com/docs/agents/net-agent/getting-started/compatibility-requirements-net-framework-agent"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": ".NET agent",
+        "id": "dotnet-agent"
       }
     ]
   },
@@ -11728,39 +11782,6 @@
     ]
   },
   {
-    "title": "AWS Glue",
-    "name": "aws-glue",
-    "description": "## What is AWS Glue?\n\nFully managed service for data analytics and ETF operations.\n\n### Get started!\n\nStart monitoring AWS Glue by connecting Amazon Web Services (AWS) to New Relic!\n\nCheck out our AWS Glue documentation to instrument your cloud service and manage the stability, scalability, and reliability of your systems with New Relic's infrastructure monitoring capabilities.\n\n### More info\n\nCheck out the [documentation](https://docs.newrelic.com/docs/infrastructure/amazon-integrations/aws-integrations-list/aws-glue-monitoring-integration/) to learn more about New Relic monitoring for AWS Glue.",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/aws/aws-glue",
-    "id": "6f4ca9e9-5b33-4073-b609-948bd59da406",
-    "level": "NEW_RELIC",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/aws/aws-glue/logo.svg",
-    "summary": "Monitor AWS Glue by connecting AWS to New Relic",
-    "websiteUrl": null,
-    "keywords": [
-      "aws",
-      "amazon web services"
-    ],
-    "authors": [
-      "New Relic"
-    ],
-    "dashboards": [],
-    "alerts": [],
-    "documentation": [
-      {
-        "name": "AWS Glue installation docs",
-        "description": "Monitor AWS Glue by connecting AWS to New Relic",
-        "url": "https://docs.newrelic.com/docs/infrastructure/amazon-integrations/aws-integrations-list/aws-glue-monitoring-integration/"
-      }
-    ],
-    "installPlans": [
-      {
-        "name": "AWS-Infrastructure-Monitoring",
-        "id": "aws-infrastructure-monitoring"
-      }
-    ]
-  },
-  {
     "title": "AWS Outposts",
     "name": "aws-outposts",
     "description": "## What is AWS Outposts?\n\nAn introduction to AWS integrations on New Relic One. Use the Amazon\nCloudWatch API to obtain metrics from the AWS services you monitor.\n\n\n### Get started!\n\nStart monitoring AWS Outposts by connecting Amazon Web Services (AWS) to New Relic!\n\nCheck out our AWS Outposts documentation to instrument your cloud service and manage the stability, scalability, and reliability of your systems with New Relic's infrastructure monitoring capabilities.\n\n### More info\n\nCheck out the [documentation](https://docs.newrelic.com/docs/infrastructure/amazon-integrations/get-started/introduction-aws-integrations/) to learn more about New Relic monitoring for AWS Outposts.",
@@ -12377,141 +12398,6 @@
     ]
   },
   {
-    "title": ".NET",
-    "name": "dotnet",
-    "description": "## Comprehensive monitoring quickstart for .NET\n\n.NET Framework is a software product developed by Microsoft. It is a platform used on the Microsoft Windows operating system to build desktop and web applications and supports many programming languages.\n\n### Why monitor .NET?\n\n.NET monitoring is an essential activity in .NET software development that enables software developers to observe the performance of an application in real-time. .NET monitoring enables a swift intervention if issues arise while the application runs.\n\n### What should you look for in a .NET Monitor?\n\nAn ideal [.NET Performance Monitor](https://docs.newrelic.com/docs/agents/net-agent/getting-started/introduction-new-relic-net/) must offer comprehensive and actionable information that software developers need to troubleshoot an application successfully. Some key components are:\n\n- Preemptive performance monitoring\n- Comprehensive full-stack performance monitoring\n- Intimate code insights\n- Granular error identification mechanism\n- Comprehensive .NET Framework, Common Language Runtime (CLR), and Internet Information Services (IIS) monitoring\n\n### What’s included in this quickstart:\n\n- High-value alerts\n- Code-related insights that acquaint developers with the intricate details of their application’s health and status by providing detailed information on errors, database queries, and transaction traces\n- Alerts that proactively inform developers about the status of their applications\n\n### What makes this quickstart unique?\n\nWith this quickstart, you can monitor health and status in one place, focus on the most important information, and enable preventative maintenance strategy.",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/dotnet/dotnet",
-    "id": "2dff13b6-0fac-43a6-abc6-57f0a3299639",
-    "level": "NEW_RELIC",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/dotnet/dotnet/logo.svg",
-    "summary": "Learn more about .NET Framework, the importance of monitoring .NET, the ideal features of a .NET monitor, and the unique value of New Relic's .NET quickstart.",
-    "websiteUrl": null,
-    "keywords": [
-      "apm",
-      "dotnet",
-      "language agent",
-      "most popular"
-    ],
-    "authors": [
-      "New Relic",
-      "Emil Hammarstrand"
-    ],
-    "dashboards": [
-      {
-        "name": "Dotnet",
-        "description": ".NET",
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/dotnet/dotnet02.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/dotnet/dotnet03.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/dotnet/dotnet.png"
-        ]
-      }
-    ],
-    "alerts": [
-      {
-        "name": "Apdex Score",
-        "details": "This alert is triggered when the Apdex score is below 0.5 for 5 minutes.",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "High CPU Utilization",
-        "details": "This alert is triggered when the CPU Utilization is above 90%.",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "Memory Usage",
-        "details": "This alert is triggered when Memory usage is above 90%.",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "Transaction Errors",
-        "details": "This alert is triggered when the the transactions fail more than 10% of the time in 5 minutes.",
-        "type": "STATIC",
-        "url": null
-      }
-    ],
-    "documentation": [
-      {
-        "name": ".NET installation docs",
-        "description": "A developer platform with tools and libraries for building web, mobile,\ndesktop, games, IoT, cloud, and microservices.\n",
-        "url": "https://docs.newrelic.com/docs/agents/net-agent/getting-started/compatibility-requirements-net-framework-agent"
-      }
-    ],
-    "installPlans": [
-      {
-        "name": ".NET agent",
-        "id": "dotnet-agent"
-      }
-    ]
-  },
-  {
-    "title": "RestSharp",
-    "name": "restsharp",
-    "description": "## What is RestSharp?\n\nRestSharp is a popular REST API client library for .NET with the purpose of making synchronous and asynchronous calls to remote resources over HTTP. Check out our [.NET documentation](https://docs.newrelic.com/docs/apm/agents/net-agent/installation/introduction-net-agent-install/) for more information.\n\n### New Relic + RestSharp\n\nThe New Relic RestSharp monitoring quickstart has the following features:\n\n- Our dashboards track key indicators like latest errors, CPU utilization, memory heap used, errors and virtual machines and more.\n- Pre-defined alert conditions notify you on performance metrics like Apdex score, memory usage, and transaction errors.\n\n### Why Monitor RestSharp with New Relic?\n\nWith application performance monitoring (APM), you will get a high-level overview of your RestSharp app, query data and track activities across the application. The New Relic RestSharp quickstart automatically instruments RestSharp with our .NET agent for a comprehensive monitoring of RestSharp. \n\nInstall the New Relic RestSharp quickstart today to proactively monitor RestSharp in real-time, detect issues quickly, and respond to them efficiently. The instant observability quickstart is the key to a seamless RestSharp monitoring.",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/dotnet/restsharp",
-    "id": "4967824f-1a29-417f-88f2-093d30a41fc2",
-    "level": "NEW_RELIC",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/dotnet/restsharp/logo.svg",
-    "summary": "Monitoring RestSharp is critical to ensure that you detect incidents and respond to them quickly. Download the New Relic RestSharp quickstart to proactively track performance metrics via our .Net agent.",
-    "websiteUrl": null,
-    "keywords": [
-      "apm",
-      "dotnet"
-    ],
-    "authors": [
-      "New Relic"
-    ],
-    "dashboards": [
-      {
-        "name": "Dotnet",
-        "description": ".NET",
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/dotnet/dotnet02.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/dotnet/dotnet03.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/dotnet/dotnet.png"
-        ]
-      }
-    ],
-    "alerts": [
-      {
-        "name": "Apdex Score",
-        "details": "This alert is triggered when the Apdex score is below 0.5 for 5 minutes",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "Memory Usage",
-        "details": "This alert is triggered when Memory usage is above 90%",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "Transaction Errors",
-        "details": "This alert is triggered when the the transactions fail more than 10% of the time in 5 minutes.",
-        "type": "STATIC",
-        "url": null
-      }
-    ],
-    "documentation": [
-      {
-        "name": "RestSharp installation docs",
-        "description": "Popular REST API client library for .NET that features auto-serialization,\nrequest type detection, a variety of authentications, and more.\n",
-        "url": "https://docs.newrelic.com/docs/agents/net-agent/getting-started/compatibility-requirements-net-framework-agent"
-      }
-    ],
-    "installPlans": [
-      {
-        "name": ".NET agent",
-        "id": "dotnet-agent"
-      }
-    ]
-  },
-  {
     "title": "Amazon CloudFront",
     "name": "aws-cloudfront",
     "description": "## What is Amazon CloudFront?\n\nSpeeds up the distribution of web content served from Amazon Web Services.\n\n### Get started!\n\nStart monitoring Amazon CloudFront by connecting Amazon Web Services (AWS) to New Relic!\n\nCheck out our Amazon CloudFront documentation to instrument your cloud service and manage the stability, scalability, and reliability of your systems with New Relic's infrastructure monitoring capabilities.\n\n### More info\n\nCheck out the [documentation](https://docs.newrelic.com/docs/infrastructure/amazon-integrations/aws-integrations-list/aws-cloudfront-monitoring-integration/) to learn more about New Relic monitoring for Amazon CloudFront.",
@@ -12959,6 +12845,79 @@
     ]
   },
   {
+    "title": ".NET",
+    "name": "dotnet",
+    "description": "## Comprehensive monitoring quickstart for .NET\n\n.NET Framework is a software product developed by Microsoft. It is a platform used on the Microsoft Windows operating system to build desktop and web applications and supports many programming languages.\n\n### Why monitor .NET?\n\n.NET monitoring is an essential activity in .NET software development that enables software developers to observe the performance of an application in real-time. .NET monitoring enables a swift intervention if issues arise while the application runs.\n\n### What should you look for in a .NET Monitor?\n\nAn ideal [.NET Performance Monitor](https://docs.newrelic.com/docs/agents/net-agent/getting-started/introduction-new-relic-net/) must offer comprehensive and actionable information that software developers need to troubleshoot an application successfully. Some key components are:\n\n- Preemptive performance monitoring\n- Comprehensive full-stack performance monitoring\n- Intimate code insights\n- Granular error identification mechanism\n- Comprehensive .NET Framework, Common Language Runtime (CLR), and Internet Information Services (IIS) monitoring\n\n### What’s included in this quickstart:\n\n- High-value alerts\n- Code-related insights that acquaint developers with the intricate details of their application’s health and status by providing detailed information on errors, database queries, and transaction traces\n- Alerts that proactively inform developers about the status of their applications\n\n### What makes this quickstart unique?\n\nWith this quickstart, you can monitor health and status in one place, focus on the most important information, and enable preventative maintenance strategy.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/dotnet/dotnet",
+    "id": "2dff13b6-0fac-43a6-abc6-57f0a3299639",
+    "level": "NEW_RELIC",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/dotnet/dotnet/logo.svg",
+    "summary": "Learn more about .NET Framework, the importance of monitoring .NET, the ideal features of a .NET monitor, and the unique value of New Relic's .NET quickstart.",
+    "websiteUrl": null,
+    "keywords": [
+      "apm",
+      "dotnet",
+      "language agent",
+      "most popular"
+    ],
+    "authors": [
+      "New Relic",
+      "Emil Hammarstrand"
+    ],
+    "dashboards": [
+      {
+        "name": ".NET",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/dotnet/dotnet02.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/dotnet/dotnet03.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/dotnet/dotnet04.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/dotnet/dotnet.png"
+        ]
+      }
+    ],
+    "alerts": [
+      {
+        "name": "Apdex Score",
+        "details": "This alert is triggered when the Apdex score is below 0.5 for 5 minutes.",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "High CPU Utilization",
+        "details": "This alert is triggered when the CPU Utilization is above 90%.",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "Memory Usage",
+        "details": "This alert is triggered when Memory usage is above 90%.",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "Transaction Errors",
+        "details": "This alert is triggered when the the transactions fail more than 10% of the time in 5 minutes.",
+        "type": "STATIC",
+        "url": null
+      }
+    ],
+    "documentation": [
+      {
+        "name": ".NET installation docs",
+        "description": "A developer platform with tools and libraries for building web, mobile,\ndesktop, games, IoT, cloud, and microservices.\n",
+        "url": "https://docs.newrelic.com/docs/agents/net-agent/getting-started/compatibility-requirements-net-framework-agent"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": ".NET agent",
+        "id": "dotnet-agent"
+      }
+    ]
+  },
+  {
     "title": "Microsoft SQL Server",
     "name": "mssql",
     "description": "Relational database management system used to store and retrieve data as\nrequested by other software applications.",
@@ -12988,6 +12947,70 @@
       {
         "name": "Microsoft SQL Server",
         "id": "microsoft-sql-server-integration"
+      }
+    ]
+  },
+  {
+    "title": "RestSharp",
+    "name": "restsharp",
+    "description": "## What is RestSharp?\n\nRestSharp is a popular REST API client library for .NET with the purpose of making synchronous and asynchronous calls to remote resources over HTTP. Check out our [.NET documentation](https://docs.newrelic.com/docs/apm/agents/net-agent/installation/introduction-net-agent-install/) for more information.\n\n### New Relic + RestSharp\n\nThe New Relic RestSharp monitoring quickstart has the following features:\n\n- Our dashboards track key indicators like latest errors, CPU utilization, memory heap used, errors and virtual machines and more.\n- Pre-defined alert conditions notify you on performance metrics like Apdex score, memory usage, and transaction errors.\n\n### Why Monitor RestSharp with New Relic?\n\nWith application performance monitoring (APM), you will get a high-level overview of your RestSharp app, query data and track activities across the application. The New Relic RestSharp quickstart automatically instruments RestSharp with our .NET agent for a comprehensive monitoring of RestSharp. \n\nInstall the New Relic RestSharp quickstart today to proactively monitor RestSharp in real-time, detect issues quickly, and respond to them efficiently. The instant observability quickstart is the key to a seamless RestSharp monitoring.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/dotnet/restsharp",
+    "id": "4967824f-1a29-417f-88f2-093d30a41fc2",
+    "level": "NEW_RELIC",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/dotnet/restsharp/logo.svg",
+    "summary": "Monitoring RestSharp is critical to ensure that you detect incidents and respond to them quickly. Download the New Relic RestSharp quickstart to proactively track performance metrics via our .Net agent.",
+    "websiteUrl": null,
+    "keywords": [
+      "apm",
+      "dotnet"
+    ],
+    "authors": [
+      "New Relic"
+    ],
+    "dashboards": [
+      {
+        "name": ".NET",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/dotnet/dotnet02.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/dotnet/dotnet03.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/dotnet/dotnet04.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/dotnet/dotnet.png"
+        ]
+      }
+    ],
+    "alerts": [
+      {
+        "name": "Apdex Score",
+        "details": "This alert is triggered when the Apdex score is below 0.5 for 5 minutes",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "Memory Usage",
+        "details": "This alert is triggered when Memory usage is above 90%",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "Transaction Errors",
+        "details": "This alert is triggered when the the transactions fail more than 10% of the time in 5 minutes.",
+        "type": "STATIC",
+        "url": null
+      }
+    ],
+    "documentation": [
+      {
+        "name": "RestSharp installation docs",
+        "description": "Popular REST API client library for .NET that features auto-serialization,\nrequest type detection, a variety of authentications, and more.\n",
+        "url": "https://docs.newrelic.com/docs/agents/net-agent/getting-started/compatibility-requirements-net-framework-agent"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": ".NET agent",
+        "id": "dotnet-agent"
       }
     ]
   },
@@ -14781,134 +14804,6 @@
     ]
   },
   {
-    "title": "Episerver CMS",
-    "name": "episerver-cms",
-    "description": "## Why monitor Episerver CMS?\n\nEpiserver offers a web content management system (CMS), digital marketing, and digital commerce services via its Episerver Digital Experience Platform Cloud Service. New Relic quickstart instruments Episerver CMS with the New Relic .NET agent to instantly monitor Episerver CMS with best-in-class dashboards and alerts.\n\n### Episerver CMS quickstart highlights\nThe New Relic Episerver CMS quickstart has the following features:\n- Dashboards: Our dashboards provide you a clear overview of transactions, errors, and the virtual machine. The dashboards also help you monitor other key indicators like  top 10 failed transactions, latest errors, and more.\n- Alerts: You can get instant alerts on performance metrics like Apdex score, memory usage, and transaction errors.\n\nOur [.NET agent](https://docs.newrelic.com/docs/agents/net-agent/getting-started/compatibility-requirements-net-framework-agent/) supports both .NET Framework and [.NET Core](https://docs.newrelic.com/docs/agents/net-agent/getting-started/net-agent-compatibility-requirements-net-core/), and works with all .NET compatible languages. In addition to the .NET agent, you can also install New Relic’s infrastructure monitoring agent to view the performance of Episerver’s host environment.\n\n### New Relic + Episerver CMS = Optimum performance monitoring\n\nMonitor your Episerver CMS performance with our .NET agent. The integration provides a high-level overview of Episerver CMS, giving you access to code-level details like transaction traces, database queries, and errors. Also, it empowers you to track activities across a large Episerver distributed system.\nNew Relic Episerver CMS quickstart gives you proactive notifications from alerts to respond quickly when your app stops running seamlessly. You can use the query builder to create custom dashboards from your data. \nDownload New Relic Episerver CMS quickstart today to monitor Episerver CMS metrics in real-time. This quickstart is your gateway to instant monitoring of your Episerver CMS.",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/dotnet/episerver-cms",
-    "id": "abd04f74-c83f-47f5-a9f0-635ae12376d8",
-    "level": "NEW_RELIC",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/dotnet/episerver-cms/logo.svg",
-    "summary": "Episerver offers full-service CMS with dedicated layers for commerce and marketing. Proactively monitor the performance of the app with New Relic’s Episerver CMS quickstart.",
-    "websiteUrl": null,
-    "keywords": [
-      "apm",
-      "dotnet",
-      "cms",
-      "content management system"
-    ],
-    "authors": [
-      "New Relic"
-    ],
-    "dashboards": [
-      {
-        "name": "Dotnet",
-        "description": ".NET",
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/dotnet/dotnet02.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/dotnet/dotnet03.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/dotnet/dotnet.png"
-        ]
-      }
-    ],
-    "alerts": [
-      {
-        "name": "Apdex Score",
-        "details": "This alert is triggered when the Apdex score is below 0.5 for 5 minutes",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "Memory Usage",
-        "details": "This alert is triggered when Memory usage is above 90%",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "Transaction Errors",
-        "details": "This alert is triggered when the the transactions fail more than 10% of the time in 5 minutes.",
-        "type": "STATIC",
-        "url": null
-      }
-    ],
-    "documentation": [
-      {
-        "name": "Episerver CMS installation docs",
-        "description": "Full service CMS with dedicated layers for commerce and marketing.",
-        "url": "https://docs.newrelic.com/docs/agents/net-agent/getting-started/compatibility-requirements-net-framework-agent"
-      }
-    ],
-    "installPlans": [
-      {
-        "name": ".NET agent",
-        "id": "dotnet-windows-agent"
-      }
-    ]
-  },
-  {
-    "title": "ServiceStack",
-    "name": "servicestack",
-    "description": "## What is ServiceStack?\n\nOpen-source framework designed to be an alternative to the WCF, ASP.NET MVC,\nand ASP.NET Web API frameworks.\n\n\n## Get started!\n\nLeverage community expertise and instantly get value out of your telemetry data. This quickstart automatically instruments ServiceStack with the New Relic .Net agent, and allows you to instantly monitor your .Net application with out-of-the-box dashboards and alerts. Further leverage New Relic's APM capabilities by setting up [errors inbox](https://docs.newrelic.com/docs/apm/apm-ui-pages/errors-inbox/errors-inbox/), [transaction tracing](https://docs.newrelic.com/docs/apm/transactions/transaction-traces/introduction-transaction-traces/), and [service maps](https://docs.newrelic.com/docs/understand-dependencies/understand-system-dependencies/service-maps/introduction-service-maps/).\n\n## More info\n\nCheck out the [documentation](https://docs.newrelic.com/docs/agents/net-agent/getting-started/introduction-new-relic-net/) to learn more about New Relic monitoring for ServiceStack.",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/dotnet/servicestack",
-    "id": "a31a0d6f-0c4c-4652-849f-c5537fbe617a",
-    "level": "NEW_RELIC",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/dotnet/servicestack/logo.svg",
-    "summary": "Monitor ServiceStack with New Relic's .NET agent",
-    "websiteUrl": null,
-    "keywords": [
-      "apm",
-      "dotnet"
-    ],
-    "authors": [
-      "New Relic"
-    ],
-    "dashboards": [
-      {
-        "name": "Dotnet",
-        "description": ".NET",
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/dotnet/dotnet02.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/dotnet/dotnet03.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/dotnet/dotnet.png"
-        ]
-      }
-    ],
-    "alerts": [
-      {
-        "name": "Apdex Score",
-        "details": "This alert is triggered when the Apdex score is below 0.5 for 5 minutes",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "Memory Usage",
-        "details": "This alert is triggered when Memory usage is above 90%",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "Transaction Errors",
-        "details": "This alert is triggered when the the transactions fail more than 10% of the time in 5 minutes.",
-        "type": "STATIC",
-        "url": null
-      }
-    ],
-    "documentation": [
-      {
-        "name": "ServiceStack installation docs",
-        "description": "Open-source framework designed to be an alternative to the WCF, ASP.NET\nMVC, and ASP.NET Web API frameworks.\n",
-        "url": "https://docs.newrelic.com/docs/agents/net-agent/getting-started/compatibility-requirements-net-framework-agent"
-      }
-    ],
-    "installPlans": [
-      {
-        "name": ".NET agent",
-        "id": "dotnet-agent"
-      }
-    ]
-  },
-  {
     "title": "Grafana Dashboard Migration",
     "name": "grafana-dashboard-migration",
     "description": "Telemetry Data Platform allows customers to onboard Prometheus Metrics and support New Relic as a Prometheus data source for Grafana dashboards. To help our customers that want to get rid of their Grafana instance we've build a toolset to migrate Grafana Prometheus dashboards to New Relic dashboards.\n\nFollow the easy to execute instructions on our Github repository to start converting Grafana dashboards in minutes.\n\nOne important note is that this isn’t a perfect solution, but it should get you 95% of the way. New Relic and Grafana are very different solutions, and the tool relies heavily on our PromQL to NRQL conversion service which is not feature complete. For these reasons, not all dashboards may get imported perfectly and some clean up may be required.",
@@ -15046,6 +14941,49 @@
     "installPlans": []
   },
   {
+    "title": "AWS IAM",
+    "name": "aws-iam",
+    "description": "## What is AWS IAM?\n\nSecurely control access to AWS services and resources, create and manage\nusers, groups, and permissions.\n\n\n### Get started!\n\nStart monitoring AWS IAM by connecting Amazon Web Services (AWS) to New Relic!\n\nCheck out our AWS IAM documentation to instrument your cloud service and manage the stability, scalability, and reliability of your systems with New Relic's infrastructure monitoring capabilities.\n\n### More info\n\nCheck out the [documentation](https://docs.newrelic.com/docs/infrastructure/amazon-integrations/aws-integrations-list/aws-iam-monitoring-integration/) to learn more about New Relic monitoring for AWS IAM.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/aws/aws-iam",
+    "id": "f9e383f7-5851-4296-9cdd-1ae94f21abd3",
+    "level": "NEW_RELIC",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/aws/aws-iam/logo.svg",
+    "summary": "Monitor AWS IAM by connecting AWS to New Relic",
+    "websiteUrl": null,
+    "keywords": [
+      "aws",
+      "amazon web services",
+      "Identity and access management"
+    ],
+    "authors": [
+      "New Relic"
+    ],
+    "dashboards": [
+      {
+        "name": "AWS IAM",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/aws-iam/aws-iam.png"
+        ]
+      }
+    ],
+    "alerts": [],
+    "documentation": [
+      {
+        "name": "AWS IAM installation docs",
+        "description": "Monitor AWS IAM by connecting AWS to New Relic.\n",
+        "url": "https://docs.newrelic.com/docs/infrastructure/amazon-integrations/aws-integrations-list/aws-iam-monitoring-integration/"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "AWS-CloudWatch-Metric-Streams",
+        "id": "aws-cloudwatch-metric-streams"
+      }
+    ]
+  },
+  {
     "title": "Cloudflare Network Logs",
     "name": "cloudflare",
     "description": "## About Cloudflare\n\nCloudflare is an industry leading global network designed to make everything you connect to the Internet secure, private, fast, and reliable. Protect and accelerate external, public-facing web properties; secure your internal operations on a single global network; and build new applications on our serverless platform. Internet properties powered by Cloudflare have all web traffic routed through its intelligent global network, which gets smarter with every request.\n\n## About this quickstart\n\nCloudflare is on a mission to help build a better Internet. The Cloudflare quickstart will enable you to monitor and analyze web traffic metrics on a dashboard, integrating with New Relic’s database to provide an at-a-glance overview of the most important logs and metrics from your websites and applications.\n\nFor more information check out our website at [cloudflare.com](https://www.cloudflare.com/)",
@@ -15092,6 +15030,170 @@
       {
         "name": "cloudflare",
         "id": "third-party-cloudflare"
+      }
+    ]
+  },
+  {
+    "title": "AWS Elastic Beanstalk",
+    "name": "aws-elastic-beanstalk",
+    "description": "## What is AWS Elastic Beanstalk?\n\nDynamic service that allows easy deployment and scalability for your\napplications on AWS.\n\n\n### Get started!\n\nStart monitoring AWS Elastic Beanstalk by connecting Amazon Web Services (AWS) to New Relic!\n\nCheck out our AWS Elastic Beanstalk documentation to instrument your cloud service and manage the stability, scalability, and reliability of your systems with New Relic's infrastructure monitoring capabilities.\n\n### More info\n\nCheck out the [documentation](https://docs.newrelic.com/docs/infrastructure/amazon-integrations/aws-integrations-list/aws-elastic-beanstalk-monitoring-integration/) to learn more about New Relic monitoring for AWS Elastic Beanstalk.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/aws/aws-elastic-beanstalk",
+    "id": "b232f332-e27a-4d34-a966-e7f678d35145",
+    "level": "NEW_RELIC",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/aws/aws-elastic-beanstalk/logo.svg",
+    "summary": "Monitor AWS Elastic Beanstalk by connecting AWS to New Relic",
+    "websiteUrl": null,
+    "keywords": [
+      "aws",
+      "amazon web services",
+      "deploy"
+    ],
+    "authors": [
+      "New Relic"
+    ],
+    "dashboards": [],
+    "alerts": [],
+    "documentation": [
+      {
+        "name": "AWS Elastic Beanstalk installation docs",
+        "description": "Monitor AWS Elastic Beanstalk by connecting AWS to New Relic.\n",
+        "url": "https://docs.newrelic.com/docs/infrastructure/amazon-integrations/aws-integrations-list/aws-elastic-beanstalk-monitoring-integration/"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "AWS-CloudWatch-Metric-Streams",
+        "id": "aws-cloudwatch-metric-streams"
+      }
+    ]
+  },
+  {
+    "title": "Episerver CMS",
+    "name": "episerver-cms",
+    "description": "## Why monitor Episerver CMS?\n\nEpiserver offers a web content management system (CMS), digital marketing, and digital commerce services via its Episerver Digital Experience Platform Cloud Service. New Relic quickstart instruments Episerver CMS with the New Relic .NET agent to instantly monitor Episerver CMS with best-in-class dashboards and alerts.\n\n### Episerver CMS quickstart highlights\nThe New Relic Episerver CMS quickstart has the following features:\n- Dashboards: Our dashboards provide you a clear overview of transactions, errors, and the virtual machine. The dashboards also help you monitor other key indicators like  top 10 failed transactions, latest errors, and more.\n- Alerts: You can get instant alerts on performance metrics like Apdex score, memory usage, and transaction errors.\n\nOur [.NET agent](https://docs.newrelic.com/docs/agents/net-agent/getting-started/compatibility-requirements-net-framework-agent/) supports both .NET Framework and [.NET Core](https://docs.newrelic.com/docs/agents/net-agent/getting-started/net-agent-compatibility-requirements-net-core/), and works with all .NET compatible languages. In addition to the .NET agent, you can also install New Relic’s infrastructure monitoring agent to view the performance of Episerver’s host environment.\n\n### New Relic + Episerver CMS = Optimum performance monitoring\n\nMonitor your Episerver CMS performance with our .NET agent. The integration provides a high-level overview of Episerver CMS, giving you access to code-level details like transaction traces, database queries, and errors. Also, it empowers you to track activities across a large Episerver distributed system.\nNew Relic Episerver CMS quickstart gives you proactive notifications from alerts to respond quickly when your app stops running seamlessly. You can use the query builder to create custom dashboards from your data. \nDownload New Relic Episerver CMS quickstart today to monitor Episerver CMS metrics in real-time. This quickstart is your gateway to instant monitoring of your Episerver CMS.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/dotnet/episerver-cms",
+    "id": "abd04f74-c83f-47f5-a9f0-635ae12376d8",
+    "level": "NEW_RELIC",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/dotnet/episerver-cms/logo.svg",
+    "summary": "Episerver offers full-service CMS with dedicated layers for commerce and marketing. Proactively monitor the performance of the app with New Relic’s Episerver CMS quickstart.",
+    "websiteUrl": null,
+    "keywords": [
+      "apm",
+      "dotnet",
+      "cms",
+      "content management system"
+    ],
+    "authors": [
+      "New Relic"
+    ],
+    "dashboards": [
+      {
+        "name": ".NET",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/dotnet/dotnet02.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/dotnet/dotnet03.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/dotnet/dotnet04.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/dotnet/dotnet.png"
+        ]
+      }
+    ],
+    "alerts": [
+      {
+        "name": "Apdex Score",
+        "details": "This alert is triggered when the Apdex score is below 0.5 for 5 minutes",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "Memory Usage",
+        "details": "This alert is triggered when Memory usage is above 90%",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "Transaction Errors",
+        "details": "This alert is triggered when the the transactions fail more than 10% of the time in 5 minutes.",
+        "type": "STATIC",
+        "url": null
+      }
+    ],
+    "documentation": [
+      {
+        "name": "Episerver CMS installation docs",
+        "description": "Full service CMS with dedicated layers for commerce and marketing.",
+        "url": "https://docs.newrelic.com/docs/agents/net-agent/getting-started/compatibility-requirements-net-framework-agent"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": ".NET agent",
+        "id": "dotnet-windows-agent"
+      }
+    ]
+  },
+  {
+    "title": "ServiceStack",
+    "name": "servicestack",
+    "description": "## What is ServiceStack?\n\nOpen-source framework designed to be an alternative to the WCF, ASP.NET MVC,\nand ASP.NET Web API frameworks.\n\n\n## Get started!\n\nLeverage community expertise and instantly get value out of your telemetry data. This quickstart automatically instruments ServiceStack with the New Relic .Net agent, and allows you to instantly monitor your .Net application with out-of-the-box dashboards and alerts. Further leverage New Relic's APM capabilities by setting up [errors inbox](https://docs.newrelic.com/docs/apm/apm-ui-pages/errors-inbox/errors-inbox/), [transaction tracing](https://docs.newrelic.com/docs/apm/transactions/transaction-traces/introduction-transaction-traces/), and [service maps](https://docs.newrelic.com/docs/understand-dependencies/understand-system-dependencies/service-maps/introduction-service-maps/).\n\n## More info\n\nCheck out the [documentation](https://docs.newrelic.com/docs/agents/net-agent/getting-started/introduction-new-relic-net/) to learn more about New Relic monitoring for ServiceStack.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/dotnet/servicestack",
+    "id": "a31a0d6f-0c4c-4652-849f-c5537fbe617a",
+    "level": "NEW_RELIC",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/dotnet/servicestack/logo.svg",
+    "summary": "Monitor ServiceStack with New Relic's .NET agent",
+    "websiteUrl": null,
+    "keywords": [
+      "apm",
+      "dotnet"
+    ],
+    "authors": [
+      "New Relic"
+    ],
+    "dashboards": [
+      {
+        "name": ".NET",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/dotnet/dotnet02.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/dotnet/dotnet03.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/dotnet/dotnet04.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/dotnet/dotnet.png"
+        ]
+      }
+    ],
+    "alerts": [
+      {
+        "name": "Apdex Score",
+        "details": "This alert is triggered when the Apdex score is below 0.5 for 5 minutes",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "Memory Usage",
+        "details": "This alert is triggered when Memory usage is above 90%",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "Transaction Errors",
+        "details": "This alert is triggered when the the transactions fail more than 10% of the time in 5 minutes.",
+        "type": "STATIC",
+        "url": null
+      }
+    ],
+    "documentation": [
+      {
+        "name": "ServiceStack installation docs",
+        "description": "Open-source framework designed to be an alternative to the WCF, ASP.NET\nMVC, and ASP.NET Web API frameworks.\n",
+        "url": "https://docs.newrelic.com/docs/agents/net-agent/getting-started/compatibility-requirements-net-framework-agent"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": ".NET agent",
+        "id": "dotnet-agent"
       }
     ]
   },
@@ -16292,72 +16394,6 @@
     ]
   },
   {
-    "title": "AWS Elastic Beanstalk",
-    "name": "aws-elastic-beanstalk",
-    "description": "## What is AWS Elastic Beanstalk?\n\nDynamic service that allows easy deployment and scalability for your\napplications on AWS.\n\n\n### Get started!\n\nStart monitoring AWS Elastic Beanstalk by connecting Amazon Web Services (AWS) to New Relic!\n\nCheck out our AWS Elastic Beanstalk documentation to instrument your cloud service and manage the stability, scalability, and reliability of your systems with New Relic's infrastructure monitoring capabilities.\n\n### More info\n\nCheck out the [documentation](https://docs.newrelic.com/docs/infrastructure/amazon-integrations/aws-integrations-list/aws-elastic-beanstalk-monitoring-integration/) to learn more about New Relic monitoring for AWS Elastic Beanstalk.",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/aws/aws-elastic-beanstalk",
-    "id": "b232f332-e27a-4d34-a966-e7f678d35145",
-    "level": "NEW_RELIC",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/aws/aws-elastic-beanstalk/logo.svg",
-    "summary": "Monitor AWS Elastic Beanstalk by connecting AWS to New Relic",
-    "websiteUrl": null,
-    "keywords": [
-      "aws",
-      "amazon web services"
-    ],
-    "authors": [
-      "New Relic"
-    ],
-    "dashboards": [],
-    "alerts": [],
-    "documentation": [
-      {
-        "name": "AWS Elastic Beanstalk installation docs",
-        "description": "Monitor AWS Elastic Beanstalk by connecting AWS to New Relic.\n",
-        "url": "https://docs.newrelic.com/docs/infrastructure/amazon-integrations/aws-integrations-list/aws-elastic-beanstalk-monitoring-integration/"
-      }
-    ],
-    "installPlans": [
-      {
-        "name": "AWS-Infrastructure-Monitoring",
-        "id": "aws-infrastructure-monitoring"
-      }
-    ]
-  },
-  {
-    "title": "AWS IAM",
-    "name": "aws-iam",
-    "description": "## What is AWS IAM?\n\nSecurely control access to AWS services and resources, create and manage\nusers, groups, and permissions.\n\n\n### Get started!\n\nStart monitoring AWS IAM by connecting Amazon Web Services (AWS) to New Relic!\n\nCheck out our AWS IAM documentation to instrument your cloud service and manage the stability, scalability, and reliability of your systems with New Relic's infrastructure monitoring capabilities.\n\n### More info\n\nCheck out the [documentation](https://docs.newrelic.com/docs/infrastructure/amazon-integrations/aws-integrations-list/aws-iam-monitoring-integration/) to learn more about New Relic monitoring for AWS IAM.",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/aws/aws-iam",
-    "id": "f9e383f7-5851-4296-9cdd-1ae94f21abd3",
-    "level": "NEW_RELIC",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/aws/aws-iam/logo.svg",
-    "summary": "Monitor AWS IAM by connecting AWS to New Relic",
-    "websiteUrl": null,
-    "keywords": [
-      "aws",
-      "amazon web services"
-    ],
-    "authors": [
-      "New Relic"
-    ],
-    "dashboards": [],
-    "alerts": [],
-    "documentation": [
-      {
-        "name": "AWS IAM installation docs",
-        "description": "Monitor AWS IAM by connecting AWS to New Relic.\n",
-        "url": "https://docs.newrelic.com/docs/infrastructure/amazon-integrations/aws-integrations-list/aws-iam-monitoring-integration/"
-      }
-    ],
-    "installPlans": [
-      {
-        "name": "AWS-Infrastructure-Monitoring",
-        "id": "aws-infrastructure-monitoring"
-      }
-    ]
-  },
-  {
     "title": "AWS RDS Enhanced",
     "name": "aws-rds-enhanced",
     "description": "## What is AWS RDS Enhanced?\n\nSupplement your RDS monitoring with real-time metrics about the OS.\n\n### Get started!\n\nStart monitoring AWS RDS Enhanced by connecting Amazon Web Services (AWS) to New Relic!\n\nCheck out our AWS RDS Enhanced documentation to instrument your cloud service and manage the stability, scalability, and reliability of your systems with New Relic's infrastructure monitoring capabilities.\n\n### More info\n\nCheck out the [documentation](https://docs.newrelic.com/docs/infrastructure/amazon-integrations/aws-integrations-list/aws-rds-enhanced-monitoring-integration/) to learn more about New Relic monitoring for AWS RDS Enhanced.",
@@ -16998,132 +17034,6 @@
     ]
   },
   {
-    "title": "FubuMVC",
-    "name": "fubumvc",
-    "description": "## New Relic + FubuMVC\n\nNew Relic’s monitoring quickstart for FubuMVC monitors the performance and reliability of FubuMVC applications. \n\nIt includes visual dashboards which showcase real-time metrics of the FubuMVC stack, including:\n- Errors overview\n- VM overview\n- Latest error display\n- CPU utilization display\n- Amount of memory heap used, and more. \nThe quickstart also includes alerts when certain metrics such as the Apdex score, memory usage, and number of transaction errors hit a critical threshold.\n\n### Why monitor FubuMVC with New Relic?\n\nBuilding server-side systems can be a complex process. Between dealing with incoming and outgoing HTTP requests, interfacing with other APIs and backends, the nuances of the server-side code itself, and any sort of distributed interaction or job scheduling, there are many things that can go wrong. When you monitor your Fubumvc instance, it’s much easier to spot these errors before they occur. FubuMVC fails, your whole application will too. New Relic makes it easier to prevent that failure.\nFor example, if you get an  alert when your transaction errors hit a critical a threshold, it can give you advance notice about a dead server, a network bottleneck, or an attack against your web app. Similarly, the CPU utilization dashboard helps you to know when your server load is high and when traffic might be about to overwhelm a particular HTTP service. You can address your issues proactively, before they cause an outage.",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/dotnet/fubumvc",
-    "id": "dbce65a2-5f9a-48cb-a957-966338a065d3",
-    "level": "NEW_RELIC",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/dotnet/fubumvc/logo.svg",
-    "summary": "FubuMVC is a framework for building server-side .NET applications. Monitoring FubuMVC is critical to ensuring that your application stays healthy. The New Relic quickstart provides key dashboards and alerts to oversee FubuMVC applications.\"",
-    "websiteUrl": null,
-    "keywords": [
-      "apm",
-      "dotnet"
-    ],
-    "authors": [
-      "New Relic"
-    ],
-    "dashboards": [
-      {
-        "name": "Dotnet",
-        "description": ".NET",
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/dotnet/dotnet02.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/dotnet/dotnet03.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/dotnet/dotnet.png"
-        ]
-      }
-    ],
-    "alerts": [
-      {
-        "name": "Apdex Score",
-        "details": "This alert is triggered when the Apdex score is below 0.5 for 5 minutes",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "Memory Usage",
-        "details": "This alert is triggered when Memory usage is above 90%",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "Transaction Errors",
-        "details": "This alert is triggered when the the transactions fail more than 10% of the time in 5 minutes.",
-        "type": "STATIC",
-        "url": null
-      }
-    ],
-    "documentation": [
-      {
-        "name": "FubuMVC installation docs",
-        "description": "A .Net framework for enabling teams to efficiently build server-side\nsystems.\n",
-        "url": "https://docs.newrelic.com/docs/agents/net-agent/getting-started/compatibility-requirements-net-framework-agent"
-      }
-    ],
-    "installPlans": [
-      {
-        "name": ".NET agent",
-        "id": "dotnet-agent"
-      }
-    ]
-  },
-  {
-    "title": "Silverlight",
-    "name": "silverlight",
-    "description": "## What is Silverlight?\n\nMicrosoft Silverlight is a deprecated application framework for writing and\nrunning rich Internet applications.\n\n\n## Get started!\n\nLeverage community expertise and instantly get value out of your telemetry data. This quickstart automatically instruments Silverlight with the New Relic .Net agent, and allows you to instantly monitor your .Net application with out-of-the-box dashboards and alerts. Further leverage New Relic's APM capabilities by setting up [errors inbox](https://docs.newrelic.com/docs/apm/apm-ui-pages/errors-inbox/errors-inbox/), [transaction tracing](https://docs.newrelic.com/docs/apm/transactions/transaction-traces/introduction-transaction-traces/), and [service maps](https://docs.newrelic.com/docs/understand-dependencies/understand-system-dependencies/service-maps/introduction-service-maps/).\n\n## More info\n\nCheck out the [documentation](https://docs.newrelic.com/docs/agents/net-agent/getting-started/introduction-new-relic-net/) to learn more about New Relic monitoring for Silverlight.",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/dotnet/silverlight",
-    "id": "fe42916f-1756-4c93-af10-7236de6d0f6e",
-    "level": "NEW_RELIC",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/dotnet/silverlight/logo.svg",
-    "summary": "Monitor Silverlight with New Relic's .NET agent",
-    "websiteUrl": null,
-    "keywords": [
-      "apm",
-      "dotnet"
-    ],
-    "authors": [
-      "New Relic"
-    ],
-    "dashboards": [
-      {
-        "name": "Dotnet",
-        "description": ".NET",
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/dotnet/dotnet02.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/dotnet/dotnet03.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/dotnet/dotnet.png"
-        ]
-      }
-    ],
-    "alerts": [
-      {
-        "name": "Apdex Score",
-        "details": "This alert is triggered when the Apdex score is below 0.5 for 5 minutes",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "Memory Usage",
-        "details": "This alert is triggered when Memory usage is above 90%",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "Transaction Errors",
-        "details": "This alert is triggered when the the transactions fail more than 10% of the time in 5 minutes.",
-        "type": "STATIC",
-        "url": null
-      }
-    ],
-    "documentation": [
-      {
-        "name": "Silverlight installation docs",
-        "description": "Microsoft Silverlight is a deprecated application framework for writing\nand running rich Internet applications.\n",
-        "url": "https://docs.newrelic.com/docs/agents/net-agent/getting-started/compatibility-requirements-net-framework-agent"
-      }
-    ],
-    "installPlans": [
-      {
-        "name": ".NET agent",
-        "id": "dotnet-agent"
-      }
-    ]
-  },
-  {
     "title": "ServiceNow Notifications",
     "name": "servicenow-notifications",
     "description": "ServiceNow is a software that helps companies manage digital workflows for enterprise operations.\n\nIntegrate New Relic with ServiceNow Incident-Management and automatically create and update incidents.\n\n[Check out our documentation](https://docs.newrelic.com/docs/alerts-applied-intelligence/notifications/notification-integrations/#servicenow) to set up a ServiceNow notification channel and provide fast and consistent ways for the right personnel to be notified about incidents",
@@ -17189,49 +17099,6 @@
     ]
   },
   {
-    "title": "Amazon ElastiCache",
-    "name": "aws-elasticache",
-    "description": "## What is Amazon ElastiCache?\n\nDeploy, operate, and scale an in-memory data store or cache in the cloud.\n\n### Get started!\n\nStart monitoring Amazon ElastiCache by connecting Amazon Web Services (AWS) to New Relic!\n\nCheck out our Amazon ElastiCache documentation to instrument your cloud service and manage the stability, scalability, and reliability of your systems with New Relic's infrastructure monitoring capabilities.\n\n### More info\n\nCheck out the [documentation](https://docs.newrelic.com/docs/infrastructure/amazon-integrations/aws-integrations-list/aws-elasticache-monitoring-integration/) to learn more about New Relic monitoring for Amazon ElastiCache.",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/aws/amazon-elasticache",
-    "id": "5c1e7b31-df21-4acb-b72c-0a8786b88301",
-    "level": "NEW_RELIC",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/aws/amazon-elasticache/logo.svg",
-    "summary": "Monitor Amazon ElastiCache by connecting AWS to New Relic",
-    "websiteUrl": null,
-    "keywords": [
-      "aws",
-      "amazon web service",
-      "database"
-    ],
-    "authors": [
-      "New Relic"
-    ],
-    "dashboards": [
-      {
-        "name": "Amazon ElastiCache (Redis)",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/amazon-elasticache-redis/amazon-elasticache-redis.png"
-        ]
-      }
-    ],
-    "alerts": [],
-    "documentation": [
-      {
-        "name": "Amazon ElastiCache installation docs",
-        "description": "Monitor Amazon ElastiCache by connecting AWS to New Relic.\n",
-        "url": "https://docs.newrelic.com/docs/infrastructure/amazon-integrations/aws-integrations-list/aws-elasticache-monitoring-integration/"
-      }
-    ],
-    "installPlans": [
-      {
-        "name": "AWS-CloudWatch-Metric-Streams",
-        "id": "aws-cloudwatch-metric-streams"
-      }
-    ]
-  },
-  {
     "title": "xMatters",
     "name": "xmatters",
     "description": "## What is xMatters?\n\nAutomated alerts for detecting and responding to events and critical issues.\n\n### Get started!\n\nCheck out our xMatters documentation to set up a notification channel and provide fast and consistent ways for the right personnel to be notified about incidents.\n\n### More info\n\nCheck out the [documentation](https://docs.newrelic.com/docs/alerts/new-relic-alerts/managing-notification-channels/notification-channels-control-where-send-alerts) to learn more about New Relic alerting for xMatters.",
@@ -17261,6 +17128,186 @@
       {
         "name": "xMatters",
         "id": "third-party-xmatters"
+      }
+    ]
+  },
+  {
+    "title": "Amazon ElastiCache",
+    "name": "aws-elasticache",
+    "description": "## What is Amazon ElastiCache?\n\nDeploy, operate, and scale an in-memory data store or cache in the cloud.\n\n### Get started!\n\nStart monitoring Amazon ElastiCache by connecting Amazon Web Services (AWS) to New Relic!\n\nCheck out our Amazon ElastiCache documentation to instrument your cloud service and manage the stability, scalability, and reliability of your systems with New Relic's infrastructure monitoring capabilities.\n\n### More info\n\nCheck out the [documentation](https://docs.newrelic.com/docs/infrastructure/amazon-integrations/aws-integrations-list/aws-elasticache-monitoring-integration/) to learn more about New Relic monitoring for Amazon ElastiCache.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/aws/amazon-elasticache",
+    "id": "5c1e7b31-df21-4acb-b72c-0a8786b88301",
+    "level": "NEW_RELIC",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/aws/amazon-elasticache/logo.svg",
+    "summary": "Monitor Amazon ElastiCache by connecting AWS to New Relic",
+    "websiteUrl": null,
+    "keywords": [
+      "aws",
+      "amazon web service",
+      "database"
+    ],
+    "authors": [
+      "New Relic"
+    ],
+    "dashboards": [
+      {
+        "name": "Amazon ElastiCache (Redis)",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/amazon-elasticache-redis/amazon-elasticache-redis.png"
+        ]
+      },
+      {
+        "name": "Amazon ElastiCache (Memcached)",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/amazon-elasticache-memcached/amazon-elasticache-memcached1.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/amazon-elasticache-memcached/amazon-elasticache-memcached2.png"
+        ]
+      }
+    ],
+    "alerts": [],
+    "documentation": [
+      {
+        "name": "Amazon ElastiCache installation docs",
+        "description": "Monitor Amazon ElastiCache by connecting AWS to New Relic.\n",
+        "url": "https://docs.newrelic.com/docs/infrastructure/amazon-integrations/aws-integrations-list/aws-elasticache-monitoring-integration/"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "AWS-CloudWatch-Metric-Streams",
+        "id": "aws-cloudwatch-metric-streams"
+      }
+    ]
+  },
+  {
+    "title": "FubuMVC",
+    "name": "fubumvc",
+    "description": "## New Relic + FubuMVC\n\nNew Relic’s monitoring quickstart for FubuMVC monitors the performance and reliability of FubuMVC applications. \n\nIt includes visual dashboards which showcase real-time metrics of the FubuMVC stack, including:\n- Errors overview\n- VM overview\n- Latest error display\n- CPU utilization display\n- Amount of memory heap used, and more. \nThe quickstart also includes alerts when certain metrics such as the Apdex score, memory usage, and number of transaction errors hit a critical threshold.\n\n### Why monitor FubuMVC with New Relic?\n\nBuilding server-side systems can be a complex process. Between dealing with incoming and outgoing HTTP requests, interfacing with other APIs and backends, the nuances of the server-side code itself, and any sort of distributed interaction or job scheduling, there are many things that can go wrong. When you monitor your Fubumvc instance, it’s much easier to spot these errors before they occur. FubuMVC fails, your whole application will too. New Relic makes it easier to prevent that failure.\nFor example, if you get an  alert when your transaction errors hit a critical a threshold, it can give you advance notice about a dead server, a network bottleneck, or an attack against your web app. Similarly, the CPU utilization dashboard helps you to know when your server load is high and when traffic might be about to overwhelm a particular HTTP service. You can address your issues proactively, before they cause an outage.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/dotnet/fubumvc",
+    "id": "dbce65a2-5f9a-48cb-a957-966338a065d3",
+    "level": "NEW_RELIC",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/dotnet/fubumvc/logo.svg",
+    "summary": "FubuMVC is a framework for building server-side .NET applications. Monitoring FubuMVC is critical to ensuring that your application stays healthy. The New Relic quickstart provides key dashboards and alerts to oversee FubuMVC applications.\"",
+    "websiteUrl": null,
+    "keywords": [
+      "apm",
+      "dotnet"
+    ],
+    "authors": [
+      "New Relic"
+    ],
+    "dashboards": [
+      {
+        "name": ".NET",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/dotnet/dotnet02.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/dotnet/dotnet03.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/dotnet/dotnet04.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/dotnet/dotnet.png"
+        ]
+      }
+    ],
+    "alerts": [
+      {
+        "name": "Apdex Score",
+        "details": "This alert is triggered when the Apdex score is below 0.5 for 5 minutes",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "Memory Usage",
+        "details": "This alert is triggered when Memory usage is above 90%",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "Transaction Errors",
+        "details": "This alert is triggered when the the transactions fail more than 10% of the time in 5 minutes.",
+        "type": "STATIC",
+        "url": null
+      }
+    ],
+    "documentation": [
+      {
+        "name": "FubuMVC installation docs",
+        "description": "A .Net framework for enabling teams to efficiently build server-side\nsystems.\n",
+        "url": "https://docs.newrelic.com/docs/agents/net-agent/getting-started/compatibility-requirements-net-framework-agent"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": ".NET agent",
+        "id": "dotnet-agent"
+      }
+    ]
+  },
+  {
+    "title": "Silverlight",
+    "name": "silverlight",
+    "description": "## What is Silverlight?\n\nMicrosoft Silverlight is a deprecated application framework for writing and\nrunning rich Internet applications.\n\n\n## Get started!\n\nLeverage community expertise and instantly get value out of your telemetry data. This quickstart automatically instruments Silverlight with the New Relic .Net agent, and allows you to instantly monitor your .Net application with out-of-the-box dashboards and alerts. Further leverage New Relic's APM capabilities by setting up [errors inbox](https://docs.newrelic.com/docs/apm/apm-ui-pages/errors-inbox/errors-inbox/), [transaction tracing](https://docs.newrelic.com/docs/apm/transactions/transaction-traces/introduction-transaction-traces/), and [service maps](https://docs.newrelic.com/docs/understand-dependencies/understand-system-dependencies/service-maps/introduction-service-maps/).\n\n## More info\n\nCheck out the [documentation](https://docs.newrelic.com/docs/agents/net-agent/getting-started/introduction-new-relic-net/) to learn more about New Relic monitoring for Silverlight.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/dotnet/silverlight",
+    "id": "fe42916f-1756-4c93-af10-7236de6d0f6e",
+    "level": "NEW_RELIC",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/dotnet/silverlight/logo.svg",
+    "summary": "Monitor Silverlight with New Relic's .NET agent",
+    "websiteUrl": null,
+    "keywords": [
+      "apm",
+      "dotnet"
+    ],
+    "authors": [
+      "New Relic"
+    ],
+    "dashboards": [
+      {
+        "name": ".NET",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/dotnet/dotnet02.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/dotnet/dotnet03.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/dotnet/dotnet04.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/dotnet/dotnet.png"
+        ]
+      }
+    ],
+    "alerts": [
+      {
+        "name": "Apdex Score",
+        "details": "This alert is triggered when the Apdex score is below 0.5 for 5 minutes",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "Memory Usage",
+        "details": "This alert is triggered when Memory usage is above 90%",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "Transaction Errors",
+        "details": "This alert is triggered when the the transactions fail more than 10% of the time in 5 minutes.",
+        "type": "STATIC",
+        "url": null
+      }
+    ],
+    "documentation": [
+      {
+        "name": "Silverlight installation docs",
+        "description": "Microsoft Silverlight is a deprecated application framework for writing\nand running rich Internet applications.\n",
+        "url": "https://docs.newrelic.com/docs/agents/net-agent/getting-started/compatibility-requirements-net-framework-agent"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": ".NET agent",
+        "id": "dotnet-agent"
       }
     ]
   },
@@ -18845,6 +18892,50 @@
     ]
   },
   {
+    "title": "Amazon Elasticsearch",
+    "name": "aws-elasticsearch",
+    "description": "## What is Amazon Elasticsearch?\n\nFully managed services for deploying and managing Elasticsearch\nimplementations on AWS.\n\n### Get started!\n\nStart monitoring Amazon Elasticsearch by connecting Amazon Web Services (AWS) to New Relic!\n\nCheck out our Amazon Elasticsearch documentation to instrument your cloud service and manage the stability, scalability, and reliability of your systems with New Relic's infrastructure monitoring capabilities.\n\n### More info\n\nCheck out the [documentation](https://docs.newrelic.com/docs/infrastructure/amazon-integrations/aws-integrations-list/aws-elasticsearch-monitoring-integration/) to learn more about New Relic monitoring for AWS Elasticsearch.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/aws/amazon-elasticsearch",
+    "id": "a69e9de8-2968-44a9-9fff-9065dd9075dd",
+    "level": "NEW_RELIC",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/aws/amazon-elasticsearch/logo.svg",
+    "summary": "Monitor Amazon Elasticsearch by connecting AWS to New Relic",
+    "websiteUrl": null,
+    "keywords": [
+      "aws",
+      "amazon web services"
+    ],
+    "authors": [
+      "New Relic"
+    ],
+    "dashboards": [
+      {
+        "name": "Amazon Elasticsearch",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/amazon-elasticsearch/amazon-elasticsearch1.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/amazon-elasticsearch/amazon-elasticsearch2.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/amazon-elasticsearch/amazon-elasticsearch3.png"
+        ]
+      }
+    ],
+    "alerts": [],
+    "documentation": [
+      {
+        "name": "Amazon Elasticsearch installation docs",
+        "description": "Monitor Amazon Elasticsearch by connecting AWS to New Relic.\n",
+        "url": "https://docs.newrelic.com/docs/infrastructure/amazon-integrations/aws-integrations-list/aws-elasticsearch-monitoring-integration/"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "AWS-CloudWatch-Metric-Streams",
+        "id": "aws-cloudwatch-metric-streams"
+      }
+    ]
+  },
+  {
     "title": "Akamai DataStream 2",
     "name": "datastream2",
     "description": "## Akamai Quickstart\n  \nAkamai Technologies is a leading content delivery network (CDN), cybersecurity, and cloud service provider.\n\n### DataStream 2\n\nDataStream 2 captures performance and security logs from your delivery properties and streams them in near real-time to provide complete monitoring.\n\nFor more information please go to https://techdocs.akamai.com/datastream2/docs\n\n### DataStream 2 quickstart\n\nThe Akamai DataStream 2 quickstart enables you to monitor your performance and security logs in real time. Here are a few of the monitoring tools available with this quickstart:\n- HTTP status code distribution\n- Error rate\n- Log ingest\n- Cache hit retio \n- TLS overhead time ranges\n- Overhead byte ranges\n- HTTP protocol distribution",
@@ -18961,69 +19052,6 @@
     ]
   },
   {
-    "title": "ASP .NET MVC",
-    "name": "asp-dotnet-mvc",
-    "description": "## What is ASP .NET MVC?\n\nOpen-source web application framework developed by Microsoft, which implements\nthe model-view-controller pattern.\n\n\n## Get started!\n\nLeverage community expertise and instantly get value out of your telemetry data. This quickstart automatically instruments ASP .NET MVC with the New Relic .Net agent, and allows you to instantly monitor your .Net application with out-of-the-box dashboards and alerts. Further leverage New Relic's APM capabilities by setting up [errors inbox](https://docs.newrelic.com/docs/apm/apm-ui-pages/errors-inbox/errors-inbox/), [transaction tracing](https://docs.newrelic.com/docs/apm/transactions/transaction-traces/introduction-transaction-traces/), and [service maps](https://docs.newrelic.com/docs/understand-dependencies/understand-system-dependencies/service-maps/introduction-service-maps/).\n\n## More info\n\nCheck out the [documentation](https://docs.newrelic.com/docs/agents/net-agent/getting-started/introduction-new-relic-net/) to learn more about New Relic monitoring for ASP .NET MVC.",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/dotnet/asp-dotnet-mvc",
-    "id": "8fb22c76-46c3-4720-bd82-bd101e5c890c",
-    "level": "NEW_RELIC",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/dotnet/asp-dotnet-mvc/logo.svg",
-    "summary": "Monitor ASP .NET MVC with New Relic's .NET agent",
-    "websiteUrl": null,
-    "keywords": [
-      "apm",
-      "dotnet"
-    ],
-    "authors": [
-      "New Relic"
-    ],
-    "dashboards": [
-      {
-        "name": "Dotnet",
-        "description": ".NET",
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/dotnet/dotnet02.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/dotnet/dotnet03.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/dotnet/dotnet.png"
-        ]
-      }
-    ],
-    "alerts": [
-      {
-        "name": "Apdex Score",
-        "details": "This alert is triggered when the Apdex score is below 0.5 for 5 minutes",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "Memory Usage",
-        "details": "This alert is triggered when Memory usage is above 90%",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "Transaction Errors",
-        "details": "This alert is triggered when the the transactions fail more than 10% of the time in 5 minutes.",
-        "type": "STATIC",
-        "url": null
-      }
-    ],
-    "documentation": [
-      {
-        "name": "ASP .NET MVC installation docs",
-        "description": "Open-source web application framework developed by Microsoft, which\nimplements the model-view-controller pattern.\n",
-        "url": "https://docs.newrelic.com/docs/agents/net-agent/getting-started/net-agent-compatibility-requirements-net-core"
-      }
-    ],
-    "installPlans": [
-      {
-        "name": ".NET agent",
-        "id": "dotnet-windows-agent"
-      }
-    ]
-  },
-  {
     "title": "Unix",
     "name": "unix",
     "description": "The Unix monitoring integration allows for system-level monitoring of AIX,\nLinux, macOS, Solaris/SunOS and other Unix-based servers.",
@@ -19053,77 +19081,6 @@
       {
         "name": "Unix",
         "id": "third-party-unix"
-      }
-    ]
-  },
-  {
-    "title": "C#",
-    "name": "c-sharp",
-    "description": "## Comprehensive monitoring quickstart for C#\nWith our C# integration, you can find and address performance bottlenecks while operating in a live development environment. Monitor your app via our dashboard quickstarts and ensure you're delivering the best user experience.\n\n## Why monitor C#?\n- Focus on the issues that affect your critical business transactions.\n- Resolve problems quickly.\n- Gain knowledge on your system's behavior in advance.\n- Learn the whole story of performance errors, from beginning to end.\n- Use traces to connect latency issues to errors, getting you to the root cause as quickly as possible.\n- See the filename and line number from the C# stack trace so you never have to guess. To reduce noise, logically filter and aggregate C# exceptions.\n- Scalable error monitoring without affecting production flow.\n- Maintain low latency with fast throughput.\n- Get meaningful data about C# errors from your dashboard.\n\n## End-to-end visibility into your C# operations\n\nOur C# dashboard translates your ingested data into a map that lets you trace business transactions across your C# stack. See your performance errors in context and prioritize your most critical operations.\n\n## What’s included in this quickstart?\nNew Relic's C# monitoring quickstart boasts instant full-stack observability out-of-the-box:\n\n- Dashboards (Throughput, Error rate, Logs, Web transaction time, Apdex Score and more).\n- Monitor scripts, functions, and web transactions.\n- High-value alerts.\n- Code-related insights about your application’s health and status. \n- Proactive alerts that inform developers about the status of their applications.",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/dotnet/csharp",
-    "id": "9b575bdc-5bf0-450f-a041-8462b886d5ee",
-    "level": "NEW_RELIC",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/dotnet/csharp/logo.png",
-    "summary": "Monitor your C# applications by tracking performance issues with a full end-to-end view of distributed traces.",
-    "websiteUrl": null,
-    "keywords": [
-      "apm",
-      "c sharp",
-      "dotnet",
-      "c#"
-    ],
-    "authors": [
-      "New Relic"
-    ],
-    "dashboards": [
-      {
-        "name": "Dotnet",
-        "description": ".NET",
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/dotnet/dotnet02.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/dotnet/dotnet03.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/dotnet/dotnet.png"
-        ]
-      }
-    ],
-    "alerts": [
-      {
-        "name": "Apdex Score",
-        "details": "This alert is triggered when the Apdex score is below 0.5 for 5 minutes.",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "High CPU Utilization",
-        "details": "This alert is triggered when the CPU Utilization is above 90%.",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "Memory Usage",
-        "details": "This alert is triggered when Memory usage is above 90%.",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "Transaction Errors",
-        "details": "This alert is triggered when the the transactions fail more than 10% of the time in 5 minutes.",
-        "type": "STATIC",
-        "url": null
-      }
-    ],
-    "documentation": [
-      {
-        "name": "C# installation docs",
-        "description": "Quickly monitor performance issues and view full end-to-end distributed trace of your .NET applications built with C#.\n",
-        "url": "https://docs.newrelic.com/docs/apm/agents/net-agent/getting-started/net-agent-compatibility-requirements-net-framework#technologies"
-      }
-    ],
-    "installPlans": [
-      {
-        "name": ".NET agent",
-        "id": "dotnet-agent"
       }
     ]
   },
@@ -19370,14 +19327,14 @@
     ]
   },
   {
-    "title": "IIS",
-    "name": "iis",
-    "description": "## What is IIS?\n\nSet of web server tools developed by Microsoft to support the .Net platform.\n\n## Get started!\n\nLeverage community expertise and instantly get value out of your telemetry data. This quickstart automatically instruments IIS with the New Relic .Net agent, and allows you to instantly monitor your .Net application with out-of-the-box dashboards and alerts. Further leverage New Relic's APM capabilities by setting up [errors inbox](https://docs.newrelic.com/docs/apm/apm-ui-pages/errors-inbox/errors-inbox/), [transaction tracing](https://docs.newrelic.com/docs/apm/transactions/transaction-traces/introduction-transaction-traces/), and [service maps](https://docs.newrelic.com/docs/understand-dependencies/understand-system-dependencies/service-maps/introduction-service-maps/).\n\n## More info\n\nCheck out the [documentation](https://docs.newrelic.com/docs/agents/net-agent/getting-started/introduction-new-relic-net/) to learn more about New Relic monitoring for IIS.",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/dotnet/iis",
-    "id": "1df9c507-ceb3-46d6-be43-7d8c43a161b3",
+    "title": "ASP .NET MVC",
+    "name": "asp-dotnet-mvc",
+    "description": "## What is ASP .NET MVC?\n\nOpen-source web application framework developed by Microsoft, which implements\nthe model-view-controller pattern.\n\n\n## Get started!\n\nLeverage community expertise and instantly get value out of your telemetry data. This quickstart automatically instruments ASP .NET MVC with the New Relic .Net agent, and allows you to instantly monitor your .Net application with out-of-the-box dashboards and alerts. Further leverage New Relic's APM capabilities by setting up [errors inbox](https://docs.newrelic.com/docs/apm/apm-ui-pages/errors-inbox/errors-inbox/), [transaction tracing](https://docs.newrelic.com/docs/apm/transactions/transaction-traces/introduction-transaction-traces/), and [service maps](https://docs.newrelic.com/docs/understand-dependencies/understand-system-dependencies/service-maps/introduction-service-maps/).\n\n## More info\n\nCheck out the [documentation](https://docs.newrelic.com/docs/agents/net-agent/getting-started/introduction-new-relic-net/) to learn more about New Relic monitoring for ASP .NET MVC.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/dotnet/asp-dotnet-mvc",
+    "id": "8fb22c76-46c3-4720-bd82-bd101e5c890c",
     "level": "NEW_RELIC",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/dotnet/iis/logo.svg",
-    "summary": "Monitor IIS with New Relic's .NET agent",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/dotnet/asp-dotnet-mvc/logo.svg",
+    "summary": "Monitor ASP .NET MVC with New Relic's .NET agent",
     "websiteUrl": null,
     "keywords": [
       "apm",
@@ -19388,12 +19345,13 @@
     ],
     "dashboards": [
       {
-        "name": "Dotnet",
-        "description": ".NET",
+        "name": ".NET",
+        "description": null,
         "url": null,
         "screenshots": [
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/dotnet/dotnet02.png",
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/dotnet/dotnet03.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/dotnet/dotnet04.png",
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/dotnet/dotnet.png"
         ]
       }
@@ -19420,78 +19378,15 @@
     ],
     "documentation": [
       {
-        "name": "IIS installation docs",
-        "description": "Set of web server tools developed by Microsoft to support the .Net\nplatform.\n",
-        "url": "https://docs.newrelic.com/docs/agents/net-agent/getting-started/compatibility-requirements-net-framework-agent"
+        "name": "ASP .NET MVC installation docs",
+        "description": "Open-source web application framework developed by Microsoft, which\nimplements the model-view-controller pattern.\n",
+        "url": "https://docs.newrelic.com/docs/agents/net-agent/getting-started/net-agent-compatibility-requirements-net-core"
       }
     ],
     "installPlans": [
       {
         "name": ".NET agent",
         "id": "dotnet-windows-agent"
-      }
-    ]
-  },
-  {
-    "title": "Spring.net",
-    "name": "springdotnet",
-    "description": "## What is Spring.net?\n\nComprehensive infrastructural support for developing enterprise .NET\napplications; conceptually based on the Java Spring Framework.\n\n\n## Get started!\n\nLeverage community expertise and instantly get value out of your telemetry data. This quickstart automatically instruments Spring.net with the New Relic .Net agent, and allows you to instantly monitor your .Net application with out-of-the-box dashboards and alerts. Further leverage New Relic's APM capabilities by setting up [errors inbox](https://docs.newrelic.com/docs/apm/apm-ui-pages/errors-inbox/errors-inbox/), [transaction tracing](https://docs.newrelic.com/docs/apm/transactions/transaction-traces/introduction-transaction-traces/), and [service maps](https://docs.newrelic.com/docs/understand-dependencies/understand-system-dependencies/service-maps/introduction-service-maps/).\n\n## More info\n\nCheck out the [documentation](https://docs.newrelic.com/docs/agents/net-agent/getting-started/introduction-new-relic-net/) to learn more about New Relic monitoring for Spring.net.",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/dotnet/springdotnet",
-    "id": "a9e5eef7-efc9-475f-91d9-81981d968e90",
-    "level": "NEW_RELIC",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/dotnet/springdotnet/logo.svg",
-    "summary": "Monitor Spring.net with New Relic's .NET agent",
-    "websiteUrl": null,
-    "keywords": [
-      "apm",
-      "dotnet"
-    ],
-    "authors": [
-      "New Relic"
-    ],
-    "dashboards": [
-      {
-        "name": "Dotnet",
-        "description": ".NET",
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/dotnet/dotnet02.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/dotnet/dotnet03.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/dotnet/dotnet.png"
-        ]
-      }
-    ],
-    "alerts": [
-      {
-        "name": "Apdex Score",
-        "details": "This alert is triggered when the Apdex score is below 0.5 for 5 minutes",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "Memory Usage",
-        "details": "This alert is triggered when Memory usage is above 90%",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "Transaction Errors",
-        "details": "This alert is triggered when the the transactions fail more than 10% of the time in 5 minutes.",
-        "type": "STATIC",
-        "url": null
-      }
-    ],
-    "documentation": [
-      {
-        "name": "Spring.net installation docs",
-        "description": "Comprehensive infrastructural support for developing enterprise .NET\napplications; conceptually based on the Java Spring Framework.\n",
-        "url": "https://docs.newrelic.com/docs/agents/net-agent/getting-started/compatibility-requirements-net-framework-agent"
-      }
-    ],
-    "installPlans": [
-      {
-        "name": ".NET agent",
-        "id": "dotnet-agent"
       }
     ]
   },
@@ -19589,6 +19484,206 @@
       {
         "name": "AWS-CloudWatch-Metric-Streams",
         "id": "aws-cloudwatch-metric-streams"
+      }
+    ]
+  },
+  {
+    "title": "C#",
+    "name": "c-sharp",
+    "description": "## Comprehensive monitoring quickstart for C#\nWith our C# integration, you can find and address performance bottlenecks while operating in a live development environment. Monitor your app via our dashboard quickstarts and ensure you're delivering the best user experience.\n\n## Why monitor C#?\n- Focus on the issues that affect your critical business transactions.\n- Resolve problems quickly.\n- Gain knowledge on your system's behavior in advance.\n- Learn the whole story of performance errors, from beginning to end.\n- Use traces to connect latency issues to errors, getting you to the root cause as quickly as possible.\n- See the filename and line number from the C# stack trace so you never have to guess. To reduce noise, logically filter and aggregate C# exceptions.\n- Scalable error monitoring without affecting production flow.\n- Maintain low latency with fast throughput.\n- Get meaningful data about C# errors from your dashboard.\n\n## End-to-end visibility into your C# operations\n\nOur C# dashboard translates your ingested data into a map that lets you trace business transactions across your C# stack. See your performance errors in context and prioritize your most critical operations.\n\n## What’s included in this quickstart?\nNew Relic's C# monitoring quickstart boasts instant full-stack observability out-of-the-box:\n\n- Dashboards (Throughput, Error rate, Logs, Web transaction time, Apdex Score and more).\n- Monitor scripts, functions, and web transactions.\n- High-value alerts.\n- Code-related insights about your application’s health and status. \n- Proactive alerts that inform developers about the status of their applications.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/dotnet/csharp",
+    "id": "9b575bdc-5bf0-450f-a041-8462b886d5ee",
+    "level": "NEW_RELIC",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/dotnet/csharp/logo.png",
+    "summary": "Monitor your C# applications by tracking performance issues with a full end-to-end view of distributed traces.",
+    "websiteUrl": null,
+    "keywords": [
+      "apm",
+      "c sharp",
+      "dotnet",
+      "c#"
+    ],
+    "authors": [
+      "New Relic"
+    ],
+    "dashboards": [
+      {
+        "name": ".NET",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/dotnet/dotnet02.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/dotnet/dotnet03.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/dotnet/dotnet04.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/dotnet/dotnet.png"
+        ]
+      }
+    ],
+    "alerts": [
+      {
+        "name": "Apdex Score",
+        "details": "This alert is triggered when the Apdex score is below 0.5 for 5 minutes.",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "High CPU Utilization",
+        "details": "This alert is triggered when the CPU Utilization is above 90%.",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "Memory Usage",
+        "details": "This alert is triggered when Memory usage is above 90%.",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "Transaction Errors",
+        "details": "This alert is triggered when the the transactions fail more than 10% of the time in 5 minutes.",
+        "type": "STATIC",
+        "url": null
+      }
+    ],
+    "documentation": [
+      {
+        "name": "C# installation docs",
+        "description": "Quickly monitor performance issues and view full end-to-end distributed trace of your .NET applications built with C#.\n",
+        "url": "https://docs.newrelic.com/docs/apm/agents/net-agent/getting-started/net-agent-compatibility-requirements-net-framework#technologies"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": ".NET agent",
+        "id": "dotnet-agent"
+      }
+    ]
+  },
+  {
+    "title": "IIS",
+    "name": "iis",
+    "description": "## What is IIS?\n\nSet of web server tools developed by Microsoft to support the .Net platform.\n\n## Get started!\n\nLeverage community expertise and instantly get value out of your telemetry data. This quickstart automatically instruments IIS with the New Relic .Net agent, and allows you to instantly monitor your .Net application with out-of-the-box dashboards and alerts. Further leverage New Relic's APM capabilities by setting up [errors inbox](https://docs.newrelic.com/docs/apm/apm-ui-pages/errors-inbox/errors-inbox/), [transaction tracing](https://docs.newrelic.com/docs/apm/transactions/transaction-traces/introduction-transaction-traces/), and [service maps](https://docs.newrelic.com/docs/understand-dependencies/understand-system-dependencies/service-maps/introduction-service-maps/).\n\n## More info\n\nCheck out the [documentation](https://docs.newrelic.com/docs/agents/net-agent/getting-started/introduction-new-relic-net/) to learn more about New Relic monitoring for IIS.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/dotnet/iis",
+    "id": "1df9c507-ceb3-46d6-be43-7d8c43a161b3",
+    "level": "NEW_RELIC",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/dotnet/iis/logo.svg",
+    "summary": "Monitor IIS with New Relic's .NET agent",
+    "websiteUrl": null,
+    "keywords": [
+      "apm",
+      "dotnet"
+    ],
+    "authors": [
+      "New Relic"
+    ],
+    "dashboards": [
+      {
+        "name": ".NET",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/dotnet/dotnet02.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/dotnet/dotnet03.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/dotnet/dotnet04.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/dotnet/dotnet.png"
+        ]
+      }
+    ],
+    "alerts": [
+      {
+        "name": "Apdex Score",
+        "details": "This alert is triggered when the Apdex score is below 0.5 for 5 minutes",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "Memory Usage",
+        "details": "This alert is triggered when Memory usage is above 90%",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "Transaction Errors",
+        "details": "This alert is triggered when the the transactions fail more than 10% of the time in 5 minutes.",
+        "type": "STATIC",
+        "url": null
+      }
+    ],
+    "documentation": [
+      {
+        "name": "IIS installation docs",
+        "description": "Set of web server tools developed by Microsoft to support the .Net\nplatform.\n",
+        "url": "https://docs.newrelic.com/docs/agents/net-agent/getting-started/compatibility-requirements-net-framework-agent"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": ".NET agent",
+        "id": "dotnet-windows-agent"
+      }
+    ]
+  },
+  {
+    "title": "Spring.net",
+    "name": "springdotnet",
+    "description": "## What is Spring.net?\n\nComprehensive infrastructural support for developing enterprise .NET\napplications; conceptually based on the Java Spring Framework.\n\n\n## Get started!\n\nLeverage community expertise and instantly get value out of your telemetry data. This quickstart automatically instruments Spring.net with the New Relic .Net agent, and allows you to instantly monitor your .Net application with out-of-the-box dashboards and alerts. Further leverage New Relic's APM capabilities by setting up [errors inbox](https://docs.newrelic.com/docs/apm/apm-ui-pages/errors-inbox/errors-inbox/), [transaction tracing](https://docs.newrelic.com/docs/apm/transactions/transaction-traces/introduction-transaction-traces/), and [service maps](https://docs.newrelic.com/docs/understand-dependencies/understand-system-dependencies/service-maps/introduction-service-maps/).\n\n## More info\n\nCheck out the [documentation](https://docs.newrelic.com/docs/agents/net-agent/getting-started/introduction-new-relic-net/) to learn more about New Relic monitoring for Spring.net.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/dotnet/springdotnet",
+    "id": "a9e5eef7-efc9-475f-91d9-81981d968e90",
+    "level": "NEW_RELIC",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/dotnet/springdotnet/logo.svg",
+    "summary": "Monitor Spring.net with New Relic's .NET agent",
+    "websiteUrl": null,
+    "keywords": [
+      "apm",
+      "dotnet"
+    ],
+    "authors": [
+      "New Relic"
+    ],
+    "dashboards": [
+      {
+        "name": ".NET",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/dotnet/dotnet02.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/dotnet/dotnet03.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/dotnet/dotnet04.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/dotnet/dotnet.png"
+        ]
+      }
+    ],
+    "alerts": [
+      {
+        "name": "Apdex Score",
+        "details": "This alert is triggered when the Apdex score is below 0.5 for 5 minutes",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "Memory Usage",
+        "details": "This alert is triggered when Memory usage is above 90%",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "Transaction Errors",
+        "details": "This alert is triggered when the the transactions fail more than 10% of the time in 5 minutes.",
+        "type": "STATIC",
+        "url": null
+      }
+    ],
+    "documentation": [
+      {
+        "name": "Spring.net installation docs",
+        "description": "Comprehensive infrastructural support for developing enterprise .NET\napplications; conceptually based on the Java Spring Framework.\n",
+        "url": "https://docs.newrelic.com/docs/agents/net-agent/getting-started/compatibility-requirements-net-framework-agent"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": ".NET agent",
+        "id": "dotnet-agent"
       }
     ]
   },
@@ -19837,48 +19932,6 @@
       {
         "name": "Ruby Agent",
         "id": "setup-ruby-agent"
-      }
-    ]
-  },
-  {
-    "title": "AWS Elasticsearch",
-    "name": "aws-elasticsearch",
-    "description": "## What is AWS Elasticsearch?\n\nFully managed services for deploying and managing Elasticsearch\nimplementations on AWS.\n\n\n### Get started!\n\nStart monitoring AWS Elasticsearch by connecting Amazon Web Services (AWS) to New Relic!\n\nCheck out our AWS Elasticsearch documentation to instrument your cloud service and manage the stability, scalability, and reliability of your systems with New Relic's infrastructure monitoring capabilities.\n\n### More info\n\nCheck out the [documentation](https://docs.newrelic.com/docs/infrastructure/amazon-integrations/aws-integrations-list/aws-elasticsearch-monitoring-integration/) to learn more about New Relic monitoring for AWS Elasticsearch.",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/aws/aws-elasticsearch",
-    "id": "a69e9de8-2968-44a9-9fff-9065dd9075dd",
-    "level": "NEW_RELIC",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/aws/aws-elasticsearch/logo.svg",
-    "summary": "Monitor AWS Elasticsearch by connecting AWS to New Relic",
-    "websiteUrl": null,
-    "keywords": [
-      "aws",
-      "amazon web services"
-    ],
-    "authors": [
-      "New Relic"
-    ],
-    "dashboards": [
-      {
-        "name": "Amazon Elasticsearch Service",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/elasticsearch/elasticsearch.png"
-        ]
-      }
-    ],
-    "alerts": [],
-    "documentation": [
-      {
-        "name": "AWS Elasticsearch installation docs",
-        "description": "Monitor AWS Elasticsearch by connecting AWS to New Relic.\n",
-        "url": "https://docs.newrelic.com/docs/infrastructure/amazon-integrations/aws-integrations-list/aws-elasticsearch-monitoring-integration/"
-      }
-    ],
-    "installPlans": [
-      {
-        "name": "AWS-CloudWatch-Metric-Streams",
-        "id": "aws-cloudwatch-metric-streams"
       }
     ]
   },
@@ -21103,132 +21156,6 @@
     ]
   },
   {
-    "title": "ASP .NET Web forms",
-    "name": "asp-dotnet-web-forms",
-    "description": "## What is ASP .NET Web forms?\n\nFramework with a drag-and-drop, event-driven model that can be used to build\nweb applications.\n\n\n## Get started!\n\nLeverage community expertise and instantly get value out of your telemetry data. This quickstart automatically instruments ASP .NET Web forms with the New Relic .Net agent, and allows you to instantly monitor your .Net application with out-of-the-box dashboards and alerts. Further leverage New Relic's APM capabilities by setting up [errors inbox](https://docs.newrelic.com/docs/apm/apm-ui-pages/errors-inbox/errors-inbox/), [transaction tracing](https://docs.newrelic.com/docs/apm/transactions/transaction-traces/introduction-transaction-traces/), and [service maps](https://docs.newrelic.com/docs/understand-dependencies/understand-system-dependencies/service-maps/introduction-service-maps/).\n\n## More info\n\nCheck out the [documentation](https://docs.newrelic.com/docs/agents/net-agent/getting-started/introduction-new-relic-net/) to learn more about New Relic monitoring for ASP .NET Web forms.",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/dotnet/asp-dotnet-web-forms",
-    "id": "9ec196c6-1725-40fd-b18a-6224a7377851",
-    "level": "NEW_RELIC",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/dotnet/asp-dotnet-web-forms/logo.svg",
-    "summary": "Monitor ASP .NET Web forms with New Relic's .NET agent",
-    "websiteUrl": null,
-    "keywords": [
-      "apm",
-      "dotnet"
-    ],
-    "authors": [
-      "New Relic"
-    ],
-    "dashboards": [
-      {
-        "name": "Dotnet",
-        "description": ".NET",
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/dotnet/dotnet02.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/dotnet/dotnet03.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/dotnet/dotnet.png"
-        ]
-      }
-    ],
-    "alerts": [
-      {
-        "name": "Apdex Score",
-        "details": "This alert is triggered when the Apdex score is below 0.5 for 5 minutes",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "Memory Usage",
-        "details": "This alert is triggered when Memory usage is above 90%",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "Transaction Errors",
-        "details": "This alert is triggered when the the transactions fail more than 10% of the time in 5 minutes.",
-        "type": "STATIC",
-        "url": null
-      }
-    ],
-    "documentation": [
-      {
-        "name": "ASP .NET Web forms installation docs",
-        "description": "Framework with a drag-and-drop, event-driven model that can be used to\nbuild web applications.\n",
-        "url": "https://docs.newrelic.com/docs/agents/net-agent/getting-started/compatibility-requirements-net-framework-agent"
-      }
-    ],
-    "installPlans": [
-      {
-        "name": ".NET agent",
-        "id": "dotnet-agent"
-      }
-    ]
-  },
-  {
-    "title": "Umbraco",
-    "name": "umbraco",
-    "description": "## What is Umbraco?\n\nOpen source CMS for the web built in ASP.NET.\n\n## Get started!\n\nLeverage community expertise and instantly get value out of your telemetry data. This quickstart automatically instruments Umbraco with the New Relic .Net agent, and allows you to instantly monitor your .Net application with out-of-the-box dashboards and alerts. Further leverage New Relic's APM capabilities by setting up [errors inbox](https://docs.newrelic.com/docs/apm/apm-ui-pages/errors-inbox/errors-inbox/), [transaction tracing](https://docs.newrelic.com/docs/apm/transactions/transaction-traces/introduction-transaction-traces/), and [service maps](https://docs.newrelic.com/docs/understand-dependencies/understand-system-dependencies/service-maps/introduction-service-maps/).\n\n## More info\n\nCheck out the [documentation](https://docs.newrelic.com/docs/agents/net-agent/getting-started/introduction-new-relic-net/) to learn more about New Relic monitoring for Umbraco.",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/dotnet/umbraco",
-    "id": "f3b27140-ec22-4f7c-bd06-27d705370c6e",
-    "level": "NEW_RELIC",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/dotnet/umbraco/logo.svg",
-    "summary": "Monitor Umbraco with New Relic's .NET agent",
-    "websiteUrl": null,
-    "keywords": [
-      "apm",
-      "dotnet"
-    ],
-    "authors": [
-      "New Relic"
-    ],
-    "dashboards": [
-      {
-        "name": "Dotnet",
-        "description": ".NET",
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/dotnet/dotnet02.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/dotnet/dotnet03.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/dotnet/dotnet.png"
-        ]
-      }
-    ],
-    "alerts": [
-      {
-        "name": "Apdex Score",
-        "details": "This alert is triggered when the Apdex score is below 0.5 for 5 minutes",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "Memory Usage",
-        "details": "This alert is triggered when Memory usage is above 90%",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "Transaction Errors",
-        "details": "This alert is triggered when the the transactions fail more than 10% of the time in 5 minutes.",
-        "type": "STATIC",
-        "url": null
-      }
-    ],
-    "documentation": [
-      {
-        "name": "Umbraco installation docs",
-        "description": "Open source CMS for the web built in ASP.NET.",
-        "url": "https://docs.newrelic.com/docs/agents/net-agent/getting-started/compatibility-requirements-net-framework-agent"
-      }
-    ],
-    "installPlans": [
-      {
-        "name": ".NET agent",
-        "id": "dotnet-windows-agent"
-      }
-    ]
-  },
-  {
     "title": "Google Cloud Spanner (latency monitoring)",
     "name": "google-cloud-spanner-latency",
     "description": "## What is Google Cloud Spanner?\n\nGlobally-distributed relational database service built for the cloud. Add\nschemas, write and modify data, and run queries.\n\n\n### Get started!\n\nThe metric data available with this integration pairs alongside the [CPU monitoring integration](https://docs.newrelic.com/docs/infrastructure/google-cloud-platform-integrations/gcp-integrations-list/google-cloud-spanner-monitoring-integration/) for full stack observability on your cloud spanner intance. This integration focuses on DB Queries, latency timing, and other core metrics on your Google Cloud Spanner instance.\n\n### About this quickstart\n\nThis integration gives you visibility into the following:\n\n- Slow query count\n- Commit latency\n- Average Bytes\n- Average lock wait\n- Average cpu seconds\n- Average rows",
@@ -21443,6 +21370,180 @@
       {
         "name": "PHP Agent",
         "id": "php-agent"
+      }
+    ]
+  },
+  {
+    "title": "AWS ELB",
+    "name": "aws-elb",
+    "description": "## What is AWS ELB?\n\nAutomatically redirect incoming web traffic to balance load when demand rises.\n\n### Get started!\\n\\nStart monitoring AWS ELB by connecting Amazon Web Services (AWS) to New Relic!\n\nCheck out our AWS ELB documentation to instrument your cloud service and manage the stability, scalability, and reliability of your systems with New Relic's infrastructure monitoring capabilities.\n\n### More info\n\nCheck out the [documentation](https://docs.newrelic.com/docs/infrastructure/amazon-integrations/aws-integrations-list/aws-elb-classic-monitoring-integration/) to learn more about New Relic monitoring for AWS ELB.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/aws/aws-elb",
+    "id": "ceb7f12e-fc9c-48c8-8fa8-a6d353c5f751",
+    "level": "NEW_RELIC",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/aws/aws-elb/logo.svg",
+    "summary": "Monitor AWS ELB by connecting AWS to New Relic",
+    "websiteUrl": null,
+    "keywords": [
+      "aws",
+      "amazon web services",
+      "load balancer",
+      "networking"
+    ],
+    "authors": [
+      "New Relic"
+    ],
+    "dashboards": [
+      {
+        "name": "AWS ELB",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/aws-elb/aws-elb1.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/aws-elb/aws-elb2.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/aws-elb/aws-elb3.png"
+        ]
+      }
+    ],
+    "alerts": [],
+    "documentation": [
+      {
+        "name": "AWS ELB installation docs",
+        "description": "Monitor AWS ELB by connecting AWS to New Relic.\n",
+        "url": "https://docs.newrelic.com/docs/infrastructure/amazon-integrations/aws-integrations-list/aws-elb-classic-monitoring-integration/"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "AWS-CloudWatch-Metric-Streams",
+        "id": "aws-cloudwatch-metric-streams"
+      }
+    ]
+  },
+  {
+    "title": "ASP .NET Web forms",
+    "name": "asp-dotnet-web-forms",
+    "description": "## What is ASP .NET Web forms?\n\nFramework with a drag-and-drop, event-driven model that can be used to build\nweb applications.\n\n\n## Get started!\n\nLeverage community expertise and instantly get value out of your telemetry data. This quickstart automatically instruments ASP .NET Web forms with the New Relic .Net agent, and allows you to instantly monitor your .Net application with out-of-the-box dashboards and alerts. Further leverage New Relic's APM capabilities by setting up [errors inbox](https://docs.newrelic.com/docs/apm/apm-ui-pages/errors-inbox/errors-inbox/), [transaction tracing](https://docs.newrelic.com/docs/apm/transactions/transaction-traces/introduction-transaction-traces/), and [service maps](https://docs.newrelic.com/docs/understand-dependencies/understand-system-dependencies/service-maps/introduction-service-maps/).\n\n## More info\n\nCheck out the [documentation](https://docs.newrelic.com/docs/agents/net-agent/getting-started/introduction-new-relic-net/) to learn more about New Relic monitoring for ASP .NET Web forms.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/dotnet/asp-dotnet-web-forms",
+    "id": "9ec196c6-1725-40fd-b18a-6224a7377851",
+    "level": "NEW_RELIC",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/dotnet/asp-dotnet-web-forms/logo.svg",
+    "summary": "Monitor ASP .NET Web forms with New Relic's .NET agent",
+    "websiteUrl": null,
+    "keywords": [
+      "apm",
+      "dotnet"
+    ],
+    "authors": [
+      "New Relic"
+    ],
+    "dashboards": [
+      {
+        "name": ".NET",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/dotnet/dotnet02.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/dotnet/dotnet03.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/dotnet/dotnet04.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/dotnet/dotnet.png"
+        ]
+      }
+    ],
+    "alerts": [
+      {
+        "name": "Apdex Score",
+        "details": "This alert is triggered when the Apdex score is below 0.5 for 5 minutes",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "Memory Usage",
+        "details": "This alert is triggered when Memory usage is above 90%",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "Transaction Errors",
+        "details": "This alert is triggered when the the transactions fail more than 10% of the time in 5 minutes.",
+        "type": "STATIC",
+        "url": null
+      }
+    ],
+    "documentation": [
+      {
+        "name": "ASP .NET Web forms installation docs",
+        "description": "Framework with a drag-and-drop, event-driven model that can be used to\nbuild web applications.\n",
+        "url": "https://docs.newrelic.com/docs/agents/net-agent/getting-started/compatibility-requirements-net-framework-agent"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": ".NET agent",
+        "id": "dotnet-agent"
+      }
+    ]
+  },
+  {
+    "title": "Umbraco",
+    "name": "umbraco",
+    "description": "## What is Umbraco?\n\nOpen source CMS for the web built in ASP.NET.\n\n## Get started!\n\nLeverage community expertise and instantly get value out of your telemetry data. This quickstart automatically instruments Umbraco with the New Relic .Net agent, and allows you to instantly monitor your .Net application with out-of-the-box dashboards and alerts. Further leverage New Relic's APM capabilities by setting up [errors inbox](https://docs.newrelic.com/docs/apm/apm-ui-pages/errors-inbox/errors-inbox/), [transaction tracing](https://docs.newrelic.com/docs/apm/transactions/transaction-traces/introduction-transaction-traces/), and [service maps](https://docs.newrelic.com/docs/understand-dependencies/understand-system-dependencies/service-maps/introduction-service-maps/).\n\n## More info\n\nCheck out the [documentation](https://docs.newrelic.com/docs/agents/net-agent/getting-started/introduction-new-relic-net/) to learn more about New Relic monitoring for Umbraco.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/dotnet/umbraco",
+    "id": "f3b27140-ec22-4f7c-bd06-27d705370c6e",
+    "level": "NEW_RELIC",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/dotnet/umbraco/logo.svg",
+    "summary": "Monitor Umbraco with New Relic's .NET agent",
+    "websiteUrl": null,
+    "keywords": [
+      "apm",
+      "dotnet"
+    ],
+    "authors": [
+      "New Relic"
+    ],
+    "dashboards": [
+      {
+        "name": ".NET",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/dotnet/dotnet02.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/dotnet/dotnet03.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/dotnet/dotnet04.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/dotnet/dotnet.png"
+        ]
+      }
+    ],
+    "alerts": [
+      {
+        "name": "Apdex Score",
+        "details": "This alert is triggered when the Apdex score is below 0.5 for 5 minutes",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "Memory Usage",
+        "details": "This alert is triggered when Memory usage is above 90%",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "Transaction Errors",
+        "details": "This alert is triggered when the the transactions fail more than 10% of the time in 5 minutes.",
+        "type": "STATIC",
+        "url": null
+      }
+    ],
+    "documentation": [
+      {
+        "name": "Umbraco installation docs",
+        "description": "Open source CMS for the web built in ASP.NET.",
+        "url": "https://docs.newrelic.com/docs/agents/net-agent/getting-started/compatibility-requirements-net-framework-agent"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": ".NET agent",
+        "id": "dotnet-windows-agent"
       }
     ]
   },
@@ -22661,41 +22762,6 @@
     ]
   },
   {
-    "title": "AWS ELB",
-    "name": "aws-elb",
-    "description": "## What is AWS ELB?\n\nAutomatically redirect incoming web traffic to balance load when demand rises.\n\n### Get started!\n\nStart monitoring AWS ELB by connecting Amazon Web Services (AWS) to New Relic!\n\nCheck out our AWS ELB documentation to instrument your cloud service and manage the stability, scalability, and reliability of your systems with New Relic's infrastructure monitoring capabilities.\n\n### More info\n\nCheck out the [documentation](https://docs.newrelic.com/docs/infrastructure/amazon-integrations/aws-integrations-list/aws-elb-classic-monitoring-integration/) to learn more about New Relic monitoring for AWS ELB.",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/aws/aws-elb",
-    "id": "ceb7f12e-fc9c-48c8-8fa8-a6d353c5f751",
-    "level": "NEW_RELIC",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/aws/aws-elb/logo.svg",
-    "summary": "Monitor AWS ELB by connecting AWS to New Relic",
-    "websiteUrl": null,
-    "keywords": [
-      "aws",
-      "amazon web services",
-      "load balancer",
-      "networking"
-    ],
-    "authors": [
-      "New Relic"
-    ],
-    "dashboards": [],
-    "alerts": [],
-    "documentation": [
-      {
-        "name": "AWS ELB installation docs",
-        "description": "Monitor AWS ELB by connecting AWS to New Relic.\n",
-        "url": "https://docs.newrelic.com/docs/infrastructure/amazon-integrations/aws-integrations-list/aws-elb-classic-monitoring-integration/"
-      }
-    ],
-    "installPlans": [
-      {
-        "name": "AWS-Infrastructure-Monitoring",
-        "id": "aws-infrastructure-monitoring"
-      }
-    ]
-  },
-  {
     "title": "AWS Kinesis Data Streams",
     "name": "aws-kinesis-data-streams",
     "description": "## What is AWS Kinesis Data Streams?\n\nPlatform for streaming data on AWS, making it easy to load and analyze data in\nreal time and build applications for specialized needs.\n\n\n### Get started!\n\nStart monitoring AWS Kinesis Data Streams by connecting Amazon Web Services (AWS) to New Relic!\n\nCheck out our AWS Kinesis Data Streams documentation to instrument your cloud service and manage the stability, scalability, and reliability of your systems with New Relic's infrastructure monitoring capabilities.\n\n### More info\n\nCheck out the [documentation](https://docs.newrelic.com/docs/infrastructure/amazon-integrations/aws-integrations-list/aws-kinesis-data-streams-monitoring-integration/) to learn more about New Relic monitoring for AWS Kinesis Data Streams.",
@@ -23412,6 +23478,14 @@
     ],
     "dashboards": [
       {
+        "name": "GCP Integrations Data Ingest Analysis",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/gcp-integrations-data-ingest-analysis/gcp-integrations-data-ingest-analysis.png"
+        ]
+      },
+      {
         "name": "On-Host Integrations Data Analysis",
         "description": null,
         "url": null,
@@ -23425,14 +23499,6 @@
         "url": null,
         "screenshots": [
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/kubernetes-data-ingest-analysis/kubernetes-data-ingest-analysis.png"
-        ]
-      },
-      {
-        "name": "GCP Integrations Data Ingest Analysis",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/gcp-integrations-data-ingest-analysis/gcp-integrations-data-ingest-analysis.png"
         ]
       },
       {
@@ -23932,12 +23998,13 @@
     ],
     "dashboards": [
       {
-        "name": "Dotnet",
-        "description": ".NET",
+        "name": ".NET",
+        "description": null,
         "url": null,
         "screenshots": [
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/dotnet/dotnet02.png",
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/dotnet/dotnet03.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/dotnet/dotnet04.png",
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/dotnet/dotnet.png"
         ]
       }
@@ -23966,69 +24033,6 @@
       {
         "name": "CSLA .NET installation docs",
         "description": "Software framework for building an object-oriented layer for tracking\nbusiness logic.\n",
-        "url": "https://docs.newrelic.com/docs/agents/net-agent/getting-started/compatibility-requirements-net-framework-agent"
-      }
-    ],
-    "installPlans": [
-      {
-        "name": ".NET agent",
-        "id": "dotnet-agent"
-      }
-    ]
-  },
-  {
-    "title": "MonoRail",
-    "name": "monorail",
-    "description": "## What is MonoRail?\n\nOpen source web application framework built for .NET designed to imitate some\nof the functions of Ruby on Rails.\n\n\n## Get started!\n\nLeverage community expertise and instantly get value out of your telemetry data. This quickstart automatically instruments MonoRail with the New Relic .Net agent, and allows you to instantly monitor your .Net application with out-of-the-box dashboards and alerts. Further leverage New Relic's APM capabilities by setting up [errors inbox](https://docs.newrelic.com/docs/apm/apm-ui-pages/errors-inbox/errors-inbox/), [transaction tracing](https://docs.newrelic.com/docs/apm/transactions/transaction-traces/introduction-transaction-traces/), and [service maps](https://docs.newrelic.com/docs/understand-dependencies/understand-system-dependencies/service-maps/introduction-service-maps/).\n\n## More info\n\nCheck out the [documentation](https://docs.newrelic.com/docs/agents/net-agent/getting-started/introduction-new-relic-net/) to learn more about New Relic monitoring for MonoRail.",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/dotnet/monorail",
-    "id": "3082c380-5cc1-48f7-976c-2b5157ecad92",
-    "level": "NEW_RELIC",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/dotnet/monorail/logo.svg",
-    "summary": "Monitor MonoRail with New Relic's .NET agent",
-    "websiteUrl": null,
-    "keywords": [
-      "apm",
-      "dotnet"
-    ],
-    "authors": [
-      "New Relic"
-    ],
-    "dashboards": [
-      {
-        "name": "Dotnet",
-        "description": ".NET",
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/dotnet/dotnet02.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/dotnet/dotnet03.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/dotnet/dotnet.png"
-        ]
-      }
-    ],
-    "alerts": [
-      {
-        "name": "Apdex Score",
-        "details": "This alert is triggered when the Apdex score is below 0.5 for 5 minutes",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "Memory Usage",
-        "details": "This alert is triggered when Memory usage is above 90%",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "Transaction Errors",
-        "details": "This alert is triggered when the the transactions fail more than 10% of the time in 5 minutes.",
-        "type": "STATIC",
-        "url": null
-      }
-    ],
-    "documentation": [
-      {
-        "name": "MonoRail installation docs",
-        "description": "Open source web application framework built for .NET designed to imitate\nsome of the functions of Ruby on Rails.\n",
         "url": "https://docs.newrelic.com/docs/agents/net-agent/getting-started/compatibility-requirements-net-framework-agent"
       }
     ],
@@ -24126,6 +24130,70 @@
       {
         "name": "Java Agent",
         "id": "setup-java-agent"
+      }
+    ]
+  },
+  {
+    "title": "MonoRail",
+    "name": "monorail",
+    "description": "## What is MonoRail?\n\nOpen source web application framework built for .NET designed to imitate some\nof the functions of Ruby on Rails.\n\n\n## Get started!\n\nLeverage community expertise and instantly get value out of your telemetry data. This quickstart automatically instruments MonoRail with the New Relic .Net agent, and allows you to instantly monitor your .Net application with out-of-the-box dashboards and alerts. Further leverage New Relic's APM capabilities by setting up [errors inbox](https://docs.newrelic.com/docs/apm/apm-ui-pages/errors-inbox/errors-inbox/), [transaction tracing](https://docs.newrelic.com/docs/apm/transactions/transaction-traces/introduction-transaction-traces/), and [service maps](https://docs.newrelic.com/docs/understand-dependencies/understand-system-dependencies/service-maps/introduction-service-maps/).\n\n## More info\n\nCheck out the [documentation](https://docs.newrelic.com/docs/agents/net-agent/getting-started/introduction-new-relic-net/) to learn more about New Relic monitoring for MonoRail.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/dotnet/monorail",
+    "id": "3082c380-5cc1-48f7-976c-2b5157ecad92",
+    "level": "NEW_RELIC",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/dotnet/monorail/logo.svg",
+    "summary": "Monitor MonoRail with New Relic's .NET agent",
+    "websiteUrl": null,
+    "keywords": [
+      "apm",
+      "dotnet"
+    ],
+    "authors": [
+      "New Relic"
+    ],
+    "dashboards": [
+      {
+        "name": ".NET",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/dotnet/dotnet02.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/dotnet/dotnet03.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/dotnet/dotnet04.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/dotnet/dotnet.png"
+        ]
+      }
+    ],
+    "alerts": [
+      {
+        "name": "Apdex Score",
+        "details": "This alert is triggered when the Apdex score is below 0.5 for 5 minutes",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "Memory Usage",
+        "details": "This alert is triggered when Memory usage is above 90%",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "Transaction Errors",
+        "details": "This alert is triggered when the the transactions fail more than 10% of the time in 5 minutes.",
+        "type": "STATIC",
+        "url": null
+      }
+    ],
+    "documentation": [
+      {
+        "name": "MonoRail installation docs",
+        "description": "Open source web application framework built for .NET designed to imitate\nsome of the functions of Ruby on Rails.\n",
+        "url": "https://docs.newrelic.com/docs/agents/net-agent/getting-started/compatibility-requirements-net-framework-agent"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": ".NET agent",
+        "id": "dotnet-agent"
       }
     ]
   },
@@ -24394,11 +24462,11 @@
     ],
     "dashboards": [
       {
-        "name": "Browser Pages Dashboard",
+        "name": "Browser Traffic Analysis",
         "description": null,
         "url": null,
         "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/browser-pages-dashboard/browser_pages_dashboard.png"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/traffic-analysis/traffic_analysis.png"
         ]
       },
       {
@@ -24418,11 +24486,11 @@
         ]
       },
       {
-        "name": "Browser Traffic Analysis",
+        "name": "Browser Pages Dashboard",
         "description": null,
         "url": null,
         "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/traffic-analysis/traffic_analysis.png"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/browser-pages-dashboard/browser_pages_dashboard.png"
         ]
       }
     ],
