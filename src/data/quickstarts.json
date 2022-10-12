@@ -3014,6 +3014,35 @@
     ]
   },
   {
+    "title": "Skykit Dashboards",
+    "name": "skykit",
+    "description": "With our secure, cloud-based dashboard tool, you'll be able to showcase your visual dashboards to 1, 5, 100 or more screens throughout your organization to drive smart decision making and employee engagement. Skykit allows you to securely share your dashboards and build alignment and engagement across your whole team not just the data experts.\n\nFor more information on how New Relic customers use Skykit visit [Skykit New Relic Dashboards](https://www.skykit.com/products/dashboards/connections/new-relic/).\n\nSkykit sales: sales@skykit.com\n\nSkykit support: support@skykit.com",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/skykit",
+    "id": "5c6d2e05-c7f3-4b8b-bd34-0d22c7a8de28",
+    "level": "VERIFIED",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/skykit/logo.png",
+    "summary": "Display New Relic dashboards anywhere for the entire company to see.",
+    "websiteUrl": null,
+    "keywords": [
+      "cms",
+      "content management system",
+      "newrelic partner"
+    ],
+    "authors": [
+      "Skykit"
+    ],
+    "dashboards": [],
+    "alerts": [],
+    "documentation": [
+      {
+        "name": "Get Started With Skykit Dashboards",
+        "description": "Connect with Skykit's team to get started displaying your New Relic dashboards",
+        "url": "https://www.skykit.com/products/dashboards/connections/new-relic/"
+      }
+    ],
+    "installPlans": []
+  },
+  {
     "title": "Apigee API Distributed Tracing",
     "name": "apigee-api",
     "description": "Apigee API JavaScript Resources to create or propagate W3C Trace Context through Apigee Flows and on to the Apigee Target. Apigee Flow Spans are reported back to New Relic's Trace API. Sample Policies are included to demonstrate use.",
@@ -16852,6 +16881,50 @@
     ]
   },
   {
+    "title": "Amazon App Runner",
+    "name": "aws-apprunner",
+    "description": "## Monitor your Apps running in Amazon App Runner containers on New Relic Instant Observability Platform!\nWith New Relic's Amazon App Runner integration, you now can see all your App Runner data on New Relic Instant Observability Platform.\n## Get started!\nCheck out the [documentation](https://docs.newrelic.com/docs/infrastructure/amazon-integrations/aws-integrations-list/aws-apprunner/) to learn more about New \n Relic monitoring and integration with Amazon App Runner.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/aws/aws-apprunner",
+    "id": "b70abf59-6db4-4d8d-81e6-d56bcf108f5a",
+    "level": "NEW_RELIC",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/aws/aws-apprunner/logo.png",
+    "summary": "Use New Relic - Amazon App Runner Integration to Monitor Your Containerized Apps and Services with New Relic",
+    "websiteUrl": null,
+    "keywords": [
+      "aws",
+      "amazon",
+      "app runner",
+      "logs"
+    ],
+    "authors": [
+      "New Relic"
+    ],
+    "dashboards": [
+      {
+        "name": "App Runner Telemetry",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/aws-apprunner/aws-apprunner01.png"
+        ]
+      }
+    ],
+    "alerts": [],
+    "documentation": [
+      {
+        "name": "Amazon App Runner integration docs",
+        "description": "Faster and comprehensive telemetry from AWS App Runner Service for new and existing New Relic Customers\n",
+        "url": "https://docs.newrelic.com/docs/infrastructure/amazon-integrations/aws-integrations-list/aws-apprunner/"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "AWS-Apprunner",
+        "id": "aws-apprunner"
+      }
+    ]
+  },
+  {
     "title": "FubuMVC",
     "name": "fubumvc",
     "description": "## New Relic + FubuMVC\n\nNew Relic’s monitoring quickstart for FubuMVC monitors the performance and reliability of FubuMVC applications. \n\nIt includes visual dashboards which showcase real-time metrics of the FubuMVC stack, including:\n- Errors overview\n- VM overview\n- Latest error display\n- CPU utilization display\n- Amount of memory heap used, and more. \nThe quickstart also includes alerts when certain metrics such as the Apdex score, memory usage, and number of transaction errors hit a critical threshold.\n\n### Why monitor FubuMVC with New Relic?\n\nBuilding server-side systems can be a complex process. Between dealing with incoming and outgoing HTTP requests, interfacing with other APIs and backends, the nuances of the server-side code itself, and any sort of distributed interaction or job scheduling, there are many things that can go wrong. When you monitor your Fubumvc instance, it’s much easier to spot these errors before they occur. FubuMVC fails, your whole application will too. New Relic makes it easier to prevent that failure.\nFor example, if you get an  alert when your transaction errors hit a critical a threshold, it can give you advance notice about a dead server, a network bottleneck, or an attack against your web app. Similarly, the CPU utilization dashboard helps you to know when your server load is high and when traffic might be about to overwhelm a particular HTTP service. You can address your issues proactively, before they cause an outage.",
@@ -16974,49 +17047,6 @@
       {
         "name": ".NET agent",
         "id": "dotnet-agent"
-      }
-    ]
-  },
-  {
-    "title": "AWS App Runner",
-    "name": "aws-apprunner",
-    "description": "## Monitor your Apps running in App Runner containers on New Relic Instant Observability Platform!\nWith New Relic's AWS App Runner integration, you now can see all your App Runner data on New Relic Instant Observability Platform.\n## Get started!\nCheck out the [documentation](https://docs.newrelic.com/docs/infrastructure/amazon-integrations/aws-integrations-list/aws-apprunner/) to learn more about New \n Relic monitoring and integration with AWS App Runner.",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/aws/aws-apprunner",
-    "id": "b70abf59-6db4-4d8d-81e6-d56bcf108f5a",
-    "level": "NEW_RELIC",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/aws/aws-apprunner/logo.png",
-    "summary": "Use New Relic - AWS App Runner Integration to Monitor Your Containerized Apps and Services with New Relic",
-    "websiteUrl": null,
-    "keywords": [
-      "aws",
-      "app runner",
-      "logs"
-    ],
-    "authors": [
-      "New Relic"
-    ],
-    "dashboards": [
-      {
-        "name": "App Runner Telemetry",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/aws-apprunner/aws-apprunner01.png"
-        ]
-      }
-    ],
-    "alerts": [],
-    "documentation": [
-      {
-        "name": "AWS App Runner integration docs",
-        "description": "Faster and comprehensive telemetry from AWS App Runner Service for new and existing New Relic Customers\n",
-        "url": "https://docs.newrelic.com/docs/infrastructure/amazon-integrations/aws-integrations-list/aws-apprunner/"
-      }
-    ],
-    "installPlans": [
-      {
-        "name": "AWS-Apprunner",
-        "id": "aws-apprunner"
       }
     ]
   },
