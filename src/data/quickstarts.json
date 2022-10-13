@@ -182,55 +182,6 @@
     ]
   },
   {
-    "title": "Amazon CloudFront web logs",
-    "name": "amazon-cloudfront-web-logs",
-    "description": "## What is Amazon CloudFront?\n\nSpeeds up the distribution of web content served from Amazon Web Services.\n\n### Get started!\n\nStart monitoring Amazon CloudFront by sending your Amazon Cloudfront Web Logs to New Relic. \n\nCheck out our Amazon CloudFront documentation to instrument your cloud service and manage the stability, scalability, and reliability of your systems with New Relic's Log monitoring capabilities.\n\n### More info\n\nCheck out the [documentation](https://docs.newrelic.com/docs/logs/forward-logs/cloudfront-web-logs/) to learn more about New Relic monitoring for Amazon CloudFront.",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/aws/amazon-cloudfront-logs",
-    "id": "fb4c4acc-e341-4b87-9bb1-5f98b9cc9310",
-    "level": "NEW_RELIC",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/aws/amazon-cloudfront-logs/logo.svg",
-    "summary": "Monitor Amazon CloudFront Web logs in New Relic",
-    "websiteUrl": null,
-    "keywords": [
-      "aws",
-      "amazon web services",
-      "web content",
-      "logs",
-      "logging",
-      "web logs"
-    ],
-    "authors": [
-      "New Relic",
-      "Joseph Counts"
-    ],
-    "dashboards": [
-      {
-        "name": "Amazon Cloudfront Web Logs",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/amazon-cloudfront-web-logs/amazon-cloudfront-web-logs01.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/amazon-cloudfront-web-logs/amazon-cloudfront-web-logs02.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/amazon-cloudfront-web-logs/amazon-cloudfront-web-logs03.png"
-        ]
-      }
-    ],
-    "alerts": [],
-    "documentation": [
-      {
-        "name": "Amazon CloudFront web logs installation docs",
-        "description": "Monitor Amazon CloudFront web logs in New Relic.",
-        "url": "https://docs.newrelic.com/docs/logs/forward-logs/cloudfront-web-logs/"
-      }
-    ],
-    "installPlans": [
-      {
-        "name": "Amazon-Cloudfront-Web-Logs",
-        "id": "amazon-cloudfront-web-logs"
-      }
-    ]
-  },
-  {
     "title": "StatsD",
     "name": "statsd",
     "description": "## What is StatsD?\n\nLightweight, open-source Node.js application that listens for metrics from different applications and aggregates them.\n\n## Get started!\n\nNew Relic's StatsD integration lets you easily get StatsD-format data into New Relic.\nFollow [the documentation](https://docs.newrelic.com/docs/integrations/host-integrations/host-integrations-list/statsd-monitoring-integration-version-2) to get started!",
@@ -355,56 +306,6 @@
     ]
   },
   {
-    "title": "Network Routers and Switches",
-    "name": "network-routers-and-switches",
-    "description": "The Network Routers and Switches quickstart provides a dashboard that gives you a holistic view of the interface traffic across all of the routers and switches in your network.\nUse this quickstart together with New Relic's Network Performance Monitoring (NPM) feature to visualize anomalies and/or bottlenecks in your network.",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/network-monitoring/network-routers-and-switches",
-    "id": "8d843fc7-ffcf-489a-93b1-c8499cdd16ec",
-    "level": "VERIFIED",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/network-monitoring/network-routers-and-switches/logo.svg",
-    "summary": "Router and Switch monitoring from NPM give you valuable insights into potential issues with your network.",
-    "websiteUrl": null,
-    "keywords": [
-      "npm",
-      "network",
-      "networking",
-      "router",
-      "switch",
-      "snmp",
-      "ktranslate",
-      "kentik",
-      "infrastructure"
-    ],
-    "authors": [
-      "New Relic",
-      "Zack Mutchler"
-    ],
-    "dashboards": [
-      {
-        "name": "Network - Routers and Switches",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/network-routers-and-switches/network-routers-and-switches.png"
-        ]
-      }
-    ],
-    "alerts": [],
-    "documentation": [
-      {
-        "name": "Network SNMP collection installation docs",
-        "description": "Install NPM for SNMP data collection using a simple Docker container.\n",
-        "url": "https://docs.newrelic.com/docs/network-performance-monitoring/setup-performance-monitoring/snmp-performance-monitoring/"
-      }
-    ],
-    "installPlans": [
-      {
-        "name": "SNMP",
-        "id": "network-snmp"
-      }
-    ]
-  },
-  {
     "title": "Node Exporter",
     "name": "node-exporter",
     "description": "Official New Relic dashboard for Prometheus Node Exporter. Node Exporter allows host metrics gathered by the exporter to be scraped by Prometheus Server.\n\n## Dashboard Highlights\n- Load Averages\n- CPU\n- Memory Usage\n- Storage Usage\n- Network\n\n## Requirements:\n1. [Prometheus Server](https://prometheus.io/docs/prometheus/latest/installation/)\n2. [Node Exporter](https://prometheus.io/docs/guides/node-exporter/) installed\n3. Enable Prometheus [Remote Write](https://docs.newrelic.com/docs/infrastructure/prometheus-integrations/install-configure-remote-write/set-your-prometheus-remote-write-integration/) to New Relic.\n4. To be able to filter metrics by a specific label that isn't part of the Node Exporter default installation, an `external_label` will need to be added to the Prometheus config. Example:\n    `\n      global:\n        external_labels:\n          clusterName: <cluster_name>\n    `",
@@ -509,6 +410,56 @@
       {
         "name": "ReleaseIQ",
         "id": "third-party-releaseiq"
+      }
+    ]
+  },
+  {
+    "title": "Amazon CloudFront web logs",
+    "name": "amazon-cloudfront-web-logs",
+    "description": "## What is Amazon CloudFront?\n\nSpeeds up the distribution of web content served from Amazon Web Services.\n\n### Get started!\n\nStart monitoring Amazon CloudFront by sending your Amazon Cloudfront Web Logs to New Relic. \n\nCheck out our Amazon CloudFront documentation to instrument your cloud service and manage the stability, scalability, and reliability of your systems with New Relic's Log monitoring capabilities.\n\n### More info\n\nCheck out the [documentation](https://docs.newrelic.com/docs/logs/forward-logs/cloudfront-web-logs/) to learn more about New Relic monitoring for Amazon CloudFront.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/aws/amazon-cloudfront-logs",
+    "id": "fb4c4acc-e341-4b87-9bb1-5f98b9cc9310",
+    "level": "NEW_RELIC",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/aws/amazon-cloudfront-logs/logo.svg",
+    "summary": "Monitor Amazon CloudFront Web logs in New Relic",
+    "websiteUrl": null,
+    "keywords": [
+      "aws",
+      "amazon web services",
+      "web content",
+      "logs",
+      "logging",
+      "web logs",
+      "cdn"
+    ],
+    "authors": [
+      "New Relic",
+      "Joseph Counts"
+    ],
+    "dashboards": [
+      {
+        "name": "Amazon Cloudfront Web Logs",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/amazon-cloudfront-web-logs/amazon-cloudfront-web-logs01.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/amazon-cloudfront-web-logs/amazon-cloudfront-web-logs02.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/amazon-cloudfront-web-logs/amazon-cloudfront-web-logs03.png"
+        ]
+      }
+    ],
+    "alerts": [],
+    "documentation": [
+      {
+        "name": "Amazon CloudFront web logs installation docs",
+        "description": "Monitor Amazon CloudFront web logs in New Relic.",
+        "url": "https://docs.newrelic.com/docs/logs/forward-logs/cloudfront-web-logs/"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "Amazon-Cloudfront-Web-Logs",
+        "id": "amazon-cloudfront-web-logs"
       }
     ]
   },
@@ -976,6 +927,56 @@
       {
         "name": "AWS-CloudWatch-Metric-Streams",
         "id": "aws-cloudwatch-metric-streams"
+      }
+    ]
+  },
+  {
+    "title": "Network Routers and Switches",
+    "name": "network-routers-and-switches",
+    "description": "The Network Routers and Switches quickstart provides a dashboard that gives you a holistic view of the interface traffic across all of the routers and switches in your network.\nUse this quickstart together with New Relic's Network Monitoring feature to visualize anomalies and/or bottlenecks in your network.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/network-monitoring/network-routers-and-switches",
+    "id": "8d843fc7-ffcf-489a-93b1-c8499cdd16ec",
+    "level": "VERIFIED",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/network-monitoring/network-routers-and-switches/logo.svg",
+    "summary": "Router and Switch telemetry from Network Monitoring give you valuable insights into potential issues with your network.",
+    "websiteUrl": null,
+    "keywords": [
+      "npm",
+      "network",
+      "networking",
+      "router",
+      "switch",
+      "snmp",
+      "ktranslate",
+      "kentik",
+      "infrastructure"
+    ],
+    "authors": [
+      "New Relic",
+      "Zack Mutchler"
+    ],
+    "dashboards": [
+      {
+        "name": "Network - Routers and Switches",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/network-routers-and-switches/network-routers-and-switches.png"
+        ]
+      }
+    ],
+    "alerts": [],
+    "documentation": [
+      {
+        "name": "Network SNMP collection installation docs",
+        "description": "Install Network Monitoring for SNMP data collection using a simple Docker container.\n",
+        "url": "https://docs.newrelic.com/docs/network-performance-monitoring/setup-performance-monitoring/snmp-performance-monitoring/"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "SNMP",
+        "id": "network-snmp"
       }
     ]
   },
@@ -2116,59 +2117,6 @@
     ]
   },
   {
-    "title": "Network Data Ingest and Cardinality",
-    "name": "network-data-ingest-and-cardinality",
-    "description": "The Network Data Ingest and Cardinality quickstart provides a dashboard with several pages dedicated to analyzing both overall ingest and cardinality of telemetry from Network Performance Monitoring.",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/audit/network-data-ingest-and-cardinality-analysis",
-    "id": "9ae44533-5dfa-4e8e-b72d-03b5b1bf9dba",
-    "level": "VERIFIED",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/audit/network-data-ingest-and-cardinality-analysis/logo.svg",
-    "summary": "Granular analysis of TDP consumption for your network performance data.",
-    "websiteUrl": null,
-    "keywords": [
-      "npm",
-      "network",
-      "ingest",
-      "consumption",
-      "cardinality",
-      "ktranslate",
-      "kentik",
-      "featured",
-      "infrastructure"
-    ],
-    "authors": [
-      "New Relic",
-      "Zack Mutchler"
-    ],
-    "dashboards": [
-      {
-        "name": "Network - Data Ingest and Cardinality",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/network-data-ingest-and-cardinality/network-data-ingest-and-cardinality1.jpg",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/network-data-ingest-and-cardinality/network-data-ingest-and-cardinality2.jpg",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/network-data-ingest-and-cardinality/network-data-ingest-and-cardinality3.jpg",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/network-data-ingest-and-cardinality/network-data-ingest-and-cardinality4.jpg"
-        ]
-      }
-    ],
-    "alerts": [],
-    "documentation": [
-      {
-        "name": "Network Performance Monitoring docs",
-        "description": "Get started with Network Performance Monitoring (NPM).\n",
-        "url": "https://docs.newrelic.com/docs/network-performance-monitoring/get-started/npm-introduction/"
-      }
-    ],
-    "installPlans": [
-      {
-        "name": "NPM",
-        "id": "network-performance-monitoring"
-      }
-    ]
-  },
-  {
     "title": "Mule ESB",
     "name": "mule-esb",
     "description": "# What is Mule ESB?\n\nMule is a lightweight Java-based enterprise service bus (ESB) and integration platform.\n\n\n## Get started!\n\nLeverage community expertise and instantly get value out of your telemetry data. This quickstart automatically instruments Mule ESB with the New Relic Java agent, and allows you to instantly monitor your Java application with out-of-the-box dashboards and alerts.\nFurther leverage New Relic's APM capabilities by setting up [errors inbox](https://docs.newrelic.com/docs/apm/apm-ui-pages/errors-inbox/errors-inbox/), [transaction tracing](https://docs.newrelic.com/docs/apm/transactions/transaction-traces/introduction-transaction-traces/), and [service maps](https://docs.newrelic.com/docs/understand-dependencies/understand-system-dependencies/service-maps/introduction-service-maps/).\n\n## More info\n\nCheck out the [documentation](https://docs.newrelic.com/docs/agents/java-agent/getting-started/introduction-new-relic-java/) to learn more about New Relic monitoring for Mule ESB.\nTo learn more about Mulesoft, visit their [blog](https://blogs.mulesoft.com/).",
@@ -3119,6 +3067,65 @@
       {
         "name": ".NET agent",
         "id": "dotnet-windows-agent"
+      }
+    ]
+  },
+  {
+    "title": "Network Data Ingest and Cardinality",
+    "name": "network-data-ingest-and-cardinality",
+    "description": "The Network Data Ingest and Cardinality quickstart provides a dashboard with several pages dedicated to analyzing both overall ingest and cardinality of telemetry from Network Monitoring.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/audit/network-data-ingest-and-cardinality-analysis",
+    "id": "9ae44533-5dfa-4e8e-b72d-03b5b1bf9dba",
+    "level": "VERIFIED",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/audit/network-data-ingest-and-cardinality-analysis/logo.svg",
+    "summary": "Granular analysis of TDP consumption for your network data.",
+    "websiteUrl": null,
+    "keywords": [
+      "npm",
+      "network",
+      "ingest",
+      "consumption",
+      "cardinality",
+      "ktranslate",
+      "kentik",
+      "featured",
+      "infrastructure"
+    ],
+    "authors": [
+      "New Relic",
+      "Zack Mutchler"
+    ],
+    "dashboards": [
+      {
+        "name": "Network - Data Ingest and Cardinality",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/network-data-ingest-and-cardinality/network-data-ingest-and-cardinality1.jpg",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/network-data-ingest-and-cardinality/network-data-ingest-and-cardinality2.jpg",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/network-data-ingest-and-cardinality/network-data-ingest-and-cardinality3.jpg"
+        ]
+      }
+    ],
+    "alerts": [
+      {
+        "name": "Network Metric Cardinality Violation",
+        "details": "This alert triggers when cardinality violation are found on metrics from the ktranslate Network Monitoring agent.",
+        "type": "STATIC",
+        "url": null
+      }
+    ],
+    "documentation": [
+      {
+        "name": "Network Monitoring docs",
+        "description": "Get started with Network Monitoring.\n",
+        "url": "https://docs.newrelic.com/docs/network-performance-monitoring/get-started/npm-introduction/"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "NPM",
+        "id": "network-performance-monitoring"
       }
     ]
   },
@@ -8056,59 +8063,6 @@
     ]
   },
   {
-    "title": "OpenTelemetry",
-    "name": "opentelemetry",
-    "description": "## What is OpenTelemetry?\n\nOpenTelemetry provides a secure, vendor-neutral specification for service instrumentation so that you can export data to New Relic. OpenTelemetry offers a single set of APIs and libraries that standardize how you collect and transfer telemetry data for your services.\n\nThe following components make up the OpenTelemetry project:\n\n* Specifications for the core pillars of observability to drive consistency across all projects. New Relic supports all of these signals: traces, metrics, and logs (see details below)\n* APIs that contain interfaces and implementations based on the specifications SDKs (reference implementations of the APIs) created specifically for languages like Java, Python, Go, Erlang, and more\n* Collectors that offer a vendor-agnostic implementation for processing and exporting\n* Exporters that enable you to send data to a backend of your choice\n\n## How OpenTelemetry works with New Relic\n\nNew Relic supports the native OpenTelemetry Protocol (OTLP) for exporting telemetry data. This allows you to use the vendor neutral components developed by the OpenTelemetry community to export your data to New Relic.\n\n## Get started!\n\nYou can easily instrument your service with OpenTelemetry and export your telemetry data to New Relic.\nFollow [this OpenTelemetry guide](https://docs.newrelic.com/docs/integrations/open-source-telemetry-integrations/opentelemetry/opentelemetry-quick-start/) to get started.",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/opentelemetry",
-    "id": "55445c3b-36dc-4bea-b31f-9f82fd551650",
-    "level": "NEW_RELIC",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/opentelemetry/logo.svg",
-    "summary": "Instrument your services with OpenTelemetry and New Relic",
-    "websiteUrl": null,
-    "keywords": [
-      "open source monitoring",
-      "open telemetry",
-      "otel",
-      "java",
-      "dotnet",
-      ".net",
-      "golang",
-      "go",
-      "cplusplus",
-      "c++",
-      "erlang",
-      "python",
-      "node",
-      "nodejs",
-      "node.js",
-      "javascript",
-      "ruby",
-      "elixir",
-      "php",
-      "rust",
-      "swift",
-      "apm"
-    ],
-    "authors": [
-      "New Relic"
-    ],
-    "dashboards": [],
-    "alerts": [],
-    "documentation": [
-      {
-        "name": "OpenTelemetry installation docs",
-        "description": "Suite of APIs and agents intended to capture metric, log, and trace data from\nyour software.\n",
-        "url": "https://docs.newrelic.com/docs/more-integrations/open-source-telemetry-integrations/opentelemetry/opentelemetry-setup"
-      }
-    ],
-    "installPlans": [
-      {
-        "name": "OpenTelemetry",
-        "id": "third-party-opentelemetry"
-      }
-    ]
-  },
-  {
     "title": "Amazon FSx",
     "name": "aws-fsx",
     "description": "## What is Amazon FSx?\n\nCollect Amazon FSx data for WindowsFileServer; change polling frequency and\nfilter data using configuration options. Maintained by Amazon.\n\n\n### Get started!\n\nStart monitoring Amazon FSx by connecting Amazon Web Services (AWS) to New Relic!\n\nCheck out our Amazon FSx documentation to instrument your cloud service and manage the stability, scalability, and reliability of your systems with New Relic's infrastructure monitoring capabilities.\n\n\n### More info\n\nCheck out the [documentation](https://docs.newrelic.com/docs/infrastructure/amazon-integrations/aws-integrations-list/aws-fsx-monitoring-integration/) to learn more about New Relic monitoring for Amazon FSx.",
@@ -8267,6 +8221,60 @@
       {
         "name": ".NET agent",
         "id": "dotnet-agent"
+      }
+    ]
+  },
+  {
+    "title": "OpenTelemetry",
+    "name": "opentelemetry",
+    "description": "## What is OpenTelemetry?\n\nOpenTelemetry provides a secure, vendor-neutral specification for service instrumentation so that you can export data to New Relic. OpenTelemetry offers a single set of APIs and libraries that standardize how you collect and transfer telemetry data for your services.\n\nThe following components make up the OpenTelemetry project:\n\n* Specifications for the core pillars of observability to drive consistency across all projects. New Relic supports all of these signals: traces, metrics, and logs (see details below)\n* APIs that contain interfaces and implementations based on the specifications SDKs (reference implementations of the APIs) created specifically for languages like Java, Python, Go, Erlang, and more\n* Collectors that offer a vendor-agnostic implementation for processing and exporting\n* Exporters that enable you to send data to a backend of your choice\n\n## How OpenTelemetry works with New Relic\n\nNew Relic supports the native OpenTelemetry Protocol (OTLP) for exporting telemetry data. This allows you to use the vendor neutral components developed by the OpenTelemetry community to export your data to New Relic.\n\n## Get started!\n\nYou can easily instrument your service with OpenTelemetry and export your telemetry data to New Relic.\nFollow [this OpenTelemetry guide](https://docs.newrelic.com/docs/integrations/open-source-telemetry-integrations/opentelemetry/opentelemetry-quick-start/) to get started.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/opentelemetry",
+    "id": "55445c3b-36dc-4bea-b31f-9f82fd551650",
+    "level": "NEW_RELIC",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/opentelemetry/logo.svg",
+    "summary": "Instrument your services with OpenTelemetry and New Relic",
+    "websiteUrl": null,
+    "keywords": [
+      "open source monitoring",
+      "open telemetry",
+      "otel",
+      "java",
+      "dotnet",
+      ".net",
+      "golang",
+      "go",
+      "cplusplus",
+      "c++",
+      "erlang",
+      "python",
+      "node",
+      "nodejs",
+      "node.js",
+      "javascript",
+      "ruby",
+      "elixir",
+      "php",
+      "rust",
+      "swift",
+      "apm",
+      "language agent"
+    ],
+    "authors": [
+      "New Relic"
+    ],
+    "dashboards": [],
+    "alerts": [],
+    "documentation": [
+      {
+        "name": "OpenTelemetry installation docs",
+        "description": "Suite of APIs and agents intended to capture metric, log, and trace data from\nyour software.\n",
+        "url": "https://docs.newrelic.com/docs/more-integrations/open-source-telemetry-integrations/opentelemetry/opentelemetry-setup"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "OpenTelemetry",
+        "id": "third-party-opentelemetry"
       }
     ]
   },
@@ -9721,54 +9729,6 @@
     ]
   },
   {
-    "title": "Network Syslog",
-    "name": "network-syslog",
-    "description": "The Network Syslog quickstart provides a dashboard that gives you a holistic view of collected syslogs from your network.\nUse this quickstart together with New Relic's Network Performance Monitoring (NPM) feature to analyze and alert on system messages in your network.",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/network-monitoring/network-syslog",
-    "id": "478be4d3-134a-4738-995a-7bbe020edcad",
-    "level": "VERIFIED",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/network-monitoring/network-syslog/logo.svg",
-    "summary": "Syslog monitoring from NPM gives you valuable insights into potential issues and changes within your network.",
-    "websiteUrl": null,
-    "keywords": [
-      "npm",
-      "network",
-      "networking",
-      "logging",
-      "ktranslate",
-      "kentik",
-      "infrastructure"
-    ],
-    "authors": [
-      "New Relic",
-      "Zack Mutchler"
-    ],
-    "dashboards": [
-      {
-        "name": "Network Syslog Overview",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/network-syslog/network-syslog.png"
-        ]
-      }
-    ],
-    "alerts": [],
-    "documentation": [
-      {
-        "name": "Network syslog installation docs",
-        "description": "Install NPM for syslog collection using a simple Docker container.\n",
-        "url": "https://docs.newrelic.com/docs/network-performance-monitoring/setup-performance-monitoring/network-syslog-monitoring/"
-      }
-    ],
-    "installPlans": [
-      {
-        "name": "Syslog",
-        "id": "network-syslog"
-      }
-    ]
-  },
-  {
     "title": "Prometheus OpenMetrics integration",
     "name": "prometheus-openmetrics",
     "description": "## Prometheus monitoring \n\nPrometheus is an open-source monitoring and alerting toolkit. Setting up Prometheus is straightforward, but scaling up and managing is not. That’s where New Relic steps in.\n\n### New Relic's Prometheus quickstart\n\nNew Relic offers two Prometheus integration schemes, Remote Write and OpenMetrics. \n\n[Remote Write](https://docs.newrelic.com/docs/integrations/prometheus-integrations/install-configure-remote-write/prometheus-remote-write-integration/) is ideal for well-established Prometheus infrastructures. It provides easy access to your metrics and only takes one line of yaml in your configuration for access. \n\n[OpenMetrics](https://docs.newrelic.com/docs/integrations/prometheus-integrations/install-configure-openmetrics/configure-prometheus-openmetrics-integrations/) allows for more visibility across multiple container platforms. Once the integration is set up, you can query data on memory usage for pods in deployment, facet any metrics, and view raw metric values all in one place.\n\nNew Relic's Prometheus Integration stores various kinds of telemetry data - whether open-source, vendor-specific, or vendor-agnostic. \n\n### Value of the Prometheus quickstart \n\nNew Relic’s quickstart makes DevOps easier. Although there are many ways to use Prometheus data in New Relic, we’ll break these down into OpenMetrics and Remote Write to help you decide on the best option for you:\n\n#### OpenMetrics:\n\n- Use pre-built dashboards to monitor Kubernetes HPA capacity, or build your own!\n- Monitor node readiness, and create alerts to let you know if a node is having issues and should not accept workloads\n- Automatically instrument and monitor any OpenMetrics endpoint. \n\n#### Remote Write:\n\nSee all of your metrics in one place\n- Combine and group all data across an entire software stack\n- Connect Grafana dashboards\n- Better understand the relationship between data and behaviors related to your software stack",
@@ -10275,6 +10235,54 @@
       {
         "name": ".NET agent",
         "id": "dotnet-agent"
+      }
+    ]
+  },
+  {
+    "title": "Network Syslog",
+    "name": "network-syslog",
+    "description": "The Network Syslog quickstart provides a dashboard that gives you a holistic view of collected syslogs from your network.\nUse this quickstart together with New Relic's Network Monitoring feature to analyze and alert on system messages in your network.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/network-monitoring/network-syslog",
+    "id": "478be4d3-134a-4738-995a-7bbe020edcad",
+    "level": "VERIFIED",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/network-monitoring/network-syslog/logo.svg",
+    "summary": "Syslog collection from Network Monitoring gives you valuable insights into potential issues and changes within your network.",
+    "websiteUrl": null,
+    "keywords": [
+      "npm",
+      "network",
+      "networking",
+      "logging",
+      "ktranslate",
+      "kentik",
+      "infrastructure"
+    ],
+    "authors": [
+      "New Relic",
+      "Zack Mutchler"
+    ],
+    "dashboards": [
+      {
+        "name": "Network Syslog Overview",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/network-syslog/network-syslog.png"
+        ]
+      }
+    ],
+    "alerts": [],
+    "documentation": [
+      {
+        "name": "Network syslog installation docs",
+        "description": "Install Network Monitoring for syslog collection using a simple Docker container.\n",
+        "url": "https://docs.newrelic.com/docs/network-performance-monitoring/setup-performance-monitoring/network-syslog-monitoring/"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "Syslog",
+        "id": "network-syslog"
       }
     ]
   },
