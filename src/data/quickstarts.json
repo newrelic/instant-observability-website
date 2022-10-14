@@ -1872,19 +1872,19 @@
     ],
     "dashboards": [
       {
-        "name": "Battlesnake Performance",
-        "description": "Monitor your Battlesnake's performance and see how it stacks up against your competition!",
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/battlesnake-performance/battlesnake-performance.png"
-        ]
-      },
-      {
         "name": "Battlesnake Server Status",
         "description": "A dashboard to monitor your Battlesnake server's performance. It's important to keep all responses to the `/move` endpoint under 500ms. Furthermore, it's possible that your snake may be in multiple concurrent matches at the same time. It's important to make sure you server and web application are running smoothly to keep you in the game!",
         "url": null,
         "screenshots": [
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/battlesnake-server-status/battlesnake-server-status.png"
+        ]
+      },
+      {
+        "name": "Battlesnake Performance",
+        "description": "Monitor your Battlesnake's performance and see how it stacks up against your competition!",
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/battlesnake-performance/battlesnake-performance.png"
         ]
       },
       {
@@ -4316,19 +4316,19 @@
     ],
     "dashboards": [
       {
-        "name": "Data Ingest Governance Baseline",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/data-ingest-baseline/data-ingest-baseline.png"
-        ]
-      },
-      {
         "name": "Data Ingest Governance Entity Breakdowns",
         "description": null,
         "url": null,
         "screenshots": [
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/data-ingest-entity-breakdown/data-ingest-entity-breakdown.png"
+        ]
+      },
+      {
+        "name": "Data Ingest Governance Baseline",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/data-ingest-baseline/data-ingest-baseline.png"
         ]
       }
     ],
@@ -4748,14 +4748,6 @@
     ],
     "dashboards": [
       {
-        "name": "Redis Enterprise Database Metrics",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/database/database01.png"
-        ]
-      },
-      {
         "name": "Redis Enterprise Cluster Metrics",
         "description": null,
         "url": null,
@@ -4769,6 +4761,14 @@
         "url": null,
         "screenshots": [
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/active-active/active_active01.png"
+        ]
+      },
+      {
+        "name": "Redis Enterprise Database Metrics",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/database/database01.png"
         ]
       }
     ],
@@ -8275,6 +8275,56 @@
       {
         "name": "OpenTelemetry",
         "id": "third-party-opentelemetry"
+      }
+    ]
+  },
+  {
+    "title": "Calico-Newrelic",
+    "name": "calico-newrelic",
+    "description": "Calico is an open source networking and network security solution for containers, virtual machines, and native host-based workloads. Calico supports a broad range of platforms including Kubernetes, OpenShift, Mirantis Kubernetes Engine (MKE), OpenStack, and bare metal services.Whether you opt to use Calico's eBPF data plane or Linux’s standard networking pipeline, Calico delivers blazing fast performance with true cloud-native scalability\n\nInstall this quickstart to access preconfigured Calico observability solutions based on Prometheus metrics that are available out-of-the-box",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/calico",
+    "id": "a4383e84-ad92-4771-8f58-d0a459542be0",
+    "level": "COMMUNITY",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/calico/logo.png",
+    "summary": "A curated dashboard based on Prometheus metrics which helps you understand the Calico CNI of your k8s cluster",
+    "websiteUrl": null,
+    "keywords": [
+      "calico",
+      "kubernetes",
+      "k8s",
+      "prometheus",
+      "remote-write"
+    ],
+    "authors": [
+      "Ragalahari Potti"
+    ],
+    "dashboards": [
+      {
+        "name": "Calico",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/calico/dashboard.png"
+        ]
+      }
+    ],
+    "alerts": [],
+    "documentation": [
+      {
+        "name": "Calico Metrics Documentation",
+        "description": "Learn more about the Prometheus metrics available for Calico-felix",
+        "url": "https://projectcalico.docs.tigera.io/reference/felix/prometheus"
+      },
+      {
+        "name": "Prometheus Remote Write Configuration",
+        "description": "Configure your Prometheus Server to remote write metrics to New Relic",
+        "url": "https://docs.newrelic.com/docs/infrastructure/prometheus-integrations/install-configure-remote-write/set-your-prometheus-remote-write-integration/"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "Prometheus remote write",
+        "id": "setup-prometheus"
       }
     ]
   },
@@ -12298,14 +12348,6 @@
     ],
     "dashboards": [
       {
-        "name": "Lacework Compliance Violations",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/lacework-compliance-violations/lacework-compliance-violations.png"
-        ]
-      },
-      {
         "name": "Lacework Anomaly Detections",
         "description": null,
         "url": null,
@@ -12319,6 +12361,14 @@
         "url": null,
         "screenshots": [
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/lacework-security-overview/lacework-security-overview.png"
+        ]
+      },
+      {
+        "name": "Lacework Compliance Violations",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/lacework-compliance-violations/lacework-compliance-violations.png"
         ]
       }
     ],
@@ -17699,14 +17749,6 @@
     ],
     "dashboards": [
       {
-        "name": "Catchpoint-Test Times",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/catchpoint-test-times/Catchpoint-Test_Times.png"
-        ]
-      },
-      {
         "name": "Catchpoint-Overview",
         "description": null,
         "url": null,
@@ -17728,6 +17770,14 @@
         "url": null,
         "screenshots": [
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/catchpoint-response-size/Catchpoint-Response_Size.png"
+        ]
+      },
+      {
+        "name": "Catchpoint-Test Times",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/catchpoint-test-times/Catchpoint-Test_Times.png"
         ]
       }
     ],
@@ -21164,57 +21214,6 @@
     ]
   },
   {
-    "title": "Google Cloud Spanner (latency monitoring)",
-    "name": "google-cloud-spanner-latency",
-    "description": "## What is Google Cloud Spanner?\n\nGlobally-distributed relational database service built for the cloud. Add\nschemas, write and modify data, and run queries.\n\n\n### Get started!\n\nThe metric data available with this integration pairs alongside the [CPU monitoring integration](https://docs.newrelic.com/docs/infrastructure/google-cloud-platform-integrations/gcp-integrations-list/google-cloud-spanner-monitoring-integration/) for full stack observability on your cloud spanner intance. This integration focuses on DB Queries, latency timing, and other core metrics on your Google Cloud Spanner instance.\n\n### About this quickstart\n\nThis integration gives you visibility into the following:\n\n- Slow query count\n- Commit latency\n- Average Bytes\n- Average lock wait\n- Average cpu seconds\n- Average rows",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/gcp/google-cloud-spanner-latency",
-    "id": "52bd4e38-5f13-4b78-add8-d5c70bb34fba",
-    "level": "COMMUNITY",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/gcp/google-cloud-spanner-latency/logo.svg",
-    "summary": "Monitor Google Cloud Spanner latency metrics by using prometheus exporter",
-    "websiteUrl": null,
-    "keywords": [
-      "gcp",
-      "google cloud platform",
-      "database",
-      "newrelic-partner"
-    ],
-    "authors": [
-      "New Relic"
-    ],
-    "dashboards": [
-      {
-        "name": "GCP Cloud Spanner",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/gcp-cloud-spanner/gcp-cloud-spanner01.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/gcp-cloud-spanner/gcp-cloud-spanner02.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/gcp-cloud-spanner/gcp-cloud-spanner03.png"
-        ]
-      }
-    ],
-    "alerts": [],
-    "documentation": [
-      {
-        "name": "Example Prometheus exporter",
-        "description": "Example google spanner prometheus exporter\n",
-        "url": "https://github.com/architjugran/example-cloudspannerreceiver"
-      },
-      {
-        "name": "Prometheus New Relic docs",
-        "description": "Use the prometheus exporter to send Metrics to New Relic\n",
-        "url": "https://docs.newrelic.com/docs/infrastructure/prometheus-integrations/get-started/send-prometheus-metric-data-new-relic/"
-      }
-    ],
-    "installPlans": [
-      {
-        "name": "cloud-spanner",
-        "id": "cloud-spanner"
-      }
-    ]
-  },
-  {
     "title": "Amazon Connect",
     "name": "aws-connect",
     "description": "## What is Amazon Connect?\n\nBuild cloud-based omnichannel support centers to serve customers dynamically.\n\n### Get started!\n\nStart monitoring Amazon Connect by connecting Amazon Web Services (AWS) to New Relic!\n\nCheck out our Amazon Connect documentation to instrument your cloud service and manage the stability, scalability, and reliability of your systems with New Relic's infrastructure monitoring capabilities.\n\n### More info\n\nCheck out the [documentation](https://docs.newrelic.com/docs/infrastructure/amazon-integrations/aws-integrations-list/aws-connect-monitoring-integration/) to learn more about New Relic monitoring for Amazon Connect.",
@@ -21552,6 +21551,61 @@
       {
         "name": ".NET agent",
         "id": "dotnet-windows-agent"
+      }
+    ]
+  },
+  {
+    "title": "Google Cloud Spanner (OTel monitoring)",
+    "name": "google-cloud-spanner-otel",
+    "description": "## What is Google Cloud Spanner?\n\nGoogle Cloud Spanner is a Globally-distributed relational database service built for the cloud. Add\nschemas, write and modify data, and run queries.\n\n### How it works\n\nThis quickstart works by using the [Prometheus OTel exporter](https://github.com/open-telemetry/opentelemetry-collector-contrib/tree/main/exporter/prometheusexporter) to send Spanner metrics to New Relic.\n\n### Get started!\n\nThe metric data available with this quickstart pairs alongside the [infrastructure monitoring quickstart](https://newrelic.com/instant-observability/google-cloud-spanner) for full stack observability on your cloud spanner intance. This integration focuses on Query metrics, Transaction metrics, and other DB monitoring metrics, while the infra integration focuses on monitoring the infrastructure.\n\n### About this quickstart\n\nThis integration gives you visibility into key metrics on your Spanner isntance. NOTE: The dashboard included in this quickstart works by using finding `instrumentation.source = gcpspanner.` If you want to use this without changing the queries, be sure to use this as the name to identify the data source. Here are some of the key metrics you can monitor with this integration:\n\n- Summary of active queries\n- Lock insights\n- Query details\n- Query insights\n- Transaction details\n- Transaction insights",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/gcp/google-cloud-spanner-otel",
+    "id": "52bd4e38-5f13-4b78-add8-d5c70bb34fba",
+    "level": "COMMUNITY",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/gcp/google-cloud-spanner-otel/logo.svg",
+    "summary": "Leverage OTel to monitor GCP Cloud Spanner",
+    "websiteUrl": null,
+    "keywords": [
+      "gcp",
+      "google cloud platform",
+      "database",
+      "newrelic-partner",
+      "otel"
+    ],
+    "authors": [
+      "New Relic"
+    ],
+    "dashboards": [
+      {
+        "name": "GCP Cloud Spanner",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/gcp-cloud-spanner/gcp-cloud-spanner01.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/gcp-cloud-spanner/gcp-cloud-spanner02.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/gcp-cloud-spanner/gcp-cloud-spanner03.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/gcp-cloud-spanner/gcp-cloud-spanner04.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/gcp-cloud-spanner/gcp-cloud-spanner05.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/gcp-cloud-spanner/gcp-cloud-spanner06.png"
+        ]
+      }
+    ],
+    "alerts": [],
+    "documentation": [
+      {
+        "name": "Example Prometheus exporter",
+        "description": "Example Google Cloud Spanner prometheus exporter\n",
+        "url": "https://github.com/architjugran/example-cloudspannerreceiver"
+      },
+      {
+        "name": "Prometheus New Relic docs",
+        "description": "Sending and identifying Prometheus data to New Relic\n",
+        "url": "https://docs.newrelic.com/docs/infrastructure/prometheus-integrations/get-started/send-prometheus-metric-data-new-relic/"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "cloud-spanner",
+        "id": "cloud-spanner"
       }
     ]
   },
@@ -23494,6 +23548,22 @@
         ]
       },
       {
+        "name": "AWS Integrations Data Ingest Analysis",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/aws-integrations-data-ingest-analysis/aws-integrations-data-ingest-analysis.png"
+        ]
+      },
+      {
+        "name": "Azure Integrations Data Ingest Analysis",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/azure-integrations-data-ingest-analysis/azure-integrations-data-ingest-analysis.png"
+        ]
+      },
+      {
         "name": "On-Host Integrations Data Analysis",
         "description": null,
         "url": null,
@@ -23507,22 +23577,6 @@
         "url": null,
         "screenshots": [
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/kubernetes-data-ingest-analysis/kubernetes-data-ingest-analysis.png"
-        ]
-      },
-      {
-        "name": "Azure Integrations Data Ingest Analysis",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/azure-integrations-data-ingest-analysis/azure-integrations-data-ingest-analysis.png"
-        ]
-      },
-      {
-        "name": "AWS Integrations Data Ingest Analysis",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/aws-integrations-data-ingest-analysis/aws-integrations-data-ingest-analysis.png"
         ]
       }
     ],
@@ -24470,11 +24524,11 @@
     ],
     "dashboards": [
       {
-        "name": "Browser Traffic Analysis",
+        "name": "JavaScript Errors",
         "description": null,
         "url": null,
         "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/traffic-analysis/traffic_analysis.png"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/javascript-errors/javascript_errors.png"
         ]
       },
       {
@@ -24486,19 +24540,19 @@
         ]
       },
       {
-        "name": "JavaScript Errors",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/javascript-errors/javascript_errors.png"
-        ]
-      },
-      {
         "name": "Browser Pages Dashboard",
         "description": null,
         "url": null,
         "screenshots": [
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/browser-pages-dashboard/browser_pages_dashboard.png"
+        ]
+      },
+      {
+        "name": "Browser Traffic Analysis",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/traffic-analysis/traffic_analysis.png"
         ]
       }
     ],
