@@ -414,56 +414,6 @@
     ]
   },
   {
-    "title": "Amazon CloudFront web logs",
-    "name": "amazon-cloudfront-web-logs",
-    "description": "## What is Amazon CloudFront?\n\nSpeeds up the distribution of web content served from Amazon Web Services.\n\n### Get started!\n\nStart monitoring Amazon CloudFront by sending your Amazon Cloudfront Web Logs to New Relic. \n\nCheck out our Amazon CloudFront documentation to instrument your cloud service and manage the stability, scalability, and reliability of your systems with New Relic's Log monitoring capabilities.\n\n### More info\n\nCheck out the [documentation](https://docs.newrelic.com/docs/logs/forward-logs/cloudfront-web-logs/) to learn more about New Relic monitoring for Amazon CloudFront.",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/aws/amazon-cloudfront-logs",
-    "id": "fb4c4acc-e341-4b87-9bb1-5f98b9cc9310",
-    "level": "NEW_RELIC",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/aws/amazon-cloudfront-logs/logo.svg",
-    "summary": "Monitor Amazon CloudFront Web logs in New Relic",
-    "websiteUrl": null,
-    "keywords": [
-      "aws",
-      "amazon web services",
-      "web content",
-      "logs",
-      "logging",
-      "web logs",
-      "cdn"
-    ],
-    "authors": [
-      "New Relic",
-      "Joseph Counts"
-    ],
-    "dashboards": [
-      {
-        "name": "Amazon Cloudfront Web Logs",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/amazon-cloudfront-web-logs/amazon-cloudfront-web-logs01.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/amazon-cloudfront-web-logs/amazon-cloudfront-web-logs02.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/amazon-cloudfront-web-logs/amazon-cloudfront-web-logs03.png"
-        ]
-      }
-    ],
-    "alerts": [],
-    "documentation": [
-      {
-        "name": "Amazon CloudFront web logs installation docs",
-        "description": "Monitor Amazon CloudFront web logs in New Relic.",
-        "url": "https://docs.newrelic.com/docs/logs/forward-logs/cloudfront-web-logs/"
-      }
-    ],
-    "installPlans": [
-      {
-        "name": "Amazon-Cloudfront-Web-Logs",
-        "id": "amazon-cloudfront-web-logs"
-      }
-    ]
-  },
-  {
     "title": "Datazoom",
     "name": "datazoom",
     "description": "The Datazoom quickstart provides a fast and easy launching point into video metrics built on top of New Relic One dashboards, allowing you to gain insights about your viewers, content, ads and your platform's performance. Customize the dashboard to use only the metrics that fit your goals and easily edit metric calculations and tailor them to your needs.",
@@ -553,57 +503,6 @@
       {
         "name": "New Relic Public API Performance",
         "id": "public-api-performance"
-      }
-    ]
-  },
-  {
-    "title": "Synthetics Private Locations",
-    "name": "synthetics-private-locations",
-    "description": "## What are private locations?\n\nIn synthetic monitoring, a private location is a collection of private minions. A minion is a containerized application that receives and manages jobs set up through the Synthetics UI. For details see our [Private locations overview](https://docs.newrelic.com/docs/synthetics/synthetic-monitoring/private-locations/private-locations-overview-monitor-internal-sites-add-new-locations).\n\n### New Relic Synthetics Containerized Private Minion\n\nThe Containerized Private Minion (CPM) runs on your private network to monitor internal endpoints not accessible from the Internet. Each CPM is configured to process jobs for a specific private location identified by the private location key. For CPM installation instructions see [Install containerized private minions](https://docs.newrelic.com/docs/synthetics/synthetic-monitoring/private-locations/install-containerized-private-minions-cpms).\n\n### Why should you monitor your private locations and CPMs?\n\nMonitoring private locations is critical to knowing when the CPM might be struggling to process jobs. Some common issues include:\n\n- DNS/firewall/proxy blocking connections on your local network\n- overloaded CPM\n- mis-configured CPM\n- under-provisioned host\n- internal engine errors.\n\nIf the CPM fails to process jobs in a timely manner, it can lead to gaps in reported results, false positive alerts, or delayed results.\n\nDownload and install the New Relic Synthetics Private Locations quickstart today to be informed about the health of your private locations and CPMs.",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/synthetics/private-locations",
-    "id": "c1703f99-a3c5-425d-817d-375a0f54959a",
-    "level": "NEW_RELIC",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/synthetics/private-locations/logo.png",
-    "summary": "Monitoring private locations is crucial to ensure that you detect issues with the CPM and resolve outages swiftly. Download the New Relic Synthetics Private Location quickstart to be informed about the health of your private locations and CPMs before they lead to false positive alerts.",
-    "websiteUrl": null,
-    "keywords": [
-      "cpm",
-      "private locations",
-      "private location queue",
-      "minion",
-      "minion dashboard",
-      "synthetics"
-    ],
-    "authors": [
-      "New Relic",
-      "Keegan Mullaney"
-    ],
-    "dashboards": [
-      {
-        "name": "Synthetics Private Minions",
-        "description": "Details on events from SyntheticsPrivateLocationStatus, SyntheticsPrivateMinion, SyntheticCheck, SyntheticRequest, NrAuditEvent, plus a page for Performance Analysis.",
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/synthetics-private-minions/synthetics-private-minions01.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/synthetics-private-minions/synthetics-private-minions02.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/synthetics-private-minions/synthetics-private-minions03.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/synthetics-private-minions/synthetics-private-minions04.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/synthetics-private-minions/synthetics-private-minions05.png"
-        ]
-      }
-    ],
-    "alerts": [],
-    "documentation": [
-      {
-        "name": "Monitor Private Locations",
-        "description": "Be informed about the health of your private locations.",
-        "url": "https://docs.newrelic.com/docs/synthetics/synthetic-monitoring/private-locations/monitor-private-locations"
-      }
-    ],
-    "installPlans": [
-      {
-        "name": "Synthetics Private Locations",
-        "id": "synthetics-private-locations"
       }
     ]
   },
@@ -977,6 +876,108 @@
       {
         "name": "SNMP",
         "id": "network-snmp"
+      }
+    ]
+  },
+  {
+    "title": "Amazon CloudFront web logs",
+    "name": "amazon-cloudfront-web-logs",
+    "description": "## What is Amazon CloudFront?\n\nSpeeds up the distribution of web content served from Amazon Web Services.\n\n### Get started!\n\nStart monitoring Amazon CloudFront by sending your Amazon Cloudfront Web Logs to New Relic. \n\nCheck out our Amazon CloudFront documentation to instrument your cloud service and manage the stability, scalability, and reliability of your systems with New Relic's Log monitoring capabilities.\n\n### More info\n\nCheck out the [documentation](https://docs.newrelic.com/docs/logs/forward-logs/cloudfront-web-logs/) to learn more about New Relic monitoring for Amazon CloudFront.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/aws/amazon-cloudfront-logs",
+    "id": "fb4c4acc-e341-4b87-9bb1-5f98b9cc9310",
+    "level": "NEW_RELIC",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/aws/amazon-cloudfront-logs/logo.svg",
+    "summary": "Monitor Amazon CloudFront Web logs in New Relic",
+    "websiteUrl": null,
+    "keywords": [
+      "aws",
+      "amazon web services",
+      "web content",
+      "logs",
+      "logging",
+      "web logs",
+      "cdn",
+      "featured"
+    ],
+    "authors": [
+      "New Relic",
+      "Joseph Counts"
+    ],
+    "dashboards": [
+      {
+        "name": "Amazon Cloudfront Web Logs",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/amazon-cloudfront-web-logs/amazon-cloudfront-web-logs01.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/amazon-cloudfront-web-logs/amazon-cloudfront-web-logs02.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/amazon-cloudfront-web-logs/amazon-cloudfront-web-logs03.png"
+        ]
+      }
+    ],
+    "alerts": [],
+    "documentation": [
+      {
+        "name": "Amazon CloudFront web logs installation docs",
+        "description": "Monitor Amazon CloudFront web logs in New Relic.",
+        "url": "https://docs.newrelic.com/docs/logs/forward-logs/cloudfront-web-logs/"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "Amazon-Cloudfront-Web-Logs",
+        "id": "amazon-cloudfront-web-logs"
+      }
+    ]
+  },
+  {
+    "title": "Synthetics Private Locations",
+    "name": "synthetics-private-locations",
+    "description": "## What are private locations?\n\nIn synthetic monitoring, a private location is a collection of private minions. A minion is a containerized application that receives and manages jobs set up through the Synthetics UI. For details see our [Private locations overview](https://docs.newrelic.com/docs/synthetics/synthetic-monitoring/private-locations/private-locations-overview-monitor-internal-sites-add-new-locations).\n\n### New Relic Synthetics Containerized Private Minion\n\nThe Containerized Private Minion (CPM) runs on your private network to monitor internal endpoints not accessible from the Internet. Each CPM is configured to process jobs for a specific private location identified by the private location key. For CPM installation instructions see [Install containerized private minions](https://docs.newrelic.com/docs/synthetics/synthetic-monitoring/private-locations/install-containerized-private-minions-cpms).\n\n### Why should you monitor your private locations and CPMs?\n\nMonitoring private locations is critical to knowing when the CPM might be struggling to process jobs. Some common issues include:\n\n- DNS/firewall/proxy blocking connections on your local network\n- overloaded CPM\n- mis-configured CPM\n- under-provisioned host\n- internal engine errors.\n\nIf the CPM fails to process jobs in a timely manner, it can lead to gaps in reported results, false positive alerts, or delayed results.\n\nDownload and install the New Relic Synthetics Private Locations quickstart today to be informed about the health of your private locations and CPMs.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/synthetics/private-locations",
+    "id": "c1703f99-a3c5-425d-817d-375a0f54959a",
+    "level": "NEW_RELIC",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/synthetics/private-locations/logo.svg",
+    "summary": "Monitoring private locations is crucial to ensure that you detect issues with the CPM and resolve outages swiftly. Download the New Relic Synthetics Private Location quickstart to be informed about the health of your private locations and CPMs before they lead to false positive alerts.",
+    "websiteUrl": null,
+    "keywords": [
+      "cpm",
+      "private locations",
+      "private location queue",
+      "minion",
+      "minion dashboard",
+      "synthetics"
+    ],
+    "authors": [
+      "New Relic",
+      "Keegan Mullaney"
+    ],
+    "dashboards": [
+      {
+        "name": "Synthetics Private Minions",
+        "description": "Details on events from SyntheticsPrivateLocationStatus, SyntheticsPrivateMinion, SyntheticCheck, SyntheticRequest, NrAuditEvent, plus a page for Performance Analysis.",
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/synthetics-private-minions/synthetics-private-minions01.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/synthetics-private-minions/synthetics-private-minions02.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/synthetics-private-minions/synthetics-private-minions03.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/synthetics-private-minions/synthetics-private-minions04.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/synthetics-private-minions/synthetics-private-minions05.png"
+        ]
+      }
+    ],
+    "alerts": [],
+    "documentation": [
+      {
+        "name": "Monitor Private Locations",
+        "description": "Be informed about the health of your private locations.",
+        "url": "https://docs.newrelic.com/docs/synthetics/synthetic-monitoring/private-locations/monitor-private-locations"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "Synthetics Private Locations",
+        "id": "synthetics-private-locations"
       }
     ]
   },
@@ -4723,71 +4724,6 @@
     ]
   },
   {
-    "title": "Redis Enterprise",
-    "name": "redis-enterprise",
-    "description": "## Redis Enterprise Quickstart\n\n### Redis Enterprise is an enterprise offering of Redis that provides:\n- High availability: Up to 5 9's\n- Support: 24/7 Enterprise support\n- Geo-replication: Write data consistency across multiple data centers\n- Tiered storage: Store data on devices outside of RAM for cost savings\n- High performance: Serve up to 200M operations per second\n\nThis integration supports [Redis Enterprise Software](https://redis.com/redis-enterprise-software/overview/) installations.\n\n### With the Redis Enterprise quickstart you can:\n\n- Monitor real-time performance and trends of you Redis Enterprise cluster\n- Drill down into the performance of individual Redis databases\n- Understand the Redis Active/Active metrics\n\n### Cluster level metrics\n\n- License Status: Information on the Enterprise license status\n- License Capacity: Capacity licensed\n- Used Capacity: Capacity currently in use\n- Cluster Capacity: Information on memory and compute resources available on the cluster\n- Total Requests: Overall throughput of the cluster in total\n\n\n### Database level metrics\n\n- Database Latency: Metrics pertaining to the latency of operations at the database level\n- Database Throughput: Detailed information of the number of read/write operations per second\n- Database Capacity: Memory usage details for capacity planning\n- Network Usage: Information on the network usage per database\n- Redis Data Retention: Expiration and Eviction statistics on object retention\n\n\n### Active/Active metrics\n\n- Lag: Time between application on servers\n- Pending:  Details of the number of writes pending as part of the sync\n- Bandwidth:  Information on the amount of traffic between clusters \n\n### Contact us\nTo get help please contact the [Redis Enterprise Field Engineering](mailto:redis.observability@redis.com?subject=NewRelic%20Integration%20Support)",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/redisenterprise",
-    "id": "f15b39b2-bdc3-46d2-b28f-04ddbe23e299",
-    "level": "COMMUNITY",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/redisenterprise/logo.png",
-    "summary": "This quickstart will allow you to visualize your Redis Enterprise analytics.",
-    "websiteUrl": null,
-    "keywords": [
-      "newrelic partner",
-      "devops",
-      "redis enterprise",
-      "redis",
-      "featured",
-      "cluster",
-      "database",
-      "active"
-    ],
-    "authors": [
-      "Redis",
-      "Chris Mague"
-    ],
-    "dashboards": [
-      {
-        "name": "Redis Enterprise Cluster Metrics",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/cluster/cluster01.png"
-        ]
-      },
-      {
-        "name": "Redis Enterprise Database CRDT",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/active-active/active_active01.png"
-        ]
-      },
-      {
-        "name": "Redis Enterprise Database Metrics",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/database/database01.png"
-        ]
-      }
-    ],
-    "alerts": [],
-    "documentation": [
-      {
-        "name": "Redis Enterprise Documentation",
-        "description": "How to install and configure Redis Enterprise New Relic integration",
-        "url": "https://docs.newrelic.com/docs/infrastructure/host-integrations/host-integrations-list/redis/redis-enterprise-integration/"
-      }
-    ],
-    "installPlans": [
-      {
-        "name": "RedisEnterprise",
-        "id": "third-party-redisenterprise"
-      }
-    ]
-  },
-  {
     "title": "DNN Evoq",
     "name": "dnn-evoq",
     "description": "## What is DNN Evoq?\n\nDNN Evoq is a commercial edition of the DNN platform, the largest and most popular open source Content Management System (CMS) on the Microsoft ASP.NET stack. [DNN Evoq](https://developer.newrelic.com/instant-observability/dnn-evoq/82672f5f-48ec-477c-ae49-7eb24a91595f/) includes customer support and provides premium features not available in the DNN platform. These premium features include personalization, in-page analytics, workflow and built-in connectors to Marketo, SharePoint, Amazon S3, and Dropbox.\n\nIntegrate New Relic .NET agent with your DNN Evoq to monitor the platform’s performance metrics in real time.\n\n### Get started!\n\nLeverage community expertise and instantly get value out of your telemetry data. This quickstart automatically instruments DNN Evoq with the New Relic .Net agent, and allows you to instantly monitor your .Net application with out-of-the-box dashboards and alerts. Further leverage New Relic's APM capabilities by setting up [errors inbox](https://docs.newrelic.com/docs/apm/apm-ui-pages/errors-inbox/errors-inbox/), [transaction tracing](https://docs.newrelic.com/docs/apm/transactions/transaction-traces/introduction-transaction-traces/), and [service maps](https://docs.newrelic.com/docs/understand-dependencies/understand-system-dependencies/service-maps/introduction-service-maps/).\n\n## DNN Evoq and New Relic highlights\n\nNew Relic’s DNN Evoq quickstart instruments DNN Evoq with the [New Relic .NET agent](https://docs.newrelic.com/docs/apm/agents/net-agent/getting-started/introduction-new-relic-net/), and empowers you to seamlessly monitor your DNN Evoq platform through out-of-the-box dashboards and alerts.\n\nOur .NET agent supports both .NET Framework and .NET Core, and it works with all .NET compatible languages. You can track your DNN Evoq platform in dynamic or distributed environments such as on-host VM servers, Microsoft Azure app services, cloud-managed server VM images, self-hosted Windows and Linux systems and Amazon AWS EC2 VMs.\n\n### DNN Evoq ideal performance monitoring\n\nThe DNN Evoq observability quickstart instruments DNN Evoq with New Relic .NET agent. The integration enables you to use [Application Performance Monitoring](https://newrelic.com/products/application-monitoring) (APM) to get a high-level overview of your DNN Evoq platform, and to track activity across the platform. With the integration, you can install [infrastructure monitoring](https://developer.newrelic.com/instant-observability/infrastructure/71419258-a96f-4845-b4f7-723f3b29d6a5/) to view the performance of your platform’s host environment.\n\nOnce you install our .NET agent, wait for a few minutes for your DNN Evoq platform to generate traffic, data will appear in the APM summary page. The agent includes a variety of configuration options to further customize your installation. You can extend your instrumentation by integrating the .NET agent with [browser monitoring](https://docs.newrelic.com/docs/browser/new-relic-browser/getting-started/new-relic-browser/) to gain visibility into end-user activity. You can also enable distributed tracing to understand activity across your platform.\n\nDownload the New Relic DNN Evoq quickstart to effectively get value out of your telemetry data and monitor your DNN Evoq platform. This quickstart is your gateway to instant monitoring of your platform via our .NET agent.",
@@ -5598,6 +5534,70 @@
       {
         "name": "Microsoft Teams for CodeStream",
         "id": "third-party-microsoft-teams-for-codestream"
+      }
+    ]
+  },
+  {
+    "title": "Redis Enterprise",
+    "name": "redis-enterprise",
+    "description": "## Redis Enterprise Quickstart\n\n### Redis Enterprise is an enterprise offering of Redis that provides:\n- High availability: Up to 5 9's\n- Support: 24/7 Enterprise support\n- Geo-replication: Write data consistency across multiple data centers\n- Tiered storage: Store data on devices outside of RAM for cost savings\n- High performance: Serve up to 200M operations per second\n\nThis integration supports [Redis Enterprise Software](https://redis.com/redis-enterprise-software/overview/) installations.\n\n### With the Redis Enterprise quickstart you can:\n\n- Monitor real-time performance and trends of you Redis Enterprise cluster\n- Drill down into the performance of individual Redis databases\n- Understand the Redis Active/Active metrics\n\n### Cluster level metrics\n\n- License Status: Information on the Enterprise license status\n- License Capacity: Capacity licensed\n- Used Capacity: Capacity currently in use\n- Cluster Capacity: Information on memory and compute resources available on the cluster\n- Total Requests: Overall throughput of the cluster in total\n\n\n### Database level metrics\n\n- Database Latency: Metrics pertaining to the latency of operations at the database level\n- Database Throughput: Detailed information of the number of read/write operations per second\n- Database Capacity: Memory usage details for capacity planning\n- Network Usage: Information on the network usage per database\n- Redis Data Retention: Expiration and Eviction statistics on object retention\n\n\n### Active/Active metrics\n\n- Lag: Time between application on servers\n- Pending:  Details of the number of writes pending as part of the sync\n- Bandwidth:  Information on the amount of traffic between clusters \n\n### Contact us\nTo get help please contact the [Redis Enterprise Field Engineering](mailto:redis.observability@redis.com?subject=NewRelic%20Integration%20Support)",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/redisenterprise",
+    "id": "f15b39b2-bdc3-46d2-b28f-04ddbe23e299",
+    "level": "COMMUNITY",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/redisenterprise/logo.png",
+    "summary": "This quickstart will allow you to visualize your Redis Enterprise analytics.",
+    "websiteUrl": null,
+    "keywords": [
+      "newrelic partner",
+      "devops",
+      "redis enterprise",
+      "redis",
+      "cluster",
+      "database",
+      "active"
+    ],
+    "authors": [
+      "Redis",
+      "Chris Mague"
+    ],
+    "dashboards": [
+      {
+        "name": "Redis Enterprise Cluster Metrics",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/cluster/cluster01.png"
+        ]
+      },
+      {
+        "name": "Redis Enterprise Database CRDT",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/active-active/active_active01.png"
+        ]
+      },
+      {
+        "name": "Redis Enterprise Database Metrics",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/database/database01.png"
+        ]
+      }
+    ],
+    "alerts": [],
+    "documentation": [
+      {
+        "name": "Redis Enterprise Documentation",
+        "description": "How to install and configure Redis Enterprise New Relic integration",
+        "url": "https://docs.newrelic.com/docs/infrastructure/host-integrations/host-integrations-list/redis/redis-enterprise-integration/"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "RedisEnterprise",
+        "id": "third-party-redisenterprise"
       }
     ]
   },
@@ -7321,58 +7321,6 @@
     ]
   },
   {
-    "title": "DBmarlin",
-    "name": "dbmarlin",
-    "description": "The DBmarlin quickstart allows you to get visibility into the performance and availability of your database services from within New Relic.\n\nTo get started with DBmarlin, visit the [DBmarlin introduction page](https://docs.dbmarlin.com/docs/DBmarlin/introduction).\n\n# About DBmarlin\nDBmarlin monitors database performance, tracks changes and helps your databases run fast.\n\nIt provides an easy-to-use and consistent way to monitor CockroachDB, DB2, MariaDB, MySQL, Oracle, PostgreSQL and SQL Server, self-hosted or in the cloud.\n\nIt captures SQL statement text and wait events so you can see exactly where the time is spent executing SQL within your database.\n\nIt auto-detects changes to schema objects, database parameters and execution plans so you can see their impact on performance.",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/dbmarlin",
-    "id": "a0daa1f8-99de-41ba-b7cb-7dd87c1bf7f2",
-    "level": "COMMUNITY",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/dbmarlin/logo.svg",
-    "summary": "View database performance from within New Relic with this integration with DBmarlin.",
-    "websiteUrl": null,
-    "keywords": [
-      "database",
-      "performance",
-      "cockroach",
-      "db2",
-      "mysql",
-      "maria",
-      "oracle",
-      "postgres",
-      "sql",
-      "infrastructure",
-      "newrelic partner",
-      "featured"
-    ],
-    "authors": [
-      "DBmarlin"
-    ],
-    "dashboards": [
-      {
-        "name": "DBmarlin dashboard",
-        "description": "See where your databases were spending their time. View wait events and top SQL.",
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/dbmarlin/dbmarlin-dashboard01.png"
-        ]
-      }
-    ],
-    "alerts": [],
-    "documentation": [
-      {
-        "name": "Installation docs",
-        "description": "Installation instructions for DBmarlin and the DBmarlin quickstart.",
-        "url": "https://docs.dbmarlin.com/docs/integrations/newrelic"
-      }
-    ],
-    "installPlans": [
-      {
-        "name": "dbmarlin",
-        "id": "third-party-dbmarlin"
-      }
-    ]
-  },
-  {
     "title": "Databricks Integration",
     "name": "databricks",
     "description": "Databricks is an orchestration platform for Apache Spark. Instantly monitor Databricks Spark applications with our New Relic Spark integration quickstart.\nOur integration provides a script run in a notebook to generate an installation script, which you can attach to a cluster and populate Spark metrics to New relic Insights events. Easily track the health of your Databricks clusters, fine-tune your Spark jobs for peak performance, and troubleshoot problems with this quickstart.\n\nDatabricks cluster’s driver node runs each job in scheduled stages. Individual stages are broken down into tasks and distributed across executor nodes. Our New Relic Spark integration collects detailed job and stage metrics so you can get granular insight into job performance at a glance. For example , break down the Job metric by status (successful, pending, or failed) to see in real-time if a high number of jobs are failing, which could indicate a code error or memory issue at the executor level. Metrics on the number of jobs in realtime can also help you make decisions for provisioning clusters in the future.",
@@ -8275,6 +8223,57 @@
       {
         "name": "OpenTelemetry",
         "id": "third-party-opentelemetry"
+      }
+    ]
+  },
+  {
+    "title": "DBmarlin",
+    "name": "dbmarlin",
+    "description": "The DBmarlin quickstart allows you to get visibility into the performance and availability of your database services from within New Relic.\n\nTo get started with DBmarlin, visit the [DBmarlin introduction page](https://docs.dbmarlin.com/docs/DBmarlin/introduction).\n\n# About DBmarlin\nDBmarlin monitors database performance, tracks changes and helps your databases run fast.\n\nIt provides an easy-to-use and consistent way to monitor CockroachDB, DB2, MariaDB, MySQL, Oracle, PostgreSQL and SQL Server, self-hosted or in the cloud.\n\nIt captures SQL statement text and wait events so you can see exactly where the time is spent executing SQL within your database.\n\nIt auto-detects changes to schema objects, database parameters and execution plans so you can see their impact on performance.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/dbmarlin",
+    "id": "a0daa1f8-99de-41ba-b7cb-7dd87c1bf7f2",
+    "level": "COMMUNITY",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/dbmarlin/logo.svg",
+    "summary": "View database performance from within New Relic with this integration with DBmarlin.",
+    "websiteUrl": null,
+    "keywords": [
+      "database",
+      "performance",
+      "cockroach",
+      "db2",
+      "mysql",
+      "maria",
+      "oracle",
+      "postgres",
+      "sql",
+      "infrastructure",
+      "newrelic partner"
+    ],
+    "authors": [
+      "DBmarlin"
+    ],
+    "dashboards": [
+      {
+        "name": "DBmarlin dashboard",
+        "description": "See where your databases were spending their time. View wait events and top SQL.",
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/dbmarlin/dbmarlin-dashboard01.png"
+        ]
+      }
+    ],
+    "alerts": [],
+    "documentation": [
+      {
+        "name": "Installation docs",
+        "description": "Installation instructions for DBmarlin and the DBmarlin quickstart.",
+        "url": "https://docs.dbmarlin.com/docs/integrations/newrelic"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "dbmarlin",
+        "id": "third-party-dbmarlin"
       }
     ]
   },
@@ -12275,57 +12274,6 @@
     ]
   },
   {
-    "title": "Zebrium Root Cause as a Service",
-    "name": "zebrium",
-    "description": "## Zebrium\n\nZebrium Root Cause as a Service reduces downtime by helping users find the root cause of problems more quickly. It works by using statistical machine learning on logs and achieves a proven accuracy rate of 95%. This is done without any manual training or rules. When there's a problem, you can now automatically see the root cause directly on any New Relic dashboard.\n\n\n### How to use Zebrium\n\n- Send your logs to Zebrium by installing an open source log collector (Zebrium does not retain your logs, it analyzes them inline). \n- When you know there is a problem, simply look at the Zebrium dashboard and you will see root cause indicators to explain what happened\n\n### Benefits\n\n- For problems that require digging through logs, speed up resolution by 10x\n- Proactively catch problems without requiring any rules\n- Reduce the burden on engineering, SREs and Devops when solving complex incidents\n\n### The Zebrium quickstart includes a dashboard that shows:\n\n- A vertical bar whenever Zebrium detects a potential problem\n- A listing of Zebrium detection summaries that includes an NLP generated summary and a link to the full report in the Zebrium UI\n- Metric charts showing log counts, error counts and anomaly counts\n\nQuestions? [Please contact Zebrium.](mailto:hello@zebrium.com)",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/zebrium",
-    "id": "2135562c-bdf4-41bd-bca4-f11bcdee72ca",
-    "level": "VERIFIED",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/zebrium/logo.png",
-    "summary": "The Zebrium integration allows you to automatically see details of root cause on any New Relic dashboard",
-    "websiteUrl": null,
-    "keywords": [
-      "devops",
-      "zebrium",
-      "featured",
-      "logs",
-      "ai",
-      "machine-learning",
-      "root cause",
-      "newrelic partner",
-      "sre",
-      "mlops"
-    ],
-    "authors": [
-      "Rod Bagg (Zebrium)",
-      "Gavin Cohen (Zebrium)"
-    ],
-    "dashboards": [
-      {
-        "name": "Zebrium Root Cause as a Service",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/zebrium-rcaas/zebrium_rcaas_dashboard01.png"
-        ]
-      }
-    ],
-    "alerts": [],
-    "documentation": [
-      {
-        "name": "Documentation for the Zebrium New Relic integration",
-        "description": "Step-by-step instructions for installing the Zebrium New Relic integration",
-        "url": "https://docs.zebrium.com/docs/monitoring/newrelic"
-      }
-    ],
-    "installPlans": [
-      {
-        "name": "Zebrium",
-        "id": "third-party-zebrium"
-      }
-    ]
-  },
-  {
     "title": "Lacework Integration",
     "name": "lacework",
     "description": "Lacework is a comprehensive cloud security platform. We aim to turn security into a data problem and replace the frictionful processes for things like breach investigations or achieving compliance standards with simple, contextualized workflows.\nTechnically, our approach is that we replace the traditional 'rules' based mentality that requires you to predict attacker patterns ahead of time with a fully ML based approach.  We baseline what normal user, application and network behaviors look like across your workloads and cloud accounts automatically and then only alert you to deviations from the norm.  This significantly reduces the amount of toil in setting up and maintaining our solution, but also drastically improves the efficacy and amount of security alerts you will receive.\nThe following Quickstart brings the curated security alerts for misconfigurations and anomalous security behaviors into the New Relic platform so you can easily triage against your wealth of observability data or easily transition from monitoring to security investigations from a single interface!\nIf you encounter any issues, have feedback or would like more details on how to get started, please head over to support.lacework.com or send an email to adam.larson@lacework.net!",
@@ -13069,6 +13017,56 @@
       {
         "name": ".NET agent",
         "id": "dotnet-agent"
+      }
+    ]
+  },
+  {
+    "title": "Zebrium Root Cause as a Service",
+    "name": "zebrium",
+    "description": "## Zebrium\n\nZebrium Root Cause as a Service reduces downtime by helping users find the root cause of problems more quickly. It works by using statistical machine learning on logs and achieves a proven accuracy rate of 95%. This is done without any manual training or rules. When there's a problem, you can now automatically see the root cause directly on any New Relic dashboard.\n\n\n### How to use Zebrium\n\n- Send your logs to Zebrium by installing an open source log collector (Zebrium does not retain your logs, it analyzes them inline). \n- When you know there is a problem, simply look at the Zebrium dashboard and you will see root cause indicators to explain what happened\n\n### Benefits\n\n- For problems that require digging through logs, speed up resolution by 10x\n- Proactively catch problems without requiring any rules\n- Reduce the burden on engineering, SREs and Devops when solving complex incidents\n\n### The Zebrium quickstart includes a dashboard that shows:\n\n- A vertical bar whenever Zebrium detects a potential problem\n- A listing of Zebrium detection summaries that includes an NLP generated summary and a link to the full report in the Zebrium UI\n- Metric charts showing log counts, error counts and anomaly counts\n\nQuestions? [Please contact Zebrium.](mailto:hello@zebrium.com)",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/zebrium",
+    "id": "2135562c-bdf4-41bd-bca4-f11bcdee72ca",
+    "level": "VERIFIED",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/zebrium/logo.png",
+    "summary": "The Zebrium integration allows you to automatically see details of root cause on any New Relic dashboard",
+    "websiteUrl": null,
+    "keywords": [
+      "devops",
+      "zebrium",
+      "logs",
+      "ai",
+      "machine-learning",
+      "root cause",
+      "newrelic partner",
+      "sre",
+      "mlops"
+    ],
+    "authors": [
+      "Rod Bagg (Zebrium)",
+      "Gavin Cohen (Zebrium)"
+    ],
+    "dashboards": [
+      {
+        "name": "Zebrium Root Cause as a Service",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/zebrium-rcaas/zebrium_rcaas_dashboard01.png"
+        ]
+      }
+    ],
+    "alerts": [],
+    "documentation": [
+      {
+        "name": "Documentation for the Zebrium New Relic integration",
+        "description": "Step-by-step instructions for installing the Zebrium New Relic integration",
+        "url": "https://docs.zebrium.com/docs/monitoring/newrelic"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "Zebrium",
+        "id": "third-party-zebrium"
       }
     ]
   },
@@ -24893,59 +24891,6 @@
     ]
   },
   {
-    "title": "Confluent Cloud - Managed Kafka",
-    "name": "otelcol-confluent-cloud",
-    "description": "## About Confluent\n\nConfluent makes it easy to connect your apps, data systems, and entire organization with real-time data flows and processing.\n\n## About Confluent Cloud\n\nConfluent Cloud is a fully managed, cloud-native service for connecting and processing all of your data, everywhere it’s needed.\n\n## About this quickstart\n\nObservability for Confluent Cloud's fully managed service for Apache Kafka on New Relic delivered using the OpenTelemetry Collector\n\nFor more information check out our website at [confluent.io](https://www.confluent.io/)",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/confluent-cloud",
-    "id": "c0de1f63-6711-4aff-87f9-267ec0d6a2fa",
-    "level": "COMMUNITY",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/confluent-cloud/logo.png",
-    "summary": "Collect and visualize Confluent Cloud and Kafka instance metrics",
-    "websiteUrl": null,
-    "keywords": [
-      "Confluent",
-      "Confluent Cloud",
-      "Metrics",
-      "OTEL",
-      "OpenTelemetry",
-      "OTelCol",
-      "OpenTelemetry Collector",
-      "Collector",
-      "newrelic partner"
-    ],
-    "authors": [
-      "Alex Beach",
-      "Josh Biggley",
-      "New Relic"
-    ],
-    "dashboards": [
-      {
-        "name": "Confluent Cloud",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/confluent-cloud/confluentcloud01.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/confluent-cloud/confluentcloud02.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/confluent-cloud/confluentcloud03.png"
-        ]
-      }
-    ],
-    "alerts": [],
-    "documentation": [
-      {
-        "name": "Deploy an OpenTelemetry Collector for Confluent Cloud & Kafka metrics collection",
-        "description": "Steps to build and deploy the OpenTelemetry Collector Contrib instance and configure for Kafka and Confluent Cloud metrics",
-        "url": "https://docs.newrelic.com/docs/more-integrations/open-source-telemetry-integrations/opentelemetry/collector/collector-configuration-examples/opentelemetry-collector-kafka-confluentcloud"
-      }
-    ],
-    "installPlans": [
-      {
-        "name": "ConfluentCloud",
-        "id": "third-party-confluent-cloud"
-      }
-    ]
-  },
-  {
     "title": "Azure Storage",
     "name": "azure-storage",
     "description": "## What is Azure Storage?\n\nAzure Storage is Microsoft’s cloud storage solution that offers highly available, scalable, secure, and durable storage for different data objects in the cloud. \n\n\n### New Relic Azure storage quickstart features\n\nThe New Relic Azure Storage monitoring integration has the following features:\n\n- A standard dashboard that tracks key indicators like average blob count, average table count, average file count, and average queue count\n- Additional dashboards that track transactions, availability in % per storage account, successful requests’ server latency (ms), and more\n- Run custom queries and visualize the data immediately\n\n\n### Why monitor Azure Storage with New Relic?\n\n[New Relic Azure Storage](https://docs.newrelic.com/docs/infrastructure/microsoft-azure-integrations/azure-integrations-list/azure-storage-monitoring-integration/) monitoring quickstart empowers you to track the performance of Azure Storage via different metrics including account used capacity, the amount of ingress and egress data, and latency. \n\nOur integration features a standard dashboard that provides interactive visualizations to explore your data, understand context, and get valuable insights. We’ve also made it easy for you to view your data in pre-built dashboards, create specialized alerts, and run custom queries with immediate data visualization.\n\nStart ingesting your Azure data today and get immediate access to our visualization dashboards so you can optimize your Azure service.",
@@ -24985,6 +24930,63 @@
       {
         "name": "Azure-Infrastructure-Monitoring",
         "id": "azure-infrastructure-monitoring"
+      }
+    ]
+  },
+  {
+    "title": "Confluent Cloud - Managed Kafka",
+    "name": "otelcol-confluent-cloud",
+    "description": "## About Confluent\n\nConfluent makes it easy to connect your apps, data systems, and entire organization with real-time data flows and processing.\n\n## About Confluent Cloud\n\nConfluent Cloud is a fully managed, cloud-native service for connecting and processing all of your data, everywhere it’s needed.\n\n## About this quickstart\n\nObservability for Confluent Cloud's fully managed service for Apache Kafka on New Relic delivered using the OpenTelemetry Collector\n\nFor more information check out our website at [confluent.io](https://www.confluent.io/)",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/confluent-cloud",
+    "id": "c0de1f63-6711-4aff-87f9-267ec0d6a2fa",
+    "level": "COMMUNITY",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/confluent-cloud/logo.png",
+    "summary": "Collect and visualize Confluent Cloud and Kafka instance metrics",
+    "websiteUrl": null,
+    "keywords": [
+      "Confluent",
+      "Confluent Cloud",
+      "Metrics",
+      "OTel",
+      "OpenTelemetry",
+      "open telemetry",
+      "OTelCol",
+      "OpenTelemetry Collector",
+      "open telemetry collector",
+      "Collector",
+      "Kafka",
+      "newrelic partner",
+      "featured"
+    ],
+    "authors": [
+      "Alex Beach",
+      "Josh Biggley",
+      "New Relic"
+    ],
+    "dashboards": [
+      {
+        "name": "Confluent Cloud",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/confluent-cloud/confluentcloud01.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/confluent-cloud/confluentcloud02.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/confluent-cloud/confluentcloud03.png"
+        ]
+      }
+    ],
+    "alerts": [],
+    "documentation": [
+      {
+        "name": "Deploy an OpenTelemetry Collector for Confluent Cloud & Kafka metrics collection",
+        "description": "Steps to build and deploy the OpenTelemetry Collector Contrib instance and configure for Kafka and Confluent Cloud metrics",
+        "url": "https://docs.newrelic.com/docs/more-integrations/open-source-telemetry-integrations/opentelemetry/collector/collector-configuration-examples/opentelemetry-collector-kafka-confluentcloud"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "ConfluentCloud",
+        "id": "third-party-confluent-cloud"
       }
     ]
   },
