@@ -5562,6 +5562,14 @@
     ],
     "dashboards": [
       {
+        "name": "Redis Enterprise Database Metrics",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/database/database01.png"
+        ]
+      },
+      {
         "name": "Redis Enterprise Cluster Metrics",
         "description": null,
         "url": null,
@@ -5575,14 +5583,6 @@
         "url": null,
         "screenshots": [
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/active-active/active_active01.png"
-        ]
-      },
-      {
-        "name": "Redis Enterprise Database Metrics",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/database/database01.png"
         ]
       }
     ],
@@ -12296,11 +12296,11 @@
     ],
     "dashboards": [
       {
-        "name": "Lacework Anomaly Detections",
+        "name": "Lacework Compliance Violations",
         "description": null,
         "url": null,
         "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/lacework-anomaly-detections/lacework-anomaly-detections.png"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/lacework-compliance-violations/lacework-compliance-violations.png"
         ]
       },
       {
@@ -12312,11 +12312,11 @@
         ]
       },
       {
-        "name": "Lacework Compliance Violations",
+        "name": "Lacework Anomaly Detections",
         "description": null,
         "url": null,
         "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/lacework-compliance-violations/lacework-compliance-violations.png"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/lacework-anomaly-detections/lacework-anomaly-detections.png"
         ]
       }
     ],
@@ -13067,6 +13067,52 @@
       {
         "name": "Zebrium",
         "id": "third-party-zebrium"
+      }
+    ]
+  },
+  {
+    "title": "Snyk",
+    "name": "snyk",
+    "description": "The Snyk quickstart allows you to send application security vulnerabilities of your services into New Relic. We leverage webhooks on the Snyk platform to trigger an Azure Function App that acts as a proxy between Snyk and New Relic.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/snyk",
+    "id": "658d36f3-aa96-4e74-93da-b74eefcaabd3",
+    "level": "COMMUNITY",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/snyk/logo.svg",
+    "summary": "Application security vulnerabilities from within New Relic with this integration by Snyk.",
+    "websiteUrl": null,
+    "keywords": [
+      "vulnerabilities",
+      "newrelic partner",
+      "azure",
+      "apm",
+      "security",
+      "snyk"
+    ],
+    "authors": [
+      "Harry Kimpel"
+    ],
+    "dashboards": [
+      {
+        "name": "Snyk Application Security",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/snyk/snyk.png"
+        ]
+      }
+    ],
+    "alerts": [],
+    "documentation": [
+      {
+        "name": "Installation docs",
+        "description": "Installation and configuration instructions for Snyk and the Snyk quickstart.",
+        "url": "https://github.com/snyk-playground/cx-tools/tree/main/Snyk-to-New-Relic-Security-API"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "Snyk",
+        "id": "third-party-snyk"
       }
     ]
   },
@@ -15254,6 +15300,41 @@
     ]
   },
   {
+    "title": "GitHub Dependabot",
+    "name": "github-dependabot",
+    "description": "## What is GitHub Dependabot?\n\nGitHub Dependabot helps you keep your dependencies up to date. Every day, it checks your dependency files for outdated requirements and opens individual PRs for any it finds. You review, merge, and get to work on the latest, most secure releases.\n\n### Get started!\n\nStart ingesting Dependabot events by connecting GitHub to New Relic!\n\nCheck out our GitHub Dependabot documentation to instrument your GitHub account to send Vulnerability events to New Relic's Vulnerability Management product.\n\n### More info\n\nCheck out the [documentation](https://docs.newrelic.com/docs/vulnerability-management/integrations/dependabot) to learn more about New Relic ingestion for GitHub Dependabot.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/github",
+    "id": "7c2d8e71-9f1d-472b-ad7f-8025c0059040",
+    "level": "NEW_RELIC",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/github/logo.png",
+    "summary": "Ingest GitHub Dependabot events by connecting GitHub to New Relic",
+    "websiteUrl": null,
+    "keywords": [
+      "vulnerability management",
+      "security",
+      "github",
+      "dependabot"
+    ],
+    "authors": [
+      "New Relic"
+    ],
+    "dashboards": [],
+    "alerts": [],
+    "documentation": [
+      {
+        "name": "GitHub Dependabot integration installation docs",
+        "description": "Automatic integration for ingesting Dependabot vulnerabilities.",
+        "url": "https://docs.newrelic.com/docs/vulnerability-management/integrations/dependabot"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "GitHub Dependabot",
+        "id": "github-dependabot-install"
+      }
+    ]
+  },
+  {
     "title": "ASyncHTTPClient",
     "name": "asynchttpclient",
     "description": "# What is ASyncHTTPClient?\n\nLibrary that allows Java applications to easily execute HTTP requests and asynchronously process HTTP responses.\n\n\n## Get started!\n\nLeverage community expertise and instantly get value out of your telemetry data. This quickstart automatically instruments ASyncHTTPClient with the New Relic Java agent, and allows you to instantly monitor your Java application with out-of-the-box dashboards and alerts.\nFurther leverage New Relic's APM capabilities by setting up [errors inbox](https://docs.newrelic.com/docs/apm/apm-ui-pages/errors-inbox/errors-inbox/), [transaction tracing](https://docs.newrelic.com/docs/apm/transactions/transaction-traces/introduction-transaction-traces/), and [service maps](https://docs.newrelic.com/docs/understand-dependencies/understand-system-dependencies/service-maps/introduction-service-maps/).\n\n## More info\n\nCheck out the [documentation](https://docs.newrelic.com/docs/agents/java-agent/getting-started/introduction-new-relic-java/) to learn more about New Relic monitoring for ASyncHTTPClient.",
@@ -17401,6 +17482,41 @@
     ]
   },
   {
+    "title": "AWS Security Hub Integration",
+    "name": "aws-security-hub",
+    "description": "## What is AWS Security Hub?\n\nCloud security posture management service that performs security best practice checks, aggregates alerts, and enables automated remediation.\n\n### Get started!\n\nStart ingesting AWS Security Hub events by connecting Amazon Web Services (AWS) security products to New Relic!\n\nCheck out our AWS Security Hub documentation to instrument your account to send events and vulnerabilities to New Relic's Vulnerability Management product.\n\n### More info\n\nCheck out the [documentation](https://docs.newrelic.com/docs/vulnerability-management/integrations/aws) to learn more about New Relic ingestion for AWS Security Hub.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/aws/aws-security-hub",
+    "id": "547c6b8a-ec5e-44e2-a1d2-0e3c3668aa40",
+    "level": "NEW_RELIC",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/aws/aws-security-hub/logo.png",
+    "summary": "Ingest AWS Security Hub by connecting AWS to New Relic",
+    "websiteUrl": null,
+    "keywords": [
+      "aws",
+      "amazon web services",
+      "vulnerability management",
+      "security"
+    ],
+    "authors": [
+      "New Relic"
+    ],
+    "dashboards": [],
+    "alerts": [],
+    "documentation": [
+      {
+        "name": "AWS Security Hub installation docs",
+        "description": "Cloud-based service for detecting vulnerabilities in AWS resources.",
+        "url": "https://docs.newrelic.com/docs/vulnerability-management/integrations/aws"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "AWS Security Hub",
+        "id": "aws-security-hub-install"
+      }
+    ]
+  },
+  {
     "title": "Split",
     "name": "split",
     "description": "A feature delivery platform that powers feature flag management, software\nexperimentation, and continuous delivery.",
@@ -17747,6 +17863,14 @@
     ],
     "dashboards": [
       {
+        "name": "Catchpoint-Response Size",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/catchpoint-response-size/Catchpoint-Response_Size.png"
+        ]
+      },
+      {
         "name": "Catchpoint-Overview",
         "description": null,
         "url": null,
@@ -17760,14 +17884,6 @@
         "url": null,
         "screenshots": [
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/catchpoint-recent-errors/Catchpoint-Recent_Errors.png"
-        ]
-      },
-      {
-        "name": "Catchpoint-Response Size",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/catchpoint-response-size/Catchpoint-Response_Size.png"
         ]
       },
       {
@@ -19740,6 +19856,39 @@
       {
         "name": ".NET agent",
         "id": "dotnet-agent"
+      }
+    ]
+  },
+  {
+    "title": "Security Events API",
+    "name": "security-events",
+    "description": "## What is the Security Event API?\n\nNew Relic's Security Event API is a way to ingest security scanner data into New Relic's Vulnerability Management platform. \n\n### Get started!\n\nStart sending events to the Security Event API!\n\nCheck out our Security Event API documentation to setup ingestion of your scanner data into our Vulnerability Management product.\n\n### More info\n\nCheck out the [documentation](https://docs.newrelic.com/docs/vulnerability-management/integrations/security-api) to learn more about our Security Event API.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/security",
+    "id": "e65552f6-4605-437f-b809-3f7d772e0a8d",
+    "level": "NEW_RELIC",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/security/logo.png",
+    "summary": "Ingest scanner data into New Relic by using Security Event API",
+    "websiteUrl": null,
+    "keywords": [
+      "vulnerability management",
+      "security"
+    ],
+    "authors": [
+      "New Relic"
+    ],
+    "dashboards": [],
+    "alerts": [],
+    "documentation": [
+      {
+        "name": "Security Event API installation instructions",
+        "description": "Integration documentation for vulnerability ingestion through Security Event API",
+        "url": "https://docs.newrelic.com/docs/vulnerability-management/integrations/security-api"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "New Relic Security API",
+        "id": "security-api-install"
       }
     ]
   },
@@ -23538,11 +23687,11 @@
     ],
     "dashboards": [
       {
-        "name": "GCP Integrations Data Ingest Analysis",
+        "name": "Kubernetes Data Ingest Analysis",
         "description": null,
         "url": null,
         "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/gcp-integrations-data-ingest-analysis/gcp-integrations-data-ingest-analysis.png"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/kubernetes-data-ingest-analysis/kubernetes-data-ingest-analysis.png"
         ]
       },
       {
@@ -23562,19 +23711,19 @@
         ]
       },
       {
+        "name": "GCP Integrations Data Ingest Analysis",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/gcp-integrations-data-ingest-analysis/gcp-integrations-data-ingest-analysis.png"
+        ]
+      },
+      {
         "name": "On-Host Integrations Data Analysis",
         "description": null,
         "url": null,
         "screenshots": [
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/on-host-integrations-data-analysis/on-host-integrations-data-analysis.png"
-        ]
-      },
-      {
-        "name": "Kubernetes Data Ingest Analysis",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/kubernetes-data-ingest-analysis/kubernetes-data-ingest-analysis.png"
         ]
       }
     ],
@@ -24538,19 +24687,19 @@
         ]
       },
       {
-        "name": "Browser Pages Dashboard",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/browser-pages-dashboard/browser_pages_dashboard.png"
-        ]
-      },
-      {
         "name": "Browser Traffic Analysis",
         "description": null,
         "url": null,
         "screenshots": [
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/traffic-analysis/traffic_analysis.png"
+        ]
+      },
+      {
+        "name": "Browser Pages Dashboard",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/browser-pages-dashboard/browser_pages_dashboard.png"
         ]
       }
     ],
