@@ -5059,61 +5059,6 @@
     ]
   },
   {
-    "title": "Roku",
-    "name": "roku",
-    "description": "## Why monitor Roku?\n\nRoku is one of the world's most popular streaming platforms. New Relic has developed the first and only open-source observabiilty agent for Roku, giving you unparalleled insight into the performance of your Roku application.\n\n### Analytics on HTTP requests and errors\n  This can be manifestations of ISP or CDN issues or unwanted changes to the application or backend services. Faster identification and understanding of these issues is critical to maintaining a positive user experience. \n### Video Quality of Experience (QoE) \n  Correlate video quality issues back through the rest of the streaming architecture. Acquire complete correlations between video playback sessions to the backend systems.\n### Customer journey tracking\n Follow customers as they navigate the application towards their content and their video playback experience. See where and when drop offs occur and the time it takes to complete critical actions.",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/roku",
-    "id": "71e1b882-ce4e-4037-b8f1-997d9e317ddd",
-    "level": "NEW_RELIC",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/roku/logo.svg",
-    "summary": "The New Relic Roku observability agent monitors the system- and video- level performance of Roku over the top (OTT) streaming applications and devices. Specifically, the agent offers insights into an application’s network connectivity, viewer journey, and overall functionality.",
-    "websiteUrl": null,
-    "keywords": [
-      "nrlabs",
-      "nrlabs-data",
-      "video",
-      "tracker",
-      "roku",
-      "brightscript"
-    ],
-    "authors": [
-      "New Relic Labs"
-    ],
-    "dashboards": [
-      {
-        "name": "Roku Quickstart",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/roku/roku-1.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/roku/roku-2.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/roku/roku-3.png"
-        ]
-      }
-    ],
-    "alerts": [
-      {
-        "name": "Roku HTTP Error Rate",
-        "details": "Alert when the Roku Error Rate % increases significantly from its baseline.\nUseful for understanding when your users are experiencing connection issues",
-        "type": "BASELINE",
-        "url": null
-      }
-    ],
-    "documentation": [
-      {
-        "name": "Roku installation docs",
-        "description": "Use Roku agent to monitor Roku applications.",
-        "url": "https://github.com/newrelic/video-agent-roku#installation"
-      }
-    ],
-    "installPlans": [
-      {
-        "name": "roku",
-        "id": "third-party-roku"
-      }
-    ]
-  },
-  {
     "title": "Kohana",
     "name": "kohana",
     "description": "## What is Kohana PHP?\n\nKohana PHP monitoring provides complete visibility into your applications to detect and resolve performance issues. DevOps teams can automatically instrument the Kohana framework and gain instant value with out-of-the-box dashboards by leveraging [New Relic's Kohana PHP monitoring quickstart](https://docs.newrelic.com/docs/apm/agents/php-agent/getting-started/introduction-new-relic-php/). Enhance performance monitoring protocols and drive smart business decisions with this approach.\n\n### Value of Kohana PHP\n\nDevelopment teams benefit from instant observability with Kohana PHP monitoring. Developers can also take advantage of high-level app summary, monitor user satisfaction, and build architectural maps of the application.\n\nYou can quickly find errors and issues by tracking key transactions, monitoring the Kohana dashboard for critical metrics, and alerting your team to errors or problems before they impact users.\n\n### New Relic Kohana PHP Quickstart Features\n\nNew Relic's Kohana PHP monitoring quickstart offers:\n- Alerts (duration, error rate, and throughput)\n- Code-level transactions, error traces, and database query traces\n- Distributed tracing to see the path taken by requests through a distributed system\n- Customizable charts for metric timeslice data and other custom metrics sent to New Relic\n- Kohana dashboards (for transactions overview, errors overview, VM overview, top five slowest transactions, latest error, and more)\n\nWhen you accelerate troubleshooting with distributed tracing and enhanced visibility into application and data lags in a Kohana dashboard, it's much easier for your team to quickly identify and resolve potential errors and ensure uptime. \n\n### The Complete Kohana PHP Dashboard Tool\n\nHelp developers optimize the entire infrastructure and help DevOps teams capture discrete events with key-value attributes attached to them, and analyze and query both application and business data.\n\nIn addition to the above, New Relic's Kohana PHP quickstart also helps teams organize, query, and visualize data to answer critical questions about app performance and customer experiences.\n\nConnect more than 500 applications to one daemon to impose sampling once you reach the harvest cycle limits. This approach helps reduce complexity and improve efficiency through the  instant observability provided by the Kohana dashboard.",
@@ -5598,6 +5543,62 @@
       {
         "name": "RedisEnterprise",
         "id": "third-party-redisenterprise"
+      }
+    ]
+  },
+  {
+    "title": "Roku",
+    "name": "roku",
+    "description": "## Why monitor Roku?\n\nRoku is one of the world's most popular streaming platforms. New Relic has developed the first and only open-source observabiilty agent for Roku, giving you unparalleled insight into the performance of your Roku application.\n\n### Analytics on HTTP requests and errors\n  This can be manifestations of ISP or CDN issues or unwanted changes to the application or backend services. Faster identification and understanding of these issues is critical to maintaining a positive user experience. \n### Video Quality of Experience (QoE) \n  Correlate video quality issues back through the rest of the streaming architecture. Acquire complete correlations between video playback sessions to the backend systems.\n### Customer journey tracking\n Follow customers as they navigate the application towards their content and their video playback experience. See where and when drop offs occur and the time it takes to complete critical actions.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/roku",
+    "id": "71e1b882-ce4e-4037-b8f1-997d9e317ddd",
+    "level": "NEW_RELIC",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/roku/logo.svg",
+    "summary": "The New Relic Roku observability agent monitors the system- and video- level performance of Roku over the top (OTT) streaming applications and devices. Specifically, the agent offers insights into an application’s network connectivity, viewer journey, and overall functionality.",
+    "websiteUrl": null,
+    "keywords": [
+      "nrlabs",
+      "nrlabs-data",
+      "video",
+      "tracker",
+      "roku",
+      "brightscript",
+      "featured"
+    ],
+    "authors": [
+      "New Relic Labs"
+    ],
+    "dashboards": [
+      {
+        "name": "Roku Quickstart",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/roku/roku-1.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/roku/roku-2.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/roku/roku-3.png"
+        ]
+      }
+    ],
+    "alerts": [
+      {
+        "name": "Roku HTTP Error Rate",
+        "details": "Alert when the Roku Error Rate % increases significantly from its baseline.\nUseful for understanding when your users are experiencing connection issues",
+        "type": "BASELINE",
+        "url": null
+      }
+    ],
+    "documentation": [
+      {
+        "name": "Roku installation docs",
+        "description": "Use Roku agent to monitor Roku applications.",
+        "url": "https://github.com/newrelic/video-agent-roku#installation"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "roku",
+        "id": "third-party-roku"
       }
     ]
   },
@@ -12287,6 +12288,52 @@
     ]
   },
   {
+    "title": "Snyk",
+    "name": "snyk",
+    "description": "The Snyk quickstart allows you to send application security vulnerabilities of your services into New Relic. We leverage webhooks on the Snyk platform to trigger an Azure Function App that acts as a proxy between Snyk and New Relic.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/snyk",
+    "id": "658d36f3-aa96-4e74-93da-b74eefcaabd3",
+    "level": "COMMUNITY",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/snyk/logo.svg",
+    "summary": "Application security vulnerabilities from within New Relic with this integration by Snyk.",
+    "websiteUrl": null,
+    "keywords": [
+      "vulnerabilities",
+      "newrelic partner",
+      "azure",
+      "apm",
+      "security",
+      "snyk"
+    ],
+    "authors": [
+      "Harry Kimpel"
+    ],
+    "dashboards": [
+      {
+        "name": "Snyk Application Security",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/snyk/snyk.png"
+        ]
+      }
+    ],
+    "alerts": [],
+    "documentation": [
+      {
+        "name": "Installation docs",
+        "description": "Installation and configuration instructions for Snyk and the Snyk quickstart.",
+        "url": "https://docs.snyk.io/snyk-api-info/snyk-webhooks/using-snyk-webhooks-to-integrate-new-relic-with-snyk-through-an-azure-function-app"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "Snyk",
+        "id": "third-party-snyk"
+      }
+    ]
+  },
+  {
     "title": "Lacework Integration",
     "name": "lacework",
     "description": "Lacework is a comprehensive cloud security platform. We aim to turn security into a data problem and replace the frictionful processes for things like breach investigations or achieving compliance standards with simple, contextualized workflows.\nTechnically, our approach is that we replace the traditional 'rules' based mentality that requires you to predict attacker patterns ahead of time with a fully ML based approach.  We baseline what normal user, application and network behaviors look like across your workloads and cloud accounts automatically and then only alert you to deviations from the norm.  This significantly reduces the amount of toil in setting up and maintaining our solution, but also drastically improves the efficacy and amount of security alerts you will receive.\nThe following Quickstart brings the curated security alerts for misconfigurations and anomalous security behaviors into the New Relic platform so you can easily triage against your wealth of observability data or easily transition from monitoring to security investigations from a single interface!\nIf you encounter any issues, have feedback or would like more details on how to get started, please head over to support.lacework.com or send an email to adam.larson@lacework.net!",
@@ -13080,52 +13127,6 @@
       {
         "name": "Zebrium",
         "id": "third-party-zebrium"
-      }
-    ]
-  },
-  {
-    "title": "Snyk",
-    "name": "snyk",
-    "description": "The Snyk quickstart allows you to send application security vulnerabilities of your services into New Relic. We leverage webhooks on the Snyk platform to trigger an Azure Function App that acts as a proxy between Snyk and New Relic.",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/snyk",
-    "id": "658d36f3-aa96-4e74-93da-b74eefcaabd3",
-    "level": "COMMUNITY",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/snyk/logo.svg",
-    "summary": "Application security vulnerabilities from within New Relic with this integration by Snyk.",
-    "websiteUrl": null,
-    "keywords": [
-      "vulnerabilities",
-      "newrelic partner",
-      "azure",
-      "apm",
-      "security",
-      "snyk"
-    ],
-    "authors": [
-      "Harry Kimpel"
-    ],
-    "dashboards": [
-      {
-        "name": "Snyk Application Security",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/snyk/snyk.png"
-        ]
-      }
-    ],
-    "alerts": [],
-    "documentation": [
-      {
-        "name": "Installation docs",
-        "description": "Installation and configuration instructions for Snyk and the Snyk quickstart.",
-        "url": "https://github.com/snyk-playground/cx-tools/tree/main/Snyk-to-New-Relic-Security-API"
-      }
-    ],
-    "installPlans": [
-      {
-        "name": "Snyk",
-        "id": "third-party-snyk"
       }
     ]
   },
