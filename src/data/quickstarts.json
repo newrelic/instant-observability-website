@@ -7372,6 +7372,82 @@
     ]
   },
   {
+    "title": "NGINX Ingress Controller",
+    "name": "nginx-ingress-controller",
+    "description": "## Why monitor the NGINX ingress controller? \n\nThe NGINX ingress controller exposes many useful metrics that can be scraped by a Prometheus server or agent. These metrics can inform you of ongoing process connections and the current ingress load that your system is handling. Furthermore, these metrics can inform you on ingress config reloads and empower alert conditions on config reload errors or unexpected config changes.\n\n## NGINX ingress controller quickstart highlights\n\n- Config reload monitoring (errors and last successful reload)\n- Throughput faceted by ingress classes\n- Request/response insights on payload size and response time\n- CPU and memory statistics \n\n## Monitoring NGINX ingress controller\n\nThe NGINX ingress controller has to have metrics enabled before they are available to be scraped. Instructions for ensuring your NGINX metrics are enabled can be found here: https://kubernetes.github.io/ingress-nginx/user-guide/monitoring/#wildcard-ingresses",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/kubernetes/nginx",
+    "id": "689827ca-e78b-4d30-989e-aa404a4f6984",
+    "level": "NEW_RELIC",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/kubernetes/nginx/logo.svg",
+    "summary": "Visualize NGINX ingress controller performance and alert on potential configuration errors. Download New Relic NGINX ingress controller quickstart to increase visibility into your ingress performance.",
+    "websiteUrl": null,
+    "keywords": [
+      "kubernetes",
+      "k8s",
+      "nginx",
+      "ingress",
+      "controllers",
+      "config"
+    ],
+    "authors": [
+      "New Relic"
+    ],
+    "dashboards": [
+      {
+        "name": "NGINX Ingress Controller",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/nginx-ingress/nginx-ingress.png"
+        ]
+      }
+    ],
+    "alerts": [
+      {
+        "name": "High HTTP 4xx/5xx error alert",
+        "details": "This alert is triggered when the HTTP request success rate drops below 95 percent. The alert threshold can be changed to your desired error alerting requirements.",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "Ingress certificate expiration alert",
+        "details": "This alert is triggered when there are less than 30 days remaining for certificate expiration. The alert threshold can be changed to your desired expiration alerting requirements.",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "Nginx-ingress config load errors alert",
+        "details": "This alert is triggered when there is an error loading ingress configuration",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "P99 latency alert",
+        "details": "This sample alert is triggered when the controller request processing duration for the 99th percentile of requests goes above 100 ms. The alert threshold can be changed to your desired latency for alerting requirements.",
+        "type": "STATIC",
+        "url": null
+      }
+    ],
+    "documentation": [
+      {
+        "name": "Enabling metrics for your NGINX ingress controller",
+        "description": "Details on enabling metrics for your NGINX ingress controller",
+        "url": "https://kubernetes.github.io/ingress-nginx/user-guide/monitoring/#prometheus-and-grafana-installation-using-pod-annotations"
+      },
+      {
+        "name": "NGINX Ingress Controller Quickstart",
+        "description": "Details on installing the NGINX ingress controller in your Kubernetes cluster",
+        "url": "https://kubernetes.github.io/ingress-nginx/deploy/#quick-start"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "NGINX Ingress Controller",
+        "id": "third-party-nginx-ingress"
+      }
+    ]
+  },
+  {
     "title": "Databricks Integration",
     "name": "databricks",
     "description": "Databricks is an orchestration platform for Apache Spark. Instantly monitor Databricks Spark applications with our New Relic Spark integration quickstart.\nOur integration provides a script run in a notebook to generate an installation script, which you can attach to a cluster and populate Spark metrics to New relic Insights events. Easily track the health of your Databricks clusters, fine-tune your Spark jobs for peak performance, and troubleshoot problems with this quickstart.\n\nDatabricks cluster’s driver node runs each job in scheduled stages. Individual stages are broken down into tasks and distributed across executor nodes. Our New Relic Spark integration collects detailed job and stage metrics so you can get granular insight into job performance at a glance. For example , break down the Job metric by status (successful, pending, or failed) to see in real-time if a high number of jobs are failing, which could indicate a code error or memory issue at the executor level. Metrics on the number of jobs in realtime can also help you make decisions for provisioning clusters in the future.",
@@ -9479,57 +9555,6 @@
       {
         "name": "Python Agent",
         "id": "setup-python-agent"
-      }
-    ]
-  },
-  {
-    "title": "NGINX Ingress Controller",
-    "name": "nginx-ingress-controller",
-    "description": "## Why monitor the NGINX ingress controller? \n\nThe NGINX ingress controller exposes many useful metrics that can be scraped by a Prometheus server or agent. These metrics can inform you of ongoing process connections and the current ingress load that your system is handling. Furthermore, these metrics can inform you on ingress config reloads and empower alert conditions on config reload errors or unexpected config changes.\n\n## NGINX ingress controller quickstart highlights\n\n- Config reload monitoring (errors and last successful reload)\n- Throughput faceted by ingress classes\n- Request/response insights on payload size and response time\n- CPU and memory statistics \n\n## Monitoring NGINX ingress controller\n\nThe NGINX ingress controller has to have metrics enabled before they are available to be scraped. Instructions for ensuring your NGINX metrics are enabled can be found here: https://kubernetes.github.io/ingress-nginx/user-guide/monitoring/#wildcard-ingresses",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/kubernetes/nginx",
-    "id": "689827ca-e78b-4d30-989e-aa404a4f6984",
-    "level": "NEW_RELIC",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/kubernetes/nginx/logo.svg",
-    "summary": "Visualize NGINX ingress controller performance and alert on potential configuration errors. Download New Relic NGINX ingress controller quickstart to increase visibility into your ingress performance.",
-    "websiteUrl": null,
-    "keywords": [
-      "kubernetes",
-      "k8s",
-      "nginx",
-      "ingress",
-      "controllers",
-      "config"
-    ],
-    "authors": [
-      "New Relic"
-    ],
-    "dashboards": [
-      {
-        "name": "NGINX Ingress Controller",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/nginx-ingress/nginx-ingress.png"
-        ]
-      }
-    ],
-    "alerts": [],
-    "documentation": [
-      {
-        "name": "Enabling metrics for your NGINX ingress controller",
-        "description": "Details on enabling metrics for your NGINX ingress controller",
-        "url": "https://kubernetes.github.io/ingress-nginx/user-guide/monitoring/#prometheus-and-grafana-installation-using-pod-annotations"
-      },
-      {
-        "name": "NGINX Ingress Controller Quickstart",
-        "description": "Details on installing the NGINX ingress controller in your Kubernetes cluster",
-        "url": "https://kubernetes.github.io/ingress-nginx/deploy/#quick-start"
-      }
-    ],
-    "installPlans": [
-      {
-        "name": "NGINX Ingress Controller",
-        "id": "third-party-nginx-ingress"
       }
     ]
   },
