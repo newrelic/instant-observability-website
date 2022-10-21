@@ -306,6 +306,74 @@
     ]
   },
   {
+    "title": "PHP",
+    "name": "php",
+    "description": "## Complete solution to PHP monitoring\n\nUse our PHP monitoring agent to see a high-level summary of their app performance in a comprehensive PHP dashboard. Help teams monitor the app's Apdex, build architectural maps, and find and resolve errors quickly.\n\nA [PHP agent](https://docs.newrelic.com/docs/agents/php-agent/getting-started/introduction-new-relic-php/) collects and analyzes application data that drive data-driven decisions. Organize data, query data using NRQL, and visualize data (in customizable interactive dashboards) that directly impact customer experiences. \n\n### How to speed up PHP with New Relic\n\nIdentify slow AJAX request performance issues at a glance through our PHP dashboard that boasts broader visibility. Proactively monitor where you should concentrate your efforts and address potential errors quickly.\n\n### What’s included?\n\nOur PHP quickstart include out-of-the-box dashboards and alerts, including:\n- Alerts including error rates, duration, and throughput\n- Multiple ready-to-use dashboards including throughput, error rate percentage, transaction time in milliseconds, and latest transactions\n\n### Value of PHP quickstarts\n\nNew Relic's instant observability quickstart helps developers leverage broader visibility in a PHP dashboard to resolve errors and speed up processes that enhance customer experiences.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/php/php",
+    "id": "475dec69-10c9-4bc6-8312-3caa266fb028",
+    "level": "NEW_RELIC",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/php/php/logo.svg",
+    "summary": "New Relic's instant observability quickstart with a PHP server monitor agent helps app developers quickly identify and resolve errors, including slow responses, to enhance customer experiences.",
+    "websiteUrl": null,
+    "keywords": [
+      "apm",
+      "php",
+      "language agent",
+      "most popular"
+    ],
+    "authors": [
+      "New Relic"
+    ],
+    "dashboards": [
+      {
+        "name": "PHP",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/php/php01.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/php/php02.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/php/php03.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/php/php04.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/php/php05.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/php/php06.png"
+        ]
+      }
+    ],
+    "alerts": [
+      {
+        "name": "High duration",
+        "details": "This alert is triggered when the total duration of the web transaction is longer than 10 seconds during 5 minutes",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "High error rate",
+        "details": "This alert is triggered when the error percentage of web transactions is higher than 5% during 5 minutes",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "Low throughput",
+        "details": "This alert is triggered when the throughput is 0 for 5 minutes",
+        "type": "STATIC",
+        "url": null
+      }
+    ],
+    "documentation": [
+      {
+        "name": "PHP",
+        "description": "PHP is a general-purpose scripting language especially suited to web development.\n",
+        "url": "https://docs.newrelic.com/docs/agents/php-agent/getting-started/php-agent-compatibility-requirements/"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "PHP Agent",
+        "id": "php-agent"
+      }
+    ]
+  },
+  {
     "title": "Node Exporter",
     "name": "node-exporter",
     "description": "Official New Relic dashboard for Prometheus Node Exporter. Node Exporter allows host metrics gathered by the exporter to be scraped by Prometheus Server.\n\n## Dashboard Highlights\n- Load Averages\n- CPU\n- Memory Usage\n- Storage Usage\n- Network\n\n## Requirements:\n1. [Prometheus Server](https://prometheus.io/docs/prometheus/latest/installation/)\n2. [Node Exporter](https://prometheus.io/docs/guides/node-exporter/) installed\n3. Enable Prometheus [Remote Write](https://docs.newrelic.com/docs/infrastructure/prometheus-integrations/install-configure-remote-write/set-your-prometheus-remote-write-integration/) to New Relic.\n4. To be able to filter metrics by a specific label that isn't part of the Node Exporter default installation, an `external_label` will need to be added to the Prometheus config. Example:\n    `\n      global:\n        external_labels:\n          clusterName: <cluster_name>\n    `",
@@ -632,74 +700,6 @@
         "name": "CakePHP installation docs",
         "description": "PHP open-source web framework that follows the model–view–controller\napproach, modeled after the concepts of Ruby on Rails.\n",
         "url": "https://docs.newrelic.com/docs/agents/php-agent/getting-started/php-agent-compatibility-requirements"
-      }
-    ],
-    "installPlans": [
-      {
-        "name": "PHP Agent",
-        "id": "php-agent"
-      }
-    ]
-  },
-  {
-    "title": "PHP",
-    "name": "php",
-    "description": "## Complete solution to PHP monitoring\n\nUse our PHP monitoring agent to see a high-level summary of their app performance in a comprehensive PHP dashboard. Help teams monitor the app's Apdex, build architectural maps, and find and resolve errors quickly.\n\nA [PHP agent](https://docs.newrelic.com/docs/agents/php-agent/getting-started/introduction-new-relic-php/) collects and analyzes application data that drive data-driven decisions. Organize data, query data using NRQL, and visualize data (in customizable interactive dashboards) that directly impact customer experiences. \n\n### How to speed up PHP with New Relic\n\nIdentify slow AJAX request performance issues at a glance through our PHP dashboard that boasts broader visibility. Proactively monitor where you should concentrate your efforts and address potential errors quickly.\n\n### What’s included?\n\nOur PHP quickstart include out-of-the-box dashboards and alerts, including:\n- Alerts including error rates, duration, and throughput\n- Multiple ready-to-use dashboards including throughput, error rate percentage, transaction time in milliseconds, and latest transactions\n\n### Value of PHP quickstarts\n\nNew Relic's instant observability quickstart helps developers leverage broader visibility in a PHP dashboard to resolve errors and speed up processes that enhance customer experiences.",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/php/php",
-    "id": "475dec69-10c9-4bc6-8312-3caa266fb028",
-    "level": "NEW_RELIC",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/php/php/logo.jpg",
-    "summary": "New Relic's instant observability quickstart with a PHP server monitor agent helps app developers quickly identify and resolve errors, including slow responses, to enhance customer experiences.",
-    "websiteUrl": null,
-    "keywords": [
-      "apm",
-      "php",
-      "language agent",
-      "most popular"
-    ],
-    "authors": [
-      "New Relic"
-    ],
-    "dashboards": [
-      {
-        "name": "PHP",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/php/php01.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/php/php02.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/php/php03.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/php/php04.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/php/php05.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/php/php06.png"
-        ]
-      }
-    ],
-    "alerts": [
-      {
-        "name": "High duration",
-        "details": "This alert is triggered when the total duration of the web transaction is longer than 10 seconds during 5 minutes",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "High error rate",
-        "details": "This alert is triggered when the error percentage of web transactions is higher than 5% during 5 minutes",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "Low throughput",
-        "details": "This alert is triggered when the throughput is 0 for 5 minutes",
-        "type": "STATIC",
-        "url": null
-      }
-    ],
-    "documentation": [
-      {
-        "name": "PHP",
-        "description": "PHP is a general-purpose scripting language especially suited to web development.\n",
-        "url": "https://docs.newrelic.com/docs/agents/php-agent/getting-started/php-agent-compatibility-requirements/"
       }
     ],
     "installPlans": [
