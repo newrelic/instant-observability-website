@@ -7568,6 +7568,101 @@
     ]
   },
   {
+    "title": "Etcd",
+    "name": "etcd",
+    "description": "## What is Etcd?\n\nEtcd is a strongly consistent, distributed key-value store that provides a reliable way to store data that needs to be accessed by a distributed system or cluster of machines. It gracefully handles leader elections during network partitions and can tolerate machine failure, even in the leader node\n\n## Quickstart details\n\nThis quickstart was built based on `etcd` metrics sent to New Relic using Prometheus remote write.  If using with the Prometheus OpenMetrics Integration, the dashboard widgets will require some modification.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/etcd",
+    "id": "83b4ef64-9af6-4bec-9707-674fa82c2837",
+    "level": "COMMUNITY",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/etcd/logo.png",
+    "summary": "A curated dashboard based on Prometheus metrics which helps you understand the health of your Etcd cluster.",
+    "websiteUrl": null,
+    "keywords": [
+      "etcd",
+      "kubernetes",
+      "k8s",
+      "prometheus",
+      "remote-write"
+    ],
+    "authors": [
+      "New Relic",
+      "Brad Schmitt",
+      "Raga Potti"
+    ],
+    "dashboards": [
+      {
+        "name": "Etcd Overview",
+        "description": "A dashboard for etcd based on Prometheus remote write metrics",
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/etcd/dashboard.png"
+        ]
+      }
+    ],
+    "alerts": [
+      {
+        "name": "High Commit Duration",
+        "details": "This alert is triggered when commit duration is high in instance",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "Higher Number Of Failed GRPC requests",
+        "details": "This alert is triggered when more than 5 gRPC requests are failing in last 5 minutes",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "Latency Of Fsync Called By Wal",
+        "details": "This alert is triggered when fsync durations are high in an instance",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "Leader Changes",
+        "details": "This alert is triggered when more than 3 leader changes occured",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "No Leader",
+        "details": "This alert is triggered when the etcd member has no leader",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "Number Of Failed GRPC requests",
+        "details": "This alert is triggered when more than 1 gRPC requests are failing in last 5 minutes",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "Number Of Failed Server Proposals",
+        "details": "This alert is triggered when more than 5 proposals are failing in last 5 minutes",
+        "type": "STATIC",
+        "url": null
+      }
+    ],
+    "documentation": [
+      {
+        "name": "Etcd Metrics Documentation",
+        "description": "Learn more about the Prometheus metrics available for Etcd",
+        "url": "https://etcd.io/docs/v3.5/metrics/"
+      },
+      {
+        "name": "Prometheus Remote Write Configuration",
+        "description": "Configure your Prometheus Server to remote write metrics to New Relic",
+        "url": "https://docs.newrelic.com/docs/infrastructure/prometheus-integrations/install-configure-remote-write/set-your-prometheus-remote-write-integration/"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "Prometheus remote write",
+        "id": "setup-prometheus"
+      }
+    ]
+  },
+  {
     "title": "Micrometer",
     "name": "micrometer",
     "description": "## What is Micrometer?\n\nLibrary for viewing and managing instrumentation clients for popular services and applications.\n\n## Get started!\n\nNew Relic's Micrometer metrics registry sends your Micrometer telemetry data to your New Relic account.\nFollow [the documentation](https://docs.newrelic.com/docs/integrations/open-source-telemetry-integrations/open-source-telemetry-integration-list/new-relics-micrometer-integration) to get started!",
@@ -8084,56 +8179,6 @@
       {
         "name": "AWS-CloudWatch-Metric-Streams",
         "id": "aws-cloudwatch-metric-streams"
-      }
-    ]
-  },
-  {
-    "title": "Etcd",
-    "name": "etcd",
-    "description": "## What is Etcd?\n\nEtcd is a strongly consistent, distributed key-value store that provides a reliable way to store data that needs to be accessed by a distributed system or cluster of machines. It gracefully handles leader elections during network partitions and can tolerate machine failure, even in the leader node\n\n## Quickstart details\n\nThis quickstart was built based on `etcd` metrics sent to New Relic using Prometheus remote write.  If using with the Prometheus OpenMetrics Integration, the dashboard widgets will require some modification.",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/etcd",
-    "id": "83b4ef64-9af6-4bec-9707-674fa82c2837",
-    "level": "COMMUNITY",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/etcd/logo.png",
-    "summary": "A curated dashboard based on Prometheus metrics which helps you understand the health of your Etcd cluster.",
-    "websiteUrl": null,
-    "keywords": [
-      "etcd",
-      "kubernetes",
-      "k8s",
-      "prometheus",
-      "remote-write"
-    ],
-    "authors": [
-      "Brad Schmitt"
-    ],
-    "dashboards": [
-      {
-        "name": "Etcd Overview",
-        "description": "A dashboard for etcd based on Prometheus remote write metrics",
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/etcd/dashboard.png"
-        ]
-      }
-    ],
-    "alerts": [],
-    "documentation": [
-      {
-        "name": "Etcd Metrics Documentation",
-        "description": "Learn more about the Prometheus metrics available for Etcd",
-        "url": "https://etcd.io/docs/v3.5/metrics/"
-      },
-      {
-        "name": "Prometheus Remote Write Configuration",
-        "description": "Configure your Prometheus Server to remote write metrics to New Relic",
-        "url": "https://docs.newrelic.com/docs/infrastructure/prometheus-integrations/install-configure-remote-write/set-your-prometheus-remote-write-integration/"
-      }
-    ],
-    "installPlans": [
-      {
-        "name": "Prometheus remote write",
-        "id": "setup-prometheus"
       }
     ]
   },
