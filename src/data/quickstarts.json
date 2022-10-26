@@ -482,6 +482,50 @@
     ]
   },
   {
+    "title": "Logs Analysis Dashboard",
+    "name": "log-analysis",
+    "description": "The logs analysis dashboard allows you to get deep visibility into the ingestion of your logs. With this panel, you will be able to identify the services and host that send the most logs, which types of serverity are being sent, the cost for each of the attributes and also if the essential attributes are being sent for the ccorrelation between services and logs, such as: service name, log in context and hostname.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/audit/log-ingestion-analysis",
+    "id": "4d0ec923-b3d7-40dd-a0df-d32e403d666f",
+    "level": "NEW_RELIC",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/audit/log-ingestion-analysis/logo.svg",
+    "summary": "Logs analysis dashboard allows you to get deep visibility into the ingestion of your logs.",
+    "websiteUrl": null,
+    "keywords": [
+      "logs",
+      "ingest",
+      "consumption",
+      "data"
+    ],
+    "authors": [
+      "Thiago Anate"
+    ],
+    "dashboards": [
+      {
+        "name": "Logs Analysis",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/log-analysis/log-analysis.png"
+        ]
+      }
+    ],
+    "alerts": [],
+    "documentation": [
+      {
+        "name": "Log Management",
+        "description": "New Relic offers a fast, scalable log management platform so you can connect your logs with the rest of your telemetry and infrastructure data in a single place.\n",
+        "url": "https://docs.newrelic.com/docs/logs/log-management/get-started/get-started-log-management/"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "New Relic Logs",
+        "id": "logs-default"
+      }
+    ]
+  },
+  {
     "title": "Datazoom",
     "name": "datazoom",
     "description": "The Datazoom quickstart provides a fast and easy launching point into video metrics built on top of New Relic One dashboards, allowing you to gain insights about your viewers, content, ads and your platform's performance. Customize the dashboard to use only the metrics that fit your goals and easily edit metric calculations and tailor them to your needs.",
@@ -1574,50 +1618,6 @@
       {
         "name": "Guided install",
         "id": "guided-install"
-      }
-    ]
-  },
-  {
-    "title": "Logs Analysis Dashboard",
-    "name": "log-analysis",
-    "description": "The logs analysis dashboard allows you to get deep visibility into the ingestion of your logs. With this panel, you will be able to identify the services and host that send the most logs, which types of serverity are being sent, the cost for each of the attributes and also if the essential attributes are being sent for the ccorrelation between services and logs, such as: service name, log in context and hostname.",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/audit/log-ingestion-analysis",
-    "id": "4d0ec923-b3d7-40dd-a0df-d32e403d666f",
-    "level": "NEW_RELIC",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/audit/log-ingestion-analysis/logo.svg",
-    "summary": "Logs analysis dashboard allows you to get deep visibility into the ingestion of your logs.",
-    "websiteUrl": null,
-    "keywords": [
-      "logs",
-      "ingest",
-      "consumption",
-      "data"
-    ],
-    "authors": [
-      "Thiago Anate"
-    ],
-    "dashboards": [
-      {
-        "name": "Logs Analysis",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/log-analysis/log-analysis.png"
-        ]
-      }
-    ],
-    "alerts": [],
-    "documentation": [
-      {
-        "name": "Log Management",
-        "description": "New Relic offers a fast, scalable log management platform so you can connect your logs with the rest of your telemetry and infrastructure data in a single place.\n",
-        "url": "https://docs.newrelic.com/docs/logs/log-management/get-started/get-started-log-management/"
-      }
-    ],
-    "installPlans": [
-      {
-        "name": "New Relic Logs",
-        "id": "logs-default"
       }
     ]
   },
