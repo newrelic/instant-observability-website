@@ -8342,75 +8342,6 @@
     ]
   },
   {
-    "title": "Calico-Newrelic",
-    "name": "calico-newrelic",
-    "description": "Calico is an open source networking and network security solution for containers, virtual machines, and native host-based workloads. Calico supports a broad range of platforms including Kubernetes, OpenShift, Mirantis Kubernetes Engine (MKE), OpenStack, and bare metal services.Whether you opt to use Calico's eBPF data plane or Linux’s standard networking pipeline, Calico delivers blazing fast performance with true cloud-native scalability\n\nInstall this quickstart to access preconfigured Calico observability solutions based on Prometheus metrics that are available out-of-the-box",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/calico",
-    "id": "a4383e84-ad92-4771-8f58-d0a459542be0",
-    "level": "COMMUNITY",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/calico/logo.png",
-    "summary": "A curated dashboard based on Prometheus metrics which helps you understand the Calico CNI of your k8s cluster",
-    "websiteUrl": null,
-    "keywords": [
-      "calico",
-      "kubernetes",
-      "k8s",
-      "prometheus",
-      "remote-write"
-    ],
-    "authors": [
-      "Ragalahari Potti"
-    ],
-    "dashboards": [
-      {
-        "name": "Calico",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/calico/dashboard.png"
-        ]
-      }
-    ],
-    "alerts": [
-      {
-        "name": "High Number Of Dataplane Failure",
-        "details": "This alert is triggered when more than 5 dataplane failures within Felix have happened",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "High Number Of Ipset Commands Failure",
-        "details": "This alert is triggered when more than 5 ipset errors within Felix have happened",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "High Number Of Iptables-save Failure",
-        "details": "This alert is triggered when more than 5 iptable save errors within Felix have happened",
-        "type": "STATIC",
-        "url": null
-      }
-    ],
-    "documentation": [
-      {
-        "name": "Calico Metrics Documentation",
-        "description": "Learn more about the Prometheus metrics available for Calico-felix",
-        "url": "https://projectcalico.docs.tigera.io/reference/felix/prometheus"
-      },
-      {
-        "name": "Prometheus Remote Write Configuration",
-        "description": "Configure your Prometheus Server to remote write metrics to New Relic",
-        "url": "https://docs.newrelic.com/docs/infrastructure/prometheus-integrations/install-configure-remote-write/set-your-prometheus-remote-write-integration/"
-      }
-    ],
-    "installPlans": [
-      {
-        "name": "Prometheus remote write",
-        "id": "setup-prometheus"
-      }
-    ]
-  },
-  {
     "title": "Etcd",
     "name": "etcd",
     "description": "## What is Etcd?\n\nEtcd is a strongly consistent, distributed key-value store that provides a reliable way to store data that needs to be accessed by a distributed system or cluster of machines. It gracefully handles leader elections during network partitions and can tolerate machine failure, even in the leader node\n\n## Quickstart details\n\nThis quickstart was built based on `etcd` metrics sent to New Relic using Prometheus remote write.  If using with the Prometheus OpenMetrics Integration, the dashboard widgets will require some modification.",
@@ -8709,6 +8640,75 @@
       {
         "name": "NGINX Ingress Controller",
         "id": "third-party-nginx-ingress"
+      }
+    ]
+  },
+  {
+    "title": "Calico-Newrelic",
+    "name": "calico-newrelic",
+    "description": "Calico is an open source networking and network security solution for containers, virtual machines, and native host-based workloads. Calico supports a broad range of platforms including Kubernetes, OpenShift, Mirantis Kubernetes Engine (MKE), OpenStack, and bare metal services.Whether you opt to use Calico's eBPF data plane or Linux’s standard networking pipeline, Calico delivers blazing fast performance with true cloud-native scalability\n\nInstall this quickstart to access preconfigured Calico observability solutions based on Prometheus metrics that are available out-of-the-box",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/calico",
+    "id": "a4383e84-ad92-4771-8f58-d0a459542be0",
+    "level": "COMMUNITY",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/calico/logo.png",
+    "summary": "A curated dashboard based on Prometheus metrics which helps you understand the Calico CNI of your k8s cluster",
+    "websiteUrl": null,
+    "keywords": [
+      "calico",
+      "kubernetes",
+      "k8s",
+      "prometheus",
+      "remote-write"
+    ],
+    "authors": [
+      "Ragalahari Potti"
+    ],
+    "dashboards": [
+      {
+        "name": "Calico",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/calico/dashboard.png"
+        ]
+      }
+    ],
+    "alerts": [
+      {
+        "name": "High Number Of Dataplane Failure",
+        "details": "This alert is triggered when more than 5 dataplane failures within Felix have happened",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "High Number Of Ipset Commands Failure",
+        "details": "This alert is triggered when more than 5 ipset errors within Felix have happened",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "High Number Of Iptables-save Failure",
+        "details": "This alert is triggered when more than 5 iptable save errors within Felix have happened",
+        "type": "STATIC",
+        "url": null
+      }
+    ],
+    "documentation": [
+      {
+        "name": "Calico Metrics Documentation",
+        "description": "Learn more about the Prometheus metrics available for Calico-felix",
+        "url": "https://projectcalico.docs.tigera.io/reference/felix/prometheus"
+      },
+      {
+        "name": "Prometheus Remote Write Configuration",
+        "description": "Configure your Prometheus Server to remote write metrics to New Relic",
+        "url": "https://docs.newrelic.com/docs/infrastructure/prometheus-integrations/install-configure-remote-write/set-your-prometheus-remote-write-integration/"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "Prometheus remote write",
+        "id": "setup-prometheus"
       }
     ]
   },
