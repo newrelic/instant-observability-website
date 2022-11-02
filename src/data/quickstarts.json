@@ -21498,77 +21498,6 @@
     ]
   },
   {
-    "title": "WordPress",
-    "name": "wordpress",
-    "description": "## Why monitor WordPress?\n\nWordPress is an open source software used for creating a website, blog, or app. It is a content management system with a plugin architecture and a template system known as Themes. New Relic WordPress quickstart empowers you to monitor the performance metrics of your WordPress via our [PHP agent](https://docs.newrelic.com/docs/apm/agents/php-agent/frameworks-libraries/wordpress-specific-functionality/).\n### WordPress quickstart highlights\n\nThe New Relic WordPress quickstart has the following features:\nDashboards: Proactively monitor metrics like total visitor time series, device types used, users’ top 5 operating systems, web transaction time, and database call counts.\nAlerts: Get instant alerts like Apdex score, memory usage, transaction errors, and CPU utilization.\n\n### New Relic + WordPress = Optimum performance monitoring\n\nMonitor WordPress performance with our PHP agent. The integration allows you to track the time spent within each WordPress hook, plugin, and theme. You can control which WordPress-specific metrics your app sends to New Relic by using the PHP agent's ini setting newrelic.framework.WordPress.hooks.\n\nThe dashboards provide interactive visualizations to explore the total visitor time series, device types used, users’ top 5 operating systems, web transaction time, and database call counts. With real user monitoring (RUM), New Relic measures the overall time to load an entire webpage and provides actionable insights into real users' experiences on your WordPress website.\nInstall the New Relic WordPress quickstart today to instantly monitor WordPress key performance indicators with our PHP agent. The quickstart is the key to a seamless WordPress uptime monitoring.",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/wordpress",
-    "id": "59ba7d1f-7833-4d9b-893d-2b493e5ddac8",
-    "level": "NEW_RELIC",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/wordpress/logo.svg",
-    "summary": "Monitoring WordPress is critical to create efficient websites, blogs and apps. Download the New Relic WordPress quickstart to track your key metrics and improve performance.",
-    "websiteUrl": null,
-    "keywords": [
-      "wordpress",
-      "php",
-      "performance monitoring",
-      "CMS",
-      "most popular"
-    ],
-    "authors": [
-      "New Relic",
-      "Emil Hammarstrand"
-    ],
-    "dashboards": [
-      {
-        "name": "Wordpress",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/wordpress/wordpress.png"
-        ]
-      }
-    ],
-    "alerts": [
-      {
-        "name": "Apdex Score",
-        "details": "This alert is triggered when the Apdex score is below 0.5 for 5 minutes",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "High CPU Utilization",
-        "details": "This alert is triggered when the CPU Utilization is above 90%.",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "Memory Usage",
-        "details": "This alert is triggered when Memory usage is above 90%",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "Transaction Errors",
-        "details": "This alert is triggered when the the transactions fail more than 10% of the time in 5 minutes.",
-        "type": "STATIC",
-        "url": null
-      }
-    ],
-    "documentation": [
-      {
-        "name": "WordPress installation docs",
-        "description": "Monitoring for the self-hosted version of the popular CMS and blogging\ntool.\n",
-        "url": "https://docs.newrelic.com/docs/agents/php-agent/getting-started/php-agent-compatibility-requirements"
-      }
-    ],
-    "installPlans": [
-      {
-        "name": "PHP Agent",
-        "id": "php-agent"
-      }
-    ]
-  },
-  {
     "title": "AWS Route 53",
     "name": "aws-route-53",
     "description": "## What is AWS Route 53?\n\nRegister domain names, route Internet traffic to the appropriate resources,\nand check the health of your web app’s resources.\n\n\n### Get started!\n\nStart monitoring AWS Route 53 by connecting Amazon Web Services (AWS) to New Relic!\n\nCheck out our AWS Route 53 documentation to instrument your cloud service and manage the stability, scalability, and reliability of your systems with New Relic's infrastructure monitoring capabilities.\n\n### More info\n\nCheck out the [documentation](https://docs.newrelic.com/docs/infrastructure/amazon-integrations/aws-integrations-list/aws-route-53-monitoring-integration/) to learn more about New Relic monitoring for AWS Route 53.",
@@ -21984,6 +21913,77 @@
       {
         "name": "Yii installation docs",
         "description": "Open source, object-oriented web framework for PHP.",
+        "url": "https://docs.newrelic.com/docs/agents/php-agent/getting-started/php-agent-compatibility-requirements"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "PHP Agent",
+        "id": "php-agent"
+      }
+    ]
+  },
+  {
+    "title": "WordPress",
+    "name": "wordpress",
+    "description": "## Why monitor WordPress?\n\nWordPress is an open source software used for creating a website, blog, or app. It is a content management system with a plugin architecture and a template system known as Themes. New Relic WordPress quickstart empowers you to monitor the performance metrics of your WordPress via our [PHP agent](https://docs.newrelic.com/docs/apm/agents/php-agent/frameworks-libraries/wordpress-specific-functionality/).\n### WordPress quickstart highlights\n\nThe New Relic WordPress quickstart has the following features:\nDashboards: Proactively monitor metrics like total visitor time series, device types used, users’ top 5 operating systems, web transaction time, and database call counts.\nAlerts: Get instant alerts like Apdex score, memory usage, transaction errors, and CPU utilization.\n\n### New Relic + WordPress = Optimum performance monitoring\n\nMonitor WordPress performance with our PHP agent. The integration allows you to track the time spent within each WordPress hook, plugin, and theme. You can control which WordPress-specific metrics your app sends to New Relic by using the PHP agent's ini setting newrelic.framework.WordPress.hooks.\n\nThe dashboards provide interactive visualizations to explore the total visitor time series, device types used, users’ top 5 operating systems, web transaction time, and database call counts. With real user monitoring (RUM), New Relic measures the overall time to load an entire webpage and provides actionable insights into real users' experiences on your WordPress website.\nInstall the New Relic WordPress quickstart today to instantly monitor WordPress key performance indicators with our PHP agent. The quickstart is the key to a seamless WordPress uptime monitoring.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/wordpress",
+    "id": "59ba7d1f-7833-4d9b-893d-2b493e5ddac8",
+    "level": "NEW_RELIC",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/wordpress/logo.svg",
+    "summary": "Monitoring WordPress is critical to create efficient websites, blogs and apps. Download the New Relic WordPress quickstart to track your key metrics and improve performance.",
+    "websiteUrl": null,
+    "keywords": [
+      "wordpress",
+      "php",
+      "performance monitoring",
+      "CMS",
+      "most popular"
+    ],
+    "authors": [
+      "New Relic",
+      "Emil Hammarstrand"
+    ],
+    "dashboards": [
+      {
+        "name": "Wordpress",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/wordpress/wordpress.png"
+        ]
+      }
+    ],
+    "alerts": [
+      {
+        "name": "Apdex Score",
+        "details": "This alert is triggered when the Apdex score is below 0.5 for 5 minutes",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "High CPU Utilization",
+        "details": "This alert is triggered when the CPU Utilization is above 90%.",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "Memory Usage",
+        "details": "This alert is triggered when Memory usage is above 90%",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "Transaction Errors",
+        "details": "This alert is triggered when the the transactions fail more than 10% of the time in 5 minutes.",
+        "type": "STATIC",
+        "url": null
+      }
+    ],
+    "documentation": [
+      {
+        "name": "WordPress installation docs",
+        "description": "Monitoring for the self-hosted version of the popular CMS and blogging\ntool.\n",
         "url": "https://docs.newrelic.com/docs/agents/php-agent/getting-started/php-agent-compatibility-requirements"
       }
     ],
