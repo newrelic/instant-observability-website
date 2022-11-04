@@ -1932,19 +1932,19 @@
     ],
     "dashboards": [
       {
-        "name": "Battlesnake Performance",
-        "description": "Monitor your Battlesnake's performance and see how it stacks up against your competition!",
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/battlesnake-performance/battlesnake-performance.png"
-        ]
-      },
-      {
         "name": "Battlesnake Server Status",
         "description": "A dashboard to monitor your Battlesnake server's performance. It's important to keep all responses to the `/move` endpoint under 500ms. Furthermore, it's possible that your snake may be in multiple concurrent matches at the same time. It's important to make sure you server and web application are running smoothly to keep you in the game!",
         "url": null,
         "screenshots": [
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/battlesnake-server-status/battlesnake-server-status.png"
+        ]
+      },
+      {
+        "name": "Battlesnake Performance",
+        "description": "Monitor your Battlesnake's performance and see how it stacks up against your competition!",
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/battlesnake-performance/battlesnake-performance.png"
         ]
       },
       {
@@ -4432,19 +4432,19 @@
     ],
     "dashboards": [
       {
-        "name": "Data Ingest Governance Baseline",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/data-ingest-baseline/data-ingest-baseline.png"
-        ]
-      },
-      {
         "name": "Data Ingest Governance Entity Breakdowns",
         "description": null,
         "url": null,
         "screenshots": [
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/data-ingest-entity-breakdown/data-ingest-entity-breakdown.png"
+        ]
+      },
+      {
+        "name": "Data Ingest Governance Baseline",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/data-ingest-baseline/data-ingest-baseline.png"
         ]
       }
     ],
@@ -5665,19 +5665,19 @@
     ],
     "dashboards": [
       {
-        "name": "Redis Enterprise Cluster Metrics",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/cluster/cluster01.png"
-        ]
-      },
-      {
         "name": "Redis Enterprise Database CRDT",
         "description": null,
         "url": null,
         "screenshots": [
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/active-active/active_active01.png"
+        ]
+      },
+      {
+        "name": "Redis Enterprise Cluster Metrics",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/cluster/cluster01.png"
         ]
       },
       {
@@ -5786,15 +5786,6 @@
     ],
     "dashboards": [
       {
-        "name": "SAP Dashboards",
-        "description": "Monitor SAP systems and applications performances",
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/nrm4sap/sap-dashboard01.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/nrm4sap/sap-dashboard02.png"
-        ]
-      },
-      {
         "name": "SAP Data Ingestion Estimate",
         "description": "Get an overview of the data volume ingested from SAP systems",
         "url": null,
@@ -5808,6 +5799,15 @@
         "url": null,
         "screenshots": [
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/nrm4sap-datacollect/sap-data-collection01.png"
+        ]
+      },
+      {
+        "name": "SAP Dashboards",
+        "description": "Monitor SAP systems and applications performances",
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/nrm4sap/sap-dashboard01.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/nrm4sap/sap-dashboard02.png"
         ]
       }
     ],
@@ -12758,14 +12758,6 @@
     ],
     "dashboards": [
       {
-        "name": "Lacework Compliance Violations",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/lacework-compliance-violations/lacework-compliance-violations.png"
-        ]
-      },
-      {
         "name": "Lacework Security Overview",
         "description": null,
         "url": null,
@@ -12779,6 +12771,14 @@
         "url": null,
         "screenshots": [
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/lacework-anomaly-detections/lacework-anomaly-detections.png"
+        ]
+      },
+      {
+        "name": "Lacework Compliance Violations",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/lacework-compliance-violations/lacework-compliance-violations.png"
         ]
       }
     ],
@@ -18309,19 +18309,19 @@
         ]
       },
       {
-        "name": "Catchpoint-Response Size",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/catchpoint-response-size/Catchpoint-Response_Size.png"
-        ]
-      },
-      {
         "name": "Catchpoint-Overview",
         "description": null,
         "url": null,
         "screenshots": [
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/catchpoint-overview/Catchpoint-Overview.png"
+        ]
+      },
+      {
+        "name": "Catchpoint-Response Size",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/catchpoint-response-size/Catchpoint-Response_Size.png"
         ]
       }
     ],
@@ -20080,70 +20080,6 @@
     ]
   },
   {
-    "title": "CoreDNS",
-    "name": "coredns",
-    "description": "## Why monitor CoreDNS?\n\nCoreDNS is DNS server that can serve as the Kubernetes cluster DNS (Kubernetes 1.23+ uses CoreDNS by default).\nCoreDNS is a critical component of a Kubernetes cluster that can be difficult to debug during an error scenario. Surfacing monitoring to this component can help teams respond faster to these unexpected scenarios.\n\n## CoreDNS quickstart highlights\n\nThe New Relic quickstart uses dashboards to proactively monitor your CoreDNS servers, like:\n\n- load shared amongst running instances\n- request & response stats (rate, payload size, etc.)\n- cache hit ratio\n- response codes and panics, and more.\n\n## Monitoring CoreDNS\n\nThis quickstart utilizes New Relic's ability to ingest Prometheus data (either from our OpenMetrics integration or via Prometheus remote write). See instructions for [sending Prometheus data to New Relic here](https://docs.newrelic.com/docs/infrastructure/prometheus-integrations/get-started/send-prometheus-metric-data-new-relic/).\n\n### How do I enable monitoring in CoreDNS\n\n[CoreDNS provides a plugin](https://coredns.io/plugins/metrics/) to surface Prometheus metrics on `localhost:9153/metrics`.\nBefore attempting to modify your CoreDNS configuration, you should be able to `kubectl port-forward pod/<pod_name> -n kube-system 9153` against a CoreDNS server in your cluster to verify it returns metrics.\n\nFor instructions on modifying your cluster's CoreDNS configuration see https://coredns.io/2018/01/29/deploying-kubernetes-with-coredns-using-kubeadm/\n\n\n### How do I configure my integration to scrape CoreDNS severs?\n\nThe approach to getting your Prometheus metrics into New Relic differs depending on which integration you use.\n\n#### Prometheus Remote Write\n\nIn addition to setting up your `remote_write` configuration as described [here](https://docs.newrelic.com/docs/infrastructure/prometheus-integrations/install-configure-remote-write/set-your-prometheus-remote-write-integration/), you will need to add the following scrape configuration to your `prometheus.yml` config file:\n\n```\n- job_name: 'kube-dns'\n  honor_labels: true\n  kubernetes_sd_configs:\n    - role: pod\n  relabel_configs:\n    - action: keep\n      source_labels:\n        - __meta_kubernetes_namespace\n        - __meta_kubernetes_pod_name\n      separator: '/'\n      regex: 'kube-system/coredns.+'\n    - source_labels:\n        - __meta_kubernetes_pod_container_port_name\n      action: keep\n      regex: metrics\n    - source_labels:\n        - __meta_kubernetes_pod_name\n      action: replace\n      target_label: instance\n    - action: labelmap\n      regex: __meta_kubernetes_pod_label_(.+)\n```\n(This helpful Prometheus job defnition sourced from [sysdig blog](https://sysdig.com/blog/how-to-monitor-coredns/))\n\nThen, after reloading Prometheus config, you can check that your CoreDNS pods are appearing under your [Prometheus targets](https://prometheus.io/docs/prometheus/latest/querying/api/#targets).\n\n#### Prometheus OpenMetrics integration\n\nPOMI will scrape any resource that contains the label or annotation `prometheus.io/scrape` (which is configurable value here https://github.com/newrelic/helm-charts/blob/ecef47fc938b7ddca8a50e63cb290924f654c56a/charts/nri-prometheus/values.yaml#L117).\nThis will make targets visible to POMI but to confiugre the `relabel_configs` as above, the defaults would have to be updated in the Helm chart here: https://github.com/newrelic/helm-charts/blob/ecef47fc938b7ddca8a50e63cb290924f654c56a/charts/nri-prometheus/values.yaml#L67-L244",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/kubernetes/coredns",
-    "id": "c9ac4abb-4a61-4eee-9e1e-79506806684e",
-    "level": "NEW_RELIC",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/kubernetes/coredns/logo.png",
-    "summary": "Visualize CoreDNS performance and alert on potential errors. CoreDNS is a critical Kubernetes cluster component and can be difficult to troubleshoot in an error scenario. Download New Relic CoreDNS quickstart to increase cluster visibility.",
-    "websiteUrl": null,
-    "keywords": [
-      "kubernetes",
-      "dns",
-      "k8s"
-    ],
-    "authors": [
-      "New Relic"
-    ],
-    "dashboards": [
-      {
-        "name": "CoreDNS",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/coredns-dashboard/coredns-dashboard.png"
-        ]
-      }
-    ],
-    "alerts": [
-      {
-        "name": "CoreDNS Panics",
-        "details": "CoreDNS panics can point to a system in an error state or degraded performance.",
-        "type": "STATIC",
-        "url": null
-      }
-    ],
-    "documentation": [
-      {
-        "name": "CoreDNS Prometheus monitoring",
-        "description": "Metric details exposed by Prometheus CoreDNS extension",
-        "url": "https://coredns.io/plugins/metrics/"
-      },
-      {
-        "name": "Installation docs",
-        "description": "Description about this doc reference",
-        "url": "https://docs.newrelic.com"
-      },
-      {
-        "name": "Kubernetes & CoreDNS",
-        "description": "Details on Kubernetes and CoreDNS",
-        "url": "https://kubernetes.io/docs/tasks/administer-cluster/coredns/"
-      }
-    ],
-    "installPlans": [
-      {
-        "name": "Kubernetes integration",
-        "id": "kubernetes-install"
-      },
-      {
-        "name": "CoreDNS",
-        "id": "third-party-coredns"
-      }
-    ]
-  },
-  {
     "title": "Amazon Cognito",
     "name": "aws-cognito",
     "description": "## What is Amazon Cognito?\n\nAdd user account management functionality to your web or mobile application.\n\n### Get started!\n\nStart monitoring Amazon Cognito by connecting Amazon Web Services (AWS) to New Relic!\n\nCheck out our Amazon Cognito documentation to instrument your cloud service and manage the stability, scalability, and reliability of your systems with New Relic's infrastructure monitoring capabilities.\n\n### More info\n\nCheck out the [documentation](https://docs.newrelic.com/docs/infrastructure/amazon-integrations/aws-integrations-list/amazon-cognito-monitoring-integration/) to learn more about New Relic monitoring for Amazon Cognito.",
@@ -20406,6 +20342,83 @@
       {
         "name": "New Relic Security API",
         "id": "security-api-install"
+      }
+    ]
+  },
+  {
+    "title": "CoreDNS Metrics",
+    "name": "coredns",
+    "description": "The CoreDNS quickstart provides a dashboard and set of alerts that provides a holistic view of the CoreDNS instances in your environment from telemetry collected through Prometheus Remote Write.  This dashboard gives visibility into CoreDNS versions, status, request/response times, and cache statistics.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/coredns",
+    "id": "c9ac4abb-4a61-4eee-9e1e-79506806684e",
+    "level": "VERIFIED",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/coredns/coredns-logo.png",
+    "summary": "Easily install a curated dashboard and alerts to monitor the health of your CoreDNS instances.",
+    "websiteUrl": null,
+    "keywords": [
+      "coredns",
+      "prometheus",
+      "remote write",
+      "remote_write",
+      "remote-write",
+      "promql",
+      "grafana"
+    ],
+    "authors": [
+      "New Relic",
+      "Brad Schmitt",
+      "Raga Potti"
+    ],
+    "dashboards": [
+      {
+        "name": "CoreDNS Metrics",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/coredns/coredns-1.jpg",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/coredns/coredns-2.jpg",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/coredns/coredns-3.jpg",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/coredns/coredns-4.jpg"
+        ]
+      }
+    ],
+    "alerts": [
+      {
+        "name": "CoreDNS Error Rate",
+        "details": "This alert will trigger if the CoreDNS error rate for response codes NXDOMAIN, SERVFAIL, or REFUSED is above 2 standard deviations for more than 5 minutes.",
+        "type": "BASELINE",
+        "url": null
+      },
+      {
+        "name": "CoreDNS Panics",
+        "details": "This alert will trigger if the CoreDNS panic rate is above 0 at least once in 5 minutes",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "CoreDNS Request Duration",
+        "details": "This alert will trigger if the CoreDNS request duration 95th percentile is above or below 2 standard deviations for more than 5 minutes",
+        "type": "BASELINE",
+        "url": null
+      },
+      {
+        "name": "CoreDNS Request Rate",
+        "details": "This alert will trigger if the CoreDNS requests per second is above or below 2 standard deviations for more than 5 minutes",
+        "type": "BASELINE",
+        "url": null
+      }
+    ],
+    "documentation": [
+      {
+        "name": "Prometheus installation docs",
+        "description": "Use Prometheus remote_write or New Relic's Prometheus OpenMetrics integration\n",
+        "url": "https://docs.newrelic.com/docs/infrastructure/prometheus-integrations/install-configure-remote-write/set-your-prometheus-remote-write-integration/"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "Prometheus remote write",
+        "id": "setup-prometheus"
       }
     ]
   },
@@ -24122,30 +24135,6 @@
     ],
     "dashboards": [
       {
-        "name": "GCP Integrations Data Ingest Analysis",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/gcp-integrations-data-ingest-analysis/gcp-integrations-data-ingest-analysis.png"
-        ]
-      },
-      {
-        "name": "Azure Integrations Data Ingest Analysis",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/azure-integrations-data-ingest-analysis/azure-integrations-data-ingest-analysis.png"
-        ]
-      },
-      {
-        "name": "Kubernetes Data Ingest Analysis",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/kubernetes-data-ingest-analysis/kubernetes-data-ingest-analysis.png"
-        ]
-      },
-      {
         "name": "AWS Integrations Data Ingest Analysis",
         "description": null,
         "url": null,
@@ -24159,6 +24148,30 @@
         "url": null,
         "screenshots": [
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/on-host-integrations-data-analysis/on-host-integrations-data-analysis.png"
+        ]
+      },
+      {
+        "name": "Kubernetes Data Ingest Analysis",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/kubernetes-data-ingest-analysis/kubernetes-data-ingest-analysis.png"
+        ]
+      },
+      {
+        "name": "GCP Integrations Data Ingest Analysis",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/gcp-integrations-data-ingest-analysis/gcp-integrations-data-ingest-analysis.png"
+        ]
+      },
+      {
+        "name": "Azure Integrations Data Ingest Analysis",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/azure-integrations-data-ingest-analysis/azure-integrations-data-ingest-analysis.png"
         ]
       }
     ],
@@ -25114,11 +25127,11 @@
         ]
       },
       {
-        "name": "Browser Overview",
+        "name": "JavaScript Errors",
         "description": null,
         "url": null,
         "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/browser-overview/browser_overview.png"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/javascript-errors/javascript_errors.png"
         ]
       },
       {
@@ -25130,11 +25143,11 @@
         ]
       },
       {
-        "name": "JavaScript Errors",
+        "name": "Browser Overview",
         "description": null,
         "url": null,
         "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/javascript-errors/javascript_errors.png"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/browser-overview/browser_overview.png"
         ]
       }
     ],
