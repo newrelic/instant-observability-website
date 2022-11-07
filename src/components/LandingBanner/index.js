@@ -6,12 +6,11 @@ import InstallButton from '../InstallButton';
 import { graphql } from 'gatsby';
 import { css } from '@emotion/react';
 import { quickstart } from '../../types';
+import { QUICKSTART_IMAGE_DISPLAY_BREAKPOINT } from '@data/constants';
 import QuickstartImg from '../QuickstartImg';
 import defaultImage from '../../images/defaultQuickstartImage.png';
 import BannerBackground from './BannerBackground';
 import SafeImage from '../SafeImage';
-
-const IMAGE_DISPLAY_BREAKPOINT = '1248px';
 
 const LandingBanner = ({ quickstart, className, location }) => {
   const bannerImg = useDetermineBannerImg(quickstart, {
@@ -58,7 +57,7 @@ const LandingBanner = ({ quickstart, className, location }) => {
             color: white;
           }
 
-          @media (max-width: ${IMAGE_DISPLAY_BREAKPOINT}) {
+          @media (max-width: ${QUICKSTART_IMAGE_DISPLAY_BREAKPOINT}) {
             grid-template-areas:
               'breadcrumbs'
               'title'
@@ -90,7 +89,7 @@ const LandingBanner = ({ quickstart, className, location }) => {
                 background-color: var(--color-white);
                 border-radius: 0 0 7px 7px;
                 padding: 5px;
-                @media (max-width: ${IMAGE_DISPLAY_BREAKPOINT}) {
+                @media (max-width: ${QUICKSTART_IMAGE_DISPLAY_BREAKPOINT}) {
                   display: none;
                 }
               `}
@@ -115,7 +114,7 @@ const LandingBanner = ({ quickstart, className, location }) => {
             grid-area: title;
             margin-bottom: 0;
 
-            @media (max-width: ${IMAGE_DISPLAY_BREAKPOINT}) {
+            @media (max-width: ${QUICKSTART_IMAGE_DISPLAY_BREAKPOINT}) {
               font-size: 4vw;
             }
 
@@ -134,7 +133,7 @@ const LandingBanner = ({ quickstart, className, location }) => {
               grid-area: summ;
               font-size: 1.25vw;
 
-              @media (max-width: ${IMAGE_DISPLAY_BREAKPOINT}) {
+              @media (max-width: ${QUICKSTART_IMAGE_DISPLAY_BREAKPOINT}) {
                 font-size: 2vw;
               }
 
@@ -156,7 +155,7 @@ const LandingBanner = ({ quickstart, className, location }) => {
             margin: 0 auto 1rem;
             padding-top: 1rem;
 
-            @media (max-width: ${IMAGE_DISPLAY_BREAKPOINT}) {
+            @media (max-width: ${QUICKSTART_IMAGE_DISPLAY_BREAKPOINT}) {
               display: none;
             }
           `}

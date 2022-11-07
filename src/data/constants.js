@@ -47,6 +47,8 @@ export const RESERVED_QUICKSTART_IDS = {
 };
 
 export const QUICKSTARTS_COLLAPSE_BREAKPOINT = '760px';
+export const QUICKSTART_IMAGE_DISPLAY_BREAKPOINT = '1248px';
+
 export const MIN_WIDTH_BREAKPOINT = '355px';
 
 // breakpoints for index.js and slick carousel
