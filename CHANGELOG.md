@@ -1,3 +1,12 @@
+## [1.12.5](https://github.com/newrelic/instant-observability-website/compare/v1.12.4...v1.12.5) (2022-11-07)
+
+
+### Bug Fixes
+
+* correct breaking layout changes from theme bump ([2673e0d](https://github.com/newrelic/instant-observability-website/commit/2673e0d876b774bde349e0f67902b604ed14a2ac))
+* update banner styles to be full width ([b940515](https://github.com/newrelic/instant-observability-website/commit/b940515b9716720da1961b23866dd349043ec612))
+* update theme version to 6.13.6 ([d5688f1](https://github.com/newrelic/instant-observability-website/commit/d5688f19da396ad4724dcd293274e4da18b4ac76))
+
 ## [1.12.4](https://github.com/newrelic/instant-observability-website/compare/v1.12.3...v1.12.4) (2022-11-07)
 
 
