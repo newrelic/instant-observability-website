@@ -122,5 +122,13 @@
   "activemq": {
     "title": "ActiveMQ Performance Monitoring | New Relic",
     "description": "ActiveMQ monitoring tool by New Relic helps business users and developers monitor ActiveMQ performance."
+  },
+  "apache-flink": {
+    "title": "Apache Flink Performance Monitoring | New Relic",
+    "description": "Apache Flink monitoring tool by New Relic helps business users and developers monitor Flink performance."
+  },
+  "snowflake": {
+    "title": "Snowflake Performance Monitoring | New Relic",
+    "description": "Learn how Snowflake monitoring tool by New Relic helps business users and developers monitor key metrics for credit usage, storage, user history and more."
   }
 }
