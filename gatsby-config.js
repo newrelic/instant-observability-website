@@ -82,7 +82,7 @@ module.exports = {
           configs: {
             production: {
               instrumentationType: 'proAndSPA',
-              accountId: '11554270',
+              accountId: '10956800',
               trustKey: '1',
               agentID: '35094807',
               licenseKey: 'NRJS-a3f5e1047a2965d965f',
@@ -92,7 +92,7 @@ module.exports = {
             },
             development: {
               instrumentationType: 'proAndSPA',
-              accountId: '11554270',
+              accountId: '10956800',
               trustKey: '1',
               agentID: '35094808',
               licenseKey: 'NRJS-a3f5e1047a2965d965f',
