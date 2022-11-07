@@ -1,3 +1,11 @@
+## [1.12.4](https://github.com/newrelic/instant-observability-website/compare/v1.12.3...v1.12.4) (2022-11-07)
+
+
+### Bug Fixes
+
+* update accountId for public IO site ([34accbe](https://github.com/newrelic/instant-observability-website/commit/34accbe04890166e8f96e9e7fa6f1e3853e10d93))
+* update reporting account ([178d7e2](https://github.com/newrelic/instant-observability-website/commit/178d7e2169ba9432865d54d5b9a69eedff94fd15))
+
 ## [1.12.3](https://github.com/newrelic/instant-observability-website/compare/v1.12.2...v1.12.3) (2022-09-28)
 
 
