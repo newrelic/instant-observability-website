@@ -12,7 +12,6 @@ const BannerBackground = ({ children }) => {
         --left-margin: calc(50% - 50vw);
         width: 100vw;
         left: var(--left-margin);
-        margin: 0 0 0 var(--left-margin);
 
         background: var(--website-banner-background-color);
         box-sizing: border-box;
