@@ -209,6 +209,7 @@ const LandingPageFooter = ({
           <RelatedResources
             css={css`
               padding: 0;
+              border: none;
             `}
             resources={quickstart.relatedResources}
           />
