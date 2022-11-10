@@ -306,6 +306,57 @@
     ]
   },
   {
+    "title": "Amazon CloudFront web logs",
+    "name": "amazon-cloudfront-web-logs",
+    "description": "## What is Amazon CloudFront?\n\nSpeeds up the distribution of web content served from Amazon Web Services.\n\n### Get started!\n\nStart monitoring Amazon CloudFront by sending your Amazon Cloudfront Web Logs to New Relic. \n\nCheck out our Amazon CloudFront documentation to instrument your cloud service and manage the stability, scalability, and reliability of your systems with New Relic's Log monitoring capabilities.\n\n### More info\n\nCheck out the [documentation](https://docs.newrelic.com/docs/logs/forward-logs/cloudfront-web-logs/) to learn more about New Relic monitoring for Amazon CloudFront.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/aws/amazon-cloudfront-logs",
+    "id": "fb4c4acc-e341-4b87-9bb1-5f98b9cc9310",
+    "level": "NEW_RELIC",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/aws/amazon-cloudfront-logs/logo.svg",
+    "summary": "Monitor Amazon CloudFront Web logs in New Relic",
+    "websiteUrl": null,
+    "keywords": [
+      "aws",
+      "amazon web services",
+      "web content",
+      "logs",
+      "logging",
+      "web logs",
+      "cdn",
+      "featured"
+    ],
+    "authors": [
+      "New Relic",
+      "Joseph Counts"
+    ],
+    "dashboards": [
+      {
+        "name": "Amazon Cloudfront Web Logs",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/amazon-cloudfront-web-logs/amazon-cloudfront-web-logs01.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/amazon-cloudfront-web-logs/amazon-cloudfront-web-logs02.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/amazon-cloudfront-web-logs/amazon-cloudfront-web-logs03.png"
+        ]
+      }
+    ],
+    "alerts": [],
+    "documentation": [
+      {
+        "name": "Amazon CloudFront web logs installation docs",
+        "description": "Monitor Amazon CloudFront web logs in New Relic.",
+        "url": "https://docs.newrelic.com/docs/logs/forward-logs/cloudfront-web-logs/"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "Amazon-Cloudfront-Web-Logs",
+        "id": "amazon-cloudfront-web-logs"
+      }
+    ]
+  },
+  {
     "title": "Node Exporter",
     "name": "node-exporter",
     "description": "Official New Relic dashboard for Prometheus Node Exporter. Node Exporter allows host metrics gathered by the exporter to be scraped by Prometheus Server.\n\n## Dashboard Highlights\n- Load Averages\n- CPU\n- Memory Usage\n- Storage Usage\n- Network\n\n## Requirements:\n1. [Prometheus Server](https://prometheus.io/docs/prometheus/latest/installation/)\n2. [Node Exporter](https://prometheus.io/docs/guides/node-exporter/) installed\n3. Enable Prometheus [Remote Write](https://docs.newrelic.com/docs/infrastructure/prometheus-integrations/install-configure-remote-write/set-your-prometheus-remote-write-integration/) to New Relic.\n4. To be able to filter metrics by a specific label that isn't part of the Node Exporter default installation, an `external_label` will need to be added to the Prometheus config. Example:\n    `\n      global:\n        external_labels:\n          clusterName: <cluster_name>\n    `",
@@ -788,57 +839,6 @@
       {
         "name": "SNMP",
         "id": "network-snmp"
-      }
-    ]
-  },
-  {
-    "title": "Amazon CloudFront web logs",
-    "name": "amazon-cloudfront-web-logs",
-    "description": "## What is Amazon CloudFront?\n\nSpeeds up the distribution of web content served from Amazon Web Services.\n\n### Get started!\n\nStart monitoring Amazon CloudFront by sending your Amazon Cloudfront Web Logs to New Relic. \n\nCheck out our Amazon CloudFront documentation to instrument your cloud service and manage the stability, scalability, and reliability of your systems with New Relic's Log monitoring capabilities.\n\n### More info\n\nCheck out the [documentation](https://docs.newrelic.com/docs/logs/forward-logs/cloudfront-web-logs/) to learn more about New Relic monitoring for Amazon CloudFront.",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/aws/amazon-cloudfront-logs",
-    "id": "fb4c4acc-e341-4b87-9bb1-5f98b9cc9310",
-    "level": "NEW_RELIC",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/aws/amazon-cloudfront-logs/logo.svg",
-    "summary": "Monitor Amazon CloudFront Web logs in New Relic",
-    "websiteUrl": null,
-    "keywords": [
-      "aws",
-      "amazon web services",
-      "web content",
-      "logs",
-      "logging",
-      "web logs",
-      "cdn",
-      "featured"
-    ],
-    "authors": [
-      "New Relic",
-      "Joseph Counts"
-    ],
-    "dashboards": [
-      {
-        "name": "Amazon Cloudfront Web Logs",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/amazon-cloudfront-web-logs/amazon-cloudfront-web-logs01.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/amazon-cloudfront-web-logs/amazon-cloudfront-web-logs02.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/amazon-cloudfront-web-logs/amazon-cloudfront-web-logs03.png"
-        ]
-      }
-    ],
-    "alerts": [],
-    "documentation": [
-      {
-        "name": "Amazon CloudFront web logs installation docs",
-        "description": "Monitor Amazon CloudFront web logs in New Relic.",
-        "url": "https://docs.newrelic.com/docs/logs/forward-logs/cloudfront-web-logs/"
-      }
-    ],
-    "installPlans": [
-      {
-        "name": "Amazon-Cloudfront-Web-Logs",
-        "id": "amazon-cloudfront-web-logs"
       }
     ]
   },
@@ -1972,6 +1972,51 @@
     ]
   },
   {
+    "title": "Alert Quality Management",
+    "name": "alert-quality-management",
+    "description": "Alert Quality Management (AQM) focuses on reducing the number of nuisance incidents so that you focus only on alerts with true business impact. This reduces alert fatigue and ensures that you and your team focus your attention on the right places at the right times.\n\nFor more information view the [implementation guide](https://docs.newrelic.com/docs/new-relic-solutions/observability-maturity/uptime-performance-reliability/aqm-implementation-guide/).",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/oma-aqm",
+    "id": "ccdf1cf7-29f0-42ca-ae0d-239dfb073fd0",
+    "level": "NEW_RELIC",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/oma-aqm/logo.png",
+    "summary": "Reduce the volume of nuisance incidents with the Alert Quality Management dashboard and process.",
+    "websiteUrl": null,
+    "keywords": [
+      "oma",
+      "observability maturity",
+      "AQM",
+      "alert quality management"
+    ],
+    "authors": [
+      "Alec Isaacson (New Relic)",
+      "Andrew Faria (New Relic)"
+    ],
+    "dashboards": [
+      {
+        "name": "Alert Quality Management",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/oma-aqm/alert-quality-management.png"
+        ]
+      }
+    ],
+    "alerts": [],
+    "documentation": [
+      {
+        "name": "Implementation guide",
+        "description": "The implementation guide will show you how to implement the AQM process, including the webhook required to generate the data that feeds this dashboard.\n",
+        "url": "https://docs.newrelic.com/docs/new-relic-solutions/observability-maturity/uptime-performance-reliability/aqm-implementation-guide/"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "Alert Quality Management",
+        "id": "third-party-alert-quality-management"
+      }
+    ]
+  },
+  {
     "title": "AWS MQ",
     "name": "aws-mq",
     "description": "## What is AWS MQ?\n\nMessage brokering service for Apache ActiveMQ managed by AWS.\n\n### Get started!\n\nStart monitoring AWS MQ by connecting Amazon Web Services (AWS) to New Relic!\n\nCheck out our AWS MQ documentation to instrument your cloud service and manage the stability, scalability, and reliability of your systems with New Relic's infrastructure monitoring capabilities.\n\n### More info\n\nCheck out the [documentation](https://docs.newrelic.com/docs/infrastructure/amazon-integrations/aws-integrations-list/aws-mq-integration/) to learn more about New Relic monitoring for AWS MQ.",
@@ -2693,51 +2738,6 @@
       {
         "name": "AWS-CloudWatch-Metric-Streams",
         "id": "aws-cloudwatch-metric-streams"
-      }
-    ]
-  },
-  {
-    "title": "Alert Quality Management",
-    "name": "alert-quality-management",
-    "description": "Alert Quality Management (AQM) focuses on reducing the number of nuisance incidents so that you focus only on alerts with true business impact. This reduces alert fatigue and ensures that you and your team focus your attention on the right places at the right times.\n\nFor more information view the [implementation guide](https://docs.newrelic.com/docs/new-relic-solutions/observability-maturity/uptime-performance-reliability/aqm-implementation-guide/).",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/oma-aqm",
-    "id": "ccdf1cf7-29f0-42ca-ae0d-239dfb073fd0",
-    "level": "NEW_RELIC",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/oma-aqm/logo.png",
-    "summary": "Reduce the volume of nuisance incidents with the Alert Quality Management dashboard and process.",
-    "websiteUrl": null,
-    "keywords": [
-      "oma",
-      "observability maturity",
-      "AQM",
-      "alert quality management"
-    ],
-    "authors": [
-      "Alec Isaacson (New Relic)",
-      "Andrew Faria (New Relic)"
-    ],
-    "dashboards": [
-      {
-        "name": "Alert Quality Management",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/oma-aqm/alert-quality-management.png"
-        ]
-      }
-    ],
-    "alerts": [],
-    "documentation": [
-      {
-        "name": "Implementation guide",
-        "description": "The implementation guide will show you how to implement the AQM process, including the webhook required to generate the data that feeds this dashboard.\n",
-        "url": "https://docs.newrelic.com/docs/new-relic-solutions/observability-maturity/uptime-performance-reliability/aqm-implementation-guide/"
-      }
-    ],
-    "installPlans": [
-      {
-        "name": "Alert Quality Management",
-        "id": "third-party-alert-quality-management"
       }
     ]
   },
@@ -12322,67 +12322,6 @@
     ]
   },
   {
-    "title": "Fastly CDN",
-    "name": "fastly-cdn",
-    "description": "Fastly helps people stay better connected with the things they love. Fastly’s edge cloud platform enables customers to create great digital experiences quickly, securely, and reliably by processing, serving, and securing our customers’ applications as close to their end-users as possible — at the edge of the internet. Fastly’s platform is designed to take advantage of the modern internet, to be programmable, and to support agile software development with unmatched visibility and minimal latency, empowering developers to innovate with both performance and security. Fastly’s customers include many of the world’s most prominent companies, including Pinterest, The New York Times, and GitHub.\n\nFor more information or support, please go to https://support.fastly.com/",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/fastly",
-    "id": "c5c5dd30-dcdf-46b6-9412-f9a1bba5a600",
-    "level": "VERIFIED",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/fastly/logo.png",
-    "summary": "Analyze the health of your Fastly CDN POP footprint with both a dashboard and alerts.",
-    "websiteUrl": null,
-    "keywords": [
-      "Fastly",
-      "CDN",
-      "logs",
-      "content delivery",
-      "POP",
-      "featured",
-      "newrelic partner"
-    ],
-    "authors": [
-      "Simon Wistow (Fastly)",
-      "Josh Biggley (New Relic)"
-    ],
-    "dashboards": [
-      {
-        "name": "Fastly",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/fastly-cdn/fastly-cdn01.png"
-        ]
-      }
-    ],
-    "alerts": [
-      {
-        "name": "Fastly CDN - Error Count by POP",
-        "details": "Excessive errors from a specific Fastly POP may indicate content deliver issues\nAlert examines error count and checks for 3σ (standard deviations)\nExceeding 3σ must exist for at least 5 minutes before the condition will trigger a notification",
-        "type": "BASELINE",
-        "url": null
-      },
-      {
-        "name": "Fastly CDN - Response Time (ms) by POP",
-        "details": "Excessive response time may impact customer experience\nAlert examines response time in milliseconds and checks for 3σ (standard deviations)\nExceeding 3σ must exist for at least 5 minutes before the condition will trigger a notification",
-        "type": "BASELINE",
-        "url": null
-      }
-    ],
-    "documentation": [
-      {
-        "name": "Installation Docs",
-        "description": "Configure Fastly streaming logs to New Relic",
-        "url": "https://docs.fastly.com/en/guides/log-streaming-newrelic-logs"
-      }
-    ],
-    "installPlans": [
-      {
-        "name": "Fastly",
-        "id": "third-party-fastly"
-      }
-    ]
-  },
-  {
     "title": "AWS Step Functions",
     "name": "aws-step-functions",
     "description": "## What is AWS Step Functions?\n\nOrchestrate serverless functions in Amazon Web Services, including Lambda.\n\n### Get started!\n\nStart monitoring AWS Step Functions by connecting Amazon Web Services (AWS) to New Relic!\n\nCheck out our AWS Step Functions documentation to instrument your cloud service and manage the stability, scalability, and reliability of your systems with New Relic's infrastructure monitoring capabilities.\n\n### More info\n\nCheck out the [documentation](https://docs.newrelic.com/docs/infrastructure/amazon-integrations/aws-integrations-list/aws-step-functions-monitoring-integration/) to learn more about New Relic monitoring for AWS Step Functions.",
@@ -13169,6 +13108,69 @@
       {
         "name": "Inet Oracle Driver (oranxo)",
         "id": "third-party-inet-oracle-driver"
+      }
+    ]
+  },
+  {
+    "title": "Fastly CDN",
+    "name": "fastly-cdn",
+    "description": "Fastly helps people stay better connected with the things they love. Fastly’s edge cloud platform enables customers to create great digital experiences quickly, securely, and reliably by processing, serving, and securing our customers’ applications as close to their end-users as possible — at the edge of the internet. Fastly’s platform is designed to take advantage of the modern internet, to be programmable, and to support agile software development with unmatched visibility and minimal latency, empowering developers to innovate with both performance and security. Fastly’s customers include many of the world’s most prominent companies, including Pinterest, The New York Times, and GitHub.\n\nFor more information or support, please go to https://support.fastly.com/",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/fastly",
+    "id": "c5c5dd30-dcdf-46b6-9412-f9a1bba5a600",
+    "level": "VERIFIED",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/fastly/logo.png",
+    "summary": "Analyze the health of your Fastly CDN POP footprint with both a dashboard and alerts.",
+    "websiteUrl": null,
+    "keywords": [
+      "Fastly",
+      "CDN",
+      "logs",
+      "content delivery",
+      "POP",
+      "featured",
+      "newrelic partner"
+    ],
+    "authors": [
+      "Simon Wistow (Fastly)",
+      "Josh Biggley (New Relic)"
+    ],
+    "dashboards": [
+      {
+        "name": "Fastly",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/fastly-cdn/fastly-cdn01.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/fastly-cdn/fastly-cdn02.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/fastly-cdn/fastly-cdn03.png"
+        ]
+      }
+    ],
+    "alerts": [
+      {
+        "name": "Fastly CDN - Error Count by POP",
+        "details": "Excessive errors from a specific Fastly POP may indicate content deliver issues\nAlert examines error count and checks for 3σ (standard deviations)\nExceeding 3σ must exist for at least 5 minutes before the condition will trigger a notification",
+        "type": "BASELINE",
+        "url": null
+      },
+      {
+        "name": "Fastly CDN - Response Time (ms) by POP",
+        "details": "Excessive response time may impact customer experience\nAlert examines response time in milliseconds and checks for 3σ (standard deviations)\nExceeding 3σ must exist for at least 5 minutes before the condition will trigger a notification",
+        "type": "BASELINE",
+        "url": null
+      }
+    ],
+    "documentation": [
+      {
+        "name": "Installation Docs",
+        "description": "Configure Fastly streaming logs to New Relic",
+        "url": "https://docs.fastly.com/en/guides/log-streaming-newrelic-logs"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "Fastly",
+        "id": "third-party-fastly"
       }
     ]
   },
@@ -15252,6 +15254,57 @@
     ]
   },
   {
+    "title": "Cloudflare Network Logs",
+    "name": "cloudflare",
+    "description": "## About Cloudflare\n\nCloudflare is an industry leading global network designed to make everything you connect to the Internet secure, private, fast, and reliable. Protect and accelerate external, public-facing web properties; secure your internal operations on a single global network; and build new applications on our serverless platform. Internet properties powered by Cloudflare have all web traffic routed through its intelligent global network, which gets smarter with every request.\n\n## About this quickstart\n\nCloudflare is on a mission to help build a better Internet. The Cloudflare quickstart will enable you to monitor and analyze web traffic metrics on a dashboard, integrating with New Relic’s database to provide an at-a-glance overview of the most important logs and metrics from your websites and applications.\n\nFor more information check out our website at [cloudflare.com](https://www.cloudflare.com/)",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/cloudflare",
+    "id": "fc2bb0ac-6622-43c6-8c1f-6a4c26ab5434",
+    "level": "COMMUNITY",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/cloudflare/logo.png",
+    "summary": "The Cloudflare quickstart will enable you to monitor and analyze web traffic metrics.",
+    "websiteUrl": null,
+    "keywords": [
+      "cloudflare",
+      "logs",
+      "network",
+      "security",
+      "cdn",
+      "featured",
+      "newrelic partner"
+    ],
+    "authors": [
+      "Joseph Counts",
+      "Cloudflare"
+    ],
+    "dashboards": [
+      {
+        "name": "Cloudflare Logs",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/cloudflare/cloudflare01.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/cloudflare/cloudflare02.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/cloudflare/cloudflare03.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/cloudflare/cloudflare04.png"
+        ]
+      }
+    ],
+    "alerts": [],
+    "documentation": [
+      {
+        "name": "Enable New Relic destination doc",
+        "description": "Developer doc on getting Cloudflare data ingested into New Relic",
+        "url": "https://docs.newrelic.com/docs/logs/forward-logs/cloudflare-logpush-forwarding"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "cloudflare",
+        "id": "third-party-cloudflare"
+      }
+    ]
+  },
+  {
     "title": "Amazon RDS Enhanced Monitoring",
     "name": "aws-rds-enhanced",
     "description": "## What is Amazon RDS Enhanced Monitoring?\n\nSupplement your RDS monitoring with real-time metrics about the OS.\n\n### Get started!\n\nStart monitoring AWS RDS Enhanced by connecting Amazon Web Services (AWS) to New Relic!\n\nCheck out our AWS RDS Enhanced documentation to instrument your cloud service and manage the stability, scalability, and reliability of your systems with New Relic's infrastructure monitoring capabilities.\n\n### More info\n\nCheck out the [documentation](https://docs.newrelic.com/docs/infrastructure/amazon-integrations/aws-integrations-list/aws-rds-enhanced-monitoring-integration/) to learn more about New Relic monitoring for AWS RDS Enhanced.",
@@ -15582,56 +15635,6 @@
       {
         "name": "AWS-CloudWatch-Metric-Streams",
         "id": "aws-cloudwatch-metric-streams"
-      }
-    ]
-  },
-  {
-    "title": "Cloudflare Network Logs",
-    "name": "cloudflare",
-    "description": "## About Cloudflare\n\nCloudflare is an industry leading global network designed to make everything you connect to the Internet secure, private, fast, and reliable. Protect and accelerate external, public-facing web properties; secure your internal operations on a single global network; and build new applications on our serverless platform. Internet properties powered by Cloudflare have all web traffic routed through its intelligent global network, which gets smarter with every request.\n\n## About this quickstart\n\nCloudflare is on a mission to help build a better Internet. The Cloudflare quickstart will enable you to monitor and analyze web traffic metrics on a dashboard, integrating with New Relic’s database to provide an at-a-glance overview of the most important logs and metrics from your websites and applications.\n\nFor more information check out our website at [cloudflare.com](https://www.cloudflare.com/)",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/cloudflare",
-    "id": "fc2bb0ac-6622-43c6-8c1f-6a4c26ab5434",
-    "level": "COMMUNITY",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/cloudflare/logo.png",
-    "summary": "The Cloudflare quickstart will enable you to monitor and analyze web traffic metrics.",
-    "websiteUrl": null,
-    "keywords": [
-      "cloudflare",
-      "logs",
-      "network",
-      "security",
-      "cdn",
-      "featured",
-      "newrelic partner"
-    ],
-    "authors": [
-      "Joseph Counts",
-      "Cloudflare"
-    ],
-    "dashboards": [
-      {
-        "name": "Cloudflare Logs",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/cloudflare/cloudflare01.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/cloudflare/cloudflare02.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/cloudflare/cloudflare03.png"
-        ]
-      }
-    ],
-    "alerts": [],
-    "documentation": [
-      {
-        "name": "Enable New Relic destination doc",
-        "description": "Developer doc on getting Cloudflare data ingested into New Relic",
-        "url": "https://docs.newrelic.com/docs/logs/forward-logs/cloudflare-logpush-forwarding"
-      }
-    ],
-    "installPlans": [
-      {
-        "name": "cloudflare",
-        "id": "third-party-cloudflare"
       }
     ]
   },
@@ -19539,63 +19542,6 @@
     ]
   },
   {
-    "title": "Akamai DataStream 2",
-    "name": "datastream2",
-    "description": "## Akamai Quickstart\n  \nAkamai Technologies is a leading content delivery network (CDN), cybersecurity, and cloud service provider.\n\n### DataStream 2\n\nDataStream 2 captures performance and security logs from your delivery properties and streams them in near real-time to provide complete monitoring.\n\nFor more information please go to https://techdocs.akamai.com/datastream2/docs\n\n### DataStream 2 quickstart\n\nThe Akamai DataStream 2 quickstart enables you to monitor your performance and security logs in real time. Here are a few of the monitoring tools available with this quickstart:\n- HTTP status code distribution\n- Error rate\n- Log ingest\n- Cache hit retio \n- TLS overhead time ranges\n- Overhead byte ranges\n- HTTP protocol distribution",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/datastream2-akamai",
-    "id": "cb995039-39d8-44d9-97c3-58174a1337f2",
-    "level": "COMMUNITY",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/datastream2-akamai/logo.png",
-    "summary": "The DataStream 2 quickstart will enable you to monitor and analyze your Akamai performance and security logs.",
-    "websiteUrl": null,
-    "keywords": [
-      "akamai",
-      "logs",
-      "cdn",
-      "datastream",
-      "performance",
-      "security",
-      "newrelic partner",
-      "featured"
-    ],
-    "authors": [
-      "Gayatri S (Akamai Technologies)"
-    ],
-    "dashboards": [
-      {
-        "name": "Akamai Datastream2",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/datastream2/datastream2-01.jpeg",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/datastream2/datastream2-02.jpeg",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/datastream2/datastream2-03.jpeg"
-        ]
-      }
-    ],
-    "alerts": [
-      {
-        "name": "Datastream2 - 5xx error greater than 1%",
-        "details": "Alert triggered when the error rate(5xx errors) exceeds 1%",
-        "type": "BASELINE",
-        "url": null
-      }
-    ],
-    "documentation": [
-      {
-        "name": "Installation docs",
-        "description": "Configure Akamai Datastream2 streaming logs to New Relic",
-        "url": "https://techdocs.akamai.com/datastream2/docs/stream-new-relic"
-      }
-    ],
-    "installPlans": [
-      {
-        "name": "Datastream2",
-        "id": "third-party-datastream2-akamai"
-      }
-    ]
-  },
-  {
     "title": "Tomcat",
     "name": "tomcat",
     "description": "# What is Tomcat?\n\nOpen-source implementation of the Java Servlet, JavaServer Pages, Java Expression Language and WebSocket technologies.It implements Java enterprise specs like WebSocket technologies and JavaServer Pages. The Apache Tomcat software powers large-scale, mission-critical web applications across a diverse range of organizations.\n\n### New Relic Tomcat quickstart features\n\nOur Tomcat monitoring integration has the following features:\n\n- A standard dashboard that tracks key indicators like error overview, virtual machine overview, daily transaction errors, transaction errors today vs 1 week ago, CPU utilization, memory heap used, and more\n- Instant alerts on performance metrics like transaction errors and high CPU utilization\n- Custom queries and immediate data visualization\n\n### Why monitor Tomcat with New Relic?\n\nNew Relic’s Tomcat monitoring quickstart automatically instruments Tomcat with the New Relic Java agent. It helps you to immediately monitor Tomcat’s memory usage and other indicators with instant alerts and a standard dashboard, giving you valuable insights to improve Tomcat’s performance.\n\nOur Tomcat integration empowers teams to monitor micros-services under Tomcat. Your team can leverage the integration to report all data for each service to New Relic and drill into specific JVMs to see the data and details for each instance.\n\nGet started with New Relic Tomcat monitoring quickstart today to proactively monitor Tomcat.",
@@ -19775,6 +19721,63 @@
       {
         "name": "AWS-CloudWatch-Metric-Streams",
         "id": "aws-cloudwatch-metric-streams"
+      }
+    ]
+  },
+  {
+    "title": "Akamai DataStream 2",
+    "name": "datastream2",
+    "description": "## Akamai Quickstart\n  \nAkamai Technologies is a leading content delivery network (CDN), cybersecurity, and cloud service provider.\n\n### DataStream 2\n\nDataStream 2 captures performance and security logs from your delivery properties and streams them in near real-time to provide complete monitoring.\n\nFor more information please go to https://techdocs.akamai.com/datastream2/docs\n\n### DataStream 2 quickstart\n\nThe Akamai DataStream 2 quickstart enables you to monitor your performance and security logs in real time. Here are a few of the monitoring tools available with this quickstart:\n- HTTP status code distribution\n- Error rate\n- Log ingest\n- Cache hit retio \n- TLS overhead time ranges\n- Overhead byte ranges\n- HTTP protocol distribution",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/datastream2-akamai",
+    "id": "cb995039-39d8-44d9-97c3-58174a1337f2",
+    "level": "COMMUNITY",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/datastream2-akamai/logo.png",
+    "summary": "The DataStream 2 quickstart will enable you to monitor and analyze your Akamai performance and security logs.",
+    "websiteUrl": null,
+    "keywords": [
+      "akamai",
+      "logs",
+      "cdn",
+      "datastream",
+      "performance",
+      "security",
+      "newrelic partner",
+      "featured"
+    ],
+    "authors": [
+      "Gayatri S (Akamai Technologies)"
+    ],
+    "dashboards": [
+      {
+        "name": "Akamai Datastream2",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/datastream2/datastream201.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/datastream2/datastream202.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/datastream2/datastream203.png"
+        ]
+      }
+    ],
+    "alerts": [
+      {
+        "name": "Datastream2 - 5xx error greater than 1%",
+        "details": "Alert triggered when the error rate(5xx errors) exceeds 1%",
+        "type": "BASELINE",
+        "url": null
+      }
+    ],
+    "documentation": [
+      {
+        "name": "Installation docs",
+        "description": "Configure Akamai Datastream2 streaming logs to New Relic",
+        "url": "https://techdocs.akamai.com/datastream2/docs/stream-new-relic"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "Datastream2",
+        "id": "third-party-datastream2-akamai"
       }
     ]
   },
