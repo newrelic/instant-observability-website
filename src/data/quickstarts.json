@@ -3655,12 +3655,6 @@
     ],
     "alerts": [
       {
-        "name": "Apdex Score",
-        "details": "This alert is triggered when the Apdex score is below 0.5 for 5 minutes",
-        "type": "STATIC",
-        "url": null
-      },
-      {
         "name": "High CPU Utilization",
         "details": "This alert is triggered when the CPU Utilization is above 90%.",
         "type": "STATIC",
@@ -3675,6 +3669,12 @@
       {
         "name": "Transaction Errors",
         "details": "This alert is triggered when the the transactions fail more than 10% of the time in 5 minutes.",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "Apdex Score",
+        "details": "This alert is triggered when the Apdex score is below 0.5 for 5 minutes",
         "type": "STATIC",
         "url": null
       }
@@ -5605,6 +5605,12 @@
     ],
     "alerts": [
       {
+        "name": "Transaction Errors",
+        "details": "This alert is triggered when the the transactions fail more than 10% of the time in 5 minutes.",
+        "type": "STATIC",
+        "url": null
+      },
+      {
         "name": "Apdex Score",
         "details": "This alert is triggered when the Apdex score is below 0.5 for 5 minutes",
         "type": "STATIC",
@@ -5613,12 +5619,6 @@
       {
         "name": "Memory Usage",
         "details": "This alert is triggered when Memory usage is above 90%",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "Transaction Errors",
-        "details": "This alert is triggered when the the transactions fail more than 10% of the time in 5 minutes.",
         "type": "STATIC",
         "url": null
       }
@@ -6337,6 +6337,12 @@
     ],
     "alerts": [
       {
+        "name": "Query Load Baseline",
+        "details": "This alert is triggered when the count of active queries on primary shards deviates more than 2 standard deviations above or below the baseline.\nThis can be a leading indicator of a potential loss of service or flood of requests.",
+        "type": "BASELINE",
+        "url": null
+      },
+      {
         "name": "Cluster Health",
         "details": "This alert triggers when the reported health of an Elasticsearch cluster is 'red'.",
         "type": "STATIC",
@@ -6370,12 +6376,6 @@
         "name": "JVM Heap Utilization Percent",
         "details": "This alert will trigger when the JVM Heap utilization of an Elasticsearch cluster node is >90%.",
         "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "Query Load Baseline",
-        "details": "This alert is triggered when the count of active queries on primary shards deviates more than 2 standard deviations above or below the baseline.\nThis can be a leading indicator of a potential loss of service or flood of requests.",
-        "type": "BASELINE",
         "url": null
       }
     ],
@@ -9536,6 +9536,12 @@
     ],
     "alerts": [
       {
+        "name": "Transaction Errors",
+        "details": "This alert is triggered when the the transactions fail more than 10% of the time in 5 minutes.",
+        "type": "STATIC",
+        "url": null
+      },
+      {
         "name": "Apdex Score",
         "details": "This alert is triggered when the Apdex score is below 0.5 for 5 minutes",
         "type": "STATIC",
@@ -9550,12 +9556,6 @@
       {
         "name": "Memory Usage",
         "details": "This alert is triggered when Memory usage is above 90%",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "Transaction Errors",
-        "details": "This alert is triggered when the the transactions fail more than 10% of the time in 5 minutes.",
         "type": "STATIC",
         "url": null
       }
@@ -11336,14 +11336,14 @@
     ],
     "alerts": [
       {
-        "name": "High CPU Utilization",
-        "details": "This alert is triggered when the CPU Utilization is above 90%.",
+        "name": "Transaction Errors",
+        "details": "This alert is triggered when the the transactions fail more than 10% of the time in 5 minutes.",
         "type": "STATIC",
         "url": null
       },
       {
-        "name": "Transaction Errors",
-        "details": "This alert is triggered when the the transactions fail more than 10% of the time in 5 minutes.",
+        "name": "High CPU Utilization",
+        "details": "This alert is triggered when the CPU Utilization is above 90%.",
         "type": "STATIC",
         "url": null
       }
@@ -16065,12 +16065,6 @@
     ],
     "alerts": [
       {
-        "name": "Apdex Score",
-        "details": "This alert is triggered when the Apdex score is below 0.5 for 5 minutes",
-        "type": "STATIC",
-        "url": null
-      },
-      {
         "name": "Memory Usage",
         "details": "This alert is triggered when Memory usage is above 90%",
         "type": "STATIC",
@@ -16079,6 +16073,12 @@
       {
         "name": "Transaction Errors",
         "details": "This alert is triggered when the the transactions fail more than 10% of the time in 5 minutes.",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "Apdex Score",
+        "details": "This alert is triggered when the Apdex score is below 0.5 for 5 minutes",
         "type": "STATIC",
         "url": null
       }
@@ -16207,14 +16207,14 @@
     ],
     "alerts": [
       {
-        "name": "High CPU Utilization",
-        "details": "This alert is triggered when the CPU Utilization is above 90%.",
+        "name": "Transaction Errors",
+        "details": "This alert is triggered when the the transactions fail more than 10% of the time in 5 minutes.",
         "type": "STATIC",
         "url": null
       },
       {
-        "name": "Transaction Errors",
-        "details": "This alert is triggered when the the transactions fail more than 10% of the time in 5 minutes.",
+        "name": "High CPU Utilization",
+        "details": "This alert is triggered when the CPU Utilization is above 90%.",
         "type": "STATIC",
         "url": null
       }
@@ -16263,14 +16263,14 @@
     ],
     "alerts": [
       {
-        "name": "High CPU Utilization",
-        "details": "This alert is triggered when the CPU Utilization is above 90% for at least 10 minutes.",
+        "name": "High Memory Usage",
+        "details": "This alert is triggered when the Memory Usage is above 95% for at least 15 minutes.",
         "type": "STATIC",
         "url": null
       },
       {
-        "name": "High Memory Usage",
-        "details": "This alert is triggered when the Memory Usage is above 95% for at least 15 minutes.",
+        "name": "High CPU Utilization",
+        "details": "This alert is triggered when the CPU Utilization is above 90% for at least 10 minutes.",
         "type": "STATIC",
         "url": null
       }
@@ -18037,84 +18037,6 @@
     ]
   },
   {
-    "title": "Apache Flink",
-    "name": "apache-flink",
-    "description": "## Comprehensive monitoring quickstart for Apache Flink\nNew Relic detects your Apache Flink metrics like job manager (checkpoints, direct, mapped, metaspace memory usage),\ntask manager (shuffle netty, operators), heap memory usage and more.\n\n## Why monitor Apache Flink?\nAn ideal Apache Flink Performance Monitoring provides an easy way for effective monitoring and alerting of your Flink jobs.\n\n\n## What’s included in this quickstart?\nNew Relic's Apache Flink monitoring quickstart boasts instant full-stack observability out-of-the-box:\n- High value alerts for your Apache Flink (errors, usage metrics and JVM).\n- Easy to use performance monitoring dashboards.\n- Custom alerts that proactively inform developers about the status of their Apache Flink Jobs.",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/apache-flink",
-    "id": "b48bf101-efdd-4723-b073-7dd58e291442",
-    "level": "NEW_RELIC",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/apache-flink/logo.png",
-    "summary": "New Relic’s instant observability quickstart with Apache Flink monitoring helps to detect client, job manager and task manager logs and parses them into a JSON payload.",
-    "websiteUrl": null,
-    "keywords": [
-      "apache-flink",
-      "flink",
-      "apache flink",
-      "data stream"
-    ],
-    "authors": [
-      "New Relic"
-    ],
-    "dashboards": [
-      {
-        "name": "Apache Flink",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/apache-flink/apache-flink-10.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/apache-flink/apache-flink-1.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/apache-flink/apache-flink-2.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/apache-flink/apache-flink-3.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/apache-flink/apache-flink-4.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/apache-flink/apache-flink-5.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/apache-flink/apache-flink-6.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/apache-flink/apache-flink-7.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/apache-flink/apache-flink-8.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/apache-flink/apache-flink-9.png"
-        ]
-      }
-    ],
-    "alerts": [
-      {
-        "name": "Failed Checkpoints",
-        "details": "This alert is triggered when the failed checkpoints is higher than 3 during 5 minutes.",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "Job Manager Heap Memory Usage",
-        "details": "This alert is triggered when the job manager heap memory usage is higher than 10mb during 5 minutes.",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "Shuffle Netty Used Memory",
-        "details": "This alert is triggered when the shuffle netty used memory is higher than 2mb during 5 minutes.",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "Task Manager Direct Memory Used",
-        "details": "This alert is triggered when the task manager direct memory used is higher than 100mb during 5 minutes.",
-        "type": "STATIC",
-        "url": null
-      }
-    ],
-    "documentation": [
-      {
-        "name": "Apache Flink integration documentation",
-        "description": "New Relic’s instant observability quickstart with Apache Flink monitoring helps to detect client, job manager and task manager logs and parses them into a JSON payload.\n",
-        "url": "https://docs.newrelic.com/docs/infrastructure/prometheus-integrations/install-configure-openmetrics/install-apache-flink/"
-      }
-    ],
-    "installPlans": [
-      {
-        "name": "Apache Flink",
-        "id": "apache-flink"
-      }
-    ]
-  },
-  {
     "title": "ServiceNow Notifications",
     "name": "servicenow-notifications",
     "description": "ServiceNow is a software that helps companies manage digital workflows for enterprise operations.\n\nIntegrate New Relic with ServiceNow Incident-Management and automatically create and update incidents.\n\n[Check out our documentation](https://docs.newrelic.com/docs/alerts-applied-intelligence/notifications/notification-integrations/#servicenow) to set up a ServiceNow notification channel and provide fast and consistent ways for the right personnel to be notified about incidents",
@@ -18176,6 +18098,83 @@
       {
         "name": "PerfMon",
         "id": "third-party-perfmon"
+      }
+    ]
+  },
+  {
+    "title": "Apache Flink",
+    "name": "apache-flink",
+    "description": "## Comprehensive monitoring quickstart for Apache Flink\nNew Relic detects your Apache Flink metrics like job manager (checkpoints, direct, mapped, metaspace memory usage),\ntask manager (shuffle service, operators), heap memory usage and more.\n\n## Why monitor Apache Flink?\nAn ideal Apache Flink performance monitoring provides an easy way for effective monitoring and alerting of your Apache Flink jobs.\n\n\n## What’s included in this quickstart?\nNew Relic's Apache Flink monitoring quickstart boasts instant full-stack observability out-of-the-box:\n- High value alerts for your Apache Flink (errors, usage metrics and JVM).\n- Easy to use performance monitoring dashboards.\n- Custom alerts that proactively inform developers about the status of their Apache Flink jobs.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/apache-flink",
+    "id": "b48bf101-efdd-4723-b073-7dd58e291442",
+    "level": "NEW_RELIC",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/apache-flink/logo.png",
+    "summary": "New Relic’s instant observability quickstart with Apache Flink monitoring helps to detect job manager, task manager, operators, shuffle service, logs and parses them into a JSON payload.",
+    "websiteUrl": null,
+    "keywords": [
+      "apache-flink",
+      "flink",
+      "apache flink",
+      "data stream"
+    ],
+    "authors": [
+      "New Relic"
+    ],
+    "dashboards": [
+      {
+        "name": "Apache Flink",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/apache-flink/apache-flink01.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/apache-flink/apache-flink02.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/apache-flink/apache-flink03.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/apache-flink/apache-flink04.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/apache-flink/apache-flink05.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/apache-flink/apache-flink06.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/apache-flink/apache-flink07.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/apache-flink/apache-flink08.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/apache-flink/apache-flink09.png"
+        ]
+      }
+    ],
+    "alerts": [
+      {
+        "name": "Failed Checkpoints",
+        "details": "This alert is triggered when the failed checkpoints is higher than 3 during 5 minutes.",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "Job Manager Heap Memory Usage",
+        "details": "This alert is triggered when the job manager heap memory usage is higher than 10 MB during 5 minutes.",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "Task Manager Direct Memory Used",
+        "details": "This alert is triggered when the task manager direct memory used is higher than 100 MB during 5 minutes.",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "Shuffle Service Used Memory",
+        "details": "This alert is triggered when the shuffle netty used memory is higher than 2 MB during 5 minutes.",
+        "type": "STATIC",
+        "url": null
+      }
+    ],
+    "documentation": [
+      {
+        "name": "Apache Flink integration documentation",
+        "description": "New Relic’s instant observability quickstart with Apache Flink monitoring helps to detect job manager, task manager, operators, shuffle service, logs and parses them into a JSON payload.\n",
+        "url": "https://docs.newrelic.com/docs/infrastructure/prometheus-integrations/install-configure-openmetrics/install-apache-flink/"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "Apache Flink",
+        "id": "apache-flink"
       }
     ]
   },
@@ -23409,6 +23408,12 @@
     ],
     "alerts": [
       {
+        "name": "Transaction Errors",
+        "details": "This alert is triggered when the the transactions fail more than 10% of the time in 5 minutes.",
+        "type": "STATIC",
+        "url": null
+      },
+      {
         "name": "Apdex Score",
         "details": "This alert is triggered when the Apdex score is below 0.5 for 5 minutes",
         "type": "STATIC",
@@ -23423,12 +23428,6 @@
       {
         "name": "Memory Usage",
         "details": "This alert is triggered when Memory usage is above 90%",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "Transaction Errors",
-        "details": "This alert is triggered when the the transactions fail more than 10% of the time in 5 minutes.",
         "type": "STATIC",
         "url": null
       }
@@ -25542,6 +25541,12 @@
     ],
     "alerts": [
       {
+        "name": "Transaction Errors",
+        "details": "This alert is triggered when the the transactions fail more than 10% of the time in 5 minutes.",
+        "type": "STATIC",
+        "url": null
+      },
+      {
         "name": "Apdex Score",
         "details": "This alert is triggered when the Apdex score is below 0.5 for 5 minutes",
         "type": "STATIC",
@@ -25556,12 +25561,6 @@
       {
         "name": "Memory Usage",
         "details": "This alert is triggered when Memory usage is above 90%",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "Transaction Errors",
-        "details": "This alert is triggered when the the transactions fail more than 10% of the time in 5 minutes.",
         "type": "STATIC",
         "url": null
       }
