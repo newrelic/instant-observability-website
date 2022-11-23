@@ -5610,166 +5610,6 @@
     ]
   },
   {
-    "title": "New Relic Monitoring for SAP® Solutions",
-    "name": "nrm4sql",
-    "description": "## Why New Relic Monitoring for SAP® Solutions \n\nWith New Relic Monitoring for SAP® Solutions, you can inspect all of your SAP and non-SAP systems through one centralized view of your infrastructure, application, and business processes.\n-- Our solution is designed to not impact performance of the SAP production servers, and instead concentrates the monitoring load on a central, non-production server.\n-- The solution is SAP Certified, and installs quickly and conveniently, allowing for easy installation with as little as 1-2 hour required.\n-- Once our SAP connector is installed, all telemetry data from SAP is conveniently available via out-of-the-box dashboards, system views, business process views, and other powerful visualizations in the New Relic platform.\n-- Monitor SAP application performance and overall health data in one place. Telemetry metrics, events, logs, and traces all come together in a central view within a single UI.\n-- View your data in relation to your business processes. Understand your infrastructure and application data from the viewpoint of your corresponding business processes, such as order-to-cash and procure-to-pay.\n-- Spot problems quickly with visualizations. By querying and viewing relevant data in customizable charts and dashboards, you can identify root causes and resolve problems faster.\n-- Prevent problems before they occur. Use our advanced alerting functionality to be notified about problems before they impact customers.",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/nrm4sap",
-    "id": "89f6d534-1164-4007-8f7a-ead2889b386d",
-    "level": "NEW_RELIC",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/nrm4sap/logo.svg",
-    "summary": "A SAP-Certified integration that brings together all your SAP and non-SAP telemetry–events, metrics, logs and traces into a unified data platform, for a single view of infrastructure, application and business processes.",
-    "websiteUrl": null,
-    "keywords": [
-      "sap",
-      "hana",
-      "integration",
-      "idoc",
-      "rfc"
-    ],
-    "authors": [
-      "New Relic"
-    ],
-    "dashboards": [
-      {
-        "name": "SAP Dashboards",
-        "description": "Monitor SAP systems and applications performances",
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/nrm4sap/sap-dashboard01.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/nrm4sap/sap-dashboard02.png"
-        ]
-      },
-      {
-        "name": "SAP Data Collection Monitoring",
-        "description": "Monitor SAP data collection and ingestion process",
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/nrm4sap-datacollect/sap-data-collection01.png"
-        ]
-      },
-      {
-        "name": "SAP Data Ingestion Estimate",
-        "description": "Get an overview of the data volume ingested from SAP systems",
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/nrm4sap-datasize/sap-size-estimate01.png"
-        ]
-      }
-    ],
-    "alerts": [
-      {
-        "name": "Application Server Instance Memory Usage Over Threshold",
-        "details": "SAP Instance memory usage is high. Check run away processes or consider increasing memory for the SAP instance.",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "Background Job Failed",
-        "details": "Job failed. Check log for error messages.",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "Background Job Runing too slow",
-        "details": "Background job is running slower than usual.",
-        "type": "BASELINE",
-        "url": null
-      },
-      {
-        "name": "Background Job waiting too long to start",
-        "details": "Background job is waiting longer than usual to start.",
-        "type": "BASELINE",
-        "url": null
-      },
-      {
-        "name": "CPU Usage Too High",
-        "details": "Identify processes that heavily consumes CPU resources and investigate.  Consider allocate more resources if no specific problematic process can be identified.",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "Database is not available",
-        "details": "Database is not able to serve all requests. This might be a result of not enough resources on DB server or some transactions used up all the resources. The loss of signal alert may indicate the database is down.",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "Database Space Usage too High",
-        "details": "Database space usage exceeds the designated threshold. You may want to allocate more space for database or clean up unused data to free up space.",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "Dialog Response over Threshold",
-        "details": "Dialog response time over threshold suggests slow system performance. If the signal is lost, it may indicate the system/instance is not available.",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "Host Memory Usage too High",
-        "details": "Consider increasing host memory or scale out deploying more hosts. Also look for processes that use a lot of memory.",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "IDOC Errors over Threshold",
-        "details": "IDOC errors over the threshold. Check the IDOC processing status.",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "Not Enough App Server Instance Free Work Process",
-        "details": "The Work Process resource usage is high. Check if there are run away processes or consider increasing system resources and Work Process numbers allowed.",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "RFC Queues in Error",
-        "details": "Check logs to see why RFC queues are in error status.",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "Slow IDOC Processing Time",
-        "details": "IDOC processing time longer than usual.",
-        "type": "BASELINE",
-        "url": null
-      },
-      {
-        "name": "Slow Responding HTTP Destination",
-        "details": "HTTP Destination response slower than usual.",
-        "type": "BASELINE",
-        "url": null
-      },
-      {
-        "name": "Slow Responding RFC Destination",
-        "details": "RFC Destination responses slower than usual.",
-        "type": "BASELINE",
-        "url": null
-      },
-      {
-        "name": "Too many errors in the System",
-        "details": "Number of errors are higher than usual.",
-        "type": "BASELINE",
-        "url": null
-      },
-      {
-        "name": "Transaction is running slow",
-        "details": "Transaction is running slower than usual.",
-        "type": "BASELINE",
-        "url": null
-      }
-    ],
-    "documentation": [
-      {
-        "name": "New Relic Monitoring for SAP® Solutions",
-        "description": "New Relic Monitoring for SAP® Solutions feature overview",
-        "url": "https://docs.newrelic.com/docs/data-apis/custom-data/sap-integration/"
-      }
-    ],
-    "installPlans": []
-  },
-  {
     "title": "Inet Merlia",
     "name": "inet-merlia",
     "description": "# What is Inet Merlia?\nJava driver built by Inet for managing Microsoft SQL servers.\n\n## Get started!\nLeverage community expertise and instantly get value out of your telemetry data. This quickstart automatically instruments Inet Merlia with the New Relic Java agent, and allows you to instantly monitor your Java application with out-of-the-box dashboards and alerts.\nFurther leverage New Relic's APM capabilities by setting up [errors inbox](https://docs.newrelic.com/docs/apm/apm-ui-pages/errors-inbox/errors-inbox/), [transaction tracing](https://docs.newrelic.com/docs/apm/transactions/transaction-traces/introduction-transaction-traces/), and [service maps](https://docs.newrelic.com/docs/understand-dependencies/understand-system-dependencies/service-maps/introduction-service-maps/).\n\n## More info\nCheck out the [documentation](https://docs.newrelic.com/docs/agents/java-agent/getting-started/introduction-new-relic-java/) to learn more about New Relic monitoring for Inet Merlia.",
@@ -6019,6 +5859,166 @@
         "id": "node-agent"
       }
     ]
+  },
+  {
+    "title": "New Relic Monitoring for SAP® Solutions",
+    "name": "nrm4sql",
+    "description": "## Why New Relic Monitoring for SAP® Solutions \n\nWith New Relic Monitoring for SAP® Solutions, you can inspect all of your SAP and non-SAP systems through one centralized view of your infrastructure, application, and business processes.\n-- Our solution is designed to not impact performance of the SAP production servers, and instead concentrates the monitoring load on a central, non-production server.\n-- The solution is SAP Certified, and installs quickly and conveniently, allowing for easy installation with as little as 1-2 hour required.\n-- Once our SAP connector is installed, all telemetry data from SAP is conveniently available via out-of-the-box dashboards, system views, business process views, and other powerful visualizations in the New Relic platform.\n-- Monitor SAP application performance and overall health data in one place. Telemetry metrics, events, logs, and traces all come together in a central view within a single UI.\n-- View your data in relation to your business processes. Understand your infrastructure and application data from the viewpoint of your corresponding business processes, such as order-to-cash and procure-to-pay.\n-- Spot problems quickly with visualizations. By querying and viewing relevant data in customizable charts and dashboards, you can identify root causes and resolve problems faster.\n-- Prevent problems before they occur. Use our advanced alerting functionality to be notified about problems before they impact customers.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/nrm4sap",
+    "id": "89f6d534-1164-4007-8f7a-ead2889b386d",
+    "level": "NEW_RELIC",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/nrm4sap/logo.svg",
+    "summary": "A SAP-Certified integration that brings together all your SAP and non-SAP telemetry–events, metrics, logs and traces into a unified data platform, for a single view of infrastructure, application and business processes.",
+    "websiteUrl": null,
+    "keywords": [
+      "sap",
+      "hana",
+      "integration",
+      "idoc",
+      "rfc"
+    ],
+    "authors": [
+      "New Relic"
+    ],
+    "dashboards": [
+      {
+        "name": "SAP Dashboards",
+        "description": "Monitor SAP systems and applications performances",
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/nrm4sap/sap-dashboard01.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/nrm4sap/sap-dashboard02.png"
+        ]
+      },
+      {
+        "name": "SAP Data Collection Monitoring",
+        "description": "Monitor SAP data collection and ingestion process",
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/nrm4sap-datacollect/sap-data-collection01.png"
+        ]
+      },
+      {
+        "name": "SAP Data Ingestion Estimate",
+        "description": "Get an overview of the data volume ingested from SAP systems",
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/nrm4sap-datasize/sap-size-estimate01.png"
+        ]
+      }
+    ],
+    "alerts": [
+      {
+        "name": "Application Server Instance Memory Usage Over Threshold",
+        "details": "SAP Instance memory usage is high. Check run away processes or consider increasing memory for the SAP instance.",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "Background Job Failed",
+        "details": "Job failed. Check log for error messages.",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "Background Job Runing too slow",
+        "details": "Background job is running slower than usual.",
+        "type": "BASELINE",
+        "url": null
+      },
+      {
+        "name": "Background Job waiting too long to start",
+        "details": "Background job is waiting longer than usual to start.",
+        "type": "BASELINE",
+        "url": null
+      },
+      {
+        "name": "CPU Usage Too High",
+        "details": "Identify processes that heavily consumes CPU resources and investigate.  Consider allocate more resources if no specific problematic process can be identified.",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "Database is not available",
+        "details": "Database is not able to serve all requests. This might be a result of not enough resources on DB server or some transactions used up all the resources. The loss of signal alert may indicate the database is down.",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "Database Space Usage too High",
+        "details": "Database space usage exceeds the designated threshold. You may want to allocate more space for database or clean up unused data to free up space.",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "Dialog Response over Threshold",
+        "details": "Dialog response time over threshold suggests slow system performance. If the signal is lost, it may indicate the system/instance is not available.",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "Host Memory Usage too High",
+        "details": "Consider increasing host memory or scale out deploying more hosts. Also look for processes that use a lot of memory.",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "IDOC Errors over Threshold",
+        "details": "IDOC errors over the threshold. Check the IDOC processing status.",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "Not Enough App Server Instance Free Work Process",
+        "details": "The Work Process resource usage is high. Check if there are run away processes or consider increasing system resources and Work Process numbers allowed.",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "RFC Queues in Error",
+        "details": "Check logs to see why RFC queues are in error status.",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "Slow IDOC Processing Time",
+        "details": "IDOC processing time longer than usual.",
+        "type": "BASELINE",
+        "url": null
+      },
+      {
+        "name": "Slow Responding HTTP Destination",
+        "details": "HTTP Destination response slower than usual.",
+        "type": "BASELINE",
+        "url": null
+      },
+      {
+        "name": "Slow Responding RFC Destination",
+        "details": "RFC Destination responses slower than usual.",
+        "type": "BASELINE",
+        "url": null
+      },
+      {
+        "name": "Too many errors in the System",
+        "details": "Number of errors are higher than usual.",
+        "type": "BASELINE",
+        "url": null
+      },
+      {
+        "name": "Transaction is running slow",
+        "details": "Transaction is running slower than usual.",
+        "type": "BASELINE",
+        "url": null
+      }
+    ],
+    "documentation": [
+      {
+        "name": "New Relic Monitoring for SAP® Solutions",
+        "description": "New Relic Monitoring for SAP® Solutions feature overview",
+        "url": "https://docs.newrelic.com/docs/data-apis/custom-data/sap-integration/"
+      }
+    ],
+    "installPlans": []
   },
   {
     "title": "AWS FireLens plugin for Logs",
