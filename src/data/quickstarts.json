@@ -306,57 +306,6 @@
     ]
   },
   {
-    "title": "Amazon CloudFront web logs",
-    "name": "amazon-cloudfront-web-logs",
-    "description": "## What is Amazon CloudFront?\n\nSpeeds up the distribution of web content served from Amazon Web Services.\n\n### Get started!\n\nStart monitoring Amazon CloudFront by sending your Amazon Cloudfront Web Logs to New Relic. \n\nCheck out our Amazon CloudFront documentation to instrument your cloud service and manage the stability, scalability, and reliability of your systems with New Relic's Log monitoring capabilities.\n\n### More info\n\nCheck out the [documentation](https://docs.newrelic.com/docs/logs/forward-logs/cloudfront-web-logs/) to learn more about New Relic monitoring for Amazon CloudFront.",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/aws/amazon-cloudfront-logs",
-    "id": "fb4c4acc-e341-4b87-9bb1-5f98b9cc9310",
-    "level": "NEW_RELIC",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/aws/amazon-cloudfront-logs/logo.svg",
-    "summary": "Monitor Amazon CloudFront Web logs in New Relic",
-    "websiteUrl": null,
-    "keywords": [
-      "aws",
-      "amazon web services",
-      "web content",
-      "logs",
-      "logging",
-      "web logs",
-      "cdn",
-      "featured"
-    ],
-    "authors": [
-      "New Relic",
-      "Joseph Counts"
-    ],
-    "dashboards": [
-      {
-        "name": "Amazon Cloudfront Web Logs",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/amazon-cloudfront-web-logs/amazon-cloudfront-web-logs01.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/amazon-cloudfront-web-logs/amazon-cloudfront-web-logs02.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/amazon-cloudfront-web-logs/amazon-cloudfront-web-logs03.png"
-        ]
-      }
-    ],
-    "alerts": [],
-    "documentation": [
-      {
-        "name": "Amazon CloudFront web logs installation docs",
-        "description": "Monitor Amazon CloudFront web logs in New Relic.",
-        "url": "https://docs.newrelic.com/docs/logs/forward-logs/cloudfront-web-logs/"
-      }
-    ],
-    "installPlans": [
-      {
-        "name": "Amazon-Cloudfront-Web-Logs",
-        "id": "amazon-cloudfront-web-logs"
-      }
-    ]
-  },
-  {
     "title": "Node Exporter",
     "name": "node-exporter",
     "description": "Official New Relic dashboard for Prometheus Node Exporter. Node Exporter allows host metrics gathered by the exporter to be scraped by Prometheus Server.\n\n## Dashboard Highlights\n- Load Averages\n- CPU\n- Memory Usage\n- Storage Usage\n- Network\n\n## Requirements:\n1. [Prometheus Server](https://prometheus.io/docs/prometheus/latest/installation/)\n2. [Node Exporter](https://prometheus.io/docs/guides/node-exporter/) installed\n3. Enable Prometheus [Remote Write](https://docs.newrelic.com/docs/infrastructure/prometheus-integrations/install-configure-remote-write/set-your-prometheus-remote-write-integration/) to New Relic.\n4. To be able to filter metrics by a specific label that isn't part of the Node Exporter default installation, an `external_label` will need to be added to the Prometheus config. Example:\n    `\n      global:\n        external_labels:\n          clusterName: <cluster_name>\n    `",
@@ -1245,6 +1194,57 @@
       {
         "name": "Kamon",
         "id": "third-party-kamon"
+      }
+    ]
+  },
+  {
+    "title": "Amazon CloudFront web logs",
+    "name": "amazon-cloudfront-web-logs",
+    "description": "## What is Amazon CloudFront?\n\nSpeeds up the distribution of web content served from Amazon Web Services.\n\n### Get started!\n\nStart monitoring Amazon CloudFront by sending your Amazon Cloudfront Web Logs to New Relic. \n\nCheck out our Amazon CloudFront documentation to instrument your cloud service and manage the stability, scalability, and reliability of your systems with New Relic's Log monitoring capabilities.\n\n### More info\n\nCheck out the [documentation](https://docs.newrelic.com/docs/logs/forward-logs/cloudfront-web-logs/) to learn more about New Relic monitoring for Amazon CloudFront.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/aws/amazon-cloudfront-logs",
+    "id": "fb4c4acc-e341-4b87-9bb1-5f98b9cc9310",
+    "level": "NEW_RELIC",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/aws/amazon-cloudfront-logs/logo.svg",
+    "summary": "Monitor Amazon CloudFront Web logs in New Relic",
+    "websiteUrl": null,
+    "keywords": [
+      "aws",
+      "amazon web services",
+      "web content",
+      "logs",
+      "logging",
+      "web logs",
+      "cdn",
+      "featured"
+    ],
+    "authors": [
+      "New Relic",
+      "Joseph Counts"
+    ],
+    "dashboards": [
+      {
+        "name": "Amazon CloudFront Web Logs",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/amazon-cloudfront-web-logs/amazon-cloudfront-web-logs01.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/amazon-cloudfront-web-logs/amazon-cloudfront-web-logs02.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/amazon-cloudfront-web-logs/amazon-cloudfront-web-logs03.png"
+        ]
+      }
+    ],
+    "alerts": [],
+    "documentation": [
+      {
+        "name": "Amazon CloudFront web logs installation docs",
+        "description": "Monitor Amazon CloudFront web logs in New Relic.",
+        "url": "https://docs.newrelic.com/docs/logs/forward-logs/cloudfront-web-logs/"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "Amazon-Cloudfront-Web-Logs",
+        "id": "amazon-cloudfront-web-logs"
       }
     ]
   },
