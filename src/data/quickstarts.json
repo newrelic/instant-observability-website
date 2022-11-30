@@ -306,6 +306,77 @@
     ]
   },
   {
+    "title": "Kubernetes (Prometheus)",
+    "name": "kubernetes-prometheus",
+    "description": "## What is Kubernetes?\nKubernetes is an open-source system for automating deployment, scaling, and, management of containerized applications. The New Relic Kubernetes (Prometheus) monitoring quickstart utilizes Prometheus to give you visibility into your Kubernetes clusters and workloads in minutes, whether your clusters are hosted on-premises or in the cloud.\nFollow the instructions [here](https://docs.newrelic.com/docs/kubernetes-pixie/kubernetes-integration/get-started/introduction-kubernetes-integration/) to install the New Relic Kubernetes integration. \n\n## What is Prometheus? \nPrometheus is an open-source monitoring and alerting toolkit. \n\n### Kubernetes (Prometheus) quickstart highlights\nThe New Relic Prometheus quickstart for Kubernetes utilizes the [New Relic Prometheus agent](https://docs.newrelic.com/docs/infrastructure/prometheus-integrations/install-configure-prometheus-agent/install-prometheus-agent/) to build dashboards that allow you to proactively monitor your metrics, like:\n- memory and cpu utilization \n- running pods and containers \n- kubelet pod start metrics \n- compute resources by pod, node, cluster, and namespace and more. \n\n### Requirements\n- Follow the instructions [here](https://docs.newrelic.com/docs/infrastructure/prometheus-integrations/install-configure-prometheus-agent/install-prometheus-agent/) to install the New Relic Prometheus agent. \n- **The default installation of the New Relic Prometheus configurator does not enable all of the metrics needed to work with this quickstart's dashboards. Follow the instructions [here](https://github.com/newrelic/newrelic-prometheus-configurator/blob/main/examples/kubernetes/README.md) to enable those metrics.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/kubernetes-prometheus",
+    "id": "8e026e99-1418-4521-a582-8ea1bb65ad68",
+    "level": "COMMUNITY",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/kubernetes-prometheus/logo.svg",
+    "summary": "Monitoring Kubernetes is crucial to gain instant visibility into Kubernetes clusters and workloads. \nPrometheus' ability to monitor a wide variety of data necessitates monitoring the toolkit itself. New Relic helps store, manage, and view telemetry data from your Prometheus setup, relieving you of a significant operational burden.\nDownload the New Relic Kubernetes (Prometheus) quickstart to proactively monitor Kubernetes cluster health and capacity.",
+    "websiteUrl": null,
+    "keywords": [
+      "kubernetes",
+      "prometheus",
+      "open source",
+      "monitoring",
+      "metrics",
+      "kubelet",
+      "compute resources"
+    ],
+    "authors": [
+      "New Relic"
+    ],
+    "dashboards": [
+      {
+        "name": "Kubernetes / Kubelet",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/kubernetes-prometheus-kubelet/kubernetes-prometheus-kubelet01.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/kubernetes-prometheus-kubelet/kubernetes-prometheus-kubelet02.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/kubernetes-prometheus-kubelet/kubernetes-prometheus-kubelet03.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/kubernetes-prometheus-kubelet/kubernetes-prometheus-kubelet04.png"
+        ]
+      },
+      {
+        "name": "Kubernetes / Compute Resources",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/kubernetes-prometheus-compute-resources/kubernetes-prometheus-compute-resources01.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/kubernetes-prometheus-compute-resources/kubernetes-prometheus-compute-resources02.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/kubernetes-prometheus-compute-resources/kubernetes-prometheus-compute-resources03.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/kubernetes-prometheus-compute-resources/kubernetes-prometheus-compute-resources04.png"
+        ]
+      }
+    ],
+    "alerts": [],
+    "documentation": [
+      {
+        "name": "Kubernetes integration",
+        "description": "The New Relic Kubernetes integration has multiple components that work together to give you end-to-end observability across your clusters. While you have the flexibility to deploy the components that you prefer, to achieve full observability, you need to install the complete package to monitor all metrics. \n",
+        "url": "https://docs.newrelic.com/docs/kubernetes-pixie/kubernetes-integration/get-started/introduction-kubernetes-integration/"
+      },
+      {
+        "name": "Kubernetes Prometheus agent",
+        "description": "New Relic's Prometheus agent is a thin wrapper on top of Prometheus server to run it in agent mode. With this integration, you can create a YAML configuration file used by Prometheus that's ready to send metrics to New Relic.\n",
+        "url": "https://docs.newrelic.com/docs/infrastructure/prometheus-integrations/install-configure-prometheus-agent/install-prometheus-agent/"
+      },
+      {
+        "name": "Kubernetes Prometheus agent REQUIRED configuration",
+        "description": "The default installation of the New Relic Prometheus agent does not enable all of the metrics needed to work with this quickstart's dashboards. Follow the instructions here to enable those metrics. \n",
+        "url": "https://github.com/newrelic/newrelic-prometheus-configurator/blob/main/examples/kubernetes/README.md"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "Prometheus Agent Mode",
+        "id": "setup-prometheus-agent-mode"
+      }
+    ]
+  },
+  {
     "title": "Node Exporter",
     "name": "node-exporter",
     "description": "Official New Relic dashboard for Prometheus Node Exporter. Node Exporter allows host metrics gathered by the exporter to be scraped by Prometheus Server.\n\n## Dashboard Highlights\n- Load Averages\n- CPU\n- Memory Usage\n- Storage Usage\n- Network\n\n## Requirements:\n1. [Prometheus Server](https://prometheus.io/docs/prometheus/latest/installation/)\n2. [Node Exporter](https://prometheus.io/docs/guides/node-exporter/) installed\n3. Enable Prometheus [Remote Write](https://docs.newrelic.com/docs/infrastructure/prometheus-integrations/install-configure-remote-write/set-your-prometheus-remote-write-integration/) to New Relic.\n4. To be able to filter metrics by a specific label that isn't part of the Node Exporter default installation, an `external_label` will need to be added to the Prometheus config. Example:\n    `\n      global:\n        external_labels:\n          clusterName: <cluster_name>\n    `",
@@ -1542,6 +1613,12 @@
     ],
     "alerts": [
       {
+        "name": "Memory Usage",
+        "details": "This alert is triggered when Memory usage is above 90%",
+        "type": "STATIC",
+        "url": null
+      },
+      {
         "name": "Apdex Score",
         "details": "This alert is triggered when the Apdex score is below 0.5 for 5 minutes",
         "type": "STATIC",
@@ -1550,12 +1627,6 @@
       {
         "name": "High CPU Utilization",
         "details": "This alert is triggered when the CPU Utilization is above 90%.",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "Memory Usage",
-        "details": "This alert is triggered when Memory usage is above 90%",
         "type": "STATIC",
         "url": null
       },
@@ -1945,19 +2016,19 @@
     ],
     "dashboards": [
       {
-        "name": "Battlesnake Server Status",
-        "description": "A dashboard to monitor your Battlesnake server's performance. It's important to keep all responses to the `/move` endpoint under 500ms. Furthermore, it's possible that your snake may be in multiple concurrent matches at the same time. It's important to make sure you server and web application are running smoothly to keep you in the game!",
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/battlesnake-server-status/battlesnake-server-status.png"
-        ]
-      },
-      {
         "name": "Battlesnake Performance",
         "description": "Monitor your Battlesnake's performance and see how it stacks up against your competition!",
         "url": null,
         "screenshots": [
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/battlesnake-performance/battlesnake-performance.png"
+        ]
+      },
+      {
+        "name": "Battlesnake Server Status",
+        "description": "A dashboard to monitor your Battlesnake server's performance. It's important to keep all responses to the `/move` endpoint under 500ms. Furthermore, it's possible that your snake may be in multiple concurrent matches at the same time. It's important to make sure you server and web application are running smoothly to keep you in the game!",
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/battlesnake-server-status/battlesnake-server-status.png"
         ]
       },
       {
@@ -2026,6 +2097,54 @@
       {
         "name": "Alert Quality Management",
         "id": "third-party-alert-quality-management"
+      }
+    ]
+  },
+  {
+    "title": "HCP Consul",
+    "name": "hcp-consul",
+    "description": "## HCP Consul\nHCP (Hashicorp Cloud Platform) Consul is a version of Consul in which the control plane is managed by HashiCorp Cloud Platform. \n\nHCP Consul is a service mesh and service discovery solution provided by Hashicorp. It enables platform operators to quickly deploy a fully managed, secure-by-default service mesh, helping developers discover and securely connect any application on any runtime, including Kubernetes, Nomad, and Amazon ECS.\n\n### Monitor HCP Consul metrics with New Relic\nKeeping your Consul and Nomad clusters healthy can help with optimizing SQL query times, troubleshooting slow HTTP response times, and real-time alerting on down-time for your Hashicorp clusters. Monitoring your Hashicorp cluster metrics is pivotal for keeping your Hashicorp mesh services operating at full capacity.\n\nNew Relic supports monitoring of HCP Consul and Envoy metrics through the StatsD plugin integration. The StatsD plugin aggregates all the metrics exposed by HCP Consul and pushes them to New Relic for data visualization and alerting.\n\n### HCP Consul quickstart highlights\nThe HCP Consul quickstart for New Relic provides a pre-made dashboard with HCP Consul and Envoy metrics to get started easily. This dashboard provides visibility into the health of your HCP Consul environment with 6 tabs:\n\n- Overview: key indicators describing the overall health of your HCP Consul environment\n- Client: Insight into the health of your client members, such as API HTTP calls, cache, nodes, and messages\n- Network: Indicators on network health including metrics for RPC, TCP, UDP, and gRCP\n- Runtime: Node runtime health metrics for garbage collection, heap size and allocation, and Go routines\n- Serf: Node discover and orchestration\n- Envoy: Proxy health, cluster membership health, and network traffic performance",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/hashicorp/hcp-consul",
+    "id": "bc99ad15-7aba-450e-8236-6ea667d50cae",
+    "level": "VERIFIED",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/hashicorp/hcp-consul/logo.svg",
+    "summary": "Monitor your HCP Consul environment with the StatsD plugin integration",
+    "websiteUrl": null,
+    "keywords": [
+      "hcp",
+      "hcp-consul",
+      "hashicorp",
+      "consul",
+      "nrlabs",
+      "nrlabs-data",
+      "infrastructure"
+    ],
+    "authors": [
+      "New Relic Labs"
+    ],
+    "dashboards": [
+      {
+        "name": "HCP Consul",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/hashicorp-hcp-consul/hashicorp-hcp-consul01.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/hashicorp-hcp-consul/hashicorp-hcp-consul02.png"
+        ]
+      }
+    ],
+    "alerts": [],
+    "documentation": [
+      {
+        "name": "Configuration documentation",
+        "description": "HCP Consul configuration documentation",
+        "url": "https://docs.newrelic.com/docs/infrastructure/infrastructure-integrations/cloud-integrations/hcp-consul-monitoring"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "HCP Consul",
+        "id": "third-party-hashicorp-hcp-consul"
       }
     ]
   },
@@ -3165,54 +3284,6 @@
     ]
   },
   {
-    "title": "HCP Consul",
-    "name": "hcp-consul",
-    "description": "## HCP Consul\nHCP (Hashicorp Cloud Platform) Consul is a version of Consul in which the control plane is managed by HashiCorp Cloud Platform. \n\nHCP Consul is a service mesh and service discovery solution provided by Hashicorp. It enables platform operators to quickly deploy a fully managed, secure-by-default service mesh, helping developers discover and securely connect any application on any runtime, including Kubernetes, Nomad, and Amazon ECS.\n\n### Monitor HCP Consul metrics with New Relic\nKeeping your Consul and Nomad clusters healthy can help with optimizing SQL query times, troubleshooting slow HTTP response times, and real-time alerting on down-time for your Hashicorp clusters. Monitoring your Hashicorp cluster metrics is pivotal for keeping your Hashicorp mesh services operating at full capacity.\n\nNew Relic supports monitoring of HCP Consul and Envoy metrics through the StatsD plugin integration. The StatsD plugin aggregates all the metrics exposed by HCP Consul and pushes them to New Relic for data visualization and alerting.\n\n### HCP Consul quickstart highlights\nThe HCP Consul quickstart for New Relic provides a pre-made dashboard with HCP Consul and Envoy metrics to get started easily. This dashboard provides visibility into the health of your HCP Consul environment with 6 tabs:\n\n- Overview: key indicators describing the overall health of your HCP Consul environment\n- Client: Insight into the health of your client members, such as API HTTP calls, cache, nodes, and messages\n- Network: Indicators on network health including metrics for RPC, TCP, UDP, and gRCP\n- Runtime: Node runtime health metrics for garbage collection, heap size and allocation, and Go routines\n- Serf: Node discover and orchestration\n- Envoy: Proxy health, cluster membership health, and network traffic performance",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/hashicorp/hcp-consul",
-    "id": "bc99ad15-7aba-450e-8236-6ea667d50cae",
-    "level": "VERIFIED",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/hashicorp/hcp-consul/logo.svg",
-    "summary": "Monitor your HCP Consul environment with the StatsD plugin integration",
-    "websiteUrl": null,
-    "keywords": [
-      "hcp",
-      "hcp-consul",
-      "hashicorp",
-      "consul",
-      "nrlabs",
-      "nrlabs-data",
-      "infrastructure"
-    ],
-    "authors": [
-      "New Relic Labs"
-    ],
-    "dashboards": [
-      {
-        "name": "HCP Consul",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/hashicorp-hcp-consul/hashicorp-hcp-consul01.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/hashicorp-hcp-consul/hashicorp-hcp-consul02.png"
-        ]
-      }
-    ],
-    "alerts": [],
-    "documentation": [
-      {
-        "name": "Configuration documentation",
-        "description": "HCP Consul configuration documentation",
-        "url": "https://github.com/newrelic-experimental/hashicorp-quickstart-annex/tree/main/hcp-consul/README.md"
-      }
-    ],
-    "installPlans": [
-      {
-        "name": "HCP Consul",
-        "id": "third-party-hashicorp-hcp-consul"
-      }
-    ]
-  },
-  {
     "title": "Mobile dashboard quickstart",
     "name": "mobile-quickstart",
     "description": "A dashboard for basic mobile metrics such as active users, installs and error rate.",
@@ -4098,14 +4169,14 @@
     ],
     "alerts": [
       {
-        "name": "High CPU Utilization",
-        "details": "This alert is triggered when the CPU Utilization is above 90%.",
+        "name": "Apdex Score",
+        "details": "This alert is triggered when the Apdex score is below 0.5 for 5 minutes",
         "type": "STATIC",
         "url": null
       },
       {
-        "name": "Apdex Score",
-        "details": "This alert is triggered when the Apdex score is below 0.5 for 5 minutes",
+        "name": "High CPU Utilization",
+        "details": "This alert is triggered when the CPU Utilization is above 90%.",
         "type": "STATIC",
         "url": null
       },
@@ -4230,12 +4301,6 @@
     ],
     "alerts": [
       {
-        "name": "Transaction Errors",
-        "details": "This alert is triggered when the the transactions fail more than 10% of the time in 5 minutes.",
-        "type": "STATIC",
-        "url": null
-      },
-      {
         "name": "Apdex Score",
         "details": "This alert is triggered when the Apdex score is below 0.5 for 5 minutes",
         "type": "STATIC",
@@ -4244,6 +4309,12 @@
       {
         "name": "High CPU Utilization",
         "details": "This alert is triggered when the CPU Utilization is above 90%.",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "Transaction Errors",
+        "details": "This alert is triggered when the the transactions fail more than 10% of the time in 5 minutes.",
         "type": "STATIC",
         "url": null
       }
@@ -4470,19 +4541,19 @@
     ],
     "dashboards": [
       {
-        "name": "Data Ingest Governance Baseline",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/data-ingest-baseline/data-ingest-baseline.png"
-        ]
-      },
-      {
         "name": "Data Ingest Governance Entity Breakdowns",
         "description": null,
         "url": null,
         "screenshots": [
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/data-ingest-entity-breakdown/data-ingest-entity-breakdown.png"
+        ]
+      },
+      {
+        "name": "Data Ingest Governance Baseline",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/data-ingest-baseline/data-ingest-baseline.png"
         ]
       }
     ],
@@ -5457,19 +5528,19 @@
     ],
     "dashboards": [
       {
-        "name": "Redis Enterprise Database CRDT",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/active-active/active_active01.png"
-        ]
-      },
-      {
         "name": "Redis Enterprise Cluster Metrics",
         "description": null,
         "url": null,
         "screenshots": [
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/cluster/cluster01.png"
+        ]
+      },
+      {
+        "name": "Redis Enterprise Database CRDT",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/active-active/active_active01.png"
         ]
       },
       {
@@ -5529,12 +5600,6 @@
     ],
     "alerts": [
       {
-        "name": "Low throughput",
-        "details": "This alert is triggered when the throughput is 0 for 5 minutes",
-        "type": "STATIC",
-        "url": null
-      },
-      {
         "name": "High duration",
         "details": "This alert is triggered when the total duration of the web transaction is longer than 10 seconds during 5 minutes",
         "type": "STATIC",
@@ -5543,6 +5608,12 @@
       {
         "name": "High error rate",
         "details": "This alert is triggered when the error percentage of web transactions is higher than 5% during 5 minutes",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "Low throughput",
+        "details": "This alert is triggered when the throughput is 0 for 5 minutes",
         "type": "STATIC",
         "url": null
       }
@@ -5764,6 +5835,12 @@
     ],
     "alerts": [
       {
+        "name": "Message Enqueue Rate",
+        "details": "This alert is triggered when the messages sent are less than 1 during 5 minutes.",
+        "type": "STATIC",
+        "url": null
+      },
+      {
         "name": "Heap Memory Usage",
         "details": "This alert is triggered when the used heap memory usage is higher than 100GB during 5 minutes.",
         "type": "STATIC",
@@ -5772,12 +5849,6 @@
       {
         "name": "Message Dequeue Rate",
         "details": "This alert is triggered when the messages received are less than 1 during 5 minutes.",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "Message Enqueue Rate",
-        "details": "This alert is triggered when the messages sent are less than 1 during 5 minutes.",
         "type": "STATIC",
         "url": null
       },
@@ -5903,19 +5974,19 @@
         ]
       },
       {
-        "name": "SAP Data Ingestion Estimate",
-        "description": "Get an overview of the data volume ingested from SAP systems",
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/nrm4sap-datasize/sap-size-estimate01.png"
-        ]
-      },
-      {
         "name": "SAP Data Collection Monitoring",
         "description": "Monitor SAP data collection and ingestion process",
         "url": null,
         "screenshots": [
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/nrm4sap-datacollect/sap-data-collection01.png"
+        ]
+      },
+      {
+        "name": "SAP Data Ingestion Estimate",
+        "description": "Get an overview of the data volume ingested from SAP systems",
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/nrm4sap-datasize/sap-size-estimate01.png"
         ]
       }
     ],
@@ -8382,14 +8453,14 @@
     ],
     "documentation": [
       {
-        "name": "Prometheus installation docs",
-        "description": "Use Prometheus remote_write or Prometheus Agent\n",
-        "url": "https://docs.newrelic.com/docs/infrastructure/prometheus-integrations/get-started/send-prometheus-metric-data-new-relic"
-      },
-      {
         "name": "NGINX Ingress Controller Prometheus Integration",
         "description": "NGINX Ingress Controller Prometheus Integration Documentation\n",
         "url": "https://docs.newrelic.com/docs/infrastructure/prometheus-integrations/integrations-list/ingress-controller-integration/"
+      },
+      {
+        "name": "Prometheus installation docs",
+        "description": "Use Prometheus remote_write or Prometheus Agent\n",
+        "url": "https://docs.newrelic.com/docs/infrastructure/prometheus-integrations/get-started/send-prometheus-metric-data-new-relic"
       }
     ],
     "installPlans": [
@@ -8542,100 +8613,6 @@
     ]
   },
   {
-    "title": "Etcd (remote write)",
-    "name": "etcd",
-    "description": "## What is Etcd?\n\nEtcd is a strongly consistent, distributed key-value store that provides a reliable way to store data that needs to be accessed by a distributed system or cluster of machines. It gracefully handles leader elections during network partitions and can tolerate machine failure, even in the leader node\n\n## Quickstart details\n\nThis quickstart was built based on `etcd` metrics sent to New Relic through remote write configurations with Prometheus Agent or Prometheus server.",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/etcd",
-    "id": "83b4ef64-9af6-4bec-9707-674fa82c2837",
-    "level": "COMMUNITY",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/etcd/logo.png",
-    "summary": "A curated dashboard based on Prometheus metrics which helps you understand the health of your Etcd cluster.  This quickstart was built based on `etcd` metrics sent to New Relic through remote write configurations with Prometheus Agent or Prometheus server.",
-    "websiteUrl": null,
-    "keywords": [
-      "etcd",
-      "kubernetes",
-      "k8s",
-      "prometheus",
-      "remote-write"
-    ],
-    "authors": [
-      "New Relic",
-      "Brad Schmitt",
-      "Raga Potti"
-    ],
-    "dashboards": [
-      {
-        "name": "Etcd (Prometheus)",
-        "description": "A dashboard for etcd based on metrics sent to New Relic using Prometheus Agent or Prometheus server.",
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/etcd/etcd-dashboard-1.jpg",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/etcd/etcd-dashboard-2.jpg"
-        ]
-      }
-    ],
-    "alerts": [
-      {
-        "name": "Number Of Failed Server Proposals",
-        "details": "This alert is triggered when more than 5 proposals are failing in last 5 minutes",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "High Commit Duration",
-        "details": "This alert is triggered when commit duration is high in instance",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "Higher Number Of Failed GRPC requests",
-        "details": "This alert is triggered when more than 5 gRPC requests are failing in last 5 minutes",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "Latency Of Fsync Called By Wal",
-        "details": "This alert is triggered when fsync durations are high in an instance",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "Leader Changes",
-        "details": "This alert is triggered when more than 3 leader changes occured",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "No Leader",
-        "details": "This alert is triggered when the etcd member has no leader",
-        "type": "STATIC",
-        "url": null
-      }
-    ],
-    "documentation": [
-      {
-        "name": "Etcd Metrics Documentation",
-        "description": "Learn more about the Prometheus metrics available for Etcd",
-        "url": "https://etcd.io/docs/v3.5/metrics/"
-      },
-      {
-        "name": "Prometheus installation docs",
-        "description": "Use Prometheus remote_write or Prometheus Agent",
-        "url": "https://docs.newrelic.com/docs/infrastructure/prometheus-integrations/install-configure-remote-write/set-your-prometheus-remote-write-integration/"
-      }
-    ],
-    "installPlans": [
-      {
-        "name": "Prometheus remote write",
-        "id": "setup-prometheus"
-      },
-      {
-        "name": "Prometheus Agent Mode",
-        "id": "setup-prometheus-agent-mode"
-      }
-    ]
-  },
-  {
     "title": "Amazon EC2",
     "name": "aws-ec2",
     "description": "## What is Amazon EC2?\n\nBuild scalable and flexible applications on top of AWS container services.\n\n### Get started!\n\nStart monitoring AWS EC2 by connecting Amazon Web Services (AWS) to New Relic!\n\nCheck out our AWS EC2 documentation to instrument your cloud service and manage the stability, scalability, and reliability of your systems with New Relic's infrastructure monitoring capabilities.\n\n### More info\n\nCheck out the [documentation](https://docs.newrelic.com/docs/infrastructure/amazon-integrations/aws-integrations-list/aws-ec2-monitoring-integration/) to learn more about New Relic monitoring for AWS EC2.",
@@ -8682,6 +8659,100 @@
       {
         "name": "AWS-CloudWatch-Metric-Streams",
         "id": "aws-cloudwatch-metric-streams"
+      }
+    ]
+  },
+  {
+    "title": "Etcd (Prometheus)",
+    "name": "etcd",
+    "description": "## What is Etcd?\n\nEtcd is a strongly consistent, distributed key-value store that provides a reliable way to store data that needs to be accessed by a distributed system or cluster of machines. It gracefully handles leader elections during network partitions and can tolerate machine failure, even in the leader node\n\n## Quickstart details\n\nThis quickstart was built based on Etcd metrics sent to New Relic through remote write configurations with Prometheus Agent or Prometheus server.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/etcd",
+    "id": "83b4ef64-9af6-4bec-9707-674fa82c2837",
+    "level": "COMMUNITY",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/etcd/logo.png",
+    "summary": "A curated dashboard based on Prometheus metrics which helps you understand the health of your Etcd cluster.  This quickstart was built based on `etcd` metrics sent to New Relic through remote write configurations with Prometheus Agent or Prometheus server.",
+    "websiteUrl": null,
+    "keywords": [
+      "etcd",
+      "kubernetes",
+      "k8s",
+      "prometheus",
+      "remote-write"
+    ],
+    "authors": [
+      "New Relic",
+      "Brad Schmitt",
+      "Raga Potti"
+    ],
+    "dashboards": [
+      {
+        "name": "Etcd (Prometheus)",
+        "description": "A dashboard for etcd based on metrics sent to New Relic using Prometheus Agent or Prometheus server.",
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/etcd/etcd-dashboard-1.jpg",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/etcd/etcd-dashboard-2.jpg"
+        ]
+      }
+    ],
+    "alerts": [
+      {
+        "name": "High Commit Duration",
+        "details": "This alert is triggered when commit duration is high in instance",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "Higher Number Of Failed GRPC requests",
+        "details": "This alert is triggered when more than 5 gRPC requests are failing in last 5 minutes",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "Latency Of Fsync Called By Wal",
+        "details": "This alert is triggered when fsync durations are high in an instance",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "Leader Changes",
+        "details": "This alert is triggered when more than 3 leader changes occured",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "No Leader",
+        "details": "This alert is triggered when the etcd member has no leader",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "Number Of Failed Server Proposals",
+        "details": "This alert is triggered when more than 5 proposals are failing in last 5 minutes",
+        "type": "STATIC",
+        "url": null
+      }
+    ],
+    "documentation": [
+      {
+        "name": "Etcd Metrics Documentation",
+        "description": "Learn more about the Prometheus metrics available for Etcd",
+        "url": "https://etcd.io/docs/v3.5/metrics/"
+      },
+      {
+        "name": "Prometheus installation docs",
+        "description": "Use Prometheus remote_write or Prometheus Agent",
+        "url": "https://docs.newrelic.com/docs/infrastructure/prometheus-integrations/install-configure-remote-write/set-your-prometheus-remote-write-integration/"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "Prometheus remote write",
+        "id": "setup-prometheus"
+      },
+      {
+        "name": "Prometheus Agent Mode",
+        "id": "setup-prometheus-agent-mode"
       }
     ]
   },
@@ -10755,12 +10826,6 @@
     ],
     "alerts": [
       {
-        "name": "Transaction Errors",
-        "details": "This alert is triggered when the the transactions fail more than 10% of the time in 5 minutes.",
-        "type": "STATIC",
-        "url": null
-      },
-      {
         "name": "Apdex Score",
         "details": "This alert is triggered when the Apdex score is below 0.5 for 5 minutes",
         "type": "STATIC",
@@ -10769,6 +10834,12 @@
       {
         "name": "Memory Usage",
         "details": "This alert is triggered when Memory usage is above 90%",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "Transaction Errors",
+        "details": "This alert is triggered when the the transactions fail more than 10% of the time in 5 minutes.",
         "type": "STATIC",
         "url": null
       }
@@ -13182,14 +13253,14 @@
     ],
     "alerts": [
       {
-        "name": "Fastly CDN - Response Time (ms) by POP",
-        "details": "Excessive response time may impact customer experience\nAlert examines response time in milliseconds and checks for 3σ (standard deviations)\nExceeding 3σ must exist for at least 5 minutes before the condition will trigger a notification",
+        "name": "Fastly CDN - Error Count by POP",
+        "details": "Excessive errors from a specific Fastly POP may indicate content deliver issues\nAlert examines error count and checks for 3σ (standard deviations)\nExceeding 3σ must exist for at least 5 minutes before the condition will trigger a notification",
         "type": "BASELINE",
         "url": null
       },
       {
-        "name": "Fastly CDN - Error Count by POP",
-        "details": "Excessive errors from a specific Fastly POP may indicate content deliver issues\nAlert examines error count and checks for 3σ (standard deviations)\nExceeding 3σ must exist for at least 5 minutes before the condition will trigger a notification",
+        "name": "Fastly CDN - Response Time (ms) by POP",
+        "details": "Excessive response time may impact customer experience\nAlert examines response time in milliseconds and checks for 3σ (standard deviations)\nExceeding 3σ must exist for at least 5 minutes before the condition will trigger a notification",
         "type": "BASELINE",
         "url": null
       }
@@ -16257,14 +16328,14 @@
     ],
     "alerts": [
       {
-        "name": "High CPU Utilization",
-        "details": "This alert is triggered when the CPU Utilization is above 90%.",
+        "name": "Transaction Errors",
+        "details": "This alert is triggered when the the transactions fail more than 10% of the time in 5 minutes.",
         "type": "STATIC",
         "url": null
       },
       {
-        "name": "Transaction Errors",
-        "details": "This alert is triggered when the the transactions fail more than 10% of the time in 5 minutes.",
+        "name": "High CPU Utilization",
+        "details": "This alert is triggered when the CPU Utilization is above 90%.",
         "type": "STATIC",
         "url": null
       }
@@ -16371,12 +16442,6 @@
     ],
     "alerts": [
       {
-        "name": "Transaction Errors",
-        "details": "This alert is triggered when the the transactions fail more than 10% of the time in 5 minutes.",
-        "type": "STATIC",
-        "url": null
-      },
-      {
         "name": "Apdex Score",
         "details": "This alert is triggered when the Apdex score is below 0.5 for 5 minutes",
         "type": "STATIC",
@@ -16391,6 +16456,12 @@
       {
         "name": "Memory Usage",
         "details": "This alert is triggered when Memory usage is above 90%",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "Transaction Errors",
+        "details": "This alert is triggered when the the transactions fail more than 10% of the time in 5 minutes.",
         "type": "STATIC",
         "url": null
       }
@@ -17108,14 +17179,14 @@
     ],
     "alerts": [
       {
-        "name": "High CPU Utilization",
-        "details": "This alert is triggered when the CPU Utilization is above 90%.",
+        "name": "Apdex Score",
+        "details": "This alert is triggered when the Apdex score is below 0.5 for 5 minutes",
         "type": "STATIC",
         "url": null
       },
       {
-        "name": "Apdex Score",
-        "details": "This alert is triggered when the Apdex score is below 0.5 for 5 minutes",
+        "name": "High CPU Utilization",
+        "details": "This alert is triggered when the CPU Utilization is above 90%.",
         "type": "STATIC",
         "url": null
       },
@@ -18814,11 +18885,11 @@
         ]
       },
       {
-        "name": "Catchpoint-Response Size",
+        "name": "Catchpoint-Overview",
         "description": null,
         "url": null,
         "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/catchpoint-response-size/Catchpoint-Response_Size.png"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/catchpoint-overview/Catchpoint-Overview.png"
         ]
       },
       {
@@ -18830,11 +18901,11 @@
         ]
       },
       {
-        "name": "Catchpoint-Overview",
+        "name": "Catchpoint-Response Size",
         "description": null,
         "url": null,
         "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/catchpoint-overview/Catchpoint-Overview.png"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/catchpoint-response-size/Catchpoint-Response_Size.png"
         ]
       }
     ],
@@ -19449,12 +19520,6 @@
     ],
     "alerts": [
       {
-        "name": "Memory Usage",
-        "details": "This alert is triggered when Memory usage is above 90%",
-        "type": "STATIC",
-        "url": null
-      },
-      {
         "name": "Apdex Score",
         "details": "This alert is triggered when the Apdex score is below 0.5 for 5 minutes",
         "type": "STATIC",
@@ -19463,6 +19528,12 @@
       {
         "name": "High CPU Utilization",
         "details": "This alert is triggered when the CPU Utilization is above 90%.",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "Memory Usage",
+        "details": "This alert is triggered when Memory usage is above 90%",
         "type": "STATIC",
         "url": null
       },
@@ -20014,6 +20085,87 @@
       {
         "name": "AWS-CloudWatch-Metric-Streams",
         "id": "aws-cloudwatch-metric-streams"
+      }
+    ]
+  },
+  {
+    "title": "CoreDNS (Prometheus)",
+    "name": "coredns",
+    "description": "The CoreDNS quickstart includes a dashboard and set of alerts that provides a holistic view of the CoreDNS instances in your environment. Information contained in the dasshboard includes CoreDNS versions, status, request/response times, and cache statistics. This quickstart was built and tested based on CoreDNS metrics sent to New Relic through remote write configurations with Prometheus Agent or Prometheus Server.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/coredns",
+    "id": "c9ac4abb-4a61-4eee-9e1e-79506806684e",
+    "level": "VERIFIED",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/coredns/coredns-logo.png",
+    "summary": "Easily install a curated dashboard and alerts to monitor the health of your CoreDNS instances. This quickstart was built and tested based on CoreDNS metrics sent to New Relic through remote write configurations with Prometheus Agent or Prometheus Server.",
+    "websiteUrl": null,
+    "keywords": [
+      "coredns",
+      "prometheus",
+      "remote write",
+      "remote_write",
+      "remote-write",
+      "promql",
+      "grafana"
+    ],
+    "authors": [
+      "New Relic",
+      "Brad Schmitt",
+      "Raga Potti"
+    ],
+    "dashboards": [
+      {
+        "name": "CoreDNS (Prometheus)",
+        "description": "A dashboard for CoreDNS based on metrics sent to New Relic using Prometheus Agent or Prometheus server.",
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/coredns/coredns-dashboard-1.jpg",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/coredns/coredns-dashboard-2.jpg",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/coredns/coredns-dashboard-3.jpg",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/coredns/coredns-dashboard-4.jpg"
+        ]
+      }
+    ],
+    "alerts": [
+      {
+        "name": "CoreDNS Error Rate",
+        "details": "This alert will trigger if the CoreDNS error rate for response codes NXDOMAIN, SERVFAIL, or REFUSED is above 2 standard deviations for more than 5 minutes.",
+        "type": "BASELINE",
+        "url": null
+      },
+      {
+        "name": "CoreDNS Panics",
+        "details": "This alert will trigger if the CoreDNS panic rate is above 0 at least once in 5 minutes",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "CoreDNS Request Duration",
+        "details": "This alert will trigger if the CoreDNS request duration 95th percentile is above or below 2 standard deviations for more than 5 minutes",
+        "type": "BASELINE",
+        "url": null
+      },
+      {
+        "name": "CoreDNS Request Rate",
+        "details": "This alert will trigger if the CoreDNS requests per second is above or below 2 standard deviations for more than 5 minutes",
+        "type": "BASELINE",
+        "url": null
+      }
+    ],
+    "documentation": [
+      {
+        "name": "Prometheus installation docs",
+        "description": "Use Prometheus remote_write or Prometheus Agent\n",
+        "url": "https://docs.newrelic.com/docs/infrastructure/prometheus-integrations/install-configure-remote-write/set-your-prometheus-remote-write-integration/"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "Prometheus remote write",
+        "id": "setup-prometheus"
+      },
+      {
+        "name": "Prometheus Agent Mode",
+        "id": "setup-prometheus-agent-mode"
       }
     ]
   },
@@ -20823,8 +20975,8 @@
     ],
     "alerts": [
       {
-        "name": "Low throughput",
-        "details": "This alert is triggered when the throughput is 0 for 5 minutes",
+        "name": "High duration",
+        "details": "This alert is triggered when the total duration of the web transaction is longer than 10 seconds during 5 minutes",
         "type": "STATIC",
         "url": null
       },
@@ -20835,8 +20987,8 @@
         "url": null
       },
       {
-        "name": "High duration",
-        "details": "This alert is triggered when the total duration of the web transaction is longer than 10 seconds during 5 minutes",
+        "name": "Low throughput",
+        "details": "This alert is triggered when the throughput is 0 for 5 minutes",
         "type": "STATIC",
         "url": null
       }
@@ -20921,80 +21073,42 @@
     ]
   },
   {
-    "title": "CoreDNS Metrics (remote write)",
-    "name": "coredns",
-    "description": "The CoreDNS quickstart includes a dashboard and set of alerts that provides a holistic view of the CoreDNS instances in your environment. Information contained in the dasshboard includes CoreDNS versions, status, request/response times, and cache statistics. This quickstart was built and tested based on CoreDNS metrics sent to New Relic through remote write configurations with Prometheus Agent or Prometheus Server.",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/coredns",
-    "id": "c9ac4abb-4a61-4eee-9e1e-79506806684e",
-    "level": "VERIFIED",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/coredns/coredns-logo.png",
-    "summary": "Easily install a curated dashboard and alerts to monitor the health of your CoreDNS instances. This quickstart was built and tested based on CoreDNS metrics sent to New Relic through remote write configurations with Prometheus Agent or Prometheus Server.",
+    "title": "Prometheus Agent",
+    "name": "prometheus-agent",
+    "description": "## About New Relic Prometheus Agent\n\nNew Relic created the [Prometheus Agent](https://github.com/newrelic/newrelic-prometheus-configurator) in order to simplify the experience of configuring features like discovery, filtering, metrics decoration, and sharding. \n\nIt generates a configuration file that is used to run a Prometheus Server in Agent mode to later send the metrics to the New Relic Remote Write Endpoint.\n\n## About the Quickstart\n\nYou can use this Quickstart dashboard to get insight into the performance of your Prometheus Server instances and the metrics volume sent to New Relic.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/prometheus-agent",
+    "id": "6ce97424-85e0-41c5-b300-afa54bcb6180",
+    "level": "NEW_RELIC",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/prometheus-agent/logo.svg",
+    "summary": "The official New Relic Quickstart for Prometheus Agent. Install the Quickstart to get a customized dashboard providing full insight into the performance of your Prometheus Server instances and the metrics volume sent to New Relic.",
     "websiteUrl": null,
     "keywords": [
-      "coredns",
       "prometheus",
-      "remote write",
-      "remote_write",
-      "remote-write",
-      "promql",
-      "grafana"
+      "agent"
     ],
     "authors": [
       "New Relic",
-      "Brad Schmitt",
-      "Raga Potti"
+      "Marc Sanmiquel"
     ],
     "dashboards": [
       {
-        "name": "CoreDNS (Prometheus)",
-        "description": "A dashboard for CoreDNS based on metrics sent to New Relic using Prometheus Agent or Prometheus server.",
+        "name": "Prometheus Agent",
+        "description": null,
         "url": null,
         "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/coredns/coredns-dashboard-1.jpg",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/coredns/coredns-dashboard-2.jpg",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/coredns/coredns-dashboard-3.jpg",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/coredns/coredns-dashboard-4.jpg"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/prometheus-agent/prometheus-agent.png"
         ]
       }
     ],
-    "alerts": [
-      {
-        "name": "CoreDNS Error Rate",
-        "details": "This alert will trigger if the CoreDNS error rate for response codes NXDOMAIN, SERVFAIL, or REFUSED is above 2 standard deviations for more than 5 minutes.",
-        "type": "BASELINE",
-        "url": null
-      },
-      {
-        "name": "CoreDNS Panics",
-        "details": "This alert will trigger if the CoreDNS panic rate is above 0 at least once in 5 minutes",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "CoreDNS Request Duration",
-        "details": "This alert will trigger if the CoreDNS request duration 95th percentile is above or below 2 standard deviations for more than 5 minutes",
-        "type": "BASELINE",
-        "url": null
-      },
-      {
-        "name": "CoreDNS Request Rate",
-        "details": "This alert will trigger if the CoreDNS requests per second is above or below 2 standard deviations for more than 5 minutes",
-        "type": "BASELINE",
-        "url": null
-      }
-    ],
+    "alerts": [],
     "documentation": [
       {
-        "name": "Prometheus installation docs",
-        "description": "Use Prometheus remote_write or Prometheus Agent\n",
-        "url": "https://docs.newrelic.com/docs/infrastructure/prometheus-integrations/install-configure-remote-write/set-your-prometheus-remote-write-integration/"
+        "name": "Prometheus Agent",
+        "description": "Install and configure New Relic Prometheus Agent\n",
+        "url": "https://docs.newrelic.com/docs/infrastructure/prometheus-integrations/install-configure-prometheus-agent/install-prometheus-agent"
       }
     ],
     "installPlans": [
-      {
-        "name": "Prometheus remote write",
-        "id": "setup-prometheus"
-      },
       {
         "name": "Prometheus Agent Mode",
         "id": "setup-prometheus-agent-mode"
@@ -24577,14 +24691,14 @@
     ],
     "alerts": [
       {
-        "name": "High 400 Error Rate",
-        "details": "This alert is triggered when a Traefik service has an HTTP 4xx error rate above 5% for over 5 minutes. This threshold should be adjusted to your own requirements.",
+        "name": "High 500 Error Rate",
+        "details": "This alert is triggered when a Traefik service has an HTTP 5xx error rate above 5% for over 5 minutes. This threshold should be adjusted to your own requirements.",
         "type": "STATIC",
         "url": null
       },
       {
-        "name": "High 500 Error Rate",
-        "details": "This alert is triggered when a Traefik service has an HTTP 5xx error rate above 5% for over 5 minutes. This threshold should be adjusted to your own requirements.",
+        "name": "High 400 Error Rate",
+        "details": "This alert is triggered when a Traefik service has an HTTP 4xx error rate above 5% for over 5 minutes. This threshold should be adjusted to your own requirements.",
         "type": "STATIC",
         "url": null
       },
@@ -24689,27 +24803,19 @@
     ],
     "dashboards": [
       {
-        "name": "AWS Integrations Data Ingest Analysis",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/aws-integrations-data-ingest-analysis/aws-integrations-data-ingest-analysis.png"
-        ]
-      },
-      {
-        "name": "On-Host Integrations Data Analysis",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/on-host-integrations-data-analysis/on-host-integrations-data-analysis.png"
-        ]
-      },
-      {
         "name": "Kubernetes Data Ingest Analysis",
         "description": null,
         "url": null,
         "screenshots": [
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/kubernetes-data-ingest-analysis/kubernetes-data-ingest-analysis.png"
+        ]
+      },
+      {
+        "name": "AWS Integrations Data Ingest Analysis",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/aws-integrations-data-ingest-analysis/aws-integrations-data-ingest-analysis.png"
         ]
       },
       {
@@ -24726,6 +24832,14 @@
         "url": null,
         "screenshots": [
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/gcp-integrations-data-ingest-analysis/gcp-integrations-data-ingest-analysis.png"
+        ]
+      },
+      {
+        "name": "On-Host Integrations Data Analysis",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/on-host-integrations-data-analysis/on-host-integrations-data-analysis.png"
         ]
       }
     ],
@@ -25673,14 +25787,6 @@
     ],
     "dashboards": [
       {
-        "name": "JavaScript Errors",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/javascript-errors/javascript_errors.png"
-        ]
-      },
-      {
         "name": "Browser Overview",
         "description": null,
         "url": null,
@@ -25694,6 +25800,14 @@
         "url": null,
         "screenshots": [
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/browser-pages-dashboard/browser_pages_dashboard.png"
+        ]
+      },
+      {
+        "name": "JavaScript Errors",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/javascript-errors/javascript_errors.png"
         ]
       },
       {
