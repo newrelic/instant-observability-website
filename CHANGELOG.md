@@ -1,3 +1,10 @@
+## [1.12.6](https://github.com/newrelic/instant-observability-website/compare/v1.12.5...v1.12.6) (2022-11-30)
+
+
+### Bug Fixes
+
+* update support level names for shield icon ([90cd56f](https://github.com/newrelic/instant-observability-website/commit/90cd56f05cd40a625f17d25ce9eaacd64e0dea93))
+
 ## [1.12.5](https://github.com/newrelic/instant-observability-website/compare/v1.12.4...v1.12.5) (2022-11-07)
 
 
