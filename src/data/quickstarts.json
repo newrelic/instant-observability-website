@@ -1613,12 +1613,6 @@
     ],
     "alerts": [
       {
-        "name": "Memory Usage",
-        "details": "This alert is triggered when Memory usage is above 90%",
-        "type": "STATIC",
-        "url": null
-      },
-      {
         "name": "Apdex Score",
         "details": "This alert is triggered when the Apdex score is below 0.5 for 5 minutes",
         "type": "STATIC",
@@ -1627,6 +1621,12 @@
       {
         "name": "High CPU Utilization",
         "details": "This alert is triggered when the CPU Utilization is above 90%.",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "Memory Usage",
+        "details": "This alert is triggered when Memory usage is above 90%",
         "type": "STATIC",
         "url": null
       },
@@ -3742,8 +3742,8 @@
     ],
     "alerts": [
       {
-        "name": "High CPU Utilization",
-        "details": "This alert is triggered when the CPU Utilization is above 90%.",
+        "name": "Transaction Errors",
+        "details": "This alert is triggered when the the transactions fail more than 10% of the time in 5 minutes.",
         "type": "STATIC",
         "url": null
       },
@@ -3754,14 +3754,14 @@
         "url": null
       },
       {
-        "name": "Memory Usage",
-        "details": "This alert is triggered when Memory usage is above 90%",
+        "name": "High CPU Utilization",
+        "details": "This alert is triggered when the CPU Utilization is above 90%.",
         "type": "STATIC",
         "url": null
       },
       {
-        "name": "Transaction Errors",
-        "details": "This alert is triggered when the the transactions fail more than 10% of the time in 5 minutes.",
+        "name": "Memory Usage",
+        "details": "This alert is triggered when Memory usage is above 90%",
         "type": "STATIC",
         "url": null
       }
@@ -5437,12 +5437,6 @@
     ],
     "alerts": [
       {
-        "name": "Apdex Score",
-        "details": "This alert is triggered when the Apdex score is below 0.5 for 5 minutes",
-        "type": "STATIC",
-        "url": null
-      },
-      {
         "name": "Memory Usage",
         "details": "This alert is triggered when Memory usage is above 90%",
         "type": "STATIC",
@@ -5451,6 +5445,12 @@
       {
         "name": "Transaction Errors",
         "details": "This alert is triggered when the the transactions fail more than 10% of the time in 5 minutes.",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "Apdex Score",
+        "details": "This alert is triggered when the Apdex score is below 0.5 for 5 minutes",
         "type": "STATIC",
         "url": null
       }
@@ -6485,6 +6485,12 @@
     ],
     "alerts": [
       {
+        "name": "JVM Heap Utilization Percent",
+        "details": "This alert will trigger when the JVM Heap utilization of an Elasticsearch cluster node is >90%.",
+        "type": "STATIC",
+        "url": null
+      },
+      {
         "name": "Cluster Health",
         "details": "This alert triggers when the reported health of an Elasticsearch cluster is 'red'.",
         "type": "STATIC",
@@ -6511,12 +6517,6 @@
       {
         "name": "Indexing Latency Threshold",
         "details": "This alert will trigger when the Indexing latency for an Elasticsearch cluster's primary shards is >5ms.\nThis is measured by: # of Docs Indexed / Time spent Indexing (ms) for the evaluated time window.\nIncreased Flush Latency is an indication that you are trying to index too many documents at one time and you may need to reconfigured your settings to increase performance.",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "JVM Heap Utilization Percent",
-        "details": "This alert will trigger when the JVM Heap utilization of an Elasticsearch cluster node is >90%.",
         "type": "STATIC",
         "url": null
       },
@@ -8393,88 +8393,6 @@
     ]
   },
   {
-    "title": "NGINX Ingress Controller",
-    "name": "nginx-ingress-controller",
-    "description": "## Why monitor the NGINX ingress controller? \n\nThe NGINX ingress controller exposes many useful metrics that can be scraped by a Prometheus server or agent. These metrics can inform you of ongoing process connections and the current ingress load that your system is handling. Furthermore, these metrics can inform you on ingress config reloads and empower alert conditions on config reload errors or unexpected config changes.\n\n## NGINX ingress controller quickstart highlights\n\n- Config reload monitoring (errors and last successful reload)\n- Throughput faceted by ingress classes\n- Request/response insights on payload size and response time\n- CPU and memory statistics\n- This quickstart is based on metrics sent to New Relic using Prometheus Agent or Prometheus Server. \n\n## Monitoring NGINX ingress controller\n\nThe NGINX ingress controller has to have metrics enabled before they are available to be scraped. Instructions for ensuring your NGINX metrics are enabled can be found here: https://kubernetes.github.io/ingress-nginx/user-guide/monitoring/#wildcard-ingresses",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/kubernetes/nginx",
-    "id": "689827ca-e78b-4d30-989e-aa404a4f6984",
-    "level": "NEW_RELIC",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/kubernetes/nginx/logo.svg",
-    "summary": "Visualize NGINX ingress controller performance and alert on potential configuration errors. Download New Relic NGINX ingress controller quickstart to increase visibility into your ingress performance. This quickstart is based on metrics sent to New Relic using Prometheus Agent or Prometheus Server.",
-    "websiteUrl": null,
-    "keywords": [
-      "kubernetes",
-      "k8s",
-      "nginx",
-      "ingress",
-      "controllers",
-      "config"
-    ],
-    "authors": [
-      "New Relic",
-      "Zack Mutchler",
-      "Gulab Sidhwani"
-    ],
-    "dashboards": [
-      {
-        "name": "NGINX Ingress Controller (Prometheus)",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/nginx-ingress/nginx-ingress.png"
-        ]
-      }
-    ],
-    "alerts": [
-      {
-        "name": "High HTTP 4xx/5xx error alert",
-        "details": "This alert is triggered when the HTTP request success rate drops below 95 percent. The alert threshold can be changed to your desired error alerting requirements.",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "Ingress certificate expiration alert",
-        "details": "This alert is triggered when there are less than 30 days remaining for certificate expiration. The alert threshold can be changed to your desired expiration alerting requirements.",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "Nginx-ingress config load errors alert",
-        "details": "This alert is triggered when there is an error loading ingress configuration",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "P99 latency alert",
-        "details": "This sample alert is triggered when the controller request processing duration for the 99th percentile of requests goes above 100 ms. The alert threshold can be changed to your desired latency for alerting requirements.",
-        "type": "STATIC",
-        "url": null
-      }
-    ],
-    "documentation": [
-      {
-        "name": "NGINX Ingress Controller Prometheus Integration",
-        "description": "NGINX Ingress Controller Prometheus Integration Documentation\n",
-        "url": "https://docs.newrelic.com/docs/infrastructure/prometheus-integrations/integrations-list/ingress-controller-integration/"
-      },
-      {
-        "name": "Prometheus installation docs",
-        "description": "Use Prometheus remote_write or Prometheus Agent\n",
-        "url": "https://docs.newrelic.com/docs/infrastructure/prometheus-integrations/get-started/send-prometheus-metric-data-new-relic"
-      }
-    ],
-    "installPlans": [
-      {
-        "name": "Prometheus remote write",
-        "id": "setup-prometheus"
-      },
-      {
-        "name": "Prometheus Agent Mode",
-        "id": "setup-prometheus-agent-mode"
-      }
-    ]
-  },
-  {
     "title": "Kubernetes",
     "name": "kubernetes",
     "description": "## Why monitor Kubernetes?\n\nKubernetes is an open-source system for automating deployment, scaling, and, management of containerized applications. The New Relic Kubernetes monitoring quickstart gives you visibility into your Kubernetes clusters and workloads in minutes, whether your clusters are hosted on-premises or in the cloud.\n\n### Kubernetes quickstart highlights\n\nThe New Relic Kubernetes quickstart uses dashboards to proactively monitor your metrics, like:\n\n- resources used\n- number of K8s objects\n- namespaces per cluster\n- pods by namespace\n- container cpu usage\n- container restarts\n- missing pods by deployment\n- node resource consumption, and more.\n\nThis quickstart is also compatible with on-host integrations like:\n\n- Cassandra\n- MySQL\n- Apache, and more.\n\n### New Relic + Kubernetes = Optimum performance monitoring\n\nThe [New Relic Kubernetes](https://docs.newrelic.com/docs/integrations/kubernetes-integration/installation/kubernetes-integration-install-configure/) quickstart has multiple components that work together to give you end-to-end observability across your clusters. While you have the flexibility to deploy the components that you prefer, to achieve full observability, you need to install the complete package to monitor all metrics. Use our quickstart to generate a Kubernetes manifest and add Pixie for more fine-grained telemetry data. You can also do the installation with Pixie for fine-grained telemetry data.\nOur quickstart monitors the aggregated core and memory usage across all nodes in your cluster. This allows you to meet resource requirements for optimal application performance. It also empowers you to track resource consumption, find pods that aren't running, monitor disk usage, and troubleshoot container restarts. The New Relic Kubernetes integration has dashboards and a cluster explorer that provide a multi-dimensional representation of a Kubernetes cluster from which you can explore your namespaces, deployments, nodes, pods, containers, and applications. Download the New Relic Kubernetes quickstart today to gain instant visibility into your Kubernetes services, clusters and workloads in minutes.",
@@ -8613,62 +8531,12 @@
     ]
   },
   {
-    "title": "Amazon EC2",
-    "name": "aws-ec2",
-    "description": "## What is Amazon EC2?\n\nBuild scalable and flexible applications on top of AWS container services.\n\n### Get started!\n\nStart monitoring AWS EC2 by connecting Amazon Web Services (AWS) to New Relic!\n\nCheck out our AWS EC2 documentation to instrument your cloud service and manage the stability, scalability, and reliability of your systems with New Relic's infrastructure monitoring capabilities.\n\n### More info\n\nCheck out the [documentation](https://docs.newrelic.com/docs/infrastructure/amazon-integrations/aws-integrations-list/aws-ec2-monitoring-integration/) to learn more about New Relic monitoring for AWS EC2.",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/aws/amazon-ec2",
-    "id": "4e11966f-04c2-49ca-8815-9e7de8645b1b",
-    "level": "NEW_RELIC",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/aws/amazon-ec2/logo.svg",
-    "summary": "Monitor Amazon EC2 by connecting AWS to New Relic",
-    "websiteUrl": null,
-    "keywords": [
-      "aws",
-      "amazon web service",
-      "database"
-    ],
-    "authors": [
-      "New Relic"
-    ],
-    "dashboards": [
-      {
-        "name": "Amazon EC2",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/amazon-ec2/amazon-ec2.png"
-        ]
-      }
-    ],
-    "alerts": [
-      {
-        "name": "High CPU Utilization",
-        "details": "This alert is triggered when the CPU Utilization is above 90%.",
-        "type": "STATIC",
-        "url": null
-      }
-    ],
-    "documentation": [
-      {
-        "name": "Amazon EC2 installation docs",
-        "description": "Monitor Amazon EC2 by connecting AWS to New Relic.\n",
-        "url": "https://docs.newrelic.com/docs/infrastructure/amazon-integrations/aws-integrations-list/aws-ec2-monitoring-integration/"
-      }
-    ],
-    "installPlans": [
-      {
-        "name": "AWS-CloudWatch-Metric-Streams",
-        "id": "aws-cloudwatch-metric-streams"
-      }
-    ]
-  },
-  {
     "title": "Etcd (Prometheus)",
     "name": "etcd",
     "description": "## What is Etcd?\n\nEtcd is a strongly consistent, distributed key-value store that provides a reliable way to store data that needs to be accessed by a distributed system or cluster of machines. It gracefully handles leader elections during network partitions and can tolerate machine failure, even in the leader node\n\n## Quickstart details\n\nThis quickstart was built based on Etcd metrics sent to New Relic through remote write configurations with Prometheus Agent or Prometheus server.",
     "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/etcd",
     "id": "83b4ef64-9af6-4bec-9707-674fa82c2837",
-    "level": "COMMUNITY",
+    "level": "NEW_RELIC",
     "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/etcd/logo.png",
     "summary": "A curated dashboard based on Prometheus metrics which helps you understand the health of your Etcd cluster.  This quickstart was built based on `etcd` metrics sent to New Relic through remote write configurations with Prometheus Agent or Prometheus server.",
     "websiteUrl": null,
@@ -8757,6 +8625,56 @@
     ]
   },
   {
+    "title": "Amazon EC2",
+    "name": "aws-ec2",
+    "description": "## What is Amazon EC2?\n\nBuild scalable and flexible applications on top of AWS container services.\n\n### Get started!\n\nStart monitoring AWS EC2 by connecting Amazon Web Services (AWS) to New Relic!\n\nCheck out our AWS EC2 documentation to instrument your cloud service and manage the stability, scalability, and reliability of your systems with New Relic's infrastructure monitoring capabilities.\n\n### More info\n\nCheck out the [documentation](https://docs.newrelic.com/docs/infrastructure/amazon-integrations/aws-integrations-list/aws-ec2-monitoring-integration/) to learn more about New Relic monitoring for AWS EC2.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/aws/amazon-ec2",
+    "id": "4e11966f-04c2-49ca-8815-9e7de8645b1b",
+    "level": "NEW_RELIC",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/aws/amazon-ec2/logo.svg",
+    "summary": "Monitor Amazon EC2 by connecting AWS to New Relic",
+    "websiteUrl": null,
+    "keywords": [
+      "aws",
+      "amazon web service",
+      "database"
+    ],
+    "authors": [
+      "New Relic"
+    ],
+    "dashboards": [
+      {
+        "name": "Amazon EC2",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/amazon-ec2/amazon-ec2.png"
+        ]
+      }
+    ],
+    "alerts": [
+      {
+        "name": "High CPU Utilization",
+        "details": "This alert is triggered when the CPU Utilization is above 90%.",
+        "type": "STATIC",
+        "url": null
+      }
+    ],
+    "documentation": [
+      {
+        "name": "Amazon EC2 installation docs",
+        "description": "Monitor Amazon EC2 by connecting AWS to New Relic.\n",
+        "url": "https://docs.newrelic.com/docs/infrastructure/amazon-integrations/aws-integrations-list/aws-ec2-monitoring-integration/"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "AWS-CloudWatch-Metric-Streams",
+        "id": "aws-cloudwatch-metric-streams"
+      }
+    ]
+  },
+  {
     "title": "AWS NLB/ALB",
     "name": "aws-nlb-alb",
     "description": "## What is AWS NLB/ALB?\n\nDistributes incoming application traffic across multiple targets, such as EC2\ninstances, in multiple availability zones.\n\n\n### Get started!\n\nStart monitoring AWS NLB/ALB by connecting Amazon Web Services (AWS) to New Relic!\n\nCheck out our AWS NLB/ALB documentation to instrument your cloud service and manage the stability, scalability, and reliability of your systems with New Relic's infrastructure monitoring capabilities.\n\n### More info\n\nCheck out the [documentation](https://docs.newrelic.com/docs/infrastructure/amazon-integrations/aws-integrations-list/aws-albnlb-monitoring-integration/) to learn more about New Relic monitoring for AWS NLB/ALB.",
@@ -8807,6 +8725,88 @@
       {
         "name": "AWS-CloudWatch-Metric-Streams",
         "id": "aws-cloudwatch-metric-streams"
+      }
+    ]
+  },
+  {
+    "title": "NGINX Ingress Controller (Prometheus)",
+    "name": "nginx-ingress-controller",
+    "description": "## Why monitor the NGINX ingress controller?\n\nThe NGINX ingress controller exposes many useful metrics that can be scraped by a Prometheus server or agent. These metrics can inform you of ongoing process connections and the current ingress load that your system is handling. Furthermore, these metrics can inform you on ingress config reloads and empower alert conditions on config reload errors or unexpected config changes.\n\n## NGINX ingress controller quickstart highlights\n\n- Config reload monitoring (errors and last successful reload)\n- Throughput faceted by ingress classes\n- Request/response insights on payload size and response time\n- CPU and memory statistics\n- This quickstart is based on metrics sent to New Relic using Prometheus Agent or Prometheus Server.\n\n## Monitoring NGINX ingress controller\n\nThe NGINX ingress controller has to have metrics enabled before they are available to be scraped. Instructions for ensuring your NGINX metrics are enabled can be found here: https://kubernetes.github.io/ingress-nginx/user-guide/monitoring/#wildcard-ingresses",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/kubernetes/nginx",
+    "id": "689827ca-e78b-4d30-989e-aa404a4f6984",
+    "level": "NEW_RELIC",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/kubernetes/nginx/logo.svg",
+    "summary": "Visualize NGINX ingress controller performance and alert on potential configuration errors. Download New Relic NGINX ingress controller quickstart to increase visibility into your ingress performance. This quickstart is based on metrics sent to New Relic using Prometheus Agent or Prometheus Server.",
+    "websiteUrl": null,
+    "keywords": [
+      "kubernetes",
+      "k8s",
+      "nginx",
+      "ingress",
+      "controllers",
+      "config"
+    ],
+    "authors": [
+      "New Relic",
+      "Zack Mutchler",
+      "Gulab Sidhwani"
+    ],
+    "dashboards": [
+      {
+        "name": "NGINX Ingress Controller (Prometheus)",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/nginx-ingress/nginx-ingress.png"
+        ]
+      }
+    ],
+    "alerts": [
+      {
+        "name": "High HTTP 4xx/5xx error alert",
+        "details": "This alert is triggered when the HTTP request success rate drops below 95 percent. The alert threshold can be changed to your desired error alerting requirements.",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "Ingress certificate expiration alert",
+        "details": "This alert is triggered when there are less than 30 days remaining for certificate expiration. The alert threshold can be changed to your desired expiration alerting requirements.",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "Nginx-ingress config load errors alert",
+        "details": "This alert is triggered when there is an error loading ingress configuration",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "P99 latency alert",
+        "details": "This sample alert is triggered when the controller request processing duration for the 99th percentile of requests goes above 100 ms. The alert threshold can be changed to your desired latency for alerting requirements.",
+        "type": "STATIC",
+        "url": null
+      }
+    ],
+    "documentation": [
+      {
+        "name": "NGINX Ingress Controller Prometheus Integration",
+        "description": "NGINX Ingress Controller Prometheus Integration Documentation\n",
+        "url": "https://docs.newrelic.com/docs/infrastructure/prometheus-integrations/integrations-list/ingress-controller-integration/"
+      },
+      {
+        "name": "Prometheus installation docs",
+        "description": "Use Prometheus remote_write or Prometheus Agent\n",
+        "url": "https://docs.newrelic.com/docs/infrastructure/prometheus-integrations/get-started/send-prometheus-metric-data-new-relic"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "Prometheus remote write",
+        "id": "setup-prometheus"
+      },
+      {
+        "name": "Prometheus Agent Mode",
+        "id": "setup-prometheus-agent-mode"
       }
     ]
   },
@@ -15659,6 +15659,145 @@
     ]
   },
   {
+    "title": "CockroachDB (Prometheus)",
+    "name": "cockroach-database-newrelic",
+    "description": "[Cockroach Database ](https://www.cockroachlabs.com/docs/  ) CockroachDB is a distributed SQL database built on a transactional and strongly-consistent key-value store. It scales horizontally; survives disk, machine, rack, and even datacenter failures with minimal latency disruption and no manual intervention; supports strongly-consistent ACID transactions; and provides a familiar SQL API for structuring, manipulating, and querying data.\n\nInstall this quickstart to access preconfigured CockroachDB observability solutions based on Prometheus metrics that are available out-of-the-box.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/cockroach-db",
+    "id": "e2ee8b6e-5c2a-11ed-9b6a-0242ac120002",
+    "level": "NEW_RELIC",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/cockroach-db/logo.png",
+    "summary": "A curated dashboard based on Prometheus metrics which helps you understand the CockroachDB performance of your Kubernetes cluster. This quickstart is based on metrics sent to New Relic using Prometheus Agent or Prometheus Server.",
+    "websiteUrl": null,
+    "keywords": [
+      "Cockroach",
+      "Database",
+      "kubernetes",
+      "k8s",
+      "prometheus",
+      "remote-write",
+      "sql"
+    ],
+    "authors": [
+      "New Relic",
+      "Gulab Sidhwani",
+      "Zack Mutchler"
+    ],
+    "dashboards": [
+      {
+        "name": "Cockroach Database Console (Prometheus)",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/cockroach-db/cockroach-db-1.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/cockroach-db/cockroach-db-2.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/cockroach-db/cockroach-db-3.png"
+        ]
+      }
+    ],
+    "alerts": [
+      {
+        "name": "CA certificate expiration",
+        "details": "This alert is triggered when there are less than 90 days remaining for CA certificate expiration. The alert threshold can be changed to your desired expiration alerting requirements.",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "Client CA certificate expiration",
+        "details": "This alert is triggered when there are less than 90 days remaining for Client CA certificate expiration. The alert threshold can be changed to your desired expiration alerting requirements.",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "Cluster running with different versions",
+        "details": "This alert is triggered when there are multiple versions of CockroachDB running in a single cluster.",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "High fd open count",
+        "details": "This alert is triggered when a node passes 80% of the open file descriptors limit for 15 minutes. The alert threshold can be changes to your desired file descriptors limit requirements.",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "Instance dead alert",
+        "details": "This alert triggers when an instance is down for 15 minutes. The alert threshold can be changed to your acceptable downtime requirements.",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "Low disk storage",
+        "details": "Send an alert when available storage capacity is below 15% for over 15 minutes. The alert threshold can be changed to your desired storage limit requirements.",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "Node certificate expiration",
+        "details": "This alert is triggered when there are less than 30 days remaining for Node certificate expiration. The alert threshold can be changed to your desired expiration alerting requirements.",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "Node down alert",
+        "details": "This alert triggers when a node is down for 15 minutes. The alert threshold can be changed to your acceptable downtime requirements.",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "Slow latch requests",
+        "details": "This alert triggers when there are > 0 slow latch requests for over 5 minutes. The alert threshold can be changed to your acceptable slow request requirements.",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "Slow lease requests",
+        "details": "This alert triggers when there are > 0 slow lease requests for over 5 minutes. The alert threshold can be changed to your acceptable slow request requirements.",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "Slow raft requests",
+        "details": "This alert triggers when there are > 0 slow raft requests for over 5 minutes. The alert threshold can be changed to your acceptable slow request requirements.",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "UI CA certificate expiration",
+        "details": "This alert is triggered when there are less than 90 days remaining for UI CA certificate expiration. The alert threshold can be changed to your desired expiration alerting requirements.",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "UI certificate expiration",
+        "details": "This alert is triggered when there are less than 30 days remaining for UI certificate expiration. The alert threshold can be changed to your desired expiration alerting requirements.",
+        "type": "STATIC",
+        "url": null
+      }
+    ],
+    "documentation": [
+      {
+        "name": "Prometheus installation docs",
+        "description": "Use Prometheus remote_write or Prometheus Agent\n",
+        "url": "https://docs.newrelic.com/docs/infrastructure/prometheus-integrations/get-started/send-prometheus-metric-data-new-relic"
+      },
+      {
+        "name": "CockroachDB Prometheus Integration",
+        "description": "CockroachDB Prometheus Integration Documentation",
+        "url": "https://docs.newrelic.com/docs/infrastructure/prometheus-integrations/integrations-list/cockroach-db-integration"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "Prometheus remote write",
+        "id": "setup-prometheus"
+      },
+      {
+        "name": "Prometheus Agent Mode",
+        "id": "setup-prometheus-agent-mode"
+      }
+    ]
+  },
+  {
     "title": "Grafana Dashboard Migration",
     "name": "grafana-dashboard-migration",
     "description": "Telemetry Data Platform allows customers to onboard Prometheus Metrics and support New Relic as a Prometheus data source for Grafana dashboards. To help our customers that want to get rid of their Grafana instance we've build a toolset to migrate Grafana Prometheus dashboards to New Relic dashboards.\n\nFollow the easy to execute instructions on our Github repository to start converting Grafana dashboards in minutes.\n\nOne important note is that this isn’t a perfect solution, but it should get you 95% of the way. New Relic and Grafana are very different solutions, and the tool relies heavily on our PromQL to NRQL conversion service which is not feature complete. For these reasons, not all dashboards may get imported perfectly and some clean up may be required.",
@@ -15981,6 +16120,12 @@
     ],
     "alerts": [
       {
+        "name": "Transaction Errors",
+        "details": "This alert is triggered when the the transactions fail more than 10% of the time in 5 minutes.",
+        "type": "STATIC",
+        "url": null
+      },
+      {
         "name": "Apdex Score",
         "details": "This alert is triggered when the Apdex score is below 0.5 for 5 minutes",
         "type": "STATIC",
@@ -15989,12 +16134,6 @@
       {
         "name": "Memory Usage",
         "details": "This alert is triggered when Memory usage is above 90%",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "Transaction Errors",
-        "details": "This alert is triggered when the the transactions fail more than 10% of the time in 5 minutes.",
         "type": "STATIC",
         "url": null
       }
@@ -16125,6 +16264,12 @@
     ],
     "alerts": [
       {
+        "name": "Low throughput",
+        "details": "This alert is triggered when the throughput is 0 for 5 minutes",
+        "type": "STATIC",
+        "url": null
+      },
+      {
         "name": "High duration",
         "details": "This alert is triggered when the total duration of the web transaction is longer than 10 seconds during 5 minutes",
         "type": "STATIC",
@@ -16133,12 +16278,6 @@
       {
         "name": "High error rate",
         "details": "This alert is triggered when the error percentage of web transactions is higher than 5% during 5 minutes",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "Low throughput",
-        "details": "This alert is triggered when the throughput is 0 for 5 minutes",
         "type": "STATIC",
         "url": null
       }
@@ -16154,145 +16293,6 @@
       {
         "name": "PHP Agent",
         "id": "php-agent"
-      }
-    ]
-  },
-  {
-    "title": "Cockroach Database-Newrelic",
-    "name": "cockroach-database-newrelic",
-    "description": "[Cockroach Database ](https://www.cockroachlabs.com/docs/  ) CockroachDB is a distributed SQL database built on a transactional and strongly-consistent key-value store. It scales horizontally; survives disk, machine, rack, and even datacenter failures with minimal latency disruption and no manual intervention; supports strongly-consistent ACID transactions; and provides a familiar SQL API for structuring, manipulating, and querying data.\n\nInstall this quickstart to access preconfigured Cockroach Database observability solutions based on Prometheus metrics that are available out-of-the-box",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/cockroach-db",
-    "id": "e2ee8b6e-5c2a-11ed-9b6a-0242ac120002",
-    "level": "NEW_RELIC",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/cockroach-db/logo.png",
-    "summary": "A curated dashboard based on Prometheus metrics which helps you understand the Cockroach Database performance of your k8s cluster. This quickstart is based on metrics sent to New Relic using Prometheus Agent or Prometheus Server.",
-    "websiteUrl": null,
-    "keywords": [
-      "Cockroach",
-      "Database",
-      "kubernetes",
-      "k8s",
-      "prometheus",
-      "remote-write",
-      "sql"
-    ],
-    "authors": [
-      "New Relic",
-      "Gulab Sidhwani",
-      "Zack Mutchler"
-    ],
-    "dashboards": [
-      {
-        "name": "Cockroach Database Console (Prometheus)",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/cockroach-db/cockroach-db-1.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/cockroach-db/cockroach-db-2.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/cockroach-db/cockroach-db-3.png"
-        ]
-      }
-    ],
-    "alerts": [
-      {
-        "name": "CA certificate expiration",
-        "details": "This alert is triggered when there are less than 90 days remaining for CA certificate expiration. The alert threshold can be changed to your desired expiration alerting requirements.",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "Client CA certificate expiration",
-        "details": "This alert is triggered when there are less than 90 days remaining for Client CA certificate expiration. The alert threshold can be changed to your desired expiration alerting requirements.",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "Cluster running with different versions",
-        "details": "This alert is triggered when there are multiple versions of CockroachDB running in a single cluster.",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "High fd open count",
-        "details": "This alert is triggered when a node passes 80% of the open file descriptors limit for 15 minutes. The alert threshold can be changes to your desired file descriptors limit requirements.",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "Instance dead alert",
-        "details": "This alert triggers when an instance is down for 15 minutes. The alert threshold can be changed to your acceptable downtime requirements.",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "Low disk storage",
-        "details": "Send an alert when available storage capacity is below 15% for over 15 minutes. The alert threshold can be changed to your desired storage limit requirements.",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "Node certificate expiration",
-        "details": "This alert is triggered when there are less than 30 days remaining for Node certificate expiration. The alert threshold can be changed to your desired expiration alerting requirements.",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "Node down alert",
-        "details": "This alert triggers when a node is down for 15 minutes. The alert threshold can be changed to your acceptable downtime requirements.",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "Slow latch requests",
-        "details": "This alert triggers when there are > 0 slow latch requests for over 5 minutes. The alert threshold can be changed to your acceptable slow request requirements.",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "Slow lease requests",
-        "details": "This alert triggers when there are > 0 slow lease requests for over 5 minutes. The alert threshold can be changed to your acceptable slow request requirements.",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "Slow raft requests",
-        "details": "This alert triggers when there are > 0 slow raft requests for over 5 minutes. The alert threshold can be changed to your acceptable slow request requirements.",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "UI CA certificate expiration",
-        "details": "This alert is triggered when there are less than 90 days remaining for UI CA certificate expiration. The alert threshold can be changed to your desired expiration alerting requirements.",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "UI certificate expiration",
-        "details": "This alert is triggered when there are less than 30 days remaining for UI certificate expiration. The alert threshold can be changed to your desired expiration alerting requirements.",
-        "type": "STATIC",
-        "url": null
-      }
-    ],
-    "documentation": [
-      {
-        "name": "Cockroach Database Prometheus Integration",
-        "description": "Cockroach Database Prometheus Integration Documentation",
-        "url": "https://docs.newrelic.com/docs/infrastructure/prometheus-integrations/integrations-list/cockroach-db-integration"
-      },
-      {
-        "name": "Prometheus installation docs",
-        "description": "Use Prometheus remote_write or Prometheus Agent\n",
-        "url": "https://docs.newrelic.com/docs/infrastructure/prometheus-integrations/get-started/send-prometheus-metric-data-new-relic"
-      }
-    ],
-    "installPlans": [
-      {
-        "name": "Prometheus remote write",
-        "id": "setup-prometheus"
-      },
-      {
-        "name": "Prometheus Agent Mode",
-        "id": "setup-prometheus-agent-mode"
       }
     ]
   },
@@ -16328,14 +16328,14 @@
     ],
     "alerts": [
       {
-        "name": "Transaction Errors",
-        "details": "This alert is triggered when the the transactions fail more than 10% of the time in 5 minutes.",
+        "name": "High CPU Utilization",
+        "details": "This alert is triggered when the CPU Utilization is above 90%.",
         "type": "STATIC",
         "url": null
       },
       {
-        "name": "High CPU Utilization",
-        "details": "This alert is triggered when the CPU Utilization is above 90%.",
+        "name": "Transaction Errors",
+        "details": "This alert is triggered when the the transactions fail more than 10% of the time in 5 minutes.",
         "type": "STATIC",
         "url": null
       }
@@ -16686,14 +16686,14 @@
     ],
     "alerts": [
       {
-        "name": "Transaction Errors",
-        "details": "This alert is triggered when the the transactions fail more than 10% of the time in 5 minutes.",
+        "name": "High CPU Utilization",
+        "details": "This alert is triggered when the CPU Utilization is above 90%.",
         "type": "STATIC",
         "url": null
       },
       {
-        "name": "High CPU Utilization",
-        "details": "This alert is triggered when the CPU Utilization is above 90%.",
+        "name": "Transaction Errors",
+        "details": "This alert is triggered when the the transactions fail more than 10% of the time in 5 minutes.",
         "type": "STATIC",
         "url": null
       }
@@ -18196,12 +18196,6 @@
     ],
     "alerts": [
       {
-        "name": "Task Manager Direct Memory Used",
-        "details": "This alert is triggered when the task manager direct memory used is higher than 100 MB during 5 minutes.",
-        "type": "STATIC",
-        "url": null
-      },
-      {
         "name": "Failed Checkpoints",
         "details": "This alert is triggered when the failed checkpoints is higher than 3 during 5 minutes.",
         "type": "STATIC",
@@ -18210,6 +18204,12 @@
       {
         "name": "Job Manager Heap Memory Usage",
         "details": "This alert is triggered when the job manager heap memory usage is higher than 10 MB during 5 minutes.",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "Task Manager Direct Memory Used",
+        "details": "This alert is triggered when the task manager direct memory used is higher than 100 MB during 5 minutes.",
         "type": "STATIC",
         "url": null
       },
@@ -18351,6 +18351,12 @@
     ],
     "alerts": [
       {
+        "name": "Transaction Errors",
+        "details": "This alert is triggered when the the transactions fail more than 10% of the time in 5 minutes.",
+        "type": "STATIC",
+        "url": null
+      },
+      {
         "name": "Apdex Score",
         "details": "This alert is triggered when the Apdex score is below 0.5 for 5 minutes",
         "type": "STATIC",
@@ -18359,12 +18365,6 @@
       {
         "name": "Memory Usage",
         "details": "This alert is triggered when Memory usage is above 90%",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "Transaction Errors",
-        "details": "This alert is triggered when the the transactions fail more than 10% of the time in 5 minutes.",
         "type": "STATIC",
         "url": null
       }
@@ -24691,8 +24691,8 @@
     ],
     "alerts": [
       {
-        "name": "High 500 Error Rate",
-        "details": "This alert is triggered when a Traefik service has an HTTP 5xx error rate above 5% for over 5 minutes. This threshold should be adjusted to your own requirements.",
+        "name": "Too Many Open requests",
+        "details": "This alert is triggered when a Traefik service has more than 50 open requests for over 1 minute. This threshold should be adjusted to your own requirements.",
         "type": "STATIC",
         "url": null
       },
@@ -24703,8 +24703,8 @@
         "url": null
       },
       {
-        "name": "Too Many Open requests",
-        "details": "This alert is triggered when a Traefik service has more than 50 open requests for over 1 minute. This threshold should be adjusted to your own requirements.",
+        "name": "High 500 Error Rate",
+        "details": "This alert is triggered when a Traefik service has an HTTP 5xx error rate above 5% for over 5 minutes. This threshold should be adjusted to your own requirements.",
         "type": "STATIC",
         "url": null
       }
