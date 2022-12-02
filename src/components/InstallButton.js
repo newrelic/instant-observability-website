@@ -122,11 +122,6 @@ const InstallButton = ({
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  // If there is nothing to install AND no documentation, don't show this button.
-  if (!hasInstallableComponent && !hasComponent(quickstart, 'documentation')) {
-    return null;
-  }
-
   let nerdletId = hasGuidedInstall
     ? NR1_GUIDED_INSTALL_NERDLET
     : NR1_PACK_DETAILS_NERDLET;
@@ -135,18 +130,14 @@ const InstallButton = ({
     nerdletId = NR1_CODESTREAM_INSTALL_NERDLET;
   }
   const hasUtmParameters = checkUtmParameters(parameters);
-  // If we have an install-able component, generate a URL. Otherwise, link to the
-  // first documentation supplied.
-  const url = hasInstallableComponent
-    ? createInstallLink(
-        quickstart.id,
-        nerdletId,
-        hasGuidedInstall,
-        hasUtmParameters,
-        checkIfReturningUser(),
-        parameters
-      )
-    : quickstart.documentation[0].url;
+  const url = createInstallLink(
+    quickstart.id,
+    nerdletId,
+    hasGuidedInstall,
+    hasUtmParameters,
+    checkIfReturningUser(),
+    parameters
+  );
 
   const writeCookie = () => {
     const currentEnvironment =
@@ -177,9 +168,7 @@ const InstallButton = ({
       super_tiles_treatment: treatment,
       urlParameters: Object.entries([...parameters]),
       partner: isNRPartner(quickstart.keywords),
-      quickstartButtonText: hasInstallableComponent
-        ? 'Install quickstart'
-        : 'See installation docs',
+      quickstartButtonText: 'Install quickstart',
     });
   };
 
@@ -201,23 +190,15 @@ const InstallButton = ({
         line-height: 21px;
         font-weight: 400;
         padding: 1rem;
-
-        ${hasInstallableComponent &&
-        css`
-          padding: 0;
-          width: 106px;
-          height: 3.125rem;
-        `};
+        padding: 0;
+        width: 106px;
+        height: 3.125rem;
       `}
     >
-      {hasInstallableComponent ? (
-        <div className="btn-animation-styles">
-          <div className="scroll scroll-top">Install now</div>
-          <div className="scroll scroll-bottom">Install now</div>
-        </div>
-      ) : (
-        'See installation docs'
-      )}
+      <div className="btn-animation-styles">
+        <div className="scroll scroll-top">Install now</div>
+        <div className="scroll scroll-bottom">Install now</div>
+      </div>
     </Button>
   );
 };
