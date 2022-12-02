@@ -20168,87 +20168,6 @@
     ]
   },
   {
-    "title": "CoreDNS (Prometheus)",
-    "name": "coredns",
-    "description": "The CoreDNS quickstart includes a dashboard and set of alerts that provides a holistic view of the CoreDNS instances in your environment. Information contained in the dasshboard includes CoreDNS versions, status, request/response times, and cache statistics. This quickstart was built and tested based on CoreDNS metrics sent to New Relic through remote write configurations with Prometheus Agent or Prometheus Server.",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/coredns",
-    "id": "c9ac4abb-4a61-4eee-9e1e-79506806684e",
-    "level": "VERIFIED",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/coredns/coredns-logo.png",
-    "summary": "Easily install a curated dashboard and alerts to monitor the health of your CoreDNS instances. This quickstart was built and tested based on CoreDNS metrics sent to New Relic through remote write configurations with Prometheus Agent or Prometheus Server.",
-    "websiteUrl": null,
-    "keywords": [
-      "coredns",
-      "prometheus",
-      "remote write",
-      "remote_write",
-      "remote-write",
-      "promql",
-      "grafana"
-    ],
-    "authors": [
-      "New Relic",
-      "Brad Schmitt",
-      "Raga Potti"
-    ],
-    "dashboards": [
-      {
-        "name": "CoreDNS (Prometheus)",
-        "description": "A dashboard for CoreDNS based on metrics sent to New Relic using Prometheus Agent or Prometheus server.",
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/coredns/coredns-dashboard-1.jpg",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/coredns/coredns-dashboard-2.jpg",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/coredns/coredns-dashboard-3.jpg",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/coredns/coredns-dashboard-4.jpg"
-        ]
-      }
-    ],
-    "alerts": [
-      {
-        "name": "CoreDNS Error Rate",
-        "details": "This alert will trigger if the CoreDNS error rate for response codes NXDOMAIN, SERVFAIL, or REFUSED is above 2 standard deviations for more than 5 minutes.",
-        "type": "BASELINE",
-        "url": null
-      },
-      {
-        "name": "CoreDNS Panics",
-        "details": "This alert will trigger if the CoreDNS panic rate is above 0 at least once in 5 minutes",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "CoreDNS Request Duration",
-        "details": "This alert will trigger if the CoreDNS request duration 95th percentile is above or below 2 standard deviations for more than 5 minutes",
-        "type": "BASELINE",
-        "url": null
-      },
-      {
-        "name": "CoreDNS Request Rate",
-        "details": "This alert will trigger if the CoreDNS requests per second is above or below 2 standard deviations for more than 5 minutes",
-        "type": "BASELINE",
-        "url": null
-      }
-    ],
-    "documentation": [
-      {
-        "name": "Prometheus installation docs",
-        "description": "Use Prometheus remote_write or Prometheus Agent\n",
-        "url": "https://docs.newrelic.com/docs/infrastructure/prometheus-integrations/install-configure-remote-write/set-your-prometheus-remote-write-integration/"
-      }
-    ],
-    "installPlans": [
-      {
-        "name": "Prometheus remote write",
-        "id": "setup-prometheus"
-      },
-      {
-        "name": "Prometheus Agent Mode",
-        "id": "setup-prometheus-agent-mode"
-      }
-    ]
-  },
-  {
     "title": "Tomcat",
     "name": "tomcat",
     "description": "# What is Tomcat?\n\nOpen-source implementation of the Java Servlet, JavaServer Pages, Java Expression Language and WebSocket technologies.It implements Java enterprise specs like WebSocket technologies and JavaServer Pages. The Apache Tomcat software powers large-scale, mission-critical web applications across a diverse range of organizations.\n\n### New Relic Tomcat quickstart features\n\nOur Tomcat monitoring integration has the following features:\n\n- A standard dashboard that tracks key indicators like error overview, virtual machine overview, daily transaction errors, transaction errors today vs 1 week ago, CPU utilization, memory heap used, and more\n- Instant alerts on performance metrics like transaction errors and high CPU utilization\n- Custom queries and immediate data visualization\n\n### Why monitor Tomcat with New Relic?\n\nNew Relic’s Tomcat monitoring quickstart automatically instruments Tomcat with the New Relic Java agent. It helps you to immediately monitor Tomcat’s memory usage and other indicators with instant alerts and a standard dashboard, giving you valuable insights to improve Tomcat’s performance.\n\nOur Tomcat integration empowers teams to monitor micros-services under Tomcat. Your team can leverage the integration to report all data for each service to New Relic and drill into specific JVMs to see the data and details for each instance.\n\nGet started with New Relic Tomcat monitoring quickstart today to proactively monitor Tomcat.",
@@ -20637,6 +20556,87 @@
       {
         "name": "AWS-CloudWatch-Metric-Streams",
         "id": "aws-cloudwatch-metric-streams"
+      }
+    ]
+  },
+  {
+    "title": "CoreDNS (Prometheus)",
+    "name": "coredns",
+    "description": "The CoreDNS quickstart includes a dashboard and set of alerts that provides a holistic view of the CoreDNS instances in your environment. Information contained in the dasshboard includes CoreDNS versions, status, request/response times, and cache statistics. This quickstart was built and tested based on CoreDNS metrics sent to New Relic through remote write configurations with Prometheus Agent or Prometheus Server.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/coredns",
+    "id": "c9ac4abb-4a61-4eee-9e1e-79506806684e",
+    "level": "VERIFIED",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/coredns/coredns-logo.png",
+    "summary": "Easily install a curated dashboard and alerts to monitor the health of your CoreDNS instances. This quickstart was built and tested based on CoreDNS metrics sent to New Relic through remote write configurations with Prometheus Agent or Prometheus Server.",
+    "websiteUrl": null,
+    "keywords": [
+      "coredns",
+      "prometheus",
+      "remote write",
+      "remote_write",
+      "remote-write",
+      "promql",
+      "grafana"
+    ],
+    "authors": [
+      "New Relic",
+      "Brad Schmitt",
+      "Raga Potti"
+    ],
+    "dashboards": [
+      {
+        "name": "CoreDNS (Prometheus)",
+        "description": "A dashboard for CoreDNS based on metrics sent to New Relic using Prometheus Agent or Prometheus server.",
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/coredns/coredns-dashboard-1.jpg",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/coredns/coredns-dashboard-2.jpg",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/coredns/coredns-dashboard-3.jpg",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/coredns/coredns-dashboard-4.jpg"
+        ]
+      }
+    ],
+    "alerts": [
+      {
+        "name": "CoreDNS Error Rate",
+        "details": "This alert will trigger if the CoreDNS error rate for response codes NXDOMAIN, SERVFAIL, or REFUSED is above 2 standard deviations for more than 5 minutes.",
+        "type": "BASELINE",
+        "url": null
+      },
+      {
+        "name": "CoreDNS Panics",
+        "details": "This alert will trigger if the CoreDNS panic rate is above 0 at least once in 5 minutes",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "CoreDNS Request Duration",
+        "details": "This alert will trigger if the CoreDNS request duration 95th percentile is above or below 2 standard deviations for more than 5 minutes",
+        "type": "BASELINE",
+        "url": null
+      },
+      {
+        "name": "CoreDNS Request Rate",
+        "details": "This alert will trigger if the CoreDNS requests per second is above or below 2 standard deviations for more than 5 minutes",
+        "type": "BASELINE",
+        "url": null
+      }
+    ],
+    "documentation": [
+      {
+        "name": "Prometheus installation docs",
+        "description": "Use Prometheus remote_write or Prometheus Agent\n",
+        "url": "https://docs.newrelic.com/docs/infrastructure/prometheus-integrations/install-configure-remote-write/set-your-prometheus-remote-write-integration/"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "Prometheus remote write",
+        "id": "setup-prometheus"
+      },
+      {
+        "name": "Prometheus Agent Mode",
+        "id": "setup-prometheus-agent-mode"
       }
     ]
   },
