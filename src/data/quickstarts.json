@@ -1138,19 +1138,19 @@
     ],
     "dashboards": [
       {
-        "name": "AWS WAF",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/aws-waf/aws-waf.png"
-        ]
-      },
-      {
         "name": "AWS WAFV2",
         "description": null,
         "url": null,
         "screenshots": [
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/aws-wafv2/aws-wafv2.png"
+        ]
+      },
+      {
+        "name": "AWS WAF",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/aws-waf/aws-waf.png"
         ]
       }
     ],
@@ -1866,14 +1866,14 @@
     "alerts": [],
     "documentation": [
       {
-        "name": "Implementation guide",
-        "description": "Explains what quality foundation is and how to apply it\n",
-        "url": "https://docs.newrelic.com/docs/new-relic-solutions/observability-maturity/customer-experience/quality-foundation-implementation-guide"
-      },
-      {
         "name": "Install README",
         "description": "Guides you on how to customize the dashboard once you've installed it\n",
         "url": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/oma-qf#readme"
+      },
+      {
+        "name": "Implementation guide",
+        "description": "Explains what quality foundation is and how to apply it\n",
+        "url": "https://docs.newrelic.com/docs/new-relic-solutions/observability-maturity/customer-experience/quality-foundation-implementation-guide"
       }
     ],
     "installPlans": [
@@ -2490,6 +2490,78 @@
       {
         "name": "C SDK Agent",
         "id": "setup-c-agent"
+      }
+    ]
+  },
+  {
+    "title": "Snowflake",
+    "name": "snowflake",
+    "description": "## Comprehensive monitoring quickstart for Snowflake\nMonitor your Snowflake application with our Infra agent in a complex environment and stay on top of performance issues.\n\n## Why monitor Snowflake?\nThe performance monitoring tool for Snowflake helps you monitor the entire infrastructure and identifies the critical issues in your Snowflake application. Snowflake performance monitoring enables you to get a complete overview of Snowflake errors and know when and where your Snowflake application slows down. Some key components are:\n\n- Monitor  Snowflake applications can be used to create rich and varied user interfaces running within a browser by using Infra agent.\n- Help you identify issues that are truly important and quickly resolve them. Gain knowledge of performance issues in advance and thus giving you ample time to avoid application downtime.\n- Scalable error monitoring without affecting production flow. \n- Maintain a low latency and fast throughput. \n- View the overall health of your production environment in order to quickly identify and resolve problems with crippled services.\n- Performance provides you with the information you need to not only prioritize critical performance issues, but also trace them down to the root cause and solve them more quickly.\n- Monitor your warehouse performance of Snowflake.\n\n## What’s included in this quickstart?\nWith our  Snowflake quickstart, you get:\n\n- Alerts (Disk Spillage, Queries being queued, Failed Queries).\n- Dashboards (credit usage, query performance, longest queries etc).\n- Monitor Queries executed.\n- Monitor warehouse performance.\n- Optimize costs-whether that’s expensive queries, users running many queries, or warehouses that contribute the most to your bill.\n- Detect potential security issues and failed logins.\n- Monitor and alert on custom Snowflake data.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/snowflake",
+    "id": "3433a3fe-37d7-4ddd-a495-a95bfc718404",
+    "level": "NEW_RELIC",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/snowflake/logo.svg",
+    "summary": "Quickly monitor your Snowflake application by tracking performance issues with a full end-to-end view of distributed traces.",
+    "websiteUrl": null,
+    "keywords": [
+      "snowflake"
+    ],
+    "authors": [
+      "New Relic"
+    ],
+    "dashboards": [
+      {
+        "name": "Snowflake",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/snowflake/snowflake-1.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/snowflake/snowflake-2.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/snowflake/snowflake-3.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/snowflake/snowflake-4.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/snowflake/snowflake-5.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/snowflake/snowflake-6.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/snowflake/snowflake-7.png"
+        ]
+      }
+    ],
+    "alerts": [
+      {
+        "name": "Bytes Spilled to Local Storage",
+        "details": "This alert is triggered when the bytes spilled to local storage are above 500 during 5 minutes.",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "Bytes Spilled to Remote Storage",
+        "details": "This alert is triggered when the bytes spilled to remote storage are above 500 during 5 minutes.",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "Failed Queries",
+        "details": "This alert is triggered when the failed queries are above 5 during 5 minutes.",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "Queued Queries",
+        "details": "This alert is triggered when queries being queued are above 5 during 5 minutes.",
+        "type": "STATIC",
+        "url": null
+      }
+    ],
+    "documentation": [
+      {
+        "name": "Snowflake integration documentation",
+        "description": "Quickly monitor your Snowflake application by tracking performance issues with a full end-to-end view of distributed traces \n",
+        "url": "https://docs.newrelic.com/docs/infrastructure/host-integrations/host-integrations-list/snowflake-integration/"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "Snowflake",
+        "id": "snowflake"
       }
     ]
   },
@@ -4541,19 +4613,19 @@
     ],
     "dashboards": [
       {
-        "name": "Data Ingest Governance Entity Breakdowns",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/data-ingest-entity-breakdown/data-ingest-entity-breakdown.png"
-        ]
-      },
-      {
         "name": "Data Ingest Governance Baseline",
         "description": null,
         "url": null,
         "screenshots": [
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/data-ingest-baseline/data-ingest-baseline.png"
+        ]
+      },
+      {
+        "name": "Data Ingest Governance Entity Breakdowns",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/data-ingest-entity-breakdown/data-ingest-entity-breakdown.png"
         ]
       }
     ],
@@ -5586,19 +5658,19 @@
     ],
     "dashboards": [
       {
-        "name": "Redis Enterprise Cluster Metrics",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/cluster/cluster01.png"
-        ]
-      },
-      {
         "name": "Redis Enterprise Database CRDT",
         "description": null,
         "url": null,
         "screenshots": [
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/active-active/active_active01.png"
+        ]
+      },
+      {
+        "name": "Redis Enterprise Cluster Metrics",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/cluster/cluster01.png"
         ]
       },
       {
@@ -5972,20 +6044,20 @@
     ],
     "dashboards": [
       {
+        "name": "SAP Data Collection Monitoring",
+        "description": "Monitor SAP data collection and ingestion process",
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/nrm4sap-datacollect/sap-data-collection01.png"
+        ]
+      },
+      {
         "name": "SAP Dashboards",
         "description": "Monitor SAP systems and applications performances",
         "url": null,
         "screenshots": [
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/nrm4sap/sap-dashboard01.png",
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/nrm4sap/sap-dashboard02.png"
-        ]
-      },
-      {
-        "name": "SAP Data Collection Monitoring",
-        "description": "Monitor SAP data collection and ingestion process",
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/nrm4sap-datacollect/sap-data-collection01.png"
         ]
       },
       {
@@ -12998,11 +13070,11 @@
     ],
     "dashboards": [
       {
-        "name": "Lacework Security Overview",
+        "name": "Lacework Anomaly Detections",
         "description": null,
         "url": null,
         "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/lacework-security-overview/lacework-security-overview.png"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/lacework-anomaly-detections/lacework-anomaly-detections.png"
         ]
       },
       {
@@ -13014,11 +13086,11 @@
         ]
       },
       {
-        "name": "Lacework Anomaly Detections",
+        "name": "Lacework Security Overview",
         "description": null,
         "url": null,
         "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/lacework-anomaly-detections/lacework-anomaly-detections.png"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/lacework-security-overview/lacework-security-overview.png"
         ]
       }
     ],
@@ -17128,6 +17200,12 @@
     ],
     "alerts": [
       {
+        "name": "Service Throughput (req/min)",
+        "details": "This baseline alert condition evaluates throughput for Pixie instrumented services",
+        "type": "BASELINE",
+        "url": null
+      },
+      {
         "name": "Service Errors (%)",
         "details": "This static alert condition evaluates error percentage for Pixie instrumented services",
         "type": "STATIC",
@@ -17136,12 +17214,6 @@
       {
         "name": "Service Response Time (ms)",
         "details": "This baseline alert condition evaluates response time for Pixie instrumented services",
-        "type": "BASELINE",
-        "url": null
-      },
-      {
-        "name": "Service Throughput (req/min)",
-        "details": "This baseline alert condition evaluates throughput for Pixie instrumented services",
         "type": "BASELINE",
         "url": null
       }
@@ -18884,19 +18956,19 @@
     ],
     "dashboards": [
       {
+        "name": "Catchpoint-Response Size",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/catchpoint-response-size/Catchpoint-Response_Size.png"
+        ]
+      },
+      {
         "name": "Catchpoint-Test Times",
         "description": null,
         "url": null,
         "screenshots": [
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/catchpoint-test-times/Catchpoint-Test_Times.png"
-        ]
-      },
-      {
-        "name": "Catchpoint-Overview",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/catchpoint-overview/Catchpoint-Overview.png"
         ]
       },
       {
@@ -18908,11 +18980,11 @@
         ]
       },
       {
-        "name": "Catchpoint-Response Size",
+        "name": "Catchpoint-Overview",
         "description": null,
         "url": null,
         "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/catchpoint-response-size/Catchpoint-Response_Size.png"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/catchpoint-overview/Catchpoint-Overview.png"
         ]
       }
     ],
@@ -24698,6 +24770,12 @@
     ],
     "alerts": [
       {
+        "name": "Too Many Open requests",
+        "details": "This alert is triggered when a Traefik service has more than 50 open requests for over 1 minute. This threshold should be adjusted to your own requirements.",
+        "type": "STATIC",
+        "url": null
+      },
+      {
         "name": "High 400 Error Rate",
         "details": "This alert is triggered when a Traefik service has an HTTP 4xx error rate above 5% for over 5 minutes. This threshold should be adjusted to your own requirements.",
         "type": "STATIC",
@@ -24706,12 +24784,6 @@
       {
         "name": "High 500 Error Rate",
         "details": "This alert is triggered when a Traefik service has an HTTP 5xx error rate above 5% for over 5 minutes. This threshold should be adjusted to your own requirements.",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "Too Many Open requests",
-        "details": "This alert is triggered when a Traefik service has more than 50 open requests for over 1 minute. This threshold should be adjusted to your own requirements.",
         "type": "STATIC",
         "url": null
       }
@@ -24810,11 +24882,11 @@
     ],
     "dashboards": [
       {
-        "name": "Kubernetes Data Ingest Analysis",
+        "name": "On-Host Integrations Data Analysis",
         "description": null,
         "url": null,
         "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/kubernetes-data-ingest-analysis/kubernetes-data-ingest-analysis.png"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/on-host-integrations-data-analysis/on-host-integrations-data-analysis.png"
         ]
       },
       {
@@ -24842,11 +24914,11 @@
         ]
       },
       {
-        "name": "On-Host Integrations Data Analysis",
+        "name": "Kubernetes Data Ingest Analysis",
         "description": null,
         "url": null,
         "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/on-host-integrations-data-analysis/on-host-integrations-data-analysis.png"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/kubernetes-data-ingest-analysis/kubernetes-data-ingest-analysis.png"
         ]
       }
     ],
@@ -25794,22 +25866,6 @@
     ],
     "dashboards": [
       {
-        "name": "Browser Overview",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/browser-overview/browser_overview.png"
-        ]
-      },
-      {
-        "name": "Browser Pages Dashboard",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/browser-pages-dashboard/browser_pages_dashboard.png"
-        ]
-      },
-      {
         "name": "JavaScript Errors",
         "description": null,
         "url": null,
@@ -25823,6 +25879,22 @@
         "url": null,
         "screenshots": [
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/traffic-analysis/traffic_analysis.png"
+        ]
+      },
+      {
+        "name": "Browser Pages Dashboard",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/browser-pages-dashboard/browser_pages_dashboard.png"
+        ]
+      },
+      {
+        "name": "Browser Overview",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/browser-overview/browser_overview.png"
         ]
       }
     ],
