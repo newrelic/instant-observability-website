@@ -421,14 +421,14 @@
     ],
     "documentation": [
       {
-        "name": "Node Exporter - GitHub",
-        "description": "Exporter for machine metrics\n",
-        "url": "https://github.com/prometheus/node_exporter"
-      },
-      {
         "name": "Node Exporter - Prometheus",
         "description": "Monitoring Linux Host Metrics with the Node Exporter\n",
         "url": "https://prometheus.io/docs/guides/node-exporter/"
+      },
+      {
+        "name": "Node Exporter - GitHub",
+        "description": "Exporter for machine metrics\n",
+        "url": "https://github.com/prometheus/node_exporter"
       }
     ],
     "installPlans": [
@@ -8534,174 +8534,6 @@
     ]
   },
   {
-    "title": "Calico (Prometheus)",
-    "name": "calico-newrelic",
-    "description": "Calico is an open source networking and network security solution for containers, virtual machines, and native host-based workloads. Calico supports a broad range of platforms including Kubernetes, OpenShift, Mirantis Kubernetes Engine (MKE), OpenStack, and bare metal services.Whether you opt to use Calico's eBPF data plane or Linux’s standard networking pipeline, Calico delivers blazing fast performance with true cloud-native scalability\n\nThis quickstart is based on metrics sent to New Relic using Prometheus Agent or Prometheus Server.",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/calico",
-    "id": "a4383e84-ad92-4771-8f58-d0a459542be0",
-    "level": "NEW_RELIC",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/calico/logo.png",
-    "summary": "A curated dashboard based on Prometheus metrics which helps you understand the Calico CNI of your k8s cluster.This quickstart is based on metrics sent to New Relic using Prometheus Agent or Prometheus Server.",
-    "websiteUrl": null,
-    "keywords": [
-      "calico",
-      "kubernetes",
-      "k8s",
-      "prometheus",
-      "remote-write",
-      "cni"
-    ],
-    "authors": [
-      "Ragalahari Potti"
-    ],
-    "dashboards": [
-      {
-        "name": "Calico (Prometheus)",
-        "description": "This quickstart was built and tested based on Calico CNI metrics sent to New Relic using Prometheus Agent or Prometheus server",
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/calico/dashboard.png"
-        ]
-      }
-    ],
-    "alerts": [
-      {
-        "name": "High Number Of Dataplane Failure",
-        "details": "This alert is triggered when more than 5 dataplane failures within Felix have happened",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "High Number Of Ipset Commands Failure",
-        "details": "This alert is triggered when more than 5 ipset errors within Felix have happened",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "High Number Of Iptables-save Failure",
-        "details": "This alert is triggered when more than 5 iptable save errors within Felix have happened",
-        "type": "STATIC",
-        "url": null
-      }
-    ],
-    "documentation": [
-      {
-        "name": "Calico Metrics Documentation",
-        "description": "Calico Metrics Documentation\n",
-        "url": "https://projectcalico.docs.tigera.io/reference/felix/prometheus"
-      },
-      {
-        "name": "Prometheus installation docs",
-        "description": "Use Prometheus remote_write or Prometheus Agent\n",
-        "url": "https://docs.newrelic.com/docs/infrastructure/prometheus-integrations/get-started/send-prometheus-metric-data-new-relic"
-      }
-    ],
-    "installPlans": [
-      {
-        "name": "Prometheus remote write",
-        "id": "setup-prometheus"
-      },
-      {
-        "name": "Prometheus Agent Mode",
-        "id": "setup-prometheus-agent-mode"
-      }
-    ]
-  },
-  {
-    "title": "Etcd (Prometheus)",
-    "name": "etcd",
-    "description": "## What is Etcd?\n\nEtcd is a strongly consistent, distributed key-value store that provides a reliable way to store data that needs to be accessed by a distributed system or cluster of machines. It gracefully handles leader elections during network partitions and can tolerate machine failure, even in the leader node\n\n## Quickstart details\n\nThis quickstart was built based on Etcd metrics sent to New Relic through remote write configurations with Prometheus Agent or Prometheus server.",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/etcd",
-    "id": "83b4ef64-9af6-4bec-9707-674fa82c2837",
-    "level": "NEW_RELIC",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/etcd/logo.png",
-    "summary": "A curated dashboard based on Prometheus metrics which helps you understand the health of your Etcd cluster.  This quickstart was built based on `etcd` metrics sent to New Relic through remote write configurations with Prometheus Agent or Prometheus server.",
-    "websiteUrl": null,
-    "keywords": [
-      "etcd",
-      "kubernetes",
-      "k8s",
-      "prometheus",
-      "remote-write"
-    ],
-    "authors": [
-      "New Relic",
-      "Brad Schmitt",
-      "Raga Potti"
-    ],
-    "dashboards": [
-      {
-        "name": "Etcd (Prometheus)",
-        "description": "A dashboard for etcd based on metrics sent to New Relic using Prometheus Agent or Prometheus server.",
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/etcd/etcd-dashboard-1.jpg",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/etcd/etcd-dashboard-2.jpg"
-        ]
-      }
-    ],
-    "alerts": [
-      {
-        "name": "High Commit Duration",
-        "details": "This alert is triggered when commit duration is high in instance",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "Higher Number Of Failed GRPC requests",
-        "details": "This alert is triggered when more than 5 gRPC requests are failing in last 5 minutes",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "Latency Of Fsync Called By Wal",
-        "details": "This alert is triggered when fsync durations are high in an instance",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "Leader Changes",
-        "details": "This alert is triggered when more than 3 leader changes occured",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "No Leader",
-        "details": "This alert is triggered when the etcd member has no leader",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "Number Of Failed Server Proposals",
-        "details": "This alert is triggered when more than 5 proposals are failing in last 5 minutes",
-        "type": "STATIC",
-        "url": null
-      }
-    ],
-    "documentation": [
-      {
-        "name": "Etcd Metrics Documentation",
-        "description": "Learn more about the Prometheus metrics available for Etcd",
-        "url": "https://etcd.io/docs/v3.5/metrics/"
-      },
-      {
-        "name": "Prometheus installation docs",
-        "description": "Use Prometheus remote_write or Prometheus Agent",
-        "url": "https://docs.newrelic.com/docs/infrastructure/prometheus-integrations/install-configure-remote-write/set-your-prometheus-remote-write-integration/"
-      }
-    ],
-    "installPlans": [
-      {
-        "name": "Prometheus remote write",
-        "id": "setup-prometheus"
-      },
-      {
-        "name": "Prometheus Agent Mode",
-        "id": "setup-prometheus-agent-mode"
-      }
-    ]
-  },
-  {
     "title": "Amazon EC2",
     "name": "aws-ec2",
     "description": "## What is Amazon EC2?\n\nBuild scalable and flexible applications on top of AWS container services.\n\n### Get started!\n\nStart monitoring AWS EC2 by connecting Amazon Web Services (AWS) to New Relic!\n\nCheck out our AWS EC2 documentation to instrument your cloud service and manage the stability, scalability, and reliability of your systems with New Relic's infrastructure monitoring capabilities.\n\n### More info\n\nCheck out the [documentation](https://docs.newrelic.com/docs/infrastructure/amazon-integrations/aws-integrations-list/aws-ec2-monitoring-integration/) to learn more about New Relic monitoring for AWS EC2.",
@@ -9305,6 +9137,184 @@
       {
         "name": "AWS-CloudWatch-Metric-Streams",
         "id": "aws-cloudwatch-metric-streams"
+      }
+    ]
+  },
+  {
+    "title": "Calico (Prometheus)",
+    "name": "calico-newrelic",
+    "description": "Calico is an open source networking and network security solution for containers, virtual machines, and native host-based workloads. Calico supports a broad range of platforms including Kubernetes, OpenShift, Mirantis Kubernetes Engine (MKE), OpenStack, and bare metal services.Whether you opt to use Calico's eBPF data plane or Linux’s standard networking pipeline, Calico delivers blazing fast performance with true cloud-native scalability\n\nThis quickstart is based on metrics sent to New Relic using Prometheus Agent or Prometheus Server.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/calico",
+    "id": "a4383e84-ad92-4771-8f58-d0a459542be0",
+    "level": "NEW_RELIC",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/calico/logo.png",
+    "summary": "A curated dashboard based on Prometheus metrics which helps you understand the Calico CNI of your k8s cluster.This quickstart is based on metrics sent to New Relic using Prometheus Agent or Prometheus Server.",
+    "websiteUrl": null,
+    "keywords": [
+      "calico",
+      "kubernetes",
+      "k8s",
+      "prometheus",
+      "remote-write",
+      "cni"
+    ],
+    "authors": [
+      "Ragalahari Potti"
+    ],
+    "dashboards": [
+      {
+        "name": "Calico (Prometheus)",
+        "description": "This quickstart was built and tested based on Calico CNI metrics sent to New Relic using Prometheus Agent or Prometheus server",
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/calico/dashboard.png"
+        ]
+      }
+    ],
+    "alerts": [
+      {
+        "name": "High Number Of Dataplane Failure",
+        "details": "This alert is triggered when more than 5 dataplane failures within Felix have happened",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "High Number Of Ipset Commands Failure",
+        "details": "This alert is triggered when more than 5 ipset errors within Felix have happened",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "High Number Of Iptables-save Failure",
+        "details": "This alert is triggered when more than 5 iptable save errors within Felix have happened",
+        "type": "STATIC",
+        "url": null
+      }
+    ],
+    "documentation": [
+      {
+        "name": "Calico Metrics Documentation",
+        "description": "Learn more about the Prometheus metrics available for Calico\n",
+        "url": "https://projectcalico.docs.tigera.io/reference/felix/prometheus"
+      },
+      {
+        "name": "Prometheus installation docs",
+        "description": "Use Prometheus remote_write or Prometheus Agent\n",
+        "url": "https://docs.newrelic.com/docs/infrastructure/prometheus-integrations/get-started/send-prometheus-metric-data-new-relic"
+      },
+      {
+        "name": "Calico Integration Docs",
+        "description": "New Relic documentation for the Calico integration including installation, configuration, and how to query the metrics.\n",
+        "url": "https://docs.newrelic.com/docs/infrastructure/prometheus-integrations/integrations-list/calico-integration/"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "Prometheus remote write",
+        "id": "setup-prometheus"
+      },
+      {
+        "name": "Prometheus Agent Mode",
+        "id": "setup-prometheus-agent-mode"
+      }
+    ]
+  },
+  {
+    "title": "Etcd (Prometheus)",
+    "name": "etcd",
+    "description": "## What is Etcd?\n\nEtcd is a strongly consistent, distributed key-value store that provides a reliable way to store data that needs to be accessed by a distributed system or cluster of machines. It gracefully handles leader elections during network partitions and can tolerate machine failure, even in the leader node\n\n## Quickstart details\n\nThis quickstart was built based on Etcd metrics sent to New Relic through remote write configurations with Prometheus Agent or Prometheus server.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/etcd",
+    "id": "83b4ef64-9af6-4bec-9707-674fa82c2837",
+    "level": "NEW_RELIC",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/etcd/logo.png",
+    "summary": "A curated dashboard based on Prometheus metrics which helps you understand the health of your Etcd cluster.  This quickstart was built based on `etcd` metrics sent to New Relic through remote write configurations with Prometheus Agent or Prometheus server.",
+    "websiteUrl": null,
+    "keywords": [
+      "etcd",
+      "kubernetes",
+      "k8s",
+      "prometheus",
+      "remote-write"
+    ],
+    "authors": [
+      "New Relic",
+      "Brad Schmitt",
+      "Raga Potti"
+    ],
+    "dashboards": [
+      {
+        "name": "Etcd (Prometheus)",
+        "description": "A dashboard for etcd based on metrics sent to New Relic using Prometheus Agent or Prometheus server.",
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/etcd/etcd-dashboard-1.jpg",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/etcd/etcd-dashboard-2.jpg"
+        ]
+      }
+    ],
+    "alerts": [
+      {
+        "name": "High Commit Duration",
+        "details": "This alert is triggered when commit duration is high in instance",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "Higher Number Of Failed GRPC requests",
+        "details": "This alert is triggered when more than 5 gRPC requests are failing in last 5 minutes",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "Latency Of Fsync Called By Wal",
+        "details": "This alert is triggered when fsync durations are high in an instance",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "Leader Changes",
+        "details": "This alert is triggered when more than 3 leader changes occured",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "No Leader",
+        "details": "This alert is triggered when the etcd member has no leader",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "Number Of Failed Server Proposals",
+        "details": "This alert is triggered when more than 5 proposals are failing in last 5 minutes",
+        "type": "STATIC",
+        "url": null
+      }
+    ],
+    "documentation": [
+      {
+        "name": "Prometheus installation docs",
+        "description": "Use Prometheus remote_write or Prometheus Agent",
+        "url": "https://docs.newrelic.com/docs/infrastructure/prometheus-integrations/get-started/send-prometheus-metric-data-new-relic"
+      },
+      {
+        "name": "Etcd Integration Docs",
+        "description": "New Relic documentation for the Etcd integration including installation, configuration, and how to query the metrics.\n",
+        "url": "https://docs.newrelic.com/docs/infrastructure/prometheus-integrations/integrations-list/etcd-integration"
+      },
+      {
+        "name": "Etcd Metrics Docs",
+        "description": "Learn more about the Prometheus metrics available for Etcd",
+        "url": "https://etcd.io/docs/v3.5/metrics/"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "Prometheus remote write",
+        "id": "setup-prometheus"
+      },
+      {
+        "name": "Prometheus Agent Mode",
+        "id": "setup-prometheus-agent-mode"
       }
     ]
   },
@@ -17868,14 +17878,14 @@
     "alerts": [],
     "documentation": [
       {
-        "name": "GitHub repository",
-        "description": "The GitHub repository for the integration",
-        "url": "https://github.com/newrelic-experimental/newrelic-connector-trendmicro-cloud-one-conformity#readme"
-      },
-      {
         "name": "New Relic blog post",
         "description": "Learn more about the integration on New Relic's blog post",
         "url": "https://newrelic.com/blog/how-to-relic/trend-micro-aws"
+      },
+      {
+        "name": "GitHub repository",
+        "description": "The GitHub repository for the integration",
+        "url": "https://github.com/newrelic-experimental/newrelic-connector-trendmicro-cloud-one-conformity#readme"
       },
       {
         "name": "Trend Micro blog post",
@@ -20605,87 +20615,6 @@
     ]
   },
   {
-    "title": "CoreDNS (Prometheus)",
-    "name": "coredns",
-    "description": "The CoreDNS quickstart includes a dashboard and set of alerts that provides a holistic view of the CoreDNS instances in your environment. Information contained in the dasshboard includes CoreDNS versions, status, request/response times, and cache statistics. This quickstart was built and tested based on CoreDNS metrics sent to New Relic through remote write configurations with Prometheus Agent or Prometheus Server.",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/coredns",
-    "id": "c9ac4abb-4a61-4eee-9e1e-79506806684e",
-    "level": "VERIFIED",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/coredns/coredns-logo.png",
-    "summary": "Easily install a curated dashboard and alerts to monitor the health of your CoreDNS instances. This quickstart was built and tested based on CoreDNS metrics sent to New Relic through remote write configurations with Prometheus Agent or Prometheus Server.",
-    "websiteUrl": null,
-    "keywords": [
-      "coredns",
-      "prometheus",
-      "remote write",
-      "remote_write",
-      "remote-write",
-      "promql",
-      "grafana"
-    ],
-    "authors": [
-      "New Relic",
-      "Brad Schmitt",
-      "Raga Potti"
-    ],
-    "dashboards": [
-      {
-        "name": "CoreDNS (Prometheus)",
-        "description": "A dashboard for CoreDNS based on metrics sent to New Relic using Prometheus Agent or Prometheus server.",
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/coredns/coredns-dashboard-1.jpg",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/coredns/coredns-dashboard-2.jpg",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/coredns/coredns-dashboard-3.jpg",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/coredns/coredns-dashboard-4.jpg"
-        ]
-      }
-    ],
-    "alerts": [
-      {
-        "name": "CoreDNS Error Rate",
-        "details": "This alert will trigger if the CoreDNS error rate for response codes NXDOMAIN, SERVFAIL, or REFUSED is above 2 standard deviations for more than 5 minutes.",
-        "type": "BASELINE",
-        "url": null
-      },
-      {
-        "name": "CoreDNS Panics",
-        "details": "This alert will trigger if the CoreDNS panic rate is above 0 at least once in 5 minutes",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "CoreDNS Request Duration",
-        "details": "This alert will trigger if the CoreDNS request duration 95th percentile is above or below 2 standard deviations for more than 5 minutes",
-        "type": "BASELINE",
-        "url": null
-      },
-      {
-        "name": "CoreDNS Request Rate",
-        "details": "This alert will trigger if the CoreDNS requests per second is above or below 2 standard deviations for more than 5 minutes",
-        "type": "BASELINE",
-        "url": null
-      }
-    ],
-    "documentation": [
-      {
-        "name": "Prometheus installation docs",
-        "description": "Use Prometheus remote_write or Prometheus Agent\n",
-        "url": "https://docs.newrelic.com/docs/infrastructure/prometheus-integrations/install-configure-remote-write/set-your-prometheus-remote-write-integration/"
-      }
-    ],
-    "installPlans": [
-      {
-        "name": "Prometheus remote write",
-        "id": "setup-prometheus"
-      },
-      {
-        "name": "Prometheus Agent Mode",
-        "id": "setup-prometheus-agent-mode"
-      }
-    ]
-  },
-  {
     "title": "ASP .NET MVC",
     "name": "asp-dotnet-mvc",
     "description": "## What is ASP .NET MVC?\n\nOpen-source web application framework developed by Microsoft, which implements\nthe model-view-controller pattern.\n\n\n## Get started!\n\nLeverage community expertise and instantly get value out of your telemetry data. This quickstart automatically instruments ASP .NET MVC with the New Relic .Net agent, and allows you to instantly monitor your .Net application with out-of-the-box dashboards and alerts. Further leverage New Relic's APM capabilities by setting up [errors inbox](https://docs.newrelic.com/docs/apm/apm-ui-pages/errors-inbox/errors-inbox/), [transaction tracing](https://docs.newrelic.com/docs/apm/transactions/transaction-traces/introduction-transaction-traces/), and [service maps](https://docs.newrelic.com/docs/understand-dependencies/understand-system-dependencies/service-maps/introduction-service-maps/).\n\n## More info\n\nCheck out the [documentation](https://docs.newrelic.com/docs/agents/net-agent/getting-started/introduction-new-relic-net/) to learn more about New Relic monitoring for ASP .NET MVC.",
@@ -20797,6 +20726,97 @@
       {
         "name": "AWS-CloudWatch-Metric-Streams",
         "id": "aws-cloudwatch-metric-streams"
+      }
+    ]
+  },
+  {
+    "title": "CoreDNS (Prometheus)",
+    "name": "coredns",
+    "description": "The CoreDNS quickstart includes a dashboard and set of alerts that provides a holistic view of the CoreDNS instances in your environment. Information contained in the dasshboard includes CoreDNS versions, status, request/response times, and cache statistics. This quickstart was built and tested based on CoreDNS metrics sent to New Relic through remote write configurations with Prometheus Agent or Prometheus Server.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/coredns",
+    "id": "c9ac4abb-4a61-4eee-9e1e-79506806684e",
+    "level": "VERIFIED",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/coredns/coredns-logo.png",
+    "summary": "Easily install a curated dashboard and alerts to monitor the health of your CoreDNS instances. This quickstart was built and tested based on CoreDNS metrics sent to New Relic through remote write configurations with Prometheus Agent or Prometheus Server.",
+    "websiteUrl": null,
+    "keywords": [
+      "coredns",
+      "prometheus",
+      "remote write",
+      "remote_write",
+      "remote-write",
+      "promql",
+      "grafana"
+    ],
+    "authors": [
+      "New Relic",
+      "Brad Schmitt",
+      "Raga Potti"
+    ],
+    "dashboards": [
+      {
+        "name": "CoreDNS (Prometheus)",
+        "description": "A dashboard for CoreDNS based on metrics sent to New Relic using Prometheus Agent or Prometheus server.",
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/coredns/coredns-dashboard-1.jpg",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/coredns/coredns-dashboard-2.jpg",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/coredns/coredns-dashboard-3.jpg",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/coredns/coredns-dashboard-4.jpg"
+        ]
+      }
+    ],
+    "alerts": [
+      {
+        "name": "CoreDNS Error Rate",
+        "details": "This alert will trigger if the CoreDNS error rate for response codes NXDOMAIN, SERVFAIL, or REFUSED is above 2 standard deviations for more than 5 minutes.",
+        "type": "BASELINE",
+        "url": null
+      },
+      {
+        "name": "CoreDNS Panics",
+        "details": "This alert will trigger if the CoreDNS panic rate is above 0 at least once in 5 minutes",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "CoreDNS Request Duration",
+        "details": "This alert will trigger if the CoreDNS request duration 95th percentile is above or below 2 standard deviations for more than 5 minutes",
+        "type": "BASELINE",
+        "url": null
+      },
+      {
+        "name": "CoreDNS Request Rate",
+        "details": "This alert will trigger if the CoreDNS requests per second is above or below 2 standard deviations for more than 5 minutes",
+        "type": "BASELINE",
+        "url": null
+      }
+    ],
+    "documentation": [
+      {
+        "name": "CoreDNS Integration Docs",
+        "description": "New Relic documentation for the CoreDNS integration including installation, configuration, and how to query the metrics.\n",
+        "url": "https://docs.newrelic.com/docs/infrastructure/prometheus-integrations/integrations-list/core-dns-integration"
+      },
+      {
+        "name": "CoreDNS Metrics Docs",
+        "description": "Learn more about the Prometheus metrics available for CoreDNS\n",
+        "url": "https://coredns.io/plugins/metrics/"
+      },
+      {
+        "name": "Prometheus Installation Docs",
+        "description": "Use Prometheus remote_write or Prometheus Agent\n",
+        "url": "https://docs.newrelic.com/docs/infrastructure/prometheus-integrations/get-started/send-prometheus-metric-data-new-relic/"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "Prometheus remote write",
+        "id": "setup-prometheus"
+      },
+      {
+        "name": "Prometheus Agent Mode",
+        "id": "setup-prometheus-agent-mode"
       }
     ]
   },
