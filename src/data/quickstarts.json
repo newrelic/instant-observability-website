@@ -677,43 +677,6 @@
     ]
   },
   {
-    "title": "WayScript",
-    "name": "wayscript",
-    "description": "## Scalable, single click development environments with WayScript\nSpin up customizable development environments which integrate Docker, Kubernetes, New Relic, and all your third-party dev tooling in a single click.\n\n### What is WayScript\n[WayScript](https://t.sidekickopen14.com/s3t/c/5/f18dQhb0S7kF8cFB-bW2kCdVL59hl3kW7_k2841CX6NGW36PLj07t5S8DW1Dh2LL96WRJDf197v5Y04?te=W3R5hFj4cm2zwW4myBCV3FcKb-w4fdHZS48S2&si=8000000020074708&pi=d3941e79-14e2-4cd1-c97d-45af92f6d865) is an **Internal Developer Platform (IDP)** that enables scalable, single click development environments. The platform empowers early stage, high growth engineering teams with scalable, modern infrastructure so they can focus on product instead of battling Ops.\n\n### Why WayScript\nHelp your development team ‘shift left’ with WayScript. Instantly connect your environments to New Relic for standardized observability in pre-production, staging, and production. \n\nWayScript is self-hosted, air-gapped, & SOC-2 Type 2 compliant and spins up in under 1 hour on your AWS.\n\n### Benefits\n* Instant infrastructure in a box \n* Increases internal tooling output by 50% \n* Standardized, secure cloud-hosted developer environments\n* Observability in pre-production, staging, and production environments\n* Developer productivity and innovation\n* Rapid Internal Tooling, API Development, and Process Automation\n\n### Getting started\n* [Read the blog](https://newrelic.com/blog/nerdlog/wayscript-integration) for a step by step walkthrough or [watch the demo](https://www.youtube.com/watch?v=EjX0nZ0w6Mo).\n* [Get started with WayScript](https://docs.wayscript.com/quickstart). See how to create a workspace, add a lair, and build your first tool.\n* [Install docs](https://docs.wayscript.com/managing-tools/integrations/new-relic)  \n* [What is an Internal Developer Platform?](https://wayscript.com/internal-developer-platform)",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/wayscript",
-    "id": "51294fb4-6b0a-4ee5-acad-c377b3b528d5",
-    "level": "VERIFIED",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/wayscript/logo.png",
-    "summary": "WayScript is an Internal Developer Platform (IDP) that enables scalable, single click development environments. Connect your environments to New Relic in minutes.",
-    "websiteUrl": null,
-    "keywords": [
-      "wayscript",
-      "idp",
-      "internal developer platform",
-      "newrelic partner",
-      "featured"
-    ],
-    "authors": [
-      "New Relic",
-      "WayScript"
-    ],
-    "dashboards": [],
-    "alerts": [],
-    "documentation": [
-      {
-        "name": "Get started with WayScript",
-        "description": "See how to create a workspace, add a lair, and build your first tool.",
-        "url": "https://docs.wayscript.com/managing-tools/integrations/new-relic"
-      }
-    ],
-    "installPlans": [
-      {
-        "name": "WayScript",
-        "id": "wayscript"
-      }
-    ]
-  },
-  {
     "title": "Slack Notifications",
     "name": "slack-notifications",
     "description": "Slack is a a messaging app for business that connects people to the information that they need.\n\nIntegrate New Relic with Slack to send notification messages to your Slack channels.\n\n[Check out our documentation](https://docs.newrelic.com/docs/alerts-applied-intelligence/notifications/notification-integrations/#slack) to set up a Slack notification channel and provide fast and consistent ways for the right personnel to be notified about incidents",
@@ -1071,6 +1034,42 @@
       {
         "name": "Synthetics Private Locations",
         "id": "synthetics-private-locations"
+      }
+    ]
+  },
+  {
+    "title": "WayScript",
+    "name": "wayscript",
+    "description": "## Scalable, single click development environments with WayScript\nSpin up customizable development environments which integrate Docker, Kubernetes, New Relic, and all your third-party dev tooling in a single click.\n\n### What is WayScript\n[WayScript](https://t.sidekickopen14.com/s3t/c/5/f18dQhb0S7kF8cFB-bW2kCdVL59hl3kW7_k2841CX6NGW36PLj07t5S8DW1Dh2LL96WRJDf197v5Y04?te=W3R5hFj4cm2zwW4myBCV3FcKb-w4fdHZS48S2&si=8000000020074708&pi=d3941e79-14e2-4cd1-c97d-45af92f6d865) is an **Internal Developer Platform (IDP)** that enables scalable, single click development environments. The platform empowers early stage, high growth engineering teams with scalable, modern infrastructure so they can focus on product instead of battling Ops.\n\n### Why WayScript\nHelp your development team ‘shift left’ with WayScript. Instantly connect your environments to New Relic for standardized observability in pre-production, staging, and production. \n\nWayScript is self-hosted, air-gapped, & SOC-2 Type 2 compliant and spins up in under 1 hour on your AWS.\n\n### Benefits\n* Instant infrastructure in a box \n* Increases internal tooling output by 50% \n* Standardized, secure cloud-hosted developer environments\n* Observability in pre-production, staging, and production environments\n* Developer productivity and innovation\n* Rapid Internal Tooling, API Development, and Process Automation\n\n### Getting started\n* [Read the blog](https://newrelic.com/blog/nerdlog/wayscript-integration) for a step by step walkthrough or [watch the demo](https://www.youtube.com/watch?v=EjX0nZ0w6Mo).\n* [Get started with WayScript](https://docs.wayscript.com/quickstart). See how to create a workspace, add a lair, and build your first tool.\n* [Install docs](https://docs.wayscript.com/managing-tools/integrations/new-relic)  \n* [What is an Internal Developer Platform?](https://wayscript.com/internal-developer-platform)",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/wayscript",
+    "id": "51294fb4-6b0a-4ee5-acad-c377b3b528d5",
+    "level": "VERIFIED",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/wayscript/logo.png",
+    "summary": "WayScript is an Internal Developer Platform (IDP) that enables scalable, single click development environments. Connect your environments to New Relic in minutes.",
+    "websiteUrl": null,
+    "keywords": [
+      "wayscript",
+      "idp",
+      "internal developer platform",
+      "newrelic partner"
+    ],
+    "authors": [
+      "New Relic",
+      "WayScript"
+    ],
+    "dashboards": [],
+    "alerts": [],
+    "documentation": [
+      {
+        "name": "Get started with WayScript",
+        "description": "See how to create a workspace, add a lair, and build your first tool.",
+        "url": "https://docs.wayscript.com/managing-tools/integrations/new-relic"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "WayScript",
+        "id": "wayscript"
       }
     ]
   },
@@ -4772,64 +4771,6 @@
     ]
   },
   {
-    "title": "Vercel Logs",
-    "name": "vercel",
-    "description": "## About Vercel\n\nVercel is the platform for frontend developers, providing the speed and reliability innovators need to create at the moment of inspiration.\n\nWe enable teams to iterate quickly and develop, preview, and ship delightful user experiences. Vercel has zero-configuration support for 35+ frontend frameworks and integrates with your headless content, commerce, or database of choice.\n  \n## About this quickstart\n\nThis quickstart is the fastest way to jump straight into monitoring your end-to-end development logs.\n\n## Vercel Dashboard\n\nThe Overview dashboard will populate with logs from your Vercel projects after you complete integration set up. This customized board provides key log data to provide you with a high-level overview of the performance of your functions.\n\n### Core monitoring\n\n-  Track your cached hit rate\n-  Keep track of your errors and problematic IP addresses\n-  Real time error logs\n-  Monitoring for your build logs\n\n### Serverless function log monitoring\n\n-  Average & total duration\n-  Average & total memory used\n-  Average & total billed duration",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/vercel",
-    "id": "c18372e0-b849-408f-b2b1-3ea7096ef5a8",
-    "level": "COMMUNITY",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/vercel/logo.svg",
-    "summary": "The Vercel quickstart is a one click solution to help monitor and analyze performance and usage in real time.",
-    "websiteUrl": null,
-    "keywords": [
-      "vercel",
-      "logs",
-      "newrelic partner",
-      "devops",
-      "cicd",
-      "build",
-      "deploy",
-      "serverless"
-    ],
-    "authors": [
-      "Joseph Counts",
-      "Vercel"
-    ],
-    "dashboards": [
-      {
-        "name": "Vercel",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/vercel/vercel-logs01.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/vercel/vercel-logs02.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/vercel/vercel-logs03.png"
-        ]
-      }
-    ],
-    "alerts": [
-      {
-        "name": "Vercel - 4xx/5xx error rate greater than 1%",
-        "details": "Alert triggered when the error rate(4xx/5xx errors) exceeds 1%",
-        "type": "BASELINE",
-        "url": null
-      }
-    ],
-    "documentation": [
-      {
-        "name": "Add the New Relic integration to your Vercel projects",
-        "description": "Send Vercel logs to New Relic",
-        "url": "https://vercel.com/integrations/newrelic"
-      }
-    ],
-    "installPlans": [
-      {
-        "name": "Vercel",
-        "id": "third-party-vercel"
-      }
-    ]
-  },
-  {
     "title": "Amazon EBS",
     "name": "aws-ebs",
     "description": "## What is Amazon EBS?\n\nBlock level storage volumes for Amazon EC2 instances.\n\n### Get started!\n\nStart monitoring Amazon EBS by connecting Amazon Web Services (AWS) to New Relic!\n\nCheck out our Amazon EBS documentation to instrument your cloud service and manage the stability, scalability, and reliability of your systems with New Relic's infrastructure monitoring capabilities.\n\n### More info\n\nCheck out the [documentation](https://docs.newrelic.com/docs/infrastructure/amazon-integrations/aws-integrations-list/aws-ebs-monitoring-integration/) to learn more about New Relic monitoring for Amazon EBS.",
@@ -5057,6 +4998,67 @@
       {
         "name": "Postman",
         "id": "third-party-postman"
+      }
+    ]
+  },
+  {
+    "title": "Vercel Logs",
+    "name": "vercel",
+    "description": "## About Vercel\n\nVercel is the platform for frontend developers, providing the speed and reliability innovators need to create at the moment of inspiration.\n\nWe enable teams to iterate quickly and develop, preview, and ship delightful user experiences. Vercel has zero-configuration support for 35+ frontend frameworks and integrates with your headless content, commerce, or database of choice.\n\n## About this quickstart\n\nThis quickstart is the fastest way to jump straight into monitoring your end-to-end development logs.\n\n## Vercel Dashboard\n\nThe Overview dashboard will populate with logs from your Vercel projects after you complete integration set up. This customized board provides key log data to provide you with a high-level overview of the performance of your functions.\n\n### Core monitoring\n\n-  Track your cached hit rate\n-  Keep track of your errors and problematic IP addresses\n-  Real time error logs\n-  Monitoring for your build logs\n\n### Serverless function log monitoring\n\n-  Average & total duration\n-  Average & total memory used\n-  Average & total billed duration",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/vercel",
+    "id": "c18372e0-b849-408f-b2b1-3ea7096ef5a8",
+    "level": "COMMUNITY",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/vercel/logo.svg",
+    "summary": "The Vercel quickstart is a one click solution to help monitor and analyze performance and usage in real time.",
+    "websiteUrl": null,
+    "keywords": [
+      "vercel",
+      "logs",
+      "newrelic partner",
+      "devops",
+      "cicd",
+      "build",
+      "deploy",
+      "serverless",
+      "featured",
+      "NR1_addData",
+      "NR1_sys"
+    ],
+    "authors": [
+      "Joseph Counts",
+      "Vercel"
+    ],
+    "dashboards": [
+      {
+        "name": "Vercel",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/vercel/vercel-logs01.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/vercel/vercel-logs02.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/vercel/vercel-logs03.png"
+        ]
+      }
+    ],
+    "alerts": [
+      {
+        "name": "Vercel - 4xx/5xx error rate greater than 1%",
+        "details": "Alert triggered when the error rate(4xx/5xx errors) exceeds 1%",
+        "type": "BASELINE",
+        "url": null
+      }
+    ],
+    "documentation": [
+      {
+        "name": "Add the New Relic integration to your Vercel projects",
+        "description": "Send Vercel logs to New Relic",
+        "url": "https://vercel.com/integrations/newrelic"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "Vercel",
+        "id": "third-party-vercel"
       }
     ]
   },
@@ -7857,52 +7859,6 @@
     ]
   },
   {
-    "title": "Bitbucket",
-    "name": "bitbucket",
-    "description": "## Atlassian Bitbucket quickstart\n\n### About Bitbucket\n\nWith best-in-class Jira integration, and built-in CI/CD, Bitbucket Cloud is the native Git tool in Atlassian’s Open DevOps solution.\n\n### About this quickstart\n\nThis quickstart is built around a [Bitbucket Pipe](https://bitbucket.org/product/features/pipelines/integrations) integration. This tool will enable you to send CI/CD events into New Relic, where you can monitor your Bitbucket Pipelines. \n\nWith this visualization you can monitor:\n  - Number of events/pipeline builds\n  - Track priority events\n  - Real time event log from your pipeline\n  - Events and priority events over time",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/atlassian/bitbucket",
-    "id": "fdc99da8-0061-4c5f-bd90-ef67a8b2419f",
-    "level": "COMMUNITY",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/atlassian/bitbucket/logo.svg",
-    "summary": "Monitor your Bitbucket Pipeline.",
-    "websiteUrl": null,
-    "keywords": [
-      "atlassian",
-      "bitbucket",
-      "cicd",
-      "featured",
-      "newrelic partner",
-      "pipeline"
-    ],
-    "authors": [
-      "Joseph Counts (New Relic)"
-    ],
-    "dashboards": [
-      {
-        "name": "Bitbucket",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/bitbucket/dashboard01.png"
-        ]
-      }
-    ],
-    "alerts": [],
-    "documentation": [
-      {
-        "name": "Bitbucket pipe integration docs",
-        "description": "Bitbucket pipe integration to send an event to New Relic from your Bitbucket pipeline.",
-        "url": "https://bitbucket.org/product/features/pipelines/integrations?p=jcountsnr/newrelic_observability_event"
-      }
-    ],
-    "installPlans": [
-      {
-        "name": "Bitbucket",
-        "id": "third-party-bitbucket"
-      }
-    ]
-  },
-  {
     "title": "Amazon SNS",
     "name": "aws-sns",
     "description": "## What is Amazon SNS?\n\nFully managed push notification service compatible with pub/sub, SMS, email,\nand mobile.\n\n\n### Get started!\n\nStart monitoring Amazon SNS by connecting Amazon Web Services (AWS) to New Relic!\n\nCheck out our Amazon SNS documentation to instrument your cloud service and manage the stability, scalability, and reliability of your systems with New Relic's infrastructure monitoring capabilities.\n\n### More info\n\nCheck out the [documentation](https://docs.newrelic.com/docs/infrastructure/amazon-integrations/aws-integrations-list/aws-sns-monitoring-integration/) to learn more about New Relic monitoring for Amazon SNS.",
@@ -8062,73 +8018,6 @@
       {
         "name": "Netlify",
         "id": "third-party-netlify"
-      }
-    ]
-  },
-  {
-    "title": "Laravel",
-    "name": "laravel",
-    "description": "## Laravel PHP Monitoring \n\nLaravel is a free, open-source PHP model-view-controller web framework that empowers developers to carry out common tasks in web and app development projects with ease.\n\n### New Relic Laravel quickstart features\n\nThe New Relic Laravel monitoring quickstart has the following features:\n- Our standard dashboard provides a clear overview of transactions, errors and virtual machines. \n- The Laravel PHP dashboard also helps you track other key indicators like daily transaction errors, comparison between weekly transaction errors, most popular transactions, and more.\n- Pre-defined alert conditions notify you on performance metrics like duration, error rate and throughput.\n\n### Why monitor Laravel with New Relic?\n\nThe New Relic Laravel quickstart installs the [New Relic PHP agent](https://docs.newrelic.com/docs/apm/agents/php-agent/frameworks-libraries/php-frameworks-integrate-support-new-relic/) so that you can instrument and monitor your  Laravel application. It is your gateway to instant detection of changes in Laravel’s critical metrics.\nThe integration helps you to monitor Laravel through a standard dashboard and three instant alerts. It can trigger low-throughput, high-error rate, and high-duration alerts when specific pre-defined alert conditions are met.\nThe quickstart also supports Laravel to identify the appropriate place to insert JavaScript headers and footers for browser monitoring. Install the New Relic Laravel quickstart today to start monitoring your Laravel PHP framework’s key performance indicators.",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/php/laravel",
-    "id": "919aad44-52ba-47fd-9e29-12195979015e",
-    "level": "NEW_RELIC",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/php/laravel/logo.svg",
-    "summary": "Monitoring Laravel is crucial to gain instant visibility into changes in Laravel PHP framework’s key performance indicators. Download New Relic Laravel quickstart to proactively instrument Laravel with the New Relic PHP agent and start monitoring.",
-    "websiteUrl": null,
-    "keywords": [
-      "apm",
-      "php",
-      "featured",
-      "most popular"
-    ],
-    "authors": [
-      "New Relic"
-    ],
-    "dashboards": [
-      {
-        "name": "PHP",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/php/php01.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/php/php02.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/php/php03.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/php/php04.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/php/php05.png"
-        ]
-      }
-    ],
-    "alerts": [
-      {
-        "name": "High duration",
-        "details": "This alert is triggered when the total duration of the web transaction is longer than 10 seconds during 5 minutes",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "High error rate",
-        "details": "This alert is triggered when the error percentage of web transactions is higher than 5% during 5 minutes",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "Low throughput",
-        "details": "This alert is triggered when the throughput is 0 for 5 minutes",
-        "type": "STATIC",
-        "url": null
-      }
-    ],
-    "documentation": [
-      {
-        "name": "Laravel installation docs",
-        "description": "Laravel is a free, open-source PHP MVC web framework.",
-        "url": "https://docs.newrelic.com/docs/agents/php-agent/getting-started/php-agent-compatibility-requirements"
-      }
-    ],
-    "installPlans": [
-      {
-        "name": "PHP Agent",
-        "id": "php-agent"
       }
     ]
   },
@@ -9234,7 +9123,8 @@
       "kubernetes",
       "k8s",
       "prometheus",
-      "remote-write"
+      "remote-write",
+      "featured"
     ],
     "authors": [
       "New Relic",
@@ -9315,6 +9205,119 @@
       {
         "name": "Prometheus Agent Mode",
         "id": "setup-prometheus-agent-mode"
+      }
+    ]
+  },
+  {
+    "title": "Bitbucket",
+    "name": "bitbucket",
+    "description": "## Atlassian Bitbucket quickstart\n\n### About Bitbucket\n\nWith best-in-class Jira integration, and built-in CI/CD, Bitbucket Cloud is the native Git tool in Atlassian’s Open DevOps solution.\n\n### About this quickstart\n\nThis quickstart is built around a [Bitbucket Pipe](https://bitbucket.org/product/features/pipelines/integrations) integration. This tool will enable you to send CI/CD events into New Relic, where you can monitor your Bitbucket Pipelines. \n\nWith this visualization you can monitor:\n  - Number of events/pipeline builds\n  - Track priority events\n  - Real time event log from your pipeline\n  - Events and priority events over time",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/atlassian/bitbucket",
+    "id": "fdc99da8-0061-4c5f-bd90-ef67a8b2419f",
+    "level": "COMMUNITY",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/atlassian/bitbucket/logo.svg",
+    "summary": "Monitor your Bitbucket Pipeline.",
+    "websiteUrl": null,
+    "keywords": [
+      "atlassian",
+      "bitbucket",
+      "cicd",
+      "newrelic partner",
+      "pipeline",
+      "NR1_addData",
+      "NR1_sys"
+    ],
+    "authors": [
+      "Joseph Counts (New Relic)"
+    ],
+    "dashboards": [
+      {
+        "name": "Bitbucket",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/bitbucket/dashboard01.png"
+        ]
+      }
+    ],
+    "alerts": [],
+    "documentation": [
+      {
+        "name": "Bitbucket pipe integration docs",
+        "description": "Bitbucket pipe integration to send an event to New Relic from your Bitbucket pipeline.",
+        "url": "https://bitbucket.org/product/features/pipelines/integrations?p=jcountsnr/newrelic_observability_event"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "Bitbucket",
+        "id": "third-party-bitbucket"
+      }
+    ]
+  },
+  {
+    "title": "Laravel",
+    "name": "laravel",
+    "description": "## Laravel PHP Monitoring \n\nLaravel is a free, open-source PHP model-view-controller web framework that empowers developers to carry out common tasks in web and app development projects with ease.\n\n### New Relic Laravel quickstart features\n\nThe New Relic Laravel monitoring quickstart has the following features:\n- Our standard dashboard provides a clear overview of transactions, errors and virtual machines. \n- The Laravel PHP dashboard also helps you track other key indicators like daily transaction errors, comparison between weekly transaction errors, most popular transactions, and more.\n- Pre-defined alert conditions notify you on performance metrics like duration, error rate and throughput.\n\n### Why monitor Laravel with New Relic?\n\nThe New Relic Laravel quickstart installs the [New Relic PHP agent](https://docs.newrelic.com/docs/apm/agents/php-agent/frameworks-libraries/php-frameworks-integrate-support-new-relic/) so that you can instrument and monitor your  Laravel application. It is your gateway to instant detection of changes in Laravel’s critical metrics.\nThe integration helps you to monitor Laravel through a standard dashboard and three instant alerts. It can trigger low-throughput, high-error rate, and high-duration alerts when specific pre-defined alert conditions are met.\nThe quickstart also supports Laravel to identify the appropriate place to insert JavaScript headers and footers for browser monitoring. Install the New Relic Laravel quickstart today to start monitoring your Laravel PHP framework’s key performance indicators.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/php/laravel",
+    "id": "919aad44-52ba-47fd-9e29-12195979015e",
+    "level": "NEW_RELIC",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/php/laravel/logo.svg",
+    "summary": "Monitoring Laravel is crucial to gain instant visibility into changes in Laravel PHP framework’s key performance indicators. Download New Relic Laravel quickstart to proactively instrument Laravel with the New Relic PHP agent and start monitoring.",
+    "websiteUrl": null,
+    "keywords": [
+      "apm",
+      "php",
+      "most popular"
+    ],
+    "authors": [
+      "New Relic"
+    ],
+    "dashboards": [
+      {
+        "name": "PHP",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/php/php01.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/php/php02.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/php/php03.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/php/php04.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/php/php05.png"
+        ]
+      }
+    ],
+    "alerts": [
+      {
+        "name": "High duration",
+        "details": "This alert is triggered when the total duration of the web transaction is longer than 10 seconds during 5 minutes",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "High error rate",
+        "details": "This alert is triggered when the error percentage of web transactions is higher than 5% during 5 minutes",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "Low throughput",
+        "details": "This alert is triggered when the throughput is 0 for 5 minutes",
+        "type": "STATIC",
+        "url": null
+      }
+    ],
+    "documentation": [
+      {
+        "name": "Laravel installation docs",
+        "description": "Laravel is a free, open-source PHP MVC web framework.",
+        "url": "https://docs.newrelic.com/docs/agents/php-agent/getting-started/php-agent-compatibility-requirements"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "PHP Agent",
+        "id": "php-agent"
       }
     ]
   },
@@ -15793,145 +15796,6 @@
     ]
   },
   {
-    "title": "CockroachDB (Prometheus)",
-    "name": "cockroach-database-newrelic",
-    "description": "[Cockroach Database ](https://www.cockroachlabs.com/docs/  ) CockroachDB is a distributed SQL database built on a transactional and strongly-consistent key-value store. It scales horizontally; survives disk, machine, rack, and even datacenter failures with minimal latency disruption and no manual intervention; supports strongly-consistent ACID transactions; and provides a familiar SQL API for structuring, manipulating, and querying data.\n\nInstall this quickstart to access preconfigured CockroachDB observability solutions based on Prometheus metrics that are available out-of-the-box.",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/cockroach-db",
-    "id": "e2ee8b6e-5c2a-11ed-9b6a-0242ac120002",
-    "level": "NEW_RELIC",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/cockroach-db/logo.png",
-    "summary": "A curated dashboard based on Prometheus metrics which helps you understand the CockroachDB performance of your Kubernetes cluster. This quickstart is based on metrics sent to New Relic using Prometheus Agent or Prometheus Server.",
-    "websiteUrl": null,
-    "keywords": [
-      "Cockroach",
-      "Database",
-      "kubernetes",
-      "k8s",
-      "prometheus",
-      "remote-write",
-      "sql"
-    ],
-    "authors": [
-      "New Relic",
-      "Gulab Sidhwani",
-      "Zack Mutchler"
-    ],
-    "dashboards": [
-      {
-        "name": "Cockroach Database Console (Prometheus)",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/cockroach-db/cockroach-db-1.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/cockroach-db/cockroach-db-2.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/cockroach-db/cockroach-db-3.png"
-        ]
-      }
-    ],
-    "alerts": [
-      {
-        "name": "CA certificate expiration",
-        "details": "This alert is triggered when there are less than 90 days remaining for CA certificate expiration. The alert threshold can be changed to your desired expiration alerting requirements.",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "Client CA certificate expiration",
-        "details": "This alert is triggered when there are less than 90 days remaining for Client CA certificate expiration. The alert threshold can be changed to your desired expiration alerting requirements.",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "Cluster running with different versions",
-        "details": "This alert is triggered when there are multiple versions of CockroachDB running in a single cluster.",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "High fd open count",
-        "details": "This alert is triggered when a node passes 80% of the open file descriptors limit for 15 minutes. The alert threshold can be changes to your desired file descriptors limit requirements.",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "Instance dead alert",
-        "details": "This alert triggers when an instance is down for 15 minutes. The alert threshold can be changed to your acceptable downtime requirements.",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "Low disk storage",
-        "details": "Send an alert when available storage capacity is below 15% for over 15 minutes. The alert threshold can be changed to your desired storage limit requirements.",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "Node certificate expiration",
-        "details": "This alert is triggered when there are less than 30 days remaining for Node certificate expiration. The alert threshold can be changed to your desired expiration alerting requirements.",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "Node down alert",
-        "details": "This alert triggers when a node is down for 15 minutes. The alert threshold can be changed to your acceptable downtime requirements.",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "Slow latch requests",
-        "details": "This alert triggers when there are > 0 slow latch requests for over 5 minutes. The alert threshold can be changed to your acceptable slow request requirements.",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "Slow lease requests",
-        "details": "This alert triggers when there are > 0 slow lease requests for over 5 minutes. The alert threshold can be changed to your acceptable slow request requirements.",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "Slow raft requests",
-        "details": "This alert triggers when there are > 0 slow raft requests for over 5 minutes. The alert threshold can be changed to your acceptable slow request requirements.",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "UI CA certificate expiration",
-        "details": "This alert is triggered when there are less than 90 days remaining for UI CA certificate expiration. The alert threshold can be changed to your desired expiration alerting requirements.",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "UI certificate expiration",
-        "details": "This alert is triggered when there are less than 30 days remaining for UI certificate expiration. The alert threshold can be changed to your desired expiration alerting requirements.",
-        "type": "STATIC",
-        "url": null
-      }
-    ],
-    "documentation": [
-      {
-        "name": "Prometheus installation docs",
-        "description": "Use Prometheus remote_write or Prometheus Agent\n",
-        "url": "https://docs.newrelic.com/docs/infrastructure/prometheus-integrations/get-started/send-prometheus-metric-data-new-relic"
-      },
-      {
-        "name": "CockroachDB Prometheus Integration",
-        "description": "CockroachDB Prometheus Integration Documentation",
-        "url": "https://docs.newrelic.com/docs/infrastructure/prometheus-integrations/integrations-list/cockroach-db-integration"
-      }
-    ],
-    "installPlans": [
-      {
-        "name": "Prometheus remote write",
-        "id": "setup-prometheus"
-      },
-      {
-        "name": "Prometheus Agent Mode",
-        "id": "setup-prometheus-agent-mode"
-      }
-    ]
-  },
-  {
     "title": "Grafana Dashboard Migration",
     "name": "grafana-dashboard-migration",
     "description": "Telemetry Data Platform allows customers to onboard Prometheus Metrics and support New Relic as a Prometheus data source for Grafana dashboards. To help our customers that want to get rid of their Grafana instance we've build a toolset to migrate Grafana Prometheus dashboards to New Relic dashboards.\n\nFollow the easy to execute instructions on our Github repository to start converting Grafana dashboards in minutes.\n\nOne important note is that this isn’t a perfect solution, but it should get you 95% of the way. New Relic and Grafana are very different solutions, and the tool relies heavily on our PromQL to NRQL conversion service which is not feature complete. For these reasons, not all dashboards may get imported perfectly and some clean up may be required.",
@@ -16153,6 +16017,145 @@
       {
         "name": "AWS-CloudWatch-Metric-Streams",
         "id": "aws-cloudwatch-metric-streams"
+      }
+    ]
+  },
+  {
+    "title": "CockroachDB (Prometheus)",
+    "name": "cockroach-database-newrelic",
+    "description": "[Cockroach Database ](https://www.cockroachlabs.com/docs/  ) CockroachDB is a distributed SQL database built on a transactional and strongly-consistent key-value store. It scales horizontally; survives disk, machine, rack, and even datacenter failures with minimal latency disruption and no manual intervention; supports strongly-consistent ACID transactions; and provides a familiar SQL API for structuring, manipulating, and querying data.\n\nInstall this quickstart to access preconfigured CockroachDB observability solutions based on Prometheus metrics that are available out-of-the-box.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/cockroach-db",
+    "id": "e2ee8b6e-5c2a-11ed-9b6a-0242ac120002",
+    "level": "NEW_RELIC",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/cockroach-db/logo.png",
+    "summary": "A curated dashboard based on Prometheus metrics which helps you understand the CockroachDB performance of your Kubernetes cluster. This quickstart is based on metrics sent to New Relic using Prometheus Agent or Prometheus Server.",
+    "websiteUrl": null,
+    "keywords": [
+      "Cockroach",
+      "Database",
+      "kubernetes",
+      "k8s",
+      "prometheus",
+      "remote-write",
+      "sql"
+    ],
+    "authors": [
+      "New Relic",
+      "Gulab Sidhwani",
+      "Zack Mutchler"
+    ],
+    "dashboards": [
+      {
+        "name": "CockroachDB (Prometheus)",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/cockroach-db/cockroach-db-1.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/cockroach-db/cockroach-db-2.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/cockroach-db/cockroach-db-3.png"
+        ]
+      }
+    ],
+    "alerts": [
+      {
+        "name": "CA certificate expiration",
+        "details": "This alert is triggered when there are less than 90 days remaining for CA certificate expiration. The alert threshold can be changed to your desired expiration alerting requirements.",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "Client CA certificate expiration",
+        "details": "This alert is triggered when there are less than 90 days remaining for Client CA certificate expiration. The alert threshold can be changed to your desired expiration alerting requirements.",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "Cluster running with different versions",
+        "details": "This alert is triggered when there are multiple versions of CockroachDB running in a single cluster.",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "High fd open count",
+        "details": "This alert is triggered when a node passes 80% of the open file descriptors limit for 15 minutes. The alert threshold can be changes to your desired file descriptors limit requirements.",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "Instance dead alert",
+        "details": "This alert triggers when an instance is down for 15 minutes. The alert threshold can be changed to your acceptable downtime requirements.",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "Low disk storage",
+        "details": "Send an alert when available storage capacity is below 15% for over 15 minutes. The alert threshold can be changed to your desired storage limit requirements.",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "Node certificate expiration",
+        "details": "This alert is triggered when there are less than 30 days remaining for Node certificate expiration. The alert threshold can be changed to your desired expiration alerting requirements.",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "Node down alert",
+        "details": "This alert triggers when a node is down for 15 minutes. The alert threshold can be changed to your acceptable downtime requirements.",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "Slow latch requests",
+        "details": "This alert triggers when there are > 0 slow latch requests for over 5 minutes. The alert threshold can be changed to your acceptable slow request requirements.",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "Slow lease requests",
+        "details": "This alert triggers when there are > 0 slow lease requests for over 5 minutes. The alert threshold can be changed to your acceptable slow request requirements.",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "Slow raft requests",
+        "details": "This alert triggers when there are > 0 slow raft requests for over 5 minutes. The alert threshold can be changed to your acceptable slow request requirements.",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "UI CA certificate expiration",
+        "details": "This alert is triggered when there are less than 90 days remaining for UI CA certificate expiration. The alert threshold can be changed to your desired expiration alerting requirements.",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "UI certificate expiration",
+        "details": "This alert is triggered when there are less than 30 days remaining for UI certificate expiration. The alert threshold can be changed to your desired expiration alerting requirements.",
+        "type": "STATIC",
+        "url": null
+      }
+    ],
+    "documentation": [
+      {
+        "name": "Prometheus installation docs",
+        "description": "Use Prometheus remote_write or Prometheus Agent\n",
+        "url": "https://docs.newrelic.com/docs/infrastructure/prometheus-integrations/get-started/send-prometheus-metric-data-new-relic"
+      },
+      {
+        "name": "CockroachDB Prometheus Integration",
+        "description": "CockroachDB Prometheus Integration Documentation",
+        "url": "https://docs.newrelic.com/docs/infrastructure/prometheus-integrations/integrations-list/cockroach-db-integration"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "Prometheus remote write",
+        "id": "setup-prometheus"
+      },
+      {
+        "name": "Prometheus Agent Mode",
+        "id": "setup-prometheus-agent-mode"
       }
     ]
   },
@@ -20730,97 +20733,6 @@
     ]
   },
   {
-    "title": "CoreDNS (Prometheus)",
-    "name": "coredns",
-    "description": "The CoreDNS quickstart includes a dashboard and set of alerts that provides a holistic view of the CoreDNS instances in your environment. Information contained in the dasshboard includes CoreDNS versions, status, request/response times, and cache statistics. This quickstart was built and tested based on CoreDNS metrics sent to New Relic through remote write configurations with Prometheus Agent or Prometheus Server.",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/coredns",
-    "id": "c9ac4abb-4a61-4eee-9e1e-79506806684e",
-    "level": "VERIFIED",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/coredns/coredns-logo.png",
-    "summary": "Easily install a curated dashboard and alerts to monitor the health of your CoreDNS instances. This quickstart was built and tested based on CoreDNS metrics sent to New Relic through remote write configurations with Prometheus Agent or Prometheus Server.",
-    "websiteUrl": null,
-    "keywords": [
-      "coredns",
-      "prometheus",
-      "remote write",
-      "remote_write",
-      "remote-write",
-      "promql",
-      "grafana"
-    ],
-    "authors": [
-      "New Relic",
-      "Brad Schmitt",
-      "Raga Potti"
-    ],
-    "dashboards": [
-      {
-        "name": "CoreDNS (Prometheus)",
-        "description": "A dashboard for CoreDNS based on metrics sent to New Relic using Prometheus Agent or Prometheus server.",
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/coredns/coredns-dashboard-1.jpg",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/coredns/coredns-dashboard-2.jpg",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/coredns/coredns-dashboard-3.jpg",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/coredns/coredns-dashboard-4.jpg"
-        ]
-      }
-    ],
-    "alerts": [
-      {
-        "name": "CoreDNS Error Rate",
-        "details": "This alert will trigger if the CoreDNS error rate for response codes NXDOMAIN, SERVFAIL, or REFUSED is above 2 standard deviations for more than 5 minutes.",
-        "type": "BASELINE",
-        "url": null
-      },
-      {
-        "name": "CoreDNS Panics",
-        "details": "This alert will trigger if the CoreDNS panic rate is above 0 at least once in 5 minutes",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "CoreDNS Request Duration",
-        "details": "This alert will trigger if the CoreDNS request duration 95th percentile is above or below 2 standard deviations for more than 5 minutes",
-        "type": "BASELINE",
-        "url": null
-      },
-      {
-        "name": "CoreDNS Request Rate",
-        "details": "This alert will trigger if the CoreDNS requests per second is above or below 2 standard deviations for more than 5 minutes",
-        "type": "BASELINE",
-        "url": null
-      }
-    ],
-    "documentation": [
-      {
-        "name": "CoreDNS Integration Docs",
-        "description": "New Relic documentation for the CoreDNS integration including installation, configuration, and how to query the metrics.\n",
-        "url": "https://docs.newrelic.com/docs/infrastructure/prometheus-integrations/integrations-list/core-dns-integration"
-      },
-      {
-        "name": "CoreDNS Metrics Docs",
-        "description": "Learn more about the Prometheus metrics available for CoreDNS\n",
-        "url": "https://coredns.io/plugins/metrics/"
-      },
-      {
-        "name": "Prometheus Installation Docs",
-        "description": "Use Prometheus remote_write or Prometheus Agent\n",
-        "url": "https://docs.newrelic.com/docs/infrastructure/prometheus-integrations/get-started/send-prometheus-metric-data-new-relic/"
-      }
-    ],
-    "installPlans": [
-      {
-        "name": "Prometheus remote write",
-        "id": "setup-prometheus"
-      },
-      {
-        "name": "Prometheus Agent Mode",
-        "id": "setup-prometheus-agent-mode"
-      }
-    ]
-  },
-  {
     "title": "C#",
     "name": "c-sharp",
     "description": "## Comprehensive monitoring quickstart for C#\nWith our C# integration, you can find and address performance bottlenecks while operating in a live development environment. Monitor your app via our dashboard quickstarts and ensure you're delivering the best user experience.\n\n## Why monitor C#?\n- Focus on the issues that affect your critical business transactions.\n- Resolve problems quickly.\n- Gain knowledge on your system's behavior in advance.\n- Learn the whole story of performance errors, from beginning to end.\n- Use traces to connect latency issues to errors, getting you to the root cause as quickly as possible.\n- See the filename and line number from the C# stack trace so you never have to guess. To reduce noise, logically filter and aggregate C# exceptions.\n- Scalable error monitoring without affecting production flow.\n- Maintain low latency with fast throughput.\n- Get meaningful data about C# errors from your dashboard.\n\n## End-to-end visibility into your C# operations\n\nOur C# dashboard translates your ingested data into a map that lets you trace business transactions across your C# stack. See your performance errors in context and prioritize your most critical operations.\n\n## What’s included in this quickstart?\nNew Relic's C# monitoring quickstart boasts instant full-stack observability out-of-the-box:\n\n- Dashboards (Throughput, Error rate, Logs, Web transaction time, Apdex Score and more).\n- Monitor scripts, functions, and web transactions.\n- High-value alerts.\n- Code-related insights about your application’s health and status. \n- Proactive alerts that inform developers about the status of their applications.",
@@ -21054,6 +20966,50 @@
     ]
   },
   {
+    "title": "Nginx",
+    "name": "nginx",
+    "description": "### Why monitoring Nginx is so important\n\nNGINX is one of the fastest‑growing open-source web servers in the world. However, in some cases, NGINX may not serve requests as quickly as expected due to problems in an application or architecture. Monitoring NGINX performance is essential to ensure that your web application and server environment are healthy. The key to effective NGINX monitoring is the New Relic NGINX quickstart.\n\n### New Relic Nginx quickstart features\n\n- Dashboards: NGINX dashboards proactively monitor NGINX metrics like requests per second, active connections, connections accepted per second, connections dropped per second, etc.\n- Automatic On-host integrations instrumentation\n- Compatible with both NGINX Open Source and NGINX Plus\n\n### New Relic - the complete Nginx performance monitoring tool\n\n[Monitor key NGINX with the New Relic NGINX Performance monitoring integration](https://docs.newrelic.com/docs/integrations/host-integrations/host-integrations-list/nginx-monitoring-integration/) with metrics like requests per second, connections accepted per second, connections dropped per second, etc. Specifically, our NGINX integration collects and sends inventory and metrics from your NGINX server to the New Relic platform, where you can see valuable insights. From that platform, you can also query data, understand integration data in detail, and create alert conditions.\n\nIn addition, the integration provides useful aggregates of detailed error reports for HTTP error responses. This gives you early warnings of missing pages or code errors and exceptions. With the New Relic NGINX integration, you can monitor NGINX running on an Ubuntu server or running as a service in Kubernetes or on Amazon ECS. The tool is compatible with both the open-source and commercial versions of NGINX.\n\nDownload the New Relic NGINX quickstart today to improve NGINX response time, execute NGINX performance tuning, and monitor NGINX traffic efficiently! It is the key to a healthy NGINX server that provides a seamless user experience for web applications.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/nginx",
+    "id": "2567c5e0-06de-4ff6-a4f2-6cbe5aed07b3",
+    "level": "NEW_RELIC",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/nginx/logo.jpeg",
+    "summary": "NGINX New Relic integration makes your NGINX servers healthy and prevents poor user experience in your web applications. Download the New Relic NGINX quickstart now to monitor NGINX’s critical metrics and improve NGINX performance.",
+    "websiteUrl": null,
+    "keywords": [
+      "infrastructure",
+      "web",
+      "featured"
+    ],
+    "authors": [
+      "New Relic",
+      "Daniel Gola"
+    ],
+    "dashboards": [
+      {
+        "name": "Nginx",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/nginx/nginx.png"
+        ]
+      }
+    ],
+    "alerts": [],
+    "documentation": [
+      {
+        "name": "Nginx",
+        "description": "Web server which can also be used as a reverse proxy, load balancer, mail proxy, and HTTP cache.\n",
+        "url": "https://docs.newrelic.com/docs/integrations/host-integrations/host-integrations-list/nginx-monitoring-integration/"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "Nginx",
+        "id": "nginx-integration"
+      }
+    ]
+  },
+  {
     "title": "OKHTTP",
     "name": "okhttp",
     "description": "OkHttp is a third-party library developed by Square for sending and receive\nHTTP-based network requests.",
@@ -21213,6 +21169,98 @@
       {
         "name": "PHP Agent",
         "id": "php-agent"
+      }
+    ]
+  },
+  {
+    "title": "CoreDNS (Prometheus)",
+    "name": "coredns",
+    "description": "The CoreDNS quickstart includes a dashboard and set of alerts that provides a holistic view of the CoreDNS instances in your environment. Information contained in the dasshboard includes CoreDNS versions, status, request/response times, and cache statistics. This quickstart was built and tested based on CoreDNS metrics sent to New Relic through remote write configurations with Prometheus Agent or Prometheus Server.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/coredns",
+    "id": "c9ac4abb-4a61-4eee-9e1e-79506806684e",
+    "level": "VERIFIED",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/coredns/coredns-logo.png",
+    "summary": "Easily install a curated dashboard and alerts to monitor the health of your CoreDNS instances. This quickstart was built and tested based on CoreDNS metrics sent to New Relic through remote write configurations with Prometheus Agent or Prometheus Server.",
+    "websiteUrl": null,
+    "keywords": [
+      "coredns",
+      "prometheus",
+      "remote write",
+      "remote_write",
+      "remote-write",
+      "promql",
+      "grafana",
+      "featured"
+    ],
+    "authors": [
+      "New Relic",
+      "Brad Schmitt",
+      "Raga Potti"
+    ],
+    "dashboards": [
+      {
+        "name": "CoreDNS (Prometheus)",
+        "description": "A dashboard for CoreDNS based on metrics sent to New Relic using Prometheus Agent or Prometheus server.",
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/coredns/coredns-dashboard-1.jpg",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/coredns/coredns-dashboard-2.jpg",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/coredns/coredns-dashboard-3.jpg",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/coredns/coredns-dashboard-4.jpg"
+        ]
+      }
+    ],
+    "alerts": [
+      {
+        "name": "CoreDNS Error Rate",
+        "details": "This alert will trigger if the CoreDNS error rate for response codes NXDOMAIN, SERVFAIL, or REFUSED is above 2 standard deviations for more than 5 minutes.",
+        "type": "BASELINE",
+        "url": null
+      },
+      {
+        "name": "CoreDNS Panics",
+        "details": "This alert will trigger if the CoreDNS panic rate is above 0 at least once in 5 minutes",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "CoreDNS Request Duration",
+        "details": "This alert will trigger if the CoreDNS request duration 95th percentile is above or below 2 standard deviations for more than 5 minutes",
+        "type": "BASELINE",
+        "url": null
+      },
+      {
+        "name": "CoreDNS Request Rate",
+        "details": "This alert will trigger if the CoreDNS requests per second is above or below 2 standard deviations for more than 5 minutes",
+        "type": "BASELINE",
+        "url": null
+      }
+    ],
+    "documentation": [
+      {
+        "name": "CoreDNS Integration Docs",
+        "description": "New Relic documentation for the CoreDNS integration including installation, configuration, and how to query the metrics.\n",
+        "url": "https://docs.newrelic.com/docs/infrastructure/prometheus-integrations/integrations-list/core-dns-integration"
+      },
+      {
+        "name": "CoreDNS Metrics Docs",
+        "description": "Learn more about the Prometheus metrics available for CoreDNS\n",
+        "url": "https://coredns.io/plugins/metrics/"
+      },
+      {
+        "name": "Prometheus Installation Docs",
+        "description": "Use Prometheus remote_write or Prometheus Agent\n",
+        "url": "https://docs.newrelic.com/docs/infrastructure/prometheus-integrations/get-started/send-prometheus-metric-data-new-relic/"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "Prometheus remote write",
+        "id": "setup-prometheus"
+      },
+      {
+        "name": "Prometheus Agent Mode",
+        "id": "setup-prometheus-agent-mode"
       }
     ]
   },
@@ -22286,49 +22334,6 @@
       {
         "name": "HAProxy",
         "id": "haproxy-integration"
-      }
-    ]
-  },
-  {
-    "title": "Nginx",
-    "name": "nginx",
-    "description": "### Why monitoring Nginx is so important\n\nNGINX is one of the fastest‑growing open-source web servers in the world. However, in some cases, NGINX may not serve requests as quickly as expected due to problems in an application or architecture. Monitoring NGINX performance is essential to ensure that your web application and server environment are healthy. The key to effective NGINX monitoring is the New Relic NGINX quickstart.\n\n### New Relic Nginx quickstart features\n\n- Dashboards: NGINX dashboards proactively monitor NGINX metrics like requests per second, active connections, connections accepted per second, connections dropped per second, etc.\n- Automatic On-host integrations instrumentation\n- Compatible with both NGINX Open Source and NGINX Plus\n\n### New Relic - the complete Nginx performance monitoring tool\n\n[Monitor key NGINX with the New Relic NGINX Performance monitoring integration](https://docs.newrelic.com/docs/integrations/host-integrations/host-integrations-list/nginx-monitoring-integration/) with metrics like requests per second, connections accepted per second, connections dropped per second, etc. Specifically, our NGINX integration collects and sends inventory and metrics from your NGINX server to the New Relic platform, where you can see valuable insights. From that platform, you can also query data, understand integration data in detail, and create alert conditions.\n\nIn addition, the integration provides useful aggregates of detailed error reports for HTTP error responses. This gives you early warnings of missing pages or code errors and exceptions. With the New Relic NGINX integration, you can monitor NGINX running on an Ubuntu server or running as a service in Kubernetes or on Amazon ECS. The tool is compatible with both the open-source and commercial versions of NGINX.\n\nDownload the New Relic NGINX quickstart today to improve NGINX response time, execute NGINX performance tuning, and monitor NGINX traffic efficiently! It is the key to a healthy NGINX server that provides a seamless user experience for web applications.",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/nginx",
-    "id": "2567c5e0-06de-4ff6-a4f2-6cbe5aed07b3",
-    "level": "NEW_RELIC",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/nginx/logo.jpeg",
-    "summary": "NGINX New Relic integration makes your NGINX servers healthy and prevents poor user experience in your web applications. Download the New Relic NGINX quickstart now to monitor NGINX’s critical metrics and improve NGINX performance.",
-    "websiteUrl": null,
-    "keywords": [
-      "infrastructure",
-      "web"
-    ],
-    "authors": [
-      "New Relic",
-      "Daniel Gola"
-    ],
-    "dashboards": [
-      {
-        "name": "Nginx",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/nginx/nginx.png"
-        ]
-      }
-    ],
-    "alerts": [],
-    "documentation": [
-      {
-        "name": "Nginx",
-        "description": "Web server which can also be used as a reverse proxy, load balancer, mail proxy, and HTTP cache.\n",
-        "url": "https://docs.newrelic.com/docs/integrations/host-integrations/host-integrations-list/nginx-monitoring-integration/"
-      }
-    ],
-    "installPlans": [
-      {
-        "name": "Nginx",
-        "id": "nginx-integration"
       }
     ]
   },
