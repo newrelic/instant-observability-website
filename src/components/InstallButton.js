@@ -41,12 +41,32 @@ const checkUtmParameters = (parameters) => {
 };
 
 /**
- * Method which returns `false` if current user is 'new'. Returns `true` if user is a returning user.
- * @returns {Boolean}
+ * Makes a call to nerdgraph to see if the user is logged in via the NR cookie hitting Service Gateway
+ * @returns {Promise<Boolean>}
  */
-const checkIfReturningUser = () => {
-  return Boolean(Cookies.get('ajs_user_id'));
-};
+const checkIfUserLoggedIn = () =>
+  fetch('https://nerd-graph.service.newrelic.com/graphql', {
+    method: 'POST',
+    credentials: 'include',
+    redirect: 'error',
+    headers: {
+      'Content-Type': 'application/json',
+      'NewRelic-Requesting-Services': 'io-website',
+    },
+    body: JSON.stringify({
+      query: `{
+        actor {
+          user {
+            name
+          }
+        }
+      }`,
+    }),
+  })
+    .then((res) => {
+      return res.ok;
+    })
+    .catch(() => false);
 
 /**
  * @param {String} id
@@ -61,14 +81,14 @@ const createInstallLink = (
   nerdletId,
   hasGuidedInstall,
   hasUtmParameters,
-  isReturningUser,
+  isLoggedIn,
   parameters
 ) => {
   const platformUrl = hasGuidedInstall
     ? getGuidedInstallStackedNr1Url(nerdletId)
     : getPackNr1Url(id, nerdletId);
 
-  const installUrl = new URL(isReturningUser ? platformUrl : SIGNUP_LINK);
+  const installUrl = new URL(isLoggedIn ? platformUrl : SIGNUP_LINK);
   if (parameters) {
     parameters.forEach((value, key) => {
       installUrl.searchParams.set(key, value);
@@ -103,24 +123,24 @@ const InstallButton = ({
 
   const tessen = useTessen();
 
-  const [parameters, setParameters] = useState();
-  useEffect(() => {
-    if (location.search) {
-      setParameters(new URLSearchParams(location.search));
-    }
-  }, [location.search, setParameters]);
+  const parameters = new URLSearchParams(location.search);
 
   const hasGuidedInstall =
     hasInstallableComponent &&
     quickstart.installPlans.length === 1 &&
     quickstart.installPlans[0].id.includes('guided-install');
 
-  const [installUrl, setInstallUrl] = useState(SIGNUP_LINK);
+  const [isLoggedIn, setLoggedIn] = useState();
   useEffect(() => {
-    setInstallUrl(url);
-
+    // IIFE - used to make a call to nerdgraph to set state for is a user is logged in.
+    // We're using an IIFE here because the callback passed
+    // to `useEffect` can't be async.
+    (async () => {
+      const loggedIn = await checkIfUserLoggedIn();
+      setLoggedIn(loggedIn);
+    })();
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  }, [checkIfUserLoggedIn]);
 
   // If there is nothing to install AND no documentation, don't show this button.
   if (!hasInstallableComponent && !hasComponent(quickstart, 'documentation')) {
@@ -137,13 +157,13 @@ const InstallButton = ({
   const hasUtmParameters = checkUtmParameters(parameters);
   // If we have an install-able component, generate a URL. Otherwise, link to the
   // first documentation supplied.
-  const url = hasInstallableComponent
+  const installUrl = hasInstallableComponent
     ? createInstallLink(
         quickstart.id,
         nerdletId,
         hasGuidedInstall,
         hasUtmParameters,
-        checkIfReturningUser(),
+        isLoggedIn,
         parameters
       )
     : quickstart.documentation[0].url;
