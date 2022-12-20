@@ -195,7 +195,7 @@ const InstallButton = ({
       quickstartId: quickstart.id,
       quickstartUrl: quickstart.packUrl,
       super_tiles_treatment: treatment,
-      urlParameters: Object.entries([...parameters]),
+      urlParameters: parameters ? Object.entries([...parameters]) : null,
       partner: isNRPartner(quickstart.keywords),
       quickstartButtonText: hasInstallableComponent
         ? 'Install quickstart'
