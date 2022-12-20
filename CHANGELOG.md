@@ -1,3 +1,10 @@
+## [1.12.7](https://github.com/newrelic/instant-observability-website/compare/v1.12.6...v1.12.7) (2022-12-20)
+
+
+### Bug Fixes
+
+* add ternary to tessen event to avoid sending empty array ([acd6eb3](https://github.com/newrelic/instant-observability-website/commit/acd6eb3d9e31366b8831ba73fcf65dbf2f68fbe7))
+
 ## [1.12.6](https://github.com/newrelic/instant-observability-website/compare/v1.12.5...v1.12.6) (2022-11-30)
 
 
