@@ -43,6 +43,39 @@
     ]
   },
   {
+    "title": "StatsD",
+    "name": "statsd",
+    "description": "## What is StatsD?\n\nLightweight, open-source Node.js application that listens for metrics from different applications and aggregates them.\n\n### Common StatsD use cases\n\nStatsD makes it easier for you to instrument your applications. As a developer or organization, it empowers you to code quickly troubleshoot application issues in real-time, and have absolute control over your data. \n\nWith StatsD, you can collect metrics from your production applications, even before the apps are deployed into production. In addition,  resource utilization metrics can be directly linked to product metrics relevant to your organization.\n\n### New Relic + StatsD\n\nNew Relic instruments StatsD with our infrastructural monitoring capabilities and allows you to analyze, troubleshoot and optimize StatsD performance. With the New Relic-StatsD integration, you can proactively monitor the health of StatsD, capture critical performance metrics, and achieve maximum uptime. Install the New Relic StatsD quickstart today to ensure that StatsD effectively listens for metrics from different apps while aggregating them in a seamless and efficient way.\n\n## Get started!\n\nNew Relic's StatsD integration lets you easily get StatsD-format data into New Relic.\nFollow [the documentation](https://docs.newrelic.com/docs/integrations/host-integrations/host-integrations-list/statsd-monitoring-integration-version-2) to get started!",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/statsd",
+    "id": "293c4da1-11cd-4942-8e40-8b6e85663003",
+    "level": "NEW_RELIC",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/statsd/logo.svg",
+    "summary": "Get StatsD data into New Relic.",
+    "websiteUrl": null,
+    "keywords": [
+      "infrastructure",
+      "open source monitoring"
+    ],
+    "authors": [
+      "New Relic"
+    ],
+    "dashboards": [],
+    "alerts": [],
+    "documentation": [
+      {
+        "name": "StatsD installation docs",
+        "description": "Lightweight, open-source Node.js application that listens for metrics from\ndifferent applications and aggregates them.\n",
+        "url": "https://docs.newrelic.com/docs/integrations/host-integrations/host-integrations-list/statsd-monitoring-integration-version-2"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "statsd",
+        "id": "third-party-statsd"
+      }
+    ]
+  },
+  {
     "title": "Cisco IP SLA Operations",
     "name": "cisco-ip-sla-operations",
     "description": "The Cisco IP SLA Operations quickstart provides a dashboard that gives you a holistic view of your configured IP SLA operations in your Cisco ecosystem.\nUse this quickstart together with New Relic's Network Monitoring feature to visualize anomalies and/or bottlenecks in your network.",
@@ -134,39 +167,6 @@
     ]
   },
   {
-    "title": "StatsD",
-    "name": "statsd",
-    "description": "## What is StatsD?\n\nLightweight, open-source Node.js application that listens for metrics from different applications and aggregates them.\n\n## Get started!\n\nNew Relic's StatsD integration lets you easily get StatsD-format data into New Relic.\nFollow [the documentation](https://docs.newrelic.com/docs/integrations/host-integrations/host-integrations-list/statsd-monitoring-integration-version-2) to get started!",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/statsd",
-    "id": "293c4da1-11cd-4942-8e40-8b6e85663003",
-    "level": "NEW_RELIC",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/statsd/logo.svg",
-    "summary": "Get StatsD data into New Relic.",
-    "websiteUrl": null,
-    "keywords": [
-      "infrastructure",
-      "open source monitoring"
-    ],
-    "authors": [
-      "New Relic"
-    ],
-    "dashboards": [],
-    "alerts": [],
-    "documentation": [
-      {
-        "name": "StatsD installation docs",
-        "description": "Lightweight, open-source Node.js application that listens for metrics from\ndifferent applications and aggregates them.\n",
-        "url": "https://docs.newrelic.com/docs/integrations/host-integrations/host-integrations-list/statsd-monitoring-integration-version-2"
-      }
-    ],
-    "installPlans": [
-      {
-        "name": "statsd",
-        "id": "third-party-statsd"
-      }
-    ]
-  },
-  {
     "title": "DagsHub",
     "name": "mlops-dagshub",
     "description": "DagsHub is a platform for data scientists and machine learning engineers to version and sync their data, models, experiments, and code. It allows you and your team to easily share, review and reuse your work, providing a GitHub-like experience for machine learning. DagsHub is built on popular open-source tools and formats, making it easy to integrate with the tools you already use like New Relic.",
@@ -236,17 +236,6 @@
     ],
     "dashboards": [
       {
-        "name": "Kubernetes / Compute Resources",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/kubernetes-prometheus-compute-resources/kubernetes-prometheus-compute-resources01.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/kubernetes-prometheus-compute-resources/kubernetes-prometheus-compute-resources02.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/kubernetes-prometheus-compute-resources/kubernetes-prometheus-compute-resources03.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/kubernetes-prometheus-compute-resources/kubernetes-prometheus-compute-resources04.png"
-        ]
-      },
-      {
         "name": "Kubernetes / Kubelet",
         "description": null,
         "url": null,
@@ -255,6 +244,17 @@
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/kubernetes-prometheus-kubelet/kubernetes-prometheus-kubelet02.png",
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/kubernetes-prometheus-kubelet/kubernetes-prometheus-kubelet03.png",
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/kubernetes-prometheus-kubelet/kubernetes-prometheus-kubelet04.png"
+        ]
+      },
+      {
+        "name": "Kubernetes / Compute Resources",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/kubernetes-prometheus-compute-resources/kubernetes-prometheus-compute-resources01.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/kubernetes-prometheus-compute-resources/kubernetes-prometheus-compute-resources02.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/kubernetes-prometheus-compute-resources/kubernetes-prometheus-compute-resources03.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/kubernetes-prometheus-compute-resources/kubernetes-prometheus-compute-resources04.png"
         ]
       }
     ],
@@ -346,6 +346,72 @@
     ]
   },
   {
+    "title": "Velero (Prometheus)",
+    "name": "velero-prometheus",
+    "description": "## A comprehensive Velero monitoring system\n\nVelero is a tool used to backup and restore Kubernetes cluster resources and persistent volumes.\n\nNew Relic provides a Velero Quickstart which allows you to monitor your Velero schedules and jobs with ease.\n\n### New Relic - a perfect tool to monitor Velero using Prometheus.\n\nVelero has become an important part of Kubernetes architectures, providing features to ensure continuity of state during disaster recover, and ease the burden of systems migration. \n\nUsing the [New Relic Prometheus Remote-Write](https://docs.newrelic.com/docs/infrastructure/prometheus-integrations/install-configure-remote-write/set-your-prometheus-remote-write-integration/) integration you can deliver your critical Velero metrics from your internally supported instance of Prometheus directly to New Relic where the rest of your observability data resides.\n\n### New Relic Velero quickstart features\n\nOur Velero Quickstart include out-of-the-box dashboards and alerts, including data such as:\n- Overview Schedules (# successes, # failures) + charts with duration and sizes of backups \n\n### Value of the Velero (Prometheus) quickstart\n\nThe Velero (Prometheus) Quickstart provides a visual snapshot of all the key health information related to your Velero clients and the Kubernetes Clusters they are helping to maintain. Monitoring is made easy via the clear, color-coded dashboard which showcases schedule execution and much more.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/velero-prometheus",
+    "id": "dbca2b58-f754-49a2-af7f-0ceca8a9978a",
+    "level": "NEW_RELIC",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/velero-prometheus/logo.png",
+    "summary": "New Relic provides crucial tools for monitoring your Velero clients using the Prometheus Remote-Write integration. It supports features such as a visual dashboard complete with charts detailing all critical performance and health metrics relevant to your Velero system.",
+    "websiteUrl": null,
+    "keywords": [
+      "velero",
+      "prometheus",
+      "remote",
+      "write",
+      "kubernetes",
+      "disaster recovery"
+    ],
+    "authors": [
+      "New Relic Labs"
+    ],
+    "dashboards": [
+      {
+        "name": "Velero-Prometheus",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/velero-prometheus/velero-prometheus-2.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/velero-prometheus/velero-prometheus.png"
+        ]
+      }
+    ],
+    "alerts": [
+      {
+        "name": "Velero Prometheus Backup Duration Baseline",
+        "details": "Alert when the duration of the backup changes significantly from its baseline.",
+        "type": "BASELINE",
+        "url": null
+      },
+      {
+        "name": "Velero Prometheus Backup Failure",
+        "details": "This alert is triggered when Velero indicates a backup has failed.",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "Velero Prometheus Backup Size",
+        "details": "Alert when the duration of the backup size changes significantly from its baseline.",
+        "type": "BASELINE",
+        "url": null
+      }
+    ],
+    "documentation": [
+      {
+        "name": "Velero Prometheus Integration",
+        "description": "Open source, backup and restore tooling to help maintain your Kubernetes systems.\n",
+        "url": "https://velero.io/docs/"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "Prometheus remote write",
+        "id": "setup-prometheus"
+      }
+    ]
+  },
+  {
     "title": "AWS Lambda",
     "name": "aws-lambda",
     "description": "## What is AWS Lambda?\n\nZero-administration compute platform for back-end web developers that runs\nyour code for you in AWS cloud.\n\n\n### Get started!\n\nStart monitoring AWS Lambda by connecting Amazon Web Services (AWS) to New Relic!\n\nCheck out our AWS Lambda documentation to instrument your cloud service and manage the stability, scalability, and reliability of your systems with New Relic's infrastructure monitoring capabilities.\n\n### More info\n\nCheck out the [documentation](https://docs.newrelic.com/docs/infrastructure/amazon-integrations/aws-integrations-list/aws-lambda-monitoring-integration/) to learn more about New Relic monitoring for AWS Lambda.",
@@ -389,6 +455,50 @@
         "name": "AWS Lambda installation docs",
         "description": "Monitor AWS Lambda by connecting AWS to New Relic.\n",
         "url": "https://docs.newrelic.com/docs/infrastructure/amazon-integrations/aws-integrations-list/aws-lambda-monitoring-integration/"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "AWS-CloudWatch-Metric-Streams",
+        "id": "aws-cloudwatch-metric-streams"
+      }
+    ]
+  },
+  {
+    "title": "Amazon Route 53 Resolver",
+    "name": "aws-route53-resolver",
+    "description": "## What is Amazon Route 53 Resolver?\n\nCreate and configure endpoints in Amazon Route 53.\n\n### Get started!\n\nStart monitoring Amazon Route 53 Resolver by connecting Amazon Web Services (AWS) to New Relic!\n\nCheck out our Amazon Route 53 Resolver documentation to instrument your cloud service and manage the stability, scalability, and reliability of your systems with New Relic's infrastructure monitoring capabilities.\n\n### More info\n\nCheck out the [documentation](https://docs.newrelic.com/docs/infrastructure/amazon-integrations/aws-integrations-list/aws-route53-resolver-monitoring-integration/) to learn more about New Relic monitoring for Amazon Route 53 Resolver.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/aws/amazon-route53-resolver",
+    "id": "91a052fe-cb0f-4b98-ae79-56d61abef5ec",
+    "level": "NEW_RELIC",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/aws/amazon-route53-resolver/logo.svg",
+    "summary": "Monitor Amazon Route 53 Resolver by connecting AWS to New Relic",
+    "websiteUrl": null,
+    "keywords": [
+      "aws",
+      "amazon web services",
+      "networking"
+    ],
+    "authors": [
+      "New Relic"
+    ],
+    "dashboards": [
+      {
+        "name": "Amazon Route 53",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/amazon-route53/amazon-route532.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/amazon-route53/amazon-route53.png"
+        ]
+      }
+    ],
+    "alerts": [],
+    "documentation": [
+      {
+        "name": "Amazon Route 53 Resolver installation docs",
+        "description": "Monitor Amazon Route 53 Resolver by connecting AWS to New Relic.",
+        "url": "https://docs.newrelic.com/docs/infrastructure/amazon-integrations/aws-integrations-list/aws-route53-resolver-monitoring-integration/"
       }
     ],
     "installPlans": [
@@ -519,49 +629,6 @@
       }
     ],
     "installPlans": []
-  },
-  {
-    "title": "Amazon Route 53 Resolver",
-    "name": "aws-route53-resolver",
-    "description": "## What is Amazon Route 53 Resolver?\n\nCreate and configure endpoints in Amazon Route 53.\n\n### Get started!\n\nStart monitoring Amazon Route 53 Resolver by connecting Amazon Web Services (AWS) to New Relic!\n\nCheck out our Amazon Route 53 Resolver documentation to instrument your cloud service and manage the stability, scalability, and reliability of your systems with New Relic's infrastructure monitoring capabilities.\n\n### More info\n\nCheck out the [documentation](https://docs.newrelic.com/docs/infrastructure/amazon-integrations/aws-integrations-list/aws-route53-resolver-monitoring-integration/) to learn more about New Relic monitoring for Amazon Route 53 Resolver.",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/aws/amazon-route53-resolver",
-    "id": "91a052fe-cb0f-4b98-ae79-56d61abef5ec",
-    "level": "NEW_RELIC",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/aws/amazon-route53-resolver/logo.svg",
-    "summary": "Monitor Amazon Route 53 Resolver by connecting AWS to New Relic",
-    "websiteUrl": null,
-    "keywords": [
-      "aws",
-      "amazon web services",
-      "networking"
-    ],
-    "authors": [
-      "New Relic"
-    ],
-    "dashboards": [
-      {
-        "name": "Amazon Route 53 Resolver",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/amazon-route53resolver/amazon-route53resolver.png"
-        ]
-      }
-    ],
-    "alerts": [],
-    "documentation": [
-      {
-        "name": "Amazon Route 53 Resolver installation docs",
-        "description": "Monitor Amazon Route 53 Resolver by connecting AWS to New Relic.",
-        "url": "https://docs.newrelic.com/docs/infrastructure/amazon-integrations/aws-integrations-list/aws-route53-resolver-monitoring-integration/"
-      }
-    ],
-    "installPlans": [
-      {
-        "name": "AWS-CloudWatch-Metric-Streams",
-        "id": "aws-cloudwatch-metric-streams"
-      }
-    ]
   },
   {
     "title": "tvOS",
@@ -899,19 +966,19 @@
     ],
     "dashboards": [
       {
-        "name": "AWS WAFV2",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/aws-wafv2/aws-wafv2.png"
-        ]
-      },
-      {
         "name": "AWS WAF",
         "description": null,
         "url": null,
         "screenshots": [
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/aws-waf/aws-waf.png"
+        ]
+      },
+      {
+        "name": "AWS WAFV2",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/aws-wafv2/aws-wafv2.png"
         ]
       }
     ],
@@ -2029,19 +2096,19 @@
     ],
     "dashboards": [
       {
-        "name": "Battlesnake Performance",
-        "description": "Monitor your Battlesnake's performance and see how it stacks up against your competition!",
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/battlesnake-performance/battlesnake-performance.png"
-        ]
-      },
-      {
         "name": "Battlesnake Server Status",
         "description": "A dashboard to monitor your Battlesnake server's performance. It's important to keep all responses to the `/move` endpoint under 500ms. Furthermore, it's possible that your snake may be in multiple concurrent matches at the same time. It's important to make sure you server and web application are running smoothly to keep you in the game!",
         "url": null,
         "screenshots": [
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/battlesnake-server-status/battlesnake-server-status.png"
+        ]
+      },
+      {
+        "name": "Battlesnake Performance",
+        "description": "Monitor your Battlesnake's performance and see how it stacks up against your competition!",
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/battlesnake-performance/battlesnake-performance.png"
         ]
       },
       {
@@ -2807,12 +2874,6 @@
     ],
     "alerts": [
       {
-        "name": "Low throughput",
-        "details": "This alert is triggered when the throughput is 0 for 5 minutes",
-        "type": "STATIC",
-        "url": null
-      },
-      {
         "name": "High duration",
         "details": "This alert is triggered when the total duration of the web transaction is longer than 10 seconds during 5 minutes",
         "type": "STATIC",
@@ -2821,6 +2882,12 @@
       {
         "name": "High error rate",
         "details": "This alert is triggered when the error percentage of web transactions is higher than 5% during 5 minutes",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "Low throughput",
+        "details": "This alert is triggered when the throughput is 0 for 5 minutes",
         "type": "STATIC",
         "url": null
       }
@@ -3252,14 +3319,14 @@
     "alerts": [],
     "documentation": [
       {
-        "name": "Adding a dashboard",
-        "description": "How to add a dashboard to New Relic",
-        "url": "https://docs.newrelic.com/docs/query-your-data/explore-query-data/dashboards/introduction-dashboards/#get-started"
-      },
-      {
         "name": "Instrument your mobile application with New Relic",
         "description": "How to instrument your mobile application with New Relic",
         "url": "https://docs.newrelic.com/docs/mobile-monitoring/new-relic-mobile/get-started/introduction-mobile-monitoring/"
+      },
+      {
+        "name": "Adding a dashboard",
+        "description": "How to add a dashboard to New Relic",
+        "url": "https://docs.newrelic.com/docs/query-your-data/explore-query-data/dashboards/introduction-dashboards/#get-started"
       }
     ],
     "installPlans": [
@@ -6291,6 +6358,14 @@
     ],
     "dashboards": [
       {
+        "name": "Redis Enterprise Cluster Metrics",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/cluster/cluster01.png"
+        ]
+      },
+      {
         "name": "Redis Enterprise Database CRDT",
         "description": null,
         "url": null,
@@ -6304,14 +6379,6 @@
         "url": null,
         "screenshots": [
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/database/database01.png"
-        ]
-      },
-      {
-        "name": "Redis Enterprise Cluster Metrics",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/cluster/cluster01.png"
         ]
       }
     ],
@@ -7121,14 +7188,14 @@
     ],
     "alerts": [
       {
-        "name": "High CPU Utilization",
-        "details": "This alert is triggered when the CPU Utilization is above 90%.",
+        "name": "Apdex Score",
+        "details": "This alert is triggered when the Apdex score is below 0.5 for 5 minutes",
         "type": "STATIC",
         "url": null
       },
       {
-        "name": "Apdex Score",
-        "details": "This alert is triggered when the Apdex score is below 0.5 for 5 minutes",
+        "name": "High CPU Utilization",
+        "details": "This alert is triggered when the CPU Utilization is above 90%.",
         "type": "STATIC",
         "url": null
       },
@@ -7951,14 +8018,14 @@
     "alerts": [],
     "documentation": [
       {
-        "name": "New Relic Micrometer Registry GitHub readme",
-        "description": "Implementation of Micrometer built for sending dimensional data to New\nRelic.\n",
-        "url": "https://github.com/newrelic/micrometer-registry-newrelic"
-      },
-      {
         "name": "Micrometer installation docs",
         "description": "Library for viewing and managing instrumentation clients for popular\nservices and applications.\n",
         "url": "https://docs.newrelic.com/docs/integrations/open-source-telemetry-integrations/open-source-telemetry-integration-list/new-relics-micrometer-integration"
+      },
+      {
+        "name": "New Relic Micrometer Registry GitHub readme",
+        "description": "Implementation of Micrometer built for sending dimensional data to New\nRelic.\n",
+        "url": "https://github.com/newrelic/micrometer-registry-newrelic"
       }
     ],
     "installPlans": [
@@ -8911,14 +8978,14 @@
         "url": "https://docs.newrelic.com/docs/infrastructure/prometheus-integrations/get-started/send-prometheus-metric-data-new-relic"
       },
       {
-        "name": "Etcd Metrics Docs",
-        "description": "Learn more about the Prometheus metrics available for Etcd",
-        "url": "https://etcd.io/docs/v3.5/metrics/"
-      },
-      {
         "name": "Etcd Integration Docs",
         "description": "New Relic documentation for the Etcd integration including installation, configuration, and how to query the metrics.\n",
         "url": "https://docs.newrelic.com/docs/infrastructure/prometheus-integrations/integrations-list/etcd-integration"
+      },
+      {
+        "name": "Etcd Metrics Docs",
+        "description": "Learn more about the Prometheus metrics available for Etcd",
+        "url": "https://etcd.io/docs/v3.5/metrics/"
       }
     ],
     "installPlans": [
@@ -9029,14 +9096,14 @@
     ],
     "alerts": [
       {
-        "name": "Transaction Errors",
-        "details": "This alert is triggered when the the transactions fail more than 10% of the time in 5 minutes.",
+        "name": "High CPU Utilization",
+        "details": "This alert is triggered when the CPU Utilization is above 90%.",
         "type": "STATIC",
         "url": null
       },
       {
-        "name": "High CPU Utilization",
-        "details": "This alert is triggered when the CPU Utilization is above 90%.",
+        "name": "Transaction Errors",
+        "details": "This alert is triggered when the the transactions fail more than 10% of the time in 5 minutes.",
         "type": "STATIC",
         "url": null
       }
@@ -10107,14 +10174,14 @@
     "alerts": [],
     "documentation": [
       {
-        "name": "ArgoCD Metrics Setup",
-        "description": "Ship performance data from ArgoCD using Prometheus\n",
-        "url": "https://argo-cd.readthedocs.io/en/stable/operator-manual/metrics/"
-      },
-      {
         "name": "Prometheus OpenMetrics Integration Setup",
         "description": "Setup New Relic's Prometheus OpenMetrics Integration (POMI)\n",
         "url": "https://docs.newrelic.com/docs/infrastructure/prometheus-integrations/install-configure-openmetrics/install-update-or-uninstall-your-prometheus-openmetrics-integration"
+      },
+      {
+        "name": "ArgoCD Metrics Setup",
+        "description": "Ship performance data from ArgoCD using Prometheus\n",
+        "url": "https://argo-cd.readthedocs.io/en/stable/operator-manual/metrics/"
       },
       {
         "name": "Prometheus Remote Write Integrations Setup",
@@ -11931,14 +11998,14 @@
     ],
     "alerts": [
       {
-        "name": "Transaction Errors",
-        "details": "This alert is triggered when the the transactions fail more than 10% of the time in 5 minutes.",
+        "name": "High CPU Utilization",
+        "details": "This alert is triggered when the CPU Utilization is above 90%.",
         "type": "STATIC",
         "url": null
       },
       {
-        "name": "High CPU Utilization",
-        "details": "This alert is triggered when the CPU Utilization is above 90%.",
+        "name": "Transaction Errors",
+        "details": "This alert is triggered when the the transactions fail more than 10% of the time in 5 minutes.",
         "type": "STATIC",
         "url": null
       }
@@ -14020,19 +14087,19 @@
     ],
     "dashboards": [
       {
-        "name": "Lacework Security Overview",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/lacework-security-overview/lacework-security-overview.png"
-        ]
-      },
-      {
         "name": "Lacework Compliance Violations",
         "description": null,
         "url": null,
         "screenshots": [
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/lacework-compliance-violations/lacework-compliance-violations.png"
+        ]
+      },
+      {
+        "name": "Lacework Security Overview",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/lacework-security-overview/lacework-security-overview.png"
         ]
       },
       {
@@ -15320,6 +15387,62 @@
     ]
   },
   {
+    "title": "Delphix",
+    "name": "delphix",
+    "description": "### Summary\n\nThe Delphix quickstart for New Relic grants insights and observability of the Delphix Platform to administrators. Users may monitor various Delphix objects, such as dSources and VDBs, and trigger alerts on exceeded thresholds. \n\nIn addition, when leveraging the Delphix integration, users can feed data into triggered New Relic workflows to command data-ready RCA environments through a [ServiceNow automated request](https://store.servicenow.com/sn_appstore_store.do#!/store/application/bb688f9f9734111012b7318c1253af11) or direct webhook.\n\n### What's the value?\n\nThe Delphix Platform is a powerful test data management tool enabling the provisioning of RCA environments for mission-critical applications on demand. The quickstart allows Delphix administrators to monitor their usage, maintain high availability, and reduce the costs of forgotten virtual databases. \n\nSite Reliability Engineers rely on Delphix and New Relic to provide mission-critical application environments within minutes of an issue which eases investigation during stressful issues and helps achieve SLA times. Delphix can reduce provisioning times from days to minutes.\n\n### What's inside?\n\nThe quickstart contains a sample Delphix Platform Dashboard and Storage Utilization Alert to help users get started. \n\nPopulating data for dashboards, alerts, and workflows requires the [Delphix Integration](https://github.com/delphix/dct-newrelic-integration) and [Delphix Data Control Tower](https://docs.delphix.com/dct).",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/delphix",
+    "id": "98f77308-4ac3-4c55-bc56-eb9d12f52ab7",
+    "level": "COMMUNITY",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/delphix/logo.svg",
+    "summary": "Monitor and observe the Delphix Platform and respond to mission-critical application issues with data-ready RCA environments.",
+    "websiteUrl": null,
+    "keywords": [
+      "delphix",
+      "newrelic partner",
+      "devops",
+      "test data management",
+      "database",
+      "sre",
+      "NR1_addData",
+      "NR1_sys"
+    ],
+    "authors": [
+      "Delphix Community"
+    ],
+    "dashboards": [
+      {
+        "name": "Delphix Platform Dashboard",
+        "description": "Sample dashboard detailing Delphix Platform usage.",
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/delphix-dashboard/delphix-dashboard-1.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/delphix-dashboard/delphix-dashboard-2.png"
+        ]
+      }
+    ],
+    "alerts": [
+      {
+        "name": "Delphix Storage Utilization",
+        "details": "Alert to monitor Delphix engines storage utilization",
+        "type": "STATIC",
+        "url": null
+      }
+    ],
+    "documentation": [
+      {
+        "name": "Quickstart and Integration Documentation",
+        "description": "Complete documentation to install and configure the Delphix quickstart and integration.",
+        "url": "https://github.com/delphix/dct-newrelic-integration"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "Delphix",
+        "id": "third-party-delphix"
+      }
+    ]
+  },
+  {
     "title": "Xamarin bindings to New Relic's Mobile SDK",
     "name": "xamarin",
     "description": "This repo/project provides Xamarin bindings for New Relic's iOS and Android SDK's. The dll produced after building the bindings can be used in your Xamarin project.",
@@ -16291,59 +16414,6 @@
       {
         "name": "cloudflare",
         "id": "third-party-cloudflare"
-      }
-    ]
-  },
-  {
-    "title": "Delphix",
-    "name": "delphix",
-    "description": "This Delphix quickstart allows you to get visibility into all your Delphix Virtualization platforms. Use this quickstart together with this [integration](https://github.com/delphix/dct-newrelic-integration)",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/delphix",
-    "id": "98f77308-4ac3-4c55-bc56-eb9d12f52ab7",
-    "level": "COMMUNITY",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/delphix/logo.png",
-    "summary": "Monitor Delphix Virtualization operations with New Relic.",
-    "websiteUrl": null,
-    "keywords": [
-      "delphix",
-      "newrelic partner",
-      "virtualization",
-      "NR1_addData",
-      "NR1_sys"
-    ],
-    "authors": [
-      "Diego Loureda",
-      "Carlos Cuellar"
-    ],
-    "dashboards": [
-      {
-        "name": "Delphix Dashboard",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/my-dashboard/my-dashboard.png"
-        ]
-      }
-    ],
-    "alerts": [
-      {
-        "name": "Delphix Storage Utilization",
-        "details": "Alert to monitor Delphix engines storage utilization",
-        "type": "STATIC",
-        "url": null
-      }
-    ],
-    "documentation": [
-      {
-        "name": "Installation Docs",
-        "description": "Configure the Delphix Virtualization integration for New Relic",
-        "url": "https://github.com/delphix/dct-newrelic-integration"
-      }
-    ],
-    "installPlans": [
-      {
-        "name": "Delphix",
-        "id": "third-party-delphix"
       }
     ]
   },
@@ -17383,6 +17453,12 @@
     ],
     "alerts": [
       {
+        "name": "Apdex Score",
+        "details": "This alert is triggered when the Apdex score is below 0.5 for 5 minutes",
+        "type": "STATIC",
+        "url": null
+      },
+      {
         "name": "High CPU Utilization",
         "details": "This alert is triggered when the CPU Utilization is above 90%.",
         "type": "STATIC",
@@ -17391,12 +17467,6 @@
       {
         "name": "Transaction Errors",
         "details": "This alert is triggered when the the transactions fail more than 10% of the time in 5 minutes.",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "Apdex Score",
-        "details": "This alert is triggered when the Apdex score is below 0.5 for 5 minutes",
         "type": "STATIC",
         "url": null
       }
@@ -18432,8 +18502,8 @@
     ],
     "alerts": [
       {
-        "name": "Transaction Errors",
-        "details": "This alert is triggered when the the transactions fail more than 10% of the time in 5 minutes.",
+        "name": "Memory Usage",
+        "details": "This alert is triggered when Memory usage is above 90%",
         "type": "STATIC",
         "url": null
       },
@@ -18444,8 +18514,8 @@
         "url": null
       },
       {
-        "name": "Memory Usage",
-        "details": "This alert is triggered when Memory usage is above 90%",
+        "name": "Transaction Errors",
+        "details": "This alert is triggered when the the transactions fail more than 10% of the time in 5 minutes.",
         "type": "STATIC",
         "url": null
       }
@@ -19086,14 +19156,6 @@
     ],
     "dashboards": [
       {
-        "name": "Catchpoint-Recent Errors",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/catchpoint-recent-errors/Catchpoint-Recent_Errors.png"
-        ]
-      },
-      {
         "name": "Catchpoint-Test Times",
         "description": null,
         "url": null,
@@ -19107,6 +19169,14 @@
         "url": null,
         "screenshots": [
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/catchpoint-response-size/Catchpoint-Response_Size.png"
+        ]
+      },
+      {
+        "name": "Catchpoint-Recent Errors",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/catchpoint-recent-errors/Catchpoint-Recent_Errors.png"
         ]
       },
       {
@@ -21173,14 +21243,14 @@
     ],
     "documentation": [
       {
-        "name": "CoreDNS Integration Docs",
-        "description": "New Relic documentation for the CoreDNS integration including installation, configuration, and how to query the metrics.\n",
-        "url": "https://docs.newrelic.com/docs/infrastructure/prometheus-integrations/integrations-list/core-dns-integration"
-      },
-      {
         "name": "CoreDNS Metrics Docs",
         "description": "Learn more about the Prometheus metrics available for CoreDNS\n",
         "url": "https://coredns.io/plugins/metrics/"
+      },
+      {
+        "name": "CoreDNS Integration Docs",
+        "description": "New Relic documentation for the CoreDNS integration including installation, configuration, and how to query the metrics.\n",
+        "url": "https://docs.newrelic.com/docs/infrastructure/prometheus-integrations/integrations-list/core-dns-integration"
       },
       {
         "name": "Prometheus Installation Docs",
@@ -22637,40 +22707,6 @@
     ]
   },
   {
-    "title": "AWS Route 53",
-    "name": "aws-route-53",
-    "description": "## What is AWS Route 53?\n\nRegister domain names, route Internet traffic to the appropriate resources,\nand check the health of your web app’s resources.\n\n\n### Get started!\n\nStart monitoring AWS Route 53 by connecting Amazon Web Services (AWS) to New Relic!\n\nCheck out our AWS Route 53 documentation to instrument your cloud service and manage the stability, scalability, and reliability of your systems with New Relic's infrastructure monitoring capabilities.\n\n### More info\n\nCheck out the [documentation](https://docs.newrelic.com/docs/infrastructure/amazon-integrations/aws-integrations-list/aws-route-53-monitoring-integration/) to learn more about New Relic monitoring for AWS Route 53.",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/aws/aws-route-53",
-    "id": "bf043e5a-213c-411e-8eea-4e386a29a088",
-    "level": "NEW_RELIC",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/aws/aws-route-53/logo.svg",
-    "summary": "Monitor AWS Route 53 by connecting AWS to New Relic",
-    "websiteUrl": null,
-    "keywords": [
-      "aws",
-      "amazon web services",
-      "networking"
-    ],
-    "authors": [
-      "New Relic"
-    ],
-    "dashboards": [],
-    "alerts": [],
-    "documentation": [
-      {
-        "name": "AWS Route 53 installation docs",
-        "description": "Monitor AWS Route 53 by connecting AWS to New Relic.\n",
-        "url": "https://docs.newrelic.com/docs/infrastructure/amazon-integrations/aws-integrations-list/aws-route-53-monitoring-integration/"
-      }
-    ],
-    "installPlans": [
-      {
-        "name": "AWS-Infrastructure-Monitoring",
-        "id": "aws-infrastructure-monitoring"
-      }
-    ]
-  },
-  {
     "title": "Redpanda",
     "name": "redpanda",
     "description": "## Comprehensive monitoring quickstart for Redpanda\nNew Relic detects your Redpanda metrics are used for debugging,\nmeasure system health (uptime, CPU utilization), Infrastructure-level (RPC errors, Disk storage, Free memory).\n\n## Why monitor Redpanda?\nYou can monitor the health of your system to optimize performance. How to use Prometheus queries to monitor your system, for example, to check consumer group lag or Kafka producer request latency.\n\n\n## What’s included in this quickstart?\nNew Relic's Redpanda monitoring quickstart boasts instant full-stack observability out-of-the-box:\n- High value alerts for your Redpanda (RPC errors, usage metrics and JVM).\n- Dashboards (uptime, CPU utilization, RPC errors, Disk storage, Free memory  and more).",
@@ -23235,6 +23271,50 @@
         "name": "Amazon VPC installation docs",
         "description": "Monitor Amazon VPC by connecting AWS to New Relic.\n",
         "url": "https://docs.newrelic.com/docs/infrastructure/amazon-integrations/aws-integrations-list/aws-vpc-monitoring-integration/"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "AWS-CloudWatch-Metric-Streams",
+        "id": "aws-cloudwatch-metric-streams"
+      }
+    ]
+  },
+  {
+    "title": "Amazon Route 53",
+    "name": "aws-route-53",
+    "description": "## What is Amazon Route 53?\n\nRegister domain names, route Internet traffic to the appropriate resources,\nand check the health of your web app's resources.\n\n\n### Get started!\n\nStart monitoring Amazon Route 53 by connecting Amazon Web Services (AWS) to New Relic!\n\nCheck out our Amazon Route 53 documentation to instrument your cloud service and manage the stability, scalability, and reliability of your systems with New Relic's infrastructure monitoring capabilities.\n\n### More info\n\nCheck out the [documentation](https://docs.newrelic.com/docs/infrastructure/amazon-integrations/aws-integrations-list/aws-route-53-monitoring-integration/) to learn more about New Relic monitoring for Amazon Route 53.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/aws/amazon-route53",
+    "id": "bf043e5a-213c-411e-8eea-4e386a29a088",
+    "level": "NEW_RELIC",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/aws/amazon-route53/logo.svg",
+    "summary": "Monitor Amazon Route 53 by connecting AWS to New Relic",
+    "websiteUrl": null,
+    "keywords": [
+      "aws",
+      "amazon web services",
+      "networking"
+    ],
+    "authors": [
+      "New Relic"
+    ],
+    "dashboards": [
+      {
+        "name": "Amazon Route 53",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/amazon-route53/amazon-route532.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/amazon-route53/amazon-route53.png"
+        ]
+      }
+    ],
+    "alerts": [],
+    "documentation": [
+      {
+        "name": "Amazon Route 53 installation docs",
+        "description": "Monitor Amazon Route 53 by connecting AWS to New Relic.\n",
+        "url": "https://docs.newrelic.com/docs/infrastructure/amazon-integrations/aws-integrations-list/aws-route-53-monitoring-integration/"
       }
     ],
     "installPlans": [
@@ -25171,14 +25251,6 @@
     ],
     "dashboards": [
       {
-        "name": "Kubernetes Data Ingest Analysis",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/kubernetes-data-ingest-analysis/kubernetes-data-ingest-analysis.png"
-        ]
-      },
-      {
         "name": "AWS Integrations Data Ingest Analysis",
         "description": null,
         "url": null,
@@ -25187,11 +25259,19 @@
         ]
       },
       {
-        "name": "Azure Integrations Data Ingest Analysis",
+        "name": "On-Host Integrations Data Analysis",
         "description": null,
         "url": null,
         "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/azure-integrations-data-ingest-analysis/azure-integrations-data-ingest-analysis.png"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/on-host-integrations-data-analysis/on-host-integrations-data-analysis.png"
+        ]
+      },
+      {
+        "name": "Kubernetes Data Ingest Analysis",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/kubernetes-data-ingest-analysis/kubernetes-data-ingest-analysis.png"
         ]
       },
       {
@@ -25203,11 +25283,11 @@
         ]
       },
       {
-        "name": "On-Host Integrations Data Analysis",
+        "name": "Azure Integrations Data Ingest Analysis",
         "description": null,
         "url": null,
         "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/on-host-integrations-data-analysis/on-host-integrations-data-analysis.png"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/azure-integrations-data-ingest-analysis/azure-integrations-data-ingest-analysis.png"
         ]
       }
     ],
@@ -26158,19 +26238,19 @@
     ],
     "dashboards": [
       {
+        "name": "Browser Traffic Analysis",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/traffic-analysis/traffic_analysis.png"
+        ]
+      },
+      {
         "name": "JavaScript Errors",
         "description": null,
         "url": null,
         "screenshots": [
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/javascript-errors/javascript_errors.png"
-        ]
-      },
-      {
-        "name": "Browser Overview",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/browser-overview/browser_overview.png"
         ]
       },
       {
@@ -26182,11 +26262,11 @@
         ]
       },
       {
-        "name": "Browser Traffic Analysis",
+        "name": "Browser Overview",
         "description": null,
         "url": null,
         "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/traffic-analysis/traffic_analysis.png"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/browser-overview/browser_overview.png"
         ]
       }
     ],
