@@ -76,64 +76,6 @@
     ]
   },
   {
-    "title": "Cisco IP SLA Operations",
-    "name": "cisco-ip-sla-operations",
-    "description": "The Cisco IP SLA Operations quickstart provides a dashboard that gives you a holistic view of your configured IP SLA operations in your Cisco ecosystem.\nUse this quickstart together with New Relic's Network Monitoring feature to visualize anomalies and/or bottlenecks in your network.",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/network-monitoring/cisco-ip-sla-operations",
-    "id": "f4fb8621-63a8-475b-b4a3-1e81edf6d24f",
-    "level": "VERIFIED",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/network-monitoring/cisco-ip-sla-operations/logo.svg",
-    "summary": "Easily install a curated dashboard to monitor the health of your Cisco IP SLA Operations with New Relic's Network Monitoring.",
-    "websiteUrl": null,
-    "keywords": [
-      "npm",
-      "network",
-      "networking",
-      "ktranslate",
-      "kentik",
-      "infrastructure",
-      "cisco",
-      "ipsla",
-      "ip sla"
-    ],
-    "authors": [
-      "New Relic",
-      "Marc Netterfield",
-      "Zack Mutchler"
-    ],
-    "dashboards": [
-      {
-        "name": "Cisco IP SLA Operations",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/cisco-ip-sla-operations/cisco-ip-sla-operations.png"
-        ]
-      }
-    ],
-    "alerts": [
-      {
-        "name": "Cisco IP SLA Operation Status",
-        "details": "This alert monitors the status of all active Cisco IP SLA Operations and will trigger when the latest sense code for a single operation is not equal to 'ok' for at least 60 seconds.",
-        "type": "STATIC",
-        "url": null
-      }
-    ],
-    "documentation": [
-      {
-        "name": "Network SNMP collection installation docs",
-        "description": "Install Network Monitoring for SNMP data collection using a simple Docker container.\n",
-        "url": "https://docs.newrelic.com/docs/network-performance-monitoring/setup-performance-monitoring/snmp-performance-monitoring/"
-      }
-    ],
-    "installPlans": [
-      {
-        "name": "SNMP",
-        "id": "network-snmp"
-      }
-    ]
-  },
-  {
     "title": "Zipkin",
     "name": "zipkin",
     "description": "## What is Zipkin?\n\nDistributed Tracing system built in Java.\n\n## Get started!\n\nYou can easily reuse your Zipkin-format trace data and use it in New Relic.\nFollow [this Zipkin guide](https://docs.newrelic.com/docs/distributed-tracing/trace-api/report-zipkin-format-traces-trace-api/) to get started.",
@@ -236,17 +178,6 @@
     ],
     "dashboards": [
       {
-        "name": "Kubernetes / Kubelet",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/kubernetes-prometheus-kubelet/kubernetes-prometheus-kubelet01.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/kubernetes-prometheus-kubelet/kubernetes-prometheus-kubelet02.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/kubernetes-prometheus-kubelet/kubernetes-prometheus-kubelet03.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/kubernetes-prometheus-kubelet/kubernetes-prometheus-kubelet04.png"
-        ]
-      },
-      {
         "name": "Kubernetes / Compute Resources",
         "description": null,
         "url": null,
@@ -256,19 +187,30 @@
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/kubernetes-prometheus-compute-resources/kubernetes-prometheus-compute-resources03.png",
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/kubernetes-prometheus-compute-resources/kubernetes-prometheus-compute-resources04.png"
         ]
+      },
+      {
+        "name": "Kubernetes / Kubelet",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/kubernetes-prometheus-kubelet/kubernetes-prometheus-kubelet01.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/kubernetes-prometheus-kubelet/kubernetes-prometheus-kubelet02.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/kubernetes-prometheus-kubelet/kubernetes-prometheus-kubelet03.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/kubernetes-prometheus-kubelet/kubernetes-prometheus-kubelet04.png"
+        ]
       }
     ],
     "alerts": [],
     "documentation": [
       {
-        "name": "Kubernetes integration",
-        "description": "The New Relic Kubernetes integration has multiple components that work together to give you end-to-end observability across your clusters. While you have the flexibility to deploy the components that you prefer, to achieve full observability, you need to install the complete package to monitor all metrics. \n",
-        "url": "https://docs.newrelic.com/docs/kubernetes-pixie/kubernetes-integration/get-started/introduction-kubernetes-integration/"
-      },
-      {
         "name": "Kubernetes Prometheus agent",
         "description": "New Relic's Prometheus agent is a thin wrapper on top of Prometheus server to run it in agent mode. With this integration, you can create a YAML configuration file used by Prometheus that's ready to send metrics to New Relic.\n",
         "url": "https://docs.newrelic.com/docs/infrastructure/prometheus-integrations/install-configure-prometheus-agent/install-prometheus-agent/"
+      },
+      {
+        "name": "Kubernetes integration",
+        "description": "The New Relic Kubernetes integration has multiple components that work together to give you end-to-end observability across your clusters. While you have the flexibility to deploy the components that you prefer, to achieve full observability, you need to install the complete package to monitor all metrics. \n",
+        "url": "https://docs.newrelic.com/docs/kubernetes-pixie/kubernetes-integration/get-started/introduction-kubernetes-integration/"
       },
       {
         "name": "Kubernetes Prometheus agent REQUIRED configuration",
@@ -692,6 +634,96 @@
     "installPlans": []
   },
   {
+    "title": "Network Routers and Switches",
+    "name": "network-routers-and-switches",
+    "description": "The Network Routers and Switches quickstart provides a dashboard that gives you a holistic view of the interface traffic across all of the routers and switches in your network, as well as example alerts to get you started.\nUse this quickstart together with New Relic's Network Monitoring feature to visualize anomalies and/or bottlenecks in your network.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/network-monitoring/network-routers-and-switches",
+    "id": "8d843fc7-ffcf-489a-93b1-c8499cdd16ec",
+    "level": "VERIFIED",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/network-monitoring/network-routers-and-switches/logo.svg",
+    "summary": "Router and Switch telemetry from Network Monitoring give you valuable insights into potential issues with your network.",
+    "websiteUrl": null,
+    "keywords": [
+      "npm",
+      "network",
+      "networking",
+      "router",
+      "switch",
+      "snmp",
+      "ktranslate",
+      "kentik",
+      "infrastructure",
+      "newrelic partner",
+      "NR1_addData",
+      "NR1_sys"
+    ],
+    "authors": [
+      "New Relic",
+      "Zack Mutchler"
+    ],
+    "dashboards": [
+      {
+        "name": "Network - Routers and Switches",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/network-routers-and-switches/network-routers-and-switches.png"
+        ]
+      }
+    ],
+    "alerts": [
+      {
+        "name": "Average CPU % Used Violation",
+        "details": "This alert will trigger when a router or switch has more than 90% CPU utilization.",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "Average Memory % Used Violation",
+        "details": "This alert will trigger when a router or switch has more than 90% memory utilization.",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "Average Transmit % Used Violation",
+        "details": "This alert will trigger when a router or switch interface has more than 90% transmit utilization.  You may want to filter this to only alert for specific interface names or descriptions.",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "Ping Packet Loss % Violation",
+        "details": "This alert will trigger when a router or switch fails to respond to at least 10% of the pings sent by ktranslate.  This indicates problems on the device or in the network between the container and the device.",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "Ping Response Time Violation",
+        "details": "This alert will trigger when a router or switch takes more than 500 ms to respond to a ping.  This requires that ping based checks are enabled in the ktranslate config using the response_time or ping_only options.",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "Uplink Interface Down Violation",
+        "details": "This alert will trigger when a router or switch interface with the word \"uplink\" in the description reports as being down.  You can change the NRQL to filter to other naming conventions.",
+        "type": "STATIC",
+        "url": null
+      }
+    ],
+    "documentation": [
+      {
+        "name": "Network SNMP collection installation docs",
+        "description": "Install Network Monitoring for SNMP data collection using a simple Docker container.\n",
+        "url": "https://docs.newrelic.com/docs/network-performance-monitoring/setup-performance-monitoring/snmp-performance-monitoring/"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "SNMP",
+        "id": "network-snmp"
+      }
+    ]
+  },
+  {
     "title": "tvOS",
     "name": "tvos",
     "description": "## New Relic Mobile monitoring\n\nNew Relic's mobile monitoring for tvOS gives you a comprehensive view of your app's performance.\n\n## Get started!\n\nFollow [the documentation](https://docs.newrelic.com/docs/mobile-monitoring/new-relic-mobile-ios/tvos/tvos-installation-configuration/) to get started!",
@@ -720,6 +752,64 @@
       {
         "name": "tvOS",
         "id": "tvos-mobile"
+      }
+    ]
+  },
+  {
+    "title": "Cisco IP SLA Operations",
+    "name": "cisco-ip-sla-operations",
+    "description": "The Cisco IP SLA Operations quickstart provides a dashboard that gives you a holistic view of your configured IP SLA operations in your Cisco ecosystem, as well as example alerts to get you started.\nUse this quickstart together with New Relic's Network Monitoring feature to visualize anomalies and/or bottlenecks in your network.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/network-monitoring/cisco-ip-sla-operations",
+    "id": "f4fb8621-63a8-475b-b4a3-1e81edf6d24f",
+    "level": "VERIFIED",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/network-monitoring/cisco-ip-sla-operations/logo.svg",
+    "summary": "Easily install a curated dashboard and example alerts to monitor the health of your Cisco IP SLA Operations with New Relic's Network Monitoring.",
+    "websiteUrl": null,
+    "keywords": [
+      "npm",
+      "network",
+      "networking",
+      "ktranslate",
+      "kentik",
+      "infrastructure",
+      "cisco",
+      "ipsla",
+      "ip sla"
+    ],
+    "authors": [
+      "New Relic",
+      "Marc Netterfield",
+      "Zack Mutchler"
+    ],
+    "dashboards": [
+      {
+        "name": "Cisco IP SLA Operations",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/cisco-ip-sla-operations/cisco-ip-sla-operations.png"
+        ]
+      }
+    ],
+    "alerts": [
+      {
+        "name": "Cisco IP SLA Operation Status",
+        "details": "This alert monitors the status of all active Cisco IP SLA Operations and will trigger when the latest sense code for a single operation is not equal to 'ok' for at least 60 seconds.",
+        "type": "STATIC",
+        "url": null
+      }
+    ],
+    "documentation": [
+      {
+        "name": "Network SNMP collection installation docs",
+        "description": "Install Network Monitoring for SNMP data collection using a simple Docker container.\n",
+        "url": "https://docs.newrelic.com/docs/network-performance-monitoring/setup-performance-monitoring/snmp-performance-monitoring/"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "SNMP",
+        "id": "network-snmp"
       }
     ]
   },
@@ -1403,59 +1493,6 @@
     ]
   },
   {
-    "title": "Network Routers and Switches",
-    "name": "network-routers-and-switches",
-    "description": "The Network Routers and Switches quickstart provides a dashboard that gives you a holistic view of the interface traffic across all of the routers and switches in your network.\nUse this quickstart together with New Relic's Network Monitoring feature to visualize anomalies and/or bottlenecks in your network.",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/network-monitoring/network-routers-and-switches",
-    "id": "8d843fc7-ffcf-489a-93b1-c8499cdd16ec",
-    "level": "VERIFIED",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/network-monitoring/network-routers-and-switches/logo.svg",
-    "summary": "Router and Switch telemetry from Network Monitoring give you valuable insights into potential issues with your network.",
-    "websiteUrl": null,
-    "keywords": [
-      "npm",
-      "network",
-      "networking",
-      "router",
-      "switch",
-      "snmp",
-      "ktranslate",
-      "kentik",
-      "infrastructure",
-      "newrelic partner",
-      "NR1_addData",
-      "NR1_sys"
-    ],
-    "authors": [
-      "New Relic",
-      "Zack Mutchler"
-    ],
-    "dashboards": [
-      {
-        "name": "Network - Routers and Switches",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/network-routers-and-switches/network-routers-and-switches.png"
-        ]
-      }
-    ],
-    "alerts": [],
-    "documentation": [
-      {
-        "name": "Network SNMP collection installation docs",
-        "description": "Install Network Monitoring for SNMP data collection using a simple Docker container.\n",
-        "url": "https://docs.newrelic.com/docs/network-performance-monitoring/setup-performance-monitoring/snmp-performance-monitoring/"
-      }
-    ],
-    "installPlans": [
-      {
-        "name": "SNMP",
-        "id": "network-snmp"
-      }
-    ]
-  },
-  {
     "title": "PySQLite",
     "name": "pysqlite",
     "description": "## What is PySQLite?\n\npysqlite is a Python interface to the SQLite 3.x embedded relational database\nengine.\n\n\n## Get started!\n\nLeverage community expertise and instantly get value out of your telemetry data. This quickstart automatically instruments PySQLite with the New Relic Python agent, and allows you to instantly monitor your Python application with out-of-the-box dashboards and alerts. Further leverage New Relic's APM capabilities by setting up [errors inbox](https://docs.newrelic.com/docs/apm/apm-ui-pages/errors-inbox/errors-inbox/), [transaction tracing](https://docs.newrelic.com/docs/apm/transactions/transaction-traces/introduction-transaction-traces/), and [service maps](https://docs.newrelic.com/docs/understand-dependencies/understand-system-dependencies/service-maps/introduction-service-maps/).\n\n## More info\n\nCheck out the [documentation](https://docs.newrelic.com/docs/agents/python-agent/) to learn more about New Relic monitoring for PySQLite.",
@@ -1487,12 +1524,6 @@
     ],
     "alerts": [
       {
-        "name": "Transaction Errors",
-        "details": "This alert is triggered when the the transactions fail more than 10% of the time in 5 minutes.",
-        "type": "STATIC",
-        "url": null
-      },
-      {
         "name": "Apdex Score",
         "details": "This alert is triggered when the Apdex score is below 0.5 for 5 minutes",
         "type": "STATIC",
@@ -1501,6 +1532,12 @@
       {
         "name": "High CPU Utilization",
         "details": "This alert is triggered when the CPU Utilization is above 90%.",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "Transaction Errors",
+        "details": "This alert is triggered when the the transactions fail more than 10% of the time in 5 minutes.",
         "type": "STATIC",
         "url": null
       }
@@ -2103,19 +2140,19 @@
     ],
     "dashboards": [
       {
-        "name": "Battlesnake Server Status",
-        "description": "A dashboard to monitor your Battlesnake server's performance. It's important to keep all responses to the `/move` endpoint under 500ms. Furthermore, it's possible that your snake may be in multiple concurrent matches at the same time. It's important to make sure you server and web application are running smoothly to keep you in the game!",
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/battlesnake-server-status/battlesnake-server-status.png"
-        ]
-      },
-      {
         "name": "Battlesnake Performance",
         "description": "Monitor your Battlesnake's performance and see how it stacks up against your competition!",
         "url": null,
         "screenshots": [
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/battlesnake-performance/battlesnake-performance.png"
+        ]
+      },
+      {
+        "name": "Battlesnake Server Status",
+        "description": "A dashboard to monitor your Battlesnake server's performance. It's important to keep all responses to the `/move` endpoint under 500ms. Furthermore, it's possible that your snake may be in multiple concurrent matches at the same time. It's important to make sure you server and web application are running smoothly to keep you in the game!",
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/battlesnake-server-status/battlesnake-server-status.png"
         ]
       },
       {
@@ -2515,54 +2552,6 @@
     ]
   },
   {
-    "title": "Cisco Hardware Sensor Dashboard",
-    "name": "network-cisco-hardware",
-    "description": "This quickstart provides a dashboard for use with New Relic's Network monitoring capability to help you visualize the status of hardware sensors on typical Cisco network devices.",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/network-monitoring/ciscoHardware",
-    "id": "b66acf30-6097-45fe-ad2f-d8f1a076feb6",
-    "level": "VERIFIED",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/network-monitoring/ciscoHardware/logo.svg",
-    "summary": "Easily install a dashboard to see the status of Cisco hardware sensors.",
-    "websiteUrl": null,
-    "keywords": [
-      "npm",
-      "network",
-      "networking",
-      "ktranslate",
-      "cisco",
-      "infrastructure"
-    ],
-    "authors": [
-      "New Relic",
-      "Marc Netterfield"
-    ],
-    "dashboards": [
-      {
-        "name": "Cisco Hardware Status",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/ciscohardware/ciscoHardware01.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/ciscohardware/ciscoHardware02.png"
-        ]
-      }
-    ],
-    "alerts": [],
-    "documentation": [
-      {
-        "name": "KTranslate Container Health Monitoring docs",
-        "description": "Learn about deploying ktranslate to monitor SNMP based devices.\n",
-        "url": "https://docs.newrelic.com/docs/network-performance-monitoring/get-started/npm-introduction/"
-      }
-    ],
-    "installPlans": [
-      {
-        "name": "Cisco Hardware Sensor Dashboard",
-        "id": "network-cisco-hardware"
-      }
-    ]
-  },
-  {
     "title": "C++",
     "name": "cplusplus",
     "description": "## What is C++?\n\nGeneral-purpose programming language that extends C with modern\nobject-oriented, generic, and functional features.\n\n## Get started!\n\nLeverage community expertise and instantly get value out of your telemetry data. This quickstart automatically instruments C++ with the New Relic C SDK, and allows you to further leverage New Relic's APM capabilities by setting up [custom dashboards](https://docs.newrelic.com/docs/query-your-data/explore-query-data/dashboards/introduction-dashboards/), [errors inbox](https://docs.newrelic.com/docs/apm/apm-ui-pages/errors-inbox/errors-inbox/), [transaction tracing](https://docs.newrelic.com/docs/apm/transactions/transaction-traces/introduction-transaction-traces/), and [service maps](https://docs.newrelic.com/docs/understand-dependencies/understand-system-dependencies/service-maps/introduction-service-maps/).\n\n## More info\n\nCheck out the [documentation](https://docs.newrelic.com/docs/agents/c-sdk/get-started/introduction-c-sdk/) to learn more about New Relic monitoring for C++.",
@@ -2591,6 +2580,85 @@
       {
         "name": "C SDK Agent",
         "id": "setup-c-agent"
+      }
+    ]
+  },
+  {
+    "title": "Cisco Hardware Sensor Dashboard",
+    "name": "network-cisco-hardware",
+    "description": "This quickstart provides a dashboard for use with New Relic's Network monitoring capability to help you visualize the status of hardware sensors on typical Cisco network devices, as well as example alerts to get you started.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/network-monitoring/ciscoHardware",
+    "id": "b66acf30-6097-45fe-ad2f-d8f1a076feb6",
+    "level": "VERIFIED",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/network-monitoring/ciscoHardware/logo.svg",
+    "summary": "Easily install a dashboard and example alerts to see the status of Cisco hardware sensors.",
+    "websiteUrl": null,
+    "keywords": [
+      "npm",
+      "network",
+      "networking",
+      "ktranslate",
+      "cisco",
+      "infrastructure"
+    ],
+    "authors": [
+      "New Relic",
+      "Marc Netterfield"
+    ],
+    "dashboards": [
+      {
+        "name": "Cisco Hardware Status",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/ciscohardware/ciscoHardware01.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/ciscohardware/ciscoHardware02.png"
+        ]
+      }
+    ],
+    "alerts": [
+      {
+        "name": "Cisco Fan Status",
+        "details": "This alert will trigger when a Cisco fan is not \"normal\" for 300 seconds. This typically indicates that there is a physical problem that requires investigation or replacement.",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "Cisco Fan Tray Status",
+        "details": "This alert will trigger when a Cisco fan tray is not \"ok\" for 300 seconds. This typically indicates that there is a physical problem that requires investigation or replacement.",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "Cisco Module Status",
+        "details": "This alert will trigger when a Cisco field replaceable module is not \"ok\" for 300 seconds. This typically indicates that there is a physical problem that requires investigation or replacement.",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "Cisco Power Supply Status",
+        "details": "This alert will trigger when a Cisco power supply is either \"critical\" or \"shutdown\" for 300 seconds. This typically indicates that there is a physical problem that requires investigation or replacement.",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "Cisco Temperature Status",
+        "details": "This alert will trigger when a Cisco temperature sesnor status is not \"normal\" for 300 seconds. This typically indicates that there is a physical problem that requires investigation or replacement.",
+        "type": "STATIC",
+        "url": null
+      }
+    ],
+    "documentation": [
+      {
+        "name": "KTranslate Container Health Monitoring docs",
+        "description": "Learn about deploying ktranslate to monitor SNMP based devices.\n",
+        "url": "https://docs.newrelic.com/docs/network-performance-monitoring/get-started/npm-introduction/"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "Cisco Hardware Sensor Dashboard",
+        "id": "network-cisco-hardware"
       }
     ]
   },
@@ -2843,6 +2911,55 @@
       {
         "name": "AWS-CloudWatch-Metric-Streams",
         "id": "aws-cloudwatch-metric-streams"
+      }
+    ]
+  },
+  {
+    "title": "Synthetics Optimization",
+    "name": "synthetics-optimization",
+    "description": "The Synthtics Optimization quickstart aims to help you understand whether you are over your Synthetics usage limits, and if so, how can you identify the right monitors and checks to optimise.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/synthetics-optimization",
+    "id": "e431aeef-b40b-4bd1-a108-21d82efef15f",
+    "level": "COMMUNITY",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/synthetics-optimization/logo.png",
+    "summary": "Optimize Synthetics Monitors in your estate to only use what is necessary",
+    "websiteUrl": null,
+    "keywords": [
+      "synthetics",
+      "optimization",
+      "usage",
+      "ping",
+      "scripted browser",
+      "api test",
+      "monitor",
+      "availability",
+      "simple browser"
+    ],
+    "authors": [
+      "Andrew Newhouse (New Relic)"
+    ],
+    "dashboards": [
+      {
+        "name": "Synthetics Optimization Dashboard",
+        "description": "This dashboard aims to help you understand whether you are over your Synthetics usage limits, and if so, how can you identify the right monitors and checks to optimise",
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/synthetics-optimization/synthetics-optimization.png"
+        ]
+      }
+    ],
+    "alerts": [],
+    "documentation": [
+      {
+        "name": "Synthetics Usage Queries",
+        "description": "This document provides additional queries that can be run to determine Synthetics usage.\n",
+        "url": "https://docs.newrelic.com/docs/accounts/accounts-billing/new-relic-one-pricing-billing/usage-queries-alerts/#synthetics-usage"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "Synthetics Endpoint Availability",
+        "id": "third-party-synthetics-endpoint-availability"
       }
     ]
   },
@@ -3326,14 +3443,14 @@
     "alerts": [],
     "documentation": [
       {
-        "name": "Instrument your mobile application with New Relic",
-        "description": "How to instrument your mobile application with New Relic",
-        "url": "https://docs.newrelic.com/docs/mobile-monitoring/new-relic-mobile/get-started/introduction-mobile-monitoring/"
-      },
-      {
         "name": "Adding a dashboard",
         "description": "How to add a dashboard to New Relic",
         "url": "https://docs.newrelic.com/docs/query-your-data/explore-query-data/dashboards/introduction-dashboards/#get-started"
+      },
+      {
+        "name": "Instrument your mobile application with New Relic",
+        "description": "How to instrument your mobile application with New Relic",
+        "url": "https://docs.newrelic.com/docs/mobile-monitoring/new-relic-mobile/get-started/introduction-mobile-monitoring/"
       }
     ],
     "installPlans": [
@@ -3909,6 +4026,12 @@
     ],
     "alerts": [
       {
+        "name": "Transaction Errors",
+        "details": "This alert is triggered when the the transactions fail more than 10% of the time in 5 minutes.",
+        "type": "STATIC",
+        "url": null
+      },
+      {
         "name": "Apdex Score",
         "details": "This alert is triggered when the Apdex score is below 0.5 for 5 minutes",
         "type": "STATIC",
@@ -3923,12 +4046,6 @@
       {
         "name": "Memory Usage",
         "details": "This alert is triggered when Memory usage is above 90%",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "Transaction Errors",
-        "details": "This alert is triggered when the the transactions fail more than 10% of the time in 5 minutes.",
         "type": "STATIC",
         "url": null
       }
@@ -5726,6 +5843,12 @@
     ],
     "alerts": [
       {
+        "name": "Message Enqueue Rate",
+        "details": "This alert is triggered when the messages sent are less than 1 during 5 minutes.",
+        "type": "STATIC",
+        "url": null
+      },
+      {
         "name": "Heap Memory Usage",
         "details": "This alert is triggered when the used heap memory usage is higher than 100GB during 5 minutes.",
         "type": "STATIC",
@@ -5734,12 +5857,6 @@
       {
         "name": "Message Dequeue Rate",
         "details": "This alert is triggered when the messages received are less than 1 during 5 minutes.",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "Message Enqueue Rate",
-        "details": "This alert is triggered when the messages sent are less than 1 during 5 minutes.",
         "type": "STATIC",
         "url": null
       },
@@ -6365,14 +6482,6 @@
     ],
     "dashboards": [
       {
-        "name": "Redis Enterprise Cluster Metrics",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/cluster/cluster01.png"
-        ]
-      },
-      {
         "name": "Redis Enterprise Database CRDT",
         "description": null,
         "url": null,
@@ -6386,6 +6495,14 @@
         "url": null,
         "screenshots": [
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/database/database01.png"
+        ]
+      },
+      {
+        "name": "Redis Enterprise Cluster Metrics",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/cluster/cluster01.png"
         ]
       }
     ],
@@ -6715,8 +6832,8 @@
     ],
     "alerts": [
       {
-        "name": "Index Health",
-        "details": "This alert triggers when the reported health of an Elasticsearch index is 'red'.",
+        "name": "FS Utilization Percent",
+        "details": "This alert will trigger when the File Store of an Elasticsearch cluster node is >90% full.",
         "type": "STATIC",
         "url": null
       },
@@ -6733,8 +6850,8 @@
         "url": null
       },
       {
-        "name": "FS Utilization Percent",
-        "details": "This alert will trigger when the File Store of an Elasticsearch cluster node is >90% full.",
+        "name": "Index Health",
+        "details": "This alert triggers when the reported health of an Elasticsearch index is 'red'.",
         "type": "STATIC",
         "url": null
       },
@@ -6877,14 +6994,14 @@
     ],
     "alerts": [
       {
-        "name": "High CPU Utilization",
-        "details": "This alert is triggered when the CPU Utilization is above 90%.",
+        "name": "Transaction Errors",
+        "details": "This alert is triggered when the the transactions fail more than 10% of the time in 5 minutes.",
         "type": "STATIC",
         "url": null
       },
       {
-        "name": "Transaction Errors",
-        "details": "This alert is triggered when the the transactions fail more than 10% of the time in 5 minutes.",
+        "name": "High CPU Utilization",
+        "details": "This alert is triggered when the CPU Utilization is above 90%.",
         "type": "STATIC",
         "url": null
       }
@@ -8425,6 +8542,12 @@
     ],
     "alerts": [
       {
+        "name": "P99 latency alert",
+        "details": "This sample alert is triggered when the controller request processing duration for the 99th percentile of requests goes above 100 ms. The alert threshold can be changed to your desired latency for alerting requirements.",
+        "type": "STATIC",
+        "url": null
+      },
+      {
         "name": "High HTTP 4xx/5xx error alert",
         "details": "This alert is triggered when the HTTP request success rate drops below 95 percent. The alert threshold can be changed to your desired error alerting requirements.",
         "type": "STATIC",
@@ -8439,12 +8562,6 @@
       {
         "name": "Nginx-ingress config load errors alert",
         "details": "This alert is triggered when there is an error loading ingress configuration",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "P99 latency alert",
-        "details": "This sample alert is triggered when the controller request processing duration for the 99th percentile of requests goes above 100 ms. The alert threshold can be changed to your desired latency for alerting requirements.",
         "type": "STATIC",
         "url": null
       }
@@ -8985,14 +9102,14 @@
         "url": "https://docs.newrelic.com/docs/infrastructure/prometheus-integrations/get-started/send-prometheus-metric-data-new-relic"
       },
       {
-        "name": "Etcd Integration Docs",
-        "description": "New Relic documentation for the Etcd integration including installation, configuration, and how to query the metrics.\n",
-        "url": "https://docs.newrelic.com/docs/infrastructure/prometheus-integrations/integrations-list/etcd-integration"
-      },
-      {
         "name": "Etcd Metrics Docs",
         "description": "Learn more about the Prometheus metrics available for Etcd",
         "url": "https://etcd.io/docs/v3.5/metrics/"
+      },
+      {
+        "name": "Etcd Integration Docs",
+        "description": "New Relic documentation for the Etcd integration including installation, configuration, and how to query the metrics.\n",
+        "url": "https://docs.newrelic.com/docs/infrastructure/prometheus-integrations/integrations-list/etcd-integration"
       }
     ],
     "installPlans": [
@@ -10460,6 +10577,86 @@
     ]
   },
   {
+    "title": "Kentik Firehose",
+    "name": "kentik-firehose-pack",
+    "description": "This quickstart gives you visibility into data ingested via the Kentik Firehose. The data is sent to Kentik and enriched before being sent to New Relic.\nDeploying this quickstart gives insights into Network Flows, Network Synthetics, and performance telemetry associated with Kentik-monitored devices.  Includes example alerts to get you started.\nFor more information or support, please go to https://www.kentik.com/customer-care/",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/kentik",
+    "id": "a781c760-fd25-458f-a170-dae8c722b2ea",
+    "level": "VERIFIED",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/kentik/logo.png",
+    "summary": "The Kentik Firehose quickstart visualizes network data within New Relic One and includes some example alerts.",
+    "websiteUrl": null,
+    "keywords": [
+      "kentik",
+      "firehose",
+      "network",
+      "NPM",
+      "Synthetics",
+      "NetFlow",
+      "sFlow",
+      "JFlow",
+      "IPFIX",
+      "newrelic partner",
+      "NR1_addData",
+      "NR1_sys"
+    ],
+    "authors": [
+      "Josh Biggley (New Relic)"
+    ],
+    "dashboards": [
+      {
+        "name": "Kentik Synthetics",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/network-synthetics/network-synthetics01.png"
+        ]
+      },
+      {
+        "name": "Kentik Firehose",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/network-flow-devices/network-flow-devices01.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/network-flow-devices/network-flow-devices02.png"
+        ]
+      }
+    ],
+    "alerts": [
+      {
+        "name": "Network Synthetic Jitter",
+        "details": "This alert will trigger when a Kentik network synthetic test has average jitter above 250 ms for 600 seconds.  This is an indication of a very unreliable network path.",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "Network Synthetic Latency",
+        "details": "This alert will trigger when a Kentik network synthetic test has average latency above 1000 ms for 600 seconds.  This is an indication of a very slow network path.",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "Network Synthetic Loss Percent",
+        "details": "This alert will trigger when a Kentik network synthetic test has average loss above 5 % for 600 seconds.  This is an indication of a very unreliable network path.",
+        "type": "STATIC",
+        "url": null
+      }
+    ],
+    "documentation": [
+      {
+        "name": "Configuration docs",
+        "description": "Learn how to configure the Kentik Firehose and send data to New Relic",
+        "url": "https://kb.kentik.com/v0/Fc19.htm#Fc19-Firehose_Overview"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "Kentik-Firehose",
+        "id": "third-party-kentik-firehose"
+      }
+    ]
+  },
+  {
     "title": "Azure Logic Apps",
     "name": "azure-logic-apps",
     "description": "## What is Azure Logic Apps?\n\nScalable workflows, business processes, and enterprise orchestrations for apps\nand data across cloud services and on-prem systems.\n\n\n### Get started!\n\nStart monitoring Azure Logic Apps by connecting Microsoft Azure to New Relic!\n\nCheck out our Azure Logic Apps documentation to instrument your cloud service and manage the stability, scalability, and reliability of your systems with New Relic's infrastructure monitoring capabilities.\n\n### More info\n\nCheck out the [documentation](https://docs.newrelic.com/docs/infrastructure/microsoft-azure-integrations/azure-integrations-list/azure-logic-apps-monitoring-integration/) to learn more about New Relic monitoring for Azure Logic Apps.",
@@ -10986,6 +11183,82 @@
     ]
   },
   {
+    "title": "Network Syslog",
+    "name": "network-syslog",
+    "description": "The Network Syslog quickstart provides a dashboard that gives you a holistic view of collected syslogs from your network, as well as example alerts to get you started.\nUse this quickstart together with New Relic's Network Monitoring feature to analyze and alert on system messages in your network.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/network-monitoring/network-syslog",
+    "id": "478be4d3-134a-4738-995a-7bbe020edcad",
+    "level": "VERIFIED",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/network-monitoring/network-syslog/logo.svg",
+    "summary": "Syslog collection from Network Monitoring gives you valuable insights into potential issues and changes within your network.",
+    "websiteUrl": null,
+    "keywords": [
+      "npm",
+      "network",
+      "networking",
+      "logging",
+      "ktranslate",
+      "kentik",
+      "infrastructure",
+      "newrelic partner",
+      "NR1_addData",
+      "NR1_sys"
+    ],
+    "authors": [
+      "New Relic",
+      "Zack Mutchler"
+    ],
+    "dashboards": [
+      {
+        "name": "Network Syslog Overview",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/network-syslog/network-syslog.png"
+        ]
+      }
+    ],
+    "alerts": [
+      {
+        "name": "Syslog Alert Violation",
+        "details": "This alert will trigger when a network syslog message with \"Alert\" severity comes in.  You should apply more conditions to make this alert more specific to your needs.",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "Syslog Critical Violation",
+        "details": "This alert will trigger when a network syslog message with \"critical\" severity comes in.  You should apply more conditions to make this alert more specific to your needs.",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "Syslog Emergency Violation",
+        "details": "This alert will trigger when a network syslog message with \"emergency\" severity comes in.  You should apply more conditions to make this alert more specific to your needs.",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "Syslog Error Violation",
+        "details": "This alert will trigger when a network syslog message with \"error\" severity comes in.  You should apply more conditions to make this alert more specific to your needs.",
+        "type": "STATIC",
+        "url": null
+      }
+    ],
+    "documentation": [
+      {
+        "name": "Network syslog installation docs",
+        "description": "Install Network Monitoring for syslog collection using a simple Docker container.\n",
+        "url": "https://docs.newrelic.com/docs/network-performance-monitoring/setup-performance-monitoring/network-syslog-monitoring/"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "Syslog",
+        "id": "network-syslog"
+      }
+    ]
+  },
+  {
     "title": ".NET MVC Web API",
     "name": "dotnet-mvc-web-api",
     "description": "## What is .NET MVC Web API?\n\nWeb application framework developed by Microsoft, which implements the\nmodel-view-controller pattern for building web applications.\n\n\n## Get started!\n\nLeverage community expertise and instantly get value out of your telemetry data. This quickstart automatically instruments .NET MVC Web API with the New Relic .Net agent, and allows you to instantly monitor your .Net application with out-of-the-box dashboards and alerts. Further leverage New Relic's APM capabilities by setting up [errors inbox](https://docs.newrelic.com/docs/apm/apm-ui-pages/errors-inbox/errors-inbox/), [transaction tracing](https://docs.newrelic.com/docs/apm/transactions/transaction-traces/introduction-transaction-traces/), and [service maps](https://docs.newrelic.com/docs/understand-dependencies/understand-system-dependencies/service-maps/introduction-service-maps/).\n\n## More info\n\nCheck out the [documentation](https://docs.newrelic.com/docs/agents/net-agent/getting-started/introduction-new-relic-net/) to learn more about New Relic monitoring for .NET MVC Web API.",
@@ -11266,118 +11539,6 @@
       {
         "name": "Java Agent",
         "id": "setup-java-agent"
-      }
-    ]
-  },
-  {
-    "title": "Kentik Firehose",
-    "name": "kentik-firehose-pack",
-    "description": "This quickstart gives you visibility into data ingested via the Kentik Firehose. The data is sent to Kentik and enriched before being sent to New Relic.\nDeploying this quickstart gives insights into Network Flows, Network Synthetics, and performance telemetry associated with Kentik-monitored devices.\nFor more information or support, please go to https://www.kentik.com/customer-care/",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/kentik",
-    "id": "a781c760-fd25-458f-a170-dae8c722b2ea",
-    "level": "VERIFIED",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/kentik/logo.png",
-    "summary": "The Kentik Firehose quickstart visualizes network data within New Relic One.",
-    "websiteUrl": null,
-    "keywords": [
-      "kentik",
-      "firehose",
-      "network",
-      "NPM",
-      "Synthetics",
-      "NetFlow",
-      "sFlow",
-      "JFlow",
-      "IPFIX",
-      "newrelic partner",
-      "NR1_addData",
-      "NR1_sys"
-    ],
-    "authors": [
-      "Josh Biggley (New Relic)"
-    ],
-    "dashboards": [
-      {
-        "name": "Kentik Synthetics",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/network-synthetics/network-synthetics01.png"
-        ]
-      },
-      {
-        "name": "Kentik Firehose",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/network-flow-devices/network-flow-devices01.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/network-flow-devices/network-flow-devices02.png"
-        ]
-      }
-    ],
-    "alerts": [],
-    "documentation": [
-      {
-        "name": "Configuration docs",
-        "description": "Learn how to configure the Kentik Firehose and send data to New Relic",
-        "url": "https://kb.kentik.com/v0/Fc19.htm#Fc19-Firehose_Overview"
-      }
-    ],
-    "installPlans": [
-      {
-        "name": "Kentik-Firehose",
-        "id": "third-party-kentik-firehose"
-      }
-    ]
-  },
-  {
-    "title": "Network Syslog",
-    "name": "network-syslog",
-    "description": "The Network Syslog quickstart provides a dashboard that gives you a holistic view of collected syslogs from your network.\nUse this quickstart together with New Relic's Network Monitoring feature to analyze and alert on system messages in your network.",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/network-monitoring/network-syslog",
-    "id": "478be4d3-134a-4738-995a-7bbe020edcad",
-    "level": "VERIFIED",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/network-monitoring/network-syslog/logo.svg",
-    "summary": "Syslog collection from Network Monitoring gives you valuable insights into potential issues and changes within your network.",
-    "websiteUrl": null,
-    "keywords": [
-      "npm",
-      "network",
-      "networking",
-      "logging",
-      "ktranslate",
-      "kentik",
-      "infrastructure",
-      "newrelic partner",
-      "NR1_addData",
-      "NR1_sys"
-    ],
-    "authors": [
-      "New Relic",
-      "Zack Mutchler"
-    ],
-    "dashboards": [
-      {
-        "name": "Network Syslog Overview",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/network-syslog/network-syslog.png"
-        ]
-      }
-    ],
-    "alerts": [],
-    "documentation": [
-      {
-        "name": "Network syslog installation docs",
-        "description": "Install Network Monitoring for syslog collection using a simple Docker container.\n",
-        "url": "https://docs.newrelic.com/docs/network-performance-monitoring/setup-performance-monitoring/network-syslog-monitoring/"
-      }
-    ],
-    "installPlans": [
-      {
-        "name": "Syslog",
-        "id": "network-syslog"
       }
     ]
   },
@@ -15510,6 +15671,83 @@
     ]
   },
   {
+    "title": "Network KTranslate Container Health",
+    "name": "network-ktranslate-health",
+    "description": "The Network KTranslate Container Health quickstart provides a dashboard that gives you a holistic view of the health of all containers used for collecting your network telemetry, as well as example alerts to get you started.\nUse this quickstart together with New Relic's Network Performance Monitoring (NPM) feature to visualize anomalies and/or bottlenecks in your network.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/network-monitoring/network-ktranslate-health",
+    "id": "f7119d5e-32b7-45ff-a814-0dca91ae0493",
+    "level": "VERIFIED",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/network-monitoring/network-ktranslate-health/logo.svg",
+    "summary": "Easily install a curated dashboard and example alerts to monitor the health of your ktranslate containers for New Relic Network Performance Monitoring.",
+    "websiteUrl": null,
+    "keywords": [
+      "npm",
+      "network",
+      "networking",
+      "ktranslate",
+      "kentik",
+      "infrastructure",
+      "newrelic partner",
+      "NR1_addData",
+      "NR1_sys"
+    ],
+    "authors": [
+      "New Relic",
+      "Marc Netterfield",
+      "Zack Mutchler"
+    ],
+    "dashboards": [
+      {
+        "name": "Network - KTranslate Container Health",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/network-ktranslate-health/network-ktranslate-health01.jpg",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/network-ktranslate-health/network-ktranslate-health02.jpg"
+        ]
+      }
+    ],
+    "alerts": [
+      {
+        "name": "Ktranslate Container Input Queue Length Violation",
+        "details": "This alert will trigger when a Kentik ktranslate container has an excessive input queue length. This number should be close to zero over time. If it is not that is an indication that the container does not have enough resources to keep up with the incoming data.  You may need to scale horizontally or vertically to address these needs.",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "Ktranslate Container Loss of Signal Violation",
+        "details": "This alert will trigger when a Kentik ktranslate container has stopped sending data completely.  This can happen due to network outages, leaving the container stopped, or other failures.",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "Ktranslate Container Low Buffer Violation",
+        "details": "This alert will trigger when a Kentik ktranslate container has a low number of available buffer allocations.  This is an indication that the container does not have enough resources to keep up with the incoming data.  You may need to scale horizontally or vertically to address these needs.",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "Ktranslate SNMP Polling Violation",
+        "details": "This alert will trigger when a Kentik ktranslate container is unable to communicate with a monitored SNMP device. You may need to check the SNMP credentials are valid or that the network path is open between the container and the device.",
+        "type": "STATIC",
+        "url": null
+      }
+    ],
+    "documentation": [
+      {
+        "name": "KTranslate Container Health Monitoring docs",
+        "description": "Monitor the health of your ktranslate container using out-of-box metrics and logs.\n",
+        "url": "https://docs.newrelic.com/docs/network-performance-monitoring/advanced/ktranslate-container-health"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "Network KTranslate Container Health",
+        "id": "network-ktranslate-health"
+      }
+    ]
+  },
+  {
     "title": "Xamarin bindings to New Relic's Mobile SDK",
     "name": "xamarin",
     "description": "This repo/project provides Xamarin bindings for New Relic's iOS and Android SDK's. The dll produced after building the bindings can be used in your Xamarin project.",
@@ -16187,14 +16425,14 @@
     ],
     "alerts": [
       {
-        "name": "Apdex Score",
-        "details": "This alert is triggered when the Apdex score is below 0.5 for 5 minutes",
+        "name": "Memory Usage",
+        "details": "This alert is triggered when Memory usage is above 90%",
         "type": "STATIC",
         "url": null
       },
       {
-        "name": "Memory Usage",
-        "details": "This alert is triggered when Memory usage is above 90%",
+        "name": "Apdex Score",
+        "details": "This alert is triggered when the Apdex score is below 0.5 for 5 minutes",
         "type": "STATIC",
         "url": null
       },
@@ -16331,6 +16569,12 @@
     ],
     "alerts": [
       {
+        "name": "Low throughput",
+        "details": "This alert is triggered when the throughput is 0 for 5 minutes",
+        "type": "STATIC",
+        "url": null
+      },
+      {
         "name": "High duration",
         "details": "This alert is triggered when the total duration of the web transaction is longer than 10 seconds during 5 minutes",
         "type": "STATIC",
@@ -16339,12 +16583,6 @@
       {
         "name": "High error rate",
         "details": "This alert is triggered when the error percentage of web transactions is higher than 5% during 5 minutes",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "Low throughput",
-        "details": "This alert is triggered when the throughput is 0 for 5 minutes",
         "type": "STATIC",
         "url": null
       }
@@ -16476,58 +16714,6 @@
       {
         "name": "Jenkins",
         "id": "third-party-jenkins-integration"
-      }
-    ]
-  },
-  {
-    "title": "Network KTranslate Container Health",
-    "name": "network-ktranslate-health",
-    "description": "The Network KTranslate Container Health quickstart provides a dashboard that gives you a holistic view of the health of all containers used for collecting your network telemetry.\nUse this quickstart together with New Relic's Network Performance Monitoring (NPM) feature to visualize anomalies and/or bottlenecks in your network.",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/network-monitoring/network-ktranslate-health",
-    "id": "f7119d5e-32b7-45ff-a814-0dca91ae0493",
-    "level": "VERIFIED",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/network-monitoring/network-ktranslate-health/logo.svg",
-    "summary": "Easily install a curated dashboard to monitor the health of your ktranslate containers for New Relic Network Performance Monitoring.",
-    "websiteUrl": null,
-    "keywords": [
-      "npm",
-      "network",
-      "networking",
-      "ktranslate",
-      "kentik",
-      "infrastructure",
-      "newrelic partner",
-      "NR1_addData",
-      "NR1_sys"
-    ],
-    "authors": [
-      "New Relic",
-      "Marc Netterfield",
-      "Zack Mutchler"
-    ],
-    "dashboards": [
-      {
-        "name": "Network - KTranslate Container Health",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/network-ktranslate-health/network-ktranslate-health01.jpg",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/network-ktranslate-health/network-ktranslate-health02.jpg"
-        ]
-      }
-    ],
-    "alerts": [],
-    "documentation": [
-      {
-        "name": "KTranslate Container Health Monitoring docs",
-        "description": "Monitor the health of your ktranslate container using out-of-box metrics and logs.\n",
-        "url": "https://docs.newrelic.com/docs/network-performance-monitoring/advanced/ktranslate-container-health"
-      }
-    ],
-    "installPlans": [
-      {
-        "name": "Network KTranslate Container Health",
-        "id": "network-ktranslate-health"
       }
     ]
   },
@@ -17335,14 +17521,14 @@
     ],
     "alerts": [
       {
-        "name": "Apdex Score",
-        "details": "This alert is triggered when the Apdex score is below 0.5 for 5 minutes",
+        "name": "High CPU Utilization",
+        "details": "This alert is triggered when the CPU Utilization is above 90%.",
         "type": "STATIC",
         "url": null
       },
       {
-        "name": "High CPU Utilization",
-        "details": "This alert is triggered when the CPU Utilization is above 90%.",
+        "name": "Apdex Score",
+        "details": "This alert is triggered when the Apdex score is below 0.5 for 5 minutes",
         "type": "STATIC",
         "url": null
       },
@@ -18516,12 +18702,6 @@
     ],
     "alerts": [
       {
-        "name": "Transaction Errors",
-        "details": "This alert is triggered when the the transactions fail more than 10% of the time in 5 minutes.",
-        "type": "STATIC",
-        "url": null
-      },
-      {
         "name": "Apdex Score",
         "details": "This alert is triggered when the Apdex score is below 0.5 for 5 minutes",
         "type": "STATIC",
@@ -18530,6 +18710,12 @@
       {
         "name": "Memory Usage",
         "details": "This alert is triggered when Memory usage is above 90%",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "Transaction Errors",
+        "details": "This alert is triggered when the the transactions fail more than 10% of the time in 5 minutes.",
         "type": "STATIC",
         "url": null
       }
@@ -19170,19 +19356,19 @@
     ],
     "dashboards": [
       {
-        "name": "Catchpoint-Test Times",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/catchpoint-test-times/Catchpoint-Test_Times.png"
-        ]
-      },
-      {
         "name": "Catchpoint-Response Size",
         "description": null,
         "url": null,
         "screenshots": [
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/catchpoint-response-size/Catchpoint-Response_Size.png"
+        ]
+      },
+      {
+        "name": "Catchpoint-Test Times",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/catchpoint-test-times/Catchpoint-Test_Times.png"
         ]
       },
       {
@@ -20570,6 +20756,78 @@
     ]
   },
   {
+    "title": "C#",
+    "name": "c-sharp",
+    "description": "## C# performance monitoring\nWith our C# integration, you can find and address performance bottlenecks while operating in a live development environment. Monitor your app via our dashboard quickstarts and ensure you're delivering the best user experience.\n  \n### Common C# performance errors\nHere are the common C# performance errors that you can handle with New Relic integration:\n- Memory management: C# uses automatic memory management, which takes the burden of manual allocation from developers. However, C# can sometimes run into memory error thereby inhibiting its memory management performance. Our integration offers the best solution to fix that.\n- CPU usage: New Relic’s high CPU utilization alert is the key to monitoring CPU usage to prevent any potential error.\n- Garbage collection: Garbage Collector (GC) manages the allocation and release of memory for your application. When the memory is under distress, our C# integration will easily notify you via the memory usage alert.\n- High volume of requests: Getting a high volume of requests can affect your app’s response time and reduce user satisfaction. With Apdex score, you can track requests and measure user satisfaction.\n- JIT compiler: If JIT compiler fails to load, it may be due to an out-of-memory exception or internal limitation error. The pathway towards getting the insights you need is the New Relic C# integration.\n\n### C# monitoring use cases\n- Focus on the issues that affect your critical business transactions.\n- Gain knowledge on your system's behavior in advance and learn the whole story of performance errors, from beginning to end.\n- Use traces to connect latency issues to errors, getting you to the root cause as quickly as possible.\n- See the filename and line number from the C# stack trace so you never have to guess. To reduce noise, logically filter and aggregate C# exceptions.\n- Scalable error monitoring without affecting production flow.\n- Maintain low latency with fast throughput.\n-  Get meaningful data about C# errors from your dashboard.\n\n## End-to-end visibility into your C# operations\n\nOur C# dashboard translates your ingested data into a map that lets you trace business transactions across your C# stack. See your performance errors in context and prioritize your most critical operations.\n\n## What’s included in this quickstart?\nNew Relic's C# monitoring quickstart boasts instant full-stack observability out-of-the-box:\n\n- Dashboards (Throughput, Error rate, Logs, Web transaction time, Apdex Score and more).\n- Monitor scripts, functions, and web transactions.\n- High-value alerts.\n- Code-related insights about your application’s health and status. \n- Proactive alerts that inform developers about the status of their applications.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/dotnet/csharp",
+    "id": "9b575bdc-5bf0-450f-a041-8462b886d5ee",
+    "level": "NEW_RELIC",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/dotnet/csharp/logo.png",
+    "summary": "Monitor your C# applications by tracking performance issues with a full end-to-end view of distributed traces.",
+    "websiteUrl": null,
+    "keywords": [
+      "apm",
+      "c sharp",
+      "dotnet",
+      "c#"
+    ],
+    "authors": [
+      "New Relic"
+    ],
+    "dashboards": [
+      {
+        "name": ".NET",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/dotnet/dotnet02.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/dotnet/dotnet03.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/dotnet/dotnet04.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/dotnet/dotnet.png"
+        ]
+      }
+    ],
+    "alerts": [
+      {
+        "name": "Apdex Score",
+        "details": "This alert is triggered when the Apdex score is below 0.5 for 5 minutes.",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "High CPU Utilization",
+        "details": "This alert is triggered when the CPU Utilization is above 90%.",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "Memory Usage",
+        "details": "This alert is triggered when Memory usage is above 90%.",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "Transaction Errors",
+        "details": "This alert is triggered when the the transactions fail more than 10% of the time in 5 minutes.",
+        "type": "STATIC",
+        "url": null
+      }
+    ],
+    "documentation": [
+      {
+        "name": "C# installation docs",
+        "description": "Quickly monitor performance issues and view full end-to-end distributed trace of your .NET applications built with C#.\n",
+        "url": "https://docs.newrelic.com/docs/apm/agents/net-agent/getting-started/net-agent-compatibility-requirements-net-framework#technologies"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": ".NET agent",
+        "id": "dotnet-agent"
+      }
+    ]
+  },
+  {
     "title": "Apple macOS (Beta)",
     "name": "macos",
     "description": "## Apple macOS?\nWith New Relic's infrastructure monitoring agent for macOS, you can monitor individual desktops or servers to analyze how your applications are performing as a whole. The macOS agent can run on your own hardware or in cloud systems such as AWS.\n\n## Supported versions\n- macOS 10.14 (Mohave), 10.15 (Catalina), 11 (Big Sur)\n- 64-bit x86 processor (M1 processor is not supported yet)",
@@ -20878,78 +21136,6 @@
       {
         "name": "AWS-CloudWatch-Metric-Streams",
         "id": "aws-cloudwatch-metric-streams"
-      }
-    ]
-  },
-  {
-    "title": "C#",
-    "name": "c-sharp",
-    "description": "## Comprehensive monitoring quickstart for C#\nWith our C# integration, you can find and address performance bottlenecks while operating in a live development environment. Monitor your app via our dashboard quickstarts and ensure you're delivering the best user experience.\n\n## Why monitor C#?\n- Focus on the issues that affect your critical business transactions.\n- Resolve problems quickly.\n- Gain knowledge on your system's behavior in advance.\n- Learn the whole story of performance errors, from beginning to end.\n- Use traces to connect latency issues to errors, getting you to the root cause as quickly as possible.\n- See the filename and line number from the C# stack trace so you never have to guess. To reduce noise, logically filter and aggregate C# exceptions.\n- Scalable error monitoring without affecting production flow.\n- Maintain low latency with fast throughput.\n- Get meaningful data about C# errors from your dashboard.\n\n## End-to-end visibility into your C# operations\n\nOur C# dashboard translates your ingested data into a map that lets you trace business transactions across your C# stack. See your performance errors in context and prioritize your most critical operations.\n\n## What’s included in this quickstart?\nNew Relic's C# monitoring quickstart boasts instant full-stack observability out-of-the-box:\n\n- Dashboards (Throughput, Error rate, Logs, Web transaction time, Apdex Score and more).\n- Monitor scripts, functions, and web transactions.\n- High-value alerts.\n- Code-related insights about your application’s health and status. \n- Proactive alerts that inform developers about the status of their applications.",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/dotnet/csharp",
-    "id": "9b575bdc-5bf0-450f-a041-8462b886d5ee",
-    "level": "NEW_RELIC",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/dotnet/csharp/logo.png",
-    "summary": "Monitor your C# applications by tracking performance issues with a full end-to-end view of distributed traces.",
-    "websiteUrl": null,
-    "keywords": [
-      "apm",
-      "c sharp",
-      "dotnet",
-      "c#"
-    ],
-    "authors": [
-      "New Relic"
-    ],
-    "dashboards": [
-      {
-        "name": ".NET",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/dotnet/dotnet02.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/dotnet/dotnet03.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/dotnet/dotnet04.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/dotnet/dotnet.png"
-        ]
-      }
-    ],
-    "alerts": [
-      {
-        "name": "Apdex Score",
-        "details": "This alert is triggered when the Apdex score is below 0.5 for 5 minutes.",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "High CPU Utilization",
-        "details": "This alert is triggered when the CPU Utilization is above 90%.",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "Memory Usage",
-        "details": "This alert is triggered when Memory usage is above 90%.",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "Transaction Errors",
-        "details": "This alert is triggered when the the transactions fail more than 10% of the time in 5 minutes.",
-        "type": "STATIC",
-        "url": null
-      }
-    ],
-    "documentation": [
-      {
-        "name": "C# installation docs",
-        "description": "Quickly monitor performance issues and view full end-to-end distributed trace of your .NET applications built with C#.\n",
-        "url": "https://docs.newrelic.com/docs/apm/agents/net-agent/getting-started/net-agent-compatibility-requirements-net-framework#technologies"
-      }
-    ],
-    "installPlans": [
-      {
-        "name": ".NET agent",
-        "id": "dotnet-agent"
       }
     ]
   },
@@ -21316,6 +21502,12 @@
     ],
     "alerts": [
       {
+        "name": "Low throughput",
+        "details": "This alert is triggered when the throughput is 0 for 5 minutes",
+        "type": "STATIC",
+        "url": null
+      },
+      {
         "name": "High duration",
         "details": "This alert is triggered when the total duration of the web transaction is longer than 10 seconds during 5 minutes",
         "type": "STATIC",
@@ -21324,12 +21516,6 @@
       {
         "name": "High error rate",
         "details": "This alert is triggered when the error percentage of web transactions is higher than 5% during 5 minutes",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "Low throughput",
-        "details": "This alert is triggered when the throughput is 0 for 5 minutes",
         "type": "STATIC",
         "url": null
       }
@@ -21541,14 +21727,14 @@
     ],
     "alerts": [
       {
-        "name": "High CPU Utilization",
-        "details": "This alert is triggered when the CPU Utilization is above 90%.",
+        "name": "Transaction Errors",
+        "details": "This alert is triggered when the the transactions fail more than 10% of the time in 5 minutes.",
         "type": "STATIC",
         "url": null
       },
       {
-        "name": "Transaction Errors",
-        "details": "This alert is triggered when the the transactions fail more than 10% of the time in 5 minutes.",
+        "name": "High CPU Utilization",
+        "details": "This alert is triggered when the CPU Utilization is above 90%.",
         "type": "STATIC",
         "url": null
       }
@@ -23339,6 +23525,76 @@
     ]
   },
   {
+    "title": "Sidekiq",
+    "name": "sidekiq",
+    "description": "## What is Sidekiq?\n\nSimple, efficient background processing for Ruby. Sidekiq uses threads to\nhandle many jobs at the same time in the same process.\n\n### Sidekiq use cases\n\nDevelopers using Ruby on Rails to build applications often have other tasks needed to be done asynchronously such as data processing, batch executions, etc. Sidekiq is the answer to this need being a framework that provides background processing for Ruby apps. With this, developers can process jobs in the background and improve efficiency. Sidekiq leverages Redis as an in-memory data structure and it can be used with Resque, also a Redis-based job scheduler.\n\n### New Relic + Sidekiq\n\nNew Relic Ruby agent empowers you with a seamless monitoring of Sidekiq. Our dashboard helps you track key indicators like average CPU utilization and average physical memory. Also, New Relic’s pre-defined alert conditions notify you on performance metrics like Apdex score, memory usage, and transaction errors.\n\n## Get started!\n\nLeverage community expertise and instantly get value out of your telemetry data. This quickstart automatically instruments Sidekiq with the New Relic Ruby agent, and allows you to further leverage New Relic's APM capabilities by setting up [custom dashboards](https://docs.newrelic.com/docs/query-your-data/explore-query-data/dashboards/introduction-dashboards/), [errors inbox](https://docs.newrelic.com/docs/apm/apm-ui-pages/errors-inbox/errors-inbox/), [transaction tracing](https://docs.newrelic.com/docs/apm/transactions/transaction-traces/introduction-transaction-traces/), and [service maps](https://docs.newrelic.com/docs/understand-dependencies/understand-system-dependencies/service-maps/introduction-service-maps/).\n\n## More info\n\nCheck out the [documentation](https://docs.newrelic.com/docs/agents/ruby-agent/) to learn more about New Relic monitoring for Sidekiq.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/ruby/sidekiq",
+    "id": "b93d4d1a-c90c-46da-8f82-086270b05fee",
+    "level": "NEW_RELIC",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/ruby/sidekiq/logo.svg",
+    "summary": "Monitor Sidekiq with New Relic's Ruby agent",
+    "websiteUrl": null,
+    "keywords": [
+      "apm",
+      "ruby"
+    ],
+    "authors": [
+      "New Relic",
+      "Emil Hammarstrand"
+    ],
+    "dashboards": [
+      {
+        "name": "Sidekiq",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/sidekiq/Sidekiq2.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/sidekiq/Sidekiq3.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/sidekiq/Sidekiq.png"
+        ]
+      }
+    ],
+    "alerts": [
+      {
+        "name": "Apdex Score",
+        "details": "This alert is triggered when the Apdex score is below 0.5 for 5 minutes",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "High CPU Utilization",
+        "details": "This alert is triggered when the CPU Utilization is above 90%.",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "Memory Usage",
+        "details": "This alert is triggered when Memory usage is above 90%",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "Transaction Errors",
+        "details": "This alert is triggered when the the transactions fail more than 10% of the time in 5 minutes.",
+        "type": "STATIC",
+        "url": null
+      }
+    ],
+    "documentation": [
+      {
+        "name": "Sidekiq installation docs",
+        "description": "Simple, efficient background processing for Ruby. Sidekiq uses threads to\nhandle many jobs at the same time in the same process.\n",
+        "url": "https://docs.newrelic.com/docs/agents/ruby-agent/getting-started/ruby-agent-requirements-supported-frameworks"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "Ruby Agent",
+        "id": "setup-ruby-agent"
+      }
+    ]
+  },
+  {
     "title": "Cordova",
     "name": "cordova",
     "description": "## New Relic Mobile monitoring\n\nNew Relic's mobile monitoring for Cordova gives you a comprehensive view of your app's performance.  The official New Relic Cordova plugin for iOS and Android allows developers to easily embed the mobile agents into Cordova applications.\n\n## Get started!\n\nFollow [the documentation](https://docs.newrelic.com/docs/mobile-monitoring/new-relic-mobile-cordova-phonegap/get-started/introduction-new-relic-cordova) to get started!",
@@ -24278,76 +24534,6 @@
     ]
   },
   {
-    "title": "Sidekiq",
-    "name": "sidekiq",
-    "description": "## What is Sidekiq?\n\nSimple, efficient background processing for Ruby. Sidekiq uses threads to\nhandle many jobs at the same time in the same process.\n\n\n## Get started!\n\nLeverage community expertise and instantly get value out of your telemetry data. This quickstart automatically instruments Sidekiq with the New Relic Ruby agent, and allows you to further leverage New Relic's APM capabilities by setting up [custom dashboards](https://docs.newrelic.com/docs/query-your-data/explore-query-data/dashboards/introduction-dashboards/), [errors inbox](https://docs.newrelic.com/docs/apm/apm-ui-pages/errors-inbox/errors-inbox/), [transaction tracing](https://docs.newrelic.com/docs/apm/transactions/transaction-traces/introduction-transaction-traces/), and [service maps](https://docs.newrelic.com/docs/understand-dependencies/understand-system-dependencies/service-maps/introduction-service-maps/).\n\n## More info\n\nCheck out the [documentation](https://docs.newrelic.com/docs/agents/ruby-agent/) to learn more about New Relic monitoring for Sidekiq.",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/ruby/sidekiq",
-    "id": "b93d4d1a-c90c-46da-8f82-086270b05fee",
-    "level": "NEW_RELIC",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/ruby/sidekiq/logo.svg",
-    "summary": "Monitor Sidekiq with New Relic's Ruby agent",
-    "websiteUrl": null,
-    "keywords": [
-      "apm",
-      "ruby"
-    ],
-    "authors": [
-      "New Relic",
-      "Emil Hammarstrand"
-    ],
-    "dashboards": [
-      {
-        "name": "Sidekiq",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/sidekiq/Sidekiq2.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/sidekiq/Sidekiq3.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/sidekiq/Sidekiq.png"
-        ]
-      }
-    ],
-    "alerts": [
-      {
-        "name": "Apdex Score",
-        "details": "This alert is triggered when the Apdex score is below 0.5 for 5 minutes",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "High CPU Utilization",
-        "details": "This alert is triggered when the CPU Utilization is above 90%.",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "Memory Usage",
-        "details": "This alert is triggered when Memory usage is above 90%",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "Transaction Errors",
-        "details": "This alert is triggered when the the transactions fail more than 10% of the time in 5 minutes.",
-        "type": "STATIC",
-        "url": null
-      }
-    ],
-    "documentation": [
-      {
-        "name": "Sidekiq installation docs",
-        "description": "Simple, efficient background processing for Ruby. Sidekiq uses threads to\nhandle many jobs at the same time in the same process.\n",
-        "url": "https://docs.newrelic.com/docs/agents/ruby-agent/getting-started/ruby-agent-requirements-supported-frameworks"
-      }
-    ],
-    "installPlans": [
-      {
-        "name": "Ruby Agent",
-        "id": "setup-ruby-agent"
-      }
-    ]
-  },
-  {
     "title": "webpy",
     "name": "webpy",
     "description": "## Why monitor webpy?\n\nwebpy is a web framework for Python that is as simple as it is powerful. It offers useful debug features and automatically reloads after code changes. Integrate New Relic’s Python agent with your webpy app to monitor your app’s performance metrics in real time.\n\n## webpy quickstart highlights\n\nThe New Relic webpy quickstart has the following features:\n\n- Dashboards: Our dashboards provide you a clear overview of transactions, errors, and the virtual machine. The dashboards also help you monitor other key indicators like top 10 failed transactions, latest errors, and more.\n- Alerts: Get instant alerts like Apdex score, memory usage, high CPU utilizations, and transaction errors.\n\n## New Relic + webpy = Optimum performance monitoring\n\nNew Relic’s webpy quickstart automatically instruments your webpy app with the [New Relic Python agent](https://docs.newrelic.com/docs/apm/agents/python-agent/getting-started/introduction-new-relic-python/) and allows you to monitor your Python application with practical dashboards and alerts. In particular, the dashboards provide you with interactive visualizations to easily explore your data, understand context, and resolve issues faster. With flexible options for custom instrumentation and APIs, our Python agent offers multiple building blocks for you to create and share customized dashboards.\n\nMonitoring webpy with New Relic’s Python agent provides instant alerts on Apdex score and transaction errors. You can track key transactions, examine database query traces, and get a high-level summary of your app’s performance. You also have the ability to view logs and infrastructure data as well as bring them together to make troubleshooting easier and more efficient.\n\nInstall the New Relic webpy quickstart to effectively monitor your webpy app’s performance metrics with our Python agent. This quickstart gives you the tools to address issues that may arise when using webpy.",
@@ -25265,6 +25451,14 @@
     ],
     "dashboards": [
       {
+        "name": "Kubernetes Data Ingest Analysis",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/kubernetes-data-ingest-analysis/kubernetes-data-ingest-analysis.png"
+        ]
+      },
+      {
         "name": "AWS Integrations Data Ingest Analysis",
         "description": null,
         "url": null,
@@ -25273,19 +25467,11 @@
         ]
       },
       {
-        "name": "On-Host Integrations Data Analysis",
+        "name": "Azure Integrations Data Ingest Analysis",
         "description": null,
         "url": null,
         "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/on-host-integrations-data-analysis/on-host-integrations-data-analysis.png"
-        ]
-      },
-      {
-        "name": "Kubernetes Data Ingest Analysis",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/kubernetes-data-ingest-analysis/kubernetes-data-ingest-analysis.png"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/azure-integrations-data-ingest-analysis/azure-integrations-data-ingest-analysis.png"
         ]
       },
       {
@@ -25297,11 +25483,11 @@
         ]
       },
       {
-        "name": "Azure Integrations Data Ingest Analysis",
+        "name": "On-Host Integrations Data Analysis",
         "description": null,
         "url": null,
         "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/azure-integrations-data-ingest-analysis/azure-integrations-data-ingest-analysis.png"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/on-host-integrations-data-analysis/on-host-integrations-data-analysis.png"
         ]
       }
     ],
@@ -25692,12 +25878,12 @@
   {
     "title": "BGP Routing Neighbors",
     "name": "bgp-routing-neighbors",
-    "description": "The BGP routing neighbor quickstart provides a dashboard that gives you a summary of the current state of your BGP neighbor connections.\nUse this quickstart together with New Relic's Network Monitoring feature to use SNMP data to visualize changes to the state of your network.",
+    "description": "The BGP routing neighbor quickstart provides a dashboard that gives you a summary of the current state of your BGP neighbor connections, as well as example alerts to get you started.\nUse this quickstart together with New Relic's Network Monitoring feature to use SNMP data to visualize changes to the state of your network.",
     "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/network-monitoring/bgpNeighbor",
     "id": "849ad74f-91a2-42de-b062-9aebaf7fbdc1",
     "level": "VERIFIED",
     "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/network-monitoring/bgpNeighbor/logo.svg",
-    "summary": "Easily install a curated dashboard to monitor the health of your BGP neighbor relationships with New Relic's Network Monitoring.",
+    "summary": "Easily install a curated dashboard and example alerts to monitor the health of your BGP neighbor relationships with New Relic's Network Monitoring.",
     "websiteUrl": null,
     "keywords": [
       "network",
@@ -25721,7 +25907,20 @@
         ]
       }
     ],
-    "alerts": [],
+    "alerts": [
+      {
+        "name": "BGP Neighbor Idle",
+        "details": "This alert will trigger when the specified BGP neighbor is \"Idle\" for 300 seconds.  You will need to edit the NRQL condition to specify which relationship(s) you want the alert to target.",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "BGP Neighbor State Changes",
+        "details": "This alert will trigger when the specified BGP neighbor establishes a new connection.  This is useful for seeing flapping connections in between the poll intervals.  You will need to edit the NRQL condition to specify which relationship(s) you want the alert to target.",
+        "type": "STATIC",
+        "url": null
+      }
+    ],
     "documentation": [
       {
         "name": "Network SNMP collection installation docs",
@@ -26189,6 +26388,12 @@
     ],
     "alerts": [
       {
+        "name": "Apdex Score",
+        "details": "This alert is triggered when the Apdex score is below 0.5 for 5 minutes",
+        "type": "STATIC",
+        "url": null
+      },
+      {
         "name": "High CPU Utilization",
         "details": "This alert is triggered when the CPU Utilization is above 90%.",
         "type": "STATIC",
@@ -26203,12 +26408,6 @@
       {
         "name": "Transaction Errors",
         "details": "This alert is triggered when the the transactions fail more than 10% of the time in 5 minutes.",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "Apdex Score",
-        "details": "This alert is triggered when the Apdex score is below 0.5 for 5 minutes",
         "type": "STATIC",
         "url": null
       }
@@ -26252,19 +26451,11 @@
     ],
     "dashboards": [
       {
-        "name": "Browser Traffic Analysis",
+        "name": "Browser Overview",
         "description": null,
         "url": null,
         "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/traffic-analysis/traffic_analysis.png"
-        ]
-      },
-      {
-        "name": "JavaScript Errors",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/javascript-errors/javascript_errors.png"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/browser-overview/browser_overview.png"
         ]
       },
       {
@@ -26276,11 +26467,19 @@
         ]
       },
       {
-        "name": "Browser Overview",
+        "name": "JavaScript Errors",
         "description": null,
         "url": null,
         "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/browser-overview/browser_overview.png"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/javascript-errors/javascript_errors.png"
+        ]
+      },
+      {
+        "name": "Browser Traffic Analysis",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/traffic-analysis/traffic_analysis.png"
         ]
       }
     ],
