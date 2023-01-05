@@ -599,6 +599,67 @@
     ]
   },
   {
+    "title": "Amazon CloudFront web logs",
+    "name": "amazon-cloudfront-web-logs",
+    "description": "## What is Amazon CloudFront?\n\nSpeeds up the distribution of web content served from Amazon Web Services.\n\n### Get started!\n\nStart monitoring Amazon CloudFront by sending your Amazon Cloudfront Web Logs to New Relic. \n\nCheck out our Amazon CloudFront documentation to instrument your cloud service and manage the stability, scalability, and reliability of your systems with New Relic's Log monitoring capabilities.\n\n### More info\n\nCheck out the [documentation](https://docs.newrelic.com/docs/logs/forward-logs/cloudfront-web-logs/) to learn more about New Relic monitoring for Amazon CloudFront.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/aws/amazon-cloudfront-logs",
+    "id": "fb4c4acc-e341-4b87-9bb1-5f98b9cc9310",
+    "level": "NEW_RELIC",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/aws/amazon-cloudfront-logs/logo.svg",
+    "summary": "Monitor Amazon CloudFront Web logs in New Relic",
+    "websiteUrl": null,
+    "keywords": [
+      "aws",
+      "amazon web services",
+      "web content",
+      "logs",
+      "logging",
+      "web logs",
+      "cdn",
+      "featured",
+      "newrelic partner",
+      "NR1_addData",
+      "NR1_sys"
+    ],
+    "authors": [
+      "New Relic",
+      "Joseph Counts"
+    ],
+    "dashboards": [
+      {
+        "name": "Amazon CloudFront Web Logs",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/amazon-cloudfront-web-logs/amazon-cloudfront-web-logs01.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/amazon-cloudfront-web-logs/amazon-cloudfront-web-logs02.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/amazon-cloudfront-web-logs/amazon-cloudfront-web-logs03.png"
+        ]
+      }
+    ],
+    "alerts": [
+      {
+        "name": "CloudFront - 4xx/5xx error greater than 1%",
+        "details": "Alert triggered when the error rate(4xx/5xx errors) exceeds 1%",
+        "type": "BASELINE",
+        "url": null
+      }
+    ],
+    "documentation": [
+      {
+        "name": "Amazon CloudFront web logs installation docs",
+        "description": "Monitor Amazon CloudFront web logs in New Relic.",
+        "url": "https://docs.newrelic.com/docs/logs/forward-logs/cloudfront-web-logs/"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "Amazon-Cloudfront-Web-Logs",
+        "id": "amazon-cloudfront-web-logs"
+      }
+    ]
+  },
+  {
     "title": "Slack Notifications",
     "name": "slack-notifications",
     "description": "Slack is a a messaging app for business that connects people to the information that they need.\n\nIntegrate New Relic with Slack to send notification messages to your Slack channels.\n\n[Check out our documentation](https://docs.newrelic.com/docs/alerts-applied-intelligence/notifications/notification-integrations/#slack) to set up a Slack notification channel and provide fast and consistent ways for the right personnel to be notified about incidents",
@@ -1426,6 +1487,12 @@
     ],
     "alerts": [
       {
+        "name": "Transaction Errors",
+        "details": "This alert is triggered when the the transactions fail more than 10% of the time in 5 minutes.",
+        "type": "STATIC",
+        "url": null
+      },
+      {
         "name": "Apdex Score",
         "details": "This alert is triggered when the Apdex score is below 0.5 for 5 minutes",
         "type": "STATIC",
@@ -1434,12 +1501,6 @@
       {
         "name": "High CPU Utilization",
         "details": "This alert is triggered when the CPU Utilization is above 90%.",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "Transaction Errors",
-        "details": "This alert is triggered when the the transactions fail more than 10% of the time in 5 minutes.",
         "type": "STATIC",
         "url": null
       }
@@ -1713,60 +1774,6 @@
       {
         "name": "CircleCi",
         "id": "third-party-circleci"
-      }
-    ]
-  },
-  {
-    "title": "Amazon CloudFront web logs",
-    "name": "amazon-cloudfront-web-logs",
-    "description": "## What is Amazon CloudFront?\n\nSpeeds up the distribution of web content served from Amazon Web Services.\n\n### Get started!\n\nStart monitoring Amazon CloudFront by sending your Amazon Cloudfront Web Logs to New Relic. \n\nCheck out our Amazon CloudFront documentation to instrument your cloud service and manage the stability, scalability, and reliability of your systems with New Relic's Log monitoring capabilities.\n\n### More info\n\nCheck out the [documentation](https://docs.newrelic.com/docs/logs/forward-logs/cloudfront-web-logs/) to learn more about New Relic monitoring for Amazon CloudFront.",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/aws/amazon-cloudfront-logs",
-    "id": "fb4c4acc-e341-4b87-9bb1-5f98b9cc9310",
-    "level": "NEW_RELIC",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/aws/amazon-cloudfront-logs/logo.svg",
-    "summary": "Monitor Amazon CloudFront Web logs in New Relic",
-    "websiteUrl": null,
-    "keywords": [
-      "aws",
-      "amazon web services",
-      "web content",
-      "logs",
-      "logging",
-      "web logs",
-      "cdn",
-      "featured",
-      "newrelic partner",
-      "NR1_addData",
-      "NR1_sys"
-    ],
-    "authors": [
-      "New Relic",
-      "Joseph Counts"
-    ],
-    "dashboards": [
-      {
-        "name": "Amazon CloudFront Web Logs",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/amazon-cloudfront-web-logs/amazon-cloudfront-web-logs01.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/amazon-cloudfront-web-logs/amazon-cloudfront-web-logs02.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/amazon-cloudfront-web-logs/amazon-cloudfront-web-logs03.png"
-        ]
-      }
-    ],
-    "alerts": [],
-    "documentation": [
-      {
-        "name": "Amazon CloudFront web logs installation docs",
-        "description": "Monitor Amazon CloudFront web logs in New Relic.",
-        "url": "https://docs.newrelic.com/docs/logs/forward-logs/cloudfront-web-logs/"
-      }
-    ],
-    "installPlans": [
-      {
-        "name": "Amazon-Cloudfront-Web-Logs",
-        "id": "amazon-cloudfront-web-logs"
       }
     ]
   },
@@ -2874,6 +2881,12 @@
     ],
     "alerts": [
       {
+        "name": "Low throughput",
+        "details": "This alert is triggered when the throughput is 0 for 5 minutes",
+        "type": "STATIC",
+        "url": null
+      },
+      {
         "name": "High duration",
         "details": "This alert is triggered when the total duration of the web transaction is longer than 10 seconds during 5 minutes",
         "type": "STATIC",
@@ -2882,12 +2895,6 @@
       {
         "name": "High error rate",
         "details": "This alert is triggered when the error percentage of web transactions is higher than 5% during 5 minutes",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "Low throughput",
-        "details": "This alert is triggered when the throughput is 0 for 5 minutes",
         "type": "STATIC",
         "url": null
       }
@@ -15443,6 +15450,66 @@
     ]
   },
   {
+    "title": "Cloudflare Network Logs",
+    "name": "cloudflare",
+    "description": "## About Cloudflare\n\nCloudflare is an industry leading global network designed to make everything you connect to the Internet secure, private, fast, and reliable. Protect and accelerate external, public-facing web properties; secure your internal operations on a single global network; and build new applications on our serverless platform. Internet properties powered by Cloudflare have all web traffic routed through its intelligent global network, which gets smarter with every request.\n\n## About this quickstart\n\nCloudflare is on a mission to help build a better Internet. The Cloudflare quickstart will enable you to monitor and analyze web traffic metrics on a dashboard, integrating with New Relic’s database to provide an at-a-glance overview of the most important logs and metrics from your websites and applications.\n\nFor more information check out our website at [cloudflare.com](https://www.cloudflare.com/)",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/cloudflare",
+    "id": "fc2bb0ac-6622-43c6-8c1f-6a4c26ab5434",
+    "level": "COMMUNITY",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/cloudflare/logo.png",
+    "summary": "The Cloudflare quickstart will enable you to monitor and analyze web traffic metrics.",
+    "websiteUrl": null,
+    "keywords": [
+      "cloudflare",
+      "logs",
+      "network",
+      "security",
+      "cdn",
+      "featured",
+      "newrelic partner",
+      "NR1_addData",
+      "NR1_sys"
+    ],
+    "authors": [
+      "Joseph Counts",
+      "Cloudflare"
+    ],
+    "dashboards": [
+      {
+        "name": "Cloudflare Logs",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/cloudflare/cloudflare01.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/cloudflare/cloudflare02.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/cloudflare/cloudflare03.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/cloudflare/cloudflare04.png"
+        ]
+      }
+    ],
+    "alerts": [
+      {
+        "name": "Cloudflare - 4xx/5xx error greater than 1%",
+        "details": "Alert triggered when the error rate(4xx/5xx errors) exceeds 1%",
+        "type": "BASELINE",
+        "url": null
+      }
+    ],
+    "documentation": [
+      {
+        "name": "Enable New Relic destination doc",
+        "description": "Developer doc on getting Cloudflare data ingested into New Relic",
+        "url": "https://docs.newrelic.com/docs/logs/forward-logs/cloudflare-logpush-forwarding"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "cloudflare",
+        "id": "third-party-cloudflare"
+      }
+    ]
+  },
+  {
     "title": "Xamarin bindings to New Relic's Mobile SDK",
     "name": "xamarin",
     "description": "This repo/project provides Xamarin bindings for New Relic's iOS and Android SDK's. The dll produced after building the bindings can be used in your Xamarin project.",
@@ -16365,59 +16432,6 @@
     ]
   },
   {
-    "title": "Cloudflare Network Logs",
-    "name": "cloudflare",
-    "description": "## About Cloudflare\n\nCloudflare is an industry leading global network designed to make everything you connect to the Internet secure, private, fast, and reliable. Protect and accelerate external, public-facing web properties; secure your internal operations on a single global network; and build new applications on our serverless platform. Internet properties powered by Cloudflare have all web traffic routed through its intelligent global network, which gets smarter with every request.\n\n## About this quickstart\n\nCloudflare is on a mission to help build a better Internet. The Cloudflare quickstart will enable you to monitor and analyze web traffic metrics on a dashboard, integrating with New Relic’s database to provide an at-a-glance overview of the most important logs and metrics from your websites and applications.\n\nFor more information check out our website at [cloudflare.com](https://www.cloudflare.com/)",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/cloudflare",
-    "id": "fc2bb0ac-6622-43c6-8c1f-6a4c26ab5434",
-    "level": "COMMUNITY",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/cloudflare/logo.png",
-    "summary": "The Cloudflare quickstart will enable you to monitor and analyze web traffic metrics.",
-    "websiteUrl": null,
-    "keywords": [
-      "cloudflare",
-      "logs",
-      "network",
-      "security",
-      "cdn",
-      "featured",
-      "newrelic partner",
-      "NR1_addData",
-      "NR1_sys"
-    ],
-    "authors": [
-      "Joseph Counts",
-      "Cloudflare"
-    ],
-    "dashboards": [
-      {
-        "name": "Cloudflare Logs",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/cloudflare/cloudflare01.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/cloudflare/cloudflare02.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/cloudflare/cloudflare03.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/cloudflare/cloudflare04.png"
-        ]
-      }
-    ],
-    "alerts": [],
-    "documentation": [
-      {
-        "name": "Enable New Relic destination doc",
-        "description": "Developer doc on getting Cloudflare data ingested into New Relic",
-        "url": "https://docs.newrelic.com/docs/logs/forward-logs/cloudflare-logpush-forwarding"
-      }
-    ],
-    "installPlans": [
-      {
-        "name": "cloudflare",
-        "id": "third-party-cloudflare"
-      }
-    ]
-  },
-  {
     "title": "Jenkins",
     "name": "jenkins",
     "description": "## What is Jenkins?\n\nThe leading open source automation server, Jenkins provides hundreds of plugins to support building, deploying and automating any project.\n\n### Get started!\n\nStart monitoring Jenkins jobs and pipeline executions in New Relic!\n\nCheck out our Monitoring Jenkins with OpenTelemetry and New Relic documentation to instrument your Jenkins instance with the OpenTelemetry plugin for Jenkins.\n\n### More info\n\nCheck out the [documentation](https://docs.newrelic.com/docs/more-integrations/open-source-telemetry-integrations/opentelemetry/jenkins/monitoring-jenkins-ot/) to learn more about New Relic monitoring for Jenkins.",
@@ -16549,14 +16563,14 @@
     ],
     "alerts": [
       {
-        "name": "Transaction Errors",
-        "details": "This alert is triggered when the the transactions fail more than 10% of the time in 5 minutes.",
+        "name": "High CPU Utilization",
+        "details": "This alert is triggered when the CPU Utilization is above 90%.",
         "type": "STATIC",
         "url": null
       },
       {
-        "name": "High CPU Utilization",
-        "details": "This alert is triggered when the CPU Utilization is above 90%.",
+        "name": "Transaction Errors",
+        "details": "This alert is triggered when the the transactions fail more than 10% of the time in 5 minutes.",
         "type": "STATIC",
         "url": null
       }
@@ -18502,8 +18516,8 @@
     ],
     "alerts": [
       {
-        "name": "Memory Usage",
-        "details": "This alert is triggered when Memory usage is above 90%",
+        "name": "Transaction Errors",
+        "details": "This alert is triggered when the the transactions fail more than 10% of the time in 5 minutes.",
         "type": "STATIC",
         "url": null
       },
@@ -18514,8 +18528,8 @@
         "url": null
       },
       {
-        "name": "Transaction Errors",
-        "details": "This alert is triggered when the the transactions fail more than 10% of the time in 5 minutes.",
+        "name": "Memory Usage",
+        "details": "This alert is triggered when Memory usage is above 90%",
         "type": "STATIC",
         "url": null
       }
