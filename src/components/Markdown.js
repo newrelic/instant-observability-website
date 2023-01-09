@@ -53,6 +53,22 @@ const h3Tag = (props) => {
     </h6>
   );
 };
+
+const codeblock = (props) => {
+  return (
+    <pre
+      css={css`
+        display: inline-block;
+        padding: 1rem;
+        margin: 0.5rem 0;
+        border-radius: 3px;
+        background: var(--system-background-muted-light);
+      `}
+    >
+      {props.children}
+    </pre>
+  );
+};
 const Markdown = ({ className, ...props }) => (
   <ReactMarkdown
     {...props}
@@ -61,6 +77,7 @@ const Markdown = ({ className, ...props }) => (
       a: aTagToLink,
       h2: h2Tag,
       h3: h3Tag,
+      pre: codeblock,
     }}
   />
 );

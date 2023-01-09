@@ -12,6 +12,7 @@ const allowedElements = [
   'ul',
   'li',
   'p',
+  'pre',
   'blockquote',
   'code',
   'a',
