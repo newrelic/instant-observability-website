@@ -15,6 +15,11 @@
     "associatedKeywords": ["os", "infrastructure"]
   },
   {
+    "value": "security",
+    "displayName": "Security",
+    "associatedKeywords": ["security"]
+  },
+  {
     "value": "browser-and-mobile",
     "displayName": "Browser & mobile",
     "associatedKeywords": ["browser agent", "mobile agent"]
@@ -53,6 +58,11 @@
     "value": "open-source-monitoring",
     "displayName": "Open source monitoring",
     "associatedKeywords": ["open source monitoring"]
+  },
+  {
+    "value": "prometheus",
+    "displayName": "Prometheus",
+    "associatedKeywords": ["prometheus"]
   },
   {
     "value": "machine-learning-ops",
