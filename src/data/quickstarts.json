@@ -178,17 +178,6 @@
     ],
     "dashboards": [
       {
-        "name": "Kubernetes / Compute Resources",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/kubernetes-prometheus-compute-resources/kubernetes-prometheus-compute-resources01.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/kubernetes-prometheus-compute-resources/kubernetes-prometheus-compute-resources02.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/kubernetes-prometheus-compute-resources/kubernetes-prometheus-compute-resources03.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/kubernetes-prometheus-compute-resources/kubernetes-prometheus-compute-resources04.png"
-        ]
-      },
-      {
         "name": "Kubernetes / Kubelet",
         "description": null,
         "url": null,
@@ -198,15 +187,21 @@
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/kubernetes-prometheus-kubelet/kubernetes-prometheus-kubelet03.png",
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/kubernetes-prometheus-kubelet/kubernetes-prometheus-kubelet04.png"
         ]
+      },
+      {
+        "name": "Kubernetes / Compute Resources",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/kubernetes-prometheus-compute-resources/kubernetes-prometheus-compute-resources01.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/kubernetes-prometheus-compute-resources/kubernetes-prometheus-compute-resources02.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/kubernetes-prometheus-compute-resources/kubernetes-prometheus-compute-resources03.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/kubernetes-prometheus-compute-resources/kubernetes-prometheus-compute-resources04.png"
+        ]
       }
     ],
     "alerts": [],
     "documentation": [
-      {
-        "name": "Kubernetes Prometheus agent REQUIRED configuration",
-        "description": "The default installation of the New Relic Prometheus agent does not enable all of the metrics needed to work with this quickstart's dashboards. Follow the instructions here to enable those metrics. \n",
-        "url": "https://github.com/newrelic/newrelic-prometheus-configurator/blob/main/examples/kubernetes/README.md"
-      },
       {
         "name": "Kubernetes integration",
         "description": "The New Relic Kubernetes integration has multiple components that work together to give you end-to-end observability across your clusters. While you have the flexibility to deploy the components that you prefer, to achieve full observability, you need to install the complete package to monitor all metrics. \n",
@@ -216,6 +211,11 @@
         "name": "Kubernetes Prometheus agent",
         "description": "New Relic's Prometheus agent is a thin wrapper on top of Prometheus server to run it in agent mode. With this integration, you can create a YAML configuration file used by Prometheus that's ready to send metrics to New Relic.\n",
         "url": "https://docs.newrelic.com/docs/infrastructure/prometheus-integrations/install-configure-prometheus-agent/install-prometheus-agent/"
+      },
+      {
+        "name": "Kubernetes Prometheus agent REQUIRED configuration",
+        "description": "The default installation of the New Relic Prometheus agent does not enable all of the metrics needed to work with this quickstart's dashboards. Follow the instructions here to enable those metrics. \n",
+        "url": "https://github.com/newrelic/newrelic-prometheus-configurator/blob/main/examples/kubernetes/README.md"
       }
     ],
     "installPlans": [
@@ -1990,14 +1990,14 @@
     "alerts": [],
     "documentation": [
       {
-        "name": "Implementation guide",
-        "description": "Explains what quality foundation is and how to apply it\n",
-        "url": "https://docs.newrelic.com/docs/new-relic-solutions/observability-maturity/customer-experience/quality-foundation-implementation-guide"
-      },
-      {
         "name": "Install README",
         "description": "Guides you on how to customize the dashboard once you've installed it\n",
         "url": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/oma-qf#readme"
+      },
+      {
+        "name": "Implementation guide",
+        "description": "Explains what quality foundation is and how to apply it\n",
+        "url": "https://docs.newrelic.com/docs/new-relic-solutions/observability-maturity/customer-experience/quality-foundation-implementation-guide"
       }
     ],
     "installPlans": [
@@ -4825,19 +4825,19 @@
     ],
     "dashboards": [
       {
-        "name": "Data Ingest Governance Entity Breakdowns",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/data-ingest-entity-breakdown/data-ingest-entity-breakdown.png"
-        ]
-      },
-      {
         "name": "Data Ingest Governance Baseline",
         "description": null,
         "url": null,
         "screenshots": [
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/data-ingest-baseline/data-ingest-baseline.png"
+        ]
+      },
+      {
+        "name": "Data Ingest Governance Entity Breakdowns",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/data-ingest-entity-breakdown/data-ingest-entity-breakdown.png"
         ]
       }
     ],
@@ -6597,14 +6597,6 @@
     ],
     "dashboards": [
       {
-        "name": "Redis Enterprise Database CRDT",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/active-active/active_active01.png"
-        ]
-      },
-      {
         "name": "Redis Enterprise Database Metrics",
         "description": null,
         "url": null,
@@ -6618,6 +6610,14 @@
         "url": null,
         "screenshots": [
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/cluster/cluster01.png"
+        ]
+      },
+      {
+        "name": "Redis Enterprise Database CRDT",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/active-active/active_active01.png"
         ]
       }
     ],
@@ -8341,14 +8341,14 @@
     "alerts": [],
     "documentation": [
       {
-        "name": "Prometheus OpenMetrics Integration Setup",
-        "description": "Setup New Relic's Prometheus OpenMetrics Integration (POMI)\n",
-        "url": "https://docs.newrelic.com/docs/infrastructure/prometheus-integrations/install-configure-openmetrics/install-update-or-uninstall-your-prometheus-openmetrics-integration"
-      },
-      {
         "name": "ArgoCD Metrics Setup",
         "description": "Ship performance data from ArgoCD using Prometheus\n",
         "url": "https://argo-cd.readthedocs.io/en/stable/operator-manual/metrics/"
+      },
+      {
+        "name": "Prometheus OpenMetrics Integration Setup",
+        "description": "Setup New Relic's Prometheus OpenMetrics Integration (POMI)\n",
+        "url": "https://docs.newrelic.com/docs/infrastructure/prometheus-integrations/install-configure-openmetrics/install-update-or-uninstall-your-prometheus-openmetrics-integration"
       },
       {
         "name": "Prometheus Remote Write Integrations Setup",
@@ -8368,6 +8368,69 @@
       {
         "name": "Prometheus OpenMetrics integration",
         "id": "setup-pomi"
+      }
+    ]
+  },
+  {
+    "title": "JFrog Platform",
+    "name": "jfrog-platform",
+    "description": "## Why monitor JFrog Platform\n\nThe JFrog Platform is a leading universal end-to-end DevOps platform for automating, managing, securing, distributing, orchestrating, monitoring, and optimizing your Cl/ CD pipeline. These different elements of the JFrog platform need to be monitored in order for the enterprise to know in real-time about the health, performance and security of the DevOps supply chain.\n\n### JFrog Platform quickstart highlights\n\nThe integration will surface Platform Logs, Xray Violations data and system performance data available through Open Metrics, as pre-built dashboards within a JFrog Platform application made available within the New Relic One Programmable Observability platform.\n\n- Monitor the JFrog platform in your familiar and convenient New Relic One Programmable Observability platform\n- Pre-built JFrog dashboards depicting critical logs and metrics from the JFrog platform\n- Utilizes FluentD, an open source and one of the most lightweight log processors and forwarders in the market",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/jfrog-platform",
+    "id": "e709396f-5b37-4e9c-a302-e872c9b864fd",
+    "level": "VERIFIED",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/jfrog-platform/icon.svg",
+    "summary": "FluentD-based custom log forwarder for the JFrog platform for customers using New Relic's observability platform",
+    "websiteUrl": null,
+    "keywords": [
+      "newrelic",
+      "newrelic partner",
+      "apm",
+      "open source monitoring"
+    ],
+    "authors": [
+      "JFrog",
+      "Mahitha Byreddy"
+    ],
+    "dashboards": [
+      {
+        "name": "Jfrog Xray",
+        "description": "This dashboard provides a summary of Logs (access, service, traffic log volumes, HTTP response codes, errors etc), Metrics (System performance, number and type of Artifacts and Components scanned), Violations (Security Vulnerabiities and Licnse issues)",
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/jfrog-xray/jfrog-xray1.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/jfrog-xray/jfrog-xray2.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/jfrog-xray/jfrog-xray3.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/jfrog-xray/jfrog-xray4.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/jfrog-xray/jfrog-xray5.png"
+        ]
+      },
+      {
+        "name": "Jfrog Artifactory",
+        "description": "This dashboard provides an overview of usage statistics of JFrog Artifactory logs (Application, Audit, Docker, Requests) and overview of the System metrics, JVM statistics, Storage consumption, Garbage collection, and other operational insights associated with JFrog Artifactory",
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/jfrog-artifactory/jfrog-artifactory1.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/jfrog-artifactory/jfrog-artifactory2.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/jfrog-artifactory/jfrog-artifactory3.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/jfrog-artifactory/jfrog-artifactory4.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/jfrog-artifactory/jfrog-artifactory5.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/jfrog-artifactory/jfrog-artifactory6.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/jfrog-artifactory/jfrog-artifactory7.png"
+        ]
+      }
+    ],
+    "alerts": [],
+    "documentation": [
+      {
+        "name": "JFrog Observability Solution",
+        "description": "JFrog Github documentation\n",
+        "url": "https://github.com/jfrog/log-analytics-newrelic"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "JFrog Platform",
+        "id": "third-party-jfrog-platform"
       }
     ]
   },
@@ -8476,6 +8539,40 @@
       {
         "name": "Ruby Agent",
         "id": "setup-ruby-agent"
+      }
+    ]
+  },
+  {
+    "title": "Trivy Vulnerabilities Integration",
+    "name": "trivy-integration",
+    "description": "## What does this integration do?\n\nThis integration allows you to send your Trivy scan results into New Relic vulnerability management to unify your security findings in one place. This integration utilizes the security data API's ability to process Trivy findings in SARIF.\n\n### What is the Security Event API?\n\nNew Relic's Security Event API is a way to ingest security scanner data into New Relic's Vulnerability Management platform. \n\n### Get started!\n\nStart sending events to the Security Event API!\n\nCheck out our Security Event API documentation to setup ingestion of your scanner data into our Vulnerability Management product.\n\n### More info\n\nCheck out the [documentation](https://docs.newrelic.com/docs/vulnerability-management/integrations/security-api) to learn more about our Security Event API.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/trivy",
+    "id": "3acbeb3a-20b2-4f97-8738-8c16bb180915",
+    "level": "NEW_RELIC",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/trivy/logo.png",
+    "summary": "Ingest Trivy vulnerability data into New Relic by using Security Event API",
+    "websiteUrl": null,
+    "keywords": [
+      "vulnerability management",
+      "security",
+      "trivy"
+    ],
+    "authors": [
+      "New Relic"
+    ],
+    "dashboards": [],
+    "alerts": [],
+    "documentation": [
+      {
+        "name": "Trivy Integration installation instructions",
+        "description": "Integration documentation for Trivy vulnerability ingestion through Security Event API",
+        "url": "https://docs.newrelic.com/docs/vulnerability-management/integrations/trivy/"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "Trivy API Integration",
+        "id": "trivy-api-install"
       }
     ]
   },
@@ -8817,14 +8914,14 @@
     ],
     "documentation": [
       {
-        "name": "Prometheus installation docs",
-        "description": "Use Prometheus remote_write or Prometheus Agent\n",
-        "url": "https://docs.newrelic.com/docs/infrastructure/prometheus-integrations/get-started/send-prometheus-metric-data-new-relic"
-      },
-      {
         "name": "NGINX Ingress Controller Prometheus Integration",
         "description": "NGINX Ingress Controller Prometheus Integration Documentation\n",
         "url": "https://docs.newrelic.com/docs/infrastructure/prometheus-integrations/integrations-list/ingress-controller-integration/"
+      },
+      {
+        "name": "Prometheus installation docs",
+        "description": "Use Prometheus remote_write or Prometheus Agent\n",
+        "url": "https://docs.newrelic.com/docs/infrastructure/prometheus-integrations/get-started/send-prometheus-metric-data-new-relic"
       }
     ],
     "installPlans": [
@@ -12872,14 +12969,14 @@
     "alerts": [],
     "documentation": [
       {
-        "name": "Installation Docs",
-        "description": "The New Relic Apollo Server plugin instruments your Apollo Server applications to give visibility into your GraphQL payloads.",
-        "url": "https://docs.newrelic.com/docs/apm/agents/nodejs-agent/extend-your-instrumentation/apollo-server-plugin-nodejs/"
-      },
-      {
         "name": "New Relic Apollo Server plugin repository",
         "description": "New Relic's official Apollo Server plugin for use with the Node.js agent.",
         "url": "https://github.com/newrelic/newrelic-node-apollo-server-plugin/blob/main/README.md"
+      },
+      {
+        "name": "Installation Docs",
+        "description": "The New Relic Apollo Server plugin instruments your Apollo Server applications to give visibility into your GraphQL payloads.",
+        "url": "https://docs.newrelic.com/docs/apm/agents/nodejs-agent/extend-your-instrumentation/apollo-server-plugin-nodejs/"
       }
     ],
     "installPlans": [
@@ -13374,6 +13471,14 @@
     ],
     "dashboards": [
       {
+        "name": "Lacework Anomaly Detections",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/lacework-anomaly-detections/lacework-anomaly-detections.png"
+        ]
+      },
+      {
         "name": "Lacework Security Overview",
         "description": null,
         "url": null,
@@ -13387,14 +13492,6 @@
         "url": null,
         "screenshots": [
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/lacework-compliance-violations/lacework-compliance-violations.png"
-        ]
-      },
-      {
-        "name": "Lacework Anomaly Detections",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/lacework-anomaly-detections/lacework-anomaly-detections.png"
         ]
       }
     ],
@@ -13850,14 +13947,14 @@
     "alerts": [],
     "documentation": [
       {
-        "name": "Getting started with New Relic and Terraform",
-        "description": "In this guide, you learn how to set up New Relic alerts with Terraform.\n",
-        "url": "https://developer.newrelic.com/terraform/get-started-terraform/"
-      },
-      {
         "name": "Github repository",
         "description": "Github repository for the New Relic Provider.",
         "url": "https://github.com/newrelic/terraform-provider-newrelic"
+      },
+      {
+        "name": "Getting started with New Relic and Terraform",
+        "description": "In this guide, you learn how to set up New Relic alerts with Terraform.\n",
+        "url": "https://developer.newrelic.com/terraform/get-started-terraform/"
       },
       {
         "name": "New Relic Provider",
@@ -19083,11 +19180,6 @@
     "alerts": [],
     "documentation": [
       {
-        "name": "GitHub repository",
-        "description": "The GitHub repository for the integration",
-        "url": "https://github.com/newrelic-experimental/newrelic-connector-trendmicro-cloud-one-conformity#readme"
-      },
-      {
         "name": "New Relic blog post",
         "description": "Learn more about the integration on New Relic's blog post",
         "url": "https://newrelic.com/blog/how-to-relic/trend-micro-aws"
@@ -19096,6 +19188,11 @@
         "name": "Trend Micro blog post",
         "description": "Learn more about the integration on Trend Micro's blog post",
         "url": "https://www.trendmicro.com/en_us/devops/21/f/how-to-achieve-more-security-observability.html"
+      },
+      {
+        "name": "GitHub repository",
+        "description": "The GitHub repository for the integration",
+        "url": "https://github.com/newrelic-experimental/newrelic-connector-trendmicro-cloud-one-conformity#readme"
       }
     ],
     "installPlans": [
@@ -19685,14 +19782,14 @@
     ],
     "documentation": [
       {
-        "name": "Kubernetes installation docs",
-        "description": "To view the Istio Quickstart, the Kubernetes New Relic integration with the Prometheus OpenMetrics Integration (POMI) must be installed prior.\n",
-        "url": "https://docs.newrelic.com/docs/integrations/host-integrations/host-integrations-list/kubernetes-monitoring-integration"
-      },
-      {
         "name": "Prometheus OpenMetrics Intergration (POMI) installation docs",
         "description": "To view the Istio Quickstart, the Kubernetes New Relic integration with the Prometheus OpenMetrics Integration (POMI) must be installed prior.\n",
         "url": "https://docs.newrelic.com/docs/infrastructure/prometheus-integrations/get-started/send-prometheus-metric-data-new-relic"
+      },
+      {
+        "name": "Kubernetes installation docs",
+        "description": "To view the Istio Quickstart, the Kubernetes New Relic integration with the Prometheus OpenMetrics Integration (POMI) must be installed prior.\n",
+        "url": "https://docs.newrelic.com/docs/integrations/host-integrations/host-integrations-list/kubernetes-monitoring-integration"
       }
     ],
     "installPlans": [
@@ -21618,14 +21715,14 @@
     ],
     "documentation": [
       {
-        "name": "CoreDNS Metrics Docs",
-        "description": "Learn more about the Prometheus metrics available for CoreDNS\n",
-        "url": "https://coredns.io/plugins/metrics/"
-      },
-      {
         "name": "CoreDNS Integration Docs",
         "description": "New Relic documentation for the CoreDNS integration including installation, configuration, and how to query the metrics.\n",
         "url": "https://docs.newrelic.com/docs/infrastructure/prometheus-integrations/integrations-list/core-dns-integration"
+      },
+      {
+        "name": "CoreDNS Metrics Docs",
+        "description": "Learn more about the Prometheus metrics available for CoreDNS\n",
+        "url": "https://coredns.io/plugins/metrics/"
       },
       {
         "name": "Prometheus Installation Docs",
@@ -26496,22 +26593,6 @@
     ],
     "dashboards": [
       {
-        "name": "Browser Overview",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/browser-overview/browser_overview.png"
-        ]
-      },
-      {
-        "name": "JavaScript Errors",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/javascript-errors/javascript_errors.png"
-        ]
-      },
-      {
         "name": "Browser Traffic Analysis",
         "description": null,
         "url": null,
@@ -26520,11 +26601,27 @@
         ]
       },
       {
+        "name": "Browser Overview",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/browser-overview/browser_overview.png"
+        ]
+      },
+      {
         "name": "Browser Pages Dashboard",
         "description": null,
         "url": null,
         "screenshots": [
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/browser-pages-dashboard/browser_pages_dashboard.png"
+        ]
+      },
+      {
+        "name": "JavaScript Errors",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/javascript-errors/javascript_errors.png"
         ]
       }
     ],
@@ -26814,14 +26911,14 @@
     "alerts": [],
     "documentation": [
       {
-        "name": "Harbor Metrics Documentation",
-        "description": "Learn more about the Prometheus metrics available for Harbor",
-        "url": "https://goharbor.io/docs/2.3.0/administration/metrics/"
-      },
-      {
         "name": "Prometheus Remote Write Configuration",
         "description": "Configure your Prometheus Server to remote write metrics to New Relic",
         "url": "https://docs.newrelic.com/docs/infrastructure/prometheus-integrations/install-configure-remote-write/set-your-prometheus-remote-write-integration/"
+      },
+      {
+        "name": "Harbor Metrics Documentation",
+        "description": "Learn more about the Prometheus metrics available for Harbor",
+        "url": "https://goharbor.io/docs/2.3.0/administration/metrics/"
       }
     ],
     "installPlans": [
