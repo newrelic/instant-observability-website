@@ -117,6 +117,7 @@ module.exports = {
             }),
           },
         },
+        newRelicRequestingServicesHeader: 'io-website',
       },
     },
     {
