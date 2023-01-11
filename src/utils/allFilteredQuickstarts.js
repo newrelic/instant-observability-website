@@ -18,7 +18,7 @@ const alphaSort = (a, b) => a.title.localeCompare(b.title);
 const shiftCodestream = (a, b) => {
   const codestreamId = '29bd9a4a-1c19-4219-9694-0942f6411ce7';
   if (a.id === codestreamId) {
-    return 1;
+    return -1;
   }
   if (b.id === codestreamId) {
     return 1;
