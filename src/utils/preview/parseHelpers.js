@@ -69,7 +69,7 @@ export const parseQuickstartFiles = (quickstartFiles) => {
   quickstartContent.installPlans = parsedInstallPlans;
   quickstartContent.keywords = loadYaml?.keywords ?? ['Placeholder keyword'];
   quickstartContent.level =
-    loadYaml?.level.replace(' ', '_').toUpperCase() ?? 'COMMUNITY';
+    loadYaml?.level?.replace(' ', '_').toUpperCase() ?? 'COMMUNITY';
   quickstartContent.name = loadYaml?.slug ?? '';
   quickstartContent.packUrl = packUrl ?? '';
   quickstartContent.relatedResources = []; // we don't get these from the config.yml
