@@ -1,3 +1,10 @@
+## [1.12.8](https://github.com/newrelic/instant-observability-website/compare/v1.12.7...v1.12.8) (2023-01-12)
+
+
+### Bug Fixes
+
+* add optional chaining to support level ([5deb8b0](https://github.com/newrelic/instant-observability-website/commit/5deb8b019b070176288a6f426df2b66a289caa1a))
+
 ## [1.12.7](https://github.com/newrelic/instant-observability-website/compare/v1.12.6...v1.12.7) (2022-12-20)
 
 
