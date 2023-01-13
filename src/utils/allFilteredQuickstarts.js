@@ -10,23 +10,6 @@ import { rank } from '@utils/searchRanking';
 const alphaSort = (a, b) => a.title.localeCompare(b.title);
 
 /**
- * Callback function for moving codestream to the front of array
- * @param {Object} quickstart node
- * @param {Object} quickstart node
- * @returns {Number}
- */
-const shiftCodestream = (a, b) => {
-  const codestreamId = '29bd9a4a-1c19-4219-9694-0942f6411ce7';
-  if (a.id === codestreamId) {
-    return 1;
-  }
-  if (b.id === codestreamId) {
-    return 1;
-  }
-  return 0;
-};
-
-/**
  * Curried function for filtering by keyword
  * @param {Array} array of quickstarts
  * @param {(Function) => Array} Callback function that filters quickstart array
@@ -90,7 +73,7 @@ const allFilteredQuickstarts = (quickstarts, search, category) => {
   const filterQuickstartsByKeyword = filterQuickstarts(quickstarts);
   const featuredQuickstarts = filterQuickstartsByKeyword('featured');
   const mostPopularQuickstarts = filterQuickstartsByKeyword('most popular');
-  const sortedQuickstarts = quickstarts.sort(alphaSort).sort(shiftCodestream);
+  const sortedQuickstarts = quickstarts.sort(alphaSort);
 
   const filteredQuickstarts = sortedQuickstarts
     .filter(filterBySearch(trimmedSearch))
