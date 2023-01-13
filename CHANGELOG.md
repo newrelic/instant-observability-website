@@ -1,3 +1,10 @@
+## [1.12.9](https://github.com/newrelic/instant-observability-website/compare/v1.12.8...v1.12.9) (2023-01-13)
+
+
+### Bug Fixes
+
+* codestream is now sorted correctly to front of quickstarts ([70987ac](https://github.com/newrelic/instant-observability-website/commit/70987ac4c7397e4bb296428fe3c7937d1a0396e7))
+
 ## [1.12.8](https://github.com/newrelic/instant-observability-website/compare/v1.12.7...v1.12.8) (2023-01-12)
 
 
