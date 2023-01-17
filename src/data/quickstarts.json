@@ -13447,70 +13447,6 @@
     ]
   },
   {
-    "title": "Lacework",
-    "name": "lacework",
-    "description": "Lacework is a comprehensive cloud security platform. We aim to turn security into a data problem and replace the frictionful processes for things like breach investigations or achieving compliance standards with simple, contextualized workflows.\nTechnically, our approach is that we replace the traditional 'rules' based mentality that requires you to predict attacker patterns ahead of time with a fully ML based approach.  We baseline what normal user, application and network behaviors look like across your workloads and cloud accounts automatically and then only alert you to deviations from the norm.  This significantly reduces the amount of toil in setting up and maintaining our solution, but also drastically improves the efficacy and amount of security alerts you will receive.\nThe following Quickstart brings the curated security alerts for misconfigurations and anomalous security behaviors into the New Relic platform so you can easily triage against your wealth of observability data or easily transition from monitoring to security investigations from a single interface!\nIf you encounter any issues, have feedback or would like more details on how to get started, please head over to support.lacework.com or send an email to adam.larson@lacework.net!",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/lacework",
-    "id": "8a7a7220-e8ec-4959-b35d-0fe082be8039",
-    "level": "VERIFIED",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/lacework/logo.jpg",
-    "summary": "Integrate Lacework's security events into the New Relic platform",
-    "websiteUrl": null,
-    "keywords": [
-      "security",
-      "compliance",
-      "lacework",
-      "anomaly",
-      "configuration",
-      "newrelic partner",
-      "NR1_addData",
-      "NR1_sys"
-    ],
-    "authors": [
-      "Lacework, Inc"
-    ],
-    "dashboards": [
-      {
-        "name": "Lacework Anomaly Detections",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/lacework-anomaly-detections/lacework-anomaly-detections.png"
-        ]
-      },
-      {
-        "name": "Lacework Security Overview",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/lacework-security-overview/lacework-security-overview.png"
-        ]
-      },
-      {
-        "name": "Lacework Compliance Violations",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/lacework-compliance-violations/lacework-compliance-violations.png"
-        ]
-      }
-    ],
-    "alerts": [],
-    "documentation": [
-      {
-        "name": "Lacework installation docs",
-        "description": "The only prerequisite is to setup the New Relic integration within the Lacework UI.  Details on how to do that can be found below!",
-        "url": "https://support.lacework.com/hc/en-us/articles/360005842354-New-Relic"
-      }
-    ],
-    "installPlans": [
-      {
-        "name": "lacework",
-        "id": "third-party-lacework-integration"
-      }
-    ]
-  },
-  {
     "title": "Snyk",
     "name": "snyk",
     "description": "The Snyk quickstart allows you to send application security vulnerabilities of your services into New Relic. We leverage webhooks on the Snyk platform to trigger an Azure Function App that acts as a proxy between Snyk and New Relic.",
@@ -13761,6 +13697,70 @@
       {
         "name": "AWS-CloudWatch-Metric-Streams",
         "id": "aws-cloudwatch-metric-streams"
+      }
+    ]
+  },
+  {
+    "title": "Lacework",
+    "name": "lacework",
+    "description": "Lacework is a comprehensive cloud security platform. We aim to turn security into a data problem and replace the frictionful processes for things like breach investigations or achieving compliance standards with simple, contextualized workflows.\nTechnically, our approach is that we replace the traditional 'rules' based mentality that requires you to predict attacker patterns ahead of time with a fully ML based approach.  We baseline what normal user, application and network behaviors look like across your workloads and cloud accounts automatically and then only alert you to deviations from the norm.  This significantly reduces the amount of toil in setting up and maintaining our solution, but also drastically improves the efficacy and amount of security alerts you will receive.\nThe following Quickstart brings the curated security alerts for misconfigurations and anomalous security behaviors into the New Relic platform so you can easily triage against your wealth of observability data or easily transition from monitoring to security investigations from a single interface!\nIf you encounter any issues, have feedback or would like more details on how to get started, please head over to support.lacework.com or send an email to adam.larson@lacework.net!",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/lacework",
+    "id": "8a7a7220-e8ec-4959-b35d-0fe082be8039",
+    "level": "VERIFIED",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/lacework/logo.jpg",
+    "summary": "Integrate Lacework's security events into the New Relic platform",
+    "websiteUrl": null,
+    "keywords": [
+      "security",
+      "compliance",
+      "lacework",
+      "anomaly",
+      "configuration",
+      "newrelic partner",
+      "NR1_addData",
+      "NR1_sys"
+    ],
+    "authors": [
+      "Lacework, Inc"
+    ],
+    "dashboards": [
+      {
+        "name": "Lacework Anomaly Detections",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/lacework-anomaly-detections/lacework-anomaly-detections01.png"
+        ]
+      },
+      {
+        "name": "Lacework Security Overview",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/lacework-security-overview/lacework-security-overview01.png"
+        ]
+      },
+      {
+        "name": "Lacework Compliance Violations",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/lacework-compliance-violations/lacework-compliance-violations01.png"
+        ]
+      }
+    ],
+    "alerts": [],
+    "documentation": [
+      {
+        "name": "Lacework installation docs",
+        "description": "The only prerequisite is to setup the New Relic integration within the Lacework UI.  Details on how to do that can be found below!",
+        "url": "https://support.lacework.com/hc/en-us/articles/360005842354-New-Relic"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "lacework",
+        "id": "third-party-lacework-integration"
       }
     ]
   },
