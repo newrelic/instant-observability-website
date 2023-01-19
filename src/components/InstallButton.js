@@ -1,10 +1,11 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import { css } from '@emotion/react';
 import { graphql } from 'gatsby';
 import Button from '@newrelic/gatsby-theme-newrelic/src/components/Button';
 import Link from '@newrelic/gatsby-theme-newrelic/src/components/Link';
 import useTessen from '@newrelic/gatsby-theme-newrelic/src/hooks/useTessen';
+import { useLoggedIn } from '@newrelic/gatsby-theme-newrelic/src/hooks/useLoggedIn';
 import isNRPartner from '@utils/isNRPartner';
 
 import {
@@ -39,34 +40,6 @@ const checkUtmParameters = (parameters) => {
 
   return hasUtmParameters;
 };
-
-/**
- * Makes a call to nerdgraph to see if the user is logged in via the NR cookie hitting Service Gateway
- * @returns {Promise<Boolean>}
- */
-const checkIfUserLoggedIn = () =>
-  fetch('https://nerd-graph.service.newrelic.com/graphql', {
-    method: 'POST',
-    credentials: 'include',
-    redirect: 'error',
-    headers: {
-      'Content-Type': 'application/json',
-      'NewRelic-Requesting-Services': 'io-website',
-    },
-    body: JSON.stringify({
-      query: `{
-        actor {
-          user {
-            name
-          }
-        }
-      }`,
-    }),
-  })
-    .then((res) => {
-      return res.ok;
-    })
-    .catch(() => false);
 
 /**
  * @param {String} id
@@ -116,6 +89,7 @@ const InstallButton = ({
   ...props
 }) => {
   const { treatment } = useTreatment('super_tiles');
+  const { loggedIn } = useLoggedIn();
 
   const hasInstallableComponent =
     hasComponent(quickstart, 'installPlans') ||
@@ -129,18 +103,6 @@ const InstallButton = ({
     hasInstallableComponent &&
     quickstart.installPlans.length === 1 &&
     quickstart.installPlans[0].id.includes('guided-install');
-
-  const [isLoggedIn, setLoggedIn] = useState();
-  useEffect(() => {
-    // IIFE - used to make a call to nerdgraph to set state for is a user is logged in.
-    // We're using an IIFE here because the callback passed
-    // to `useEffect` can't be async.
-    (async () => {
-      const loggedIn = await checkIfUserLoggedIn();
-      setLoggedIn(loggedIn);
-    })();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [checkIfUserLoggedIn]);
 
   // If there is nothing to install AND no documentation, don't show this button.
   if (!hasInstallableComponent && !hasComponent(quickstart, 'documentation')) {
@@ -163,7 +125,7 @@ const InstallButton = ({
         nerdletId,
         hasGuidedInstall,
         hasUtmParameters,
-        isLoggedIn,
+        loggedIn,
         parameters
       )
     : quickstart.documentation[0].url;
