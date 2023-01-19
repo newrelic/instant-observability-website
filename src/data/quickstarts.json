@@ -1117,19 +1117,19 @@
     ],
     "dashboards": [
       {
-        "name": "AWS WAF",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/aws-waf/aws-waf.png"
-        ]
-      },
-      {
         "name": "AWS WAFV2",
         "description": null,
         "url": null,
         "screenshots": [
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/aws-wafv2/aws-wafv2.png"
+        ]
+      },
+      {
+        "name": "AWS WAF",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/aws-waf/aws-waf.png"
         ]
       }
     ],
@@ -2140,19 +2140,19 @@
     ],
     "dashboards": [
       {
-        "name": "Battlesnake Performance",
-        "description": "Monitor your Battlesnake's performance and see how it stacks up against your competition!",
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/battlesnake-performance/battlesnake-performance.png"
-        ]
-      },
-      {
         "name": "Battlesnake Server Status",
         "description": "A dashboard to monitor your Battlesnake server's performance. It's important to keep all responses to the `/move` endpoint under 500ms. Furthermore, it's possible that your snake may be in multiple concurrent matches at the same time. It's important to make sure you server and web application are running smoothly to keep you in the game!",
         "url": null,
         "screenshots": [
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/battlesnake-server-status/battlesnake-server-status.png"
+        ]
+      },
+      {
+        "name": "Battlesnake Performance",
+        "description": "Monitor your Battlesnake's performance and see how it stacks up against your competition!",
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/battlesnake-performance/battlesnake-performance.png"
         ]
       },
       {
@@ -2998,12 +2998,6 @@
     ],
     "alerts": [
       {
-        "name": "Low throughput",
-        "details": "This alert is triggered when the throughput is 0 for 5 minutes",
-        "type": "STATIC",
-        "url": null
-      },
-      {
         "name": "High duration",
         "details": "This alert is triggered when the total duration of the web transaction is longer than 10 seconds during 5 minutes",
         "type": "STATIC",
@@ -3012,6 +3006,12 @@
       {
         "name": "High error rate",
         "details": "This alert is triggered when the error percentage of web transactions is higher than 5% during 5 minutes",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "Low throughput",
+        "details": "This alert is triggered when the throughput is 0 for 5 minutes",
         "type": "STATIC",
         "url": null
       }
@@ -3133,14 +3133,14 @@
     ],
     "alerts": [
       {
-        "name": "Client connections alert",
-        "details": "This alert is triggered when the number of connected redis clients is high.",
+        "name": "Redis down alert",
+        "details": "This alert is triggered when the Redis instance is not responding for a continuous 5 minutes.",
         "type": "STATIC",
         "url": null
       },
       {
-        "name": "Redis down alert",
-        "details": "This alert is triggered when the Redis instance is not responding for a continuous 5 minutes.",
+        "name": "Client connections alert",
+        "details": "This alert is triggered when the number of connected redis clients is high.",
         "type": "STATIC",
         "url": null
       }
@@ -4026,18 +4026,6 @@
     ],
     "alerts": [
       {
-        "name": "Transaction Errors",
-        "details": "This alert is triggered when the the transactions fail more than 10% of the time in 5 minutes.",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "Apdex Score",
-        "details": "This alert is triggered when the Apdex score is below 0.5 for 5 minutes",
-        "type": "STATIC",
-        "url": null
-      },
-      {
         "name": "High CPU Utilization",
         "details": "This alert is triggered when the CPU Utilization is above 90%.",
         "type": "STATIC",
@@ -4046,6 +4034,18 @@
       {
         "name": "Memory Usage",
         "details": "This alert is triggered when Memory usage is above 90%",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "Transaction Errors",
+        "details": "This alert is triggered when the the transactions fail more than 10% of the time in 5 minutes.",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "Apdex Score",
+        "details": "This alert is triggered when the Apdex score is below 0.5 for 5 minutes",
         "type": "STATIC",
         "url": null
       }
@@ -6183,12 +6183,6 @@
     ],
     "alerts": [
       {
-        "name": "Message Enqueue Rate",
-        "details": "This alert is triggered when the messages sent are less than 1 during 5 minutes.",
-        "type": "STATIC",
-        "url": null
-      },
-      {
         "name": "Heap Memory Usage",
         "details": "This alert is triggered when the used heap memory usage is higher than 100GB during 5 minutes.",
         "type": "STATIC",
@@ -6197,6 +6191,12 @@
       {
         "name": "Message Dequeue Rate",
         "details": "This alert is triggered when the messages received are less than 1 during 5 minutes.",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "Message Enqueue Rate",
+        "details": "This alert is triggered when the messages sent are less than 1 during 5 minutes.",
         "type": "STATIC",
         "url": null
       },
@@ -6313,15 +6313,6 @@
     ],
     "dashboards": [
       {
-        "name": "SAP Dashboards",
-        "description": "Monitor SAP systems and applications performances",
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/nrm4sap/sap-dashboard01.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/nrm4sap/sap-dashboard02.png"
-        ]
-      },
-      {
         "name": "SAP Data Collection Monitoring",
         "description": "Monitor SAP data collection and ingestion process",
         "url": null,
@@ -6335,6 +6326,15 @@
         "url": null,
         "screenshots": [
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/nrm4sap-datasize/sap-size-estimate01.png"
+        ]
+      },
+      {
+        "name": "SAP Dashboards",
+        "description": "Monitor SAP systems and applications performances",
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/nrm4sap/sap-dashboard01.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/nrm4sap/sap-dashboard02.png"
         ]
       }
     ],
@@ -6597,11 +6597,11 @@
     ],
     "dashboards": [
       {
-        "name": "Redis Enterprise Database Metrics",
+        "name": "Redis Enterprise Database CRDT",
         "description": null,
         "url": null,
         "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/database/database01.png"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/active-active/active_active01.png"
         ]
       },
       {
@@ -6613,11 +6613,11 @@
         ]
       },
       {
-        "name": "Redis Enterprise Database CRDT",
+        "name": "Redis Enterprise Database Metrics",
         "description": null,
         "url": null,
         "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/active-active/active_active01.png"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/database/database01.png"
         ]
       }
     ],
@@ -6947,9 +6947,9 @@
     ],
     "alerts": [
       {
-        "name": "FS Utilization Percent",
-        "details": "This alert will trigger when the File Store of an Elasticsearch cluster node is >90% full.",
-        "type": "STATIC",
+        "name": "Query Load Baseline",
+        "details": "This alert is triggered when the count of active queries on primary shards deviates more than 2 standard deviations above or below the baseline.\nThis can be a leading indicator of a potential loss of service or flood of requests.",
+        "type": "BASELINE",
         "url": null
       },
       {
@@ -6961,6 +6961,12 @@
       {
         "name": "Flush Latency Threshold",
         "details": "This alert will trigger when the Flush latency for an Elasticsearch cluster's primary shards is >5ms.\nThis is measured by: # of Flushes / Time spent on Flushes (ms) for the evaluated time window.\nIncreased Flush Latency is an indication that your disks cannot keep up with your cluster's demands and you may need to reconfigure the 'flush_threshold_size' setting to reduce the translog size needed to trigger a flush operation.",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "FS Utilization Percent",
+        "details": "This alert will trigger when the File Store of an Elasticsearch cluster node is >90% full.",
         "type": "STATIC",
         "url": null
       },
@@ -6980,12 +6986,6 @@
         "name": "JVM Heap Utilization Percent",
         "details": "This alert will trigger when the JVM Heap utilization of an Elasticsearch cluster node is >90%.",
         "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "Query Load Baseline",
-        "details": "This alert is triggered when the count of active queries on primary shards deviates more than 2 standard deviations above or below the baseline.\nThis can be a leading indicator of a potential loss of service or flood of requests.",
-        "type": "BASELINE",
         "url": null
       }
     ],
@@ -7109,14 +7109,14 @@
     ],
     "alerts": [
       {
-        "name": "Transaction Errors",
-        "details": "This alert is triggered when the the transactions fail more than 10% of the time in 5 minutes.",
+        "name": "High CPU Utilization",
+        "details": "This alert is triggered when the CPU Utilization is above 90%.",
         "type": "STATIC",
         "url": null
       },
       {
-        "name": "High CPU Utilization",
-        "details": "This alert is triggered when the CPU Utilization is above 90%.",
+        "name": "Transaction Errors",
+        "details": "This alert is triggered when the the transactions fail more than 10% of the time in 5 minutes.",
         "type": "STATIC",
         "url": null
       }
@@ -8888,12 +8888,6 @@
     ],
     "alerts": [
       {
-        "name": "P99 latency alert",
-        "details": "This sample alert is triggered when the controller request processing duration for the 99th percentile of requests goes above 100 ms. The alert threshold can be changed to your desired latency for alerting requirements.",
-        "type": "STATIC",
-        "url": null
-      },
-      {
         "name": "High HTTP 4xx/5xx error alert",
         "details": "This alert is triggered when the HTTP request success rate drops below 95 percent. The alert threshold can be changed to your desired error alerting requirements.",
         "type": "STATIC",
@@ -8908,6 +8902,12 @@
       {
         "name": "Nginx-ingress config load errors alert",
         "details": "This alert is triggered when there is an error loading ingress configuration",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "P99 latency alert",
+        "details": "This sample alert is triggered when the controller request processing duration for the 99th percentile of requests goes above 100 ms. The alert threshold can be changed to your desired latency for alerting requirements.",
         "type": "STATIC",
         "url": null
       }
@@ -10078,14 +10078,14 @@
     ],
     "alerts": [
       {
-        "name": "Apdex Score",
-        "details": "This alert is triggered when the Apdex score is below 0.5 for 5 minutes",
+        "name": "High CPU Utilization",
+        "details": "This alert is triggered when the CPU Utilization is above 90%.",
         "type": "STATIC",
         "url": null
       },
       {
-        "name": "High CPU Utilization",
-        "details": "This alert is triggered when the CPU Utilization is above 90%.",
+        "name": "Apdex Score",
+        "details": "This alert is triggered when the Apdex score is below 0.5 for 5 minutes",
         "type": "STATIC",
         "url": null
       },
@@ -11595,6 +11595,73 @@
     ]
   },
   {
+    "title": "Dojo",
+    "name": "dojo",
+    "description": "## Comprehensive monitoring quickstart for Dojo\nMonitor your Dojo application performance in the most complex and distributed environments to deliver exceptional user experience by proactively identifying and resolving performance issues without any downtime.\n\n## Why monitor Dojo?\nThe performance monitoring tool for Dojo application helps you in monitoring the entire infrastructure and identifies the critical issues in your application. Dojo performance monitoring enables you to get a complete picture of Dojo errors, as well as know when and where your Dojo application slows down. \nSome key components are:\n- Monitor  Dojo applications can be used to create rich and varied user interfaces running within a browser.\n- Help you identify issues that are truly important and quickly resolve them. Gain knowledge of performance issues in advance and thus giving you ample time to avoid application downtime.\n- Performance provides you with the information you need to not only prioritize critical performance issues, but also trace them down to the root cause and solve them more quickly.\n- View the overall health of your production environment in order to quickly identify and resolve problems with crippled services.\n\n\n## What’s included in this quickstart?\nNew Relic's Dojo monitoring quickstart boasts instant full-stack observability out-of-the-box:\n\nWith this quickstart, you can:\n- Easily monitor code-related insights that acquaint developers with the intricate details of their application’s health and status by providing detailed information on errors, database queries, and transaction traces.\n- View interactive dashboards show your application's core web vitals,user time on the site and browser performance metrics like Initial page load, Route change, Throughput and Page views with Javascript errors.\n- Proactive alerts that inform developers about the status of their applications.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/dojo",
+    "id": "fdd86b8b-7cc8-4528-a8e7-4cab7072304d",
+    "level": "NEW_RELIC",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/dojo/logo.png",
+    "summary": "Quickly monitor your Dojo application by tracking performance issues with a full end-to-end view of distributed traces.",
+    "websiteUrl": null,
+    "keywords": [
+      "dojo",
+      "browser monitoring"
+    ],
+    "authors": [
+      "New Relic"
+    ],
+    "dashboards": [
+      {
+        "name": "Dojo",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/dojo/dojo01.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/dojo/dojo02.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/dojo/dojo03.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/dojo/dojo04.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/dojo/dojo05.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/dojo/dojo06.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/dojo/dojo07.png"
+        ]
+      }
+    ],
+    "alerts": [
+      {
+        "name": "Ajax Error Response",
+        "details": "This alert is triggered when the client and server error response is higher than 10 for 5 minutes.",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "Application Error Rate",
+        "details": "This alert is triggered when the Application Error Rate are higher than 5 for 5 minutes.",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "Page Load Time",
+        "details": "This alert is triggered when the page load time is higher than 5 seconds for 5 minutes.",
+        "type": "STATIC",
+        "url": null
+      }
+    ],
+    "documentation": [
+      {
+        "name": "Dojo integration documentation",
+        "description": "Monitor the performance metrics of your Dojo instances in real-time with New Relic.\n",
+        "url": "https://docs.newrelic.com/docs/infrastructure/host-integrations/host-integrations-list/dojo-io-integration/"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "Dojo",
+        "id": "dojo"
+      }
+    ]
+  },
+  {
     "title": "F5",
     "name": "f5",
     "description": "## What is F5?\n\nF5 is a family of software and hardware products designed around application availability, access control, and security.\n\n## Get started!\n\nUse New Relic's F5 BIG-IP integration to collect and send inventory and metrics from your F5 BIG-IP instance, where you can aggregate and visualize key performance metrics.\n\nWe collect data at the system, application, pool, pool member, virtual server, and node levels.\n\nFollow the [F5 monitoring integration documentation](https://docs.newrelic.com/docs/integrations/host-integrations/host-integrations-list/f5-monitoring-integration) to get started.",
@@ -11949,14 +12016,14 @@
     "alerts": [],
     "documentation": [
       {
-        "name": "Github repository",
-        "description": "Github repository for the New Relic Package.",
-        "url": "https://github.com/pulumi/pulumi-newrelic"
-      },
-      {
         "name": "Getting started with New Relic and Pulumi",
         "description": "In this guide, you learn how to set up New Relic alerts with Pulumi.\n",
         "url": "https://www.pulumi.com/registry/packages/newrelic/"
+      },
+      {
+        "name": "Github repository",
+        "description": "Github repository for the New Relic Package.",
+        "url": "https://github.com/pulumi/pulumi-newrelic"
       },
       {
         "name": "New Relic Package",
@@ -12062,14 +12129,14 @@
     ],
     "alerts": [
       {
-        "name": "Apdex Score",
-        "details": "This alert is triggered when the Apdex score is below 0.5 for 5 minutes",
+        "name": "High CPU Utilization",
+        "details": "This alert is triggered when the CPU Utilization is above 90%.",
         "type": "STATIC",
         "url": null
       },
       {
-        "name": "High CPU Utilization",
-        "details": "This alert is triggered when the CPU Utilization is above 90%.",
+        "name": "Apdex Score",
+        "details": "This alert is triggered when the Apdex score is below 0.5 for 5 minutes",
         "type": "STATIC",
         "url": null
       },
@@ -12969,14 +13036,14 @@
     "alerts": [],
     "documentation": [
       {
-        "name": "New Relic Apollo Server plugin repository",
-        "description": "New Relic's official Apollo Server plugin for use with the Node.js agent.",
-        "url": "https://github.com/newrelic/newrelic-node-apollo-server-plugin/blob/main/README.md"
-      },
-      {
         "name": "Installation Docs",
         "description": "The New Relic Apollo Server plugin instruments your Apollo Server applications to give visibility into your GraphQL payloads.",
         "url": "https://docs.newrelic.com/docs/apm/agents/nodejs-agent/extend-your-instrumentation/apollo-server-plugin-nodejs/"
+      },
+      {
+        "name": "New Relic Apollo Server plugin repository",
+        "description": "New Relic's official Apollo Server plugin for use with the Node.js agent.",
+        "url": "https://github.com/newrelic/newrelic-node-apollo-server-plugin/blob/main/README.md"
       }
     ],
     "installPlans": [
@@ -13725,14 +13792,6 @@
     ],
     "dashboards": [
       {
-        "name": "Lacework Anomaly Detections",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/lacework-anomaly-detections/lacework-anomaly-detections01.png"
-        ]
-      },
-      {
         "name": "Lacework Security Overview",
         "description": null,
         "url": null,
@@ -13746,6 +13805,14 @@
         "url": null,
         "screenshots": [
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/lacework-compliance-violations/lacework-compliance-violations01.png"
+        ]
+      },
+      {
+        "name": "Lacework Anomaly Detections",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/lacework-anomaly-detections/lacework-anomaly-detections01.png"
         ]
       }
     ],
@@ -13761,6 +13828,79 @@
       {
         "name": "lacework",
         "id": "third-party-lacework-integration"
+      }
+    ]
+  },
+  {
+    "title": "Blazor Server",
+    "name": "blazor-server",
+    "description": "## Comprehensive monitoring quickstart for Blazor Server\nMicrosoft developed Blazor Server to build web UIs with C#, HTML, and CSS. As a feature of ASP.NET, our Blazor Server integration with the .NET agent lets you monitor your apps with our quickstart dashboards right out of the box.\n\n## Why monitor Blazor Server?\nBlazor Server offers a lot of useful features in addition to allowing C# developers to utilize their preferred language for web development. Blazor Server allows you to run your code through Blazor Server on the server or the client, and you can decide which users or devices experience each method.\n\nThere are a few compelling arguments that support the employment of Blazor Server:\n- All of the major browsers support Blazor Server.\n- Using C# for interactive web apps.\n- Utilize current C# libraries.\n- Near-native performance.\n- Debugging and tooling.\n\n## What’s included in this quickstart?\nGet these Blazor Server monitoring features out of the box with our quickstart:\n- Understand the health of your system with dashboards that show throughput and error rate data, logs, web transaction time, Apdex score, and more. \n- Alerts.\n- Monitor scripts and functions.\n- Monitor web transactions.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/dotnet/blazor-server",
+    "id": "b038e759-bf74-4353-9273-c66e86b25ebe",
+    "level": "NEW_RELIC",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/dotnet/blazor-server/logo.png",
+    "summary": "Instrument and monitor your Blazor Server application with our .NET agent. Analyze your performance data right out of the box.",
+    "websiteUrl": null,
+    "keywords": [
+      "dotnet",
+      ".net",
+      "blazor",
+      "blazor server"
+    ],
+    "authors": [
+      "New Relic"
+    ],
+    "dashboards": [
+      {
+        "name": "Blazor Server",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/blazor-server/blazor-server01.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/blazor-server/blazor-server02.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/blazor-server/blazor-server03.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/blazor-server/blazor-server04.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/blazor-server/blazor-server05.png"
+        ]
+      }
+    ],
+    "alerts": [
+      {
+        "name": "Apdex Score",
+        "details": "This alert is triggered when the Apdex score is below 0.5 for 5 minutes.",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "High CPU Utilization",
+        "details": "This alert is triggered when the CPU Utilization is above 90%.",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "Memory Usage",
+        "details": "This alert is triggered when Memory usage is above 90%.",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "Transaction Errors",
+        "details": "This alert is triggered when the the transactions fail more than 10% of the time in 5 minutes.",
+        "type": "STATIC",
+        "url": null
+      }
+    ],
+    "documentation": [
+      {
+        "name": "Blazor Server installation docs",
+        "description": "Our .NET agent can be used to instrument and monitor your Blazor Server application. Perform an immediate analysis of your performance statistics. \n",
+        "url": "https://docs.newrelic.com/docs/apm/agents/net-agent/getting-started/net-agent-compatibility-requirements-net-framework/#technologies"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "Blazor Server",
+        "id": "blazor-server"
       }
     ]
   },
@@ -13947,14 +14087,14 @@
     "alerts": [],
     "documentation": [
       {
-        "name": "Github repository",
-        "description": "Github repository for the New Relic Provider.",
-        "url": "https://github.com/newrelic/terraform-provider-newrelic"
-      },
-      {
         "name": "Getting started with New Relic and Terraform",
         "description": "In this guide, you learn how to set up New Relic alerts with Terraform.\n",
         "url": "https://developer.newrelic.com/terraform/get-started-terraform/"
+      },
+      {
+        "name": "Github repository",
+        "description": "Github repository for the New Relic Provider.",
+        "url": "https://github.com/newrelic/terraform-provider-newrelic"
       },
       {
         "name": "New Relic Provider",
@@ -15923,12 +16063,6 @@
     ],
     "alerts": [
       {
-        "name": "Low throughput",
-        "details": "This alert is triggered when the throughput is 0 for 5 minutes",
-        "type": "STATIC",
-        "url": null
-      },
-      {
         "name": "High duration",
         "details": "This alert is triggered when the total duration of the web transaction is longer than 10 seconds during 5 minutes",
         "type": "STATIC",
@@ -15937,6 +16071,12 @@
       {
         "name": "High error rate",
         "details": "This alert is triggered when the error percentage of web transactions is higher than 5% during 5 minutes",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "Low throughput",
+        "details": "This alert is triggered when the throughput is 0 for 5 minutes",
         "type": "STATIC",
         "url": null
       }
@@ -16639,14 +16779,14 @@
         "url": null
       },
       {
-        "name": "Apdex Score",
-        "details": "This alert is triggered when the Apdex score is below 0.5 for 5 minutes",
+        "name": "Transaction Errors",
+        "details": "This alert is triggered when the the transactions fail more than 10% of the time in 5 minutes.",
         "type": "STATIC",
         "url": null
       },
       {
-        "name": "Transaction Errors",
-        "details": "This alert is triggered when the the transactions fail more than 10% of the time in 5 minutes.",
+        "name": "Apdex Score",
+        "details": "This alert is triggered when the Apdex score is below 0.5 for 5 minutes",
         "type": "STATIC",
         "url": null
       }
@@ -16891,14 +17031,14 @@
     ],
     "alerts": [
       {
-        "name": "High CPU Utilization",
-        "details": "This alert is triggered when the CPU Utilization is above 90%.",
+        "name": "Transaction Errors",
+        "details": "This alert is triggered when the the transactions fail more than 10% of the time in 5 minutes.",
         "type": "STATIC",
         "url": null
       },
       {
-        "name": "Transaction Errors",
-        "details": "This alert is triggered when the the transactions fail more than 10% of the time in 5 minutes.",
+        "name": "High CPU Utilization",
+        "details": "This alert is triggered when the CPU Utilization is above 90%.",
         "type": "STATIC",
         "url": null
       }
@@ -17663,14 +17803,14 @@
     ],
     "alerts": [
       {
-        "name": "High CPU Utilization",
-        "details": "This alert is triggered when the CPU Utilization is above 90%.",
+        "name": "Apdex Score",
+        "details": "This alert is triggered when the Apdex score is below 0.5 for 5 minutes",
         "type": "STATIC",
         "url": null
       },
       {
-        "name": "Apdex Score",
-        "details": "This alert is triggered when the Apdex score is below 0.5 for 5 minutes",
+        "name": "High CPU Utilization",
+        "details": "This alert is triggered when the CPU Utilization is above 90%.",
         "type": "STATIC",
         "url": null
       },
@@ -19180,6 +19320,11 @@
     "alerts": [],
     "documentation": [
       {
+        "name": "GitHub repository",
+        "description": "The GitHub repository for the integration",
+        "url": "https://github.com/newrelic-experimental/newrelic-connector-trendmicro-cloud-one-conformity#readme"
+      },
+      {
         "name": "New Relic blog post",
         "description": "Learn more about the integration on New Relic's blog post",
         "url": "https://newrelic.com/blog/how-to-relic/trend-micro-aws"
@@ -19188,11 +19333,6 @@
         "name": "Trend Micro blog post",
         "description": "Learn more about the integration on Trend Micro's blog post",
         "url": "https://www.trendmicro.com/en_us/devops/21/f/how-to-achieve-more-security-observability.html"
-      },
-      {
-        "name": "GitHub repository",
-        "description": "The GitHub repository for the integration",
-        "url": "https://github.com/newrelic-experimental/newrelic-connector-trendmicro-cloud-one-conformity#readme"
       }
     ],
     "installPlans": [
@@ -19498,11 +19638,11 @@
     ],
     "dashboards": [
       {
-        "name": "Catchpoint-Response Size",
+        "name": "Catchpoint-Overview",
         "description": null,
         "url": null,
         "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/catchpoint-response-size/Catchpoint-Response_Size.png"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/catchpoint-overview/Catchpoint-Overview.png"
         ]
       },
       {
@@ -19514,19 +19654,19 @@
         ]
       },
       {
+        "name": "Catchpoint-Response Size",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/catchpoint-response-size/Catchpoint-Response_Size.png"
+        ]
+      },
+      {
         "name": "Catchpoint-Recent Errors",
         "description": null,
         "url": null,
         "screenshots": [
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/catchpoint-recent-errors/Catchpoint-Recent_Errors.png"
-        ]
-      },
-      {
-        "name": "Catchpoint-Overview",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/catchpoint-overview/Catchpoint-Overview.png"
         ]
       }
     ],
@@ -19782,14 +19922,14 @@
     ],
     "documentation": [
       {
-        "name": "Prometheus OpenMetrics Intergration (POMI) installation docs",
-        "description": "To view the Istio Quickstart, the Kubernetes New Relic integration with the Prometheus OpenMetrics Integration (POMI) must be installed prior.\n",
-        "url": "https://docs.newrelic.com/docs/infrastructure/prometheus-integrations/get-started/send-prometheus-metric-data-new-relic"
-      },
-      {
         "name": "Kubernetes installation docs",
         "description": "To view the Istio Quickstart, the Kubernetes New Relic integration with the Prometheus OpenMetrics Integration (POMI) must be installed prior.\n",
         "url": "https://docs.newrelic.com/docs/integrations/host-integrations/host-integrations-list/kubernetes-monitoring-integration"
+      },
+      {
+        "name": "Prometheus OpenMetrics Intergration (POMI) installation docs",
+        "description": "To view the Istio Quickstart, the Kubernetes New Relic integration with the Prometheus OpenMetrics Integration (POMI) must be installed prior.\n",
+        "url": "https://docs.newrelic.com/docs/infrastructure/prometheus-integrations/get-started/send-prometheus-metric-data-new-relic"
       }
     ],
     "installPlans": [
@@ -21002,12 +21142,6 @@
     ],
     "alerts": [
       {
-        "name": "Low throughput",
-        "details": "This alert is triggered when the throughput is 0 for 5 minutes",
-        "type": "STATIC",
-        "url": null
-      },
-      {
         "name": "High duration",
         "details": "This alert is triggered when the total duration of the web transaction is longer than 10 seconds during 5 minutes",
         "type": "STATIC",
@@ -21016,6 +21150,12 @@
       {
         "name": "High error rate",
         "details": "This alert is triggered when the error percentage of web transactions is higher than 5% during 5 minutes",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "Low throughput",
+        "details": "This alert is triggered when the throughput is 0 for 5 minutes",
         "type": "STATIC",
         "url": null
       }
@@ -21715,14 +21855,14 @@
     ],
     "documentation": [
       {
-        "name": "CoreDNS Integration Docs",
-        "description": "New Relic documentation for the CoreDNS integration including installation, configuration, and how to query the metrics.\n",
-        "url": "https://docs.newrelic.com/docs/infrastructure/prometheus-integrations/integrations-list/core-dns-integration"
-      },
-      {
         "name": "CoreDNS Metrics Docs",
         "description": "Learn more about the Prometheus metrics available for CoreDNS\n",
         "url": "https://coredns.io/plugins/metrics/"
+      },
+      {
+        "name": "CoreDNS Integration Docs",
+        "description": "New Relic documentation for the CoreDNS integration including installation, configuration, and how to query the metrics.\n",
+        "url": "https://docs.newrelic.com/docs/infrastructure/prometheus-integrations/integrations-list/core-dns-integration"
       },
       {
         "name": "Prometheus Installation Docs",
@@ -21869,14 +22009,14 @@
     ],
     "alerts": [
       {
-        "name": "Transaction Errors",
-        "details": "This alert is triggered when the the transactions fail more than 10% of the time in 5 minutes.",
+        "name": "High CPU Utilization",
+        "details": "This alert is triggered when the CPU Utilization is above 90%.",
         "type": "STATIC",
         "url": null
       },
       {
-        "name": "High CPU Utilization",
-        "details": "This alert is triggered when the CPU Utilization is above 90%.",
+        "name": "Transaction Errors",
+        "details": "This alert is triggered when the the transactions fail more than 10% of the time in 5 minutes.",
         "type": "STATIC",
         "url": null
       }
@@ -25601,22 +25741,6 @@
         ]
       },
       {
-        "name": "AWS Integrations Data Ingest Analysis",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/aws-integrations-data-ingest-analysis/aws-integrations-data-ingest-analysis.png"
-        ]
-      },
-      {
-        "name": "On-Host Integrations Data Analysis",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/on-host-integrations-data-analysis/on-host-integrations-data-analysis.png"
-        ]
-      },
-      {
         "name": "Kubernetes Data Ingest Analysis",
         "description": null,
         "url": null,
@@ -25630,6 +25754,22 @@
         "url": null,
         "screenshots": [
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/gcp-integrations-data-ingest-analysis/gcp-integrations-data-ingest-analysis.png"
+        ]
+      },
+      {
+        "name": "AWS Integrations Data Ingest Analysis",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/aws-integrations-data-ingest-analysis/aws-integrations-data-ingest-analysis.png"
+        ]
+      },
+      {
+        "name": "On-Host Integrations Data Analysis",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/on-host-integrations-data-analysis/on-host-integrations-data-analysis.png"
         ]
       }
     ],
@@ -26593,19 +26733,11 @@
     ],
     "dashboards": [
       {
-        "name": "Browser Traffic Analysis",
+        "name": "JavaScript Errors",
         "description": null,
         "url": null,
         "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/traffic-analysis/traffic_analysis.png"
-        ]
-      },
-      {
-        "name": "Browser Overview",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/browser-overview/browser_overview.png"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/javascript-errors/javascript_errors.png"
         ]
       },
       {
@@ -26617,11 +26749,19 @@
         ]
       },
       {
-        "name": "JavaScript Errors",
+        "name": "Browser Overview",
         "description": null,
         "url": null,
         "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/javascript-errors/javascript_errors.png"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/browser-overview/browser_overview.png"
+        ]
+      },
+      {
+        "name": "Browser Traffic Analysis",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/traffic-analysis/traffic_analysis.png"
         ]
       }
     ],
@@ -26911,14 +27051,14 @@
     "alerts": [],
     "documentation": [
       {
-        "name": "Prometheus Remote Write Configuration",
-        "description": "Configure your Prometheus Server to remote write metrics to New Relic",
-        "url": "https://docs.newrelic.com/docs/infrastructure/prometheus-integrations/install-configure-remote-write/set-your-prometheus-remote-write-integration/"
-      },
-      {
         "name": "Harbor Metrics Documentation",
         "description": "Learn more about the Prometheus metrics available for Harbor",
         "url": "https://goharbor.io/docs/2.3.0/administration/metrics/"
+      },
+      {
+        "name": "Prometheus Remote Write Configuration",
+        "description": "Configure your Prometheus Server to remote write metrics to New Relic",
+        "url": "https://docs.newrelic.com/docs/infrastructure/prometheus-integrations/install-configure-remote-write/set-your-prometheus-remote-write-integration/"
       }
     ],
     "installPlans": [
