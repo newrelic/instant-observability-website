@@ -1,3 +1,11 @@
+## [1.12.10](https://github.com/newrelic/instant-observability-website/compare/v1.12.9...v1.12.10) (2023-01-26)
+
+
+### Bug Fixes
+
+* made bigger tweak to get rid of issue at 1420px ([07ad80a](https://github.com/newrelic/instant-observability-website/commit/07ad80aa58daa62afe0b521e65f46e1ba10d0bd5))
+* small padding tweak to remove overlapping text ([c403309](https://github.com/newrelic/instant-observability-website/commit/c40330921ec604ae4328e9dd9c58ec49fdfbfa85))
+
 ## [1.12.9](https://github.com/newrelic/instant-observability-website/compare/v1.12.8...v1.12.9) (2023-01-13)
 
 
