@@ -47,7 +47,7 @@ const GuidedInstallTile = () => {
         interactive
         base={Surface.BASE.PRIMARY}
         css={css`
-          padding: 32px;
+          padding: 28px;
           overflow: hidden;
           height: 360px;
           min-width: 250px;
@@ -66,7 +66,7 @@ const GuidedInstallTile = () => {
             'install';
 
           @media screen and (max-width: ${QUICKSTARTS_COLLAPSE_BREAKPOINT}) {
-            padding: 32px 32px 24px 32px;
+            padding: 28px 28px 24px 28px;
             width: 100%;
             min-width: 250px;
           }
