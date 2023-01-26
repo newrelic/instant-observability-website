@@ -288,72 +288,6 @@
     ]
   },
   {
-    "title": "Velero (Prometheus)",
-    "name": "velero-prometheus",
-    "description": "## A comprehensive Velero monitoring system\n\nVelero is a tool used to backup and restore Kubernetes cluster resources and persistent volumes.\n\nNew Relic provides a Velero Quickstart which allows you to monitor your Velero schedules and jobs with ease.\n\n### New Relic - a perfect tool to monitor Velero using Prometheus.\n\nVelero has become an important part of Kubernetes architectures, providing features to ensure continuity of state during disaster recover, and ease the burden of systems migration. \n\nUsing the [New Relic Prometheus Remote-Write](https://docs.newrelic.com/docs/infrastructure/prometheus-integrations/install-configure-remote-write/set-your-prometheus-remote-write-integration/) integration you can deliver your critical Velero metrics from your internally supported instance of Prometheus directly to New Relic where the rest of your observability data resides.\n\n### New Relic Velero quickstart features\n\nOur Velero Quickstart include out-of-the-box dashboards and alerts, including data such as:\n- Overview Schedules (# successes, # failures) + charts with duration and sizes of backups \n\n### Value of the Velero (Prometheus) quickstart\n\nThe Velero (Prometheus) Quickstart provides a visual snapshot of all the key health information related to your Velero clients and the Kubernetes Clusters they are helping to maintain. Monitoring is made easy via the clear, color-coded dashboard which showcases schedule execution and much more.",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/velero-prometheus",
-    "id": "dbca2b58-f754-49a2-af7f-0ceca8a9978a",
-    "level": "NEW_RELIC",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/velero-prometheus/logo.png",
-    "summary": "New Relic provides crucial tools for monitoring your Velero clients using the Prometheus Remote-Write integration. It supports features such as a visual dashboard complete with charts detailing all critical performance and health metrics relevant to your Velero system.",
-    "websiteUrl": null,
-    "keywords": [
-      "velero",
-      "prometheus",
-      "remote",
-      "write",
-      "kubernetes",
-      "disaster recovery"
-    ],
-    "authors": [
-      "New Relic Labs"
-    ],
-    "dashboards": [
-      {
-        "name": "Velero-Prometheus",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/velero-prometheus/velero-prometheus-2.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/velero-prometheus/velero-prometheus.png"
-        ]
-      }
-    ],
-    "alerts": [
-      {
-        "name": "Velero Prometheus Backup Duration Baseline",
-        "details": "Alert when the duration of the backup changes significantly from its baseline.",
-        "type": "BASELINE",
-        "url": null
-      },
-      {
-        "name": "Velero Prometheus Backup Failure",
-        "details": "This alert is triggered when Velero indicates a backup has failed.",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "Velero Prometheus Backup Size",
-        "details": "Alert when the duration of the backup size changes significantly from its baseline.",
-        "type": "BASELINE",
-        "url": null
-      }
-    ],
-    "documentation": [
-      {
-        "name": "Velero Prometheus Integration",
-        "description": "Open source, backup and restore tooling to help maintain your Kubernetes systems.\n",
-        "url": "https://velero.io/docs/"
-      }
-    ],
-    "installPlans": [
-      {
-        "name": "Prometheus remote write",
-        "id": "setup-prometheus"
-      }
-    ]
-  },
-  {
     "title": "AWS Lambda",
     "name": "aws-lambda",
     "description": "## What is AWS Lambda?\n\nZero-administration compute platform for back-end web developers that runs\nyour code for you in AWS cloud.\n\n\n### Get started!\n\nStart monitoring AWS Lambda by connecting Amazon Web Services (AWS) to New Relic!\n\nCheck out our AWS Lambda documentation to instrument your cloud service and manage the stability, scalability, and reliability of your systems with New Relic's infrastructure monitoring capabilities.\n\n### More info\n\nCheck out the [documentation](https://docs.newrelic.com/docs/infrastructure/amazon-integrations/aws-integrations-list/aws-lambda-monitoring-integration/) to learn more about New Relic monitoring for AWS Lambda.",
@@ -1117,19 +1051,19 @@
     ],
     "dashboards": [
       {
-        "name": "AWS WAFV2",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/aws-wafv2/aws-wafv2.png"
-        ]
-      },
-      {
         "name": "AWS WAF",
         "description": null,
         "url": null,
         "screenshots": [
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/aws-waf/aws-waf.png"
+        ]
+      },
+      {
+        "name": "AWS WAFV2",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/aws-wafv2/aws-wafv2.png"
         ]
       }
     ],
@@ -1244,6 +1178,72 @@
       {
         "name": "Kamon",
         "id": "third-party-kamon"
+      }
+    ]
+  },
+  {
+    "title": "Velero (Prometheus)",
+    "name": "velero-prometheus",
+    "description": "## A comprehensive Velero monitoring system\n\nVelero is a tool used to backup and restore Kubernetes cluster resources and persistent volumes.\n\nNew Relic provides a Velero Quickstart which allows you to monitor your Velero schedules and jobs with ease.\n\n### New Relic - a perfect tool to monitor Velero using Prometheus.\n\nVelero has become an important part of Kubernetes architectures, providing features to ensure continuity of state during disaster recover, and ease the burden of systems migration. \n\nUsing the [New Relic Prometheus Remote-Write](https://docs.newrelic.com/docs/infrastructure/prometheus-integrations/install-configure-remote-write/set-your-prometheus-remote-write-integration/) integration you can deliver your critical Velero metrics from your internally supported instance of Prometheus directly to New Relic where the rest of your observability data resides.\n\n### New Relic Velero quickstart features\n\nOur Velero Quickstart include out-of-the-box dashboards and alerts, including data such as:\n- Overview Schedules (# successes, # failures) + charts with duration and sizes of backups \n\n### Value of the Velero (Prometheus) quickstart\n\nThe Velero (Prometheus) Quickstart provides a visual snapshot of all the key health information related to your Velero clients and the Kubernetes Clusters they are helping to maintain. Monitoring is made easy via the clear, color-coded dashboard which showcases schedule execution and much more.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/velero-prometheus",
+    "id": "dbca2b58-f754-49a2-af7f-0ceca8a9978a",
+    "level": "NEW_RELIC",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/velero-prometheus/logo.png",
+    "summary": "New Relic provides crucial tools for monitoring your Velero clients using the Prometheus Remote-Write integration. It supports features such as a visual dashboard complete with charts detailing all critical performance and health metrics relevant to your Velero system.",
+    "websiteUrl": null,
+    "keywords": [
+      "velero",
+      "prometheus",
+      "remote",
+      "write",
+      "kubernetes",
+      "disaster recovery"
+    ],
+    "authors": [
+      "New Relic Labs"
+    ],
+    "dashboards": [
+      {
+        "name": "Velero-Prometheus",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/velero-prometheus/velero-prometheus-2.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/velero-prometheus/velero-prometheus.png"
+        ]
+      }
+    ],
+    "alerts": [
+      {
+        "name": "Velero Prometheus Backup Duration Baseline",
+        "details": "Alert when the duration of the backup changes significantly from its baseline.",
+        "type": "BASELINE",
+        "url": null
+      },
+      {
+        "name": "Velero Prometheus Backup Failure",
+        "details": "This alert is triggered when Velero indicates a backup has failed.",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "Velero Prometheus Backup Size",
+        "details": "Alert when the duration of the backup size changes significantly from its baseline.",
+        "type": "BASELINE",
+        "url": null
+      }
+    ],
+    "documentation": [
+      {
+        "name": "Velero Prometheus Integration",
+        "description": "Open source, backup and restore tooling to help maintain your Kubernetes systems.\n",
+        "url": "https://velero.io/docs/"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "Prometheus remote write",
+        "id": "setup-prometheus"
       }
     ]
   },
@@ -1524,14 +1524,14 @@
     ],
     "alerts": [
       {
-        "name": "Apdex Score",
-        "details": "This alert is triggered when the Apdex score is below 0.5 for 5 minutes",
+        "name": "High CPU Utilization",
+        "details": "This alert is triggered when the CPU Utilization is above 90%.",
         "type": "STATIC",
         "url": null
       },
       {
-        "name": "High CPU Utilization",
-        "details": "This alert is triggered when the CPU Utilization is above 90%.",
+        "name": "Apdex Score",
+        "details": "This alert is triggered when the Apdex score is below 0.5 for 5 minutes",
         "type": "STATIC",
         "url": null
       },
@@ -2998,6 +2998,12 @@
     ],
     "alerts": [
       {
+        "name": "Low throughput",
+        "details": "This alert is triggered when the throughput is 0 for 5 minutes",
+        "type": "STATIC",
+        "url": null
+      },
+      {
         "name": "High duration",
         "details": "This alert is triggered when the total duration of the web transaction is longer than 10 seconds during 5 minutes",
         "type": "STATIC",
@@ -3006,12 +3012,6 @@
       {
         "name": "High error rate",
         "details": "This alert is triggered when the error percentage of web transactions is higher than 5% during 5 minutes",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "Low throughput",
-        "details": "This alert is triggered when the throughput is 0 for 5 minutes",
         "type": "STATIC",
         "url": null
       }
@@ -3133,14 +3133,14 @@
     ],
     "alerts": [
       {
-        "name": "Redis down alert",
-        "details": "This alert is triggered when the Redis instance is not responding for a continuous 5 minutes.",
+        "name": "Client connections alert",
+        "details": "This alert is triggered when the number of connected redis clients is high.",
         "type": "STATIC",
         "url": null
       },
       {
-        "name": "Client connections alert",
-        "details": "This alert is triggered when the number of connected redis clients is high.",
+        "name": "Redis down alert",
+        "details": "This alert is triggered when the Redis instance is not responding for a continuous 5 minutes.",
         "type": "STATIC",
         "url": null
       }
@@ -4026,6 +4026,12 @@
     ],
     "alerts": [
       {
+        "name": "Transaction Errors",
+        "details": "This alert is triggered when the the transactions fail more than 10% of the time in 5 minutes.",
+        "type": "STATIC",
+        "url": null
+      },
+      {
         "name": "High CPU Utilization",
         "details": "This alert is triggered when the CPU Utilization is above 90%.",
         "type": "STATIC",
@@ -4034,12 +4040,6 @@
       {
         "name": "Memory Usage",
         "details": "This alert is triggered when Memory usage is above 90%",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "Transaction Errors",
-        "details": "This alert is triggered when the the transactions fail more than 10% of the time in 5 minutes.",
         "type": "STATIC",
         "url": null
       },
@@ -6183,6 +6183,12 @@
     ],
     "alerts": [
       {
+        "name": "Message Enqueue Rate",
+        "details": "This alert is triggered when the messages sent are less than 1 during 5 minutes.",
+        "type": "STATIC",
+        "url": null
+      },
+      {
         "name": "Heap Memory Usage",
         "details": "This alert is triggered when the used heap memory usage is higher than 100GB during 5 minutes.",
         "type": "STATIC",
@@ -6191,12 +6197,6 @@
       {
         "name": "Message Dequeue Rate",
         "details": "This alert is triggered when the messages received are less than 1 during 5 minutes.",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "Message Enqueue Rate",
-        "details": "This alert is triggered when the messages sent are less than 1 during 5 minutes.",
         "type": "STATIC",
         "url": null
       },
@@ -6597,14 +6597,6 @@
     ],
     "dashboards": [
       {
-        "name": "Redis Enterprise Database CRDT",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/active-active/active_active01.png"
-        ]
-      },
-      {
         "name": "Redis Enterprise Cluster Metrics",
         "description": null,
         "url": null,
@@ -6618,6 +6610,14 @@
         "url": null,
         "screenshots": [
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/database/database01.png"
+        ]
+      },
+      {
+        "name": "Redis Enterprise Database CRDT",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/active-active/active_active01.png"
         ]
       }
     ],
@@ -6947,9 +6947,9 @@
     ],
     "alerts": [
       {
-        "name": "Query Load Baseline",
-        "details": "This alert is triggered when the count of active queries on primary shards deviates more than 2 standard deviations above or below the baseline.\nThis can be a leading indicator of a potential loss of service or flood of requests.",
-        "type": "BASELINE",
+        "name": "Indexing Latency Threshold",
+        "details": "This alert will trigger when the Indexing latency for an Elasticsearch cluster's primary shards is >5ms.\nThis is measured by: # of Docs Indexed / Time spent Indexing (ms) for the evaluated time window.\nIncreased Flush Latency is an indication that you are trying to index too many documents at one time and you may need to reconfigured your settings to increase performance.",
+        "type": "STATIC",
         "url": null
       },
       {
@@ -6977,15 +6977,15 @@
         "url": null
       },
       {
-        "name": "Indexing Latency Threshold",
-        "details": "This alert will trigger when the Indexing latency for an Elasticsearch cluster's primary shards is >5ms.\nThis is measured by: # of Docs Indexed / Time spent Indexing (ms) for the evaluated time window.\nIncreased Flush Latency is an indication that you are trying to index too many documents at one time and you may need to reconfigured your settings to increase performance.",
+        "name": "JVM Heap Utilization Percent",
+        "details": "This alert will trigger when the JVM Heap utilization of an Elasticsearch cluster node is >90%.",
         "type": "STATIC",
         "url": null
       },
       {
-        "name": "JVM Heap Utilization Percent",
-        "details": "This alert will trigger when the JVM Heap utilization of an Elasticsearch cluster node is >90%.",
-        "type": "STATIC",
+        "name": "Query Load Baseline",
+        "details": "This alert is triggered when the count of active queries on primary shards deviates more than 2 standard deviations above or below the baseline.\nThis can be a leading indicator of a potential loss of service or flood of requests.",
+        "type": "BASELINE",
         "url": null
       }
     ],
@@ -8914,14 +8914,14 @@
     ],
     "documentation": [
       {
-        "name": "NGINX Ingress Controller Prometheus Integration",
-        "description": "NGINX Ingress Controller Prometheus Integration Documentation\n",
-        "url": "https://docs.newrelic.com/docs/infrastructure/prometheus-integrations/integrations-list/ingress-controller-integration/"
-      },
-      {
         "name": "Prometheus installation docs",
         "description": "Use Prometheus remote_write or Prometheus Agent\n",
         "url": "https://docs.newrelic.com/docs/infrastructure/prometheus-integrations/get-started/send-prometheus-metric-data-new-relic"
+      },
+      {
+        "name": "NGINX Ingress Controller Prometheus Integration",
+        "description": "NGINX Ingress Controller Prometheus Integration Documentation\n",
+        "url": "https://docs.newrelic.com/docs/infrastructure/prometheus-integrations/integrations-list/ingress-controller-integration/"
       }
     ],
     "installPlans": [
@@ -9448,14 +9448,14 @@
         "url": "https://docs.newrelic.com/docs/infrastructure/prometheus-integrations/get-started/send-prometheus-metric-data-new-relic"
       },
       {
-        "name": "Etcd Metrics Docs",
-        "description": "Learn more about the Prometheus metrics available for Etcd",
-        "url": "https://etcd.io/docs/v3.5/metrics/"
-      },
-      {
         "name": "Etcd Integration Docs",
         "description": "New Relic documentation for the Etcd integration including installation, configuration, and how to query the metrics.\n",
         "url": "https://docs.newrelic.com/docs/infrastructure/prometheus-integrations/integrations-list/etcd-integration"
+      },
+      {
+        "name": "Etcd Metrics Docs",
+        "description": "Learn more about the Prometheus metrics available for Etcd",
+        "url": "https://etcd.io/docs/v3.5/metrics/"
       }
     ],
     "installPlans": [
@@ -9500,14 +9500,14 @@
     ],
     "alerts": [
       {
-        "name": "High CPU Utilization",
-        "details": "This alert is triggered when the CPU Utilization is above 90%.",
+        "name": "Transaction Errors",
+        "details": "This alert is triggered when the the transactions fail more than 10% of the time in 5 minutes.",
         "type": "STATIC",
         "url": null
       },
       {
-        "name": "Transaction Errors",
-        "details": "This alert is triggered when the the transactions fail more than 10% of the time in 5 minutes.",
+        "name": "High CPU Utilization",
+        "details": "This alert is triggered when the CPU Utilization is above 90%.",
         "type": "STATIC",
         "url": null
       }
@@ -10078,14 +10078,14 @@
     ],
     "alerts": [
       {
-        "name": "High CPU Utilization",
-        "details": "This alert is triggered when the CPU Utilization is above 90%.",
+        "name": "Apdex Score",
+        "details": "This alert is triggered when the Apdex score is below 0.5 for 5 minutes",
         "type": "STATIC",
         "url": null
       },
       {
-        "name": "Apdex Score",
-        "details": "This alert is triggered when the Apdex score is below 0.5 for 5 minutes",
+        "name": "High CPU Utilization",
+        "details": "This alert is triggered when the CPU Utilization is above 90%.",
         "type": "STATIC",
         "url": null
       },
@@ -12129,8 +12129,8 @@
     ],
     "alerts": [
       {
-        "name": "High CPU Utilization",
-        "details": "This alert is triggered when the CPU Utilization is above 90%.",
+        "name": "Transaction Errors",
+        "details": "This alert is triggered when the the transactions fail more than 10% of the time in 5 minutes.",
         "type": "STATIC",
         "url": null
       },
@@ -12141,8 +12141,8 @@
         "url": null
       },
       {
-        "name": "Transaction Errors",
-        "details": "This alert is triggered when the the transactions fail more than 10% of the time in 5 minutes.",
+        "name": "High CPU Utilization",
+        "details": "This alert is triggered when the CPU Utilization is above 90%.",
         "type": "STATIC",
         "url": null
       }
@@ -13800,19 +13800,19 @@
         ]
       },
       {
-        "name": "Lacework Compliance Violations",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/lacework-compliance-violations/lacework-compliance-violations01.png"
-        ]
-      },
-      {
         "name": "Lacework Anomaly Detections",
         "description": null,
         "url": null,
         "screenshots": [
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/lacework-anomaly-detections/lacework-anomaly-detections01.png"
+        ]
+      },
+      {
+        "name": "Lacework Compliance Violations",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/lacework-compliance-violations/lacework-compliance-violations01.png"
         ]
       }
     ],
@@ -16200,6 +16200,75 @@
     ]
   },
   {
+    "title": "Redmine",
+    "name": "redmine",
+    "description": "## Comprehensive monitoring quickstart for Redmine\nWe can monitor your Redmine application in a complex environment and keep you on top of performance with our Ruby agent.\n## Why monitor Redmine?\nThe performance monitoring tool for Redmine helps you monitor the entire infrastructure and identifies the critical issues in your Redmine application. Redmine performance monitoring enables you to get a complete overview of Redmine errors and know when and where your Redmine application slows down. Some key components are:\n- Helps you identify issues that are truly important and quickly resolve them. Gain knowledge of performance issues in advance and thus giving you ample time to avoid application downtime.\n- Performance provides you with the information you need to not only prioritize critical performance issues, but also trace them down to the root cause and solve them more quickly.\n- Monitor your issues related to projects which are created in the Redmine application.\n\n## What’s included in this quickstart?\nNew Relic's Redmine monitoring quickstart boasts instant full-stack observability out-of-the-box:\n\nWith this quickstart, you can:\n- Monitor Application custom metrics.\n- Code-related insights about your application’s health and status. \n- Monitor Database Operations and Transactions.\n- Proactive alerts that inform developers about the status of their applications.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/redmine",
+    "id": "f1cde389-deec-451e-8fd3-3a84631d5e83",
+    "level": "NEW_RELIC",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/redmine/logo.png",
+    "summary": "Quickly monitor your Redmine application by tracking performance issues with a full  end-to-end view of distributed traces",
+    "websiteUrl": null,
+    "keywords": [
+      "redmine",
+      "ruby agent",
+      "ruby"
+    ],
+    "authors": [
+      "New Relic"
+    ],
+    "dashboards": [
+      {
+        "name": "Redmine",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/redmine/redmine01.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/redmine/redmine02.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/redmine/redmine03.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/redmine/redmine04.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/redmine/redmine05.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/redmine/redmine06.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/redmine/redmine07.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/redmine/redmine08.png"
+        ]
+      }
+    ],
+    "alerts": [
+      {
+        "name": "Average Error Rate",
+        "details": "This alert is triggered when the Average Error Rate is higher than 5 for 5 minutes.",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "Average Page Load Time",
+        "details": "This alert is triggered when the Average Page Load Time is higher than 5 seconds for 5 minutes.",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "Failed Transactions",
+        "details": "This alert is triggered when the Failed Transactions are higher than 5 for 5 minutes.",
+        "type": "STATIC",
+        "url": null
+      }
+    ],
+    "documentation": [
+      {
+        "name": "Redmine integration documentation",
+        "description": "Monitor the performance metrics of your Redmine instances in real-time with New Relic ruby agent.\n",
+        "url": "https://docs.newrelic.com/docs/infrastructure/host-integrations/host-integrations-list/redmine-integration/"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "Redmine",
+        "id": "redmine"
+      }
+    ]
+  },
+  {
     "title": "LaunchDarkly",
     "name": "launchdarkly",
     "description": "LaunchDarkly provides simple, scalable feature flag & toggle management\n(feature management) for the modern enterprise.",
@@ -16773,6 +16842,12 @@
     ],
     "alerts": [
       {
+        "name": "Apdex Score",
+        "details": "This alert is triggered when the Apdex score is below 0.5 for 5 minutes",
+        "type": "STATIC",
+        "url": null
+      },
+      {
         "name": "Memory Usage",
         "details": "This alert is triggered when Memory usage is above 90%",
         "type": "STATIC",
@@ -16781,12 +16856,6 @@
       {
         "name": "Transaction Errors",
         "details": "This alert is triggered when the the transactions fail more than 10% of the time in 5 minutes.",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "Apdex Score",
-        "details": "This alert is triggered when the Apdex score is below 0.5 for 5 minutes",
         "type": "STATIC",
         "url": null
       }
@@ -17442,14 +17511,14 @@
     ],
     "alerts": [
       {
-        "name": "High CPU Utilization",
-        "details": "This alert is triggered when the CPU Utilization is above 90%.",
+        "name": "Transaction Errors",
+        "details": "This alert is triggered when the the transactions fail more than 10% of the time in 5 minutes.",
         "type": "STATIC",
         "url": null
       },
       {
-        "name": "Transaction Errors",
-        "details": "This alert is triggered when the the transactions fail more than 10% of the time in 5 minutes.",
+        "name": "High CPU Utilization",
+        "details": "This alert is triggered when the CPU Utilization is above 90%.",
         "type": "STATIC",
         "url": null
       }
@@ -19019,6 +19088,62 @@
     ]
   },
   {
+    "title": "Nextcloud",
+    "name": "nextcloud",
+    "description": "## Comprehensive monitoring quickstart for Nextcloud\nWith New Relic's Nextcloud monitoring system, keep an eye on your Nextcloud in real-time, correlate transactions moving across the application environment and troubleshoot the issue which you are facing.\n### Why monitor Nextcloud?\nControl, monitor and secure all the data of Nextcloud with Infrastructure monitoring agent and Prometheus open metric integration to view a thorough Nextcloud server dashboard that contains a high-level overview of their app's performance. \n- Assist teams in creating architectural maps, tracking down all the issues fast, and observing the Apdex of the app.\n- Maintain a quick throughput and low latency.\n- Control over the workflow of [Nextcloud](https://nextcloud.com/) .\n- Check the health of the dependencies such as database, application, server.\n- Give specific results to help with the problems.\n### What’s included?\nThe New Relic Nextcloud monitoring quickstart offers rapid observability:\n- Alerts (heap memory usage, scrape errors).\n- Dashboards (uptime, free space in bytes, total active users, heap memory usage and more).\n- Enables administrators to keep track of the status and operation of a Nextcloud server installation.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/nextcloud",
+    "id": "fe6eb60f-faff-46f9-bf64-666a874ac855",
+    "level": "NEW_RELIC",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/nextcloud/logo.png",
+    "summary": "The controllable self-hosted productivity platform. Monitor the server, check the condition of it and keep a watch on what happens to your files with our Infrastructure agent and Prometheus open metric integration.",
+    "websiteUrl": null,
+    "keywords": [
+      "nextcloud",
+      "web server"
+    ],
+    "authors": [
+      "New Relic"
+    ],
+    "dashboards": [
+      {
+        "name": "Nextcloud",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/nextcloud/nextcloud01.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/nextcloud/nextcloud02.png"
+        ]
+      }
+    ],
+    "alerts": [
+      {
+        "name": "Heap Memory Usage",
+        "details": "This alert is triggered  when the Heap Memory Usage is below 2 for atleast 5 minutes.",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "Scrape Errors",
+        "details": "This alert is triggered  when the cache size limit is reached above 4 for atleast 5 minutes.",
+        "type": "STATIC",
+        "url": null
+      }
+    ],
+    "documentation": [
+      {
+        "name": "Nextcloud",
+        "description": "Integrate your Nextcloud processes with our Infrastructure agent and Prometheus open metric integration to collect data and send it to New Relic.\n",
+        "url": "https://docs.newrelic.com/docs/infrastructure/host-integrations/host-integrations-list/nextcloud-integration/"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "Nextcloud",
+        "id": "nextcloud"
+      }
+    ]
+  },
+  {
     "title": "FubuMVC",
     "name": "fubumvc",
     "description": "## New Relic + FubuMVC\n\nNew Relic’s monitoring quickstart for FubuMVC monitors the performance and reliability of FubuMVC applications. \n\nIt includes visual dashboards which showcase real-time metrics of the FubuMVC stack, including:\n- Errors overview\n- VM overview\n- Latest error display\n- CPU utilization display\n- Amount of memory heap used, and more. \nThe quickstart also includes alerts when certain metrics such as the Apdex score, memory usage, and number of transaction errors hit a critical threshold.\n\n### Why monitor FubuMVC with New Relic?\n\nBuilding server-side systems can be a complex process. Between dealing with incoming and outgoing HTTP requests, interfacing with other APIs and backends, the nuances of the server-side code itself, and any sort of distributed interaction or job scheduling, there are many things that can go wrong. When you monitor your Fubumvc instance, it’s much easier to spot these errors before they occur. FubuMVC fails, your whole application will too. New Relic makes it easier to prevent that failure.\nFor example, if you get an  alert when your transaction errors hit a critical a threshold, it can give you advance notice about a dead server, a network bottleneck, or an attack against your web app. Similarly, the CPU utilization dashboard helps you to know when your server load is high and when traffic might be about to overwhelm a particular HTTP service. You can address your issues proactively, before they cause an outage.",
@@ -19638,11 +19763,11 @@
     ],
     "dashboards": [
       {
-        "name": "Catchpoint-Overview",
+        "name": "Catchpoint-Recent Errors",
         "description": null,
         "url": null,
         "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/catchpoint-overview/Catchpoint-Overview.png"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/catchpoint-recent-errors/Catchpoint-Recent_Errors.png"
         ]
       },
       {
@@ -19662,11 +19787,11 @@
         ]
       },
       {
-        "name": "Catchpoint-Recent Errors",
+        "name": "Catchpoint-Overview",
         "description": null,
         "url": null,
         "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/catchpoint-recent-errors/Catchpoint-Recent_Errors.png"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/catchpoint-overview/Catchpoint-Overview.png"
         ]
       }
     ],
@@ -21142,6 +21267,12 @@
     ],
     "alerts": [
       {
+        "name": "Low throughput",
+        "details": "This alert is triggered when the throughput is 0 for 5 minutes",
+        "type": "STATIC",
+        "url": null
+      },
+      {
         "name": "High duration",
         "details": "This alert is triggered when the total duration of the web transaction is longer than 10 seconds during 5 minutes",
         "type": "STATIC",
@@ -21150,12 +21281,6 @@
       {
         "name": "High error rate",
         "details": "This alert is triggered when the error percentage of web transactions is higher than 5% during 5 minutes",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "Low throughput",
-        "details": "This alert is triggered when the throughput is 0 for 5 minutes",
         "type": "STATIC",
         "url": null
       }
@@ -21855,14 +21980,14 @@
     ],
     "documentation": [
       {
-        "name": "CoreDNS Metrics Docs",
-        "description": "Learn more about the Prometheus metrics available for CoreDNS\n",
-        "url": "https://coredns.io/plugins/metrics/"
-      },
-      {
         "name": "CoreDNS Integration Docs",
         "description": "New Relic documentation for the CoreDNS integration including installation, configuration, and how to query the metrics.\n",
         "url": "https://docs.newrelic.com/docs/infrastructure/prometheus-integrations/integrations-list/core-dns-integration"
+      },
+      {
+        "name": "CoreDNS Metrics Docs",
+        "description": "Learn more about the Prometheus metrics available for CoreDNS\n",
+        "url": "https://coredns.io/plugins/metrics/"
       },
       {
         "name": "Prometheus Installation Docs",
@@ -23134,75 +23259,6 @@
     ]
   },
   {
-    "title": "Redpanda",
-    "name": "redpanda",
-    "description": "## Comprehensive monitoring quickstart for Redpanda\nNew Relic detects your Redpanda metrics are used for debugging,\nmeasure system health (uptime, CPU utilization), Infrastructure-level (RPC errors, Disk storage, Free memory).\n\n## Why monitor Redpanda?\nYou can monitor the health of your system to optimize performance. How to use Prometheus queries to monitor your system, for example, to check consumer group lag or Kafka producer request latency.\n\n\n## What’s included in this quickstart?\nNew Relic's Redpanda monitoring quickstart boasts instant full-stack observability out-of-the-box:\n- High value alerts for your Redpanda (RPC errors, usage metrics and JVM).\n- Dashboards (uptime, CPU utilization, RPC errors, Disk storage, Free memory  and more).",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/redpanda",
-    "id": "04ffa356-1f90-4cc1-baf6-c4a5e886c239",
-    "level": "NEW_RELIC",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/redpanda/logo.png",
-    "summary": "Redpanda is the streaming data platform for developers. It's API-compatible with Apache Kafka®, but 10x faster, much easier to use and safer.",
-    "websiteUrl": null,
-    "keywords": [
-      "redpanda",
-      "streaming data platform"
-    ],
-    "authors": [
-      "New Relic"
-    ],
-    "dashboards": [
-      {
-        "name": "Redpanda",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/redpanda/redpanda01.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/redpanda/redpanda02.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/redpanda/redpanda03.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/redpanda/redpanda04.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/redpanda/redpanda05.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/redpanda/redpanda06.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/redpanda/redpanda07.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/redpanda/redpanda08.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/redpanda/redpanda09.png"
-        ]
-      }
-    ],
-    "alerts": [
-      {
-        "name": "Application Uptime",
-        "details": "This alert is triggered when the application uptime is equals to 2 during 5 minutes.",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "Monitor disk space",
-        "details": "This alert is triggered when the monitor disk space equals to 2 for 5 minutes.",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "Service Errors",
-        "details": "This alert is triggered when the service errors are higher than 5 for 3 minutes.",
-        "type": "STATIC",
-        "url": null
-      }
-    ],
-    "documentation": [
-      {
-        "name": "Redpanda integration documentation",
-        "description": "New Relic’s instant observability quickstart with Redpanda monitoring helps to detect your metrics which are useful for debugging and measuring system health.\n",
-        "url": "https://docs.newrelic.com/docs/infrastructure/host-integrations/host-integrations-list/redpanda-integration/"
-      }
-    ],
-    "installPlans": [
-      {
-        "name": "Redpanda",
-        "id": "redpanda"
-      }
-    ]
-  },
-  {
     "title": "Amazon Connect",
     "name": "aws-connect",
     "description": "## What is Amazon Connect?\n\nBuild cloud-based omnichannel support centers to serve customers dynamically.\n\n### Get started!\n\nStart monitoring Amazon Connect by connecting Amazon Web Services (AWS) to New Relic!\n\nCheck out our Amazon Connect documentation to instrument your cloud service and manage the stability, scalability, and reliability of your systems with New Relic's infrastructure monitoring capabilities.\n\n### More info\n\nCheck out the [documentation](https://docs.newrelic.com/docs/infrastructure/amazon-integrations/aws-integrations-list/aws-connect-monitoring-integration/) to learn more about New Relic monitoring for Amazon Connect.",
@@ -24119,6 +24175,75 @@
       {
         "name": "PHP Agent",
         "id": "php-agent"
+      }
+    ]
+  },
+  {
+    "title": "Redpanda",
+    "name": "redpanda",
+    "description": "## Comprehensive monitoring quickstart for Redpanda\nNew Relic detects your Redpanda metrics are used for debugging,\nmeasure system health (uptime, CPU utilization), Infrastructure-level (RPC errors, Disk storage, Free memory).\n\n## Why monitor Redpanda?\nYou can monitor the health of your system to optimize performance. How to use Prometheus queries to monitor your system, for example, to check consumer group lag or Kafka producer request latency.\n\n\n## What’s included in this quickstart?\nNew Relic's Redpanda monitoring quickstart boasts instant full-stack observability out-of-the-box:\n- High value alerts for your Redpanda (RPC errors, usage metrics and JVM).\n- Dashboards (uptime, CPU utilization, RPC errors, Disk storage, Free memory  and more).",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/redpanda",
+    "id": "04ffa356-1f90-4cc1-baf6-c4a5e886c239",
+    "level": "NEW_RELIC",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/redpanda/logo.png",
+    "summary": "Using New Relic’s instant observability quickstart with Redpanda monitoring, you can detect metrics for debugging and monitoring your system’s health.",
+    "websiteUrl": null,
+    "keywords": [
+      "redpanda",
+      "streaming data platform"
+    ],
+    "authors": [
+      "New Relic"
+    ],
+    "dashboards": [
+      {
+        "name": "Redpanda",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/redpanda/redpanda01.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/redpanda/redpanda02.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/redpanda/redpanda03.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/redpanda/redpanda04.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/redpanda/redpanda05.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/redpanda/redpanda06.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/redpanda/redpanda07.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/redpanda/redpanda08.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/redpanda/redpanda09.png"
+        ]
+      }
+    ],
+    "alerts": [
+      {
+        "name": "Application Uptime",
+        "details": "This alert is triggered when the application uptime is equals to 2 during 5 minutes.",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "Monitor disk space",
+        "details": "This alert is triggered when the monitor disk space equals to 2 for 5 minutes.",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "Service Errors",
+        "details": "This alert is triggered when the service errors are higher than 5 for 3 minutes.",
+        "type": "STATIC",
+        "url": null
+      }
+    ],
+    "documentation": [
+      {
+        "name": "Redpanda integration documentation",
+        "description": "New Relic’s instant observability quickstart with Redpanda monitoring helps to detect your metrics which are useful for debugging and measuring system health.\n",
+        "url": "https://docs.newrelic.com/docs/infrastructure/host-integrations/host-integrations-list/redpanda-integration/"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "Redpanda",
+        "id": "redpanda"
       }
     ]
   },
@@ -25221,75 +25346,6 @@
     ]
   },
   {
-    "title": "NuxtJS",
-    "name": "nuxtjs",
-    "description": "## Comprehensive monitoring quickstart for NuxtJS\nNuxtJS is a framework that helps you build server-rendered Vue.js applications easily. Manage asynchronous data, middleware, and routing right out of the box with our quickstart dashboards.\n\n## Why monitor NuxtJS?\nThe monitor allows us to know what issues customers are having in real time and provides an intuitive way to understand those issues, and direct those issues to the proper party for resolution.\n\n\n## What’s included in this quickstart?\nNew Relic's NuxtJS monitoring quickstart boasts instant full-stack observability out-of-the-box:\n- Easy to use performance monitoring dashboards.\n- See all your JavaScript errors tagged by deployment.\n- Get a detailed view of your web application traffic, including page views, load times, sessions, and most popular content.",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/nuxtjs",
-    "id": "7c712985-c6d5-4e4e-8ede-c55980a5e95d",
-    "level": "NEW_RELIC",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/nuxtjs/logo.png",
-    "summary": "Instrument and monitor your NuxtJS build apps with our Vue browser monitoring agent. Analyze performance data right out of the box.",
-    "websiteUrl": null,
-    "keywords": [
-      "NuxtJS",
-      "Nuxt JS",
-      "Vue JS",
-      "Browser Monitoring"
-    ],
-    "authors": [
-      "New Relic"
-    ],
-    "dashboards": [
-      {
-        "name": "NuxtJS",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/nuxtjs/nuxtjs01.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/nuxtjs/nuxtjs02.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/nuxtjs/nuxtjs03.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/nuxtjs/nuxtjs04.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/nuxtjs/nuxtjs05.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/nuxtjs/nuxtjs06.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/nuxtjs/nuxtjs07.png"
-        ]
-      }
-    ],
-    "alerts": [
-      {
-        "name": "Application Error Rate",
-        "details": "This alert is triggered when the Application Error Rate are higher than 5 for 5 minutes.",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "Error Response",
-        "details": "This alert is triggered when the client and server error response is higher than 10 for 5 minutes.",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "Page Load Time",
-        "details": "This alert is triggered when the page load time is higher than 5 seconds for 5 minutes.",
-        "type": "STATIC",
-        "url": null
-      }
-    ],
-    "documentation": [
-      {
-        "name": "NuxtJS installation docs",
-        "description": "Integrate your NuxtJS app with our Vue browser monitoring and get your data into New Relic.\n",
-        "url": "https://docs.newrelic.com/docs/infrastructure/host-integrations/host-integrations-list/nuxt-js-integration/"
-      }
-    ],
-    "installPlans": [
-      {
-        "name": "NuxtJS",
-        "id": "nuxtjs"
-      }
-    ]
-  },
-  {
     "title": "Ansible",
     "name": "ansible",
     "description": "# What is Ansible?\nAnsible is a radically simple IT automation engine that automates cloud provisioning, configuration management, application deployment, intra-service orchestration, and many other IT needs.\n\nDesigned for multi-tier deployments since day one, Ansible models your IT infrastructure by describing how all of your systems inter-relate, rather than just managing one system at a time.\n\nIt uses no agents and no additional custom security infrastructure, so it's easy to deploy - and most importantly, it uses a very simple language (YAML, in the form of Ansible Playbooks) that allow you to describe your automation jobs in a way that approaches plain English.\n\n# What does New Relic provide\nNew Relic has developed a Ansible playbook for the Ansible agent to deploy the [New Relic Infrastructure agent](https://docs.newrelic.com/docs/infrastructure/infrastructure-monitoring/get-started/get-started-infrastructure-monitoring/) and [On Host Integrations](https://docs.newrelic.com/docs/infrastructure/host-integrations/get-started/introduction-host-integrations) throughout your environment.\n\n# How to get started?\nFollow the instructions on New Relic documentation: [Configure the infrastructure agent using Ansible](https://docs.newrelic.com/docs/infrastructure/new-relic-infrastructure/config-management-tools/configure-new-relic-infrastructure-using-ansible)",
@@ -25741,6 +25797,22 @@
         ]
       },
       {
+        "name": "On-Host Integrations Data Analysis",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/on-host-integrations-data-analysis/on-host-integrations-data-analysis.png"
+        ]
+      },
+      {
+        "name": "AWS Integrations Data Ingest Analysis",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/aws-integrations-data-ingest-analysis/aws-integrations-data-ingest-analysis.png"
+        ]
+      },
+      {
         "name": "Kubernetes Data Ingest Analysis",
         "description": null,
         "url": null,
@@ -25754,22 +25826,6 @@
         "url": null,
         "screenshots": [
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/gcp-integrations-data-ingest-analysis/gcp-integrations-data-ingest-analysis.png"
-        ]
-      },
-      {
-        "name": "AWS Integrations Data Ingest Analysis",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/aws-integrations-data-ingest-analysis/aws-integrations-data-ingest-analysis.png"
-        ]
-      },
-      {
-        "name": "On-Host Integrations Data Analysis",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/on-host-integrations-data-analysis/on-host-integrations-data-analysis.png"
         ]
       }
     ],
@@ -25874,6 +25930,75 @@
       {
         "name": "Kubernetes integration",
         "id": "kubernetes-install"
+      }
+    ]
+  },
+  {
+    "title": "NuxtJS",
+    "name": "nuxtjs",
+    "description": "## Comprehensive monitoring quickstart for NuxtJS\nNuxtJS is a framework that helps you build server-rendered Vue.js applications easily. Manage asynchronous data, middleware, and routing right out of the box with our quickstart dashboards.\n\n## Why monitor NuxtJS?\nThe monitor allows us to know what issues customers are having in real time and provides an intuitive way to understand those issues, and direct those issues to the proper party for resolution.\n\n\n## What’s included in this quickstart?\nNew Relic's NuxtJS monitoring quickstart boasts instant full-stack observability out-of-the-box:\n- Easy to use performance monitoring dashboards.\n- See all your JavaScript errors tagged by deployment.\n- Get a detailed view of your web application traffic, including page views, load times, sessions, and most popular content.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/nuxtjs",
+    "id": "7c712985-c6d5-4e4e-8ede-c55980a5e95d",
+    "level": "NEW_RELIC",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/nuxtjs/logo.png",
+    "summary": "Instrument and monitor your NuxtJS build apps with New Relic’s Vue browser monitoring agent. Analyze performance data right out of the box.",
+    "websiteUrl": null,
+    "keywords": [
+      "NuxtJS",
+      "Nuxt JS",
+      "Vue JS",
+      "Browser Monitoring"
+    ],
+    "authors": [
+      "New Relic"
+    ],
+    "dashboards": [
+      {
+        "name": "NuxtJS",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/nuxtjs/nuxtjs01.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/nuxtjs/nuxtjs02.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/nuxtjs/nuxtjs03.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/nuxtjs/nuxtjs04.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/nuxtjs/nuxtjs05.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/nuxtjs/nuxtjs06.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/nuxtjs/nuxtjs07.png"
+        ]
+      }
+    ],
+    "alerts": [
+      {
+        "name": "Application Error Rate",
+        "details": "This alert is triggered when the Application Error Rate are higher than 5 for 5 minutes.",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "Error Response",
+        "details": "This alert is triggered when the client and server error response is higher than 10 for 5 minutes.",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "Page Load Time",
+        "details": "This alert is triggered when the page load time is higher than 5 seconds for 5 minutes.",
+        "type": "STATIC",
+        "url": null
+      }
+    ],
+    "documentation": [
+      {
+        "name": "NuxtJS installation docs",
+        "description": "Integrate your NuxtJS app with our Vue browser monitoring and get your data into New Relic.\n",
+        "url": "https://docs.newrelic.com/docs/infrastructure/host-integrations/host-integrations-list/browser-monitoring-integrations/nuxt-js-integration/"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "NuxtJS",
+        "id": "nuxtjs"
       }
     ]
   },
@@ -26670,12 +26795,6 @@
     ],
     "alerts": [
       {
-        "name": "Apdex Score",
-        "details": "This alert is triggered when the Apdex score is below 0.5 for 5 minutes",
-        "type": "STATIC",
-        "url": null
-      },
-      {
         "name": "High CPU Utilization",
         "details": "This alert is triggered when the CPU Utilization is above 90%.",
         "type": "STATIC",
@@ -26690,6 +26809,12 @@
       {
         "name": "Transaction Errors",
         "details": "This alert is triggered when the the transactions fail more than 10% of the time in 5 minutes.",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "Apdex Score",
+        "details": "This alert is triggered when the Apdex score is below 0.5 for 5 minutes",
         "type": "STATIC",
         "url": null
       }
@@ -26733,14 +26858,6 @@
     ],
     "dashboards": [
       {
-        "name": "JavaScript Errors",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/javascript-errors/javascript_errors.png"
-        ]
-      },
-      {
         "name": "Browser Pages Dashboard",
         "description": null,
         "url": null,
@@ -26762,6 +26879,14 @@
         "url": null,
         "screenshots": [
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/traffic-analysis/traffic_analysis.png"
+        ]
+      },
+      {
+        "name": "JavaScript Errors",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/javascript-errors/javascript_errors.png"
         ]
       }
     ],
