@@ -3203,6 +3203,63 @@
     ]
   },
   {
+    "title": "Mobile Crash Analytics",
+    "name": "mobile-crash-analytics-quickstart",
+    "description": "## Crash Analytics Monitoring Quickstart\n\nGet deeper insights into the mobile application crash frequency, affected versions, crash impact on users. \n\nReceive details about the last interactions before crash. \n\nHelp page on the dashboard will guide you on how to enable data filtering.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/mobile-crash-analytics",
+    "id": "931317a4-ec09-438a-80ae-441637475386",
+    "level": "COMMUNITY",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/mobile-crash-analytics/logo.png",
+    "summary": "Real time mobile application crash & network analysis to ensure ongoing reliability and performance.",
+    "websiteUrl": null,
+    "keywords": [
+      "dashboard",
+      "mobile-crash",
+      "crash analytics",
+      "crashlytics",
+      "mobile agent",
+      "HTTP data",
+      "android",
+      "ios",
+      "apps"
+    ],
+    "authors": [
+      "New Relic",
+      "Siddhartha Khare"
+    ],
+    "dashboards": [
+      {
+        "name": "Crash Analytics",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/mobile-crash-analytics/CrashAnalytics2.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/mobile-crash-analytics/CrashAnalytics3.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/mobile-crash-analytics/CrashAnalytics.png"
+        ]
+      }
+    ],
+    "alerts": [],
+    "documentation": [
+      {
+        "name": "Adding a dashboard",
+        "description": "How to add a dashboard to New Relic",
+        "url": "https://docs.newrelic.com/docs/query-your-data/explore-query-data/dashboards/introduction-dashboards/#get-started"
+      },
+      {
+        "name": "Instrument your mobile application with New Relic",
+        "description": "How to instrument your mobile application with New Relic",
+        "url": "https://docs.newrelic.com/docs/mobile-monitoring/new-relic-mobile/get-started/introduction-mobile-monitoring/"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "Mobile Dashboard Install Plan",
+        "id": "mobile-dashboard-install"
+      }
+    ]
+  },
+  {
     "title": "Redis (Prometheus)",
     "name": "redis-prometheus",
     "description": "## A complete Redis monitoring system\n\nRedis operates in-memory and achieves I/O faster than traditional database systems. It includes several data structures which make it ready to use right out of the box.\n\nNew Relic provides a Redis quickstart which allows you to monitor your Redis instances out-of-the-box.\n\n### New Relic - a perfect tool to monitor Redis using Prometheus.\n\nRedis is known for its speed, so ensuring that it stays operating at peak performance is paramount. Slowdowns can lead to a compromised user experience or even a complete application failure.\n\nUsing the [New Relic Prometheus Remote-Write](https://docs.newrelic.com/docs/infrastructure/prometheus-integrations/install-configure-remote-write/set-your-prometheus-remote-write-integration/) integration you can deliver your critical Redis metrics from your internally supported instance of Prometheus directly to New Relic where the rest of your observability data resides.\n\n### New Relic Redis quickstart features\n\nOur Redis quickstart include out-of-the-box dashboards and alerts, including data such as:\n- Overview Snapshot (# masters, # slaves) + charts with commands/sec and commands/sec by node\n- Charts showing connected clients, connected clients by node, changes since last save by node, expired keys/second by node, memory used by node, and blocked clients.\n- Charts showing keyspace hit ratio by node, evicted keys/second by node, input bytes/second by node, network I/O per second, and output bytes / second by node.\n- This quickstart is based on metrics sent to New Relic using Prometheus Agent or Prometheus Server.\n\n### Value of the Redis (Prometheus) quickstart\n\nThe Redis (Prometheus) Quickstart provides a visual snapshot of all the key health information related to your Redis nodes and clusters. Monitoring is made easy via the clear, color-coded dashboard which showcases memory usage, network I/O, node health, and much more.\n\n### Redis Prometheus Exporter (Kubernetes)\n\nIf you are supporting Redis and Prometheus in a Kubernetes cluster, you can easily export Redis metrics to Prometheus using the [Prometheus Redis Exporter](https://github.com/prometheus-community/helm-charts/tree/main/charts/prometheus-redis-exporter).",
@@ -3623,14 +3680,14 @@
     "alerts": [],
     "documentation": [
       {
-        "name": "Instrument your mobile application with New Relic",
-        "description": "How to instrument your mobile application with New Relic",
-        "url": "https://docs.newrelic.com/docs/mobile-monitoring/new-relic-mobile/get-started/introduction-mobile-monitoring/"
-      },
-      {
         "name": "Adding a dashboard",
         "description": "How to add a dashboard to New Relic",
         "url": "https://docs.newrelic.com/docs/query-your-data/explore-query-data/dashboards/introduction-dashboards/#get-started"
+      },
+      {
+        "name": "Instrument your mobile application with New Relic",
+        "description": "How to instrument your mobile application with New Relic",
+        "url": "https://docs.newrelic.com/docs/mobile-monitoring/new-relic-mobile/get-started/introduction-mobile-monitoring/"
       }
     ],
     "installPlans": [
@@ -6358,19 +6415,19 @@
     ],
     "dashboards": [
       {
-        "name": "SAP Data Ingestion Estimate",
-        "description": "Get an overview of the data volume ingested from SAP systems",
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/nrm4sap-datasize/sap-size-estimate01.png"
-        ]
-      },
-      {
         "name": "SAP Data Collection Monitoring",
         "description": "Monitor SAP data collection and ingestion process",
         "url": null,
         "screenshots": [
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/nrm4sap-datacollect/sap-data-collection01.png"
+        ]
+      },
+      {
+        "name": "SAP Data Ingestion Estimate",
+        "description": "Get an overview of the data volume ingested from SAP systems",
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/nrm4sap-datasize/sap-size-estimate01.png"
         ]
       },
       {
@@ -6650,19 +6707,19 @@
         ]
       },
       {
-        "name": "Redis Enterprise Database Metrics",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/database/database01.png"
-        ]
-      },
-      {
         "name": "Redis Enterprise Database CRDT",
         "description": null,
         "url": null,
         "screenshots": [
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/active-active/active_active01.png"
+        ]
+      },
+      {
+        "name": "Redis Enterprise Database Metrics",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/database/database01.png"
         ]
       }
     ],
@@ -8438,18 +8495,6 @@
     ],
     "dashboards": [
       {
-        "name": "Jfrog Xray",
-        "description": "This dashboard provides a summary of Logs (access, service, traffic log volumes, HTTP response codes, errors etc), Metrics (System performance, number and type of Artifacts and Components scanned), Violations (Security Vulnerabiities and Licnse issues)",
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/jfrog-xray/jfrog-xray1.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/jfrog-xray/jfrog-xray2.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/jfrog-xray/jfrog-xray3.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/jfrog-xray/jfrog-xray4.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/jfrog-xray/jfrog-xray5.png"
-        ]
-      },
-      {
         "name": "Jfrog Artifactory",
         "description": "This dashboard provides an overview of usage statistics of JFrog Artifactory logs (Application, Audit, Docker, Requests) and overview of the System metrics, JVM statistics, Storage consumption, Garbage collection, and other operational insights associated with JFrog Artifactory",
         "url": null,
@@ -8461,6 +8506,18 @@
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/jfrog-artifactory/jfrog-artifactory5.png",
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/jfrog-artifactory/jfrog-artifactory6.png",
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/jfrog-artifactory/jfrog-artifactory7.png"
+        ]
+      },
+      {
+        "name": "Jfrog Xray",
+        "description": "This dashboard provides a summary of Logs (access, service, traffic log volumes, HTTP response codes, errors etc), Metrics (System performance, number and type of Artifacts and Components scanned), Violations (Security Vulnerabiities and Licnse issues)",
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/jfrog-xray/jfrog-xray1.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/jfrog-xray/jfrog-xray2.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/jfrog-xray/jfrog-xray3.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/jfrog-xray/jfrog-xray4.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/jfrog-xray/jfrog-xray5.png"
         ]
       }
     ],
@@ -9059,14 +9116,14 @@
     ],
     "documentation": [
       {
-        "name": "Prometheus installation docs",
-        "description": "Use Prometheus remote_write or Prometheus Agent\n",
-        "url": "https://docs.newrelic.com/docs/infrastructure/prometheus-integrations/get-started/send-prometheus-metric-data-new-relic"
-      },
-      {
         "name": "NGINX Ingress Controller Prometheus Integration",
         "description": "NGINX Ingress Controller Prometheus Integration Documentation\n",
         "url": "https://docs.newrelic.com/docs/infrastructure/prometheus-integrations/integrations-list/ingress-controller-integration/"
+      },
+      {
+        "name": "Prometheus installation docs",
+        "description": "Use Prometheus remote_write or Prometheus Agent\n",
+        "url": "https://docs.newrelic.com/docs/infrastructure/prometheus-integrations/get-started/send-prometheus-metric-data-new-relic"
       }
     ],
     "installPlans": [
@@ -9717,14 +9774,14 @@
         "url": "https://docs.newrelic.com/docs/infrastructure/prometheus-integrations/get-started/send-prometheus-metric-data-new-relic"
       },
       {
-        "name": "Etcd Integration Docs",
-        "description": "New Relic documentation for the Etcd integration including installation, configuration, and how to query the metrics.\n",
-        "url": "https://docs.newrelic.com/docs/infrastructure/prometheus-integrations/integrations-list/etcd-integration"
-      },
-      {
         "name": "Etcd Metrics Docs",
         "description": "Learn more about the Prometheus metrics available for Etcd",
         "url": "https://etcd.io/docs/v3.5/metrics/"
+      },
+      {
+        "name": "Etcd Integration Docs",
+        "description": "New Relic documentation for the Etcd integration including installation, configuration, and how to query the metrics.\n",
+        "url": "https://docs.newrelic.com/docs/infrastructure/prometheus-integrations/integrations-list/etcd-integration"
       }
     ],
     "installPlans": [
@@ -13868,19 +13925,19 @@
         ]
       },
       {
-        "name": "Lacework Compliance Violations",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/lacework-compliance-violations/lacework-compliance-violations01.png"
-        ]
-      },
-      {
         "name": "Lacework Anomaly Detections",
         "description": null,
         "url": null,
         "screenshots": [
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/lacework-anomaly-detections/lacework-anomaly-detections01.png"
+        ]
+      },
+      {
+        "name": "Lacework Compliance Violations",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/lacework-compliance-violations/lacework-compliance-violations01.png"
         ]
       }
     ],
@@ -19489,14 +19546,14 @@
     "alerts": [],
     "documentation": [
       {
-        "name": "New Relic blog post",
-        "description": "Learn more about the integration on New Relic's blog post",
-        "url": "https://newrelic.com/blog/how-to-relic/trend-micro-aws"
-      },
-      {
         "name": "GitHub repository",
         "description": "The GitHub repository for the integration",
         "url": "https://github.com/newrelic-experimental/newrelic-connector-trendmicro-cloud-one-conformity#readme"
+      },
+      {
+        "name": "New Relic blog post",
+        "description": "Learn more about the integration on New Relic's blog post",
+        "url": "https://newrelic.com/blog/how-to-relic/trend-micro-aws"
       },
       {
         "name": "Trend Micro blog post",
@@ -22093,9 +22150,9 @@
     ],
     "documentation": [
       {
-        "name": "CoreDNS Metrics Docs",
-        "description": "Learn more about the Prometheus metrics available for CoreDNS\n",
-        "url": "https://coredns.io/plugins/metrics/"
+        "name": "Prometheus Installation Docs",
+        "description": "Use Prometheus remote_write or Prometheus Agent\n",
+        "url": "https://docs.newrelic.com/docs/infrastructure/prometheus-integrations/get-started/send-prometheus-metric-data-new-relic/"
       },
       {
         "name": "CoreDNS Integration Docs",
@@ -22103,9 +22160,9 @@
         "url": "https://docs.newrelic.com/docs/infrastructure/prometheus-integrations/integrations-list/core-dns-integration"
       },
       {
-        "name": "Prometheus Installation Docs",
-        "description": "Use Prometheus remote_write or Prometheus Agent\n",
-        "url": "https://docs.newrelic.com/docs/infrastructure/prometheus-integrations/get-started/send-prometheus-metric-data-new-relic/"
+        "name": "CoreDNS Metrics Docs",
+        "description": "Learn more about the Prometheus metrics available for CoreDNS\n",
+        "url": "https://coredns.io/plugins/metrics/"
       }
     ],
     "installPlans": [
@@ -25902,19 +25959,19 @@
     ],
     "dashboards": [
       {
-        "name": "On-Host Integrations Data Analysis",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/on-host-integrations-data-analysis/on-host-integrations-data-analysis.png"
-        ]
-      },
-      {
         "name": "AWS Integrations Data Ingest Analysis",
         "description": null,
         "url": null,
         "screenshots": [
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/aws-integrations-data-ingest-analysis/aws-integrations-data-ingest-analysis.png"
+        ]
+      },
+      {
+        "name": "On-Host Integrations Data Analysis",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/on-host-integrations-data-analysis/on-host-integrations-data-analysis.png"
         ]
       },
       {
@@ -26971,11 +27028,11 @@
     ],
     "dashboards": [
       {
-        "name": "Browser Traffic Analysis",
+        "name": "JavaScript Errors",
         "description": null,
         "url": null,
         "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/traffic-analysis/traffic_analysis.png"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/javascript-errors/javascript_errors.png"
         ]
       },
       {
@@ -26987,19 +27044,19 @@
         ]
       },
       {
+        "name": "Browser Traffic Analysis",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/traffic-analysis/traffic_analysis.png"
+        ]
+      },
+      {
         "name": "Browser Pages Dashboard",
         "description": null,
         "url": null,
         "screenshots": [
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/browser-pages-dashboard/browser_pages_dashboard.png"
-        ]
-      },
-      {
-        "name": "JavaScript Errors",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/javascript-errors/javascript_errors.png"
         ]
       }
     ],
