@@ -3203,63 +3203,6 @@
     ]
   },
   {
-    "title": "Mobile Crash Analytics",
-    "name": "mobile-crash-analytics-quickstart",
-    "description": "## Crash Analytics Monitoring Quickstart\n\nGet deeper insights into the mobile application crash frequency, affected versions, crash impact on users. \n\nReceive details about the last interactions before crash. \n\nHelp page on the dashboard will guide you on how to enable data filtering.",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/mobile-crash-analytics",
-    "id": "931317a4-ec09-438a-80ae-441637475386",
-    "level": "COMMUNITY",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/mobile-crash-analytics/logo.png",
-    "summary": "Real time mobile application crash & network analysis to ensure ongoing reliability and performance.",
-    "websiteUrl": null,
-    "keywords": [
-      "dashboard",
-      "mobile-crash",
-      "crash analytics",
-      "crashlytics",
-      "mobile agent",
-      "HTTP data",
-      "android",
-      "ios",
-      "apps"
-    ],
-    "authors": [
-      "New Relic",
-      "Siddhartha Khare"
-    ],
-    "dashboards": [
-      {
-        "name": "Crash Analytics",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/mobile-crash-analytics/CrashAnalytics2.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/mobile-crash-analytics/CrashAnalytics3.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/mobile-crash-analytics/CrashAnalytics.png"
-        ]
-      }
-    ],
-    "alerts": [],
-    "documentation": [
-      {
-        "name": "Adding a dashboard",
-        "description": "How to add a dashboard to New Relic",
-        "url": "https://docs.newrelic.com/docs/query-your-data/explore-query-data/dashboards/introduction-dashboards/#get-started"
-      },
-      {
-        "name": "Instrument your mobile application with New Relic",
-        "description": "How to instrument your mobile application with New Relic",
-        "url": "https://docs.newrelic.com/docs/mobile-monitoring/new-relic-mobile/get-started/introduction-mobile-monitoring/"
-      }
-    ],
-    "installPlans": [
-      {
-        "name": "Mobile Dashboard Install Plan",
-        "id": "mobile-dashboard-install"
-      }
-    ]
-  },
-  {
     "title": "Redis (Prometheus)",
     "name": "redis-prometheus",
     "description": "## A complete Redis monitoring system\n\nRedis operates in-memory and achieves I/O faster than traditional database systems. It includes several data structures which make it ready to use right out of the box.\n\nNew Relic provides a Redis quickstart which allows you to monitor your Redis instances out-of-the-box.\n\n### New Relic - a perfect tool to monitor Redis using Prometheus.\n\nRedis is known for its speed, so ensuring that it stays operating at peak performance is paramount. Slowdowns can lead to a compromised user experience or even a complete application failure.\n\nUsing the [New Relic Prometheus Remote-Write](https://docs.newrelic.com/docs/infrastructure/prometheus-integrations/install-configure-remote-write/set-your-prometheus-remote-write-integration/) integration you can deliver your critical Redis metrics from your internally supported instance of Prometheus directly to New Relic where the rest of your observability data resides.\n\n### New Relic Redis quickstart features\n\nOur Redis quickstart include out-of-the-box dashboards and alerts, including data such as:\n- Overview Snapshot (# masters, # slaves) + charts with commands/sec and commands/sec by node\n- Charts showing connected clients, connected clients by node, changes since last save by node, expired keys/second by node, memory used by node, and blocked clients.\n- Charts showing keyspace hit ratio by node, evicted keys/second by node, input bytes/second by node, network I/O per second, and output bytes / second by node.\n- This quickstart is based on metrics sent to New Relic using Prometheus Agent or Prometheus Server.\n\n### Value of the Redis (Prometheus) quickstart\n\nThe Redis (Prometheus) Quickstart provides a visual snapshot of all the key health information related to your Redis nodes and clusters. Monitoring is made easy via the clear, color-coded dashboard which showcases memory usage, network I/O, node health, and much more.\n\n### Redis Prometheus Exporter (Kubernetes)\n\nIf you are supporting Redis and Prometheus in a Kubernetes cluster, you can easily export Redis metrics to Prometheus using the [Prometheus Redis Exporter](https://github.com/prometheus-community/helm-charts/tree/main/charts/prometheus-redis-exporter).",
@@ -3643,6 +3586,63 @@
       {
         "name": "AWS-CloudWatch-Metric-Streams",
         "id": "aws-cloudwatch-metric-streams"
+      }
+    ]
+  },
+  {
+    "title": "Mobile Crash Analytics",
+    "name": "mobile-crash-analytics-quickstart",
+    "description": "## Crash Analytics Monitoring Quickstart\n\nGet deeper insights into the mobile application crash frequency, affected versions, crash impact on users. \n\nReceive details about the last interactions before crash. \n\nHelp page on the dashboard will guide you on how to enable data filtering.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/mobile-crash-analytics",
+    "id": "931317a4-ec09-438a-80ae-441637475386",
+    "level": "COMMUNITY",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/mobile-crash-analytics/logo.png",
+    "summary": "Real time mobile application crash & network analysis to ensure ongoing reliability and performance.",
+    "websiteUrl": null,
+    "keywords": [
+      "dashboard",
+      "mobile-crash",
+      "crash analytics",
+      "crashlytics",
+      "mobile agent",
+      "HTTP data",
+      "android",
+      "ios",
+      "apps"
+    ],
+    "authors": [
+      "New Relic",
+      "Siddhartha Khare"
+    ],
+    "dashboards": [
+      {
+        "name": "Mobile Crash Analytics",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/mobile-crash-analytics/CrashAnalytics2.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/mobile-crash-analytics/CrashAnalytics3.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/mobile-crash-analytics/CrashAnalytics.png"
+        ]
+      }
+    ],
+    "alerts": [],
+    "documentation": [
+      {
+        "name": "Adding a dashboard",
+        "description": "How to add a dashboard to New Relic",
+        "url": "https://docs.newrelic.com/docs/query-your-data/explore-query-data/dashboards/introduction-dashboards/#get-started"
+      },
+      {
+        "name": "Instrument your mobile application with New Relic",
+        "description": "How to instrument your mobile application with New Relic",
+        "url": "https://docs.newrelic.com/docs/mobile-monitoring/new-relic-mobile/get-started/introduction-mobile-monitoring/"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "Mobile Dashboard Install Plan",
+        "id": "mobile-dashboard-install"
       }
     ]
   },
