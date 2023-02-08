@@ -2185,19 +2185,19 @@
     ],
     "dashboards": [
       {
-        "name": "Battlesnake Server Status",
-        "description": "A dashboard to monitor your Battlesnake server's performance. It's important to keep all responses to the `/move` endpoint under 500ms. Furthermore, it's possible that your snake may be in multiple concurrent matches at the same time. It's important to make sure you server and web application are running smoothly to keep you in the game!",
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/battlesnake-server-status/battlesnake-server-status.png"
-        ]
-      },
-      {
         "name": "Battlesnake Performance",
         "description": "Monitor your Battlesnake's performance and see how it stacks up against your competition!",
         "url": null,
         "screenshots": [
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/battlesnake-performance/battlesnake-performance.png"
+        ]
+      },
+      {
+        "name": "Battlesnake Server Status",
+        "description": "A dashboard to monitor your Battlesnake server's performance. It's important to keep all responses to the `/move` endpoint under 500ms. Furthermore, it's possible that your snake may be in multiple concurrent matches at the same time. It's important to make sure you server and web application are running smoothly to keep you in the game!",
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/battlesnake-server-status/battlesnake-server-status.png"
         ]
       },
       {
@@ -5801,6 +5801,51 @@
     ]
   },
   {
+    "title": "Windows Services",
+    "name": "winservices",
+    "description": "## Windows Services\n\nNew Relic's Windows services integration collects data about the services running on your Microsoft Windows hosts and sends it to our platform. \nYou can check the state and start mode of each service, find out which hosts are running a service, set up alerts for services, and more.\n\nOur integration is bundled with the Windows infrastructure agent. If you're monitoring Windows hosts on New Relic, you only need to enable the integration to get Windows services data into our platform.\n\n### Why it matters\n\nMicrosoft Windows services are the Windows equivalent of daemons in Unix and Linux: \nlong-running executables that can be started, stopped, paused, and restarted without a graphical interface. \n\nKnowing which services are enabled, or their state or health, is essential when monitoring Windows infrastructure.\n\nWith our Windows services integration you can:\n- Check all your Windows services, their state (running, stopped, etc.), start mode (auto, manual, etc.), and other service metadata.\n- See which hosts are running specific Windows services.\n- Set alerts based on any Windows services that you are monitoring using New Relic.\n- Create dashboards to track your Windows services.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/winservices",
+    "id": "97b57f9d-b55e-465c-96b3-4adb5883fe9c",
+    "level": "NEW_RELIC",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/winservices/logo.svg",
+    "summary": "New Relic's Windows services integration collects data about the services running on your Microsoft Windows hosts",
+    "websiteUrl": null,
+    "keywords": [
+      "windows",
+      "microsoft",
+      "service",
+      "os",
+      "operating system"
+    ],
+    "authors": [
+      "New Relic"
+    ],
+    "dashboards": [
+      {
+        "name": "Windows Services - Dashboard",
+        "description": "Get an overview of the windows services running on the monitored hosts",
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/winservices/winservices01.png"
+        ]
+      }
+    ],
+    "alerts": [],
+    "documentation": [
+      {
+        "name": "Windows Services monitoring integration",
+        "description": "New Relic's Windows services integration collects data about the services running on your Microsoft Windows hosts and sends it to our platform. \n",
+        "url": "https://docs.newrelic.com/docs/infrastructure/host-integrations/host-integrations-list/windows-services-integration/"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "winservices",
+        "id": "winservices-integration-docs"
+      }
+    ]
+  },
+  {
     "title": "Amazon SES",
     "name": "aws-ses",
     "description": "## What is Amazon SES?\n\nCloud-based service for sending and receiving email.\n\n### Get started!\n\nStart monitoring Amazon SES by connecting Amazon Web Services (AWS) to New Relic!\n\nCheck out our Amazon SES documentation to instrument your cloud service and manage the stability, scalability, and reliability of your systems with New Relic's infrastructure monitoring capabilities.\n\n### More info\n\nCheck out the [documentation](https://docs.newrelic.com/docs/infrastructure/amazon-integrations/aws-integrations-list/aws-simple-email-service-ses-monitoring-integration/) to learn more about New Relic monitoring for Amazon SES.",
@@ -6415,6 +6460,15 @@
     ],
     "dashboards": [
       {
+        "name": "SAP Dashboards",
+        "description": "Monitor SAP systems and applications performances",
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/nrm4sap/sap-dashboard01.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/nrm4sap/sap-dashboard02.png"
+        ]
+      },
+      {
         "name": "SAP Data Collection Monitoring",
         "description": "Monitor SAP data collection and ingestion process",
         "url": null,
@@ -6428,15 +6482,6 @@
         "url": null,
         "screenshots": [
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/nrm4sap-datasize/sap-size-estimate01.png"
-        ]
-      },
-      {
-        "name": "SAP Dashboards",
-        "description": "Monitor SAP systems and applications performances",
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/nrm4sap/sap-dashboard01.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/nrm4sap/sap-dashboard02.png"
         ]
       }
     ],
@@ -19864,11 +19909,11 @@
     ],
     "dashboards": [
       {
-        "name": "Catchpoint-Response Size",
+        "name": "Catchpoint-Recent Errors",
         "description": null,
         "url": null,
         "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/catchpoint-response-size/Catchpoint-Response_Size.png"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/catchpoint-recent-errors/Catchpoint-Recent_Errors.png"
         ]
       },
       {
@@ -19880,11 +19925,11 @@
         ]
       },
       {
-        "name": "Catchpoint-Recent Errors",
+        "name": "Catchpoint-Response Size",
         "description": null,
         "url": null,
         "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/catchpoint-recent-errors/Catchpoint-Recent_Errors.png"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/catchpoint-response-size/Catchpoint-Response_Size.png"
         ]
       },
       {
@@ -25959,22 +26004,6 @@
     ],
     "dashboards": [
       {
-        "name": "AWS Integrations Data Ingest Analysis",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/aws-integrations-data-ingest-analysis/aws-integrations-data-ingest-analysis.png"
-        ]
-      },
-      {
-        "name": "On-Host Integrations Data Analysis",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/on-host-integrations-data-analysis/on-host-integrations-data-analysis.png"
-        ]
-      },
-      {
         "name": "Kubernetes Data Ingest Analysis",
         "description": null,
         "url": null,
@@ -25996,6 +26025,22 @@
         "url": null,
         "screenshots": [
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/azure-integrations-data-ingest-analysis/azure-integrations-data-ingest-analysis.png"
+        ]
+      },
+      {
+        "name": "AWS Integrations Data Ingest Analysis",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/aws-integrations-data-ingest-analysis/aws-integrations-data-ingest-analysis.png"
+        ]
+      },
+      {
+        "name": "On-Host Integrations Data Analysis",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/on-host-integrations-data-analysis/on-host-integrations-data-analysis.png"
         ]
       }
     ],
@@ -26610,6 +26655,54 @@
     ]
   },
   {
+    "title": "IBM MQ",
+    "name": "ibmmq",
+    "description": "## IBM MQ performance\n\nIBM MQ allows independent and potentially non-concurrent applications on a distributed system to securely communicate with each other, using messages.\n\nThe IBM MQ integration allows you to monitor the performance of MQ Objects like channels and queues . The metrics collected include depth of your queues, how much space your queues have for additional messages, and the age of a queue’s oldest message. Analyzing metrics over time allows you to scale your instances accordingly in order to prevent full queues, which can delay message delivery.\n\n### IBM MQ quickstart highlights\n\nThe IBM MQ quickstart automatically instruments your IBM MQ infrastructure, and comes pre-built dashboard visualizing:\n- Total of Connections\n- Connections by Queue Manager\n- Total of Errors\n- Errors  by Queue Manager\n- Total of Messages\n- Messages by Queue Manager\n- Messages by Queue\n- Queue Depth\n- Expired messages by Queue\n- Filesystem usage",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/ibmmq",
+    "id": "924fd4b3-a6d1-4a6e-9e2c-b598f197f713",
+    "level": "NEW_RELIC",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/ibmmq/logo.png",
+    "summary": "The IBM MQ integration enables performance monitoring of IBM MQ infrastructure.",
+    "websiteUrl": null,
+    "keywords": [
+      "infrastructure",
+      "ibm mq",
+      "ibm-mq",
+      "ibmmq",
+      "mq",
+      "messaging",
+      "queue"
+    ],
+    "authors": [
+      "New Relic"
+    ],
+    "dashboards": [
+      {
+        "name": "IBM MQ - Dashboard",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/ibmmq/ibmmq01.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/ibmmq/ibmmq02.png"
+        ]
+      }
+    ],
+    "alerts": [],
+    "documentation": [
+      {
+        "name": "IBM MQ monitoring integration",
+        "description": "Our IBM MQ integration collects and sends dimensional metrics from IBM MQ.\n",
+        "url": "https://docs.newrelic.com/docs/integrations/host-integrations/host-integrations-list/ibmmq-monitoring-integration/"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "IBM MQ",
+        "id": "ibmmq-integration-docs"
+      }
+    ]
+  },
+  {
     "title": "Dropwizard",
     "name": "dropwizard",
     "description": "## What is Dropwizard?\n\nJava framework for metrics instrumentation intended for use in RESTful web services.\n\n## Get started!\n\nNew Relic's Dropwizard reporter sends your Dropwizard telemetry data to your New Relic account.\nFollow [the documentation](https://docs.newrelic.com/docs/integrations/open-source-telemetry-integrations/open-source-telemetry-integration-list/new-relics-dropwizard-integration) to get started!",
@@ -27044,19 +27137,19 @@
         ]
       },
       {
-        "name": "Browser Traffic Analysis",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/traffic-analysis/traffic_analysis.png"
-        ]
-      },
-      {
         "name": "Browser Pages Dashboard",
         "description": null,
         "url": null,
         "screenshots": [
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/browser-pages-dashboard/browser_pages_dashboard.png"
+        ]
+      },
+      {
+        "name": "Browser Traffic Analysis",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/traffic-analysis/traffic_analysis.png"
         ]
       }
     ],
@@ -27162,52 +27255,6 @@
       {
         "name": "Gatsby",
         "id": "gatsby-build-newrelic"
-      }
-    ]
-  },
-  {
-    "title": "IBM MQ",
-    "name": "ibmmq",
-    "description": "## IBM MQ performance\n\nIBM MQ allows independent and potentially non-concurrent applications on a distributed system to securely communicate with each other, using messages.\n\nThe IBM MQ integration allows you to monitor the performance of MQ Objects like channels and queues . The metrics collected include depth of your queues, how much space your queues have for additional messages, and the age of a queue’s oldest message. Analyzing metrics over time allows you to scale your instances accordingly in order to prevent full queues, which can delay message delivery.\n\n### IBM MQ quickstart highlights\n\nThe IBM MQ quickstart automatically instruments your IBM MQ infrastructure, and comes pre-built dashboard visualizing:\n- Total of Connections\n- Connections by Queue Manager\n- Total of Errors\n- Errors  by Queue Manager\n- Total of Messages\n- Messages by Queue Manager\n- Messages by Queue\n- Queue Depth\n- Expired messages by Queue\n- Filesystem usage",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/ibmmq",
-    "id": "924fd4b3-a6d1-4a6e-9e2c-b598f197f713",
-    "level": "NEW_RELIC",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/ibmmq/logo.png",
-    "summary": "The IBM MQ integration enables performance monitoring of IBM MQ infrastructure.",
-    "websiteUrl": null,
-    "keywords": [
-      "infrastructure",
-      "ibm mq",
-      "mq",
-      "messaging",
-      "queue"
-    ],
-    "authors": [
-      "New Relic"
-    ],
-    "dashboards": [
-      {
-        "name": "IBM MQ - Dashboard",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/ibmmq/ibmmq01.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/ibmmq/ibmmq02.png"
-        ]
-      }
-    ],
-    "alerts": [],
-    "documentation": [
-      {
-        "name": "IBM MQ monitoring integration",
-        "description": "Our IBM MQ integration collects and sends dimensional metrics from IBM MQ.\n",
-        "url": "https://docs.newrelic.com/docs/integrations/host-integrations/host-integrations-list/ibmmq-monitoring-integration/"
-      }
-    ],
-    "installPlans": [
-      {
-        "name": "IBM MQ",
-        "id": "ibmmq-integration-docs"
       }
     ]
   },
@@ -27346,14 +27393,14 @@
     "alerts": [],
     "documentation": [
       {
-        "name": "Harbor Metrics Documentation",
-        "description": "Learn more about the Prometheus metrics available for Harbor",
-        "url": "https://goharbor.io/docs/2.3.0/administration/metrics/"
-      },
-      {
         "name": "Prometheus Remote Write Configuration",
         "description": "Configure your Prometheus Server to remote write metrics to New Relic",
         "url": "https://docs.newrelic.com/docs/infrastructure/prometheus-integrations/install-configure-remote-write/set-your-prometheus-remote-write-integration/"
+      },
+      {
+        "name": "Harbor Metrics Documentation",
+        "description": "Learn more about the Prometheus metrics available for Harbor",
+        "url": "https://goharbor.io/docs/2.3.0/administration/metrics/"
       }
     ],
     "installPlans": [
