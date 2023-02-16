@@ -315,17 +315,6 @@
     ],
     "dashboards": [
       {
-        "name": "Kubernetes / Kubelet",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/kubernetes-prometheus-kubelet/kubernetes-prometheus-kubelet01.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/kubernetes-prometheus-kubelet/kubernetes-prometheus-kubelet02.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/kubernetes-prometheus-kubelet/kubernetes-prometheus-kubelet03.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/kubernetes-prometheus-kubelet/kubernetes-prometheus-kubelet04.png"
-        ]
-      },
-      {
         "name": "Kubernetes / Compute Resources",
         "description": null,
         "url": null,
@@ -334,6 +323,17 @@
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/kubernetes-prometheus-compute-resources/kubernetes-prometheus-compute-resources02.png",
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/kubernetes-prometheus-compute-resources/kubernetes-prometheus-compute-resources03.png",
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/kubernetes-prometheus-compute-resources/kubernetes-prometheus-compute-resources04.png"
+        ]
+      },
+      {
+        "name": "Kubernetes / Kubelet",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/kubernetes-prometheus-kubelet/kubernetes-prometheus-kubelet01.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/kubernetes-prometheus-kubelet/kubernetes-prometheus-kubelet02.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/kubernetes-prometheus-kubelet/kubernetes-prometheus-kubelet03.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/kubernetes-prometheus-kubelet/kubernetes-prometheus-kubelet04.png"
         ]
       }
     ],
@@ -2097,14 +2097,14 @@
     "alerts": [],
     "documentation": [
       {
-        "name": "Implementation guide",
-        "description": "Explains what quality foundation is and how to apply it\n",
-        "url": "https://docs.newrelic.com/docs/new-relic-solutions/observability-maturity/customer-experience/quality-foundation-implementation-guide"
-      },
-      {
         "name": "Install README",
         "description": "Guides you on how to customize the dashboard once you've installed it\n",
         "url": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/oma-qf#readme"
+      },
+      {
+        "name": "Implementation guide",
+        "description": "Explains what quality foundation is and how to apply it\n",
+        "url": "https://docs.newrelic.com/docs/new-relic-solutions/observability-maturity/customer-experience/quality-foundation-implementation-guide"
       }
     ],
     "installPlans": [
@@ -3609,6 +3609,80 @@
     ]
   },
   {
+    "title": "Red Hat Ansible Automation Controller",
+    "name": "ansible-automation-controller",
+    "description": "## Why monitor your Ansible Automation Controller?\nUse New Relic to monitor your Ansible Automation Controller's performance, so that you can get comprehensive and actionable information that your developers can use to successfully troubleshoot problems. Some key capabilities are:\n\n- Track the efficiency of your Ansible Automation Controller server's business transactions.\n- Use deep diagnostics to analyze and fix issues with your app's performance.\n- Detect faults and errors to reduce your app's downtime.\n- Compare the performance of your Ansible Automation Controller servers.\n\n## Comprehensive monitoring for your Ansible Automation Controller server\n\nWhen you monitor your Ansible Automation Controller server with New Relic, you get all of this full-stack observability out of the box:\n\n- High value alerts for your Ansible Automation Controller  on key metrics, such as errors, usage metrics, and Awx.\n- Easy-to-use performance monitoring dashboards on things like most successful transactions, average transaction duration today compared with the previous week, Awx organization comparisons, and more.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/ansible-automation-controller",
+    "id": "eeb3ad84-0aaf-447b-8c60-b26bde85ed2a",
+    "level": "NEW_RELIC",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/ansible-automation-controller/logo.png",
+    "summary": "Use New Relic to monitor and analyze your Red Hat Ansible Automation Controller infrastructure.",
+    "websiteUrl": null,
+    "keywords": [
+      "ansible automation platform",
+      "ansible tower",
+      "ansiblr automation controller"
+    ],
+    "authors": [
+      "New Relic"
+    ],
+    "dashboards": [
+      {
+        "name": "Red Hat Ansible Automation Controller",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/ansible-automation-controller/ansible-automation-controller01.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/ansible-automation-controller/ansible-automation-controller02.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/ansible-automation-controller/ansible-automation-controller03.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/ansible-automation-controller/ansible-automation-controller04.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/ansible-automation-controller/ansible-automation-controller05.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/ansible-automation-controller/ansible-automation-controller06.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/ansible-automation-controller/ansible-automation-controller07.png"
+        ]
+      }
+    ],
+    "alerts": [
+      {
+        "name": "Batch Insertions Failed",
+        "details": "This alert is triggered when the batch insertions failed is higher than 3 within 5 minutes.",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "Jobs Pending",
+        "details": "This alert is triggered when the jobs pending is higher than 5 within 5 minutes.",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "Low Instance Memory",
+        "details": "This alert is triggered when the low instance memory is higher than 1024 MB within 5 minutes.",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "Time Spent Saving Events to Database",
+        "details": "This alert is triggered when the time spent saving events to database is higher than 6 within 5 minutes.",
+        "type": "STATIC",
+        "url": null
+      }
+    ],
+    "documentation": [
+      {
+        "name": "Ansible Automation Controller integration documentation",
+        "description": "Use New Relic to monitor and analyze your Red Hat Ansible Automation Controller infrastructure.\n",
+        "url": "https://docs.newrelic.com/docs/infrastructure/host-integrations/host-integrations-list/ansible-controller-integration/"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "Ansible Automation Controller",
+        "id": "ansible-automation-controller"
+      }
+    ]
+  },
+  {
     "title": "AWS AppSync",
     "name": "aws-appsync",
     "description": "## What is AWS AppSync?\n\nFully managed serverless GraphQL service for real-time data queries,\nsynchronization, communications and offline programming features.\n\n\n### Get started!\n\nStart monitoring AWS AppSync by connecting Amazon Web Services (AWS) to New Relic!\n\nCheck out our AWS AppSync documentation to instrument your cloud service and manage the stability, scalability, and reliability of your systems with New Relic's infrastructure monitoring capabilities.\n\n\n### More info\n\nCheck out the [documentation](https://docs.newrelic.com/docs/integrations/amazon-integrations/aws-integrations-list/aws-appsync-monitoring-integration) to learn more about New Relic monitoring for AWS AppSync.",
@@ -4597,6 +4671,12 @@
         "url": null
       },
       {
+        "name": "Apdex Score",
+        "details": "This alert is triggered when the Apdex score is below 0.5 for 5 minutes",
+        "type": "STATIC",
+        "url": null
+      },
+      {
         "name": "Memory Usage",
         "details": "This alert is triggered when Memory usage is above 90%",
         "type": "STATIC",
@@ -4605,12 +4685,6 @@
       {
         "name": "Transaction Errors",
         "details": "This alert is triggered when the the transactions fail more than 10% of the time in 5 minutes.",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "Apdex Score",
-        "details": "This alert is triggered when the Apdex score is below 0.5 for 5 minutes",
         "type": "STATIC",
         "url": null
       }
@@ -5035,19 +5109,19 @@
     ],
     "dashboards": [
       {
-        "name": "Data Ingest Governance Baseline",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/data-ingest-baseline/data-ingest-baseline.png"
-        ]
-      },
-      {
         "name": "Data Ingest Governance Entity Breakdowns",
         "description": null,
         "url": null,
         "screenshots": [
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/data-ingest-entity-breakdown/data-ingest-entity-breakdown.png"
+        ]
+      },
+      {
+        "name": "Data Ingest Governance Baseline",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/data-ingest-baseline/data-ingest-baseline.png"
         ]
       }
     ],
@@ -6287,6 +6361,79 @@
     ]
   },
   {
+    "title": "ActiveMQ",
+    "name": "activemq",
+    "description": "## ActiveMQ Uses\nActiveMQ is an open source message middleware built by Apache on top the Java Messaging Service (JMS). Its primary use is to send messages between different apps. It translates messages from sender to receiver, and connects multiple clients and servers. ActiveMQ supports a high number of transport protocols, including OpenWire, WebSockets, STOMP, REST, and MQTT. Also, it provides Enterprise Features thereby enabling communication from multiple clients or servers.\n\n## Why monitor ActiveMQ?\nApache ActiveMQ is a fault-tolerant, scalable messaging system used to build real-time data pipelines. ActiveMQ also supports replications natively, and can help build streaming applications that run inside production environments.\n\nMonitoring ActiveMQ with our quickstart shows you performance metrics and inventory data on a real-time basis, create your own custom dashboard with charts and queries, and create alert policies.\n\n\n## What’s included in this quickstart?\nNew Relic’s performance monitoring provides instant observability out-of-the-box.\n\nWith this quickstart, you can:\n- Easily monitor and identify when your ActiveMQ nodes are underperforming.\n- View interactive dashboards show your tracked brokers, messages per sec, broker connections, memory usage, storage usage and more.\n- Know when message processing time is about to degrade.\n\n\n### Comprehensive monitoring quickstart for ActiveMQ\n\nNew Relic detects your ActiveMQ metrics like queues, brokers, producers, consumers, garbage collection rate, heap memory usage and more.  Monitor the performance metrics of your Apache ActiveMQ instances in real-time with New Relic APM. \n\nInstall and start monitoring your data today!",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/activemq",
+    "id": "2a0365a9-f14c-4611-b097-9ad3aee51f1a",
+    "level": "NEW_RELIC",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/activemq/logo.png",
+    "summary": "ActiveMQ monitoring tool by New Relic helps business users and developers monitor ActiveMQ performance.",
+    "websiteUrl": null,
+    "keywords": [
+      "activemq",
+      "jmx monitoring",
+      "apache"
+    ],
+    "authors": [
+      "New Relic"
+    ],
+    "dashboards": [
+      {
+        "name": "ActiveMQ",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/activemq/activemq01.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/activemq/activemq02.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/activemq/activemq03.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/activemq/activemq04.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/activemq/activemq05.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/activemq/activemq06.png"
+        ]
+      }
+    ],
+    "alerts": [
+      {
+        "name": "Heap Memory Usage",
+        "details": "This alert is triggered when the used heap memory usage is higher than 100GB during 5 minutes.",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "Message Dequeue Rate",
+        "details": "This alert is triggered when the messages received are less than 1 during 5 minutes.",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "Message Enqueue Rate",
+        "details": "This alert is triggered when the messages sent are less than 1 during 5 minutes.",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "Total Connections",
+        "details": "This alert is triggered when the total connections are less than 1 during 5 minutes.",
+        "type": "STATIC",
+        "url": null
+      }
+    ],
+    "documentation": [
+      {
+        "name": "ActiveMQ integration documentation",
+        "description": "Monitor the performance metrics of your Apache ActiveMQ instances in real-time with New Relic APM.\n",
+        "url": "https://docs.newrelic.com/docs/infrastructure/host-integrations/host-integrations-list/jmx-monitoring-activemq"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "ActiveMQ",
+        "id": "activemq-integration"
+      }
+    ]
+  },
+  {
     "title": "Roku",
     "name": "roku",
     "description": "## Why monitor Roku?\n\nRoku is one of the world's most popular streaming platforms. New Relic has developed the first and only open-source observabiilty agent for Roku, giving you unparalleled insight into the performance of your Roku application.\n\n### Analytics on HTTP requests and errors\n  This can be manifestations of ISP or CDN issues or unwanted changes to the application or backend services. Faster identification and understanding of these issues is critical to maintaining a positive user experience. \n### Video Quality of Experience (QoE) \n  Correlate video quality issues back through the rest of the streaming architecture. Acquire complete correlations between video playback sessions to the backend systems.\n### Customer journey tracking\n Follow customers as they navigate the application towards their content and their video playback experience. See where and when drop offs occur and the time it takes to complete critical actions.",
@@ -6787,79 +6934,6 @@
     ]
   },
   {
-    "title": "ActiveMQ",
-    "name": "activemq",
-    "description": "## ActiveMQ Uses\nActiveMQ is an open source message middleware built by Apache on top the Java Messaging Service (JMS). Its primary use is to send messages between different apps. It translates messages from sender to receiver, and connects multiple clients and servers. ActiveMQ supports a high number of transport protocols, including OpenWire, WebSockets, STOMP, REST, and MQTT. Also, it provides Enterprise Features thereby enabling communication from multiple clients or servers.\n\n## Why monitor ActiveMQ?\nApache ActiveMQ is a fault-tolerant, scalable messaging system used to build real-time data pipelines. ActiveMQ also supports replications natively, and can help build streaming applications that run inside production environments.\n\nMonitoring ActiveMQ with our quickstart shows you performance metrics and inventory data on a real-time basis, create your own custom dashboard with charts and queries, and create alert policies.\n\n\n## What’s included in this quickstart?\nNew Relic’s performance monitoring provides instant observability out-of-the-box.\n\nWith this quickstart, you can:\n- Easily monitor and identify when your ActiveMQ nodes are underperforming.\n- View interactive dashboards show your tracked brokers, messages per sec, broker connections, memory usage, storage usage and more.\n- Know when message processing time is about to degrade.\n\n\n### Comprehensive monitoring quickstart for ActiveMQ\n\nNew Relic detects your ActiveMQ metrics like queues, brokers, producers, consumers, garbage collection rate, heap memory usage and more.  Monitor the performance metrics of your Apache ActiveMQ instances in real-time with New Relic APM. \n\nInstall and start monitoring your data today!",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/activemq",
-    "id": "2a0365a9-f14c-4611-b097-9ad3aee51f1a",
-    "level": "NEW_RELIC",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/activemq/logo.png",
-    "summary": "ActiveMQ monitoring tool by New Relic helps business users and developers monitor ActiveMQ performance.",
-    "websiteUrl": null,
-    "keywords": [
-      "activemq",
-      "jmx monitoring",
-      "apache"
-    ],
-    "authors": [
-      "New Relic"
-    ],
-    "dashboards": [
-      {
-        "name": "ActiveMQ",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/activemq/activemq01.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/activemq/activemq02.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/activemq/activemq03.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/activemq/activemq04.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/activemq/activemq05.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/activemq/activemq06.png"
-        ]
-      }
-    ],
-    "alerts": [
-      {
-        "name": "Heap Memory Usage",
-        "details": "This alert is triggered when the used heap memory usage is higher than 100GB during 5 minutes.",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "Message Dequeue Rate",
-        "details": "This alert is triggered when the messages received are less than 1 during 5 minutes.",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "Message Enqueue Rate",
-        "details": "This alert is triggered when the messages sent are less than 1 during 5 minutes.",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "Total Connections",
-        "details": "This alert is triggered when the total connections are less than 1 during 5 minutes.",
-        "type": "STATIC",
-        "url": null
-      }
-    ],
-    "documentation": [
-      {
-        "name": "ActiveMQ integration documentation",
-        "description": "Monitor the performance metrics of your Apache ActiveMQ instances in real-time with New Relic APM.\n",
-        "url": "https://docs.newrelic.com/docs/infrastructure/host-integrations/host-integrations-list/jmx-monitoring-activemq"
-      }
-    ],
-    "installPlans": [
-      {
-        "name": "ActiveMQ",
-        "id": "activemq-integration"
-      }
-    ]
-  },
-  {
     "title": "Postman",
     "name": "postman",
     "description": "## Postman introduction\n\nPostman is an API platform for building and using APIs. Postman simplifies each step of the API lifecycle and\nstreamlines collaboration so you can create better APIs—faster.\n\n## Postman quickstart highlights\n\nThe Postman quickstart allows you to get an opinionated visualization of your Postman API data within minutes.\n\n- View your average latency over time\n- Compare your total request count over time\n- Get a real time tally of recent errors and failed tests\n- Measure API 4xx and 5xx failures\n- Review your byte traffic over time\n\n## Getting started\n- Watch the [Nerd Byte instructional video](https://www.youtube.com/watch?v=c9GPsYc7mKY)\n- Read the [blog post](https://newrelic.com/blog/nerdlog/postman-integration)",
@@ -6934,11 +7008,11 @@
     ],
     "dashboards": [
       {
-        "name": "Redis Enterprise Database CRDT",
+        "name": "Redis Enterprise Database Metrics",
         "description": null,
         "url": null,
         "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/active-active/active_active01.png"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/database/database01.png"
         ]
       },
       {
@@ -6950,11 +7024,11 @@
         ]
       },
       {
-        "name": "Redis Enterprise Database Metrics",
+        "name": "Redis Enterprise Database CRDT",
         "description": null,
         "url": null,
         "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/database/database01.png"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/active-active/active_active01.png"
         ]
       }
     ],
@@ -7412,12 +7486,6 @@
     ],
     "alerts": [
       {
-        "name": "Query Load Baseline",
-        "details": "This alert is triggered when the count of active queries on primary shards deviates more than 2 standard deviations above or below the baseline.\nThis can be a leading indicator of a potential loss of service or flood of requests.",
-        "type": "BASELINE",
-        "url": null
-      },
-      {
         "name": "Cluster Health",
         "details": "This alert triggers when the reported health of an Elasticsearch cluster is 'red'.",
         "type": "STATIC",
@@ -7436,9 +7504,9 @@
         "url": null
       },
       {
-        "name": "Index Health",
-        "details": "This alert triggers when the reported health of an Elasticsearch index is 'red'.",
-        "type": "STATIC",
+        "name": "Query Load Baseline",
+        "details": "This alert is triggered when the count of active queries on primary shards deviates more than 2 standard deviations above or below the baseline.\nThis can be a leading indicator of a potential loss of service or flood of requests.",
+        "type": "BASELINE",
         "url": null
       },
       {
@@ -7450,6 +7518,12 @@
       {
         "name": "JVM Heap Utilization Percent",
         "details": "This alert will trigger when the JVM Heap utilization of an Elasticsearch cluster node is >90%.",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "Index Health",
+        "details": "This alert triggers when the reported health of an Elasticsearch index is 'red'.",
         "type": "STATIC",
         "url": null
       }
@@ -10334,14 +10408,14 @@
     ],
     "alerts": [
       {
-        "name": "High CPU Utilization",
-        "details": "This alert is triggered when the CPU Utilization is above 90%.",
+        "name": "Apdex Score",
+        "details": "This alert is triggered when the Apdex score is below 0.5 for 5 minutes",
         "type": "STATIC",
         "url": null
       },
       {
-        "name": "Apdex Score",
-        "details": "This alert is triggered when the Apdex score is below 0.5 for 5 minutes",
+        "name": "High CPU Utilization",
+        "details": "This alert is triggered when the CPU Utilization is above 90%.",
         "type": "STATIC",
         "url": null
       },
@@ -10608,26 +10682,26 @@
     ],
     "alerts": [
       {
-        "name": "Transaction Errors",
-        "details": "This alert is triggered when the transaction error count is higher than 5 for 5 minutes.",
-        "type": "STATIC",
-        "url": null
-      },
-      {
         "name": "High CPU Utilization",
         "details": "This alert is triggered when the CPU Utilization is above 90%.",
         "type": "STATIC",
         "url": null
       },
       {
-        "name": "Average Heap Memory Used",
-        "details": "This alert is triggered when Average Heap Memory Used is higher than 2048 MB for 5 minutes.",
+        "name": "Transaction Errors",
+        "details": "This alert is triggered when the transaction error count is higher than 5 for 5 minutes.",
         "type": "STATIC",
         "url": null
       },
       {
         "name": "Average Transaction Duration",
         "details": "This alert is triggered when Average Transaction Duration is higher than 2 seconds for 5 minutes.",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "Average Heap Memory Used",
+        "details": "This alert is triggered when Average Heap Memory Used is higher than 2048 MB for 5 minutes.",
         "type": "STATIC",
         "url": null
       }
@@ -12108,14 +12182,14 @@
     ],
     "alerts": [
       {
-        "name": "High CPU Utilization",
-        "details": "This alert is triggered when the CPU Utilization is above 90%.",
+        "name": "Apdex Score",
+        "details": "This alert is triggered when the Apdex score is below 0.5 for 5 minutes",
         "type": "STATIC",
         "url": null
       },
       {
-        "name": "Apdex Score",
-        "details": "This alert is triggered when the Apdex score is below 0.5 for 5 minutes",
+        "name": "High CPU Utilization",
+        "details": "This alert is triggered when the CPU Utilization is above 90%.",
         "type": "STATIC",
         "url": null
       },
@@ -13432,14 +13506,14 @@
     "alerts": [],
     "documentation": [
       {
-        "name": "Installation Docs",
-        "description": "The New Relic Apollo Server plugin instruments your Apollo Server applications to give visibility into your GraphQL payloads.",
-        "url": "https://docs.newrelic.com/docs/apm/agents/nodejs-agent/extend-your-instrumentation/apollo-server-plugin-nodejs/"
-      },
-      {
         "name": "New Relic Apollo Server plugin repository",
         "description": "New Relic's official Apollo Server plugin for use with the Node.js agent.",
         "url": "https://github.com/newrelic/newrelic-node-apollo-server-plugin/blob/main/README.md"
+      },
+      {
+        "name": "Installation Docs",
+        "description": "The New Relic Apollo Server plugin instruments your Apollo Server applications to give visibility into your GraphQL payloads.",
+        "url": "https://docs.newrelic.com/docs/apm/agents/nodejs-agent/extend-your-instrumentation/apollo-server-plugin-nodejs/"
       }
     ],
     "installPlans": [
@@ -17284,6 +17358,12 @@
     ],
     "alerts": [
       {
+        "name": "Apdex Score",
+        "details": "This alert is triggered when the Apdex score is below 0.5 for 5 minutes",
+        "type": "STATIC",
+        "url": null
+      },
+      {
         "name": "Memory Usage",
         "details": "This alert is triggered when Memory usage is above 90%",
         "type": "STATIC",
@@ -17292,12 +17372,6 @@
       {
         "name": "Transaction Errors",
         "details": "This alert is triggered when the the transactions fail more than 10% of the time in 5 minutes.",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "Apdex Score",
-        "details": "This alert is triggered when the Apdex score is below 0.5 for 5 minutes",
         "type": "STATIC",
         "url": null
       }
@@ -19768,14 +19842,14 @@
     ],
     "alerts": [
       {
-        "name": "Failed Checkpoints",
-        "details": "This alert is triggered when the failed checkpoints is higher than 3 during 5 minutes.",
+        "name": "Job Manager Heap Memory Usage",
+        "details": "This alert is triggered when the job manager heap memory usage is higher than 10 MB during 5 minutes.",
         "type": "STATIC",
         "url": null
       },
       {
-        "name": "Job Manager Heap Memory Usage",
-        "details": "This alert is triggered when the job manager heap memory usage is higher than 10 MB during 5 minutes.",
+        "name": "Failed Checkpoints",
+        "details": "This alert is triggered when the failed checkpoints is higher than 3 during 5 minutes.",
         "type": "STATIC",
         "url": null
       },
@@ -20589,11 +20663,11 @@
     ],
     "dashboards": [
       {
-        "name": "Catchpoint-Recent Errors",
+        "name": "Catchpoint-Response Size",
         "description": null,
         "url": null,
         "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/catchpoint-recent-errors/Catchpoint-Recent_Errors.png"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/catchpoint-response-size/Catchpoint-Response_Size.png"
         ]
       },
       {
@@ -20605,19 +20679,19 @@
         ]
       },
       {
-        "name": "Catchpoint-Response Size",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/catchpoint-response-size/Catchpoint-Response_Size.png"
-        ]
-      },
-      {
         "name": "Catchpoint-Overview",
         "description": null,
         "url": null,
         "screenshots": [
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/catchpoint-overview/Catchpoint-Overview.png"
+        ]
+      },
+      {
+        "name": "Catchpoint-Recent Errors",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/catchpoint-recent-errors/Catchpoint-Recent_Errors.png"
         ]
       }
     ],
@@ -21561,76 +21635,6 @@
     ]
   },
   {
-    "title": "Blazor WebAssembly",
-    "name": "blazor-web-assembly",
-    "description": "## Comprehensive monitoring quickstart for Blazor WebAssembly\n\nAs you probably know, Microsoft developed Blazor WebAssembly to build web UI via C#, HTML, and CSS. With our Browser Monitoring agent, you can monitor your Blazor WebAssembly app performance with our quickstart dashboards right out of the box.\n\n\n## Why monitor Blazor WebAssembly?\n\nThere are a few strong arguments in favour of using Blazor WebAssembly:\n\n- Monitoring the higher latency and slower applications.\n- Using New Relic Browser Monitoring agent captures the Page load time, Web transactions and Https response.\n- Monitoring the application Performance, Errors and Apdex.\n- Near-native performance.\n- Debugging and tooling.\n\n## What’s included?\n\nGet these Blazor WebAssembly monitoring features out of the box:\n- Understand the health of your system with dashboards that show throughput and error rate data, logs, web transaction time, page views, page load time, and more. \n- Get alerts when your application suffers critical failures and errors.\n- Monitor scripts and functions.\n- Monitor web transactions.",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/blazor-webassembly",
-    "id": "d47d1298-fe2a-437b-91f1-c0316bd274d7",
-    "level": "NEW_RELIC",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/blazor-webassembly/logo.png",
-    "summary": "Instrument and monitor your Blazor WebAssembly application with our Browser Monitoring agent. Analyze your performance data right out of the box.",
-    "websiteUrl": null,
-    "keywords": [
-      "blazor web assembly",
-      "dotnet",
-      ".net",
-      "blazor",
-      "blazor webassembly"
-    ],
-    "authors": [
-      "New Relic"
-    ],
-    "dashboards": [
-      {
-        "name": "Blazor WebAssembly",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/blazor-webassembly/blazor-webassembly01.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/blazor-webassembly/blazor-webassembly02.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/blazor-webassembly/blazor-webassembly03.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/blazor-webassembly/blazor-webassembly04.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/blazor-webassembly/blazor-webassembly05.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/blazor-webassembly/blazor-webassembly06.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/blazor-webassembly/blazor-webassembly07.png"
-        ]
-      }
-    ],
-    "alerts": [
-      {
-        "name": "Application Error Rate",
-        "details": "This alert is triggered when the application error rates are higher than 5 for 5 minutes.",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "Client and Server Error Response",
-        "details": "This alert is triggered when the client and server error response is higher than 10 for 5 minutes.",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "Page Load Time",
-        "details": "This alert is triggered when the page load time is higher than 5 seconds for 5 minutes.",
-        "type": "STATIC",
-        "url": null
-      }
-    ],
-    "documentation": [
-      {
-        "name": "Blazor WebAssembly installation docs",
-        "description": "Our Browser Monitoring agent can be used to instrument and monitor your Blazor WebAssembly application. Perform an immediate analysis of your performance statistics. \n",
-        "url": "https://docs.newrelic.com/docs/infrastructure/host-integrations/host-integrations-list/browser-monitoring-integrations/blazor-webassembly/"
-      }
-    ],
-    "installPlans": [
-      {
-        "name": "Blazor WebAssembly",
-        "id": "blazor-webassembly"
-      }
-    ]
-  },
-  {
     "title": "Amazon MSK",
     "name": "amazon-msk",
     "description": "## What is Amazon MSK?\n\nFully managed service that makes it easy for you to build and run applications\nthat use Apache Kafka to process streaming data.\n\n\n### Get started!\n\nStart monitoring Amazon MSK by connecting Amazon Web Services (AWS) to New Relic!\n\nCheck out our Amazon MSK documentation to instrument your cloud service and manage the stability, scalability, and reliability of your systems with New Relic's infrastructure monitoring capabilities.\n\n### More info\n\nCheck out the [documentation](https://docs.newrelic.com/docs/integrations/amazon-integrations/aws-integrations-list/aws-managed-kafka-msk-integration) to learn more about New Relic monitoring for Amazon MSK.",
@@ -21814,14 +21818,14 @@
     ],
     "alerts": [
       {
-        "name": "High duration",
-        "details": "This alert is triggered when the total duration of the web transaction is longer than 10 seconds during 5 minutes",
+        "name": "High error rate",
+        "details": "This alert is triggered when the error percentage of web transactions is higher than 5% during 5 minutes",
         "type": "STATIC",
         "url": null
       },
       {
-        "name": "High error rate",
-        "details": "This alert is triggered when the error percentage of web transactions is higher than 5% during 5 minutes",
+        "name": "High duration",
+        "details": "This alert is triggered when the total duration of the web transaction is longer than 10 seconds during 5 minutes",
         "type": "STATIC",
         "url": null
       },
@@ -22220,6 +22224,76 @@
       {
         "name": "AWS-CloudWatch-Metric-Streams",
         "id": "aws-cloudwatch-metric-streams"
+      }
+    ]
+  },
+  {
+    "title": "Blazor WebAssembly",
+    "name": "blazor-web-assembly",
+    "description": "## Comprehensive monitoring quickstart for Blazor WebAssembly\n\nAs you probably know, Microsoft developed Blazor WebAssembly to build web UI via C#, HTML, and CSS. With our Browser Monitoring agent, you can monitor your Blazor WebAssembly app performance with our quickstart dashboards right out of the box.\n\n\n## Why monitor Blazor WebAssembly?\n\nThere are a few strong arguments in favour of using Blazor WebAssembly:\n\n- Monitoring the higher latency and slower applications.\n- Using New Relic Browser Monitoring agent captures the Page load time, Web transactions and Https response.\n- Monitoring the application Performance, Errors and Apdex.\n- Near-native performance.\n- Debugging and tooling.\n\n## What’s included?\n\nGet these Blazor WebAssembly monitoring features out of the box:\n- Understand the health of your system with dashboards that show throughput and error rate data, logs, web transaction time, page views, page load time, and more. \n- Get alerts when your application suffers critical failures and errors.\n- Monitor scripts and functions.\n- Monitor web transactions.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/blazor-webassembly",
+    "id": "d47d1298-fe2a-437b-91f1-c0316bd274d7",
+    "level": "NEW_RELIC",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/blazor-webassembly/logo.png",
+    "summary": "Instrument and monitor your Blazor WebAssembly application with our Browser Monitoring agent. Analyze your performance data right out of the box.",
+    "websiteUrl": null,
+    "keywords": [
+      "blazor web assembly",
+      "dotnet",
+      ".net",
+      "blazor",
+      "blazor webassembly"
+    ],
+    "authors": [
+      "New Relic"
+    ],
+    "dashboards": [
+      {
+        "name": "Blazor WebAssembly",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/blazor-webassembly/blazor-webassembly01.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/blazor-webassembly/blazor-webassembly02.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/blazor-webassembly/blazor-webassembly03.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/blazor-webassembly/blazor-webassembly04.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/blazor-webassembly/blazor-webassembly05.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/blazor-webassembly/blazor-webassembly06.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/blazor-webassembly/blazor-webassembly07.png"
+        ]
+      }
+    ],
+    "alerts": [
+      {
+        "name": "Application Error Rate",
+        "details": "This alert is triggered when the application error rates are higher than 5 for 5 minutes.",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "Client and Server Error Response",
+        "details": "This alert is triggered when the client and server error response is higher than 10 for 5 minutes.",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "Page Load Time",
+        "details": "This alert is triggered when the page load time is higher than 5 seconds for 5 minutes.",
+        "type": "STATIC",
+        "url": null
+      }
+    ],
+    "documentation": [
+      {
+        "name": "Blazor WebAssembly installation docs",
+        "description": "Our Browser Monitoring agent can be used to instrument and monitor your Blazor WebAssembly application. Perform an immediate analysis of your performance statistics. \n",
+        "url": "https://docs.newrelic.com/docs/infrastructure/host-integrations/host-integrations-list/browser-monitoring-integrations/blazor-webassembly/"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "Blazor WebAssembly",
+        "id": "blazor-webassembly"
       }
     ]
   },
@@ -24994,14 +25068,14 @@
     ],
     "alerts": [
       {
-        "name": "High CPU Utilization",
-        "details": "This alert is triggered when the CPU Utilization is above 90%.",
+        "name": "Transaction Errors",
+        "details": "This alert is triggered when the the transactions fail more than 10% of the time in 5 minutes.",
         "type": "STATIC",
         "url": null
       },
       {
-        "name": "Transaction Errors",
-        "details": "This alert is triggered when the the transactions fail more than 10% of the time in 5 minutes.",
+        "name": "High CPU Utilization",
+        "details": "This alert is triggered when the CPU Utilization is above 90%.",
         "type": "STATIC",
         "url": null
       }
@@ -26544,14 +26618,6 @@
     ],
     "dashboards": [
       {
-        "name": "GCP Integrations Data Ingest Analysis",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/gcp-integrations-data-ingest-analysis/gcp-integrations-data-ingest-analysis.png"
-        ]
-      },
-      {
         "name": "Azure Integrations Data Ingest Analysis",
         "description": null,
         "url": null,
@@ -26565,6 +26631,14 @@
         "url": null,
         "screenshots": [
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/aws-integrations-data-ingest-analysis/aws-integrations-data-ingest-analysis.png"
+        ]
+      },
+      {
+        "name": "GCP Integrations Data Ingest Analysis",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/gcp-integrations-data-ingest-analysis/gcp-integrations-data-ingest-analysis.png"
         ]
       },
       {
