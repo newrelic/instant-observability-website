@@ -750,53 +750,6 @@
     ]
   },
   {
-    "title": "MongoDB (Prometheus)",
-    "name": "mongodb-prometheus",
-    "description": "## MongoDB Monitoring\n\nMongoDB enables the unlimited virtual scaling of applications. Utilities like mongostat and mongotop offer immediate results but fail to provide insights into trends in a highly graphical visual dashboard. MongoDB dashboards provide insights into key metrics like connections saturation, oplog size, query and document operations, databases and indexes size, collections and transactions latency, replica set and members status. \n\nAvoid slow queries with  proper indexes that impact performance. Instantly monitor your entire MongoDB database with our instant observability kit or the MongoDB free monitoring tool.  \n\nThe critical differences between MongoDB free monitoring and monitoring MongoDB with New Relic’s instant observability quickstart are efficiency, usability, scope, and cost. MongoDB free monitoring focuses on standalone instances and replica sets. Data collected on disk utilization, memory, and operation execution times are uploaded periodically. \n\n\n### What’s Included?\n\nNew Relic + MongoDB quickstart - New Relic’s instant observability quickstart provides multiple metrics related to instances, replica sets, members, databases, and collections.\n\nNew Relic’s MongoDB quickstart contains a dashboard with meaningful insights, including:\n- Predefined dashboard filters by Cluster, databases, collections, replica sets, and members.\n- Connections saturation, operations by type, databases objects and size, indexes size, commands latency and duration, replica set and member status, and more.\n\nMonitor MongoDB with New Relic to quickly gain improved distribution and increased visibility into real-time user and app response times, throughput and breakdown by component and layer, and long-term data trends over time.  \n\n### Value of MongoDB Quickstarts\n\n[MongoDB performance monitoring with New Relic](https://docs.newrelic.com/docs/integrations/host-integrations/host-integrations-list/mongodb-monitoring-integration-new/) offers advanced features, including:\n- Obtain app performance insights.\n- Create custom queries and charts of your data integrations.\n- Filter and analyze configuration data and metrics in Infrastructure UI.\n\nNew Relic’s instant observability quickstart helps developers reduce administrative overheads and accelerate time to value. As New Relic is SaaS-based, you also don’t have to worry about maintenance or onboarding.",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/mongodb-prometheus",
-    "id": "04f45b0a-e326-4095-be0e-850de867982e",
-    "level": "NEW_RELIC",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/mongodb-prometheus/logo.jpeg",
-    "summary": "New Relic's MongoDB quickstart provides insights including total commands, requests per second, and database size. Install the quickstart to better understand utilization of resources and monitor performance issues.",
-    "websiteUrl": null,
-    "keywords": [
-      "infrastructure",
-      "database",
-      "featured",
-      "prometheus"
-    ],
-    "authors": [
-      "New Relic"
-    ],
-    "dashboards": [
-      {
-        "name": "MongoDB (Prometheus)",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/mongodb-prometheus/mongodb01.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/mongodb-prometheus/mongodb02.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/mongodb-prometheus/mongodb03.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/mongodb-prometheus/mongodb04.png"
-        ]
-      }
-    ],
-    "alerts": [],
-    "documentation": [
-      {
-        "name": "MongoDB",
-        "description": "Open source, document-oriented database where you store data in JSON-like files with dynamic schemas.\n",
-        "url": "https://docs.newrelic.com/docs/integrations/host-integrations/host-integrations-list/mongodb-monitoring-integration-new/"
-      }
-    ],
-    "installPlans": [
-      {
-        "name": "MongoDB (Prometheus)",
-        "id": "mongodb-prometheus-integration-docs"
-      }
-    ]
-  },
-  {
     "title": "tvOS",
     "name": "tvos",
     "description": "## New Relic Mobile monitoring\n\nNew Relic's mobile monitoring for tvOS gives you a comprehensive view of your app's performance.\n\n## Get started!\n\nFollow [the documentation](https://docs.newrelic.com/docs/mobile-monitoring/new-relic-mobile-ios/tvos/tvos-installation-configuration/) to get started!",
@@ -1123,6 +1076,53 @@
       {
         "name": "WayScript",
         "id": "wayscript"
+      }
+    ]
+  },
+  {
+    "title": "MongoDB (Prometheus)",
+    "name": "mongodb-prometheus",
+    "description": "## MongoDB Monitoring\n\nMongoDB enables the unlimited virtual scaling of applications. Utilities like mongostat and mongotop offer immediate results but fail to provide insights into trends in a highly graphical visual dashboard. MongoDB dashboards provide insights into key metrics like connections saturation, oplog size, query and document operations, databases and indexes size, collections and transactions latency, replica set and members status. \n\nAvoid slow queries with  proper indexes that impact performance. Instantly monitor your entire MongoDB database with our instant observability kit or the MongoDB free monitoring tool.  \n\nThe critical differences between MongoDB free monitoring and monitoring MongoDB with New Relic’s instant observability quickstart are efficiency, usability, scope, and cost. MongoDB free monitoring focuses on standalone instances and replica sets. Data collected on disk utilization, memory, and operation execution times are uploaded periodically. \n\n\n### What’s Included?\n\nNew Relic + MongoDB quickstart - New Relic’s instant observability quickstart provides multiple metrics related to instances, replica sets, members, databases, and collections.\n\nNew Relic’s MongoDB quickstart contains a dashboard with meaningful insights, including:\n- Predefined dashboard filters by Cluster, databases, collections, replica sets, and members.\n- Connections saturation, operations by type, databases objects and size, indexes size, commands latency and duration, replica set and member status, and more.\n\nMonitor MongoDB with New Relic to quickly gain improved distribution and increased visibility into real-time user and app response times, throughput and breakdown by component and layer, and long-term data trends over time.  \n\n### Value of MongoDB Quickstarts\n\n[MongoDB performance monitoring with New Relic](https://docs.newrelic.com/docs/infrastructure/host-integrations/host-integrations-list/mongodb/mongodb-monitoring-integration-new/) offers advanced features, including:\n- Obtain app performance insights.\n- Create custom queries and charts of your data integrations.\n- Filter and analyze configuration data and metrics in Infrastructure UI.\n\nNew Relic’s instant observability quickstart helps developers reduce administrative overheads and accelerate time to value. As New Relic is SaaS-based, you also don’t have to worry about maintenance or onboarding.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/mongodb-prometheus",
+    "id": "04f45b0a-e326-4095-be0e-850de867982e",
+    "level": "NEW_RELIC",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/mongodb-prometheus/logo.jpeg",
+    "summary": "New Relic's MongoDB quickstart provides insights including total commands, requests per second, and database size. Install the quickstart to better understand utilization of resources and monitor performance issues.",
+    "websiteUrl": null,
+    "keywords": [
+      "infrastructure",
+      "database",
+      "featured",
+      "prometheus"
+    ],
+    "authors": [
+      "New Relic"
+    ],
+    "dashboards": [
+      {
+        "name": "MongoDB (Prometheus)",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/mongodb-prometheus/mongodb01.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/mongodb-prometheus/mongodb02.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/mongodb-prometheus/mongodb03.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/mongodb-prometheus/mongodb04.png"
+        ]
+      }
+    ],
+    "alerts": [],
+    "documentation": [
+      {
+        "name": "MongoDB",
+        "description": "Open source, document-oriented database where you store data in JSON-like files with dynamic schemas.\n",
+        "url": "https://docs.newrelic.com/docs/infrastructure/host-integrations/host-integrations-list/mongodb/mongodb-monitoring-integration-new/"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "MongoDB (Prometheus)",
+        "id": "mongodb-prometheus-integration-docs"
       }
     ]
   },
