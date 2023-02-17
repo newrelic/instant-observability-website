@@ -315,17 +315,6 @@
     ],
     "dashboards": [
       {
-        "name": "Kubernetes / Compute Resources",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/kubernetes-prometheus-compute-resources/kubernetes-prometheus-compute-resources01.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/kubernetes-prometheus-compute-resources/kubernetes-prometheus-compute-resources02.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/kubernetes-prometheus-compute-resources/kubernetes-prometheus-compute-resources03.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/kubernetes-prometheus-compute-resources/kubernetes-prometheus-compute-resources04.png"
-        ]
-      },
-      {
         "name": "Kubernetes / Kubelet",
         "description": null,
         "url": null,
@@ -334,6 +323,17 @@
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/kubernetes-prometheus-kubelet/kubernetes-prometheus-kubelet02.png",
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/kubernetes-prometheus-kubelet/kubernetes-prometheus-kubelet03.png",
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/kubernetes-prometheus-kubelet/kubernetes-prometheus-kubelet04.png"
+        ]
+      },
+      {
+        "name": "Kubernetes / Compute Resources",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/kubernetes-prometheus-compute-resources/kubernetes-prometheus-compute-resources01.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/kubernetes-prometheus-compute-resources/kubernetes-prometheus-compute-resources02.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/kubernetes-prometheus-compute-resources/kubernetes-prometheus-compute-resources03.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/kubernetes-prometheus-compute-resources/kubernetes-prometheus-compute-resources04.png"
         ]
       }
     ],
@@ -3167,6 +3167,12 @@
     ],
     "alerts": [
       {
+        "name": "Low throughput",
+        "details": "This alert is triggered when the throughput is 0 for 5 minutes",
+        "type": "STATIC",
+        "url": null
+      },
+      {
         "name": "High duration",
         "details": "This alert is triggered when the total duration of the web transaction is longer than 10 seconds during 5 minutes",
         "type": "STATIC",
@@ -3175,12 +3181,6 @@
       {
         "name": "High error rate",
         "details": "This alert is triggered when the error percentage of web transactions is higher than 5% during 5 minutes",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "Low throughput",
-        "details": "This alert is triggered when the throughput is 0 for 5 minutes",
         "type": "STATIC",
         "url": null
       }
@@ -4665,14 +4665,14 @@
     ],
     "alerts": [
       {
-        "name": "High CPU Utilization",
-        "details": "This alert is triggered when the CPU Utilization is above 90%.",
+        "name": "Transaction Errors",
+        "details": "This alert is triggered when the the transactions fail more than 10% of the time in 5 minutes.",
         "type": "STATIC",
         "url": null
       },
       {
-        "name": "Apdex Score",
-        "details": "This alert is triggered when the Apdex score is below 0.5 for 5 minutes",
+        "name": "High CPU Utilization",
+        "details": "This alert is triggered when the CPU Utilization is above 90%.",
         "type": "STATIC",
         "url": null
       },
@@ -4683,8 +4683,8 @@
         "url": null
       },
       {
-        "name": "Transaction Errors",
-        "details": "This alert is triggered when the the transactions fail more than 10% of the time in 5 minutes.",
+        "name": "Apdex Score",
+        "details": "This alert is triggered when the Apdex score is below 0.5 for 5 minutes",
         "type": "STATIC",
         "url": null
       }
@@ -5109,19 +5109,19 @@
     ],
     "dashboards": [
       {
-        "name": "Data Ingest Governance Entity Breakdowns",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/data-ingest-entity-breakdown/data-ingest-entity-breakdown.png"
-        ]
-      },
-      {
         "name": "Data Ingest Governance Baseline",
         "description": null,
         "url": null,
         "screenshots": [
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/data-ingest-baseline/data-ingest-baseline.png"
+        ]
+      },
+      {
+        "name": "Data Ingest Governance Entity Breakdowns",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/data-ingest-entity-breakdown/data-ingest-entity-breakdown.png"
         ]
       }
     ],
@@ -6395,6 +6395,12 @@
     ],
     "alerts": [
       {
+        "name": "Total Connections",
+        "details": "This alert is triggered when the total connections are less than 1 during 5 minutes.",
+        "type": "STATIC",
+        "url": null
+      },
+      {
         "name": "Heap Memory Usage",
         "details": "This alert is triggered when the used heap memory usage is higher than 100GB during 5 minutes.",
         "type": "STATIC",
@@ -6409,12 +6415,6 @@
       {
         "name": "Message Enqueue Rate",
         "details": "This alert is triggered when the messages sent are less than 1 during 5 minutes.",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "Total Connections",
-        "details": "This alert is triggered when the total connections are less than 1 during 5 minutes.",
         "type": "STATIC",
         "url": null
       }
@@ -6585,19 +6585,19 @@
     ],
     "dashboards": [
       {
-        "name": "SAP Data Ingestion Estimate",
-        "description": "Get an overview of the data volume ingested from SAP systems",
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/nrm4sap-datasize/sap-size-estimate01.png"
-        ]
-      },
-      {
         "name": "SAP Data Collection Monitoring",
         "description": "Monitor SAP data collection and ingestion process",
         "url": null,
         "screenshots": [
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/nrm4sap-datacollect/sap-data-collection01.png"
+        ]
+      },
+      {
+        "name": "SAP Data Ingestion Estimate",
+        "description": "Get an overview of the data volume ingested from SAP systems",
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/nrm4sap-datasize/sap-size-estimate01.png"
         ]
       },
       {
@@ -7008,11 +7008,11 @@
     ],
     "dashboards": [
       {
-        "name": "Redis Enterprise Database Metrics",
+        "name": "Redis Enterprise Database CRDT",
         "description": null,
         "url": null,
         "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/database/database01.png"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/active-active/active_active01.png"
         ]
       },
       {
@@ -7024,11 +7024,11 @@
         ]
       },
       {
-        "name": "Redis Enterprise Database CRDT",
+        "name": "Redis Enterprise Database Metrics",
         "description": null,
         "url": null,
         "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/active-active/active_active01.png"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/database/database01.png"
         ]
       }
     ],
@@ -7486,6 +7486,12 @@
     ],
     "alerts": [
       {
+        "name": "Indexing Latency Threshold",
+        "details": "This alert will trigger when the Indexing latency for an Elasticsearch cluster's primary shards is >5ms.\nThis is measured by: # of Docs Indexed / Time spent Indexing (ms) for the evaluated time window.\nIncreased Flush Latency is an indication that you are trying to index too many documents at one time and you may need to reconfigured your settings to increase performance.",
+        "type": "STATIC",
+        "url": null
+      },
+      {
         "name": "Cluster Health",
         "details": "This alert triggers when the reported health of an Elasticsearch cluster is 'red'.",
         "type": "STATIC",
@@ -7504,14 +7510,8 @@
         "url": null
       },
       {
-        "name": "Query Load Baseline",
-        "details": "This alert is triggered when the count of active queries on primary shards deviates more than 2 standard deviations above or below the baseline.\nThis can be a leading indicator of a potential loss of service or flood of requests.",
-        "type": "BASELINE",
-        "url": null
-      },
-      {
-        "name": "Indexing Latency Threshold",
-        "details": "This alert will trigger when the Indexing latency for an Elasticsearch cluster's primary shards is >5ms.\nThis is measured by: # of Docs Indexed / Time spent Indexing (ms) for the evaluated time window.\nIncreased Flush Latency is an indication that you are trying to index too many documents at one time and you may need to reconfigured your settings to increase performance.",
+        "name": "Index Health",
+        "details": "This alert triggers when the reported health of an Elasticsearch index is 'red'.",
         "type": "STATIC",
         "url": null
       },
@@ -7522,9 +7522,9 @@
         "url": null
       },
       {
-        "name": "Index Health",
-        "details": "This alert triggers when the reported health of an Elasticsearch index is 'red'.",
-        "type": "STATIC",
+        "name": "Query Load Baseline",
+        "details": "This alert is triggered when the count of active queries on primary shards deviates more than 2 standard deviations above or below the baseline.\nThis can be a leading indicator of a potential loss of service or flood of requests.",
+        "type": "BASELINE",
         "url": null
       }
     ],
@@ -8657,78 +8657,6 @@
     ]
   },
   {
-    "title": "ArgoCD",
-    "name": "argocd-quickstart",
-    "description": "## What is Argo CD?\nArgo CD is a declarative, GitOps continuous delivery tool for Kubernetes.\n\n## Why Argo CD?\nApplication definitions, configurations, and environments should be declarative and version controlled. Application deployment and lifecycle management should be automated, auditable, and easy to understand.\n\nThis dashboard mirrors the official Argo CD Grafana dashboard ([Link](https://github.com/argoproj/argo-cd/blob/master/examples/dashboard.json)).\n\n## Argo CD Getting started:\n- [Getting Started](https://argo-cd.readthedocs.io/en/stable/getting_started)\n- [Docs](https://argo-cd.readthedocs.io/en/stable/)\n- [Available Metrics](https://argo-cd.readthedocs.io/en/stable/operator-manual/metrics/)\n\n## ArgoCD Dashboard Highlights:\n- Sync Activity\n- Health Status\n- Controller Stats\n- Repo Server Stats\n- Argo Server Stats\n\n## Requirements:\n1. NewRelic Kubernetes Integration ([Link](https://docs.newrelic.com/docs/kubernetes-pixie/kubernetes-integration/installation/kubernetes-integration-install-configure/)) with the Prometheus OpenMetrics Integration ([Link](https://docs.newrelic.com/docs/infrastructure/prometheus-integrations/get-started/send-prometheus-metric-data-new-relic/#OpenMetrics))\n2. Patch the ArgoCD pods with `prometheus.io/scrape=true` podAnnotations.  This will enable the New Relic Prometheus Integration to scrape ArgoCD metrics:\n\n    `kubectl patch deployment argocd-server -n argocd -p '{\"spec\": {\"template\":{\"metadata\":{\"annotations\":{\"prometheus.io/scrape\":\"true\",\"prometheus.io/port\": \"8083\",\"prometheus.io/path\": \"metrics\"}}}} }'`\n\n    `kubectl patch statefulset argocd-application-controller -n argocd -p '{\"spec\": {\"template\":{\"metadata\":{\"annotations\":{\"prometheus.io/scrape\":\"true\",\"prometheus.io/port\": \"8082\",\"prometheus.io/path\": \"metrics\"}}}} }'`\n\n    `kubectl patch deployment argocd-repo-server -n argocd -p '{\"spec\": {\"template\":{\"metadata\":{\"annotations\":{\"prometheus.io/scrape\":\"true\",\"prometheus.io/port\": \"8084\",\"prometheus.io/path\": \"metrics\"}}}} }'`",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/argocd",
-    "id": "03b4a3b9-3a59-4603-91dd-6b0ced1d62de",
-    "level": "NEW_RELIC",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/argocd/logo.png",
-    "summary": "Displays the performance and availability of the ArgoCD platform within Kubernetes.",
-    "websiteUrl": null,
-    "keywords": [
-      "argocd",
-      "helm",
-      "kubernetes",
-      "k8s",
-      "cd",
-      "continuous deployment",
-      "argo",
-      "prometheus",
-      "remote_write",
-      "promql",
-      "grafana",
-      "newrelic partner",
-      "NR1_addData",
-      "NR1_sys"
-    ],
-    "authors": [
-      "New Relic"
-    ],
-    "dashboards": [
-      {
-        "name": "ArgoCD",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/argocd-dashboard/argocd_dashboard.png"
-        ]
-      }
-    ],
-    "alerts": [],
-    "documentation": [
-      {
-        "name": "ArgoCD Metrics Setup",
-        "description": "Ship performance data from ArgoCD using Prometheus\n",
-        "url": "https://argo-cd.readthedocs.io/en/stable/operator-manual/metrics/"
-      },
-      {
-        "name": "Prometheus OpenMetrics Integration Setup",
-        "description": "Setup New Relic's Prometheus OpenMetrics Integration (POMI)\n",
-        "url": "https://docs.newrelic.com/docs/infrastructure/prometheus-integrations/install-configure-openmetrics/install-update-or-uninstall-your-prometheus-openmetrics-integration"
-      },
-      {
-        "name": "Prometheus Remote Write Integrations Setup",
-        "description": "Use Prometheus remote_write integration\n",
-        "url": "https://docs.newrelic.com/docs/infrastructure/prometheus-integrations/install-configure-remote-write/set-your-prometheus-remote-write-integration"
-      }
-    ],
-    "installPlans": [
-      {
-        "name": "Kubernetes integration",
-        "id": "kubernetes-install"
-      },
-      {
-        "name": "Prometheus remote write",
-        "id": "setup-prometheus"
-      },
-      {
-        "name": "Prometheus OpenMetrics integration",
-        "id": "setup-pomi"
-      }
-    ]
-  },
-  {
     "title": "JFrog Platform",
     "name": "jfrog-platform",
     "description": "## Why monitor JFrog Platform\n\nThe JFrog Platform is a leading universal end-to-end DevOps platform for automating, managing, securing, distributing, orchestrating, monitoring, and optimizing your Cl/ CD pipeline. These different elements of the JFrog platform need to be monitored in order for the enterprise to know in real-time about the health, performance and security of the DevOps supply chain.\n\n### JFrog Platform quickstart highlights\n\nThe integration will surface Platform Logs, Xray Violations data and system performance data available through Open Metrics, as pre-built dashboards within a JFrog Platform application made available within the New Relic One Programmable Observability platform.\n\n- Monitor the JFrog platform in your familiar and convenient New Relic One Programmable Observability platform\n- Pre-built JFrog dashboards depicting critical logs and metrics from the JFrog platform\n- Utilizes FluentD, an open source and one of the most lightweight log processors and forwarders in the market",
@@ -8996,6 +8924,89 @@
       {
         "name": "Java Agent",
         "id": "setup-java-agent"
+      }
+    ]
+  },
+  {
+    "title": "Argo CD",
+    "name": "argocd-quickstart",
+    "description": "## What is Argo CD?\nArgo CD is a declarative, GitOps continuous delivery tool for Kubernetes.\n\n## Why Argo CD?\nApplication definitions, configurations, and environments should be declarative and version controlled. Application deployment and lifecycle management should be automated, auditable, and easy to understand.\n\nThis dashboard closely mirrors the official Argo CD Grafana dashboard ([Link](https://github.com/argoproj/argo-cd/blob/master/examples/dashboard.json)).\n\n## Argo CD Getting started:\n- [Getting Started](https://argo-cd.readthedocs.io/en/stable/getting_started)\n- [Docs](https://argo-cd.readthedocs.io/en/stable/)\n- [Available Metrics](https://argo-cd.readthedocs.io/en/stable/operator-manual/metrics/)\n\n## Argo CD Dashboard Highlights:\n- Sync Activity\n- Health Status\n- Controller Stats\n- Repo Server Stats\n- Argo Server Stats\n\n## Requirements:\n1. [Prometheus Server or Prometheus Agent](https://docs.newrelic.com/docs/infrastructure/prometheus-integrations/get-started/send-prometheus-metric-data-new-relic/) configured to remote write to New Relic.\n2. Patch the Argo CD pods with `prometheus.io/scrape=true` podAnnotations.  This will enable the New Relic Prometheus Integration to scrape Argo CD metrics:\n\n    `kubectl patch deployment argocd-server -n argocd -p '{\"spec\": {\"template\":{\"metadata\":{\"annotations\":{\"prometheus.io/scrape\":\"true\",\"prometheus.io/port\": \"8083\",\"prometheus.io/path\": \"metrics\"}}}} }'`\n\n    `kubectl patch statefulset argocd-application-controller -n argocd -p '{\"spec\": {\"template\":{\"metadata\":{\"annotations\":{\"prometheus.io/scrape\":\"true\",\"prometheus.io/port\": \"8082\",\"prometheus.io/path\": \"metrics\"}}}} }'`\n\n    `kubectl patch deployment argocd-repo-server -n argocd -p '{\"spec\": {\"template\":{\"metadata\":{\"annotations\":{\"prometheus.io/scrape\":\"true\",\"prometheus.io/port\": \"8084\",\"prometheus.io/path\": \"metrics\"}}}} }'`",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/argocd",
+    "id": "03b4a3b9-3a59-4603-91dd-6b0ced1d62de",
+    "level": "NEW_RELIC",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/argocd/logo.png",
+    "summary": "Displays the performance and availability of the Argo CD platform within Kubernetes.",
+    "websiteUrl": null,
+    "keywords": [
+      "argocd",
+      "helm",
+      "git",
+      "kubernetes",
+      "k8s",
+      "cd",
+      "continuous deployment",
+      "argo",
+      "prometheus",
+      "remote_write",
+      "promql",
+      "grafana"
+    ],
+    "authors": [
+      "New Relic",
+      "Brad Schmitt"
+    ],
+    "dashboards": [
+      {
+        "name": "Argo CD (Prometheus)",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/argocd-dashboard/argocd_dashboard_1.jpg",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/argocd-dashboard/argocd_dashboard_2.jpg",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/argocd-dashboard/argocd_dashboard_3.jpg",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/argocd-dashboard/argocd_dashboard_4.jpg"
+        ]
+      }
+    ],
+    "alerts": [
+      {
+        "name": "Argo CD App Degraded",
+        "details": "An alert will trigger if an Argo CD app is in an unhealthy state for more than 5 minutes.",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "Argo CD App OutOfSync",
+        "details": "A Warning alert will trigger if an Argo CD app is in an OutOfSync state for more than 5 minutes.",
+        "type": "STATIC",
+        "url": null
+      }
+    ],
+    "documentation": [
+      {
+        "name": "Argo CD Integration Docs",
+        "description": "New Relic documentation for the Argo CD integration including installation, configuration, and how to query the metrics.\n",
+        "url": "https://docs.newrelic.com/docs/infrastructure/prometheus-integrations/integrations-list/argocd-integration"
+      },
+      {
+        "name": "Argo CD Metrics Reference",
+        "description": "Argo CD Prometheus Metric Reference\n",
+        "url": "https://argo-cd.readthedocs.io/en/stable/operator-manual/metrics/"
+      },
+      {
+        "name": "Prometheus Installation Docs",
+        "description": "Use Prometheus remote_write or Prometheus Agent\n",
+        "url": "https://docs.newrelic.com/docs/infrastructure/prometheus-integrations/get-started/send-prometheus-metric-data-new-relic/"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "Prometheus remote write",
+        "id": "setup-prometheus"
+      },
+      {
+        "name": "Prometheus Agent Mode",
+        "id": "setup-prometheus-agent-mode"
       }
     ]
   },
@@ -10408,14 +10419,14 @@
     ],
     "alerts": [
       {
-        "name": "Apdex Score",
-        "details": "This alert is triggered when the Apdex score is below 0.5 for 5 minutes",
+        "name": "High CPU Utilization",
+        "details": "This alert is triggered when the CPU Utilization is above 90%.",
         "type": "STATIC",
         "url": null
       },
       {
-        "name": "High CPU Utilization",
-        "details": "This alert is triggered when the CPU Utilization is above 90%.",
+        "name": "Apdex Score",
+        "details": "This alert is triggered when the Apdex score is below 0.5 for 5 minutes",
         "type": "STATIC",
         "url": null
       },
@@ -12899,14 +12910,14 @@
     ],
     "alerts": [
       {
-        "name": "High CPU Utilization",
-        "details": "This alert is triggered when the CPU Utilization is above 90%.",
+        "name": "Transaction Errors",
+        "details": "This alert is triggered when the the transactions fail more than 10% of the time in 5 minutes.",
         "type": "STATIC",
         "url": null
       },
       {
-        "name": "Transaction Errors",
-        "details": "This alert is triggered when the the transactions fail more than 10% of the time in 5 minutes.",
+        "name": "High CPU Utilization",
+        "details": "This alert is triggered when the CPU Utilization is above 90%.",
         "type": "STATIC",
         "url": null
       }
@@ -14312,19 +14323,19 @@
     ],
     "dashboards": [
       {
-        "name": "Lacework Security Overview",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/lacework-security-overview/lacework-security-overview01.png"
-        ]
-      },
-      {
         "name": "Lacework Compliance Violations",
         "description": null,
         "url": null,
         "screenshots": [
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/lacework-compliance-violations/lacework-compliance-violations01.png"
+        ]
+      },
+      {
+        "name": "Lacework Security Overview",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/lacework-security-overview/lacework-security-overview01.png"
         ]
       },
       {
@@ -17538,8 +17549,8 @@
     ],
     "alerts": [
       {
-        "name": "Apdex Score",
-        "details": "This alert is triggered when the Apdex score is below 0.5 for 5 minutes",
+        "name": "Transaction Errors",
+        "details": "This alert is triggered when the the transactions fail more than 10% of the time in 5 minutes.",
         "type": "STATIC",
         "url": null
       },
@@ -17550,8 +17561,8 @@
         "url": null
       },
       {
-        "name": "Transaction Errors",
-        "details": "This alert is triggered when the the transactions fail more than 10% of the time in 5 minutes.",
+        "name": "Apdex Score",
+        "details": "This alert is triggered when the Apdex score is below 0.5 for 5 minutes",
         "type": "STATIC",
         "url": null
       }
@@ -17768,14 +17779,14 @@
     ],
     "alerts": [
       {
-        "name": "High CPU Utilization",
-        "details": "This alert is triggered when the CPU Utilization is above 90%.",
+        "name": "Transaction Errors",
+        "details": "This alert is triggered when the the transactions fail more than 10% of the time in 5 minutes.",
         "type": "STATIC",
         "url": null
       },
       {
-        "name": "Transaction Errors",
-        "details": "This alert is triggered when the the transactions fail more than 10% of the time in 5 minutes.",
+        "name": "High CPU Utilization",
+        "details": "This alert is triggered when the CPU Utilization is above 90%.",
         "type": "STATIC",
         "url": null
       }
@@ -18185,14 +18196,14 @@
     ],
     "alerts": [
       {
-        "name": "High CPU Utilization",
-        "details": "This alert is triggered when the CPU Utilization is above 90%.",
+        "name": "Transaction Errors",
+        "details": "This alert is triggered when the the transactions fail more than 10% of the time in 5 minutes.",
         "type": "STATIC",
         "url": null
       },
       {
-        "name": "Transaction Errors",
-        "details": "This alert is triggered when the the transactions fail more than 10% of the time in 5 minutes.",
+        "name": "High CPU Utilization",
+        "details": "This alert is triggered when the CPU Utilization is above 90%.",
         "type": "STATIC",
         "url": null
       }
@@ -19842,14 +19853,14 @@
     ],
     "alerts": [
       {
-        "name": "Job Manager Heap Memory Usage",
-        "details": "This alert is triggered when the job manager heap memory usage is higher than 10 MB during 5 minutes.",
+        "name": "Failed Checkpoints",
+        "details": "This alert is triggered when the failed checkpoints is higher than 3 during 5 minutes.",
         "type": "STATIC",
         "url": null
       },
       {
-        "name": "Failed Checkpoints",
-        "details": "This alert is triggered when the failed checkpoints is higher than 3 during 5 minutes.",
+        "name": "Job Manager Heap Memory Usage",
+        "details": "This alert is triggered when the job manager heap memory usage is higher than 10 MB during 5 minutes.",
         "type": "STATIC",
         "url": null
       },
@@ -20663,6 +20674,22 @@
     ],
     "dashboards": [
       {
+        "name": "Catchpoint-Recent Errors",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/catchpoint-recent-errors/Catchpoint-Recent_Errors.png"
+        ]
+      },
+      {
+        "name": "Catchpoint-Overview",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/catchpoint-overview/Catchpoint-Overview.png"
+        ]
+      },
+      {
         "name": "Catchpoint-Response Size",
         "description": null,
         "url": null,
@@ -20676,22 +20703,6 @@
         "url": null,
         "screenshots": [
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/catchpoint-test-times/Catchpoint-Test_Times.png"
-        ]
-      },
-      {
-        "name": "Catchpoint-Overview",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/catchpoint-overview/Catchpoint-Overview.png"
-        ]
-      },
-      {
-        "name": "Catchpoint-Recent Errors",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/catchpoint-recent-errors/Catchpoint-Recent_Errors.png"
         ]
       }
     ],
@@ -21818,8 +21829,8 @@
     ],
     "alerts": [
       {
-        "name": "High error rate",
-        "details": "This alert is triggered when the error percentage of web transactions is higher than 5% during 5 minutes",
+        "name": "Low throughput",
+        "details": "This alert is triggered when the throughput is 0 for 5 minutes",
         "type": "STATIC",
         "url": null
       },
@@ -21830,8 +21841,8 @@
         "url": null
       },
       {
-        "name": "Low throughput",
-        "details": "This alert is triggered when the throughput is 0 for 5 minutes",
+        "name": "High error rate",
+        "details": "This alert is triggered when the error percentage of web transactions is higher than 5% during 5 minutes",
         "type": "STATIC",
         "url": null
       }
@@ -25068,14 +25079,14 @@
     ],
     "alerts": [
       {
-        "name": "Transaction Errors",
-        "details": "This alert is triggered when the the transactions fail more than 10% of the time in 5 minutes.",
+        "name": "High CPU Utilization",
+        "details": "This alert is triggered when the CPU Utilization is above 90%.",
         "type": "STATIC",
         "url": null
       },
       {
-        "name": "High CPU Utilization",
-        "details": "This alert is triggered when the CPU Utilization is above 90%.",
+        "name": "Transaction Errors",
+        "details": "This alert is triggered when the the transactions fail more than 10% of the time in 5 minutes.",
         "type": "STATIC",
         "url": null
       }
@@ -27627,12 +27638,6 @@
     ],
     "alerts": [
       {
-        "name": "Apdex Score",
-        "details": "This alert is triggered when the Apdex score is below 0.5 for 5 minutes",
-        "type": "STATIC",
-        "url": null
-      },
-      {
         "name": "High CPU Utilization",
         "details": "This alert is triggered when the CPU Utilization is above 90%.",
         "type": "STATIC",
@@ -27647,6 +27652,12 @@
       {
         "name": "Transaction Errors",
         "details": "This alert is triggered when the the transactions fail more than 10% of the time in 5 minutes.",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "Apdex Score",
+        "details": "This alert is triggered when the Apdex score is below 0.5 for 5 minutes",
         "type": "STATIC",
         "url": null
       }
@@ -27690,14 +27701,6 @@
     ],
     "dashboards": [
       {
-        "name": "JavaScript Errors",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/javascript-errors/javascript_errors.png"
-        ]
-      },
-      {
         "name": "Browser Overview",
         "description": null,
         "url": null,
@@ -27719,6 +27722,14 @@
         "url": null,
         "screenshots": [
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/traffic-analysis/traffic_analysis.png"
+        ]
+      },
+      {
+        "name": "JavaScript Errors",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/javascript-errors/javascript_errors.png"
         ]
       }
     ],
