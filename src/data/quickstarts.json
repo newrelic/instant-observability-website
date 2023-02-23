@@ -11766,73 +11766,6 @@
     ]
   },
   {
-    "title": "Dojo",
-    "name": "dojo",
-    "description": "## Comprehensive monitoring quickstart for Dojo\nWith the help of New Relic's Dojo dashboard, you can track your application's core web vitals, how much time your users spend on your site, and critical browser performance metrics like initial page load and pages with Javascript errors.\n\n## Why monitor your Dojo app?\nAs you know, you Dojo web app is a complex interaction of widgets, data flows, and data stores. By monitoring your Dojo app with New Relic, you can start to gain insight into its performance and areas where it can be improved. \n- By understanding your app's performance, you can prioritize resolving critical performance issues by tracing the problem to its source.\n\n## What’s included in this quickstart?\nNew Relic's Dojo monitoring quickstart boasts instant full-stack observability out-of-the-box:\n\nWith this quickstart, you can:\n- Use interactive, continually updating dashboards to see your app's performance, such as load time distribution and AJAX response times.\n- With alerts, be notified about critical issues involving your app's performance.",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/dojo",
-    "id": "fdd86b8b-7cc8-4528-a8e7-4cab7072304d",
-    "level": "NEW_RELIC",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/dojo/logo.png",
-    "summary": "Monitor your Dojo application by tracking performance issues with a full end-to-end view of distributed traces.",
-    "websiteUrl": null,
-    "keywords": [
-      "dojo",
-      "browser monitoring"
-    ],
-    "authors": [
-      "New Relic"
-    ],
-    "dashboards": [
-      {
-        "name": "Dojo",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/dojo/dojo01.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/dojo/dojo02.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/dojo/dojo03.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/dojo/dojo04.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/dojo/dojo05.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/dojo/dojo06.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/dojo/dojo07.png"
-        ]
-      }
-    ],
-    "alerts": [
-      {
-        "name": "Ajax Error Response",
-        "details": "This alert is triggered when the client and server error response is higher than 10 for 5 minutes.",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "Application Error Rate",
-        "details": "This alert is triggered when the Application Error Rate are higher than 5 for 5 minutes.",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "Page Load Time",
-        "details": "This alert is triggered when the page load time is higher than 5 seconds for 5 minutes.",
-        "type": "STATIC",
-        "url": null
-      }
-    ],
-    "documentation": [
-      {
-        "name": "Dojo integration documentation",
-        "description": "Monitor the performance metrics of your Dojo instances in real-time with New Relic.\n",
-        "url": "https://docs.newrelic.com/docs/infrastructure/host-integrations/host-integrations-list/dojo-io-integration/"
-      }
-    ],
-    "installPlans": [
-      {
-        "name": "Dojo",
-        "id": "dojo"
-      }
-    ]
-  },
-  {
     "title": "CodeIgniter",
     "name": "codeigniter",
     "description": "## What is CodeIgniter?\n\nOpen-source PHP-based web framework built for rapid development.\n\n## Get started!\n\nLeverage community expertise and instantly get value out of your telemetry data. This quickstart automatically instruments CodeIgniter with the New Relic PHP agent, and allows you to further leverage New Relic's APM capabilities by setting up [custom dashboards](https://docs.newrelic.com/docs/query-your-data/explore-query-data/dashboards/introduction-dashboards/), [errors inbox](https://docs.newrelic.com/docs/apm/apm-ui-pages/errors-inbox/errors-inbox/), [transaction tracing](https://docs.newrelic.com/docs/apm/transactions/transaction-traces/introduction-transaction-traces/), and [service maps](https://docs.newrelic.com/docs/understand-dependencies/understand-system-dependencies/service-maps/introduction-service-maps/).\n\n## More info\n\nCheck out the [documentation](https://docs.newrelic.com/docs/agents/php-agent/) to learn more about New Relic monitoring for CodeIgniter.",
@@ -12121,6 +12054,73 @@
       {
         "name": "f5",
         "id": "third-party-f5"
+      }
+    ]
+  },
+  {
+    "title": "Dojo",
+    "name": "dojo",
+    "description": "## Comprehensive monitoring quickstart for Dojo\nTransform the performance of your Dojo application with complete observability, even in the face of complicated and distributed environments. Deliver an unparalleled user experience by identifying and swiftly resolving performance issues, all without sacrificing any aspect of your user experience. \n\n## Why monitor your Dojo app?\n\n### Performance\nRecognize bottlenecks and potential issues, and take proactive steps to resolve them before they impact the user experience.\nIdentify and address any security vulnerabilities in a timely manner, helping to keep your application and user data safe.\n\n### Compatibility\nStay informed about changes to browser compatibility and ensure that your application continues to work seamlessly across different platforms and devices.\n\n### User experience\nMonitoring the framework can help you identify areas for improvement in your application's user experience and make informed decisions about how to optimize it for your users.\n\n### Debugging\nCatch and resolve issues during development and testing, allowing you to identify and fix problems before they reach production.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/dojo",
+    "id": "fdd86b8b-7cc8-4528-a8e7-4cab7072304d",
+    "level": "NEW_RELIC",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/dojo/logo.png",
+    "summary": "Monitor your Dojo application by tracking performance issues with a full end-to-end view of distributed traces.",
+    "websiteUrl": null,
+    "keywords": [
+      "dojo",
+      "browser monitoring"
+    ],
+    "authors": [
+      "New Relic"
+    ],
+    "dashboards": [
+      {
+        "name": "Dojo",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/dojo/dojo01.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/dojo/dojo02.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/dojo/dojo03.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/dojo/dojo04.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/dojo/dojo05.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/dojo/dojo06.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/dojo/dojo07.png"
+        ]
+      }
+    ],
+    "alerts": [
+      {
+        "name": "Ajax Error Response",
+        "details": "This alert is triggered when the client and server error response is higher than 10 for 5 minutes.",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "Application Error Rate",
+        "details": "This alert is triggered when the Application Error Rate are higher than 5 for 5 minutes.",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "Page Load Time",
+        "details": "This alert is triggered when the page load time is higher than 5 seconds for 5 minutes.",
+        "type": "STATIC",
+        "url": null
+      }
+    ],
+    "documentation": [
+      {
+        "name": "Dojo integration documentation",
+        "description": "Monitor the performance metrics of your Dojo instances in real-time with New Relic.\n",
+        "url": "https://docs.newrelic.com/docs/infrastructure/host-integrations/host-integrations-list/dojo-io-integration/"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "Dojo",
+        "id": "dojo"
       }
     ]
   },
@@ -14072,7 +14072,7 @@
   {
     "title": "Blazor Server",
     "name": "blazor-server",
-    "description": "## Comprehensive monitoring for Blazor Server\nAs you probably know, Microsoft developed Blazor Server to build web UI components. As a feature of ASP.NET Core, our Blazor Server integration with the .NET APM agent lets you monitor your apps with our dashboards right out of the box.\n\n## Why monitor your Blazor Server?\nThere are a few strong arguments in favor of using Blazor Server:\n\n- Monitoring the higher latency and slower applications.\n- Using New Relic .NET APM agent capture the Total transactions, Failed transactions, Active and Inactive connections.\n- Monitoring the application Performance, Errors and Apdex.\n- Near-native performance.\n- Debugging and tooling.\n\n## What’s included?\nGet these Blazor Server monitoring features out of the box with New Relic:\n- Understand the health of your system with dashboards that show throughput and error rate data, logs, transaction time, Apdex score, and more. \n- Get alerts when your application suffers critical failures and errors.\n- Monitor scripts and functions.\n- Monitor web transactions.",
+    "description": "## Comprehensive monitoring for Blazor Server\nMicrosoft developed Blazor Server to build web UIs with C#, HTML, and CSS. As a feature of ASP.NET, our Blazor Server integration with the .NET agent lets you monitor your apps with our quickstart dashboards right out of the box.\n\nDespite being an extremely innovative and exciting new technology, Blazor Server is a relatively new technology. That means there may be some issues that arise during development and deployment as with any new technology. \n\n## Why monitor your Blazor Server?\n\n### Optimize Performance: \nBlazor Server apps rely on SignalR for real-time communication between the client and the server, which can result in slower performance compared to traditional client-side Blazor apps.\n\n### Improve Scalability: \nBlazor Server apps may struggle with high levels of traffic, as each client connection requires a separate server-side connection.\n\n### Debug Quickly: \nDebugging Blazor Server apps can be challenging, as the source of errors may be difficult to determine.\n\n### Optimize State Management: \nManaging state in Blazor Server apps can be more complex than in traditional client-side Blazor apps, as state must be shared between the client and the server.\n\n### Lower Bandwidth Consumption: \nBlazor Server apps may consume more bandwidth compared to traditional client-side Blazor apps, as data is constantly being sent back and forth between the client and the server.\n\nUnleash the power of C# for web development with Blazor Server. This innovative technology not only lets you use your preferred language, but also provides a plethora of useful features. Experience the freedom to run your code on either the server or the client with Blazor Server and tailor the user experience for each device. Embrace a new era of web development with Blazor Server.",
     "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/dotnet/blazor-server",
     "id": "b038e759-bf74-4353-9273-c66e86b25ebe",
     "level": "NEW_RELIC",
@@ -16839,75 +16839,6 @@
     ]
   },
   {
-    "title": "Redmine",
-    "name": "redmine",
-    "description": "## Comprehensive monitoring quickstart for Redmine\nYou can monitor the performance of your Ruby-on-Rails Redmine app in a complex environment with our Ruby APM agent.\n## Why monitor your Redmine app?\nWhen you monitor your Redmine app's performance, you'll get a complete overview of your errors and when and where your Redmine application is slowing down. Specifically, you can use this to:\n- Identify issues that are truly important and quickly resolve them.\n- Be warned of performance issues ahead of time, giving you plenty of time to avoid downtime.\n- Prioritize resolving critical performance issues, tracing them down to their root cause, so you can solve them more quickly.\n- Monitor issues related to your Redmine app's projects.\n\n## What's included?\nYou'll get instant full-stack observability of your Redmine app out-of-the-box:\n\n- Monitor your app's custom metrics.\n- Gain code-related insights about your app's health and status.\n- Monitor your Redmine database operations and transactions.\n- Be proactively alerted about critical issues related to your app's status.",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/redmine",
-    "id": "f1cde389-deec-451e-8fd3-3a84631d5e83",
-    "level": "NEW_RELIC",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/redmine/logo.png",
-    "summary": "Quickly monitor your Redmine application by tracking performance issues with a full  end-to-end view of distributed traces",
-    "websiteUrl": null,
-    "keywords": [
-      "redmine",
-      "ruby agent",
-      "ruby"
-    ],
-    "authors": [
-      "New Relic"
-    ],
-    "dashboards": [
-      {
-        "name": "Redmine",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/redmine/redmine01.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/redmine/redmine02.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/redmine/redmine03.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/redmine/redmine04.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/redmine/redmine05.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/redmine/redmine06.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/redmine/redmine07.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/redmine/redmine08.png"
-        ]
-      }
-    ],
-    "alerts": [
-      {
-        "name": "Average Error Rate",
-        "details": "This alert is triggered when the Average Error Rate is higher than 5 for 5 minutes.",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "Average Page Load Time",
-        "details": "This alert is triggered when the Average Page Load Time is higher than 5 seconds for 5 minutes.",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "Failed Transactions",
-        "details": "This alert is triggered when the Failed Transactions are higher than 5 for 5 minutes.",
-        "type": "STATIC",
-        "url": null
-      }
-    ],
-    "documentation": [
-      {
-        "name": "Redmine integration documentation",
-        "description": "Monitor the performance metrics of your Redmine instances in real-time with New Relic ruby agent.\n",
-        "url": "https://docs.newrelic.com/docs/infrastructure/host-integrations/host-integrations-list/redmine-integration/"
-      }
-    ],
-    "installPlans": [
-      {
-        "name": "Redmine",
-        "id": "redmine"
-      }
-    ]
-  },
-  {
     "title": "Grafana Dashboard Migration",
     "name": "grafana-dashboard-migration",
     "description": "Telemetry Data Platform allows customers to onboard Prometheus Metrics and support New Relic as a Prometheus data source for Grafana dashboards. To help our customers that want to get rid of their Grafana instance we've build a toolset to migrate Grafana Prometheus dashboards to New Relic dashboards.\n\nFollow the easy to execute instructions on our Github repository to start converting Grafana dashboards in minutes.\n\nOne important note is that this isn’t a perfect solution, but it should get you 95% of the way. New Relic and Grafana are very different solutions, and the tool relies heavily on our PromQL to NRQL conversion service which is not feature complete. For these reasons, not all dashboards may get imported perfectly and some clean up may be required.",
@@ -17441,6 +17372,75 @@
       {
         "name": "AWS-CloudWatch-Metric-Streams",
         "id": "aws-cloudwatch-metric-streams"
+      }
+    ]
+  },
+  {
+    "title": "Redmine",
+    "name": "redmine",
+    "description": "## Comprehensive monitoring quickstart for Redmine\nWe can monitor your Redmine application in a complex environment and keep you on top of performance with our Ruby agent.\n\n## Why monitor Redmine?\nRedmine is a popular open-source project management and issue tracking tool, but like any software, it can also have some issues. Our quickstart helps you catch those quickly and effortlessly.   ## Why monitor your Redmine app?\n\n### Slow performance\nRedmine can become slow and unresponsive with a large number of projects, issues, and users, requiring optimization and maintenance to keep it running smoothly.\n\n### Integration problems: \nIntegrating Redmine with other tools and systems, such as source control systems, can be challenging and may require custom development.\n\n### Customization limitations: \nWhile Redmine can be customized to a certain extent, it may not meet all the specific requirements of a particular organization, and customizing it further may require extensive development work.\n\n### User management: \nManaging large numbers of users and their permissions in Redmine can be difficult, and may require the development of custom scripts or plugins.\n\n### Data import and export: \nImporting and exporting data from Redmine can be complex, and may require custom development to meet specific requirements.\n\n### User adoption: \nGetting users to adopt and effectively use Redmine can be a challenge, as some users may find its interface confusing or difficult to use.\n\n\n## What's included?\nYou'll get instant full-stack observability of your Redmine app out-of-the-box:\n\n- Monitor your app's custom metrics.\n- Gain code-related insights about your app's health and status.\n- Monitor your Redmine database operations and transactions.\n- Be proactively alerted about critical issues related to your app's status.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/redmine",
+    "id": "f1cde389-deec-451e-8fd3-3a84631d5e83",
+    "level": "NEW_RELIC",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/redmine/logo.png",
+    "summary": "Effortlessly monitor your Redmine application by keeping a close eye on performance issues with a comprehensive and all-encompassing view of the entire distributed tracing process.",
+    "websiteUrl": null,
+    "keywords": [
+      "redmine",
+      "ruby agent",
+      "ruby"
+    ],
+    "authors": [
+      "New Relic"
+    ],
+    "dashboards": [
+      {
+        "name": "Redmine",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/redmine/redmine01.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/redmine/redmine02.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/redmine/redmine03.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/redmine/redmine04.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/redmine/redmine05.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/redmine/redmine06.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/redmine/redmine07.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/redmine/redmine08.png"
+        ]
+      }
+    ],
+    "alerts": [
+      {
+        "name": "Average Error Rate",
+        "details": "This alert is triggered when the Average Error Rate is higher than 5 for 5 minutes.",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "Average Page Load Time",
+        "details": "This alert is triggered when the Average Page Load Time is higher than 5 seconds for 5 minutes.",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "Failed Transactions",
+        "details": "This alert is triggered when the Failed Transactions are higher than 5 for 5 minutes.",
+        "type": "STATIC",
+        "url": null
+      }
+    ],
+    "documentation": [
+      {
+        "name": "Redmine integration documentation",
+        "description": "Monitor the performance metrics of your Redmine instances in real-time with New Relic ruby agent.\n",
+        "url": "https://docs.newrelic.com/docs/infrastructure/host-integrations/host-integrations-list/redmine-integration/"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "Redmine",
+        "id": "redmine"
       }
     ]
   },
@@ -23992,7 +23992,7 @@
   {
     "title": "Redpanda",
     "name": "redpanda",
-    "description": "## Comprehensive monitoring quickstart for Redpanda\nNew Relic detects your Redpanda metrics are used for debugging,\nmeasure system health (uptime, CPU utilization), Infrastructure-level (RPC errors, Disk storage, Free memory).\n\n## Why monitor Redpanda?\nYou can monitor the health of your system to optimize performance. How to use Prometheus queries to monitor your system, for example, to check consumer group lag or Kafka producer request latency.\n\n\n## What’s included in this quickstart?\nNew Relic's Redpanda monitoring quickstart boasts instant full-stack observability out-of-the-box:\n- High value alerts for your Redpanda (RPC errors, usage metrics and JVM).\n- Dashboards (uptime, CPU utilization, RPC errors, Disk storage, Free memory  and more).",
+    "description": "## Comprehensive monitoring quickstart for Redpanda\nUnleash the power of optimized performance with New Relic’s Redpanda dashboard. Keep an eye on Redpanda metrics, effortlessly monitor your system's health, including uptime and CPU utilization, and stay ahead of any potential issues with real-time tracking of RPC errors, disk storage, and free memory, all at the infrastructure level..\n\n## Why monitor Redpanda?\nDetect issues early, so you can quickly resolve them and prevent downtime. This is particularly important in a distributed system like Redpanda, where failures in one node can affect the entire cluster.\n\n### Scalability alerts\nOur high volume request dashboard alerts you immediately to any issues in overscaling your platform. \n\n### Latency errors\nIdentify high latency in processing to solve for overall platform performance. \n\n### Data loss\nOur node dashboard alerts you immediately in case of failures, to prevent data loss by quick intervention. \n\nRedpanda observability is essential for ensuring its reliability, availability, and performance, and for preventing and resolving issues.\n\n\n## What’s included in this quickstart?\nNew Relic's Redpanda monitoring quickstart boasts instant full-stack observability out-of-the-box:\n- High value alerts for your Redpanda (RPC errors, usage metrics and JVM).\n- Dashboards (uptime, CPU utilization, RPC errors, Disk storage, Free memory  and more).",
     "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/redpanda",
     "id": "04ffa356-1f90-4cc1-baf6-c4a5e886c239",
     "level": "NEW_RELIC",
@@ -26415,75 +26415,6 @@
     ]
   },
   {
-    "title": "NuxtJS",
-    "name": "nuxtjs",
-    "description": "## Comprehensive monitoring quickstart for NuxtJS\nNuxtJS is a framework that helps you build server-rendered Vue.js applications easily. Manage asynchronous data, middleware, and routing right out of the box with our quickstart dashboards.\n\n## Why monitor NuxtJS?\nThe monitor allows us to know what issues customers are having in real time and provides an intuitive way to understand those issues, and direct those issues to the proper party for resolution.\n\n\n## What’s included in this quickstart?\nNew Relic's NuxtJS monitoring quickstart boasts instant full-stack observability out-of-the-box:\n- Easy to use performance monitoring dashboards.\n- See all your JavaScript errors tagged by deployment.\n- Get a detailed view of your web application traffic, including page views, load times, sessions, and most popular content.",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/nuxtjs",
-    "id": "7c712985-c6d5-4e4e-8ede-c55980a5e95d",
-    "level": "NEW_RELIC",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/nuxtjs/logo.png",
-    "summary": "Instrument and monitor your NuxtJS build apps with New Relic’s Vue browser monitoring agent. Analyze performance data right out of the box.",
-    "websiteUrl": null,
-    "keywords": [
-      "NuxtJS",
-      "Nuxt JS",
-      "Vue JS",
-      "Browser Monitoring"
-    ],
-    "authors": [
-      "New Relic"
-    ],
-    "dashboards": [
-      {
-        "name": "NuxtJS",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/nuxtjs/nuxtjs01.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/nuxtjs/nuxtjs02.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/nuxtjs/nuxtjs03.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/nuxtjs/nuxtjs04.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/nuxtjs/nuxtjs05.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/nuxtjs/nuxtjs06.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/nuxtjs/nuxtjs07.png"
-        ]
-      }
-    ],
-    "alerts": [
-      {
-        "name": "Application Error Rate",
-        "details": "This alert is triggered when the Application Error Rate are higher than 5 for 5 minutes.",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "Error Response",
-        "details": "This alert is triggered when the client and server error response is higher than 10 for 5 minutes.",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "Page Load Time",
-        "details": "This alert is triggered when the page load time is higher than 5 seconds for 5 minutes.",
-        "type": "STATIC",
-        "url": null
-      }
-    ],
-    "documentation": [
-      {
-        "name": "NuxtJS installation docs",
-        "description": "Integrate your NuxtJS app with our Vue browser monitoring and get your data into New Relic.\n",
-        "url": "https://docs.newrelic.com/docs/infrastructure/host-integrations/host-integrations-list/browser-monitoring-integrations/nuxt-js-integration/"
-      }
-    ],
-    "installPlans": [
-      {
-        "name": "NuxtJS",
-        "id": "nuxtjs"
-      }
-    ]
-  },
-  {
     "title": "Traefik (Prometheus)",
     "name": "traefik",
     "description": "This quickstart was built and tested based on Traefik metrics sent to New Relic using Prometheus Agent or Prometheus server.",
@@ -26770,6 +26701,75 @@
       {
         "name": "Kubernetes integration",
         "id": "kubernetes-install"
+      }
+    ]
+  },
+  {
+    "title": "NuxtJS",
+    "name": "nuxtjs",
+    "description": "## Comprehensive monitoring quickstart for NuxtJS\nTransform your Vue.js development experience with NuxtJS monitoring - a powerful framework that revolutionizes the way you build server-rendered applications. Say goodbye to cumbersome data management, messy middleware, and frustrating routing with our effortless quickstart dashboards - empowering you to unleash your full potential with ease.\n\n## Why monitor NuxtJS?\n### Identify data binding errors\nIncorrect data bindings or missing data bindings can cause issues with the application's behavior. Catch them before your users do.\n\n\n### Track quickly when a component isn’t rendering\nIf a component is not properly defined or missing, it won't render in the application. This can cause bugs in your application. \n\n\n### Get alerted about incorrect lifecycle hook orders\nIf the lifecycle hooks are not properly ordered, it can cause issues with the component's behavior. Get alerted to order issues quickly and efficiently.\n\n\n### Quickly identify network errors\nNetwork errors, such as CORS or API errors, can cause issues in fetching and rendering data. Don’t get caught up with extra network time, with immediate alerts you won’t miss a beat.\n\n## Unlock the power of real-time monitoring with New Relic’s Nuxt.js quickstart\nStay ahead of poor user experience with our monitoring dashboard- providing instant insight into challenges and enabling a rapid resolution. \n\n## What’s included in this quickstart?\nNew Relic's NuxtJS monitoring quickstart boasts instant full-stack observability out-of-the-box:\n- Easy to use performance monitoring dashboards.\n- See all your JavaScript errors tagged by deployment.\n- Get a detailed view of your web application traffic, including page views, load times, sessions, and most popular content.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/nuxtjs",
+    "id": "7c712985-c6d5-4e4e-8ede-c55980a5e95d",
+    "level": "NEW_RELIC",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/nuxtjs/logo.png",
+    "summary": "Instrument and monitor your NuxtJS build apps with New Relic’s Vue browser monitoring agent. Analyze performance data right out of the box.",
+    "websiteUrl": null,
+    "keywords": [
+      "NuxtJS",
+      "Nuxt JS",
+      "Vue JS",
+      "Browser Monitoring"
+    ],
+    "authors": [
+      "New Relic"
+    ],
+    "dashboards": [
+      {
+        "name": "NuxtJS",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/nuxtjs/nuxtjs01.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/nuxtjs/nuxtjs02.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/nuxtjs/nuxtjs03.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/nuxtjs/nuxtjs04.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/nuxtjs/nuxtjs05.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/nuxtjs/nuxtjs06.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/nuxtjs/nuxtjs07.png"
+        ]
+      }
+    ],
+    "alerts": [
+      {
+        "name": "Application Error Rate",
+        "details": "This alert is triggered when the Application Error Rate are higher than 5 for 5 minutes.",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "Error Response",
+        "details": "This alert is triggered when the client and server error response is higher than 10 for 5 minutes.",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "Page Load Time",
+        "details": "This alert is triggered when the page load time is higher than 5 seconds for 5 minutes.",
+        "type": "STATIC",
+        "url": null
+      }
+    ],
+    "documentation": [
+      {
+        "name": "NuxtJS installation docs",
+        "description": "Integrate your NuxtJS app with our Vue browser monitoring and get your data into New Relic.\n",
+        "url": "https://docs.newrelic.com/docs/infrastructure/host-integrations/host-integrations-list/browser-monitoring-integrations/nuxt-js-integration/"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "NuxtJS",
+        "id": "nuxtjs"
       }
     ]
   },
