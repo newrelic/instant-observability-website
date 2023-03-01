@@ -1146,19 +1146,19 @@
     ],
     "dashboards": [
       {
-        "name": "AWS WAFV2",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/aws-wafv2/aws-wafv2.png"
-        ]
-      },
-      {
         "name": "AWS WAF",
         "description": null,
         "url": null,
         "screenshots": [
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/aws-waf/aws-waf.png"
+        ]
+      },
+      {
+        "name": "AWS WAFV2",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/aws-wafv2/aws-wafv2.png"
         ]
       }
     ],
@@ -4673,7 +4673,7 @@
     ],
     "installPlans": [
       {
-        "name": "Node Agent",
+        "name": "Node agent",
         "id": "node-agent"
       }
     ]
@@ -6561,6 +6561,49 @@
     ]
   },
   {
+    "title": "OpenAI Observability",
+    "name": "openai",
+    "description": "## Monitor your GPT-3 Application Usage in New Relic\n\nWith the GPT-3 application integration, you'll have the ability to seamlessly monitor OpenAI completion queries and simultaneously log useful statistics in a New Relic customizable dashboard about your requests.\n\nBy adding just two lines of code, users can gain access to key performance metrics such as cost, response time, and sample inputs/outputs. The dashboard also allows users to track total requests, average token/requests, and model names. \n\nWith New Relic's fully customizable dashboard, users can add additional metrics based on their specific business requirements and needs. \n\nOverall, New Relic's GPT-3 integration provides real-time metrics to help businesses optimize usage, reduce costs, and achieve better results.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/openai",
+    "id": "5db25dbd-a6e9-46fc-a728-4697f677fbc6",
+    "level": "NEW_RELIC",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/openai/openai-logo.svg",
+    "summary": "Seamlessly monitor your usage of OpenAI’s GPT-3 application using New Relic’s dashboard. You'll get access to real-time metrics that can help you optimize usage, reduce costs, and achieve better results.",
+    "websiteUrl": null,
+    "keywords": [
+      "featured",
+      "newrelic partner"
+    ],
+    "authors": [
+      "New Relic",
+      "Yogev Kriger"
+    ],
+    "dashboards": [
+      {
+        "name": "GPT-3 OpenAI Monitoring",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/openai/openai-dashboard-screenshot.png"
+        ]
+      }
+    ],
+    "alerts": [],
+    "documentation": [
+      {
+        "name": "Monitor OpenAI",
+        "description": "A lightweight tool to monitor your OpenAI workload.\n",
+        "url": "https://github.com/newrelic/openai-api-monitoring"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "OpenAI integration",
+        "id": "setup-openai"
+      }
+    ]
+  },
+  {
     "title": "TypeScript",
     "name": "typescript",
     "description": "## What is TypeScript\nTypeScript is an open source programming language built by Microsoft. It is a strict syntactical superset of JavaScript (i.e. JavaScript plus additional features). The language is primarily designed to empower developers to build large apps and transpiles to JavaScript.\n\n### Common uses of TypeScript\n\nOftentimes, developers using JavaScript complain about the absence of strong static characters, TypeScript perfectly addressed this challenge. Among many other things, developers can leverage TypeScript for the following:\n- Build large-scale applications and transform their source code into JavaScript.\n- Use IntelliSense which actively provides hints as code is added.\n- Specify the types of data passed within the code, and report errors if types don't match.\n\n\n### What’s included in this quickstart?\n\nMontoring TypeScript is critical to help you access logs and identify errors in your application. With New Relic monitoring quickstart, you will get a scalable monitoring package that empowers you to identify performance issues before they happen. By monitoring TypeScript, you will achieve a seamless production flow while maintaining low latency with fast throughput.\n\n### Get these TypeScript monitoring features out of the box with our quickstart:\n- Understand the health of your with: throughput and error rate data, logs, web transaction time, Apdex score, and more apdex score and more).\n- Correlate TypeScript application metrics with your server’s primary health metrics, like CPU usage, memory, network usage, and disk space.\n- Create high-value baseline alerts that proactively inform developers about the status of their apps.",
@@ -6625,7 +6668,7 @@
     ],
     "installPlans": [
       {
-        "name": "Node Agent",
+        "name": "Node agent",
         "id": "node-agent"
       }
     ]
@@ -6652,11 +6695,12 @@
     ],
     "dashboards": [
       {
-        "name": "SAP Data Ingestion Estimate",
-        "description": "Get an overview of the data volume ingested from SAP systems",
+        "name": "SAP Dashboards",
+        "description": "Monitor SAP systems and applications performances",
         "url": null,
         "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/nrm4sap-datasize/sap-size-estimate01.png"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/nrm4sap/sap-dashboard01.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/nrm4sap/sap-dashboard02.png"
         ]
       },
       {
@@ -6668,12 +6712,11 @@
         ]
       },
       {
-        "name": "SAP Dashboards",
-        "description": "Monitor SAP systems and applications performances",
+        "name": "SAP Data Ingestion Estimate",
+        "description": "Get an overview of the data volume ingested from SAP systems",
         "url": null,
         "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/nrm4sap/sap-dashboard01.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/nrm4sap/sap-dashboard02.png"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/nrm4sap-datasize/sap-size-estimate01.png"
         ]
       }
     ],
@@ -7075,14 +7118,6 @@
     ],
     "dashboards": [
       {
-        "name": "Redis Enterprise Database CRDT",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/active-active/active_active01.png"
-        ]
-      },
-      {
         "name": "Redis Enterprise Cluster Metrics",
         "description": null,
         "url": null,
@@ -7096,6 +7131,14 @@
         "url": null,
         "screenshots": [
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/database/database01.png"
+        ]
+      },
+      {
+        "name": "Redis Enterprise Database CRDT",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/active-active/active_active01.png"
         ]
       }
     ],
@@ -7672,7 +7715,7 @@
     ],
     "installPlans": [
       {
-        "name": "Node Agent",
+        "name": "Node agent",
         "id": "node-agent"
       }
     ]
@@ -8631,6 +8674,18 @@
     ],
     "dashboards": [
       {
+        "name": "Jfrog Xray",
+        "description": "This dashboard provides a summary of Logs (access, service, traffic log volumes, HTTP response codes, errors etc), Metrics (System performance, number and type of Artifacts and Components scanned), Violations (Security Vulnerabiities and Licnse issues)",
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/jfrog-xray/jfrog-xray1.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/jfrog-xray/jfrog-xray2.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/jfrog-xray/jfrog-xray3.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/jfrog-xray/jfrog-xray4.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/jfrog-xray/jfrog-xray5.png"
+        ]
+      },
+      {
         "name": "Jfrog Artifactory",
         "description": "This dashboard provides an overview of usage statistics of JFrog Artifactory logs (Application, Audit, Docker, Requests) and overview of the System metrics, JVM statistics, Storage consumption, Garbage collection, and other operational insights associated with JFrog Artifactory",
         "url": null,
@@ -8642,18 +8697,6 @@
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/jfrog-artifactory/jfrog-artifactory5.png",
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/jfrog-artifactory/jfrog-artifactory6.png",
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/jfrog-artifactory/jfrog-artifactory7.png"
-        ]
-      },
-      {
-        "name": "Jfrog Xray",
-        "description": "This dashboard provides a summary of Logs (access, service, traffic log volumes, HTTP response codes, errors etc), Metrics (System performance, number and type of Artifacts and Components scanned), Violations (Security Vulnerabiities and Licnse issues)",
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/jfrog-xray/jfrog-xray1.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/jfrog-xray/jfrog-xray2.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/jfrog-xray/jfrog-xray3.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/jfrog-xray/jfrog-xray4.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/jfrog-xray/jfrog-xray5.png"
         ]
       }
     ],
@@ -10852,7 +10895,7 @@
     ],
     "installPlans": [
       {
-        "name": "Node Agent",
+        "name": "Node agent",
         "id": "node-agent"
       }
     ]
@@ -13529,7 +13572,7 @@
     ],
     "installPlans": [
       {
-        "name": "Node Agent",
+        "name": "Node agent",
         "id": "node-agent"
       }
     ]
@@ -14276,19 +14319,19 @@
     ],
     "dashboards": [
       {
-        "name": "Lacework Security Overview",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/lacework-security-overview/lacework-security-overview01.png"
-        ]
-      },
-      {
         "name": "Lacework Compliance Violations",
         "description": null,
         "url": null,
         "screenshots": [
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/lacework-compliance-violations/lacework-compliance-violations01.png"
+        ]
+      },
+      {
+        "name": "Lacework Security Overview",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/lacework-security-overview/lacework-security-overview01.png"
         ]
       },
       {
@@ -14384,7 +14427,7 @@
     ],
     "installPlans": [
       {
-        "name": "Node Agent",
+        "name": "Node agent",
         "id": "node-agent"
       }
     ]
@@ -20716,22 +20759,6 @@
     ],
     "dashboards": [
       {
-        "name": "Catchpoint-Test Times",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/catchpoint-test-times/Catchpoint-Test_Times.png"
-        ]
-      },
-      {
-        "name": "Catchpoint-Overview",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/catchpoint-overview/Catchpoint-Overview.png"
-        ]
-      },
-      {
         "name": "Catchpoint-Response Size",
         "description": null,
         "url": null,
@@ -20740,11 +20767,27 @@
         ]
       },
       {
+        "name": "Catchpoint-Test Times",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/catchpoint-test-times/Catchpoint-Test_Times.png"
+        ]
+      },
+      {
         "name": "Catchpoint-Recent Errors",
         "description": null,
         "url": null,
         "screenshots": [
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/catchpoint-recent-errors/Catchpoint-Recent_Errors.png"
+        ]
+      },
+      {
+        "name": "Catchpoint-Overview",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/catchpoint-overview/Catchpoint-Overview.png"
         ]
       }
     ],
@@ -25706,7 +25749,7 @@
     ],
     "installPlans": [
       {
-        "name": "Node Agent",
+        "name": "Node agent",
         "id": "node-agent"
       }
     ]
@@ -26560,27 +26603,19 @@
     ],
     "dashboards": [
       {
-        "name": "AWS Integrations Data Ingest Analysis",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/aws-integrations-data-ingest-analysis/aws-integrations-data-ingest-analysis.png"
-        ]
-      },
-      {
-        "name": "On-Host Integrations Data Analysis",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/on-host-integrations-data-analysis/on-host-integrations-data-analysis.png"
-        ]
-      },
-      {
         "name": "Kubernetes Data Ingest Analysis",
         "description": null,
         "url": null,
         "screenshots": [
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/kubernetes-data-ingest-analysis/kubernetes-data-ingest-analysis.png"
+        ]
+      },
+      {
+        "name": "AWS Integrations Data Ingest Analysis",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/aws-integrations-data-ingest-analysis/aws-integrations-data-ingest-analysis.png"
         ]
       },
       {
@@ -26597,6 +26632,14 @@
         "url": null,
         "screenshots": [
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/azure-integrations-data-ingest-analysis/azure-integrations-data-ingest-analysis.png"
+        ]
+      },
+      {
+        "name": "On-Host Integrations Data Analysis",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/on-host-integrations-data-analysis/on-host-integrations-data-analysis.png"
         ]
       }
     ],
@@ -27701,19 +27744,19 @@
     ],
     "dashboards": [
       {
+        "name": "Browser Overview",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/browser-overview/browser_overview.png"
+        ]
+      },
+      {
         "name": "Browser Pages Dashboard",
         "description": null,
         "url": null,
         "screenshots": [
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/browser-pages-dashboard/browser_pages_dashboard.png"
-        ]
-      },
-      {
-        "name": "JavaScript Errors",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/javascript-errors/javascript_errors.png"
         ]
       },
       {
@@ -27725,11 +27768,11 @@
         ]
       },
       {
-        "name": "Browser Overview",
+        "name": "JavaScript Errors",
         "description": null,
         "url": null,
         "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/browser-overview/browser_overview.png"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/javascript-errors/javascript_errors.png"
         ]
       }
     ],
