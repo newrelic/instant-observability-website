@@ -6561,49 +6561,6 @@
     ]
   },
   {
-    "title": "OpenAI Observability",
-    "name": "openai",
-    "description": "## Monitor your GPT-3 Application Usage in New Relic\n\nWith the GPT-3 application integration, you'll have the ability to seamlessly monitor OpenAI completion queries and simultaneously log useful statistics in a New Relic customizable dashboard about your requests.\n\nBy adding just two lines of code, users can gain access to key performance metrics such as cost, response time, and sample inputs/outputs. The dashboard also allows users to track total requests, average token/requests, and model names. \n\nWith New Relic's fully customizable dashboard, users can add additional metrics based on their specific business requirements and needs. \n\nOverall, New Relic's GPT-3 integration provides real-time metrics to help businesses optimize usage, reduce costs, and achieve better results.",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/openai",
-    "id": "5db25dbd-a6e9-46fc-a728-4697f677fbc6",
-    "level": "NEW_RELIC",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/openai/openai-logo.svg",
-    "summary": "Seamlessly monitor your usage of OpenAI’s GPT-3 application using New Relic’s dashboard. You'll get access to real-time metrics that can help you optimize usage, reduce costs, and achieve better results.",
-    "websiteUrl": null,
-    "keywords": [
-      "featured",
-      "newrelic partner"
-    ],
-    "authors": [
-      "New Relic",
-      "Yogev Kriger"
-    ],
-    "dashboards": [
-      {
-        "name": "GPT-3 OpenAI Monitoring",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/openai/openai-dashboard-screenshot.png"
-        ]
-      }
-    ],
-    "alerts": [],
-    "documentation": [
-      {
-        "name": "Monitor OpenAI",
-        "description": "A lightweight tool to monitor your OpenAI workload.\n",
-        "url": "https://github.com/newrelic/openai-api-monitoring"
-      }
-    ],
-    "installPlans": [
-      {
-        "name": "OpenAI integration",
-        "id": "setup-openai"
-      }
-    ]
-  },
-  {
     "title": "TypeScript",
     "name": "typescript",
     "description": "## What is TypeScript\nTypeScript is an open source programming language built by Microsoft. It is a strict syntactical superset of JavaScript (i.e. JavaScript plus additional features). The language is primarily designed to empower developers to build large apps and transpiles to JavaScript.\n\n### Common uses of TypeScript\n\nOftentimes, developers using JavaScript complain about the absence of strong static characters, TypeScript perfectly addressed this challenge. Among many other things, developers can leverage TypeScript for the following:\n- Build large-scale applications and transform their source code into JavaScript.\n- Use IntelliSense which actively provides hints as code is added.\n- Specify the types of data passed within the code, and report errors if types don't match.\n\n\n### What’s included in this quickstart?\n\nMontoring TypeScript is critical to help you access logs and identify errors in your application. With New Relic monitoring quickstart, you will get a scalable monitoring package that empowers you to identify performance issues before they happen. By monitoring TypeScript, you will achieve a seamless production flow while maintaining low latency with fast throughput.\n\n### Get these TypeScript monitoring features out of the box with our quickstart:\n- Understand the health of your with: throughput and error rate data, logs, web transaction time, Apdex score, and more apdex score and more).\n- Correlate TypeScript application metrics with your server’s primary health metrics, like CPU usage, memory, network usage, and disk space.\n- Create high-value baseline alerts that proactively inform developers about the status of their apps.",
@@ -6832,6 +6789,49 @@
       }
     ],
     "installPlans": []
+  },
+  {
+    "title": "OpenAI Observability",
+    "name": "openai",
+    "description": "## Monitor your GPT-3 Application Usage in New Relic\n\nWith the GPT-3 application integration, you'll have the ability to seamlessly monitor OpenAI completion queries and simultaneously log useful statistics in a New Relic customizable dashboard about your requests.\n\nBy adding just two lines of code, users can gain access to key performance metrics such as cost, response time, and sample inputs/outputs. The dashboard also allows users to track total requests, average token/requests, and model names. \n\nWith New Relic's fully customizable dashboard, users can add additional metrics based on their specific business requirements and needs. \n\nOverall, New Relic's GPT-3 integration provides real-time metrics to help businesses optimize usage, reduce costs, and achieve better results.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/openai",
+    "id": "5db25dbd-a6e9-46fc-a728-4697f677fbc6",
+    "level": "NEW_RELIC",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/openai/openai-logo.svg",
+    "summary": "Seamlessly monitor your usage of OpenAI’s GPT-3 application using New Relic’s dashboard. You'll get access to real-time metrics that can help you optimize usage, reduce costs, and achieve better results.",
+    "websiteUrl": null,
+    "keywords": [
+      "featured",
+      "newrelic partner"
+    ],
+    "authors": [
+      "New Relic",
+      "Yogev Kriger"
+    ],
+    "dashboards": [
+      {
+        "name": "GPT-3 OpenAI Monitoring",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/openai/openai-dashboard-screenshot.png"
+        ]
+      }
+    ],
+    "alerts": [],
+    "documentation": [
+      {
+        "name": "Monitor OpenAI",
+        "description": "A lightweight tool to monitor your OpenAI workload.\n",
+        "url": "https://github.com/newrelic/openai-api-monitoring"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "OpenAI integration",
+        "id": "setup-openai"
+      }
+    ]
   },
   {
     "title": "AWS FireLens plugin for Logs",
