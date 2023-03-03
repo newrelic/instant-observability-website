@@ -6791,49 +6791,6 @@
     "installPlans": []
   },
   {
-    "title": "OpenAI Observability",
-    "name": "openai",
-    "description": "## Monitor your GPT-3 Application Usage in New Relic\n\nWith the GPT-3 application integration, you'll have the ability to seamlessly monitor OpenAI completion queries and simultaneously log useful statistics in a New Relic customizable dashboard about your requests.\n\nBy adding just two lines of code, users can gain access to key performance metrics such as cost, response time, and sample inputs/outputs. The dashboard also allows users to track total requests, average token/requests, and model names. \n\nWith New Relic's fully customizable dashboard, users can add additional metrics based on their specific business requirements and needs. \n\nOverall, New Relic's GPT-3 integration provides real-time metrics to help businesses optimize usage, reduce costs, and achieve better results.",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/openai",
-    "id": "5db25dbd-a6e9-46fc-a728-4697f677fbc6",
-    "level": "NEW_RELIC",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/openai/openai-logo.svg",
-    "summary": "Seamlessly monitor your usage of OpenAI’s GPT-3 application using New Relic’s dashboard. You'll get access to real-time metrics that can help you optimize usage, reduce costs, and achieve better results.",
-    "websiteUrl": null,
-    "keywords": [
-      "featured",
-      "newrelic partner"
-    ],
-    "authors": [
-      "New Relic",
-      "Yogev Kriger"
-    ],
-    "dashboards": [
-      {
-        "name": "GPT-3 OpenAI Monitoring",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/openai/openai-dashboard-screenshot.png"
-        ]
-      }
-    ],
-    "alerts": [],
-    "documentation": [
-      {
-        "name": "Monitor OpenAI",
-        "description": "A lightweight tool to monitor your OpenAI workload.\n",
-        "url": "https://github.com/newrelic/openai-api-monitoring"
-      }
-    ],
-    "installPlans": [
-      {
-        "name": "OpenAI integration",
-        "id": "setup-openai"
-      }
-    ]
-  },
-  {
     "title": "AWS FireLens plugin for Logs",
     "name": "aws-firelens-plugin-for-logs",
     "description": "Collect log data and export to AWS or other services for analysis.",
@@ -7653,6 +7610,49 @@
       {
         "name": "Python Agent",
         "id": "setup-python-agent"
+      }
+    ]
+  },
+  {
+    "title": "OpenAI Observability",
+    "name": "openai",
+    "description": "## Monitor your GPT-3 Application Usage in New Relic\n\nWith the GPT-3 application integration, you'll have the ability to seamlessly monitor OpenAI completion queries and simultaneously log useful statistics in a New Relic customizable dashboard about your requests.\n\nBy adding just two lines of code, users can gain access to key performance metrics such as cost, response time, and sample inputs/outputs. The dashboard also allows users to track total requests, average token/requests, and model names. \n\nWith New Relic's fully customizable dashboard, users can add additional metrics based on their specific business requirements and needs. \n\nOverall, New Relic's GPT-3 integration provides real-time metrics to help businesses optimize usage, reduce costs, and achieve better results.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/openai",
+    "id": "5db25dbd-a6e9-46fc-a728-4697f677fbc6",
+    "level": "NEW_RELIC",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/openai/openai-logo.svg",
+    "summary": "Seamlessly monitor your usage of OpenAI’s GPT-3 application using New Relic’s dashboard. You'll get access to real-time metrics that can help you optimize usage, reduce costs, and achieve better results.",
+    "websiteUrl": null,
+    "keywords": [
+      "featured",
+      "newrelic partner"
+    ],
+    "authors": [
+      "New Relic",
+      "Yogev Kriger"
+    ],
+    "dashboards": [
+      {
+        "name": "GPT-3 OpenAI Monitoring",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/openai/openai-dashboard-screenshot.png"
+        ]
+      }
+    ],
+    "alerts": [],
+    "documentation": [
+      {
+        "name": "Monitor OpenAI",
+        "description": "A lightweight tool to monitor your OpenAI workload.\n",
+        "url": "https://github.com/newrelic/openai-api-monitoring"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "OpenAI integration",
+        "id": "setup-openai"
       }
     ]
   },
@@ -12234,6 +12234,46 @@
     ]
   },
   {
+    "title": "Chef",
+    "name": "chef",
+    "description": "# What is Chef?\nChef Infrastructure Management enables DevOps teams to model and deploy secure and scalable infrastructure automation across any cloud, VM, and/or physical infrastructure.\n\nThe Chef Infra agent is self-updating, self-automating and works well in low bandwidth or remote environments. It also allows Chef to scale up and down as customers demands change. Security keys are managed and rotated regularly using  Chef automated cookbooks which allows admins to turn off port access to SSH and WinRM further securing their environments in line with recommendations from industry standards like CIS (Center for Internet Security) benchmarks.\n\n# What does New Relic provide\nNew Relic has developed a Chef recipe for the Chef Infra agent to deploy the [New Relic Infrastructure agent](https://docs.newrelic.com/docs/infrastructure/infrastructure-monitoring/get-started/get-started-infrastructure-monitoring/) and [On Host Integrations](https://docs.newrelic.com/docs/infrastructure/host-integrations/get-started/introduction-host-integrations) throughout your environment.\n\n# How to get started?\nFollow the instructions on New Relic documentation: [Configure the infrastructure agent using Chef](https://docs.newrelic.com/docs/infrastructure/new-relic-infrastructure/config-management-tools/configure-new-relic-infrastructure-using-chef)",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/observability-as-code/chef",
+    "id": "ad40ccc2-f7ef-44bf-b961-07813088fce0",
+    "level": "NEW_RELIC",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/observability-as-code/chef/logo.svg",
+    "summary": "New Relic Chef recipe to deploy the New Relic Infrastructure agent and On Host Integrations throughout your environment.",
+    "websiteUrl": null,
+    "keywords": [
+      "automation",
+      "devops",
+      "sre",
+      "gitops"
+    ],
+    "authors": [
+      "New Relic"
+    ],
+    "dashboards": [],
+    "alerts": [],
+    "documentation": [
+      {
+        "name": "Chef installation docs",
+        "description": "Chef is a configuration management tool written in Ruby and Erlang.",
+        "url": "https://docs.newrelic.com/docs/infrastructure/new-relic-infrastructure/config-management-tools/configure-new-relic-infrastructure-using-chef"
+      },
+      {
+        "name": "Chef Supermarket",
+        "description": "Chef Supermarket page for the New Relic Chef Recipe",
+        "url": "https://supermarket.chef.io/cookbooks/newrelic-infra"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "Chef",
+        "id": "third-party-chef"
+      }
+    ]
+  },
+  {
     "title": "Red Hat Enterprise Linux",
     "name": "red-hat-enterprise-linux",
     "description": "Red Hat Enterprise Linux is a Linux distribution developed by Red Hat for the\ncommercial market.",
@@ -12669,46 +12709,6 @@
       {
         "name": "Ruby Agent",
         "id": "setup-ruby-agent"
-      }
-    ]
-  },
-  {
-    "title": "Chef",
-    "name": "chef",
-    "description": "# What is Chef?\nChef Infrastructure Management enables DevOps teams to model and deploy secure and scalable infrastructure automation across any cloud, VM, and/or physical infrastructure.\n\nThe Chef Infra agent is self-updating, self-automating and works well in low bandwidth or remote environments. It also allows Chef to scale up and down as customers demands change. Security keys are managed and rotated regularly using  Chef automated cookbooks which allows admins to turn off port access to SSH and WinRM further securing their environments in line with recommendations from industry standards like CIS (Center for Internet Security) benchmarks.\n\n# What does New Relic provide\nNew Relic has developed a Chef recipe for the Chef Infra agent to deploy the [New Relic Infrastructure agent](https://docs.newrelic.com/docs/infrastructure/infrastructure-monitoring/get-started/get-started-infrastructure-monitoring/) and [On Host Integrations](https://docs.newrelic.com/docs/infrastructure/host-integrations/get-started/introduction-host-integrations) throughout your environment.\n\n# How to get started?\nFollow the instructions on New Relic documentation: [Configure the infrastructure agent using Chef](https://docs.newrelic.com/docs/infrastructure/new-relic-infrastructure/config-management-tools/configure-new-relic-infrastructure-using-chef)",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/observability-as-code/chef",
-    "id": "ad40ccc2-f7ef-44bf-b961-07813088fce0",
-    "level": "NEW_RELIC",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/observability-as-code/chef/logo.svg",
-    "summary": "New Relic Chef recipe to deploy the New Relic Infrastructure agent and On Host Integrations throughout your environment.",
-    "websiteUrl": null,
-    "keywords": [
-      "automation",
-      "devops",
-      "sre",
-      "gitops"
-    ],
-    "authors": [
-      "New Relic"
-    ],
-    "dashboards": [],
-    "alerts": [],
-    "documentation": [
-      {
-        "name": "Chef installation docs",
-        "description": "Chef is a configuration management tool written in Ruby and Erlang.",
-        "url": "https://docs.newrelic.com/docs/infrastructure/new-relic-infrastructure/config-management-tools/configure-new-relic-infrastructure-using-chef"
-      },
-      {
-        "name": "Chef Supermarket",
-        "description": "Chef Supermarket page for the New Relic Chef Recipe",
-        "url": "https://supermarket.chef.io/cookbooks/newrelic-infra"
-      }
-    ],
-    "installPlans": [
-      {
-        "name": "Chef",
-        "id": "third-party-chef"
       }
     ]
   },
