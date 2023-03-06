@@ -68,6 +68,50 @@
     ]
   },
   {
+    "title": "Public API Performance",
+    "name": "public-api-performance",
+    "description": "## Public API Performance\n\nExplore the performance data New Relic collects about commonly used, public APIs. Use this dashboard to:\n\n  * Determine if a public API you use is experiencing a performance issue\n  * Compare the performance of your publicly-available APIs against other services\n  * Evaluate the API performance of providers when considering which one(s) to choose",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/public-api-performance",
+    "id": "7f8e7ef2-d94b-47bc-8d85-31471430b673",
+    "level": "NEW_RELIC",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/public-api-performance/logo.svg",
+    "summary": "Explore the performance data New Relic collects about commonly used, public APIs.",
+    "websiteUrl": null,
+    "keywords": [
+      "public api",
+      "performance",
+      "provider"
+    ],
+    "authors": [
+      "New Relic"
+    ],
+    "dashboards": [
+      {
+        "name": "Public Api Performance",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/public-api-performance/public-api-performance1.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/public-api-performance/public-api-performance2.png"
+        ]
+      }
+    ],
+    "alerts": [],
+    "documentation": [
+      {
+        "name": "Public API Performance Dashboard",
+        "description": "See our documentation for more details on the Public API Performance Dashboard.",
+        "url": "https://docs.newrelic.com/docs/query-your-data/explore-query-data/dashboards/explore-public-api-performance-dashboard/"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "New Relic Public API Performance",
+        "id": "public-api-performance"
+      }
+    ]
+  },
+  {
     "title": "Amazon API Gateway",
     "name": "aws-api-gateway",
     "description": "## What is Amazon API Gateway?\n\nFully managed service for creating, publishing, maintaining, monitoring, and\nsecuring APIs at any scale.\n\n\n### Get started!\n\nStart monitoring Amazon API Gateway by connecting Amazon Web Services (AWS) to New Relic!\n\nCheck out our Amazon API Gateway documentation to instrument your cloud service and manage the stability, scalability, and reliability of your systems with New Relic's infrastructure monitoring capabilities.\n\n\n### More info\n\nCheck out the [documentation](https://docs.newrelic.com/docs/integrations/amazon-integrations/aws-integrations-list/aws-api-gateway-monitoring-integration) to learn more about New Relic monitoring for AWS API Gateway.",
@@ -915,50 +959,6 @@
       {
         "name": "glassbox",
         "id": "third-party-glassbox"
-      }
-    ]
-  },
-  {
-    "title": "Public API Performance",
-    "name": "public-api-performance",
-    "description": "## Public API Performance\n\nExplore the performance data New Relic collects about commonly used, public APIs. Use this dashboard to:\n\n  * Determine if a public API you use is experiencing a performance issue\n  * Compare the performance of your publicly-available APIs against other services\n  * Evaluate the API performance of providers when considering which one(s) to choose",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/public-api-performance",
-    "id": "7f8e7ef2-d94b-47bc-8d85-31471430b673",
-    "level": "NEW_RELIC",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/public-api-performance/logo.svg",
-    "summary": "Explore the performance data New Relic collects about commonly used, public APIs.",
-    "websiteUrl": null,
-    "keywords": [
-      "public api",
-      "performance",
-      "provider"
-    ],
-    "authors": [
-      "New Relic"
-    ],
-    "dashboards": [
-      {
-        "name": "Public Api Performance",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/public-api-performance/public-api-performance1.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/public-api-performance/public-api-performance2.png"
-        ]
-      }
-    ],
-    "alerts": [],
-    "documentation": [
-      {
-        "name": "Public API Performance Dashboard",
-        "description": "See our documentation for more details on the Public API Performance Dashboard.",
-        "url": "https://docs.newrelic.com/docs/query-your-data/explore-query-data/dashboards/explore-public-api-performance-dashboard/"
-      }
-    ],
-    "installPlans": [
-      {
-        "name": "New Relic Public API Performance",
-        "id": "public-api-performance"
       }
     ]
   },
@@ -3044,6 +3044,152 @@
     ]
   },
   {
+    "title": "Red Hat Ansible Automation Controller",
+    "name": "ansible-automation-controller",
+    "description": "## Why monitor your Ansible Automation Controller?\nUse New Relic to monitor your Ansible Automation Controller's performance, so that you can get comprehensive and actionable information that your developers can use to successfully troubleshoot problems. Some key capabilities are:\n\n- Track the efficiency of your Ansible Automation Controller server's business transactions.\n- Use deep diagnostics to analyze and fix issues with your app's performance.\n- Detect faults and errors to reduce your app's downtime.\n- Compare the performance of your Ansible Automation Controller servers.\n\n## Comprehensive monitoring for your Ansible Automation Controller server\n\nWhen you monitor your Ansible Automation Controller server with New Relic, you get all of this full-stack observability out of the box:\n\n- High value alerts for your Ansible Automation Controller  on key metrics, such as errors, usage metrics, and Awx.\n- Easy-to-use performance monitoring dashboards on things like most successful transactions, average transaction duration today compared with the previous week, Awx organization comparisons, and more.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/ansible-automation-controller",
+    "id": "eeb3ad84-0aaf-447b-8c60-b26bde85ed2a",
+    "level": "NEW_RELIC",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/ansible-automation-controller/logo.svg",
+    "summary": "Use New Relic to monitor and analyze your Red Hat Ansible Automation Controller infrastructure.",
+    "websiteUrl": null,
+    "keywords": [
+      "ansible automation platform",
+      "ansible tower",
+      "ansiblr automation controller"
+    ],
+    "authors": [
+      "New Relic"
+    ],
+    "dashboards": [
+      {
+        "name": "Red Hat Ansible Automation Controller",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/ansible-automation-controller/ansible-automation-controller01.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/ansible-automation-controller/ansible-automation-controller02.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/ansible-automation-controller/ansible-automation-controller03.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/ansible-automation-controller/ansible-automation-controller04.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/ansible-automation-controller/ansible-automation-controller05.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/ansible-automation-controller/ansible-automation-controller06.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/ansible-automation-controller/ansible-automation-controller07.png"
+        ]
+      }
+    ],
+    "alerts": [
+      {
+        "name": "Batch Insertions Failed",
+        "details": "This alert is triggered when the batch insertions failed is higher than 3 within 5 minutes.",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "Jobs Pending",
+        "details": "This alert is triggered when the jobs pending is higher than 5 within 5 minutes.",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "Low Instance Memory",
+        "details": "This alert is triggered when the low instance memory is higher than 1024 MB within 5 minutes.",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "Time Spent Saving Events to Database",
+        "details": "This alert is triggered when the time spent saving events to database is higher than 6 within 5 minutes.",
+        "type": "STATIC",
+        "url": null
+      }
+    ],
+    "documentation": [
+      {
+        "name": "Ansible Automation Controller integration documentation",
+        "description": "Use New Relic to monitor and analyze your Red Hat Ansible Automation Controller infrastructure.\n",
+        "url": "https://docs.newrelic.com/docs/infrastructure/host-integrations/host-integrations-list/ansible-controller-integration/"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "Ansible Automation Controller",
+        "id": "ansible-automation-controller"
+      }
+    ]
+  },
+  {
+    "title": "Snowflake",
+    "name": "snowflake",
+    "description": "## Snowflake performance monitoring\nMonitor your Snowflake application with our Infra agent in a complex environment and stay on top of performance issues.\n\n## Why monitor Snowflake?\nThe performance monitoring tool for Snowflake helps you monitor the entire infrastructure and identifies the critical issues in your Snowflake application. Snowflake performance monitoring enables you to get a complete overview of Snowflake errors and know when and where your Snowflake application slows down. Some key components are:\n\n- Monitor  Snowflake applications can be used to create rich and varied user interfaces running within a browser by using Infra agent.\n- Help you identify issues that are truly important and quickly resolve them. Gain knowledge of performance issues in advance and thus giving you ample time to avoid application downtime.\n- Scalable error monitoring without affecting production flow. \n- Maintain a low latency and fast throughput. \n- View the overall health of your production environment in order to quickly identify and resolve problems with crippled services.\n- Performance provides you with the information you need to not only prioritize critical performance issues, but also trace them down to the root cause and solve them more quickly.\n- Monitor your warehouse performance of Snowflake.\n\n## What’s included in this quickstart?\nWith our  Snowflake quickstart, you get:\n\n- Alerts (Disk Spillage, Queries being queued, Failed Queries).\n- Dashboards (credit usage, query performance, longest queries etc).\n- Monitor Queries executed.\n- Monitor warehouse performance.\n- Optimize costs-whether that’s expensive queries, users running many queries, or warehouses that contribute the most to your bill.\n- Detect potential security issues and failed logins.\n- Monitor and alert on custom Snowflake data.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/snowflake",
+    "id": "3433a3fe-37d7-4ddd-a495-a95bfc718404",
+    "level": "NEW_RELIC",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/snowflake/logo.svg",
+    "summary": "Quickly monitor your Snowflake application by tracking performance issues with a full end-to-end view of distributed traces.",
+    "websiteUrl": null,
+    "keywords": [
+      "snowflake"
+    ],
+    "authors": [
+      "New Relic"
+    ],
+    "dashboards": [
+      {
+        "name": "Snowflake",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/snowflake/snowflake-1.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/snowflake/snowflake-2.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/snowflake/snowflake-3.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/snowflake/snowflake-4.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/snowflake/snowflake-5.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/snowflake/snowflake-6.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/snowflake/snowflake-7.png"
+        ]
+      }
+    ],
+    "alerts": [
+      {
+        "name": "Bytes Spilled to Local Storage",
+        "details": "This alert is triggered when the bytes spilled to local storage are above 500 during 5 minutes.",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "Bytes Spilled to Remote Storage",
+        "details": "This alert is triggered when the bytes spilled to remote storage are above 500 during 5 minutes.",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "Failed Queries",
+        "details": "This alert is triggered when the failed queries are above 5 during 5 minutes.",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "Queued Queries",
+        "details": "This alert is triggered when queries being queued are above 5 during 5 minutes.",
+        "type": "STATIC",
+        "url": null
+      }
+    ],
+    "documentation": [
+      {
+        "name": "Snowflake integration documentation",
+        "description": "Quickly monitor your Snowflake application by tracking performance issues with a full end-to-end view of distributed traces \n",
+        "url": "https://docs.newrelic.com/docs/infrastructure/host-integrations/host-integrations-list/snowflake-integration/"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "Snowflake",
+        "id": "snowflake"
+      }
+    ]
+  },
+  {
     "title": "Amazon S3",
     "name": "aws-s3",
     "description": "## What is Amazon S3?\n\nProvides developers and IT teams with secure, durable, highly-scalable cloud\nstorage.\n\n\n### Get started!\n\nStart monitoring Amazon S3 by connecting Amazon Web Services (AWS) to New Relic!\n\nCheck out our Amazon S3 documentation to instrument your cloud service and manage the stability, scalability, and reliability of your systems with New Relic's infrastructure monitoring capabilities.\n\n### More info\n\nCheck out the [documentation](https://docs.newrelic.com/docs/infrastructure/amazon-integrations/aws-integrations-list/aws-s3-monitoring-integration/) to learn more about New Relic monitoring for Amazon S3.",
@@ -3344,78 +3490,6 @@
     ]
   },
   {
-    "title": "Snowflake",
-    "name": "snowflake",
-    "description": "## Snowflake performance monitoring\nMonitor your Snowflake application with our Infra agent in a complex environment and stay on top of performance issues.\n\n## Why monitor Snowflake?\nThe performance monitoring tool for Snowflake helps you monitor the entire infrastructure and identifies the critical issues in your Snowflake application. Snowflake performance monitoring enables you to get a complete overview of Snowflake errors and know when and where your Snowflake application slows down. Some key components are:\n\n- Monitor  Snowflake applications can be used to create rich and varied user interfaces running within a browser by using Infra agent.\n- Help you identify issues that are truly important and quickly resolve them. Gain knowledge of performance issues in advance and thus giving you ample time to avoid application downtime.\n- Scalable error monitoring without affecting production flow. \n- Maintain a low latency and fast throughput. \n- View the overall health of your production environment in order to quickly identify and resolve problems with crippled services.\n- Performance provides you with the information you need to not only prioritize critical performance issues, but also trace them down to the root cause and solve them more quickly.\n- Monitor your warehouse performance of Snowflake.\n\n## What’s included in this quickstart?\nWith our  Snowflake quickstart, you get:\n\n- Alerts (Disk Spillage, Queries being queued, Failed Queries).\n- Dashboards (credit usage, query performance, longest queries etc).\n- Monitor Queries executed.\n- Monitor warehouse performance.\n- Optimize costs-whether that’s expensive queries, users running many queries, or warehouses that contribute the most to your bill.\n- Detect potential security issues and failed logins.\n- Monitor and alert on custom Snowflake data.",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/snowflake",
-    "id": "3433a3fe-37d7-4ddd-a495-a95bfc718404",
-    "level": "NEW_RELIC",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/snowflake/logo.svg",
-    "summary": "Quickly monitor your Snowflake application by tracking performance issues with a full end-to-end view of distributed traces.",
-    "websiteUrl": null,
-    "keywords": [
-      "snowflake"
-    ],
-    "authors": [
-      "New Relic"
-    ],
-    "dashboards": [
-      {
-        "name": "Snowflake",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/snowflake/snowflake-1.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/snowflake/snowflake-2.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/snowflake/snowflake-3.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/snowflake/snowflake-4.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/snowflake/snowflake-5.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/snowflake/snowflake-6.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/snowflake/snowflake-7.png"
-        ]
-      }
-    ],
-    "alerts": [
-      {
-        "name": "Bytes Spilled to Local Storage",
-        "details": "This alert is triggered when the bytes spilled to local storage are above 500 during 5 minutes.",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "Bytes Spilled to Remote Storage",
-        "details": "This alert is triggered when the bytes spilled to remote storage are above 500 during 5 minutes.",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "Failed Queries",
-        "details": "This alert is triggered when the failed queries are above 5 during 5 minutes.",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "Queued Queries",
-        "details": "This alert is triggered when queries being queued are above 5 during 5 minutes.",
-        "type": "STATIC",
-        "url": null
-      }
-    ],
-    "documentation": [
-      {
-        "name": "Snowflake integration documentation",
-        "description": "Quickly monitor your Snowflake application by tracking performance issues with a full end-to-end view of distributed traces \n",
-        "url": "https://docs.newrelic.com/docs/infrastructure/host-integrations/host-integrations-list/snowflake-integration/"
-      }
-    ],
-    "installPlans": [
-      {
-        "name": "Snowflake",
-        "id": "snowflake"
-      }
-    ]
-  },
-  {
     "title": "Browser Segment Investigation Quickstart",
     "name": "browser-segment-investigation",
     "description": "Review the extent of crushed urls so you know which urls you need to add segments for in the browser segment allow list.",
@@ -3562,80 +3636,6 @@
       {
         "name": "Slack for CodeStream",
         "id": "third-party-slack-for-codestream"
-      }
-    ]
-  },
-  {
-    "title": "Red Hat Ansible Automation Controller",
-    "name": "ansible-automation-controller",
-    "description": "## Why monitor your Ansible Automation Controller?\nUse New Relic to monitor your Ansible Automation Controller's performance, so that you can get comprehensive and actionable information that your developers can use to successfully troubleshoot problems. Some key capabilities are:\n\n- Track the efficiency of your Ansible Automation Controller server's business transactions.\n- Use deep diagnostics to analyze and fix issues with your app's performance.\n- Detect faults and errors to reduce your app's downtime.\n- Compare the performance of your Ansible Automation Controller servers.\n\n## Comprehensive monitoring for your Ansible Automation Controller server\n\nWhen you monitor your Ansible Automation Controller server with New Relic, you get all of this full-stack observability out of the box:\n\n- High value alerts for your Ansible Automation Controller  on key metrics, such as errors, usage metrics, and Awx.\n- Easy-to-use performance monitoring dashboards on things like most successful transactions, average transaction duration today compared with the previous week, Awx organization comparisons, and more.",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/ansible-automation-controller",
-    "id": "eeb3ad84-0aaf-447b-8c60-b26bde85ed2a",
-    "level": "NEW_RELIC",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/ansible-automation-controller/logo.svg",
-    "summary": "Use New Relic to monitor and analyze your Red Hat Ansible Automation Controller infrastructure.",
-    "websiteUrl": null,
-    "keywords": [
-      "ansible automation platform",
-      "ansible tower",
-      "ansiblr automation controller"
-    ],
-    "authors": [
-      "New Relic"
-    ],
-    "dashboards": [
-      {
-        "name": "Red Hat Ansible Automation Controller",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/ansible-automation-controller/ansible-automation-controller01.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/ansible-automation-controller/ansible-automation-controller02.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/ansible-automation-controller/ansible-automation-controller03.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/ansible-automation-controller/ansible-automation-controller04.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/ansible-automation-controller/ansible-automation-controller05.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/ansible-automation-controller/ansible-automation-controller06.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/ansible-automation-controller/ansible-automation-controller07.png"
-        ]
-      }
-    ],
-    "alerts": [
-      {
-        "name": "Batch Insertions Failed",
-        "details": "This alert is triggered when the batch insertions failed is higher than 3 within 5 minutes.",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "Jobs Pending",
-        "details": "This alert is triggered when the jobs pending is higher than 5 within 5 minutes.",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "Low Instance Memory",
-        "details": "This alert is triggered when the low instance memory is higher than 1024 MB within 5 minutes.",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "Time Spent Saving Events to Database",
-        "details": "This alert is triggered when the time spent saving events to database is higher than 6 within 5 minutes.",
-        "type": "STATIC",
-        "url": null
-      }
-    ],
-    "documentation": [
-      {
-        "name": "Ansible Automation Controller integration documentation",
-        "description": "Use New Relic to monitor and analyze your Red Hat Ansible Automation Controller infrastructure.\n",
-        "url": "https://docs.newrelic.com/docs/infrastructure/host-integrations/host-integrations-list/ansible-controller-integration/"
-      }
-    ],
-    "installPlans": [
-      {
-        "name": "Ansible Automation Controller",
-        "id": "ansible-automation-controller"
       }
     ]
   },
@@ -11293,6 +11293,73 @@
     ]
   },
   {
+    "title": "Dojo",
+    "name": "dojo",
+    "description": "## Comprehensive monitoring quickstart for Dojo\nTransform the performance of your Dojo application with complete observability, even in the face of complicated and distributed environments. Deliver an unparalleled user experience by identifying and swiftly resolving performance issues, all without sacrificing any aspect of your user experience. \n\n## Why monitor your Dojo app?\n\n### Performance\nRecognize bottlenecks and potential issues, and take proactive steps to resolve them before they impact the user experience.\nIdentify and address any security vulnerabilities in a timely manner, helping to keep your application and user data safe.\n\n### Compatibility\nStay informed about changes to browser compatibility and ensure that your application continues to work seamlessly across different platforms and devices.\n\n### User experience\nMonitoring the framework can help you identify areas for improvement in your application's user experience and make informed decisions about how to optimize it for your users.\n\n### Debugging\nCatch and resolve issues during development and testing, allowing you to identify and fix problems before they reach production.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/dojo",
+    "id": "fdd86b8b-7cc8-4528-a8e7-4cab7072304d",
+    "level": "NEW_RELIC",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/dojo/logo.png",
+    "summary": "Monitor your Dojo application by tracking performance issues with a full end-to-end view of distributed traces.",
+    "websiteUrl": null,
+    "keywords": [
+      "dojo",
+      "browser monitoring"
+    ],
+    "authors": [
+      "New Relic"
+    ],
+    "dashboards": [
+      {
+        "name": "Dojo",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/dojo/dojo01.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/dojo/dojo02.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/dojo/dojo03.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/dojo/dojo04.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/dojo/dojo05.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/dojo/dojo06.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/dojo/dojo07.png"
+        ]
+      }
+    ],
+    "alerts": [
+      {
+        "name": "Ajax Error Response",
+        "details": "This alert is triggered when the client and server error response is higher than 10 for 5 minutes.",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "Application Error Rate",
+        "details": "This alert is triggered when the Application Error Rate are higher than 5 for 5 minutes.",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "Page Load Time",
+        "details": "This alert is triggered when the page load time is higher than 5 seconds for 5 minutes.",
+        "type": "STATIC",
+        "url": null
+      }
+    ],
+    "documentation": [
+      {
+        "name": "Dojo integration documentation",
+        "description": "Monitor the performance metrics of your Dojo instances in real-time with New Relic.\n",
+        "url": "https://docs.newrelic.com/docs/infrastructure/host-integrations/host-integrations-list/dojo-io-integration/"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "Dojo",
+        "id": "dojo"
+      }
+    ]
+  },
+  {
     "title": "Apollo Server",
     "name": "apollo-server",
     "description": "## What is Apollo Server?\n\nApollo Server is an open-source, spec-compliant GraphQL server that's compatible with any GraphQL client, including Apollo Client. It's the best way to build a production-ready, self-documenting GraphQL API that can use data from any source.\n\nYou can use Apollo Server as:\n\n- A stand-alone GraphQL server, including in a serverless environment\n- An add-on to your application's existing Node.js middleware (such as Express or Fastify)\n- A gateway for a federated graph\n\n### Apollo & New Relic\n\nThe New Relic Apollo Server plugin instruments your Apollo Server applications to give visibility into your GraphQL payloads. This helps you uncover and diagnose the cause of your slow GraphQL queries.",
@@ -11524,73 +11591,6 @@
       {
         "name": "AWS-CloudWatch-Metric-Streams",
         "id": "aws-cloudwatch-metric-streams"
-      }
-    ]
-  },
-  {
-    "title": "Dojo",
-    "name": "dojo",
-    "description": "## Comprehensive monitoring quickstart for Dojo\nTransform the performance of your Dojo application with complete observability, even in the face of complicated and distributed environments. Deliver an unparalleled user experience by identifying and swiftly resolving performance issues, all without sacrificing any aspect of your user experience. \n\n## Why monitor your Dojo app?\n\n### Performance\nRecognize bottlenecks and potential issues, and take proactive steps to resolve them before they impact the user experience.\nIdentify and address any security vulnerabilities in a timely manner, helping to keep your application and user data safe.\n\n### Compatibility\nStay informed about changes to browser compatibility and ensure that your application continues to work seamlessly across different platforms and devices.\n\n### User experience\nMonitoring the framework can help you identify areas for improvement in your application's user experience and make informed decisions about how to optimize it for your users.\n\n### Debugging\nCatch and resolve issues during development and testing, allowing you to identify and fix problems before they reach production.",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/dojo",
-    "id": "fdd86b8b-7cc8-4528-a8e7-4cab7072304d",
-    "level": "NEW_RELIC",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/dojo/logo.png",
-    "summary": "Monitor your Dojo application by tracking performance issues with a full end-to-end view of distributed traces.",
-    "websiteUrl": null,
-    "keywords": [
-      "dojo",
-      "browser monitoring"
-    ],
-    "authors": [
-      "New Relic"
-    ],
-    "dashboards": [
-      {
-        "name": "Dojo",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/dojo/dojo01.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/dojo/dojo02.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/dojo/dojo03.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/dojo/dojo04.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/dojo/dojo05.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/dojo/dojo06.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/dojo/dojo07.png"
-        ]
-      }
-    ],
-    "alerts": [
-      {
-        "name": "Ajax Error Response",
-        "details": "This alert is triggered when the client and server error response is higher than 10 for 5 minutes.",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "Application Error Rate",
-        "details": "This alert is triggered when the Application Error Rate are higher than 5 for 5 minutes.",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "Page Load Time",
-        "details": "This alert is triggered when the page load time is higher than 5 seconds for 5 minutes.",
-        "type": "STATIC",
-        "url": null
-      }
-    ],
-    "documentation": [
-      {
-        "name": "Dojo integration documentation",
-        "description": "Monitor the performance metrics of your Dojo instances in real-time with New Relic.\n",
-        "url": "https://docs.newrelic.com/docs/infrastructure/host-integrations/host-integrations-list/dojo-io-integration/"
-      }
-    ],
-    "installPlans": [
-      {
-        "name": "Dojo",
-        "id": "dojo"
       }
     ]
   },
@@ -16449,6 +16449,118 @@
     ]
   },
   {
+    "title": "Jumpstart quickstart tool",
+    "name": "jumpstart-quickstart",
+    "description": "The Jumpstart quickstart is a tool that has everything you need to help you get started building your own quickstart. It has some basic steps to follow to get started, some sample dashboards and queries, as well as a list of resources to help you build your own quickstart faster!",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/jumpstart",
+    "id": "fbca935b-5a3e-41d7-b708-c24d90fcd820",
+    "level": "COMMUNITY",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/jumpstart/logo.svg",
+    "summary": "A sample quickstart to help you get started building your own quickstart for New Relic I/O.",
+    "websiteUrl": null,
+    "keywords": [
+      "jumpstart",
+      "quickstart",
+      "intro"
+    ],
+    "authors": [
+      "New Relic"
+    ],
+    "dashboards": [
+      {
+        "name": "Partner I/O quickstart",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/jumpstart/Jumpstart01.png"
+        ]
+      }
+    ],
+    "alerts": [],
+    "documentation": [
+      {
+        "name": "Guide to build a quickstart",
+        "description": "Detailed instructions how to contribute a quickstart to New Relic I/O.",
+        "url": "https://developer.newrelic.com/contribute-to-quickstarts/build-a-quickstart/"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "Jumpstart",
+        "id": "third-party-jumpstart"
+      }
+    ]
+  },
+  {
+    "title": "Redmine",
+    "name": "redmine",
+    "description": "## Comprehensive monitoring quickstart for Redmine\nWe can monitor your Redmine application in a complex environment and keep you on top of performance with our Ruby agent.\n\n## Why monitor Redmine?\nRedmine is a popular open-source project management and issue tracking tool, but like any software, it can also have some issues. Our quickstart helps you catch those quickly and effortlessly.   ## Why monitor your Redmine app?\n\n### Slow performance\nRedmine can become slow and unresponsive with a large number of projects, issues, and users, requiring optimization and maintenance to keep it running smoothly.\n\n### Integration problems: \nIntegrating Redmine with other tools and systems, such as source control systems, can be challenging and may require custom development.\n\n### Customization limitations: \nWhile Redmine can be customized to a certain extent, it may not meet all the specific requirements of a particular organization, and customizing it further may require extensive development work.\n\n### User management: \nManaging large numbers of users and their permissions in Redmine can be difficult, and may require the development of custom scripts or plugins.\n\n### Data import and export: \nImporting and exporting data from Redmine can be complex, and may require custom development to meet specific requirements.\n\n### User adoption: \nGetting users to adopt and effectively use Redmine can be a challenge, as some users may find its interface confusing or difficult to use.\n\n\n## What's included?\nYou'll get instant full-stack observability of your Redmine app out-of-the-box:\n\n- Monitor your app's custom metrics.\n- Gain code-related insights about your app's health and status.\n- Monitor your Redmine database operations and transactions.\n- Be proactively alerted about critical issues related to your app's status.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/redmine",
+    "id": "f1cde389-deec-451e-8fd3-3a84631d5e83",
+    "level": "NEW_RELIC",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/redmine/logo.png",
+    "summary": "Effortlessly monitor your Redmine application by keeping a close eye on performance issues with a comprehensive and all-encompassing view of the entire distributed tracing process.",
+    "websiteUrl": null,
+    "keywords": [
+      "redmine",
+      "ruby agent",
+      "ruby"
+    ],
+    "authors": [
+      "New Relic"
+    ],
+    "dashboards": [
+      {
+        "name": "Redmine",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/redmine/redmine01.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/redmine/redmine02.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/redmine/redmine03.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/redmine/redmine04.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/redmine/redmine05.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/redmine/redmine06.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/redmine/redmine07.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/redmine/redmine08.png"
+        ]
+      }
+    ],
+    "alerts": [
+      {
+        "name": "Average Error Rate",
+        "details": "This alert is triggered when the Average Error Rate is higher than 5 for 5 minutes.",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "Average Page Load Time",
+        "details": "This alert is triggered when the Average Page Load Time is higher than 5 seconds for 5 minutes.",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "Failed Transactions",
+        "details": "This alert is triggered when the Failed Transactions are higher than 5 for 5 minutes.",
+        "type": "STATIC",
+        "url": null
+      }
+    ],
+    "documentation": [
+      {
+        "name": "Redmine integration documentation",
+        "description": "Monitor the performance metrics of your Redmine instances in real-time with New Relic ruby agent.\n",
+        "url": "https://docs.newrelic.com/docs/infrastructure/host-integrations/host-integrations-list/redmine-integration/"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "Redmine",
+        "id": "redmine"
+      }
+    ]
+  },
+  {
     "title": "Video agent for Akamai player",
     "name": "video-web-akamai",
     "description": "## Why monitor Akamai player?\n\nAkamai Media Player is designed to help you insert quality media playback experiences into web, mobile, and connected-TV applications using SDKs. It includes SDKs for web, iOS, tvOS, Android, Android TV, Fire TV, and Chromecast. New Relic Akamai quickstart monitors your Akamai player with digital experience monitoring, tracing, diagnostics, and application analytics.\n\n### Akamai player quickstart highlights\n\nThe New Relic Akamai player quickstart has the following features\n- Dashboards| Our dashboards proactively track metrics like video attempts, video plays, and average video start time. The dashboards also help you monitor other key indicators like connection buffering ratio, plays by app, and more.\n- Alerts| You can get instant alerts on performance metrics like video playback failure, video start failure, and video start time.\n\n### How to monitor Akamai performance\n\nNew Relic’s Akamai quickstart automatically instruments your Akamai player with our video agent. It empowers you to monitor video applications with practical dashboards and alerts. The dashboard provides interactive visualizations to explore your data and understand context. In particular, the dashboard offers you the ability to drill down into performance details like the number of video attempts, number of video plays, and the overall average video start.\n\nWith instant alerts, the integration helps you to detect issues quickly and respond to them efficiently thereby improving your Akamai streaming experience.\n\nInstall the [New Relic Akamai](https://developer.akamai.com/new-relic-overview) observability quickstart today to track Akamai player’s metrics in real-time through a seamless dashboard and different alerts. This quickstart offers you the fastest path to effective monitoring of your Akamai video player via our video agent.",
@@ -16935,118 +17047,6 @@
       {
         "name": "Azure-Infrastructure-Monitoring",
         "id": "azure-infrastructure-monitoring"
-      }
-    ]
-  },
-  {
-    "title": "Jumpstart quickstart tool",
-    "name": "jumpstart-quickstart",
-    "description": "The Jumpstart quickstart is a tool that has everything you need to help you get started building your own quickstart. It has some basic steps to follow to get started, some sample dashboards and queries, as well as a list of resources to help you build your own quickstart faster!",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/jumpstart",
-    "id": "fbca935b-5a3e-41d7-b708-c24d90fcd820",
-    "level": "COMMUNITY",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/jumpstart/logo.svg",
-    "summary": "A sample quickstart to help you get started building your own quickstart for New Relic I/O.",
-    "websiteUrl": null,
-    "keywords": [
-      "jumpstart",
-      "quickstart",
-      "intro"
-    ],
-    "authors": [
-      "New Relic"
-    ],
-    "dashboards": [
-      {
-        "name": "Partner I/O quickstart",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/jumpstart/Jumpstart01.png"
-        ]
-      }
-    ],
-    "alerts": [],
-    "documentation": [
-      {
-        "name": "Guide to build a quickstart",
-        "description": "Detailed instructions how to contribute a quickstart to New Relic I/O.",
-        "url": "https://developer.newrelic.com/contribute-to-quickstarts/build-a-quickstart/"
-      }
-    ],
-    "installPlans": [
-      {
-        "name": "Jumpstart",
-        "id": "third-party-jumpstart"
-      }
-    ]
-  },
-  {
-    "title": "Redmine",
-    "name": "redmine",
-    "description": "## Comprehensive monitoring quickstart for Redmine\nWe can monitor your Redmine application in a complex environment and keep you on top of performance with our Ruby agent.\n\n## Why monitor Redmine?\nRedmine is a popular open-source project management and issue tracking tool, but like any software, it can also have some issues. Our quickstart helps you catch those quickly and effortlessly.   ## Why monitor your Redmine app?\n\n### Slow performance\nRedmine can become slow and unresponsive with a large number of projects, issues, and users, requiring optimization and maintenance to keep it running smoothly.\n\n### Integration problems: \nIntegrating Redmine with other tools and systems, such as source control systems, can be challenging and may require custom development.\n\n### Customization limitations: \nWhile Redmine can be customized to a certain extent, it may not meet all the specific requirements of a particular organization, and customizing it further may require extensive development work.\n\n### User management: \nManaging large numbers of users and their permissions in Redmine can be difficult, and may require the development of custom scripts or plugins.\n\n### Data import and export: \nImporting and exporting data from Redmine can be complex, and may require custom development to meet specific requirements.\n\n### User adoption: \nGetting users to adopt and effectively use Redmine can be a challenge, as some users may find its interface confusing or difficult to use.\n\n\n## What's included?\nYou'll get instant full-stack observability of your Redmine app out-of-the-box:\n\n- Monitor your app's custom metrics.\n- Gain code-related insights about your app's health and status.\n- Monitor your Redmine database operations and transactions.\n- Be proactively alerted about critical issues related to your app's status.",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/redmine",
-    "id": "f1cde389-deec-451e-8fd3-3a84631d5e83",
-    "level": "NEW_RELIC",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/redmine/logo.png",
-    "summary": "Effortlessly monitor your Redmine application by keeping a close eye on performance issues with a comprehensive and all-encompassing view of the entire distributed tracing process.",
-    "websiteUrl": null,
-    "keywords": [
-      "redmine",
-      "ruby agent",
-      "ruby"
-    ],
-    "authors": [
-      "New Relic"
-    ],
-    "dashboards": [
-      {
-        "name": "Redmine",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/redmine/redmine01.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/redmine/redmine02.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/redmine/redmine03.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/redmine/redmine04.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/redmine/redmine05.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/redmine/redmine06.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/redmine/redmine07.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/redmine/redmine08.png"
-        ]
-      }
-    ],
-    "alerts": [
-      {
-        "name": "Average Error Rate",
-        "details": "This alert is triggered when the Average Error Rate is higher than 5 for 5 minutes.",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "Average Page Load Time",
-        "details": "This alert is triggered when the Average Page Load Time is higher than 5 seconds for 5 minutes.",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "Failed Transactions",
-        "details": "This alert is triggered when the Failed Transactions are higher than 5 for 5 minutes.",
-        "type": "STATIC",
-        "url": null
-      }
-    ],
-    "documentation": [
-      {
-        "name": "Redmine integration documentation",
-        "description": "Monitor the performance metrics of your Redmine instances in real-time with New Relic ruby agent.\n",
-        "url": "https://docs.newrelic.com/docs/infrastructure/host-integrations/host-integrations-list/redmine-integration/"
-      }
-    ],
-    "installPlans": [
-      {
-        "name": "Redmine",
-        "id": "redmine"
       }
     ]
   },
@@ -19070,6 +19070,83 @@
     ]
   },
   {
+    "title": "Apache Flink",
+    "name": "apache-flink",
+    "description": "## Comprehensive monitoring quickstart for Apache Flink\nNew Relic detects your Apache Flink metrics like job manager (checkpoints, direct, mapped, metaspace memory usage),\ntask manager (shuffle service, operators), heap memory usage and more.\n\n## Why monitor Apache Flink?\nAn ideal Apache Flink performance monitoring provides an easy way for effective monitoring and alerting of your Apache Flink jobs.\n\n\n## Apache monitoring dashboards\n\nNew Relic's Apache Flink monitoring quickstart boasts instant full-stack observability out-of-the-box.\n\nOur easy-to-use performance monitoring dashboards monitor metrics like:\n- Heap memory usage\n- Job manager uptime and downtime\n- Used memory\n- CPU time in seconds and CPU load\n- Status of recent triggered checkpoints and those in progress\n\n### Apache Flink performance alerts\n\nWe’ve also created strategic alerts toproactively inform you about the status of your Apache Flink jobs.\n\nThese alerts include failed checkpoints, job manager heap memory usage higher than 10MB, task manager direct memory higher than 100MB, and shuffle service used memory greater than 2MB.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/apache-flink",
+    "id": "b48bf101-efdd-4723-b073-7dd58e291442",
+    "level": "NEW_RELIC",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/apache-flink/logo.png",
+    "summary": "New Relic’s instant observability quickstart with Apache Flink monitoring helps you get vital metrics fast to get on top of issues before your customers do.",
+    "websiteUrl": null,
+    "keywords": [
+      "apache-flink",
+      "flink",
+      "apache flink",
+      "data stream"
+    ],
+    "authors": [
+      "New Relic"
+    ],
+    "dashboards": [
+      {
+        "name": "Apache Flink",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/apache-flink/apache-flink01.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/apache-flink/apache-flink02.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/apache-flink/apache-flink03.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/apache-flink/apache-flink04.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/apache-flink/apache-flink05.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/apache-flink/apache-flink06.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/apache-flink/apache-flink07.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/apache-flink/apache-flink08.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/apache-flink/apache-flink09.png"
+        ]
+      }
+    ],
+    "alerts": [
+      {
+        "name": "Failed Checkpoints",
+        "details": "This alert is triggered when the failed checkpoints is higher than 3 during 5 minutes.",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "Job Manager Heap Memory Usage",
+        "details": "This alert is triggered when the job manager heap memory usage is higher than 10 MB during 5 minutes.",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "Task Manager Direct Memory Used",
+        "details": "This alert is triggered when the task manager direct memory used is higher than 100 MB during 5 minutes.",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "Shuffle Service Used Memory",
+        "details": "This alert is triggered when the shuffle netty used memory is higher than 2 MB during 5 minutes.",
+        "type": "STATIC",
+        "url": null
+      }
+    ],
+    "documentation": [
+      {
+        "name": "Apache Flink integration documentation",
+        "description": "New Relic’s instant observability quickstart with Apache Flink monitoring helps to detect job manager, task manager, operators, shuffle service, logs and parses them into a JSON payload.\n",
+        "url": "https://docs.newrelic.com/docs/infrastructure/prometheus-integrations/install-configure-openmetrics/install-apache-flink/"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "Apache Flink",
+        "id": "apache-flink"
+      }
+    ]
+  },
+  {
     "title": "Amazon ElastiCache",
     "name": "aws-elasticache",
     "description": "## What is Amazon ElastiCache?\n\nDeploy, operate, and scale an in-memory data store or cache in the cloud.\n\n### Get started!\n\nStart monitoring Amazon ElastiCache by connecting Amazon Web Services (AWS) to New Relic!\n\nCheck out our Amazon ElastiCache documentation to instrument your cloud service and manage the stability, scalability, and reliability of your systems with New Relic's infrastructure monitoring capabilities.\n\n### More info\n\nCheck out the [documentation](https://docs.newrelic.com/docs/infrastructure/amazon-integrations/aws-integrations-list/aws-elasticache-monitoring-integration/) to learn more about New Relic monitoring for Amazon ElastiCache.",
@@ -19169,6 +19246,50 @@
       {
         "name": "Guided install",
         "id": "guided-install"
+      }
+    ]
+  },
+  {
+    "title": "Amazon App Runner",
+    "name": "aws-apprunner",
+    "description": "## Monitor your Apps running in Amazon App Runner containers on New Relic Instant Observability Platform!\nWith New Relic's Amazon App Runner integration, you now can see all your App Runner data on New Relic Instant Observability Platform.\n## Get started!\nCheck out the [documentation](https://docs.newrelic.com/docs/infrastructure/amazon-integrations/aws-integrations-list/aws-apprunner/) to learn more about New \n Relic monitoring and integration with Amazon App Runner.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/aws/aws-apprunner",
+    "id": "b70abf59-6db4-4d8d-81e6-d56bcf108f5a",
+    "level": "NEW_RELIC",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/aws/aws-apprunner/logo.png",
+    "summary": "Use New Relic - Amazon App Runner Integration to Monitor Your Containerized Apps and Services with New Relic",
+    "websiteUrl": null,
+    "keywords": [
+      "aws",
+      "amazon",
+      "app runner",
+      "logs"
+    ],
+    "authors": [
+      "New Relic"
+    ],
+    "dashboards": [
+      {
+        "name": "App Runner Telemetry",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/aws-apprunner/aws-apprunner01.png"
+        ]
+      }
+    ],
+    "alerts": [],
+    "documentation": [
+      {
+        "name": "Amazon App Runner integration docs",
+        "description": "Faster and comprehensive telemetry from AWS App Runner Service for new and existing New Relic Customers\n",
+        "url": "https://docs.newrelic.com/docs/infrastructure/amazon-integrations/aws-integrations-list/aws-apprunner/"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "AWS-Apprunner",
+        "id": "aws-apprunner"
       }
     ]
   },
@@ -19441,127 +19562,6 @@
       {
         "name": "Azure-Infrastructure-Monitoring",
         "id": "azure-infrastructure-monitoring"
-      }
-    ]
-  },
-  {
-    "title": "Amazon App Runner",
-    "name": "aws-apprunner",
-    "description": "## Monitor your Apps running in Amazon App Runner containers on New Relic Instant Observability Platform!\nWith New Relic's Amazon App Runner integration, you now can see all your App Runner data on New Relic Instant Observability Platform.\n## Get started!\nCheck out the [documentation](https://docs.newrelic.com/docs/infrastructure/amazon-integrations/aws-integrations-list/aws-apprunner/) to learn more about New \n Relic monitoring and integration with Amazon App Runner.",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/aws/aws-apprunner",
-    "id": "b70abf59-6db4-4d8d-81e6-d56bcf108f5a",
-    "level": "NEW_RELIC",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/aws/aws-apprunner/logo.png",
-    "summary": "Use New Relic - Amazon App Runner Integration to Monitor Your Containerized Apps and Services with New Relic",
-    "websiteUrl": null,
-    "keywords": [
-      "aws",
-      "amazon",
-      "app runner",
-      "logs"
-    ],
-    "authors": [
-      "New Relic"
-    ],
-    "dashboards": [
-      {
-        "name": "App Runner Telemetry",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/aws-apprunner/aws-apprunner01.png"
-        ]
-      }
-    ],
-    "alerts": [],
-    "documentation": [
-      {
-        "name": "Amazon App Runner integration docs",
-        "description": "Faster and comprehensive telemetry from AWS App Runner Service for new and existing New Relic Customers\n",
-        "url": "https://docs.newrelic.com/docs/infrastructure/amazon-integrations/aws-integrations-list/aws-apprunner/"
-      }
-    ],
-    "installPlans": [
-      {
-        "name": "AWS-Apprunner",
-        "id": "aws-apprunner"
-      }
-    ]
-  },
-  {
-    "title": "Apache Flink",
-    "name": "apache-flink",
-    "description": "## Comprehensive monitoring quickstart for Apache Flink\nNew Relic detects your Apache Flink metrics like job manager (checkpoints, direct, mapped, metaspace memory usage),\ntask manager (shuffle service, operators), heap memory usage and more.\n\n## Why monitor Apache Flink?\nAn ideal Apache Flink performance monitoring provides an easy way for effective monitoring and alerting of your Apache Flink jobs.\n\n\n## Apache monitoring dashboards\n\nNew Relic's Apache Flink monitoring quickstart boasts instant full-stack observability out-of-the-box.\n\nOur easy-to-use performance monitoring dashboards monitor metrics like:\n- Heap memory usage\n- Job manager uptime and downtime\n- Used memory\n- CPU time in seconds and CPU load\n- Status of recent triggered checkpoints and those in progress\n\n### Apache Flink performance alerts\n\nWe’ve also created strategic alerts toproactively inform you about the status of your Apache Flink jobs.\n\nThese alerts include failed checkpoints, job manager heap memory usage higher than 10MB, task manager direct memory higher than 100MB, and shuffle service used memory greater than 2MB.",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/apache-flink",
-    "id": "b48bf101-efdd-4723-b073-7dd58e291442",
-    "level": "NEW_RELIC",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/apache-flink/logo.png",
-    "summary": "New Relic’s instant observability quickstart with Apache Flink monitoring helps you get vital metrics fast to get on top of issues before your customers do.",
-    "websiteUrl": null,
-    "keywords": [
-      "apache-flink",
-      "flink",
-      "apache flink",
-      "data stream"
-    ],
-    "authors": [
-      "New Relic"
-    ],
-    "dashboards": [
-      {
-        "name": "Apache Flink",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/apache-flink/apache-flink01.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/apache-flink/apache-flink02.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/apache-flink/apache-flink03.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/apache-flink/apache-flink04.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/apache-flink/apache-flink05.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/apache-flink/apache-flink06.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/apache-flink/apache-flink07.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/apache-flink/apache-flink08.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/apache-flink/apache-flink09.png"
-        ]
-      }
-    ],
-    "alerts": [
-      {
-        "name": "Failed Checkpoints",
-        "details": "This alert is triggered when the failed checkpoints is higher than 3 during 5 minutes.",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "Job Manager Heap Memory Usage",
-        "details": "This alert is triggered when the job manager heap memory usage is higher than 10 MB during 5 minutes.",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "Task Manager Direct Memory Used",
-        "details": "This alert is triggered when the task manager direct memory used is higher than 100 MB during 5 minutes.",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "Shuffle Service Used Memory",
-        "details": "This alert is triggered when the shuffle netty used memory is higher than 2 MB during 5 minutes.",
-        "type": "STATIC",
-        "url": null
-      }
-    ],
-    "documentation": [
-      {
-        "name": "Apache Flink integration documentation",
-        "description": "New Relic’s instant observability quickstart with Apache Flink monitoring helps to detect job manager, task manager, operators, shuffle service, logs and parses them into a JSON payload.\n",
-        "url": "https://docs.newrelic.com/docs/infrastructure/prometheus-integrations/install-configure-openmetrics/install-apache-flink/"
-      }
-    ],
-    "installPlans": [
-      {
-        "name": "Apache Flink",
-        "id": "apache-flink"
       }
     ]
   },
@@ -21523,6 +21523,65 @@
     ]
   },
   {
+    "title": "Akamai DataStream 2",
+    "name": "datastream2",
+    "description": "## Akamai Quickstart\n  \nAkamai Technologies is a leading content delivery network (CDN), cybersecurity, and cloud service provider.\n\n### DataStream 2\n\nDataStream 2 captures performance and security logs from your delivery properties and streams them in near real-time to provide complete monitoring.\n\nFor more information please go to https://techdocs.akamai.com/datastream2/docs\n\n### DataStream 2 quickstart\n\nThe Akamai DataStream 2 quickstart enables you to monitor your performance and security logs in real time. Here are a few of the monitoring tools available with this quickstart:\n- HTTP status code distribution\n- Error rate\n- Log ingest\n- Cache hit retio \n- TLS overhead time ranges\n- Overhead byte ranges\n- HTTP protocol distribution",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/datastream2-akamai",
+    "id": "cb995039-39d8-44d9-97c3-58174a1337f2",
+    "level": "COMMUNITY",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/datastream2-akamai/logo.png",
+    "summary": "The DataStream 2 quickstart will enable you to monitor and analyze your Akamai performance and security logs.",
+    "websiteUrl": null,
+    "keywords": [
+      "akamai",
+      "logs",
+      "cdn",
+      "datastream",
+      "performance",
+      "security",
+      "newrelic partner",
+      "featured",
+      "NR1_addData",
+      "NR1_sys"
+    ],
+    "authors": [
+      "Gayatri S (Akamai Technologies)"
+    ],
+    "dashboards": [
+      {
+        "name": "Akamai Datastream2",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/datastream2/datastream201.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/datastream2/datastream202.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/datastream2/datastream203.png"
+        ]
+      }
+    ],
+    "alerts": [
+      {
+        "name": "Datastream2 - 5xx error greater than 1%",
+        "details": "Alert triggered when the error rate(5xx errors) exceeds 1%",
+        "type": "BASELINE",
+        "url": null
+      }
+    ],
+    "documentation": [
+      {
+        "name": "Installation docs",
+        "description": "Configure Akamai Datastream2 streaming logs to New Relic",
+        "url": "https://techdocs.akamai.com/datastream2/docs/stream-new-relic"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "Datastream2",
+        "id": "third-party-datastream2-akamai"
+      }
+    ]
+  },
+  {
     "title": "Video agent for VideoJS player",
     "name": "video-web-videojs",
     "description": "Agent to monitor video applications using VideoJS player.",
@@ -22132,65 +22191,6 @@
       {
         "name": "Prometheus Agent Mode",
         "id": "setup-prometheus-agent-mode"
-      }
-    ]
-  },
-  {
-    "title": "Akamai DataStream 2",
-    "name": "datastream2",
-    "description": "## Akamai Quickstart\n  \nAkamai Technologies is a leading content delivery network (CDN), cybersecurity, and cloud service provider.\n\n### DataStream 2\n\nDataStream 2 captures performance and security logs from your delivery properties and streams them in near real-time to provide complete monitoring.\n\nFor more information please go to https://techdocs.akamai.com/datastream2/docs\n\n### DataStream 2 quickstart\n\nThe Akamai DataStream 2 quickstart enables you to monitor your performance and security logs in real time. Here are a few of the monitoring tools available with this quickstart:\n- HTTP status code distribution\n- Error rate\n- Log ingest\n- Cache hit retio \n- TLS overhead time ranges\n- Overhead byte ranges\n- HTTP protocol distribution",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/datastream2-akamai",
-    "id": "cb995039-39d8-44d9-97c3-58174a1337f2",
-    "level": "COMMUNITY",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/datastream2-akamai/logo.png",
-    "summary": "The DataStream 2 quickstart will enable you to monitor and analyze your Akamai performance and security logs.",
-    "websiteUrl": null,
-    "keywords": [
-      "akamai",
-      "logs",
-      "cdn",
-      "datastream",
-      "performance",
-      "security",
-      "newrelic partner",
-      "featured",
-      "NR1_addData",
-      "NR1_sys"
-    ],
-    "authors": [
-      "Gayatri S (Akamai Technologies)"
-    ],
-    "dashboards": [
-      {
-        "name": "Akamai Datastream2",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/datastream2/datastream201.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/datastream2/datastream202.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/datastream2/datastream203.png"
-        ]
-      }
-    ],
-    "alerts": [
-      {
-        "name": "Datastream2 - 5xx error greater than 1%",
-        "details": "Alert triggered when the error rate(5xx errors) exceeds 1%",
-        "type": "BASELINE",
-        "url": null
-      }
-    ],
-    "documentation": [
-      {
-        "name": "Installation docs",
-        "description": "Configure Akamai Datastream2 streaming logs to New Relic",
-        "url": "https://techdocs.akamai.com/datastream2/docs/stream-new-relic"
-      }
-    ],
-    "installPlans": [
-      {
-        "name": "Datastream2",
-        "id": "third-party-datastream2-akamai"
       }
     ]
   },
