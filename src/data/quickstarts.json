@@ -308,6 +308,53 @@
     ]
   },
   {
+    "title": "Glassbox",
+    "name": "glassbox",
+    "description": "Glassbox empowers organizations to create frictionless digital journeys for their customers. Our digital experience analytics and Session Replay platform works in real time across mobile apps and websites to accelerate loyalty and growth. Through AI-driven visualization and analytics tools, Glassbox helps teams to prioritize customer experience and digital product enhancements from a single collaborative system.\n\nThe Glassbox quickstart helps you understand the impact of application performance on your customers’ digital experience. Gain deeper contextual insights by combining the data capture and session replay capabilities of Glassbox with New Relic One. Get a view of behavioral insights and KPIs inside a pre-built New Relic dashboard, which links directly to a session replay in Glassbox, so you can find the root cause of the digital issue and fix performance issues faster.\n\nFor more information or support, please go to [glassbox.com](https://www.glassbox.com/)",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/glassbox",
+    "id": "bdb952f3-28db-4ee7-89c6-b00244b0bb73",
+    "level": "COMMUNITY",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/glassbox/logo.png",
+    "summary": "The Glassbox quickstart helps you understand the impact of application performance on your customers’ digital experience.",
+    "websiteUrl": null,
+    "keywords": [
+      "glassbox",
+      "newrelic partner",
+      "digital",
+      "session replay",
+      "NR1_addData",
+      "NR1_sys"
+    ],
+    "authors": [
+      "Joseph Counts (New Relic)",
+      "Glassbox"
+    ],
+    "dashboards": [
+      {
+        "name": "Glassbox Digital",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/glassbox/dashboard01.png"
+        ]
+      }
+    ],
+    "alerts": [],
+    "documentation": [
+      {
+        "name": "Glasbox integraton guide",
+        "description": "Integrate your Glassbox data with New Relic.",
+        "url": "https://support.glassbox.com/hc/en-gb/articles/4405777280401-How-to-Connect-New-Relic"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "glassbox",
+        "id": "third-party-glassbox"
+      }
+    ]
+  },
+  {
     "title": "Slack Notifications",
     "name": "slack-notifications",
     "description": "Slack is a a messaging app for business that connects people to the information that they need.\n\nIntegrate New Relic with Slack to send notification messages to your Slack channels.\n\n[Check out our documentation](https://docs.newrelic.com/docs/alerts-applied-intelligence/notifications/notification-integrations/#slack) to set up a Slack notification channel and provide fast and consistent ways for the right personnel to be notified about incidents",
@@ -912,53 +959,6 @@
       {
         "name": "Datazoom",
         "id": "third-party-datazoom"
-      }
-    ]
-  },
-  {
-    "title": "Glassbox",
-    "name": "glassbox",
-    "description": "Glassbox empowers organizations to create frictionless digital journeys for their customers. Our digital experience analytics and Session Replay platform works in real time across mobile apps and websites to accelerate loyalty and growth. Through AI-driven visualization and analytics tools, Glassbox helps teams to prioritize customer experience and digital product enhancements from a single collaborative system.\n\nThe Glassbox quickstart helps you understand the impact of application performance on your customers’ digital experience. Gain deeper contextual insights by combining the data capture and session replay capabilities of Glassbox with New Relic One. Get a view of behavioral insights and KPIs inside a pre-built New Relic dashboard, which links directly to a session replay in Glassbox, so you can find the root cause of the digital issue and fix performance issues faster.\n\nFor more information or support, please go to [glassbox.com](https://www.glassbox.com/)",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/glassbox",
-    "id": "bdb952f3-28db-4ee7-89c6-b00244b0bb73",
-    "level": "COMMUNITY",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/glassbox/logo.png",
-    "summary": "The Glassbox quickstart helps you understand the impact of application performance on your customers’ digital experience.",
-    "websiteUrl": null,
-    "keywords": [
-      "glassbox",
-      "newrelic partner",
-      "digital",
-      "session replay",
-      "NR1_addData",
-      "NR1_sys"
-    ],
-    "authors": [
-      "Joseph Counts (New Relic)",
-      "Glassbox"
-    ],
-    "dashboards": [
-      {
-        "name": "Glassbox Digital",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/glassbox/dashboard01.png"
-        ]
-      }
-    ],
-    "alerts": [],
-    "documentation": [
-      {
-        "name": "Glasbox integraton guide",
-        "description": "Integrate your Glassbox data with New Relic.",
-        "url": "https://support.glassbox.com/hc/en-gb/articles/4405777280401-How-to-Connect-New-Relic"
-      }
-    ],
-    "installPlans": [
-      {
-        "name": "glassbox",
-        "id": "third-party-glassbox"
       }
     ]
   },
@@ -6096,67 +6096,6 @@
     ]
   },
   {
-    "title": "Vercel",
-    "name": "vercel",
-    "description": "## About Vercel\n\nVercel is the platform for frontend developers, providing the speed and reliability innovators need to create at the moment of inspiration.\n\nWe enable teams to iterate quickly and develop, preview, and ship delightful user experiences. Vercel has zero-configuration support for 35+ frontend frameworks and integrates with your headless content, commerce, or database of choice.\n\n## About this quickstart\n\nThis quickstart is the fastest way to jump straight into monitoring your end-to-end development logs.\n\n## Vercel Dashboard\n\nThe Overview dashboard will populate with logs from your Vercel projects after you complete integration set up. This customized board provides key log data to provide you with a high-level overview of the performance of your functions.\n\n### Core monitoring\n\n-  Track your cached hit rate\n-  Keep track of your errors and problematic IP addresses\n-  Real time error logs\n-  Monitoring for your build logs\n\n### Serverless function log monitoring\n\n-  Average & total duration\n-  Average & total memory used\n-  Average & total billed duration",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/vercel",
-    "id": "c18372e0-b849-408f-b2b1-3ea7096ef5a8",
-    "level": "COMMUNITY",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/vercel/logo.svg",
-    "summary": "The Vercel quickstart is a one click solution to help monitor and analyze performance and usage in real time.",
-    "websiteUrl": null,
-    "keywords": [
-      "vercel",
-      "logs",
-      "newrelic partner",
-      "devops",
-      "cicd",
-      "build",
-      "deploy",
-      "serverless",
-      "featured",
-      "NR1_addData",
-      "NR1_sys"
-    ],
-    "authors": [
-      "Joseph Counts",
-      "Vercel"
-    ],
-    "dashboards": [
-      {
-        "name": "Vercel",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/vercel/vercel-logs01.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/vercel/vercel-logs02.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/vercel/vercel-logs03.png"
-        ]
-      }
-    ],
-    "alerts": [
-      {
-        "name": "Vercel - 4xx/5xx error rate greater than 1%",
-        "details": "Alert triggered when the error rate(4xx/5xx errors) exceeds 1%",
-        "type": "BASELINE",
-        "url": null
-      }
-    ],
-    "documentation": [
-      {
-        "name": "Add the New Relic integration to your Vercel projects",
-        "description": "Send Vercel logs to New Relic",
-        "url": "https://vercel.com/integrations/newrelic"
-      }
-    ],
-    "installPlans": [
-      {
-        "name": "Vercel",
-        "id": "third-party-vercel"
-      }
-    ]
-  },
-  {
     "title": "CloudFormation custom Resource that creates New Relic NRQL Alerts",
     "name": "newrelic-alert-cloudformation-resource",
     "description": "Custom CloudFormation Resource that allows for the creation of New Relic NRQL Alerts as part of a CloudFormation Stack.",
@@ -6232,6 +6171,67 @@
       {
         "name": "Azure-Infrastructure-Monitoring",
         "id": "azure-infrastructure-monitoring"
+      }
+    ]
+  },
+  {
+    "title": "Vercel",
+    "name": "vercel",
+    "description": "## About Vercel\n\nVercel is the platform for frontend developers, providing the speed and reliability innovators need to create at the moment of inspiration.\n\nWe enable teams to iterate quickly and develop, preview, and ship delightful user experiences. Vercel has zero-configuration support for 35+ frontend frameworks and integrates with your headless content, commerce, or database of choice.\n\n## About this quickstart\n\nThis quickstart is the fastest way to jump straight into monitoring your end-to-end development logs.\n\n## Vercel Dashboard\n\nThe Overview dashboard will populate with logs from your Vercel projects after you complete integration set up. This customized board provides key log data to provide you with a high-level overview of the performance of your functions.\n\n### Core monitoring\n\n-  Track your cached hit rate\n-  Keep track of your errors and problematic IP addresses\n-  Real time error logs\n-  Monitoring for your build logs\n\n### Serverless function log monitoring\n\n-  Average & total duration\n-  Average & total memory used\n-  Average & total billed duration",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/vercel",
+    "id": "c18372e0-b849-408f-b2b1-3ea7096ef5a8",
+    "level": "COMMUNITY",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/vercel/logo.svg",
+    "summary": "The Vercel quickstart is a one click solution to help monitor and analyze performance and usage in real time.",
+    "websiteUrl": null,
+    "keywords": [
+      "vercel",
+      "logs",
+      "newrelic partner",
+      "devops",
+      "cicd",
+      "build",
+      "deploy",
+      "serverless",
+      "featured",
+      "NR1_addData",
+      "NR1_sys"
+    ],
+    "authors": [
+      "Joseph Counts",
+      "Vercel"
+    ],
+    "dashboards": [
+      {
+        "name": "Vercel",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/vercel/vercel-logs01.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/vercel/vercel-logs02.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/vercel/vercel-logs03.png"
+        ]
+      }
+    ],
+    "alerts": [
+      {
+        "name": "Vercel - 4xx/5xx error rate greater than 1%",
+        "details": "Alert triggered when the error rate(4xx/5xx errors) exceeds 1%",
+        "type": "BASELINE",
+        "url": null
+      }
+    ],
+    "documentation": [
+      {
+        "name": "Add the New Relic integration to your Vercel projects",
+        "description": "Send Vercel logs to New Relic",
+        "url": "https://vercel.com/integrations/newrelic"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "Vercel",
+        "id": "third-party-vercel"
       }
     ]
   },
@@ -8697,53 +8697,6 @@
     ]
   },
   {
-    "title": "Bitbucket",
-    "name": "bitbucket",
-    "description": "## Atlassian Bitbucket quickstart\n\n### About Bitbucket\n\nWith best-in-class Jira integration, and built-in CI/CD, Bitbucket Cloud is the native Git tool in Atlassian’s Open DevOps solution.\n\n### About this quickstart\n\nThis quickstart is built around a [Bitbucket Pipe](https://bitbucket.org/product/features/pipelines/integrations) integration. This tool will enable you to send CI/CD events into New Relic, where you can monitor your Bitbucket Pipelines. \n\nWith this visualization you can monitor:\n  - Number of events/pipeline builds\n  - Track priority events\n  - Real time event log from your pipeline\n  - Events and priority events over time",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/atlassian/bitbucket",
-    "id": "fdc99da8-0061-4c5f-bd90-ef67a8b2419f",
-    "level": "COMMUNITY",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/atlassian/bitbucket/logo.svg",
-    "summary": "Monitor your Bitbucket Pipeline.",
-    "websiteUrl": null,
-    "keywords": [
-      "atlassian",
-      "bitbucket",
-      "cicd",
-      "newrelic partner",
-      "pipeline",
-      "NR1_addData",
-      "NR1_sys"
-    ],
-    "authors": [
-      "Joseph Counts (New Relic)"
-    ],
-    "dashboards": [
-      {
-        "name": "Bitbucket",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/bitbucket/dashboard01.png"
-        ]
-      }
-    ],
-    "alerts": [],
-    "documentation": [
-      {
-        "name": "Bitbucket pipe integration docs",
-        "description": "Bitbucket pipe integration to send an event to New Relic from your Bitbucket pipeline.",
-        "url": "https://bitbucket.org/product/features/pipelines/integrations?p=jcountsnr/newrelic_observability_event"
-      }
-    ],
-    "installPlans": [
-      {
-        "name": "Bitbucket",
-        "id": "third-party-bitbucket"
-      }
-    ]
-  },
-  {
     "title": "Synthetics Page Load performance",
     "name": "synthetics-page-load-performance",
     "description": "# What is Synthetics monitoring?\nSynthetic monitoring is a suite of automated, scriptable tools to monitor your websites, critical business transactions, and API endpoints. You can simulate user traffic to proactively detect and resolve outages and poor performance of critical endpoints before your customers notice.\n\n# What is a Synthetics Page Link Crawler\nSynthetics Page Load performance monitors essentially are simple, pre-built scripted browser monitors. They make a request to your site using an instance of Google Chrome and wait for a full page load.\n\nCompared to a simple ping monitor, this is a more accurate emulation of an actual customer visit. The user agent is identified as Google Chrome.\n\nThe check will return you detailed resource breakdowns and timelines to debug performance and latency issues.",
@@ -9078,37 +9031,67 @@
     ]
   },
   {
-    "title": "PiHole",
-    "name": "pihole",
-    "description": "This quickstart monitors the PiHole by leveraging it's built-in API to display information about the type and quantify of network requests being handled. This quickstart requires the pihole-detailed.yml file found at [https://github.com/newrelic/nri-flex/tree/master/examples](https://github.com/newrelic/nri-flex/tree/master/examples).",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/pihole",
-    "id": "14d35e2a-0c67-481b-b374-60390a4ad86f",
-    "level": "COMMUNITY",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/pihole/logo.svg",
-    "summary": "Dashboard for displaying pihole information.",
+    "title": "JFrog Platform",
+    "name": "jfrog-platform",
+    "description": "## Why monitor JFrog Platform\n\nThe JFrog Platform is a leading universal end-to-end DevOps platform for automating, managing, securing, distributing, orchestrating, monitoring, and optimizing your Cl/ CD pipeline. These different elements of the JFrog platform need to be monitored in order for the enterprise to know in real-time about the health, performance and security of the DevOps supply chain.\n\n### JFrog Platform quickstart highlights\n\nThe integration will surface Platform Logs, Xray Violations data and system performance data available through Open Metrics, as pre-built dashboards within a JFrog Platform application made available within the New Relic One Programmable Observability platform.\n\n- Monitor the JFrog platform in your familiar and convenient New Relic One Programmable Observability platform\n- Pre-built JFrog dashboards depicting critical logs and metrics from the JFrog platform\n- Utilizes FluentD, an open source and one of the most lightweight log processors and forwarders in the market",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/jfrog-platform",
+    "id": "e709396f-5b37-4e9c-a302-e872c9b864fd",
+    "level": "VERIFIED",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/jfrog-platform/icon.svg",
+    "summary": "FluentD-based custom log forwarder for the JFrog platform for customers using New Relic's observability platform",
     "websiteUrl": null,
     "keywords": [
-      "pihole",
-      "dns",
-      "flex",
-      "api"
+      "newrelic",
+      "newrelic partner",
+      "apm",
+      "open source monitoring"
     ],
     "authors": [
-      "Leon Adato"
+      "JFrog",
+      "Mahitha Byreddy"
     ],
     "dashboards": [
       {
-        "name": "PiHole Quickstart",
-        "description": null,
+        "name": "Jfrog Xray",
+        "description": "This dashboard provides a summary of Logs (access, service, traffic log volumes, HTTP response codes, errors etc), Metrics (System performance, number and type of Artifacts and Components scanned), Violations (Security Vulnerabiities and Licnse issues)",
         "url": null,
         "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/pihole/pihole_quickstart_dashboard.png"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/jfrog-xray/jfrog-xray1.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/jfrog-xray/jfrog-xray2.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/jfrog-xray/jfrog-xray3.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/jfrog-xray/jfrog-xray4.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/jfrog-xray/jfrog-xray5.png"
+        ]
+      },
+      {
+        "name": "Jfrog Artifactory",
+        "description": "This dashboard provides an overview of usage statistics of JFrog Artifactory logs (Application, Audit, Docker, Requests) and overview of the System metrics, JVM statistics, Storage consumption, Garbage collection, and other operational insights associated with JFrog Artifactory",
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/jfrog-artifactory/jfrog-artifactory01.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/jfrog-artifactory/jfrog-artifactory02.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/jfrog-artifactory/jfrog-artifactory03.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/jfrog-artifactory/jfrog-artifactory04.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/jfrog-artifactory/jfrog-artifactory05.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/jfrog-artifactory/jfrog-artifactory06.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/jfrog-artifactory/jfrog-artifactory07.png"
         ]
       }
     ],
     "alerts": [],
-    "documentation": [],
-    "installPlans": []
+    "documentation": [
+      {
+        "name": "JFrog Observability Solution",
+        "description": "JFrog Github documentation\n",
+        "url": "https://github.com/jfrog/log-analytics-newrelic"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "JFrog Platform",
+        "id": "third-party-jfrog-platform"
+      }
+    ]
   },
   {
     "title": "AWS NLB/ALB",
@@ -9210,6 +9193,86 @@
         "id": "aws-lambda-telemetry-extension"
       }
     ]
+  },
+  {
+    "title": "Bitbucket",
+    "name": "bitbucket",
+    "description": "## Atlassian Bitbucket quickstart\n\n### About Bitbucket\n\nWith best-in-class Jira integration, and built-in CI/CD, Bitbucket Cloud is the native Git tool in Atlassian’s Open DevOps solution.\n\n### About this quickstart\n\nThis quickstart is built around a [Bitbucket Pipe](https://bitbucket.org/product/features/pipelines/integrations) integration. This tool will enable you to send CI/CD events into New Relic, where you can monitor your Bitbucket Pipelines. \n\nWith this visualization you can monitor:\n  - Number of events/pipeline builds\n  - Track priority events\n  - Real time event log from your pipeline\n  - Events and priority events over time",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/atlassian/bitbucket",
+    "id": "fdc99da8-0061-4c5f-bd90-ef67a8b2419f",
+    "level": "COMMUNITY",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/atlassian/bitbucket/logo.svg",
+    "summary": "Monitor your Bitbucket Pipeline.",
+    "websiteUrl": null,
+    "keywords": [
+      "atlassian",
+      "bitbucket",
+      "cicd",
+      "newrelic partner",
+      "pipeline",
+      "NR1_addData",
+      "NR1_sys"
+    ],
+    "authors": [
+      "Joseph Counts (New Relic)"
+    ],
+    "dashboards": [
+      {
+        "name": "Bitbucket",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/bitbucket/dashboard01.png"
+        ]
+      }
+    ],
+    "alerts": [],
+    "documentation": [
+      {
+        "name": "Bitbucket pipe integration docs",
+        "description": "Bitbucket pipe integration to send an event to New Relic from your Bitbucket pipeline.",
+        "url": "https://bitbucket.org/product/features/pipelines/integrations?p=jcountsnr/newrelic_observability_event"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "Bitbucket",
+        "id": "third-party-bitbucket"
+      }
+    ]
+  },
+  {
+    "title": "PiHole",
+    "name": "pihole",
+    "description": "This quickstart monitors the PiHole by leveraging it's built-in API to display information about the type and quantify of network requests being handled. This quickstart requires the pihole-detailed.yml file found at [https://github.com/newrelic/nri-flex/tree/master/examples](https://github.com/newrelic/nri-flex/tree/master/examples).",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/pihole",
+    "id": "14d35e2a-0c67-481b-b374-60390a4ad86f",
+    "level": "COMMUNITY",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/pihole/logo.svg",
+    "summary": "Dashboard for displaying pihole information.",
+    "websiteUrl": null,
+    "keywords": [
+      "pihole",
+      "dns",
+      "flex",
+      "api"
+    ],
+    "authors": [
+      "Leon Adato"
+    ],
+    "dashboards": [
+      {
+        "name": "PiHole Quickstart",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/pihole/pihole_quickstart_dashboard.png"
+        ]
+      }
+    ],
+    "alerts": [],
+    "documentation": [],
+    "installPlans": []
   },
   {
     "title": "Azure API Management",
@@ -10468,69 +10531,6 @@
       {
         "name": "Java Agent",
         "id": "setup-java-agent"
-      }
-    ]
-  },
-  {
-    "title": "JFrog Platform",
-    "name": "jfrog-platform",
-    "description": "## Why monitor JFrog Platform\n\nThe JFrog Platform is a leading universal end-to-end DevOps platform for automating, managing, securing, distributing, orchestrating, monitoring, and optimizing your Cl/ CD pipeline. These different elements of the JFrog platform need to be monitored in order for the enterprise to know in real-time about the health, performance and security of the DevOps supply chain.\n\n### JFrog Platform quickstart highlights\n\nThe integration will surface Platform Logs, Xray Violations data and system performance data available through Open Metrics, as pre-built dashboards within a JFrog Platform application made available within the New Relic One Programmable Observability platform.\n\n- Monitor the JFrog platform in your familiar and convenient New Relic One Programmable Observability platform\n- Pre-built JFrog dashboards depicting critical logs and metrics from the JFrog platform\n- Utilizes FluentD, an open source and one of the most lightweight log processors and forwarders in the market",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/jfrog-platform",
-    "id": "e709396f-5b37-4e9c-a302-e872c9b864fd",
-    "level": "VERIFIED",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/jfrog-platform/icon.svg",
-    "summary": "FluentD-based custom log forwarder for the JFrog platform for customers using New Relic's observability platform",
-    "websiteUrl": null,
-    "keywords": [
-      "newrelic",
-      "newrelic partner",
-      "apm",
-      "open source monitoring"
-    ],
-    "authors": [
-      "JFrog",
-      "Mahitha Byreddy"
-    ],
-    "dashboards": [
-      {
-        "name": "Jfrog Xray",
-        "description": "This dashboard provides a summary of Logs (access, service, traffic log volumes, HTTP response codes, errors etc), Metrics (System performance, number and type of Artifacts and Components scanned), Violations (Security Vulnerabiities and Licnse issues)",
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/jfrog-xray/jfrog-xray1.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/jfrog-xray/jfrog-xray2.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/jfrog-xray/jfrog-xray3.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/jfrog-xray/jfrog-xray4.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/jfrog-xray/jfrog-xray5.png"
-        ]
-      },
-      {
-        "name": "Jfrog Artifactory",
-        "description": "This dashboard provides an overview of usage statistics of JFrog Artifactory logs (Application, Audit, Docker, Requests) and overview of the System metrics, JVM statistics, Storage consumption, Garbage collection, and other operational insights associated with JFrog Artifactory",
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/jfrog-artifactory/jfrog-artifactory1.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/jfrog-artifactory/jfrog-artifactory2.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/jfrog-artifactory/jfrog-artifactory3.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/jfrog-artifactory/jfrog-artifactory4.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/jfrog-artifactory/jfrog-artifactory5.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/jfrog-artifactory/jfrog-artifactory6.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/jfrog-artifactory/jfrog-artifactory7.png"
-        ]
-      }
-    ],
-    "alerts": [],
-    "documentation": [
-      {
-        "name": "JFrog Observability Solution",
-        "description": "JFrog Github documentation\n",
-        "url": "https://github.com/jfrog/log-analytics-newrelic"
-      }
-    ],
-    "installPlans": [
-      {
-        "name": "JFrog Platform",
-        "id": "third-party-jfrog-platform"
       }
     ]
   },
@@ -14120,6 +14120,81 @@
     ]
   },
   {
+    "title": "Deeper Network",
+    "name": "deeper-network",
+    "description": "## Deeper Connect Monitoring Quickstart\n\nGet deep visibility into the health, performance, connections, logs and balance of your Deeper Connect device.\n\nAlert and identify potential issues, or simply use for remote monitoring.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/deeper-network",
+    "id": "b5feb1f0-ca9f-4f31-92fc-f6e117ef91bb",
+    "level": "COMMUNITY",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/deeper-network/logo.png",
+    "summary": "Monitor and alert on the health of your Deeper Connect devices to ensure ongoing reliability and performance. Requires deeper-cli setup.",
+    "websiteUrl": null,
+    "keywords": [
+      "infrastructure",
+      "network",
+      "nrlabs",
+      "deeper-network",
+      "crypto",
+      "security",
+      "newrelic partner",
+      "NR1_addData",
+      "NR1_sys"
+    ],
+    "authors": [
+      "New Relic",
+      "Kav. Pather"
+    ],
+    "dashboards": [
+      {
+        "name": "Deeper Network - Connect Monitoring",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/deeper-connect/deeperconnect01.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/deeper-connect/deeperconnect02.png"
+        ]
+      }
+    ],
+    "alerts": [
+      {
+        "name": "Device CPU",
+        "details": "This alert triggers a warning when CPU % is above 70 for 2 minutes, and a critical when above 80 for 2 minutes.",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "Device Memory",
+        "details": "This alert triggers a warning when memory % is above 70 for 2 minutes, and a critical when above 80 for 2 minutes.",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "Device Temperature",
+        "details": "This alert triggers a warning when above 55 degress celsius for 2 minutes, and a critical when above 65 for 2 minutes.",
+        "type": "STATIC",
+        "url": null
+      }
+    ],
+    "documentation": [
+      {
+        "name": "Deeper Network",
+        "description": "The Decentralized Gateway and Infrastructure for Web3.0. Deeper Network combines blockchain, network security, and sharing economy to create a global peer to peer network that empowers the real users of the internet and paves the way for the next generation of the web.\n",
+        "url": "https://deeper.network/"
+      },
+      {
+        "name": "Deeper Network Monitoring Guide",
+        "description": "A guide detailing how to configure and use the `deeper-cli` with New Relic.\n",
+        "url": "https://github.com/Kav91/deeper-connect-monitoring"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "Deeper Network",
+        "id": "third-party-deeper-network"
+      }
+    ]
+  },
+  {
     "title": "Amazon QLDB",
     "name": "aws-qldb",
     "description": "## What is Amazon QLDB?\n\nAmazon Quantum Ledger Database (Amazon QLDB) is a fully managed ledger database that provides a transparent, immutable, and cryptographically verifiable transaction log. Proactively instrument Amazon QLDB with the New Relic infrastructure monitoring agent to monitor the stability and reliability of Amazon QLDB.\n\n\n### Amazon QLDB quickstart highlights\n\nThe New Relic Amazon QLDB quickstart includes the following features\nDashboards: Proactively monitor metrics like ledger samples, provider readIOs latency, ledgers, overview of ledger provider, etc.\n\n\nStart monitoring Amazon QLDB by connecting Amazon Web Services (AWS) to New Relic!\n\nCheck out our Amazon QLDB documentation to instrument your cloud service and manage the stability, scalability, and reliability of your systems with New Relic's infrastructure monitoring capabilities.\n\n### Ideal Amazon QLDB performance monitoring\n\nNew Relic Amazon QLDB quickstart offers an [integration](https://docs.newrelic.com/docs/infrastructure/amazon-integrations/aws-integrations-list/aws-qldb-monitoring-integration/) for reporting your Amazon Quantum Ledger Database (QLDB) data to New Relic. The integration collects several Amazon QLDB metrics that you can analyze to understand context, improve customer experience, and make data-driven business decisions. The quickstart empowers you to monitor Amazon QLDB with out-of-the-box dashboards and visualizations.\n\nSome of the metrics you can track with the integration include the total amount of disk space used by a ledger's journal, indexes, and indexed history, all reported in 15-minute intervals. It also tracks the number of disk read I/O operations, disk write I/O operations, and the amount of time taken for data operations, all reported in one-minute intervals.\n\nInstall the New Relic Amazon QLDB instant observability quickstart to effectively monitor your Amazon QLDB performance metrics with our infrastructure agent. This quickstart is your gateway to instant monitoring of services like QLDB AWS marketplace.",
@@ -14431,81 +14506,6 @@
       {
         "name": "GitHub for CodeStream",
         "id": "third-party-github-for-codestream"
-      }
-    ]
-  },
-  {
-    "title": "Deeper Network",
-    "name": "deeper-network",
-    "description": "## Deeper Connect Monitoring Quickstart\n\nGet deep visibility into the health, performance, connections, logs and balance of your Deeper Connect device.\n\nAlert and identify potential issues, or simply use for remote monitoring.",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/deeper-network",
-    "id": "b5feb1f0-ca9f-4f31-92fc-f6e117ef91bb",
-    "level": "COMMUNITY",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/deeper-network/logo.png",
-    "summary": "Monitor and alert on the health of your Deeper Connect devices to ensure ongoing reliability and performance. Requires deeper-cli setup.",
-    "websiteUrl": null,
-    "keywords": [
-      "infrastructure",
-      "network",
-      "nrlabs",
-      "deeper-network",
-      "crypto",
-      "security",
-      "newrelic partner",
-      "NR1_addData",
-      "NR1_sys"
-    ],
-    "authors": [
-      "New Relic",
-      "Kav. Pather"
-    ],
-    "dashboards": [
-      {
-        "name": "Deeper Network - Connect Monitoring",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/deeper-connect/deeperconnect01.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/deeper-connect/deeperconnect02.png"
-        ]
-      }
-    ],
-    "alerts": [
-      {
-        "name": "Device CPU",
-        "details": "This alert triggers a warning when CPU % is above 70 for 2 minutes, and a critical when above 80 for 2 minutes.",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "Device Memory",
-        "details": "This alert triggers a warning when memory % is above 70 for 2 minutes, and a critical when above 80 for 2 minutes.",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "Device Temperature",
-        "details": "This alert triggers a warning when above 55 degress celsius for 2 minutes, and a critical when above 65 for 2 minutes.",
-        "type": "STATIC",
-        "url": null
-      }
-    ],
-    "documentation": [
-      {
-        "name": "Deeper Network",
-        "description": "The Decentralized Gateway and Infrastructure for Web3.0. Deeper Network combines blockchain, network security, and sharing economy to create a global peer to peer network that empowers the real users of the internet and paves the way for the next generation of the web.\n",
-        "url": "https://deeper.network/"
-      },
-      {
-        "name": "Deeper Network Monitoring Guide",
-        "description": "A guide detailing how to configure and use the `deeper-cli` with New Relic.\n",
-        "url": "https://github.com/Kav91/deeper-connect-monitoring"
-      }
-    ],
-    "installPlans": [
-      {
-        "name": "Deeper Network",
-        "id": "third-party-deeper-network"
       }
     ]
   },
@@ -16561,6 +16561,62 @@
     ]
   },
   {
+    "title": "Delphix",
+    "name": "delphix",
+    "description": "### Summary\n\nThe Delphix quickstart for New Relic grants insights and observability of the Delphix Platform to administrators. Users may monitor various Delphix objects, such as dSources and VDBs, and trigger alerts on exceeded thresholds. \n\nIn addition, when leveraging the Delphix integration, users can feed data into triggered New Relic workflows to command data-ready RCA environments through a [ServiceNow automated request](https://store.servicenow.com/sn_appstore_store.do#!/store/application/bb688f9f9734111012b7318c1253af11) or direct webhook.\n\n### What's the value?\n\nThe Delphix Platform is a powerful test data management tool enabling the provisioning of RCA environments for mission-critical applications on demand. The quickstart allows Delphix administrators to monitor their usage, maintain high availability, and reduce the costs of forgotten virtual databases. \n\nSite Reliability Engineers rely on Delphix and New Relic to provide mission-critical application environments within minutes of an issue which eases investigation during stressful issues and helps achieve SLA times. Delphix can reduce provisioning times from days to minutes.\n\n### What's inside?\n\nThe quickstart contains a sample Delphix Platform Dashboard and Storage Utilization Alert to help users get started. \n\nPopulating data for dashboards, alerts, and workflows requires the [Delphix Integration](https://github.com/delphix/dct-newrelic-integration) and [Delphix Data Control Tower](https://docs.delphix.com/dct).",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/delphix",
+    "id": "98f77308-4ac3-4c55-bc56-eb9d12f52ab7",
+    "level": "COMMUNITY",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/delphix/logo.svg",
+    "summary": "Monitor and observe the Delphix Platform and respond to mission-critical application issues with data-ready RCA environments.",
+    "websiteUrl": null,
+    "keywords": [
+      "delphix",
+      "newrelic partner",
+      "devops",
+      "test data management",
+      "database",
+      "sre",
+      "NR1_addData",
+      "NR1_sys"
+    ],
+    "authors": [
+      "Delphix Community"
+    ],
+    "dashboards": [
+      {
+        "name": "Delphix Platform Dashboard",
+        "description": "Sample dashboard detailing Delphix Platform usage.",
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/delphix-dashboard/delphix-dashboard-1.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/delphix-dashboard/delphix-dashboard-2.png"
+        ]
+      }
+    ],
+    "alerts": [
+      {
+        "name": "Delphix Storage Utilization",
+        "details": "Alert to monitor Delphix engines storage utilization",
+        "type": "STATIC",
+        "url": null
+      }
+    ],
+    "documentation": [
+      {
+        "name": "Quickstart and Integration Documentation",
+        "description": "Complete documentation to install and configure the Delphix quickstart and integration.",
+        "url": "https://github.com/delphix/dct-newrelic-integration"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "Delphix",
+        "id": "third-party-delphix"
+      }
+    ]
+  },
+  {
     "title": "Video agent for Akamai player",
     "name": "video-web-akamai",
     "description": "## Why monitor Akamai player?\n\nAkamai Media Player is designed to help you insert quality media playback experiences into web, mobile, and connected-TV applications using SDKs. It includes SDKs for web, iOS, tvOS, Android, Android TV, Fire TV, and Chromecast. New Relic Akamai quickstart monitors your Akamai player with digital experience monitoring, tracing, diagnostics, and application analytics.\n\n### Akamai player quickstart highlights\n\nThe New Relic Akamai player quickstart has the following features\n- Dashboards| Our dashboards proactively track metrics like video attempts, video plays, and average video start time. The dashboards also help you monitor other key indicators like connection buffering ratio, plays by app, and more.\n- Alerts| You can get instant alerts on performance metrics like video playback failure, video start failure, and video start time.\n\n### How to monitor Akamai performance\n\nNew Relic’s Akamai quickstart automatically instruments your Akamai player with our video agent. It empowers you to monitor video applications with practical dashboards and alerts. The dashboard provides interactive visualizations to explore your data and understand context. In particular, the dashboard offers you the ability to drill down into performance details like the number of video attempts, number of video plays, and the overall average video start.\n\nWith instant alerts, the integration helps you to detect issues quickly and respond to them efficiently thereby improving your Akamai streaming experience.\n\nInstall the [New Relic Akamai](https://developer.akamai.com/new-relic-overview) observability quickstart today to track Akamai player’s metrics in real-time through a seamless dashboard and different alerts. This quickstart offers you the fastest path to effective monitoring of your Akamai video player via our video agent.",
@@ -16625,6 +16681,66 @@
       {
         "name": "Akamai Media Player",
         "id": "video-web-akamai"
+      }
+    ]
+  },
+  {
+    "title": "Cloudflare Network Logs",
+    "name": "cloudflare",
+    "description": "## About Cloudflare\n\nCloudflare is an industry leading global network designed to make everything you connect to the Internet secure, private, fast, and reliable. Protect and accelerate external, public-facing web properties; secure your internal operations on a single global network; and build new applications on our serverless platform. Internet properties powered by Cloudflare have all web traffic routed through its intelligent global network, which gets smarter with every request.\n\n## About this quickstart\n\nCloudflare is on a mission to help build a better Internet. The Cloudflare quickstart will enable you to monitor and analyze web traffic metrics on a dashboard, integrating with New Relic’s database to provide an at-a-glance overview of the most important logs and metrics from your websites and applications.\n\nFor more information check out our website at [cloudflare.com](https://www.cloudflare.com/)",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/cloudflare",
+    "id": "fc2bb0ac-6622-43c6-8c1f-6a4c26ab5434",
+    "level": "COMMUNITY",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/cloudflare/logo.png",
+    "summary": "The Cloudflare quickstart will enable you to monitor and analyze web traffic metrics.",
+    "websiteUrl": null,
+    "keywords": [
+      "cloudflare",
+      "logs",
+      "network",
+      "security",
+      "cdn",
+      "featured",
+      "newrelic partner",
+      "NR1_addData",
+      "NR1_sys"
+    ],
+    "authors": [
+      "Joseph Counts",
+      "Cloudflare"
+    ],
+    "dashboards": [
+      {
+        "name": "Cloudflare Logs",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/cloudflare/cloudflare01.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/cloudflare/cloudflare02.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/cloudflare/cloudflare03.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/cloudflare/cloudflare04.png"
+        ]
+      }
+    ],
+    "alerts": [
+      {
+        "name": "Cloudflare - 4xx/5xx error greater than 1%",
+        "details": "Alert triggered when the error rate(4xx/5xx errors) exceeds 1%",
+        "type": "BASELINE",
+        "url": null
+      }
+    ],
+    "documentation": [
+      {
+        "name": "Enable New Relic destination doc",
+        "description": "Developer doc on getting Cloudflare data ingested into New Relic",
+        "url": "https://docs.newrelic.com/docs/logs/forward-logs/cloudflare-logpush-forwarding"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "cloudflare",
+        "id": "third-party-cloudflare"
       }
     ]
   },
@@ -17051,66 +17167,6 @@
     ]
   },
   {
-    "title": "Cloudflare Network Logs",
-    "name": "cloudflare",
-    "description": "## About Cloudflare\n\nCloudflare is an industry leading global network designed to make everything you connect to the Internet secure, private, fast, and reliable. Protect and accelerate external, public-facing web properties; secure your internal operations on a single global network; and build new applications on our serverless platform. Internet properties powered by Cloudflare have all web traffic routed through its intelligent global network, which gets smarter with every request.\n\n## About this quickstart\n\nCloudflare is on a mission to help build a better Internet. The Cloudflare quickstart will enable you to monitor and analyze web traffic metrics on a dashboard, integrating with New Relic’s database to provide an at-a-glance overview of the most important logs and metrics from your websites and applications.\n\nFor more information check out our website at [cloudflare.com](https://www.cloudflare.com/)",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/cloudflare",
-    "id": "fc2bb0ac-6622-43c6-8c1f-6a4c26ab5434",
-    "level": "COMMUNITY",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/cloudflare/logo.png",
-    "summary": "The Cloudflare quickstart will enable you to monitor and analyze web traffic metrics.",
-    "websiteUrl": null,
-    "keywords": [
-      "cloudflare",
-      "logs",
-      "network",
-      "security",
-      "cdn",
-      "featured",
-      "newrelic partner",
-      "NR1_addData",
-      "NR1_sys"
-    ],
-    "authors": [
-      "Joseph Counts",
-      "Cloudflare"
-    ],
-    "dashboards": [
-      {
-        "name": "Cloudflare Logs",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/cloudflare/cloudflare01.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/cloudflare/cloudflare02.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/cloudflare/cloudflare03.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/cloudflare/cloudflare04.png"
-        ]
-      }
-    ],
-    "alerts": [
-      {
-        "name": "Cloudflare - 4xx/5xx error greater than 1%",
-        "details": "Alert triggered when the error rate(4xx/5xx errors) exceeds 1%",
-        "type": "BASELINE",
-        "url": null
-      }
-    ],
-    "documentation": [
-      {
-        "name": "Enable New Relic destination doc",
-        "description": "Developer doc on getting Cloudflare data ingested into New Relic",
-        "url": "https://docs.newrelic.com/docs/logs/forward-logs/cloudflare-logpush-forwarding"
-      }
-    ],
-    "installPlans": [
-      {
-        "name": "cloudflare",
-        "id": "third-party-cloudflare"
-      }
-    ]
-  },
-  {
     "title": "CockroachDB (Prometheus)",
     "name": "cockroach-database-newrelic",
     "description": "[Cockroach Database ](https://www.cockroachlabs.com/docs/  ) CockroachDB is a distributed SQL database built on a transactional and strongly-consistent key-value store. It scales horizontally; survives disk, machine, rack, and even datacenter failures with minimal latency disruption and no manual intervention; supports strongly-consistent ACID transactions; and provides a familiar SQL API for structuring, manipulating, and querying data.\n\nInstall this quickstart to access preconfigured CockroachDB observability solutions based on Prometheus metrics that are available out-of-the-box.",
@@ -17246,62 +17302,6 @@
       {
         "name": "Prometheus Agent Mode",
         "id": "setup-prometheus-agent-mode"
-      }
-    ]
-  },
-  {
-    "title": "Delphix",
-    "name": "delphix",
-    "description": "### Summary\n\nThe Delphix quickstart for New Relic grants insights and observability of the Delphix Platform to administrators. Users may monitor various Delphix objects, such as dSources and VDBs, and trigger alerts on exceeded thresholds. \n\nIn addition, when leveraging the Delphix integration, users can feed data into triggered New Relic workflows to command data-ready RCA environments through a [ServiceNow automated request](https://store.servicenow.com/sn_appstore_store.do#!/store/application/bb688f9f9734111012b7318c1253af11) or direct webhook.\n\n### What's the value?\n\nThe Delphix Platform is a powerful test data management tool enabling the provisioning of RCA environments for mission-critical applications on demand. The quickstart allows Delphix administrators to monitor their usage, maintain high availability, and reduce the costs of forgotten virtual databases. \n\nSite Reliability Engineers rely on Delphix and New Relic to provide mission-critical application environments within minutes of an issue which eases investigation during stressful issues and helps achieve SLA times. Delphix can reduce provisioning times from days to minutes.\n\n### What's inside?\n\nThe quickstart contains a sample Delphix Platform Dashboard and Storage Utilization Alert to help users get started. \n\nPopulating data for dashboards, alerts, and workflows requires the [Delphix Integration](https://github.com/delphix/dct-newrelic-integration) and [Delphix Data Control Tower](https://docs.delphix.com/dct).",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/delphix",
-    "id": "98f77308-4ac3-4c55-bc56-eb9d12f52ab7",
-    "level": "COMMUNITY",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/delphix/logo.svg",
-    "summary": "Monitor and observe the Delphix Platform and respond to mission-critical application issues with data-ready RCA environments.",
-    "websiteUrl": null,
-    "keywords": [
-      "delphix",
-      "newrelic partner",
-      "devops",
-      "test data management",
-      "database",
-      "sre",
-      "NR1_addData",
-      "NR1_sys"
-    ],
-    "authors": [
-      "Delphix Community"
-    ],
-    "dashboards": [
-      {
-        "name": "Delphix Platform Dashboard",
-        "description": "Sample dashboard detailing Delphix Platform usage.",
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/delphix-dashboard/delphix-dashboard-1.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/delphix-dashboard/delphix-dashboard-2.png"
-        ]
-      }
-    ],
-    "alerts": [
-      {
-        "name": "Delphix Storage Utilization",
-        "details": "Alert to monitor Delphix engines storage utilization",
-        "type": "STATIC",
-        "url": null
-      }
-    ],
-    "documentation": [
-      {
-        "name": "Quickstart and Integration Documentation",
-        "description": "Complete documentation to install and configure the Delphix quickstart and integration.",
-        "url": "https://github.com/delphix/dct-newrelic-integration"
-      }
-    ],
-    "installPlans": [
-      {
-        "name": "Delphix",
-        "id": "third-party-delphix"
       }
     ]
   },
@@ -19290,6 +19290,65 @@
       {
         "name": "AWS-Apprunner",
         "id": "aws-apprunner"
+      }
+    ]
+  },
+  {
+    "title": "Trend Micro Cloud One - Conformity",
+    "name": "trendmicro-cloudone-conformity",
+    "description": "New Relic’s integration with Trend Micro Cloud One - Conformity ingests cloud security posture management (CSPM) data from Conformity into New Relic in real-time.\nThe integration deploys a Amazon Web Services (AWS) CloudFormation stack in your AWS account.  Bring your Conformity generated CSPM data into New Relic one to contextualize and correlate it with workload telemetry data, delivering AI powered visualizations and quick insights.\nConformity generated CSPM data into New Relic One where it's contextualized and correlated with workload telemetry data delivering AI powered visualizations and quick insights.\n\nFor more information about this IO quickstart, [see this how to video](https://www.youtube.com/watch?v=_-QtMWuq1nA).",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/trendmicro-cloudone-conformity",
+    "id": "c3ae3b79-260a-436f-ba25-1d97c61da3ad",
+    "level": "VERIFIED",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/trendmicro-cloudone-conformity/logo.png",
+    "summary": "New Relic’s integration with Trend Micro Cloud One - Conformity ingests cloud security posture management (CSPM) data from Conformity into New Relic in real-time.",
+    "websiteUrl": null,
+    "keywords": [
+      "devops",
+      "aws",
+      "trend micro",
+      "security",
+      "newrelic partner",
+      "NR1_addData",
+      "NR1_sys"
+    ],
+    "authors": [
+      "Trend Micro",
+      "Rohit Kaul"
+    ],
+    "dashboards": [
+      {
+        "name": "Trend Micro Cloud One Conformity",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/trendmicro-cloudone-conformity/my-dashboard.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/trendmicro-cloudone-conformity/trendmicro-cloudone-conformity.png"
+        ]
+      }
+    ],
+    "alerts": [],
+    "documentation": [
+      {
+        "name": "GitHub repository",
+        "description": "The GitHub repository for the integration",
+        "url": "https://github.com/newrelic-experimental/newrelic-connector-trendmicro-cloud-one-conformity#readme"
+      },
+      {
+        "name": "New Relic blog post",
+        "description": "Learn more about the integration on New Relic's blog post",
+        "url": "https://newrelic.com/blog/how-to-relic/trend-micro-aws"
+      },
+      {
+        "name": "Trend Micro blog post",
+        "description": "Learn more about the integration on Trend Micro's blog post",
+        "url": "https://www.trendmicro.com/en_us/devops/21/f/how-to-achieve-more-security-observability.html"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "Trend Micro Cloud One - Conformity",
+        "id": "third-party-trendmicro-cloudone-conformity"
       }
     ]
   },
@@ -21427,65 +21486,6 @@
       {
         "name": "Split",
         "id": "third-party-split"
-      }
-    ]
-  },
-  {
-    "title": "Trend Micro Cloud One - Conformity",
-    "name": "trendmicro-cloudone-conformity",
-    "description": "New Relic’s integration with Trend Micro Cloud One - Conformity ingests cloud security posture management (CSPM) data from Conformity into New Relic in real-time.\nThe integration deploys a Amazon Web Services (AWS) CloudFormation stack in your AWS account.  Bring your Conformity generated CSPM data into New Relic one to contextualize and correlate it with workload telemetry data, delivering AI powered visualizations and quick insights.\nConformity generated CSPM data into New Relic One where it's contextualized and correlated with workload telemetry data delivering AI powered visualizations and quick insights.\n\nFor more information about this IO quickstart, [see this how to video](https://www.youtube.com/watch?v=_-QtMWuq1nA).",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/trendmicro-cloudone-conformity",
-    "id": "c3ae3b79-260a-436f-ba25-1d97c61da3ad",
-    "level": "VERIFIED",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/trendmicro-cloudone-conformity/logo.png",
-    "summary": "New Relic’s integration with Trend Micro Cloud One - Conformity ingests cloud security posture management (CSPM) data from Conformity into New Relic in real-time.",
-    "websiteUrl": null,
-    "keywords": [
-      "devops",
-      "aws",
-      "trend micro",
-      "security",
-      "newrelic partner",
-      "NR1_addData",
-      "NR1_sys"
-    ],
-    "authors": [
-      "Trend Micro",
-      "Rohit Kaul"
-    ],
-    "dashboards": [
-      {
-        "name": "Trend Micro Cloud One Conformity",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/trendmicro-cloudone-conformity/my-dashboard.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/trendmicro-cloudone-conformity/trendmicro-cloudone-conformity.png"
-        ]
-      }
-    ],
-    "alerts": [],
-    "documentation": [
-      {
-        "name": "GitHub repository",
-        "description": "The GitHub repository for the integration",
-        "url": "https://github.com/newrelic-experimental/newrelic-connector-trendmicro-cloud-one-conformity#readme"
-      },
-      {
-        "name": "New Relic blog post",
-        "description": "Learn more about the integration on New Relic's blog post",
-        "url": "https://newrelic.com/blog/how-to-relic/trend-micro-aws"
-      },
-      {
-        "name": "Trend Micro blog post",
-        "description": "Learn more about the integration on Trend Micro's blog post",
-        "url": "https://www.trendmicro.com/en_us/devops/21/f/how-to-achieve-more-security-observability.html"
-      }
-    ],
-    "installPlans": [
-      {
-        "name": "Trend Micro Cloud One - Conformity",
-        "id": "third-party-trendmicro-cloudone-conformity"
       }
     ]
   },
