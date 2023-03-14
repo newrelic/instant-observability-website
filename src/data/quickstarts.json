@@ -724,6 +724,82 @@
     ]
   },
   {
+    "title": "Velero (Prometheus)",
+    "name": "velero-prometheus",
+    "description": "## A comprehensive Velero monitoring system\n\nVelero is a tool used to backup and restore Kubernetes cluster resources and persistent volumes.\n\nNew Relic provides a Velero Quickstart which allows you to monitor your Velero schedules and jobs with ease.\n\n### New Relic - a perfect tool to monitor Velero using Prometheus.\n\nVelero has become an important part of Kubernetes architectures, providing features to ensure continuity of state during disaster recover, and ease the burden of systems migration. \n\nUsing the [New Relic Prometheus Remote-Write](https://docs.newrelic.com/docs/infrastructure/prometheus-integrations/install-configure-remote-write/set-your-prometheus-remote-write-integration/) integration you can deliver your critical Velero metrics from your internally supported instance of Prometheus directly to New Relic where the rest of your observability data resides.\n\n### New Relic Velero quickstart features\n\nOur Velero Quickstart include out-of-the-box dashboards and alerts, including data such as:\n- Overview Schedules (# successes, # failures) + charts with duration and sizes of backups \n\n### Value of the Velero (Prometheus) quickstart\n\nThe Velero (Prometheus) Quickstart provides a visual snapshot of all the key health information related to your Velero clients and the Kubernetes Clusters they are helping to maintain. Monitoring is made easy via the clear, color-coded dashboard which showcases schedule execution and much more.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/velero-prometheus",
+    "id": "dbca2b58-f754-49a2-af7f-0ceca8a9978a",
+    "level": "NEW_RELIC",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/velero-prometheus/logo.png",
+    "summary": "New Relic provides crucial tools for monitoring your Velero clients using the Prometheus Remote-Write integration. It supports features such as a visual dashboard complete with charts detailing all critical performance and health metrics relevant to your Velero system.",
+    "websiteUrl": null,
+    "keywords": [
+      "velero",
+      "prometheus",
+      "remote",
+      "write",
+      "kubernetes",
+      "disaster recovery"
+    ],
+    "authors": [
+      "New Relic Labs"
+    ],
+    "dashboards": [
+      {
+        "name": "Velero-Prometheus",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/velero-prometheus/velero-prometheus-2.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/velero-prometheus/velero-prometheus.png"
+        ]
+      }
+    ],
+    "alerts": [
+      {
+        "name": "Velero Prometheus Backup Duration Baseline",
+        "details": "Alert when the duration of the backup changes significantly from its baseline.",
+        "type": "BASELINE",
+        "url": null
+      },
+      {
+        "name": "Velero Prometheus Backup Failure",
+        "details": "This alert is triggered when Velero indicates a backup has failed.",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "Velero Prometheus Backup Size",
+        "details": "Alert when the duration of the backup size changes significantly from its baseline.",
+        "type": "BASELINE",
+        "url": null
+      }
+    ],
+    "documentation": [
+      {
+        "name": "Prometheus Installation Docs",
+        "description": "Use Prometheus remote_write or Prometheus Agent\n",
+        "url": "https://docs.newrelic.com/docs/infrastructure/prometheus-integrations/get-started/send-prometheus-metric-data-new-relic/"
+      },
+      {
+        "name": "Velero Integration Docs",
+        "description": "New Relic documentation for the Velero integration including installation, configuration, and how to query the metrics.\n",
+        "url": "https://docs.newrelic.com/docs/infrastructure/prometheus-integrations/integrations-list/velero-integration"
+      },
+      {
+        "name": "Velero Metrics Reference",
+        "description": "Velero Prometheus Metric Reference\n",
+        "url": "https://github.com/vmware-tanzu/velero/blob/main/pkg/metrics/metrics.go#L30"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "Prometheus remote write",
+        "id": "setup-prometheus"
+      }
+    ]
+  },
+  {
     "title": "Synthetics Private Locations",
     "name": "synthetics-private-locations",
     "description": "## What are private locations?\n\nIn synthetic monitoring, a private location is a collection of private minions. A minion is a containerized application that receives and manages jobs set up through the Synthetics UI. For details see our [Private locations overview](https://docs.newrelic.com/docs/synthetics/synthetic-monitoring/private-locations/private-locations-overview-monitor-internal-sites-add-new-locations).\n\n### New Relic Synthetics Containerized Private Minion\n\nThe Containerized Private Minion (CPM) runs on your private network to monitor internal endpoints not accessible from the Internet. Each CPM is configured to process jobs for a specific private location identified by the private location key. For CPM installation instructions see [Install containerized private minions](https://docs.newrelic.com/docs/synthetics/synthetic-monitoring/private-locations/install-containerized-private-minions-cpms).\n\n### Why should you monitor your private locations and CPMs?\n\nMonitoring private locations is critical to knowing when the CPM might be struggling to process jobs. Some common issues include:\n\n- DNS/firewall/proxy blocking connections on your local network\n- overloaded CPM\n- mis-configured CPM\n- under-provisioned host\n- internal engine errors.\n\nIf the CPM fails to process jobs in a timely manner, it can lead to gaps in reported results, false positive alerts, or delayed results.\n\nDownload and install the New Relic Synthetics Private Locations quickstart today to be informed about the health of your private locations and CPMs.",
@@ -1180,14 +1256,14 @@
     "alerts": [],
     "documentation": [
       {
-        "name": "Kubernetes integration",
-        "description": "The New Relic Kubernetes integration has multiple components that work together to give you end-to-end observability across your clusters. While you have the flexibility to deploy the components that you prefer, to achieve full observability, you need to install the complete package to monitor all metrics. \n",
-        "url": "https://docs.newrelic.com/docs/kubernetes-pixie/kubernetes-integration/get-started/introduction-kubernetes-integration/"
-      },
-      {
         "name": "Kubernetes Prometheus agent",
         "description": "New Relic's Prometheus agent is a thin wrapper on top of Prometheus server to run it in agent mode. With this integration, you can create a YAML configuration file used by Prometheus that's ready to send metrics to New Relic.\n",
         "url": "https://docs.newrelic.com/docs/infrastructure/prometheus-integrations/install-configure-prometheus-agent/install-prometheus-agent/"
+      },
+      {
+        "name": "Kubernetes integration",
+        "description": "The New Relic Kubernetes integration has multiple components that work together to give you end-to-end observability across your clusters. While you have the flexibility to deploy the components that you prefer, to achieve full observability, you need to install the complete package to monitor all metrics. \n",
+        "url": "https://docs.newrelic.com/docs/kubernetes-pixie/kubernetes-integration/get-started/introduction-kubernetes-integration/"
       },
       {
         "name": "Kubernetes Prometheus agent REQUIRED configuration",
@@ -2133,72 +2209,6 @@
       {
         "name": "statsd",
         "id": "third-party-statsd"
-      }
-    ]
-  },
-  {
-    "title": "Velero (Prometheus)",
-    "name": "velero-prometheus",
-    "description": "## A comprehensive Velero monitoring system\n\nVelero is a tool used to backup and restore Kubernetes cluster resources and persistent volumes.\n\nNew Relic provides a Velero Quickstart which allows you to monitor your Velero schedules and jobs with ease.\n\n### New Relic - a perfect tool to monitor Velero using Prometheus.\n\nVelero has become an important part of Kubernetes architectures, providing features to ensure continuity of state during disaster recover, and ease the burden of systems migration. \n\nUsing the [New Relic Prometheus Remote-Write](https://docs.newrelic.com/docs/infrastructure/prometheus-integrations/install-configure-remote-write/set-your-prometheus-remote-write-integration/) integration you can deliver your critical Velero metrics from your internally supported instance of Prometheus directly to New Relic where the rest of your observability data resides.\n\n### New Relic Velero quickstart features\n\nOur Velero Quickstart include out-of-the-box dashboards and alerts, including data such as:\n- Overview Schedules (# successes, # failures) + charts with duration and sizes of backups \n\n### Value of the Velero (Prometheus) quickstart\n\nThe Velero (Prometheus) Quickstart provides a visual snapshot of all the key health information related to your Velero clients and the Kubernetes Clusters they are helping to maintain. Monitoring is made easy via the clear, color-coded dashboard which showcases schedule execution and much more.",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/velero-prometheus",
-    "id": "dbca2b58-f754-49a2-af7f-0ceca8a9978a",
-    "level": "NEW_RELIC",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/velero-prometheus/logo.png",
-    "summary": "New Relic provides crucial tools for monitoring your Velero clients using the Prometheus Remote-Write integration. It supports features such as a visual dashboard complete with charts detailing all critical performance and health metrics relevant to your Velero system.",
-    "websiteUrl": null,
-    "keywords": [
-      "velero",
-      "prometheus",
-      "remote",
-      "write",
-      "kubernetes",
-      "disaster recovery"
-    ],
-    "authors": [
-      "New Relic Labs"
-    ],
-    "dashboards": [
-      {
-        "name": "Velero-Prometheus",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/velero-prometheus/velero-prometheus-2.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/velero-prometheus/velero-prometheus.png"
-        ]
-      }
-    ],
-    "alerts": [
-      {
-        "name": "Velero Prometheus Backup Duration Baseline",
-        "details": "Alert when the duration of the backup changes significantly from its baseline.",
-        "type": "BASELINE",
-        "url": null
-      },
-      {
-        "name": "Velero Prometheus Backup Failure",
-        "details": "This alert is triggered when Velero indicates a backup has failed.",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "Velero Prometheus Backup Size",
-        "details": "Alert when the duration of the backup size changes significantly from its baseline.",
-        "type": "BASELINE",
-        "url": null
-      }
-    ],
-    "documentation": [
-      {
-        "name": "Velero Prometheus Integration",
-        "description": "Open source, backup and restore tooling to help maintain your Kubernetes systems.\n",
-        "url": "https://velero.io/docs/"
-      }
-    ],
-    "installPlans": [
-      {
-        "name": "Prometheus remote write",
-        "id": "setup-prometheus"
       }
     ]
   },
@@ -9914,14 +9924,14 @@
         "url": "https://docs.newrelic.com/docs/infrastructure/prometheus-integrations/get-started/send-prometheus-metric-data-new-relic"
       },
       {
-        "name": "Etcd Metrics Docs",
-        "description": "Learn more about the Prometheus metrics available for Etcd",
-        "url": "https://etcd.io/docs/v3.5/metrics/"
-      },
-      {
         "name": "Etcd Integration Docs",
         "description": "New Relic documentation for the Etcd integration including installation, configuration, and how to query the metrics.\n",
         "url": "https://docs.newrelic.com/docs/infrastructure/prometheus-integrations/integrations-list/etcd-integration"
+      },
+      {
+        "name": "Etcd Metrics Docs",
+        "description": "Learn more about the Prometheus metrics available for Etcd",
+        "url": "https://etcd.io/docs/v3.5/metrics/"
       }
     ],
     "installPlans": [
@@ -10776,14 +10786,14 @@
     ],
     "documentation": [
       {
-        "name": "NGINX Ingress Controller Prometheus Integration",
-        "description": "NGINX Ingress Controller Prometheus Integration Documentation\n",
-        "url": "https://docs.newrelic.com/docs/infrastructure/prometheus-integrations/integrations-list/ingress-controller-integration/"
-      },
-      {
         "name": "Prometheus installation docs",
         "description": "Use Prometheus remote_write or Prometheus Agent\n",
         "url": "https://docs.newrelic.com/docs/infrastructure/prometheus-integrations/get-started/send-prometheus-metric-data-new-relic"
+      },
+      {
+        "name": "NGINX Ingress Controller Prometheus Integration",
+        "description": "NGINX Ingress Controller Prometheus Integration Documentation\n",
+        "url": "https://docs.newrelic.com/docs/infrastructure/prometheus-integrations/integrations-list/ingress-controller-integration/"
       }
     ],
     "installPlans": [
@@ -20357,14 +20367,14 @@
     ],
     "documentation": [
       {
-        "name": "Prometheus OpenMetrics Intergration (POMI) installation docs",
-        "description": "To view the Istio Quickstart, the Kubernetes New Relic integration with the Prometheus OpenMetrics Integration (POMI) must be installed prior.\n",
-        "url": "https://docs.newrelic.com/docs/infrastructure/prometheus-integrations/get-started/send-prometheus-metric-data-new-relic"
-      },
-      {
         "name": "Kubernetes installation docs",
         "description": "To view the Istio Quickstart, the Kubernetes New Relic integration with the Prometheus OpenMetrics Integration (POMI) must be installed prior.\n",
         "url": "https://docs.newrelic.com/docs/integrations/host-integrations/host-integrations-list/kubernetes-monitoring-integration"
+      },
+      {
+        "name": "Prometheus OpenMetrics Intergration (POMI) installation docs",
+        "description": "To view the Istio Quickstart, the Kubernetes New Relic integration with the Prometheus OpenMetrics Integration (POMI) must be installed prior.\n",
+        "url": "https://docs.newrelic.com/docs/infrastructure/prometheus-integrations/get-started/send-prometheus-metric-data-new-relic"
       }
     ],
     "installPlans": [
@@ -22621,14 +22631,14 @@
     ],
     "documentation": [
       {
-        "name": "CoreDNS Integration Docs",
-        "description": "New Relic documentation for the CoreDNS integration including installation, configuration, and how to query the metrics.\n",
-        "url": "https://docs.newrelic.com/docs/infrastructure/prometheus-integrations/integrations-list/core-dns-integration"
-      },
-      {
         "name": "CoreDNS Metrics Docs",
         "description": "Learn more about the Prometheus metrics available for CoreDNS\n",
         "url": "https://coredns.io/plugins/metrics/"
+      },
+      {
+        "name": "CoreDNS Integration Docs",
+        "description": "New Relic documentation for the CoreDNS integration including installation, configuration, and how to query the metrics.\n",
+        "url": "https://docs.newrelic.com/docs/infrastructure/prometheus-integrations/integrations-list/core-dns-integration"
       },
       {
         "name": "Prometheus Installation Docs",
