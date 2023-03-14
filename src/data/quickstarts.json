@@ -6358,6 +6358,51 @@
     ]
   },
   {
+    "title": "OpenAI Observability",
+    "name": "openai",
+    "description": "## Monitor your GPT-3 Application Usage in New Relic\n\nWith the GPT-3 application integration, you'll have the ability to seamlessly monitor OpenAI completion queries and simultaneously log useful statistics in a New Relic customizable dashboard about your requests.\n\nBy adding just two lines of code, users can gain access to key performance metrics such as cost, response time, and sample inputs/outputs. The dashboard also allows users to track total requests, average token/requests, and model names. \n\nWith New Relic's fully customizable dashboard, users can add additional metrics based on their specific business requirements and needs. \n\nOverall, New Relic's GPT-3 integration provides real-time metrics to help businesses optimize usage, reduce costs, and achieve better results.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/openai",
+    "id": "5db25dbd-a6e9-46fc-a728-4697f677fbc6",
+    "level": "NEW_RELIC",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/openai/openai-logo.svg",
+    "summary": "Seamlessly monitor your usage of OpenAI’s GPT-3 application using New Relic’s dashboard. You'll get access to real-time metrics that can help you optimize usage, reduce costs, and achieve better results.",
+    "websiteUrl": null,
+    "keywords": [
+      "featured",
+      "openai",
+      "ai",
+      "gpt"
+    ],
+    "authors": [
+      "New Relic",
+      "Yogev Kriger"
+    ],
+    "dashboards": [
+      {
+        "name": "GPT-3 OpenAI Monitoring",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/openai/openai-dashboard-screenshot.png"
+        ]
+      }
+    ],
+    "alerts": [],
+    "documentation": [
+      {
+        "name": "Monitor OpenAI",
+        "description": "A lightweight tool to monitor your OpenAI workload.\n",
+        "url": "https://github.com/newrelic/openai-api-monitoring"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "OpenAI integration",
+        "id": "setup-openai"
+      }
+    ]
+  },
+  {
     "title": "Cassandra",
     "name": "cassandra",
     "description": "## Why monitor Cassandra?\nMonitoring Cassandra performance is vital to identify slowdowns, diagnose issues, and take prompt actions to correct any problems. Monitor Cassandra efficiently with New Relic’s Cassandra quickstart.\n\n### Cassandra quickstart highlights\n\nThe New Relic Cassandra quickstart automatically instruments your database and includes pre-built dashboards visualizing:\n- client request rates \n- average pending pool tasks\n- active request pool tasks \n- active and pending read tasks by node\n- write/read latency\n\n### New Relic + Cassandra - Your tool for better monitoring\n\nMonitor all Cassandra key performance indicators with the [New Relic Cassandra integration](https://docs.newrelic.com/docs/integrations/host-integrations/host-integrations-list/cassandra-monitoring-integration/). This gives you insights on client request rates, average pending and active request pool tasks, active and pending read tasks by node, write latency, read latency, etc. \n\nThe Cassandra integration sends performance metrics and inventory data from your Cassandra database to the New Relic platform. On the platform, you can view pre-built dashboards of your Cassandra metric data, create alert policies, query data for troubleshooting purposes, and create charts.\n\nMonitoring multiple Cassandra servers from the same integration is possible with New Relic by leveraging the multi-instance monitoring configuration. Our integration allows you to monitor Cassandra running as a service in Kubernetes or on Amazon ECS. You can also install New Relic's infrastructure monitoring agent on a Linux host that is running Cassandra.\n\nDownload the New Relic Cassandra Quickstart now to monitor Cassandra query performance and improve Cassandra speed. Address the issue of complexity in your data infrastructure and ensure the good health of Cassandra clusters.",
@@ -7187,49 +7232,6 @@
       {
         "name": "Java Agent",
         "id": "setup-java-agent"
-      }
-    ]
-  },
-  {
-    "title": "OpenAI Observability",
-    "name": "openai",
-    "description": "## Monitor your GPT-3 Application Usage in New Relic\n\nWith the GPT-3 application integration, you'll have the ability to seamlessly monitor OpenAI completion queries and simultaneously log useful statistics in a New Relic customizable dashboard about your requests.\n\nBy adding just two lines of code, users can gain access to key performance metrics such as cost, response time, and sample inputs/outputs. The dashboard also allows users to track total requests, average token/requests, and model names. \n\nWith New Relic's fully customizable dashboard, users can add additional metrics based on their specific business requirements and needs. \n\nOverall, New Relic's GPT-3 integration provides real-time metrics to help businesses optimize usage, reduce costs, and achieve better results.",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/openai",
-    "id": "5db25dbd-a6e9-46fc-a728-4697f677fbc6",
-    "level": "NEW_RELIC",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/openai/openai-logo.svg",
-    "summary": "Seamlessly monitor your usage of OpenAI’s GPT-3 application using New Relic’s dashboard. You'll get access to real-time metrics that can help you optimize usage, reduce costs, and achieve better results.",
-    "websiteUrl": null,
-    "keywords": [
-      "featured",
-      "newrelic partner"
-    ],
-    "authors": [
-      "New Relic",
-      "Yogev Kriger"
-    ],
-    "dashboards": [
-      {
-        "name": "GPT-3 OpenAI Monitoring",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/openai/openai-dashboard-screenshot.png"
-        ]
-      }
-    ],
-    "alerts": [],
-    "documentation": [
-      {
-        "name": "Monitor OpenAI",
-        "description": "A lightweight tool to monitor your OpenAI workload.\n",
-        "url": "https://github.com/newrelic/openai-api-monitoring"
-      }
-    ],
-    "installPlans": [
-      {
-        "name": "OpenAI integration",
-        "id": "setup-openai"
       }
     ]
   },
