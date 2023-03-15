@@ -644,53 +644,6 @@
     ]
   },
   {
-    "title": "Ajax Requests",
-    "name": "ajax-example",
-    "description": "**A dashboard that displays the performance of your Ajax Request**\n\n**Benefits of understanding AJAX requests**\n1. **Identify performance issues:** By reviewing AJAX requests in New Relic, you can identify performance issues with your application. New Relic provides detailed metrics on AJAX requests, such as response time, throughput, and error rates, which can help you identify performance bottlenecks.\n\n2.  **Troubleshoot errors:** If an AJAX request fails or returns an error, New Relic can provide detailed information on the error, including the status code and error message. This information can help you quickly identify and troubleshoot errors in your application.\n\n3.  **Monitor third-party dependencies:** If your application depends on third-party services, you can use New Relic to monitor the performance of those services. New Relic can provide insights into the performance of AJAX requests to third-party services, such as response time and error rates.\n\n4.  **Optimize application performance:** By reviewing AJAX requests in New Relic, you can identify opportunities to optimize your application's performance. For example, you may identify slow-loading AJAX requests that can be optimized by reducing the size of the payload or optimizing the code.\n\n  \n\n**Distributed tracing with AJAX requests in a microsystem architecture can provide several benefits:**\n1.  **End-to-end visibility:** Distributed tracing allows you to trace the flow of a request across multiple services in your microsystem architecture. With AJAX requests, you can trace the request from the client-side through to the server-side, allowing you to see the complete end-to-end flow of the request.\n    \n2.  **Performance monitoring:** Distributed tracing can provide valuable insights into the performance of your microsystem architecture. By tracing the flow of requests, you can identify bottlenecks and optimize the performance of your system.\n    \n3.  **Debugging and troubleshooting:** Distributed tracing can make it easier to debug and troubleshoot issues in your microsystem architecture. By tracing the flow of a request, you can quickly identify which service is causing the issue and address it.\n    \n4.  **Root cause analysis:** Distributed tracing can help you identify the root cause of issues in your microsystem architecture. By tracing the flow of requests, you can identify the root cause of a problem and take steps to prevent similar issues from occurring in the future.",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/ajax",
-    "id": "ab83f4c2-4e75-4767-8dea-fd6ab940a2dd",
-    "level": "COMMUNITY",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/ajax/logo.svg",
-    "summary": "An Ajax dashboard based on New Relic Browser agent data. AJAX (Asynchronous JavaScript and XML) is a set of web development techniques that allows web applications to update and display data on a web page without requiring a full page reload. AJAX uses JavaScript to asynchronously send requests to the server and update only the necessary parts of the page with the response data.",
-    "websiteUrl": null,
-    "keywords": [
-      "browser agent",
-      "web",
-      "javascript",
-      "chrome",
-      "firefox",
-      "safari",
-      "ajax"
-    ],
-    "authors": [
-      "Darren Doyle"
-    ],
-    "dashboards": [
-      {
-        "name": "Browser Ajax Requests",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/ajax/ajax.png"
-        ]
-      }
-    ],
-    "alerts": [],
-    "documentation": [
-      {
-        "name": "Browser",
-        "description": "With New Relic One's browser monitoring solution, you get full visibility into the complete webpage life cycle of your application or website",
-        "url": "https://docs.newrelic.com/docs/browser/"
-      }
-    ],
-    "installPlans": [
-      {
-        "name": "Browser",
-        "id": "browser-docs"
-      }
-    ]
-  },
-  {
     "title": "AWS Elemental MediaPackage VOD",
     "name": "aws-elemental-mediapackage-vod",
     "description": "## What is AWS Elemental MediaPackage VOD?\n\nCollect AWS MediaPackage VOD data for PackagingConfiguration. Maintained by\nAmazon.\n\n\n### Get started!\n\nStart monitoring AWS Elemental MediaPackage VOD by connecting Amazon Web Services (AWS) to New Relic!\n\nCheck out our AWS Elemental MediaPackage VOD documentation to instrument your cloud service and manage the stability, scalability, and reliability of your systems with New Relic's infrastructure monitoring capabilities.\n\n### More info\n\nCheck out the [documentation](https://docs.newrelic.com/docs/infrastructure/amazon-integrations/aws-integrations-list/aws-elemental-mediapackage-vod-monitoring-integration/) to learn more about New Relic monitoring for AWS Elemental MediaPackage VOD.",
@@ -944,6 +897,53 @@
       {
         "name": "New Relic Logs",
         "id": "logs-default"
+      }
+    ]
+  },
+  {
+    "title": "Ajax Requests",
+    "name": "ajax-example",
+    "description": "**A dashboard that displays the performance of your Ajax Request**\n\n**Benefits of understanding AJAX requests**\n1. **Identify performance issues:** By reviewing AJAX requests in New Relic, you can identify performance issues with your application. New Relic provides detailed metrics on AJAX requests, such as response time, throughput, and error rates, which can help you identify performance bottlenecks.\n\n2.  **Troubleshoot errors:** If an AJAX request fails or returns an error, New Relic can provide detailed information on the error, including the status code and error message. This information can help you quickly identify and troubleshoot errors in your application.\n\n3.  **Monitor third-party dependencies:** If your application depends on third-party services, you can use New Relic to monitor the performance of those services. New Relic can provide insights into the performance of AJAX requests to third-party services, such as response time and error rates.\n\n4.  **Optimize application performance:** By reviewing AJAX requests in New Relic, you can identify opportunities to optimize your application's performance. For example, you may identify slow-loading AJAX requests that can be optimized by reducing the size of the payload or optimizing the code.\n\n  \n\n**Distributed tracing with AJAX requests in a microsystem architecture can provide several benefits:**\n1.  **End-to-end visibility:** Distributed tracing allows you to trace the flow of a request across multiple services in your microsystem architecture. With AJAX requests, you can trace the request from the client-side through to the server-side, allowing you to see the complete end-to-end flow of the request.\n    \n2.  **Performance monitoring:** Distributed tracing can provide valuable insights into the performance of your microsystem architecture. By tracing the flow of requests, you can identify bottlenecks and optimize the performance of your system.\n    \n3.  **Debugging and troubleshooting:** Distributed tracing can make it easier to debug and troubleshoot issues in your microsystem architecture. By tracing the flow of a request, you can quickly identify which service is causing the issue and address it.\n    \n4.  **Root cause analysis:** Distributed tracing can help you identify the root cause of issues in your microsystem architecture. By tracing the flow of requests, you can identify the root cause of a problem and take steps to prevent similar issues from occurring in the future.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/ajax",
+    "id": "ab83f4c2-4e75-4767-8dea-fd6ab940a2dd",
+    "level": "COMMUNITY",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/ajax/logo.svg",
+    "summary": "An Ajax dashboard based on New Relic Browser agent data. AJAX (Asynchronous JavaScript and XML) is a set of web development techniques that allows web applications to update and display data on a web page without requiring a full page reload. AJAX uses JavaScript to asynchronously send requests to the server and update only the necessary parts of the page with the response data.",
+    "websiteUrl": null,
+    "keywords": [
+      "browser agent",
+      "web",
+      "javascript",
+      "chrome",
+      "firefox",
+      "safari",
+      "ajax"
+    ],
+    "authors": [
+      "Darren Doyle"
+    ],
+    "dashboards": [
+      {
+        "name": "Browser Ajax Requests",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/ajax/ajax.png"
+        ]
+      }
+    ],
+    "alerts": [],
+    "documentation": [
+      {
+        "name": "Browser",
+        "description": "With New Relic One's browser monitoring solution, you get full visibility into the complete webpage life cycle of your application or website",
+        "url": "https://docs.newrelic.com/docs/browser/"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "Browser",
+        "id": "browser-docs"
       }
     ]
   },
@@ -3543,52 +3543,6 @@
     ]
   },
   {
-    "title": "Core Web Vitals",
-    "name": "cwv-example",
-    "description": "**A dashboard that displays the performance of your Core Web Vitalst**\n\n**Benefits of understanding CWV**\n1. **Improved User Experience:** Core Web Vitals are key performance metrics that can impact the user experience of a website. By monitoring these metrics with the New Relic Browser agent, you can identify and address issues that may be negatively affecting user experience, such as slow page load times, high input latency, or unexpected layout shifts.\n\n2.  **Better Search Engine Optimization:** Google has announced that Core Web Vitals will be used as a ranking factor in search results starting in May 2021. By monitoring and optimizing for these metrics using New Relic's Browser agent, you can improve your website's search engine visibility and attract more traffic to your site.\n\n3.  **Enhanced Performance Optimization:** The New Relic Browser agent provides detailed performance data on various aspects of your website, including network performance, page load times, and JavaScript errors. This data can help you identify bottlenecks and other issues that may be slowing down your website, so you can optimize its performance and improve its overall speed.\n\n4. **Greater Insights and Analytics:** The New Relic Browser agent provides real-time and historical data on user interactions with your website, including page views, clicks, and other engagement metrics. This data can help you gain a better understanding of how users are interacting with your site, which can inform your decision-making and help you improve the overall user experience.\n\n5. **Increased Business Value:** By using the New Relic Browser agent to monitor and optimize your website's Core Web Vitals, you can improve its performance and user experience, which can ultimately drive more conversions, sales, and revenue for your business.",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/core-web-vitals",
-    "id": "5cf33115-1e99-4d7a-a84e-fd98df81409a",
-    "level": "COMMUNITY",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/core-web-vitals/logo.svg",
-    "summary": "An Core Web Vitals dashboards based on New Relic Browser agent data.",
-    "websiteUrl": null,
-    "keywords": [
-      "browser agent",
-      "web",
-      "javascript",
-      "chrome",
-      "firefox",
-      "safari",
-      "ajax",
-      "core web vitals"
-    ],
-    "authors": [
-      "Darren Doyle"
-    ],
-    "dashboards": [
-      {
-        "name": "Core Web Vitals Quickstart",
-        "description": null,
-        "url": null,
-        "screenshots": []
-      }
-    ],
-    "alerts": [],
-    "documentation": [
-      {
-        "name": "Browser",
-        "description": "With New Relic One's browser monitoring solution, you get full visibility into the complete webpage life cycle of your application or website",
-        "url": "https://docs.newrelic.com/docs/browser/"
-      }
-    ],
-    "installPlans": [
-      {
-        "name": "Browser",
-        "id": "browser-docs"
-      }
-    ]
-  },
-  {
     "title": "Azure Front Door",
     "name": "azure-front-door",
     "description": "## What is Azure Front Door?\n\nAzure service for creating rules and redirecting your incoming web traffic’s\nglobal routing.\n\n\n### Get started!\n\nStart monitoring Azure Front Door by connecting Microsoft Azure to New Relic!\n\nCheck out our Azure Front Door documentation to instrument your cloud service and manage the stability, scalability, and reliability of your systems with New Relic's infrastructure monitoring capabilities.\n\n### More info\n\nCheck out the [documentation](https://docs.newrelic.com/docs/infrastructure/microsoft-azure-integrations/azure-integrations-list/azure-front-door-monitoring-integration/) to learn more about New Relic monitoring for Azure Front Door.",
@@ -3618,6 +3572,54 @@
       {
         "name": "Azure-Infrastructure-Monitoring",
         "id": "azure-infrastructure-monitoring"
+      }
+    ]
+  },
+  {
+    "title": "Core Web Vitals",
+    "name": "cwv-example",
+    "description": "**A dashboard that displays the performance of your Core Web Vitalst**\n\n**Benefits of understanding CWV**\n1. **Improved User Experience:** Core Web Vitals are key performance metrics that can impact the user experience of a website. By monitoring these metrics with the New Relic Browser agent, you can identify and address issues that may be negatively affecting user experience, such as slow page load times, high input latency, or unexpected layout shifts.\n\n2.  **Better Search Engine Optimization:** Google has announced that Core Web Vitals will be used as a ranking factor in search results starting in May 2021. By monitoring and optimizing for these metrics using New Relic's Browser agent, you can improve your website's search engine visibility and attract more traffic to your site.\n\n3.  **Enhanced Performance Optimization:** The New Relic Browser agent provides detailed performance data on various aspects of your website, including network performance, page load times, and JavaScript errors. This data can help you identify bottlenecks and other issues that may be slowing down your website, so you can optimize its performance and improve its overall speed.\n\n4. **Greater Insights and Analytics:** The New Relic Browser agent provides real-time and historical data on user interactions with your website, including page views, clicks, and other engagement metrics. This data can help you gain a better understanding of how users are interacting with your site, which can inform your decision-making and help you improve the overall user experience.\n\n5. **Increased Business Value:** By using the New Relic Browser agent to monitor and optimize your website's Core Web Vitals, you can improve its performance and user experience, which can ultimately drive more conversions, sales, and revenue for your business.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/core-web-vitals",
+    "id": "5cf33115-1e99-4d7a-a84e-fd98df81409a",
+    "level": "COMMUNITY",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/core-web-vitals/logo.svg",
+    "summary": "An Core Web Vitals dashboards based on New Relic Browser agent data.",
+    "websiteUrl": null,
+    "keywords": [
+      "browser agent",
+      "web",
+      "javascript",
+      "chrome",
+      "firefox",
+      "safari",
+      "ajax",
+      "core web vitals"
+    ],
+    "authors": [
+      "Darren Doyle"
+    ],
+    "dashboards": [
+      {
+        "name": "Core Web Vitals Quickstart",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/core-web-vitals/core-web-vitals.png"
+        ]
+      }
+    ],
+    "alerts": [],
+    "documentation": [
+      {
+        "name": "Browser",
+        "description": "With New Relic One's browser monitoring solution, you get full visibility into the complete webpage life cycle of your application or website",
+        "url": "https://docs.newrelic.com/docs/browser/"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "Browser",
+        "id": "browser-docs"
       }
     ]
   },
