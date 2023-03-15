@@ -6474,7 +6474,8 @@
       "featured",
       "openai",
       "ai",
-      "gpt"
+      "gpt",
+      "mlops"
     ],
     "authors": [
       "New Relic",
@@ -6482,7 +6483,7 @@
     ],
     "dashboards": [
       {
-        "name": "GPT-3 OpenAI Monitoring",
+        "name": "OpenAI Monitoring",
         "description": null,
         "url": null,
         "screenshots": [
