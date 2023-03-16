@@ -8490,89 +8490,6 @@
     ]
   },
   {
-    "title": "Argo CD",
-    "name": "argocd-quickstart",
-    "description": "## What is Argo CD?\nArgo CD is a declarative, GitOps continuous delivery tool for Kubernetes.\n\n## Why Argo CD?\nApplication definitions, configurations, and environments should be declarative and version controlled. Application deployment and lifecycle management should be automated, auditable, and easy to understand.\n\nThis dashboard closely mirrors the official Argo CD Grafana dashboard ([Link](https://github.com/argoproj/argo-cd/blob/master/examples/dashboard.json)).\n\n## Argo CD Getting started:\n- [Getting Started](https://argo-cd.readthedocs.io/en/stable/getting_started)\n- [Docs](https://argo-cd.readthedocs.io/en/stable/)\n- [Available Metrics](https://argo-cd.readthedocs.io/en/stable/operator-manual/metrics/)\n\n## Argo CD Dashboard Highlights:\n- Sync Activity\n- Health Status\n- Controller Stats\n- Repo Server Stats\n- Argo Server Stats\n\n## Requirements:\n1. [Prometheus Server or Prometheus Agent](https://docs.newrelic.com/docs/infrastructure/prometheus-integrations/get-started/send-prometheus-metric-data-new-relic/) configured to remote write to New Relic.\n2. Patch the Argo CD pods with `prometheus.io/scrape=true` podAnnotations.  This will enable the New Relic Prometheus Integration to scrape Argo CD metrics:\n\n    `kubectl patch deployment argocd-server -n argocd -p '{\"spec\": {\"template\":{\"metadata\":{\"annotations\":{\"prometheus.io/scrape\":\"true\",\"prometheus.io/port\": \"8083\",\"prometheus.io/path\": \"metrics\"}}}} }'`\n\n    `kubectl patch statefulset argocd-application-controller -n argocd -p '{\"spec\": {\"template\":{\"metadata\":{\"annotations\":{\"prometheus.io/scrape\":\"true\",\"prometheus.io/port\": \"8082\",\"prometheus.io/path\": \"metrics\"}}}} }'`\n\n    `kubectl patch deployment argocd-repo-server -n argocd -p '{\"spec\": {\"template\":{\"metadata\":{\"annotations\":{\"prometheus.io/scrape\":\"true\",\"prometheus.io/port\": \"8084\",\"prometheus.io/path\": \"metrics\"}}}} }'`",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/argocd",
-    "id": "03b4a3b9-3a59-4603-91dd-6b0ced1d62de",
-    "level": "NEW_RELIC",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/argocd/logo.png",
-    "summary": "Displays the performance and availability of the Argo CD platform within Kubernetes.",
-    "websiteUrl": null,
-    "keywords": [
-      "argocd",
-      "helm",
-      "git",
-      "kubernetes",
-      "k8s",
-      "cd",
-      "continuous deployment",
-      "argo",
-      "prometheus",
-      "remote_write",
-      "promql",
-      "grafana"
-    ],
-    "authors": [
-      "New Relic",
-      "Brad Schmitt"
-    ],
-    "dashboards": [
-      {
-        "name": "Argo CD (Prometheus)",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/argocd-dashboard/argocd_dashboard_1.jpg",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/argocd-dashboard/argocd_dashboard_2.jpg",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/argocd-dashboard/argocd_dashboard_3.jpg",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/argocd-dashboard/argocd_dashboard_4.jpg"
-        ]
-      }
-    ],
-    "alerts": [
-      {
-        "name": "Argo CD App Degraded",
-        "details": "An alert will trigger if an Argo CD app is in an unhealthy state for more than 5 minutes.",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "Argo CD App OutOfSync",
-        "details": "A Warning alert will trigger if an Argo CD app is in an OutOfSync state for more than 5 minutes.",
-        "type": "STATIC",
-        "url": null
-      }
-    ],
-    "documentation": [
-      {
-        "name": "Argo CD Integration Docs",
-        "description": "New Relic documentation for the Argo CD integration including installation, configuration, and how to query the metrics.\n",
-        "url": "https://docs.newrelic.com/docs/infrastructure/prometheus-integrations/integrations-list/argocd-integration"
-      },
-      {
-        "name": "Argo CD Metrics Reference",
-        "description": "Argo CD Prometheus Metric Reference\n",
-        "url": "https://argo-cd.readthedocs.io/en/stable/operator-manual/metrics/"
-      },
-      {
-        "name": "Prometheus Installation Docs",
-        "description": "Use Prometheus remote_write or Prometheus Agent\n",
-        "url": "https://docs.newrelic.com/docs/infrastructure/prometheus-integrations/get-started/send-prometheus-metric-data-new-relic/"
-      }
-    ],
-    "installPlans": [
-      {
-        "name": "Prometheus remote write",
-        "id": "setup-prometheus"
-      },
-      {
-        "name": "Prometheus Agent Mode",
-        "id": "setup-prometheus-agent-mode"
-      }
-    ]
-  },
-  {
     "title": "ActiveRecord",
     "name": "activerecord",
     "description": "## What is ActiveRecord?\n\nActive Record facilitates the creation and use of business objects whose data\nrequires persistent storage to a database.\n\n\n## Get started!\n\nLeverage community expertise and instantly get value out of your telemetry data. This quickstart automatically instruments ActiveRecord with the New Relic Ruby agent, and allows you to further leverage New Relic's APM capabilities by setting up [custom dashboards](https://docs.newrelic.com/docs/query-your-data/explore-query-data/dashboards/introduction-dashboards/), [errors inbox](https://docs.newrelic.com/docs/apm/apm-ui-pages/errors-inbox/errors-inbox/), [transaction tracing](https://docs.newrelic.com/docs/apm/transactions/transaction-traces/introduction-transaction-traces/), and [service maps](https://docs.newrelic.com/docs/understand-dependencies/understand-system-dependencies/service-maps/introduction-service-maps/).\n\n## More info\n\nCheck out the [documentation](https://docs.newrelic.com/docs/agents/ruby-agent/) to learn more about New Relic monitoring for ActiveRecord.",
@@ -9596,6 +9513,89 @@
       {
         "name": "Azure-Infrastructure-Monitoring",
         "id": "azure-infrastructure-monitoring"
+      }
+    ]
+  },
+  {
+    "title": "Argo CD",
+    "name": "argocd-quickstart",
+    "description": "## What is Argo CD?\nArgo CD is a declarative, GitOps continuous delivery tool for Kubernetes.\n\n## Why Argo CD?\nApplication definitions, configurations, and environments should be declarative and version controlled. Application deployment and lifecycle management should be automated, auditable, and easy to understand.\n\nThis dashboard closely mirrors the official Argo CD Grafana dashboard ([Link](https://github.com/argoproj/argo-cd/blob/master/examples/dashboard.json)).\n\n## Argo CD Getting started:\n- [Getting Started](https://argo-cd.readthedocs.io/en/stable/getting_started)\n- [Docs](https://argo-cd.readthedocs.io/en/stable/)\n- [Available Metrics](https://argo-cd.readthedocs.io/en/stable/operator-manual/metrics/)\n\n## Argo CD Dashboard Highlights:\n- Sync Activity\n- Health Status\n- Controller Stats\n- Repo Server Stats\n- Argo Server Stats\n\n## Requirements:\n1. [Prometheus Server or Prometheus Agent](https://docs.newrelic.com/docs/infrastructure/prometheus-integrations/get-started/send-prometheus-metric-data-new-relic/) configured to remote write to New Relic.\n2. Patch the Argo CD pods with `prometheus.io/scrape=true` podAnnotations.  This will enable the New Relic Prometheus Integration to scrape Argo CD metrics:\n\n    `kubectl patch deployment argocd-server -n argocd -p '{\"spec\": {\"template\":{\"metadata\":{\"annotations\":{\"prometheus.io/scrape\":\"true\",\"prometheus.io/port\": \"8083\",\"prometheus.io/path\": \"metrics\"}}}} }'`\n\n    `kubectl patch statefulset argocd-application-controller -n argocd -p '{\"spec\": {\"template\":{\"metadata\":{\"annotations\":{\"prometheus.io/scrape\":\"true\",\"prometheus.io/port\": \"8082\",\"prometheus.io/path\": \"metrics\"}}}} }'`\n\n    `kubectl patch deployment argocd-repo-server -n argocd -p '{\"spec\": {\"template\":{\"metadata\":{\"annotations\":{\"prometheus.io/scrape\":\"true\",\"prometheus.io/port\": \"8084\",\"prometheus.io/path\": \"metrics\"}}}} }'`",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/argocd",
+    "id": "03b4a3b9-3a59-4603-91dd-6b0ced1d62de",
+    "level": "NEW_RELIC",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/argocd/logo.png",
+    "summary": "Displays the performance and availability of the Argo CD platform within Kubernetes.",
+    "websiteUrl": null,
+    "keywords": [
+      "argocd",
+      "helm",
+      "git",
+      "kubernetes",
+      "k8s",
+      "cd",
+      "continuous deployment",
+      "argo",
+      "prometheus",
+      "remote_write",
+      "promql",
+      "grafana"
+    ],
+    "authors": [
+      "New Relic",
+      "Brad Schmitt"
+    ],
+    "dashboards": [
+      {
+        "name": "Argo CD (Prometheus)",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/argocd-dashboard/argocd_dashboard_1.jpg",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/argocd-dashboard/argocd_dashboard_2.jpg",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/argocd-dashboard/argocd_dashboard_3.jpg",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/argocd-dashboard/argocd_dashboard_4.jpg"
+        ]
+      }
+    ],
+    "alerts": [
+      {
+        "name": "Argo CD App Degraded",
+        "details": "An alert will trigger if an Argo CD app is in an unhealthy state for more than 5 minutes.",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "Argo CD App OutOfSync",
+        "details": "A Warning alert will trigger if an Argo CD app is in an OutOfSync state for more than 5 minutes.",
+        "type": "STATIC",
+        "url": null
+      }
+    ],
+    "documentation": [
+      {
+        "name": "Argo CD Integration Docs",
+        "description": "New Relic documentation for the Argo CD integration including installation, configuration, and how to query the metrics.\n",
+        "url": "https://docs.newrelic.com/docs/infrastructure/prometheus-integrations/integrations-list/argocd-integration"
+      },
+      {
+        "name": "Argo CD Metrics Reference",
+        "description": "Argo CD Prometheus Metric Reference\n",
+        "url": "https://argo-cd.readthedocs.io/en/stable/operator-manual/metrics/"
+      },
+      {
+        "name": "Prometheus Installation Docs",
+        "description": "Use Prometheus remote_write or Prometheus Agent\n",
+        "url": "https://docs.newrelic.com/docs/infrastructure/prometheus-integrations/get-started/send-prometheus-metric-data-new-relic/"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "Prometheus remote write",
+        "id": "setup-prometheus"
+      },
+      {
+        "name": "Prometheus Agent Mode",
+        "id": "setup-prometheus-agent-mode"
       }
     ]
   },
