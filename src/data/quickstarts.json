@@ -445,53 +445,6 @@
     ]
   },
   {
-    "title": "MongoDB (Prometheus)",
-    "name": "mongodb-prometheus",
-    "description": "## MongoDB Monitoring\n\nMongoDB enables the unlimited virtual scaling of applications. Utilities like mongostat and mongotop offer immediate results but fail to provide insights into trends in a highly graphical visual dashboard. MongoDB dashboards provide insights into key metrics like connections saturation, oplog size, query and document operations, databases and indexes size, collections and transactions latency, replica set and members status. \n\nAvoid slow queries with  proper indexes that impact performance. Instantly monitor your entire MongoDB database with our instant observability kit or the MongoDB free monitoring tool.  \n\nThe critical differences between MongoDB free monitoring and monitoring MongoDB with New Relic’s instant observability quickstart are efficiency, usability, scope, and cost. MongoDB free monitoring focuses on standalone instances and replica sets. Data collected on disk utilization, memory, and operation execution times are uploaded periodically. \n\n\n### What’s Included?\n\nNew Relic + MongoDB quickstart - New Relic’s instant observability quickstart provides multiple metrics related to instances, replica sets, members, databases, and collections.\n\nNew Relic’s MongoDB quickstart contains a dashboard with meaningful insights, including:\n- Predefined dashboard filters by Cluster, databases, collections, replica sets, and members.\n- Connections saturation, operations by type, databases objects and size, indexes size, commands latency and duration, replica set and member status, and more.\n\nMonitor MongoDB with New Relic to quickly gain improved distribution and increased visibility into real-time user and app response times, throughput and breakdown by component and layer, and long-term data trends over time.  \n\n### Value of MongoDB Quickstarts\n\n[MongoDB performance monitoring with New Relic](https://docs.newrelic.com/docs/infrastructure/host-integrations/host-integrations-list/mongodb/mongodb-monitoring-integration-new/) offers advanced features, including:\n- Obtain app performance insights.\n- Create custom queries and charts of your data integrations.\n- Filter and analyze configuration data and metrics in Infrastructure UI.\n\nNew Relic’s instant observability quickstart helps developers reduce administrative overheads and accelerate time to value. As New Relic is SaaS-based, you also don’t have to worry about maintenance or onboarding.",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/mongodb-prometheus",
-    "id": "04f45b0a-e326-4095-be0e-850de867982e",
-    "level": "NEW_RELIC",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/mongodb-prometheus/logo.jpeg",
-    "summary": "New Relic's MongoDB quickstart provides insights including total commands, requests per second, and database size. Install the quickstart to better understand utilization of resources and monitor performance issues.",
-    "websiteUrl": null,
-    "keywords": [
-      "infrastructure",
-      "database",
-      "featured",
-      "prometheus"
-    ],
-    "authors": [
-      "New Relic"
-    ],
-    "dashboards": [
-      {
-        "name": "MongoDB (Prometheus)",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/mongodb-prometheus/mongodb01.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/mongodb-prometheus/mongodb02.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/mongodb-prometheus/mongodb03.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/mongodb-prometheus/mongodb04.png"
-        ]
-      }
-    ],
-    "alerts": [],
-    "documentation": [
-      {
-        "name": "MongoDB",
-        "description": "Open source, document-oriented database where you store data in JSON-like files with dynamic schemas.\n",
-        "url": "https://docs.newrelic.com/docs/infrastructure/host-integrations/host-integrations-list/mongodb/mongodb-monitoring-integration-new/"
-      }
-    ],
-    "installPlans": [
-      {
-        "name": "MongoDB (Prometheus)",
-        "id": "mongodb-prometheus-integration-docs"
-      }
-    ]
-  },
-  {
     "title": "Slack Notifications",
     "name": "slack-notifications",
     "description": "Slack is a a messaging app for business that connects people to the information that they need.\n\nIntegrate New Relic with Slack to send notification messages to your Slack channels.\n\n[Check out our documentation](https://docs.newrelic.com/docs/alerts-applied-intelligence/notifications/notification-integrations/#slack) to set up a Slack notification channel and provide fast and consistent ways for the right personnel to be notified about incidents",
@@ -857,6 +810,71 @@
     ]
   },
   {
+    "title": "Lighttpd",
+    "name": "lighttpd",
+    "description": "## Comprehensive monitoring for your lighttpd server\n\nLighttpd is an open-source web server designed for high-performance situations while staying standards-compliant, secure, and adaptable.\n\n### Why monitor your lighttpd server?\n\nLighttpd monitoring provides important information to help you construct a complete picture of your web server's performance. This performance data includes uptime, network in bytes and packets, number of connections, and more.\n\n### What’s included?\n\nWhen you monitor your lighttpd server with New Relic, you get immediate full-stack observability, including:\n- Alerts on things like average number of connections, average number of requests and high memory usage.\n- Dashboards to monitor crucial performance metrics such as uptime, connection state handle request, connection state still alive, networks, requests per second, and more.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/lighttpd",
+    "id": "c51dca70-14f4-4c1b-b0af-c2576b48f39f",
+    "level": "NEW_RELIC",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/lighttpd/logo.png",
+    "summary": "With our infrastructure agent and Flex configuration setup, you can monitor and validate your lighttpd processes right out of the box: analyze and capture your server's performance data.",
+    "websiteUrl": null,
+    "keywords": [
+      "Lighttpd",
+      "web server",
+      "infrastructure"
+    ],
+    "authors": [
+      "New Relic"
+    ],
+    "dashboards": [
+      {
+        "name": "Lighttpd",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/lighttpd/lighttpd01.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/lighttpd/lighttpd02.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/lighttpd/lighttpd03.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/lighttpd/lighttpd04.png"
+        ]
+      }
+    ],
+    "alerts": [
+      {
+        "name": "Average Number of Connections",
+        "details": "This alert is triggered when the average number of connections are above 6000 for at least 2 minutes.",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "Average Number of Requests for 5 seconds",
+        "details": "This alert is triggered when the average number of requests for 5 seconds are above 6000 for at least 5 minutes.",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "High Memory Usage",
+        "details": "This alert is triggered when the memory usage is above 90% for at least 5 minutes.",
+        "type": "STATIC",
+        "url": null
+      }
+    ],
+    "documentation": [
+      {
+        "name": "Lighttpd",
+        "description": "To collect data and deliver it to New Relic, integrate your lighttpd processes with our infrastructure agent and Flex configuration.\n",
+        "url": "https://docs.newrelic.com/docs/infrastructure/host-integrations/host-integrations-list/lighttpd-integration/"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "Guided install",
+        "id": "guided-install"
+      }
+    ]
+  },
+  {
     "title": "Logs Analysis Dashboard",
     "name": "log-analysis",
     "description": "The logs analysis dashboard allows you to get deep visibility into the ingestion of your logs. With this panel, you will be able to identify the services and host that send the most logs, which types of serverity are being sent, the cost for each of the attributes and also if the essential attributes are being sent for the ccorrelation between services and logs, such as: service name, log in context and hostname.",
@@ -944,6 +962,53 @@
       {
         "name": "Browser",
         "id": "browser-docs"
+      }
+    ]
+  },
+  {
+    "title": "MongoDB (Prometheus)",
+    "name": "mongodb-prometheus",
+    "description": "## MongoDB Monitoring\n\nMongoDB enables the unlimited virtual scaling of applications. Utilities like mongostat and mongotop offer immediate results but fail to provide insights into trends in a highly graphical visual dashboard. MongoDB dashboards provide insights into key metrics like connections saturation, oplog size, query and document operations, databases and indexes size, collections and transactions latency, replica set and members status. \n\nAvoid slow queries with  proper indexes that impact performance. Instantly monitor your entire MongoDB database with our instant observability kit or the MongoDB free monitoring tool.  \n\nThe critical differences between MongoDB free monitoring and monitoring MongoDB with New Relic’s instant observability quickstart are efficiency, usability, scope, and cost. MongoDB free monitoring focuses on standalone instances and replica sets. Data collected on disk utilization, memory, and operation execution times are uploaded periodically. \n\n\n### What’s Included?\n\nNew Relic + MongoDB quickstart - New Relic’s instant observability quickstart provides multiple metrics related to instances, replica sets, members, databases, and collections.\n\nNew Relic’s MongoDB quickstart contains a dashboard with meaningful insights, including:\n- Predefined dashboard filters by Cluster, databases, collections, replica sets, and members.\n- Connections saturation, operations by type, databases objects and size, indexes size, commands latency and duration, replica set and member status, and more.\n\nMonitor MongoDB with New Relic to quickly gain improved distribution and increased visibility into real-time user and app response times, throughput and breakdown by component and layer, and long-term data trends over time.  \n\n### Value of MongoDB Quickstarts\n\n[MongoDB performance monitoring with New Relic](https://docs.newrelic.com/docs/infrastructure/host-integrations/host-integrations-list/mongodb/mongodb-monitoring-integration-new/) offers advanced features, including:\n- Obtain app performance insights.\n- Create custom queries and charts of your data integrations.\n- Filter and analyze configuration data and metrics in Infrastructure UI.\n\nNew Relic’s instant observability quickstart helps developers reduce administrative overheads and accelerate time to value. As New Relic is SaaS-based, you also don’t have to worry about maintenance or onboarding.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/mongodb-prometheus",
+    "id": "04f45b0a-e326-4095-be0e-850de867982e",
+    "level": "NEW_RELIC",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/mongodb-prometheus/logo.jpeg",
+    "summary": "New Relic's MongoDB quickstart provides insights including total commands, requests per second, and database size. Install the quickstart to better understand utilization of resources and monitor performance issues.",
+    "websiteUrl": null,
+    "keywords": [
+      "infrastructure",
+      "database",
+      "featured",
+      "prometheus"
+    ],
+    "authors": [
+      "New Relic"
+    ],
+    "dashboards": [
+      {
+        "name": "MongoDB (Prometheus)",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/mongodb-prometheus/mongodb01.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/mongodb-prometheus/mongodb02.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/mongodb-prometheus/mongodb03.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/mongodb-prometheus/mongodb04.png"
+        ]
+      }
+    ],
+    "alerts": [],
+    "documentation": [
+      {
+        "name": "MongoDB",
+        "description": "Open source, document-oriented database where you store data in JSON-like files with dynamic schemas.\n",
+        "url": "https://docs.newrelic.com/docs/infrastructure/host-integrations/host-integrations-list/mongodb/mongodb-monitoring-integration-new/"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "MongoDB (Prometheus)",
+        "id": "mongodb-prometheus-integration-docs"
       }
     ]
   },
@@ -1231,17 +1296,6 @@
     ],
     "dashboards": [
       {
-        "name": "Kubernetes / Kubelet",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/kubernetes-prometheus-kubelet/kubernetes-prometheus-kubelet01.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/kubernetes-prometheus-kubelet/kubernetes-prometheus-kubelet02.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/kubernetes-prometheus-kubelet/kubernetes-prometheus-kubelet03.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/kubernetes-prometheus-kubelet/kubernetes-prometheus-kubelet04.png"
-        ]
-      },
-      {
         "name": "Kubernetes / Compute Resources",
         "description": null,
         "url": null,
@@ -1251,19 +1305,30 @@
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/kubernetes-prometheus-compute-resources/kubernetes-prometheus-compute-resources03.png",
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/kubernetes-prometheus-compute-resources/kubernetes-prometheus-compute-resources04.png"
         ]
+      },
+      {
+        "name": "Kubernetes / Kubelet",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/kubernetes-prometheus-kubelet/kubernetes-prometheus-kubelet01.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/kubernetes-prometheus-kubelet/kubernetes-prometheus-kubelet02.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/kubernetes-prometheus-kubelet/kubernetes-prometheus-kubelet03.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/kubernetes-prometheus-kubelet/kubernetes-prometheus-kubelet04.png"
+        ]
       }
     ],
     "alerts": [],
     "documentation": [
       {
-        "name": "Kubernetes Prometheus agent",
-        "description": "New Relic's Prometheus agent is a thin wrapper on top of Prometheus server to run it in agent mode. With this integration, you can create a YAML configuration file used by Prometheus that's ready to send metrics to New Relic.\n",
-        "url": "https://docs.newrelic.com/docs/infrastructure/prometheus-integrations/install-configure-prometheus-agent/install-prometheus-agent/"
-      },
-      {
         "name": "Kubernetes integration",
         "description": "The New Relic Kubernetes integration has multiple components that work together to give you end-to-end observability across your clusters. While you have the flexibility to deploy the components that you prefer, to achieve full observability, you need to install the complete package to monitor all metrics. \n",
         "url": "https://docs.newrelic.com/docs/kubernetes-pixie/kubernetes-integration/get-started/introduction-kubernetes-integration/"
+      },
+      {
+        "name": "Kubernetes Prometheus agent",
+        "description": "New Relic's Prometheus agent is a thin wrapper on top of Prometheus server to run it in agent mode. With this integration, you can create a YAML configuration file used by Prometheus that's ready to send metrics to New Relic.\n",
+        "url": "https://docs.newrelic.com/docs/infrastructure/prometheus-integrations/install-configure-prometheus-agent/install-prometheus-agent/"
       },
       {
         "name": "Kubernetes Prometheus agent REQUIRED configuration",
@@ -1521,14 +1586,14 @@
     "alerts": [],
     "documentation": [
       {
-        "name": "Implementation guide",
-        "description": "Explains what quality foundation is and how to apply it\n",
-        "url": "https://docs.newrelic.com/docs/new-relic-solutions/observability-maturity/customer-experience/quality-foundation-implementation-guide"
-      },
-      {
         "name": "Install README",
         "description": "Guides you on how to customize the dashboard once you've installed it\n",
         "url": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/oma-qf#readme"
+      },
+      {
+        "name": "Implementation guide",
+        "description": "Explains what quality foundation is and how to apply it\n",
+        "url": "https://docs.newrelic.com/docs/new-relic-solutions/observability-maturity/customer-experience/quality-foundation-implementation-guide"
       }
     ],
     "installPlans": [
@@ -3558,14 +3623,14 @@
     ],
     "alerts": [
       {
-        "name": "Memory Usage",
-        "details": "This alert is triggered when Memory usage is above 90%",
+        "name": "Apdex Score",
+        "details": "This alert is triggered when the Apdex score is below 0.5 for 5 minutes",
         "type": "STATIC",
         "url": null
       },
       {
-        "name": "Apdex Score",
-        "details": "This alert is triggered when the Apdex score is below 0.5 for 5 minutes",
+        "name": "Memory Usage",
+        "details": "This alert is triggered when Memory usage is above 90%",
         "type": "STATIC",
         "url": null
       },
@@ -3620,6 +3685,91 @@
       {
         "name": "Azure-Infrastructure-Monitoring",
         "id": "azure-infrastructure-monitoring"
+      }
+    ]
+  },
+  {
+    "title": "MERN Stack",
+    "name": "mern-stack",
+    "description": "## Comprehensive MERN stack monitoring system:\nMERN is a free and open-source JavaScript software stack for building dynamic web sites and web applications. Each of these 4 powerful technologies provides an end-to-end framework for the developers to work in and each of these technologies play a big part in the development of web applications.\n\n## What should you look for in a MERN dashboard?\nMetrics of MongoDB, i.e. number of active connections, database details, usage time and many more.\nMetrics of ExpressJS, NodeJS, i.e. number of web transactions, top transactions and the error transactions, memory usage and many more.\nMetrics of ReactJS, i.e. number of viewed urls, page views by city, ajax requests and many more. You are also free to create your own chart by using the stored metrics.\n\n## What’s included in the MERN quickstart?\nInstall this quickstart to install preconfigured observability solutions:\n- Multiple high-value alerts, including page views by city and ajax requests\n- Informative dashboards (Top transactions, Error transactions, and more)",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/mern",
+    "id": "ef98b152-9ccc-4e9b-8fc6-0d3b3215faeb",
+    "level": "NEW_RELIC",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/mern/logo.png",
+    "summary": "This MERN quickstart allows you to monitor a MERN stack (MongoDB, ExpressJS, ReactJS, NodeJS).\nMERN stack is a full stack software development kit. It is used to develop web applications. MERN is utilized by developers and businesses worldwide.\nOur MERN integration includes a specific dashboard to get observability for an entire MERN stack.",
+    "websiteUrl": null,
+    "keywords": [
+      "MERN",
+      "MongoDB",
+      "ExpressJS",
+      "ReactJS",
+      "NodeJS",
+      "Fullstack application monitoring",
+      "browser agent",
+      "language agent"
+    ],
+    "authors": [
+      "New Relic",
+      "Phaneendra Kosanam"
+    ],
+    "dashboards": [
+      {
+        "name": "MExN",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/mexn/mexn01.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/mexn/mexn02.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/mexn/mexn03.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/mexn/mexn04.png"
+        ]
+      }
+    ],
+    "alerts": [
+      {
+        "name": "First Contentful Paint",
+        "details": "This alert is triggered when the first contentful paint takes more than 3 seconds for 5 minutes.",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "High Memory Usage (MB)",
+        "details": "This alert is triggered when the server memory is higher than 90 MB for 5 minutes.",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "MongoDB Connection Count",
+        "details": "This alert is triggered when there are more than 2000 MongoDB connections created within a 5 minute period.",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "Transaction Errors",
+        "details": "This alert is triggered when 10 or more transactions fail for 5 minutes.",
+        "type": "STATIC",
+        "url": null
+      }
+    ],
+    "documentation": [
+      {
+        "name": "MERN stack installation documentation",
+        "description": "Integrate your MERN app and get your data into New Relic.\n",
+        "url": "https://docs.newrelic.com/docs/browser/browser-integrations/mexn-integration/"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "Browser",
+        "id": "browser-docs"
+      },
+      {
+        "name": "MongoDB",
+        "id": "mongodb-integration"
+      },
+      {
+        "name": "Node agent",
+        "id": "node-agent"
       }
     ]
   },
@@ -5413,12 +5563,6 @@
     ],
     "alerts": [
       {
-        "name": "Total Connections",
-        "details": "This alert is triggered when the total connections are less than 1 during 5 minutes.",
-        "type": "STATIC",
-        "url": null
-      },
-      {
         "name": "Heap Memory Usage",
         "details": "This alert is triggered when the used heap memory usage is higher than 100GB during 5 minutes.",
         "type": "STATIC",
@@ -5433,6 +5577,12 @@
       {
         "name": "Message Enqueue Rate",
         "details": "This alert is triggered when the messages sent are less than 1 during 5 minutes.",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "Total Connections",
+        "details": "This alert is triggered when the total connections are less than 1 during 5 minutes.",
         "type": "STATIC",
         "url": null
       }
@@ -5592,11 +5742,11 @@
     ],
     "dashboards": [
       {
-        "name": "Redis Enterprise Database CRDT",
+        "name": "Redis Enterprise Database Metrics",
         "description": null,
         "url": null,
         "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/active-active/active_active01.png"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/database/database01.png"
         ]
       },
       {
@@ -5608,11 +5758,11 @@
         ]
       },
       {
-        "name": "Redis Enterprise Database Metrics",
+        "name": "Redis Enterprise Database CRDT",
         "description": null,
         "url": null,
         "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/database/database01.png"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/active-active/active_active01.png"
         ]
       }
     ],
@@ -6207,6 +6357,44 @@
     ]
   },
   {
+    "title": "AlloyDB",
+    "name": "gcp-alloydb",
+    "description": "## What is AlloyDB?\n\nA fully managed PostgreSQL-compatible database service for your most demanding enterprise database workloads. AlloyDB combines the best of Google \nwith one of the most popular open-source database engines, PostgreSQL, for superior performance, scale, and availability.\n\n### Get started!\n\nStart monitoring AlloyDB by connecting Google Cloud Platform (GCP) to New Relic!\nCheck out our AlloyDB documentation to instrument your cloud service and manage the stability, scalability, and reliability of your systems with \nNew Relic's infrastructure monitoring capabilities.\n\n### More info\n\nCheck out the [documentation](https://docs.newrelic.com/docs/infrastructure/google-cloud-platform-integrations/gcp-integrations-list/google-alloydb-monitoring-integration/) to learn more about New Relic monitoring for AlloyDB.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/gcp/gcp-alloydb",
+    "id": "27c65f9b-b15d-4894-ab44-e8a45e045fb8",
+    "level": "NEW_RELIC",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/gcp/gcp-alloydb/icon.png",
+    "summary": "Monitor AlloyDB by connecting GCP to New Relic",
+    "websiteUrl": null,
+    "keywords": [
+      "gcp",
+      "google cloud platform",
+      "alloydb"
+    ],
+    "authors": [
+      "New Relic"
+    ],
+    "dashboards": [
+      {
+        "name": "AlloyDB",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/gcp-alloydb/gcp-alloydb.png"
+        ]
+      }
+    ],
+    "alerts": [],
+    "documentation": [
+      {
+        "name": "AlloyDB integration docs",
+        "description": "Monitor AlloyDB by connecting GCP to New Relic.",
+        "url": "https://docs.newrelic.com/docs/infrastructure/google-cloud-platform-integrations/gcp-integrations-list/google-alloydb-monitoring-integration/"
+      }
+    ],
+    "installPlans": []
+  },
+  {
     "title": "CloudFormation custom Resource that creates New Relic NRQL Alerts",
     "name": "newrelic-alert-cloudformation-resource",
     "description": "Custom CloudFormation Resource that allows for the creation of New Relic NRQL Alerts as part of a CloudFormation Stack.",
@@ -6601,11 +6789,11 @@
     ],
     "dashboards": [
       {
-        "name": "SAP Data Ingestion Estimate",
-        "description": "Get an overview of the data volume ingested from SAP systems",
+        "name": "SAP Data Collection Monitoring",
+        "description": "Monitor SAP data collection and ingestion process",
         "url": null,
         "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/nrm4sap-datasize/sap-size-estimate01.png"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/nrm4sap-datacollect/sap-data-collection01.png"
         ]
       },
       {
@@ -6618,11 +6806,11 @@
         ]
       },
       {
-        "name": "SAP Data Collection Monitoring",
-        "description": "Monitor SAP data collection and ingestion process",
+        "name": "SAP Data Ingestion Estimate",
+        "description": "Get an overview of the data volume ingested from SAP systems",
         "url": null,
         "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/nrm4sap-datacollect/sap-data-collection01.png"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/nrm4sap-datasize/sap-size-estimate01.png"
         ]
       }
     ],
@@ -9559,14 +9747,14 @@
     ],
     "alerts": [
       {
-        "name": "Argo CD App Degraded",
-        "details": "An alert will trigger if an Argo CD app is in an unhealthy state for more than 5 minutes.",
+        "name": "Argo CD App OutOfSync",
+        "details": "A Warning alert will trigger if an Argo CD app is in an OutOfSync state for more than 5 minutes.",
         "type": "STATIC",
         "url": null
       },
       {
-        "name": "Argo CD App OutOfSync",
-        "details": "A Warning alert will trigger if an Argo CD app is in an OutOfSync state for more than 5 minutes.",
+        "name": "Argo CD App Degraded",
+        "details": "An alert will trigger if an Argo CD app is in an unhealthy state for more than 5 minutes.",
         "type": "STATIC",
         "url": null
       }
@@ -9927,14 +10115,14 @@
         "url": "https://docs.newrelic.com/docs/infrastructure/prometheus-integrations/get-started/send-prometheus-metric-data-new-relic"
       },
       {
-        "name": "Etcd Integration Docs",
-        "description": "New Relic documentation for the Etcd integration including installation, configuration, and how to query the metrics.\n",
-        "url": "https://docs.newrelic.com/docs/infrastructure/prometheus-integrations/integrations-list/etcd-integration"
-      },
-      {
         "name": "Etcd Metrics Docs",
         "description": "Learn more about the Prometheus metrics available for Etcd",
         "url": "https://etcd.io/docs/v3.5/metrics/"
+      },
+      {
+        "name": "Etcd Integration Docs",
+        "description": "New Relic documentation for the Etcd integration including installation, configuration, and how to query the metrics.\n",
+        "url": "https://docs.newrelic.com/docs/infrastructure/prometheus-integrations/integrations-list/etcd-integration"
       }
     ],
     "installPlans": [
@@ -10789,14 +10977,14 @@
     ],
     "documentation": [
       {
-        "name": "Prometheus installation docs",
-        "description": "Use Prometheus remote_write or Prometheus Agent\n",
-        "url": "https://docs.newrelic.com/docs/infrastructure/prometheus-integrations/get-started/send-prometheus-metric-data-new-relic"
-      },
-      {
         "name": "NGINX Ingress Controller Prometheus Integration",
         "description": "NGINX Ingress Controller Prometheus Integration Documentation\n",
         "url": "https://docs.newrelic.com/docs/infrastructure/prometheus-integrations/integrations-list/ingress-controller-integration/"
+      },
+      {
+        "name": "Prometheus installation docs",
+        "description": "Use Prometheus remote_write or Prometheus Agent\n",
+        "url": "https://docs.newrelic.com/docs/infrastructure/prometheus-integrations/get-started/send-prometheus-metric-data-new-relic"
       }
     ],
     "installPlans": [
@@ -11524,12 +11712,6 @@
     ],
     "alerts": [
       {
-        "name": "Transaction Errors",
-        "details": "This alert is triggered when the the transactions fail more than 10% of the time in 5 minutes.",
-        "type": "STATIC",
-        "url": null
-      },
-      {
         "name": "Apdex Score",
         "details": "This alert is triggered when the Apdex score is below 0.5 for 5 minutes",
         "type": "STATIC",
@@ -11538,6 +11720,12 @@
       {
         "name": "Memory Usage",
         "details": "This alert is triggered when Memory usage is above 90%",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "Transaction Errors",
+        "details": "This alert is triggered when the the transactions fail more than 10% of the time in 5 minutes.",
         "type": "STATIC",
         "url": null
       }
@@ -12525,14 +12713,14 @@
     ],
     "alerts": [
       {
-        "name": "High CPU Utilization",
-        "details": "This alert is triggered when the CPU Utilization is above 90%.",
+        "name": "Transaction Errors",
+        "details": "This alert is triggered when the the transactions fail more than 10% of the time in 5 minutes.",
         "type": "STATIC",
         "url": null
       },
       {
-        "name": "Transaction Errors",
-        "details": "This alert is triggered when the the transactions fail more than 10% of the time in 5 minutes.",
+        "name": "High CPU Utilization",
+        "details": "This alert is triggered when the CPU Utilization is above 90%.",
         "type": "STATIC",
         "url": null
       }
@@ -12852,14 +13040,14 @@
     ],
     "alerts": [
       {
-        "name": "Network Synthetic Latency",
-        "details": "This alert will trigger when a Kentik network synthetic test has average latency above 1000 ms for 600 seconds.  This is an indication of a very slow network path.",
+        "name": "Network Synthetic Jitter",
+        "details": "This alert will trigger when a Kentik network synthetic test has average jitter above 250 ms for 600 seconds.  This is an indication of a very unreliable network path.",
         "type": "STATIC",
         "url": null
       },
       {
-        "name": "Network Synthetic Jitter",
-        "details": "This alert will trigger when a Kentik network synthetic test has average jitter above 250 ms for 600 seconds.  This is an indication of a very unreliable network path.",
+        "name": "Network Synthetic Latency",
+        "details": "This alert will trigger when a Kentik network synthetic test has average latency above 1000 ms for 600 seconds.  This is an indication of a very slow network path.",
         "type": "STATIC",
         "url": null
       },
@@ -14368,20 +14556,14 @@
     ],
     "alerts": [
       {
-        "name": "Apdex Score",
-        "details": "This alert is triggered when the Apdex score is below 0.5 for 5 minutes.",
-        "type": "STATIC",
-        "url": null
-      },
-      {
         "name": "High CPU Utilization",
         "details": "This alert is triggered when the CPU Utilization is above 90%.",
         "type": "STATIC",
         "url": null
       },
       {
-        "name": "Transaction Errors",
-        "details": "This alert is triggered when the the transactions fail more than 10% of the time in 5 minutes.",
+        "name": "Apdex Score",
+        "details": "This alert is triggered when the Apdex score is below 0.5 for 5 minutes.",
         "type": "STATIC",
         "url": null
       },
@@ -14392,14 +14574,20 @@
         "url": null
       },
       {
-        "name": "Generation 2 Hits",
-        "details": "This alert is triggered when memory that survives garbage collection is more than 10 MB and not promoted.",
+        "name": "Transaction Errors",
+        "details": "This alert is triggered when the the transactions fail more than 10% of the time in 5 minutes.",
         "type": "STATIC",
         "url": null
       },
       {
         "name": "Generation 0 Hits",
         "details": "This alert is triggered when the memory that survives garbage collection is more than 256 KB and has been promoted from Generation 0 to Generation 1.",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "Generation 2 Hits",
+        "details": "This alert is triggered when memory that survives garbage collection is more than 10 MB and not promoted.",
         "type": "STATIC",
         "url": null
       },
@@ -18734,14 +18922,14 @@
     ],
     "alerts": [
       {
-        "name": "High CPU Utilization",
-        "details": "This alert is triggered when the CPU Utilization is above 90%.",
+        "name": "Apdex Score",
+        "details": "This alert is triggered when the Apdex score is below 0.5 for 5 minutes",
         "type": "STATIC",
         "url": null
       },
       {
-        "name": "Apdex Score",
-        "details": "This alert is triggered when the Apdex score is below 0.5 for 5 minutes",
+        "name": "High CPU Utilization",
+        "details": "This alert is triggered when the CPU Utilization is above 90%.",
         "type": "STATIC",
         "url": null
       },
@@ -20003,22 +20191,6 @@
     ],
     "dashboards": [
       {
-        "name": "Catchpoint-Recent Errors",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/catchpoint-recent-errors/Catchpoint-Recent_Errors.png"
-        ]
-      },
-      {
-        "name": "Catchpoint-Test Times",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/catchpoint-test-times/Catchpoint-Test_Times.png"
-        ]
-      },
-      {
         "name": "Catchpoint-Response Size",
         "description": null,
         "url": null,
@@ -20032,6 +20204,22 @@
         "url": null,
         "screenshots": [
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/catchpoint-overview/Catchpoint-Overview.png"
+        ]
+      },
+      {
+        "name": "Catchpoint-Test Times",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/catchpoint-test-times/Catchpoint-Test_Times.png"
+        ]
+      },
+      {
+        "name": "Catchpoint-Recent Errors",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/catchpoint-recent-errors/Catchpoint-Recent_Errors.png"
         ]
       }
     ],
@@ -20370,14 +20558,14 @@
     ],
     "documentation": [
       {
-        "name": "Kubernetes installation docs",
-        "description": "To view the Istio Quickstart, the Kubernetes New Relic integration with the Prometheus OpenMetrics Integration (POMI) must be installed prior.\n",
-        "url": "https://docs.newrelic.com/docs/integrations/host-integrations/host-integrations-list/kubernetes-monitoring-integration"
-      },
-      {
         "name": "Prometheus OpenMetrics Intergration (POMI) installation docs",
         "description": "To view the Istio Quickstart, the Kubernetes New Relic integration with the Prometheus OpenMetrics Integration (POMI) must be installed prior.\n",
         "url": "https://docs.newrelic.com/docs/infrastructure/prometheus-integrations/get-started/send-prometheus-metric-data-new-relic"
+      },
+      {
+        "name": "Kubernetes installation docs",
+        "description": "To view the Istio Quickstart, the Kubernetes New Relic integration with the Prometheus OpenMetrics Integration (POMI) must be installed prior.\n",
+        "url": "https://docs.newrelic.com/docs/integrations/host-integrations/host-integrations-list/kubernetes-monitoring-integration"
       }
     ],
     "installPlans": [
@@ -22634,14 +22822,14 @@
     ],
     "documentation": [
       {
-        "name": "CoreDNS Metrics Docs",
-        "description": "Learn more about the Prometheus metrics available for CoreDNS\n",
-        "url": "https://coredns.io/plugins/metrics/"
-      },
-      {
         "name": "CoreDNS Integration Docs",
         "description": "New Relic documentation for the CoreDNS integration including installation, configuration, and how to query the metrics.\n",
         "url": "https://docs.newrelic.com/docs/infrastructure/prometheus-integrations/integrations-list/core-dns-integration"
+      },
+      {
+        "name": "CoreDNS Metrics Docs",
+        "description": "Learn more about the Prometheus metrics available for CoreDNS\n",
+        "url": "https://coredns.io/plugins/metrics/"
       },
       {
         "name": "Prometheus Installation Docs",
@@ -23432,14 +23620,14 @@
     ],
     "alerts": [
       {
-        "name": "High duration",
-        "details": "This alert is triggered when the total duration of the web transaction is longer than 10 seconds during 5 minutes",
+        "name": "High error rate",
+        "details": "This alert is triggered when the error percentage of web transactions is higher than 5% during 5 minutes",
         "type": "STATIC",
         "url": null
       },
       {
-        "name": "High error rate",
-        "details": "This alert is triggered when the error percentage of web transactions is higher than 5% during 5 minutes",
+        "name": "High duration",
+        "details": "This alert is triggered when the total duration of the web transaction is longer than 10 seconds during 5 minutes",
         "type": "STATIC",
         "url": null
       },
@@ -26719,14 +26907,6 @@
     ],
     "dashboards": [
       {
-        "name": "On-Host Integrations Data Analysis",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/on-host-integrations-data-analysis/on-host-integrations-data-analysis.png"
-        ]
-      },
-      {
         "name": "AWS Integrations Data Ingest Analysis",
         "description": null,
         "url": null,
@@ -26748,6 +26928,14 @@
         "url": null,
         "screenshots": [
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/gcp-integrations-data-ingest-analysis/gcp-integrations-data-ingest-analysis.png"
+        ]
+      },
+      {
+        "name": "On-Host Integrations Data Analysis",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/on-host-integrations-data-analysis/on-host-integrations-data-analysis.png"
         ]
       },
       {
@@ -27670,14 +27858,6 @@
     ],
     "dashboards": [
       {
-        "name": "Browser Overview",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/browser-overview/browser_overview.png"
-        ]
-      },
-      {
         "name": "JavaScript Errors",
         "description": null,
         "url": null,
@@ -27699,6 +27879,14 @@
         "url": null,
         "screenshots": [
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/browser-pages-dashboard/browser_pages_dashboard.png"
+        ]
+      },
+      {
+        "name": "Browser Overview",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/browser-overview/browser_overview.png"
         ]
       }
     ],
@@ -28333,6 +28521,11 @@
     ],
     "documentation": [
       {
+        "name": "Prometheus Installation Docs",
+        "description": "Use Prometheus remote_write or Prometheus Agent\n",
+        "url": "https://docs.newrelic.com/docs/infrastructure/prometheus-integrations/get-started/send-prometheus-metric-data-new-relic/"
+      },
+      {
         "name": "Harbor Integration Docs",
         "description": "New Relic documentation for the Harbor integration including installation, configuration, and how to query the metrics.\n",
         "url": "https://docs.newrelic.com/docs/infrastructure/prometheus-integrations/integrations-list/harbor-integration/"
@@ -28341,11 +28534,6 @@
         "name": "Harbor Metrics Docs",
         "description": "Learn more about the Prometheus metrics available for Harbor\n",
         "url": "https://goharbor.io/docs/2.3.0/administration/metrics/"
-      },
-      {
-        "name": "Prometheus Installation Docs",
-        "description": "Use Prometheus remote_write or Prometheus Agent\n",
-        "url": "https://docs.newrelic.com/docs/infrastructure/prometheus-integrations/get-started/send-prometheus-metric-data-new-relic/"
       }
     ],
     "installPlans": [
