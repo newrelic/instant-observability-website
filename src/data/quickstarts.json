@@ -630,82 +630,6 @@
     ]
   },
   {
-    "title": "Velero (Prometheus)",
-    "name": "velero-prometheus",
-    "description": "## A comprehensive Velero monitoring system\n\nVelero is a tool used to backup and restore Kubernetes cluster resources and persistent volumes.\n\nNew Relic provides a Velero Quickstart which allows you to monitor your Velero schedules and jobs with ease.\n\n### New Relic - a perfect tool to monitor Velero using Prometheus.\n\nVelero has become an important part of Kubernetes architectures, providing features to ensure continuity of state during disaster recover, and ease the burden of systems migration. \n\nUsing the [New Relic Prometheus Remote-Write](https://docs.newrelic.com/docs/infrastructure/prometheus-integrations/install-configure-remote-write/set-your-prometheus-remote-write-integration/) integration you can deliver your critical Velero metrics from your internally supported instance of Prometheus directly to New Relic where the rest of your observability data resides.\n\n### New Relic Velero quickstart features\n\nOur Velero Quickstart include out-of-the-box dashboards and alerts, including data such as:\n- Overview Schedules (# successes, # failures) + charts with duration and sizes of backups \n\n### Value of the Velero (Prometheus) quickstart\n\nThe Velero (Prometheus) Quickstart provides a visual snapshot of all the key health information related to your Velero clients and the Kubernetes Clusters they are helping to maintain. Monitoring is made easy via the clear, color-coded dashboard which showcases schedule execution and much more.",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/velero-prometheus",
-    "id": "dbca2b58-f754-49a2-af7f-0ceca8a9978a",
-    "level": "NEW_RELIC",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/velero-prometheus/logo.png",
-    "summary": "New Relic provides crucial tools for monitoring your Velero clients using the Prometheus Remote-Write integration. It supports features such as a visual dashboard complete with charts detailing all critical performance and health metrics relevant to your Velero system.",
-    "websiteUrl": null,
-    "keywords": [
-      "velero",
-      "prometheus",
-      "remote",
-      "write",
-      "kubernetes",
-      "disaster recovery"
-    ],
-    "authors": [
-      "New Relic Labs"
-    ],
-    "dashboards": [
-      {
-        "name": "Velero-Prometheus",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/velero-prometheus/velero-prometheus-2.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/velero-prometheus/velero-prometheus.png"
-        ]
-      }
-    ],
-    "alerts": [
-      {
-        "name": "Velero Prometheus Backup Duration Baseline",
-        "details": "Alert when the duration of the backup changes significantly from its baseline.",
-        "type": "BASELINE",
-        "url": null
-      },
-      {
-        "name": "Velero Prometheus Backup Failure",
-        "details": "This alert is triggered when Velero indicates a backup has failed.",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "Velero Prometheus Backup Size",
-        "details": "Alert when the duration of the backup size changes significantly from its baseline.",
-        "type": "BASELINE",
-        "url": null
-      }
-    ],
-    "documentation": [
-      {
-        "name": "Prometheus Installation Docs",
-        "description": "Use Prometheus remote_write or Prometheus Agent\n",
-        "url": "https://docs.newrelic.com/docs/infrastructure/prometheus-integrations/get-started/send-prometheus-metric-data-new-relic/"
-      },
-      {
-        "name": "Velero Integration Docs",
-        "description": "New Relic documentation for the Velero integration including installation, configuration, and how to query the metrics.\n",
-        "url": "https://docs.newrelic.com/docs/infrastructure/prometheus-integrations/integrations-list/velero-integration"
-      },
-      {
-        "name": "Velero Metrics Reference",
-        "description": "Velero Prometheus Metric Reference\n",
-        "url": "https://github.com/vmware-tanzu/velero/blob/main/pkg/metrics/metrics.go#L30"
-      }
-    ],
-    "installPlans": [
-      {
-        "name": "Prometheus remote write",
-        "id": "setup-prometheus"
-      }
-    ]
-  },
-  {
     "title": "Synthetics Private Locations",
     "name": "synthetics-private-locations",
     "description": "## What are private locations?\n\nIn synthetic monitoring, a private location is a collection of private minions. A minion is a containerized application that receives and manages jobs set up through the Synthetics UI. For details see our [Private locations overview](https://docs.newrelic.com/docs/synthetics/synthetic-monitoring/private-locations/private-locations-overview-monitor-internal-sites-add-new-locations).\n\n### New Relic Synthetics Containerized Private Minion\n\nThe Containerized Private Minion (CPM) runs on your private network to monitor internal endpoints not accessible from the Internet. Each CPM is configured to process jobs for a specific private location identified by the private location key. For CPM installation instructions see [Install containerized private minions](https://docs.newrelic.com/docs/synthetics/synthetic-monitoring/private-locations/install-containerized-private-minions-cpms).\n\n### Why should you monitor your private locations and CPMs?\n\nMonitoring private locations is critical to knowing when the CPM might be struggling to process jobs. Some common issues include:\n\n- DNS/firewall/proxy blocking connections on your local network\n- overloaded CPM\n- mis-configured CPM\n- under-provisioned host\n- internal engine errors.\n\nIf the CPM fails to process jobs in a timely manner, it can lead to gaps in reported results, false positive alerts, or delayed results.\n\nDownload and install the New Relic Synthetics Private Locations quickstart today to be informed about the health of your private locations and CPMs.",
@@ -806,71 +730,6 @@
       {
         "name": "AWS-CloudWatch-Metric-Streams",
         "id": "aws-cloudwatch-metric-streams"
-      }
-    ]
-  },
-  {
-    "title": "Lighttpd",
-    "name": "lighttpd",
-    "description": "## Comprehensive monitoring for your lighttpd server\n\nLighttpd is an open-source web server designed for high-performance situations while staying standards-compliant, secure, and adaptable.\n\n### Why monitor your lighttpd server?\n\nLighttpd monitoring provides important information to help you construct a complete picture of your web server's performance. This performance data includes uptime, network in bytes and packets, number of connections, and more.\n\n### What’s included?\n\nWhen you monitor your lighttpd server with New Relic, you get immediate full-stack observability, including:\n- Alerts on things like average number of connections, average number of requests and high memory usage.\n- Dashboards to monitor crucial performance metrics such as uptime, connection state handle request, connection state still alive, networks, requests per second, and more.",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/lighttpd",
-    "id": "c51dca70-14f4-4c1b-b0af-c2576b48f39f",
-    "level": "NEW_RELIC",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/lighttpd/logo.png",
-    "summary": "With our infrastructure agent and Flex configuration setup, you can monitor and validate your lighttpd processes right out of the box: analyze and capture your server's performance data.",
-    "websiteUrl": null,
-    "keywords": [
-      "Lighttpd",
-      "web server",
-      "infrastructure"
-    ],
-    "authors": [
-      "New Relic"
-    ],
-    "dashboards": [
-      {
-        "name": "Lighttpd",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/lighttpd/lighttpd01.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/lighttpd/lighttpd02.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/lighttpd/lighttpd03.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/lighttpd/lighttpd04.png"
-        ]
-      }
-    ],
-    "alerts": [
-      {
-        "name": "Average Number of Connections",
-        "details": "This alert is triggered when the average number of connections are above 6000 for at least 2 minutes.",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "Average Number of Requests for 5 seconds",
-        "details": "This alert is triggered when the average number of requests for 5 seconds are above 6000 for at least 5 minutes.",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "High Memory Usage",
-        "details": "This alert is triggered when the memory usage is above 90% for at least 5 minutes.",
-        "type": "STATIC",
-        "url": null
-      }
-    ],
-    "documentation": [
-      {
-        "name": "Lighttpd",
-        "description": "To collect data and deliver it to New Relic, integrate your lighttpd processes with our infrastructure agent and Flex configuration.\n",
-        "url": "https://docs.newrelic.com/docs/infrastructure/host-integrations/host-integrations-list/lighttpd-integration/"
-      }
-    ],
-    "installPlans": [
-      {
-        "name": "Guided install",
-        "id": "guided-install"
       }
     ]
   },
@@ -1140,56 +999,6 @@
     ]
   },
   {
-    "title": "CircleCI",
-    "name": "circleci",
-    "description": "## CircleCI Quickstart\n\nThe world’s best software teams use CircleCI to deliver quality code with confidence. As the largest continuous integration and delivery (CI/CD) platform, CircleCI empowers engineers to seamlessly take ideas to execution, at scale. Every feature of our platform is built to fine-tune the entire development process from start to finish.\n\nThis quickstart allows users to view analytical data about their CircleCI jobs within the New Relic dashboard to gain visibility into the performance and health of their continuous integration and deployment pipelines. \n\n### With the CircleCI quickstart you can:\n\n- Monitor real-time CI performance, activity, and health, or track over time.\n- Identify opportunities for optimization.\n\n### The CircleCI quickstart includes a dashboard where users can easily monitor:\n- Total Jobs Ran\n- Job Health (% success)\n- Projects Summary\n- Most Recent Failed Jobs\n- Jobs Ran Per Project\n\n### Requirements\nTo set up the integration, visit the [CircleCI Webhooks documentation](https://circleci.com/docs/2.0/webhooks/).\n\n### Contact us\nShow us how you’re using the quickstart for a chance to win a CircleCI swag kit! Join us on Discuss [here](https://discuss.circleci.com/t/circleci-quickstart-with-new-relic/44022).\nFor more information or support, please go to [support.circleci.com](https://support.circleci.com/)",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/circleci",
-    "id": "39109d3d-b1d8-4366-8ca9-b8925005f727",
-    "level": "COMMUNITY",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/circleci/logo.png",
-    "summary": "This integration allows users to view analytical data about their CircleCI jobs within the New Relic monitoring stack.",
-    "websiteUrl": null,
-    "keywords": [
-      "newrelic partner",
-      "devops",
-      "circleci",
-      "circle",
-      "cicd",
-      "featured",
-      "logs",
-      "NR1_addData",
-      "NR1_sys"
-    ],
-    "authors": [
-      "New Relic",
-      "Joseph Counts"
-    ],
-    "dashboards": [
-      {
-        "name": "CircleCI",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/circledashboard/circledashboard01.png"
-        ]
-      }
-    ],
-    "alerts": [],
-    "documentation": [
-      {
-        "name": "Forward CircleCI logs to New Relic",
-        "description": "How to set up a webhook to forward your CircleCI logs to New Relic",
-        "url": "https://docs.newrelic.com/docs/logs/forward-logs/circleci-logs/"
-      }
-    ],
-    "installPlans": [
-      {
-        "name": "CircleCi",
-        "id": "third-party-circleci"
-      }
-    ]
-  },
-  {
     "title": "Datazoom",
     "name": "datazoom",
     "description": "The Datazoom quickstart provides a fast and easy launching point into video metrics built on top of New Relic One dashboards, allowing you to gain insights about your viewers, content, ads and your platform's performance. Customize the dashboard to use only the metrics that fit your goals and easily edit metric calculations and tailor them to your needs.",
@@ -1241,6 +1050,120 @@
     ]
   },
   {
+    "title": "Lighttpd",
+    "name": "lighttpd",
+    "description": "## Comprehensive monitoring for your lighttpd server\n\nLighttpd is an open-source web server designed for high-performance situations while staying standards-compliant, secure, and adaptable.\n\n### Why monitor your lighttpd server?\n\nLighttpd monitoring provides important information to help you construct a complete picture of your web server's performance. This performance data includes uptime, network in bytes and packets, number of connections, and more.\n\n### What’s included?\n\nWhen you monitor your lighttpd server with New Relic, you get immediate full-stack observability, including:\n- Alerts on things like average number of connections, average number of requests and high memory usage.\n- Dashboards to monitor crucial performance metrics such as uptime, connection state handle request, connection state still alive, networks, requests per second, and more.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/lighttpd",
+    "id": "c51dca70-14f4-4c1b-b0af-c2576b48f39f",
+    "level": "NEW_RELIC",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/lighttpd/logo.png",
+    "summary": "With our infrastructure agent and Flex configuration setup, you can monitor and validate your lighttpd processes right out of the box: analyze and capture your server's performance data.",
+    "websiteUrl": null,
+    "keywords": [
+      "Lighttpd",
+      "web server",
+      "infrastructure"
+    ],
+    "authors": [
+      "New Relic"
+    ],
+    "dashboards": [
+      {
+        "name": "Lighttpd",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/lighttpd/lighttpd01.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/lighttpd/lighttpd02.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/lighttpd/lighttpd03.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/lighttpd/lighttpd04.png"
+        ]
+      }
+    ],
+    "alerts": [
+      {
+        "name": "Average Number of Connections",
+        "details": "This alert is triggered when the average number of connections are above 6000 for at least 2 minutes.",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "Average Number of Requests for 5 seconds",
+        "details": "This alert is triggered when the average number of requests for 5 seconds are above 6000 for at least 5 minutes.",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "High Memory Usage",
+        "details": "This alert is triggered when the memory usage is above 90% for at least 5 minutes.",
+        "type": "STATIC",
+        "url": null
+      }
+    ],
+    "documentation": [
+      {
+        "name": "Lighttpd",
+        "description": "Integrate your lighttpd processes with our infrastructure agent and Flex configuration to collect data and deliver it to New Relic.\n",
+        "url": "https://docs.newrelic.com/docs/infrastructure/host-integrations/host-integrations-list/lighttpd-integration/"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "lighttpd",
+        "id": "lighttpd"
+      }
+    ]
+  },
+  {
+    "title": "CircleCI",
+    "name": "circleci",
+    "description": "## CircleCI Quickstart\n\nThe world’s best software teams use CircleCI to deliver quality code with confidence. As the largest continuous integration and delivery (CI/CD) platform, CircleCI empowers engineers to seamlessly take ideas to execution, at scale. Every feature of our platform is built to fine-tune the entire development process from start to finish.\n\nThis quickstart allows users to view analytical data about their CircleCI jobs within the New Relic dashboard to gain visibility into the performance and health of their continuous integration and deployment pipelines. \n\n### With the CircleCI quickstart you can:\n\n- Monitor real-time CI performance, activity, and health, or track over time.\n- Identify opportunities for optimization.\n\n### The CircleCI quickstart includes a dashboard where users can easily monitor:\n- Total Jobs Ran\n- Job Health (% success)\n- Projects Summary\n- Most Recent Failed Jobs\n- Jobs Ran Per Project\n\n### Requirements\nTo set up the integration, visit the [CircleCI Webhooks documentation](https://circleci.com/docs/2.0/webhooks/).\n\n### Contact us\nShow us how you’re using the quickstart for a chance to win a CircleCI swag kit! Join us on Discuss [here](https://discuss.circleci.com/t/circleci-quickstart-with-new-relic/44022).\nFor more information or support, please go to [support.circleci.com](https://support.circleci.com/)",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/circleci",
+    "id": "39109d3d-b1d8-4366-8ca9-b8925005f727",
+    "level": "COMMUNITY",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/circleci/logo.png",
+    "summary": "This integration allows users to view analytical data about their CircleCI jobs within the New Relic monitoring stack.",
+    "websiteUrl": null,
+    "keywords": [
+      "newrelic partner",
+      "devops",
+      "circleci",
+      "circle",
+      "cicd",
+      "logs",
+      "NR1_addData",
+      "NR1_sys"
+    ],
+    "authors": [
+      "New Relic",
+      "Joseph Counts"
+    ],
+    "dashboards": [
+      {
+        "name": "CircleCI",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/circledashboard/circledashboard01.png"
+        ]
+      }
+    ],
+    "alerts": [],
+    "documentation": [
+      {
+        "name": "Forward CircleCI logs to New Relic",
+        "description": "How to set up a webhook to forward your CircleCI logs to New Relic",
+        "url": "https://docs.newrelic.com/docs/logs/forward-logs/circleci-logs/"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "CircleCi",
+        "id": "third-party-circleci"
+      }
+    ]
+  },
+  {
     "title": "Kamon",
     "name": "kamon",
     "description": "## What is Kamon?\nKamon provides an instrumentation toolkit that specializes in automatic instrumentation of Scala and Akka applications. It consists of APIs for metric and tracing instrumentation and automatic instrumentation modules that create application metrics and distributed traces.\n\n## Get started!\n\nNew Relic's Kamon reporter is included in the Kamon Bundle, and you can configure it to send telemetry data from your Kamon-instrumented applications to your New Relic account.\nFollow the documentation for the [New Relic's Kamon reporter](https://docs.newrelic.com/docs/integrations/open-source-telemetry-integrations/kamon/kamon-reporter/) to get started!",
@@ -1269,6 +1192,83 @@
       {
         "name": "Kamon",
         "id": "third-party-kamon"
+      }
+    ]
+  },
+  {
+    "title": "Velero (Prometheus)",
+    "name": "velero-prometheus",
+    "description": "## A comprehensive Velero monitoring system\n\nVelero is a tool used to backup and restore Kubernetes cluster resources and persistent volumes.\n\nNew Relic provides a Velero Quickstart which allows you to monitor your Velero schedules and jobs with ease.\n\n### New Relic - a perfect tool to monitor Velero using Prometheus.\n\nVelero has become an important part of Kubernetes architectures, providing features to ensure continuity of state during disaster recover, and ease the burden of systems migration. \n\nUsing the [New Relic Prometheus Remote-Write](https://docs.newrelic.com/docs/infrastructure/prometheus-integrations/install-configure-remote-write/set-your-prometheus-remote-write-integration/) integration you can deliver your critical Velero metrics from your internally supported instance of Prometheus directly to New Relic where the rest of your observability data resides.\n\n### New Relic Velero quickstart features\n\nOur Velero Quickstart include out-of-the-box dashboards and alerts, including data such as:\n- Overview Schedules (# successes, # failures) + charts with duration and sizes of backups \n\n### Value of the Velero (Prometheus) quickstart\n\nThe Velero (Prometheus) Quickstart provides a visual snapshot of all the key health information related to your Velero clients and the Kubernetes Clusters they are helping to maintain. Monitoring is made easy via the clear, color-coded dashboard which showcases schedule execution and much more.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/velero-prometheus",
+    "id": "dbca2b58-f754-49a2-af7f-0ceca8a9978a",
+    "level": "NEW_RELIC",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/velero-prometheus/logo.png",
+    "summary": "New Relic provides crucial tools for monitoring your Velero clients using the Prometheus Remote-Write integration. It supports features such as a visual dashboard complete with charts detailing all critical performance and health metrics relevant to your Velero system.",
+    "websiteUrl": null,
+    "keywords": [
+      "velero",
+      "prometheus",
+      "remote",
+      "write",
+      "kubernetes",
+      "disaster recovery",
+      "featured"
+    ],
+    "authors": [
+      "New Relic Labs"
+    ],
+    "dashboards": [
+      {
+        "name": "Velero-Prometheus",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/velero-prometheus/velero-prometheus-2.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/velero-prometheus/velero-prometheus.png"
+        ]
+      }
+    ],
+    "alerts": [
+      {
+        "name": "Velero Prometheus Backup Duration Baseline",
+        "details": "Alert when the duration of the backup changes significantly from its baseline.",
+        "type": "BASELINE",
+        "url": null
+      },
+      {
+        "name": "Velero Prometheus Backup Failure",
+        "details": "This alert is triggered when Velero indicates a backup has failed.",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "Velero Prometheus Backup Size",
+        "details": "Alert when the duration of the backup size changes significantly from its baseline.",
+        "type": "BASELINE",
+        "url": null
+      }
+    ],
+    "documentation": [
+      {
+        "name": "Prometheus Installation Docs",
+        "description": "Use Prometheus remote_write or Prometheus Agent\n",
+        "url": "https://docs.newrelic.com/docs/infrastructure/prometheus-integrations/get-started/send-prometheus-metric-data-new-relic/"
+      },
+      {
+        "name": "Velero Integration Docs",
+        "description": "New Relic documentation for the Velero integration including installation, configuration, and how to query the metrics.\n",
+        "url": "https://docs.newrelic.com/docs/infrastructure/prometheus-integrations/integrations-list/velero-integration"
+      },
+      {
+        "name": "Velero Metrics Reference",
+        "description": "Velero Prometheus Metric Reference\n",
+        "url": "https://github.com/vmware-tanzu/velero/blob/main/pkg/metrics/metrics.go#L30"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "Prometheus remote write",
+        "id": "setup-prometheus"
       }
     ]
   },
@@ -1321,14 +1321,14 @@
     "alerts": [],
     "documentation": [
       {
-        "name": "Kubernetes integration",
-        "description": "The New Relic Kubernetes integration has multiple components that work together to give you end-to-end observability across your clusters. While you have the flexibility to deploy the components that you prefer, to achieve full observability, you need to install the complete package to monitor all metrics. \n",
-        "url": "https://docs.newrelic.com/docs/kubernetes-pixie/kubernetes-integration/get-started/introduction-kubernetes-integration/"
-      },
-      {
         "name": "Kubernetes Prometheus agent",
         "description": "New Relic's Prometheus agent is a thin wrapper on top of Prometheus server to run it in agent mode. With this integration, you can create a YAML configuration file used by Prometheus that's ready to send metrics to New Relic.\n",
         "url": "https://docs.newrelic.com/docs/infrastructure/prometheus-integrations/install-configure-prometheus-agent/install-prometheus-agent/"
+      },
+      {
+        "name": "Kubernetes integration",
+        "description": "The New Relic Kubernetes integration has multiple components that work together to give you end-to-end observability across your clusters. While you have the flexibility to deploy the components that you prefer, to achieve full observability, you need to install the complete package to monitor all metrics. \n",
+        "url": "https://docs.newrelic.com/docs/kubernetes-pixie/kubernetes-integration/get-started/introduction-kubernetes-integration/"
       },
       {
         "name": "Kubernetes Prometheus agent REQUIRED configuration",
@@ -1586,14 +1586,14 @@
     "alerts": [],
     "documentation": [
       {
-        "name": "Install README",
-        "description": "Guides you on how to customize the dashboard once you've installed it\n",
-        "url": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/oma-qf#readme"
-      },
-      {
         "name": "Implementation guide",
         "description": "Explains what quality foundation is and how to apply it\n",
         "url": "https://docs.newrelic.com/docs/new-relic-solutions/observability-maturity/customer-experience/quality-foundation-implementation-guide"
+      },
+      {
+        "name": "Install README",
+        "description": "Guides you on how to customize the dashboard once you've installed it\n",
+        "url": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/oma-qf#readme"
       }
     ],
     "installPlans": [
@@ -3689,91 +3689,6 @@
     ]
   },
   {
-    "title": "MERN Stack",
-    "name": "mern-stack",
-    "description": "## Comprehensive MERN stack monitoring system:\nMERN is a free and open-source JavaScript software stack for building dynamic web sites and web applications. Each of these 4 powerful technologies provides an end-to-end framework for the developers to work in and each of these technologies play a big part in the development of web applications.\n\n## What should you look for in a MERN dashboard?\nMetrics of MongoDB, i.e. number of active connections, database details, usage time and many more.\nMetrics of ExpressJS, NodeJS, i.e. number of web transactions, top transactions and the error transactions, memory usage and many more.\nMetrics of ReactJS, i.e. number of viewed urls, page views by city, ajax requests and many more. You are also free to create your own chart by using the stored metrics.\n\n## What’s included in the MERN quickstart?\nInstall this quickstart to install preconfigured observability solutions:\n- Multiple high-value alerts, including page views by city and ajax requests\n- Informative dashboards (Top transactions, Error transactions, and more)",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/mern",
-    "id": "ef98b152-9ccc-4e9b-8fc6-0d3b3215faeb",
-    "level": "NEW_RELIC",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/mern/logo.png",
-    "summary": "This MERN quickstart allows you to monitor a MERN stack (MongoDB, ExpressJS, ReactJS, NodeJS).\nMERN stack is a full stack software development kit. It is used to develop web applications. MERN is utilized by developers and businesses worldwide.\nOur MERN integration includes a specific dashboard to get observability for an entire MERN stack.",
-    "websiteUrl": null,
-    "keywords": [
-      "MERN",
-      "MongoDB",
-      "ExpressJS",
-      "ReactJS",
-      "NodeJS",
-      "Fullstack application monitoring",
-      "browser agent",
-      "language agent"
-    ],
-    "authors": [
-      "New Relic",
-      "Phaneendra Kosanam"
-    ],
-    "dashboards": [
-      {
-        "name": "MExN",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/mexn/mexn01.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/mexn/mexn02.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/mexn/mexn03.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/mexn/mexn04.png"
-        ]
-      }
-    ],
-    "alerts": [
-      {
-        "name": "First Contentful Paint",
-        "details": "This alert is triggered when the first contentful paint takes more than 3 seconds for 5 minutes.",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "High Memory Usage (MB)",
-        "details": "This alert is triggered when the server memory is higher than 90 MB for 5 minutes.",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "MongoDB Connection Count",
-        "details": "This alert is triggered when there are more than 2000 MongoDB connections created within a 5 minute period.",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "Transaction Errors",
-        "details": "This alert is triggered when 10 or more transactions fail for 5 minutes.",
-        "type": "STATIC",
-        "url": null
-      }
-    ],
-    "documentation": [
-      {
-        "name": "MERN stack installation documentation",
-        "description": "Integrate your MERN app and get your data into New Relic.\n",
-        "url": "https://docs.newrelic.com/docs/browser/browser-integrations/mexn-integration/"
-      }
-    ],
-    "installPlans": [
-      {
-        "name": "Browser",
-        "id": "browser-docs"
-      },
-      {
-        "name": "MongoDB",
-        "id": "mongodb-integration"
-      },
-      {
-        "name": "Node agent",
-        "id": "node-agent"
-      }
-    ]
-  },
-  {
     "title": "Mobile Crash Analytics",
     "name": "mobile-crash-analytics-quickstart",
     "description": "## Crash Analytics Monitoring Quickstart\n\nGet deeper insights into the mobile application crash frequency, affected versions, crash impact on users. \n\nReceive details about the last interactions before crash. \n\nHelp page on the dashboard will guide you on how to enable data filtering.",
@@ -3878,6 +3793,92 @@
       {
         "name": "Mobile Dashboard Install Plan",
         "id": "mobile-dashboard-install"
+      }
+    ]
+  },
+  {
+    "title": "MERN Stack",
+    "name": "mern-stack",
+    "description": "## Comprehensive MERN stack monitoring system:\nMERN is a free and open-source JavaScript software stack for building dynamic web sites and web applications. Each of these 4 powerful technologies provides an end-to-end framework for the developers to work in and each of these technologies play a big part in the development of web applications.\n\n## What should you look for in a MERN dashboard?\nMetrics of MongoDB, i.e. number of active connections, database details, usage time and many more.\nMetrics of ExpressJS, NodeJS, i.e. number of web transactions, top transactions and the error transactions, memory usage and many more.\nMetrics of ReactJS, i.e. number of viewed urls, page views by city, ajax requests and many more. You are also free to create your own chart by using the stored metrics.\n\n## What’s included in the MERN quickstart?\nInstall this quickstart to install preconfigured observability solutions:\n- Multiple high-value alerts, including page views by city and ajax requests\n- Informative dashboards (Top transactions, Error transactions, and more)",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/mern",
+    "id": "ef98b152-9ccc-4e9b-8fc6-0d3b3215faeb",
+    "level": "NEW_RELIC",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/mern/logo.png",
+    "summary": "This MERN quickstart allows you to monitor a MERN stack (MongoDB, ExpressJS, ReactJS, NodeJS).\nMERN stack is a full stack software development kit. It is used to develop web applications. MERN is utilized by developers and businesses worldwide.\nOur MERN integration includes a specific dashboard to get observability for an entire MERN stack.",
+    "websiteUrl": null,
+    "keywords": [
+      "MERN",
+      "MongoDB",
+      "ExpressJS",
+      "ReactJS",
+      "NodeJS",
+      "Fullstack application monitoring",
+      "browser agent",
+      "language agent",
+      "featured"
+    ],
+    "authors": [
+      "New Relic",
+      "Phaneendra Kosanam"
+    ],
+    "dashboards": [
+      {
+        "name": "MExN",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/mexn/mexn01.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/mexn/mexn02.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/mexn/mexn03.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/mexn/mexn04.png"
+        ]
+      }
+    ],
+    "alerts": [
+      {
+        "name": "First Contentful Paint",
+        "details": "This alert is triggered when the first contentful paint takes more than 3 seconds for 5 minutes.",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "High Memory Usage (MB)",
+        "details": "This alert is triggered when the server memory is higher than 90 MB for 5 minutes.",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "MongoDB Connection Count",
+        "details": "This alert is triggered when there are more than 2000 MongoDB connections created within a 5 minute period.",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "Transaction Errors",
+        "details": "This alert is triggered when 10 or more transactions fail for 5 minutes.",
+        "type": "STATIC",
+        "url": null
+      }
+    ],
+    "documentation": [
+      {
+        "name": "MERN stack installation documentation",
+        "description": "Integrate your MERN app and get your data into New Relic.\n",
+        "url": "https://docs.newrelic.com/docs/browser/browser-integrations/mexn-integration/"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "Browser",
+        "id": "browser-docs"
+      },
+      {
+        "name": "MongoDB",
+        "id": "mongodb-integration"
+      },
+      {
+        "name": "Node agent",
+        "id": "node-agent"
       }
     ]
   },
@@ -5875,66 +5876,6 @@
     ]
   },
   {
-    "title": "Roku",
-    "name": "roku",
-    "description": "## Why monitor Roku?\n\nRoku is one of the world's most popular streaming platforms. New Relic has developed the first and only open-source observabiilty agent for Roku, giving you unparalleled insight into the performance of your Roku application.\n\n### Analytics on HTTP requests and errors\n  This can be manifestations of ISP or CDN issues or unwanted changes to the application or backend services. Faster identification and understanding of these issues is critical to maintaining a positive user experience. \n### Video Quality of Experience (QoE) \n  Correlate video quality issues back through the rest of the streaming architecture. Acquire complete correlations between video playback sessions to the backend systems.\n### Customer journey tracking\n Follow customers as they navigate the application towards their content and their video playback experience. See where and when drop offs occur and the time it takes to complete critical actions.",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/roku",
-    "id": "71e1b882-ce4e-4037-b8f1-997d9e317ddd",
-    "level": "NEW_RELIC",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/roku/logo.svg",
-    "summary": "The New Relic Roku observability agent monitors the system- and video- level performance of Roku over the top (OTT) streaming applications and devices. Specifically, the agent offers insights into an application’s network connectivity, viewer journey, and overall functionality.",
-    "websiteUrl": null,
-    "keywords": [
-      "nrlabs",
-      "nrlabs-data",
-      "video",
-      "tracker",
-      "roku",
-      "brightscript",
-      "featured"
-    ],
-    "authors": [
-      "New Relic Labs"
-    ],
-    "dashboards": [
-      {
-        "name": "Roku Quickstart",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/roku/roku-1.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/roku/roku-2.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/roku/roku-3.png"
-        ]
-      }
-    ],
-    "alerts": [
-      {
-        "name": "Roku HTTP Error Rate",
-        "details": "Alert when the Roku Error Rate % increases significantly from its baseline.\nUseful for understanding when your users are experiencing connection issues",
-        "type": "BASELINE",
-        "url": null
-      }
-    ],
-    "documentation": [
-      {
-        "name": "Roku installation docs",
-        "description": "Use Roku agent to monitor Roku applications.",
-        "url": "https://github.com/newrelic/video-agent-roku#installation"
-      }
-    ],
-    "installPlans": [
-      {
-        "name": "roku",
-        "id": "third-party-roku"
-      },
-      {
-        "name": "Roku HTTP Analytics (optional)",
-        "id": "third-party-roku-http-analytics"
-      }
-    ]
-  },
-  {
     "title": "HttpClient",
     "name": "httpclient",
     "description": "## What is HttpClient?\n\nFramework for using Ruby to access web resources.\n\n## Get started!\n\nLeverage community expertise and instantly get value out of your telemetry data. This quickstart automatically instruments HttpClient with the New Relic Ruby agent, and allows you to further leverage New Relic's APM capabilities by setting up [custom dashboards](https://docs.newrelic.com/docs/query-your-data/explore-query-data/dashboards/introduction-dashboards/), [errors inbox](https://docs.newrelic.com/docs/apm/apm-ui-pages/errors-inbox/errors-inbox/), [transaction tracing](https://docs.newrelic.com/docs/apm/transactions/transaction-traces/introduction-transaction-traces/), and [service maps](https://docs.newrelic.com/docs/understand-dependencies/understand-system-dependencies/service-maps/introduction-service-maps/).\n\n## More info\n\nCheck out the [documentation](https://docs.newrelic.com/docs/agents/ruby-agent/) to learn more about New Relic monitoring for HttpClient.",
@@ -6474,6 +6415,52 @@
     ]
   },
   {
+    "title": "Windows Services",
+    "name": "winservices",
+    "description": "## Windows Services\n\nNew Relic's Windows services integration collects data about the services running on your Microsoft Windows hosts and sends it to our platform. \nYou can check the state and start mode of each service, find out which hosts are running a service, set up alerts for services, and more.\n\nOur integration is bundled with the Windows infrastructure agent. If you're monitoring Windows hosts on New Relic, you only need to enable the integration to get Windows services data into our platform.\n\n### Why it matters\n\nMicrosoft Windows services are the Windows equivalent of daemons in Unix and Linux: \nlong-running executables that can be started, stopped, paused, and restarted without a graphical interface. \n\nKnowing which services are enabled, or their state or health, is essential when monitoring Windows infrastructure.\n\nWith our Windows services integration you can:\n- Check all your Windows services, their state (running, stopped, etc.), start mode (auto, manual, etc.), and other service metadata.\n- See which hosts are running specific Windows services.\n- Set alerts based on any Windows services that you are monitoring using New Relic.\n- Create dashboards to track your Windows services.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/winservices",
+    "id": "97b57f9d-b55e-465c-96b3-4adb5883fe9c",
+    "level": "NEW_RELIC",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/winservices/logo.svg",
+    "summary": "New Relic's Windows services integration collects data about the services running on your Microsoft Windows hosts",
+    "websiteUrl": null,
+    "keywords": [
+      "windows",
+      "microsoft",
+      "service",
+      "os",
+      "operating system",
+      "featured"
+    ],
+    "authors": [
+      "New Relic"
+    ],
+    "dashboards": [
+      {
+        "name": "Windows Services - Dashboard",
+        "description": "Get an overview of the windows services running on the monitored hosts",
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/winservices/winservices01.png"
+        ]
+      }
+    ],
+    "alerts": [],
+    "documentation": [
+      {
+        "name": "Windows Services monitoring integration",
+        "description": "New Relic's Windows services integration collects data about the services running on your Microsoft Windows hosts and sends it to our platform. \n",
+        "url": "https://docs.newrelic.com/docs/infrastructure/host-integrations/host-integrations-list/windows-services-integration/"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "winservices",
+        "id": "winservices-integration-docs"
+      }
+    ]
+  },
+  {
     "title": "Sybase",
     "name": "sybase",
     "description": "## Quickstart for Sybase monitoring\n\nSybase is a relational database software solution. \n\n### New Relic Sybase quickstart features\n\nWith monitoring statistics enabled, you can observe key metrics such as the number of connections, execution times, statement cache, process activity, threads, and more. \n\n### Sybase Quickstart instructions\n\nCheck out [nri-db](https://github.com/newrelic-experimental/nri-db) to learn more about New Relic monitoring for Sybase.",
@@ -6515,6 +6502,65 @@
       {
         "name": "Sybase",
         "id": "sybase-integration"
+      }
+    ]
+  },
+  {
+    "title": "Roku",
+    "name": "roku",
+    "description": "## Why monitor Roku?\n\nRoku is one of the world's most popular streaming platforms. New Relic has developed the first and only open-source observabiilty agent for Roku, giving you unparalleled insight into the performance of your Roku application.\n\n### Analytics on HTTP requests and errors\n  This can be manifestations of ISP or CDN issues or unwanted changes to the application or backend services. Faster identification and understanding of these issues is critical to maintaining a positive user experience. \n### Video Quality of Experience (QoE) \n  Correlate video quality issues back through the rest of the streaming architecture. Acquire complete correlations between video playback sessions to the backend systems.\n### Customer journey tracking\n Follow customers as they navigate the application towards their content and their video playback experience. See where and when drop offs occur and the time it takes to complete critical actions.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/roku",
+    "id": "71e1b882-ce4e-4037-b8f1-997d9e317ddd",
+    "level": "NEW_RELIC",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/roku/logo.svg",
+    "summary": "The New Relic Roku observability agent monitors the system- and video- level performance of Roku over the top (OTT) streaming applications and devices. Specifically, the agent offers insights into an application’s network connectivity, viewer journey, and overall functionality.",
+    "websiteUrl": null,
+    "keywords": [
+      "nrlabs",
+      "nrlabs-data",
+      "video",
+      "tracker",
+      "roku",
+      "brightscript"
+    ],
+    "authors": [
+      "New Relic Labs"
+    ],
+    "dashboards": [
+      {
+        "name": "Roku Quickstart",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/roku/roku-1.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/roku/roku-2.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/roku/roku-3.png"
+        ]
+      }
+    ],
+    "alerts": [
+      {
+        "name": "Roku HTTP Error Rate",
+        "details": "Alert when the Roku Error Rate % increases significantly from its baseline.\nUseful for understanding when your users are experiencing connection issues",
+        "type": "BASELINE",
+        "url": null
+      }
+    ],
+    "documentation": [
+      {
+        "name": "Roku installation docs",
+        "description": "Use Roku agent to monitor Roku applications.",
+        "url": "https://github.com/newrelic/video-agent-roku#installation"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "roku",
+        "id": "third-party-roku"
+      },
+      {
+        "name": "Roku HTTP Analytics (optional)",
+        "id": "third-party-roku-http-analytics"
       }
     ]
   },
@@ -7733,51 +7779,6 @@
     ]
   },
   {
-    "title": "Windows Services",
-    "name": "winservices",
-    "description": "## Windows Services\n\nNew Relic's Windows services integration collects data about the services running on your Microsoft Windows hosts and sends it to our platform. \nYou can check the state and start mode of each service, find out which hosts are running a service, set up alerts for services, and more.\n\nOur integration is bundled with the Windows infrastructure agent. If you're monitoring Windows hosts on New Relic, you only need to enable the integration to get Windows services data into our platform.\n\n### Why it matters\n\nMicrosoft Windows services are the Windows equivalent of daemons in Unix and Linux: \nlong-running executables that can be started, stopped, paused, and restarted without a graphical interface. \n\nKnowing which services are enabled, or their state or health, is essential when monitoring Windows infrastructure.\n\nWith our Windows services integration you can:\n- Check all your Windows services, their state (running, stopped, etc.), start mode (auto, manual, etc.), and other service metadata.\n- See which hosts are running specific Windows services.\n- Set alerts based on any Windows services that you are monitoring using New Relic.\n- Create dashboards to track your Windows services.",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/winservices",
-    "id": "97b57f9d-b55e-465c-96b3-4adb5883fe9c",
-    "level": "NEW_RELIC",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/winservices/logo.svg",
-    "summary": "New Relic's Windows services integration collects data about the services running on your Microsoft Windows hosts",
-    "websiteUrl": null,
-    "keywords": [
-      "windows",
-      "microsoft",
-      "service",
-      "os",
-      "operating system"
-    ],
-    "authors": [
-      "New Relic"
-    ],
-    "dashboards": [
-      {
-        "name": "Windows Services - Dashboard",
-        "description": "Get an overview of the windows services running on the monitored hosts",
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/winservices/winservices01.png"
-        ]
-      }
-    ],
-    "alerts": [],
-    "documentation": [
-      {
-        "name": "Windows Services monitoring integration",
-        "description": "New Relic's Windows services integration collects data about the services running on your Microsoft Windows hosts and sends it to our platform. \n",
-        "url": "https://docs.newrelic.com/docs/infrastructure/host-integrations/host-integrations-list/windows-services-integration/"
-      }
-    ],
-    "installPlans": [
-      {
-        "name": "winservices",
-        "id": "winservices-integration-docs"
-      }
-    ]
-  },
-  {
     "title": "Websphere Liberty Profile",
     "name": "websphere-liberty-profile",
     "description": "## Monitoring WebSphere Liberty Profile\n\nLiberty Profile is a flexible server profile of IBM’s WebSphere Application Server (WAS) which enables the server to deploy only required custom features rather than deploying all available components.\n\nLeverage our New Relic WebSphere Liberty Profile quickstart to proactively monitor your Liberty Profile with the [New Relic Java agent](https://docs.newrelic.com/docs/apm/agents/java-agent/additional-installation/ibm-websphere-application-server/).\n\n### New Relic WebSphere Liberty Profile highlights\n\nNew Relic’s WebSphere Liberty Profile monitoring instruments WebSphere with the New Relic Java agent and allows you to instantly monitor your Java application.\n\nWith New Relic's Java agent, you can track everything from active connections to tiny errors within your code. Every minute, the agent posts metric timeslice and event data to the New Relic user interface, where you can monitor your website’s performance.\n\n### New Relic + WebSphere Liberty Profile = Optimum performance monitoring\n\nOur WebSphere Liberty Profile quickstart empowers you to [configure New Relic’s Java agent for your WebSphere Liberty Profile](https://docs.newrelic.com/docs/apm/agents/java-agent/additional-installation/ibm-websphere-application-server/). With a configuration customized for your application, you can monitor browser performance and WebSphere PMI metrics like memory, threads, and HTTP sessions.\n\nNew Relic supports all versions of WebSphere and IBM Java Virtual Machine that are compatible with the Java agent. (If you’re using Java 2 Security with WebSphere, you need to grant the Java agent additional permissions for proper execution).\n\nYou can also configure the Java agent to capture any WebSphere PMI metrics you want. Such metrics will be displayed on the New Relic JVM metrics page. These metrics will be listed under different tabs like memory, thread, HTTP sessions, and data sources.\n\nThe memory tab has heap memory usage, garbage collection and class count. The thread tab has thread count and thread pool. The HTTP sessions tab shows the active, invalidated by timeout, and invalidated HTTP session counts of your application. The data sources tab will show you metrics like wait time, max connections, active connections, and idle connections.\n\nInstall the New Relic WebSphere Liberty Profile quickstart to effectively monitor Liberty Profile key performance indicators with our Java agent. This quickstart is the key to making sure that you detect and respond to any incident quickly and efficiently.",
@@ -8923,92 +8924,6 @@
     ]
   },
   {
-    "title": "MEAN Stack",
-    "name": "mean-stack",
-    "description": "## Comprehensive MEAN Stack Monitoring System\nA JavaScript-based open-source framework called MEAN Stack is used for creating dynamic web pages and online applications. \nThere are four components in the stack: MongoDB, ExpressJS, Angular and NodeJS. The stack's components integrate logically and simply because they are all based on JavaScript and JSON. These four powerful technologies all play an important role in the creation of web applications.\n\n## What should you look for in a MEAN dashboard?\n- Metrics related to MongoDB including active connections, database details, usage time, and more.\n- There are many metrics available for ExpressJS and NodeJS including web transactions, top ten transactions and errors, memory usage, and many others. \n- There are many different Angular metrics including the number of viewed urls, page views by city, ajax requests, etc. You may also create your own chart using the collected metrics.\n\n## What’s included in the MEAN quickstart?\nInstall this quickstart to install preconfigured observability solutions:\n- A number of high-value alerts are available including the average number of connections created, the FCP score and the memory usage.\n- Informative dashboards (the top 10 transactions, connections, database indexes, and more).",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/mean",
-    "id": "53147329-a8d4-47c3-ad53-6444a4610315",
-    "level": "NEW_RELIC",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/mean/logo.png",
-    "summary": "Monitor your apps using New Relic’s MEAN integration with Angular, MongoDB and NodeJS agents for browser, database and application monitoring.",
-    "websiteUrl": null,
-    "keywords": [
-      "MEAN",
-      "MongoDB",
-      "database",
-      "ExpressJS",
-      "Angular",
-      "NodeJS",
-      "Fullstack",
-      "MEAN Stack",
-      "browser agent",
-      "language agent"
-    ],
-    "authors": [
-      "New Relic"
-    ],
-    "dashboards": [
-      {
-        "name": "MExN",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/mexn/mexn01.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/mexn/mexn02.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/mexn/mexn03.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/mexn/mexn04.png"
-        ]
-      }
-    ],
-    "alerts": [
-      {
-        "name": "First Contentful Paint",
-        "details": "This alert is triggered when the first contentful paint takes more than 3 seconds for 5 minutes.",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "High Memory Usage (MB)",
-        "details": "This alert is triggered when the server memory is higher than 90 MB for 5 minutes.",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "MongoDB Connection Count",
-        "details": "This alert is triggered when there are more than 2000 MongoDB connections created within a 5 minute period.",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "Transaction Errors",
-        "details": "This alert is triggered when 10 or more transactions fail for 5 minutes.",
-        "type": "STATIC",
-        "url": null
-      }
-    ],
-    "documentation": [
-      {
-        "name": "MEAN Stack installation documentation",
-        "description": "Integrate your MEAN app and get your data into New Relic.\n",
-        "url": "https://docs.newrelic.com/docs/browser/browser-integrations/mexn-integration/"
-      }
-    ],
-    "installPlans": [
-      {
-        "name": "Browser",
-        "id": "browser-docs"
-      },
-      {
-        "name": "MongoDB",
-        "id": "mongodb-integration"
-      },
-      {
-        "name": "Node agent",
-        "id": "node-agent"
-      }
-    ]
-  },
-  {
     "title": "Synthetics Page Load performance",
     "name": "synthetics-page-load-performance",
     "description": "# What is Synthetics monitoring?\nSynthetic monitoring is a suite of automated, scriptable tools to monitor your websites, critical business transactions, and API endpoints. You can simulate user traffic to proactively detect and resolve outages and poor performance of critical endpoints before your customers notice.\n\n# What is a Synthetics Page Link Crawler\nSynthetics Page Load performance monitors essentially are simple, pre-built scripted browser monitors. They make a request to your site using an instance of Google Chrome and wait for a full page load.\n\nCompared to a simple ping monitor, this is a more accurate emulation of an actual customer visit. The user agent is identified as Google Chrome.\n\nThe check will return you detailed resource breakdowns and timelines to debug performance and latency issues.",
@@ -9343,6 +9258,157 @@
     ]
   },
   {
+    "title": "Argo CD",
+    "name": "argocd-quickstart",
+    "description": "## What is Argo CD?\nArgo CD is a declarative, GitOps continuous delivery tool for Kubernetes.\n\n## Why Argo CD?\nApplication definitions, configurations, and environments should be declarative and version controlled. Application deployment and lifecycle management should be automated, auditable, and easy to understand.\n\nThis dashboard closely mirrors the official Argo CD Grafana dashboard ([Link](https://github.com/argoproj/argo-cd/blob/master/examples/dashboard.json)).\n\n## Argo CD Getting started:\n- [Getting Started](https://argo-cd.readthedocs.io/en/stable/getting_started)\n- [Docs](https://argo-cd.readthedocs.io/en/stable/)\n- [Available Metrics](https://argo-cd.readthedocs.io/en/stable/operator-manual/metrics/)\n\n## Argo CD Dashboard Highlights:\n- Sync Activity\n- Health Status\n- Controller Stats\n- Repo Server Stats\n- Argo Server Stats\n\n## Requirements:\n1. [Prometheus Server or Prometheus Agent](https://docs.newrelic.com/docs/infrastructure/prometheus-integrations/get-started/send-prometheus-metric-data-new-relic/) configured to remote write to New Relic.\n2. Patch the Argo CD pods with `prometheus.io/scrape=true` podAnnotations.  This will enable the New Relic Prometheus Integration to scrape Argo CD metrics:\n\n    `kubectl patch deployment argocd-server -n argocd -p '{\"spec\": {\"template\":{\"metadata\":{\"annotations\":{\"prometheus.io/scrape\":\"true\",\"prometheus.io/port\": \"8083\",\"prometheus.io/path\": \"metrics\"}}}} }'`\n\n    `kubectl patch statefulset argocd-application-controller -n argocd -p '{\"spec\": {\"template\":{\"metadata\":{\"annotations\":{\"prometheus.io/scrape\":\"true\",\"prometheus.io/port\": \"8082\",\"prometheus.io/path\": \"metrics\"}}}} }'`\n\n    `kubectl patch deployment argocd-repo-server -n argocd -p '{\"spec\": {\"template\":{\"metadata\":{\"annotations\":{\"prometheus.io/scrape\":\"true\",\"prometheus.io/port\": \"8084\",\"prometheus.io/path\": \"metrics\"}}}} }'`",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/argocd",
+    "id": "03b4a3b9-3a59-4603-91dd-6b0ced1d62de",
+    "level": "NEW_RELIC",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/argocd/logo.png",
+    "summary": "Displays the performance and availability of the Argo CD platform within Kubernetes.",
+    "websiteUrl": null,
+    "keywords": [
+      "argocd",
+      "helm",
+      "git",
+      "kubernetes",
+      "k8s",
+      "cd",
+      "continuous deployment",
+      "argo",
+      "prometheus",
+      "remote_write",
+      "promql",
+      "grafana",
+      "featured"
+    ],
+    "authors": [
+      "New Relic",
+      "Brad Schmitt"
+    ],
+    "dashboards": [
+      {
+        "name": "Argo CD (Prometheus)",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/argocd-dashboard/argocd_dashboard_1.jpg",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/argocd-dashboard/argocd_dashboard_2.jpg",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/argocd-dashboard/argocd_dashboard_3.jpg",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/argocd-dashboard/argocd_dashboard_4.jpg"
+        ]
+      }
+    ],
+    "alerts": [
+      {
+        "name": "Argo CD App Degraded",
+        "details": "An alert will trigger if an Argo CD app is in an unhealthy state for more than 5 minutes.",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "Argo CD App OutOfSync",
+        "details": "A Warning alert will trigger if an Argo CD app is in an OutOfSync state for more than 5 minutes.",
+        "type": "STATIC",
+        "url": null
+      }
+    ],
+    "documentation": [
+      {
+        "name": "Argo CD Integration Docs",
+        "description": "New Relic documentation for the Argo CD integration including installation, configuration, and how to query the metrics.\n",
+        "url": "https://docs.newrelic.com/docs/infrastructure/prometheus-integrations/integrations-list/argocd-integration"
+      },
+      {
+        "name": "Argo CD Metrics Reference",
+        "description": "Argo CD Prometheus Metric Reference\n",
+        "url": "https://argo-cd.readthedocs.io/en/stable/operator-manual/metrics/"
+      },
+      {
+        "name": "Prometheus Installation Docs",
+        "description": "Use Prometheus remote_write or Prometheus Agent\n",
+        "url": "https://docs.newrelic.com/docs/infrastructure/prometheus-integrations/get-started/send-prometheus-metric-data-new-relic/"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "Prometheus remote write",
+        "id": "setup-prometheus"
+      },
+      {
+        "name": "Prometheus Agent Mode",
+        "id": "setup-prometheus-agent-mode"
+      }
+    ]
+  },
+  {
+    "title": "JFrog Software Supply Chain Platform",
+    "name": "jfrog-platform",
+    "description": "## Why monitor the JFrog Platform\n\nThe JFrog Platform is a leading universal end-to-end DevOps and DevSecOps platform for automating, managing, securing, distributing, orchestrating, monitoring, and optimizing your Cl/ CD pipeline. Monitor the JFrog Platform to get real-time insights about the health, performance, and security of your software supply chain.\n\n### JFrog Platform quickstart highlights\n\nThe integration surfaces critical platform logs, JFrog Xray violations data, and system performance data available through OpenMetrics as pre-built dashboards\n\n- Monitor the JFrom platform inside the convenient New Relic observability platform\n- Utilizes Fluentd, an open source, lightweight log processor and forwarder \n- Curated dashboards surface performance data, artifact usage, and security metrics for operations teams, DevSecOps teams, and business stakeholders. \n\n### Quickstart benefits\n- **Faster and more reliable software delivery.** Monitor all your JFrog applications, artifacts, and dependencies in real time with pre-built dashboards to correlate performance alongside the rest of your telemetry data in a unified view.\n- **Better compliance and security.** Identify urgent vulnerabilities, identify malicious users, and deliver more secure software with less toil.\n- **Improve software supply chain performance.** Proactively manage performance degradation and remediate issues and boost release velocity and quality.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/jfrog-platform",
+    "id": "e709396f-5b37-4e9c-a302-e872c9b864fd",
+    "level": "VERIFIED",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/jfrog-platform/icon.svg",
+    "summary": "Monitor your JFrog Artifactory and JFrog Xray environments for faster, more secure software delivery",
+    "websiteUrl": null,
+    "keywords": [
+      "newrelic",
+      "newrelic partner",
+      "apm",
+      "open source monitoring",
+      "artifactory",
+      "xray",
+      "security",
+      "featured"
+    ],
+    "authors": [
+      "JFrog",
+      "Mahitha Byreddy"
+    ],
+    "dashboards": [
+      {
+        "name": "JFrog Artifactory",
+        "description": "This dashboard provides an overview of usage statistics of JFrog Artifactory logs (application, audit, Docker, requests) and overview of the system metrics, JVM statistics, storage consumption, garbage collection, and other operational insights associated with JFrog Artifactory",
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/jfrog-artifactory/jfrog-artifactory01.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/jfrog-artifactory/jfrog-artifactory02.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/jfrog-artifactory/jfrog-artifactory03.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/jfrog-artifactory/jfrog-artifactory04.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/jfrog-artifactory/jfrog-artifactory05.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/jfrog-artifactory/jfrog-artifactory06.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/jfrog-artifactory/jfrog-artifactory07.png"
+        ]
+      },
+      {
+        "name": "JFrog Xray",
+        "description": "This dashboard provides visibility into JFrog Xray logs (access, service, traffic log volumes, HTTP response codes, errors etc), metrics (system performance, number and type of artifacts and components scanned), and violations (security vulnerabiities and license issues)",
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/jfrog-xray/jfrog-xray1.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/jfrog-xray/jfrog-xray2.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/jfrog-xray/jfrog-xray3.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/jfrog-xray/jfrog-xray4.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/jfrog-xray/jfrog-xray5.png"
+        ]
+      }
+    ],
+    "alerts": [],
+    "documentation": [
+      {
+        "name": "JFrog Observability Solution",
+        "description": "JFrog Github documentation\n",
+        "url": "https://github.com/jfrog/log-analytics-newrelic"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "JFrog Platform",
+        "id": "third-party-jfrog-platform"
+      }
+    ]
+  },
+  {
     "title": "AWS NLB/ALB",
     "name": "aws-nlb-alb",
     "description": "## What is AWS NLB/ALB?\n\nDistributes incoming application traffic across multiple targets, such as EC2\ninstances, in multiple availability zones.\n\n\n### Get started!\n\nStart monitoring AWS NLB/ALB by connecting Amazon Web Services (AWS) to New Relic!\n\nCheck out our AWS NLB/ALB documentation to instrument your cloud service and manage the stability, scalability, and reliability of your systems with New Relic's infrastructure monitoring capabilities.\n\n### More info\n\nCheck out the [documentation](https://docs.newrelic.com/docs/infrastructure/amazon-integrations/aws-integrations-list/aws-albnlb-monitoring-integration/) to learn more about New Relic monitoring for AWS NLB/ALB.",
@@ -9522,72 +9588,6 @@
     "alerts": [],
     "documentation": [],
     "installPlans": []
-  },
-  {
-    "title": "JFrog Software Supply Chain Platform",
-    "name": "jfrog-platform",
-    "description": "## Why monitor the JFrog Platform\n\nThe JFrog Platform is a leading universal end-to-end DevOps and DevSecOps platform for automating, managing, securing, distributing, orchestrating, monitoring, and optimizing your Cl/ CD pipeline. Monitor the JFrog Platform to get real-time insights about the health, performance, and security of your software supply chain.\n\n### JFrog Platform quickstart highlights\n\nThe integration surfaces critical platform logs, JFrog Xray violations data, and system performance data available through OpenMetrics as pre-built dashboards\n\n- Monitor the JFrom platform inside the convenient New Relic observability platform\n- Utilizes Fluentd, an open source, lightweight log processor and forwarder \n- Curated dashboards surface performance data, artifact usage, and security metrics for operations teams, DevSecOps teams, and business stakeholders. \n\n### Quickstart benefits\n- **Faster and more reliable software delivery.** Monitor all your JFrog applications, artifacts, and dependencies in real time with pre-built dashboards to correlate performance alongside the rest of your telemetry data in a unified view.\n- **Better compliance and security.** Identify urgent vulnerabilities, identify malicious users, and deliver more secure software with less toil.\n- **Improve software supply chain performance.** Proactively manage performance degradation and remediate issues and boost release velocity and quality.",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/jfrog-platform",
-    "id": "e709396f-5b37-4e9c-a302-e872c9b864fd",
-    "level": "VERIFIED",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/jfrog-platform/icon.svg",
-    "summary": "Monitor your JFrog Artifactory and JFrog Xray environments for faster, more secure software delivery",
-    "websiteUrl": null,
-    "keywords": [
-      "newrelic",
-      "newrelic partner",
-      "apm",
-      "open source monitoring",
-      "artifactory",
-      "xray",
-      "security"
-    ],
-    "authors": [
-      "JFrog",
-      "Mahitha Byreddy"
-    ],
-    "dashboards": [
-      {
-        "name": "JFrog Artifactory",
-        "description": "This dashboard provides an overview of usage statistics of JFrog Artifactory logs (application, audit, Docker, requests) and overview of the system metrics, JVM statistics, storage consumption, garbage collection, and other operational insights associated with JFrog Artifactory",
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/jfrog-artifactory/jfrog-artifactory01.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/jfrog-artifactory/jfrog-artifactory02.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/jfrog-artifactory/jfrog-artifactory03.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/jfrog-artifactory/jfrog-artifactory04.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/jfrog-artifactory/jfrog-artifactory05.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/jfrog-artifactory/jfrog-artifactory06.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/jfrog-artifactory/jfrog-artifactory07.png"
-        ]
-      },
-      {
-        "name": "JFrog Xray",
-        "description": "This dashboard provides visibility into JFrog Xray logs (access, service, traffic log volumes, HTTP response codes, errors etc), metrics (system performance, number and type of artifacts and components scanned), and violations (security vulnerabiities and license issues)",
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/jfrog-xray/jfrog-xray1.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/jfrog-xray/jfrog-xray2.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/jfrog-xray/jfrog-xray3.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/jfrog-xray/jfrog-xray4.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/jfrog-xray/jfrog-xray5.png"
-        ]
-      }
-    ],
-    "alerts": [],
-    "documentation": [
-      {
-        "name": "JFrog Observability Solution",
-        "description": "JFrog Github documentation\n",
-        "url": "https://github.com/jfrog/log-analytics-newrelic"
-      }
-    ],
-    "installPlans": [
-      {
-        "name": "JFrog Platform",
-        "id": "third-party-jfrog-platform"
-      }
-    ]
   },
   {
     "title": "Azure API Management",
@@ -9791,85 +9791,47 @@
     ]
   },
   {
-    "title": "Argo CD",
-    "name": "argocd-quickstart",
-    "description": "## What is Argo CD?\nArgo CD is a declarative, GitOps continuous delivery tool for Kubernetes.\n\n## Why Argo CD?\nApplication definitions, configurations, and environments should be declarative and version controlled. Application deployment and lifecycle management should be automated, auditable, and easy to understand.\n\nThis dashboard closely mirrors the official Argo CD Grafana dashboard ([Link](https://github.com/argoproj/argo-cd/blob/master/examples/dashboard.json)).\n\n## Argo CD Getting started:\n- [Getting Started](https://argo-cd.readthedocs.io/en/stable/getting_started)\n- [Docs](https://argo-cd.readthedocs.io/en/stable/)\n- [Available Metrics](https://argo-cd.readthedocs.io/en/stable/operator-manual/metrics/)\n\n## Argo CD Dashboard Highlights:\n- Sync Activity\n- Health Status\n- Controller Stats\n- Repo Server Stats\n- Argo Server Stats\n\n## Requirements:\n1. [Prometheus Server or Prometheus Agent](https://docs.newrelic.com/docs/infrastructure/prometheus-integrations/get-started/send-prometheus-metric-data-new-relic/) configured to remote write to New Relic.\n2. Patch the Argo CD pods with `prometheus.io/scrape=true` podAnnotations.  This will enable the New Relic Prometheus Integration to scrape Argo CD metrics:\n\n    `kubectl patch deployment argocd-server -n argocd -p '{\"spec\": {\"template\":{\"metadata\":{\"annotations\":{\"prometheus.io/scrape\":\"true\",\"prometheus.io/port\": \"8083\",\"prometheus.io/path\": \"metrics\"}}}} }'`\n\n    `kubectl patch statefulset argocd-application-controller -n argocd -p '{\"spec\": {\"template\":{\"metadata\":{\"annotations\":{\"prometheus.io/scrape\":\"true\",\"prometheus.io/port\": \"8082\",\"prometheus.io/path\": \"metrics\"}}}} }'`\n\n    `kubectl patch deployment argocd-repo-server -n argocd -p '{\"spec\": {\"template\":{\"metadata\":{\"annotations\":{\"prometheus.io/scrape\":\"true\",\"prometheus.io/port\": \"8084\",\"prometheus.io/path\": \"metrics\"}}}} }'`",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/argocd",
-    "id": "03b4a3b9-3a59-4603-91dd-6b0ced1d62de",
+    "title": "MongoDB",
+    "name": "mongodb",
+    "description": "## MongoDB Monitoring\n\nMongoDB enables the unlimited virtual scaling of applications. Utilities like mongostat and mongotop offer immediate results but fail to provide insights into trends in a highly graphical visual dashboard. MongoDB dashboards provide insights into key metrics like RAM usage, operations per second, page fault, disk size, lock %, and app and database performance at a glance. \n\nAvoid slow queries with  proper indexes that impact performance. Instantly monitor your entire MongoDB database with our instant observability kit or the MongoDB free monitoring tool.  \n\nThe critical differences between MongoDB free monitoring and monitoring MongoDB with New Relic’s instant observability quickstart are efficiency, usability, scope, and cost. MongoDB free monitoring focuses on standalone instances and replica sets. Data collected on disk utilization, memory, and operation execution times are uploaded periodically. \n\n\n### What’s Included?\n\nNew Relic + MongoDB quickstart - New Relic’s instant observability quickstart provides multiple monitoring parameters like operations per second, transactions, and queries by default (with Nagios, you must configure each parameter).\n\nNew Relic’s MongoDB quickstart contains multiple dashboards, including:\n- Total Commands, failed commands per second, bytes in & out per second, available connections, and more. \n\nMonitor MongoDB with New Relic to quickly gain improved distribution and increased visibility into real-time user and app response times, throughput and breakdown by component and layer, and long-term data trends over time.  \n\n### Value of MongoDB Quickstarts\n\n[MongoDB performance monitoring with New Relic](https://docs.newrelic.com/docs/integrations/host-integrations/host-integrations-list/mongodb-monitoring-integration/) offers advanced features, including:\n- Obtain app performance insights (without logging in to DB instances).\n- Create custom queries and charts of your data integrations.\n- Filter and analyze configuration data and metrics in Infrastructure UI.\n\nNew Relic’s instant observability quickstart helps developers reduce administrative overheads and accelerate time to value. As New Relic is SaaS-based, you also don’t have to worry about maintenance or onboarding.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/mongodb",
+    "id": "6183e12f-a398-48e6-8431-a48db03e4443",
     "level": "NEW_RELIC",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/argocd/logo.png",
-    "summary": "Displays the performance and availability of the Argo CD platform within Kubernetes.",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/mongodb/logo.jpeg",
+    "summary": "New Relic's MongoDB quickstart provides multiple customized dashboards including total commands, requests per second, and database size. Install the quickstart to better understand utilization of resources and monitor performance issues.",
     "websiteUrl": null,
     "keywords": [
-      "argocd",
-      "helm",
-      "git",
-      "kubernetes",
-      "k8s",
-      "cd",
-      "continuous deployment",
-      "argo",
-      "prometheus",
-      "remote_write",
-      "promql",
-      "grafana"
+      "infrastructure",
+      "database"
     ],
     "authors": [
       "New Relic",
-      "Brad Schmitt"
+      "Daniel Gola"
     ],
     "dashboards": [
       {
-        "name": "Argo CD (Prometheus)",
+        "name": "MongoDB",
         "description": null,
         "url": null,
         "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/argocd-dashboard/argocd_dashboard_1.jpg",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/argocd-dashboard/argocd_dashboard_2.jpg",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/argocd-dashboard/argocd_dashboard_3.jpg",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/argocd-dashboard/argocd_dashboard_4.jpg"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/mongodb/mongodb01.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/mongodb/mongodb02.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/mongodb/mongodb03.png"
         ]
       }
     ],
-    "alerts": [
-      {
-        "name": "Argo CD App Degraded",
-        "details": "An alert will trigger if an Argo CD app is in an unhealthy state for more than 5 minutes.",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "Argo CD App OutOfSync",
-        "details": "A Warning alert will trigger if an Argo CD app is in an OutOfSync state for more than 5 minutes.",
-        "type": "STATIC",
-        "url": null
-      }
-    ],
+    "alerts": [],
     "documentation": [
       {
-        "name": "Argo CD Integration Docs",
-        "description": "New Relic documentation for the Argo CD integration including installation, configuration, and how to query the metrics.\n",
-        "url": "https://docs.newrelic.com/docs/infrastructure/prometheus-integrations/integrations-list/argocd-integration"
-      },
-      {
-        "name": "Argo CD Metrics Reference",
-        "description": "Argo CD Prometheus Metric Reference\n",
-        "url": "https://argo-cd.readthedocs.io/en/stable/operator-manual/metrics/"
-      },
-      {
-        "name": "Prometheus Installation Docs",
-        "description": "Use Prometheus remote_write or Prometheus Agent\n",
-        "url": "https://docs.newrelic.com/docs/infrastructure/prometheus-integrations/get-started/send-prometheus-metric-data-new-relic/"
+        "name": "MongoDB",
+        "description": "Open source, document-oriented database where you store data in JSON-like files with dynamic schemas.\n",
+        "url": "https://docs.newrelic.com/docs/integrations/host-integrations/host-integrations-list/mongodb-monitoring-integration/"
       }
     ],
     "installPlans": [
       {
-        "name": "Prometheus remote write",
-        "id": "setup-prometheus"
-      },
-      {
-        "name": "Prometheus Agent Mode",
-        "id": "setup-prometheus-agent-mode"
+        "name": "MongoDB",
+        "id": "mongodb-integration"
       }
     ]
   },
@@ -10018,6 +9980,168 @@
       {
         "name": "Prometheus Agent Mode",
         "id": "setup-prometheus-agent-mode"
+      }
+    ]
+  },
+  {
+    "title": "MEAN Stack",
+    "name": "mean-stack",
+    "description": "## Comprehensive MEAN Stack Monitoring System\nA JavaScript-based open-source framework called MEAN Stack is used for creating dynamic web pages and online applications. \nThere are four components in the stack: MongoDB, ExpressJS, Angular and NodeJS. The stack's components integrate logically and simply because they are all based on JavaScript and JSON. These four powerful technologies all play an important role in the creation of web applications.\n\n## What should you look for in a MEAN dashboard?\n- Metrics related to MongoDB including active connections, database details, usage time, and more.\n- There are many metrics available for ExpressJS and NodeJS including web transactions, top ten transactions and errors, memory usage, and many others. \n- There are many different Angular metrics including the number of viewed urls, page views by city, ajax requests, etc. You may also create your own chart using the collected metrics.\n\n## What’s included in the MEAN quickstart?\nInstall this quickstart to install preconfigured observability solutions:\n- A number of high-value alerts are available including the average number of connections created, the FCP score and the memory usage.\n- Informative dashboards (the top 10 transactions, connections, database indexes, and more).",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/mean",
+    "id": "53147329-a8d4-47c3-ad53-6444a4610315",
+    "level": "NEW_RELIC",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/mean/logo.png",
+    "summary": "Monitor your apps using New Relic’s MEAN integration with Angular, MongoDB and NodeJS agents for browser, database and application monitoring.",
+    "websiteUrl": null,
+    "keywords": [
+      "MEAN",
+      "MongoDB",
+      "database",
+      "ExpressJS",
+      "Angular",
+      "NodeJS",
+      "Fullstack",
+      "MEAN Stack",
+      "browser agent",
+      "language agent",
+      "featured"
+    ],
+    "authors": [
+      "New Relic"
+    ],
+    "dashboards": [
+      {
+        "name": "MExN",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/mexn/mexn01.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/mexn/mexn02.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/mexn/mexn03.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/mexn/mexn04.png"
+        ]
+      }
+    ],
+    "alerts": [
+      {
+        "name": "First Contentful Paint",
+        "details": "This alert is triggered when the first contentful paint takes more than 3 seconds for 5 minutes.",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "High Memory Usage (MB)",
+        "details": "This alert is triggered when the server memory is higher than 90 MB for 5 minutes.",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "MongoDB Connection Count",
+        "details": "This alert is triggered when there are more than 2000 MongoDB connections created within a 5 minute period.",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "Transaction Errors",
+        "details": "This alert is triggered when 10 or more transactions fail for 5 minutes.",
+        "type": "STATIC",
+        "url": null
+      }
+    ],
+    "documentation": [
+      {
+        "name": "MEAN Stack installation documentation",
+        "description": "Integrate your MEAN app and get your data into New Relic.\n",
+        "url": "https://docs.newrelic.com/docs/browser/browser-integrations/mexn-integration/"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "Browser",
+        "id": "browser-docs"
+      },
+      {
+        "name": "MongoDB",
+        "id": "mongodb-integration"
+      },
+      {
+        "name": "Node agent",
+        "id": "node-agent"
+      }
+    ]
+  },
+  {
+    "title": "Netlify Builds",
+    "name": "netlify-builds",
+    "description": "Netlify is an all-in-one platform for automating modern web projects. Replace your hosting infrastructure, continuous integration, and deployment pipeline with a single workflow. Integrate dynamic functionality like serverless functions, user authentication, and form handling as your projects grow.\n\n### Netlify Builds quickstart highlights\n\nThe Netlify Builds quickstart is the fastest way to explore data from the [New Relic Netlify plugin](https://github.com/newrelic-experimental/netlify-plugin). Visualize your Netlify performance with a wide selection of dashboards.\n\n- Get a detailed view of your web application traffic, including page views, load times, sessions, and most popular content\n- Find out more about your visitors. Where are they from? What devices are they using? When do they frequent your application most?\n- View in-depth information about your page rendering, including LCP, CLS, and FID ratings\n- See all your JavaScript errors tagged by deployment\n- Compare deployment statstics and notice trends in failing builds\n\nKnow as soon as an event occurs with alerts.\n\n- When the number of JavaScript errors increases beyond an allowed threshold\n- If the onError event is triggered and a build fails\n- When page load time degrades beyond two standard deviations from the normal",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/netlify/netlify-builds",
+    "id": "5861d7f5-26c0-43ad-bda8-c893c4b27b25",
+    "level": "COMMUNITY",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/netlify/netlify-builds/logo.png",
+    "summary": "Analyze the health of your Netlify builds and Jamstack applications",
+    "websiteUrl": null,
+    "keywords": [
+      "infrastructure",
+      "automation",
+      "Netlify",
+      "Jamstack",
+      "RUM",
+      "browser agent",
+      "continuous integration",
+      "continuous deployment",
+      "newrelic partner",
+      "NR1_addData",
+      "NR1_sys"
+    ],
+    "authors": [
+      "Aaron Bassett (New Relic)"
+    ],
+    "dashboards": [
+      {
+        "name": "Netlify",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/netlify-builds/netlify-builds01.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/netlify-builds/netlify-builds02.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/netlify-builds/netlify-builds03.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/netlify-builds/netlify-builds04.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/netlify-builds/netlify-builds05.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/netlify-builds/netlify-builds06.png"
+        ]
+      }
+    ],
+    "alerts": [
+      {
+        "name": "Build Failed",
+        "details": "This alert is triggered whenever the build error count is > 0",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "JavaScript Errors",
+        "details": "This alert is triggered whenever the number of JavaScript errors deviates 5 standard deviations from the normal.",
+        "type": "BASELINE",
+        "url": null
+      },
+      {
+        "name": "Page Load Time Degrades",
+        "details": "This alert is triggered whenever the average page load time deviates 2 standard deviations from the normal.",
+        "type": "BASELINE",
+        "url": null
+      }
+    ],
+    "documentation": [
+      {
+        "name": "Installation Docs",
+        "description": "Install the New Relic plugin for Netlify",
+        "url": "https://github.com/newrelic-experimental/netlify-plugin#installation"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "Netlify",
+        "id": "third-party-netlify"
       }
     ]
   },
@@ -11122,128 +11246,6 @@
     ]
   },
   {
-    "title": "MongoDB",
-    "name": "mongodb",
-    "description": "## MongoDB Monitoring\n\nMongoDB enables the unlimited virtual scaling of applications. Utilities like mongostat and mongotop offer immediate results but fail to provide insights into trends in a highly graphical visual dashboard. MongoDB dashboards provide insights into key metrics like RAM usage, operations per second, page fault, disk size, lock %, and app and database performance at a glance. \n\nAvoid slow queries with  proper indexes that impact performance. Instantly monitor your entire MongoDB database with our instant observability kit or the MongoDB free monitoring tool.  \n\nThe critical differences between MongoDB free monitoring and monitoring MongoDB with New Relic’s instant observability quickstart are efficiency, usability, scope, and cost. MongoDB free monitoring focuses on standalone instances and replica sets. Data collected on disk utilization, memory, and operation execution times are uploaded periodically. \n\n\n### What’s Included?\n\nNew Relic + MongoDB quickstart - New Relic’s instant observability quickstart provides multiple monitoring parameters like operations per second, transactions, and queries by default (with Nagios, you must configure each parameter).\n\nNew Relic’s MongoDB quickstart contains multiple dashboards, including:\n- Total Commands, failed commands per second, bytes in & out per second, available connections, and more. \n\nMonitor MongoDB with New Relic to quickly gain improved distribution and increased visibility into real-time user and app response times, throughput and breakdown by component and layer, and long-term data trends over time.  \n\n### Value of MongoDB Quickstarts\n\n[MongoDB performance monitoring with New Relic](https://docs.newrelic.com/docs/integrations/host-integrations/host-integrations-list/mongodb-monitoring-integration/) offers advanced features, including:\n- Obtain app performance insights (without logging in to DB instances).\n- Create custom queries and charts of your data integrations.\n- Filter and analyze configuration data and metrics in Infrastructure UI.\n\nNew Relic’s instant observability quickstart helps developers reduce administrative overheads and accelerate time to value. As New Relic is SaaS-based, you also don’t have to worry about maintenance or onboarding.",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/mongodb",
-    "id": "6183e12f-a398-48e6-8431-a48db03e4443",
-    "level": "NEW_RELIC",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/mongodb/logo.jpeg",
-    "summary": "New Relic's MongoDB quickstart provides multiple customized dashboards including total commands, requests per second, and database size. Install the quickstart to better understand utilization of resources and monitor performance issues.",
-    "websiteUrl": null,
-    "keywords": [
-      "infrastructure",
-      "database",
-      "featured"
-    ],
-    "authors": [
-      "New Relic",
-      "Daniel Gola"
-    ],
-    "dashboards": [
-      {
-        "name": "MongoDB",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/mongodb/mongodb01.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/mongodb/mongodb02.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/mongodb/mongodb03.png"
-        ]
-      }
-    ],
-    "alerts": [],
-    "documentation": [
-      {
-        "name": "MongoDB",
-        "description": "Open source, document-oriented database where you store data in JSON-like files with dynamic schemas.\n",
-        "url": "https://docs.newrelic.com/docs/integrations/host-integrations/host-integrations-list/mongodb-monitoring-integration/"
-      }
-    ],
-    "installPlans": [
-      {
-        "name": "MongoDB",
-        "id": "mongodb-integration"
-      }
-    ]
-  },
-  {
-    "title": "Netlify Builds",
-    "name": "netlify-builds",
-    "description": "Netlify is an all-in-one platform for automating modern web projects. Replace your hosting infrastructure, continuous integration, and deployment pipeline with a single workflow. Integrate dynamic functionality like serverless functions, user authentication, and form handling as your projects grow.\n\n### Netlify Builds quickstart highlights\n\nThe Netlify Builds quickstart is the fastest way to explore data from the [New Relic Netlify plugin](https://github.com/newrelic-experimental/netlify-plugin). Visualize your Netlify performance with a wide selection of dashboards.\n\n- Get a detailed view of your web application traffic, including page views, load times, sessions, and most popular content\n- Find out more about your visitors. Where are they from? What devices are they using? When do they frequent your application most?\n- View in-depth information about your page rendering, including LCP, CLS, and FID ratings\n- See all your JavaScript errors tagged by deployment\n- Compare deployment statstics and notice trends in failing builds\n\nKnow as soon as an event occurs with alerts.\n\n- When the number of JavaScript errors increases beyond an allowed threshold\n- If the onError event is triggered and a build fails\n- When page load time degrades beyond two standard deviations from the normal",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/netlify/netlify-builds",
-    "id": "5861d7f5-26c0-43ad-bda8-c893c4b27b25",
-    "level": "COMMUNITY",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/netlify/netlify-builds/logo.png",
-    "summary": "Analyze the health of your Netlify builds and Jamstack applications",
-    "websiteUrl": null,
-    "keywords": [
-      "infrastructure",
-      "automation",
-      "Netlify",
-      "Jamstack",
-      "RUM",
-      "browser agent",
-      "continuous integration",
-      "continuous deployment",
-      "newrelic partner",
-      "featured",
-      "NR1_addData",
-      "NR1_sys"
-    ],
-    "authors": [
-      "Aaron Bassett (New Relic)"
-    ],
-    "dashboards": [
-      {
-        "name": "Netlify",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/netlify-builds/netlify-builds01.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/netlify-builds/netlify-builds02.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/netlify-builds/netlify-builds03.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/netlify-builds/netlify-builds04.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/netlify-builds/netlify-builds05.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/netlify-builds/netlify-builds06.png"
-        ]
-      }
-    ],
-    "alerts": [
-      {
-        "name": "Build Failed",
-        "details": "This alert is triggered whenever the build error count is > 0",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "JavaScript Errors",
-        "details": "This alert is triggered whenever the number of JavaScript errors deviates 5 standard deviations from the normal.",
-        "type": "BASELINE",
-        "url": null
-      },
-      {
-        "name": "Page Load Time Degrades",
-        "details": "This alert is triggered whenever the average page load time deviates 2 standard deviations from the normal.",
-        "type": "BASELINE",
-        "url": null
-      }
-    ],
-    "documentation": [
-      {
-        "name": "Installation Docs",
-        "description": "Install the New Relic plugin for Netlify",
-        "url": "https://github.com/newrelic-experimental/netlify-plugin#installation"
-      }
-    ],
-    "installPlans": [
-      {
-        "name": "Netlify",
-        "id": "third-party-netlify"
-      }
-    ]
-  },
-  {
     "title": "Koa",
     "name": "koa",
     "description": "## What is Koa?\n\nExpressive HTTP middleware framework for node.js to make web applications and\nAPIs more enjoyable to write.\n\n\n## Get started!\n\nLeverage community expertise and instantly get value out of your telemetry data. This quickstart automatically instruments Koa with the New Relic Node.js agent, and allows you to instantly monitor your Node application with out-of-the-box dashboards and alerts. Further leverage New Relic's APM capabilities by setting up [errors inbox](https://docs.newrelic.com/docs/apm/apm-ui-pages/errors-inbox/errors-inbox/), [transaction tracing](https://docs.newrelic.com/docs/apm/transactions/transaction-traces/introduction-transaction-traces/), and [service maps](https://docs.newrelic.com/docs/understand-dependencies/understand-system-dependencies/service-maps/introduction-service-maps/).\n\n## More info\n\nCheck out the [documentation](https://docs.newrelic.com/docs/agents/nodejs-agent/getting-started/introduction-new-relic-nodejs/) to learn more about New Relic monitoring for Koa.",
@@ -11853,14 +11855,14 @@
     "alerts": [],
     "documentation": [
       {
-        "name": "New Relic Apollo Server plugin repository",
-        "description": "New Relic's official Apollo Server plugin for use with the Node.js agent.",
-        "url": "https://github.com/newrelic/newrelic-node-apollo-server-plugin/blob/main/README.md"
-      },
-      {
         "name": "Installation Docs",
         "description": "The New Relic Apollo Server plugin instruments your Apollo Server applications to give visibility into your GraphQL payloads.",
         "url": "https://docs.newrelic.com/docs/apm/agents/nodejs-agent/extend-your-instrumentation/apollo-server-plugin-nodejs/"
+      },
+      {
+        "name": "New Relic Apollo Server plugin repository",
+        "description": "New Relic's official Apollo Server plugin for use with the Node.js agent.",
+        "url": "https://github.com/newrelic/newrelic-node-apollo-server-plugin/blob/main/README.md"
       }
     ],
     "installPlans": [
@@ -12044,6 +12046,76 @@
       {
         "name": "Flutter Web",
         "id": "flutter-web"
+      }
+    ]
+  },
+  {
+    "title": "Python",
+    "name": "python",
+    "description": "## Complete quickstart for Python monitoring\n\n[Python monitoring provides visibility](https://docs.newrelic.com/docs/agents/python-agent/) into all your applications to help identify and resolve performance issues. Track key transactions, monitor a dashboard for critical metrics, and trigger alerts whenever an error or problem is detected before it impacts users.\n\nThe Python quickstart enables development teams to dive deep into performance metrics to inspect database query traces, code-level transaction traces, and error traces.\n\n### Why monitoring Python is so important\n\nPython monitoring agents enable developers to troubleshoot application and endpoint issues, identify specific dependencies, and meet service level agreements. \n\nDevelopment teams can view detailed stack traces of sampled threads and extend performance monitoring to collect and analyze business data in a dashboard. This approach helps teams make data-driven decisions and enhance user experiences.\n\n### What's included in this quickstart?\n\nNew Relic's Python monitoring quickstart boasts instant full-stack observability out-of-the-box:\n- Alerts (Adpex score, CPU utilization, transaction error)\n- Dashboards (most popular transactions, average transaction duration today compared with that for the previous week, Adpex score comparisons, and more) \n- Monitor scripts and functions\n- Monitor WSGI web transactions\n\n### New Relic - complete Python performance monitoring tool\n\nNew Relic's Python agent helps developers measure time-based values like connections per minute. It allows teams to capture discrete events with key-value attributes attached to them and analyze and query data.\n\nIn addition to the above, New Relic's Python agent includes:\n- Browser monitoring\n- Cross application tracing\n- Custom metrics\n- Event loop diagnostics\n- Message queues\n- Runtime metrics\n\nNew Relic's instant observability quickstart helps Python developers minimize complexity and boost efficiency through enhanced visibility.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/python/python",
+    "id": "986df593-98db-485b-8e8c-dd866fa28813",
+    "level": "NEW_RELIC",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/python/python/logo.svg",
+    "summary": "New Relic's instant observability quickstart boasts alerts, event loop diagnostics,\nand multiple customizable dashboards to detect and resolve issues before they impact end-users.",
+    "websiteUrl": null,
+    "keywords": [
+      "apm",
+      "python",
+      "language agent"
+    ],
+    "authors": [
+      "New Relic",
+      "Emil Hammerstrand"
+    ],
+    "dashboards": [
+      {
+        "name": "Python",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/python/python01.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/python/python02.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/python/python03.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/python/python04.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/python/python05.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/python/python06.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/python/python07.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/python/python08.png"
+        ]
+      }
+    ],
+    "alerts": [
+      {
+        "name": "Average Error Rate",
+        "details": "This alert is triggered when Average Error Rate is higher than 5 for 5 minutes.",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "Average Transaction Duration",
+        "details": "This alert is triggered when Average Transaction Duration is higher than 5 seconds for 5 minutes.",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "Error Transactions (%)",
+        "details": "This alert is triggered when Error Transactions (%) are higher than 5 for 5 minutes.",
+        "type": "STATIC",
+        "url": null
+      }
+    ],
+    "documentation": [
+      {
+        "name": "Python installation docs",
+        "description": "Python is an interpreted, high-level and general-purpose programming\nlanguage.\n",
+        "url": "https://docs.newrelic.com/docs/agents/python-agent/getting-started/compatibility-requirements-python-agent"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "Python Agent",
+        "id": "setup-python-agent"
       }
     ]
   },
@@ -13769,77 +13841,6 @@
     ]
   },
   {
-    "title": "Python",
-    "name": "python",
-    "description": "## Complete quickstart for Python monitoring\n\n[Python monitoring provides visibility](https://docs.newrelic.com/docs/agents/python-agent/) into all your applications to help identify and resolve performance issues. Track key transactions, monitor a dashboard for critical metrics, and trigger alerts whenever an error or problem is detected before it impacts users.\n\nThe Python quickstart enables development teams to dive deep into performance metrics to inspect database query traces, code-level transaction traces, and error traces.\n\n### Why monitoring Python is so important\n\nPython monitoring agents enable developers to troubleshoot application and endpoint issues, identify specific dependencies, and meet service level agreements. \n\nDevelopment teams can view detailed stack traces of sampled threads and extend performance monitoring to collect and analyze business data in a dashboard. This approach helps teams make data-driven decisions and enhance user experiences.\n\n### What's included in this quickstart?\n\nNew Relic's Python monitoring quickstart boasts instant full-stack observability out-of-the-box:\n- Alerts (Adpex score, CPU utilization, transaction error)\n- Dashboards (most popular transactions, average transaction duration today compared with that for the previous week, Adpex score comparisons, and more) \n- Monitor scripts and functions\n- Monitor WSGI web transactions\n\n### New Relic - complete Python performance monitoring tool\n\nNew Relic's Python agent helps developers measure time-based values like connections per minute. It allows teams to capture discrete events with key-value attributes attached to them and analyze and query data.\n\nIn addition to the above, New Relic's Python agent includes:\n- Browser monitoring\n- Cross application tracing\n- Custom metrics\n- Event loop diagnostics\n- Message queues\n- Runtime metrics\n\nNew Relic's instant observability quickstart helps Python developers minimize complexity and boost efficiency through enhanced visibility.",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/python/python",
-    "id": "986df593-98db-485b-8e8c-dd866fa28813",
-    "level": "NEW_RELIC",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/python/python/logo.svg",
-    "summary": "New Relic's instant observability quickstart boasts alerts, event loop diagnostics,\nand multiple customizable dashboards to detect and resolve issues before they impact end-users.",
-    "websiteUrl": null,
-    "keywords": [
-      "apm",
-      "python",
-      "language agent",
-      "featured"
-    ],
-    "authors": [
-      "New Relic",
-      "Emil Hammerstrand"
-    ],
-    "dashboards": [
-      {
-        "name": "Python",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/python/python01.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/python/python02.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/python/python03.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/python/python04.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/python/python05.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/python/python06.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/python/python07.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/python/python08.png"
-        ]
-      }
-    ],
-    "alerts": [
-      {
-        "name": "Average Error Rate",
-        "details": "This alert is triggered when Average Error Rate is higher than 5 for 5 minutes.",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "Average Transaction Duration",
-        "details": "This alert is triggered when Average Transaction Duration is higher than 5 seconds for 5 minutes.",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "Error Transactions (%)",
-        "details": "This alert is triggered when Error Transactions (%) are higher than 5 for 5 minutes.",
-        "type": "STATIC",
-        "url": null
-      }
-    ],
-    "documentation": [
-      {
-        "name": "Python installation docs",
-        "description": "Python is an interpreted, high-level and general-purpose programming\nlanguage.\n",
-        "url": "https://docs.newrelic.com/docs/agents/python-agent/getting-started/compatibility-requirements-python-agent"
-      }
-    ],
-    "installPlans": [
-      {
-        "name": "Python Agent",
-        "id": "setup-python-agent"
-      }
-    ]
-  },
-  {
     "title": "Red Hat Enterprise Linux",
     "name": "red-hat-enterprise-linux",
     "description": "Red Hat Enterprise Linux is a Linux distribution developed by Red Hat for the\ncommercial market.",
@@ -14830,6 +14831,90 @@
       {
         "name": ".NET agent",
         "id": "dotnet-agent"
+      }
+    ]
+  },
+  {
+    "title": "Resmo",
+    "name": "resmo",
+    "description": "## What is Resmo?\n Resmo provides a comprehensive solution for continuous cyber asset visibility and security to cloud-native teams. By allowing SQL-based data queries across a range of Cloud and SaaS providers, Resmo enables customers to stay informed of any changes. Resmo consolidates users, vulnerabilities, repositories, and other essential elements to provide valuable insights through user-friendly dashboards and automates compliance checks for frameworks such as CIS benchmarks. This alerts customers to potential security vulnerabilities.\n\n### How this integration works\n\nOnce you sign up to Resmo, you can easily integrate your account with New Relic using an API key. Resmo uses an API to do the initial polling and collect existing resources. Then, we receive resource changes and updates in real-time by regular polling.\n\n### What does this integration offer\n\nWith this integration you can:\n- Gather and monitor all your New Relic assets on a single platform. \n- Query your New Relic dashboards, accounts, alert policies, API keys, and more. \n- Set up rules to continuously assess your New Relic resources. \n- Set up and receive rule notifications based on your New Relic resource configurations.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/resmo",
+    "id": "1f7fdf81-5d61-4f6a-9cd4-6c72d73df8e7",
+    "level": "NEW_RELIC",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/resmo/logo.svg",
+    "summary": "Resmo is a cyber asset visibility and security solution for cloud-native teams, enabling discovery, security, and compliance across Cloud and SaaS platforms.",
+    "websiteUrl": null,
+    "keywords": [
+      "resmo",
+      "newrelic partner",
+      "assets",
+      "rules",
+      "notifications",
+      "resource configurations"
+    ],
+    "authors": [
+      "New Relic",
+      "Resmo"
+    ],
+    "dashboards": [],
+    "alerts": [],
+    "documentation": [
+      {
+        "name": "Resmo installation docs",
+        "description": "Integrate your Resmo account with New Relic using an API key.",
+        "url": "https://docs.resmo.com/product/integrations/new-relic-integration"
+      }
+    ],
+    "installPlans": []
+  },
+  {
+    "title": "Netlify Logs",
+    "name": "netlify-logs",
+    "description": "Use this quickstart to quickly parse traffic and function logs from Netlify into meaningful metrics within New Relic.\n\n### Netlify Logs quickstart highlights\n\nThe Netlify Logs quickstart is the fastest way to explore and visualize data from traffic and function logs provided by [Netlify log drains](https://docs.netlify.com/monitor-sites/log-drains/). \n\nWith this quickstart, you can easily understand:\n\n- Changes in your sites' traffic over time\n- Percentage of successful requests, warnings, and errors\n- Requests by status\n- Average duration of requests \n- Changes in Functions utilization over time\n- Number of successful Function Invocations, warnings, and errors\n- Number of Function Invocations over time\n- Average Function duration\n- Traffic logs and function logs for correlation with these metrics\n\nNote: The Functions dashboard within the Netlify Logs quickstart features a function duration chart that requires a custom parsing rule to correctly display this data.\n\nTo create this parsing rule in New Relic One, navigate to the Logs tab and select the Parsing option under Manage Data. Click Create Parsing Rule and enter a name for your rule (ex: Function Duration). Under Attribute, select `log_type` and select `functions` under Value. In the Parsing Logic field, enter the following:\n\n`%{WORD:level} RequestId: %{DATA} %{BASE16FLOAT:duration} %{DATA} %{INT:billed_duration} %{DATA} %{INT:max_mem} %{DATA} %{INT:used_mem}`\n\nEnable the rule toggle and the then click Save Parsing Rule.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/netlify/netlify-logs",
+    "id": "63f08781-18ad-4a89-ae63-49718deee041",
+    "level": "COMMUNITY",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/netlify/netlify-logs/logo.png",
+    "summary": "Visualize your Netlify traffic and function log drains",
+    "websiteUrl": null,
+    "keywords": [
+      "netlify",
+      "logs",
+      "traffic logs",
+      "function logs",
+      "log drains",
+      "jamstack",
+      "serverless functions",
+      "newrelic partner",
+      "NR1_addData",
+      "NR1_sys"
+    ],
+    "authors": [
+      "Matt Rinehart (Netlify)"
+    ],
+    "dashboards": [
+      {
+        "name": "Netlify Traffic and Function Logs",
+        "description": "Netlify traffic and function log drain dashboard",
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/netlify-logs/netlify-logs01.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/netlify-logs/netlify-logs02.png"
+        ]
+      }
+    ],
+    "alerts": [],
+    "documentation": [
+      {
+        "name": "Configuration docs",
+        "description": "Configuring Netlify log drains for New Relic",
+        "url": "https://docs.netlify.com/monitor-sites/log-drains/"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "netlify-logs",
+        "id": "third-party-netlify-logs"
       }
     ]
   },
@@ -16092,58 +16177,6 @@
     ]
   },
   {
-    "title": "Netlify Logs",
-    "name": "netlify-logs",
-    "description": "Use this quickstart to quickly parse traffic and function logs from Netlify into meaningful metrics within New Relic.\n\n### Netlify Logs quickstart highlights\n\nThe Netlify Logs quickstart is the fastest way to explore and visualize data from traffic and function logs provided by [Netlify log drains](https://docs.netlify.com/monitor-sites/log-drains/). \n\nWith this quickstart, you can easily understand:\n\n- Changes in your sites' traffic over time\n- Percentage of successful requests, warnings, and errors\n- Requests by status\n- Average duration of requests \n- Changes in Functions utilization over time\n- Number of successful Function Invocations, warnings, and errors\n- Number of Function Invocations over time\n- Average Function duration\n- Traffic logs and function logs for correlation with these metrics\n\nNote: The Functions dashboard within the Netlify Logs quickstart features a function duration chart that requires a custom parsing rule to correctly display this data.\n\nTo create this parsing rule in New Relic One, navigate to the Logs tab and select the Parsing option under Manage Data. Click Create Parsing Rule and enter a name for your rule (ex: Function Duration). Under Attribute, select `log_type` and select `functions` under Value. In the Parsing Logic field, enter the following:\n\n`%{WORD:level} RequestId: %{DATA} %{BASE16FLOAT:duration} %{DATA} %{INT:billed_duration} %{DATA} %{INT:max_mem} %{DATA} %{INT:used_mem}`\n\nEnable the rule toggle and the then click Save Parsing Rule.",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/netlify/netlify-logs",
-    "id": "63f08781-18ad-4a89-ae63-49718deee041",
-    "level": "COMMUNITY",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/netlify/netlify-logs/logo.png",
-    "summary": "Visualize your Netlify traffic and function log drains",
-    "websiteUrl": null,
-    "keywords": [
-      "netlify",
-      "logs",
-      "traffic logs",
-      "function logs",
-      "log drains",
-      "jamstack",
-      "serverless functions",
-      "newrelic partner",
-      "featured",
-      "NR1_addData",
-      "NR1_sys"
-    ],
-    "authors": [
-      "Matt Rinehart (Netlify)"
-    ],
-    "dashboards": [
-      {
-        "name": "Netlify Traffic and Function Logs",
-        "description": "Netlify traffic and function log drain dashboard",
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/netlify-logs/netlify-logs01.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/netlify-logs/netlify-logs02.png"
-        ]
-      }
-    ],
-    "alerts": [],
-    "documentation": [
-      {
-        "name": "Configuration docs",
-        "description": "Configuring Netlify log drains for New Relic",
-        "url": "https://docs.netlify.com/monitor-sites/log-drains/"
-      }
-    ],
-    "installPlans": [
-      {
-        "name": "netlify-logs",
-        "id": "third-party-netlify-logs"
-      }
-    ]
-  },
-  {
     "title": "Microsoft SQL Server",
     "name": "mssql",
     "description": "Relational database management system used to store and retrieve data as\nrequested by other software applications.",
@@ -17119,6 +17152,58 @@
     ]
   },
   {
+    "title": "Speedscale",
+    "name": "speedscale",
+    "description": "Speedscale lets you capture traffic from one environment and replay elsewhere. Use the traffic replay to validate new code performance and functionality. Track the SRE golden signals of latency, throughput, CPU, memory and error metrics before you deploy. Preview your container or API behavior in your CI pipeline without having to write any scripts. Any necessary backends are provided by Speedscale’s mocking technology, which also uses past traffic to generate proper responses you expect during traffic replay. \n\nSpeedscale Snapshots are subsets of traffic that you would like to replay to test how your new code reacts, similar to test scenarios. Deploying this quickstart adds a Speedscale dashboard to your New Relic account that includes replay success rates, response time and deep links to reports.\n\nRead the integration tutorial for the Speedscale quickstart on [New Relic Explorer Hub](https://discuss.newrelic.com/t/how-to-integrate-with-speedscale/171099).\n\nIf you have questions about this quickstart please contact support@speedscale.com.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/speedscale",
+    "id": "c4512294-8f81-4efa-8f28-6c1db28d288c",
+    "level": "VERIFIED",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/speedscale/logo.svg",
+    "summary": "Visualize Speedscale traffic replay performance data in New Relic One dashboards to see how new code will perform in production.",
+    "websiteUrl": null,
+    "keywords": [
+      "traffic",
+      "replay",
+      "simulate",
+      "report",
+      "newrelic partner",
+      "NR1_addData",
+      "NR1_sys"
+    ],
+    "authors": [
+      "Speedscale Inc."
+    ],
+    "dashboards": [
+      {
+        "name": "Speedscale Reports",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/speedscale-reports/speedscale-reports.png"
+        ]
+      }
+    ],
+    "alerts": [],
+    "documentation": [
+      {
+        "name": "New Relic Explorer Hub",
+        "description": "Ask questions in the post on New Relic Explorer Hub",
+        "url": "https://discuss.newrelic.com/t/how-to-integrate-with-speedscale/171099"
+      },
+      {
+        "name": "Speedscale Installation Docs",
+        "description": "The only prerequisite is to obtain your New Relic account id and license key.",
+        "url": "https://docs.speedscale.com/reference/integrations/new-relic"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "speedscale",
+        "id": "third-party-speedscale-integration"
+      }
+    ]
+  },
+  {
     "title": "Video agent for Akamai player",
     "name": "video-web-akamai",
     "description": "## Why monitor Akamai player?\n\nAkamai Media Player is designed to help you insert quality media playback experiences into web, mobile, and connected-TV applications using SDKs. It includes SDKs for web, iOS, tvOS, Android, Android TV, Fire TV, and Chromecast. New Relic Akamai quickstart monitors your Akamai player with digital experience monitoring, tracing, diagnostics, and application analytics.\n\n### Akamai player quickstart highlights\n\nThe New Relic Akamai player quickstart has the following features\n- Dashboards| Our dashboards proactively track metrics like video attempts, video plays, and average video start time. The dashboards also help you monitor other key indicators like connection buffering ratio, plays by app, and more.\n- Alerts| You can get instant alerts on performance metrics like video playback failure, video start failure, and video start time.\n\n### How to monitor Akamai performance\n\nNew Relic’s Akamai quickstart automatically instruments your Akamai player with our video agent. It empowers you to monitor video applications with practical dashboards and alerts. The dashboard provides interactive visualizations to explore your data and understand context. In particular, the dashboard offers you the ability to drill down into performance details like the number of video attempts, number of video plays, and the overall average video start.\n\nWith instant alerts, the integration helps you to detect issues quickly and respond to them efficiently thereby improving your Akamai streaming experience.\n\nInstall the [New Relic Akamai](https://developer.akamai.com/new-relic-overview) observability quickstart today to track Akamai player’s metrics in real-time through a seamless dashboard and different alerts. This quickstart offers you the fastest path to effective monitoring of your Akamai video player via our video agent.",
@@ -17511,6 +17596,45 @@
         "id": "third-party-jenkins-integration"
       }
     ]
+  },
+  {
+    "title": "New Relic Reports",
+    "name": "nr-reports",
+    "description": "New Relic Reports is an engine for automating the generation of custom reports\nbuilt using telemetry in the New Relic Telemetry Data Platform and the delivery\nof those reports via a variety of channels.\n\n## Installation\n\nInstalling New Relic Reports is easy. First make sure you check\n[the prerequisites](https://github.com/newrelic/nr-reports#prerequisites).\nThen follow the [installed steps](https://github.com/newrelic/nr-reports#installation).\n\n## Getting Started\n\nCheck out [the Getting Started](https://github.com/newrelic/nr-reports#getting-started)\ndocumentation to see an example of generating each type of report.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/nr-reports",
+    "id": "260438fc-9bbb-4f7a-8a03-930b5a0ae0bc",
+    "level": "COMMUNITY",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/nr-reports/logo.svg",
+    "summary": "New Relic Reports is a report generation and automation framework for New Relic.",
+    "websiteUrl": null,
+    "keywords": [
+      "report",
+      "reports",
+      "custom"
+    ],
+    "authors": [
+      "Scott DeWitt"
+    ],
+    "dashboards": [],
+    "alerts": [],
+    "documentation": [
+      {
+        "name": "Getting Started",
+        "description": "A tutorial to get you started with New Relic Reports.",
+        "url": "https://github.com/newrelic/nr-reports#getting-started"
+      },
+      {
+        "name": "Installation",
+        "description": "Installing New Relic Reports",
+        "url": "https://github.com/newrelic/nr-reports#installation"
+      },
+      {
+        "name": "New Relic Reports Repository",
+        "description": "The New Relic Reports repository.",
+        "url": "https://github.com/newrelic/nr-reports"
+      }
+    ],
+    "installPlans": []
   },
   {
     "title": "Amazon RDS Enhanced Monitoring",
@@ -19352,59 +19476,6 @@
     ]
   },
   {
-    "title": "Speedscale",
-    "name": "speedscale",
-    "description": "Speedscale lets you capture traffic from one environment and replay elsewhere. Use the traffic replay to validate new code performance and functionality. Track the SRE golden signals of latency, throughput, CPU, memory and error metrics before you deploy. Preview your container or API behavior in your CI pipeline without having to write any scripts. Any necessary backends are provided by Speedscale’s mocking technology, which also uses past traffic to generate proper responses you expect during traffic replay. \n\nSpeedscale Snapshots are subsets of traffic that you would like to replay to test how your new code reacts, similar to test scenarios. Deploying this quickstart adds a Speedscale dashboard to your New Relic account that includes replay success rates, response time and deep links to reports.\n\nRead the integration tutorial for the Speedscale quickstart on [New Relic Explorer Hub](https://discuss.newrelic.com/t/how-to-integrate-with-speedscale/171099).\n\nIf you have questions about this quickstart please contact support@speedscale.com.",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/speedscale",
-    "id": "c4512294-8f81-4efa-8f28-6c1db28d288c",
-    "level": "VERIFIED",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/speedscale/logo.svg",
-    "summary": "Visualize Speedscale traffic replay performance data in New Relic One dashboards to see how new code will perform in production.",
-    "websiteUrl": null,
-    "keywords": [
-      "traffic",
-      "replay",
-      "simulate",
-      "report",
-      "newrelic partner",
-      "featured",
-      "NR1_addData",
-      "NR1_sys"
-    ],
-    "authors": [
-      "Speedscale Inc."
-    ],
-    "dashboards": [
-      {
-        "name": "Speedscale Reports",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/speedscale-reports/speedscale-reports.png"
-        ]
-      }
-    ],
-    "alerts": [],
-    "documentation": [
-      {
-        "name": "New Relic Explorer Hub",
-        "description": "Ask questions in the post on New Relic Explorer Hub",
-        "url": "https://discuss.newrelic.com/t/how-to-integrate-with-speedscale/171099"
-      },
-      {
-        "name": "Speedscale Installation Docs",
-        "description": "The only prerequisite is to obtain your New Relic account id and license key.",
-        "url": "https://docs.speedscale.com/reference/integrations/new-relic"
-      }
-    ],
-    "installPlans": [
-      {
-        "name": "speedscale",
-        "id": "third-party-speedscale-integration"
-      }
-    ]
-  },
-  {
     "title": "CodeStream",
     "name": "codestream",
     "description": "## What is New Relic CodeStream?\n\nNew Relic CodeStream helps dev teams discuss, review, and understand code.\n\n### Get started!\n\nNew Relic CodeStream supercharges development workflows by putting collaboration tools in your IDE. It supports pull requests from GitHub, BitBucket and GitLab, issue management from Jira, Trello, Asana and 9 others, observability from New Relic One and Pixie, and provides code discussion that ties it all together, integrated with Slack, MS Teams, email, and in-editor notifications.\n\nWith the New Relic One integration:\n- Click from Errors Inbox right to the code that caused it in your IDE\n- Step through stack-traces and method calls, navigating to specific lines of code\n- Add production logging on the fly, and see the results, without leaving your editor\n- Discover recent errors assigned to you, assign errors, and update their status \n- View telemetry such as error rate, throughput and executions/sec for a given method\n\nInstall the extension for [VS Code](https://marketplace.visualstudio.com/items?itemName=CodeStream.codestream), [Visual Studio](https://marketplace.visualstudio.com/items?itemName=CodeStream.codestream-vs), and all [JetBrains](https://plugins.jetbrains.com/plugin/12206-codestream-github-gitlab-bitbucket-prs-and-code-review) editors.\n\n### More info\n\nCheck out the [documentation](https://docs.newrelic.com/docs/codestream/)",
@@ -20712,14 +20783,14 @@
     ],
     "documentation": [
       {
-        "name": "Prometheus OpenMetrics Intergration (POMI) installation docs",
-        "description": "To view the Istio Quickstart, the Kubernetes New Relic integration with the Prometheus OpenMetrics Integration (POMI) must be installed prior.\n",
-        "url": "https://docs.newrelic.com/docs/infrastructure/prometheus-integrations/get-started/send-prometheus-metric-data-new-relic"
-      },
-      {
         "name": "Kubernetes installation docs",
         "description": "To view the Istio Quickstart, the Kubernetes New Relic integration with the Prometheus OpenMetrics Integration (POMI) must be installed prior.\n",
         "url": "https://docs.newrelic.com/docs/integrations/host-integrations/host-integrations-list/kubernetes-monitoring-integration"
+      },
+      {
+        "name": "Prometheus OpenMetrics Intergration (POMI) installation docs",
+        "description": "To view the Istio Quickstart, the Kubernetes New Relic integration with the Prometheus OpenMetrics Integration (POMI) must be installed prior.\n",
+        "url": "https://docs.newrelic.com/docs/infrastructure/prometheus-integrations/get-started/send-prometheus-metric-data-new-relic"
       }
     ],
     "installPlans": [
@@ -27955,6 +28026,53 @@
     ]
   },
   {
+    "title": "Gatsby Build",
+    "name": "gatsby-build",
+    "description": "The Gatsby quickstart allows you to get visibility into the build time of your Gatsby Sites,\nusing [OpenTelemetry](https://docs.newrelic.com/docs/integrations/open-source-telemetry-integrations/opentelemetry/introduction-opentelemetry-new-relic/)\nto collect each step as a span in a Distributed Trace. This quickstart takes events, metrics, logs, and traces from the `gatsby-build-newrelic` plugin and allows us to contextualize and identify performance issues within our plugins, 3rd party APIs, and other parts of our website.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/gatsby-build",
+    "id": "d234c09c-3338-4713-8340-ca75766445d6",
+    "level": "NEW_RELIC",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/gatsby-build/logo.png",
+    "summary": "The Gatsby quickstart allows you to get visibility into the build time of your Gatsby Sites,\nusing OpenTelemetry to collect each step as a span in a Distributed Trace. Monitor your build in real-time to highlight which steps are affecting performance, so you can improve them faster.",
+    "websiteUrl": null,
+    "keywords": [
+      "featured"
+    ],
+    "authors": [
+      "New Relic",
+      "Ruairi Douglas"
+    ],
+    "dashboards": [
+      {
+        "name": "Gatsby Build",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/gatsby-build/gatsby-build01.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/gatsby-build/gatsby-build02.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/gatsby-build/gatsby-build03.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/gatsby-build/gatsby-build04.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/gatsby-build/gatsby-build05.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/gatsby-build/gatsby-build.png"
+        ]
+      }
+    ],
+    "alerts": [],
+    "documentation": [
+      {
+        "name": "Gatsby Build OpenTelemetry Setup",
+        "description": "Ship performance data from Gatsby builds using OpenTelemetry\n",
+        "url": "https://newrelic.com/blog/best-practices/optimize-gatsby-build-opentelemetry"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "Gatsby",
+        "id": "gatsby-build-newrelic"
+      }
+    ]
+  },
+  {
     "title": "Azure SQL Database",
     "name": "azure-sql-database",
     "description": "## What is Azure SQL Database?\n\nAzure SQL provides single databases with their own set of resources, and\nelastic pools that share a set of resources.\n\n\n### Get started!\n\nStart monitoring Azure SQL Database by connecting Microsoft Azure to New Relic!\n\nCheck out our Azure SQL Database documentation to instrument your cloud service and manage the stability, scalability, and reliability of your systems with New Relic's infrastructure monitoring capabilities.\n\n### More info\n\nCheck out the [documentation](https://docs.newrelic.com/docs/infrastructure/microsoft-azure-integrations/azure-integrations-list/azure-sql-database-monitoring-integration/) to learn more about New Relic monitoring for Azure SQL Database.",
@@ -28131,53 +28249,6 @@
       {
         "name": "Dropwizard",
         "id": "third-party-dropwizard"
-      }
-    ]
-  },
-  {
-    "title": "Gatsby Build",
-    "name": "gatsby-build",
-    "description": "The Gatsby quickstart allows you to get visibility into the build time of your Gatsby Sites,\nusing [OpenTelemetry](https://docs.newrelic.com/docs/integrations/open-source-telemetry-integrations/opentelemetry/introduction-opentelemetry-new-relic/)\nto collect each step as a span in a Distributed Trace. This quickstart takes events, metrics, logs, and traces from the `gatsby-build-newrelic` plugin and allows us to contextualize and identify performance issues within our plugins, 3rd party APIs, and other parts of our website.",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/gatsby-build",
-    "id": "d234c09c-3338-4713-8340-ca75766445d6",
-    "level": "NEW_RELIC",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/gatsby-build/logo.png",
-    "summary": "The Gatsby quickstart allows you to get visibility into the build time of your Gatsby Sites,\nusing OpenTelemetry to collect each step as a span in a Distributed Trace. Monitor your build in real-time to highlight which steps are affecting performance, so you can improve them faster.",
-    "websiteUrl": null,
-    "keywords": [
-      "featured"
-    ],
-    "authors": [
-      "New Relic",
-      "Ruairi Douglas"
-    ],
-    "dashboards": [
-      {
-        "name": "Gatsby Build",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/gatsby-build/gatsby-build01.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/gatsby-build/gatsby-build02.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/gatsby-build/gatsby-build03.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/gatsby-build/gatsby-build04.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/gatsby-build/gatsby-build05.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/gatsby-build/gatsby-build.png"
-        ]
-      }
-    ],
-    "alerts": [],
-    "documentation": [
-      {
-        "name": "Gatsby Build OpenTelemetry Setup",
-        "description": "Ship performance data from Gatsby builds using OpenTelemetry\n",
-        "url": "https://newrelic.com/blog/best-practices/optimize-gatsby-build-opentelemetry"
-      }
-    ],
-    "installPlans": [
-      {
-        "name": "Gatsby",
-        "id": "gatsby-build-newrelic"
       }
     ]
   },
@@ -28625,7 +28696,8 @@
       "remote_write",
       "remote-write",
       "promql",
-      "grafana"
+      "grafana",
+      "featured"
     ],
     "authors": [
       "Zack Mutchler",
