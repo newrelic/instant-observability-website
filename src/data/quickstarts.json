@@ -355,96 +355,6 @@
     ]
   },
   {
-    "title": "Network Routers and Switches",
-    "name": "network-routers-and-switches",
-    "description": "The Network Routers and Switches quickstart provides a dashboard that gives you a holistic view of the interface traffic across all of the routers and switches in your network, as well as example alerts to get you started.\nUse this quickstart together with New Relic's Network Monitoring feature to visualize anomalies and/or bottlenecks in your network.",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/network-monitoring/network-routers-and-switches",
-    "id": "8d843fc7-ffcf-489a-93b1-c8499cdd16ec",
-    "level": "VERIFIED",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/network-monitoring/network-routers-and-switches/logo.svg",
-    "summary": "Router and Switch telemetry from Network Monitoring give you valuable insights into potential issues with your network.",
-    "websiteUrl": null,
-    "keywords": [
-      "npm",
-      "network",
-      "networking",
-      "router",
-      "switch",
-      "snmp",
-      "ktranslate",
-      "kentik",
-      "infrastructure",
-      "newrelic partner",
-      "NR1_addData",
-      "NR1_sys"
-    ],
-    "authors": [
-      "New Relic",
-      "Zack Mutchler"
-    ],
-    "dashboards": [
-      {
-        "name": "Network - Routers and Switches",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/network-routers-and-switches/network-routers-and-switches.png"
-        ]
-      }
-    ],
-    "alerts": [
-      {
-        "name": "Average CPU % Used Violation",
-        "details": "This alert will trigger when a router or switch has more than 90% CPU utilization.",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "Average Memory % Used Violation",
-        "details": "This alert will trigger when a router or switch has more than 90% memory utilization.",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "Average Transmit % Used Violation",
-        "details": "This alert will trigger when a router or switch interface with *uplink* in the description has more than 90% transmit utilization. You can change the filter this to only alert for specific interface names or descriptions.",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "Ping Packet Loss % Violation",
-        "details": "This alert will trigger when a router or switch fails to respond to at least 10% of the pings sent by ktranslate.  This indicates problems on the device or in the network between the container and the device.",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "Ping Response Time Violation",
-        "details": "This alert will trigger when a router or switch takes more than 500 ms to respond to a ping.  This requires that ping based checks are enabled in the ktranslate config using the response_time or ping_only options.",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "Uplink Interface Down Violation",
-        "details": "This alert will trigger when a router or switch interface with the word \"uplink\" in the description reports as being down.  You can change the NRQL to filter to other naming conventions.",
-        "type": "STATIC",
-        "url": null
-      }
-    ],
-    "documentation": [
-      {
-        "name": "Network SNMP collection installation docs",
-        "description": "Install Network Monitoring for SNMP data collection using a simple Docker container.\n",
-        "url": "https://docs.newrelic.com/docs/network-performance-monitoring/setup-performance-monitoring/snmp-performance-monitoring/"
-      }
-    ],
-    "installPlans": [
-      {
-        "name": "SNMP",
-        "id": "network-snmp"
-      }
-    ]
-  },
-  {
     "title": "Slack Notifications",
     "name": "slack-notifications",
     "description": "Slack is a a messaging app for business that connects people to the information that they need.\n\nIntegrate New Relic with Slack to send notification messages to your Slack channels.\n\n[Check out our documentation](https://docs.newrelic.com/docs/alerts-applied-intelligence/notifications/notification-integrations/#slack) to set up a Slack notification channel and provide fast and consistent ways for the right personnel to be notified about incidents",
@@ -1383,6 +1293,96 @@
       {
         "name": "Guided install",
         "id": "guided-install"
+      }
+    ]
+  },
+  {
+    "title": "Network Routers and Switches",
+    "name": "network-routers-and-switches",
+    "description": "The Network Routers and Switches quickstart provides a dashboard that gives you a holistic view of the interface traffic across all of the routers and switches in your network, as well as example alerts to get you started.\nUse this quickstart together with New Relic's Network Monitoring feature to visualize anomalies and/or bottlenecks in your network.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/network-monitoring/network-routers-and-switches",
+    "id": "8d843fc7-ffcf-489a-93b1-c8499cdd16ec",
+    "level": "VERIFIED",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/network-monitoring/network-routers-and-switches/logo.svg",
+    "summary": "Router and Switch telemetry from Network Monitoring give you valuable insights into potential issues with your network.",
+    "websiteUrl": null,
+    "keywords": [
+      "npm",
+      "network",
+      "networking",
+      "router",
+      "switch",
+      "snmp",
+      "ktranslate",
+      "kentik",
+      "infrastructure",
+      "newrelic partner",
+      "NR1_addData",
+      "NR1_sys"
+    ],
+    "authors": [
+      "New Relic",
+      "Zack Mutchler"
+    ],
+    "dashboards": [
+      {
+        "name": "Network - Routers and Switches",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/network-routers-and-switches/network-routers-and-switches.png"
+        ]
+      }
+    ],
+    "alerts": [
+      {
+        "name": "Average CPU % Used Violation",
+        "details": "This alert will trigger when a router or switch has more than 90% CPU utilization.",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "Average Memory % Used Violation",
+        "details": "This alert will trigger when a router or switch has more than 90% memory utilization.",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "Average Transmit % Used Violation",
+        "details": "This alert will trigger when a router or switch interface with *uplink* in the description has more than 90% transmit utilization. You can change the filter this to only alert for specific interface names or descriptions.",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "Ping Packet Loss % Violation",
+        "details": "This alert will trigger when a router or switch fails to respond to at least 10% of the pings sent by ktranslate.  This indicates problems on the device or in the network between the container and the device.",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "Ping Response Time Violation",
+        "details": "This alert will trigger when a router or switch takes more than 500 ms to respond to a ping.  This requires that ping based checks are enabled in the ktranslate config using the response_time or ping_only options.",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "Uplink Interface Down Violation",
+        "details": "This alert will trigger when a router or switch interface with the word \"uplink\" in the description reports as being down.  You can change the NRQL to filter to other naming conventions.",
+        "type": "STATIC",
+        "url": null
+      }
+    ],
+    "documentation": [
+      {
+        "name": "Network SNMP collection installation docs",
+        "description": "Install Network Monitoring for SNMP data collection using a simple Docker container.\n",
+        "url": "https://docs.newrelic.com/docs/network-performance-monitoring/setup-performance-monitoring/snmp-performance-monitoring/"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "SNMP",
+        "id": "network-snmp"
       }
     ]
   },
