@@ -4,6 +4,7 @@ import { graphql, useStaticQuery } from 'gatsby';
 import ExternalLink from '@newrelic/gatsby-theme-newrelic/src/components/ExternalLink';
 import Link from '@newrelic/gatsby-theme-newrelic/src/components/Link';
 import Icon from '@newrelic/gatsby-theme-newrelic/src/components/Icon';
+import Button from '@newrelic/gatsby-theme-newrelic/src/components/Button';
 import NewLogo from './NewLogo';
 import PropTypes from 'prop-types';
 import React from 'react';
@@ -19,6 +20,17 @@ const getCurrentYear = () => {
   const fullYear = new Date().getFullYear().toString();
   currentYear = fullYear.substring(fullYear.length - 2);
   return currentYear;
+};
+
+const hasOsano = () => {
+  if (typeof window !== 'undefined') {
+    return window.Osano !== undefined;
+  }
+  return false;
+};
+
+const handlePrivacyClick = () => {
+  window.Osano.cm.showDrawer('osano-cm-dom-info-dialog-open');
 };
 
 const GlobalFooter = ({ className }) => {
@@ -302,6 +314,21 @@ const GlobalFooter = ({ className }) => {
           <ExternalLink href="https://newrelic.com/termsandconditions/services-notices">
             {t('footer.privacyNotice', 'Privacy Notice')}
           </ExternalLink>
+          {hasOsano() && (
+            <Button
+              variant={Button.VARIANT.LINK}
+              css={css`
+                font-size: 14px;
+                padding: 0;
+                white-space: nowrap;
+                margin-right: 52px;
+                color: var(--footer-text-color);
+              `}
+              onClick={handlePrivacyClick}
+            >
+              {t('footer.privacyChoices')}
+            </Button>
+          )}
           <ExternalLink href="https://newrelic.com/termsandconditions/cookie-policy">
             {t('footer.cookiePolicy', 'Cookie Policy')}
           </ExternalLink>

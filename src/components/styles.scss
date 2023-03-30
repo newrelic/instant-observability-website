@@ -123,18 +123,11 @@ input[type='text'] {
   margin: 6.5px !important;
 }
 
-@media only screen and (max-width: 425px) {
-  #onetrust-banner-sdk.otFloatingRoundedCorner {
-    width: 100% !important;
+.osano-cm-info {
+  p {
+   font-size: 12px;
   }
 }
-
-@media only screen and (min-width: 426px) and (max-width: 896px) {
-  #onetrust-banner-sdk.otFloatingRoundedCorner {
-    max-width: 100%;
-  }
-}
-
 .slick-track {
   float: left;
   justify-content: center;

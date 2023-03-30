@@ -27,7 +27,6 @@ module.exports = {
     {
       resolve: '@newrelic/gatsby-theme-newrelic',
       options: {
-        oneTrustID: '77dd4d78-49db-4057-81ea-4bc325d6ecdd',
         layout: {
           contentPadding: '2rem',
           maxWidth: '1700px',
