@@ -960,71 +960,6 @@
     ]
   },
   {
-    "title": "Lighttpd",
-    "name": "lighttpd",
-    "description": "## Comprehensive monitoring for your lighttpd server\n\nLighttpd is an open-source web server designed for high-performance situations while staying standards-compliant, secure, and adaptable.\n\n### Why monitor your lighttpd server?\n\nLighttpd monitoring provides important information to help you construct a complete picture of your web server's performance. This performance data includes uptime, network in bytes and packets, number of connections, and more.\n\n### What’s included?\n\nWhen you monitor your lighttpd server with New Relic, you get immediate full-stack observability, including:\n- Alerts on things like average number of connections, average number of requests and high memory usage.\n- Dashboards to monitor crucial performance metrics such as uptime, connection state handle request, connection state still alive, networks, requests per second, and more.",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/lighttpd",
-    "id": "c51dca70-14f4-4c1b-b0af-c2576b48f39f",
-    "level": "NEW_RELIC",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/lighttpd/logo.png",
-    "summary": "With our infrastructure agent and Flex configuration setup, you can monitor and validate your lighttpd processes right out of the box: analyze and capture your server's performance data.",
-    "websiteUrl": null,
-    "keywords": [
-      "Lighttpd",
-      "web server",
-      "infrastructure"
-    ],
-    "authors": [
-      "New Relic"
-    ],
-    "dashboards": [
-      {
-        "name": "Lighttpd",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/lighttpd/lighttpd01.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/lighttpd/lighttpd02.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/lighttpd/lighttpd03.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/lighttpd/lighttpd04.png"
-        ]
-      }
-    ],
-    "alerts": [
-      {
-        "name": "Average Number of Connections",
-        "details": "This alert is triggered when the average number of connections are above 6000 for at least 2 minutes.",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "Average Number of Requests for 5 seconds",
-        "details": "This alert is triggered when the average number of requests for 5 seconds are above 6000 for at least 5 minutes.",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "High Memory Usage",
-        "details": "This alert is triggered when the memory usage is above 90% for at least 5 minutes.",
-        "type": "STATIC",
-        "url": null
-      }
-    ],
-    "documentation": [
-      {
-        "name": "Lighttpd",
-        "description": "Integrate your lighttpd processes with our infrastructure agent and Flex configuration to collect data and deliver it to New Relic.\n",
-        "url": "https://docs.newrelic.com/docs/infrastructure/host-integrations/host-integrations-list/lighttpd-integration/"
-      }
-    ],
-    "installPlans": [
-      {
-        "name": "lighttpd",
-        "id": "lighttpd"
-      }
-    ]
-  },
-  {
     "title": "CircleCI",
     "name": "circleci",
     "description": "## CircleCI Quickstart\n\nThe world’s best software teams use CircleCI to deliver quality code with confidence. As the largest continuous integration and delivery (CI/CD) platform, CircleCI empowers engineers to seamlessly take ideas to execution, at scale. Every feature of our platform is built to fine-tune the entire development process from start to finish.\n\nThis quickstart allows users to view analytical data about their CircleCI jobs within the New Relic dashboard to gain visibility into the performance and health of their continuous integration and deployment pipelines. \n\n### With the CircleCI quickstart you can:\n\n- Monitor real-time CI performance, activity, and health, or track over time.\n- Identify opportunities for optimization.\n\n### The CircleCI quickstart includes a dashboard where users can easily monitor:\n- Total Jobs Ran\n- Job Health (% success)\n- Projects Summary\n- Most Recent Failed Jobs\n- Jobs Ran Per Project\n\n### Requirements\nTo set up the integration, visit the [CircleCI Webhooks documentation](https://circleci.com/docs/2.0/webhooks/).\n\n### Contact us\nShow us how you’re using the quickstart for a chance to win a CircleCI swag kit! Join us on Discuss [here](https://discuss.circleci.com/t/circleci-quickstart-with-new-relic/44022).\nFor more information or support, please go to [support.circleci.com](https://support.circleci.com/)",
@@ -1383,6 +1318,71 @@
       {
         "name": "SNMP",
         "id": "network-snmp"
+      }
+    ]
+  },
+  {
+    "title": "Lighttpd",
+    "name": "lighttpd",
+    "description": "## Comprehensive monitoring for your lighttpd server\n\nLighttpd is an open-source web server designed for high-performance situations while staying standards-compliant, secure, and adaptable.\n\n### Why monitor your lighttpd server?\n\nLighttpd monitoring provides important information to help you construct a complete picture of your web server's performance. This performance data includes uptime, network in bytes and packets, number of connections, and more.\n\n### What’s included?\n\nWhen you monitor your lighttpd server with New Relic, you get immediate full-stack observability, including:\n- Alerts on things like average number of connections, average number of requests and high memory usage.\n- Dashboards to monitor crucial performance metrics such as uptime, connection state handle request, connection state still alive, networks, requests per second, and more.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/lighttpd",
+    "id": "c51dca70-14f4-4c1b-b0af-c2576b48f39f",
+    "level": "NEW_RELIC",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/lighttpd/logo.png",
+    "summary": "With our infrastructure agent and Flex configuration setup, you can monitor and validate your lighttpd processes right out of the box: analyze and capture your server's performance data.",
+    "websiteUrl": null,
+    "keywords": [
+      "Lighttpd",
+      "web server",
+      "infrastructure"
+    ],
+    "authors": [
+      "New Relic"
+    ],
+    "dashboards": [
+      {
+        "name": "Lighttpd",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/lighttpd/lighttpd01.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/lighttpd/lighttpd02.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/lighttpd/lighttpd03.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/lighttpd/lighttpd04.png"
+        ]
+      }
+    ],
+    "alerts": [
+      {
+        "name": "Average Number of Connections",
+        "details": "This alert is triggered when the average number of connections are above 6000 for at least 2 minutes.",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "Average Number of Requests for 5 seconds",
+        "details": "This alert is triggered when the average number of requests for 5 seconds are above 6000 for at least 5 minutes.",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "High Memory Usage",
+        "details": "This alert is triggered when the memory usage is above 90% for at least 5 minutes.",
+        "type": "STATIC",
+        "url": null
+      }
+    ],
+    "documentation": [
+      {
+        "name": "Lighttpd",
+        "description": "Integrate your lighttpd processes with our infrastructure agent and Flex configuration to collect data and deliver it to New Relic.\n",
+        "url": "https://docs.newrelic.com/docs/infrastructure/host-integrations/host-integrations-list/lighttpd-integration/"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "lighttpd",
+        "id": "lighttpd"
       }
     ]
   },
@@ -3799,12 +3799,12 @@
   {
     "title": "MERN Stack",
     "name": "mern-stack",
-    "description": "## Comprehensive MERN stack monitoring system:\nMERN is a free and open-source JavaScript software stack for building dynamic web sites and web applications. Each of these 4 powerful technologies provides an end-to-end framework for the developers to work in and each of these technologies play a big part in the development of web applications.\n\n## What should you look for in a MERN dashboard?\nMetrics of MongoDB, i.e. number of active connections, database details, usage time and many more.\nMetrics of ExpressJS, NodeJS, i.e. number of web transactions, top transactions and the error transactions, memory usage and many more.\nMetrics of ReactJS, i.e. number of viewed urls, page views by city, ajax requests and many more. You are also free to create your own chart by using the stored metrics.\n\n## What’s included in the MERN quickstart?\nInstall this quickstart to install preconfigured observability solutions:\n- Multiple high-value alerts, including page views by city and ajax requests\n- Informative dashboards (Top transactions, Error transactions, and more)",
+    "description": "## Comprehensive MERN Stack Monitoring System\nA JavaScript-based open-source framework called MERN Stack is used for creating dynamic web pages and online applications. There are four components in the stack: MongoDB, ExpressJS, ReactJS and NodeJS. \nThe stack's components integrate logically and simply because they are all based on JavaScript and JSON. These four powerful technologies all play an important role in the creation of web applications.\n\n## What should you look for in a MERN dashboard?\n- Metrics related to MongoDB including active connections, database details, usage time, and more.\n- There are many metrics available for ExpressJS and NodeJS including web transactions, top ten transactions and errors, memory usage, and many others.\n- There are many different ReactJS metrics including the number of viewed urls, page views by city, ajax requests, etc. You may also create your own chart using the collected metrics.\n\n## What’s included in the MERN quickstart?\nInstall this quickstart to install preconfigured observability solutions:\n- A number of high-value alerts are available including the average number of connections created, the FCP score and the memory usage.\n- Informative dashboards (the top 10 transactions, connections, database indexes, and more).",
     "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/mern",
     "id": "ef98b152-9ccc-4e9b-8fc6-0d3b3215faeb",
     "level": "NEW_RELIC",
     "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/mern/logo.png",
-    "summary": "This MERN quickstart allows you to monitor a MERN stack (MongoDB, ExpressJS, ReactJS, NodeJS).\nMERN stack is a full stack software development kit. It is used to develop web applications. MERN is utilized by developers and businesses worldwide.\nOur MERN integration includes a specific dashboard to get observability for an entire MERN stack.",
+    "summary": "Monitor your apps using New Relic’s MERN integration with ReactJS, MongoDB and NodeJS agents for browser, database and application monitoring.",
     "websiteUrl": null,
     "keywords": [
       "MERN",
@@ -3862,7 +3862,7 @@
     ],
     "documentation": [
       {
-        "name": "MERN stack installation documentation",
+        "name": "MERN Stack installation documentation",
         "description": "Integrate your MERN app and get your data into New Relic.\n",
         "url": "https://docs.newrelic.com/docs/browser/browser-integrations/mexn-integration/"
       }
@@ -17027,75 +17027,6 @@
     ]
   },
   {
-    "title": "Redmine",
-    "name": "redmine",
-    "description": "## Comprehensive monitoring quickstart for Redmine\nWe can monitor your Redmine application in a complex environment and keep you on top of performance with our Ruby agent.\n\n## Why monitor Redmine?\nRedmine is a popular open-source project management and issue tracking tool, but like any software, it can also have some issues. Our quickstart helps you catch those quickly and effortlessly.   ## Why monitor your Redmine app?\n\n### Slow performance\nRedmine can become slow and unresponsive with a large number of projects, issues, and users, requiring optimization and maintenance to keep it running smoothly.\n\n### Integration problems: \nIntegrating Redmine with other tools and systems, such as source control systems, can be challenging and may require custom development.\n\n### Customization limitations: \nWhile Redmine can be customized to a certain extent, it may not meet all the specific requirements of a particular organization, and customizing it further may require extensive development work.\n\n### User management: \nManaging large numbers of users and their permissions in Redmine can be difficult, and may require the development of custom scripts or plugins.\n\n### Data import and export: \nImporting and exporting data from Redmine can be complex, and may require custom development to meet specific requirements.\n\n### User adoption: \nGetting users to adopt and effectively use Redmine can be a challenge, as some users may find its interface confusing or difficult to use.\n\n\n## What's included?\nYou'll get instant full-stack observability of your Redmine app out-of-the-box:\n\n- Monitor your app's custom metrics.\n- Gain code-related insights about your app's health and status.\n- Monitor your Redmine database operations and transactions.\n- Be proactively alerted about critical issues related to your app's status.",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/redmine",
-    "id": "f1cde389-deec-451e-8fd3-3a84631d5e83",
-    "level": "NEW_RELIC",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/redmine/logo.png",
-    "summary": "Effortlessly monitor your Redmine application by keeping a close eye on performance issues with a comprehensive and all-encompassing view of the entire distributed tracing process.",
-    "websiteUrl": null,
-    "keywords": [
-      "redmine",
-      "ruby agent",
-      "ruby"
-    ],
-    "authors": [
-      "New Relic"
-    ],
-    "dashboards": [
-      {
-        "name": "Redmine",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/redmine/redmine01.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/redmine/redmine02.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/redmine/redmine03.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/redmine/redmine04.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/redmine/redmine05.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/redmine/redmine06.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/redmine/redmine07.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/redmine/redmine08.png"
-        ]
-      }
-    ],
-    "alerts": [
-      {
-        "name": "Average Error Rate",
-        "details": "This alert is triggered when the Average Error Rate is higher than 5 for 5 minutes.",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "Average Page Load Time",
-        "details": "This alert is triggered when the Average Page Load Time is higher than 5 seconds for 5 minutes.",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "Failed Transactions",
-        "details": "This alert is triggered when the Failed Transactions are higher than 5 for 5 minutes.",
-        "type": "STATIC",
-        "url": null
-      }
-    ],
-    "documentation": [
-      {
-        "name": "Redmine integration documentation",
-        "description": "Monitor the performance metrics of your Redmine instances in real-time with New Relic ruby agent.\n",
-        "url": "https://docs.newrelic.com/docs/infrastructure/host-integrations/host-integrations-list/redmine-integration/"
-      }
-    ],
-    "installPlans": [
-      {
-        "name": "Redmine",
-        "id": "redmine"
-      }
-    ]
-  },
-  {
     "title": "Delphix",
     "name": "delphix",
     "description": "### Summary\n\nThe Delphix quickstart for New Relic grants insights and observability of the Delphix Platform to administrators. Users may monitor various Delphix objects, such as dSources and VDBs, and trigger alerts on exceeded thresholds. \n\nIn addition, when leveraging the Delphix integration, users can feed data into triggered New Relic workflows to command data-ready RCA environments through a [ServiceNow automated request](https://store.servicenow.com/sn_appstore_store.do#!/store/application/bb688f9f9734111012b7318c1253af11) or direct webhook.\n\n### What's the value?\n\nThe Delphix Platform is a powerful test data management tool enabling the provisioning of RCA environments for mission-critical applications on demand. The quickstart allows Delphix administrators to monitor their usage, maintain high availability, and reduce the costs of forgotten virtual databases. \n\nSite Reliability Engineers rely on Delphix and New Relic to provide mission-critical application environments within minutes of an issue which eases investigation during stressful issues and helps achieve SLA times. Delphix can reduce provisioning times from days to minutes.\n\n### What's inside?\n\nThe quickstart contains a sample Delphix Platform Dashboard and Storage Utilization Alert to help users get started. \n\nPopulating data for dashboards, alerts, and workflows requires the [Delphix Integration](https://github.com/delphix/dct-newrelic-integration) and [Delphix Data Control Tower](https://docs.delphix.com/dct).",
@@ -17756,6 +17687,75 @@
       {
         "name": "AWS-CloudWatch-Metric-Streams",
         "id": "aws-cloudwatch-metric-streams"
+      }
+    ]
+  },
+  {
+    "title": "Redmine",
+    "name": "redmine",
+    "description": "## Comprehensive monitoring quickstart for Redmine\nWe can monitor your Redmine application in a complex environment and keep you on top of performance with our Ruby agent.\n\n## Why monitor Redmine?\nRedmine is a popular open-source project management and issue tracking tool, but like any software, it can also have some issues. Our quickstart helps you catch those quickly and effortlessly.\n\n### Slow performance\nRedmine can become slow and unresponsive with a large number of projects, issues, and users, requiring optimization and maintenance to keep it running smoothly.\n\n### Integration problems: \nIntegrating Redmine with other tools and systems, such as source control systems, can be challenging and may require custom development.\n\n### Customization limitations: \nWhile Redmine can be customized to a certain extent, it may not meet all the specific requirements of a particular organization, and customizing it further may require extensive development work.\n\n### User management: \nManaging large numbers of users and their permissions in Redmine can be difficult, and may require the development of custom scripts or plugins.\n\n### Data import and export: \nImporting and exporting data from Redmine can be complex, and may require custom development to meet specific requirements.\n\n### User adoption: \nGetting users to adopt and effectively use Redmine can be a challenge, as some users may find its interface confusing or difficult to use.\n\n\n## What's included?\nYou'll get instant full-stack observability of your Redmine app out-of-the-box:\n\n- Monitor your app's custom metrics.\n- Gain code-related insights about your app's health and status.\n- Monitor your Redmine database operations and transactions.\n- Be proactively alerted about critical issues related to your app's status.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/redmine",
+    "id": "f1cde389-deec-451e-8fd3-3a84631d5e83",
+    "level": "NEW_RELIC",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/redmine/logo.png",
+    "summary": "Effortlessly monitor your Redmine application by keeping a close eye on performance issues with a comprehensive and all-encompassing view of the entire distributed tracing process.",
+    "websiteUrl": null,
+    "keywords": [
+      "redmine",
+      "ruby agent",
+      "ruby"
+    ],
+    "authors": [
+      "New Relic"
+    ],
+    "dashboards": [
+      {
+        "name": "Redmine",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/redmine/redmine01.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/redmine/redmine02.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/redmine/redmine03.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/redmine/redmine04.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/redmine/redmine05.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/redmine/redmine06.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/redmine/redmine07.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/redmine/redmine08.png"
+        ]
+      }
+    ],
+    "alerts": [
+      {
+        "name": "Average Error Rate",
+        "details": "This alert is triggered when the Average Error Rate is higher than 5 for 5 minutes.",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "Average Page Load Time",
+        "details": "This alert is triggered when the Average Page Load Time is higher than 5 seconds for 5 minutes.",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "Failed Transactions",
+        "details": "This alert is triggered when the Failed Transactions are higher than 5 for 5 minutes.",
+        "type": "STATIC",
+        "url": null
+      }
+    ],
+    "documentation": [
+      {
+        "name": "Redmine integration documentation",
+        "description": "Monitor the performance metrics of your Redmine instances in real-time with New Relic ruby agent.\n",
+        "url": "https://docs.newrelic.com/docs/infrastructure/host-integrations/host-integrations-list/redmine-integration/"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "Redmine",
+        "id": "redmine"
       }
     ]
   },
