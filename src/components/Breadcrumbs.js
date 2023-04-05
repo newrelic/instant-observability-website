@@ -48,7 +48,7 @@ const Breadcrumbs = ({ segments, separator }) => {
 };
 
 Breadcrumbs.defaultProps = {
-  separator: '/',
+  separator: '>',
 };
 
 Breadcrumbs.propTypes = {
