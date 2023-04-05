@@ -1141,17 +1141,6 @@
     ],
     "dashboards": [
       {
-        "name": "Kubernetes / Kubelet",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/kubernetes-prometheus-kubelet/kubernetes-prometheus-kubelet01.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/kubernetes-prometheus-kubelet/kubernetes-prometheus-kubelet02.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/kubernetes-prometheus-kubelet/kubernetes-prometheus-kubelet03.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/kubernetes-prometheus-kubelet/kubernetes-prometheus-kubelet04.png"
-        ]
-      },
-      {
         "name": "Kubernetes / Compute Resources",
         "description": null,
         "url": null,
@@ -1161,19 +1150,30 @@
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/kubernetes-prometheus-compute-resources/kubernetes-prometheus-compute-resources03.png",
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/kubernetes-prometheus-compute-resources/kubernetes-prometheus-compute-resources04.png"
         ]
+      },
+      {
+        "name": "Kubernetes / Kubelet",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/kubernetes-prometheus-kubelet/kubernetes-prometheus-kubelet01.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/kubernetes-prometheus-kubelet/kubernetes-prometheus-kubelet02.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/kubernetes-prometheus-kubelet/kubernetes-prometheus-kubelet03.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/kubernetes-prometheus-kubelet/kubernetes-prometheus-kubelet04.png"
+        ]
       }
     ],
     "alerts": [],
     "documentation": [
       {
-        "name": "Kubernetes Prometheus agent",
-        "description": "New Relic's Prometheus agent is a thin wrapper on top of Prometheus server to run it in agent mode. With this integration, you can create a YAML configuration file used by Prometheus that's ready to send metrics to New Relic.\n",
-        "url": "https://docs.newrelic.com/docs/infrastructure/prometheus-integrations/install-configure-prometheus-agent/install-prometheus-agent/"
-      },
-      {
         "name": "Kubernetes integration",
         "description": "The New Relic Kubernetes integration has multiple components that work together to give you end-to-end observability across your clusters. While you have the flexibility to deploy the components that you prefer, to achieve full observability, you need to install the complete package to monitor all metrics. \n",
         "url": "https://docs.newrelic.com/docs/kubernetes-pixie/kubernetes-integration/get-started/introduction-kubernetes-integration/"
+      },
+      {
+        "name": "Kubernetes Prometheus agent",
+        "description": "New Relic's Prometheus agent is a thin wrapper on top of Prometheus server to run it in agent mode. With this integration, you can create a YAML configuration file used by Prometheus that's ready to send metrics to New Relic.\n",
+        "url": "https://docs.newrelic.com/docs/infrastructure/prometheus-integrations/install-configure-prometheus-agent/install-prometheus-agent/"
       },
       {
         "name": "Kubernetes Prometheus agent REQUIRED configuration",
@@ -1586,14 +1586,14 @@
     "alerts": [],
     "documentation": [
       {
-        "name": "Implementation guide",
-        "description": "Explains what quality foundation is and how to apply it\n",
-        "url": "https://docs.newrelic.com/docs/new-relic-solutions/observability-maturity/customer-experience/quality-foundation-implementation-guide"
-      },
-      {
         "name": "Install README",
         "description": "Guides you on how to customize the dashboard once you've installed it\n",
         "url": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/oma-qf#readme"
+      },
+      {
+        "name": "Implementation guide",
+        "description": "Explains what quality foundation is and how to apply it\n",
+        "url": "https://docs.newrelic.com/docs/new-relic-solutions/observability-maturity/customer-experience/quality-foundation-implementation-guide"
       }
     ],
     "installPlans": [
@@ -5743,11 +5743,11 @@
     ],
     "dashboards": [
       {
-        "name": "Redis Enterprise Cluster Metrics",
+        "name": "Redis Enterprise Database Metrics",
         "description": null,
         "url": null,
         "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/cluster/cluster01.png"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/database/database01.png"
         ]
       },
       {
@@ -5759,11 +5759,11 @@
         ]
       },
       {
-        "name": "Redis Enterprise Database Metrics",
+        "name": "Redis Enterprise Cluster Metrics",
         "description": null,
         "url": null,
         "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/database/database01.png"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/cluster/cluster01.png"
         ]
       }
     ],
@@ -6835,6 +6835,14 @@
     ],
     "dashboards": [
       {
+        "name": "SAP Data Ingestion Estimate",
+        "description": "Get an overview of the data volume ingested from SAP systems",
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/nrm4sap-datasize/sap-size-estimate01.png"
+        ]
+      },
+      {
         "name": "SAP Data Collection Monitoring",
         "description": "Monitor SAP data collection and ingestion process",
         "url": null,
@@ -6849,14 +6857,6 @@
         "screenshots": [
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/nrm4sap/sap-dashboard01.png",
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/nrm4sap/sap-dashboard02.png"
-        ]
-      },
-      {
-        "name": "SAP Data Ingestion Estimate",
-        "description": "Get an overview of the data volume ingested from SAP systems",
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/nrm4sap-datasize/sap-size-estimate01.png"
         ]
       }
     ],
@@ -9367,6 +9367,18 @@
     ],
     "dashboards": [
       {
+        "name": "JFrog Xray",
+        "description": "This dashboard provides visibility into JFrog Xray logs (access, service, traffic log volumes, HTTP response codes, errors etc), metrics (system performance, number and type of artifacts and components scanned), and violations (security vulnerabiities and license issues)",
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/jfrog-xray/jfrog-xray1.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/jfrog-xray/jfrog-xray2.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/jfrog-xray/jfrog-xray3.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/jfrog-xray/jfrog-xray4.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/jfrog-xray/jfrog-xray5.png"
+        ]
+      },
+      {
         "name": "JFrog Artifactory",
         "description": "This dashboard provides an overview of usage statistics of JFrog Artifactory logs (application, audit, Docker, requests) and overview of the system metrics, JVM statistics, storage consumption, garbage collection, and other operational insights associated with JFrog Artifactory",
         "url": null,
@@ -9378,18 +9390,6 @@
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/jfrog-artifactory/jfrog-artifactory05.png",
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/jfrog-artifactory/jfrog-artifactory06.png",
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/jfrog-artifactory/jfrog-artifactory07.png"
-        ]
-      },
-      {
-        "name": "JFrog Xray",
-        "description": "This dashboard provides visibility into JFrog Xray logs (access, service, traffic log volumes, HTTP response codes, errors etc), metrics (system performance, number and type of artifacts and components scanned), and violations (security vulnerabiities and license issues)",
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/jfrog-xray/jfrog-xray1.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/jfrog-xray/jfrog-xray2.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/jfrog-xray/jfrog-xray3.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/jfrog-xray/jfrog-xray4.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/jfrog-xray/jfrog-xray5.png"
         ]
       }
     ],
@@ -10325,14 +10325,14 @@
         "url": "https://docs.newrelic.com/docs/infrastructure/prometheus-integrations/get-started/send-prometheus-metric-data-new-relic"
       },
       {
-        "name": "Etcd Integration Docs",
-        "description": "New Relic documentation for the Etcd integration including installation, configuration, and how to query the metrics.\n",
-        "url": "https://docs.newrelic.com/docs/infrastructure/prometheus-integrations/integrations-list/etcd-integration"
-      },
-      {
         "name": "Etcd Metrics Docs",
         "description": "Learn more about the Prometheus metrics available for Etcd",
         "url": "https://etcd.io/docs/v3.5/metrics/"
+      },
+      {
+        "name": "Etcd Integration Docs",
+        "description": "New Relic documentation for the Etcd integration including installation, configuration, and how to query the metrics.\n",
+        "url": "https://docs.newrelic.com/docs/infrastructure/prometheus-integrations/integrations-list/etcd-integration"
       }
     ],
     "installPlans": [
@@ -20153,6 +20153,43 @@
     ]
   },
   {
+    "title": "TiDB Cloud",
+    "name": "tidbcloud-quickstart",
+    "description": "## Quickstart for TiDB Cloud monitoring\nTiDB Cloud is a fully-managed Database-as-a-Service (DBaaS) solution for TiDB, an open-source, distributed SQL database that is designed to handle both online transaction processing (OLTP) and online analytical processing (OLAP) workloads.\n\n### New Relic TiDB Cloud quickstart features\nWith monitoring statistics enabled, you can observe key metrics to analyze the performance of your cluster. \n\n### TiDBCloud Quickstart instructions\nCheck out [Metrics available to New Relic](https://docs.pingcap.com/tidbcloud/monitor-new-relic-integration#metrics-available-to-new-relic) to learn more about New Relic monitoring for TiDBCloud.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/tidbcloud",
+    "id": "bb0e7dc3-7484-46ca-841e-86a2d8818fcc",
+    "level": "COMMUNITY",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/tidbcloud/logo.svg",
+    "summary": "New Relic's TiDB Cloud quickstart provides performance insights including database time, queries per second, and resource utilization. Install the quickstart to better understand utilization of resources and monitor performance issues.",
+    "websiteUrl": null,
+    "keywords": [
+      "database"
+    ],
+    "authors": [
+      "PingCAP",
+      "lilyjazz"
+    ],
+    "dashboards": [
+      {
+        "name": "TiDB Cloud Monitoring",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/tidbcloud/tidbcloud.png"
+        ]
+      }
+    ],
+    "alerts": [],
+    "documentation": [
+      {
+        "name": "Integrate TiDB Cloud with New Relic",
+        "description": "You can configure TiDB Cloud to send metric data about your TiDB clusters to New Relic.",
+        "url": "https://docs.pingcap.com/tidbcloud/monitor-new-relic-integration"
+      }
+    ],
+    "installPlans": []
+  },
+  {
     "title": "ServiceNow Notifications",
     "name": "servicenow-notifications",
     "description": "ServiceNow is a software that helps companies manage digital workflows for enterprise operations.\n\nIntegrate New Relic with ServiceNow Incident-Management and automatically create and update incidents.\n\n[Check out our documentation](https://docs.newrelic.com/docs/alerts-applied-intelligence/notifications/notification-integrations/#servicenow) to set up a ServiceNow notification channel and provide fast and consistent ways for the right personnel to be notified about incidents",
@@ -20416,6 +20453,14 @@
     ],
     "dashboards": [
       {
+        "name": "Catchpoint-Response Size",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/catchpoint-response-size/Catchpoint-Response_Size.png"
+        ]
+      },
+      {
         "name": "Catchpoint-Test Times",
         "description": null,
         "url": null,
@@ -20437,14 +20482,6 @@
         "url": null,
         "screenshots": [
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/catchpoint-recent-errors/Catchpoint-Recent_Errors.png"
-        ]
-      },
-      {
-        "name": "Catchpoint-Response Size",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/catchpoint-response-size/Catchpoint-Response_Size.png"
         ]
       }
     ],
@@ -22529,6 +22566,58 @@
     ]
   },
   {
+    "title": "Conviva",
+    "name": "conviva",
+    "description": "## What is Conviva?\n\n[Conviva](https://www.conviva.com/) is a real-time analytics platform that\nmakes streaming data actionable.\n\n## What is the Conviva Integration?\n\nThe Conviva integration is a New Relic Infrastructure\n[on-host integration](https://docs.newrelic.com/docs/infrastructure/host-integrations/get-started/introduction-host-integrations/)\nthat uses the [Conviva v3 Metrics API](https://developer.conviva.com/docs/metrics-api-v3/3e38d9ead39fc-metrics-v3-api-user-guide-beta)\nto pull metrics from Conviva and push them into New Relic as dimensional\nmetrics.\n\nThe Conviva integration supports the following Conviva v3 Metrics API\nconcepts.\n\n* [Single metrics and metric groups](https://developer.conviva.com/docs/metrics-api-v3/3e38d9ead39fc-metrics-v3-api-user-guide-beta#single-metrics-and-metric-groups)\n* [Multiple singular metrics](https://developer.conviva.com/docs/metrics-api-v3/3e38d9ead39fc-metrics-v3-api-user-guide-beta#retrieving-multiple-singular-metrics-in-a-request)\n* [Dimensions](https://developer.conviva.com/docs/metrics-api-v3/3e38d9ead39fc-metrics-v3-api-user-guide-beta#dimensions)\n* [Time ranges](https://developer.conviva.com/docs/metrics-api-v3/3e38d9ead39fc-metrics-v3-api-user-guide-beta#time-range)\n* [Interval granularity](https://developer.conviva.com/docs/metrics-api-v3/3e38d9ead39fc-metrics-v3-api-user-guide-beta#interval-granularity)\n* [Filtering](https://developer.conviva.com/docs/metrics-api-v3/3e38d9ead39fc-metrics-v3-api-user-guide-beta#filtering-by-dimensions)\n\n## Getting Started\n\nThis quickstart is designed to help customers install and use the Conviva\nintegration to collect and work with Conviva metrics.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/conviva",
+    "id": "5fd7561f-2128-4270-9d51-f731819c7d50",
+    "level": "COMMUNITY",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/conviva/logo.svg",
+    "summary": "A New Relic quickstart designed to help customers install and use the Conviva\nintegration to collect and work with Conviva metrics.",
+    "websiteUrl": null,
+    "keywords": [
+      "conviva",
+      "video",
+      "streaming",
+      "NRI",
+      "integration",
+      "newrelic"
+    ],
+    "authors": [
+      "Scott DeWitt",
+      "Chris McCarthy"
+    ],
+    "dashboards": [
+      {
+        "name": "Conviva Integration",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/conviva/conviva.png"
+        ]
+      }
+    ],
+    "alerts": [],
+    "documentation": [
+      {
+        "name": "Conviva Metrics V3 API User Guide",
+        "description": "The Conviva Metrics V3 API documentation",
+        "url": "https://developer.conviva.com/docs/metrics-api-v3/3e38d9ead39fc-metrics-v3-api-user-guide-beta"
+      },
+      {
+        "name": "Github Repository",
+        "description": "The Conviva integration repository",
+        "url": "https://github.com/newrelic/nri-conviva"
+      },
+      {
+        "name": "Installation",
+        "description": "Installing the Conviva integration",
+        "url": "https://github.com/newrelic/nri-conviva#installation"
+      }
+    ],
+    "installPlans": []
+  },
+  {
     "title": "Amazon Cognito",
     "name": "aws-cognito",
     "description": "## What is Amazon Cognito?\n\nAdd user account management functionality to your web or mobile application.\n\n### Get started!\n\nStart monitoring Amazon Cognito by connecting Amazon Web Services (AWS) to New Relic!\n\nCheck out our Amazon Cognito documentation to instrument your cloud service and manage the stability, scalability, and reliability of your systems with New Relic's infrastructure monitoring capabilities.\n\n### More info\n\nCheck out the [documentation](https://docs.newrelic.com/docs/infrastructure/amazon-integrations/aws-integrations-list/amazon-cognito-monitoring-integration/) to learn more about New Relic monitoring for Amazon Cognito.",
@@ -23047,14 +23136,14 @@
     ],
     "documentation": [
       {
-        "name": "CoreDNS Integration Docs",
-        "description": "New Relic documentation for the CoreDNS integration including installation, configuration, and how to query the metrics.\n",
-        "url": "https://docs.newrelic.com/docs/infrastructure/prometheus-integrations/integrations-list/core-dns-integration"
-      },
-      {
         "name": "CoreDNS Metrics Docs",
         "description": "Learn more about the Prometheus metrics available for CoreDNS\n",
         "url": "https://coredns.io/plugins/metrics/"
+      },
+      {
+        "name": "CoreDNS Integration Docs",
+        "description": "New Relic documentation for the CoreDNS integration including installation, configuration, and how to query the metrics.\n",
+        "url": "https://docs.newrelic.com/docs/infrastructure/prometheus-integrations/integrations-list/core-dns-integration"
       },
       {
         "name": "Prometheus Installation Docs",
@@ -27132,14 +27221,6 @@
     ],
     "dashboards": [
       {
-        "name": "GCP Integrations Data Ingest Analysis",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/gcp-integrations-data-ingest-analysis/gcp-integrations-data-ingest-analysis.png"
-        ]
-      },
-      {
         "name": "Azure Integrations Data Ingest Analysis",
         "description": null,
         "url": null,
@@ -27156,11 +27237,11 @@
         ]
       },
       {
-        "name": "On-Host Integrations Data Analysis",
+        "name": "GCP Integrations Data Ingest Analysis",
         "description": null,
         "url": null,
         "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/on-host-integrations-data-analysis/on-host-integrations-data-analysis.png"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/gcp-integrations-data-ingest-analysis/gcp-integrations-data-ingest-analysis.png"
         ]
       },
       {
@@ -27169,6 +27250,14 @@
         "url": null,
         "screenshots": [
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/kubernetes-data-ingest-analysis/kubernetes-data-ingest-analysis.png"
+        ]
+      },
+      {
+        "name": "On-Host Integrations Data Analysis",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/on-host-integrations-data-analysis/on-host-integrations-data-analysis.png"
         ]
       }
     ],
@@ -28130,11 +28219,11 @@
     ],
     "dashboards": [
       {
-        "name": "Browser Pages Dashboard",
+        "name": "JavaScript Errors",
         "description": null,
         "url": null,
         "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/browser-pages-dashboard/browser_pages_dashboard.png"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/javascript-errors/javascript_errors.png"
         ]
       },
       {
@@ -28146,11 +28235,11 @@
         ]
       },
       {
-        "name": "JavaScript Errors",
+        "name": "Browser Pages Dashboard",
         "description": null,
         "url": null,
         "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/javascript-errors/javascript_errors.png"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/browser-pages-dashboard/browser_pages_dashboard.png"
         ]
       },
       {
@@ -28747,6 +28836,11 @@
     ],
     "documentation": [
       {
+        "name": "Prometheus Installation Docs",
+        "description": "Use Prometheus remote_write or Prometheus Agent\n",
+        "url": "https://docs.newrelic.com/docs/infrastructure/prometheus-integrations/get-started/send-prometheus-metric-data-new-relic/"
+      },
+      {
         "name": "Harbor Integration Docs",
         "description": "New Relic documentation for the Harbor integration including installation, configuration, and how to query the metrics.\n",
         "url": "https://docs.newrelic.com/docs/infrastructure/prometheus-integrations/integrations-list/harbor-integration/"
@@ -28755,11 +28849,6 @@
         "name": "Harbor Metrics Docs",
         "description": "Learn more about the Prometheus metrics available for Harbor\n",
         "url": "https://goharbor.io/docs/2.3.0/administration/metrics/"
-      },
-      {
-        "name": "Prometheus Installation Docs",
-        "description": "Use Prometheus remote_write or Prometheus Agent\n",
-        "url": "https://docs.newrelic.com/docs/infrastructure/prometheus-integrations/get-started/send-prometheus-metric-data-new-relic/"
       }
     ],
     "installPlans": [
