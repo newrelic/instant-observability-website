@@ -5530,79 +5530,6 @@
     ]
   },
   {
-    "title": "ActiveMQ",
-    "name": "activemq",
-    "description": "## ActiveMQ Uses\nActiveMQ is an open source message middleware built by Apache on top the Java Messaging Service (JMS). Its primary use is to send messages between different apps. It translates messages from sender to receiver, and connects multiple clients and servers. ActiveMQ supports a high number of transport protocols, including OpenWire, WebSockets, STOMP, REST, and MQTT. Also, it provides Enterprise Features thereby enabling communication from multiple clients or servers.\n\n## Why monitor ActiveMQ?\nApache ActiveMQ is a fault-tolerant, scalable messaging system used to build real-time data pipelines. ActiveMQ also supports replications natively, and can help build streaming applications that run inside production environments.\n\nMonitoring ActiveMQ with our quickstart shows you performance metrics and inventory data on a real-time basis, create your own custom dashboard with charts and queries, and create alert policies.\n\n\n## What’s included in this quickstart?\nNew Relic’s performance monitoring provides instant observability out-of-the-box.\n\nWith this quickstart, you can:\n- Easily monitor and identify when your ActiveMQ nodes are underperforming.\n- View interactive dashboards show your tracked brokers, messages per sec, broker connections, memory usage, storage usage and more.\n- Know when message processing time is about to degrade.\n\n\n### Comprehensive monitoring quickstart for ActiveMQ\n\nNew Relic detects your ActiveMQ metrics like queues, brokers, producers, consumers, garbage collection rate, heap memory usage and more.  Monitor the performance metrics of your Apache ActiveMQ instances in real-time with New Relic APM. \n\nInstall and start monitoring your data today!",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/activemq",
-    "id": "2a0365a9-f14c-4611-b097-9ad3aee51f1a",
-    "level": "NEW_RELIC",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/activemq/logo.png",
-    "summary": "ActiveMQ monitoring tool by New Relic helps business users and developers monitor ActiveMQ performance.",
-    "websiteUrl": null,
-    "keywords": [
-      "activemq",
-      "jmx monitoring",
-      "apache"
-    ],
-    "authors": [
-      "New Relic"
-    ],
-    "dashboards": [
-      {
-        "name": "ActiveMQ",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/activemq/activemq01.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/activemq/activemq02.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/activemq/activemq03.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/activemq/activemq04.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/activemq/activemq05.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/activemq/activemq06.png"
-        ]
-      }
-    ],
-    "alerts": [
-      {
-        "name": "Heap Memory Usage",
-        "details": "This alert is triggered when the used heap memory usage is higher than 100GB during 5 minutes.",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "Message Dequeue Rate",
-        "details": "This alert is triggered when the messages received are less than 1 during 5 minutes.",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "Message Enqueue Rate",
-        "details": "This alert is triggered when the messages sent are less than 1 during 5 minutes.",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "Total Connections",
-        "details": "This alert is triggered when the total connections are less than 1 during 5 minutes.",
-        "type": "STATIC",
-        "url": null
-      }
-    ],
-    "documentation": [
-      {
-        "name": "ActiveMQ integration documentation",
-        "description": "Monitor the performance metrics of your Apache ActiveMQ instances in real-time with New Relic APM.\n",
-        "url": "https://docs.newrelic.com/docs/infrastructure/host-integrations/host-integrations-list/jmx-monitoring-activemq"
-      }
-    ],
-    "installPlans": [
-      {
-        "name": "ActiveMQ",
-        "id": "activemq-integration"
-      }
-    ]
-  },
-  {
     "title": "Tornado",
     "name": "tornado",
     "description": "## What is tornado?\n\nTornado is a Python web framework and asynchronous networking library, originally developed at FriendFeed. By using non-blocking network I/O, Tornado can scale to tens of thousands of open connections, making it ideal for long polling, WebSockets, and other applications that require a long-lived connection to each user.\n\n## Get started!\n\nLeverage community expertise and instantly get value out of your telemetry data. This quickstart automatically instruments tornado with the New Relic Python agent, and allows you to instantly monitor your Python application with out-of-the-box dashboards and alerts. Further leverage New Relic's APM capabilities by setting up [errors inbox](https://docs.newrelic.com/docs/apm/apm-ui-pages/errors-inbox/errors-inbox/), [transaction tracing](https://docs.newrelic.com/docs/apm/transactions/transaction-traces/introduction-transaction-traces/), and [service maps](https://docs.newrelic.com/docs/understand-dependencies/understand-system-dependencies/service-maps/introduction-service-maps/).\\n\\n## More info\\n\\nCheck out the [documentation](https://docs.newrelic.com/docs/agents/python-agent/) to learn more about New Relic monitoring for tornado.\"",
@@ -6733,6 +6660,79 @@
       {
         "name": "Contentsquare",
         "id": "third-party-contentsquare"
+      }
+    ]
+  },
+  {
+    "title": "ActiveMQ",
+    "name": "activemq",
+    "description": "## ActiveMQ Uses\nActiveMQ is an open source message middleware built by Apache on top the Java Messaging Service (JMS). Its primary use is to send messages between different apps. It translates messages from sender to receiver, and connects multiple clients and servers. ActiveMQ supports a high number of transport protocols, including OpenWire, WebSockets, STOMP, REST, and MQTT. Also, it provides Enterprise Features thereby enabling communication from multiple clients or servers.\n\n## Why monitor ActiveMQ?\nApache ActiveMQ is a fault-tolerant, scalable messaging system used to build real-time data pipelines. ActiveMQ also supports replications natively, and can help build streaming applications that run inside production environments.\n\nMonitoring ActiveMQ with our quickstart shows you performance metrics and inventory data on a real-time basis, create your own custom dashboard with charts and queries, and create alert policies.\n\n\n## What’s included in this quickstart?\nNew Relic’s performance monitoring provides instant observability out-of-the-box.\n\nWith this quickstart, you can:\n- Easily monitor and identify when your ActiveMQ nodes are underperforming.\n- View interactive dashboards show your tracked brokers, messages per sec, broker connections, memory usage, storage usage and more.\n- Know when message processing time is about to degrade.\n\n\n### Comprehensive monitoring quickstart for ActiveMQ\n\nNew Relic detects your ActiveMQ metrics like queues, brokers, producers, consumers, garbage collection rate, heap memory usage and more.  Monitor the performance metrics of your Apache ActiveMQ instances in real-time with New Relic APM. \n\nInstall and start monitoring your data today!",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/activemq",
+    "id": "2a0365a9-f14c-4611-b097-9ad3aee51f1a",
+    "level": "NEW_RELIC",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/activemq/logo.png",
+    "summary": "ActiveMQ monitoring tool by New Relic helps business users and developers monitor ActiveMQ performance.",
+    "websiteUrl": null,
+    "keywords": [
+      "activemq",
+      "jmx monitoring",
+      "apache"
+    ],
+    "authors": [
+      "New Relic"
+    ],
+    "dashboards": [
+      {
+        "name": "ActiveMQ",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/activemq/activemq01.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/activemq/activemq02.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/activemq/activemq03.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/activemq/activemq04.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/activemq/activemq05.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/activemq/activemq06.png"
+        ]
+      }
+    ],
+    "alerts": [
+      {
+        "name": "Heap Memory Usage",
+        "details": "This alert is triggered when the heap memory usage exceeds 100GB for 5 minutes.",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "Message Dequeue Rate",
+        "details": "This alert is triggered when the messages received are less than 1 during 5 minutes.",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "Message Enqueue Rate",
+        "details": "This alert is triggered when the messages sent are less than 1 during 5 minutes.",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "Total Connections",
+        "details": "This alert is triggered when the total connections are less than 1 during 5 minutes.",
+        "type": "STATIC",
+        "url": null
+      }
+    ],
+    "documentation": [
+      {
+        "name": "ActiveMQ integration documentation",
+        "description": "Monitor the performance metrics of your Apache ActiveMQ instances in real-time with New Relic APM.\n",
+        "url": "https://docs.newrelic.com/docs/infrastructure/host-integrations/host-integrations-list/jmx-monitoring-activemq"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "ActiveMQ",
+        "id": "activemq-integration"
       }
     ]
   },
