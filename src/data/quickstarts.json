@@ -3998,6 +3998,59 @@
     ]
   },
   {
+    "title": "OMA Data Ingest Governance",
+    "name": "oma-data-governance",
+    "description": "Data ingest governance is a practice of ensuring optimal value for telemetry data collected by an organization particularly a complex organization with numerous business units and working groups.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/oma-data-gov",
+    "id": "30593cae-4cfb-435c-9170-310e3f38ab40",
+    "level": "NEW_RELIC",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/oma-data-gov/logo.svg",
+    "summary": "The prerequisite step of data governance includes developing an accurate baseline of your telemetry data ingest levels. A good ingest baseline will break your ingest out by sub-account and telemetry type.  This is particularly necessary in a complex organization with numerous business units and working groups.",
+    "websiteUrl": null,
+    "keywords": [
+      "OMA",
+      "Data Governance",
+      "Data Consumption",
+      "Manage Data Ingest"
+    ],
+    "authors": [
+      "Jim Hagan",
+      "Kim Hickey"
+    ],
+    "dashboards": [
+      {
+        "name": "Data Ingest Governance Baseline",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/data-ingest-baseline/data-ingest-baseline.png"
+        ]
+      },
+      {
+        "name": "Data Ingest Governance Entity Breakdowns",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/data-ingest-entity-breakdown/data-ingest-entity-breakdown.png"
+        ]
+      }
+    ],
+    "alerts": [],
+    "documentation": [
+      {
+        "name": "Observability Maturity",
+        "description": "Observability Maturity Solutions Guide",
+        "url": "https://docs.newrelic.com/docs/new-relic-solutions/observability-maturity/introduction"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "solutions-hub",
+        "id": "solutions-hub-dashboards"
+      }
+    ]
+  },
+  {
     "title": "Slack for CodeStream",
     "name": "slack-for-codestream",
     "description": "Slack is a messaging app for business that connects people to the information they need. \n\nWhen you post a comment, issue, or feedback request, your teammates are notified via the activity feed, and potentially via email. Sometimes, though, you might want to share to Slack as well. This allows you to reach people who haven’t yet joined CodeStream, or maybe don’t spend a lot of time in their IDE.\n\n[Check out our documentation](https://docs.newrelic.com/docs/codestream/codestream-integrations/slack-integration) to connect New Relic CodeStream to your team's Slack channel.",
@@ -4781,59 +4834,6 @@
       {
         "name": "Java Agent",
         "id": "setup-java-agent"
-      }
-    ]
-  },
-  {
-    "title": "OMA Data Ingest Governance",
-    "name": "oma-data-governance",
-    "description": "Data ingest governance is a practice of ensuring optimal value for telemetry data collected by an organization particularly a complex organization with numerous business units and working groups.",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/oma-data-gov",
-    "id": "30593cae-4cfb-435c-9170-310e3f38ab40",
-    "level": "NEW_RELIC",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/oma-data-gov/logo.svg",
-    "summary": "The prerequisite step of data governance includes developing an accurate baseline of your telemetry data ingest levels.  A good ingest baseline will break your ingest out by sub-account and telemetry type.  This is particularly necessary in a complex organization with numerous business units and working groups.",
-    "websiteUrl": null,
-    "keywords": [
-      "OMA",
-      "Data Governance",
-      "Data Consumption",
-      "Manage Data Ingest"
-    ],
-    "authors": [
-      "Jim Hagan",
-      "Kim Hickey"
-    ],
-    "dashboards": [
-      {
-        "name": "Data Ingest Governance Baseline",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/data-ingest-baseline/data-ingest-baseline.png"
-        ]
-      },
-      {
-        "name": "Data Ingest Governance Entity Breakdowns",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/data-ingest-entity-breakdown/data-ingest-entity-breakdown.png"
-        ]
-      }
-    ],
-    "alerts": [],
-    "documentation": [
-      {
-        "name": "Observability Maturity",
-        "description": "Observability Maturity Solutions Guide",
-        "url": "https://docs.newrelic.com/docs/new-relic-solutions/observability-maturity/introduction"
-      }
-    ],
-    "installPlans": [
-      {
-        "name": "solutions-hub",
-        "id": "solutions-hub-dashboards"
       }
     ]
   },
