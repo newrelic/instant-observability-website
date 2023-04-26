@@ -754,19 +754,19 @@
     ],
     "dashboards": [
       {
-        "name": "AWS WAF",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/aws-waf/aws-waf.png"
-        ]
-      },
-      {
         "name": "AWS WAFV2",
         "description": null,
         "url": null,
         "screenshots": [
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/aws-wafv2/aws-wafv2.png"
+        ]
+      },
+      {
+        "name": "AWS WAF",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/aws-waf/aws-waf.png"
         ]
       }
     ],
@@ -1048,14 +1048,14 @@
     ],
     "documentation": [
       {
-        "name": "Velero Integration Docs",
-        "description": "New Relic documentation for the Velero integration including installation, configuration, and how to query the metrics.\n",
-        "url": "https://docs.newrelic.com/docs/infrastructure/prometheus-integrations/integrations-list/velero-integration"
-      },
-      {
         "name": "Prometheus Installation Docs",
         "description": "Use Prometheus remote_write or Prometheus Agent\n",
         "url": "https://docs.newrelic.com/docs/infrastructure/prometheus-integrations/get-started/send-prometheus-metric-data-new-relic/"
+      },
+      {
+        "name": "Velero Integration Docs",
+        "description": "New Relic documentation for the Velero integration including installation, configuration, and how to query the metrics.\n",
+        "url": "https://docs.newrelic.com/docs/infrastructure/prometheus-integrations/integrations-list/velero-integration"
       },
       {
         "name": "Velero Metrics Reference",
@@ -1094,17 +1094,6 @@
     ],
     "dashboards": [
       {
-        "name": "Kubernetes / Kubelet",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/kubernetes-prometheus-kubelet/kubernetes-prometheus-kubelet01.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/kubernetes-prometheus-kubelet/kubernetes-prometheus-kubelet02.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/kubernetes-prometheus-kubelet/kubernetes-prometheus-kubelet03.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/kubernetes-prometheus-kubelet/kubernetes-prometheus-kubelet04.png"
-        ]
-      },
-      {
         "name": "Kubernetes / Compute Resources",
         "description": null,
         "url": null,
@@ -1114,10 +1103,26 @@
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/kubernetes-prometheus-compute-resources/kubernetes-prometheus-compute-resources03.png",
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/kubernetes-prometheus-compute-resources/kubernetes-prometheus-compute-resources04.png"
         ]
+      },
+      {
+        "name": "Kubernetes / Kubelet",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/kubernetes-prometheus-kubelet/kubernetes-prometheus-kubelet01.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/kubernetes-prometheus-kubelet/kubernetes-prometheus-kubelet02.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/kubernetes-prometheus-kubelet/kubernetes-prometheus-kubelet03.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/kubernetes-prometheus-kubelet/kubernetes-prometheus-kubelet04.png"
+        ]
       }
     ],
     "alerts": [],
     "documentation": [
+      {
+        "name": "Kubernetes Prometheus agent REQUIRED configuration",
+        "description": "The default installation of the New Relic Prometheus agent does not enable all of the metrics needed to work with this quickstart's dashboards. Follow the instructions here to enable those metrics. \n",
+        "url": "https://github.com/newrelic/newrelic-prometheus-configurator/blob/main/examples/kubernetes/README.md"
+      },
       {
         "name": "Kubernetes integration",
         "description": "The New Relic Kubernetes integration has multiple components that work together to give you end-to-end observability across your clusters. While you have the flexibility to deploy the components that you prefer, to achieve full observability, you need to install the complete package to monitor all metrics. \n",
@@ -1127,11 +1132,6 @@
         "name": "Kubernetes Prometheus agent",
         "description": "New Relic's Prometheus agent is a thin wrapper on top of Prometheus server to run it in agent mode. With this integration, you can create a YAML configuration file used by Prometheus that's ready to send metrics to New Relic.\n",
         "url": "https://docs.newrelic.com/docs/infrastructure/prometheus-integrations/install-configure-prometheus-agent/install-prometheus-agent/"
-      },
-      {
-        "name": "Kubernetes Prometheus agent REQUIRED configuration",
-        "description": "The default installation of the New Relic Prometheus agent does not enable all of the metrics needed to work with this quickstart's dashboards. Follow the instructions here to enable those metrics. \n",
-        "url": "https://github.com/newrelic/newrelic-prometheus-configurator/blob/main/examples/kubernetes/README.md"
       }
     ],
     "installPlans": [
@@ -1386,53 +1386,6 @@
     ]
   },
   {
-    "title": "MongoDB (Prometheus)",
-    "name": "mongodb-prometheus",
-    "description": "## MongoDB Monitoring\n\nMongoDB enables the unlimited virtual scaling of applications. Utilities like mongostat and mongotop offer immediate results but fail to provide insights into trends in a highly graphical visual dashboard. MongoDB dashboards provide insights into key metrics like connections saturation, oplog size, query and document operations, databases and indexes size, collections and transactions latency, replica set and members status. \n\nAvoid slow queries with  proper indexes that impact performance. Instantly monitor your entire MongoDB database with our instant observability kit or the MongoDB free monitoring tool.  \n\nThe critical differences between MongoDB free monitoring and monitoring MongoDB with New Relic’s instant observability quickstart are efficiency, usability, scope, and cost. MongoDB free monitoring focuses on standalone instances and replica sets. Data collected on disk utilization, memory, and operation execution times are uploaded periodically. \n\n\n### What’s Included?\n\nNew Relic + MongoDB quickstart - New Relic’s instant observability quickstart provides multiple metrics related to instances, replica sets, members, databases, and collections.\n\nNew Relic’s MongoDB quickstart contains a dashboard with meaningful insights, including:\n- Predefined dashboard filters by Cluster, databases, collections, replica sets, and members.\n- Connections saturation, operations by type, databases objects and size, indexes size, commands latency and duration, replica set and member status, and more.\n\nMonitor MongoDB with New Relic to quickly gain improved distribution and increased visibility into real-time user and app response times, throughput and breakdown by component and layer, and long-term data trends over time.  \n\n### Value of MongoDB Quickstarts\n\n[MongoDB performance monitoring with New Relic](https://docs.newrelic.com/docs/infrastructure/host-integrations/host-integrations-list/mongodb/mongodb-monitoring-integration-new/) offers advanced features, including:\n- Obtain app performance insights.\n- Create custom queries and charts of your data integrations.\n- Filter and analyze configuration data and metrics in Infrastructure UI.\n\nNew Relic’s instant observability quickstart helps developers reduce administrative overheads and accelerate time to value. As New Relic is SaaS-based, you also don’t have to worry about maintenance or onboarding.",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/mongodb-prometheus",
-    "id": "04f45b0a-e326-4095-be0e-850de867982e",
-    "level": "NEW_RELIC",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/mongodb-prometheus/logo.jpeg",
-    "summary": "New Relic's MongoDB quickstart provides insights including total commands, requests per second, and database size. Install the quickstart to better understand utilization of resources and monitor performance issues.",
-    "websiteUrl": null,
-    "keywords": [
-      "infrastructure",
-      "database",
-      "featured",
-      "prometheus"
-    ],
-    "authors": [
-      "New Relic"
-    ],
-    "dashboards": [
-      {
-        "name": "MongoDB (Prometheus)",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/mongodb-prometheus/mongodb01.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/mongodb-prometheus/mongodb02.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/mongodb-prometheus/mongodb03.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/mongodb-prometheus/mongodb04.png"
-        ]
-      }
-    ],
-    "alerts": [],
-    "documentation": [
-      {
-        "name": "MongoDB",
-        "description": "Open source, document-oriented database where you store data in JSON-like files with dynamic schemas.\n",
-        "url": "https://docs.newrelic.com/docs/infrastructure/host-integrations/host-integrations-list/mongodb/mongodb-monitoring-integration-new/"
-      }
-    ],
-    "installPlans": [
-      {
-        "name": "MongoDB (Prometheus)",
-        "id": "mongodb-prometheus-integration-docs"
-      }
-    ]
-  },
-  {
     "title": "Cisco IP SLA Operations",
     "name": "cisco-ip-sla-operations",
     "description": "The Cisco IP SLA Operations quickstart provides a dashboard that gives you a holistic view of your configured IP SLA operations in your Cisco ecosystem, as well as example alerts to get you started.\nUse this quickstart together with New Relic's Network Monitoring feature to visualize anomalies and/or bottlenecks in your network.",
@@ -1487,6 +1440,53 @@
       {
         "name": "SNMP",
         "id": "network-snmp"
+      }
+    ]
+  },
+  {
+    "title": "MongoDB (Prometheus)",
+    "name": "mongodb-prometheus",
+    "description": "## MongoDB Monitoring\n\nMongoDB enables the unlimited virtual scaling of applications. Utilities like mongostat and mongotop offer immediate results but fail to provide insights into trends in a highly graphical visual dashboard. MongoDB dashboards provide insights into key metrics like connections saturation, oplog size, query and document operations, databases and indexes size, collections and transactions latency, replica set and members status. \n\nAvoid slow queries with  proper indexes that impact performance. Instantly monitor your entire MongoDB database with our instant observability kit or the MongoDB free monitoring tool.  \n\nThe critical differences between MongoDB free monitoring and monitoring MongoDB with New Relic’s instant observability quickstart are efficiency, usability, scope, and cost. MongoDB free monitoring focuses on standalone instances and replica sets. Data collected on disk utilization, memory, and operation execution times are uploaded periodically. \n\n\n### What’s Included?\n\nNew Relic + MongoDB quickstart - New Relic’s instant observability quickstart provides multiple metrics related to instances, replica sets, members, databases, and collections.\n\nNew Relic’s MongoDB quickstart contains a dashboard with meaningful insights, including:\n- Predefined dashboard filters by Cluster, databases, collections, replica sets, and members.\n- Connections saturation, operations by type, databases objects and size, indexes size, commands latency and duration, replica set and member status, and more.\n\nMonitor MongoDB with New Relic to quickly gain improved distribution and increased visibility into real-time user and app response times, throughput and breakdown by component and layer, and long-term data trends over time.  \n\n### Value of MongoDB Quickstarts\n\n[MongoDB performance monitoring with New Relic](https://docs.newrelic.com/docs/infrastructure/host-integrations/host-integrations-list/mongodb/mongodb-monitoring-integration-new/) offers advanced features, including:\n- Obtain app performance insights.\n- Create custom queries and charts of your data integrations.\n- Filter and analyze configuration data and metrics in Infrastructure UI.\n\nNew Relic’s instant observability quickstart helps developers reduce administrative overheads and accelerate time to value. As New Relic is SaaS-based, you also don’t have to worry about maintenance or onboarding.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/mongodb-prometheus",
+    "id": "04f45b0a-e326-4095-be0e-850de867982e",
+    "level": "NEW_RELIC",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/mongodb-prometheus/logo.jpeg",
+    "summary": "New Relic's MongoDB quickstart provides insights including total commands, requests per second, and database size. Install the quickstart to better understand utilization of resources and monitor performance issues.",
+    "websiteUrl": null,
+    "keywords": [
+      "infrastructure",
+      "database",
+      "featured",
+      "prometheus"
+    ],
+    "authors": [
+      "New Relic"
+    ],
+    "dashboards": [
+      {
+        "name": "MongoDB (Prometheus)",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/mongodb-prometheus/mongodb01.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/mongodb-prometheus/mongodb02.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/mongodb-prometheus/mongodb03.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/mongodb-prometheus/mongodb04.png"
+        ]
+      }
+    ],
+    "alerts": [],
+    "documentation": [
+      {
+        "name": "MongoDB",
+        "description": "Open source, document-oriented database where you store data in JSON-like files with dynamic schemas.\n",
+        "url": "https://docs.newrelic.com/docs/infrastructure/host-integrations/host-integrations-list/mongodb/mongodb-monitoring-integration-new/"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "MongoDB (Prometheus)",
+        "id": "mongodb-prometheus-integration-docs"
       }
     ]
   },
@@ -2369,19 +2369,19 @@
     ],
     "dashboards": [
       {
-        "name": "Battlesnake Performance",
-        "description": "Monitor your Battlesnake's performance and see how it stacks up against your competition!",
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/battlesnake-performance/battlesnake-performance.png"
-        ]
-      },
-      {
         "name": "Battlesnake Server Status",
         "description": "A dashboard to monitor your Battlesnake server's performance. It's important to keep all responses to the `/move` endpoint under 500ms. Furthermore, it's possible that your snake may be in multiple concurrent matches at the same time. It's important to make sure you server and web application are running smoothly to keep you in the game!",
         "url": null,
         "screenshots": [
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/battlesnake-server-status/battlesnake-server-status.png"
+        ]
+      },
+      {
+        "name": "Battlesnake Performance",
+        "description": "Monitor your Battlesnake's performance and see how it stacks up against your competition!",
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/battlesnake-performance/battlesnake-performance.png"
         ]
       },
       {
@@ -4019,19 +4019,19 @@
     ],
     "dashboards": [
       {
-        "name": "Data Ingest Governance Entity Breakdowns",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/data-ingest-entity-breakdown/data-ingest-entity-breakdown.png"
-        ]
-      },
-      {
         "name": "Data Ingest Governance Baseline",
         "description": null,
         "url": null,
         "screenshots": [
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/data-ingest-baseline/data-ingest-baseline.png"
+        ]
+      },
+      {
+        "name": "Data Ingest Governance Entity Breakdowns",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/data-ingest-entity-breakdown/data-ingest-entity-breakdown.png"
         ]
       }
     ],
@@ -5670,19 +5670,19 @@
     ],
     "dashboards": [
       {
-        "name": "Redis Enterprise Database CRDT",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/active-active/active_active01.png"
-        ]
-      },
-      {
         "name": "Redis Enterprise Cluster Metrics",
         "description": null,
         "url": null,
         "screenshots": [
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/cluster/cluster01.png"
+        ]
+      },
+      {
+        "name": "Redis Enterprise Database CRDT",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/active-active/active_active01.png"
         ]
       },
       {
@@ -6814,6 +6814,142 @@
     ]
   },
   {
+    "title": "OpenAI Observability",
+    "name": "openai",
+    "description": "## Monitor your GPT-3 and GPT-4 Application Usage in New Relic\n\nWith the GPT integration, you'll have the ability to seamlessly monitor OpenAI completion queries and simultaneously log useful statistics in a New Relic customizable dashboard about your requests.\n\nBy adding just two lines of code, users can gain access to key performance metrics such as cost, response time, and sample inputs/outputs. The dashboard also allows users to track total requests, average token/requests, and model names. \n\nWith New Relic's fully customizable dashboard, users can add additional metrics based on their specific business requirements and needs. \n\nOverall, New Relic's OpenAI integration provides real-time metrics around GPT applications to help businesses optimize usage, reduce costs, and achieve better results.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/openai",
+    "id": "5db25dbd-a6e9-46fc-a728-4697f677fbc6",
+    "level": "NEW_RELIC",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/openai/openai-logo.svg",
+    "summary": "Seamlessly monitor your usage of OpenAI’s GPT Series APIs using New Relic’s dashboard. You'll get access to real-time metrics that can help you optimize usage, reduce costs, and achieve better results.",
+    "websiteUrl": null,
+    "keywords": [
+      "NR1_addData",
+      "NR1_sys",
+      "featured",
+      "openai",
+      "ai",
+      "gpt",
+      "mlops"
+    ],
+    "authors": [
+      "New Relic",
+      "Yogev Kriger"
+    ],
+    "dashboards": [
+      {
+        "name": "OpenAI Monitoring",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/openai/openai-dashboard-screenshot.png"
+        ]
+      }
+    ],
+    "alerts": [],
+    "documentation": [
+      {
+        "name": "Monitor OpenAI",
+        "description": "A lightweight tool to monitor your OpenAI workload.\n",
+        "url": "https://github.com/newrelic/openai-api-monitoring"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "OpenAI integration",
+        "id": "setup-openai"
+      }
+    ]
+  },
+  {
+    "title": "Cribl",
+    "name": "cribl-logstream",
+    "description": "## About Cribl\n\nCribl Stream unlocks [data sources](https://docs.cribl.io/stream/sources), including metrics, events, and logs, in an observability pipeline. \n\nDeploying this quickstart will allow you to add context to your data, by enriching it with information from external data sources, help secure your data, by redacting, obfuscating, or encrypting sensitive fields, and optimize your data, per your performance and cost requirements.\n\nFor more information about Cribl.Cloud, or the self-hosted Cribl Stream platform, please go to [cribl.io/Stream/about](https://docs.cribl.io/stream/about/)\n\nFor Cribl support, please go to [cribl.io/support](https://cribl.io/support/)\n\n\n## Getting started with Cribl\n\nTo get started with Cribl, you can sign up for a [free cloud account](https://cribl.cloud/signup/) and up to 1 TB/day of data.  Check out the [licensing page](https://docs.cribl.io/stream/licensing) for more details.\n\nReady to start using Cribl Stream to send Metrics, Events, and Logs to New Relic? Check out the [New Relic Logs & Metrics](https://docs.cribl.io/stream/destinations-newrelic) destinations and the [New Relic Events](https://docs.cribl.io/stream/destinations-newrelic-events) destinations.\n\nNeed an introductory course on Cribl Stream? Get started with the [Cribl sandbox](https://sandbox.cribl.io/).\n\n\n## About this integration\n\nThe Cribl Stream quickstart gives you a way to quickly integrate your Cribl Stream metrics and Worker Node s with New Relic’s observability platform. The quickstart also has several ready-to-use visualizations to get you started right away with observing your data.\n\nFor more information about this integration, check out the [blogpost](https://cribl.io/blog/a-low-code-approach-to-getting-your-logs-and-metrics-into-new-relic-with-cribl-logstream/)",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/cribl-logstream",
+    "id": "e67f2859-80c1-4234-bbcf-bcbeeb31d70d",
+    "level": "VERIFIED",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/cribl-logstream/Cribl-Logo.png",
+    "summary": "Observe the Cribl Stream control plane performance including sources, pipelines, workers, and destinations.",
+    "websiteUrl": null,
+    "keywords": [
+      "stream",
+      "log",
+      "cribl",
+      "control plane",
+      "splunk",
+      "elastic",
+      "etl",
+      "newrelic partner",
+      "NR1_addData",
+      "NR1_sys"
+    ],
+    "authors": [
+      "Carley Rosato (Cribl)"
+    ],
+    "dashboards": [
+      {
+        "name": "Cribl Stream Metrics",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/cribl-stream-metrics/cribl-stream-metrics01.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/cribl-stream-metrics/cribl-stream-metrics02.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/cribl-stream-metrics/cribl-stream-metrics03.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/cribl-stream-metrics/cribl-stream-metrics04.png"
+        ]
+      }
+    ],
+    "alerts": [],
+    "documentation": [
+      {
+        "name": "Installation Docs",
+        "description": "Configure a Stream destination to send Metrics, Events, and Logs",
+        "url": "https://docs.cribl.io/docs/destinations-newrelic"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "Cribl Stream",
+        "id": "third-party-cribl-stream"
+      }
+    ]
+  },
+  {
+    "title": "DNN Evoq",
+    "name": "dnn-evoq",
+    "description": "## What is DNN Evoq?\n\nDNN Evoq is a commercial edition of the DNN platform, the largest and most popular open source Content Management System (CMS) on the Microsoft ASP.NET stack. [DNN Evoq](https://developer.newrelic.com/instant-observability/dnn-evoq/82672f5f-48ec-477c-ae49-7eb24a91595f/) includes customer support and provides premium features not available in the DNN platform. These premium features include personalization, in-page analytics, workflow and built-in connectors to Marketo, SharePoint, Amazon S3, and Dropbox.\n\nIntegrate New Relic .NET agent with your DNN Evoq to monitor the platform’s performance metrics in real time.\n\n### Get started!\n\nLeverage community expertise and instantly get value out of your telemetry data. This quickstart automatically instruments DNN Evoq with the New Relic .Net agent, and allows you to instantly monitor your .Net application with out-of-the-box dashboards and alerts. Further leverage New Relic's APM capabilities by setting up [errors inbox](https://docs.newrelic.com/docs/apm/apm-ui-pages/errors-inbox/errors-inbox/), [transaction tracing](https://docs.newrelic.com/docs/apm/transactions/transaction-traces/introduction-transaction-traces/), and [service maps](https://docs.newrelic.com/docs/understand-dependencies/understand-system-dependencies/service-maps/introduction-service-maps/).\n\n## DNN Evoq and New Relic highlights\n\nNew Relic’s DNN Evoq quickstart instruments DNN Evoq with the [New Relic .NET agent](https://docs.newrelic.com/docs/apm/agents/net-agent/getting-started/introduction-new-relic-net/), and empowers you to seamlessly monitor your DNN Evoq platform through out-of-the-box dashboards and alerts.\n\nOur .NET agent supports both .NET Framework and .NET Core, and it works with all .NET compatible languages. You can track your DNN Evoq platform in dynamic or distributed environments such as on-host VM servers, Microsoft Azure app services, cloud-managed server VM images, self-hosted Windows and Linux systems and Amazon AWS EC2 VMs.\n\n### DNN Evoq ideal performance monitoring\n\nThe DNN Evoq observability quickstart instruments DNN Evoq with New Relic .NET agent. The integration enables you to use [Application Performance Monitoring](https://newrelic.com/products/application-monitoring) (APM) to get a high-level overview of your DNN Evoq platform, and to track activity across the platform. With the integration, you can install [infrastructure monitoring](https://developer.newrelic.com/instant-observability/infrastructure/71419258-a96f-4845-b4f7-723f3b29d6a5/) to view the performance of your platform’s host environment.\n\nOnce you install our .NET agent, wait for a few minutes for your DNN Evoq platform to generate traffic, data will appear in the APM summary page. The agent includes a variety of configuration options to further customize your installation. You can extend your instrumentation by integrating the .NET agent with [browser monitoring](https://docs.newrelic.com/docs/browser/new-relic-browser/getting-started/new-relic-browser/) to gain visibility into end-user activity. You can also enable distributed tracing to understand activity across your platform.\n\nDownload the New Relic DNN Evoq quickstart to effectively get value out of your telemetry data and monitor your DNN Evoq platform. This quickstart is your gateway to instant monitoring of your platform via our .NET agent.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/dotnet/dnn-evoq",
+    "id": "82672f5f-48ec-477c-ae49-7eb24a91595f",
+    "level": "COMMUNITY",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/dotnet/dnn-evoq/logo.svg",
+    "summary": "Monitoring DNN Evoq is crucial to gain instant visibility into the platform’s activity. Download New Relic DNN Evoq quickstart to proactively monitor your DNN Evoq platform with New Relic’s .NET agent.",
+    "websiteUrl": null,
+    "keywords": [
+      "apm",
+      "dotnet",
+      "cms",
+      "content management system"
+    ],
+    "authors": [
+      "New Relic"
+    ],
+    "dashboards": [],
+    "alerts": [],
+    "documentation": [
+      {
+        "name": "Introduction to .NET",
+        "description": "Integrate New Relic .NET agent with your DNN Evoq to monitor the platform’s performance metrics in real time.\n",
+        "url": "https://docs.newrelic.com/docs/agents/net-agent/getting-started/introduction-new-relic-net/"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": ".NET agent",
+        "id": "dotnet-agent"
+      }
+    ]
+  },
+  {
     "title": "New Relic Monitoring for SAP® Solutions",
     "name": "nrm4sql",
     "description": "## Why New Relic Monitoring for SAP® Solutions \n\nWith New Relic Monitoring for SAP® Solutions, you can inspect all of your SAP and non-SAP systems through one centralized view of your infrastructure, application, and business processes.\n-- Our solution is designed to not impact performance of the SAP production servers, and instead concentrates the monitoring load on a central, non-production server.\n-- The solution is SAP Certified, and installs quickly and conveniently, allowing for easy installation with as little as 1-2 hour required.\n-- Once our SAP connector is installed, all telemetry data from SAP is conveniently available via out-of-the-box dashboards, system views, business process views, and other powerful visualizations in the New Relic platform.\n-- Monitor SAP application performance and overall health data in one place. Telemetry metrics, events, logs, and traces all come together in a central view within a single UI.\n-- View your data in relation to your business processes. Understand your infrastructure and application data from the viewpoint of your corresponding business processes, such as order-to-cash and procure-to-pay.\n-- Spot problems quickly with visualizations. By querying and viewing relevant data in customizable charts and dashboards, you can identify root causes and resolve problems faster.\n-- Prevent problems before they occur. Use our advanced alerting functionality to be notified about problems before they impact customers.",
@@ -6972,142 +7108,6 @@
       }
     ],
     "installPlans": []
-  },
-  {
-    "title": "OpenAI Observability",
-    "name": "openai",
-    "description": "## Monitor your GPT-3 and GPT-4 Application Usage in New Relic\n\nWith the GPT integration, you'll have the ability to seamlessly monitor OpenAI completion queries and simultaneously log useful statistics in a New Relic customizable dashboard about your requests.\n\nBy adding just two lines of code, users can gain access to key performance metrics such as cost, response time, and sample inputs/outputs. The dashboard also allows users to track total requests, average token/requests, and model names. \n\nWith New Relic's fully customizable dashboard, users can add additional metrics based on their specific business requirements and needs. \n\nOverall, New Relic's OpenAI integration provides real-time metrics around GPT applications to help businesses optimize usage, reduce costs, and achieve better results.",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/openai",
-    "id": "5db25dbd-a6e9-46fc-a728-4697f677fbc6",
-    "level": "NEW_RELIC",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/openai/openai-logo.svg",
-    "summary": "Seamlessly monitor your usage of OpenAI’s GPT Series APIs using New Relic’s dashboard. You'll get access to real-time metrics that can help you optimize usage, reduce costs, and achieve better results.",
-    "websiteUrl": null,
-    "keywords": [
-      "NR1_addData",
-      "NR1_sys",
-      "featured",
-      "openai",
-      "ai",
-      "gpt",
-      "mlops"
-    ],
-    "authors": [
-      "New Relic",
-      "Yogev Kriger"
-    ],
-    "dashboards": [
-      {
-        "name": "OpenAI Monitoring",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/openai/openai-dashboard-screenshot.png"
-        ]
-      }
-    ],
-    "alerts": [],
-    "documentation": [
-      {
-        "name": "Monitor OpenAI",
-        "description": "A lightweight tool to monitor your OpenAI workload.\n",
-        "url": "https://github.com/newrelic/openai-api-monitoring"
-      }
-    ],
-    "installPlans": [
-      {
-        "name": "OpenAI integration",
-        "id": "setup-openai"
-      }
-    ]
-  },
-  {
-    "title": "Cribl",
-    "name": "cribl-logstream",
-    "description": "## About Cribl\n\nCribl Stream unlocks [data sources](https://docs.cribl.io/stream/sources), including metrics, events, and logs, in an observability pipeline. \n\nDeploying this quickstart will allow you to add context to your data, by enriching it with information from external data sources, help secure your data, by redacting, obfuscating, or encrypting sensitive fields, and optimize your data, per your performance and cost requirements.\n\nFor more information about Cribl.Cloud, or the self-hosted Cribl Stream platform, please go to [cribl.io/Stream/about](https://docs.cribl.io/stream/about/)\n\nFor Cribl support, please go to [cribl.io/support](https://cribl.io/support/)\n\n\n## Getting started with Cribl\n\nTo get started with Cribl, you can sign up for a [free cloud account](https://cribl.cloud/signup/) and up to 1 TB/day of data.  Check out the [licensing page](https://docs.cribl.io/stream/licensing) for more details.\n\nReady to start using Cribl Stream to send Metrics, Events, and Logs to New Relic? Check out the [New Relic Logs & Metrics](https://docs.cribl.io/stream/destinations-newrelic) destinations and the [New Relic Events](https://docs.cribl.io/stream/destinations-newrelic-events) destinations.\n\nNeed an introductory course on Cribl Stream? Get started with the [Cribl sandbox](https://sandbox.cribl.io/).\n\n\n## About this integration\n\nThe Cribl Stream quickstart gives you a way to quickly integrate your Cribl Stream metrics and Worker Node s with New Relic’s observability platform. The quickstart also has several ready-to-use visualizations to get you started right away with observing your data.\n\nFor more information about this integration, check out the [blogpost](https://cribl.io/blog/a-low-code-approach-to-getting-your-logs-and-metrics-into-new-relic-with-cribl-logstream/)",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/cribl-logstream",
-    "id": "e67f2859-80c1-4234-bbcf-bcbeeb31d70d",
-    "level": "VERIFIED",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/cribl-logstream/Cribl-Logo.png",
-    "summary": "Observe the Cribl Stream control plane performance including sources, pipelines, workers, and destinations.",
-    "websiteUrl": null,
-    "keywords": [
-      "stream",
-      "log",
-      "cribl",
-      "control plane",
-      "splunk",
-      "elastic",
-      "etl",
-      "newrelic partner",
-      "NR1_addData",
-      "NR1_sys"
-    ],
-    "authors": [
-      "Carley Rosato (Cribl)"
-    ],
-    "dashboards": [
-      {
-        "name": "Cribl Stream Metrics",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/cribl-stream-metrics/cribl-stream-metrics01.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/cribl-stream-metrics/cribl-stream-metrics02.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/cribl-stream-metrics/cribl-stream-metrics03.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/cribl-stream-metrics/cribl-stream-metrics04.png"
-        ]
-      }
-    ],
-    "alerts": [],
-    "documentation": [
-      {
-        "name": "Installation Docs",
-        "description": "Configure a Stream destination to send Metrics, Events, and Logs",
-        "url": "https://docs.cribl.io/docs/destinations-newrelic"
-      }
-    ],
-    "installPlans": [
-      {
-        "name": "Cribl Stream",
-        "id": "third-party-cribl-stream"
-      }
-    ]
-  },
-  {
-    "title": "DNN Evoq",
-    "name": "dnn-evoq",
-    "description": "## What is DNN Evoq?\n\nDNN Evoq is a commercial edition of the DNN platform, the largest and most popular open source Content Management System (CMS) on the Microsoft ASP.NET stack. [DNN Evoq](https://developer.newrelic.com/instant-observability/dnn-evoq/82672f5f-48ec-477c-ae49-7eb24a91595f/) includes customer support and provides premium features not available in the DNN platform. These premium features include personalization, in-page analytics, workflow and built-in connectors to Marketo, SharePoint, Amazon S3, and Dropbox.\n\nIntegrate New Relic .NET agent with your DNN Evoq to monitor the platform’s performance metrics in real time.\n\n### Get started!\n\nLeverage community expertise and instantly get value out of your telemetry data. This quickstart automatically instruments DNN Evoq with the New Relic .Net agent, and allows you to instantly monitor your .Net application with out-of-the-box dashboards and alerts. Further leverage New Relic's APM capabilities by setting up [errors inbox](https://docs.newrelic.com/docs/apm/apm-ui-pages/errors-inbox/errors-inbox/), [transaction tracing](https://docs.newrelic.com/docs/apm/transactions/transaction-traces/introduction-transaction-traces/), and [service maps](https://docs.newrelic.com/docs/understand-dependencies/understand-system-dependencies/service-maps/introduction-service-maps/).\n\n## DNN Evoq and New Relic highlights\n\nNew Relic’s DNN Evoq quickstart instruments DNN Evoq with the [New Relic .NET agent](https://docs.newrelic.com/docs/apm/agents/net-agent/getting-started/introduction-new-relic-net/), and empowers you to seamlessly monitor your DNN Evoq platform through out-of-the-box dashboards and alerts.\n\nOur .NET agent supports both .NET Framework and .NET Core, and it works with all .NET compatible languages. You can track your DNN Evoq platform in dynamic or distributed environments such as on-host VM servers, Microsoft Azure app services, cloud-managed server VM images, self-hosted Windows and Linux systems and Amazon AWS EC2 VMs.\n\n### DNN Evoq ideal performance monitoring\n\nThe DNN Evoq observability quickstart instruments DNN Evoq with New Relic .NET agent. The integration enables you to use [Application Performance Monitoring](https://newrelic.com/products/application-monitoring) (APM) to get a high-level overview of your DNN Evoq platform, and to track activity across the platform. With the integration, you can install [infrastructure monitoring](https://developer.newrelic.com/instant-observability/infrastructure/71419258-a96f-4845-b4f7-723f3b29d6a5/) to view the performance of your platform’s host environment.\n\nOnce you install our .NET agent, wait for a few minutes for your DNN Evoq platform to generate traffic, data will appear in the APM summary page. The agent includes a variety of configuration options to further customize your installation. You can extend your instrumentation by integrating the .NET agent with [browser monitoring](https://docs.newrelic.com/docs/browser/new-relic-browser/getting-started/new-relic-browser/) to gain visibility into end-user activity. You can also enable distributed tracing to understand activity across your platform.\n\nDownload the New Relic DNN Evoq quickstart to effectively get value out of your telemetry data and monitor your DNN Evoq platform. This quickstart is your gateway to instant monitoring of your platform via our .NET agent.",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/dotnet/dnn-evoq",
-    "id": "82672f5f-48ec-477c-ae49-7eb24a91595f",
-    "level": "COMMUNITY",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/dotnet/dnn-evoq/logo.svg",
-    "summary": "Monitoring DNN Evoq is crucial to gain instant visibility into the platform’s activity. Download New Relic DNN Evoq quickstart to proactively monitor your DNN Evoq platform with New Relic’s .NET agent.",
-    "websiteUrl": null,
-    "keywords": [
-      "apm",
-      "dotnet",
-      "cms",
-      "content management system"
-    ],
-    "authors": [
-      "New Relic"
-    ],
-    "dashboards": [],
-    "alerts": [],
-    "documentation": [
-      {
-        "name": "Introduction to .NET",
-        "description": "Integrate New Relic .NET agent with your DNN Evoq to monitor the platform’s performance metrics in real time.\n",
-        "url": "https://docs.newrelic.com/docs/agents/net-agent/getting-started/introduction-new-relic-net/"
-      }
-    ],
-    "installPlans": [
-      {
-        "name": ".NET agent",
-        "id": "dotnet-agent"
-      }
-    ]
   },
   {
     "title": "Elasticsearch",
@@ -9369,18 +9369,6 @@
     ],
     "dashboards": [
       {
-        "name": "JFrog Xray",
-        "description": "This dashboard provides visibility into JFrog Xray logs (access, service, traffic log volumes, HTTP response codes, errors etc), metrics (system performance, number and type of artifacts and components scanned), and violations (security vulnerabiities and license issues)",
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/jfrog-xray/jfrog-xray1.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/jfrog-xray/jfrog-xray2.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/jfrog-xray/jfrog-xray3.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/jfrog-xray/jfrog-xray4.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/jfrog-xray/jfrog-xray5.png"
-        ]
-      },
-      {
         "name": "JFrog Artifactory",
         "description": "This dashboard provides an overview of usage statistics of JFrog Artifactory logs (application, audit, Docker, requests) and overview of the system metrics, JVM statistics, storage consumption, garbage collection, and other operational insights associated with JFrog Artifactory",
         "url": null,
@@ -9392,6 +9380,18 @@
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/jfrog-artifactory/jfrog-artifactory05.png",
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/jfrog-artifactory/jfrog-artifactory06.png",
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/jfrog-artifactory/jfrog-artifactory07.png"
+        ]
+      },
+      {
+        "name": "JFrog Xray",
+        "description": "This dashboard provides visibility into JFrog Xray logs (access, service, traffic log volumes, HTTP response codes, errors etc), metrics (system performance, number and type of artifacts and components scanned), and violations (security vulnerabiities and license issues)",
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/jfrog-xray/jfrog-xray1.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/jfrog-xray/jfrog-xray2.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/jfrog-xray/jfrog-xray3.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/jfrog-xray/jfrog-xray4.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/jfrog-xray/jfrog-xray5.png"
         ]
       }
     ],
@@ -10327,14 +10327,14 @@
         "url": "https://docs.newrelic.com/docs/infrastructure/prometheus-integrations/get-started/send-prometheus-metric-data-new-relic"
       },
       {
-        "name": "Etcd Metrics Docs",
-        "description": "Learn more about the Prometheus metrics available for Etcd",
-        "url": "https://etcd.io/docs/v3.5/metrics/"
-      },
-      {
         "name": "Etcd Integration Docs",
         "description": "New Relic documentation for the Etcd integration including installation, configuration, and how to query the metrics.\n",
         "url": "https://docs.newrelic.com/docs/infrastructure/prometheus-integrations/integrations-list/etcd-integration"
+      },
+      {
+        "name": "Etcd Metrics Docs",
+        "description": "Learn more about the Prometheus metrics available for Etcd",
+        "url": "https://etcd.io/docs/v3.5/metrics/"
       }
     ],
     "installPlans": [
@@ -16092,19 +16092,19 @@
     ],
     "dashboards": [
       {
-        "name": "Lacework Compliance Violations",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/lacework-compliance-violations/lacework-compliance-violations01.png"
-        ]
-      },
-      {
         "name": "Lacework Security Overview",
         "description": null,
         "url": null,
         "screenshots": [
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/lacework-security-overview/lacework-security-overview01.png"
+        ]
+      },
+      {
+        "name": "Lacework Compliance Violations",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/lacework-compliance-violations/lacework-compliance-violations01.png"
         ]
       },
       {
@@ -20511,11 +20511,11 @@
     ],
     "dashboards": [
       {
-        "name": "Catchpoint-Response Size",
+        "name": "Catchpoint-Recent Errors",
         "description": null,
         "url": null,
         "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/catchpoint-response-size/Catchpoint-Response_Size.png"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/catchpoint-recent-errors/Catchpoint-Recent_Errors.png"
         ]
       },
       {
@@ -20527,11 +20527,11 @@
         ]
       },
       {
-        "name": "Catchpoint-Recent Errors",
+        "name": "Catchpoint-Response Size",
         "description": null,
         "url": null,
         "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/catchpoint-recent-errors/Catchpoint-Recent_Errors.png"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/catchpoint-response-size/Catchpoint-Response_Size.png"
         ]
       },
       {
@@ -21460,14 +21460,14 @@
     "alerts": [],
     "documentation": [
       {
-        "name": "Install README",
-        "description": "Guides you on how to customize the dashboard once you've installed it\n",
-        "url": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/oma-bofu#readme"
-      },
-      {
         "name": "Implementation guide",
         "description": "Explains what bottom of the funnel analysis is and how to apply it\n",
         "url": "https://docs.newrelic.com/docs/new-relic-solutions/observability-maturity/customer-experience/bottom-funnel-analysis-customer-journey-guide"
+      },
+      {
+        "name": "Install README",
+        "description": "Guides you on how to customize the dashboard once you've installed it\n",
+        "url": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/oma-bofu#readme"
       }
     ],
     "installPlans": [
@@ -26936,6 +26936,22 @@
     ],
     "dashboards": [
       {
+        "name": "Amazon Security Lake - Cloudtrail",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/amazon-security-lake-cloudtrail-logs/amazon-security-lake-cloudtrail-logs01.png"
+        ]
+      },
+      {
+        "name": "Amazon Security Lake - Route 53 Resolver query logs",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/amazon-security-lake-route53-resolver-query-logs/amazon-security-lake-route53-resolver-query-logs01.png"
+        ]
+      },
+      {
         "name": "Amazon Security Lake - Security Hub",
         "description": null,
         "url": null,
@@ -26949,22 +26965,6 @@
         "url": null,
         "screenshots": [
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/amazon-security-lake-vpc-flowlogs/amazon-security-lake-vpc-flowlogs01.png"
-        ]
-      },
-      {
-        "name": "Amazon Security Lake - Route 53 Resolver query logs",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/amazon-security-lake-route53-resolver-query-logs/amazon-security-lake-route53-resolver-query-logs01.png"
-        ]
-      },
-      {
-        "name": "Amazon Security Lake - Cloudtrail",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/amazon-security-lake-cloudtrail-logs/amazon-security-lake-cloudtrail-logs01.png"
         ]
       }
     ],
@@ -27337,11 +27337,11 @@
     ],
     "dashboards": [
       {
-        "name": "AWS Integrations Data Ingest Analysis",
+        "name": "GCP Integrations Data Ingest Analysis",
         "description": null,
         "url": null,
         "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/aws-integrations-data-ingest-analysis/aws-integrations-data-ingest-analysis.png"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/gcp-integrations-data-ingest-analysis/gcp-integrations-data-ingest-analysis.png"
         ]
       },
       {
@@ -27361,11 +27361,11 @@
         ]
       },
       {
-        "name": "GCP Integrations Data Ingest Analysis",
+        "name": "AWS Integrations Data Ingest Analysis",
         "description": null,
         "url": null,
         "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/gcp-integrations-data-ingest-analysis/gcp-integrations-data-ingest-analysis.png"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/aws-integrations-data-ingest-analysis/aws-integrations-data-ingest-analysis.png"
         ]
       },
       {
@@ -28007,6 +28007,56 @@
     ]
   },
   {
+    "title": "Dapr",
+    "name": "dapr",
+    "description": "The Dapr quickstart allows you to add meaningful dashboards to New Relic that highlight key aspects of the Dapr platform.\n\nA guide on how to set-up New Relic for distributed tracing with Dapr can be found [here](https://docs.dapr.io/operations/monitoring/tracing/newrelic/).",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/dapr",
+    "id": "33129991-fb5d-4251-bca2-d0b63176b7c2",
+    "level": "COMMUNITY",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/dapr/logo.svg",
+    "summary": "Dapr is a portable, event-driven runtime that makes it easy for any developer to build resilient, stateless and stateful applications that run on the cloud and edge and embraces the diversity of languages and developer frameworks.",
+    "websiteUrl": null,
+    "keywords": [
+      "apm",
+      "dapr"
+    ],
+    "authors": [
+      "Harry Kimpel"
+    ],
+    "dashboards": [
+      {
+        "name": "Dapr System Services Dashboard",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/dapr-system-services/nr-dashboard-dapr-system-services.png"
+        ]
+      },
+      {
+        "name": "Dapr Metrics",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/dapr-metrics/nr-dashboard-dapr-metrics.png"
+        ]
+      }
+    ],
+    "alerts": [],
+    "documentation": [
+      {
+        "name": "Installation docs",
+        "description": "How-To Set-up New Relic for distributed tracing.",
+        "url": "https://docs.dapr.io/operations/monitoring/tracing/newrelic/"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "Dapr",
+        "id": "third-party-dapr"
+      }
+    ]
+  },
+  {
     "title": "Azure Service Bus",
     "name": "azure-service-bus",
     "description": "## What is Azure Service Bus?\n\nFully managed message broker designed to bridge the gaps between applications\nand services.\n\n\n### Get started!\n\nStart monitoring Azure Service Bus by connecting Microsoft Azure to New Relic!\n\nCheck out our Azure Service Bus documentation to instrument your cloud service and manage the stability, scalability, and reliability of your systems with New Relic's infrastructure monitoring capabilities.\n\n### More info\n\nCheck out the [documentation](https://docs.newrelic.com/docs/infrastructure/microsoft-azure-integrations/azure-integrations-list/azure-service-bus-monitoring-integration/) to learn more about New Relic monitoring for Azure Service Bus.",
@@ -28363,6 +28413,61 @@
     ]
   },
   {
+    "title": "Mobile Network Performance",
+    "name": "mobile-network-performance-quickstart",
+    "description": "## Network performance Quickstart\n\nGet deeper insights into the networking details from your mobile application perspective. \n\nReceive details about the HTTP errors, Network failure, HTTP Request data, type of network errors. \n\nHelp page on the dashboard will guide you on how to enable data filtering.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/mobile-network-performance",
+    "id": "617ced9b-e5ad-4759-bd42-7a4353a26e18",
+    "level": "COMMUNITY",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/mobile-network-performance/logo.png",
+    "summary": "Real time mobile application network analysis to ensure ongoing reliability and performance.",
+    "websiteUrl": null,
+    "keywords": [
+      "dashboard",
+      "mobile-crash",
+      "mobile network",
+      "mobile agent",
+      "HTTP data",
+      "android",
+      "ios",
+      "apps"
+    ],
+    "authors": [
+      "Siddhartha Khare"
+    ],
+    "dashboards": [
+      {
+        "name": "Mobile Network Performance",
+        "description": "Get an overview of mobile application network performance",
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/mobile-network-performance/NetworkPerformance2.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/mobile-network-performance/NetworkPerformance3.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/mobile-network-performance/NetworkPerformance.png"
+        ]
+      }
+    ],
+    "alerts": [],
+    "documentation": [
+      {
+        "name": "Adding a dashboard",
+        "description": "How to add a dashboard to New Relic",
+        "url": "https://docs.newrelic.com/docs/query-your-data/explore-query-data/dashboards/introduction-dashboards/#get-started"
+      },
+      {
+        "name": "Instrument your mobile application with New Relic",
+        "description": "How to instrument your mobile application with New Relic",
+        "url": "https://docs.newrelic.com/docs/mobile-monitoring/new-relic-mobile/get-started/introduction-mobile-monitoring/"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "Mobile Network Performance Install Plan",
+        "id": "mobile-network-performance-install"
+      }
+    ]
+  },
+  {
     "title": "Azure SQL Database",
     "name": "azure-sql-database",
     "description": "## What is Azure SQL Database?\n\nAzure SQL provides single databases with their own set of resources, and\nelastic pools that share a set of resources.\n\n\n### Get started!\n\nStart monitoring Azure SQL Database by connecting Microsoft Azure to New Relic!\n\nCheck out our Azure SQL Database documentation to instrument your cloud service and manage the stability, scalability, and reliability of your systems with New Relic's infrastructure monitoring capabilities.\n\n### More info\n\nCheck out the [documentation](https://docs.newrelic.com/docs/infrastructure/microsoft-azure-integrations/azure-integrations-list/azure-sql-database-monitoring-integration/) to learn more about New Relic monitoring for Azure SQL Database.",
@@ -28420,11 +28525,11 @@
     ],
     "dashboards": [
       {
-        "name": "Browser Traffic Analysis",
+        "name": "Browser Pages Dashboard",
         "description": null,
         "url": null,
         "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/traffic-analysis/traffic_analysis.png"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/browser-pages-dashboard/browser_pages_dashboard.png"
         ]
       },
       {
@@ -28444,11 +28549,11 @@
         ]
       },
       {
-        "name": "Browser Pages Dashboard",
+        "name": "Browser Traffic Analysis",
         "description": null,
         "url": null,
         "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/browser-pages-dashboard/browser_pages_dashboard.png"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/traffic-analysis/traffic_analysis.png"
         ]
       }
     ],
@@ -29037,14 +29142,14 @@
     ],
     "documentation": [
       {
-        "name": "Harbor Metrics Docs",
-        "description": "Learn more about the Prometheus metrics available for Harbor\n",
-        "url": "https://goharbor.io/docs/2.3.0/administration/metrics/"
-      },
-      {
         "name": "Harbor Integration Docs",
         "description": "New Relic documentation for the Harbor integration including installation, configuration, and how to query the metrics.\n",
         "url": "https://docs.newrelic.com/docs/infrastructure/prometheus-integrations/integrations-list/harbor-integration/"
+      },
+      {
+        "name": "Harbor Metrics Docs",
+        "description": "Learn more about the Prometheus metrics available for Harbor\n",
+        "url": "https://goharbor.io/docs/2.3.0/administration/metrics/"
       },
       {
         "name": "Prometheus Installation Docs",
