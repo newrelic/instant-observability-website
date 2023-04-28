@@ -1119,11 +1119,6 @@
     "alerts": [],
     "documentation": [
       {
-        "name": "Kubernetes Prometheus agent REQUIRED configuration",
-        "description": "The default installation of the New Relic Prometheus agent does not enable all of the metrics needed to work with this quickstart's dashboards. Follow the instructions here to enable those metrics. \n",
-        "url": "https://github.com/newrelic/newrelic-prometheus-configurator/blob/main/examples/kubernetes/README.md"
-      },
-      {
         "name": "Kubernetes integration",
         "description": "The New Relic Kubernetes integration has multiple components that work together to give you end-to-end observability across your clusters. While you have the flexibility to deploy the components that you prefer, to achieve full observability, you need to install the complete package to monitor all metrics. \n",
         "url": "https://docs.newrelic.com/docs/kubernetes-pixie/kubernetes-integration/get-started/introduction-kubernetes-integration/"
@@ -1132,6 +1127,11 @@
         "name": "Kubernetes Prometheus agent",
         "description": "New Relic's Prometheus agent is a thin wrapper on top of Prometheus server to run it in agent mode. With this integration, you can create a YAML configuration file used by Prometheus that's ready to send metrics to New Relic.\n",
         "url": "https://docs.newrelic.com/docs/infrastructure/prometheus-integrations/install-configure-prometheus-agent/install-prometheus-agent/"
+      },
+      {
+        "name": "Kubernetes Prometheus agent REQUIRED configuration",
+        "description": "The default installation of the New Relic Prometheus agent does not enable all of the metrics needed to work with this quickstart's dashboards. Follow the instructions here to enable those metrics. \n",
+        "url": "https://github.com/newrelic/newrelic-prometheus-configurator/blob/main/examples/kubernetes/README.md"
       }
     ],
     "installPlans": [
@@ -5670,19 +5670,19 @@
     ],
     "dashboards": [
       {
-        "name": "Redis Enterprise Cluster Metrics",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/cluster/cluster01.png"
-        ]
-      },
-      {
         "name": "Redis Enterprise Database CRDT",
         "description": null,
         "url": null,
         "screenshots": [
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/active-active/active_active01.png"
+        ]
+      },
+      {
+        "name": "Redis Enterprise Cluster Metrics",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/cluster/cluster01.png"
         ]
       },
       {
@@ -9369,6 +9369,18 @@
     ],
     "dashboards": [
       {
+        "name": "JFrog Xray",
+        "description": "This dashboard provides visibility into JFrog Xray logs (access, service, traffic log volumes, HTTP response codes, errors etc), metrics (system performance, number and type of artifacts and components scanned), and violations (security vulnerabiities and license issues)",
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/jfrog-xray/jfrog-xray1.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/jfrog-xray/jfrog-xray2.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/jfrog-xray/jfrog-xray3.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/jfrog-xray/jfrog-xray4.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/jfrog-xray/jfrog-xray5.png"
+        ]
+      },
+      {
         "name": "JFrog Artifactory",
         "description": "This dashboard provides an overview of usage statistics of JFrog Artifactory logs (application, audit, Docker, requests) and overview of the system metrics, JVM statistics, storage consumption, garbage collection, and other operational insights associated with JFrog Artifactory",
         "url": null,
@@ -9380,18 +9392,6 @@
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/jfrog-artifactory/jfrog-artifactory05.png",
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/jfrog-artifactory/jfrog-artifactory06.png",
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/jfrog-artifactory/jfrog-artifactory07.png"
-        ]
-      },
-      {
-        "name": "JFrog Xray",
-        "description": "This dashboard provides visibility into JFrog Xray logs (access, service, traffic log volumes, HTTP response codes, errors etc), metrics (system performance, number and type of artifacts and components scanned), and violations (security vulnerabiities and license issues)",
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/jfrog-xray/jfrog-xray1.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/jfrog-xray/jfrog-xray2.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/jfrog-xray/jfrog-xray3.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/jfrog-xray/jfrog-xray4.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/jfrog-xray/jfrog-xray5.png"
         ]
       }
     ],
@@ -16100,19 +16100,19 @@
         ]
       },
       {
-        "name": "Lacework Compliance Violations",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/lacework-compliance-violations/lacework-compliance-violations01.png"
-        ]
-      },
-      {
         "name": "Lacework Anomaly Detections",
         "description": null,
         "url": null,
         "screenshots": [
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/lacework-anomaly-detections/lacework-anomaly-detections01.png"
+        ]
+      },
+      {
+        "name": "Lacework Compliance Violations",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/lacework-compliance-violations/lacework-compliance-violations01.png"
         ]
       }
     ],
@@ -20511,14 +20511,6 @@
     ],
     "dashboards": [
       {
-        "name": "Catchpoint-Recent Errors",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/catchpoint-recent-errors/Catchpoint-Recent_Errors.png"
-        ]
-      },
-      {
         "name": "Catchpoint-Overview",
         "description": null,
         "url": null,
@@ -20532,6 +20524,14 @@
         "url": null,
         "screenshots": [
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/catchpoint-response-size/Catchpoint-Response_Size.png"
+        ]
+      },
+      {
+        "name": "Catchpoint-Recent Errors",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/catchpoint-recent-errors/Catchpoint-Recent_Errors.png"
         ]
       },
       {
@@ -26936,11 +26936,11 @@
     ],
     "dashboards": [
       {
-        "name": "Amazon Security Lake - Cloudtrail",
+        "name": "Amazon Security Lake - VPC flow logs",
         "description": null,
         "url": null,
         "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/amazon-security-lake-cloudtrail-logs/amazon-security-lake-cloudtrail-logs01.png"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/amazon-security-lake-vpc-flowlogs/amazon-security-lake-vpc-flowlogs01.png"
         ]
       },
       {
@@ -26952,19 +26952,19 @@
         ]
       },
       {
+        "name": "Amazon Security Lake - Cloudtrail",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/amazon-security-lake-cloudtrail-logs/amazon-security-lake-cloudtrail-logs01.png"
+        ]
+      },
+      {
         "name": "Amazon Security Lake - Security Hub",
         "description": null,
         "url": null,
         "screenshots": [
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/amazon-security-lake-security-hub/amazon-security-lake-security-hub01.png"
-        ]
-      },
-      {
-        "name": "Amazon Security Lake - VPC flow logs",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/amazon-security-lake-vpc-flowlogs/amazon-security-lake-vpc-flowlogs01.png"
         ]
       }
     ],
@@ -27337,27 +27337,11 @@
     ],
     "dashboards": [
       {
-        "name": "GCP Integrations Data Ingest Analysis",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/gcp-integrations-data-ingest-analysis/gcp-integrations-data-ingest-analysis.png"
-        ]
-      },
-      {
         "name": "On-Host Integrations Data Analysis",
         "description": null,
         "url": null,
         "screenshots": [
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/on-host-integrations-data-analysis/on-host-integrations-data-analysis.png"
-        ]
-      },
-      {
-        "name": "Kubernetes Data Ingest Analysis",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/kubernetes-data-ingest-analysis/kubernetes-data-ingest-analysis.png"
         ]
       },
       {
@@ -27374,6 +27358,22 @@
         "url": null,
         "screenshots": [
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/azure-integrations-data-ingest-analysis/azure-integrations-data-ingest-analysis.png"
+        ]
+      },
+      {
+        "name": "GCP Integrations Data Ingest Analysis",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/gcp-integrations-data-ingest-analysis/gcp-integrations-data-ingest-analysis.png"
+        ]
+      },
+      {
+        "name": "Kubernetes Data Ingest Analysis",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/kubernetes-data-ingest-analysis/kubernetes-data-ingest-analysis.png"
         ]
       }
     ],
@@ -28025,19 +28025,19 @@
     ],
     "dashboards": [
       {
-        "name": "Dapr System Services Dashboard",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/dapr-system-services/nr-dashboard-dapr-system-services.png"
-        ]
-      },
-      {
         "name": "Dapr Metrics",
         "description": null,
         "url": null,
         "screenshots": [
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/dapr-metrics/nr-dashboard-dapr-metrics.png"
+        ]
+      },
+      {
+        "name": "Dapr System Services Dashboard",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/dapr-system-services/nr-dashboard-dapr-system-services.png"
         ]
       }
     ],
@@ -28525,14 +28525,6 @@
     ],
     "dashboards": [
       {
-        "name": "Browser Pages Dashboard",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/browser-pages-dashboard/browser_pages_dashboard.png"
-        ]
-      },
-      {
         "name": "Browser Overview",
         "description": null,
         "url": null,
@@ -28554,6 +28546,14 @@
         "url": null,
         "screenshots": [
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/traffic-analysis/traffic_analysis.png"
+        ]
+      },
+      {
+        "name": "Browser Pages Dashboard",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/browser-pages-dashboard/browser_pages_dashboard.png"
         ]
       }
     ],
@@ -29165,6 +29165,50 @@
       {
         "name": "Prometheus Agent Mode",
         "id": "setup-prometheus-agent-mode"
+      }
+    ]
+  },
+  {
+    "title": "Squid (Prometheus)",
+    "name": "squid-prometheus",
+    "description": "## Squid Monitoring\nSquid is a caching proxy for the Web supporting HTTP, HTTPS, FTP, and more. It reduces bandwidth and improves response times by caching and reusing frequently-requested web pages.\n\n### What’s Included?\nNew Relic + Squid (Prometheus) quickstart - New Relic’s instant observability quickstart provides the metrics reported by Squid Prometheus exporter.\nMonitor Squid Cache Managers with New Relic to quickly gain visibility into your cache manager, including active cache managers, traffic, hit rate and more.\n\n### Value of Squid Quickstarts\n[Squid monitoring with New Relic](https://docs.newrelic.com/docs/more-integrations/open-source-telemetry-integrations/opentelemetry/collector/collector-configuration-examples/opentelemetry-collector-squid/) offers advanced features, including:\n- Create custom queries and charts of your data integrations.\n- Filter and analyze metrics in Infrastructure UI.\nNew Relic’s instant observability quickstart helps developers reduce administrative overheads and accelerate time to value. As New Relic is SaaS-based, you also don’t have to worry about maintenance or onboarding.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/squid-prometheus",
+    "id": "20bc868d-d0f6-4413-91a6-2afc281a906b",
+    "level": "NEW_RELIC",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/squid-prometheus/logo.png",
+    "summary": "New Relic's Squid Prometheus quickstart provides data from Squid Cache Manager. Install the quickstart to better understand utilization of the cache and monitor performance issues.",
+    "websiteUrl": null,
+    "keywords": [
+      "infrastructure",
+      "cache",
+      "prometheus"
+    ],
+    "authors": [
+      "New Relic"
+    ],
+    "dashboards": [
+      {
+        "name": "Squid Cache Manager",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/squid-prometheus/squid01.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/squid-prometheus/squid02.png"
+        ]
+      }
+    ],
+    "alerts": [],
+    "documentation": [
+      {
+        "name": "Squid (Prometheus)",
+        "description": "Caching proxy for the Web supporting different protocols that reduces bandwidth and improves response times.\n",
+        "url": "https://docs.newrelic.com/docs/more-integrations/open-source-telemetry-integrations/opentelemetry/collector/collector-configuration-examples/opentelemetry-collector-squid/"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "Squid",
+        "id": "squid-prometheus-integration-docs"
       }
     ]
   },
