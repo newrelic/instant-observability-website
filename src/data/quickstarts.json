@@ -10327,14 +10327,14 @@
         "url": "https://docs.newrelic.com/docs/infrastructure/prometheus-integrations/get-started/send-prometheus-metric-data-new-relic"
       },
       {
-        "name": "Etcd Integration Docs",
-        "description": "New Relic documentation for the Etcd integration including installation, configuration, and how to query the metrics.\n",
-        "url": "https://docs.newrelic.com/docs/infrastructure/prometheus-integrations/integrations-list/etcd-integration"
-      },
-      {
         "name": "Etcd Metrics Docs",
         "description": "Learn more about the Prometheus metrics available for Etcd",
         "url": "https://etcd.io/docs/v3.5/metrics/"
+      },
+      {
+        "name": "Etcd Integration Docs",
+        "description": "New Relic documentation for the Etcd integration including installation, configuration, and how to query the metrics.\n",
+        "url": "https://docs.newrelic.com/docs/infrastructure/prometheus-integrations/integrations-list/etcd-integration"
       }
     ],
     "installPlans": [
@@ -11857,14 +11857,14 @@
     "alerts": [],
     "documentation": [
       {
-        "name": "Installation Docs",
-        "description": "The New Relic Apollo Server plugin instruments your Apollo Server applications to give visibility into your GraphQL payloads.",
-        "url": "https://docs.newrelic.com/docs/apm/agents/nodejs-agent/extend-your-instrumentation/apollo-server-plugin-nodejs/"
-      },
-      {
         "name": "New Relic Apollo Server plugin repository",
         "description": "New Relic's official Apollo Server plugin for use with the Node.js agent.",
         "url": "https://github.com/newrelic/newrelic-node-apollo-server-plugin/blob/main/README.md"
+      },
+      {
+        "name": "Installation Docs",
+        "description": "The New Relic Apollo Server plugin instruments your Apollo Server applications to give visibility into your GraphQL payloads.",
+        "url": "https://docs.newrelic.com/docs/apm/agents/nodejs-agent/extend-your-instrumentation/apollo-server-plugin-nodejs/"
       }
     ],
     "installPlans": [
@@ -13521,14 +13521,14 @@
     "alerts": [],
     "documentation": [
       {
-        "name": "Getting started with New Relic and Pulumi",
-        "description": "In this guide, you learn how to set up New Relic alerts with Pulumi.\n",
-        "url": "https://www.pulumi.com/registry/packages/newrelic/"
-      },
-      {
         "name": "Github repository",
         "description": "Github repository for the New Relic Package.",
         "url": "https://github.com/pulumi/pulumi-newrelic"
+      },
+      {
+        "name": "Getting started with New Relic and Pulumi",
+        "description": "In this guide, you learn how to set up New Relic alerts with Pulumi.\n",
+        "url": "https://www.pulumi.com/registry/packages/newrelic/"
       },
       {
         "name": "New Relic Package",
@@ -23138,14 +23138,14 @@
     ],
     "documentation": [
       {
-        "name": "CoreDNS Integration Docs",
-        "description": "New Relic documentation for the CoreDNS integration including installation, configuration, and how to query the metrics.\n",
-        "url": "https://docs.newrelic.com/docs/infrastructure/prometheus-integrations/integrations-list/core-dns-integration"
-      },
-      {
         "name": "CoreDNS Metrics Docs",
         "description": "Learn more about the Prometheus metrics available for CoreDNS\n",
         "url": "https://coredns.io/plugins/metrics/"
+      },
+      {
+        "name": "CoreDNS Integration Docs",
+        "description": "New Relic documentation for the CoreDNS integration including installation, configuration, and how to query the metrics.\n",
+        "url": "https://docs.newrelic.com/docs/infrastructure/prometheus-integrations/integrations-list/core-dns-integration"
       },
       {
         "name": "Prometheus Installation Docs",
@@ -29142,14 +29142,14 @@
     ],
     "documentation": [
       {
-        "name": "Harbor Integration Docs",
-        "description": "New Relic documentation for the Harbor integration including installation, configuration, and how to query the metrics.\n",
-        "url": "https://docs.newrelic.com/docs/infrastructure/prometheus-integrations/integrations-list/harbor-integration/"
-      },
-      {
         "name": "Harbor Metrics Docs",
         "description": "Learn more about the Prometheus metrics available for Harbor\n",
         "url": "https://goharbor.io/docs/2.3.0/administration/metrics/"
+      },
+      {
+        "name": "Harbor Integration Docs",
+        "description": "New Relic documentation for the Harbor integration including installation, configuration, and how to query the metrics.\n",
+        "url": "https://docs.newrelic.com/docs/infrastructure/prometheus-integrations/integrations-list/harbor-integration/"
       },
       {
         "name": "Prometheus Installation Docs",
@@ -29309,6 +29309,41 @@
       {
         "name": "ConfluentCloud",
         "id": "third-party-confluent-cloud"
+      }
+    ]
+  },
+  {
+    "title": "HiveMQ (Prometheus)",
+    "name": "hivemq",
+    "description": "## HiveMQ Monitoring\n\nHiveMQ's MQTT broker makes it easy to move data to and from connected devices in an efficient, fast and reliable manner. It's metrics subsystem reports all relevant metrics to monitor your MQTT brokers.\n\n### What’s Included?\n\nNew Relic + HiveMQ quickstart - New Relic’s instant observability quickstart provides the metrics reported by HiveMQ metrics subsystem.\n\nMonitor HiveMQ with New Relic to quickly gain visibility into single node and clustered HiveMQ servers, including: cache rates, message statistics, system and JVM metrics and more.\n\n### Value of HiveMQ Quickstarts\n\n[HiveMQ monitoring with New Relic](https://docs.newrelic.com/docs/more-integrations/open-source-telemetry-integrations/opentelemetry/collector/collector-configuration-examples/opentelemetry-collector-hivemq/) offers advanced features, including:\n- Create custom queries and charts of your data integrations.\n- Filter and analyze metrics in Infrastructure UI.\n\nNew Relic’s instant observability quickstart helps developers reduce administrative overheads and accelerate time to value. As New Relic is SaaS-based, you also don’t have to worry about maintenance or onboarding.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/hivemq",
+    "id": "e3494e28-dcfb-4df2-a3d8-c7cca67525e0",
+    "level": "NEW_RELIC",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/hivemq/logo.svg",
+    "summary": "New Relic's HiveMQ quickstart provides data from HiveMQ metrics subsystem. Install the quickstart to better understand utilization of resources and monitor performance issues.",
+    "websiteUrl": null,
+    "keywords": [
+      "infrastructure",
+      "messaging",
+      "queue",
+      "prometheus"
+    ],
+    "authors": [
+      "New Relic"
+    ],
+    "dashboards": [],
+    "alerts": [],
+    "documentation": [
+      {
+        "name": "HiveMQ",
+        "description": "MQTT broker that makes it easy to move data to and from connected devices.\n",
+        "url": "https://docs.newrelic.com/docs/more-integrations/open-source-telemetry-integrations/opentelemetry/collector/collector-configuration-examples/opentelemetry-collector-hivemq/"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "HiveMQ",
+        "id": "hivemq-integration-docs"
       }
     ]
   },
