@@ -1094,17 +1094,6 @@
     ],
     "dashboards": [
       {
-        "name": "Kubernetes / Compute Resources",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/kubernetes-prometheus-compute-resources/kubernetes-prometheus-compute-resources01.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/kubernetes-prometheus-compute-resources/kubernetes-prometheus-compute-resources02.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/kubernetes-prometheus-compute-resources/kubernetes-prometheus-compute-resources03.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/kubernetes-prometheus-compute-resources/kubernetes-prometheus-compute-resources04.png"
-        ]
-      },
-      {
         "name": "Kubernetes / Kubelet",
         "description": null,
         "url": null,
@@ -1113,6 +1102,17 @@
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/kubernetes-prometheus-kubelet/kubernetes-prometheus-kubelet02.png",
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/kubernetes-prometheus-kubelet/kubernetes-prometheus-kubelet03.png",
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/kubernetes-prometheus-kubelet/kubernetes-prometheus-kubelet04.png"
+        ]
+      },
+      {
+        "name": "Kubernetes / Compute Resources",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/kubernetes-prometheus-compute-resources/kubernetes-prometheus-compute-resources01.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/kubernetes-prometheus-compute-resources/kubernetes-prometheus-compute-resources02.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/kubernetes-prometheus-compute-resources/kubernetes-prometheus-compute-resources03.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/kubernetes-prometheus-compute-resources/kubernetes-prometheus-compute-resources04.png"
         ]
       }
     ],
@@ -1181,96 +1181,6 @@
       {
         "name": "Guided install",
         "id": "guided-install"
-      }
-    ]
-  },
-  {
-    "title": "Network Routers and Switches",
-    "name": "network-routers-and-switches",
-    "description": "The Network Routers and Switches quickstart provides a dashboard that gives you a holistic view of the interface traffic across all of the routers and switches in your network, as well as example alerts to get you started.\nUse this quickstart together with New Relic's Network Monitoring feature to visualize anomalies and/or bottlenecks in your network.",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/network-monitoring/network-routers-and-switches",
-    "id": "8d843fc7-ffcf-489a-93b1-c8499cdd16ec",
-    "level": "VERIFIED",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/network-monitoring/network-routers-and-switches/logo.svg",
-    "summary": "Router and Switch telemetry from Network Monitoring give you valuable insights into potential issues with your network.",
-    "websiteUrl": null,
-    "keywords": [
-      "npm",
-      "network",
-      "networking",
-      "router",
-      "switch",
-      "snmp",
-      "ktranslate",
-      "kentik",
-      "infrastructure",
-      "newrelic partner",
-      "NR1_addData",
-      "NR1_sys"
-    ],
-    "authors": [
-      "New Relic",
-      "Zack Mutchler"
-    ],
-    "dashboards": [
-      {
-        "name": "Network - Routers and Switches",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/network-routers-and-switches/network-routers-and-switches.png"
-        ]
-      }
-    ],
-    "alerts": [
-      {
-        "name": "Average CPU % Used Violation",
-        "details": "This alert will trigger when a router or switch has more than 90% CPU utilization.",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "Average Memory % Used Violation",
-        "details": "This alert will trigger when a router or switch has more than 90% memory utilization.",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "Average Transmit % Used Violation",
-        "details": "This alert will trigger when a router or switch interface with *uplink* in the description has more than 90% transmit utilization. You can change the filter this to only alert for specific interface names or descriptions.",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "Ping Packet Loss % Violation",
-        "details": "This alert will trigger when a router or switch fails to respond to at least 10% of the pings sent by ktranslate.  This indicates problems on the device or in the network between the container and the device.",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "Ping Response Time Violation",
-        "details": "This alert will trigger when a router or switch takes more than 500 ms to respond to a ping.  This requires that ping based checks are enabled in the ktranslate config using the response_time or ping_only options.",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "Uplink Interface Down Violation",
-        "details": "This alert will trigger when a router or switch interface with the word \"uplink\" in the description reports as being down.  You can change the NRQL to filter to other naming conventions.",
-        "type": "STATIC",
-        "url": null
-      }
-    ],
-    "documentation": [
-      {
-        "name": "Network SNMP collection installation docs",
-        "description": "Install Network Monitoring for SNMP data collection using a simple Docker container.\n",
-        "url": "https://docs.newrelic.com/docs/network-performance-monitoring/setup-performance-monitoring/snmp-performance-monitoring/"
-      }
-    ],
-    "installPlans": [
-      {
-        "name": "SNMP",
-        "id": "network-snmp"
       }
     ]
   },
@@ -1487,6 +1397,102 @@
       {
         "name": "MongoDB (Prometheus)",
         "id": "mongodb-prometheus-integration-docs"
+      }
+    ]
+  },
+  {
+    "title": "Network Routers and Switches",
+    "name": "network-routers-and-switches",
+    "description": "The Network Routers and Switches quickstart provides a dashboard that gives you a holistic view of the interface traffic across all of the routers and switches in your network, as well as example alerts to get you started.\nUse this quickstart together with New Relic's Network Monitoring feature to visualize anomalies and/or bottlenecks in your network.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/network-monitoring/network-routers-and-switches",
+    "id": "8d843fc7-ffcf-489a-93b1-c8499cdd16ec",
+    "level": "VERIFIED",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/network-monitoring/network-routers-and-switches/logo.svg",
+    "summary": "Router and Switch telemetry from Network Monitoring give you valuable insights into potential issues with your network.",
+    "websiteUrl": null,
+    "keywords": [
+      "npm",
+      "network",
+      "networking",
+      "router",
+      "switch",
+      "snmp",
+      "ktranslate",
+      "kentik",
+      "infrastructure",
+      "newrelic partner",
+      "NR1_addData",
+      "NR1_sys"
+    ],
+    "authors": [
+      "New Relic",
+      "Zack Mutchler"
+    ],
+    "dashboards": [
+      {
+        "name": "Network - Routers and Switches",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/network-routers-and-switches/network-routers-and-switches.png"
+        ]
+      }
+    ],
+    "alerts": [
+      {
+        "name": "Average CPU % Used Violation",
+        "details": "This alert will trigger when a router or switch has more than 90% CPU utilization.",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "Average Memory % Used Violation",
+        "details": "This alert will trigger when a router or switch has more than 90% memory utilization.",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "Average Transmit % Used Violation",
+        "details": "This alert will trigger when a router or switch interface with *uplink* in the description has more than 90% transmit utilization. You can change the filter this to only alert for specific interface names or descriptions.",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "Ping Packet Loss % Violation",
+        "details": "This alert will trigger when a router or switch fails to respond to at least 10% of the pings sent by ktranslate.  This indicates problems on the device or in the network between the container and the device.",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "Ping Response Time Violation",
+        "details": "This alert will trigger when a router or switch takes more than 500 ms to respond to a ping.  This requires that ping based checks are enabled in the ktranslate config using the response_time or ping_only options.",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "Uplink Interface Down Violation",
+        "details": "This alert will trigger when a router or switch interface with the word \"uplink\" in the description reports as being down.  You can change the NRQL to filter to other naming conventions.",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "Average Receive % Used Violation",
+        "details": "This alert will trigger when a router or switch interface that has *uplink* in the description has more than 90% receive utilization.  You can change the filter this to only alert for specific interface names or descriptions.",
+        "type": "STATIC",
+        "url": null
+      }
+    ],
+    "documentation": [
+      {
+        "name": "Network SNMP collection installation docs",
+        "description": "Install Network Monitoring for SNMP data collection using a simple Docker container.\n",
+        "url": "https://docs.newrelic.com/docs/network-performance-monitoring/setup-performance-monitoring/snmp-performance-monitoring/"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "SNMP",
+        "id": "network-snmp"
       }
     ]
   },
@@ -4019,19 +4025,19 @@
     ],
     "dashboards": [
       {
-        "name": "Data Ingest Governance Entity Breakdowns",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/data-ingest-entity-breakdown/data-ingest-entity-breakdown.png"
-        ]
-      },
-      {
         "name": "Data Ingest Governance Baseline",
         "description": null,
         "url": null,
         "screenshots": [
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/data-ingest-baseline/data-ingest-baseline.png"
+        ]
+      },
+      {
+        "name": "Data Ingest Governance Entity Breakdowns",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/data-ingest-entity-breakdown/data-ingest-entity-breakdown.png"
         ]
       }
     ],
@@ -5670,6 +5676,14 @@
     ],
     "dashboards": [
       {
+        "name": "Redis Enterprise Database Metrics",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/database/database01.png"
+        ]
+      },
+      {
         "name": "Redis Enterprise Database CRDT",
         "description": null,
         "url": null,
@@ -5683,14 +5697,6 @@
         "url": null,
         "screenshots": [
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/cluster/cluster01.png"
-        ]
-      },
-      {
-        "name": "Redis Enterprise Database Metrics",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/database/database01.png"
         ]
       }
     ],
@@ -6646,14 +6652,14 @@
     "alerts": [],
     "documentation": [
       {
-        "name": "Installation Doc",
-        "description": "See how to install this integration and the data exchanged between New \nRelic ancd Contentsquare.\n",
-        "url": "https://uxanalyser.zendesk.com/hc/en-gb/articles/4408893503122-New-Relic"
-      },
-      {
         "name": "Partnership Page",
         "description": "New Relic x Contentsquare partnership page on Contentsquare website\n",
         "url": "https://partners.contentsquare.com/technology-partners/new-relic"
+      },
+      {
+        "name": "Installation Doc",
+        "description": "See how to install this integration and the data exchanged between New \nRelic ancd Contentsquare.\n",
+        "url": "https://uxanalyser.zendesk.com/hc/en-gb/articles/4408893503122-New-Relic"
       }
     ],
     "installPlans": [
@@ -6971,11 +6977,12 @@
     ],
     "dashboards": [
       {
-        "name": "SAP Data Ingestion Estimate",
-        "description": "Get an overview of the data volume ingested from SAP systems",
+        "name": "SAP Dashboards",
+        "description": "Monitor SAP systems and applications performances",
         "url": null,
         "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/nrm4sap-datasize/sap-size-estimate01.png"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/nrm4sap/sap-dashboard01.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/nrm4sap/sap-dashboard02.png"
         ]
       },
       {
@@ -6987,12 +6994,11 @@
         ]
       },
       {
-        "name": "SAP Dashboards",
-        "description": "Monitor SAP systems and applications performances",
+        "name": "SAP Data Ingestion Estimate",
+        "description": "Get an overview of the data volume ingested from SAP systems",
         "url": null,
         "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/nrm4sap/sap-dashboard01.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/nrm4sap/sap-dashboard02.png"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/nrm4sap-datasize/sap-size-estimate01.png"
         ]
       }
     ],
@@ -9335,18 +9341,6 @@
     ],
     "dashboards": [
       {
-        "name": "JFrog Xray",
-        "description": "This dashboard provides visibility into JFrog Xray logs (access, service, traffic log volumes, HTTP response codes, errors etc), metrics (system performance, number and type of artifacts and components scanned), and violations (security vulnerabiities and license issues)",
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/jfrog-xray/jfrog-xray1.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/jfrog-xray/jfrog-xray2.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/jfrog-xray/jfrog-xray3.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/jfrog-xray/jfrog-xray4.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/jfrog-xray/jfrog-xray5.png"
-        ]
-      },
-      {
         "name": "JFrog Artifactory",
         "description": "This dashboard provides an overview of usage statistics of JFrog Artifactory logs (application, audit, Docker, requests) and overview of the system metrics, JVM statistics, storage consumption, garbage collection, and other operational insights associated with JFrog Artifactory",
         "url": null,
@@ -9358,6 +9352,18 @@
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/jfrog-artifactory/jfrog-artifactory05.png",
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/jfrog-artifactory/jfrog-artifactory06.png",
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/jfrog-artifactory/jfrog-artifactory07.png"
+        ]
+      },
+      {
+        "name": "JFrog Xray",
+        "description": "This dashboard provides visibility into JFrog Xray logs (access, service, traffic log volumes, HTTP response codes, errors etc), metrics (system performance, number and type of artifacts and components scanned), and violations (security vulnerabiities and license issues)",
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/jfrog-xray/jfrog-xray1.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/jfrog-xray/jfrog-xray2.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/jfrog-xray/jfrog-xray3.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/jfrog-xray/jfrog-xray4.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/jfrog-xray/jfrog-xray5.png"
         ]
       }
     ],
@@ -11835,46 +11841,6 @@
     ]
   },
   {
-    "title": "Apollo Server",
-    "name": "apollo-server",
-    "description": "## What is Apollo Server?\n\nApollo Server is an open-source, spec-compliant GraphQL server that's compatible with any GraphQL client, including Apollo Client. It's the best way to build a production-ready, self-documenting GraphQL API that can use data from any source.\n\nYou can use Apollo Server as:\n\n- A stand-alone GraphQL server, including in a serverless environment\n- An add-on to your application's existing Node.js middleware (such as Express or Fastify)\n- A gateway for a federated graph\n\n### Apollo & New Relic\n\nThe New Relic Apollo Server plugin instruments your Apollo Server applications to give visibility into your GraphQL payloads. This helps you uncover and diagnose the cause of your slow GraphQL queries.",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/apollo/apollo-server",
-    "id": "7befa2d3-aaa2-4e67-93a8-364f8d746b90",
-    "level": "COMMUNITY",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/apollo/apollo-server/logo.png",
-    "summary": "The New Relic Apollo Server plugin instruments your Apollo Server applications to give visibility into your GraphQL payloads. This helps you uncover and diagnose the cause of your slow GraphQL queries.",
-    "websiteUrl": null,
-    "keywords": [
-      "apollo server",
-      "apollo",
-      "graphql"
-    ],
-    "authors": [
-      "New Relic",
-      "John Vajda"
-    ],
-    "dashboards": [],
-    "alerts": [],
-    "documentation": [
-      {
-        "name": "New Relic Apollo Server plugin repository",
-        "description": "New Relic's official Apollo Server plugin for use with the Node.js agent.",
-        "url": "https://github.com/newrelic/newrelic-node-apollo-server-plugin/blob/main/README.md"
-      },
-      {
-        "name": "Installation Docs",
-        "description": "The New Relic Apollo Server plugin instruments your Apollo Server applications to give visibility into your GraphQL payloads.",
-        "url": "https://docs.newrelic.com/docs/apm/agents/nodejs-agent/extend-your-instrumentation/apollo-server-plugin-nodejs/"
-      }
-    ],
-    "installPlans": [
-      {
-        "name": "Node agent",
-        "id": "node-agent"
-      }
-    ]
-  },
-  {
     "title": "OpenRasta",
     "name": "openrasta",
     "description": "## What is OpenRasta?\n\nOpenRasta is an open-source .NET framework for building everything web, from\nweb sites to RESTful APIs.\n\n\n## Get started!\n\nLeverage community expertise and instantly get value out of your telemetry data. This quickstart automatically instruments OpenRasta with the New Relic .Net agent, and allows you to instantly monitor your .Net application with out-of-the-box dashboards and alerts. Further leverage New Relic's APM capabilities by setting up [errors inbox](https://docs.newrelic.com/docs/apm/apm-ui-pages/errors-inbox/errors-inbox/), [transaction tracing](https://docs.newrelic.com/docs/apm/transactions/transaction-traces/introduction-transaction-traces/), and [service maps](https://docs.newrelic.com/docs/understand-dependencies/understand-system-dependencies/service-maps/introduction-service-maps/).\n\n## More info\n\nCheck out the [documentation](https://docs.newrelic.com/docs/agents/net-agent/getting-started/introduction-new-relic-net/) to learn more about New Relic monitoring for OpenRasta.",
@@ -12151,6 +12117,65 @@
       {
         "name": "AWS-CloudWatch-Metric-Streams",
         "id": "aws-cloudwatch-metric-streams"
+      }
+    ]
+  },
+  {
+    "title": "Apollo Server",
+    "name": "apollo-server",
+    "description": "## What is Apollo Server?\n\nApollo Server is an open-source, spec-compliant GraphQL server that's compatible with any GraphQL client, including Apollo Client. It's the best way to build a production-ready, self-documenting GraphQL API that can use data from any source.\n\nYou can use Apollo Server as:\n\n- A stand-alone GraphQL server, including in a serverless environment\n- An add-on to your application's existing Node.js middleware (such as Express or Fastify)\n- A gateway for a federated graph\n\n### Apollo & New Relic\n\nThe New Relic Apollo Server plugin instruments your Apollo Server applications to give visibility into your GraphQL payloads. This helps you uncover and diagnose the cause of your slow GraphQL queries.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/apollo/apollo-server",
+    "id": "7befa2d3-aaa2-4e67-93a8-364f8d746b90",
+    "level": "COMMUNITY",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/apollo/apollo-server/logo.png",
+    "summary": "The New Relic Apollo Server plugin instruments your Apollo Server applications to give visibility into your GraphQL payloads. This helps you uncover and diagnose the cause of your slow GraphQL queries.",
+    "websiteUrl": null,
+    "keywords": [
+      "apollo server",
+      "apollo",
+      "graphql",
+      "nodejs",
+      "npm",
+      "plugin",
+      "typescript",
+      "express",
+      "hapi",
+      "koa",
+      "fastify",
+      "lambda"
+    ],
+    "authors": [
+      "New Relic",
+      "John Vajda",
+      "Dave Miyamasu"
+    ],
+    "dashboards": [
+      {
+        "name": "Apollo-Server Dashboard",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/apollo-server/apollo-server.png"
+        ]
+      }
+    ],
+    "alerts": [],
+    "documentation": [
+      {
+        "name": "New Relic Apollo Server plugin repository",
+        "description": "New Relic's official Apollo Server plugin for use with the Node.js agent.",
+        "url": "https://github.com/newrelic/newrelic-node-apollo-server-plugin/blob/main/README.md"
+      },
+      {
+        "name": "Installation Docs",
+        "description": "The New Relic Apollo Server plugin instruments your Apollo Server applications to give visibility into your GraphQL payloads.",
+        "url": "https://docs.newrelic.com/docs/apm/agents/nodejs-agent/extend-your-instrumentation/apollo-server-plugin-nodejs/"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "Node agent",
+        "id": "node-agent"
       }
     ]
   },
@@ -12941,14 +12966,14 @@
     ],
     "alerts": [
       {
-        "name": "High CPU Utilization",
-        "details": "This alert is triggered when the CPU Utilization is above 90%.",
+        "name": "Transaction Errors",
+        "details": "This alert is triggered when the the transactions fail more than 10% of the time in 5 minutes.",
         "type": "STATIC",
         "url": null
       },
       {
-        "name": "Transaction Errors",
-        "details": "This alert is triggered when the the transactions fail more than 10% of the time in 5 minutes.",
+        "name": "High CPU Utilization",
+        "details": "This alert is triggered when the CPU Utilization is above 90%.",
         "type": "STATIC",
         "url": null
       }
@@ -16092,6 +16117,14 @@
     ],
     "dashboards": [
       {
+        "name": "Lacework Anomaly Detections",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/lacework-anomaly-detections/lacework-anomaly-detections01.png"
+        ]
+      },
+      {
         "name": "Lacework Compliance Violations",
         "description": null,
         "url": null,
@@ -16105,14 +16138,6 @@
         "url": null,
         "screenshots": [
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/lacework-security-overview/lacework-security-overview01.png"
-        ]
-      },
-      {
-        "name": "Lacework Anomaly Detections",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/lacework-anomaly-detections/lacework-anomaly-detections01.png"
         ]
       }
     ],
@@ -18396,14 +18421,14 @@
     ],
     "alerts": [
       {
-        "name": "High CPU Utilization",
-        "details": "This alert is triggered when the CPU Utilization is above 90%.",
+        "name": "Transaction Errors",
+        "details": "This alert is triggered when the the transactions fail more than 10% of the time in 5 minutes.",
         "type": "STATIC",
         "url": null
       },
       {
-        "name": "Transaction Errors",
-        "details": "This alert is triggered when the the transactions fail more than 10% of the time in 5 minutes.",
+        "name": "High CPU Utilization",
+        "details": "This alert is triggered when the CPU Utilization is above 90%.",
         "type": "STATIC",
         "url": null
       }
@@ -19133,14 +19158,14 @@
     ],
     "alerts": [
       {
-        "name": "Apdex Score",
-        "details": "This alert is triggered when the Apdex score is below 0.5 for 5 minutes",
+        "name": "High CPU Utilization",
+        "details": "This alert is triggered when the CPU Utilization is above 90%.",
         "type": "STATIC",
         "url": null
       },
       {
-        "name": "High CPU Utilization",
-        "details": "This alert is triggered when the CPU Utilization is above 90%.",
+        "name": "Apdex Score",
+        "details": "This alert is triggered when the Apdex score is below 0.5 for 5 minutes",
         "type": "STATIC",
         "url": null
       },
@@ -20527,19 +20552,19 @@
         ]
       },
       {
-        "name": "Catchpoint-Response Size",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/catchpoint-response-size/Catchpoint-Response_Size.png"
-        ]
-      },
-      {
         "name": "Catchpoint-Overview",
         "description": null,
         "url": null,
         "screenshots": [
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/catchpoint-overview/Catchpoint-Overview.png"
+        ]
+      },
+      {
+        "name": "Catchpoint-Response Size",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/catchpoint-response-size/Catchpoint-Response_Size.png"
         ]
       }
     ],
@@ -21127,14 +21152,14 @@
     ],
     "alerts": [
       {
-        "name": "High CPU Utilization",
-        "details": "This alert is triggered when the CPU Utilization is above 90%.",
+        "name": "Transaction Errors",
+        "details": "This alert is triggered when the the transactions fail more than 10% of the time in 5 minutes.",
         "type": "STATIC",
         "url": null
       },
       {
-        "name": "Transaction Errors",
-        "details": "This alert is triggered when the the transactions fail more than 10% of the time in 5 minutes.",
+        "name": "High CPU Utilization",
+        "details": "This alert is triggered when the CPU Utilization is above 90%.",
         "type": "STATIC",
         "url": null
       }
@@ -25683,14 +25708,14 @@
     ],
     "alerts": [
       {
-        "name": "High CPU Utilization",
-        "details": "This alert is triggered when the CPU Utilization is above 90%.",
+        "name": "Transaction Errors",
+        "details": "This alert is triggered when the the transactions fail more than 10% of the time in 5 minutes.",
         "type": "STATIC",
         "url": null
       },
       {
-        "name": "Transaction Errors",
-        "details": "This alert is triggered when the the transactions fail more than 10% of the time in 5 minutes.",
+        "name": "High CPU Utilization",
+        "details": "This alert is triggered when the CPU Utilization is above 90%.",
         "type": "STATIC",
         "url": null
       }
@@ -26936,14 +26961,6 @@
     ],
     "dashboards": [
       {
-        "name": "Amazon Security Lake - VPC flow logs",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/amazon-security-lake-vpc-flowlogs/amazon-security-lake-vpc-flowlogs01.png"
-        ]
-      },
-      {
         "name": "Amazon Security Lake - Cloudtrail",
         "description": null,
         "url": null,
@@ -26957,6 +26974,14 @@
         "url": null,
         "screenshots": [
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/amazon-security-lake-route53-resolver-query-logs/amazon-security-lake-route53-resolver-query-logs01.png"
+        ]
+      },
+      {
+        "name": "Amazon Security Lake - VPC flow logs",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/amazon-security-lake-vpc-flowlogs/amazon-security-lake-vpc-flowlogs01.png"
         ]
       },
       {
@@ -27337,6 +27362,30 @@
     ],
     "dashboards": [
       {
+        "name": "Azure Integrations Data Ingest Analysis",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/azure-integrations-data-ingest-analysis/azure-integrations-data-ingest-analysis.png"
+        ]
+      },
+      {
+        "name": "AWS Integrations Data Ingest Analysis",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/aws-integrations-data-ingest-analysis/aws-integrations-data-ingest-analysis.png"
+        ]
+      },
+      {
+        "name": "GCP Integrations Data Ingest Analysis",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/gcp-integrations-data-ingest-analysis/gcp-integrations-data-ingest-analysis.png"
+        ]
+      },
+      {
         "name": "Kubernetes Data Ingest Analysis",
         "description": null,
         "url": null,
@@ -27350,30 +27399,6 @@
         "url": null,
         "screenshots": [
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/on-host-integrations-data-analysis/on-host-integrations-data-analysis.png"
-        ]
-      },
-      {
-        "name": "AWS Integrations Data Ingest Analysis",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/aws-integrations-data-ingest-analysis/aws-integrations-data-ingest-analysis.png"
-        ]
-      },
-      {
-        "name": "Azure Integrations Data Ingest Analysis",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/azure-integrations-data-ingest-analysis/azure-integrations-data-ingest-analysis.png"
-        ]
-      },
-      {
-        "name": "GCP Integrations Data Ingest Analysis",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/gcp-integrations-data-ingest-analysis/gcp-integrations-data-ingest-analysis.png"
         ]
       }
     ],
@@ -28025,19 +28050,19 @@
     ],
     "dashboards": [
       {
-        "name": "Dapr Metrics",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/dapr-metrics/nr-dashboard-dapr-metrics.png"
-        ]
-      },
-      {
         "name": "Dapr System Services Dashboard",
         "description": null,
         "url": null,
         "screenshots": [
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/dapr-system-services/nr-dashboard-dapr-system-services.png"
+        ]
+      },
+      {
+        "name": "Dapr Metrics",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/dapr-metrics/nr-dashboard-dapr-metrics.png"
         ]
       }
     ],
@@ -28525,14 +28550,6 @@
     ],
     "dashboards": [
       {
-        "name": "Browser Traffic Analysis",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/traffic-analysis/traffic_analysis.png"
-        ]
-      },
-      {
         "name": "Browser Overview",
         "description": null,
         "url": null,
@@ -28546,6 +28563,14 @@
         "url": null,
         "screenshots": [
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/browser-pages-dashboard/browser_pages_dashboard.png"
+        ]
+      },
+      {
+        "name": "Browser Traffic Analysis",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/traffic-analysis/traffic_analysis.png"
         ]
       },
       {
@@ -29348,6 +29373,38 @@
     ]
   },
   {
+    "title": "VMware vSphere",
+    "name": "vmware-vsphere",
+    "description": "Enterprise Workload Platform for Traditional and Next Gen Apps",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/vmware/vmware-vsphere",
+    "id": "87bd9d20-a193-4aa8-80f7-a1f5c65278f1",
+    "level": "NEW_RELIC",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/vmware/vmware-vsphere/logo.svg",
+    "summary": "Enterprise Workload Platform for Traditional and Next Gen Apps",
+    "websiteUrl": null,
+    "keywords": [
+      "infrastructure"
+    ],
+    "authors": [
+      "New Relic"
+    ],
+    "dashboards": [],
+    "alerts": [],
+    "documentation": [
+      {
+        "name": "VMware vSphere installation docs",
+        "description": "Enterprise Workload Platform for Traditional and Next Gen Apps\n",
+        "url": "https://docs.newrelic.com/docs/infrastructure/host-integrations/host-integrations-list/vmware-vsphere-monitoring-integration/"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "VMware vSphere",
+        "id": "vsphere-integration"
+      }
+    ]
+  },
+  {
     "title": "Azure Virtual Machine Scale Sets",
     "name": "azure-virtual-machine-scale-sets",
     "description": "## What is Azure Virtual Machine Scale Sets?\n\nAutomatically scale application load across a series of heterogeneous,\nload-balanced virtual machines.\n\n\n### Get started!\n\nStart monitoring Azure Virtual Machine Scale Sets by connecting Microsoft Azure to New Relic!\n\nCheck out our Azure Virtual Machine Scale Sets documentation to instrument your cloud service and manage the stability, scalability, and reliability of your systems with New Relic's infrastructure monitoring capabilities.\n\n### More info\n\nCheck out the [documentation](https://docs.newrelic.com/docs/infrastructure/microsoft-azure-integrations/azure-integrations-list/azure-virtual-machine-scale-sets-monitoring-integration/) to learn more about New Relic monitoring for Azure Virtual Machine Scale Sets.",
@@ -29423,6 +29480,32 @@
     ]
   },
   {
+    "title": "GitHub Deployment Protection Rules",
+    "name": "github-deployment-protection",
+    "description": "## What are Deployment Protection Rules\n​​Deployment Protection Rules for GitHub Actions provides additional control to your [GitHub Actions](https://github.com/features/actions) CI/CD workflows. Developers can enforce quality gates on every deployment environment, preventing deployments that do not meet specific criteria from reaching production.\n\n### Why Set Up Deployment Protection Rules\nBy setting up Deployment Protection Rules and integrating them into their release processes, teams can break down silos and create tighter collaboration between development, operations, and other groups for faster, more reliable releases. This can also lead to a better overall development lifecycle, with fewer bugs, better testing, and more reliable code.\n\n## Integrate New Relic with GitHub Actions releases\nNew Relic and GitHub have made it easy to set up rigorous control mechanisms that ensure only high-quality thoroughly tested code reaches production.\n\nWith the [New Relic Gate App](https://github.com/apps/new-relic-gate), you can leverage anomaly detection to automatically intercept and validate deployment requests. This lets you prevent issues earlier in the release cycle to reduce alarming on higher level environments and build better software.\n\n### Benefits\nWith this integration, you can connect software performance and environment health analysis to actual deployment criteria, allowing you to:\n\n  **Protect downstream environments from potential issues.** Connect New Relic signals with your deployment gates to prevent hazards and issues from being deployed downstream.\n  **Gain flexible control with New Relic AIOps.** Whether it's errors, performance changes, or anomalies, anything you monitor can become a deployment gate. \n  **Catch issues earlier in the release cycle.** Shift left and prevent issues before they make it to production.\n\n## Get Started\n  [Learn more](https://docs.newrelic.com/whats-new/2023/04/whats-new-04-20-github-integration/)\n  [See instructions](https://github.com/apps/new-relic-gate)and install the app.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/gh-gates",
+    "id": "91464093-cc5d-4599-8fee-23f4de0183b5",
+    "level": "NEW_RELIC",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/gh-gates/logo.svg",
+    "summary": "Use New Relic anomaly detection to create GitHub deployment protection rules",
+    "websiteUrl": null,
+    "keywords": [
+      "github",
+      "gates",
+      "anomaly detection",
+      "notifications",
+      "AIOps",
+      "Incident Intelligence"
+    ],
+    "authors": [
+      "New Relic"
+    ],
+    "dashboards": [],
+    "alerts": [],
+    "documentation": [],
+    "installPlans": []
+  },
+  {
     "title": "Azure Virtual Network",
     "name": "azure-virtual-network",
     "description": "## What is Azure Virtual Network?\nAzure Virtual Network (VNet) provides the means for Azure cloud resources such as virtual machines to securely communicate with each other as well as the rest of the internet and on-premises resources. Using VNet to create a private network gives you control over network filtering, routing, and other key pieces of the network infrastructure. \nGiven an Azure virtual network, you can do things like assign a public IP, assign a load balancer, and handle outbound connections. VNets are ideal for developers deploying on Azure resources who want fine-grained control over network management.\n\n### New Relic Azure Vnet integration\nNew Relic's integration for Azure Virtual Network reports metric data about your virtual networks (VNets), like packets dropped per second or bytes forwarded per second. It also collects data about the status and configuration of your account. The selection of dashboards include:\n- Total virtual networks: The total number of virtual networks currently live\n- Virtual networks time series: Displays the fluctuation of the total number of virtual networks over a series of timepoints\n- Virtual network per region: Displays the virtual networks within a specific geographic region\n- Public IPs under DDoS attack: Quickly identify which IPs on the network may be experiencing a DDOS attack\n- Virtual network per resource group: Shows the number of virtual networks deployed within each resource group\n\n### Why monitor Azure Virtual Network with New Relic?\nHaving insight into Azure virtual network performance is key to keeping network systems healthy and reliable. Virtual networks are often vulnerable to attack, so continuous monitoring of IP requests and understanding which IPs may be experiencing a distributed denial of service (DDOS) attack can be critical for initiating a proactive response. \nThe virtual network time series display can give insight into fluctuations in network health and uptime within a specified interval and can be useful for drilling down into any deviations from the norm.\nFinally, being able to understand how virtual networks are distributed across geographic regions can help you pinpoint when a particular region is being underserved and deploy network resources accordingly.",
@@ -29481,7 +29564,16 @@
     "authors": [
       "New Relic"
     ],
-    "dashboards": [],
+    "dashboards": [
+      {
+        "name": "Azure Virtual Machines",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/azure-virtual-machines/azure-virtual-machines.png"
+        ]
+      }
+    ],
     "alerts": [],
     "documentation": [
       {
