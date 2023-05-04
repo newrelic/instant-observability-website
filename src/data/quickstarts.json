@@ -387,83 +387,6 @@
     "installPlans": []
   },
   {
-    "title": "Change Tracking Overview - APM",
-    "name": "change-tracking-apm",
-    "description": "This dashboard provides a high-level view of the APM services in your ecosystem that you are using Change Tracking Markers on today; along with their golden signals and Apdex score to enable you to quickly analyze the impact of changes on your environment.",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/apm-change-tracking",
-    "id": "31575ae7-ef0b-4200-bf0d-6e6718affc7f",
-    "level": "NEW_RELIC",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/apm-change-tracking/logo.svg",
-    "summary": "Quickly analyze the impact of changes to your APM services throughout your environment.",
-    "websiteUrl": null,
-    "keywords": [
-      "apm",
-      "deployment",
-      "marker",
-      "change",
-      "tracking"
-    ],
-    "authors": [
-      "Zack Mutchler"
-    ],
-    "dashboards": [
-      {
-        "name": "Change Tracking Overview - APM",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/change-tracking-apm/change-tracking-apm.png"
-        ]
-      }
-    ],
-    "alerts": [],
-    "documentation": [
-      {
-        "name": "New Relic APM Installation Docs",
-        "description": "Configure monitoring for you applications with one of our APM agents",
-        "url": "https://docs.newrelic.com/docs/apm/new-relic-apm/getting-started/introduction-apm/#get-started"
-      }
-    ],
-    "installPlans": [
-      {
-        "name": "Change Tracking Install",
-        "id": "change-tracking"
-      }
-    ]
-  },
-  {
-    "title": "tvOS",
-    "name": "tvos",
-    "description": "## New Relic Mobile monitoring\n\nNew Relic's mobile monitoring for tvOS gives you a comprehensive view of your app's performance.\n\n## Get started!\n\nFollow [the documentation](https://docs.newrelic.com/docs/mobile-monitoring/new-relic-mobile-ios/tvos/tvos-installation-configuration/) to get started!",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/tvos",
-    "id": "36061f8f-c057-4a01-b578-c9b67bdf1859",
-    "level": "NEW_RELIC",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/tvos/logo.svg",
-    "summary": "Use New Relic Mobile monitoring to monitor your tvOS apps.",
-    "websiteUrl": null,
-    "keywords": [
-      "mobile"
-    ],
-    "authors": [
-      "New Relic"
-    ],
-    "dashboards": [],
-    "alerts": [],
-    "documentation": [
-      {
-        "name": "tvOS installation docs",
-        "description": "Default operating system for Apple media streaming devices, including the\nApple TV.\n",
-        "url": "https://docs.newrelic.com/docs/mobile-monitoring/new-relic-mobile-ios/tvos/tvos-installation-configuration"
-      }
-    ],
-    "installPlans": [
-      {
-        "name": "tvOS",
-        "id": "tvos-mobile"
-      }
-    ]
-  },
-  {
     "title": "AWS Direct Connect",
     "name": "aws-direct-connect",
     "description": "## What is AWS Direct Connect?\n\nEstablish a private, secure connection to AWS that runs outside of your ISP.\n\n### Get started!\n\nStart monitoring AWS Direct Connect by connecting Amazon Web Services (AWS) to New Relic!\n\nCheck out our AWS Direct Connect documentation to instrument your cloud service and manage the stability, scalability, and reliability of your systems with New Relic's infrastructure monitoring capabilities.\n\n### More info\n\nCheck out the [documentation](https://docs.newrelic.com/docs/infrastructure/amazon-integrations/aws-integrations-list/aws-direct-connect-monitoring-integration/) to learn more about New Relic monitoring for AWS Direct Connect.",
@@ -540,57 +463,6 @@
     ]
   },
   {
-    "title": "Synthetics Private Locations",
-    "name": "synthetics-private-locations",
-    "description": "## What are private locations?\n\nIn synthetic monitoring, a private location is a collection of private minions. A minion is a containerized application that receives and manages jobs set up through the Synthetics UI. For details see our [Private locations overview](https://docs.newrelic.com/docs/synthetics/synthetic-monitoring/private-locations/private-locations-overview-monitor-internal-sites-add-new-locations).\n\n### New Relic Synthetics Containerized Private Minion\n\nThe Containerized Private Minion (CPM) runs on your private network to monitor internal endpoints not accessible from the Internet. Each CPM is configured to process jobs for a specific private location identified by the private location key. For CPM installation instructions see [Install containerized private minions](https://docs.newrelic.com/docs/synthetics/synthetic-monitoring/private-locations/install-containerized-private-minions-cpms).\n\n### Why should you monitor your private locations and CPMs?\n\nMonitoring private locations is critical to knowing when the CPM might be struggling to process jobs. Some common issues include:\n\n- DNS/firewall/proxy blocking connections on your local network\n- overloaded CPM\n- mis-configured CPM\n- under-provisioned host\n- internal engine errors.\n\nIf the CPM fails to process jobs in a timely manner, it can lead to gaps in reported results, false positive alerts, or delayed results.\n\nDownload and install the New Relic Synthetics Private Locations quickstart today to be informed about the health of your private locations and CPMs.",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/synthetics/private-locations",
-    "id": "c1703f99-a3c5-425d-817d-375a0f54959a",
-    "level": "NEW_RELIC",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/synthetics/private-locations/logo.svg",
-    "summary": "Monitoring private locations is crucial to ensure that you detect issues with the CPM and resolve outages swiftly. Download the New Relic Synthetics Private Location quickstart to be informed about the health of your private locations and CPMs before they lead to false positive alerts.",
-    "websiteUrl": null,
-    "keywords": [
-      "cpm",
-      "private locations",
-      "private location queue",
-      "minion",
-      "minion dashboard",
-      "synthetics"
-    ],
-    "authors": [
-      "New Relic",
-      "Keegan Mullaney"
-    ],
-    "dashboards": [
-      {
-        "name": "Synthetics Private Minions",
-        "description": "Details on events from SyntheticsPrivateLocationStatus, SyntheticsPrivateMinion, SyntheticCheck, SyntheticRequest, NrAuditEvent, plus a page for Performance Analysis.",
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/synthetics-private-minions/synthetics-private-minions01.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/synthetics-private-minions/synthetics-private-minions02.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/synthetics-private-minions/synthetics-private-minions03.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/synthetics-private-minions/synthetics-private-minions04.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/synthetics-private-minions/synthetics-private-minions05.png"
-        ]
-      }
-    ],
-    "alerts": [],
-    "documentation": [
-      {
-        "name": "Monitor Private Locations",
-        "description": "Be informed about the health of your private locations.",
-        "url": "https://docs.newrelic.com/docs/synthetics/synthetic-monitoring/private-locations/monitor-private-locations"
-      }
-    ],
-    "installPlans": [
-      {
-        "name": "Synthetics Private Locations",
-        "id": "synthetics-private-locations"
-      }
-    ]
-  },
-  {
     "title": "AWS Lambda",
     "name": "aws-lambda",
     "description": "## What is AWS Lambda?\n\nZero-administration compute platform for back-end web developers that runs\nyour code for you in AWS cloud.\n\n\n### Get started!\n\nStart monitoring AWS Lambda by connecting Amazon Web Services (AWS) to New Relic!\n\nCheck out our AWS Lambda documentation to instrument your cloud service and manage the stability, scalability, and reliability of your systems with New Relic's infrastructure monitoring capabilities.\n\n### More info\n\nCheck out the [documentation](https://docs.newrelic.com/docs/infrastructure/amazon-integrations/aws-integrations-list/aws-lambda-monitoring-integration/) to learn more about New Relic monitoring for AWS Lambda.",
@@ -640,50 +512,6 @@
       {
         "name": "AWS-CloudWatch-Metric-Streams",
         "id": "aws-cloudwatch-metric-streams"
-      }
-    ]
-  },
-  {
-    "title": "Logs Analysis Dashboard",
-    "name": "log-analysis",
-    "description": "The logs analysis dashboard allows you to get deep visibility into the ingestion of your logs. With this panel, you will be able to identify the services and host that send the most logs, which types of serverity are being sent, the cost for each of the attributes and also if the essential attributes are being sent for the ccorrelation between services and logs, such as: service name, log in context and hostname.",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/audit/log-ingestion-analysis",
-    "id": "4d0ec923-b3d7-40dd-a0df-d32e403d666f",
-    "level": "NEW_RELIC",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/audit/log-ingestion-analysis/logo.svg",
-    "summary": "Logs analysis dashboard allows you to get deep visibility into the ingestion of your logs.",
-    "websiteUrl": null,
-    "keywords": [
-      "logs",
-      "ingest",
-      "consumption",
-      "data"
-    ],
-    "authors": [
-      "Thiago Anate"
-    ],
-    "dashboards": [
-      {
-        "name": "Logs Analysis",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/log-analysis/log-analysis.png"
-        ]
-      }
-    ],
-    "alerts": [],
-    "documentation": [
-      {
-        "name": "Log Management",
-        "description": "New Relic offers a fast, scalable log management platform so you can connect your logs with the rest of your telemetry and infrastructure data in a single place.\n",
-        "url": "https://docs.newrelic.com/docs/logs/log-management/get-started/get-started-log-management/"
-      }
-    ],
-    "installPlans": [
-      {
-        "name": "New Relic Logs",
-        "id": "logs-default"
       }
     ]
   },
@@ -1094,17 +922,6 @@
     ],
     "dashboards": [
       {
-        "name": "Kubernetes / Compute Resources",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/kubernetes-prometheus-compute-resources/kubernetes-prometheus-compute-resources01.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/kubernetes-prometheus-compute-resources/kubernetes-prometheus-compute-resources02.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/kubernetes-prometheus-compute-resources/kubernetes-prometheus-compute-resources03.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/kubernetes-prometheus-compute-resources/kubernetes-prometheus-compute-resources04.png"
-        ]
-      },
-      {
         "name": "Kubernetes / Kubelet",
         "description": null,
         "url": null,
@@ -1113,6 +930,17 @@
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/kubernetes-prometheus-kubelet/kubernetes-prometheus-kubelet02.png",
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/kubernetes-prometheus-kubelet/kubernetes-prometheus-kubelet03.png",
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/kubernetes-prometheus-kubelet/kubernetes-prometheus-kubelet04.png"
+        ]
+      },
+      {
+        "name": "Kubernetes / Compute Resources",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/kubernetes-prometheus-compute-resources/kubernetes-prometheus-compute-resources01.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/kubernetes-prometheus-compute-resources/kubernetes-prometheus-compute-resources02.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/kubernetes-prometheus-compute-resources/kubernetes-prometheus-compute-resources03.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/kubernetes-prometheus-compute-resources/kubernetes-prometheus-compute-resources04.png"
         ]
       }
     ],
@@ -1497,6 +1325,51 @@
     ]
   },
   {
+    "title": "Change Tracking Overview - APM",
+    "name": "change-tracking-apm",
+    "description": "This dashboard provides a high-level view of the APM services in your ecosystem that you are using Change Tracking Markers on today; along with their golden signals and Apdex score to enable you to quickly analyze the impact of changes on your environment.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/apm-change-tracking",
+    "id": "31575ae7-ef0b-4200-bf0d-6e6718affc7f",
+    "level": "NEW_RELIC",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/apm-change-tracking/logo.svg",
+    "summary": "Quickly analyze the impact of changes to your APM services throughout your environment.",
+    "websiteUrl": null,
+    "keywords": [
+      "apm",
+      "deployment",
+      "marker",
+      "change",
+      "tracking"
+    ],
+    "authors": [
+      "Zack Mutchler"
+    ],
+    "dashboards": [
+      {
+        "name": "Change Tracking Overview - APM",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/change-tracking-apm/change-tracking-apm.png"
+        ]
+      }
+    ],
+    "alerts": [],
+    "documentation": [
+      {
+        "name": "New Relic APM Installation Docs",
+        "description": "Configure monitoring for you applications with one of our APM agents",
+        "url": "https://docs.newrelic.com/docs/apm/new-relic-apm/getting-started/introduction-apm/#get-started"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "Change Tracking Install",
+        "id": "change-tracking"
+      }
+    ]
+  },
+  {
     "title": "Node Exporter",
     "name": "node-exporter",
     "description": "Official New Relic dashboard for Prometheus Node Exporter. Node Exporter allows host metrics gathered by the exporter to be scraped by Prometheus Server.\n\n## Dashboard Highlights\n- Load Averages\n- CPU\n- Memory Usage\n- Storage Usage\n- Network\n\n## Requirements:\n1. [Prometheus Server](https://prometheus.io/docs/prometheus/latest/installation/)\n2. [Node Exporter](https://prometheus.io/docs/guides/node-exporter/) installed\n3. Enable Prometheus [Remote Write](https://docs.newrelic.com/docs/infrastructure/prometheus-integrations/install-configure-remote-write/set-your-prometheus-remote-write-integration/) to New Relic.\n4. To be able to filter metrics by a specific label that isn't part of the Node Exporter default installation, an `external_label` will need to be added to the Prometheus config. Example:\n    `\n      global:\n        external_labels:\n          clusterName: <cluster_name>\n    `",
@@ -1555,6 +1428,133 @@
       {
         "name": "Prometheus remote write",
         "id": "setup-prometheus"
+      }
+    ]
+  },
+  {
+    "title": "Logs Analysis Dashboard",
+    "name": "log-analysis",
+    "description": "The logs analysis dashboard allows you to get deep visibility into the ingestion of your logs. With this panel, you will be able to identify the services and host that send the most logs, which types of serverity are being sent, the cost for each of the attributes and also if the essential attributes are being sent for the ccorrelation between services and logs, such as: service name, log in context and hostname.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/audit/log-ingestion-analysis",
+    "id": "4d0ec923-b3d7-40dd-a0df-d32e403d666f",
+    "level": "NEW_RELIC",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/audit/log-ingestion-analysis/logo.svg",
+    "summary": "Logs analysis dashboard allows you to get deep visibility into the ingestion of your logs.",
+    "websiteUrl": null,
+    "keywords": [
+      "logs",
+      "ingest",
+      "consumption",
+      "data"
+    ],
+    "authors": [
+      "Thiago Anate"
+    ],
+    "dashboards": [
+      {
+        "name": "Logs Analysis",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/log-analysis/log-analysis.png"
+        ]
+      }
+    ],
+    "alerts": [],
+    "documentation": [
+      {
+        "name": "Log Management",
+        "description": "New Relic offers a fast, scalable log management platform so you can connect your logs with the rest of your telemetry and infrastructure data in a single place.\n",
+        "url": "https://docs.newrelic.com/docs/logs/log-management/get-started/get-started-log-management/"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "New Relic Logs",
+        "id": "logs-default"
+      }
+    ]
+  },
+  {
+    "title": "tvOS",
+    "name": "tvos",
+    "description": "## New Relic Mobile monitoring\n\nNew Relic's mobile monitoring for tvOS gives you a comprehensive view of your app's performance.\n\n## Get started!\n\nFollow [the documentation](https://docs.newrelic.com/docs/mobile-monitoring/new-relic-mobile-ios/tvos/tvos-installation-configuration/) to get started!",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/tvos",
+    "id": "36061f8f-c057-4a01-b578-c9b67bdf1859",
+    "level": "NEW_RELIC",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/tvos/logo.svg",
+    "summary": "Use New Relic Mobile monitoring to monitor your tvOS apps.",
+    "websiteUrl": null,
+    "keywords": [
+      "mobile"
+    ],
+    "authors": [
+      "New Relic"
+    ],
+    "dashboards": [],
+    "alerts": [],
+    "documentation": [
+      {
+        "name": "tvOS installation docs",
+        "description": "Default operating system for Apple media streaming devices, including the\nApple TV.\n",
+        "url": "https://docs.newrelic.com/docs/mobile-monitoring/new-relic-mobile-ios/tvos/tvos-installation-configuration"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "tvOS",
+        "id": "tvos-mobile"
+      }
+    ]
+  },
+  {
+    "title": "Synthetics Private Locations",
+    "name": "synthetics-private-locations",
+    "description": "## What are private locations?\n\nIn synthetic monitoring, a private location is a collection of private minions. A minion is a containerized application that receives and manages jobs set up through the Synthetics UI. For details see our [Private locations overview](https://docs.newrelic.com/docs/synthetics/synthetic-monitoring/private-locations/private-locations-overview-monitor-internal-sites-add-new-locations).\n\n### New Relic Synthetics Containerized Private Minion\n\nThe Containerized Private Minion (CPM) runs on your private network to monitor internal endpoints not accessible from the Internet. Each CPM is configured to process jobs for a specific private location identified by the private location key. For CPM installation instructions see [Install containerized private minions](https://docs.newrelic.com/docs/synthetics/synthetic-monitoring/private-locations/install-containerized-private-minions-cpms).\n\n### Why should you monitor your private locations and CPMs?\n\nMonitoring private locations is critical to knowing when the CPM might be struggling to process jobs. Some common issues include:\n\n- DNS/firewall/proxy blocking connections on your local network\n- overloaded CPM\n- mis-configured CPM\n- under-provisioned host\n- internal engine errors.\n\nIf the CPM fails to process jobs in a timely manner, it can lead to gaps in reported results, false positive alerts, or delayed results.\n\nDownload and install the New Relic Synthetics Private Locations quickstart today to be informed about the health of your private locations and CPMs.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/synthetics/private-locations",
+    "id": "c1703f99-a3c5-425d-817d-375a0f54959a",
+    "level": "NEW_RELIC",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/synthetics/private-locations/logo.svg",
+    "summary": "Monitoring private locations is crucial to ensure that you detect issues with the CPM and resolve outages swiftly. Download the New Relic Synthetics Private Location quickstart to be informed about the health of your private locations and CPMs before they lead to false positive alerts.",
+    "websiteUrl": null,
+    "keywords": [
+      "cpm",
+      "private locations",
+      "private location queue",
+      "minion",
+      "minion dashboard",
+      "synthetics"
+    ],
+    "authors": [
+      "New Relic",
+      "Keegan Mullaney"
+    ],
+    "dashboards": [
+      {
+        "name": "Synthetics Private Minions",
+        "description": "Details on events from SyntheticsPrivateLocationStatus, SyntheticsPrivateMinion, SyntheticCheck, SyntheticRequest, NrAuditEvent, plus a page for Performance Analysis.",
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/synthetics-private-minions/synthetics-private-minions01.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/synthetics-private-minions/synthetics-private-minions02.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/synthetics-private-minions/synthetics-private-minions03.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/synthetics-private-minions/synthetics-private-minions04.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/synthetics-private-minions/synthetics-private-minions05.png"
+        ]
+      }
+    ],
+    "alerts": [],
+    "documentation": [
+      {
+        "name": "Monitor Private Locations",
+        "description": "Be informed about the health of your private locations.",
+        "url": "https://docs.newrelic.com/docs/synthetics/synthetic-monitoring/private-locations/monitor-private-locations"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "Synthetics Private Locations",
+        "id": "synthetics-private-locations"
       }
     ]
   },
@@ -2349,68 +2349,6 @@
       {
         "name": "Zipkin",
         "id": "third-party-zipkin"
-      }
-    ]
-  },
-  {
-    "title": "Battlesnake",
-    "name": "battlesnake",
-    "description": "[Battlesnake](https://play.battlesnake.com/) is a multi-player programming game played by developers all over the world. All you need to play is a live web server that implements the [Battlesnake API](https://docs.battlesnake.com/).\n\nWith New Relic, you can monitor you Battlesnake [server](https://docs.newrelic.com/docs/infrastructure/infrastructure-monitoring/get-started/get-started-infrastructure-monitoring/) and [web application](https://docs.newrelic.com/docs/apm/new-relic-apm/getting-started/introduction-apm). This quickstart includes a few helpful dashboards to ensure your server is compliant with the game's server requirements and your Battlesnake is set up for success!\n\nAdditional features coming soon!",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/battlesnake",
-    "id": "63a65857-a25e-4654-9174-928e5894b3b9",
-    "level": "NEW_RELIC",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/battlesnake/logo.png",
-    "summary": "Battlesnake is a multi-player programming game played by developers all over the world. All you need to play is a live web server that implements the Battlesnake API.",
-    "websiteUrl": null,
-    "keywords": [
-      "game",
-      "infrastructure",
-      "snake",
-      "battlesnake"
-    ],
-    "authors": [
-      "New Relic",
-      "Zack Stickles (New Relic)",
-      "Alec Swanson (New Relic)"
-    ],
-    "dashboards": [
-      {
-        "name": "Battlesnake Performance",
-        "description": "Monitor your Battlesnake's performance and see how it stacks up against your competition!",
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/battlesnake-performance/battlesnake-performance.png"
-        ]
-      },
-      {
-        "name": "Battlesnake Server Status",
-        "description": "A dashboard to monitor your Battlesnake server's performance. It's important to keep all responses to the `/move` endpoint under 500ms. Furthermore, it's possible that your snake may be in multiple concurrent matches at the same time. It's important to make sure you server and web application are running smoothly to keep you in the game!",
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/battlesnake-server-status/battlesnake-server-status.png"
-        ]
-      },
-      {
-        "name": "Battlesnake Game Tracking",
-        "description": "Monitor your Battlesnake's performance and see how it stacks up against your competition!",
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/battlesnake-game-tracking/battlesnake-game-tracking-1.png"
-        ]
-      }
-    ],
-    "alerts": [],
-    "documentation": [
-      {
-        "name": "Battlesnake installation docs",
-        "description": "With New Relic, you can monitor Battlesnake server and web application.\n",
-        "url": "https://docs.newrelic.com/docs/data-apis/custom-data/custom-events/apm-report-custom-events-attributes/"
-      }
-    ],
-    "installPlans": [
-      {
-        "name": "Custom Attributes",
-        "id": "battlesnake"
       }
     ]
   },
@@ -3695,114 +3633,6 @@
     ]
   },
   {
-    "title": "Mobile Crash Analytics",
-    "name": "mobile-crash-analytics-quickstart",
-    "description": "## Crash Analytics Monitoring Quickstart\n\nGet deeper insights into the mobile application crash frequency, affected versions, crash impact on users. \n\nReceive details about the last interactions before crash. \n\nHelp page on the dashboard will guide you on how to enable data filtering.",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/mobile-crash-analytics",
-    "id": "931317a4-ec09-438a-80ae-441637475386",
-    "level": "COMMUNITY",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/mobile-crash-analytics/logo.png",
-    "summary": "Real time mobile application crash & network analysis to ensure ongoing reliability and performance.",
-    "websiteUrl": null,
-    "keywords": [
-      "dashboard",
-      "mobile-crash",
-      "crash analytics",
-      "crashlytics",
-      "mobile agent",
-      "HTTP data",
-      "android",
-      "ios",
-      "apps"
-    ],
-    "authors": [
-      "New Relic",
-      "Siddhartha Khare"
-    ],
-    "dashboards": [
-      {
-        "name": "Mobile Crash Analytics",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/mobile-crash-analytics/CrashAnalytics2.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/mobile-crash-analytics/CrashAnalytics3.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/mobile-crash-analytics/CrashAnalytics.png"
-        ]
-      }
-    ],
-    "alerts": [],
-    "documentation": [
-      {
-        "name": "Adding a dashboard",
-        "description": "How to add a dashboard to New Relic",
-        "url": "https://docs.newrelic.com/docs/query-your-data/explore-query-data/dashboards/introduction-dashboards/#get-started"
-      },
-      {
-        "name": "Instrument your mobile application with New Relic",
-        "description": "How to instrument your mobile application with New Relic",
-        "url": "https://docs.newrelic.com/docs/mobile-monitoring/new-relic-mobile/get-started/introduction-mobile-monitoring/"
-      }
-    ],
-    "installPlans": [
-      {
-        "name": "Mobile Dashboard Install Plan",
-        "id": "mobile-dashboard-install"
-      }
-    ]
-  },
-  {
-    "title": "Mobile dashboard quickstart",
-    "name": "mobile-quickstart",
-    "description": "A dashboard for basic mobile metrics such as active users, installs and error rate.",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/mobile",
-    "id": "4b785b4d-0689-4516-b9db-fbf7227e2e1c",
-    "level": "COMMUNITY",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/mobile/icon.png",
-    "summary": "A dashboard for basic mobile metrics such as active users, installs and error rate.",
-    "websiteUrl": null,
-    "keywords": [
-      "dashboard",
-      "mobile",
-      "mobile agent",
-      "android",
-      "ios",
-      "apps"
-    ],
-    "authors": [
-      "Víctor Pérez"
-    ],
-    "dashboards": [
-      {
-        "name": "Mobile",
-        "description": "A dashboard for all your mobile app instrumenting needs.",
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/mobile/Mobile.png"
-        ]
-      }
-    ],
-    "alerts": [],
-    "documentation": [
-      {
-        "name": "Adding a dashboard",
-        "description": "How to add a dashboard to New Relic",
-        "url": "https://docs.newrelic.com/docs/query-your-data/explore-query-data/dashboards/introduction-dashboards/#get-started"
-      },
-      {
-        "name": "Instrument your mobile application with New Relic",
-        "description": "How to instrument your mobile application with New Relic",
-        "url": "https://docs.newrelic.com/docs/mobile-monitoring/new-relic-mobile/get-started/introduction-mobile-monitoring/"
-      }
-    ],
-    "installPlans": [
-      {
-        "name": "Mobile Dashboard Install Plan",
-        "id": "mobile-dashboard-install"
-      }
-    ]
-  },
-  {
     "title": "MERN Stack",
     "name": "mern-stack",
     "description": "## Comprehensive MERN Stack Monitoring System\nA JavaScript-based open-source framework called MERN Stack is used for creating dynamic web pages and online applications. There are four components in the stack: MongoDB, ExpressJS, ReactJS and NodeJS. \nThe stack's components integrate logically and simply because they are all based on JavaScript and JSON. These four powerful technologies all play an important role in the creation of web applications.\n\n## What should you look for in a MERN dashboard?\n- Metrics related to MongoDB including active connections, database details, usage time, and more.\n- There are many metrics available for ExpressJS and NodeJS including web transactions, top ten transactions and errors, memory usage, and many others.\n- There are many different ReactJS metrics including the number of viewed urls, page views by city, ajax requests, etc. You may also create your own chart using the collected metrics.\n\n## What’s included in the MERN quickstart?\nInstall this quickstart to install preconfigured observability solutions:\n- A number of high-value alerts are available including the average number of connections created, the FCP score and the memory usage.\n- Informative dashboards (the top 10 transactions, connections, database indexes, and more).",
@@ -4025,19 +3855,19 @@
     ],
     "dashboards": [
       {
-        "name": "Data Ingest Governance Entity Breakdowns",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/data-ingest-entity-breakdown/data-ingest-entity-breakdown.png"
-        ]
-      },
-      {
         "name": "Data Ingest Governance Baseline",
         "description": null,
         "url": null,
         "screenshots": [
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/data-ingest-baseline/data-ingest-baseline.png"
+        ]
+      },
+      {
+        "name": "Data Ingest Governance Entity Breakdowns",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/data-ingest-entity-breakdown/data-ingest-entity-breakdown.png"
         ]
       }
     ],
@@ -4088,6 +3918,68 @@
       {
         "name": "Slack for CodeStream",
         "id": "third-party-slack-for-codestream"
+      }
+    ]
+  },
+  {
+    "title": "Battlesnake",
+    "name": "battlesnake",
+    "description": "[Battlesnake](https://play.battlesnake.com/) is a multi-player programming game played by developers all over the world. All you need to play is a live web server that implements the [Battlesnake API](https://docs.battlesnake.com/).\n\nWith New Relic, you can monitor you Battlesnake [server](https://docs.newrelic.com/docs/infrastructure/infrastructure-monitoring/get-started/get-started-infrastructure-monitoring/) and [web application](https://docs.newrelic.com/docs/apm/new-relic-apm/getting-started/introduction-apm). This quickstart includes a few helpful dashboards to ensure your server is compliant with the game's server requirements and your Battlesnake is set up for success!\n\nAdditional features coming soon!",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/battlesnake",
+    "id": "63a65857-a25e-4654-9174-928e5894b3b9",
+    "level": "NEW_RELIC",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/battlesnake/logo.png",
+    "summary": "Battlesnake is a multi-player programming game played by developers all over the world. All you need to play is a live web server that implements the Battlesnake API.",
+    "websiteUrl": null,
+    "keywords": [
+      "game",
+      "infrastructure",
+      "snake",
+      "battlesnake"
+    ],
+    "authors": [
+      "New Relic",
+      "Zack Stickles (New Relic)",
+      "Alec Swanson (New Relic)"
+    ],
+    "dashboards": [
+      {
+        "name": "Battlesnake Performance",
+        "description": "Monitor your Battlesnake's performance and see how it stacks up against your competition!",
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/battlesnake-performance/battlesnake-performance.png"
+        ]
+      },
+      {
+        "name": "Battlesnake Server Status",
+        "description": "A dashboard to monitor your Battlesnake server's performance. It's important to keep all responses to the `/move` endpoint under 500ms. Furthermore, it's possible that your snake may be in multiple concurrent matches at the same time. It's important to make sure you server and web application are running smoothly to keep you in the game!",
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/battlesnake-server-status/battlesnake-server-status.png"
+        ]
+      },
+      {
+        "name": "Battlesnake Game Tracking",
+        "description": "Monitor your Battlesnake's performance and see how it stacks up against your competition!",
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/battlesnake-game-tracking/battlesnake-game-tracking-1.png"
+        ]
+      }
+    ],
+    "alerts": [],
+    "documentation": [
+      {
+        "name": "Battlesnake installation docs",
+        "description": "With New Relic, you can monitor Battlesnake server and web application.\n",
+        "url": "https://docs.newrelic.com/docs/data-apis/custom-data/custom-events/apm-report-custom-events-attributes/"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "Custom Attributes",
+        "id": "battlesnake"
       }
     ]
   },
@@ -4203,6 +4095,173 @@
       {
         "name": "C SDK Agent",
         "id": "setup-c-agent"
+      }
+    ]
+  },
+  {
+    "title": "Mobile dashboard quickstart",
+    "name": "mobile-quickstart",
+    "description": "A dashboard for basic mobile metrics such as active users, installs and error rate.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/mobile",
+    "id": "4b785b4d-0689-4516-b9db-fbf7227e2e1c",
+    "level": "COMMUNITY",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/mobile/icon.png",
+    "summary": "A dashboard for basic mobile metrics such as active users, installs and error rate.",
+    "websiteUrl": null,
+    "keywords": [
+      "dashboard",
+      "mobile",
+      "mobile agent",
+      "android",
+      "ios",
+      "apps"
+    ],
+    "authors": [
+      "Víctor Pérez"
+    ],
+    "dashboards": [
+      {
+        "name": "Mobile",
+        "description": "A dashboard for all your mobile app instrumenting needs.",
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/mobile/Mobile.png"
+        ]
+      }
+    ],
+    "alerts": [],
+    "documentation": [
+      {
+        "name": "Adding a dashboard",
+        "description": "How to add a dashboard to New Relic",
+        "url": "https://docs.newrelic.com/docs/query-your-data/explore-query-data/dashboards/introduction-dashboards/#get-started"
+      },
+      {
+        "name": "Instrument your mobile application with New Relic",
+        "description": "How to instrument your mobile application with New Relic",
+        "url": "https://docs.newrelic.com/docs/mobile-monitoring/new-relic-mobile/get-started/introduction-mobile-monitoring/"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "Mobile Dashboard Install Plan",
+        "id": "mobile-dashboard-install"
+      }
+    ]
+  },
+  {
+    "title": "Google Kubernetes Engine",
+    "name": "google-kubernetes-engine",
+    "description": "Provides a managed environment for deploying, managing, and scaling your\ncontainerized applications using Google infrastructure.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/kubernetes/google-kubernetes-engine",
+    "id": "7ecb459a-eb29-4346-a6f0-c9fe1acf8830",
+    "level": "NEW_RELIC",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/kubernetes/google-kubernetes-engine/logo.svg",
+    "summary": "Provides a managed environment for deploying, managing, and scaling your\ncontainerized applications using Google infrastructure.",
+    "websiteUrl": null,
+    "keywords": [
+      "kubernetes",
+      "containers",
+      "k8s",
+      "google"
+    ],
+    "authors": [
+      "New Relic",
+      "Emil Hammarstrand"
+    ],
+    "dashboards": [
+      {
+        "name": "Google Kubernetes Engine",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/google-kubernetes-engine/google-kubernetes-engine-2.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/google-kubernetes-engine/google-kubernetes-engine.png"
+        ]
+      }
+    ],
+    "alerts": [
+      {
+        "name": "High CPU Utilization",
+        "details": "This alert is triggered when the CPU utilization for a Node is above 90% for at least 15 minutes.",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "High Memory Usage",
+        "details": "This alert is triggered when the memory usage for a Node is above 85% of total capacity.",
+        "type": "STATIC",
+        "url": null
+      }
+    ],
+    "documentation": [
+      {
+        "name": "Google Kubernetes Engine installation docs",
+        "description": "Provides a managed environment for deploying, managing, and scaling your\ncontainerized applications using Google infrastructure.\n",
+        "url": "https://docs.newrelic.com/docs/integrations/kubernetes-integration/get-started/introduction-kubernetes-integration"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "Kubernetes integration",
+        "id": "kubernetes-install"
+      }
+    ]
+  },
+  {
+    "title": "Mobile Crash Analytics",
+    "name": "mobile-crash-analytics-quickstart",
+    "description": "## Crash Analytics Monitoring Quickstart\n\nGet deeper insights into the mobile application crash frequency, affected versions, crash impact on users. \n\nReceive details about the last interactions before crash. \n\nHelp page on the dashboard will guide you on how to enable data filtering.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/mobile-crash-analytics",
+    "id": "931317a4-ec09-438a-80ae-441637475386",
+    "level": "COMMUNITY",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/mobile-crash-analytics/logo.png",
+    "summary": "Real time mobile application crash & network analysis to ensure ongoing reliability and performance.",
+    "websiteUrl": null,
+    "keywords": [
+      "dashboard",
+      "mobile-crash",
+      "crash analytics",
+      "crashlytics",
+      "mobile agent",
+      "HTTP data",
+      "android",
+      "ios",
+      "apps"
+    ],
+    "authors": [
+      "New Relic",
+      "Siddhartha Khare"
+    ],
+    "dashboards": [
+      {
+        "name": "Mobile Crash Analytics",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/mobile-crash-analytics/CrashAnalytics2.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/mobile-crash-analytics/CrashAnalytics3.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/mobile-crash-analytics/CrashAnalytics.png"
+        ]
+      }
+    ],
+    "alerts": [],
+    "documentation": [
+      {
+        "name": "Adding a dashboard",
+        "description": "How to add a dashboard to New Relic",
+        "url": "https://docs.newrelic.com/docs/query-your-data/explore-query-data/dashboards/introduction-dashboards/#get-started"
+      },
+      {
+        "name": "Instrument your mobile application with New Relic",
+        "description": "How to instrument your mobile application with New Relic",
+        "url": "https://docs.newrelic.com/docs/mobile-monitoring/new-relic-mobile/get-started/introduction-mobile-monitoring/"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "Mobile Dashboard Install Plan",
+        "id": "mobile-dashboard-install"
       }
     ]
   },
@@ -4525,65 +4584,6 @@
       {
         "name": "Guided install",
         "id": "guided-install"
-      }
-    ]
-  },
-  {
-    "title": "Google Kubernetes Engine",
-    "name": "google-kubernetes-engine",
-    "description": "Provides a managed environment for deploying, managing, and scaling your\ncontainerized applications using Google infrastructure.",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/kubernetes/google-kubernetes-engine",
-    "id": "7ecb459a-eb29-4346-a6f0-c9fe1acf8830",
-    "level": "NEW_RELIC",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/kubernetes/google-kubernetes-engine/logo.svg",
-    "summary": "Provides a managed environment for deploying, managing, and scaling your\ncontainerized applications using Google infrastructure.",
-    "websiteUrl": null,
-    "keywords": [
-      "kubernetes",
-      "containers",
-      "k8s",
-      "google"
-    ],
-    "authors": [
-      "New Relic",
-      "Emil Hammarstrand"
-    ],
-    "dashboards": [
-      {
-        "name": "Google Kubernetes Engine",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/google-kubernetes-engine/google-kubernetes-engine-2.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/google-kubernetes-engine/google-kubernetes-engine.png"
-        ]
-      }
-    ],
-    "alerts": [
-      {
-        "name": "High CPU Utilization",
-        "details": "This alert is triggered when the CPU utilization for a Node is above 90% for at least 15 minutes.",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "High Memory Usage",
-        "details": "This alert is triggered when the memory usage for a Node is above 85% of total capacity.",
-        "type": "STATIC",
-        "url": null
-      }
-    ],
-    "documentation": [
-      {
-        "name": "Google Kubernetes Engine installation docs",
-        "description": "Provides a managed environment for deploying, managing, and scaling your\ncontainerized applications using Google infrastructure.\n",
-        "url": "https://docs.newrelic.com/docs/integrations/kubernetes-integration/get-started/introduction-kubernetes-integration"
-      }
-    ],
-    "installPlans": [
-      {
-        "name": "Kubernetes integration",
-        "id": "kubernetes-install"
       }
     ]
   },
@@ -5605,51 +5605,6 @@
     ]
   },
   {
-    "title": "Gitlab",
-    "name": "gitlab",
-    "description": "## What is Gitlab?\n\nGitLab is a popular single application for the entire DevOps lifecycle, fulfilling all the fundamentals for CI/CD in one environment.\n\nNow, you can monitor your Gitlab with New Relic, making it easier to get observability into your CI/CD pipeline health and performance.",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/gitlab",
-    "id": "bdb89e80-12e0-4543-ab9f-69d2397756eb",
-    "level": "COMMUNITY",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/gitlab/logo.svg",
-    "summary": "Monitor Gitlab with the OpenTelemetry in New Relic.",
-    "websiteUrl": null,
-    "keywords": [
-      "gitlab",
-      "opentelemetry",
-      "otel",
-      "pipelines"
-    ],
-    "authors": [
-      "New Relic",
-      "Diogo Pacheco"
-    ],
-    "dashboards": [
-      {
-        "name": "Sample Dashboard - Gitlab",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/gitlab/gitlab_dashboard.jpg"
-        ]
-      }
-    ],
-    "alerts": [],
-    "documentation": [
-      {
-        "name": "Set up Gitlab using open telemetry",
-        "description": "Monitor your Gitlab pipelines with New Relic, making it easier to get observability into your CI/CD pipeline health and performance.",
-        "url": "https://github.com/newrelic-experimental/gitlab"
-      }
-    ],
-    "installPlans": [
-      {
-        "name": "gitlab",
-        "id": "third-party-gitlab-integration"
-      }
-    ]
-  },
-  {
     "title": "Redis Enterprise",
     "name": "redis-enterprise",
     "description": "## Redis Enterprise Quickstart\n\n### Redis Enterprise is an enterprise offering of Redis that provides:\n- High availability: Up to 5 9's\n- Support: 24/7 Enterprise support\n- Geo-replication: Write data consistency across multiple data centers\n- Tiered storage: Store data on devices outside of RAM for cost savings\n- High performance: Serve up to 200M operations per second\n\nThis integration supports [Redis Enterprise Software](https://redis.com/redis-enterprise-software/overview/) installations.\n\n### With the Redis Enterprise quickstart you can:\n\n- Monitor real-time performance and trends of you Redis Enterprise cluster\n- Drill down into the performance of individual Redis databases\n- Understand the Redis Active/Active metrics\n\n### Cluster level metrics\n\n- License Status: Information on the Enterprise license status\n- License Capacity: Capacity licensed\n- Used Capacity: Capacity currently in use\n- Cluster Capacity: Information on memory and compute resources available on the cluster\n- Total Requests: Overall throughput of the cluster in total\n\n\n### Database level metrics\n\n- Database Latency: Metrics pertaining to the latency of operations at the database level\n- Database Throughput: Detailed information of the number of read/write operations per second\n- Database Capacity: Memory usage details for capacity planning\n- Network Usage: Information on the network usage per database\n- Redis Data Retention: Expiration and Eviction statistics on object retention\n\n\n### Active/Active metrics\n\n- Lag: Time between application on servers\n- Pending:  Details of the number of writes pending as part of the sync\n- Bandwidth:  Information on the amount of traffic between clusters \n\n### Contact us\nTo get help please contact the [Redis Enterprise Field Engineering](mailto:redis.observability@redis.com?subject=NewRelic%20Integration%20Support)",
@@ -5676,6 +5631,14 @@
     ],
     "dashboards": [
       {
+        "name": "Redis Enterprise Database Metrics",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/database/database01.png"
+        ]
+      },
+      {
         "name": "Redis Enterprise Database CRDT",
         "description": null,
         "url": null,
@@ -5689,14 +5652,6 @@
         "url": null,
         "screenshots": [
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/cluster/cluster01.png"
-        ]
-      },
-      {
-        "name": "Redis Enterprise Database Metrics",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/database/database01.png"
         ]
       }
     ],
@@ -6394,51 +6349,6 @@
     ]
   },
   {
-    "title": "Sybase",
-    "name": "sybase",
-    "description": "## Quickstart for Sybase monitoring\n\nSybase is a relational database software solution. \n\n### New Relic Sybase quickstart features\n\nWith monitoring statistics enabled, you can observe key metrics such as the number of connections, execution times, statement cache, process activity, threads, and more. \n\n### Sybase Quickstart instructions\n\nCheck out [nri-db](https://github.com/newrelic-experimental/nri-db) to learn more about New Relic monitoring for Sybase.",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/sybase",
-    "id": "65d0ccb0-444a-409a-beca-3bed99315d4e",
-    "level": "COMMUNITY",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/sybase/logo.svg",
-    "summary": "Monitor SAP Adaptive Server Enterprise (Sybase)",
-    "websiteUrl": null,
-    "keywords": [
-      "sybase",
-      "sap",
-      "ase",
-      "adaptive server enterprise"
-    ],
-    "authors": [
-      "New Relic",
-      "Peter Nguyen"
-    ],
-    "dashboards": [
-      {
-        "name": "Sybase - SAP ASE",
-        "description": "Sybase - SAP Adaptive Server Enterprise statistics.",
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/sybase/sybase.png"
-        ]
-      }
-    ],
-    "alerts": [],
-    "documentation": [
-      {
-        "name": "New Relic Integration - Database",
-        "description": "Monitor SAP Adaptive Server Enterprise (Sybase)",
-        "url": "https://github.com/newrelic-experimental/nri-db"
-      }
-    ],
-    "installPlans": [
-      {
-        "name": "Sybase",
-        "id": "sybase-integration"
-      }
-    ]
-  },
-  {
     "title": "Roku",
     "name": "roku",
     "description": "## Why monitor Roku?\n\nRoku is one of the world's most popular streaming platforms. New Relic has developed the first and only open-source observabiilty agent for Roku, giving you unparalleled insight into the performance of your Roku application.\n\n### Analytics on HTTP requests and errors\n  This can be manifestations of ISP or CDN issues or unwanted changes to the application or backend services. Faster identification and understanding of these issues is critical to maintaining a positive user experience. \n### Video Quality of Experience (QoE) \n  Correlate video quality issues back through the rest of the streaming architecture. Acquire complete correlations between video playback sessions to the backend systems.\n### Customer journey tracking\n Follow customers as they navigate the application towards their content and their video playback experience. See where and when drop offs occur and the time it takes to complete critical actions.",
@@ -6986,19 +6896,19 @@
         ]
       },
       {
-        "name": "SAP Data Ingestion Estimate",
-        "description": "Get an overview of the data volume ingested from SAP systems",
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/nrm4sap-datasize/sap-size-estimate01.png"
-        ]
-      },
-      {
         "name": "SAP Data Collection Monitoring",
         "description": "Monitor SAP data collection and ingestion process",
         "url": null,
         "screenshots": [
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/nrm4sap-datacollect/sap-data-collection01.png"
+        ]
+      },
+      {
+        "name": "SAP Data Ingestion Estimate",
+        "description": "Get an overview of the data volume ingested from SAP systems",
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/nrm4sap-datasize/sap-size-estimate01.png"
         ]
       }
     ],
@@ -7114,6 +7024,96 @@
       }
     ],
     "installPlans": []
+  },
+  {
+    "title": "Gitlab",
+    "name": "gitlab",
+    "description": "## What is Gitlab?\n\nGitLab is a popular single application for the entire DevOps lifecycle, fulfilling all the fundamentals for CI/CD in one environment.\n\nNow, you can monitor your Gitlab with New Relic, making it easier to get observability into your CI/CD pipeline health and performance.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/gitlab",
+    "id": "bdb89e80-12e0-4543-ab9f-69d2397756eb",
+    "level": "COMMUNITY",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/gitlab/logo.svg",
+    "summary": "Monitor Gitlab with the OpenTelemetry in New Relic.",
+    "websiteUrl": null,
+    "keywords": [
+      "gitlab",
+      "opentelemetry",
+      "otel",
+      "pipelines"
+    ],
+    "authors": [
+      "New Relic",
+      "Diogo Pacheco"
+    ],
+    "dashboards": [
+      {
+        "name": "Sample Dashboard - Gitlab",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/gitlab/gitlab_dashboard.jpg"
+        ]
+      }
+    ],
+    "alerts": [],
+    "documentation": [
+      {
+        "name": "Set up Gitlab using open telemetry",
+        "description": "Monitor your Gitlab pipelines with New Relic, making it easier to get observability into your CI/CD pipeline health and performance.",
+        "url": "https://github.com/newrelic-experimental/gitlab"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "gitlab",
+        "id": "third-party-gitlab-integration"
+      }
+    ]
+  },
+  {
+    "title": "Sybase",
+    "name": "sybase",
+    "description": "## Quickstart for Sybase monitoring\n\nSybase is a relational database software solution. \n\n### New Relic Sybase quickstart features\n\nWith monitoring statistics enabled, you can observe key metrics such as the number of connections, execution times, statement cache, process activity, threads, and more. \n\n### Sybase Quickstart instructions\n\nCheck out [nri-db](https://github.com/newrelic-experimental/nri-db) to learn more about New Relic monitoring for Sybase.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/sybase",
+    "id": "65d0ccb0-444a-409a-beca-3bed99315d4e",
+    "level": "COMMUNITY",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/sybase/logo.svg",
+    "summary": "Monitor SAP Adaptive Server Enterprise (Sybase)",
+    "websiteUrl": null,
+    "keywords": [
+      "sybase",
+      "sap",
+      "ase",
+      "adaptive server enterprise"
+    ],
+    "authors": [
+      "New Relic",
+      "Peter Nguyen"
+    ],
+    "dashboards": [
+      {
+        "name": "Sybase - SAP ASE",
+        "description": "Sybase - SAP Adaptive Server Enterprise statistics.",
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/sybase/sybase.png"
+        ]
+      }
+    ],
+    "alerts": [],
+    "documentation": [
+      {
+        "name": "New Relic Integration - Database",
+        "description": "Monitor SAP Adaptive Server Enterprise (Sybase)",
+        "url": "https://github.com/newrelic-experimental/nri-db"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "Sybase",
+        "id": "sybase-integration"
+      }
+    ]
   },
   {
     "title": "Elasticsearch",
@@ -9843,42 +9843,6 @@
     ]
   },
   {
-    "title": "Video agent for Android.",
-    "name": "video-android",
-    "description": "Agent to monitor video applications for Android.",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/video/video-android",
-    "id": "fa2ebce2-9dc0-4ff0-bcd4-c5d7de01e542",
-    "level": "COMMUNITY",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/video/video-android/logo.svg",
-    "summary": "Agent to monitor video applications for Android.",
-    "websiteUrl": null,
-    "keywords": [
-      "nrlabs",
-      "nrlabs-data",
-      "video",
-      "tracking",
-      "Android"
-    ],
-    "authors": [
-      "New Relic Labs"
-    ],
-    "dashboards": [],
-    "alerts": [],
-    "documentation": [
-      {
-        "name": "Video Android. Installation Docs",
-        "description": "Agent to monitor video applications for Android.",
-        "url": "https://github.com/newrelic/video-agent-android"
-      }
-    ],
-    "installPlans": [
-      {
-        "name": "Video agent for Android",
-        "id": "third-party-video-android"
-      }
-    ]
-  },
-  {
     "title": "Calico (Prometheus)",
     "name": "calico-newrelic",
     "description": "Calico is an open source networking and network security solution for containers, virtual machines, and native host-based workloads. Calico supports a broad range of platforms including Kubernetes, OpenShift, Mirantis Kubernetes Engine (MKE), OpenStack, and bare metal services.Whether you opt to use Calico's eBPF data plane or Linux’s standard networking pipeline, Calico delivers blazing fast performance with true cloud-native scalability\n\nThis quickstart is based on metrics sent to New Relic using Prometheus Agent or Prometheus Server.",
@@ -10203,6 +10167,93 @@
       {
         "name": "Elixir Agent",
         "id": "setup-elixir-agent"
+      }
+    ]
+  },
+  {
+    "title": "SendGrid Events",
+    "name": "sendgrid-quickstart",
+    "description": "SendGrid provides a cloud-based service that assists businesses with email delivery. This quickstart allows you to easily visualize the status of email delivery via SendGrid. In order to use this quickstart you will need to send SendGrid events to New Relic. If you are already sending events to AWS S3 using the SendGrid Event Webhook, they can be transferred to New Relic by using NewRelic-log-ingestion-s3.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/sendgrid",
+    "id": "6e0cc60a-e6ae-4c97-b5d4-b99568f04e9d",
+    "level": "NEW_RELIC",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/sendgrid/logo.png",
+    "summary": "SendGrid provides a cloud-based service that assists businesses with email delivery. This quickstart allows you to visualize status of email delivery.",
+    "websiteUrl": null,
+    "keywords": [
+      "sendgrid",
+      "log"
+    ],
+    "authors": [
+      "Kota Saito"
+    ],
+    "dashboards": [
+      {
+        "name": "SendGrid",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/sendgrid-dashboard/sendgrid-dashboard.png"
+        ]
+      }
+    ],
+    "alerts": [],
+    "documentation": [
+      {
+        "name": "AWS Lambda for sending logs from S3",
+        "description": "Description about how to send logs stored in AWS S3 to New Relic",
+        "url": "https://docs.newrelic.com/docs/logs/forward-logs/aws-lambda-sending-logs-s3/"
+      },
+      {
+        "name": "SendGrid Getting started with the Event Webhook",
+        "description": "Description about how to send SendGrid Events via Webhook",
+        "url": "https://docs.sendgrid.com/for-developers/tracking-events/getting-started-event-webhook"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "sendgrid",
+        "id": "third-party-sendgrid-integration"
+      },
+      {
+        "name": "AWS Lambda for sending logs from S3",
+        "id": "aws-log-ingestion-s3"
+      }
+    ]
+  },
+  {
+    "title": "Video agent for Android.",
+    "name": "video-android",
+    "description": "Agent to monitor video applications for Android.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/video/video-android",
+    "id": "fa2ebce2-9dc0-4ff0-bcd4-c5d7de01e542",
+    "level": "COMMUNITY",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/video/video-android/logo.svg",
+    "summary": "Agent to monitor video applications for Android.",
+    "websiteUrl": null,
+    "keywords": [
+      "nrlabs",
+      "nrlabs-data",
+      "video",
+      "tracking",
+      "Android"
+    ],
+    "authors": [
+      "New Relic Labs"
+    ],
+    "dashboards": [],
+    "alerts": [],
+    "documentation": [
+      {
+        "name": "Video Android. Installation Docs",
+        "description": "Agent to monitor video applications for Android.",
+        "url": "https://github.com/newrelic/video-agent-android"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "Video agent for Android",
+        "id": "third-party-video-android"
       }
     ]
   },
@@ -10953,57 +11004,6 @@
       {
         "name": "Java Agent",
         "id": "setup-java-agent"
-      }
-    ]
-  },
-  {
-    "title": "SendGrid Events",
-    "name": "sendgrid-quickstart",
-    "description": "SendGrid provides a cloud-based service that assists businesses with email delivery. This quickstart allows you to easily visualize the status of email delivery via SendGrid. In order to use this quickstart you will need to send SendGrid events to New Relic. If you are already sending events to AWS S3 using the SendGrid Event Webhook, they can be transferred to New Relic by using NewRelic-log-ingestion-s3.",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/sendgrid",
-    "id": "6e0cc60a-e6ae-4c97-b5d4-b99568f04e9d",
-    "level": "NEW_RELIC",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/sendgrid/logo.png",
-    "summary": "SendGrid provides a cloud-based service that assists businesses with email delivery. This quickstart allows you to visualize status of email delivery.",
-    "websiteUrl": null,
-    "keywords": [
-      "sendgrid",
-      "log"
-    ],
-    "authors": [
-      "Kota Saito"
-    ],
-    "dashboards": [
-      {
-        "name": "SendGrid",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/sendgrid-dashboard/sendgrid-dashboard.png"
-        ]
-      }
-    ],
-    "alerts": [],
-    "documentation": [
-      {
-        "name": "AWS Lambda for sending logs from S3",
-        "description": "Description about how to send logs stored in AWS S3 to New Relic",
-        "url": "https://docs.newrelic.com/docs/logs/forward-logs/aws-lambda-sending-logs-s3/"
-      },
-      {
-        "name": "SendGrid Getting started with the Event Webhook",
-        "description": "Description about how to send SendGrid Events via Webhook",
-        "url": "https://docs.sendgrid.com/for-developers/tracking-events/getting-started-event-webhook"
-      }
-    ],
-    "installPlans": [
-      {
-        "name": "sendgrid",
-        "id": "third-party-sendgrid-integration"
-      },
-      {
-        "name": "AWS Lambda for sending logs from S3",
-        "id": "aws-log-ingestion-s3"
       }
     ]
   },
@@ -20544,14 +20544,6 @@
         ]
       },
       {
-        "name": "Catchpoint-Response Size",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/catchpoint-response-size/Catchpoint-Response_Size.png"
-        ]
-      },
-      {
         "name": "Catchpoint-Test Times",
         "description": null,
         "url": null,
@@ -20565,6 +20557,14 @@
         "url": null,
         "screenshots": [
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/catchpoint-overview/Catchpoint-Overview.png"
+        ]
+      },
+      {
+        "name": "Catchpoint-Response Size",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/catchpoint-response-size/Catchpoint-Response_Size.png"
         ]
       }
     ],
@@ -22828,6 +22828,51 @@
     ]
   },
   {
+    "title": "Azure Kubernetes Service",
+    "name": "azure-kubernetes-service",
+    "description": "Provides a managed environment for deploying, managing, and scaling your\ncontainerized applications using Azure infrastructure.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/kubernetes/azure-kubernetes-service",
+    "id": "ce59998f-0daf-434b-9e80-b8ba0f576300",
+    "level": "NEW_RELIC",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/kubernetes/azure-kubernetes-service/logo.svg",
+    "summary": "Provides a managed environment for deploying, managing, and scaling your\ncontainerized applications using Azure infrastructure.",
+    "websiteUrl": null,
+    "keywords": [
+      "kubernetes",
+      "azure",
+      "k8s",
+      "aks"
+    ],
+    "authors": [
+      "New Relic",
+      "Emil Hammarstrand"
+    ],
+    "dashboards": [
+      {
+        "name": "Azure Kubernetes Service",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/aks/AKS.png"
+        ]
+      }
+    ],
+    "alerts": [],
+    "documentation": [
+      {
+        "name": "Azure Kubernetes Service installation docs",
+        "description": "Provides a managed environment for deploying, managing, and scaling your\ncontainerized applications using Azure infrastructure.\n",
+        "url": "https://docs.newrelic.com/docs/integrations/kubernetes-integration/get-started/introduction-kubernetes-integration"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "Kubernetes integration",
+        "id": "kubernetes-install"
+      }
+    ]
+  },
+  {
     "title": "Amazon Redshift",
     "name": "aws-redshift",
     "description": "## What is Amazon Redshift?\n\nFully managed data warehouse used to analyze all your data using standard SQL\nand your existing Amazon Business Intelligence tools.\n\n\n### Get started!\n\nStart monitoring Amazon Redshift by connecting Amazon Web Services (AWS) to New Relic!\n\nCheck out our Amazon Redshift documentation to instrument your cloud service and manage the stability, scalability, and reliability of your systems with New Relic's infrastructure monitoring capabilities.\n\n### More info\n\nCheck out the [documentation](https://docs.newrelic.com/docs/infrastructure/amazon-integrations/aws-integrations-list/aws-redshift-integration/) to learn more about New Relic monitoring for Amazon Redshift.",
@@ -23410,51 +23455,6 @@
       {
         "name": "HAProxy",
         "id": "haproxy-integration"
-      }
-    ]
-  },
-  {
-    "title": "Azure Kubernetes Service",
-    "name": "azure-kubernetes-service",
-    "description": "Provides a managed environment for deploying, managing, and scaling your\ncontainerized applications using Azure infrastructure.",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/kubernetes/azure-kubernetes-service",
-    "id": "ce59998f-0daf-434b-9e80-b8ba0f576300",
-    "level": "NEW_RELIC",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/kubernetes/azure-kubernetes-service/logo.svg",
-    "summary": "Provides a managed environment for deploying, managing, and scaling your\ncontainerized applications using Azure infrastructure.",
-    "websiteUrl": null,
-    "keywords": [
-      "kubernetes",
-      "azure",
-      "k8s",
-      "aks"
-    ],
-    "authors": [
-      "New Relic",
-      "Emil Hammarstrand"
-    ],
-    "dashboards": [
-      {
-        "name": "Azure Kubernetes Service",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/aks/AKS.png"
-        ]
-      }
-    ],
-    "alerts": [],
-    "documentation": [
-      {
-        "name": "Azure Kubernetes Service installation docs",
-        "description": "Provides a managed environment for deploying, managing, and scaling your\ncontainerized applications using Azure infrastructure.\n",
-        "url": "https://docs.newrelic.com/docs/integrations/kubernetes-integration/get-started/introduction-kubernetes-integration"
-      }
-    ],
-    "installPlans": [
-      {
-        "name": "Kubernetes integration",
-        "id": "kubernetes-install"
       }
     ]
   },
@@ -26937,78 +26937,6 @@
     ]
   },
   {
-    "title": "Amazon Security Lake",
-    "name": "aws-security-lake",
-    "description": "## What is Amazon Security Lake?\n\nAmazon Security Lake allow you to automatically centralize your security data in just a few steps. \n\n\n### Get started!\n\nStart monitoring Amazon Security Lake by forwarding logs to New Relic using a Lambda function.\n\nCheck out our Amazon Security Lake documentation to instrument your cloud service and manage the stability, scalability, and reliability of your systems with New Relic's infrastructure monitoring capabilities.\n\n### More info\n\nCheck out the [documentation](https://docs.newrelic.com/docs/infrastructure/amazon-integrations/aws-integrations-list/aws-security-lake-monitoring-integration/) to learn more about New Relic monitoring for Amazon Security Lake.",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/aws/amazon-security-lake",
-    "id": "a9e632bf-9467-4e0d-92cd-e4b16eebef03",
-    "level": "NEW_RELIC",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/aws/amazon-security-lake/logo.svg",
-    "summary": "Monitor Amazon Security Lake by sending logs to New Relic",
-    "websiteUrl": null,
-    "keywords": [
-      "aws",
-      "amazon web services",
-      "networking",
-      "security lake",
-      "vpc flow logs",
-      "security hub",
-      "route 53 query resolver",
-      "cloudtrail"
-    ],
-    "authors": [
-      "New Relic"
-    ],
-    "dashboards": [
-      {
-        "name": "Amazon Security Lake - Route 53 Resolver query logs",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/amazon-security-lake-route53-resolver-query-logs/amazon-security-lake-route53-resolver-query-logs01.png"
-        ]
-      },
-      {
-        "name": "Amazon Security Lake - VPC flow logs",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/amazon-security-lake-vpc-flowlogs/amazon-security-lake-vpc-flowlogs01.png"
-        ]
-      },
-      {
-        "name": "Amazon Security Lake - Security Hub",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/amazon-security-lake-security-hub/amazon-security-lake-security-hub01.png"
-        ]
-      },
-      {
-        "name": "Amazon Security Lake - Cloudtrail",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/amazon-security-lake-cloudtrail-logs/amazon-security-lake-cloudtrail-logs01.png"
-        ]
-      }
-    ],
-    "alerts": [],
-    "documentation": [
-      {
-        "name": "Amazon Security Lake integration guide",
-        "description": "Monitor Amazon Security Lake by sending logs to New Relic via Lambda function\n",
-        "url": "https://docs.newrelic.com/docs/infrastructure/amazon-integrations/aws-integrations-list/aws-security-lake-monitoring-integration/"
-      }
-    ],
-    "installPlans": [
-      {
-        "name": "Amazon-Security-Lake",
-        "id": "aws-security-lake"
-      }
-    ]
-  },
-  {
     "title": "Agent for Google Publisher Tags",
     "name": "ads-web-gpt",
     "description": "Agent to monitor web applications using GPT.",
@@ -27041,6 +26969,95 @@
       {
         "name": "Agent for Google Publisher Tags",
         "id": "third-party-ads-web-gpt"
+      }
+    ]
+  },
+  {
+    "title": "Kubernetes Log Ingest Analysis",
+    "name": "audit-kubernetes-log-data-ingest-analysis",
+    "description": "Shows log bytes ingest for Kubernetes faceted by several common attributes k8s logs: application, environment, container, namespace, pod and cluster. Total logs and GB ingested is shown.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/audit/k8s-log-ingestion-analysis",
+    "id": "b3cafc0a-6876-41e5-876c-5ae3c8c9ecea",
+    "level": "NEW_RELIC",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/audit/k8s-log-ingestion-analysis/logo.svg",
+    "summary": "Paginated dashboard that analyzes overall data ingest generated by the New Relic Kubernetes Logs integration and outlines options available to fine-tune your environment to help control ingest and cost.",
+    "websiteUrl": null,
+    "keywords": [
+      "k8s",
+      "kubernetes",
+      "data ingest",
+      "audit",
+      "logs"
+    ],
+    "authors": [
+      "New Relic",
+      "Jim Hagan",
+      "Brian Bost",
+      "Emil Hammarstrand"
+    ],
+    "dashboards": [
+      {
+        "name": "Kubernetes Log Ingest Analysis",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/k8s-log-ingest-breakdown/kubernetes-log-ingest-analysis.png"
+        ]
+      }
+    ],
+    "alerts": [],
+    "documentation": [
+      {
+        "name": "New Relic Kubernetes Logs integration",
+        "description": "Kubernetes plugin for log forwarding\n",
+        "url": "https://docs.newrelic.com/docs/logs/forward-logs/kubernetes-plugin-log-forwarding/"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "Kubernetes integration",
+        "id": "kubernetes-install"
+      }
+    ]
+  },
+  {
+    "title": "Data Ingestion Breakdown",
+    "name": "account-data-ingestion",
+    "description": "Shows bytes ingested for APM, Browser, Mobile, Infrastructure, Logs, Synthetics, and Kubernetes.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/audit/account-data-ingestion-analysis",
+    "id": "51e66f0d-153c-493c-a75c-a386c3f170ce",
+    "level": "NEW_RELIC",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/audit/account-data-ingestion-analysis/logo.svg",
+    "summary": "Shows bytes ingested for different entity types.",
+    "websiteUrl": null,
+    "keywords": [
+      "data",
+      "ingest"
+    ],
+    "authors": [
+      "New Relic",
+      "Sri Shetty"
+    ],
+    "dashboards": [
+      {
+        "name": "Data Ingestion Breakdown",
+        "description": null,
+        "url": null,
+        "screenshots": []
+      }
+    ],
+    "alerts": [],
+    "documentation": [
+      {
+        "name": "TDP Manage Data",
+        "description": "Manage data coming into New Relic",
+        "url": "https://docs.newrelic.com/docs/telemetry-data-platform/manage-data/manage-data-coming-new-relic/"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "Telemetry Data Platform",
+        "id": "telemetry-data-platform"
       }
     ]
   },
@@ -27335,178 +27352,6 @@
     ]
   },
   {
-    "title": "Infrastructure Integrations Data Analysis",
-    "name": "infrastructure-integrations-data-analysis",
-    "description": "This quickstart provides several dashboards to analyze overall data ingest created by the various Infrastructure On-Host, Cloud, and Kubernetes integrations that contribute to the \"Infrastructure integrations\" portion of the Data Management Hub.\nAdditional pages have been added that analyze data ingest created by Pixie, Prometheus, and AWS CloudWatch Metric Stream integrations, which are associated with infrastructure data, but feed other categories of the Data Management Hub.",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/audit/infrastructure-integrations-data-analysis",
-    "id": "8e31a0ae-81c0-4df0-a119-a0ada9ec16fa",
-    "level": "NEW_RELIC",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/audit/infrastructure-integrations-data-analysis/logo.svg",
-    "summary": "Dashboards designed to analyze data ingest from \"Infrastructure Integrations\" category in the Data Management Hub.",
-    "websiteUrl": null,
-    "keywords": [
-      "audit",
-      "data ingest",
-      "infrastructure",
-      "k8s",
-      "kubernetes",
-      "on-host integration",
-      "ohi",
-      "prometheus",
-      "pomi",
-      "remote-write",
-      "pixie"
-    ],
-    "authors": [
-      "Zack Mutchler"
-    ],
-    "dashboards": [
-      {
-        "name": "Azure Integrations Data Ingest Analysis",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/azure-integrations-data-ingest-analysis/azure-integrations-data-ingest-analysis.png"
-        ]
-      },
-      {
-        "name": "AWS Integrations Data Ingest Analysis",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/aws-integrations-data-ingest-analysis/aws-integrations-data-ingest-analysis.png"
-        ]
-      },
-      {
-        "name": "On-Host Integrations Data Analysis",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/on-host-integrations-data-analysis/on-host-integrations-data-analysis.png"
-        ]
-      },
-      {
-        "name": "GCP Integrations Data Ingest Analysis",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/gcp-integrations-data-ingest-analysis/gcp-integrations-data-ingest-analysis.png"
-        ]
-      },
-      {
-        "name": "Kubernetes Data Ingest Analysis",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/kubernetes-data-ingest-analysis/kubernetes-data-ingest-analysis.png"
-        ]
-      }
-    ],
-    "alerts": [],
-    "documentation": [
-      {
-        "name": "Data Management Hub",
-        "description": "New Relic Data Management Hub\n",
-        "url": "https://docs.newrelic.com/docs/data-apis/manage-data/manage-your-data/"
-      }
-    ],
-    "installPlans": [
-      {
-        "name": "Telemetry Data Platform",
-        "id": "telemetry-data-platform"
-      }
-    ]
-  },
-  {
-    "title": "Data Ingestion Breakdown",
-    "name": "account-data-ingestion",
-    "description": "Shows bytes ingested for APM, Browser, Mobile, Infrastructure, Logs, Synthetics, and Kubernetes.",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/audit/account-data-ingestion-analysis",
-    "id": "51e66f0d-153c-493c-a75c-a386c3f170ce",
-    "level": "NEW_RELIC",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/audit/account-data-ingestion-analysis/logo.svg",
-    "summary": "Shows bytes ingested for different entity types.",
-    "websiteUrl": null,
-    "keywords": [
-      "data",
-      "ingest"
-    ],
-    "authors": [
-      "New Relic",
-      "Sri Shetty"
-    ],
-    "dashboards": [
-      {
-        "name": "Data Ingestion Breakdown",
-        "description": null,
-        "url": null,
-        "screenshots": []
-      }
-    ],
-    "alerts": [],
-    "documentation": [
-      {
-        "name": "TDP Manage Data",
-        "description": "Manage data coming into New Relic",
-        "url": "https://docs.newrelic.com/docs/telemetry-data-platform/manage-data/manage-data-coming-new-relic/"
-      }
-    ],
-    "installPlans": [
-      {
-        "name": "Telemetry Data Platform",
-        "id": "telemetry-data-platform"
-      }
-    ]
-  },
-  {
-    "title": "Kubernetes Log Ingest Analysis",
-    "name": "audit-kubernetes-log-data-ingest-analysis",
-    "description": "Shows log bytes ingest for Kubernetes faceted by several common attributes k8s logs: application, environment, container, namespace, pod and cluster. Total logs and GB ingested is shown.",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/audit/k8s-log-ingestion-analysis",
-    "id": "b3cafc0a-6876-41e5-876c-5ae3c8c9ecea",
-    "level": "NEW_RELIC",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/audit/k8s-log-ingestion-analysis/logo.svg",
-    "summary": "Paginated dashboard that analyzes overall data ingest generated by the New Relic Kubernetes Logs integration and outlines options available to fine-tune your environment to help control ingest and cost.",
-    "websiteUrl": null,
-    "keywords": [
-      "k8s",
-      "kubernetes",
-      "data ingest",
-      "audit",
-      "logs"
-    ],
-    "authors": [
-      "New Relic",
-      "Jim Hagan",
-      "Brian Bost",
-      "Emil Hammarstrand"
-    ],
-    "dashboards": [
-      {
-        "name": "Kubernetes Log Ingest Analysis",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/k8s-log-ingest-breakdown/kubernetes-log-ingest-analysis.png"
-        ]
-      }
-    ],
-    "alerts": [],
-    "documentation": [
-      {
-        "name": "New Relic Kubernetes Logs integration",
-        "description": "Kubernetes plugin for log forwarding\n",
-        "url": "https://docs.newrelic.com/docs/logs/forward-logs/kubernetes-plugin-log-forwarding/"
-      }
-    ],
-    "installPlans": [
-      {
-        "name": "Kubernetes integration",
-        "id": "kubernetes-install"
-      }
-    ]
-  },
-  {
     "title": "New Relic Audit",
     "name": "audit-events-analysis",
     "description": "Dashboard to analyse the New Relic Audit events that New Relic captures out of the box as an additional security measure for managing your New Relic account. This includes:\n\n- Individuals added or deleted\n- Role changes\n- Account changes made via API\n- Synthetic monitor changes\n- Dashboard deletion\n- Workload configuration changes\n\nAll New Relic accounts can query up to 13 months of account changes. To ensure account security, the audit logging NRQL query only tracks changes in your currently selected account. It does not show audit log events for any associated child accounts. To query changes in another account or sub-account, select the account and run a NRQL query there.\n\nAudit logging is different than configuring audit mode for your APM agent. APM audit mode records information about all data being transmitted from your app.",
@@ -27655,6 +27500,161 @@
       {
         "name": "NuxtJS",
         "id": "nuxtjs"
+      }
+    ]
+  },
+  {
+    "title": "Infrastructure Integrations Data Analysis",
+    "name": "infrastructure-integrations-data-analysis",
+    "description": "This quickstart provides several dashboards to analyze overall data ingest created by the various Infrastructure On-Host, Cloud, and Kubernetes integrations that contribute to the \"Infrastructure integrations\" portion of the Data Management Hub.\nAdditional pages have been added that analyze data ingest created by Pixie, Prometheus, and AWS CloudWatch Metric Stream integrations, which are associated with infrastructure data, but feed other categories of the Data Management Hub.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/audit/infrastructure-integrations-data-analysis",
+    "id": "8e31a0ae-81c0-4df0-a119-a0ada9ec16fa",
+    "level": "NEW_RELIC",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/audit/infrastructure-integrations-data-analysis/logo.svg",
+    "summary": "Dashboards designed to analyze data ingest from \"Infrastructure Integrations\" category in the Data Management Hub.",
+    "websiteUrl": null,
+    "keywords": [
+      "audit",
+      "data ingest",
+      "infrastructure",
+      "k8s",
+      "kubernetes",
+      "on-host integration",
+      "ohi",
+      "prometheus",
+      "pomi",
+      "remote-write",
+      "pixie"
+    ],
+    "authors": [
+      "Zack Mutchler"
+    ],
+    "dashboards": [
+      {
+        "name": "Azure Integrations Data Ingest Analysis",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/azure-integrations-data-ingest-analysis/azure-integrations-data-ingest-analysis.png"
+        ]
+      },
+      {
+        "name": "AWS Integrations Data Ingest Analysis",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/aws-integrations-data-ingest-analysis/aws-integrations-data-ingest-analysis.png"
+        ]
+      },
+      {
+        "name": "GCP Integrations Data Ingest Analysis",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/gcp-integrations-data-ingest-analysis/gcp-integrations-data-ingest-analysis.png"
+        ]
+      },
+      {
+        "name": "Kubernetes Data Ingest Analysis",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/kubernetes-data-ingest-analysis/kubernetes-data-ingest-analysis.png"
+        ]
+      },
+      {
+        "name": "On-Host Integrations Data Analysis",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/on-host-integrations-data-analysis/on-host-integrations-data-analysis.png"
+        ]
+      }
+    ],
+    "alerts": [],
+    "documentation": [
+      {
+        "name": "Data Management Hub",
+        "description": "New Relic Data Management Hub\n",
+        "url": "https://docs.newrelic.com/docs/data-apis/manage-data/manage-your-data/"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "Telemetry Data Platform",
+        "id": "telemetry-data-platform"
+      }
+    ]
+  },
+  {
+    "title": "Amazon Security Lake",
+    "name": "aws-security-lake",
+    "description": "## What is Amazon Security Lake?\n\nAmazon Security Lake allow you to automatically centralize your security data in just a few steps. \n\n\n### Get started!\n\nStart monitoring Amazon Security Lake by forwarding logs to New Relic using a Lambda function.\n\nCheck out our Amazon Security Lake documentation to instrument your cloud service and manage the stability, scalability, and reliability of your systems with New Relic's infrastructure monitoring capabilities.\n\n### More info\n\nCheck out the [documentation](https://docs.newrelic.com/docs/infrastructure/amazon-integrations/aws-integrations-list/aws-security-lake-monitoring-integration/) to learn more about New Relic monitoring for Amazon Security Lake.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/aws/amazon-security-lake",
+    "id": "a9e632bf-9467-4e0d-92cd-e4b16eebef03",
+    "level": "NEW_RELIC",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/aws/amazon-security-lake/logo.svg",
+    "summary": "Monitor Amazon Security Lake by sending logs to New Relic",
+    "websiteUrl": null,
+    "keywords": [
+      "aws",
+      "amazon web services",
+      "networking",
+      "security lake",
+      "vpc flow logs",
+      "security hub",
+      "route 53 query resolver",
+      "cloudtrail"
+    ],
+    "authors": [
+      "New Relic"
+    ],
+    "dashboards": [
+      {
+        "name": "Amazon Security Lake - Cloudtrail",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/amazon-security-lake-cloudtrail-logs/amazon-security-lake-cloudtrail-logs01.png"
+        ]
+      },
+      {
+        "name": "Amazon Security Lake - Route 53 Resolver query logs",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/amazon-security-lake-route53-resolver-query-logs/amazon-security-lake-route53-resolver-query-logs01.png"
+        ]
+      },
+      {
+        "name": "Amazon Security Lake - VPC flow logs",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/amazon-security-lake-vpc-flowlogs/amazon-security-lake-vpc-flowlogs01.png"
+        ]
+      },
+      {
+        "name": "Amazon Security Lake - Security Hub",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/amazon-security-lake-security-hub/amazon-security-lake-security-hub01.png"
+        ]
+      }
+    ],
+    "alerts": [],
+    "documentation": [
+      {
+        "name": "Amazon Security Lake integration guide",
+        "description": "Monitor Amazon Security Lake by sending logs to New Relic via Lambda function\n",
+        "url": "https://docs.newrelic.com/docs/infrastructure/amazon-integrations/aws-integrations-list/aws-security-lake-monitoring-integration/"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "Amazon-Security-Lake",
+        "id": "aws-security-lake"
       }
     ]
   },
@@ -28050,19 +28050,19 @@
     ],
     "dashboards": [
       {
-        "name": "Dapr Metrics",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/dapr-metrics/nr-dashboard-dapr-metrics.png"
-        ]
-      },
-      {
         "name": "Dapr System Services Dashboard",
         "description": null,
         "url": null,
         "screenshots": [
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/dapr-system-services/nr-dashboard-dapr-system-services.png"
+        ]
+      },
+      {
+        "name": "Dapr Metrics",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/dapr-metrics/nr-dashboard-dapr-metrics.png"
         ]
       }
     ],
@@ -28276,54 +28276,6 @@
     ]
   },
   {
-    "title": "IBM MQ",
-    "name": "ibmmq",
-    "description": "## IBM MQ performance\n\nIBM MQ allows independent and potentially non-concurrent applications on a distributed system to securely communicate with each other, using messages.\n\nThe IBM MQ integration allows you to monitor the performance of MQ Objects like channels and queues . The metrics collected include depth of your queues, how much space your queues have for additional messages, and the age of a queue’s oldest message. Analyzing metrics over time allows you to scale your instances accordingly in order to prevent full queues, which can delay message delivery.\n\n### IBM MQ quickstart highlights\n\nThe IBM MQ quickstart automatically instruments your IBM MQ infrastructure, and comes pre-built dashboard visualizing:\n- Total of Connections\n- Connections by Queue Manager\n- Total of Errors\n- Errors  by Queue Manager\n- Total of Messages\n- Messages by Queue Manager\n- Messages by Queue\n- Queue Depth\n- Expired messages by Queue\n- Filesystem usage",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/ibmmq",
-    "id": "924fd4b3-a6d1-4a6e-9e2c-b598f197f713",
-    "level": "NEW_RELIC",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/ibmmq/logo.png",
-    "summary": "The IBM MQ integration enables performance monitoring of IBM MQ infrastructure.",
-    "websiteUrl": null,
-    "keywords": [
-      "infrastructure",
-      "ibm mq",
-      "ibm-mq",
-      "ibmmq",
-      "mq",
-      "messaging",
-      "queue"
-    ],
-    "authors": [
-      "New Relic"
-    ],
-    "dashboards": [
-      {
-        "name": "IBM MQ - Dashboard",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/ibmmq/ibmmq01.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/ibmmq/ibmmq02.png"
-        ]
-      }
-    ],
-    "alerts": [],
-    "documentation": [
-      {
-        "name": "IBM MQ monitoring integration",
-        "description": "Our IBM MQ integration collects and sends dimensional metrics from IBM MQ.\n",
-        "url": "https://docs.newrelic.com/docs/integrations/host-integrations/host-integrations-list/ibmmq-monitoring-integration/"
-      }
-    ],
-    "installPlans": [
-      {
-        "name": "IBM MQ",
-        "id": "ibmmq-integration-docs"
-      }
-    ]
-  },
-  {
     "title": "MonoRail",
     "name": "monorail",
     "description": "## What is MonoRail?\n\nOpen source web application framework built for .NET designed to imitate some\nof the functions of Ruby on Rails.\n\n\n## Get started!\n\nLeverage community expertise and instantly get value out of your telemetry data. This quickstart automatically instruments MonoRail with the New Relic .Net agent, and allows you to instantly monitor your .Net application with out-of-the-box dashboards and alerts. Further leverage New Relic's APM capabilities by setting up [errors inbox](https://docs.newrelic.com/docs/apm/apm-ui-pages/errors-inbox/errors-inbox/), [transaction tracing](https://docs.newrelic.com/docs/apm/transactions/transaction-traces/introduction-transaction-traces/), and [service maps](https://docs.newrelic.com/docs/understand-dependencies/understand-system-dependencies/service-maps/introduction-service-maps/).\n\n## More info\n\nCheck out the [documentation](https://docs.newrelic.com/docs/agents/net-agent/getting-started/introduction-new-relic-net/) to learn more about New Relic monitoring for MonoRail.",
@@ -28438,6 +28390,87 @@
     ]
   },
   {
+    "title": "IBM MQ",
+    "name": "ibmmq",
+    "description": "## IBM MQ performance\n\nIBM MQ allows independent and potentially non-concurrent applications on a distributed system to securely communicate with each other, using messages.\n\nThe IBM MQ integration allows you to monitor the performance of MQ Objects like channels and queues . The metrics collected include depth of your queues, how much space your queues have for additional messages, and the age of a queue’s oldest message. Analyzing metrics over time allows you to scale your instances accordingly in order to prevent full queues, which can delay message delivery.\n\n### IBM MQ quickstart highlights\n\nThe IBM MQ quickstart automatically instruments your IBM MQ infrastructure, and comes pre-built dashboard visualizing:\n- Total of Connections\n- Connections by Queue Manager\n- Total of Errors\n- Errors  by Queue Manager\n- Total of Messages\n- Messages by Queue Manager\n- Messages by Queue\n- Queue Depth\n- Expired messages by Queue\n- Filesystem usage",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/ibmmq",
+    "id": "924fd4b3-a6d1-4a6e-9e2c-b598f197f713",
+    "level": "NEW_RELIC",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/ibmmq/logo.png",
+    "summary": "The IBM MQ integration enables performance monitoring of IBM MQ infrastructure.",
+    "websiteUrl": null,
+    "keywords": [
+      "infrastructure",
+      "ibm mq",
+      "ibm-mq",
+      "ibmmq",
+      "mq",
+      "messaging",
+      "queue"
+    ],
+    "authors": [
+      "New Relic"
+    ],
+    "dashboards": [
+      {
+        "name": "IBM MQ - Dashboard",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/ibmmq/ibmmq01.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/ibmmq/ibmmq02.png"
+        ]
+      }
+    ],
+    "alerts": [],
+    "documentation": [
+      {
+        "name": "IBM MQ monitoring integration",
+        "description": "Our IBM MQ integration collects and sends dimensional metrics from IBM MQ.\n",
+        "url": "https://docs.newrelic.com/docs/integrations/host-integrations/host-integrations-list/ibmmq-monitoring-integration/"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "IBM MQ",
+        "id": "ibmmq-integration-docs"
+      }
+    ]
+  },
+  {
+    "title": "Azure SQL Database",
+    "name": "azure-sql-database",
+    "description": "## What is Azure SQL Database?\n\nAzure SQL provides single databases with their own set of resources, and\nelastic pools that share a set of resources.\n\n\n### Get started!\n\nStart monitoring Azure SQL Database by connecting Microsoft Azure to New Relic!\n\nCheck out our Azure SQL Database documentation to instrument your cloud service and manage the stability, scalability, and reliability of your systems with New Relic's infrastructure monitoring capabilities.\n\n### More info\n\nCheck out the [documentation](https://docs.newrelic.com/docs/infrastructure/microsoft-azure-integrations/azure-integrations-list/azure-sql-database-monitoring-integration/) to learn more about New Relic monitoring for Azure SQL Database.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/azure/azure-sql-database",
+    "id": "d8d0d97f-4105-436f-ba25-1e57dbd175c7",
+    "level": "NEW_RELIC",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/azure/azure-sql-database/logo.svg",
+    "summary": "Monitor Azure SQL Database by connecting Azure to New Relic",
+    "websiteUrl": null,
+    "keywords": [
+      "azure",
+      "database"
+    ],
+    "authors": [
+      "New Relic"
+    ],
+    "dashboards": [],
+    "alerts": [],
+    "documentation": [
+      {
+        "name": "Azure SQL Database installation docs",
+        "description": "Monitor Azure SQL Database by connecting Azure to New Relic.\n",
+        "url": "https://docs.newrelic.com/docs/infrastructure/microsoft-azure-integrations/azure-integrations-list/azure-sql-database-monitoring-integration/"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "Azure-Infrastructure-Monitoring",
+        "id": "azure-infrastructure-monitoring"
+      }
+    ]
+  },
+  {
     "title": "Mobile Network Performance",
     "name": "mobile-network-performance-quickstart",
     "description": "## Network performance Quickstart\n\nGet deeper insights into the networking details from your mobile application perspective. \n\nReceive details about the HTTP errors, Network failure, HTTP Request data, type of network errors. \n\nHelp page on the dashboard will guide you on how to enable data filtering.",
@@ -28493,39 +28526,6 @@
     ]
   },
   {
-    "title": "Azure SQL Database",
-    "name": "azure-sql-database",
-    "description": "## What is Azure SQL Database?\n\nAzure SQL provides single databases with their own set of resources, and\nelastic pools that share a set of resources.\n\n\n### Get started!\n\nStart monitoring Azure SQL Database by connecting Microsoft Azure to New Relic!\n\nCheck out our Azure SQL Database documentation to instrument your cloud service and manage the stability, scalability, and reliability of your systems with New Relic's infrastructure monitoring capabilities.\n\n### More info\n\nCheck out the [documentation](https://docs.newrelic.com/docs/infrastructure/microsoft-azure-integrations/azure-integrations-list/azure-sql-database-monitoring-integration/) to learn more about New Relic monitoring for Azure SQL Database.",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/azure/azure-sql-database",
-    "id": "d8d0d97f-4105-436f-ba25-1e57dbd175c7",
-    "level": "NEW_RELIC",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/azure/azure-sql-database/logo.svg",
-    "summary": "Monitor Azure SQL Database by connecting Azure to New Relic",
-    "websiteUrl": null,
-    "keywords": [
-      "azure",
-      "database"
-    ],
-    "authors": [
-      "New Relic"
-    ],
-    "dashboards": [],
-    "alerts": [],
-    "documentation": [
-      {
-        "name": "Azure SQL Database installation docs",
-        "description": "Monitor Azure SQL Database by connecting Azure to New Relic.\n",
-        "url": "https://docs.newrelic.com/docs/infrastructure/microsoft-azure-integrations/azure-integrations-list/azure-sql-database-monitoring-integration/"
-      }
-    ],
-    "installPlans": [
-      {
-        "name": "Azure-Infrastructure-Monitoring",
-        "id": "azure-infrastructure-monitoring"
-      }
-    ]
-  },
-  {
     "title": "Browser examples",
     "name": "browser-examples",
     "description": "A set of example dashboards based on New Relic Browser agent data. Browser measures page load timing, also known as Real User Monitoring (RUM). But it goes far beyond that to measure:\n\n- Actual performance data, such as by page view popularity, filtered by geographical regions important to your business, or by user satisfaction (Apdex) scores\n\n- Perceived performance data that measures how quickly your async or dynamic visuals and interactive page contents display\n\n- JavaScript error analytics, stack traces, and source maps with line-of-code visibility, to show you the end-user steps leading up to an error itself\n\n- Session performance with a detailed timeline and heat map of the load and interaction events during a webpage's full life cycle\n\n- AJAX requests indicating problems with timing, end points, and specific locations in the webpage\n\n- Hash-based route changes in apps with single-page application (SPA) architectures",
@@ -28550,14 +28550,6 @@
     ],
     "dashboards": [
       {
-        "name": "JavaScript Errors",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/javascript-errors/javascript_errors.png"
-        ]
-      },
-      {
         "name": "Browser Overview",
         "description": null,
         "url": null,
@@ -28579,6 +28571,14 @@
         "url": null,
         "screenshots": [
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/traffic-analysis/traffic_analysis.png"
+        ]
+      },
+      {
+        "name": "JavaScript Errors",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/javascript-errors/javascript_errors.png"
         ]
       }
     ],
