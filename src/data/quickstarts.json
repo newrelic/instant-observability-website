@@ -1651,14 +1651,14 @@
     "alerts": [],
     "documentation": [
       {
-        "name": "Implementation guide",
-        "description": "Explains what quality foundation is and how to apply it\n",
-        "url": "https://docs.newrelic.com/docs/new-relic-solutions/observability-maturity/customer-experience/quality-foundation-implementation-guide"
-      },
-      {
         "name": "Install README",
         "description": "Guides you on how to customize the dashboard once you've installed it\n",
         "url": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/oma-qf#readme"
+      },
+      {
+        "name": "Implementation guide",
+        "description": "Explains what quality foundation is and how to apply it\n",
+        "url": "https://docs.newrelic.com/docs/new-relic-solutions/observability-maturity/customer-experience/quality-foundation-implementation-guide"
       }
     ],
     "installPlans": [
@@ -2410,6 +2410,72 @@
         "id": "third-party-zipkin"
       }
     ]
+  },
+  {
+    "title": "Aerospike",
+    "name": "aerospike",
+    "description": "## Comprehensive monitoring quickstart for Aerospike\nNew Relic detects your Aerospike metrics like uptime, info stats, memory, client connections, etc. Monitor the performance metrics of your Aerospike instances in real-time with New Relic APM.\n\n## Why monitor Aerospike?\n Using Aerospike database instrumentation, you can monitor cluster health, database performance, and alerts based on instantaneous and cumulative metrics.\n\n## What’s included in this quickstart?\nNew Relic Aerospike monitoring quickstart boasts instant full-stack observability out-of-the-box:\n- Alerts for Aerospike (failed generation, unavailable partitions, uptime and heap efficiency %)\n- Dashboards (uptime, info stats, memory, client connections, etc)",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/aerospike",
+    "id": "c676d398-14d3-4d32-a00d-56aab474f1f7",
+    "level": "NEW_RELIC",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/aerospike/logo.png",
+    "summary": "Instrument and monitor your Aerospike with the New Relic infrastructure agent. Analyze your performance data using our pre-built dashboards and alert conditions.",
+    "websiteUrl": null,
+    "keywords": [
+      "aerospike",
+      "real-time data platform"
+    ],
+    "authors": [
+      "New Relic",
+      "Ramana reddy"
+    ],
+    "dashboards": [
+      {
+        "name": "Aerospike",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/aerospike/aerospike01.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/aerospike/aerospike02.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/aerospike/aerospike03.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/aerospike/aerospike04.png"
+        ]
+      }
+    ],
+    "alerts": [
+      {
+        "name": "Heap Efficiency (%)",
+        "details": "This alert is triggered when heap efficiency is below 50% for 5 minutes.",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "Fail Generation",
+        "details": "This alert is triggered when more than 10 read/write transactions fail on generation check in 5 minutes.",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "Partitions Unavailable",
+        "details": "This alert is triggered when partitions are unavailable for 5 minutes.",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "Uptime",
+        "details": "This alert is triggered when the uptime is below 100 seconds for 5 minutes.",
+        "type": "STATIC",
+        "url": null
+      }
+    ],
+    "documentation": [
+      {
+        "name": "Aerospike integration documentation",
+        "description": "Monitor the performance metrics of your Aerospike instances in real-time with New Relic APM.\n",
+        "url": "https://docs.newrelic.com/docs/infrastructure/host-integrations/host-integrations-list/aerospike-integration/"
+      }
+    ],
+    "installPlans": []
   },
   {
     "title": "Network Data Ingest and Cardinality",
@@ -3914,19 +3980,19 @@
     ],
     "dashboards": [
       {
-        "name": "Data Ingest Governance Entity Breakdowns",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/data-ingest-entity-breakdown/data-ingest-entity-breakdown.png"
-        ]
-      },
-      {
         "name": "Data Ingest Governance Baseline",
         "description": null,
         "url": null,
         "screenshots": [
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/data-ingest-baseline/data-ingest-baseline.png"
+        ]
+      },
+      {
+        "name": "Data Ingest Governance Entity Breakdowns",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/data-ingest-entity-breakdown/data-ingest-entity-breakdown.png"
         ]
       }
     ],
@@ -4003,19 +4069,19 @@
     ],
     "dashboards": [
       {
-        "name": "Battlesnake Performance",
-        "description": "Monitor your Battlesnake's performance and see how it stacks up against your competition!",
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/battlesnake-performance/battlesnake-performance.png"
-        ]
-      },
-      {
         "name": "Battlesnake Server Status",
         "description": "A dashboard to monitor your Battlesnake server's performance. It's important to keep all responses to the `/move` endpoint under 500ms. Furthermore, it's possible that your snake may be in multiple concurrent matches at the same time. It's important to make sure you server and web application are running smoothly to keep you in the game!",
         "url": null,
         "screenshots": [
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/battlesnake-server-status/battlesnake-server-status.png"
+        ]
+      },
+      {
+        "name": "Battlesnake Performance",
+        "description": "Monitor your Battlesnake's performance and see how it stacks up against your competition!",
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/battlesnake-performance/battlesnake-performance.png"
         ]
       },
       {
@@ -5690,14 +5756,6 @@
     ],
     "dashboards": [
       {
-        "name": "Redis Enterprise Database Metrics",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/database/database01.png"
-        ]
-      },
-      {
         "name": "Redis Enterprise Cluster Metrics",
         "description": null,
         "url": null,
@@ -5711,6 +5769,14 @@
         "url": null,
         "screenshots": [
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/active-active/active_active01.png"
+        ]
+      },
+      {
+        "name": "Redis Enterprise Database Metrics",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/database/database01.png"
         ]
       }
     ],
@@ -6621,14 +6687,14 @@
     "alerts": [],
     "documentation": [
       {
-        "name": "Partnership Page",
-        "description": "New Relic x Contentsquare partnership page on Contentsquare website\n",
-        "url": "https://partners.contentsquare.com/technology-partners/new-relic"
-      },
-      {
         "name": "Installation Doc",
         "description": "See how to install this integration and the data exchanged between New \nRelic ancd Contentsquare.\n",
         "url": "https://uxanalyser.zendesk.com/hc/en-gb/articles/4408893503122-New-Relic"
+      },
+      {
+        "name": "Partnership Page",
+        "description": "New Relic x Contentsquare partnership page on Contentsquare website\n",
+        "url": "https://partners.contentsquare.com/technology-partners/new-relic"
       }
     ],
     "installPlans": [
@@ -6946,20 +7012,20 @@
     ],
     "dashboards": [
       {
+        "name": "SAP Data Collection Monitoring",
+        "description": "Monitor SAP data collection and ingestion process",
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/nrm4sap-datacollect/sap-data-collection01.png"
+        ]
+      },
+      {
         "name": "SAP Dashboards",
         "description": "Monitor SAP systems and applications performances",
         "url": null,
         "screenshots": [
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/nrm4sap/sap-dashboard01.png",
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/nrm4sap/sap-dashboard02.png"
-        ]
-      },
-      {
-        "name": "SAP Data Collection Monitoring",
-        "description": "Monitor SAP data collection and ingestion process",
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/nrm4sap-datacollect/sap-data-collection01.png"
         ]
       },
       {
@@ -7674,14 +7740,14 @@
     ],
     "alerts": [
       {
-        "name": "Apdex Score",
-        "details": "This alert is triggered when the Apdex score is below 0.5 for 5 minutes",
+        "name": "High CPU Utilization",
+        "details": "This alert is triggered when the CPU Utilization is above 90%.",
         "type": "STATIC",
         "url": null
       },
       {
-        "name": "High CPU Utilization",
-        "details": "This alert is triggered when the CPU Utilization is above 90%.",
+        "name": "Apdex Score",
+        "details": "This alert is triggered when the Apdex score is below 0.5 for 5 minutes",
         "type": "STATIC",
         "url": null
       },
@@ -8644,12 +8710,6 @@
     ],
     "alerts": [
       {
-        "name": "Transaction Errors",
-        "details": "This alert is triggered when the the transactions fail more than 10% of the time in 5 minutes.",
-        "type": "STATIC",
-        "url": null
-      },
-      {
         "name": "Apdex Score",
         "details": "This alert is triggered when the Apdex score is below 0.5 for 5 minutes",
         "type": "STATIC",
@@ -8658,6 +8718,12 @@
       {
         "name": "High CPU Utilization",
         "details": "This alert is triggered when the CPU Utilization is above 90%.",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "Transaction Errors",
+        "details": "This alert is triggered when the the transactions fail more than 10% of the time in 5 minutes.",
         "type": "STATIC",
         "url": null
       }
@@ -9348,14 +9414,14 @@
     ],
     "documentation": [
       {
-        "name": "Argo CD Integration Docs",
-        "description": "New Relic documentation for the Argo CD integration including installation, configuration, and how to query the metrics.\n",
-        "url": "https://docs.newrelic.com/docs/infrastructure/prometheus-integrations/integrations-list/argocd-integration"
-      },
-      {
         "name": "Argo CD Metrics Reference",
         "description": "Argo CD Prometheus Metric Reference\n",
         "url": "https://argo-cd.readthedocs.io/en/stable/operator-manual/metrics/"
+      },
+      {
+        "name": "Argo CD Integration Docs",
+        "description": "New Relic documentation for the Argo CD integration including installation, configuration, and how to query the metrics.\n",
+        "url": "https://docs.newrelic.com/docs/infrastructure/prometheus-integrations/integrations-list/argocd-integration"
       },
       {
         "name": "Prometheus Installation Docs",
@@ -10443,14 +10509,14 @@
         "url": "https://docs.newrelic.com/docs/infrastructure/prometheus-integrations/get-started/send-prometheus-metric-data-new-relic"
       },
       {
-        "name": "Etcd Metrics Docs",
-        "description": "Learn more about the Prometheus metrics available for Etcd",
-        "url": "https://etcd.io/docs/v3.5/metrics/"
-      },
-      {
         "name": "Etcd Integration Docs",
         "description": "New Relic documentation for the Etcd integration including installation, configuration, and how to query the metrics.\n",
         "url": "https://docs.newrelic.com/docs/infrastructure/prometheus-integrations/integrations-list/etcd-integration"
+      },
+      {
+        "name": "Etcd Metrics Docs",
+        "description": "Learn more about the Prometheus metrics available for Etcd",
+        "url": "https://etcd.io/docs/v3.5/metrics/"
       }
     ],
     "installPlans": [
@@ -10631,6 +10697,12 @@
     ],
     "alerts": [
       {
+        "name": "Memory Usage",
+        "details": "This alert is triggered when Memory usage is above 90%",
+        "type": "STATIC",
+        "url": null
+      },
+      {
         "name": "Apdex Score",
         "details": "This alert is triggered when the Apdex score is below 0.5 for 5 minutes",
         "type": "STATIC",
@@ -10639,12 +10711,6 @@
       {
         "name": "High CPU Utilization",
         "details": "This alert is triggered when the CPU Utilization is above 90%.",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "Memory Usage",
-        "details": "This alert is triggered when Memory usage is above 90%",
         "type": "STATIC",
         "url": null
       },
@@ -10902,14 +10968,14 @@
     ],
     "alerts": [
       {
-        "name": "High CPU Utilization",
-        "details": "This alert is triggered when the CPU Utilization is above 90%.",
+        "name": "Transaction Errors",
+        "details": "This alert is triggered when the transaction error count is higher than 5 for 5 minutes.",
         "type": "STATIC",
         "url": null
       },
       {
-        "name": "Transaction Errors",
-        "details": "This alert is triggered when the transaction error count is higher than 5 for 5 minutes.",
+        "name": "High CPU Utilization",
+        "details": "This alert is triggered when the CPU Utilization is above 90%.",
         "type": "STATIC",
         "url": null
       },
@@ -13025,14 +13091,14 @@
     ],
     "alerts": [
       {
-        "name": "Transaction Errors",
-        "details": "This alert is triggered when the the transactions fail more than 10% of the time in 5 minutes.",
+        "name": "High CPU Utilization",
+        "details": "This alert is triggered when the CPU Utilization is above 90%.",
         "type": "STATIC",
         "url": null
       },
       {
-        "name": "High CPU Utilization",
-        "details": "This alert is triggered when the CPU Utilization is above 90%.",
+        "name": "Transaction Errors",
+        "details": "This alert is triggered when the the transactions fail more than 10% of the time in 5 minutes.",
         "type": "STATIC",
         "url": null
       }
@@ -13610,14 +13676,14 @@
         "url": "https://github.com/pulumi/pulumi-newrelic"
       },
       {
-        "name": "Getting started with New Relic and Pulumi",
-        "description": "In this guide, you learn how to set up New Relic alerts with Pulumi.\n",
-        "url": "https://www.pulumi.com/registry/packages/newrelic/"
-      },
-      {
         "name": "New Relic Package",
         "description": "Pulumi documentation for the New Relic Package",
         "url": "https://www.pulumi.com/registry/packages/newrelic/api-docs/"
+      },
+      {
+        "name": "Getting started with New Relic and Pulumi",
+        "description": "In this guide, you learn how to set up New Relic alerts with Pulumi.\n",
+        "url": "https://www.pulumi.com/registry/packages/newrelic/"
       }
     ],
     "installPlans": [
@@ -13826,6 +13892,12 @@
     ],
     "alerts": [
       {
+        "name": "Transaction Errors",
+        "details": "This alert is triggered when the the transactions fail more than 10% of the time in 5 minutes.",
+        "type": "STATIC",
+        "url": null
+      },
+      {
         "name": "Apdex Score",
         "details": "This alert is triggered when the Apdex score is below 0.5 for 5 minutes",
         "type": "STATIC",
@@ -13834,12 +13906,6 @@
       {
         "name": "High CPU Utilization",
         "details": "This alert is triggered when the CPU Utilization is above 90%.",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "Transaction Errors",
-        "details": "This alert is triggered when the the transactions fail more than 10% of the time in 5 minutes.",
         "type": "STATIC",
         "url": null
       }
@@ -14821,8 +14887,8 @@
         "url": null
       },
       {
-        "name": "Generation 2 Hits",
-        "details": "This alert is triggered when memory that survives garbage collection is more than 10 MB and not promoted.",
+        "name": "Generation 1 Hits",
+        "details": "This alert is triggered when the memory that survives garbage collection is more than 2 MB and has been promoted from Generation 1 to Generation 2.",
         "type": "STATIC",
         "url": null
       },
@@ -14833,8 +14899,8 @@
         "url": null
       },
       {
-        "name": "Generation 1 Hits",
-        "details": "This alert is triggered when the memory that survives garbage collection is more than 2 MB and has been promoted from Generation 1 to Generation 2.",
+        "name": "Generation 2 Hits",
+        "details": "This alert is triggered when memory that survives garbage collection is more than 10 MB and not promoted.",
         "type": "STATIC",
         "url": null
       }
@@ -16176,19 +16242,19 @@
     ],
     "dashboards": [
       {
-        "name": "Lacework Compliance Violations",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/lacework-compliance-violations/lacework-compliance-violations01.png"
-        ]
-      },
-      {
         "name": "Lacework Anomaly Detections",
         "description": null,
         "url": null,
         "screenshots": [
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/lacework-anomaly-detections/lacework-anomaly-detections01.png"
+        ]
+      },
+      {
+        "name": "Lacework Compliance Violations",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/lacework-compliance-violations/lacework-compliance-violations01.png"
         ]
       },
       {
@@ -18100,6 +18166,12 @@
     ],
     "alerts": [
       {
+        "name": "Node down alert",
+        "details": "This alert triggers when a node is down for 15 minutes. The alert threshold can be changed to your acceptable downtime requirements.",
+        "type": "STATIC",
+        "url": null
+      },
+      {
         "name": "Slow latch requests",
         "details": "This alert triggers when there are > 0 slow latch requests for over 5 minutes. The alert threshold can be changed to your acceptable slow request requirements.",
         "type": "STATIC",
@@ -18130,12 +18202,6 @@
         "url": null
       },
       {
-        "name": "High fd open count",
-        "details": "This alert is triggered when a node passes 80% of the open file descriptors limit for 15 minutes. The alert threshold can be changes to your desired file descriptors limit requirements.",
-        "type": "STATIC",
-        "url": null
-      },
-      {
         "name": "CA certificate expiration",
         "details": "This alert is triggered when there are less than 90 days remaining for CA certificate expiration. The alert threshold can be changed to your desired expiration alerting requirements.",
         "type": "STATIC",
@@ -18154,6 +18220,12 @@
         "url": null
       },
       {
+        "name": "High fd open count",
+        "details": "This alert is triggered when a node passes 80% of the open file descriptors limit for 15 minutes. The alert threshold can be changes to your desired file descriptors limit requirements.",
+        "type": "STATIC",
+        "url": null
+      },
+      {
         "name": "Instance dead alert",
         "details": "This alert triggers when an instance is down for 15 minutes. The alert threshold can be changed to your acceptable downtime requirements.",
         "type": "STATIC",
@@ -18168,12 +18240,6 @@
       {
         "name": "Node certificate expiration",
         "details": "This alert is triggered when there are less than 30 days remaining for Node certificate expiration. The alert threshold can be changed to your desired expiration alerting requirements.",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "Node down alert",
-        "details": "This alert triggers when a node is down for 15 minutes. The alert threshold can be changed to your acceptable downtime requirements.",
         "type": "STATIC",
         "url": null
       }
@@ -18368,6 +18434,12 @@
     ],
     "alerts": [
       {
+        "name": "Transaction Errors",
+        "details": "This alert is triggered when the the transactions fail more than 10% of the time in 5 minutes.",
+        "type": "STATIC",
+        "url": null
+      },
+      {
         "name": "Apdex Score",
         "details": "This alert is triggered when the Apdex score is below 0.5 for 5 minutes",
         "type": "STATIC",
@@ -18382,12 +18454,6 @@
       {
         "name": "Memory Usage",
         "details": "This alert is triggered when Memory usage is above 90%",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "Transaction Errors",
-        "details": "This alert is triggered when the the transactions fail more than 10% of the time in 5 minutes.",
         "type": "STATIC",
         "url": null
       }
@@ -20603,11 +20669,11 @@
         ]
       },
       {
-        "name": "Catchpoint-Overview",
+        "name": "Catchpoint-Response Size",
         "description": null,
         "url": null,
         "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/catchpoint-overview/Catchpoint-Overview.png"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/catchpoint-response-size/Catchpoint-Response_Size.png"
         ]
       },
       {
@@ -20619,11 +20685,11 @@
         ]
       },
       {
-        "name": "Catchpoint-Response Size",
+        "name": "Catchpoint-Overview",
         "description": null,
         "url": null,
         "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/catchpoint-response-size/Catchpoint-Response_Size.png"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/catchpoint-overview/Catchpoint-Overview.png"
         ]
       }
     ],
@@ -21148,14 +21214,14 @@
     ],
     "alerts": [
       {
-        "name": "Transaction Errors",
-        "details": "This alert is triggered when the the transactions fail more than 10% of the time in 5 minutes.",
+        "name": "High CPU Utilization",
+        "details": "This alert is triggered when the CPU Utilization is above 90%.",
         "type": "STATIC",
         "url": null
       },
       {
-        "name": "High CPU Utilization",
-        "details": "This alert is triggered when the CPU Utilization is above 90%.",
+        "name": "Transaction Errors",
+        "details": "This alert is triggered when the the transactions fail more than 10% of the time in 5 minutes.",
         "type": "STATIC",
         "url": null
       }
@@ -21211,14 +21277,14 @@
     ],
     "alerts": [
       {
-        "name": "Transaction Errors",
-        "details": "This alert is triggered when the the transactions fail more than 10% of the time in 5 minutes.",
+        "name": "High CPU Utilization",
+        "details": "This alert is triggered when the CPU Utilization is above 90%.",
         "type": "STATIC",
         "url": null
       },
       {
-        "name": "High CPU Utilization",
-        "details": "This alert is triggered when the CPU Utilization is above 90%.",
+        "name": "Transaction Errors",
+        "details": "This alert is triggered when the the transactions fail more than 10% of the time in 5 minutes.",
         "type": "STATIC",
         "url": null
       }
@@ -21987,12 +22053,6 @@
     ],
     "alerts": [
       {
-        "name": "Memory Usage",
-        "details": "This alert is triggered when Memory usage is above 90%",
-        "type": "STATIC",
-        "url": null
-      },
-      {
         "name": "Apdex Score",
         "details": "This alert is triggered when the Apdex score is below 0.5 for 5 minutes",
         "type": "STATIC",
@@ -22001,6 +22061,12 @@
       {
         "name": "High CPU Utilization",
         "details": "This alert is triggered when the CPU Utilization is above 90%.",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "Memory Usage",
+        "details": "This alert is triggered when Memory usage is above 90%",
         "type": "STATIC",
         "url": null
       },
@@ -22057,14 +22123,14 @@
     ],
     "alerts": [
       {
-        "name": "Apdex Score",
-        "details": "This alert is triggered when the Apdex score is below 0.5 for 5 minutes",
+        "name": "High CPU Utilization",
+        "details": "This alert is triggered when the CPU Utilization is above 90%.",
         "type": "STATIC",
         "url": null
       },
       {
-        "name": "High CPU Utilization",
-        "details": "This alert is triggered when the CPU Utilization is above 90%.",
+        "name": "Apdex Score",
+        "details": "This alert is triggered when the Apdex score is below 0.5 for 5 minutes",
         "type": "STATIC",
         "url": null
       },
@@ -23267,9 +23333,9 @@
     ],
     "documentation": [
       {
-        "name": "CoreDNS Metrics Docs",
-        "description": "Learn more about the Prometheus metrics available for CoreDNS\n",
-        "url": "https://coredns.io/plugins/metrics/"
+        "name": "Prometheus Installation Docs",
+        "description": "Use Prometheus remote_write or Prometheus Agent\n",
+        "url": "https://docs.newrelic.com/docs/infrastructure/prometheus-integrations/get-started/send-prometheus-metric-data-new-relic/"
       },
       {
         "name": "CoreDNS Integration Docs",
@@ -23277,9 +23343,9 @@
         "url": "https://docs.newrelic.com/docs/infrastructure/prometheus-integrations/integrations-list/core-dns-integration"
       },
       {
-        "name": "Prometheus Installation Docs",
-        "description": "Use Prometheus remote_write or Prometheus Agent\n",
-        "url": "https://docs.newrelic.com/docs/infrastructure/prometheus-integrations/get-started/send-prometheus-metric-data-new-relic/"
+        "name": "CoreDNS Metrics Docs",
+        "description": "Learn more about the Prometheus metrics available for CoreDNS\n",
+        "url": "https://coredns.io/plugins/metrics/"
       }
     ],
     "installPlans": [
@@ -25767,14 +25833,14 @@
     ],
     "alerts": [
       {
-        "name": "Transaction Errors",
-        "details": "This alert is triggered when the the transactions fail more than 10% of the time in 5 minutes.",
+        "name": "High CPU Utilization",
+        "details": "This alert is triggered when the CPU Utilization is above 90%.",
         "type": "STATIC",
         "url": null
       },
       {
-        "name": "High CPU Utilization",
-        "details": "This alert is triggered when the CPU Utilization is above 90%.",
+        "name": "Transaction Errors",
+        "details": "This alert is triggered when the the transactions fail more than 10% of the time in 5 minutes.",
         "type": "STATIC",
         "url": null
       }
@@ -25830,14 +25896,14 @@
     ],
     "alerts": [
       {
-        "name": "High CPU Utilization",
-        "details": "This alert is triggered when the CPU Utilization is above 90%.",
+        "name": "Transaction Errors",
+        "details": "This alert is triggered when the the transactions fail more than 10% of the time in 5 minutes.",
         "type": "STATIC",
         "url": null
       },
       {
-        "name": "Transaction Errors",
-        "details": "This alert is triggered when the the transactions fail more than 10% of the time in 5 minutes.",
+        "name": "High CPU Utilization",
+        "details": "This alert is triggered when the CPU Utilization is above 90%.",
         "type": "STATIC",
         "url": null
       }
@@ -27590,6 +27656,22 @@
     ],
     "dashboards": [
       {
+        "name": "Azure Integrations Data Ingest Analysis",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/azure-integrations-data-ingest-analysis/azure-integrations-data-ingest-analysis.png"
+        ]
+      },
+      {
+        "name": "AWS Integrations Data Ingest Analysis",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/aws-integrations-data-ingest-analysis/aws-integrations-data-ingest-analysis.png"
+        ]
+      },
+      {
         "name": "GCP Integrations Data Ingest Analysis",
         "description": null,
         "url": null,
@@ -27611,22 +27693,6 @@
         "url": null,
         "screenshots": [
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/on-host-integrations-data-analysis/on-host-integrations-data-analysis.png"
-        ]
-      },
-      {
-        "name": "Azure Integrations Data Ingest Analysis",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/azure-integrations-data-ingest-analysis/azure-integrations-data-ingest-analysis.png"
-        ]
-      },
-      {
-        "name": "AWS Integrations Data Ingest Analysis",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/aws-integrations-data-ingest-analysis/aws-integrations-data-ingest-analysis.png"
         ]
       }
     ],
@@ -27670,14 +27736,6 @@
     ],
     "dashboards": [
       {
-        "name": "Amazon Security Lake - Route 53 Resolver query logs",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/amazon-security-lake-route53-resolver-query-logs/amazon-security-lake-route53-resolver-query-logs01.png"
-        ]
-      },
-      {
         "name": "Amazon Security Lake - VPC flow logs",
         "description": null,
         "url": null,
@@ -27691,6 +27749,14 @@
         "url": null,
         "screenshots": [
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/amazon-security-lake-security-hub/amazon-security-lake-security-hub01.png"
+        ]
+      },
+      {
+        "name": "Amazon Security Lake - Route 53 Resolver query logs",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/amazon-security-lake-route53-resolver-query-logs/amazon-security-lake-route53-resolver-query-logs01.png"
         ]
       },
       {
@@ -28609,11 +28675,11 @@
     ],
     "dashboards": [
       {
-        "name": "Browser Overview",
+        "name": "Browser Traffic Analysis",
         "description": null,
         "url": null,
         "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/browser-overview/browser_overview.png"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/traffic-analysis/traffic_analysis.png"
         ]
       },
       {
@@ -28625,11 +28691,11 @@
         ]
       },
       {
-        "name": "Browser Traffic Analysis",
+        "name": "Browser Overview",
         "description": null,
         "url": null,
         "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/traffic-analysis/traffic_analysis.png"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/browser-overview/browser_overview.png"
         ]
       },
       {
@@ -29226,11 +29292,6 @@
     ],
     "documentation": [
       {
-        "name": "Prometheus Installation Docs",
-        "description": "Use Prometheus remote_write or Prometheus Agent\n",
-        "url": "https://docs.newrelic.com/docs/infrastructure/prometheus-integrations/get-started/send-prometheus-metric-data-new-relic/"
-      },
-      {
         "name": "Harbor Integration Docs",
         "description": "New Relic documentation for the Harbor integration including installation, configuration, and how to query the metrics.\n",
         "url": "https://docs.newrelic.com/docs/infrastructure/prometheus-integrations/integrations-list/harbor-integration/"
@@ -29239,6 +29300,11 @@
         "name": "Harbor Metrics Docs",
         "description": "Learn more about the Prometheus metrics available for Harbor\n",
         "url": "https://goharbor.io/docs/2.3.0/administration/metrics/"
+      },
+      {
+        "name": "Prometheus Installation Docs",
+        "description": "Use Prometheus remote_write or Prometheus Agent\n",
+        "url": "https://docs.newrelic.com/docs/infrastructure/prometheus-integrations/get-started/send-prometheus-metric-data-new-relic/"
       }
     ],
     "installPlans": [
