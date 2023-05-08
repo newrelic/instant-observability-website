@@ -93,6 +93,7 @@ const InstallButton = ({
 
   const hasInstallableComponent =
     hasComponent(quickstart, 'installPlans') ||
+    hasComponent(quickstart, 'dataSources') ||
     quickstart.id === CODESTREAM_QUICKSTART_ID;
 
   const tessen = useTessen();
@@ -214,6 +215,10 @@ InstallButton.propTypes = {
 export const fragmentQuery = graphql`
   fragment InstallButton_quickstart on Quickstarts {
     installPlans {
+      id
+      name
+    }
+    dataSources {
       id
       name
     }

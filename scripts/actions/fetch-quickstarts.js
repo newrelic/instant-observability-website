@@ -41,6 +41,12 @@ const nr1CatalogQuickstartQuery = gql`
               icon {
                 url
               }
+              dataSources {
+                id
+                metadata {
+                  displayName
+                }
+              }
               installer {
                 type
                 ... on Nr1CatalogInstallPlan {
@@ -168,7 +174,16 @@ const formatQuickstart = (nr1CatQuickstart) => {
   const installSteps = metadata?.installer?.steps ?? [];
   formatted.installPlans = installSteps.map(formatInstallPlan);
 
+  formatted.dataSources = metadata.dataSources.map(formatDataSource);
+
   return formatted;
+};
+
+const formatDataSource = (nr1CatDataSource) => {
+  return {
+    id: nr1CatDataSource.id,
+    name: nr1CatDataSource.metadata.displayName,
+  };
 };
 
 const formatDashboard = (nr1CatDashboard) => {

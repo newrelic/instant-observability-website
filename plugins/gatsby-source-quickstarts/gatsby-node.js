@@ -57,6 +57,7 @@ exports.createSchemaCustomization = ({ actions }) => {
       alerts: [QuickstartAlertCondition]
       dashboards: [QuickstartDashboard]
       installPlans: [QuickstartInstallPlan]
+      dataSources: [QuickstartDataSource]
     }
 
     type QuickstartDocumentation {
@@ -77,6 +78,11 @@ exports.createSchemaCustomization = ({ actions }) => {
       description: String
       url: String
       screenshots: [File]
+    }
+
+    type QuickstartDataSource {
+      name: String
+      id: String
     }
 
     type QuickstartInstallPlan {
@@ -179,6 +185,7 @@ exports.sourceNodes = async ({
         documentation: quickstart.documentation,
         alerts: quickstart.alerts,
         installPlans: quickstart.installPlans,
+        dataSources: quickstart.dataSources,
         logo: !isLogoSvg ? logoNode : null,
         logoSvg: isLogoSvg ? logoNode : null,
         dashboards,
