@@ -31,14 +31,14 @@
     ],
     "alerts": [
       {
-        "name": "Video Start Failure % - jwplayer",
-        "details": "Alert when the Video Start Failures % increases significantly from its baseline.\nUseful for understanding when your users are unable to successfully initiate video plays.",
+        "name": "Video Playback Failure % - jwplayer",
+        "details": "Alert when the Video Playback Failures % increases significantly from its baseline.\nUseful for understanding when your users are experiencing issues during video playback.",
         "type": "BASELINE",
         "url": null
       },
       {
-        "name": "Video Playback Failure % - jwplayer",
-        "details": "Alert when the Video Playback Failures % increases significantly from its baseline.\nUseful for understanding when your users are experiencing issues during video playback.",
+        "name": "Video Start Failure % - jwplayer",
+        "details": "Alert when the Video Start Failures % increases significantly from its baseline.\nUseful for understanding when your users are unable to successfully initiate video plays.",
         "type": "BASELINE",
         "url": null
       },
@@ -414,6 +414,97 @@
     ]
   },
   {
+    "title": "Ajax Requests",
+    "name": "ajax-example",
+    "description": "**A dashboard that displays the performance of your Ajax Request**\n\n**Benefits of understanding AJAX requests**\n1. **Identify performance issues:** By reviewing AJAX requests in New Relic, you can identify performance issues with your application. New Relic provides detailed metrics on AJAX requests, such as response time, throughput, and error rates, which can help you identify performance bottlenecks.\n\n2.  **Troubleshoot errors:** If an AJAX request fails or returns an error, New Relic can provide detailed information on the error, including the status code and error message. This information can help you quickly identify and troubleshoot errors in your application.\n\n3.  **Monitor third-party dependencies:** If your application depends on third-party services, you can use New Relic to monitor the performance of those services. New Relic can provide insights into the performance of AJAX requests to third-party services, such as response time and error rates.\n\n4.  **Optimize application performance:** By reviewing AJAX requests in New Relic, you can identify opportunities to optimize your application's performance. For example, you may identify slow-loading AJAX requests that can be optimized by reducing the size of the payload or optimizing the code.\n\n  \n\n**Distributed tracing with AJAX requests in a microsystem architecture can provide several benefits:**\n1.  **End-to-end visibility:** Distributed tracing allows you to trace the flow of a request across multiple services in your microsystem architecture. With AJAX requests, you can trace the request from the client-side through to the server-side, allowing you to see the complete end-to-end flow of the request.\n    \n2.  **Performance monitoring:** Distributed tracing can provide valuable insights into the performance of your microsystem architecture. By tracing the flow of requests, you can identify bottlenecks and optimize the performance of your system.\n    \n3.  **Debugging and troubleshooting:** Distributed tracing can make it easier to debug and troubleshoot issues in your microsystem architecture. By tracing the flow of a request, you can quickly identify which service is causing the issue and address it.\n    \n4.  **Root cause analysis:** Distributed tracing can help you identify the root cause of issues in your microsystem architecture. By tracing the flow of requests, you can identify the root cause of a problem and take steps to prevent similar issues from occurring in the future.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/ajax",
+    "id": "ab83f4c2-4e75-4767-8dea-fd6ab940a2dd",
+    "level": "COMMUNITY",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/ajax/logo.svg",
+    "summary": "An Ajax dashboard based on New Relic Browser agent data. AJAX (Asynchronous JavaScript and XML) is a set of web development techniques that allows web applications to update and display data on a web page without requiring a full page reload. AJAX uses JavaScript to asynchronously send requests to the server and update only the necessary parts of the page with the response data.",
+    "websiteUrl": null,
+    "keywords": [
+      "browser agent",
+      "web",
+      "javascript",
+      "chrome",
+      "firefox",
+      "safari",
+      "ajax"
+    ],
+    "authors": [
+      "Darren Doyle",
+      "Kinsey"
+    ],
+    "dashboards": [
+      {
+        "name": "Browser Ajax Requests",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/ajax/ajax.png"
+        ]
+      }
+    ],
+    "alerts": [
+      {
+        "name": "Ajax Response Codes (>= 300)",
+        "details": "This baseline alert condition evaluates deviations in Ajax response codes over 299.",
+        "type": "BASELINE",
+        "url": null
+      },
+      {
+        "name": "Ajax Throughput",
+        "details": "This baseline alert condition evaluates Ajax throughput deviations.",
+        "type": "BASELINE",
+        "url": null
+      },
+      {
+        "name": "Ajax Time to Settle Deviation",
+        "details": "This baseline alert condition evaluates Ajax time to settle deviations.",
+        "type": "BASELINE",
+        "url": null
+      },
+      {
+        "name": "First Input Delay (75 percentile) (ms)",
+        "details": "This baseline alert condition evaluates FID deviations.",
+        "type": "BASELINE",
+        "url": null
+      },
+      {
+        "name": "Largest Contentful Paint (75 percentile) (seconds)",
+        "details": "This baseline alert condition evaluates LCP deviations.",
+        "type": "BASELINE",
+        "url": null
+      },
+      {
+        "name": "Pageload times (seconds)",
+        "details": "This baseline alert condition evaluates pageload time deviations.",
+        "type": "BASELINE",
+        "url": null
+      },
+      {
+        "name": "Throughput",
+        "details": "This baseline alert condition evaluates throughput deviations.",
+        "type": "BASELINE",
+        "url": null
+      }
+    ],
+    "documentation": [
+      {
+        "name": "Browser",
+        "description": "With New Relic One's browser monitoring solution, you get full visibility into the complete webpage life cycle of your application or website",
+        "url": "https://docs.newrelic.com/docs/browser/"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "Browser",
+        "id": "browser-docs"
+      }
+    ]
+  },
+  {
     "title": "Slack Notifications",
     "name": "slack-notifications",
     "description": "Slack is a a messaging app for business that connects people to the information that they need.\n\nIntegrate New Relic with Slack to send notification messages to your Slack channels.\n\n[Check out our documentation](https://docs.newrelic.com/docs/alerts-applied-intelligence/notifications/notification-integrations/#slack) to set up a Slack notification channel and provide fast and consistent ways for the right personnel to be notified about incidents",
@@ -575,53 +666,6 @@
     ]
   },
   {
-    "title": "Ajax Requests",
-    "name": "ajax-example",
-    "description": "**A dashboard that displays the performance of your Ajax Request**\n\n**Benefits of understanding AJAX requests**\n1. **Identify performance issues:** By reviewing AJAX requests in New Relic, you can identify performance issues with your application. New Relic provides detailed metrics on AJAX requests, such as response time, throughput, and error rates, which can help you identify performance bottlenecks.\n\n2.  **Troubleshoot errors:** If an AJAX request fails or returns an error, New Relic can provide detailed information on the error, including the status code and error message. This information can help you quickly identify and troubleshoot errors in your application.\n\n3.  **Monitor third-party dependencies:** If your application depends on third-party services, you can use New Relic to monitor the performance of those services. New Relic can provide insights into the performance of AJAX requests to third-party services, such as response time and error rates.\n\n4.  **Optimize application performance:** By reviewing AJAX requests in New Relic, you can identify opportunities to optimize your application's performance. For example, you may identify slow-loading AJAX requests that can be optimized by reducing the size of the payload or optimizing the code.\n\n  \n\n**Distributed tracing with AJAX requests in a microsystem architecture can provide several benefits:**\n1.  **End-to-end visibility:** Distributed tracing allows you to trace the flow of a request across multiple services in your microsystem architecture. With AJAX requests, you can trace the request from the client-side through to the server-side, allowing you to see the complete end-to-end flow of the request.\n    \n2.  **Performance monitoring:** Distributed tracing can provide valuable insights into the performance of your microsystem architecture. By tracing the flow of requests, you can identify bottlenecks and optimize the performance of your system.\n    \n3.  **Debugging and troubleshooting:** Distributed tracing can make it easier to debug and troubleshoot issues in your microsystem architecture. By tracing the flow of a request, you can quickly identify which service is causing the issue and address it.\n    \n4.  **Root cause analysis:** Distributed tracing can help you identify the root cause of issues in your microsystem architecture. By tracing the flow of requests, you can identify the root cause of a problem and take steps to prevent similar issues from occurring in the future.",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/ajax",
-    "id": "ab83f4c2-4e75-4767-8dea-fd6ab940a2dd",
-    "level": "COMMUNITY",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/ajax/logo.svg",
-    "summary": "An Ajax dashboard based on New Relic Browser agent data. AJAX (Asynchronous JavaScript and XML) is a set of web development techniques that allows web applications to update and display data on a web page without requiring a full page reload. AJAX uses JavaScript to asynchronously send requests to the server and update only the necessary parts of the page with the response data.",
-    "websiteUrl": null,
-    "keywords": [
-      "browser agent",
-      "web",
-      "javascript",
-      "chrome",
-      "firefox",
-      "safari",
-      "ajax"
-    ],
-    "authors": [
-      "Darren Doyle"
-    ],
-    "dashboards": [
-      {
-        "name": "Browser Ajax Requests",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/ajax/ajax.png"
-        ]
-      }
-    ],
-    "alerts": [],
-    "documentation": [
-      {
-        "name": "Browser",
-        "description": "With New Relic One's browser monitoring solution, you get full visibility into the complete webpage life cycle of your application or website",
-        "url": "https://docs.newrelic.com/docs/browser/"
-      }
-    ],
-    "installPlans": [
-      {
-        "name": "Browser",
-        "id": "browser-docs"
-      }
-    ]
-  },
-  {
     "title": "AWS WAF",
     "name": "aws-waf",
     "description": "## What is AWS WAF?\n\nSecure web traffic with a firewall built on top of Amazon Web Services.\n\n### Get started!\n\nStart monitoring AWS WAF by connecting Amazon Web Services (AWS) to New Relic!\n\nCheck out our AWS WAF documentation to instrument your cloud service and manage the stability, scalability, and reliability of your systems with New Relic's infrastructure monitoring capabilities.\n\n### More info\n\nCheck out the [documentation](https://docs.newrelic.com/docs/infrastructure/amazon-integrations/aws-integrations-list/aws-waf-monitoring-integration/) to learn more about New Relic monitoring for AWS WAF.",
@@ -641,19 +685,19 @@
     ],
     "dashboards": [
       {
-        "name": "AWS WAFV2",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/aws-wafv2/aws-wafv2.png"
-        ]
-      },
-      {
         "name": "AWS WAF",
         "description": null,
         "url": null,
         "screenshots": [
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/aws-waf/aws-waf.png"
+        ]
+      },
+      {
+        "name": "AWS WAFV2",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/aws-wafv2/aws-wafv2.png"
         ]
       }
     ],
@@ -1327,12 +1371,6 @@
     ],
     "alerts": [
       {
-        "name": "Uplink Interface Down Violation",
-        "details": "This alert will trigger when a router or switch interface with the word \"uplink\" in the description reports as being down.  You can change the NRQL to filter to other naming conventions.",
-        "type": "STATIC",
-        "url": null
-      },
-      {
         "name": "Average CPU % Used Violation",
         "details": "This alert will trigger when a router or switch has more than 90% CPU utilization.",
         "type": "STATIC",
@@ -1341,6 +1379,12 @@
       {
         "name": "Average Memory % Used Violation",
         "details": "This alert will trigger when a router or switch has more than 90% memory utilization.",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "Uplink Interface Down Violation",
+        "details": "This alert will trigger when a router or switch interface with the word \"uplink\" in the description reports as being down.  You can change the NRQL to filter to other naming conventions.",
         "type": "STATIC",
         "url": null
       },
@@ -1651,14 +1695,14 @@
     "alerts": [],
     "documentation": [
       {
-        "name": "Install README",
-        "description": "Guides you on how to customize the dashboard once you've installed it\n",
-        "url": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/oma-qf#readme"
-      },
-      {
         "name": "Implementation guide",
         "description": "Explains what quality foundation is and how to apply it\n",
         "url": "https://docs.newrelic.com/docs/new-relic-solutions/observability-maturity/customer-experience/quality-foundation-implementation-guide"
+      },
+      {
+        "name": "Install README",
+        "description": "Guides you on how to customize the dashboard once you've installed it\n",
+        "url": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/oma-qf#readme"
       }
     ],
     "installPlans": [
@@ -1950,14 +1994,14 @@
     ],
     "alerts": [
       {
-        "name": "High CPU Utilization",
-        "details": "This alert is triggered when the CPU Utilization is above 90%.",
+        "name": "Apdex Score",
+        "details": "This alert is triggered when the Apdex score is below 0.5 for 5 minutes",
         "type": "STATIC",
         "url": null
       },
       {
-        "name": "Apdex Score",
-        "details": "This alert is triggered when the Apdex score is below 0.5 for 5 minutes",
+        "name": "High CPU Utilization",
+        "details": "This alert is triggered when the CPU Utilization is above 90%.",
         "type": "STATIC",
         "url": null
       },
@@ -2805,14 +2849,14 @@
     ],
     "alerts": [
       {
-        "name": "Client connections alert",
-        "details": "This alert is triggered when the number of connected redis clients is high.",
+        "name": "Redis down alert",
+        "details": "This alert is triggered when the Redis instance is not responding for a continuous 5 minutes.",
         "type": "STATIC",
         "url": null
       },
       {
-        "name": "Redis down alert",
-        "details": "This alert is triggered when the Redis instance is not responding for a continuous 5 minutes.",
+        "name": "Client connections alert",
+        "details": "This alert is triggered when the number of connected redis clients is high.",
         "type": "STATIC",
         "url": null
       }
@@ -3792,24 +3836,6 @@
     ],
     "alerts": [
       {
-        "name": "High Crash Rate (Mobile)",
-        "details": "This alert fires when the crash rate of your mobile app goes above 10 percent for a period of 5 minutes.",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "High HTTP Request Error Rate (Mobile)",
-        "details": "This alert fires when the error rate of HTTP network requests made by your mobile app goes above 5 percent for a period of 5 minutes.",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "High Percentage of Users Affected by Exception (Mobile)",
-        "details": "This alert fires when the rate of users affect by exceptions in your mobile app goes above 10 percent for a period of 5 minutes.",
-        "type": "STATIC",
-        "url": null
-      },
-      {
         "name": "High Unique Crash Count (Mobile)",
         "details": "This alert fires when the rate of crashes from unique locations in your mobile app goes above 10 percent for a period of 60 minutes.",
         "type": "STATIC",
@@ -3830,6 +3856,24 @@
       {
         "name": "High Crash Rate by Version (Mobile)",
         "details": "This alert fires when the crash rate for a specific version of your mobile app goes above 10 percent for a period of 5 minutes.",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "High Crash Rate (Mobile)",
+        "details": "This alert fires when the crash rate of your mobile app goes above 10 percent for a period of 5 minutes.",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "High HTTP Request Error Rate (Mobile)",
+        "details": "This alert fires when the error rate of HTTP network requests made by your mobile app goes above 5 percent for a period of 5 minutes.",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "High Percentage of Users Affected by Exception (Mobile)",
+        "details": "This alert fires when the rate of users affect by exceptions in your mobile app goes above 10 percent for a period of 5 minutes.",
         "type": "STATIC",
         "url": null
       }
@@ -3980,6 +4024,12 @@
     ],
     "alerts": [
       {
+        "name": "MongoDB Connection Count",
+        "details": "This alert is triggered when there are more than 2000 MongoDB connections created within a 5 minute period.",
+        "type": "STATIC",
+        "url": null
+      },
+      {
         "name": "First Contentful Paint",
         "details": "This alert is triggered when the first contentful paint takes more than 3 seconds for 5 minutes.",
         "type": "STATIC",
@@ -3988,12 +4038,6 @@
       {
         "name": "High Memory Usage (MB)",
         "details": "This alert is triggered when the server memory is higher than 90 MB for 5 minutes.",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "MongoDB Connection Count",
-        "details": "This alert is triggered when there are more than 2000 MongoDB connections created within a 5 minute period.",
         "type": "STATIC",
         "url": null
       },
@@ -4252,19 +4296,19 @@
     ],
     "dashboards": [
       {
-        "name": "Battlesnake Server Status",
-        "description": "A dashboard to monitor your Battlesnake server's performance. It's important to keep all responses to the `/move` endpoint under 500ms. Furthermore, it's possible that your snake may be in multiple concurrent matches at the same time. It's important to make sure you server and web application are running smoothly to keep you in the game!",
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/battlesnake-server-status/battlesnake-server-status.png"
-        ]
-      },
-      {
         "name": "Battlesnake Performance",
         "description": "Monitor your Battlesnake's performance and see how it stacks up against your competition!",
         "url": null,
         "screenshots": [
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/battlesnake-performance/battlesnake-performance.png"
+        ]
+      },
+      {
+        "name": "Battlesnake Server Status",
+        "description": "A dashboard to monitor your Battlesnake server's performance. It's important to keep all responses to the `/move` endpoint under 500ms. Furthermore, it's possible that your snake may be in multiple concurrent matches at the same time. It's important to make sure you server and web application are running smoothly to keep you in the game!",
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/battlesnake-server-status/battlesnake-server-status.png"
         ]
       },
       {
@@ -4439,14 +4483,14 @@
     ],
     "alerts": [
       {
-        "name": "High Memory Usage",
-        "details": "This alert is triggered when the memory usage for a Node is above 85% of total capacity.",
+        "name": "High CPU Utilization",
+        "details": "This alert is triggered when the CPU utilization for a Node is above 90% for at least 15 minutes.",
         "type": "STATIC",
         "url": null
       },
       {
-        "name": "High CPU Utilization",
-        "details": "This alert is triggered when the CPU utilization for a Node is above 90% for at least 15 minutes.",
+        "name": "High Memory Usage",
+        "details": "This alert is triggered when the memory usage for a Node is above 85% of total capacity.",
         "type": "STATIC",
         "url": null
       }
@@ -4632,6 +4676,12 @@
     ],
     "alerts": [
       {
+        "name": "Transaction Errors",
+        "details": "This alert is triggered when the the transactions fail more than 10% of the time in 5 minutes.",
+        "type": "STATIC",
+        "url": null
+      },
+      {
         "name": "Apdex Score",
         "details": "This alert is triggered when the Apdex score is below 0.5 for 5 minutes",
         "type": "STATIC",
@@ -4646,12 +4696,6 @@
       {
         "name": "Memory Usage",
         "details": "This alert is triggered when Memory usage is above 90%",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "Transaction Errors",
-        "details": "This alert is triggered when the the transactions fail more than 10% of the time in 5 minutes.",
         "type": "STATIC",
         "url": null
       }
@@ -5421,14 +5465,14 @@
         "url": null
       },
       {
-        "name": "High CPU Utilization",
-        "details": "This alert is triggered when the CPU Utilization is above 90%.",
+        "name": "Transaction Errors",
+        "details": "This alert is triggered when the transactions fail more than 10% of the time in 5 minutes.",
         "type": "STATIC",
         "url": null
       },
       {
-        "name": "Transaction Errors",
-        "details": "This alert is triggered when the transactions fail more than 10% of the time in 5 minutes.",
+        "name": "High CPU Utilization",
+        "details": "This alert is triggered when the CPU Utilization is above 90%.",
         "type": "STATIC",
         "url": null
       }
@@ -5697,26 +5741,26 @@
     ],
     "alerts": [
       {
-        "name": "Memory Usage",
-        "details": "This alert is triggered when Memory usage is above 90%",
-        "type": "STATIC",
-        "url": null
-      },
-      {
         "name": "High CPU Utilization",
         "details": "This alert is triggered when the CPU Utilization is above 90%.",
         "type": "STATIC",
         "url": null
       },
       {
-        "name": "Transaction Errors",
-        "details": "This alert is triggered when the the transactions fail more than 10% of the time in 5 minutes.",
+        "name": "Apdex Score",
+        "details": "This alert is triggered when the Apdex score is below 0.5 for 5 minutes",
         "type": "STATIC",
         "url": null
       },
       {
-        "name": "Apdex Score",
-        "details": "This alert is triggered when the Apdex score is below 0.5 for 5 minutes",
+        "name": "Memory Usage",
+        "details": "This alert is triggered when Memory usage is above 90%",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "Transaction Errors",
+        "details": "This alert is triggered when the the transactions fail more than 10% of the time in 5 minutes.",
         "type": "STATIC",
         "url": null
       }
@@ -5734,6 +5778,43 @@
         "id": "setup-python-agent"
       }
     ]
+  },
+  {
+    "title": "Azure App Service Plan",
+    "name": "azure-app-service-plan",
+    "description": "## What is Azure App Service Plan?\n\nAzure App Service Plan represents the collection of physical resources for the App Service. An App Service Plan can have multiple web apps. In other words, we can have multiple web apps in an app service plan.\n\n### New Relic Azure App Service Plan quickstart features\n\nA standard dashboard that tracks key indicators like bytes received, bytes sent, CPU percentage, disk queue length, memory percentage. It runs custom queries and visualizes the data immediately.\n\n### Why monitor Azure App Service Plan with New Relic?\n\n[New Relic Azure App Service Plan](https://docs.newrelic.com/docs/infrastructure/microsoft-azure-integrations/azure-integrations-list/azure-app-service-plan-monitoring-integration/) monitoring quickstart empowers you to track the performance of Azure App Service Plan via different metrics including bytes received, bytes sent, CPU percentage, disk queue length, memory percentage. \n\nOur integration features a standard dashboard that provides interactive visualizations to explore your data, understand context, and get valuable insights.\n\nStart ingesting your Azure data today and get immediate access to our visualization dashboards so you can optimize your Azure service.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/azure/azure-app-service-plan",
+    "id": "9dc69e3b-c6c6-4b3e-b832-0f1ceab6c17b",
+    "level": "NEW_RELIC",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/azure/azure-app-service-plan/logo.png",
+    "summary": "Monitoring Azure App Service Plan is critical to track the performance through via key metrics. Download New Relic Azure App Service Plan monitoring quickstart to get a pre-built dashboard tailored to monitor your Azure App Service Plan Service.",
+    "websiteUrl": null,
+    "keywords": [
+      "azure",
+      "app service plan",
+      "product partnerships"
+    ],
+    "authors": [
+      "New Relic",
+      "New Relic Partner"
+    ],
+    "dashboards": [
+      {
+        "name": "Azure App Service Plan",
+        "description": null,
+        "url": null,
+        "screenshots": []
+      }
+    ],
+    "alerts": [],
+    "documentation": [
+      {
+        "name": "Azure App Service Plan installation docs",
+        "description": "Monitor Azure App Service Plan by connecting Azure to New Relic.\n",
+        "url": "https://docs.newrelic.com/docs/infrastructure/microsoft-azure-integrations/azure-integrations-list/azure-app-service-plan-monitoring-integration/"
+      }
+    ],
+    "installPlans": []
   },
   {
     "title": "Tornado",
@@ -5831,14 +5912,6 @@
     ],
     "dashboards": [
       {
-        "name": "Redis Enterprise Cluster Metrics",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/cluster/cluster01.png"
-        ]
-      },
-      {
         "name": "Redis Enterprise Database CRDT",
         "description": null,
         "url": null,
@@ -5852,6 +5925,14 @@
         "url": null,
         "screenshots": [
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/database/database01.png"
+        ]
+      },
+      {
+        "name": "Redis Enterprise Cluster Metrics",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/cluster/cluster01.png"
         ]
       }
     ],
@@ -6118,14 +6199,14 @@
         "url": null
       },
       {
-        "name": "Memory Usage",
-        "details": "This alert is triggered when Memory usage is above 90%",
+        "name": "High CPU Utilization",
+        "details": "This alert is triggered when the CPU Utilization is above 90%.",
         "type": "STATIC",
         "url": null
       },
       {
-        "name": "High CPU Utilization",
-        "details": "This alert is triggered when the CPU Utilization is above 90%.",
+        "name": "Memory Usage",
+        "details": "This alert is triggered when Memory usage is above 90%",
         "type": "STATIC",
         "url": null
       },
@@ -7087,20 +7168,20 @@
     ],
     "dashboards": [
       {
-        "name": "SAP Data Collection Monitoring",
-        "description": "Monitor SAP data collection and ingestion process",
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/nrm4sap-datacollect/sap-data-collection01.png"
-        ]
-      },
-      {
         "name": "SAP Dashboards",
         "description": "Monitor SAP systems and applications performances",
         "url": null,
         "screenshots": [
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/nrm4sap/sap-dashboard01.png",
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/nrm4sap/sap-dashboard02.png"
+        ]
+      },
+      {
+        "name": "SAP Data Collection Monitoring",
+        "description": "Monitor SAP data collection and ingestion process",
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/nrm4sap-datacollect/sap-data-collection01.png"
         ]
       },
       {
@@ -7348,6 +7429,12 @@
     ],
     "alerts": [
       {
+        "name": "JVM Heap Utilization Percent",
+        "details": "This alert will trigger when the JVM Heap utilization of an Elasticsearch cluster node is >90%.",
+        "type": "STATIC",
+        "url": null
+      },
+      {
         "name": "Cluster Health",
         "details": "This alert triggers when the reported health of an Elasticsearch cluster is 'red'.",
         "type": "STATIC",
@@ -7366,9 +7453,9 @@
         "url": null
       },
       {
-        "name": "Query Load Baseline",
-        "details": "This alert is triggered when the count of active queries on primary shards deviates more than 2 standard deviations above or below the baseline.\nThis can be a leading indicator of a potential loss of service or flood of requests.",
-        "type": "BASELINE",
+        "name": "Index Health",
+        "details": "This alert triggers when the reported health of an Elasticsearch index is 'red'.",
+        "type": "STATIC",
         "url": null
       },
       {
@@ -7378,15 +7465,9 @@
         "url": null
       },
       {
-        "name": "JVM Heap Utilization Percent",
-        "details": "This alert will trigger when the JVM Heap utilization of an Elasticsearch cluster node is >90%.",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "Index Health",
-        "details": "This alert triggers when the reported health of an Elasticsearch index is 'red'.",
-        "type": "STATIC",
+        "name": "Query Load Baseline",
+        "details": "This alert is triggered when the count of active queries on primary shards deviates more than 2 standard deviations above or below the baseline.\nThis can be a leading indicator of a potential loss of service or flood of requests.",
+        "type": "BASELINE",
         "url": null
       }
     ],
@@ -7694,14 +7775,14 @@
     ],
     "alerts": [
       {
-        "name": "High CPU Utilization",
-        "details": "This alert is triggered when the CPU Utilization is above 90%.",
+        "name": "Transaction Errors",
+        "details": "This alert is triggered when the the transactions fail more than 10% of the time in 5 minutes.",
         "type": "STATIC",
         "url": null
       },
       {
-        "name": "Transaction Errors",
-        "details": "This alert is triggered when the the transactions fail more than 10% of the time in 5 minutes.",
+        "name": "High CPU Utilization",
+        "details": "This alert is triggered when the CPU Utilization is above 90%.",
         "type": "STATIC",
         "url": null
       }
@@ -8957,6 +9038,45 @@
     ]
   },
   {
+    "title": "Azure Batch",
+    "name": "azure-batch",
+    "description": "## What is Azure Batch?\n\nAzure Batch is a managed service that enables you to run high-performance parallel computing jobs in the cloud. You can run compute-intensive work in a collection of virtual machines.\n\n### New Relic Azure Batch quickstart features\n\nA standard dashboard that tracks key indicators like vCPU minutes, node states, job status and task status. It runs custom queries and visualizes the data immediately.\n\n### Why monitor Azure Batch with New Relic?\n\n[New Relic Azure Batch](https://docs.newrelic.com/docs/infrastructure/microsoft-azure-integrations/azure-integrations-list/azure-batch-monitoring-integration/) monitoring quickstart empowers you to track the performance of Azure Batch via different metrics including vCPU minutes, node states, task states and job states. \n\nOur integration features a standard dashboard that provides interactive visualizations to explore your data, understand context, and get valuable insights.\n\nStart ingesting your Azure data today and get immediate access to our visualization dashboards so you can optimize your Azure service.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/azure/azure-batch",
+    "id": "e31643a4-a7a8-4fb9-b4fc-e8b15f93dabf",
+    "level": "NEW_RELIC",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/azure/azure-batch/logo.png",
+    "summary": "Monitoring Azure Batch is critical to track the performance of the jobs via key metrics. Download New Relic Azure Batch monitoring quickstart to get a pre-built dashboard tailored to monitor your Azure Batch Service.",
+    "websiteUrl": null,
+    "keywords": [
+      "azure",
+      "batch",
+      "product partnerships"
+    ],
+    "authors": [
+      "New Relic",
+      "New Relic Partner"
+    ],
+    "dashboards": [
+      {
+        "name": "Azure Batch",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/azure-batch/azure-batch.png"
+        ]
+      }
+    ],
+    "alerts": [],
+    "documentation": [
+      {
+        "name": "Azure Batch installation docs",
+        "description": "Monitor Azure Batch by connecting Azure to New Relic.\n",
+        "url": "https://docs.newrelic.com/docs/infrastructure/microsoft-azure-integrations/azure-integrations-list/azure-batch-monitoring-integration/"
+      }
+    ],
+    "installPlans": []
+  },
+  {
     "title": "HttpRb",
     "name": "httprb",
     "description": "## What is HttpRb?\n\nStraightforward Ruby-based HTTP client with advanced feature set.\n\n## Get started!\n\nLeverage community expertise and instantly get value out of your telemetry data. This quickstart automatically instruments HttpRb with the New Relic Ruby agent, and allows you to further leverage New Relic's APM capabilities by setting up [custom dashboards](https://docs.newrelic.com/docs/query-your-data/explore-query-data/dashboards/introduction-dashboards/), [errors inbox](https://docs.newrelic.com/docs/apm/apm-ui-pages/errors-inbox/errors-inbox/), [transaction tracing](https://docs.newrelic.com/docs/apm/transactions/transaction-traces/introduction-transaction-traces/), and [service maps](https://docs.newrelic.com/docs/understand-dependencies/understand-system-dependencies/service-maps/introduction-service-maps/).\n\n## More info\n\nCheck out the [documentation](https://docs.newrelic.com/docs/agents/ruby-agent/) to learn more about New Relic monitoring for HttpRb.",
@@ -9541,18 +9661,6 @@
     ],
     "dashboards": [
       {
-        "name": "JFrog Xray",
-        "description": "This dashboard provides visibility into JFrog Xray logs (access, service, traffic log volumes, HTTP response codes, errors etc), metrics (system performance, number and type of artifacts and components scanned), and violations (security vulnerabiities and license issues)",
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/jfrog-xray/jfrog-xray1.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/jfrog-xray/jfrog-xray2.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/jfrog-xray/jfrog-xray3.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/jfrog-xray/jfrog-xray4.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/jfrog-xray/jfrog-xray5.png"
-        ]
-      },
-      {
         "name": "JFrog Artifactory",
         "description": "This dashboard provides an overview of usage statistics of JFrog Artifactory logs (application, audit, Docker, requests) and overview of the system metrics, JVM statistics, storage consumption, garbage collection, and other operational insights associated with JFrog Artifactory",
         "url": null,
@@ -9564,6 +9672,18 @@
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/jfrog-artifactory/jfrog-artifactory05.png",
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/jfrog-artifactory/jfrog-artifactory06.png",
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/jfrog-artifactory/jfrog-artifactory07.png"
+        ]
+      },
+      {
+        "name": "JFrog Xray",
+        "description": "This dashboard provides visibility into JFrog Xray logs (access, service, traffic log volumes, HTTP response codes, errors etc), metrics (system performance, number and type of artifacts and components scanned), and violations (security vulnerabiities and license issues)",
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/jfrog-xray/jfrog-xray1.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/jfrog-xray/jfrog-xray2.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/jfrog-xray/jfrog-xray3.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/jfrog-xray/jfrog-xray4.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/jfrog-xray/jfrog-xray5.png"
         ]
       }
     ],
@@ -10702,12 +10822,6 @@
     ],
     "alerts": [
       {
-        "name": "Transaction Errors",
-        "details": "This alert is triggered when the the transactions fail more than 10% of the time in 5 minutes.",
-        "type": "STATIC",
-        "url": null
-      },
-      {
         "name": "Apdex Score",
         "details": "This alert is triggered when the Apdex score is below 0.5 for 5 minutes",
         "type": "STATIC",
@@ -10722,6 +10836,12 @@
       {
         "name": "Memory Usage",
         "details": "This alert is triggered when Memory usage is above 90%",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "Transaction Errors",
+        "details": "This alert is triggered when the the transactions fail more than 10% of the time in 5 minutes.",
         "type": "STATIC",
         "url": null
       }
@@ -10977,14 +11097,14 @@
     ],
     "alerts": [
       {
-        "name": "Transaction Errors",
-        "details": "This alert is triggered when the the transactions fail more than 10% of the time in 5 minutes.",
+        "name": "High CPU Utilization",
+        "details": "This alert is triggered when the CPU Utilization is above 90%.",
         "type": "STATIC",
         "url": null
       },
       {
-        "name": "High CPU Utilization",
-        "details": "This alert is triggered when the CPU Utilization is above 90%.",
+        "name": "Transaction Errors",
+        "details": "This alert is triggered when the the transactions fail more than 10% of the time in 5 minutes.",
         "type": "STATIC",
         "url": null
       }
@@ -11043,26 +11163,26 @@
     ],
     "alerts": [
       {
-        "name": "High CPU Utilization",
-        "details": "This alert is triggered when the CPU Utilization is above 90%.",
-        "type": "STATIC",
-        "url": null
-      },
-      {
         "name": "Transaction Errors",
         "details": "This alert is triggered when the transaction error count is higher than 5 for 5 minutes.",
         "type": "STATIC",
         "url": null
       },
       {
-        "name": "Average Heap Memory Used",
-        "details": "This alert is triggered when Average Heap Memory Used is higher than 2048 MB for 5 minutes.",
+        "name": "High CPU Utilization",
+        "details": "This alert is triggered when the CPU Utilization is above 90%.",
         "type": "STATIC",
         "url": null
       },
       {
         "name": "Average Transaction Duration",
         "details": "This alert is triggered when Average Transaction Duration is higher than 2 seconds for 5 minutes.",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "Average Heap Memory Used",
+        "details": "This alert is triggered when Average Heap Memory Used is higher than 2048 MB for 5 minutes.",
         "type": "STATIC",
         "url": null
       }
@@ -11369,8 +11489,8 @@
     ],
     "alerts": [
       {
-        "name": "High HTTP 4xx/5xx error alert",
-        "details": "This alert is triggered when the HTTP request success rate drops below 95 percent. The alert threshold can be changed to your desired error alerting requirements.",
+        "name": "Nginx-ingress config load errors alert",
+        "details": "This alert is triggered when there is an error loading ingress configuration",
         "type": "STATIC",
         "url": null
       },
@@ -11381,14 +11501,14 @@
         "url": null
       },
       {
-        "name": "Nginx-ingress config load errors alert",
-        "details": "This alert is triggered when there is an error loading ingress configuration",
+        "name": "P99 latency alert",
+        "details": "This sample alert is triggered when the controller request processing duration for the 99th percentile of requests goes above 100 ms. The alert threshold can be changed to your desired latency for alerting requirements.",
         "type": "STATIC",
         "url": null
       },
       {
-        "name": "P99 latency alert",
-        "details": "This sample alert is triggered when the controller request processing duration for the 99th percentile of requests goes above 100 ms. The alert threshold can be changed to your desired latency for alerting requirements.",
+        "name": "High HTTP 4xx/5xx error alert",
+        "details": "This alert is triggered when the HTTP request success rate drops below 95 percent. The alert threshold can be changed to your desired error alerting requirements.",
         "type": "STATIC",
         "url": null
       }
@@ -12039,6 +12159,43 @@
         "id": "dotnet-windows-agent"
       }
     ]
+  },
+  {
+    "title": "Azure Disk Storage",
+    "name": "azure-disk-storage",
+    "description": "## What is Azure Disk Storage?\n\nAzure managed disks are block-level storage volumes that are managed by Azure and used with Azure Virtual Machines.\n\n### New Relic Azure Disk Storage quickstart features\n\nA standard dashboard that tracks key indicators like disk read bytes, disk read operations, disk write bytes, disk write operations and disk on-demand burst operations. It runs custom queries and visualizes the data immediately.\n\n### Why monitor Azure Disk Storage with New Relic?\n\n[New Relic Azure Disk Storage](https://docs.newrelic.com/docs/infrastructure/microsoft-azure-integrations/azure-integrations-list/azure-disk-storage-monitoring-integration/) monitoring quickstart empowers you to track the performance of Azure Disk Storage via different metrics including disk read bytes, disk read operations, disk write bytes, disk write operations and disk on-demand burst operations. \n\nOur integration features a standard dashboard that provides interactive visualizations to explore your data, understand context and get valuable insights.\n\nStart ingesting your Azure data today and get immediate access to our visualization dashboards so you can optimize your Azure service.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/azure/azure-disk-storage",
+    "id": "8a6fd1c3-6022-4533-8c5e-f5f6753372bb",
+    "level": "NEW_RELIC",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/azure/azure-disk-storage/logo.png",
+    "summary": "Monitoring Azure Disk Storage is critical to track the performance through key metrics. Download New Relic Azure Disk Storage monitoring quickstart to get a pre-built dashboard tailored to monitor your Azure Disk Storage.",
+    "websiteUrl": null,
+    "keywords": [
+      "azure",
+      "disk storage",
+      "product partnerships"
+    ],
+    "authors": [
+      "New Relic",
+      "New Relic Partner"
+    ],
+    "dashboards": [
+      {
+        "name": "Azure Disk Storage",
+        "description": null,
+        "url": null,
+        "screenshots": []
+      }
+    ],
+    "alerts": [],
+    "documentation": [
+      {
+        "name": "Azure Disk Storage installation docs",
+        "description": "Monitor Azure Disk Storage by connecting Azure to New Relic.\n",
+        "url": "https://docs.newrelic.com/docs/infrastructure/microsoft-azure-integrations/azure-integrations-list/azure-disk-stoarge-monitoring-integration/"
+      }
+    ],
+    "installPlans": []
   },
   {
     "title": "OpenRasta",
@@ -12962,12 +13119,6 @@
     ],
     "alerts": [
       {
-        "name": "Memory Usage",
-        "details": "This alert is triggered when Memory usage is above 90%",
-        "type": "STATIC",
-        "url": null
-      },
-      {
         "name": "Apdex Score",
         "details": "This alert is triggered when the Apdex score is below 0.5 for 5 minutes",
         "type": "STATIC",
@@ -12976,6 +13127,12 @@
       {
         "name": "High CPU Utilization",
         "details": "This alert is triggered when the CPU Utilization is above 90%.",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "Memory Usage",
+        "details": "This alert is triggered when Memory usage is above 90%",
         "type": "STATIC",
         "url": null
       },
@@ -13166,14 +13323,14 @@
     ],
     "alerts": [
       {
-        "name": "High CPU Utilization",
-        "details": "This alert is triggered when the CPU Utilization is above 90%.",
+        "name": "Transaction Errors",
+        "details": "This alert is triggered when the the transactions fail more than 10% of the time in 5 minutes.",
         "type": "STATIC",
         "url": null
       },
       {
-        "name": "Transaction Errors",
-        "details": "This alert is triggered when the the transactions fail more than 10% of the time in 5 minutes.",
+        "name": "High CPU Utilization",
+        "details": "This alert is triggered when the CPU Utilization is above 90%.",
         "type": "STATIC",
         "url": null
       }
@@ -14132,6 +14289,12 @@
     ],
     "alerts": [
       {
+        "name": "Memory Usage",
+        "details": "This alert is triggered when Memory usage is above 90%",
+        "type": "STATIC",
+        "url": null
+      },
+      {
         "name": "Apdex Score",
         "details": "This alert is triggered when the Apdex score is below 0.5 for 5 minutes",
         "type": "STATIC",
@@ -14140,12 +14303,6 @@
       {
         "name": "High CPU Utilization",
         "details": "This alert is triggered when the CPU Utilization is above 90%.",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "Memory Usage",
-        "details": "This alert is triggered when Memory usage is above 90%",
         "type": "STATIC",
         "url": null
       },
@@ -14938,8 +15095,8 @@
     ],
     "alerts": [
       {
-        "name": "Transaction Errors",
-        "details": "This alert is triggered when the the transactions fail more than 10% of the time in 5 minutes.",
+        "name": "High CPU Utilization",
+        "details": "This alert is triggered when the CPU Utilization is above 90%.",
         "type": "STATIC",
         "url": null
       },
@@ -14950,14 +15107,14 @@
         "url": null
       },
       {
-        "name": "High CPU Utilization",
-        "details": "This alert is triggered when the CPU Utilization is above 90%.",
+        "name": "Memory Usage",
+        "details": "This alert is triggered when Memory usage is above 90%.",
         "type": "STATIC",
         "url": null
       },
       {
-        "name": "Memory Usage",
-        "details": "This alert is triggered when Memory usage is above 90%.",
+        "name": "Transaction Errors",
+        "details": "This alert is triggered when the the transactions fail more than 10% of the time in 5 minutes.",
         "type": "STATIC",
         "url": null
       },
@@ -14968,14 +15125,14 @@
         "url": null
       },
       {
-        "name": "Generation 1 Hits",
-        "details": "This alert is triggered when the memory that survives garbage collection is more than 2 MB and has been promoted from Generation 1 to Generation 2.",
+        "name": "Generation 2 Hits",
+        "details": "This alert is triggered when memory that survives garbage collection is more than 10 MB and not promoted.",
         "type": "STATIC",
         "url": null
       },
       {
-        "name": "Generation 2 Hits",
-        "details": "This alert is triggered when memory that survives garbage collection is more than 10 MB and not promoted.",
+        "name": "Generation 1 Hits",
+        "details": "This alert is triggered when the memory that survives garbage collection is more than 2 MB and has been promoted from Generation 1 to Generation 2.",
         "type": "STATIC",
         "url": null
       }
@@ -15221,6 +15378,45 @@
         "id": "aws-infrastructure-monitoring"
       }
     ]
+  },
+  {
+    "title": "Azure Container Registry",
+    "name": "azure-container-registry",
+    "description": "## What is Azure Container Registry?\n\nAzure Container Registry is a private registry service for building, storing and managing container images and related artifacts.\n\n### New Relic Azure Container Registry quickstart features\n\nA standard dashboard that tracks key indicators like agent pool CPU time, run duration, storage used, successful pull count, successful push count, total pull count and total push count. It runs custom queries and visualizes the data immediately.\n\n### Why monitor Azure Container Registry with New Relic?\n\n[New Relic Azure Container Registry](https://docs.newrelic.com/docs/infrastructure/microsoft-azure-integrations/azure-integrations-list/azure-containers-monitoring-integration/) monitoring quickstart empowers you to track the performance of Azure Container Registry via different metrics including agent pool CPU time, run duration, storage used, successful pull count, successful push count, total pull count and total push count. \n\nOur integration features a standard dashboard that provides interactive visualizations to explore your data, understand context and get valuable insights.\n\nStart ingesting your Azure data today and get immediate access to our visualization dashboards so you can optimize your Azure service.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/azure/azure-container-registry",
+    "id": "f0d9ae29-607c-40e1-b471-043cd56c8ec0",
+    "level": "NEW_RELIC",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/azure/azure-container-registry/logo.png",
+    "summary": "Monitoring Azure Container Registry is critical to track the performance through key metrics. Download New Relic Azure Container Registry monitoring quickstart to get a pre-built dashboard tailored to monitor your Azure Container Registry service.",
+    "websiteUrl": null,
+    "keywords": [
+      "azure",
+      "container registry",
+      "product partnerships"
+    ],
+    "authors": [
+      "New Relic",
+      "New Relic Partner"
+    ],
+    "dashboards": [
+      {
+        "name": "Azure Container Registry",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/azure-container-registry/azure-container-registry.png"
+        ]
+      }
+    ],
+    "alerts": [],
+    "documentation": [
+      {
+        "name": "Azure Container Registry installation docs",
+        "description": "Monitor Azure Container Registry by connecting Azure to New Relic.\n",
+        "url": "https://docs.newrelic.com/docs/infrastructure/microsoft-azure-integrations/azure-integrations-list/azure-containers-monitoring-integration/"
+      }
+    ],
+    "installPlans": []
   },
   {
     "title": "AWS Enhanced Monitoring",
@@ -15495,8 +15691,8 @@
     ],
     "alerts": [
       {
-        "name": "Transaction Errors",
-        "details": "This alert is triggered when the transactions fail more than 10% of the time in 5 minutes.",
+        "name": "High CPU Utilization",
+        "details": "This alert is triggered when the CPU Utilization is above 90%.",
         "type": "STATIC",
         "url": null
       },
@@ -15507,14 +15703,14 @@
         "url": null
       },
       {
-        "name": "High CPU Utilization",
-        "details": "This alert is triggered when the CPU Utilization is above 90%.",
+        "name": "Memory Usage",
+        "details": "This alert is triggered when Memory usage is above 90%.",
         "type": "STATIC",
         "url": null
       },
       {
-        "name": "Memory Usage",
-        "details": "This alert is triggered when Memory usage is above 90%.",
+        "name": "Transaction Errors",
+        "details": "This alert is triggered when the transactions fail more than 10% of the time in 5 minutes.",
         "type": "STATIC",
         "url": null
       }
@@ -16317,6 +16513,14 @@
     ],
     "dashboards": [
       {
+        "name": "Lacework Security Overview",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/lacework-security-overview/lacework-security-overview01.png"
+        ]
+      },
+      {
         "name": "Lacework Anomaly Detections",
         "description": null,
         "url": null,
@@ -16330,14 +16534,6 @@
         "url": null,
         "screenshots": [
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/lacework-compliance-violations/lacework-compliance-violations01.png"
-        ]
-      },
-      {
-        "name": "Lacework Security Overview",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/lacework-security-overview/lacework-security-overview01.png"
         ]
       }
     ],
@@ -17254,6 +17450,45 @@
     ]
   },
   {
+    "title": "Azure App Configuration",
+    "name": "azure-app-configuration",
+    "description": "## What is Azure App Configuration?\n\n Azure App Configuration provides a service to centrally manage application settings and feature flags.\n\n ### New Relic Azure AppConfiguration quickstart features\n\n A standard dashboard that tracks key indicators like daily storage usage, http incoming request count, http incoming request duration and throttled http request count. It runs custom queries and visualizes the data immediately.\n\n ### Why monitor Azure AppConfiguration with New Relic?\n\n [New Relic Azure App Configuration](https://docs.newrelic.com/docs/infrastructure/microsoft-azure-integrations/azure-integrations-list/azure-app-configuration-monitoring-integration/) monitoring quickstart empowers you to track the performance of Azure App Configuration via different metrics including daily storage usage, http incoming request count, http incoming request duration and throttled http request count.\n \n  Our integration features a standard dashboard that provides interactive visualizations to explore your data, understand context, and get valuable insights.\n \n Start ingesting your Azure data today and get immediate access to our visualization dashboards so you can optimize your Azure service.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/azure/azure-app-configuration",
+    "id": "936ad19f-b447-4d17-a7f6-9fee6df5d94a",
+    "level": "NEW_RELIC",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/azure/azure-app-configuration/logo.png",
+    "summary": "Monitoring Azure App Configuration is critical to track the performance through key metrics. Download New Relic Azure App Configuration monitoring quickstart to get a pre-built dashboard tailored to monitor your Azure App Configuration Service.",
+    "websiteUrl": null,
+    "keywords": [
+      "azure",
+      "app configuration",
+      "product partnerships"
+    ],
+    "authors": [
+      "New Relic",
+      "New Relic Partner"
+    ],
+    "dashboards": [
+      {
+        "name": "Azure App Configuration",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/azure-app-configuration/azure-app-configuration.png"
+        ]
+      }
+    ],
+    "alerts": [],
+    "documentation": [
+      {
+        "name": "Azure App Configuration installation docs.",
+        "description": "Monitor Azure App Configuration by connecting Azure to New Relic.\n",
+        "url": "https://docs.newrelic.com/docs/infrastructure/microsoft-azure-integrations/azure-integrations-list/azure-app-configuration-monitoring-integration/"
+      }
+    ],
+    "installPlans": []
+  },
+  {
     "title": "Delphix",
     "name": "delphix",
     "description": "### Summary\n\nThe Delphix quickstart for New Relic grants insights and observability of the Delphix Platform to administrators. Users may monitor various Delphix objects, such as dSources and VDBs, and trigger alerts on exceeded thresholds. \n\nIn addition, when leveraging the Delphix integration, users can feed data into triggered New Relic workflows to command data-ready RCA environments through a [ServiceNow automated request](https://store.servicenow.com/sn_appstore_store.do#!/store/application/bb688f9f9734111012b7318c1253af11) or direct webhook.\n\n### What's the value?\n\nThe Delphix Platform is a powerful test data management tool enabling the provisioning of RCA environments for mission-critical applications on demand. The quickstart allows Delphix administrators to monitor their usage, maintain high availability, and reduce the costs of forgotten virtual databases. \n\nSite Reliability Engineers rely on Delphix and New Relic to provide mission-critical application environments within minutes of an issue which eases investigation during stressful issues and helps achieve SLA times. Delphix can reduce provisioning times from days to minutes.\n\n### What's inside?\n\nThe quickstart contains a sample Delphix Platform Dashboard and Storage Utilization Alert to help users get started. \n\nPopulating data for dashboards, alerts, and workflows requires the [Delphix Integration](https://github.com/delphix/dct-newrelic-integration) and [Delphix Data Control Tower](https://docs.delphix.com/dct).",
@@ -17675,14 +17910,14 @@
     ],
     "alerts": [
       {
-        "name": "Apdex Score",
-        "details": "This alert is triggered when the Apdex score is below 0.5 for 5 minutes",
+        "name": "Memory Usage",
+        "details": "This alert is triggered when Memory usage is above 90%",
         "type": "STATIC",
         "url": null
       },
       {
-        "name": "Memory Usage",
-        "details": "This alert is triggered when Memory usage is above 90%",
+        "name": "Apdex Score",
+        "details": "This alert is triggered when the Apdex score is below 0.5 for 5 minutes",
         "type": "STATIC",
         "url": null
       },
@@ -18177,14 +18412,14 @@
     ],
     "alerts": [
       {
-        "name": "High Memory Usage",
-        "details": "This alert is triggered when the Memory Usage is above 95% for at least 15 minutes.",
+        "name": "High CPU Utilization",
+        "details": "This alert is triggered when the CPU Utilization is above 90% for at least 10 minutes.",
         "type": "STATIC",
         "url": null
       },
       {
-        "name": "High CPU Utilization",
-        "details": "This alert is triggered when the CPU Utilization is above 90% for at least 10 minutes.",
+        "name": "High Memory Usage",
+        "details": "This alert is triggered when the Memory Usage is above 95% for at least 15 minutes.",
         "type": "STATIC",
         "url": null
       }
@@ -18241,6 +18476,30 @@
     ],
     "alerts": [
       {
+        "name": "Slow lease requests",
+        "details": "This alert triggers when there are > 0 slow lease requests for over 5 minutes. The alert threshold can be changed to your acceptable slow request requirements.",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "Slow raft requests",
+        "details": "This alert triggers when there are > 0 slow raft requests for over 5 minutes. The alert threshold can be changed to your acceptable slow request requirements.",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "UI CA certificate expiration",
+        "details": "This alert is triggered when there are less than 90 days remaining for UI CA certificate expiration. The alert threshold can be changed to your desired expiration alerting requirements.",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "UI certificate expiration",
+        "details": "This alert is triggered when there are less than 30 days remaining for UI certificate expiration. The alert threshold can be changed to your desired expiration alerting requirements.",
+        "type": "STATIC",
+        "url": null
+      },
+      {
         "name": "CA certificate expiration",
         "details": "This alert is triggered when there are less than 90 days remaining for CA certificate expiration. The alert threshold can be changed to your desired expiration alerting requirements.",
         "type": "STATIC",
@@ -18291,30 +18550,6 @@
       {
         "name": "Slow latch requests",
         "details": "This alert triggers when there are > 0 slow latch requests for over 5 minutes. The alert threshold can be changed to your acceptable slow request requirements.",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "Slow lease requests",
-        "details": "This alert triggers when there are > 0 slow lease requests for over 5 minutes. The alert threshold can be changed to your acceptable slow request requirements.",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "Slow raft requests",
-        "details": "This alert triggers when there are > 0 slow raft requests for over 5 minutes. The alert threshold can be changed to your acceptable slow request requirements.",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "UI CA certificate expiration",
-        "details": "This alert is triggered when there are less than 90 days remaining for UI CA certificate expiration. The alert threshold can be changed to your desired expiration alerting requirements.",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "UI certificate expiration",
-        "details": "This alert is triggered when there are less than 30 days remaining for UI certificate expiration. The alert threshold can be changed to your desired expiration alerting requirements.",
         "type": "STATIC",
         "url": null
       }
@@ -18509,6 +18744,12 @@
     ],
     "alerts": [
       {
+        "name": "Memory Usage",
+        "details": "This alert is triggered when Memory usage is above 90%",
+        "type": "STATIC",
+        "url": null
+      },
+      {
         "name": "Apdex Score",
         "details": "This alert is triggered when the Apdex score is below 0.5 for 5 minutes",
         "type": "STATIC",
@@ -18517,12 +18758,6 @@
       {
         "name": "High CPU Utilization",
         "details": "This alert is triggered when the CPU Utilization is above 90%.",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "Memory Usage",
-        "details": "This alert is triggered when Memory usage is above 90%",
         "type": "STATIC",
         "url": null
       },
@@ -18684,14 +18919,14 @@
     ],
     "alerts": [
       {
-        "name": "High CPU Utilization",
-        "details": "This alert is triggered when the CPU Utilization is above 90%.",
+        "name": "Transaction Errors",
+        "details": "This alert is triggered when the the transactions fail more than 10% of the time in 5 minutes.",
         "type": "STATIC",
         "url": null
       },
       {
-        "name": "Transaction Errors",
-        "details": "This alert is triggered when the the transactions fail more than 10% of the time in 5 minutes.",
+        "name": "High CPU Utilization",
+        "details": "This alert is triggered when the CPU Utilization is above 90%.",
         "type": "STATIC",
         "url": null
       }
@@ -19158,6 +19393,12 @@
     ],
     "alerts": [
       {
+        "name": "Low throughput",
+        "details": "This alert is triggered when the throughput is 0 for 5 minutes",
+        "type": "STATIC",
+        "url": null
+      },
+      {
         "name": "High duration",
         "details": "This alert is triggered when the total duration of the web transaction is longer than 10 seconds during 5 minutes",
         "type": "STATIC",
@@ -19166,12 +19407,6 @@
       {
         "name": "High error rate",
         "details": "This alert is triggered when the error percentage of web transactions is higher than 5% during 5 minutes",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "Low throughput",
-        "details": "This alert is triggered when the throughput is 0 for 5 minutes",
         "type": "STATIC",
         "url": null
       }
@@ -19594,6 +19829,12 @@
     ],
     "alerts": [
       {
+        "name": "Memory Usage",
+        "details": "This alert is triggered when Memory usage is above 90%",
+        "type": "STATIC",
+        "url": null
+      },
+      {
         "name": "Apdex Score",
         "details": "This alert is triggered when the Apdex score is below 0.5 for 5 minutes",
         "type": "STATIC",
@@ -19602,12 +19843,6 @@
       {
         "name": "High CPU Utilization",
         "details": "This alert is triggered when the CPU Utilization is above 90%.",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "Memory Usage",
-        "details": "This alert is triggered when Memory usage is above 90%",
         "type": "STATIC",
         "url": null
       },
@@ -19914,14 +20149,14 @@
     ],
     "alerts": [
       {
-        "name": "Job Manager Heap Memory Usage",
-        "details": "This alert is triggered when the job manager heap memory usage is higher than 10 MB during 5 minutes.",
+        "name": "Failed Checkpoints",
+        "details": "This alert is triggered when the failed checkpoints is higher than 3 during 5 minutes.",
         "type": "STATIC",
         "url": null
       },
       {
-        "name": "Failed Checkpoints",
-        "details": "This alert is triggered when the failed checkpoints is higher than 3 during 5 minutes.",
+        "name": "Job Manager Heap Memory Usage",
+        "details": "This alert is triggered when the job manager heap memory usage is higher than 10 MB during 5 minutes.",
         "type": "STATIC",
         "url": null
       },
@@ -20473,6 +20708,43 @@
     ]
   },
   {
+    "title": "Azure DNS Zones",
+    "name": "azure-dns-zones",
+    "description": "## What is Azure DNS zones?\n\nAzure DNS is a hosting service for DNS domains that provides name resolution by using Microsoft Azure infrastructure. By hosting your domains in Azure, you can manage your DNS records by using the same credentials, APIs, tools and billing as your other Azure services.\n\n### New Relic Azure DNS Zones quickstart features\n\nA standard dashboard that tracks key indicators like query volume, record set capacity utilization and record set count. It runs custom queries and visualizes the data immediately.\n\n### Why monitor Azure DNS Zones with New Relic?\n\n[New Relic Azure DNS Zones](https://docs.newrelic.com/docs/infrastructure/microsoft-azure-integrations/azure-integrations-list/azure-dns-zones-monitoring-integration/) monitoring quickstart empowers you to track the performance of Azure DNS Zones via different metrics including query volume, record set capacity utilization and record set count. \n\nOur integration features a standard dashboard that provides interactive visualizations to explore your data, understand context, and get valuable insights.\n\nStart ingesting your Azure data today and get immediate access to our visualization dashboards so you can optimize your Azure service.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/azure/azure-dns-zones",
+    "id": "98803980-ab2e-4018-8103-ff9a9847dfa8",
+    "level": "NEW_RELIC",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/azure/azure-dns-zones/logo.png",
+    "summary": "Monitoring Azure DNS Zones is critical to track the performance through key metrics. Download New Relic Azure Dns Zones monitoring quickstart to get a pre-built dashboard tailored to monitor your Azure DNS Zones Service.",
+    "websiteUrl": null,
+    "keywords": [
+      "azure",
+      "dns zones",
+      "product partnerships"
+    ],
+    "authors": [
+      "New Relic",
+      "New Relic Partner"
+    ],
+    "dashboards": [
+      {
+        "name": "Azure DNS Zones",
+        "description": null,
+        "url": null,
+        "screenshots": []
+      }
+    ],
+    "alerts": [],
+    "documentation": [
+      {
+        "name": "Azure DNS Zones installation docs",
+        "description": "Monitor Azure DNS Zones by connecting Azure to New Relic.\n",
+        "url": "https://docs.newrelic.com/docs/infrastructure/microsoft-azure-integrations/azure-integrations-list/azure-dns-zones-monitoring-integration/"
+      }
+    ],
+    "installPlans": []
+  },
+  {
     "title": "ServiceNow Notifications",
     "name": "servicenow-notifications",
     "description": "ServiceNow is a software that helps companies manage digital workflows for enterprise operations.\n\nIntegrate New Relic with ServiceNow Incident-Management and automatically create and update incidents.\n\n[Check out our documentation](https://docs.newrelic.com/docs/alerts-applied-intelligence/notifications/notification-integrations/#servicenow) to set up a ServiceNow notification channel and provide fast and consistent ways for the right personnel to be notified about incidents",
@@ -20736,6 +21008,14 @@
     ],
     "dashboards": [
       {
+        "name": "Catchpoint-Overview",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/catchpoint-overview/Catchpoint-Overview.png"
+        ]
+      },
+      {
         "name": "Catchpoint-Test Times",
         "description": null,
         "url": null,
@@ -20757,14 +21037,6 @@
         "url": null,
         "screenshots": [
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/catchpoint-recent-errors/Catchpoint-Recent_Errors.png"
-        ]
-      },
-      {
-        "name": "Catchpoint-Overview",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/catchpoint-overview/Catchpoint-Overview.png"
         ]
       }
     ],
@@ -21103,14 +21375,14 @@
     ],
     "documentation": [
       {
-        "name": "Prometheus OpenMetrics Intergration (POMI) installation docs",
-        "description": "To view the Istio Quickstart, the Kubernetes New Relic integration with the Prometheus OpenMetrics Integration (POMI) must be installed prior.\n",
-        "url": "https://docs.newrelic.com/docs/infrastructure/prometheus-integrations/get-started/send-prometheus-metric-data-new-relic"
-      },
-      {
         "name": "Kubernetes installation docs",
         "description": "To view the Istio Quickstart, the Kubernetes New Relic integration with the Prometheus OpenMetrics Integration (POMI) must be installed prior.\n",
         "url": "https://docs.newrelic.com/docs/integrations/host-integrations/host-integrations-list/kubernetes-monitoring-integration"
+      },
+      {
+        "name": "Prometheus OpenMetrics Intergration (POMI) installation docs",
+        "description": "To view the Istio Quickstart, the Kubernetes New Relic integration with the Prometheus OpenMetrics Integration (POMI) must be installed prior.\n",
+        "url": "https://docs.newrelic.com/docs/infrastructure/prometheus-integrations/get-started/send-prometheus-metric-data-new-relic"
       }
     ],
     "installPlans": [
@@ -21161,14 +21433,14 @@
     ],
     "alerts": [
       {
-        "name": "Transaction Errors",
-        "details": "This alert is triggered when the the transactions fail more than 10% of the time in 5 minutes.",
+        "name": "High CPU Utilization",
+        "details": "This alert is triggered when the CPU Utilization is above 90%.",
         "type": "STATIC",
         "url": null
       },
       {
-        "name": "High CPU Utilization",
-        "details": "This alert is triggered when the CPU Utilization is above 90%.",
+        "name": "Transaction Errors",
+        "details": "This alert is triggered when the the transactions fail more than 10% of the time in 5 minutes.",
         "type": "STATIC",
         "url": null
       }
@@ -21352,14 +21624,14 @@
     ],
     "alerts": [
       {
-        "name": "High CPU Utilization",
-        "details": "This alert is triggered when the CPU Utilization is above 90%.",
+        "name": "Transaction Errors",
+        "details": "This alert is triggered when the the transactions fail more than 10% of the time in 5 minutes.",
         "type": "STATIC",
         "url": null
       },
       {
-        "name": "Transaction Errors",
-        "details": "This alert is triggered when the the transactions fail more than 10% of the time in 5 minutes.",
+        "name": "High CPU Utilization",
+        "details": "This alert is triggered when the CPU Utilization is above 90%.",
         "type": "STATIC",
         "url": null
       }
@@ -21685,14 +21957,14 @@
     "alerts": [],
     "documentation": [
       {
-        "name": "Install README",
-        "description": "Guides you on how to customize the dashboard once you've installed it\n",
-        "url": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/oma-bofu#readme"
-      },
-      {
         "name": "Implementation guide",
         "description": "Explains what bottom of the funnel analysis is and how to apply it\n",
         "url": "https://docs.newrelic.com/docs/new-relic-solutions/observability-maturity/customer-experience/bottom-funnel-analysis-customer-journey-guide"
+      },
+      {
+        "name": "Install README",
+        "description": "Guides you on how to customize the dashboard once you've installed it\n",
+        "url": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/oma-bofu#readme"
       }
     ],
     "installPlans": [
@@ -21769,12 +22041,6 @@
     ],
     "alerts": [
       {
-        "name": "High duration",
-        "details": "This alert is triggered when the total duration of the web transaction is longer than 10 seconds during 5 minutes",
-        "type": "STATIC",
-        "url": null
-      },
-      {
         "name": "High error rate",
         "details": "This alert is triggered when the error percentage of web transactions is higher than 5% during 5 minutes",
         "type": "STATIC",
@@ -21783,6 +22049,12 @@
       {
         "name": "Low throughput",
         "details": "This alert is triggered when the throughput is 0 for 5 minutes",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "High duration",
+        "details": "This alert is triggered when the total duration of the web transaction is longer than 10 seconds during 5 minutes",
         "type": "STATIC",
         "url": null
       }
@@ -22128,12 +22400,6 @@
     ],
     "alerts": [
       {
-        "name": "Transaction Errors",
-        "details": "This alert is triggered when the the transactions fail more than 10% of the time in 5 minutes.",
-        "type": "STATIC",
-        "url": null
-      },
-      {
         "name": "Apdex Score",
         "details": "This alert is triggered when the Apdex score is below 0.5 for 5 minutes",
         "type": "STATIC",
@@ -22148,6 +22414,12 @@
       {
         "name": "Memory Usage",
         "details": "This alert is triggered when Memory usage is above 90%",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "Transaction Errors",
+        "details": "This alert is triggered when the the transactions fail more than 10% of the time in 5 minutes.",
         "type": "STATIC",
         "url": null
       }
@@ -22429,6 +22701,44 @@
         "id": "third-party-datastream2-akamai"
       }
     ]
+  },
+  {
+    "title": "Azure Event Grid Subscriptions",
+    "name": "azure-event-grid-subscriptions",
+    "description": "## What is Azure Event Grid Subscriptions?\n\nAzure Event Grid Subscriptions tells Event Grid which events on a topic you're interested in receiving. The endpoint or built-in mechanism to route events, sometimes to more than one handler. Subscriptions are also used by handlers to intelligently filter incoming events.\n\n### New Relic Azure Event Grid Subscriptions quickstart features\n\nA standard dashboard that tracks key indicators like delivery failed events, delivered events, dropped events and matched events. It runs custom queries and visualizes the data immediately\n\n\n### Why monitor Azure Event Grid Subscriptions with New Relic?\n\n[New Relic Azure Event Grid Subscriptions](https://docs.newrelic.com/docs/infrastructure/microsoft-azure-integrations/azure-integrations-list/azure-event-grid-subscription-monitoring-integration/) monitoring quickstart empowers you to track the performance of Azure event grid subscriptions via different metrics including delivery failed events, delivered events, dropped events and matched events.\n\nOur integration features a standard dashboard that provides interactive visualizations to explore your data, understand context, and get valuable insights.\n\nStart ingesting your Azure data today and get immediate access to our visualization dashboards so you can optimize your Azure service.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/azure/azure-event-grid-subscriptions",
+    "id": "c5ab28e0-e920-4d36-8c29-2fe7d5ce48f1",
+    "level": "NEW_RELIC",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/azure/azure-event-grid-subscriptions/logo.png",
+    "summary": "Monitoring Azure Event Grid Subscriptions is critical to track the performance through key metrics. Download New Relic Azure Event Grid Subscriptions monitoring quickstart to  get a pre-built dashboard tailored to monitor your Azure Event Grid Subscriptions Service.",
+    "websiteUrl": null,
+    "keywords": [
+      "azure",
+      "event grid",
+      "event grid subscriptions",
+      "product partnerships"
+    ],
+    "authors": [
+      "New Relic",
+      "New Relic Partner"
+    ],
+    "dashboards": [
+      {
+        "name": "Azure Event Grid Subscriptions",
+        "description": null,
+        "url": null,
+        "screenshots": []
+      }
+    ],
+    "alerts": [],
+    "documentation": [
+      {
+        "name": "Azure Event Grid Subscriptions installation docs",
+        "description": "Monitor Azure Event Grid Subscriptions by connecting Azure to New Relic.\n",
+        "url": "https://docs.newrelic.com/docs/infrastructure/microsoft-azure-integrations/azure-integrations-list/azure-event-grid-subscription-monitoring-integration/"
+      }
+    ],
+    "installPlans": []
   },
   {
     "title": "ASP .NET MVC",
@@ -23118,6 +23428,44 @@
     ]
   },
   {
+    "title": "Azure Event Grid Topics",
+    "name": "azure-event-grid-topics",
+    "description": "## What is Azure Event Grid Topics?\n\nEvent Grid is a highly scalable, serverless event broker that you can use to integrate applications using events. Event Grid topic provides an endpoint where the source sends events. A topic is used for a collection of related events. To respond to certain types of events, subscribers decide which topics to subscribe to.\n\n### New Relic Azure Event Grid Topics quickstart features\n\nA standard dashboard that tracks key indicators like delivery success count, matched event count, publish success count. It runs custom queries and visualizes the data immediately.\n\n\n### Why monitor Azure Event Grid Topics with New Relic?\n\n[New Relic Azure Event Grid Topics](https://docs.newrelic.com/docs/infrastructure/microsoft-azure-integrations/azure-integrations-list/azure-event-grid-topics-monitoring-integration/) monitoring quickstart empowers you to track the performance of Azure Batch via different metrics including delivery success count, matched event count, publish success count. \n\nOur integration features a standard dashboard that provides interactive visualizations to explore your data, understand context and get valuable insights.\n\nStart ingesting your Azure data today and get immediate access to our visualization dashboards so you can optimize your Azure service.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/azure/azure-event-grid-topics",
+    "id": "0c301dd2-2eef-458a-9e1f-9d4fd4f9e944",
+    "level": "NEW_RELIC",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/azure/azure-event-grid-topics/logo.png",
+    "summary": "Monitoring Azure Event Grid Topics is critical to track the performance through key metrics. Download New Relic Azure Event Grid Topics monitoring quickstart to get a pre-built dashboard tailored to monitor your Azure Event Grid Topics Service.",
+    "websiteUrl": null,
+    "keywords": [
+      "azure",
+      "event grid",
+      "event grid topics",
+      "product partnerships"
+    ],
+    "authors": [
+      "New Relic",
+      "New Relic Partner"
+    ],
+    "dashboards": [
+      {
+        "name": "Azure Event Grid Topics",
+        "description": null,
+        "url": null,
+        "screenshots": []
+      }
+    ],
+    "alerts": [],
+    "documentation": [
+      {
+        "name": "Azure Event Grid Topics installation docs",
+        "description": "Monitor Azure Event Grid Topics by connecting Azure to New Relic.\n",
+        "url": "https://docs.newrelic.com/docs/infrastructure/microsoft-azure-integrations/azure-integrations-list/azure-event-grid-topics-monitoring-integration/"
+      }
+    ],
+    "installPlans": []
+  },
+  {
     "title": "Amazon VPC Flow Logs",
     "name": "aws-vpc-flow-logs",
     "description": "## What is Amazon VPC Flow Logs monitoring via Kinesis Data Firehose?\n\nEnables you to capture information about the IP traffic going to and from\nnetwork interfaces in your Amazon VPC. Kinesis Data Firehose helps you reduce\nthe friction of sending logs to New Relic. With VPC flow logs from across\nyour Amazon estates, you can quickly understand key insights for performance\nanalytics and troubleshooting network connectivity.\n\n### Get started!\n\nStart monitoring Amazon VPC Flow Logs by connecting Amazon Web Services (AWS) to New Relic!\n\nCheck out our Amazon VPC Flow Logs documentation to instrument your cloud service and manage the stability, scalability, and reliability of your systems with New Relic's network monitoring capabilities.\n\n### More info\n\nCheck out the [documentation](https://docs.newrelic.com/docs/network-performance-monitoring/setup-performance-monitoring/cloud-flow-logs/aws-vpc-flow-log-monitoring/) to learn more about New Relic monitoring for Amazon VPC Flow Logs.",
@@ -23695,14 +24043,14 @@
     ],
     "alerts": [
       {
-        "name": "Transaction Errors",
-        "details": "This alert is triggered when the the transactions fail more than 10% of the time in 5 minutes.",
+        "name": "High CPU Utilization",
+        "details": "This alert is triggered when the CPU Utilization is above 90%.",
         "type": "STATIC",
         "url": null
       },
       {
-        "name": "High CPU Utilization",
-        "details": "This alert is triggered when the CPU Utilization is above 90%.",
+        "name": "Transaction Errors",
+        "details": "This alert is triggered when the the transactions fail more than 10% of the time in 5 minutes.",
         "type": "STATIC",
         "url": null
       }
@@ -23822,14 +24170,14 @@
     ],
     "alerts": [
       {
-        "name": "Transaction Errors",
-        "details": "This alert is triggered when the the transactions fail more than 10% of the time in 5 minutes.",
+        "name": "High CPU Utilization",
+        "details": "This alert is triggered when the CPU Utilization is above 90%.",
         "type": "STATIC",
         "url": null
       },
       {
-        "name": "High CPU Utilization",
-        "details": "This alert is triggered when the CPU Utilization is above 90%.",
+        "name": "Transaction Errors",
+        "details": "This alert is triggered when the the transactions fail more than 10% of the time in 5 minutes.",
         "type": "STATIC",
         "url": null
       }
@@ -23885,14 +24233,14 @@
     ],
     "alerts": [
       {
-        "name": "High CPU Utilization",
-        "details": "This alert is triggered when the CPU Utilization is above 90%.",
+        "name": "Transaction Errors",
+        "details": "This alert is triggered when the the transactions fail more than 10% of the time in 5 minutes.",
         "type": "STATIC",
         "url": null
       },
       {
-        "name": "Transaction Errors",
-        "details": "This alert is triggered when the the transactions fail more than 10% of the time in 5 minutes.",
+        "name": "High CPU Utilization",
+        "details": "This alert is triggered when the CPU Utilization is above 90%.",
         "type": "STATIC",
         "url": null
       }
@@ -24384,12 +24732,6 @@
     ],
     "alerts": [
       {
-        "name": "Memory Usage",
-        "details": "This alert is triggered when Memory usage is above 90%",
-        "type": "STATIC",
-        "url": null
-      },
-      {
         "name": "Apdex Score",
         "details": "This alert is triggered when the Apdex score is below 0.5 for 5 minutes",
         "type": "STATIC",
@@ -24398,6 +24740,12 @@
       {
         "name": "High CPU Utilization",
         "details": "This alert is triggered when the CPU Utilization is above 90%.",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "Memory Usage",
+        "details": "This alert is triggered when Memory usage is above 90%",
         "type": "STATIC",
         "url": null
       },
@@ -24526,14 +24874,14 @@
     ],
     "alerts": [
       {
-        "name": "High CPU Utilization",
-        "details": "This alert is triggered when the CPU Utilization is above 90%.",
+        "name": "Apdex Score",
+        "details": "This alert is triggered when the Apdex score is below 0.5 for 5 minutes",
         "type": "STATIC",
         "url": null
       },
       {
-        "name": "Apdex Score",
-        "details": "This alert is triggered when the Apdex score is below 0.5 for 5 minutes",
+        "name": "High CPU Utilization",
+        "details": "This alert is triggered when the CPU Utilization is above 90%.",
         "type": "STATIC",
         "url": null
       },
@@ -25169,6 +25517,43 @@
     ]
   },
   {
+    "title": "Azure Event Grid Domains",
+    "name": "azure-event-grid-domains",
+    "description": "## What is Azure Event Grid Domains?\n\nEvent Grid Domains within the Event Grid service is a management capability to manage a large number of events. \n\n### New Relic Azure Event Grid Domains quickstart features\n\nA standard dashboard that tracks key indicators like dead lettered count, delivered events, dropped events and matched events. It runs custom queries and visualizes the data immediately.\n\n### Why monitor Azure Event Grid Domains with New Relic?\n\n[New Relic Azure Event Grid domains](https://docs.newrelic.com/docs/infrastructure/microsoft-azure-integrations/azure-integrations-list/azure-event-grid-domains-monitoring-integration/) monitoring quickstart empowers you to track the performance of Azure Event Grid Domains via different metrics including dead lettered count, delivered events, dropped events and matched events. \n\nOur integration features a standard dashboard that provides interactive visualizations to explore your data, understand context and get valuable insights.\n\nStart ingesting your Azure data today and get immediate access to our visualization dashboards so you can optimize your Azure service.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/azure/azure-event-grid-domains",
+    "id": "b7ada61a-95c7-48af-8260-27734c0d72af",
+    "level": "NEW_RELIC",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/azure/azure-event-grid-domains/logo.png",
+    "summary": "Monitoring Azure Event Grid Domains is critical to track the performance through key metrics. Download New Relic Azure Event Grid Domains monitoring quickstart to get a pre-built dashboard tailored to monitor your Azure Event Grid Domains Service.",
+    "websiteUrl": null,
+    "keywords": [
+      "azure",
+      "event grid domains",
+      "product partnerships"
+    ],
+    "authors": [
+      "New Relic",
+      "New Relic Partner"
+    ],
+    "dashboards": [
+      {
+        "name": "Azure Event Grid Domains",
+        "description": null,
+        "url": null,
+        "screenshots": []
+      }
+    ],
+    "alerts": [],
+    "documentation": [
+      {
+        "name": "Azure Event Grid Domains installation docs",
+        "description": "Monitor Azure Event Grid Domains by connecting Azure to New Relic.\n",
+        "url": "https://docs.newrelic.com/docs/infrastructure/microsoft-azure-integrations/azure-integrations-list/azure-event-grid-domains-monitoring-integration/"
+      }
+    ],
+    "installPlans": []
+  },
+  {
     "title": "Amazon Route 53",
     "name": "aws-route-53",
     "description": "## What is Amazon Route 53?\n\nRegister domain names, route Internet traffic to the appropriate resources,\nand check the health of your web app's resources.\n\n\n### Get started!\n\nStart monitoring Amazon Route 53 by connecting Amazon Web Services (AWS) to New Relic!\n\nCheck out our Amazon Route 53 documentation to instrument your cloud service and manage the stability, scalability, and reliability of your systems with New Relic's infrastructure monitoring capabilities.\n\n### More info\n\nCheck out the [documentation](https://docs.newrelic.com/docs/infrastructure/amazon-integrations/aws-integrations-list/aws-route-53-monitoring-integration/) to learn more about New Relic monitoring for Amazon Route 53.",
@@ -25621,14 +26006,14 @@
     ],
     "alerts": [
       {
-        "name": "High CPU Utilization",
-        "details": "This alert is triggered when the CPU Utilization is above 90%.",
+        "name": "Apdex Score",
+        "details": "This alert is triggered when the Apdex score is below 0.5 for 5 minutes",
         "type": "STATIC",
         "url": null
       },
       {
-        "name": "Apdex Score",
-        "details": "This alert is triggered when the Apdex score is below 0.5 for 5 minutes",
+        "name": "High CPU Utilization",
+        "details": "This alert is triggered when the CPU Utilization is above 90%.",
         "type": "STATIC",
         "url": null
       },
@@ -26368,6 +26753,12 @@
     ],
     "alerts": [
       {
+        "name": "High duration",
+        "details": "This alert is triggered when the total duration of the web transaction is longer than 10 seconds during 5 minutes",
+        "type": "STATIC",
+        "url": null
+      },
+      {
         "name": "High error rate",
         "details": "This alert is triggered when the error percentage of web transactions is higher than 5% during 5 minutes",
         "type": "STATIC",
@@ -26376,12 +26767,6 @@
       {
         "name": "Low throughput",
         "details": "This alert is triggered when the throughput is 0 for 5 minutes",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "High duration",
-        "details": "This alert is triggered when the total duration of the web transaction is longer than 10 seconds during 5 minutes",
         "type": "STATIC",
         "url": null
       }
@@ -26639,14 +27024,14 @@
     ],
     "alerts": [
       {
-        "name": "High CPU Utilization",
-        "details": "This alert is triggered when the CPU Utilization is above 90%.",
+        "name": "Apdex Score",
+        "details": "This alert is triggered when the Apdex score is below 0.5 for 5 minutes",
         "type": "STATIC",
         "url": null
       },
       {
-        "name": "Apdex Score",
-        "details": "This alert is triggered when the Apdex score is below 0.5 for 5 minutes",
+        "name": "High CPU Utilization",
+        "details": "This alert is triggered when the CPU Utilization is above 90%.",
         "type": "STATIC",
         "url": null
       },
@@ -27552,6 +27937,43 @@
     ]
   },
   {
+    "title": "Azure Event Grid Partner Namespaces",
+    "name": "azure-event-grid-partner-namespaces",
+    "description": "## What is Azure Event Grid Partner Namespaces?\n\nA partner namespace is a regional resource that has an endpoint to publish events to Azure Event Grid. Partner namespaces contain either channels or event channels (legacy resource).\n\n### New Relic Azure Event Grid Partner Namespaces quickstart features\n\nA standard dashboard that tracks key indicators like publish fail count, publish success count, publish success latency and unmatched event count. It runs custom queries and visualizes the data immediately.\n\n\n### Why monitor Azure Event Grid Partner Namespaces with New Relic?\n\n[New Relic Azure Event Grid Partner Namespaces](https://docs.newrelic.com/docs/infrastructure/microsoft-azure-integrations/azure-integrations-list/azure-event-grid-partner-namespaces-monitoring-integration/) monitoring quickstart empowers you to track the performance of Azure Event Grid Partner Namespaces via different metrics including publish fail count, publish success count, publish success latency and unmatched event count.\n\nOur integration features a standard dashboard that provides interactive visualizations to explore your data, understand context, and get valuable insights.\n\nStart ingesting your Azure data today and get immediate access to our visualization dashboards so you can optimize your Azure service.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/azure/azure-event-grid-partner-namespaces",
+    "id": "3f899a50-6bb4-4a2a-9238-f1865636172a",
+    "level": "NEW_RELIC",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/azure/azure-event-grid-partner-namespaces/logo.png",
+    "summary": "Monitoring Azure Event Grid Partner Namespaces is critical to track the performance through key metrics. Download New Relic Azure Event Grid Partner Namespaces monitoring quickstart to get a pre-built dashboard tailored to monitor your Azure Event Grid Partner Namespaces.",
+    "websiteUrl": null,
+    "keywords": [
+      "azure",
+      "event grid",
+      "product partnerships"
+    ],
+    "authors": [
+      "New Relic",
+      "New Relic Partner"
+    ],
+    "dashboards": [
+      {
+        "name": "Azure Event Grid Partner Namespaces",
+        "description": null,
+        "url": null,
+        "screenshots": []
+      }
+    ],
+    "alerts": [],
+    "documentation": [
+      {
+        "name": "Azure Event Grid Partner Namespaces installation docs",
+        "description": "Monitor Azure Event Grid Partner Namespaces by connecting Azure to New Relic.\n",
+        "url": "https://docs.newrelic.com/docs/infrastructure/microsoft-azure-integrations/azure-integrations-list/azure-event-grid-partner-namespaces-monitoring-integration/"
+      }
+    ],
+    "installPlans": []
+  },
+  {
     "title": "New Relic Audit",
     "name": "audit-events-analysis",
     "description": "Dashboard to analyse the New Relic Audit events that New Relic captures out of the box as an additional security measure for managing your New Relic account. This includes:\n\n- Individuals added or deleted\n- Role changes\n- Account changes made via API\n- Synthetic monitor changes\n- Dashboard deletion\n- Workload configuration changes\n\nAll New Relic accounts can query up to 13 months of account changes. To ensure account security, the audit logging NRQL query only tracks changes in your currently selected account. It does not show audit log events for any associated child accounts. To query changes in another account or sub-account, select the account and run a NRQL query there.\n\nAudit logging is different than configuring audit mode for your APM agent. APM audit mode records information about all data being transmitted from your app.",
@@ -27731,11 +28153,11 @@
     ],
     "dashboards": [
       {
-        "name": "Azure Integrations Data Ingest Analysis",
+        "name": "GCP Integrations Data Ingest Analysis",
         "description": null,
         "url": null,
         "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/azure-integrations-data-ingest-analysis/azure-integrations-data-ingest-analysis.png"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/gcp-integrations-data-ingest-analysis/gcp-integrations-data-ingest-analysis.png"
         ]
       },
       {
@@ -27744,14 +28166,6 @@
         "url": null,
         "screenshots": [
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/aws-integrations-data-ingest-analysis/aws-integrations-data-ingest-analysis.png"
-        ]
-      },
-      {
-        "name": "GCP Integrations Data Ingest Analysis",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/gcp-integrations-data-ingest-analysis/gcp-integrations-data-ingest-analysis.png"
         ]
       },
       {
@@ -27768,6 +28182,14 @@
         "url": null,
         "screenshots": [
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/on-host-integrations-data-analysis/on-host-integrations-data-analysis.png"
+        ]
+      },
+      {
+        "name": "Azure Integrations Data Ingest Analysis",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/azure-integrations-data-ingest-analysis/azure-integrations-data-ingest-analysis.png"
         ]
       }
     ],
@@ -27811,19 +28233,11 @@
     ],
     "dashboards": [
       {
-        "name": "Amazon Security Lake - VPC flow logs",
+        "name": "Amazon Security Lake - Cloudtrail",
         "description": null,
         "url": null,
         "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/amazon-security-lake-vpc-flowlogs/amazon-security-lake-vpc-flowlogs01.png"
-        ]
-      },
-      {
-        "name": "Amazon Security Lake - Security Hub",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/amazon-security-lake-security-hub/amazon-security-lake-security-hub01.png"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/amazon-security-lake-cloudtrail-logs/amazon-security-lake-cloudtrail-logs01.png"
         ]
       },
       {
@@ -27835,11 +28249,19 @@
         ]
       },
       {
-        "name": "Amazon Security Lake - Cloudtrail",
+        "name": "Amazon Security Lake - Security Hub",
         "description": null,
         "url": null,
         "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/amazon-security-lake-cloudtrail-logs/amazon-security-lake-cloudtrail-logs01.png"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/amazon-security-lake-security-hub/amazon-security-lake-security-hub01.png"
+        ]
+      },
+      {
+        "name": "Amazon Security Lake - VPC flow logs",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/amazon-security-lake-vpc-flowlogs/amazon-security-lake-vpc-flowlogs01.png"
         ]
       }
     ],
@@ -28008,6 +28430,43 @@
     "installPlans": []
   },
   {
+    "title": "Azure Event Grid Partner Topics",
+    "name": "azure-event-grid-partner-topics",
+    "description": "## What is Azure Event Grid Partner Topics?\n\nEvent Grid's Partner Events allows customers to subscribe to events that originate in a registered system using the same mechanism they would use for any other event source on Azure, such as an Azure service.  \n\n### New Relic Azure Event Grid Partner Topics quickstart features\n\nA standard dashboard that tracks key indicators like delivery success count, matched event count, publish success count. It runs custom queries and visualizes the data immediately.\n\n### Why monitor Azure Event Grid Partner Topics with New Relic?\n\n[New Relic Azure Event Grid Partner Topics](https://docs.newrelic.com/docs/infrastructure/microsoft-azure-integrations/azure-integrations-list/azure-eventgrid-Partner-topics-monitoring-integration/) monitoring quickstart empowers you to track the performance of Azure partner topics via different metrics including delivery success count, matched event count, publish success count. \n\nOur integration features a standard dashboard that provides interactive visualizations to explore your data, understand context, and get valuable insights.\n\nStart ingesting your Azure data today and get immediate access to our visualization dashboards so you can optimize your Azure service.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/azure/azure-event-grid-partner-topics",
+    "id": "de0c7325-e684-4e6e-8156-c02651f64104",
+    "level": "NEW_RELIC",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/azure/azure-event-grid-partner-topics/logo.png",
+    "summary": "Monitoring Azure Event Grid Partner Topics is critical to track the performance through key metrics. Download New Relic Azure Event Grid Partner Topics monitoring quickstart to get a pre-built dashboard tailored to monitor your Azure Event Grid Partner Topics Service.",
+    "websiteUrl": null,
+    "keywords": [
+      "azure",
+      "event grid",
+      "product partnerships"
+    ],
+    "authors": [
+      "New Relic",
+      "New Relic Partner"
+    ],
+    "dashboards": [
+      {
+        "name": "Azure Event Grid Partner Topics",
+        "description": null,
+        "url": null,
+        "screenshots": []
+      }
+    ],
+    "alerts": [],
+    "documentation": [
+      {
+        "name": "Azure Event Grid Partner Topics installation docs",
+        "description": "Monitor Azure Event Grid Partner Topics by connecting Azure to New Relic.\n",
+        "url": "https://docs.newrelic.com/docs/infrastructure/microsoft-azure-integrations/azure-integrations-list/azure-eventgrid-Partner-topics-monitoring-integration/"
+      }
+    ],
+    "installPlans": []
+  },
+  {
     "title": "Azure VPN Gateways",
     "name": "azure-vpn-gateways",
     "description": "## What is Azure VPN Gateways?\n\nUsed to send encrypted data between on-premises infrastructure and Azure\nservices.\n\n\n### Get started!\n\nStart monitoring Azure VPN Gateways by connecting Microsoft Azure to New Relic!\n\nCheck out our Azure VPN Gateways documentation to instrument your cloud service and manage the stability, scalability, and reliability of your systems with New Relic's infrastructure monitoring capabilities.\n\n### More info\n\nCheck out the [documentation](https://docs.newrelic.com/docs/infrastructure/microsoft-azure-integrations/azure-integrations-list/azure-vpn-gateway-integration/) to learn more about New Relic monitoring for Azure VPN Gateways.",
@@ -28106,6 +28565,45 @@
     ]
   },
   {
+    "title": "Azure Maps",
+    "name": "azure-maps",
+    "description": "## What is Azure Maps?\n\nAzure Maps is a collection of geospatial services and SDKs that use fresh mapping data to provide geographic context to web and mobile applications.\n\n### New Relic Azure Maps quickstart features\n\nA standard dashboard that tracks key indicators like availability, creator usage and usage. It runs custom queries and visualizes the data immediately.\n\n### Why monitor Azure Maps with New Relic?\n\n[New Relic Azure Maps](https://docs.newrelic.com/docs/infrastructure/microsoft-azure-integrations/azure-integrations-list/azure-maps-monitoring-integration/) monitoring quickstart empowers you to track the performance of Azure Maps via different metrics including availability, creator usage and usage. \n\nOur integration features a standard dashboard that provides interactive visualizations to explore your data, understand context and get valuable insights.\n\nStart ingesting your Azure data today and get immediate access to our visualization dashboards so you can optimize your Azure service.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/azure/azure-maps",
+    "id": "263cc05f-d01d-4313-a4aa-62df965c33f6",
+    "level": "NEW_RELIC",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/azure/azure-maps/logo.svg",
+    "summary": "Azure Maps is a collection of geospatial services and SDKs that use fresh mapping data to provide geographic context to web and mobile applications.",
+    "websiteUrl": null,
+    "keywords": [
+      "azure",
+      "maps",
+      "product partnerships"
+    ],
+    "authors": [
+      "New Relic",
+      "New Relic Partner"
+    ],
+    "dashboards": [
+      {
+        "name": "Azure Maps",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/azure-maps/azure-maps.png"
+        ]
+      }
+    ],
+    "alerts": [],
+    "documentation": [
+      {
+        "name": "Azure Maps installation docs",
+        "description": "Monitor Azure Maps by connecting Azure to New Relic.\n",
+        "url": "https://docs.newrelic.com/docs/infrastructure/microsoft-azure-integrations/azure-integrations-list/azure-maps-monitoring-integration/"
+      }
+    ],
+    "installPlans": []
+  },
+  {
     "title": "Amazon Verified Access",
     "name": "aws-verified-access",
     "description": "## What is Amazon Verified Access?\n\nAWS Verified Access allows you to provide secure network access without a VPN to corporate applications. Verified Access verifies each access request in real time and only connects users to the applications they are allowed to access, removing broad access to corporate applications, and reducing the associated risks.\n\n\n### Get started!\n\nStart monitoring Amazon Veried Access by using AWS Kenesis Firehose to send logs to New Relic! Take a look at our documentation for information on how to set this integration.\n\n### About this integration\n\nWith this integration, you can keep up with important information about your Verified Access logo.svg\n\n- Access attempt traffic\n- Top denied attempts by IP Address\n- Users attempting access from multiple IP Addresses\n- Top accessed applications\n- Real time logs on denied access attempts\n\n### More info\n\nCheck out the [documentation](https://docs.newrelic.com/docs/infrastructure/amazon-integrations/aws-integrations-list/aws-verified-access-monitoring-integration/) to learn more about New Relic monitoring for Amazon Verified Access.",
@@ -28182,6 +28680,43 @@
     ]
   },
   {
+    "title": "Azure Event Grid System Topics",
+    "name": "azure-event-grid-system-topics",
+    "description": "## What is Azure Event Grid System Topics?\n\nA system topic in Event Grid represents one or more events published by Azure services such as Azure storage and Azure event hubs. For example, a system topic may represent all blob events or only blob created and blob deleted events published for a specific storage account.  \n\n### New Relic Azure Event Grid System Topics quickstart features\n\nA standard dashboard that tracks key indicators like delivery success count, matched event count, publish success count. It runs custom queries and visualizes the data immediately.\n\n### Why monitor Azure Event Grid System Topics with New Relic?\n\n[New Relic Azure Event Grid System Topics](https://docs.newrelic.com/docs/infrastructure/microsoft-azure-integrations/azure-integrations-list/azure-event-grid-system-topics-monitoring-integration/) monitoring quickstart empowers you to track the performance of Azure system topics via different metrics including delivery success count, matched event count, publish success count. \n\nOur integration features a standard dashboard that provides interactive visualizations to explore your data, understand context, and get valuable insights.\n\nStart ingesting your Azure data today and get immediate access to our visualization dashboards so you can optimize your Azure service.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/azure/azure-event-grid-system-topics",
+    "id": "d55a0980-e633-4ae0-9ea2-a6025f270c02",
+    "level": "NEW_RELIC",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/azure/azure-event-grid-system-topics/logo.png",
+    "summary": "Monitoring Azure Event Grid System Topics is critical to track the performance through key metrics. Download New Relic Azure Event Grid System Topics monitoring quickstart to get a pre-built dashboard tailored to monitor your Azure Event Grid System Topics Service.",
+    "websiteUrl": null,
+    "keywords": [
+      "azure",
+      "event grid",
+      "product partnerships"
+    ],
+    "authors": [
+      "New Relic",
+      "New Relic Partner"
+    ],
+    "dashboards": [
+      {
+        "name": "Azure Event Grid System Topics",
+        "description": null,
+        "url": null,
+        "screenshots": []
+      }
+    ],
+    "alerts": [],
+    "documentation": [
+      {
+        "name": "Azure Event Grid System Topics installation docs",
+        "description": "Monitor Azure Event Grid System Topics by connecting Azure to New Relic.\n",
+        "url": "https://docs.newrelic.com/docs/infrastructure/microsoft-azure-integrations/azure-integrations-list/azure-event-grid-system-topics-monitoring-integration/"
+      }
+    ],
+    "installPlans": []
+  },
+  {
     "title": "BizTalk360",
     "name": "biztalk360",
     "description": "## What's BizTalk360?  \nBizTalk360 is a one-stop tool for administration, monitoring and application performance management (APM) of BizTalk environments.\n\nTo be able to use the integration with New Relic from BizTalk360, you must have :\n- New Relic License to be configured in BizTalk360 Application. Download the latest version of BizTalk360 from [here](http://www.biztalk360.com/free-trial/)\n- BizTalk360 Platinum license .\n- You must be a Super User in your BizTalk360 application to configure the New Relic environment in BizTalk360\n\nBelow are some of the important performance metrics you can see in your Newrelic dashboard.  \n  \n- BizTalk and SQL Server Health\n  - CPU Usage\n  - Memory Usage\n  - Disk Free Space\n  - Average Disk Queue Length\n  - Network Performance\n\n- Host Performance\n  - Host Instance performance by CPU\n  - Host Instance Performance by Memory\n  - CPU Consuming Host Instances\n  - Top 10 Memory Consuming Host Instances\n\n- BizTalk Messaging Performance\n  - BizTalk Host Performance\n  - Documents Receive/Second\n  - Documents Processed/Second\n  - Inbound Latency (Sec)\n  - Outbound Latency (Sec)\n  - Outbound Adapter Latency (Sec)\n\n- Throttling Performance\n  - Message delivery Throttling State\n  - Message Publishing Throttling State\n  - Message Delivery Outgoing Rate\n  - Message Delivery Incoming Rate\n  - Active Instance Count",
@@ -28250,19 +28785,19 @@
     ],
     "dashboards": [
       {
-        "name": "Dapr System Services Dashboard",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/dapr-system-services/nr-dashboard-dapr-system-services.png"
-        ]
-      },
-      {
         "name": "Dapr Metrics",
         "description": null,
         "url": null,
         "screenshots": [
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/dapr-metrics/nr-dashboard-dapr-metrics.png"
+        ]
+      },
+      {
+        "name": "Dapr System Services Dashboard",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/dapr-system-services/nr-dashboard-dapr-system-services.png"
         ]
       }
     ],
@@ -28313,6 +28848,44 @@
         "id": "azure-infrastructure-monitoring"
       }
     ]
+  },
+  {
+    "title": "Azure Media Services Live Events",
+    "name": "azure-media-services-live-events",
+    "description": "## What is Azure Media Services Live Events?\n\nAzure Media Services Live Events is a service provided by Microsoft Azure that enables live video and audio streaming for various events such as conferences, webinars, concerts and sports events. It allows users to capture, encode, package and deliver live video content to audiences worldwide via the internet.  \n\n### New Relic Azure Media Services Live Events quickstart features\n\nA standard dashboard that tracks key indicators like ingest bitrate, ingest drift value, ingest last timestamp and live output last timestamp. It runs custom queries and visualizes the data immediately.\n\n### Why monitor Azure Media Services Live Events with New Relic?\n\n[New Relic Azure Media Services Live Events](https://docs.newrelic.com/docs/infrastructure/microsoft-azure-integrations/azure-integrations-list/azure-media-services-live-events-monitoring-integration/) monitoring quickstart empowers you to track the performance of Azure Media Services Live Events via different metrics including ingest bitrate, ingest drift value, ingest last timestamp and live output last timestamp.\n\nOur integration features a standard dashboard that provides interactive visualizations to explore your data, understand context and get valuable insights.\n\nStart ingesting your Azure data today and get immediate access to our visualization dashboards so you can optimize your Azure service.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/azure/azure-media-services-live-events",
+    "id": "50da112b-302d-4c4c-8672-d347aff1c36a",
+    "level": "NEW_RELIC",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/azure/azure-media-services-live-events/logo.png",
+    "summary": "Monitoring Azure Media Services Live Events is critical to track the performance of the live events via key metrics. Download New Relic Azure Media Services Live Events monitoring quickstart to get a pre-built dashboard tailored to monitor your Azure SignalR Service.",
+    "websiteUrl": null,
+    "keywords": [
+      "azure",
+      "media services",
+      "live events",
+      "product partnerships"
+    ],
+    "authors": [
+      "New Relic",
+      "New Relic Partner"
+    ],
+    "dashboards": [
+      {
+        "name": "Azure Media Services Live Events",
+        "description": null,
+        "url": null,
+        "screenshots": []
+      }
+    ],
+    "alerts": [],
+    "documentation": [
+      {
+        "name": "Azure Media Services Live Events installation docs",
+        "description": "Monitor Azure Media Services Live Events by connecting Azure to New Relic.\n",
+        "url": "https://docs.newrelic.com/docs/infrastructure/microsoft-azure-integrations/azure-integrations-list/azure-media-services-live-events-monitoring-integration/"
+      }
+    ],
+    "installPlans": []
   },
   {
     "title": "Blameless",
@@ -28671,78 +29244,6 @@
     ]
   },
   {
-    "title": "Browser examples",
-    "name": "browser-examples",
-    "description": "A set of example dashboards based on New Relic Browser agent data. Browser measures page load timing, also known as Real User Monitoring (RUM). But it goes far beyond that to measure:\n\n- Actual performance data, such as by page view popularity, filtered by geographical regions important to your business, or by user satisfaction (Apdex) scores\n\n- Perceived performance data that measures how quickly your async or dynamic visuals and interactive page contents display\n\n- JavaScript error analytics, stack traces, and source maps with line-of-code visibility, to show you the end-user steps leading up to an error itself\n\n- Session performance with a detailed timeline and heat map of the load and interaction events during a webpage's full life cycle\n\n- AJAX requests indicating problems with timing, end points, and specific locations in the webpage\n\n- Hash-based route changes in apps with single-page application (SPA) architectures",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/browser",
-    "id": "721fd258-326d-41f4-8f5d-0d5538ac7487",
-    "level": "NEW_RELIC",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/browser/logo.svg",
-    "summary": "Set of example dashboards based on New Relic Browser agent data.",
-    "websiteUrl": null,
-    "keywords": [
-      "browser agent",
-      "web",
-      "javascript",
-      "chrome",
-      "firefox",
-      "safari"
-    ],
-    "authors": [
-      "New Relic",
-      "Darren Doyle",
-      "Alex York"
-    ],
-    "dashboards": [
-      {
-        "name": "Browser Traffic Analysis",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/traffic-analysis/traffic_analysis.png"
-        ]
-      },
-      {
-        "name": "JavaScript Errors",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/javascript-errors/javascript_errors.png"
-        ]
-      },
-      {
-        "name": "Browser Overview",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/browser-overview/browser_overview.png"
-        ]
-      },
-      {
-        "name": "Browser Pages Dashboard",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/browser-pages-dashboard/browser_pages_dashboard.png"
-        ]
-      }
-    ],
-    "alerts": [],
-    "documentation": [
-      {
-        "name": "Browser",
-        "description": "With New Relic One's browser monitoring solution, you get full visibility into the complete webpage life cycle of your application or website",
-        "url": "https://docs.newrelic.com/docs/browser/"
-      }
-    ],
-    "installPlans": [
-      {
-        "name": "Browser",
-        "id": "browser-docs"
-      }
-    ]
-  },
-  {
     "title": "Couchbase",
     "name": "couchbase",
     "description": "Couchbase is an award-winning distributed NoSQL cloud database. It delivers unmatched versatility, performance, scalability, and financial value across cloud, on-premises, hybrid, distributed cloud, and edge computing deployments.\n\nAs a key-value and document database that’s memory first, Couchbase empowers developers to build responsive and flexible cloud, mobile, and edge computing applications that scale effortlessly.\n\nYou can use this quickstart together with the New Relic Couchbase On Host Integration to get insight into the performance of your Couchbase instances.",
@@ -28837,6 +29338,159 @@
       {
         "name": "Mobile Network Performance Install Plan",
         "id": "mobile-network-performance-install"
+      }
+    ]
+  },
+  {
+    "title": "Azure IoT Central Applications",
+    "name": "azure-iot-central-applications",
+    "description": "## What is Azure IoT Central Applications?\n\nIoT Central is an IoT application platform as a service (aPaaS) that reduces the burden and cost of developing, managing and maintaining IoT solutions. IoT Central streamlines the development of a complex and continually evolving IoT infrastructure by letting you to focus your efforts on determining the business impact you can create with the IoT data stream.\n\n### New Relic Azure IoT Central Applications quickstart features\n\nA standard dashboard that tracks key indicators like c2d commands success, connected device count, data export error and device data usage. It runs custom queries and visualizes the data immediately.\n\n### Why monitor Azure IoT Central Applications with New Relic?\n\n[New Relic Azure IoT Central Applications](https://docs.newrelic.com/docs/infrastructure/microsoft-azure-integrations/azure-integrations-list/azure-iot-central-applications-monitoring-integration/) monitoring quickstart empowers you to track the performance of Azure IoT Central Applications via different metrics including c2d commands success, connected device count, data export error and device data usage. \n\nOur integration features a standard dashboard that provides interactive visualizations to explore your data, understand context, and get valuable insights.\n\nStart ingesting your Azure data today and get immediate access to our visualization dashboards so you can optimize your Azure service.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/azure/azure-iot-central-applications",
+    "id": "911a0700-8e41-4bc7-b976-e662268792b5",
+    "level": "NEW_RELIC",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/azure/azure-iot-central-applications/logo.png",
+    "summary": "Monitoring Azure IoT Central Applications is critical to track the performance through key metrics. Download New Relic Azure IoT Central Applications monitoring quickstart to get a pre-built dashboard tailored to monitor your Azure IoT Central Applications Service.",
+    "websiteUrl": null,
+    "keywords": [
+      "azure",
+      "iot central applications",
+      "product partnerships"
+    ],
+    "authors": [
+      "New Relic",
+      "New Relic Partner"
+    ],
+    "dashboards": [
+      {
+        "name": "Azure IoT Central Applications",
+        "description": null,
+        "url": null,
+        "screenshots": []
+      }
+    ],
+    "alerts": [],
+    "documentation": [
+      {
+        "name": "Azure IoT Central Applications installation docs",
+        "description": "Monitor Azure IoT Central Applications by connecting Azure to New Relic.\n",
+        "url": "https://docs.newrelic.com/docs/infrastructure/microsoft-azure-integrations/azure-integrations-list/azure-iot-central-applications-monitoring-integration/"
+      }
+    ],
+    "installPlans": []
+  },
+  {
+    "title": "Browser examples",
+    "name": "browser-examples",
+    "description": "A set of example dashboards based on New Relic Browser agent data. Browser measures page load timing, also known as Real User Monitoring (RUM). But it goes far beyond that to measure:\n\n- Actual performance data, such as by page view popularity, filtered by geographical regions important to your business, or by user satisfaction (Apdex) scores\n\n- Perceived performance data that measures how quickly your async or dynamic visuals and interactive page contents display\n\n- JavaScript error analytics, stack traces, and source maps with line-of-code visibility, to show you the end-user steps leading up to an error itself\n\n- Session performance with a detailed timeline and heat map of the load and interaction events during a webpage's full life cycle\n\n- AJAX requests indicating problems with timing, end points, and specific locations in the webpage\n\n- Hash-based route changes in apps with single-page application (SPA) architectures",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/browser",
+    "id": "721fd258-326d-41f4-8f5d-0d5538ac7487",
+    "level": "NEW_RELIC",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/browser/logo.svg",
+    "summary": "Set of example dashboards based on New Relic Browser agent data.",
+    "websiteUrl": null,
+    "keywords": [
+      "browser agent",
+      "web",
+      "javascript",
+      "chrome",
+      "firefox",
+      "safari"
+    ],
+    "authors": [
+      "New Relic",
+      "Darren Doyle",
+      "Alex York",
+      "Kinsey"
+    ],
+    "dashboards": [
+      {
+        "name": "Browser Traffic Analysis",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/traffic-analysis/traffic_analysis.png"
+        ]
+      },
+      {
+        "name": "Browser Overview",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/browser-overview/browser_overview.png"
+        ]
+      },
+      {
+        "name": "JavaScript Errors",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/javascript-errors/javascript_errors.png"
+        ]
+      },
+      {
+        "name": "Browser Pages Dashboard",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/browser-pages-dashboard/browser_pages_dashboard.png"
+        ]
+      }
+    ],
+    "alerts": [
+      {
+        "name": "Ajax Response Codes (>= 300)",
+        "details": "This baseline alert condition evaluates deviations in Ajax response codes over 299.",
+        "type": "BASELINE",
+        "url": null
+      },
+      {
+        "name": "Ajax Throughput",
+        "details": "This baseline alert condition evaluates Ajax throughput deviations.",
+        "type": "BASELINE",
+        "url": null
+      },
+      {
+        "name": "Ajax Time to Settle Deviation",
+        "details": "This baseline alert condition evaluates Ajax time to settle deviations.",
+        "type": "BASELINE",
+        "url": null
+      },
+      {
+        "name": "First Input Delay (75 percentile) (ms)",
+        "details": "This baseline alert condition evaluates FID deviations.",
+        "type": "BASELINE",
+        "url": null
+      },
+      {
+        "name": "Largest Contentful Paint (75 percentile) (seconds)",
+        "details": "This baseline alert condition evaluates LCP deviations.",
+        "type": "BASELINE",
+        "url": null
+      },
+      {
+        "name": "Pageload times (seconds)",
+        "details": "This baseline alert condition evaluates pageload time deviations.",
+        "type": "BASELINE",
+        "url": null
+      },
+      {
+        "name": "Throughput",
+        "details": "This baseline alert condition evaluates throughput deviations.",
+        "type": "BASELINE",
+        "url": null
+      }
+    ],
+    "documentation": [
+      {
+        "name": "Browser",
+        "description": "With New Relic One's browser monitoring solution, you get full visibility into the complete webpage life cycle of your application or website",
+        "url": "https://docs.newrelic.com/docs/browser/"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "Browser",
+        "id": "browser-docs"
       }
     ]
   },
@@ -29048,14 +29702,14 @@
     ],
     "alerts": [
       {
-        "name": "Transaction Errors",
-        "details": "This alert is triggered when the the transactions fail more than 10% of the time in 5 minutes.",
+        "name": "High CPU Utilization",
+        "details": "This alert is triggered when the CPU Utilization is above 90%.",
         "type": "STATIC",
         "url": null
       },
       {
-        "name": "High CPU Utilization",
-        "details": "This alert is triggered when the CPU Utilization is above 90%.",
+        "name": "Transaction Errors",
+        "details": "This alert is triggered when the the transactions fail more than 10% of the time in 5 minutes.",
         "type": "STATIC",
         "url": null
       }
@@ -29297,6 +29951,43 @@
     ]
   },
   {
+    "title": "Azure Media Services Video Analyzer",
+    "name": "azure-media-services-video-analyzer",
+    "description": "## What is Azure Media Services Video Analyzer?\n\nAzure Video Analyzer for Media Azure Video Analyzer for Media, previously known as Azure Video Indexer, is available under AMS and also as a separate Azure service.\n\n### New Relic Azure Media Services Video Analyzer quickstart features\n\nA standard dashboard that tracks key indicators like ingress bytes and pipelines. It runs custom queries and visualizes the data immediately.\n\n\n### Why monitor Azure Media Services Video Analyzer with New Relic?\n\n[New Relic Azure Media Services Video Analyzer](https://docs.newrelic.com/docs/infrastructure/microsoft-azure-integrations/azure-integrations-list/azure-media-services-video-analyzer-monitoring-integration/) monitoring quickstart empowers you to track the performance of Azure Media Services Video Analyzer via different metrics including ingress bytes and pipelines.\n\nOur integration features a standard dashboard that provides interactive visualizations to explore your data, understand context and get valuable insights.\n\nStart ingesting your Azure data today and get immediate access to our visualization dashboards so you can optimize your Azure service.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/azure/azure-media-services-video-analyzer",
+    "id": "70512fed-b33b-48d6-95ae-60ad9415baa4",
+    "level": "NEW_RELIC",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/azure/azure-media-services-video-analyzer/logo.png",
+    "summary": "Monitoring Azure Media Services Video Analyzer is critical to track the performance of the video analyzer via key metrics. Download New Relic Azure Media Services Video Analyzer monitoring quickstart to get a pre-built dashboard tailored to monitor your Azure Media Services Video Analyzer Service.",
+    "websiteUrl": null,
+    "keywords": [
+      "azure",
+      "media services video analyzer",
+      "product partnerships"
+    ],
+    "authors": [
+      "New Relic",
+      "New Relic Partner"
+    ],
+    "dashboards": [
+      {
+        "name": "Azure Media Services Video Analyzer",
+        "description": null,
+        "url": null,
+        "screenshots": []
+      }
+    ],
+    "alerts": [],
+    "documentation": [
+      {
+        "name": "Azure Media Services Video Analyzer installation docs",
+        "description": "Monitor Azure Media Services Video Analyzer by connecting Azure to New Relic.\n",
+        "url": "https://docs.newrelic.com/docs/infrastructure/microsoft-azure-integrations/azure-integrations-list/azure-media-services-video-analyzer-monitoring-integration/"
+      }
+    ],
+    "installPlans": []
+  },
+  {
     "title": "Harbor (Prometheus)",
     "name": "harbor",
     "description": "The Harbor quickstart includes a dashboard and set of alerts that provides a holistic view of the Harbor instances in your environment. Information contained in the dashboard includes Harbor versions, status, request/response times, and project statistics. This quickstart was built and tested based on Harbor metrics sent to New Relic through remote write configurations with Prometheus Agent or Prometheus Server.",
@@ -29367,14 +30058,14 @@
     ],
     "documentation": [
       {
-        "name": "Harbor Integration Docs",
-        "description": "New Relic documentation for the Harbor integration including installation, configuration, and how to query the metrics.\n",
-        "url": "https://docs.newrelic.com/docs/infrastructure/prometheus-integrations/integrations-list/harbor-integration/"
-      },
-      {
         "name": "Harbor Metrics Docs",
         "description": "Learn more about the Prometheus metrics available for Harbor\n",
         "url": "https://goharbor.io/docs/2.3.0/administration/metrics/"
+      },
+      {
+        "name": "Harbor Integration Docs",
+        "description": "New Relic documentation for the Harbor integration including installation, configuration, and how to query the metrics.\n",
+        "url": "https://docs.newrelic.com/docs/infrastructure/prometheus-integrations/integrations-list/harbor-integration/"
       },
       {
         "name": "Prometheus Installation Docs",
@@ -29573,6 +30264,43 @@
     ]
   },
   {
+    "title": "Azure Media Services",
+    "name": "azure-media-services",
+    "description": "## What is Azure Media Services?\n\nAzure Media Services is a cloud-based platform that enables you to build solutions that achieve broadcast-quality video streaming, enhance accessibility and distribution, analyze content and much more.\n\n### New Relic Azure Media Services quickstart features\n\nA standard dashboard that tracks key indicators like content key policy count, job quota, max running channels and live events count, streaming policy quota used percentage and more. It runs custom queries and visualizes the data immediately.\n\n### Why monitor Azure Media Services with New Relic?\n\n[New Relic Azure Media Services](https://docs.newrelic.com/docs/infrastructure/microsoft-azure-integrations/azure-integrations-list/azure-media-services-monitoring-integration/) monitoring quickstart empowers you to track the performance of Azure Media Services via different metrics including content key policy count, job quota, max running channels and live events count, streaming policy quota used percentage and more. \n\nOur integration features a standard dashboard that provides interactive visualizations to explore your data, understand context and get valuable insights.\n\nStart ingesting your Azure data today and get immediate access to our visualization dashboards so you can optimize your Azure service.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/azure/azure-media-services",
+    "id": "e90a5553-e84c-409c-aef1-5ac05cc90b80",
+    "level": "NEW_RELIC",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/azure/azure-media-services/logo.png",
+    "summary": "Monitoring Azure Media Services is critical to track the performance of media services via key metrics. Download New Relic Azure Media Services monitoring quickstart to get a pre-built dashboard tailored to monitor your Azure Media Services.",
+    "websiteUrl": null,
+    "keywords": [
+      "azure",
+      "media services",
+      "product partnerships"
+    ],
+    "authors": [
+      "New Relic",
+      "New Relic Partner"
+    ],
+    "dashboards": [
+      {
+        "name": "Azure Media Services",
+        "description": null,
+        "url": null,
+        "screenshots": []
+      }
+    ],
+    "alerts": [],
+    "documentation": [
+      {
+        "name": "Azure Media Services installation docs",
+        "description": "Monitor Azure Media Services by connecting Azure to New Relic.\n",
+        "url": "https://docs.newrelic.com/docs/infrastructure/microsoft-azure-integrations/azure-integrations-list/azure-media-services-monitoring-integration/"
+      }
+    ],
+    "installPlans": []
+  },
+  {
     "title": "VMware vSphere",
     "name": "vmware-vsphere",
     "description": "Enterprise Workload Platform for Traditional and Next Gen Apps",
@@ -29635,6 +30363,43 @@
         "id": "azure-infrastructure-monitoring"
       }
     ]
+  },
+  {
+    "title": "Azure Media Services Streaming Endpoints",
+    "name": "azure-media-services-streaming-endpoints",
+    "description": "## What is Azure Media Services Streaming Endpoints?\n\nA Streaming Endpoint represents a dynamic (just-in-time) packaging and origin service that can deliver your live and on-demand content directly to a client player app, using one of the common streaming media protocols (HLS or DASH).\n\n### New Relic Azure MediaServices StreamingEndpoints quickstart features\n\nA standard dashboard that tracks key indicators like CPU usage, egress, egress bandwidth, requests and success E2E latency. It runs custom queries and visualizes the data immediately.\n\n\n### Why monitor Azure Media Services Streaming Endpoints with New Relic?\n\n[New Relic Azure Media Services Streaming Endpoints](https://docs.newrelic.com/docs/infrastructure/microsoft-azure-integrations/azure-integrations-list/azure-media-services-streaming-endpoints-monitoring-integration/) monitoring quickstart empowers you to track the performance of Azure Media Services Streaming Endpoints via different metrics including CPU usage, egress, egress bandwidth, requests and success E2E latency. \n\nOur integration features a standard dashboard that provides interactive visualizations to explore your data, understand context and get valuable insights.\n\nStart ingesting your Azure data today and get immediate access to our visualization dashboards so you can optimize your Azure service.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/azure/azure-media-services-streaming-endpoints",
+    "id": "19935340-6dd8-45ae-b5a8-79432e5c4f3a",
+    "level": "NEW_RELIC",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/azure/azure-media-services-streaming-endpoints/logo.png",
+    "summary": "Monitoring Azure Media Services Streaming Endpoints is critical to track the performance of the streaming endpoints via key metrics. Download New Relic Azure Media Services Streaming Endpoints monitoring quickstart to get a pre-built dashboard tailored to monitor your Azure Media Services Streaming Endpoints Service.",
+    "websiteUrl": null,
+    "keywords": [
+      "azure",
+      "media services streaming endpoints",
+      "product partnerships"
+    ],
+    "authors": [
+      "New Relic",
+      "New Relic Partner"
+    ],
+    "dashboards": [
+      {
+        "name": "Azure Media Services Streaming Endpoints",
+        "description": null,
+        "url": null,
+        "screenshots": []
+      }
+    ],
+    "alerts": [],
+    "documentation": [
+      {
+        "name": "Azure Media Services Streaming Endpoints installation docs",
+        "description": "Monitor Azure Media Services Streaming Endpoints by connecting Azure to New Relic.\n",
+        "url": "https://docs.newrelic.com/docs/infrastructure/microsoft-azure-integrations/azure-integrations-list/azure-media-services-streaming-endpoints-monitoring-integration/"
+      }
+    ],
+    "installPlans": []
   },
   {
     "title": "Azure Virtual Machines",
