@@ -31,14 +31,14 @@
     ],
     "alerts": [
       {
-        "name": "Video Playback Failure % - jwplayer",
-        "details": "Alert when the Video Playback Failures % increases significantly from its baseline.\nUseful for understanding when your users are experiencing issues during video playback.",
+        "name": "Video Start Failure % - jwplayer",
+        "details": "Alert when the Video Start Failures % increases significantly from its baseline.\nUseful for understanding when your users are unable to successfully initiate video plays.",
         "type": "BASELINE",
         "url": null
       },
       {
-        "name": "Video Start Failure % - jwplayer",
-        "details": "Alert when the Video Start Failures % increases significantly from its baseline.\nUseful for understanding when your users are unable to successfully initiate video plays.",
+        "name": "Video Playback Failure % - jwplayer",
+        "details": "Alert when the Video Playback Failures % increases significantly from its baseline.\nUseful for understanding when your users are experiencing issues during video playback.",
         "type": "BASELINE",
         "url": null
       },
@@ -1327,6 +1327,12 @@
     ],
     "alerts": [
       {
+        "name": "Uplink Interface Down Violation",
+        "details": "This alert will trigger when a router or switch interface with the word \"uplink\" in the description reports as being down.  You can change the NRQL to filter to other naming conventions.",
+        "type": "STATIC",
+        "url": null
+      },
+      {
         "name": "Average CPU % Used Violation",
         "details": "This alert will trigger when a router or switch has more than 90% CPU utilization.",
         "type": "STATIC",
@@ -1353,12 +1359,6 @@
       {
         "name": "Ping Response Time Violation",
         "details": "This alert will trigger when a router or switch takes more than 500 ms to respond to a ping.  This requires that ping based checks are enabled in the ktranslate config using the response_time or ping_only options.",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "Uplink Interface Down Violation",
-        "details": "This alert will trigger when a router or switch interface with the word \"uplink\" in the description reports as being down.  You can change the NRQL to filter to other naming conventions.",
         "type": "STATIC",
         "url": null
       },
@@ -1950,14 +1950,14 @@
     ],
     "alerts": [
       {
-        "name": "Apdex Score",
-        "details": "This alert is triggered when the Apdex score is below 0.5 for 5 minutes",
+        "name": "High CPU Utilization",
+        "details": "This alert is triggered when the CPU Utilization is above 90%.",
         "type": "STATIC",
         "url": null
       },
       {
-        "name": "High CPU Utilization",
-        "details": "This alert is triggered when the CPU Utilization is above 90%.",
+        "name": "Apdex Score",
+        "details": "This alert is triggered when the Apdex score is below 0.5 for 5 minutes",
         "type": "STATIC",
         "url": null
       },
@@ -2444,14 +2444,14 @@
     ],
     "alerts": [
       {
-        "name": "Heap Efficiency (%)",
-        "details": "This alert is triggered when heap efficiency is below 50% for 5 minutes.",
+        "name": "Fail Generation",
+        "details": "This alert is triggered when more than 10 read/write transactions fail on generation check in 5 minutes.",
         "type": "STATIC",
         "url": null
       },
       {
-        "name": "Fail Generation",
-        "details": "This alert is triggered when more than 10 read/write transactions fail on generation check in 5 minutes.",
+        "name": "Heap Efficiency (%)",
+        "details": "This alert is triggered when heap efficiency is below 50% for 5 minutes.",
         "type": "STATIC",
         "url": null
       },
@@ -3758,6 +3758,189 @@
     ]
   },
   {
+    "title": "Mobile dashboard quickstart",
+    "name": "mobile-quickstart",
+    "description": "A dashboard for basic mobile metrics such as app launches and installs, version breakdowns and memory usage.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/mobile",
+    "id": "4b785b4d-0689-4516-b9db-fbf7227e2e1c",
+    "level": "COMMUNITY",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/mobile/icon.png",
+    "summary": "A dashboard for basic mobile metrics such as app launches and installs, version breakdowns and memory usage.",
+    "websiteUrl": null,
+    "keywords": [
+      "dashboard",
+      "mobile",
+      "mobile agent",
+      "android",
+      "ios",
+      "apps"
+    ],
+    "authors": [
+      "Víctor Pérez",
+      "Ruairi Douglas",
+      "Siddhartha Khare"
+    ],
+    "dashboards": [
+      {
+        "name": "Mobile",
+        "description": "A dashboard for all your mobile app instrumenting needs.",
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/mobile/Mobile.png"
+        ]
+      }
+    ],
+    "alerts": [
+      {
+        "name": "High Crash Rate (Mobile)",
+        "details": "This alert fires when the crash rate of your mobile app goes above 10 percent for a period of 5 minutes.",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "High HTTP Request Error Rate (Mobile)",
+        "details": "This alert fires when the error rate of HTTP network requests made by your mobile app goes above 5 percent for a period of 5 minutes.",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "High Percentage of Users Affected by Exception (Mobile)",
+        "details": "This alert fires when the rate of users affect by exceptions in your mobile app goes above 10 percent for a period of 5 minutes.",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "High Unique Crash Count (Mobile)",
+        "details": "This alert fires when the rate of crashes from unique locations in your mobile app goes above 10 percent for a period of 60 minutes.",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "Low App Launch Count (Mobile)",
+        "details": "This alert fires when the number of mobile app launches goes below 10 for a period of 5 minutes. \nIt will also fire if number of launches drops to 0 for a period of 30 minutes.",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "Slow Network Response Time (Mobile)",
+        "details": "This alert fires when the average response time of network requests made by your mobile app goes above 3 seconds for a period of 5 minutes.",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "High Crash Rate by Version (Mobile)",
+        "details": "This alert fires when the crash rate for a specific version of your mobile app goes above 10 percent for a period of 5 minutes.",
+        "type": "STATIC",
+        "url": null
+      }
+    ],
+    "documentation": [
+      {
+        "name": "Adding a dashboard",
+        "description": "How to add a dashboard to New Relic",
+        "url": "https://docs.newrelic.com/docs/query-your-data/explore-query-data/dashboards/introduction-dashboards/#get-started"
+      },
+      {
+        "name": "Instrument your mobile application with New Relic",
+        "description": "How to instrument your mobile application with New Relic",
+        "url": "https://docs.newrelic.com/docs/mobile-monitoring/new-relic-mobile/get-started/introduction-mobile-monitoring/"
+      },
+      {
+        "name": "Mobile app Alerts",
+        "description": "How to set up alerts for your mobile app",
+        "url": "https://docs.newrelic.com/docs/mobile-monitoring/new-relic-mobile/get-started/mobile-monitoring-alert-information/"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "Mobile Dashboard Install Plan",
+        "id": "mobile-dashboard-install"
+      }
+    ]
+  },
+  {
+    "title": "Mobile Crash Analytics",
+    "name": "mobile-crash-analytics-quickstart",
+    "description": "## Crash Analytics Monitoring Quickstart\n\nGet deeper insights into the mobile application crash frequency, affected versions, crash impact on users. \n\nReceive details about the last interactions before crash. \n\nHelp page on the dashboard will guide you on how to enable data filtering.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/mobile-crash-analytics",
+    "id": "931317a4-ec09-438a-80ae-441637475386",
+    "level": "COMMUNITY",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/mobile-crash-analytics/icon.png",
+    "summary": "Real time mobile application crash & network analysis to ensure ongoing reliability and performance.",
+    "websiteUrl": null,
+    "keywords": [
+      "dashboard",
+      "mobile-crash",
+      "crash analytics",
+      "crashlytics",
+      "mobile agent",
+      "HTTP data",
+      "android",
+      "ios",
+      "apps"
+    ],
+    "authors": [
+      "New Relic",
+      "Siddhartha Khare",
+      "Ruairi Douglas"
+    ],
+    "dashboards": [
+      {
+        "name": "Mobile Crash Analytics",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/mobile-crash-analytics/CrashAnalytics2.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/mobile-crash-analytics/CrashAnalytics3.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/mobile-crash-analytics/CrashAnalytics.png"
+        ]
+      }
+    ],
+    "alerts": [
+      {
+        "name": "High Crash Rate by Version (Mobile)",
+        "details": "This alert fires when the crash rate for a specific version of your mobile app goes above 10 percent for a period of 5 minutes.",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "High Crash Rate (Mobile)",
+        "details": "This alert fires when the crash rate of your mobile app goes above 10 percent for a period of 5 minutes.",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "High Unique Crash Count (Mobile)",
+        "details": "This alert fires when the rate of crashes from unique locations in your mobile app goes above 10 percent for a period of 60 minutes.",
+        "type": "STATIC",
+        "url": null
+      }
+    ],
+    "documentation": [
+      {
+        "name": "Adding a dashboard",
+        "description": "How to add a dashboard to New Relic",
+        "url": "https://docs.newrelic.com/docs/query-your-data/explore-query-data/dashboards/introduction-dashboards/#get-started"
+      },
+      {
+        "name": "Instrument your mobile application with New Relic",
+        "description": "How to instrument your mobile application with New Relic",
+        "url": "https://docs.newrelic.com/docs/mobile-monitoring/new-relic-mobile/get-started/introduction-mobile-monitoring/"
+      },
+      {
+        "name": "Mobile app Alerts",
+        "description": "How to set up alerts for your mobile app",
+        "url": "https://docs.newrelic.com/docs/mobile-monitoring/new-relic-mobile/get-started/mobile-monitoring-alert-information/"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "Mobile Dashboard Install Plan",
+        "id": "mobile-dashboard-install"
+      }
+    ]
+  },
+  {
     "title": "MERN Stack",
     "name": "mern-stack",
     "description": "## Comprehensive MERN Stack Monitoring System\nA JavaScript-based open-source framework called MERN Stack is used for creating dynamic web pages and online applications. There are four components in the stack: MongoDB, ExpressJS, ReactJS and NodeJS. \nThe stack's components integrate logically and simply because they are all based on JavaScript and JSON. These four powerful technologies all play an important role in the creation of web applications.\n\n## What should you look for in a MERN dashboard?\n- Metrics related to MongoDB including active connections, database details, usage time, and more.\n- There are many metrics available for ExpressJS and NodeJS including web transactions, top ten transactions and errors, memory usage, and many others.\n- There are many different ReactJS metrics including the number of viewed urls, page views by city, ajax requests, etc. You may also create your own chart using the collected metrics.\n\n## What’s included in the MERN quickstart?\nInstall this quickstart to install preconfigured observability solutions:\n- A number of high-value alerts are available including the average number of connections created, the FCP score and the memory usage.\n- Informative dashboards (the top 10 transactions, connections, database indexes, and more).",
@@ -4224,57 +4407,6 @@
     ]
   },
   {
-    "title": "Mobile dashboard quickstart",
-    "name": "mobile-quickstart",
-    "description": "A dashboard for basic mobile metrics such as active users, installs and error rate.",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/mobile",
-    "id": "4b785b4d-0689-4516-b9db-fbf7227e2e1c",
-    "level": "COMMUNITY",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/mobile/icon.png",
-    "summary": "A dashboard for basic mobile metrics such as active users, installs and error rate.",
-    "websiteUrl": null,
-    "keywords": [
-      "dashboard",
-      "mobile",
-      "mobile agent",
-      "android",
-      "ios",
-      "apps"
-    ],
-    "authors": [
-      "Víctor Pérez"
-    ],
-    "dashboards": [
-      {
-        "name": "Mobile",
-        "description": "A dashboard for all your mobile app instrumenting needs.",
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/mobile/Mobile.png"
-        ]
-      }
-    ],
-    "alerts": [],
-    "documentation": [
-      {
-        "name": "Adding a dashboard",
-        "description": "How to add a dashboard to New Relic",
-        "url": "https://docs.newrelic.com/docs/query-your-data/explore-query-data/dashboards/introduction-dashboards/#get-started"
-      },
-      {
-        "name": "Instrument your mobile application with New Relic",
-        "description": "How to instrument your mobile application with New Relic",
-        "url": "https://docs.newrelic.com/docs/mobile-monitoring/new-relic-mobile/get-started/introduction-mobile-monitoring/"
-      }
-    ],
-    "installPlans": [
-      {
-        "name": "Mobile Dashboard Install Plan",
-        "id": "mobile-dashboard-install"
-      }
-    ]
-  },
-  {
     "title": "Google Kubernetes Engine",
     "name": "google-kubernetes-engine",
     "description": "Provides a managed environment for deploying, managing, and scaling your\ncontainerized applications using Google infrastructure.",
@@ -4307,14 +4439,14 @@
     ],
     "alerts": [
       {
-        "name": "High CPU Utilization",
-        "details": "This alert is triggered when the CPU utilization for a Node is above 90% for at least 15 minutes.",
+        "name": "High Memory Usage",
+        "details": "This alert is triggered when the memory usage for a Node is above 85% of total capacity.",
         "type": "STATIC",
         "url": null
       },
       {
-        "name": "High Memory Usage",
-        "details": "This alert is triggered when the memory usage for a Node is above 85% of total capacity.",
+        "name": "High CPU Utilization",
+        "details": "This alert is triggered when the CPU utilization for a Node is above 90% for at least 15 minutes.",
         "type": "STATIC",
         "url": null
       }
@@ -4330,63 +4462,6 @@
       {
         "name": "Kubernetes integration",
         "id": "kubernetes-install"
-      }
-    ]
-  },
-  {
-    "title": "Mobile Crash Analytics",
-    "name": "mobile-crash-analytics-quickstart",
-    "description": "## Crash Analytics Monitoring Quickstart\n\nGet deeper insights into the mobile application crash frequency, affected versions, crash impact on users. \n\nReceive details about the last interactions before crash. \n\nHelp page on the dashboard will guide you on how to enable data filtering.",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/mobile-crash-analytics",
-    "id": "931317a4-ec09-438a-80ae-441637475386",
-    "level": "COMMUNITY",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/mobile-crash-analytics/logo.png",
-    "summary": "Real time mobile application crash & network analysis to ensure ongoing reliability and performance.",
-    "websiteUrl": null,
-    "keywords": [
-      "dashboard",
-      "mobile-crash",
-      "crash analytics",
-      "crashlytics",
-      "mobile agent",
-      "HTTP data",
-      "android",
-      "ios",
-      "apps"
-    ],
-    "authors": [
-      "New Relic",
-      "Siddhartha Khare"
-    ],
-    "dashboards": [
-      {
-        "name": "Mobile Crash Analytics",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/mobile-crash-analytics/CrashAnalytics2.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/mobile-crash-analytics/CrashAnalytics3.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/mobile-crash-analytics/CrashAnalytics.png"
-        ]
-      }
-    ],
-    "alerts": [],
-    "documentation": [
-      {
-        "name": "Adding a dashboard",
-        "description": "How to add a dashboard to New Relic",
-        "url": "https://docs.newrelic.com/docs/query-your-data/explore-query-data/dashboards/introduction-dashboards/#get-started"
-      },
-      {
-        "name": "Instrument your mobile application with New Relic",
-        "description": "How to instrument your mobile application with New Relic",
-        "url": "https://docs.newrelic.com/docs/mobile-monitoring/new-relic-mobile/get-started/introduction-mobile-monitoring/"
-      }
-    ],
-    "installPlans": [
-      {
-        "name": "Mobile Dashboard Install Plan",
-        "id": "mobile-dashboard-install"
       }
     ]
   },
@@ -5622,8 +5697,8 @@
     ],
     "alerts": [
       {
-        "name": "Transaction Errors",
-        "details": "This alert is triggered when the the transactions fail more than 10% of the time in 5 minutes.",
+        "name": "Memory Usage",
+        "details": "This alert is triggered when Memory usage is above 90%",
         "type": "STATIC",
         "url": null
       },
@@ -5634,8 +5709,8 @@
         "url": null
       },
       {
-        "name": "Memory Usage",
-        "details": "This alert is triggered when Memory usage is above 90%",
+        "name": "Transaction Errors",
+        "details": "This alert is triggered when the the transactions fail more than 10% of the time in 5 minutes.",
         "type": "STATIC",
         "url": null
       },
@@ -6043,14 +6118,14 @@
         "url": null
       },
       {
-        "name": "High CPU Utilization",
-        "details": "This alert is triggered when the CPU Utilization is above 90%.",
+        "name": "Memory Usage",
+        "details": "This alert is triggered when Memory usage is above 90%",
         "type": "STATIC",
         "url": null
       },
       {
-        "name": "Memory Usage",
-        "details": "This alert is triggered when Memory usage is above 90%",
+        "name": "High CPU Utilization",
+        "details": "This alert is triggered when the CPU Utilization is above 90%.",
         "type": "STATIC",
         "url": null
       },
@@ -7273,12 +7348,6 @@
     ],
     "alerts": [
       {
-        "name": "Indexing Latency Threshold",
-        "details": "This alert will trigger when the Indexing latency for an Elasticsearch cluster's primary shards is >5ms.\nThis is measured by: # of Docs Indexed / Time spent Indexing (ms) for the evaluated time window.\nIncreased Flush Latency is an indication that you are trying to index too many documents at one time and you may need to reconfigured your settings to increase performance.",
-        "type": "STATIC",
-        "url": null
-      },
-      {
         "name": "Cluster Health",
         "details": "This alert triggers when the reported health of an Elasticsearch cluster is 'red'.",
         "type": "STATIC",
@@ -7297,8 +7366,14 @@
         "url": null
       },
       {
-        "name": "Index Health",
-        "details": "This alert triggers when the reported health of an Elasticsearch index is 'red'.",
+        "name": "Query Load Baseline",
+        "details": "This alert is triggered when the count of active queries on primary shards deviates more than 2 standard deviations above or below the baseline.\nThis can be a leading indicator of a potential loss of service or flood of requests.",
+        "type": "BASELINE",
+        "url": null
+      },
+      {
+        "name": "Indexing Latency Threshold",
+        "details": "This alert will trigger when the Indexing latency for an Elasticsearch cluster's primary shards is >5ms.\nThis is measured by: # of Docs Indexed / Time spent Indexing (ms) for the evaluated time window.\nIncreased Flush Latency is an indication that you are trying to index too many documents at one time and you may need to reconfigured your settings to increase performance.",
         "type": "STATIC",
         "url": null
       },
@@ -7309,9 +7384,9 @@
         "url": null
       },
       {
-        "name": "Query Load Baseline",
-        "details": "This alert is triggered when the count of active queries on primary shards deviates more than 2 standard deviations above or below the baseline.\nThis can be a leading indicator of a potential loss of service or flood of requests.",
-        "type": "BASELINE",
+        "name": "Index Health",
+        "details": "This alert triggers when the reported health of an Elasticsearch index is 'red'.",
+        "type": "STATIC",
         "url": null
       }
     ],
@@ -7740,14 +7815,14 @@
     ],
     "alerts": [
       {
-        "name": "High CPU Utilization",
-        "details": "This alert is triggered when the CPU Utilization is above 90%.",
+        "name": "Apdex Score",
+        "details": "This alert is triggered when the Apdex score is below 0.5 for 5 minutes",
         "type": "STATIC",
         "url": null
       },
       {
-        "name": "Apdex Score",
-        "details": "This alert is triggered when the Apdex score is below 0.5 for 5 minutes",
+        "name": "High CPU Utilization",
+        "details": "This alert is triggered when the CPU Utilization is above 90%.",
         "type": "STATIC",
         "url": null
       },
@@ -9414,14 +9489,14 @@
     ],
     "documentation": [
       {
-        "name": "Argo CD Metrics Reference",
-        "description": "Argo CD Prometheus Metric Reference\n",
-        "url": "https://argo-cd.readthedocs.io/en/stable/operator-manual/metrics/"
-      },
-      {
         "name": "Argo CD Integration Docs",
         "description": "New Relic documentation for the Argo CD integration including installation, configuration, and how to query the metrics.\n",
         "url": "https://docs.newrelic.com/docs/infrastructure/prometheus-integrations/integrations-list/argocd-integration"
+      },
+      {
+        "name": "Argo CD Metrics Reference",
+        "description": "Argo CD Prometheus Metric Reference\n",
+        "url": "https://argo-cd.readthedocs.io/en/stable/operator-manual/metrics/"
       },
       {
         "name": "Prometheus Installation Docs",
@@ -10627,6 +10702,12 @@
     ],
     "alerts": [
       {
+        "name": "Transaction Errors",
+        "details": "This alert is triggered when the the transactions fail more than 10% of the time in 5 minutes.",
+        "type": "STATIC",
+        "url": null
+      },
+      {
         "name": "Apdex Score",
         "details": "This alert is triggered when the Apdex score is below 0.5 for 5 minutes",
         "type": "STATIC",
@@ -10641,12 +10722,6 @@
       {
         "name": "Memory Usage",
         "details": "This alert is triggered when Memory usage is above 90%",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "Transaction Errors",
-        "details": "This alert is triggered when the the transactions fail more than 10% of the time in 5 minutes.",
         "type": "STATIC",
         "url": null
       }
@@ -10697,12 +10772,6 @@
     ],
     "alerts": [
       {
-        "name": "Memory Usage",
-        "details": "This alert is triggered when Memory usage is above 90%",
-        "type": "STATIC",
-        "url": null
-      },
-      {
         "name": "Apdex Score",
         "details": "This alert is triggered when the Apdex score is below 0.5 for 5 minutes",
         "type": "STATIC",
@@ -10711,6 +10780,12 @@
       {
         "name": "High CPU Utilization",
         "details": "This alert is triggered when the CPU Utilization is above 90%.",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "Memory Usage",
+        "details": "This alert is triggered when Memory usage is above 90%",
         "type": "STATIC",
         "url": null
       },
@@ -10902,14 +10977,14 @@
     ],
     "alerts": [
       {
-        "name": "High CPU Utilization",
-        "details": "This alert is triggered when the CPU Utilization is above 90%.",
+        "name": "Transaction Errors",
+        "details": "This alert is triggered when the the transactions fail more than 10% of the time in 5 minutes.",
         "type": "STATIC",
         "url": null
       },
       {
-        "name": "Transaction Errors",
-        "details": "This alert is triggered when the the transactions fail more than 10% of the time in 5 minutes.",
+        "name": "High CPU Utilization",
+        "details": "This alert is triggered when the CPU Utilization is above 90%.",
         "type": "STATIC",
         "url": null
       }
@@ -10968,14 +11043,14 @@
     ],
     "alerts": [
       {
-        "name": "Transaction Errors",
-        "details": "This alert is triggered when the transaction error count is higher than 5 for 5 minutes.",
+        "name": "High CPU Utilization",
+        "details": "This alert is triggered when the CPU Utilization is above 90%.",
         "type": "STATIC",
         "url": null
       },
       {
-        "name": "High CPU Utilization",
-        "details": "This alert is triggered when the CPU Utilization is above 90%.",
+        "name": "Transaction Errors",
+        "details": "This alert is triggered when the transaction error count is higher than 5 for 5 minutes.",
         "type": "STATIC",
         "url": null
       },
@@ -12287,14 +12362,14 @@
     "alerts": [],
     "documentation": [
       {
-        "name": "New Relic Apollo Server plugin repository",
-        "description": "New Relic's official Apollo Server plugin for use with the Node.js agent.",
-        "url": "https://github.com/newrelic/newrelic-node-apollo-server-plugin/blob/main/README.md"
-      },
-      {
         "name": "Installation Docs",
         "description": "The New Relic Apollo Server plugin instruments your Apollo Server applications to give visibility into your GraphQL payloads.",
         "url": "https://docs.newrelic.com/docs/apm/agents/nodejs-agent/extend-your-instrumentation/apollo-server-plugin-nodejs/"
+      },
+      {
+        "name": "New Relic Apollo Server plugin repository",
+        "description": "New Relic's official Apollo Server plugin for use with the Node.js agent.",
+        "url": "https://github.com/newrelic/newrelic-node-apollo-server-plugin/blob/main/README.md"
       }
     ],
     "installPlans": [
@@ -12887,6 +12962,12 @@
     ],
     "alerts": [
       {
+        "name": "Memory Usage",
+        "details": "This alert is triggered when Memory usage is above 90%",
+        "type": "STATIC",
+        "url": null
+      },
+      {
         "name": "Apdex Score",
         "details": "This alert is triggered when the Apdex score is below 0.5 for 5 minutes",
         "type": "STATIC",
@@ -12895,12 +12976,6 @@
       {
         "name": "High CPU Utilization",
         "details": "This alert is triggered when the CPU Utilization is above 90%.",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "Memory Usage",
-        "details": "This alert is triggered when Memory usage is above 90%",
         "type": "STATIC",
         "url": null
       },
@@ -13671,6 +13746,11 @@
     "alerts": [],
     "documentation": [
       {
+        "name": "Getting started with New Relic and Pulumi",
+        "description": "In this guide, you learn how to set up New Relic alerts with Pulumi.\n",
+        "url": "https://www.pulumi.com/registry/packages/newrelic/"
+      },
+      {
         "name": "Github repository",
         "description": "Github repository for the New Relic Package.",
         "url": "https://github.com/pulumi/pulumi-newrelic"
@@ -13679,11 +13759,6 @@
         "name": "New Relic Package",
         "description": "Pulumi documentation for the New Relic Package",
         "url": "https://www.pulumi.com/registry/packages/newrelic/api-docs/"
-      },
-      {
-        "name": "Getting started with New Relic and Pulumi",
-        "description": "In this guide, you learn how to set up New Relic alerts with Pulumi.\n",
-        "url": "https://www.pulumi.com/registry/packages/newrelic/"
       }
     ],
     "installPlans": [
@@ -13892,12 +13967,6 @@
     ],
     "alerts": [
       {
-        "name": "Transaction Errors",
-        "details": "This alert is triggered when the the transactions fail more than 10% of the time in 5 minutes.",
-        "type": "STATIC",
-        "url": null
-      },
-      {
         "name": "Apdex Score",
         "details": "This alert is triggered when the Apdex score is below 0.5 for 5 minutes",
         "type": "STATIC",
@@ -13906,6 +13975,12 @@
       {
         "name": "High CPU Utilization",
         "details": "This alert is triggered when the CPU Utilization is above 90%.",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "Transaction Errors",
+        "details": "This alert is triggered when the the transactions fail more than 10% of the time in 5 minutes.",
         "type": "STATIC",
         "url": null
       }
@@ -14063,6 +14138,12 @@
         "url": null
       },
       {
+        "name": "High CPU Utilization",
+        "details": "This alert is triggered when the CPU Utilization is above 90%.",
+        "type": "STATIC",
+        "url": null
+      },
+      {
         "name": "Memory Usage",
         "details": "This alert is triggered when Memory usage is above 90%",
         "type": "STATIC",
@@ -14071,12 +14152,6 @@
       {
         "name": "Transaction Errors",
         "details": "This alert is triggered when the the transactions fail more than 10% of the time in 5 minutes.",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "High CPU Utilization",
-        "details": "This alert is triggered when the CPU Utilization is above 90%.",
         "type": "STATIC",
         "url": null
       }
@@ -14863,6 +14938,12 @@
     ],
     "alerts": [
       {
+        "name": "Transaction Errors",
+        "details": "This alert is triggered when the the transactions fail more than 10% of the time in 5 minutes.",
+        "type": "STATIC",
+        "url": null
+      },
+      {
         "name": "Apdex Score",
         "details": "This alert is triggered when the Apdex score is below 0.5 for 5 minutes.",
         "type": "STATIC",
@@ -14875,26 +14956,20 @@
         "url": null
       },
       {
-        "name": "Transaction Errors",
-        "details": "This alert is triggered when the the transactions fail more than 10% of the time in 5 minutes.",
-        "type": "STATIC",
-        "url": null
-      },
-      {
         "name": "Memory Usage",
         "details": "This alert is triggered when Memory usage is above 90%.",
         "type": "STATIC",
         "url": null
       },
       {
-        "name": "Generation 1 Hits",
-        "details": "This alert is triggered when the memory that survives garbage collection is more than 2 MB and has been promoted from Generation 1 to Generation 2.",
+        "name": "Generation 0 Hits",
+        "details": "This alert is triggered when the memory that survives garbage collection is more than 256 KB and has been promoted from Generation 0 to Generation 1.",
         "type": "STATIC",
         "url": null
       },
       {
-        "name": "Generation 0 Hits",
-        "details": "This alert is triggered when the memory that survives garbage collection is more than 256 KB and has been promoted from Generation 0 to Generation 1.",
+        "name": "Generation 1 Hits",
+        "details": "This alert is triggered when the memory that survives garbage collection is more than 2 MB and has been promoted from Generation 1 to Generation 2.",
         "type": "STATIC",
         "url": null
       },
@@ -18102,14 +18177,14 @@
     ],
     "alerts": [
       {
-        "name": "High CPU Utilization",
-        "details": "This alert is triggered when the CPU Utilization is above 90% for at least 10 minutes.",
+        "name": "High Memory Usage",
+        "details": "This alert is triggered when the Memory Usage is above 95% for at least 15 minutes.",
         "type": "STATIC",
         "url": null
       },
       {
-        "name": "High Memory Usage",
-        "details": "This alert is triggered when the Memory Usage is above 95% for at least 15 minutes.",
+        "name": "High CPU Utilization",
+        "details": "This alert is triggered when the CPU Utilization is above 90% for at least 10 minutes.",
         "type": "STATIC",
         "url": null
       }
@@ -18166,42 +18241,6 @@
     ],
     "alerts": [
       {
-        "name": "Node down alert",
-        "details": "This alert triggers when a node is down for 15 minutes. The alert threshold can be changed to your acceptable downtime requirements.",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "Slow latch requests",
-        "details": "This alert triggers when there are > 0 slow latch requests for over 5 minutes. The alert threshold can be changed to your acceptable slow request requirements.",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "Slow lease requests",
-        "details": "This alert triggers when there are > 0 slow lease requests for over 5 minutes. The alert threshold can be changed to your acceptable slow request requirements.",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "Slow raft requests",
-        "details": "This alert triggers when there are > 0 slow raft requests for over 5 minutes. The alert threshold can be changed to your acceptable slow request requirements.",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "UI CA certificate expiration",
-        "details": "This alert is triggered when there are less than 90 days remaining for UI CA certificate expiration. The alert threshold can be changed to your desired expiration alerting requirements.",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "UI certificate expiration",
-        "details": "This alert is triggered when there are less than 30 days remaining for UI certificate expiration. The alert threshold can be changed to your desired expiration alerting requirements.",
-        "type": "STATIC",
-        "url": null
-      },
-      {
         "name": "CA certificate expiration",
         "details": "This alert is triggered when there are less than 90 days remaining for CA certificate expiration. The alert threshold can be changed to your desired expiration alerting requirements.",
         "type": "STATIC",
@@ -18240,6 +18279,42 @@
       {
         "name": "Node certificate expiration",
         "details": "This alert is triggered when there are less than 30 days remaining for Node certificate expiration. The alert threshold can be changed to your desired expiration alerting requirements.",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "Node down alert",
+        "details": "This alert triggers when a node is down for 15 minutes. The alert threshold can be changed to your acceptable downtime requirements.",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "Slow latch requests",
+        "details": "This alert triggers when there are > 0 slow latch requests for over 5 minutes. The alert threshold can be changed to your acceptable slow request requirements.",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "Slow lease requests",
+        "details": "This alert triggers when there are > 0 slow lease requests for over 5 minutes. The alert threshold can be changed to your acceptable slow request requirements.",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "Slow raft requests",
+        "details": "This alert triggers when there are > 0 slow raft requests for over 5 minutes. The alert threshold can be changed to your acceptable slow request requirements.",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "UI CA certificate expiration",
+        "details": "This alert is triggered when there are less than 90 days remaining for UI CA certificate expiration. The alert threshold can be changed to your desired expiration alerting requirements.",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "UI certificate expiration",
+        "details": "This alert is triggered when there are less than 30 days remaining for UI certificate expiration. The alert threshold can be changed to your desired expiration alerting requirements.",
         "type": "STATIC",
         "url": null
       }
@@ -18434,12 +18509,6 @@
     ],
     "alerts": [
       {
-        "name": "Transaction Errors",
-        "details": "This alert is triggered when the the transactions fail more than 10% of the time in 5 minutes.",
-        "type": "STATIC",
-        "url": null
-      },
-      {
         "name": "Apdex Score",
         "details": "This alert is triggered when the Apdex score is below 0.5 for 5 minutes",
         "type": "STATIC",
@@ -18454,6 +18523,12 @@
       {
         "name": "Memory Usage",
         "details": "This alert is triggered when Memory usage is above 90%",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "Transaction Errors",
+        "details": "This alert is triggered when the the transactions fail more than 10% of the time in 5 minutes.",
         "type": "STATIC",
         "url": null
       }
@@ -18546,14 +18621,14 @@
     ],
     "alerts": [
       {
-        "name": "Transaction Errors",
-        "details": "This alert is triggered when the the transactions fail more than 10% of the time in 5 minutes.",
+        "name": "High CPU Utilization",
+        "details": "This alert is triggered when the CPU Utilization is above 90%.",
         "type": "STATIC",
         "url": null
       },
       {
-        "name": "High CPU Utilization",
-        "details": "This alert is triggered when the CPU Utilization is above 90%.",
+        "name": "Transaction Errors",
+        "details": "This alert is triggered when the the transactions fail more than 10% of the time in 5 minutes.",
         "type": "STATIC",
         "url": null
       }
@@ -19283,14 +19358,14 @@
     ],
     "alerts": [
       {
-        "name": "High CPU Utilization",
-        "details": "This alert is triggered when the CPU Utilization is above 90%.",
+        "name": "Apdex Score",
+        "details": "This alert is triggered when the Apdex score is below 0.5 for 5 minutes",
         "type": "STATIC",
         "url": null
       },
       {
-        "name": "Apdex Score",
-        "details": "This alert is triggered when the Apdex score is below 0.5 for 5 minutes",
+        "name": "High CPU Utilization",
+        "details": "This alert is triggered when the CPU Utilization is above 90%.",
         "type": "STATIC",
         "url": null
       },
@@ -19839,14 +19914,14 @@
     ],
     "alerts": [
       {
-        "name": "Failed Checkpoints",
-        "details": "This alert is triggered when the failed checkpoints is higher than 3 during 5 minutes.",
+        "name": "Job Manager Heap Memory Usage",
+        "details": "This alert is triggered when the job manager heap memory usage is higher than 10 MB during 5 minutes.",
         "type": "STATIC",
         "url": null
       },
       {
-        "name": "Job Manager Heap Memory Usage",
-        "details": "This alert is triggered when the job manager heap memory usage is higher than 10 MB during 5 minutes.",
+        "name": "Failed Checkpoints",
+        "details": "This alert is triggered when the failed checkpoints is higher than 3 during 5 minutes.",
         "type": "STATIC",
         "url": null
       },
@@ -21028,14 +21103,14 @@
     ],
     "documentation": [
       {
-        "name": "Kubernetes installation docs",
-        "description": "To view the Istio Quickstart, the Kubernetes New Relic integration with the Prometheus OpenMetrics Integration (POMI) must be installed prior.\n",
-        "url": "https://docs.newrelic.com/docs/integrations/host-integrations/host-integrations-list/kubernetes-monitoring-integration"
-      },
-      {
         "name": "Prometheus OpenMetrics Intergration (POMI) installation docs",
         "description": "To view the Istio Quickstart, the Kubernetes New Relic integration with the Prometheus OpenMetrics Integration (POMI) must be installed prior.\n",
         "url": "https://docs.newrelic.com/docs/infrastructure/prometheus-integrations/get-started/send-prometheus-metric-data-new-relic"
+      },
+      {
+        "name": "Kubernetes installation docs",
+        "description": "To view the Istio Quickstart, the Kubernetes New Relic integration with the Prometheus OpenMetrics Integration (POMI) must be installed prior.\n",
+        "url": "https://docs.newrelic.com/docs/integrations/host-integrations/host-integrations-list/kubernetes-monitoring-integration"
       }
     ],
     "installPlans": [
@@ -21086,14 +21161,14 @@
     ],
     "alerts": [
       {
-        "name": "High CPU Utilization",
-        "details": "This alert is triggered when the CPU Utilization is above 90%.",
+        "name": "Transaction Errors",
+        "details": "This alert is triggered when the the transactions fail more than 10% of the time in 5 minutes.",
         "type": "STATIC",
         "url": null
       },
       {
-        "name": "Transaction Errors",
-        "details": "This alert is triggered when the the transactions fail more than 10% of the time in 5 minutes.",
+        "name": "High CPU Utilization",
+        "details": "This alert is triggered when the CPU Utilization is above 90%.",
         "type": "STATIC",
         "url": null
       }
@@ -21610,14 +21685,14 @@
     "alerts": [],
     "documentation": [
       {
-        "name": "Implementation guide",
-        "description": "Explains what bottom of the funnel analysis is and how to apply it\n",
-        "url": "https://docs.newrelic.com/docs/new-relic-solutions/observability-maturity/customer-experience/bottom-funnel-analysis-customer-journey-guide"
-      },
-      {
         "name": "Install README",
         "description": "Guides you on how to customize the dashboard once you've installed it\n",
         "url": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/oma-bofu#readme"
+      },
+      {
+        "name": "Implementation guide",
+        "description": "Explains what bottom of the funnel analysis is and how to apply it\n",
+        "url": "https://docs.newrelic.com/docs/new-relic-solutions/observability-maturity/customer-experience/bottom-funnel-analysis-customer-journey-guide"
       }
     ],
     "installPlans": [
@@ -22053,6 +22128,12 @@
     ],
     "alerts": [
       {
+        "name": "Transaction Errors",
+        "details": "This alert is triggered when the the transactions fail more than 10% of the time in 5 minutes.",
+        "type": "STATIC",
+        "url": null
+      },
+      {
         "name": "Apdex Score",
         "details": "This alert is triggered when the Apdex score is below 0.5 for 5 minutes",
         "type": "STATIC",
@@ -22067,12 +22148,6 @@
       {
         "name": "Memory Usage",
         "details": "This alert is triggered when Memory usage is above 90%",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "Transaction Errors",
-        "details": "This alert is triggered when the the transactions fail more than 10% of the time in 5 minutes.",
         "type": "STATIC",
         "url": null
       }
@@ -22123,14 +22198,14 @@
     ],
     "alerts": [
       {
-        "name": "High CPU Utilization",
-        "details": "This alert is triggered when the CPU Utilization is above 90%.",
+        "name": "Apdex Score",
+        "details": "This alert is triggered when the Apdex score is below 0.5 for 5 minutes",
         "type": "STATIC",
         "url": null
       },
       {
-        "name": "Apdex Score",
-        "details": "This alert is triggered when the Apdex score is below 0.5 for 5 minutes",
+        "name": "High CPU Utilization",
+        "details": "This alert is triggered when the CPU Utilization is above 90%.",
         "type": "STATIC",
         "url": null
       },
@@ -23333,11 +23408,6 @@
     ],
     "documentation": [
       {
-        "name": "Prometheus Installation Docs",
-        "description": "Use Prometheus remote_write or Prometheus Agent\n",
-        "url": "https://docs.newrelic.com/docs/infrastructure/prometheus-integrations/get-started/send-prometheus-metric-data-new-relic/"
-      },
-      {
         "name": "CoreDNS Integration Docs",
         "description": "New Relic documentation for the CoreDNS integration including installation, configuration, and how to query the metrics.\n",
         "url": "https://docs.newrelic.com/docs/infrastructure/prometheus-integrations/integrations-list/core-dns-integration"
@@ -23346,6 +23416,11 @@
         "name": "CoreDNS Metrics Docs",
         "description": "Learn more about the Prometheus metrics available for CoreDNS\n",
         "url": "https://coredns.io/plugins/metrics/"
+      },
+      {
+        "name": "Prometheus Installation Docs",
+        "description": "Use Prometheus remote_write or Prometheus Agent\n",
+        "url": "https://docs.newrelic.com/docs/infrastructure/prometheus-integrations/get-started/send-prometheus-metric-data-new-relic/"
       }
     ],
     "installPlans": [
@@ -23620,14 +23695,14 @@
     ],
     "alerts": [
       {
-        "name": "High CPU Utilization",
-        "details": "This alert is triggered when the CPU Utilization is above 90%.",
+        "name": "Transaction Errors",
+        "details": "This alert is triggered when the the transactions fail more than 10% of the time in 5 minutes.",
         "type": "STATIC",
         "url": null
       },
       {
-        "name": "Transaction Errors",
-        "details": "This alert is triggered when the the transactions fail more than 10% of the time in 5 minutes.",
+        "name": "High CPU Utilization",
+        "details": "This alert is triggered when the CPU Utilization is above 90%.",
         "type": "STATIC",
         "url": null
       }
@@ -23747,14 +23822,14 @@
     ],
     "alerts": [
       {
-        "name": "High CPU Utilization",
-        "details": "This alert is triggered when the CPU Utilization is above 90%.",
+        "name": "Transaction Errors",
+        "details": "This alert is triggered when the the transactions fail more than 10% of the time in 5 minutes.",
         "type": "STATIC",
         "url": null
       },
       {
-        "name": "Transaction Errors",
-        "details": "This alert is triggered when the the transactions fail more than 10% of the time in 5 minutes.",
+        "name": "High CPU Utilization",
+        "details": "This alert is triggered when the CPU Utilization is above 90%.",
         "type": "STATIC",
         "url": null
       }
@@ -23810,14 +23885,14 @@
     ],
     "alerts": [
       {
-        "name": "Transaction Errors",
-        "details": "This alert is triggered when the the transactions fail more than 10% of the time in 5 minutes.",
+        "name": "High CPU Utilization",
+        "details": "This alert is triggered when the CPU Utilization is above 90%.",
         "type": "STATIC",
         "url": null
       },
       {
-        "name": "High CPU Utilization",
-        "details": "This alert is triggered when the CPU Utilization is above 90%.",
+        "name": "Transaction Errors",
+        "details": "This alert is triggered when the the transactions fail more than 10% of the time in 5 minutes.",
         "type": "STATIC",
         "url": null
       }
@@ -24309,6 +24384,12 @@
     ],
     "alerts": [
       {
+        "name": "Memory Usage",
+        "details": "This alert is triggered when Memory usage is above 90%",
+        "type": "STATIC",
+        "url": null
+      },
+      {
         "name": "Apdex Score",
         "details": "This alert is triggered when the Apdex score is below 0.5 for 5 minutes",
         "type": "STATIC",
@@ -24317,12 +24398,6 @@
       {
         "name": "High CPU Utilization",
         "details": "This alert is triggered when the CPU Utilization is above 90%.",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "Memory Usage",
-        "details": "This alert is triggered when Memory usage is above 90%",
         "type": "STATIC",
         "url": null
       },
@@ -24451,14 +24526,14 @@
     ],
     "alerts": [
       {
-        "name": "Apdex Score",
-        "details": "This alert is triggered when the Apdex score is below 0.5 for 5 minutes",
+        "name": "High CPU Utilization",
+        "details": "This alert is triggered when the CPU Utilization is above 90%.",
         "type": "STATIC",
         "url": null
       },
       {
-        "name": "High CPU Utilization",
-        "details": "This alert is triggered when the CPU Utilization is above 90%.",
+        "name": "Apdex Score",
+        "details": "This alert is triggered when the Apdex score is below 0.5 for 5 minutes",
         "type": "STATIC",
         "url": null
       },
@@ -25546,14 +25621,14 @@
     ],
     "alerts": [
       {
-        "name": "Apdex Score",
-        "details": "This alert is triggered when the Apdex score is below 0.5 for 5 minutes",
+        "name": "High CPU Utilization",
+        "details": "This alert is triggered when the CPU Utilization is above 90%.",
         "type": "STATIC",
         "url": null
       },
       {
-        "name": "High CPU Utilization",
-        "details": "This alert is triggered when the CPU Utilization is above 90%.",
+        "name": "Apdex Score",
+        "details": "This alert is triggered when the Apdex score is below 0.5 for 5 minutes",
         "type": "STATIC",
         "url": null
       },
@@ -25896,14 +25971,14 @@
     ],
     "alerts": [
       {
-        "name": "Transaction Errors",
-        "details": "This alert is triggered when the the transactions fail more than 10% of the time in 5 minutes.",
+        "name": "High CPU Utilization",
+        "details": "This alert is triggered when the CPU Utilization is above 90%.",
         "type": "STATIC",
         "url": null
       },
       {
-        "name": "High CPU Utilization",
-        "details": "This alert is triggered when the CPU Utilization is above 90%.",
+        "name": "Transaction Errors",
+        "details": "This alert is triggered when the the transactions fail more than 10% of the time in 5 minutes.",
         "type": "STATIC",
         "url": null
       }
@@ -26128,14 +26203,14 @@
     ],
     "alerts": [
       {
-        "name": "High CPU Utilization",
-        "details": "This alert is triggered when the CPU Utilization is above 90%.",
+        "name": "Apdex Score",
+        "details": "This alert is triggered when the Apdex score is below 0.5 for 5 minutes",
         "type": "STATIC",
         "url": null
       },
       {
-        "name": "Apdex Score",
-        "details": "This alert is triggered when the Apdex score is below 0.5 for 5 minutes",
+        "name": "High CPU Utilization",
+        "details": "This alert is triggered when the CPU Utilization is above 90%.",
         "type": "STATIC",
         "url": null
       },
@@ -26293,12 +26368,6 @@
     ],
     "alerts": [
       {
-        "name": "High duration",
-        "details": "This alert is triggered when the total duration of the web transaction is longer than 10 seconds during 5 minutes",
-        "type": "STATIC",
-        "url": null
-      },
-      {
         "name": "High error rate",
         "details": "This alert is triggered when the error percentage of web transactions is higher than 5% during 5 minutes",
         "type": "STATIC",
@@ -26307,6 +26376,12 @@
       {
         "name": "Low throughput",
         "details": "This alert is triggered when the throughput is 0 for 5 minutes",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "High duration",
+        "details": "This alert is triggered when the total duration of the web transaction is longer than 10 seconds during 5 minutes",
         "type": "STATIC",
         "url": null
       }
@@ -28307,14 +28382,14 @@
     ],
     "alerts": [
       {
-        "name": "BGP Neighbor State Changes",
-        "details": "This alert will trigger when the specified BGP neighbor establishes a new connection.  This is useful for seeing flapping connections in between the poll intervals.  You will need to edit the NRQL condition to specify which relationship(s) you want the alert to target.",
+        "name": "BGP Neighbor Idle",
+        "details": "This alert will trigger when the specified BGP neighbor is \"Idle\" for 300 seconds.  You will need to edit the NRQL condition to specify which relationship(s) you want the alert to target.",
         "type": "STATIC",
         "url": null
       },
       {
-        "name": "BGP Neighbor Idle",
-        "details": "This alert will trigger when the specified BGP neighbor is \"Idle\" for 300 seconds.  You will need to edit the NRQL condition to specify which relationship(s) you want the alert to target.",
+        "name": "BGP Neighbor State Changes",
+        "details": "This alert will trigger when the specified BGP neighbor establishes a new connection.  This is useful for seeing flapping connections in between the poll intervals.  You will need to edit the NRQL condition to specify which relationship(s) you want the alert to target.",
         "type": "STATIC",
         "url": null
       }
@@ -28897,18 +28972,6 @@
     ],
     "alerts": [
       {
-        "name": "High CPU Utilization",
-        "details": "This alert is triggered when the CPU Utilization is above 90%.",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "Memory Usage",
-        "details": "This alert is triggered when Memory usage is above 90%",
-        "type": "STATIC",
-        "url": null
-      },
-      {
         "name": "Transaction Errors",
         "details": "This alert is triggered when the the transactions fail more than 10% of the time in 5 minutes.",
         "type": "STATIC",
@@ -28917,6 +28980,18 @@
       {
         "name": "Apdex Score",
         "details": "This alert is triggered when the Apdex score is below 0.5 for 5 minutes",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "High CPU Utilization",
+        "details": "This alert is triggered when the CPU Utilization is above 90%.",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "Memory Usage",
+        "details": "This alert is triggered when Memory usage is above 90%",
         "type": "STATIC",
         "url": null
       }
@@ -28973,14 +29048,14 @@
     ],
     "alerts": [
       {
-        "name": "High CPU Utilization",
-        "details": "This alert is triggered when the CPU Utilization is above 90%.",
+        "name": "Transaction Errors",
+        "details": "This alert is triggered when the the transactions fail more than 10% of the time in 5 minutes.",
         "type": "STATIC",
         "url": null
       },
       {
-        "name": "Transaction Errors",
-        "details": "This alert is triggered when the the transactions fail more than 10% of the time in 5 minutes.",
+        "name": "High CPU Utilization",
+        "details": "This alert is triggered when the CPU Utilization is above 90%.",
         "type": "STATIC",
         "url": null
       }
