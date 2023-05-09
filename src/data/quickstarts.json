@@ -537,6 +537,71 @@
     "installPlans": []
   },
   {
+    "title": "Lighttpd",
+    "name": "lighttpd",
+    "description": "## Comprehensive monitoring for your lighttpd server\n\nLighttpd is an open-source web server designed for high-performance situations while staying standards-compliant, secure, and adaptable.\n\n### Why monitor your lighttpd web server?\n\nLighttpd monitoring provides important information to help you construct a complete picture of your web server's performance. This performance data includes uptime, network in bytes and packets, number of connections, and more.\n\n### What’s included?\n\nUse New Relic to monitor your lighttpd server for immediate full-stack visibility, including:\n- Alerts on things like average number of connections, average number of requests and high memory usage.\n- Dashboards to monitor crucial performance metrics such as uptime, connection state handle request, connection state still alive, networks, requests per second, and more.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/lighttpd",
+    "id": "c51dca70-14f4-4c1b-b0af-c2576b48f39f",
+    "level": "NEW_RELIC",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/lighttpd/logo.png",
+    "summary": "Using New Relic infrastructure agent and Flex configuration setup, you can measure and visualize your lighttpd web server in real time.",
+    "websiteUrl": null,
+    "keywords": [
+      "Lighttpd",
+      "web server",
+      "infrastructure"
+    ],
+    "authors": [
+      "New Relic"
+    ],
+    "dashboards": [
+      {
+        "name": "Lighttpd",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/lighttpd/lighttpd01.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/lighttpd/lighttpd02.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/lighttpd/lighttpd03.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/lighttpd/lighttpd04.png"
+        ]
+      }
+    ],
+    "alerts": [
+      {
+        "name": "Average Number of Connections",
+        "details": "This alert is triggered when the average number of connections exceeds 6000 for 2 minutes.",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "High Memory Usage",
+        "details": "The alert is triggered when memory usage exceeds 90% for at least 5 minutes.",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "Average Number of Requests",
+        "details": "This alert is triggered when the average number of requests exceeds 4000 for 2 minutes.",
+        "type": "STATIC",
+        "url": null
+      }
+    ],
+    "documentation": [
+      {
+        "name": "Lighttpd",
+        "description": "Use our infrastructure agent and Flex configuration to export lighttpd data to New Relic.\n",
+        "url": "https://docs.newrelic.com/docs/infrastructure/host-integrations/host-integrations-list/lighttpd-integration/"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "lighttpd",
+        "id": "lighttpd"
+      }
+    ]
+  },
+  {
     "title": "AWS Direct Connect",
     "name": "aws-direct-connect",
     "description": "## What is AWS Direct Connect?\n\nEstablish a private, secure connection to AWS that runs outside of your ISP.\n\n### Get started!\n\nStart monitoring AWS Direct Connect by connecting Amazon Web Services (AWS) to New Relic!\n\nCheck out our AWS Direct Connect documentation to instrument your cloud service and manage the stability, scalability, and reliability of your systems with New Relic's infrastructure monitoring capabilities.\n\n### More info\n\nCheck out the [documentation](https://docs.newrelic.com/docs/infrastructure/amazon-integrations/aws-integrations-list/aws-direct-connect-monitoring-integration/) to learn more about New Relic monitoring for AWS Direct Connect.",
@@ -1116,71 +1181,6 @@
     ]
   },
   {
-    "title": "Lighttpd",
-    "name": "lighttpd",
-    "description": "## Comprehensive monitoring for your lighttpd server\n\nLighttpd is an open-source web server designed for high-performance situations while staying standards-compliant, secure, and adaptable.\n\n### Why monitor your lighttpd server?\n\nLighttpd monitoring provides important information to help you construct a complete picture of your web server's performance. This performance data includes uptime, network in bytes and packets, number of connections, and more.\n\n### What’s included?\n\nWhen you monitor your lighttpd server with New Relic, you get immediate full-stack observability, including:\n- Alerts on things like average number of connections, average number of requests and high memory usage.\n- Dashboards to monitor crucial performance metrics such as uptime, connection state handle request, connection state still alive, networks, requests per second, and more.",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/lighttpd",
-    "id": "c51dca70-14f4-4c1b-b0af-c2576b48f39f",
-    "level": "NEW_RELIC",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/lighttpd/logo.png",
-    "summary": "With our infrastructure agent and Flex configuration setup, you can monitor and validate your lighttpd processes right out of the box: analyze and capture your server's performance data.",
-    "websiteUrl": null,
-    "keywords": [
-      "Lighttpd",
-      "web server",
-      "infrastructure"
-    ],
-    "authors": [
-      "New Relic"
-    ],
-    "dashboards": [
-      {
-        "name": "Lighttpd",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/lighttpd/lighttpd01.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/lighttpd/lighttpd02.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/lighttpd/lighttpd03.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/lighttpd/lighttpd04.png"
-        ]
-      }
-    ],
-    "alerts": [
-      {
-        "name": "Average Number of Connections",
-        "details": "This alert is triggered when the average number of connections are above 6000 for at least 2 minutes.",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "Average Number of Requests for 5 seconds",
-        "details": "This alert is triggered when the average number of requests for 5 seconds are above 6000 for at least 5 minutes.",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "High Memory Usage",
-        "details": "This alert is triggered when the memory usage is above 90% for at least 5 minutes.",
-        "type": "STATIC",
-        "url": null
-      }
-    ],
-    "documentation": [
-      {
-        "name": "Lighttpd",
-        "description": "Integrate your lighttpd processes with our infrastructure agent and Flex configuration to collect data and deliver it to New Relic.\n",
-        "url": "https://docs.newrelic.com/docs/infrastructure/host-integrations/host-integrations-list/lighttpd-integration/"
-      }
-    ],
-    "installPlans": [
-      {
-        "name": "lighttpd",
-        "id": "lighttpd"
-      }
-    ]
-  },
-  {
     "title": "DagsHub",
     "name": "mlops-dagshub",
     "description": "DagsHub is a platform for data scientists and machine learning engineers to version and sync their data, models, experiments, and code. It allows you and your team to easily share, review and reuse your work, providing a GitHub-like experience for machine learning. DagsHub is built on popular open-source tools and formats, making it easy to integrate with the tools you already use like New Relic.",
@@ -1695,14 +1695,14 @@
     "alerts": [],
     "documentation": [
       {
-        "name": "Install README",
-        "description": "Guides you on how to customize the dashboard once you've installed it\n",
-        "url": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/oma-qf#readme"
-      },
-      {
         "name": "Implementation guide",
         "description": "Explains what quality foundation is and how to apply it\n",
         "url": "https://docs.newrelic.com/docs/new-relic-solutions/observability-maturity/customer-experience/quality-foundation-implementation-guide"
+      },
+      {
+        "name": "Install README",
+        "description": "Guides you on how to customize the dashboard once you've installed it\n",
+        "url": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/oma-qf#readme"
       }
     ],
     "installPlans": [
@@ -4207,19 +4207,19 @@
     ],
     "dashboards": [
       {
-        "name": "Data Ingest Governance Baseline",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/data-ingest-baseline/data-ingest-baseline.png"
-        ]
-      },
-      {
         "name": "Data Ingest Governance Entity Breakdowns",
         "description": null,
         "url": null,
         "screenshots": [
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/data-ingest-entity-breakdown/data-ingest-entity-breakdown.png"
+        ]
+      },
+      {
+        "name": "Data Ingest Governance Baseline",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/data-ingest-baseline/data-ingest-baseline.png"
         ]
       }
     ],
@@ -7177,19 +7177,19 @@
         ]
       },
       {
-        "name": "SAP Data Ingestion Estimate",
-        "description": "Get an overview of the data volume ingested from SAP systems",
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/nrm4sap-datasize/sap-size-estimate01.png"
-        ]
-      },
-      {
         "name": "SAP Data Collection Monitoring",
         "description": "Monitor SAP data collection and ingestion process",
         "url": null,
         "screenshots": [
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/nrm4sap-datacollect/sap-data-collection01.png"
+        ]
+      },
+      {
+        "name": "SAP Data Ingestion Estimate",
+        "description": "Get an overview of the data volume ingested from SAP systems",
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/nrm4sap-datasize/sap-size-estimate01.png"
         ]
       }
     ],
@@ -9609,14 +9609,14 @@
     ],
     "documentation": [
       {
-        "name": "Argo CD Integration Docs",
-        "description": "New Relic documentation for the Argo CD integration including installation, configuration, and how to query the metrics.\n",
-        "url": "https://docs.newrelic.com/docs/infrastructure/prometheus-integrations/integrations-list/argocd-integration"
-      },
-      {
         "name": "Argo CD Metrics Reference",
         "description": "Argo CD Prometheus Metric Reference\n",
         "url": "https://argo-cd.readthedocs.io/en/stable/operator-manual/metrics/"
+      },
+      {
+        "name": "Argo CD Integration Docs",
+        "description": "New Relic documentation for the Argo CD integration including installation, configuration, and how to query the metrics.\n",
+        "url": "https://docs.newrelic.com/docs/infrastructure/prometheus-integrations/integrations-list/argocd-integration"
       },
       {
         "name": "Prometheus Installation Docs",
@@ -9661,18 +9661,6 @@
     ],
     "dashboards": [
       {
-        "name": "JFrog Xray",
-        "description": "This dashboard provides visibility into JFrog Xray logs (access, service, traffic log volumes, HTTP response codes, errors etc), metrics (system performance, number and type of artifacts and components scanned), and violations (security vulnerabiities and license issues)",
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/jfrog-xray/jfrog-xray1.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/jfrog-xray/jfrog-xray2.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/jfrog-xray/jfrog-xray3.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/jfrog-xray/jfrog-xray4.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/jfrog-xray/jfrog-xray5.png"
-        ]
-      },
-      {
         "name": "JFrog Artifactory",
         "description": "This dashboard provides an overview of usage statistics of JFrog Artifactory logs (application, audit, Docker, requests) and overview of the system metrics, JVM statistics, storage consumption, garbage collection, and other operational insights associated with JFrog Artifactory",
         "url": null,
@@ -9684,6 +9672,18 @@
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/jfrog-artifactory/jfrog-artifactory05.png",
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/jfrog-artifactory/jfrog-artifactory06.png",
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/jfrog-artifactory/jfrog-artifactory07.png"
+        ]
+      },
+      {
+        "name": "JFrog Xray",
+        "description": "This dashboard provides visibility into JFrog Xray logs (access, service, traffic log volumes, HTTP response codes, errors etc), metrics (system performance, number and type of artifacts and components scanned), and violations (security vulnerabiities and license issues)",
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/jfrog-xray/jfrog-xray1.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/jfrog-xray/jfrog-xray2.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/jfrog-xray/jfrog-xray3.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/jfrog-xray/jfrog-xray4.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/jfrog-xray/jfrog-xray5.png"
         ]
       }
     ],
@@ -10704,14 +10704,14 @@
         "url": "https://docs.newrelic.com/docs/infrastructure/prometheus-integrations/get-started/send-prometheus-metric-data-new-relic"
       },
       {
-        "name": "Etcd Metrics Docs",
-        "description": "Learn more about the Prometheus metrics available for Etcd",
-        "url": "https://etcd.io/docs/v3.5/metrics/"
-      },
-      {
         "name": "Etcd Integration Docs",
         "description": "New Relic documentation for the Etcd integration including installation, configuration, and how to query the metrics.\n",
         "url": "https://docs.newrelic.com/docs/infrastructure/prometheus-integrations/integrations-list/etcd-integration"
+      },
+      {
+        "name": "Etcd Metrics Docs",
+        "description": "Learn more about the Prometheus metrics available for Etcd",
+        "url": "https://etcd.io/docs/v3.5/metrics/"
       }
     ],
     "installPlans": [
@@ -11515,14 +11515,14 @@
     ],
     "documentation": [
       {
-        "name": "NGINX Ingress Controller Prometheus Integration",
-        "description": "NGINX Ingress Controller Prometheus Integration Documentation\n",
-        "url": "https://docs.newrelic.com/docs/infrastructure/prometheus-integrations/integrations-list/ingress-controller-integration/"
-      },
-      {
         "name": "Prometheus installation docs",
         "description": "Use Prometheus remote_write or Prometheus Agent\n",
         "url": "https://docs.newrelic.com/docs/infrastructure/prometheus-integrations/get-started/send-prometheus-metric-data-new-relic"
+      },
+      {
+        "name": "NGINX Ingress Controller Prometheus Integration",
+        "description": "NGINX Ingress Controller Prometheus Integration Documentation\n",
+        "url": "https://docs.newrelic.com/docs/infrastructure/prometheus-integrations/integrations-list/ingress-controller-integration/"
       }
     ],
     "installPlans": [
@@ -16513,14 +16513,6 @@
     ],
     "dashboards": [
       {
-        "name": "Lacework Security Overview",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/lacework-security-overview/lacework-security-overview01.png"
-        ]
-      },
-      {
         "name": "Lacework Anomaly Detections",
         "description": null,
         "url": null,
@@ -16534,6 +16526,14 @@
         "url": null,
         "screenshots": [
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/lacework-compliance-violations/lacework-compliance-violations01.png"
+        ]
+      },
+      {
+        "name": "Lacework Security Overview",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/lacework-security-overview/lacework-security-overview01.png"
         ]
       }
     ],
@@ -21008,11 +21008,11 @@
     ],
     "dashboards": [
       {
-        "name": "Catchpoint-Overview",
+        "name": "Catchpoint-Response Size",
         "description": null,
         "url": null,
         "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/catchpoint-overview/Catchpoint-Overview.png"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/catchpoint-response-size/Catchpoint-Response_Size.png"
         ]
       },
       {
@@ -21024,11 +21024,11 @@
         ]
       },
       {
-        "name": "Catchpoint-Response Size",
+        "name": "Catchpoint-Overview",
         "description": null,
         "url": null,
         "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/catchpoint-response-size/Catchpoint-Response_Size.png"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/catchpoint-overview/Catchpoint-Overview.png"
         ]
       },
       {
@@ -21375,14 +21375,14 @@
     ],
     "documentation": [
       {
-        "name": "Prometheus OpenMetrics Intergration (POMI) installation docs",
-        "description": "To view the Istio Quickstart, the Kubernetes New Relic integration with the Prometheus OpenMetrics Integration (POMI) must be installed prior.\n",
-        "url": "https://docs.newrelic.com/docs/infrastructure/prometheus-integrations/get-started/send-prometheus-metric-data-new-relic"
-      },
-      {
         "name": "Kubernetes installation docs",
         "description": "To view the Istio Quickstart, the Kubernetes New Relic integration with the Prometheus OpenMetrics Integration (POMI) must be installed prior.\n",
         "url": "https://docs.newrelic.com/docs/integrations/host-integrations/host-integrations-list/kubernetes-monitoring-integration"
+      },
+      {
+        "name": "Prometheus OpenMetrics Intergration (POMI) installation docs",
+        "description": "To view the Istio Quickstart, the Kubernetes New Relic integration with the Prometheus OpenMetrics Integration (POMI) must be installed prior.\n",
+        "url": "https://docs.newrelic.com/docs/infrastructure/prometheus-integrations/get-started/send-prometheus-metric-data-new-relic"
       }
     ],
     "installPlans": [
@@ -23756,14 +23756,14 @@
     ],
     "documentation": [
       {
-        "name": "CoreDNS Metrics Docs",
-        "description": "Learn more about the Prometheus metrics available for CoreDNS\n",
-        "url": "https://coredns.io/plugins/metrics/"
-      },
-      {
         "name": "CoreDNS Integration Docs",
         "description": "New Relic documentation for the CoreDNS integration including installation, configuration, and how to query the metrics.\n",
         "url": "https://docs.newrelic.com/docs/infrastructure/prometheus-integrations/integrations-list/core-dns-integration"
+      },
+      {
+        "name": "CoreDNS Metrics Docs",
+        "description": "Learn more about the Prometheus metrics available for CoreDNS\n",
+        "url": "https://coredns.io/plugins/metrics/"
       },
       {
         "name": "Prometheus Installation Docs",
@@ -28153,19 +28153,11 @@
     ],
     "dashboards": [
       {
-        "name": "GCP Integrations Data Ingest Analysis",
+        "name": "AWS Integrations Data Ingest Analysis",
         "description": null,
         "url": null,
         "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/gcp-integrations-data-ingest-analysis/gcp-integrations-data-ingest-analysis.png"
-        ]
-      },
-      {
-        "name": "On-Host Integrations Data Analysis",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/on-host-integrations-data-analysis/on-host-integrations-data-analysis.png"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/aws-integrations-data-ingest-analysis/aws-integrations-data-ingest-analysis.png"
         ]
       },
       {
@@ -28177,6 +28169,14 @@
         ]
       },
       {
+        "name": "GCP Integrations Data Ingest Analysis",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/gcp-integrations-data-ingest-analysis/gcp-integrations-data-ingest-analysis.png"
+        ]
+      },
+      {
         "name": "Azure Integrations Data Ingest Analysis",
         "description": null,
         "url": null,
@@ -28185,11 +28185,11 @@
         ]
       },
       {
-        "name": "AWS Integrations Data Ingest Analysis",
+        "name": "On-Host Integrations Data Analysis",
         "description": null,
         "url": null,
         "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/aws-integrations-data-ingest-analysis/aws-integrations-data-ingest-analysis.png"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/on-host-integrations-data-analysis/on-host-integrations-data-analysis.png"
         ]
       }
     ],
@@ -28785,19 +28785,19 @@
     ],
     "dashboards": [
       {
-        "name": "Dapr System Services Dashboard",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/dapr-system-services/nr-dashboard-dapr-system-services.png"
-        ]
-      },
-      {
         "name": "Dapr Metrics",
         "description": null,
         "url": null,
         "screenshots": [
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/dapr-metrics/nr-dashboard-dapr-metrics.png"
+        ]
+      },
+      {
+        "name": "Dapr System Services Dashboard",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/dapr-system-services/nr-dashboard-dapr-system-services.png"
         ]
       }
     ],
@@ -29404,11 +29404,11 @@
     ],
     "dashboards": [
       {
-        "name": "Browser Pages Dashboard",
+        "name": "JavaScript Errors",
         "description": null,
         "url": null,
         "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/browser-pages-dashboard/browser_pages_dashboard.png"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/javascript-errors/javascript_errors.png"
         ]
       },
       {
@@ -29420,11 +29420,11 @@
         ]
       },
       {
-        "name": "JavaScript Errors",
+        "name": "Browser Pages Dashboard",
         "description": null,
         "url": null,
         "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/javascript-errors/javascript_errors.png"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/browser-pages-dashboard/browser_pages_dashboard.png"
         ]
       },
       {
@@ -30058,11 +30058,6 @@
     ],
     "documentation": [
       {
-        "name": "Prometheus Installation Docs",
-        "description": "Use Prometheus remote_write or Prometheus Agent\n",
-        "url": "https://docs.newrelic.com/docs/infrastructure/prometheus-integrations/get-started/send-prometheus-metric-data-new-relic/"
-      },
-      {
         "name": "Harbor Integration Docs",
         "description": "New Relic documentation for the Harbor integration including installation, configuration, and how to query the metrics.\n",
         "url": "https://docs.newrelic.com/docs/infrastructure/prometheus-integrations/integrations-list/harbor-integration/"
@@ -30071,6 +30066,11 @@
         "name": "Harbor Metrics Docs",
         "description": "Learn more about the Prometheus metrics available for Harbor\n",
         "url": "https://goharbor.io/docs/2.3.0/administration/metrics/"
+      },
+      {
+        "name": "Prometheus Installation Docs",
+        "description": "Use Prometheus remote_write or Prometheus Agent\n",
+        "url": "https://docs.newrelic.com/docs/infrastructure/prometheus-integrations/get-started/send-prometheus-metric-data-new-relic/"
       }
     ],
     "installPlans": [
@@ -30550,6 +30550,44 @@
         "id": "azure-infrastructure-monitoring"
       }
     ]
+  },
+  {
+    "title": "Amazon Textract",
+    "name": "aws-textract",
+    "description": "## Monitor your AWS Textract Metrics\n\nWith New Relic's Amazon Textract integration, you now can see all your Textract data on New Relic Instant Observability Platform.\n\n### Get started!\n\n Check out the [documentation](https://docs.newrelic.com/docs/infrastructure/amazon-integrations/aws-integrations-list/aws-textract-monitoring-integration/) to learn more about New\n Relic monitoring and integration with Amazon Textract.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/aws/aws-textract",
+    "id": "e519bc93-31fa-4375-9fa0-ac3e2620acc2",
+    "level": "NEW_RELIC",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/aws/aws-textract/logo.png",
+    "summary": "Use New Relic - Amazon Textract Integration to monitor your Textract utilizing Apps and Services with New Relic",
+    "websiteUrl": null,
+    "keywords": [
+      "aws",
+      "amazon web services",
+      "textract"
+    ],
+    "authors": [
+      "New Relic"
+    ],
+    "dashboards": [
+      {
+        "name": "AWS Textract",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/aws-textract/aws-textract.png"
+        ]
+      }
+    ],
+    "alerts": [],
+    "documentation": [
+      {
+        "name": "Amazon Textract installation docs",
+        "description": "Monitor Amazon Textract by connecting AWS to New Relic.\n",
+        "url": "https://docs.newrelic.com/docs/infrastructure/amazon-integrations/aws-integrations-list/aws-textract-monitoring-integration/"
+      }
+    ],
+    "installPlans": []
   },
   {
     "title": "Azure VMs",
