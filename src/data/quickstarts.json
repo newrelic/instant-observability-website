@@ -5780,43 +5780,6 @@
     ]
   },
   {
-    "title": "Azure App Service Plan",
-    "name": "azure-app-service-plan",
-    "description": "## What is Azure App Service Plan?\n\nAzure App Service Plan represents the collection of physical resources for the App Service. An App Service Plan can have multiple web apps. In other words, we can have multiple web apps in an app service plan.\n\n### New Relic Azure App Service Plan quickstart features\n\nA standard dashboard that tracks key indicators like bytes received, bytes sent, CPU percentage, disk queue length, memory percentage. It runs custom queries and visualizes the data immediately.\n\n### Why monitor Azure App Service Plan with New Relic?\n\n[New Relic Azure App Service Plan](https://docs.newrelic.com/docs/infrastructure/microsoft-azure-integrations/azure-integrations-list/azure-app-service-plan-monitoring-integration/) monitoring quickstart empowers you to track the performance of Azure App Service Plan via different metrics including bytes received, bytes sent, CPU percentage, disk queue length, memory percentage. \n\nOur integration features a standard dashboard that provides interactive visualizations to explore your data, understand context, and get valuable insights.\n\nStart ingesting your Azure data today and get immediate access to our visualization dashboards so you can optimize your Azure service.",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/azure/azure-app-service-plan",
-    "id": "9dc69e3b-c6c6-4b3e-b832-0f1ceab6c17b",
-    "level": "NEW_RELIC",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/azure/azure-app-service-plan/logo.png",
-    "summary": "Monitoring Azure App Service Plan is critical to track the performance through via key metrics. Download New Relic Azure App Service Plan monitoring quickstart to get a pre-built dashboard tailored to monitor your Azure App Service Plan Service.",
-    "websiteUrl": null,
-    "keywords": [
-      "azure",
-      "app service plan",
-      "product partnerships"
-    ],
-    "authors": [
-      "New Relic",
-      "New Relic Partner"
-    ],
-    "dashboards": [
-      {
-        "name": "Azure App Service Plan",
-        "description": null,
-        "url": null,
-        "screenshots": []
-      }
-    ],
-    "alerts": [],
-    "documentation": [
-      {
-        "name": "Azure App Service Plan installation docs",
-        "description": "Monitor Azure App Service Plan by connecting Azure to New Relic.\n",
-        "url": "https://docs.newrelic.com/docs/infrastructure/microsoft-azure-integrations/azure-integrations-list/azure-app-service-plan-monitoring-integration/"
-      }
-    ],
-    "installPlans": []
-  },
-  {
     "title": "Tornado",
     "name": "tornado",
     "description": "## What is tornado?\n\nTornado is a Python web framework and asynchronous networking library, originally developed at FriendFeed. By using non-blocking network I/O, Tornado can scale to tens of thousands of open connections, making it ideal for long polling, WebSockets, and other applications that require a long-lived connection to each user.\n\n## Get started!\n\nLeverage community expertise and instantly get value out of your telemetry data. This quickstart automatically instruments tornado with the New Relic Python agent, and allows you to instantly monitor your Python application with out-of-the-box dashboards and alerts. Further leverage New Relic's APM capabilities by setting up [errors inbox](https://docs.newrelic.com/docs/apm/apm-ui-pages/errors-inbox/errors-inbox/), [transaction tracing](https://docs.newrelic.com/docs/apm/transactions/transaction-traces/introduction-transaction-traces/), and [service maps](https://docs.newrelic.com/docs/understand-dependencies/understand-system-dependencies/service-maps/introduction-service-maps/).\\n\\n## More info\\n\\nCheck out the [documentation](https://docs.newrelic.com/docs/agents/python-agent/) to learn more about New Relic monitoring for tornado.\"",
@@ -6043,6 +6006,43 @@
         "id": "aws-cloudwatch-metric-streams"
       }
     ]
+  },
+  {
+    "title": "Azure App Service Plan",
+    "name": "azure-app-service-plan",
+    "description": "## What is Azure App Service Plan?\n\nAzure App Service Plan represents the collection of physical resources for the App Service. An App Service Plan can have multiple web apps. In other words, we can have multiple web apps in an app service plan.\n\n### New Relic Azure App Service Plan quickstart features\n\nA standard dashboard that tracks key indicators like bytes received, bytes sent, CPU percentage, disk queue length, memory percentage. It runs custom queries and visualizes the data immediately.\n\n### Why monitor Azure App Service Plan with New Relic?\n\n[New Relic Azure App Service Plan](https://docs.newrelic.com/docs/infrastructure/microsoft-azure-integrations/azure-integrations-list/azure-app-service-plan-monitoring-integration/) monitoring quickstart empowers you to track the performance of Azure App Service Plan via different metrics including bytes received, bytes sent, CPU percentage, disk queue length, memory percentage. \n\nOur integration features a standard dashboard that provides interactive visualizations to explore your data, understand context, and get valuable insights.\n\nStart ingesting your Azure data today and get immediate access to our visualization dashboards so you can optimize your Azure service.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/azure/azure-app-service-plan",
+    "id": "9dc69e3b-c6c6-4b3e-b832-0f1ceab6c17b",
+    "level": "NEW_RELIC",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/azure/azure-app-service-plan/logo.png",
+    "summary": "Monitoring Azure App Service Plan is critical to track the performance through via key metrics. Download New Relic Azure App Service Plan monitoring quickstart to get a pre-built dashboard tailored to monitor your Azure App Service Plan Service.",
+    "websiteUrl": null,
+    "keywords": [
+      "azure",
+      "app service plan",
+      "product partnerships"
+    ],
+    "authors": [
+      "New Relic",
+      "New Relic Partner"
+    ],
+    "dashboards": [
+      {
+        "name": "Azure App Service Plan",
+        "description": null,
+        "url": null,
+        "screenshots": []
+      }
+    ],
+    "alerts": [],
+    "documentation": [
+      {
+        "name": "Azure App Service Plan installation docs",
+        "description": "Monitor Azure App Service Plan by connecting Azure to New Relic.\n",
+        "url": "https://docs.newrelic.com/docs/infrastructure/microsoft-azure-integrations/azure-integrations-list/azure-app-service-plan/"
+      }
+    ],
+    "installPlans": []
   },
   {
     "title": "HttpClient",
@@ -9038,45 +9038,6 @@
     ]
   },
   {
-    "title": "Azure Batch",
-    "name": "azure-batch",
-    "description": "## What is Azure Batch?\n\nAzure Batch is a managed service that enables you to run high-performance parallel computing jobs in the cloud. You can run compute-intensive work in a collection of virtual machines.\n\n### New Relic Azure Batch quickstart features\n\nA standard dashboard that tracks key indicators like vCPU minutes, node states, job status and task status. It runs custom queries and visualizes the data immediately.\n\n### Why monitor Azure Batch with New Relic?\n\n[New Relic Azure Batch](https://docs.newrelic.com/docs/infrastructure/microsoft-azure-integrations/azure-integrations-list/azure-batch-monitoring-integration/) monitoring quickstart empowers you to track the performance of Azure Batch via different metrics including vCPU minutes, node states, task states and job states. \n\nOur integration features a standard dashboard that provides interactive visualizations to explore your data, understand context, and get valuable insights.\n\nStart ingesting your Azure data today and get immediate access to our visualization dashboards so you can optimize your Azure service.",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/azure/azure-batch",
-    "id": "e31643a4-a7a8-4fb9-b4fc-e8b15f93dabf",
-    "level": "NEW_RELIC",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/azure/azure-batch/logo.png",
-    "summary": "Monitoring Azure Batch is critical to track the performance of the jobs via key metrics. Download New Relic Azure Batch monitoring quickstart to get a pre-built dashboard tailored to monitor your Azure Batch Service.",
-    "websiteUrl": null,
-    "keywords": [
-      "azure",
-      "batch",
-      "product partnerships"
-    ],
-    "authors": [
-      "New Relic",
-      "New Relic Partner"
-    ],
-    "dashboards": [
-      {
-        "name": "Azure Batch",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/azure-batch/azure-batch.png"
-        ]
-      }
-    ],
-    "alerts": [],
-    "documentation": [
-      {
-        "name": "Azure Batch installation docs",
-        "description": "Monitor Azure Batch by connecting Azure to New Relic.\n",
-        "url": "https://docs.newrelic.com/docs/infrastructure/microsoft-azure-integrations/azure-integrations-list/azure-batch-monitoring-integration/"
-      }
-    ],
-    "installPlans": []
-  },
-  {
     "title": "HttpRb",
     "name": "httprb",
     "description": "## What is HttpRb?\n\nStraightforward Ruby-based HTTP client with advanced feature set.\n\n## Get started!\n\nLeverage community expertise and instantly get value out of your telemetry data. This quickstart automatically instruments HttpRb with the New Relic Ruby agent, and allows you to further leverage New Relic's APM capabilities by setting up [custom dashboards](https://docs.newrelic.com/docs/query-your-data/explore-query-data/dashboards/introduction-dashboards/), [errors inbox](https://docs.newrelic.com/docs/apm/apm-ui-pages/errors-inbox/errors-inbox/), [transaction tracing](https://docs.newrelic.com/docs/apm/transactions/transaction-traces/introduction-transaction-traces/), and [service maps](https://docs.newrelic.com/docs/understand-dependencies/understand-system-dependencies/service-maps/introduction-service-maps/).\n\n## More info\n\nCheck out the [documentation](https://docs.newrelic.com/docs/agents/ruby-agent/) to learn more about New Relic monitoring for HttpRb.",
@@ -9216,6 +9177,45 @@
         "id": "setup-ruby-agent"
       }
     ]
+  },
+  {
+    "title": "Azure Batch",
+    "name": "azure-batch",
+    "description": "## What is Azure Batch?\n\nAzure Batch is a managed service that enables you to run high-performance parallel computing jobs in the cloud. You can run compute-intensive work in a collection of virtual machines.\n\n### New Relic Azure Batch quickstart features\n\nA standard dashboard that tracks key indicators like vCPU minutes, node states, job status and task status. It runs custom queries and visualizes the data immediately.\n\n### Why monitor Azure Batch with New Relic?\n\n[New Relic Azure Batch](https://docs.newrelic.com/docs/infrastructure/microsoft-azure-integrations/azure-integrations-list/azure-batch-monitoring-integration/) monitoring quickstart empowers you to track the performance of Azure Batch via different metrics including vCPU minutes, node states, task states and job states. \n\nOur integration features a standard dashboard that provides interactive visualizations to explore your data, understand context, and get valuable insights.\n\nStart ingesting your Azure data today and get immediate access to our visualization dashboards so you can optimize your Azure service.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/azure/azure-batch",
+    "id": "e31643a4-a7a8-4fb9-b4fc-e8b15f93dabf",
+    "level": "NEW_RELIC",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/azure/azure-batch/logo.png",
+    "summary": "Monitoring Azure Batch is critical to track the performance of the jobs via key metrics. Download New Relic Azure Batch monitoring quickstart to get a pre-built dashboard tailored to monitor your Azure Batch Service.",
+    "websiteUrl": null,
+    "keywords": [
+      "azure",
+      "batch",
+      "product partnerships"
+    ],
+    "authors": [
+      "New Relic",
+      "New Relic Partner"
+    ],
+    "dashboards": [
+      {
+        "name": "Azure Batch",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/azure-batch/azure-batch.png"
+        ]
+      }
+    ],
+    "alerts": [],
+    "documentation": [
+      {
+        "name": "Azure Batch installation docs",
+        "description": "Monitor Azure Batch by connecting Azure to New Relic.\n",
+        "url": "https://docs.newrelic.com/docs/infrastructure/microsoft-azure-integrations/azure-integrations-list/azure-batchaccount-monitoring-integration/"
+      }
+    ],
+    "installPlans": []
   },
   {
     "title": "Synthetics Page Load performance",
@@ -10704,14 +10704,14 @@
         "url": "https://docs.newrelic.com/docs/infrastructure/prometheus-integrations/get-started/send-prometheus-metric-data-new-relic"
       },
       {
-        "name": "Etcd Integration Docs",
-        "description": "New Relic documentation for the Etcd integration including installation, configuration, and how to query the metrics.\n",
-        "url": "https://docs.newrelic.com/docs/infrastructure/prometheus-integrations/integrations-list/etcd-integration"
-      },
-      {
         "name": "Etcd Metrics Docs",
         "description": "Learn more about the Prometheus metrics available for Etcd",
         "url": "https://etcd.io/docs/v3.5/metrics/"
+      },
+      {
+        "name": "Etcd Integration Docs",
+        "description": "New Relic documentation for the Etcd integration including installation, configuration, and how to query the metrics.\n",
+        "url": "https://docs.newrelic.com/docs/infrastructure/prometheus-integrations/integrations-list/etcd-integration"
       }
     ],
     "installPlans": [
@@ -12161,43 +12161,6 @@
     ]
   },
   {
-    "title": "Azure Disk Storage",
-    "name": "azure-disk-storage",
-    "description": "## What is Azure Disk Storage?\n\nAzure managed disks are block-level storage volumes that are managed by Azure and used with Azure Virtual Machines.\n\n### New Relic Azure Disk Storage quickstart features\n\nA standard dashboard that tracks key indicators like disk read bytes, disk read operations, disk write bytes, disk write operations and disk on-demand burst operations. It runs custom queries and visualizes the data immediately.\n\n### Why monitor Azure Disk Storage with New Relic?\n\n[New Relic Azure Disk Storage](https://docs.newrelic.com/docs/infrastructure/microsoft-azure-integrations/azure-integrations-list/azure-disk-storage-monitoring-integration/) monitoring quickstart empowers you to track the performance of Azure Disk Storage via different metrics including disk read bytes, disk read operations, disk write bytes, disk write operations and disk on-demand burst operations. \n\nOur integration features a standard dashboard that provides interactive visualizations to explore your data, understand context and get valuable insights.\n\nStart ingesting your Azure data today and get immediate access to our visualization dashboards so you can optimize your Azure service.",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/azure/azure-disk-storage",
-    "id": "8a6fd1c3-6022-4533-8c5e-f5f6753372bb",
-    "level": "NEW_RELIC",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/azure/azure-disk-storage/logo.png",
-    "summary": "Monitoring Azure Disk Storage is critical to track the performance through key metrics. Download New Relic Azure Disk Storage monitoring quickstart to get a pre-built dashboard tailored to monitor your Azure Disk Storage.",
-    "websiteUrl": null,
-    "keywords": [
-      "azure",
-      "disk storage",
-      "product partnerships"
-    ],
-    "authors": [
-      "New Relic",
-      "New Relic Partner"
-    ],
-    "dashboards": [
-      {
-        "name": "Azure Disk Storage",
-        "description": null,
-        "url": null,
-        "screenshots": []
-      }
-    ],
-    "alerts": [],
-    "documentation": [
-      {
-        "name": "Azure Disk Storage installation docs",
-        "description": "Monitor Azure Disk Storage by connecting Azure to New Relic.\n",
-        "url": "https://docs.newrelic.com/docs/infrastructure/microsoft-azure-integrations/azure-integrations-list/azure-disk-stoarge-monitoring-integration/"
-      }
-    ],
-    "installPlans": []
-  },
-  {
     "title": "OpenRasta",
     "name": "openrasta",
     "description": "## What is OpenRasta?\n\nOpenRasta is an open-source .NET framework for building everything web, from\nweb sites to RESTful APIs.\n\n\n## Get started!\n\nLeverage community expertise and instantly get value out of your telemetry data. This quickstart automatically instruments OpenRasta with the New Relic .Net agent, and allows you to instantly monitor your .Net application with out-of-the-box dashboards and alerts. Further leverage New Relic's APM capabilities by setting up [errors inbox](https://docs.newrelic.com/docs/apm/apm-ui-pages/errors-inbox/errors-inbox/), [transaction tracing](https://docs.newrelic.com/docs/apm/transactions/transaction-traces/introduction-transaction-traces/), and [service maps](https://docs.newrelic.com/docs/understand-dependencies/understand-system-dependencies/service-maps/introduction-service-maps/).\n\n## More info\n\nCheck out the [documentation](https://docs.newrelic.com/docs/agents/net-agent/getting-started/introduction-new-relic-net/) to learn more about New Relic monitoring for OpenRasta.",
@@ -12564,6 +12527,43 @@
         "name": "Webhook installation docs",
         "description": "Ready to integrate Webhook with New Relic? Check out our documentation to learn how to set up a Webhook workflow from New Relic.",
         "url": "https://docs.newrelic.com/docs/alerts-applied-intelligence/notifications/notification-integrations/#webhook"
+      }
+    ],
+    "installPlans": []
+  },
+  {
+    "title": "Azure Disk Storage",
+    "name": "azure-disk-storage",
+    "description": "## What is Azure Disk Storage?\n\nAzure managed disks are block-level storage volumes that are managed by Azure and used with Azure Virtual Machines.\n\n### New Relic Azure Disk Storage quickstart features\n\nA standard dashboard that tracks key indicators like disk read bytes, disk read operations, disk write bytes, disk write operations and disk on-demand burst operations. It runs custom queries and visualizes the data immediately.\n\n### Why monitor Azure Disk Storage with New Relic?\n\n[New Relic Azure Disk Storage](https://docs.newrelic.com/docs/infrastructure/microsoft-azure-integrations/azure-integrations-list/azure-disk-storage-monitoring-integration/) monitoring quickstart empowers you to track the performance of Azure Disk Storage via different metrics including disk read bytes, disk read operations, disk write bytes, disk write operations and disk on-demand burst operations. \n\nOur integration features a standard dashboard that provides interactive visualizations to explore your data, understand context and get valuable insights.\n\nStart ingesting your Azure data today and get immediate access to our visualization dashboards so you can optimize your Azure service.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/azure/azure-disk-storage",
+    "id": "8a6fd1c3-6022-4533-8c5e-f5f6753372bb",
+    "level": "NEW_RELIC",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/azure/azure-disk-storage/logo.png",
+    "summary": "Monitoring Azure Disk Storage is critical to track the performance through key metrics. Download New Relic Azure Disk Storage monitoring quickstart to get a pre-built dashboard tailored to monitor your Azure Disk Storage.",
+    "websiteUrl": null,
+    "keywords": [
+      "azure",
+      "disk storage",
+      "product partnerships"
+    ],
+    "authors": [
+      "New Relic",
+      "New Relic Partner"
+    ],
+    "dashboards": [
+      {
+        "name": "Azure Disk Storage",
+        "description": null,
+        "url": null,
+        "screenshots": []
+      }
+    ],
+    "alerts": [],
+    "documentation": [
+      {
+        "name": "Azure Disk Storage installation docs",
+        "description": "Monitor Azure Disk Storage by connecting Azure to New Relic.\n",
+        "url": "https://docs.newrelic.com/docs/infrastructure/microsoft-azure-integrations/azure-integrations-list/azure-disk-storage-monitoring-integration/"
       }
     ],
     "installPlans": []
@@ -22703,44 +22703,6 @@
     ]
   },
   {
-    "title": "Azure Event Grid Subscriptions",
-    "name": "azure-event-grid-subscriptions",
-    "description": "## What is Azure Event Grid Subscriptions?\n\nAzure Event Grid Subscriptions tells Event Grid which events on a topic you're interested in receiving. The endpoint or built-in mechanism to route events, sometimes to more than one handler. Subscriptions are also used by handlers to intelligently filter incoming events.\n\n### New Relic Azure Event Grid Subscriptions quickstart features\n\nA standard dashboard that tracks key indicators like delivery failed events, delivered events, dropped events and matched events. It runs custom queries and visualizes the data immediately\n\n\n### Why monitor Azure Event Grid Subscriptions with New Relic?\n\n[New Relic Azure Event Grid Subscriptions](https://docs.newrelic.com/docs/infrastructure/microsoft-azure-integrations/azure-integrations-list/azure-event-grid-subscription-monitoring-integration/) monitoring quickstart empowers you to track the performance of Azure event grid subscriptions via different metrics including delivery failed events, delivered events, dropped events and matched events.\n\nOur integration features a standard dashboard that provides interactive visualizations to explore your data, understand context, and get valuable insights.\n\nStart ingesting your Azure data today and get immediate access to our visualization dashboards so you can optimize your Azure service.",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/azure/azure-event-grid-subscriptions",
-    "id": "c5ab28e0-e920-4d36-8c29-2fe7d5ce48f1",
-    "level": "NEW_RELIC",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/azure/azure-event-grid-subscriptions/logo.png",
-    "summary": "Monitoring Azure Event Grid Subscriptions is critical to track the performance through key metrics. Download New Relic Azure Event Grid Subscriptions monitoring quickstart to  get a pre-built dashboard tailored to monitor your Azure Event Grid Subscriptions Service.",
-    "websiteUrl": null,
-    "keywords": [
-      "azure",
-      "event grid",
-      "event grid subscriptions",
-      "product partnerships"
-    ],
-    "authors": [
-      "New Relic",
-      "New Relic Partner"
-    ],
-    "dashboards": [
-      {
-        "name": "Azure Event Grid Subscriptions",
-        "description": null,
-        "url": null,
-        "screenshots": []
-      }
-    ],
-    "alerts": [],
-    "documentation": [
-      {
-        "name": "Azure Event Grid Subscriptions installation docs",
-        "description": "Monitor Azure Event Grid Subscriptions by connecting Azure to New Relic.\n",
-        "url": "https://docs.newrelic.com/docs/infrastructure/microsoft-azure-integrations/azure-integrations-list/azure-event-grid-subscription-monitoring-integration/"
-      }
-    ],
-    "installPlans": []
-  },
-  {
     "title": "ASP .NET MVC",
     "name": "asp-dotnet-mvc",
     "description": "## What is ASP .NET MVC?\n\nOpen-source web application framework developed by Microsoft, which implements\nthe model-view-controller pattern.\n\n\n## Get started!\n\nLeverage community expertise and instantly get value out of your telemetry data. This quickstart automatically instruments ASP .NET MVC with the New Relic .Net agent, and allows you to instantly monitor your .Net application with out-of-the-box dashboards and alerts. Further leverage New Relic's APM capabilities by setting up [errors inbox](https://docs.newrelic.com/docs/apm/apm-ui-pages/errors-inbox/errors-inbox/), [transaction tracing](https://docs.newrelic.com/docs/apm/transactions/transaction-traces/introduction-transaction-traces/), and [service maps](https://docs.newrelic.com/docs/understand-dependencies/understand-system-dependencies/service-maps/introduction-service-maps/).\n\n## More info\n\nCheck out the [documentation](https://docs.newrelic.com/docs/agents/net-agent/getting-started/introduction-new-relic-net/) to learn more about New Relic monitoring for ASP .NET MVC.",
@@ -23502,6 +23464,44 @@
         "id": "aws-vpc-flow-logs"
       }
     ]
+  },
+  {
+    "title": "Azure Event Grid Subscriptions",
+    "name": "azure-event-grid-subscriptions",
+    "description": "## What is Azure Event Grid Subscriptions?\n\nAzure Event Grid Subscriptions tells Event Grid which events on a topic you're interested in receiving. The endpoint or built-in mechanism to route events, sometimes to more than one handler. Subscriptions are also used by handlers to intelligently filter incoming events.\n\n### New Relic Azure Event Grid Subscriptions quickstart features\n\nA standard dashboard that tracks key indicators like delivery failed events, delivered events, dropped events and matched events. It runs custom queries and visualizes the data immediately\n\n\n### Why monitor Azure Event Grid Subscriptions with New Relic?\n\n[New Relic Azure Event Grid Subscriptions](https://docs.newrelic.com/docs/infrastructure/microsoft-azure-integrations/azure-integrations-list/azure-event-grid-subscription-monitoring-integration/) monitoring quickstart empowers you to track the performance of Azure event grid subscriptions via different metrics including delivery failed events, delivered events, dropped events and matched events.\n\nOur integration features a standard dashboard that provides interactive visualizations to explore your data, understand context, and get valuable insights.\n\nStart ingesting your Azure data today and get immediate access to our visualization dashboards so you can optimize your Azure service.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/azure/azure-event-grid-subscriptions",
+    "id": "c5ab28e0-e920-4d36-8c29-2fe7d5ce48f1",
+    "level": "NEW_RELIC",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/azure/azure-event-grid-subscriptions/logo.png",
+    "summary": "Monitoring Azure Event Grid Subscriptions is critical to track the performance through key metrics. Download New Relic Azure Event Grid Subscriptions monitoring quickstart to  get a pre-built dashboard tailored to monitor your Azure Event Grid Subscriptions Service.",
+    "websiteUrl": null,
+    "keywords": [
+      "azure",
+      "event grid",
+      "event grid subscriptions",
+      "product partnerships"
+    ],
+    "authors": [
+      "New Relic",
+      "New Relic Partner"
+    ],
+    "dashboards": [
+      {
+        "name": "Azure Event Grid Subscriptions",
+        "description": null,
+        "url": null,
+        "screenshots": []
+      }
+    ],
+    "alerts": [],
+    "documentation": [
+      {
+        "name": "Azure Event Grid Subscriptions installation docs",
+        "description": "Monitor Azure Event Grid Subscriptions by connecting Azure to New Relic.\n",
+        "url": "https://docs.newrelic.com/docs/infrastructure/microsoft-azure-integrations/azure-integrations-list/azure-event-grid-subscriptions-monitoring-integration/"
+      }
+    ],
+    "installPlans": []
   },
   {
     "title": "Azure DataFactories",
@@ -28430,43 +28430,6 @@
     "installPlans": []
   },
   {
-    "title": "Azure Event Grid Partner Topics",
-    "name": "azure-event-grid-partner-topics",
-    "description": "## What is Azure Event Grid Partner Topics?\n\nEvent Grid's Partner Events allows customers to subscribe to events that originate in a registered system using the same mechanism they would use for any other event source on Azure, such as an Azure service.  \n\n### New Relic Azure Event Grid Partner Topics quickstart features\n\nA standard dashboard that tracks key indicators like delivery success count, matched event count, publish success count. It runs custom queries and visualizes the data immediately.\n\n### Why monitor Azure Event Grid Partner Topics with New Relic?\n\n[New Relic Azure Event Grid Partner Topics](https://docs.newrelic.com/docs/infrastructure/microsoft-azure-integrations/azure-integrations-list/azure-eventgrid-Partner-topics-monitoring-integration/) monitoring quickstart empowers you to track the performance of Azure partner topics via different metrics including delivery success count, matched event count, publish success count. \n\nOur integration features a standard dashboard that provides interactive visualizations to explore your data, understand context, and get valuable insights.\n\nStart ingesting your Azure data today and get immediate access to our visualization dashboards so you can optimize your Azure service.",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/azure/azure-event-grid-partner-topics",
-    "id": "de0c7325-e684-4e6e-8156-c02651f64104",
-    "level": "NEW_RELIC",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/azure/azure-event-grid-partner-topics/logo.png",
-    "summary": "Monitoring Azure Event Grid Partner Topics is critical to track the performance through key metrics. Download New Relic Azure Event Grid Partner Topics monitoring quickstart to get a pre-built dashboard tailored to monitor your Azure Event Grid Partner Topics Service.",
-    "websiteUrl": null,
-    "keywords": [
-      "azure",
-      "event grid",
-      "product partnerships"
-    ],
-    "authors": [
-      "New Relic",
-      "New Relic Partner"
-    ],
-    "dashboards": [
-      {
-        "name": "Azure Event Grid Partner Topics",
-        "description": null,
-        "url": null,
-        "screenshots": []
-      }
-    ],
-    "alerts": [],
-    "documentation": [
-      {
-        "name": "Azure Event Grid Partner Topics installation docs",
-        "description": "Monitor Azure Event Grid Partner Topics by connecting Azure to New Relic.\n",
-        "url": "https://docs.newrelic.com/docs/infrastructure/microsoft-azure-integrations/azure-integrations-list/azure-eventgrid-Partner-topics-monitoring-integration/"
-      }
-    ],
-    "installPlans": []
-  },
-  {
     "title": "Azure VPN Gateways",
     "name": "azure-vpn-gateways",
     "description": "## What is Azure VPN Gateways?\n\nUsed to send encrypted data between on-premises infrastructure and Azure\nservices.\n\n\n### Get started!\n\nStart monitoring Azure VPN Gateways by connecting Microsoft Azure to New Relic!\n\nCheck out our Azure VPN Gateways documentation to instrument your cloud service and manage the stability, scalability, and reliability of your systems with New Relic's infrastructure monitoring capabilities.\n\n### More info\n\nCheck out the [documentation](https://docs.newrelic.com/docs/infrastructure/microsoft-azure-integrations/azure-integrations-list/azure-vpn-gateway-integration/) to learn more about New Relic monitoring for Azure VPN Gateways.",
@@ -28599,6 +28562,43 @@
         "name": "Azure Maps installation docs",
         "description": "Monitor Azure Maps by connecting Azure to New Relic.\n",
         "url": "https://docs.newrelic.com/docs/infrastructure/microsoft-azure-integrations/azure-integrations-list/azure-maps-monitoring-integration/"
+      }
+    ],
+    "installPlans": []
+  },
+  {
+    "title": "Azure Event Grid Partner Topics",
+    "name": "azure-event-grid-partner-topics",
+    "description": "## What is Azure Event Grid Partner Topics?\n\nEvent Grid's Partner Events allows customers to subscribe to events that originate in a registered system using the same mechanism they would use for any other event source on Azure, such as an Azure service.  \n\n### New Relic Azure Event Grid Partner Topics quickstart features\n\nA standard dashboard that tracks key indicators like delivery success count, matched event count, publish success count. It runs custom queries and visualizes the data immediately.\n\n### Why monitor Azure Event Grid Partner Topics with New Relic?\n\n[New Relic Azure Event Grid Partner Topics](https://docs.newrelic.com/docs/infrastructure/microsoft-azure-integrations/azure-integrations-list/azure-eventgrid-Partner-topics-monitoring-integration/) monitoring quickstart empowers you to track the performance of Azure partner topics via different metrics including delivery success count, matched event count, publish success count. \n\nOur integration features a standard dashboard that provides interactive visualizations to explore your data, understand context, and get valuable insights.\n\nStart ingesting your Azure data today and get immediate access to our visualization dashboards so you can optimize your Azure service.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/azure/azure-event-grid-partner-topics",
+    "id": "de0c7325-e684-4e6e-8156-c02651f64104",
+    "level": "NEW_RELIC",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/azure/azure-event-grid-partner-topics/logo.png",
+    "summary": "Monitoring Azure Event Grid Partner Topics is critical to track the performance through key metrics. Download New Relic Azure Event Grid Partner Topics monitoring quickstart to get a pre-built dashboard tailored to monitor your Azure Event Grid Partner Topics Service.",
+    "websiteUrl": null,
+    "keywords": [
+      "azure",
+      "event grid",
+      "product partnerships"
+    ],
+    "authors": [
+      "New Relic",
+      "New Relic Partner"
+    ],
+    "dashboards": [
+      {
+        "name": "Azure Event Grid Partner Topics",
+        "description": null,
+        "url": null,
+        "screenshots": []
+      }
+    ],
+    "alerts": [],
+    "documentation": [
+      {
+        "name": "Azure Event Grid Partner Topics installation docs",
+        "description": "Monitor Azure Event Grid Partner Topics by connecting Azure to New Relic.\n",
+        "url": "https://docs.newrelic.com/docs/infrastructure/microsoft-azure-integrations/azure-integrations-list/azure-event-grid-partner-topics-monitoring-integration/"
       }
     ],
     "installPlans": []
@@ -30445,32 +30445,6 @@
     ]
   },
   {
-    "title": "GitHub Deployment Protection Rules",
-    "name": "github-deployment-protection",
-    "description": "## What are Deployment Protection Rules\n​​Deployment Protection Rules for GitHub Actions provides additional control to your [GitHub Actions](https://github.com/features/actions) CI/CD workflows. Developers can enforce quality gates on every deployment environment, preventing deployments that do not meet specific criteria from reaching production.\n\n### Why Set Up Deployment Protection Rules\nBy setting up Deployment Protection Rules and integrating them into their release processes, teams can break down silos and create tighter collaboration between development, operations, and other groups for faster, more reliable releases. This can also lead to a better overall development lifecycle, with fewer bugs, better testing, and more reliable code.\n\n## Integrate New Relic with GitHub Actions releases\nNew Relic and GitHub have made it easy to set up rigorous control mechanisms that ensure only high-quality thoroughly tested code reaches production.\n\nWith the [New Relic Gate App](https://github.com/apps/new-relic-gate), you can leverage anomaly detection to automatically intercept and validate deployment requests. This lets you prevent issues earlier in the release cycle to reduce alarming on higher level environments and build better software.\n\n### Benefits\nWith this integration, you can connect software performance and environment health analysis to actual deployment criteria, allowing you to:\n\n  **Protect downstream environments from potential issues.** Connect New Relic signals with your deployment gates to prevent hazards and issues from being deployed downstream.\n  **Gain flexible control with New Relic AIOps.** Whether it's errors, performance changes, or anomalies, anything you monitor can become a deployment gate. \n  **Catch issues earlier in the release cycle.** Shift left and prevent issues before they make it to production.\n\n## Get Started\n  [Learn more](https://docs.newrelic.com/whats-new/2023/04/whats-new-04-20-github-integration/)\n  [See instructions](https://github.com/apps/new-relic-gate)and install the app.",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/gh-gates",
-    "id": "91464093-cc5d-4599-8fee-23f4de0183b5",
-    "level": "NEW_RELIC",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/gh-gates/logo.svg",
-    "summary": "Use New Relic anomaly detection to create GitHub deployment protection rules",
-    "websiteUrl": null,
-    "keywords": [
-      "github",
-      "gates",
-      "anomaly detection",
-      "notifications",
-      "AIOps",
-      "Incident Intelligence"
-    ],
-    "authors": [
-      "New Relic"
-    ],
-    "dashboards": [],
-    "alerts": [],
-    "documentation": [],
-    "installPlans": []
-  },
-  {
     "title": "Amazon Translate",
     "name": "aws-translate",
     "description": "## Monitor your AWS Translate Metrics\n\nWith New Relic's Amazon Translate integration, you now can see all your Transate data on New Relic Instant Observability Platform.\n\n### Get started!\n\n Check out the [documentation](https://docs.newrelic.com/docs/infrastructure/amazon-integrations/aws-integrations-list/aws-translate-monitoring-integration/) to learn more about New\n Relic monitoring and integration with Amazon Translate.",
@@ -30504,6 +30478,38 @@
         "name": "Amazon Translate installation docs",
         "description": "Monitor Amazon Translate by connecting AWS to New Relic.\n",
         "url": "https://docs.newrelic.com/docs/infrastructure/amazon-integrations/aws-integrations-list/aws-translate-monitoring-integration/"
+      }
+    ],
+    "installPlans": []
+  },
+  {
+    "title": "GitHub Deployment Protection Rules",
+    "name": "github-deployment-protection",
+    "description": "## What are Deployment Protection Rules\nDeployment Protection Rules for GitHub Actions provides additional control to your [GitHub Actions](https://github.com/features/actions) CI/CD workflows. Developers can enforce quality gates on every deployment environment, preventing deployments that do not meet specific criteria from reaching production.\n\n### Why Set Up Deployment Protection Rules\nBy setting up Deployment Protection Rules and integrating them into their release processes, teams can break down silos and create tighter collaboration between development, operations, and other groups for faster, more reliable releases. This can also lead to a better overall development lifecycle, with fewer bugs, better testing, and more reliable code.\n\n## Integrate New Relic with GitHub Actions releases\nNew Relic and GitHub have made it easy to set up rigorous control mechanisms that ensure only high-quality thoroughly tested code reaches production.\n\nWith the [New Relic Gate App](https://github.com/apps/new-relic-gate), you can leverage anomaly detection to automatically intercept and validate deployment requests. This lets you prevent issues earlier in the release cycle to reduce alarming on higher level environments and build better software.\n\n### Benefits\nWith this integration, you can connect software performance and environment health analysis to actual deployment criteria, allowing you to:\n\n- **Protect downstream environments from potential issues.** Connect New Relic signals with your deployment gates to prevent hazards and issues from being deployed downstream.\n- **Gain flexible control with New Relic AIOps.** Whether it's errors, performance changes, or anomalies, anything you monitor can become a deployment gate. \n- **Catch issues earlier in the release cycle.** Shift left and prevent issues before they make it to production.\n\n## Get Started\n- [Learn more](https://docs.newrelic.com/whats-new/2023/04/whats-new-04-20-github-integration/)\n- [See instructions](https://github.com/apps/new-relic-gate)and install the app.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/gh-gates",
+    "id": "91464093-cc5d-4599-8fee-23f4de0183b5",
+    "level": "NEW_RELIC",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/gh-gates/logo.svg",
+    "summary": "Use New Relic anomaly detection to create GitHub deployment protection rules",
+    "websiteUrl": null,
+    "keywords": [
+      "github",
+      "gates",
+      "anomaly detection",
+      "notifications",
+      "AIOps",
+      "Incident Intelligence"
+    ],
+    "authors": [
+      "New Relic"
+    ],
+    "dashboards": [],
+    "alerts": [],
+    "documentation": [
+      {
+        "name": "Get Started",
+        "description": "Create GitHub Actions Deployment Protection Rules with New Relic AIOps",
+        "url": "https://docs.newrelic.com/whats-new/2023/04/whats-new-04-20-github-integration/"
       }
     ],
     "installPlans": []
