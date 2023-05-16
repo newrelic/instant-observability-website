@@ -1082,6 +1082,11 @@
     ],
     "documentation": [
       {
+        "name": "Velero Metrics Reference",
+        "description": "Velero Prometheus Metric Reference\n",
+        "url": "https://github.com/vmware-tanzu/velero/blob/main/pkg/metrics/metrics.go#L30"
+      },
+      {
         "name": "Prometheus Installation Docs",
         "description": "Use Prometheus remote_write or Prometheus Agent\n",
         "url": "https://docs.newrelic.com/docs/infrastructure/prometheus-integrations/get-started/send-prometheus-metric-data-new-relic/"
@@ -1090,11 +1095,6 @@
         "name": "Velero Integration Docs",
         "description": "New Relic documentation for the Velero integration including installation, configuration, and how to query the metrics.\n",
         "url": "https://docs.newrelic.com/docs/infrastructure/prometheus-integrations/integrations-list/velero-integration"
-      },
-      {
-        "name": "Velero Metrics Reference",
-        "description": "Velero Prometheus Metric Reference\n",
-        "url": "https://github.com/vmware-tanzu/velero/blob/main/pkg/metrics/metrics.go#L30"
       }
     ],
     "installPlans": [
@@ -1555,14 +1555,14 @@
     ],
     "documentation": [
       {
-        "name": "Node Exporter - GitHub",
-        "description": "Exporter for machine metrics\n",
-        "url": "https://github.com/prometheus/node_exporter"
-      },
-      {
         "name": "Node Exporter - Prometheus",
         "description": "Monitoring Linux Host Metrics with the Node Exporter\n",
         "url": "https://prometheus.io/docs/guides/node-exporter/"
+      },
+      {
+        "name": "Node Exporter - GitHub",
+        "description": "Exporter for machine metrics\n",
+        "url": "https://github.com/prometheus/node_exporter"
       }
     ],
     "installPlans": [
@@ -5989,11 +5989,11 @@
     ],
     "dashboards": [
       {
-        "name": "Redis Enterprise Database Metrics",
+        "name": "Redis Enterprise Database CRDT",
         "description": null,
         "url": null,
         "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/database/database01.png"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/active-active/active_active01.png"
         ]
       },
       {
@@ -6005,11 +6005,11 @@
         ]
       },
       {
-        "name": "Redis Enterprise Database CRDT",
+        "name": "Redis Enterprise Database Metrics",
         "description": null,
         "url": null,
         "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/active-active/active_active01.png"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/database/database01.png"
         ]
       }
     ],
@@ -7163,6 +7163,50 @@
     ]
   },
   {
+    "title": "k6",
+    "name": "k6",
+    "description": "## Quickstart for k6 Load Test Monitoring\n\nk6 can send performance metrics to New Relic through the New Relic StatsD integration. By integrating New Relic and k6, you can visualize and correlate test result data, alert on performance data, and share advanced load testing results and their KPI's with your teams. View alongside all of your other telemetry data in New Relic for added insights.\nInstallation is as simple as running the NR StatsD integration and including NR StatsD as an output in your k6 load testing script.\n\nThis quickstart includes dashboards for the following k6 charts:\n- Number of virtual users\n- Max, median, and average Request Durations\n- Rate of requests (per second)\n- Histogram bucketing requests\n- Data sent and data received\n- Rate of change in the number of requests\n- Blocked requests\n- Response timings (90th percentile)\n- List of all available k6 metrics",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/k6",
+    "id": "b9ef4c73-0875-43dd-b9d5-4c3bb74632ea",
+    "level": "COMMUNITY",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/k6/logo.png",
+    "summary": "Send k6 performance metrics to New Relic through the New Relic StatsD integration.",
+    "websiteUrl": null,
+    "keywords": [
+      "k6",
+      "grafana",
+      "load testing",
+      "statsD"
+    ],
+    "authors": [
+      "Kinsey"
+    ],
+    "dashboards": [
+      {
+        "name": "k6",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/k6/k6.png"
+        ]
+      }
+    ],
+    "alerts": [],
+    "documentation": [
+      {
+        "name": "Learn more about the New Relic StatsD integration",
+        "description": "The StatsD integration is required to send k6 data to New Relic.",
+        "url": "https://docs.newrelic.com/docs/infrastructure/host-integrations/host-integrations-list/statsd-monitoring-integration-version-2/"
+      },
+      {
+        "name": "Set up k6 to send data to New Relic",
+        "description": "Information on how to set up k6 to send data to New Relic, including all configuration options from k6.",
+        "url": "https://k6.io/docs/results-output/real-time/new-relic/"
+      }
+    ],
+    "installPlans": []
+  },
+  {
     "title": "OpenAI Observability",
     "name": "openai",
     "description": "## Monitor your GPT-3 and GPT-4 Application Usage in New Relic\n\nWith the GPT integration, you'll have the ability to seamlessly monitor OpenAI completion queries and simultaneously log useful statistics in a New Relic customizable dashboard about your requests.\n\nBy adding just two lines of code, users can gain access to key performance metrics such as cost, response time, and sample inputs/outputs. The dashboard also allows users to track total requests, average token/requests, and model names. \n\nWith New Relic's fully customizable dashboard, users can add additional metrics based on their specific business requirements and needs. \n\nOverall, New Relic's OpenAI integration provides real-time metrics around GPT applications to help businesses optimize usage, reduce costs, and achieve better results.",
@@ -7320,12 +7364,11 @@
     ],
     "dashboards": [
       {
-        "name": "SAP Dashboards",
-        "description": "Monitor SAP systems and applications performances",
+        "name": "SAP Data Ingestion Estimate",
+        "description": "Get an overview of the data volume ingested from SAP systems",
         "url": null,
         "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/nrm4sap/sap-dashboard01.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/nrm4sap/sap-dashboard02.png"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/nrm4sap-datasize/sap-size-estimate01.png"
         ]
       },
       {
@@ -7337,11 +7380,12 @@
         ]
       },
       {
-        "name": "SAP Data Ingestion Estimate",
-        "description": "Get an overview of the data volume ingested from SAP systems",
+        "name": "SAP Dashboards",
+        "description": "Monitor SAP systems and applications performances",
         "url": null,
         "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/nrm4sap-datasize/sap-size-estimate01.png"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/nrm4sap/sap-dashboard01.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/nrm4sap/sap-dashboard02.png"
         ]
       }
     ],
@@ -9813,18 +9857,6 @@
     ],
     "dashboards": [
       {
-        "name": "JFrog Xray",
-        "description": "This dashboard provides visibility into JFrog Xray logs (access, service, traffic log volumes, HTTP response codes, errors etc), metrics (system performance, number and type of artifacts and components scanned), and violations (security vulnerabiities and license issues)",
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/jfrog-xray/jfrog-xray1.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/jfrog-xray/jfrog-xray2.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/jfrog-xray/jfrog-xray3.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/jfrog-xray/jfrog-xray4.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/jfrog-xray/jfrog-xray5.png"
-        ]
-      },
-      {
         "name": "JFrog Artifactory",
         "description": "This dashboard provides an overview of usage statistics of JFrog Artifactory logs (application, audit, Docker, requests) and overview of the system metrics, JVM statistics, storage consumption, garbage collection, and other operational insights associated with JFrog Artifactory",
         "url": null,
@@ -9836,6 +9868,18 @@
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/jfrog-artifactory/jfrog-artifactory05.png",
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/jfrog-artifactory/jfrog-artifactory06.png",
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/jfrog-artifactory/jfrog-artifactory07.png"
+        ]
+      },
+      {
+        "name": "JFrog Xray",
+        "description": "This dashboard provides visibility into JFrog Xray logs (access, service, traffic log volumes, HTTP response codes, errors etc), metrics (system performance, number and type of artifacts and components scanned), and violations (security vulnerabiities and license issues)",
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/jfrog-xray/jfrog-xray1.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/jfrog-xray/jfrog-xray2.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/jfrog-xray/jfrog-xray3.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/jfrog-xray/jfrog-xray4.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/jfrog-xray/jfrog-xray5.png"
         ]
       }
     ],
@@ -10896,14 +10940,14 @@
         "url": "https://docs.newrelic.com/docs/infrastructure/prometheus-integrations/get-started/send-prometheus-metric-data-new-relic"
       },
       {
-        "name": "Etcd Metrics Docs",
-        "description": "Learn more about the Prometheus metrics available for Etcd",
-        "url": "https://etcd.io/docs/v3.5/metrics/"
-      },
-      {
         "name": "Etcd Integration Docs",
         "description": "New Relic documentation for the Etcd integration including installation, configuration, and how to query the metrics.\n",
         "url": "https://docs.newrelic.com/docs/infrastructure/prometheus-integrations/integrations-list/etcd-integration"
+      },
+      {
+        "name": "Etcd Metrics Docs",
+        "description": "Learn more about the Prometheus metrics available for Etcd",
+        "url": "https://etcd.io/docs/v3.5/metrics/"
       }
     ],
     "installPlans": [
@@ -21354,11 +21398,11 @@
     ],
     "dashboards": [
       {
-        "name": "Catchpoint-Recent Errors",
+        "name": "Catchpoint-Test Times",
         "description": null,
         "url": null,
         "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/catchpoint-recent-errors/Catchpoint-Recent_Errors.png"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/catchpoint-test-times/Catchpoint-Test_Times.png"
         ]
       },
       {
@@ -21370,11 +21414,11 @@
         ]
       },
       {
-        "name": "Catchpoint-Test Times",
+        "name": "Catchpoint-Recent Errors",
         "description": null,
         "url": null,
         "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/catchpoint-test-times/Catchpoint-Test_Times.png"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/catchpoint-recent-errors/Catchpoint-Recent_Errors.png"
         ]
       },
       {
@@ -21721,14 +21765,14 @@
     ],
     "documentation": [
       {
-        "name": "Prometheus OpenMetrics Intergration (POMI) installation docs",
-        "description": "To view the Istio Quickstart, the Kubernetes New Relic integration with the Prometheus OpenMetrics Integration (POMI) must be installed prior.\n",
-        "url": "https://docs.newrelic.com/docs/infrastructure/prometheus-integrations/get-started/send-prometheus-metric-data-new-relic"
-      },
-      {
         "name": "Kubernetes installation docs",
         "description": "To view the Istio Quickstart, the Kubernetes New Relic integration with the Prometheus OpenMetrics Integration (POMI) must be installed prior.\n",
         "url": "https://docs.newrelic.com/docs/integrations/host-integrations/host-integrations-list/kubernetes-monitoring-integration"
+      },
+      {
+        "name": "Prometheus OpenMetrics Intergration (POMI) installation docs",
+        "description": "To view the Istio Quickstart, the Kubernetes New Relic integration with the Prometheus OpenMetrics Integration (POMI) must be installed prior.\n",
+        "url": "https://docs.newrelic.com/docs/infrastructure/prometheus-integrations/get-started/send-prometheus-metric-data-new-relic"
       }
     ],
     "installPlans": [
@@ -24156,14 +24200,14 @@
     ],
     "documentation": [
       {
-        "name": "CoreDNS Metrics Docs",
-        "description": "Learn more about the Prometheus metrics available for CoreDNS\n",
-        "url": "https://coredns.io/plugins/metrics/"
-      },
-      {
         "name": "CoreDNS Integration Docs",
         "description": "New Relic documentation for the CoreDNS integration including installation, configuration, and how to query the metrics.\n",
         "url": "https://docs.newrelic.com/docs/infrastructure/prometheus-integrations/integrations-list/core-dns-integration"
+      },
+      {
+        "name": "CoreDNS Metrics Docs",
+        "description": "Learn more about the Prometheus metrics available for CoreDNS\n",
+        "url": "https://coredns.io/plugins/metrics/"
       },
       {
         "name": "Prometheus Installation Docs",
@@ -26323,14 +26367,14 @@
     "alerts": [],
     "documentation": [
       {
-        "name": "Example Prometheus exporter",
-        "description": "Example Google Cloud Spanner prometheus exporter\n",
-        "url": "https://github.com/architjugran/example-cloudspannerreceiver"
-      },
-      {
         "name": "Prometheus New Relic docs",
         "description": "Sending and identifying Prometheus data to New Relic\n",
         "url": "https://docs.newrelic.com/docs/infrastructure/prometheus-integrations/get-started/send-prometheus-metric-data-new-relic/"
+      },
+      {
+        "name": "Example Prometheus exporter",
+        "description": "Example Google Cloud Spanner prometheus exporter\n",
+        "url": "https://github.com/architjugran/example-cloudspannerreceiver"
       }
     ],
     "installPlans": [
@@ -28633,22 +28677,6 @@
     ],
     "dashboards": [
       {
-        "name": "Amazon Security Lake - VPC flow logs",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/amazon-security-lake-vpc-flowlogs/amazon-security-lake-vpc-flowlogs01.png"
-        ]
-      },
-      {
-        "name": "Amazon Security Lake - Route 53 Resolver query logs",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/amazon-security-lake-route53-resolver-query-logs/amazon-security-lake-route53-resolver-query-logs01.png"
-        ]
-      },
-      {
         "name": "Amazon Security Lake - Security Hub",
         "description": null,
         "url": null,
@@ -28657,11 +28685,27 @@
         ]
       },
       {
+        "name": "Amazon Security Lake - VPC flow logs",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/amazon-security-lake-vpc-flowlogs/amazon-security-lake-vpc-flowlogs01.png"
+        ]
+      },
+      {
         "name": "Amazon Security Lake - Cloudtrail",
         "description": null,
         "url": null,
         "screenshots": [
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/amazon-security-lake-cloudtrail-logs/amazon-security-lake-cloudtrail-logs01.png"
+        ]
+      },
+      {
+        "name": "Amazon Security Lake - Route 53 Resolver query logs",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/amazon-security-lake-route53-resolver-query-logs/amazon-security-lake-route53-resolver-query-logs01.png"
         ]
       }
     ],
@@ -29185,19 +29229,19 @@
     ],
     "dashboards": [
       {
-        "name": "Dapr System Services Dashboard",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/dapr-system-services/nr-dashboard-dapr-system-services.png"
-        ]
-      },
-      {
         "name": "Dapr Metrics",
         "description": null,
         "url": null,
         "screenshots": [
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/dapr-metrics/nr-dashboard-dapr-metrics.png"
+        ]
+      },
+      {
+        "name": "Dapr System Services Dashboard",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/dapr-system-services/nr-dashboard-dapr-system-services.png"
         ]
       }
     ],
