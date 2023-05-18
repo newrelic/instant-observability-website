@@ -31,14 +31,14 @@
     ],
     "alerts": [
       {
-        "name": "Video Playback Failure % - jwplayer",
-        "details": "Alert when the Video Playback Failures % increases significantly from its baseline.\nUseful for understanding when your users are experiencing issues during video playback.",
+        "name": "Video Start Failure % - jwplayer",
+        "details": "Alert when the Video Start Failures % increases significantly from its baseline.\nUseful for understanding when your users are unable to successfully initiate video plays.",
         "type": "BASELINE",
         "url": null
       },
       {
-        "name": "Video Start Failure % - jwplayer",
-        "details": "Alert when the Video Start Failures % increases significantly from its baseline.\nUseful for understanding when your users are unable to successfully initiate video plays.",
+        "name": "Video Playback Failure % - jwplayer",
+        "details": "Alert when the Video Playback Failures % increases significantly from its baseline.\nUseful for understanding when your users are experiencing issues during video playback.",
         "type": "BASELINE",
         "url": null
       },
@@ -1128,17 +1128,6 @@
     ],
     "dashboards": [
       {
-        "name": "Kubernetes / Kubelet",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/kubernetes-prometheus-kubelet/kubernetes-prometheus-kubelet01.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/kubernetes-prometheus-kubelet/kubernetes-prometheus-kubelet02.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/kubernetes-prometheus-kubelet/kubernetes-prometheus-kubelet03.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/kubernetes-prometheus-kubelet/kubernetes-prometheus-kubelet04.png"
-        ]
-      },
-      {
         "name": "Kubernetes / Compute Resources",
         "description": null,
         "url": null,
@@ -1148,10 +1137,26 @@
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/kubernetes-prometheus-compute-resources/kubernetes-prometheus-compute-resources03.png",
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/kubernetes-prometheus-compute-resources/kubernetes-prometheus-compute-resources04.png"
         ]
+      },
+      {
+        "name": "Kubernetes / Kubelet",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/kubernetes-prometheus-kubelet/kubernetes-prometheus-kubelet01.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/kubernetes-prometheus-kubelet/kubernetes-prometheus-kubelet02.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/kubernetes-prometheus-kubelet/kubernetes-prometheus-kubelet03.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/kubernetes-prometheus-kubelet/kubernetes-prometheus-kubelet04.png"
+        ]
       }
     ],
     "alerts": [],
     "documentation": [
+      {
+        "name": "Kubernetes Prometheus agent REQUIRED configuration",
+        "description": "The default installation of the New Relic Prometheus agent does not enable all of the metrics needed to work with this quickstart's dashboards. Follow the instructions here to enable those metrics. \n",
+        "url": "https://github.com/newrelic/newrelic-prometheus-configurator/blob/main/examples/kubernetes/README.md"
+      },
       {
         "name": "Kubernetes integration",
         "description": "The New Relic Kubernetes integration has multiple components that work together to give you end-to-end observability across your clusters. While you have the flexibility to deploy the components that you prefer, to achieve full observability, you need to install the complete package to monitor all metrics. \n",
@@ -1161,11 +1166,6 @@
         "name": "Kubernetes Prometheus agent",
         "description": "New Relic's Prometheus agent is a thin wrapper on top of Prometheus server to run it in agent mode. With this integration, you can create a YAML configuration file used by Prometheus that's ready to send metrics to New Relic.\n",
         "url": "https://docs.newrelic.com/docs/infrastructure/prometheus-integrations/install-configure-prometheus-agent/install-prometheus-agent/"
-      },
-      {
-        "name": "Kubernetes Prometheus agent REQUIRED configuration",
-        "description": "The default installation of the New Relic Prometheus agent does not enable all of the metrics needed to work with this quickstart's dashboards. Follow the instructions here to enable those metrics. \n",
-        "url": "https://github.com/newrelic/newrelic-prometheus-configurator/blob/main/examples/kubernetes/README.md"
       }
     ],
     "installPlans": [
@@ -1409,14 +1409,14 @@
     ],
     "alerts": [
       {
-        "name": "Average Memory % Used Violation",
-        "details": "This alert will trigger when a router or switch has more than 90% memory utilization.",
+        "name": "Average CPU % Used Violation",
+        "details": "This alert will trigger when a router or switch has more than 90% CPU utilization.",
         "type": "STATIC",
         "url": null
       },
       {
-        "name": "Average CPU % Used Violation",
-        "details": "This alert will trigger when a router or switch has more than 90% CPU utilization.",
+        "name": "Average Memory % Used Violation",
+        "details": "This alert will trigger when a router or switch has more than 90% memory utilization.",
         "type": "STATIC",
         "url": null
       },
@@ -1733,14 +1733,14 @@
     "alerts": [],
     "documentation": [
       {
-        "name": "Install README",
-        "description": "Guides you on how to customize the dashboard once you've installed it\n",
-        "url": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/oma-qf#readme"
-      },
-      {
         "name": "Implementation guide",
         "description": "Explains what quality foundation is and how to apply it\n",
         "url": "https://docs.newrelic.com/docs/new-relic-solutions/observability-maturity/customer-experience/quality-foundation-implementation-guide"
+      },
+      {
+        "name": "Install README",
+        "description": "Guides you on how to customize the dashboard once you've installed it\n",
+        "url": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/oma-qf#readme"
       }
     ],
     "installPlans": [
@@ -2032,12 +2032,6 @@
     ],
     "alerts": [
       {
-        "name": "Transaction Errors",
-        "details": "This alert is triggered when the the transactions fail more than 10% of the time in 5 minutes.",
-        "type": "STATIC",
-        "url": null
-      },
-      {
         "name": "Apdex Score",
         "details": "This alert is triggered when the Apdex score is below 0.5 for 5 minutes",
         "type": "STATIC",
@@ -2046,6 +2040,12 @@
       {
         "name": "High CPU Utilization",
         "details": "This alert is triggered when the CPU Utilization is above 90%.",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "Transaction Errors",
+        "details": "This alert is triggered when the the transactions fail more than 10% of the time in 5 minutes.",
         "type": "STATIC",
         "url": null
       }
@@ -2213,14 +2213,14 @@
     ],
     "alerts": [
       {
-        "name": "High CPU Utilization",
-        "details": "This alert is triggered when the CPU Utilization is above 90%.",
+        "name": "Apdex Score",
+        "details": "This alert is triggered when the Apdex score is below 0.5 for 5 minutes",
         "type": "STATIC",
         "url": null
       },
       {
-        "name": "Apdex Score",
-        "details": "This alert is triggered when the Apdex score is below 0.5 for 5 minutes",
+        "name": "High CPU Utilization",
+        "details": "This alert is triggered when the CPU Utilization is above 90%.",
         "type": "STATIC",
         "url": null
       },
@@ -2887,14 +2887,14 @@
     ],
     "alerts": [
       {
-        "name": "Redis down alert",
-        "details": "This alert is triggered when the Redis instance is not responding for a continuous 5 minutes.",
+        "name": "Client connections alert",
+        "details": "This alert is triggered when the number of connected redis clients is high.",
         "type": "STATIC",
         "url": null
       },
       {
-        "name": "Client connections alert",
-        "details": "This alert is triggered when the number of connected redis clients is high.",
+        "name": "Redis down alert",
+        "details": "This alert is triggered when the Redis instance is not responding for a continuous 5 minutes.",
         "type": "STATIC",
         "url": null
       }
@@ -3918,14 +3918,14 @@
     ],
     "documentation": [
       {
-        "name": "Instrument your mobile application with New Relic",
-        "description": "How to instrument your mobile application with New Relic",
-        "url": "https://docs.newrelic.com/docs/mobile-monitoring/new-relic-mobile/get-started/introduction-mobile-monitoring/"
-      },
-      {
         "name": "Adding a dashboard",
         "description": "How to add a dashboard to New Relic",
         "url": "https://docs.newrelic.com/docs/query-your-data/explore-query-data/dashboards/introduction-dashboards/#get-started"
+      },
+      {
+        "name": "Instrument your mobile application with New Relic",
+        "description": "How to instrument your mobile application with New Relic",
+        "url": "https://docs.newrelic.com/docs/mobile-monitoring/new-relic-mobile/get-started/introduction-mobile-monitoring/"
       },
       {
         "name": "Mobile app Alerts",
@@ -4138,12 +4138,6 @@
     ],
     "alerts": [
       {
-        "name": "MongoDB Connection Count",
-        "details": "This alert is triggered when there are more than 2000 MongoDB connections created within a 5 minute period.",
-        "type": "STATIC",
-        "url": null
-      },
-      {
         "name": "First Contentful Paint",
         "details": "This alert is triggered when the first contentful paint takes more than 3 seconds for 5 minutes.",
         "type": "STATIC",
@@ -4152,6 +4146,12 @@
       {
         "name": "High Memory Usage (MB)",
         "details": "This alert is triggered when the server memory is higher than 90 MB for 5 minutes.",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "MongoDB Connection Count",
+        "details": "This alert is triggered when there are more than 2000 MongoDB connections created within a 5 minute period.",
         "type": "STATIC",
         "url": null
       },
@@ -4321,19 +4321,19 @@
     ],
     "dashboards": [
       {
-        "name": "Data Ingest Governance Entity Breakdowns",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/data-ingest-entity-breakdown/data-ingest-entity-breakdown.png"
-        ]
-      },
-      {
         "name": "Data Ingest Governance Baseline",
         "description": null,
         "url": null,
         "screenshots": [
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/data-ingest-baseline/data-ingest-baseline.png"
+        ]
+      },
+      {
+        "name": "Data Ingest Governance Entity Breakdowns",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/data-ingest-entity-breakdown/data-ingest-entity-breakdown.png"
         ]
       }
     ],
@@ -4410,19 +4410,19 @@
     ],
     "dashboards": [
       {
-        "name": "Battlesnake Server Status",
-        "description": "A dashboard to monitor your Battlesnake server's performance. It's important to keep all responses to the `/move` endpoint under 500ms. Furthermore, it's possible that your snake may be in multiple concurrent matches at the same time. It's important to make sure you server and web application are running smoothly to keep you in the game!",
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/battlesnake-server-status/battlesnake-server-status.png"
-        ]
-      },
-      {
         "name": "Battlesnake Performance",
         "description": "Monitor your Battlesnake's performance and see how it stacks up against your competition!",
         "url": null,
         "screenshots": [
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/battlesnake-performance/battlesnake-performance.png"
+        ]
+      },
+      {
+        "name": "Battlesnake Server Status",
+        "description": "A dashboard to monitor your Battlesnake server's performance. It's important to keep all responses to the `/move` endpoint under 500ms. Furthermore, it's possible that your snake may be in multiple concurrent matches at the same time. It's important to make sure you server and web application are running smoothly to keep you in the game!",
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/battlesnake-server-status/battlesnake-server-status.png"
         ]
       },
       {
@@ -4597,14 +4597,14 @@
     ],
     "alerts": [
       {
-        "name": "High CPU Utilization",
-        "details": "This alert is triggered when the CPU utilization for a Node is above 90% for at least 15 minutes.",
+        "name": "High Memory Usage",
+        "details": "This alert is triggered when the memory usage for a Node is above 85% of total capacity.",
         "type": "STATIC",
         "url": null
       },
       {
-        "name": "High Memory Usage",
-        "details": "This alert is triggered when the memory usage for a Node is above 85% of total capacity.",
+        "name": "High CPU Utilization",
+        "details": "This alert is triggered when the CPU utilization for a Node is above 90% for at least 15 minutes.",
         "type": "STATIC",
         "url": null
       }
@@ -4790,12 +4790,6 @@
     ],
     "alerts": [
       {
-        "name": "Transaction Errors",
-        "details": "This alert is triggered when the the transactions fail more than 10% of the time in 5 minutes.",
-        "type": "STATIC",
-        "url": null
-      },
-      {
         "name": "Apdex Score",
         "details": "This alert is triggered when the Apdex score is below 0.5 for 5 minutes",
         "type": "STATIC",
@@ -4810,6 +4804,12 @@
       {
         "name": "Memory Usage",
         "details": "This alert is triggered when Memory usage is above 90%",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "Transaction Errors",
+        "details": "This alert is triggered when the the transactions fail more than 10% of the time in 5 minutes.",
         "type": "STATIC",
         "url": null
       }
@@ -5046,14 +5046,14 @@
     ],
     "alerts": [
       {
-        "name": "Transaction Errors",
-        "details": "This alert is triggered when the the transactions fail more than 10% of the time in 5 minutes.",
+        "name": "High CPU Utilization",
+        "details": "This alert is triggered when the CPU Utilization is above 90%.",
         "type": "STATIC",
         "url": null
       },
       {
-        "name": "High CPU Utilization",
-        "details": "This alert is triggered when the CPU Utilization is above 90%.",
+        "name": "Transaction Errors",
+        "details": "This alert is triggered when the the transactions fail more than 10% of the time in 5 minutes.",
         "type": "STATIC",
         "url": null
       }
@@ -5855,8 +5855,8 @@
     ],
     "alerts": [
       {
-        "name": "High CPU Utilization",
-        "details": "This alert is triggered when the CPU Utilization is above 90%.",
+        "name": "Transaction Errors",
+        "details": "This alert is triggered when the the transactions fail more than 10% of the time in 5 minutes.",
         "type": "STATIC",
         "url": null
       },
@@ -5867,14 +5867,14 @@
         "url": null
       },
       {
-        "name": "Memory Usage",
-        "details": "This alert is triggered when Memory usage is above 90%",
+        "name": "High CPU Utilization",
+        "details": "This alert is triggered when the CPU Utilization is above 90%.",
         "type": "STATIC",
         "url": null
       },
       {
-        "name": "Transaction Errors",
-        "details": "This alert is triggered when the the transactions fail more than 10% of the time in 5 minutes.",
+        "name": "Memory Usage",
+        "details": "This alert is triggered when Memory usage is above 90%",
         "type": "STATIC",
         "url": null
       }
@@ -6902,14 +6902,14 @@
     ],
     "alerts": [
       {
-        "name": "Apdex Score",
-        "details": "This alert is triggered when the Apdex score is below 0.5 for 5 minutes",
+        "name": "Memory Usage",
+        "details": "This alert is triggered when Memory usage is above 90%",
         "type": "STATIC",
         "url": null
       },
       {
-        "name": "Memory Usage",
-        "details": "This alert is triggered when Memory usage is above 90%",
+        "name": "Apdex Score",
+        "details": "This alert is triggered when the Apdex score is below 0.5 for 5 minutes",
         "type": "STATIC",
         "url": null
       },
@@ -7364,11 +7364,12 @@
     ],
     "dashboards": [
       {
-        "name": "SAP Data Ingestion Estimate",
-        "description": "Get an overview of the data volume ingested from SAP systems",
+        "name": "SAP Dashboards",
+        "description": "Monitor SAP systems and applications performances",
         "url": null,
         "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/nrm4sap-datasize/sap-size-estimate01.png"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/nrm4sap/sap-dashboard01.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/nrm4sap/sap-dashboard02.png"
         ]
       },
       {
@@ -7380,12 +7381,11 @@
         ]
       },
       {
-        "name": "SAP Dashboards",
-        "description": "Monitor SAP systems and applications performances",
+        "name": "SAP Data Ingestion Estimate",
+        "description": "Get an overview of the data volume ingested from SAP systems",
         "url": null,
         "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/nrm4sap/sap-dashboard01.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/nrm4sap/sap-dashboard02.png"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/nrm4sap-datasize/sap-size-estimate01.png"
         ]
       }
     ],
@@ -7625,8 +7625,8 @@
     ],
     "alerts": [
       {
-        "name": "JVM Heap Utilization Percent",
-        "details": "This alert will trigger when the JVM Heap utilization of an Elasticsearch cluster node is >90%.",
+        "name": "Indexing Latency Threshold",
+        "details": "This alert will trigger when the Indexing latency for an Elasticsearch cluster's primary shards is >5ms.\nThis is measured by: # of Docs Indexed / Time spent Indexing (ms) for the evaluated time window.\nIncreased Flush Latency is an indication that you are trying to index too many documents at one time and you may need to reconfigured your settings to increase performance.",
         "type": "STATIC",
         "url": null
       },
@@ -7655,8 +7655,8 @@
         "url": null
       },
       {
-        "name": "Indexing Latency Threshold",
-        "details": "This alert will trigger when the Indexing latency for an Elasticsearch cluster's primary shards is >5ms.\nThis is measured by: # of Docs Indexed / Time spent Indexing (ms) for the evaluated time window.\nIncreased Flush Latency is an indication that you are trying to index too many documents at one time and you may need to reconfigured your settings to increase performance.",
+        "name": "JVM Heap Utilization Percent",
+        "details": "This alert will trigger when the JVM Heap utilization of an Elasticsearch cluster node is >90%.",
         "type": "STATIC",
         "url": null
       },
@@ -10607,12 +10607,6 @@
     ],
     "alerts": [
       {
-        "name": "Page Load Time Degrades",
-        "details": "This alert is triggered whenever the average page load time deviates 2 standard deviations from the normal.",
-        "type": "BASELINE",
-        "url": null
-      },
-      {
         "name": "Build Failed",
         "details": "This alert is triggered whenever the build error count is > 0",
         "type": "STATIC",
@@ -10621,6 +10615,12 @@
       {
         "name": "JavaScript Errors",
         "details": "This alert is triggered whenever the number of JavaScript errors deviates 5 standard deviations from the normal.",
+        "type": "BASELINE",
+        "url": null
+      },
+      {
+        "name": "Page Load Time Degrades",
+        "details": "This alert is triggered whenever the average page load time deviates 2 standard deviations from the normal.",
         "type": "BASELINE",
         "url": null
       }
@@ -10940,14 +10940,14 @@
         "url": "https://docs.newrelic.com/docs/infrastructure/prometheus-integrations/get-started/send-prometheus-metric-data-new-relic"
       },
       {
-        "name": "Etcd Integration Docs",
-        "description": "New Relic documentation for the Etcd integration including installation, configuration, and how to query the metrics.\n",
-        "url": "https://docs.newrelic.com/docs/infrastructure/prometheus-integrations/integrations-list/etcd-integration"
-      },
-      {
         "name": "Etcd Metrics Docs",
         "description": "Learn more about the Prometheus metrics available for Etcd",
         "url": "https://etcd.io/docs/v3.5/metrics/"
+      },
+      {
+        "name": "Etcd Integration Docs",
+        "description": "New Relic documentation for the Etcd integration including installation, configuration, and how to query the metrics.\n",
+        "url": "https://docs.newrelic.com/docs/infrastructure/prometheus-integrations/integrations-list/etcd-integration"
       }
     ],
     "installPlans": [
@@ -11333,14 +11333,14 @@
     ],
     "alerts": [
       {
-        "name": "High CPU Utilization",
-        "details": "This alert is triggered when the CPU Utilization is above 90%.",
+        "name": "Transaction Errors",
+        "details": "This alert is triggered when the the transactions fail more than 10% of the time in 5 minutes.",
         "type": "STATIC",
         "url": null
       },
       {
-        "name": "Transaction Errors",
-        "details": "This alert is triggered when the the transactions fail more than 10% of the time in 5 minutes.",
+        "name": "High CPU Utilization",
+        "details": "This alert is triggered when the CPU Utilization is above 90%.",
         "type": "STATIC",
         "url": null
       }
@@ -11399,26 +11399,26 @@
     ],
     "alerts": [
       {
-        "name": "Transaction Errors",
-        "details": "This alert is triggered when the transaction error count is higher than 5 for 5 minutes.",
-        "type": "STATIC",
-        "url": null
-      },
-      {
         "name": "High CPU Utilization",
         "details": "This alert is triggered when the CPU Utilization is above 90%.",
         "type": "STATIC",
         "url": null
       },
       {
-        "name": "Average Transaction Duration",
-        "details": "This alert is triggered when Average Transaction Duration is higher than 2 seconds for 5 minutes.",
+        "name": "Transaction Errors",
+        "details": "This alert is triggered when the transaction error count is higher than 5 for 5 minutes.",
         "type": "STATIC",
         "url": null
       },
       {
         "name": "Average Heap Memory Used",
         "details": "This alert is triggered when Average Heap Memory Used is higher than 2048 MB for 5 minutes.",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "Average Transaction Duration",
+        "details": "This alert is triggered when Average Transaction Duration is higher than 2 seconds for 5 minutes.",
         "type": "STATIC",
         "url": null
       }
@@ -11725,26 +11725,26 @@
     ],
     "alerts": [
       {
-        "name": "Nginx-ingress config load errors alert",
-        "details": "This alert is triggered when there is an error loading ingress configuration",
-        "type": "STATIC",
-        "url": null
-      },
-      {
         "name": "Ingress certificate expiration alert",
         "details": "This alert is triggered when there are less than 30 days remaining for certificate expiration. The alert threshold can be changed to your desired expiration alerting requirements.",
         "type": "STATIC",
         "url": null
       },
       {
-        "name": "P99 latency alert",
-        "details": "This sample alert is triggered when the controller request processing duration for the 99th percentile of requests goes above 100 ms. The alert threshold can be changed to your desired latency for alerting requirements.",
+        "name": "High HTTP 4xx/5xx error alert",
+        "details": "This alert is triggered when the HTTP request success rate drops below 95 percent. The alert threshold can be changed to your desired error alerting requirements.",
         "type": "STATIC",
         "url": null
       },
       {
-        "name": "High HTTP 4xx/5xx error alert",
-        "details": "This alert is triggered when the HTTP request success rate drops below 95 percent. The alert threshold can be changed to your desired error alerting requirements.",
+        "name": "Nginx-ingress config load errors alert",
+        "details": "This alert is triggered when there is an error loading ingress configuration",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "P99 latency alert",
+        "details": "This sample alert is triggered when the controller request processing duration for the 99th percentile of requests goes above 100 ms. The alert threshold can be changed to your desired latency for alerting requirements.",
         "type": "STATIC",
         "url": null
       }
@@ -13394,6 +13394,12 @@
     ],
     "alerts": [
       {
+        "name": "Memory Usage",
+        "details": "This alert is triggered when Memory usage is above 90%",
+        "type": "STATIC",
+        "url": null
+      },
+      {
         "name": "Apdex Score",
         "details": "This alert is triggered when the Apdex score is below 0.5 for 5 minutes",
         "type": "STATIC",
@@ -13402,12 +13408,6 @@
       {
         "name": "High CPU Utilization",
         "details": "This alert is triggered when the CPU Utilization is above 90%.",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "Memory Usage",
-        "details": "This alert is triggered when Memory usage is above 90%",
         "type": "STATIC",
         "url": null
       },
@@ -14399,12 +14399,6 @@
     ],
     "alerts": [
       {
-        "name": "Transaction Errors",
-        "details": "This alert is triggered when the the transactions fail more than 10% of the time in 5 minutes.",
-        "type": "STATIC",
-        "url": null
-      },
-      {
         "name": "Apdex Score",
         "details": "This alert is triggered when the Apdex score is below 0.5 for 5 minutes",
         "type": "STATIC",
@@ -14413,6 +14407,12 @@
       {
         "name": "High CPU Utilization",
         "details": "This alert is triggered when the CPU Utilization is above 90%.",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "Transaction Errors",
+        "details": "This alert is triggered when the the transactions fail more than 10% of the time in 5 minutes.",
         "type": "STATIC",
         "url": null
       }
@@ -14564,14 +14564,14 @@
     ],
     "alerts": [
       {
-        "name": "High CPU Utilization",
-        "details": "This alert is triggered when the CPU Utilization is above 90%.",
+        "name": "Apdex Score",
+        "details": "This alert is triggered when the Apdex score is below 0.5 for 5 minutes",
         "type": "STATIC",
         "url": null
       },
       {
-        "name": "Apdex Score",
-        "details": "This alert is triggered when the Apdex score is below 0.5 for 5 minutes",
+        "name": "High CPU Utilization",
+        "details": "This alert is triggered when the CPU Utilization is above 90%.",
         "type": "STATIC",
         "url": null
       },
@@ -15370,8 +15370,8 @@
     ],
     "alerts": [
       {
-        "name": "Memory Usage",
-        "details": "This alert is triggered when Memory usage is above 90%.",
+        "name": "Transaction Errors",
+        "details": "This alert is triggered when the the transactions fail more than 10% of the time in 5 minutes.",
         "type": "STATIC",
         "url": null
       },
@@ -15388,8 +15388,8 @@
         "url": null
       },
       {
-        "name": "Transaction Errors",
-        "details": "This alert is triggered when the the transactions fail more than 10% of the time in 5 minutes.",
+        "name": "Memory Usage",
+        "details": "This alert is triggered when Memory usage is above 90%.",
         "type": "STATIC",
         "url": null
       },
@@ -18829,30 +18829,6 @@
     ],
     "alerts": [
       {
-        "name": "Slow lease requests",
-        "details": "This alert triggers when there are > 0 slow lease requests for over 5 minutes. The alert threshold can be changed to your acceptable slow request requirements.",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "Slow raft requests",
-        "details": "This alert triggers when there are > 0 slow raft requests for over 5 minutes. The alert threshold can be changed to your acceptable slow request requirements.",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "UI CA certificate expiration",
-        "details": "This alert is triggered when there are less than 90 days remaining for UI CA certificate expiration. The alert threshold can be changed to your desired expiration alerting requirements.",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "UI certificate expiration",
-        "details": "This alert is triggered when there are less than 30 days remaining for UI certificate expiration. The alert threshold can be changed to your desired expiration alerting requirements.",
-        "type": "STATIC",
-        "url": null
-      },
-      {
         "name": "CA certificate expiration",
         "details": "This alert is triggered when there are less than 90 days remaining for CA certificate expiration. The alert threshold can be changed to your desired expiration alerting requirements.",
         "type": "STATIC",
@@ -18903,6 +18879,30 @@
       {
         "name": "Slow latch requests",
         "details": "This alert triggers when there are > 0 slow latch requests for over 5 minutes. The alert threshold can be changed to your acceptable slow request requirements.",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "Slow lease requests",
+        "details": "This alert triggers when there are > 0 slow lease requests for over 5 minutes. The alert threshold can be changed to your acceptable slow request requirements.",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "Slow raft requests",
+        "details": "This alert triggers when there are > 0 slow raft requests for over 5 minutes. The alert threshold can be changed to your acceptable slow request requirements.",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "UI CA certificate expiration",
+        "details": "This alert is triggered when there are less than 90 days remaining for UI CA certificate expiration. The alert threshold can be changed to your desired expiration alerting requirements.",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "UI certificate expiration",
+        "details": "This alert is triggered when there are less than 30 days remaining for UI certificate expiration. The alert threshold can be changed to your desired expiration alerting requirements.",
         "type": "STATIC",
         "url": null
       }
@@ -19097,12 +19097,6 @@
     ],
     "alerts": [
       {
-        "name": "Memory Usage",
-        "details": "This alert is triggered when Memory usage is above 90%",
-        "type": "STATIC",
-        "url": null
-      },
-      {
         "name": "Apdex Score",
         "details": "This alert is triggered when the Apdex score is below 0.5 for 5 minutes",
         "type": "STATIC",
@@ -19111,6 +19105,12 @@
       {
         "name": "High CPU Utilization",
         "details": "This alert is triggered when the CPU Utilization is above 90%.",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "Memory Usage",
+        "details": "This alert is triggered when Memory usage is above 90%",
         "type": "STATIC",
         "url": null
       },
@@ -19746,12 +19746,6 @@
     ],
     "alerts": [
       {
-        "name": "Low throughput",
-        "details": "This alert is triggered when the throughput is 0 for 5 minutes",
-        "type": "STATIC",
-        "url": null
-      },
-      {
         "name": "High duration",
         "details": "This alert is triggered when the total duration of the web transaction is longer than 10 seconds during 5 minutes",
         "type": "STATIC",
@@ -19760,6 +19754,12 @@
       {
         "name": "High error rate",
         "details": "This alert is triggered when the error percentage of web transactions is higher than 5% during 5 minutes",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "Low throughput",
+        "details": "This alert is triggered when the throughput is 0 for 5 minutes",
         "type": "STATIC",
         "url": null
       }
@@ -20182,12 +20182,6 @@
     ],
     "alerts": [
       {
-        "name": "Memory Usage",
-        "details": "This alert is triggered when Memory usage is above 90%",
-        "type": "STATIC",
-        "url": null
-      },
-      {
         "name": "Apdex Score",
         "details": "This alert is triggered when the Apdex score is below 0.5 for 5 minutes",
         "type": "STATIC",
@@ -20196,6 +20190,12 @@
       {
         "name": "High CPU Utilization",
         "details": "This alert is triggered when the CPU Utilization is above 90%.",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "Memory Usage",
+        "details": "This alert is triggered when Memory usage is above 90%",
         "type": "STATIC",
         "url": null
       },
@@ -21216,14 +21216,14 @@
     ],
     "alerts": [
       {
-        "name": "Scrape Errors",
-        "details": "This alert is triggered  when the cache size limit is reached above 4 for at least 5 minutes.",
+        "name": "Heap Memory Usage",
+        "details": "This alert is triggered  when the Heap Memory Usage is below 2 for at least 5 minutes.",
         "type": "STATIC",
         "url": null
       },
       {
-        "name": "Heap Memory Usage",
-        "details": "This alert is triggered  when the Heap Memory Usage is below 2 for at least 5 minutes.",
+        "name": "Scrape Errors",
+        "details": "This alert is triggered  when the cache size limit is reached above 4 for at least 5 minutes.",
         "type": "STATIC",
         "url": null
       }
@@ -21398,6 +21398,14 @@
     ],
     "dashboards": [
       {
+        "name": "Catchpoint-Response Size",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/catchpoint-response-size/Catchpoint-Response_Size.png"
+        ]
+      },
+      {
         "name": "Catchpoint-Test Times",
         "description": null,
         "url": null,
@@ -21419,14 +21427,6 @@
         "url": null,
         "screenshots": [
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/catchpoint-overview/Catchpoint-Overview.png"
-        ]
-      },
-      {
-        "name": "Catchpoint-Response Size",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/catchpoint-response-size/Catchpoint-Response_Size.png"
         ]
       }
     ],
@@ -22431,8 +22431,8 @@
     ],
     "alerts": [
       {
-        "name": "Low throughput",
-        "details": "This alert is triggered when the throughput is 0 for 5 minutes",
+        "name": "High error rate",
+        "details": "This alert is triggered when the error percentage of web transactions is higher than 5% during 5 minutes",
         "type": "STATIC",
         "url": null
       },
@@ -22443,8 +22443,8 @@
         "url": null
       },
       {
-        "name": "High error rate",
-        "details": "This alert is triggered when the error percentage of web transactions is higher than 5% during 5 minutes",
+        "name": "Low throughput",
+        "details": "This alert is triggered when the throughput is 0 for 5 minutes",
         "type": "STATIC",
         "url": null
       }
@@ -22860,12 +22860,6 @@
     ],
     "alerts": [
       {
-        "name": "Memory Usage",
-        "details": "This alert is triggered when Memory usage is above 90%",
-        "type": "STATIC",
-        "url": null
-      },
-      {
         "name": "Apdex Score",
         "details": "This alert is triggered when the Apdex score is below 0.5 for 5 minutes",
         "type": "STATIC",
@@ -22874,6 +22868,12 @@
       {
         "name": "High CPU Utilization",
         "details": "This alert is triggered when the CPU Utilization is above 90%.",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "Memory Usage",
+        "details": "This alert is triggered when Memory usage is above 90%",
         "type": "STATIC",
         "url": null
       },
@@ -24200,14 +24200,14 @@
     ],
     "documentation": [
       {
-        "name": "CoreDNS Metrics Docs",
-        "description": "Learn more about the Prometheus metrics available for CoreDNS\n",
-        "url": "https://coredns.io/plugins/metrics/"
-      },
-      {
         "name": "CoreDNS Integration Docs",
         "description": "New Relic documentation for the CoreDNS integration including installation, configuration, and how to query the metrics.\n",
         "url": "https://docs.newrelic.com/docs/infrastructure/prometheus-integrations/integrations-list/core-dns-integration"
+      },
+      {
+        "name": "CoreDNS Metrics Docs",
+        "description": "Learn more about the Prometheus metrics available for CoreDNS\n",
+        "url": "https://coredns.io/plugins/metrics/"
       },
       {
         "name": "Prometheus Installation Docs",
@@ -24614,14 +24614,14 @@
     ],
     "alerts": [
       {
-        "name": "High CPU Utilization",
-        "details": "This alert is triggered when the CPU Utilization is above 90%.",
+        "name": "Transaction Errors",
+        "details": "This alert is triggered when the the transactions fail more than 10% of the time in 5 minutes.",
         "type": "STATIC",
         "url": null
       },
       {
-        "name": "Transaction Errors",
-        "details": "This alert is triggered when the the transactions fail more than 10% of the time in 5 minutes.",
+        "name": "High CPU Utilization",
+        "details": "This alert is triggered when the CPU Utilization is above 90%.",
         "type": "STATIC",
         "url": null
       }
@@ -24677,14 +24677,14 @@
     ],
     "alerts": [
       {
-        "name": "Transaction Errors",
-        "details": "This alert is triggered when the the transactions fail more than 10% of the time in 5 minutes.",
+        "name": "High CPU Utilization",
+        "details": "This alert is triggered when the CPU Utilization is above 90%.",
         "type": "STATIC",
         "url": null
       },
       {
-        "name": "High CPU Utilization",
-        "details": "This alert is triggered when the CPU Utilization is above 90%.",
+        "name": "Transaction Errors",
+        "details": "This alert is triggered when the the transactions fail more than 10% of the time in 5 minutes.",
         "type": "STATIC",
         "url": null
       }
@@ -27280,12 +27280,6 @@
     ],
     "alerts": [
       {
-        "name": "High duration",
-        "details": "This alert is triggered when the total duration of the web transaction is longer than 10 seconds during 5 minutes",
-        "type": "STATIC",
-        "url": null
-      },
-      {
         "name": "High error rate",
         "details": "This alert is triggered when the error percentage of web transactions is higher than 5% during 5 minutes",
         "type": "STATIC",
@@ -27294,6 +27288,12 @@
       {
         "name": "Low throughput",
         "details": "This alert is triggered when the throughput is 0 for 5 minutes",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "High duration",
+        "details": "This alert is triggered when the total duration of the web transaction is longer than 10 seconds during 5 minutes",
         "type": "STATIC",
         "url": null
       }
@@ -28501,6 +28501,75 @@
     "installPlans": []
   },
   {
+    "title": "Flutter Android",
+    "name": "flutter-android",
+    "description": "## Comprehensive monitoring quickstart for Flutter Android\n\nMonitor your Flutter applications and analyze performance bottlenecks while operating in a live development environment. You can use this dashboard to visualize your web user experience with your application rendition.\n\n## Why monitor Flutter Android?\nMonitoring app performance allows you to avoid crashes, bugs, or user complaints by taking a preventative approach rather than waiting until an issue arises. With New Relic Android and Flutter agents, you can track important metrics such as network failures, HTTP response times, slow launches, and custom traces.\n\nYou can optimize the process once you have a comprehensive picture of all releases by prioritizing active issues and marking errors as corrected. Identify the release in which the problem first appeared, merge duplicates, and assess whether the issue may worsen. Send deploy emails instantly with commit information, and suggest an owner for each application error.\n\n## What’s included in this quickstart?\nNew Relic Android and Flutter monitoring agents capture the following metrics:\n\n- Get alerted when critical issues affect your Flutter application\n- Dashboards (error rate, app launches, app installations, app crashes and more)\n- Monitor Flutter Dart exceptions and errors\n- Monitor HTTP responses & errors, and mobile events",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/flutter-android",
+    "id": "4dbabbe7-1e32-47fc-b80b-a792aaa38ba7",
+    "level": "NEW_RELIC",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/flutter-android/logo.png",
+    "summary": "Identify and optimize Flutter Android app performance with New Relic Flutter Android monitoring.",
+    "websiteUrl": null,
+    "keywords": [
+      "flutter",
+      "flutter android application",
+      "android agent",
+      "flutter agent"
+    ],
+    "authors": [
+      "New Relic"
+    ],
+    "dashboards": [
+      {
+        "name": "Flutter Android",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/flutter-android/flutter-android01.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/flutter-android/flutter-android02.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/flutter-android/flutter-android03.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/flutter-android/flutter-android04.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/flutter-android/flutter-android05.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/flutter-android/flutter-android06.png"
+        ]
+      }
+    ],
+    "alerts": [
+      {
+        "name": "App Crash Rate",
+        "details": "This alert is triggered when the application crash rate exceeds 20% for 5 minutes.",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "Error Rate",
+        "details": "This alert is triggered when the error rate exceeds 4% for 5 minutes.",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "HTTP Response Time",
+        "details": "This alert is triggered when the HTTP response time exceeds 5 seconds for 5 minutes.",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "Users Affected Rate",
+        "details": "This alert is triggered when the users affected rate exceeds 5% for 5 minutes.",
+        "type": "STATIC",
+        "url": null
+      }
+    ],
+    "documentation": [
+      {
+        "name": "Flutter Android integration documentation",
+        "description": "Monitor the performance metrics of your Flutter Android application instances in real-time with New Relic Android and Flutter agents.\n",
+        "url": "https://docs.newrelic.com/docs/mobile-monitoring/new-relic-mobile-flutter/monitor-your-flutter-application/"
+      }
+    ],
+    "installPlans": []
+  },
+  {
     "title": "New Relic Audit",
     "name": "audit-events-analysis",
     "description": "Dashboard to analyse the New Relic Audit events that New Relic captures out of the box as an additional security measure for managing your New Relic account. This includes:\n\n- Individuals added or deleted\n- Role changes\n- Account changes made via API\n- Synthetic monitor changes\n- Dashboard deletion\n- Workload configuration changes\n\nAll New Relic accounts can query up to 13 months of account changes. To ensure account security, the audit logging NRQL query only tracks changes in your currently selected account. It does not show audit log events for any associated child accounts. To query changes in another account or sub-account, select the account and run a NRQL query there.\n\nAudit logging is different than configuring audit mode for your APM agent. APM audit mode records information about all data being transmitted from your app.",
@@ -28696,11 +28765,11 @@
         ]
       },
       {
-        "name": "AWS Integrations Data Ingest Analysis",
+        "name": "Azure Integrations Data Ingest Analysis",
         "description": null,
         "url": null,
         "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/aws-integrations-data-ingest-analysis/aws-integrations-data-ingest-analysis.png"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/azure-integrations-data-ingest-analysis/azure-integrations-data-ingest-analysis.png"
         ]
       },
       {
@@ -28712,11 +28781,11 @@
         ]
       },
       {
-        "name": "Azure Integrations Data Ingest Analysis",
+        "name": "AWS Integrations Data Ingest Analysis",
         "description": null,
         "url": null,
         "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/azure-integrations-data-ingest-analysis/azure-integrations-data-ingest-analysis.png"
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/aws-integrations-data-ingest-analysis/aws-integrations-data-ingest-analysis.png"
         ]
       }
     ],
@@ -28760,6 +28829,22 @@
     ],
     "dashboards": [
       {
+        "name": "Amazon Security Lake - VPC flow logs",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/amazon-security-lake-vpc-flowlogs/amazon-security-lake-vpc-flowlogs01.png"
+        ]
+      },
+      {
+        "name": "Amazon Security Lake - Route 53 Resolver query logs",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/amazon-security-lake-route53-resolver-query-logs/amazon-security-lake-route53-resolver-query-logs01.png"
+        ]
+      },
+      {
         "name": "Amazon Security Lake - Security Hub",
         "description": null,
         "url": null,
@@ -28773,22 +28858,6 @@
         "url": null,
         "screenshots": [
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/amazon-security-lake-cloudtrail-logs/amazon-security-lake-cloudtrail-logs01.png"
-        ]
-      },
-      {
-        "name": "Amazon Security Lake - Route 53 Resolver query logs",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/amazon-security-lake-route53-resolver-query-logs/amazon-security-lake-route53-resolver-query-logs01.png"
-        ]
-      },
-      {
-        "name": "Amazon Security Lake - VPC flow logs",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/amazon-security-lake-vpc-flowlogs/amazon-security-lake-vpc-flowlogs01.png"
         ]
       }
     ],
@@ -29131,6 +29200,85 @@
     "installPlans": []
   },
   {
+    "title": "Magento Business Insights",
+    "name": "magento-business-insights",
+    "description": "## Comprehensive monitoring quickstart for Magento Business Insights\nMagento Business Insights involves tracking key performance indicators and other metrics in real-time, to ensure that the system is performing optimally and to identify potential issues before they become major problems.\n## Why monitor your Magento app?\nMagento Ecommerce store monitoring is crucial to ensuring that the system is functioning smoothly and providing accurate data insights.\nThere are several reasons for this:\n### Revenue tracking:\nMonitoring Magento Ecommerce store allows business owners and ecommerce managers to track revenue performance in real-time, ensuring that sales data is accurate and up-to-date. This information can be critical for making informed decisions around marketing and inventory management.\n### Downtime impact: \nA business's revenue can be directly affected by downtime if customers are unable to purchase. Keeping track of downtime and lost revenue can help businesses quantify the impact of these issues.\n### Order tracking: \nWith Magento Business Insights, businesses can monitor order details such as total orders, average order value, and latest orders in order to get insight into their customer's buying behavior.\n### Customer details: \nAnalyzing customer details, such as new vs. returning customers and cart abandonment rates, can help businesses better understand their target market.\n### Funnel monitoring: \nA funnel monitor tracks and analyzes the behavior of customers as they move through your e-commerce site. By monitoring the funnel, businesses can identify where customers are dropping off and where they need to improve the user experience to drive conversions.\n## What's included?\nYou'll have full-stack observability of your Magento app out-of-the-box:\n- Alerts (Downtime (%), HTTP Errors and Largest Contentful Paint (LCP))\n- Dashboards (Executive summary, Customers, Orders, Funnel and more)\n- Keep an eye on the performance and reliability of your Magento site\n- Keep track of your transactions and bottom of the funnel on a desktop or mobile device",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/magento-business-insights",
+    "id": "f99bd30d-bac2-4b6d-a6cb-9b582b4d0dc5",
+    "level": "NEW_RELIC",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/magento-business-insights/logo.png",
+    "summary": "Magento Business Insights quickstart offers a tailored business insights platform for Magento store owners and ecommerce managers. It facilitates real-time data extraction for informed decision-making.",
+    "websiteUrl": null,
+    "keywords": [
+      "magento business insights",
+      "magento",
+      "nri-flex"
+    ],
+    "authors": [
+      "New Relic, Jyothi Surampudi"
+    ],
+    "dashboards": [
+      {
+        "name": "Magento Business Insights",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/magento-business-insights/magentoBI01.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/magento-business-insights/magentoBI02.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/magento-business-insights/magentoBI03.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/magento-business-insights/magentoBI04.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/magento-business-insights/magentoBI05.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/magento-business-insights/magentoBI06.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/magento-business-insights/magentoBI07.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/magento-business-insights/magentoBI08.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/magento-business-insights/magentoBI09.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/magento-business-insights/magentoBI10.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/magento-business-insights/magentoBI11.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/magento-business-insights/magentoBI12.png"
+        ]
+      }
+    ],
+    "alerts": [
+      {
+        "name": "5xx Server Errors",
+        "details": "This alert is triggered if the customer faces 5xx server errors more than 5 times in 5 minutes.",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "CPU Usage (%)",
+        "details": "This alert is triggered if CPU usage exceeds 90% for 5 minutes.",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "Downtime (%)",
+        "details": "This alert is triggered if Downtime is more than 1% for 2 minutes.",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "Memory Usage (%)",
+        "details": "This alert is triggered if Memory usage exceeds 90% for 5 minutes.",
+        "type": "STATIC",
+        "url": null
+      }
+    ],
+    "documentation": [
+      {
+        "name": "Magento Business Insights documentation",
+        "description": "Magento Business Insights Quickstart provides pre-configured packages for businesses to gain real-time insights.\n",
+        "url": "https://docs.newrelic.com/docs/apm/agents/php-agent/other-integrations/magento-business-insights/"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "Magento Business Insights",
+        "id": "magento-business-insights"
+      }
+    ]
+  },
+  {
     "title": "Amazon Verified Access",
     "name": "aws-verified-access",
     "description": "## What is Amazon Verified Access?\n\nAWS Verified Access allows you to provide secure network access without a VPN to corporate applications. Verified Access verifies each access request in real time and only connects users to the applications they are allowed to access, removing broad access to corporate applications, and reducing the associated risks.\n\n\n### Get started!\n\nStart monitoring Amazon Veried Access by using AWS Kenesis Firehose to send logs to New Relic! Take a look at our documentation for information on how to set this integration.\n\n### About this integration\n\nWith this integration, you can keep up with important information about your Verified Access logo.svg\n\n- Access attempt traffic\n- Top denied attempts by IP Address\n- Users attempting access from multiple IP Addresses\n- Top accessed applications\n- Real time logs on denied access attempts\n\n### More info\n\nCheck out the [documentation](https://docs.newrelic.com/docs/infrastructure/amazon-integrations/aws-integrations-list/aws-verified-access-monitoring-integration/) to learn more about New Relic monitoring for Amazon Verified Access.",
@@ -29292,6 +29440,75 @@
         "id": "third-party-biztalk360"
       }
     ]
+  },
+  {
+    "title": "Flutter iOS",
+    "name": "flutter-ios",
+    "description": "## Comprehensive monitoring quickstart for Flutter iOS\n\nMonitor your Flutter applications and analyze performance bottlenecks while operating in a live development environment. You can use this dashboard to visualize your web user experience with your application rendition.\n\n## Why monitor Flutter iOS?\nMonitoring app performance allows you to avoid crashes, bugs, or user complaints by taking a preventative approach rather than waiting until an issue arises. With New Relic iOS and Flutter agents, you can track important metrics such as network failures, HTTP response times, slow launches, and custom traces.\n\n You can optimize the process once you have a comprehensive picture of all releases by prioritizing active issues and marking errors as corrected. Identify the release in which the problem first appeared, merge duplicates, and assess whether the issue may worsen. Send deploy emails instantly with commit information, and suggest an owner for each application error.\n\n\n\n## What’s included in this quickstart?\nNew Relic iOS and Flutter monitoring agents capture the following metrics:\n\n- Get alerted when critical issues affect your Flutter application\n- Dashboards (error rate, app launches, app installations, app crashes and more)\n- Monitor Flutter Dart exceptions and errors\n- Monitor HTTP responses & errors, and mobile events",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/flutter-ios",
+    "id": "e39b2930-856a-4023-90b6-1275ab889ba5",
+    "level": "NEW_RELIC",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/flutter-ios/logo.png",
+    "summary": "Identify and optimize Flutter iOS app performance with New Relic Flutter iOS monitoring.",
+    "websiteUrl": null,
+    "keywords": [
+      "flutter",
+      "flutter ios application",
+      "ios agent",
+      "flutter agent"
+    ],
+    "authors": [
+      "New Relic"
+    ],
+    "dashboards": [
+      {
+        "name": "Flutter iOS",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/flutter-ios/flutter-ios01.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/flutter-ios/flutter-ios02.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/flutter-ios/flutter-ios03.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/flutter-ios/flutter-ios04.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/flutter-ios/flutter-ios05.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/flutter-ios/flutter-ios06.png"
+        ]
+      }
+    ],
+    "alerts": [
+      {
+        "name": "App Crash Rate",
+        "details": "This alert is triggered when the application crash rate is exceeds 20% for 5 minutes.",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "Error Rate",
+        "details": "This alert is triggered when the error rate exceeds 4% for 5 minutes.",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "HTTP Response Time",
+        "details": "This alert is triggered when the HTTP response time exceeds 5 seconds for 5 minutes.",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "Users Affected Rate",
+        "details": "This alert is triggered when the users affected rate exceeds 5% for 5 minutes.",
+        "type": "STATIC",
+        "url": null
+      }
+    ],
+    "documentation": [
+      {
+        "name": "Flutter iOS integration documentation",
+        "description": "Monitor the performance metrics of your Flutter iOS application instances in real-time with New Relic iOS and Flutter agents.\n",
+        "url": "https://docs.newrelic.com/docs/mobile-monitoring/new-relic-mobile-flutter/monitor-your-flutter-application/"
+      }
+    ],
+    "installPlans": []
   },
   {
     "title": "Dapr",
@@ -29931,19 +30148,19 @@
     ],
     "dashboards": [
       {
-        "name": "Browser Overview",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/browser-overview/browser_overview.png"
-        ]
-      },
-      {
         "name": "Browser Traffic Analysis",
         "description": null,
         "url": null,
         "screenshots": [
           "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/traffic-analysis/traffic_analysis.png"
+        ]
+      },
+      {
+        "name": "Browser Overview",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/browser-overview/browser_overview.png"
         ]
       },
       {
@@ -30153,12 +30370,6 @@
     ],
     "alerts": [
       {
-        "name": "Transaction Errors",
-        "details": "This alert is triggered when the the transactions fail more than 10% of the time in 5 minutes.",
-        "type": "STATIC",
-        "url": null
-      },
-      {
         "name": "Apdex Score",
         "details": "This alert is triggered when the Apdex score is below 0.5 for 5 minutes",
         "type": "STATIC",
@@ -30173,6 +30384,12 @@
       {
         "name": "Memory Usage",
         "details": "This alert is triggered when Memory usage is above 90%",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "Transaction Errors",
+        "details": "This alert is triggered when the the transactions fail more than 10% of the time in 5 minutes.",
         "type": "STATIC",
         "url": null
       }
@@ -30585,14 +30802,14 @@
     ],
     "documentation": [
       {
-        "name": "Harbor Metrics Docs",
-        "description": "Learn more about the Prometheus metrics available for Harbor\n",
-        "url": "https://goharbor.io/docs/2.3.0/administration/metrics/"
-      },
-      {
         "name": "Harbor Integration Docs",
         "description": "New Relic documentation for the Harbor integration including installation, configuration, and how to query the metrics.\n",
         "url": "https://docs.newrelic.com/docs/infrastructure/prometheus-integrations/integrations-list/harbor-integration/"
+      },
+      {
+        "name": "Harbor Metrics Docs",
+        "description": "Learn more about the Prometheus metrics available for Harbor\n",
+        "url": "https://goharbor.io/docs/2.3.0/administration/metrics/"
       },
       {
         "name": "Prometheus Installation Docs",
