@@ -20464,83 +20464,6 @@
     ]
   },
   {
-    "title": "Apache Flink",
-    "name": "apache-flink",
-    "description": "## Comprehensive monitoring quickstart for Apache Flink\nNew Relic detects your Apache Flink metrics like job manager (checkpoints, direct, mapped, metaspace memory usage),\ntask manager (shuffle service, operators), heap memory usage and more.\n\n## Why monitor Apache Flink?\nAn ideal Apache Flink performance monitoring provides an easy way for effective monitoring and alerting of your Apache Flink jobs.\n\n\n## Apache monitoring dashboards\n\nNew Relic's Apache Flink monitoring quickstart boasts instant full-stack observability out-of-the-box.\n\nOur easy-to-use performance monitoring dashboards monitor metrics like:\n- Heap memory usage\n- Job manager uptime and downtime\n- Used memory\n- CPU time in seconds and CPU load\n- Status of recent triggered checkpoints and those in progress\n\n### Apache Flink performance alerts\n\nWe’ve also created strategic alerts toproactively inform you about the status of your Apache Flink jobs.\n\nThese alerts include failed checkpoints, job manager heap memory usage higher than 10MB, task manager direct memory higher than 100MB, and shuffle service used memory greater than 2MB.",
-    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/apache-flink",
-    "id": "b48bf101-efdd-4723-b073-7dd58e291442",
-    "level": "NEW_RELIC",
-    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/apache-flink/logo.png",
-    "summary": "New Relic’s instant observability quickstart with Apache Flink monitoring helps you get vital metrics fast to get on top of issues before your customers do.",
-    "websiteUrl": null,
-    "keywords": [
-      "apache-flink",
-      "flink",
-      "apache flink",
-      "data stream"
-    ],
-    "authors": [
-      "New Relic"
-    ],
-    "dashboards": [
-      {
-        "name": "Apache Flink",
-        "description": null,
-        "url": null,
-        "screenshots": [
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/apache-flink/apache-flink01.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/apache-flink/apache-flink02.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/apache-flink/apache-flink03.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/apache-flink/apache-flink04.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/apache-flink/apache-flink05.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/apache-flink/apache-flink06.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/apache-flink/apache-flink07.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/apache-flink/apache-flink08.png",
-          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/apache-flink/apache-flink09.png"
-        ]
-      }
-    ],
-    "alerts": [
-      {
-        "name": "Failed Checkpoints",
-        "details": "This alert is triggered when the failed checkpoints is higher than 3 during 5 minutes.",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "Job Manager Heap Memory Usage",
-        "details": "This alert is triggered when the job manager heap memory usage is higher than 10 MB during 5 minutes.",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "Task Manager Direct Memory Used",
-        "details": "This alert is triggered when the task manager direct memory used is higher than 100 MB during 5 minutes.",
-        "type": "STATIC",
-        "url": null
-      },
-      {
-        "name": "Shuffle Service Used Memory",
-        "details": "This alert is triggered when the shuffle netty used memory is higher than 2 MB during 5 minutes.",
-        "type": "STATIC",
-        "url": null
-      }
-    ],
-    "documentation": [
-      {
-        "name": "Apache Flink integration documentation",
-        "description": "New Relic’s instant observability quickstart with Apache Flink monitoring helps to detect job manager, task manager, operators, shuffle service, logs and parses them into a JSON payload.\n",
-        "url": "https://docs.newrelic.com/docs/infrastructure/prometheus-integrations/install-configure-openmetrics/install-apache-flink/"
-      }
-    ],
-    "installPlans": [
-      {
-        "name": "Apache Flink",
-        "id": "apache-flink"
-      }
-    ]
-  },
-  {
     "title": "Amazon ElastiCache",
     "name": "aws-elasticache",
     "description": "## What is Amazon ElastiCache?\n\nDeploy, operate, and scale an in-memory data store or cache in the cloud.\n\n### Get started!\n\nStart monitoring Amazon ElastiCache by connecting Amazon Web Services (AWS) to New Relic!\n\nCheck out our Amazon ElastiCache documentation to instrument your cloud service and manage the stability, scalability, and reliability of your systems with New Relic's infrastructure monitoring capabilities.\n\n### More info\n\nCheck out the [documentation](https://docs.newrelic.com/docs/infrastructure/amazon-integrations/aws-integrations-list/aws-elasticache-monitoring-integration/) to learn more about New Relic monitoring for Amazon ElastiCache.",
@@ -21239,6 +21162,83 @@
       {
         "name": "Nextcloud",
         "id": "nextcloud"
+      }
+    ]
+  },
+  {
+    "title": "Apache Flink",
+    "name": "apache-flink",
+    "description": "## Comprehensive monitoring quickstart for Apache Flink\nNew Relic detects your Apache Flink metrics like job manager (checkpoints, direct, mapped, metaspace memory usage),\ntask manager (shuffle service, operators), heap memory usage and more.\n\n## Why monitor Apache Flink?\nAn ideal Apache Flink performance monitoring provides an easy way for effective monitoring and alerting of your Apache Flink jobs.\n\n\n## Apache monitoring dashboards\n\nNew Relic's Apache Flink monitoring quickstart boasts instant full-stack observability out-of-the-box.\n\nOur easy-to-use performance monitoring dashboards monitor metrics like:\n- Heap memory usage\n- Job manager uptime and downtime\n- Used memory\n- CPU time in seconds and CPU load\n- Status of recent triggered checkpoints and those in progress\n\n### Apache Flink performance alerts\n\nWe’ve also created strategic alerts toproactively inform you about the status of your Apache Flink jobs.\n\nThese alerts include failed checkpoints, job manager heap memory usage higher than 10MB, task manager direct memory higher than 100MB, and shuffle service used memory greater than 2MB.",
+    "packUrl": "https://github.com/newrelic/newrelic-quickstarts/tree/main/quickstarts/apache-flink",
+    "id": "b48bf101-efdd-4723-b073-7dd58e291442",
+    "level": "NEW_RELIC",
+    "logoUrl": "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/quickstarts/apache-flink/logo.png",
+    "summary": "New Relic’s instant observability quickstart with Apache Flink monitoring helps you get vital metrics fast to get on top of issues before your customers do.",
+    "websiteUrl": null,
+    "keywords": [
+      "apache-flink",
+      "flink",
+      "apache flink",
+      "data stream"
+    ],
+    "authors": [
+      "New Relic"
+    ],
+    "dashboards": [
+      {
+        "name": "Apache Flink",
+        "description": null,
+        "url": null,
+        "screenshots": [
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/apache-flink/apache-flink01.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/apache-flink/apache-flink02.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/apache-flink/apache-flink03.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/apache-flink/apache-flink04.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/apache-flink/apache-flink05.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/apache-flink/apache-flink06.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/apache-flink/apache-flink07.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/apache-flink/apache-flink08.png",
+          "https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/main/dashboards/apache-flink/apache-flink09.png"
+        ]
+      }
+    ],
+    "alerts": [
+      {
+        "name": "Failed Checkpoints",
+        "details": "This alert is triggered when the failed checkpoints is higher than 3 during 5 minutes.",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "Job Manager Heap Memory Usage",
+        "details": "This alert is triggered when the job manager heap memory usage is higher than 10 MB during 5 minutes.",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "Task Manager Direct Memory Used",
+        "details": "This alert is triggered when the task manager direct memory used is higher than 100 MB during 5 minutes.",
+        "type": "STATIC",
+        "url": null
+      },
+      {
+        "name": "Shuffle Service Used Memory",
+        "details": "This alert is triggered when the shuffle netty used memory is higher than 2 MB during 5 minutes.",
+        "type": "STATIC",
+        "url": null
+      }
+    ],
+    "documentation": [
+      {
+        "name": "Apache Flink integration documentation",
+        "description": "New Relic’s instant observability quickstart with Apache Flink monitoring helps to detect job manager, task manager, operators, shuffle service, logs and parses them into a JSON payload.\n",
+        "url": "https://docs.newrelic.com/docs/infrastructure/prometheus-integrations/install-configure-openmetrics/install-apache-flink/"
+      }
+    ],
+    "installPlans": [
+      {
+        "name": "Apache Flink",
+        "id": "apache-flink"
       }
     ]
   },
