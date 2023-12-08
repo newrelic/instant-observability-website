@@ -1,3 +1,5 @@
+## 🚨 The code base for newrelic.com/instant-observability is now in github enterprise
+
 [![Community Project header](https://github.com/newrelic/open-source-office/raw/master/examples/categories/images/Community_Project.png)](https://github.com/newrelic/open-source-office/blob/master/examples/categories/index.md#category-community-project)
 
 # Instant Observability Website
